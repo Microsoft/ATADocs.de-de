@@ -1,18 +1,16 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 4
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [ATADocs\DeployUse\working-with-detection-settings.md](https://github.com/Microsoft/ATADocs-pr/blob/3e82f207fdda7569258944c86cbb41e9616cf57c/ATADocs/DeployUse/working-with-detection-settings.md) | HandedOffFailed | [Details](#48da69f3fb8edd5bb2d55052f63560940f94367947)
- [ATADocs\index.html](https://github.com/Microsoft/ATADocs-pr/blob/3e82f207fdda7569258944c86cbb41e9616cf57c/ATADocs/index.html) | HandedOffSuccess | [Details](#78175e5e559433f50389d54a92da5c5ad179583b124)
- [ATADocs\PlanDesign\ata-capacity-planning.md](https://github.com/Microsoft/ATADocs-pr/blob/3e82f207fdda7569258944c86cbb41e9616cf57c/ATADocs/PlanDesign/ata-capacity-planning.md) | HandedOffSuccess | [Details](#8dae653c43b144c6d1ee8b2efdf4b326c14bb3c2125)
- [ATADocs\PlanDesign\ata-plan-and-design.md](https://github.com/Microsoft/ATADocs-pr/blob/3e82f207fdda7569258944c86cbb41e9616cf57c/ATADocs/PlanDesign/ata-plan-and-design.md) | HandedOffSuccess | [Details](#248ad7b1d055abf75df8bf932d7583b6f8b6dee7126)
+ [ATADocs\DeployUse\working-with-detection-settings.md](https://github.com/Microsoft/ATADocs-pr/blob/0af57a1da6c16b5aae5896debda20710ffb3bb71/ATADocs/DeployUse/working-with-detection-settings.md) | HandedOffFailed | [Details](#48da69f3fb8edd5bb2d55052f63560940f94367947)
+ [ATADocs\Understand\what-is-ata.md](https://github.com/Microsoft/ATADocs-pr/blob/0af57a1da6c16b5aae5896debda20710ffb3bb71/ATADocs/Understand/what-is-ata.md) | HandedOffSuccess | [Details](#21dcba1fb595d26ab1a330546f079527a9b74fa9190)
 
 ## Item Details
-##### <a name='48da69f3fb8edd5bb2d55052f63560940f94367947'></a> Source: [ATADocs\DeployUse\working-with-detection-settings.md](https://github.com/Microsoft/ATADocs-pr/blob/3e82f207fdda7569258944c86cbb41e9616cf57c/ATADocs/DeployUse/working-with-detection-settings.md)
+##### <a name='48da69f3fb8edd5bb2d55052f63560940f94367947'></a> Source: [ATADocs\DeployUse\working-with-detection-settings.md](https://github.com/Microsoft/ATADocs-pr/blob/0af57a1da6c16b5aae5896debda20710ffb3bb71/ATADocs/DeployUse/working-with-detection-settings.md)
 * Status: HandedOffFailed
 * Target File: 
 * Handoff File: 
@@ -25,35 +23,11 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='78175e5e559433f50389d54a92da5c5ad179583b124'></a> Source: [ATADocs\index.html](https://github.com/Microsoft/ATADocs-pr/blob/3e82f207fdda7569258944c86cbb41e9616cf57c/ATADocs/index.html)
+##### <a name='21dcba1fb595d26ab1a330546f079527a9b74fa9190'></a> Source: [ATADocs\Understand\what-is-ata.md](https://github.com/Microsoft/ATADocs-pr/blob/0af57a1da6c16b5aae5896debda20710ffb3bb71/ATADocs/Understand/what-is-ata.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [78175e5e559433f50389d54a92da5c5ad179583b.html](https://github.com/Microsoft/EM.handoff/blob/13f6e49e34568c880cc59b79b420c60332aa7125/ol-handoff/Microsoft/ATADocs-pr.de-de/master/78175e5e559433f50389d54a92da5c5ad179583b.html)
-* Handoff Datetime: 2016-03-14 18:23:29
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='8dae653c43b144c6d1ee8b2efdf4b326c14bb3c2125'></a> Source: [ATADocs\PlanDesign\ata-capacity-planning.md](https://github.com/Microsoft/ATADocs-pr/blob/3e82f207fdda7569258944c86cbb41e9616cf57c/ATADocs/PlanDesign/ata-capacity-planning.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [ata-capacity-planning.7dded00c6a8ca713a36c240993fc56aa469bbb4b.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/13f6e49e34568c880cc59b79b420c60332aa7125/ol-handoff/Microsoft/ATADocs-pr.de-de/master/ata-capacity-planning.7dded00c6a8ca713a36c240993fc56aa469bbb4b.de-de.xlf)
-* Handoff Datetime: 2016-03-14 18:23:29
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='248ad7b1d055abf75df8bf932d7583b6f8b6dee7126'></a> Source: [ATADocs\PlanDesign\ata-plan-and-design.md](https://github.com/Microsoft/ATADocs-pr/blob/3e82f207fdda7569258944c86cbb41e9616cf57c/ATADocs/PlanDesign/ata-plan-and-design.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [ata-plan-and-design.59b44a3cff18ef6cd1ecb64f5b3c2aa92aa6de6b.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/13f6e49e34568c880cc59b79b420c60332aa7125/ol-handoff/Microsoft/ATADocs-pr.de-de/master/ata-plan-and-design.59b44a3cff18ef6cd1ecb64f5b3c2aa92aa6de6b.de-de.xlf)
-* Handoff Datetime: 2016-03-14 18:23:29
+* Handoff File: [what-is-ata.26e22f3b3bdc705961558ab294bf44dabd1ee498.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/8705d8e1e3fea5114b469c5cadf0cdf79f312a81/ol-handoff/Microsoft/ATADocs-pr.de-de/master/what-is-ata.26e22f3b3bdc705961558ab294bf44dabd1ee498.de-de.xlf)
+* Handoff Datetime: 2016-03-14 19:23:16
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
