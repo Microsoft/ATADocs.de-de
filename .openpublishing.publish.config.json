@@ -55,5 +55,4 @@
     ],
     "notification_subscribers": [""],
     "branches_to_filter": [ "live","master-oldev" ]
-	"package_version": "latest-prerelease"
 }
