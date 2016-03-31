@@ -5,13 +5,13 @@
  -------- | ----- 
  Total Files | 199
 [ Handoff Failed Files ](#handoff-failed-list)| 0
-[ Handoff Success Files ](#handoff-success-list)| 173
+[ Handoff Success Files ](#handoff-success-list)| 169
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 0
 [ Handback Failed Files ](#handback-failed-list)| 0
 [ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 0
 [ In Sync Handback Files ](#insync-handback-success-list)| 0
-[ Ignored Files ](#ignored-list)| 26
+[ Ignored Files ](#ignored-list)| 30
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
 
@@ -24,11 +24,8 @@
  [ATADocs\DeployUse\install-ata.md](https://github.com/Microsoft/ATADocs-pr/blob/dffddac833cf1febb835d95f2c49482c77485211/ATADocs/DeployUse/install-ata.md) | HandedOffSuccess | [Details](#efb85d9c4559e2151b2c79a12e7529d68e00b8df17)
  [ATADocs\DeployUse\install-ata-preinstall.md](https://github.com/Microsoft/ATADocs-pr/blob/dffddac833cf1febb835d95f2c49482c77485211/ATADocs/DeployUse/install-ata-preinstall.md) | HandedOffSuccess | [Details](#e8ca6d5c14632fa09f77019cdae9adacd66ca4da10)
  [ATADocs\DeployUse\install-ata-step1.md](https://github.com/Microsoft/ATADocs-pr/blob/dffddac833cf1febb835d95f2c49482c77485211/ATADocs/DeployUse/install-ata-step1.md) | HandedOffSuccess | [Details](#a4eb150ad38c1b9c3f25d62957861172fe8ec69211)
- [ATADocs\DeployUse\install-ata-step2.md](https://github.com/Microsoft/ATADocs-pr/blob/dffddac833cf1febb835d95f2c49482c77485211/ATADocs/DeployUse/install-ata-step2.md) | HandedOffSuccess | [Details](#292e0f49c4c90ae4ac36ecb4913bc853eeab940f12)
  [ATADocs\DeployUse\install-ata-step3.md](https://github.com/Microsoft/ATADocs-pr/blob/dffddac833cf1febb835d95f2c49482c77485211/ATADocs/DeployUse/install-ata-step3.md) | HandedOffSuccess | [Details](#442c94890b223adf18c0d9e67dc2f0946c8a21e313)
- [ATADocs\DeployUse\install-ata-step4.md](https://github.com/Microsoft/ATADocs-pr/blob/dffddac833cf1febb835d95f2c49482c77485211/ATADocs/DeployUse/install-ata-step4.md) | HandedOffSuccess | [Details](#4d8160eda8d5b5c5414ff938a254d752c6531e0314)
  [ATADocs\DeployUse\install-ata-step5.md](https://github.com/Microsoft/ATADocs-pr/blob/dffddac833cf1febb835d95f2c49482c77485211/ATADocs/DeployUse/install-ata-step5.md) | HandedOffSuccess | [Details](#0c524962cfb6a9599ed6ff3b037170b1553b132f15)
- [ATADocs\DeployUse\install-ata-step6.md](https://github.com/Microsoft/ATADocs-pr/blob/dffddac833cf1febb835d95f2c49482c77485211/ATADocs/DeployUse/install-ata-step6.md) | HandedOffSuccess | [Details](#00fe63afb572c6953632598166dd722cc8bb251d16)
  [ATADocs\DeployUse\manage-telemetry-settings.md](https://github.com/Microsoft/ATADocs-pr/blob/eb768858107f8be81b264e56168eee3e304d4b60/ATADocs/DeployUse/manage-telemetry-settings.md) | HandedOffSuccess | [Details](#fa5d0081bd2827bffb0f710f8762b3bcab7ede4218)
  [ATADocs\DeployUse\media\150x150.png](https://github.com/Microsoft/ATADocs-pr/blob/b98547e340bce87faba3e3aa209d738ddbc4612c/ATADocs/DeployUse/media/150x150.png) | HandedOffSuccess | [Details](#84421bf7f4ba657e685239fb27f4798a46485f7119)
  [ATADocs\DeployUse\media\ATA-alerts-verbosity-language.png](https://github.com/Microsoft/ATADocs-pr/blob/b98547e340bce87faba3e3aa209d738ddbc4612c/ATADocs/DeployUse/media/ATA-alerts-verbosity-language.png) | HandedOffSuccess | [Details](#f8847c09ae291ce8fb83cb013a7e5f5f3a4b627920)
@@ -59,7 +56,6 @@
  [ATADocs\DeployUse\media\ATA-uninstall-center-bug.jpg](https://github.com/Microsoft/ATADocs-pr/blob/b98547e340bce87faba3e3aa209d738ddbc4612c/ATADocs/DeployUse/media/ATA-uninstall-center-bug.jpg) | HandedOffSuccess | [Details](#2693f2a42f01bacc6651248a0113d575c12054c344)
  [ATADocs\DeployUse\media\ATA-VPN-Subnets.JPG](https://github.com/Microsoft/ATADocs-pr/blob/b98547e340bce87faba3e3aa209d738ddbc4612c/ATADocs/DeployUse/media/ATA-VPN-Subnets.JPG) | HandedOffSuccess | [Details](#ce4a21e892357049d70b5ff1aa708547ca715b1745)
  [ATADocs\DeployUse\modifying-ata-config-centercert.md](https://github.com/Microsoft/ATADocs-pr/blob/dffddac833cf1febb835d95f2c49482c77485211/ATADocs/DeployUse/modifying-ata-config-centercert.md) | HandedOffSuccess | [Details](#0ff53c4b1a56d9d20aeb5a9fa2350ee27439a82247)
- [ATADocs\DeployUse\modifying-ata-config-centerip.md](https://github.com/Microsoft/ATADocs-pr/blob/dffddac833cf1febb835d95f2c49482c77485211/ATADocs/DeployUse/modifying-ata-config-centerip.md) | HandedOffSuccess | [Details](#b2bba5f2f46d2dd9ddf7452113307bf0ca55759d48)
  [ATADocs\DeployUse\modifying-ata-config-consoleip.md](https://github.com/Microsoft/ATADocs-pr/blob/dffddac833cf1febb835d95f2c49482c77485211/ATADocs/DeployUse/modifying-ata-config-consoleip.md) | HandedOffSuccess | [Details](#44f0c82d1ca072c147804376fea179c1951dbdcb49)
  [ATADocs\DeployUse\modifying-ata-config-dcpassword.md](https://github.com/Microsoft/ATADocs-pr/blob/dffddac833cf1febb835d95f2c49482c77485211/ATADocs/DeployUse/modifying-ata-config-dcpassword.md) | HandedOffSuccess | [Details](#ed1f5523a3d02d4cd3b3dd02db86c2773ecdf7ab50)
  [ATADocs\DeployUse\modifying-ata-config-iiscert.md](https://github.com/Microsoft/ATADocs-pr/blob/dffddac833cf1febb835d95f2c49482c77485211/ATADocs/DeployUse/modifying-ata-config-iiscert.md) | HandedOffSuccess | [Details](#bfa37e513931f0a764d0408195dc62347cfadc2451)
@@ -212,6 +208,10 @@
  [.openpublishing.publish.config.json](https://github.com/Microsoft/ATADocs-pr/blob/c89853d974ce4f7578a4be7b9aae6d8a3e10f514/.openpublishing.publish.config.json) | Ignored | [Details](#cbd1b45109668ea6c12b5a661c67da3dc777d5754)
  [.vscode\launch.json](https://github.com/Microsoft/ATADocs-pr/blob/c89853d974ce4f7578a4be7b9aae6d8a3e10f514/.vscode/launch.json) | Ignored | [Details](#40cc736961353fa8e5de3337ff4fc63e363195e65)
  [ATADocs\DeployUse\docfx.json](https://github.com/Microsoft/ATADocs-pr/blob/c89853d974ce4f7578a4be7b9aae6d8a3e10f514/ATADocs/DeployUse/docfx.json) | Ignored | [Details](#c45e4a7d1ad52ae258890cf2c2449de16b313b519)
+ [ATADocs\DeployUse\install-ata-step2.md](https://github.com/Microsoft/ATADocs-pr/blob/c89853d974ce4f7578a4be7b9aae6d8a3e10f514/ATADocs/DeployUse/install-ata-step2.md) | Ignored | [Details](#3ddbf8a1b6181c1c1b97e6faf9ee815d7edced2712)
+ [ATADocs\DeployUse\install-ata-step4.md](https://github.com/Microsoft/ATADocs-pr/blob/c89853d974ce4f7578a4be7b9aae6d8a3e10f514/ATADocs/DeployUse/install-ata-step4.md) | Ignored | [Details](#6170140efb5bff068840f72838a8b248f8e42ae114)
+ [ATADocs\DeployUse\install-ata-step6.md](https://github.com/Microsoft/ATADocs-pr/blob/c89853d974ce4f7578a4be7b9aae6d8a3e10f514/ATADocs/DeployUse/install-ata-step6.md) | Ignored | [Details](#417943115718148fea9f61b06b7962c9a355dce016)
+ [ATADocs\DeployUse\modifying-ata-config-centerip.md](https://github.com/Microsoft/ATADocs-pr/blob/c89853d974ce4f7578a4be7b9aae6d8a3e10f514/ATADocs/DeployUse/modifying-ata-config-centerip.md) | Ignored | [Details](#f02c908e012c294973ef05971b13d3fec189e30848)
  [ATADocs\docfx.json](https://github.com/Microsoft/ATADocs-pr/blob/c89853d974ce4f7578a4be7b9aae6d8a3e10f514/ATADocs/docfx.json) | Ignored | [Details](#18782720dea333e2051a0df575f170367cac825e61)
  [ATADocs\Image\ATA-alerts-email-settings.png](https://github.com/Microsoft/ATADocs-pr/blob/c89853d974ce4f7578a4be7b9aae6d8a3e10f514/ATADocs/Image/ATA-alerts-email-settings.png) | Ignored | [Details](#9e4da487d65aa093c3dd0f9b8331079ecb46928363)
  [ATADocs\Image\ATA-Alerts-syslog-settings.png](https://github.com/Microsoft/ATADocs-pr/blob/c89853d974ce4f7578a4be7b9aae6d8a3e10f514/ATADocs/Image/ATA-Alerts-syslog-settings.png) | Ignored | [Details](#9b2c23cd8035306cb31883ff2a1e4605b0f5722065)
@@ -389,12 +389,12 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='292e0f49c4c90ae4ac36ecb4913bc853eeab940f12'></a> Source: [ATADocs\DeployUse\install-ata-step2.md](https://github.com/Microsoft/ATADocs-pr/blob/dffddac833cf1febb835d95f2c49482c77485211/ATADocs/DeployUse/install-ata-step2.md)
-* Status: HandedOffSuccess
+##### <a name='3ddbf8a1b6181c1c1b97e6faf9ee815d7edced2712'></a> Source: [ATADocs\DeployUse\install-ata-step2.md](https://github.com/Microsoft/ATADocs-pr/blob/c89853d974ce4f7578a4be7b9aae6d8a3e10f514/ATADocs/DeployUse/install-ata-step2.md)
+* Status: Ignored
 * Target File: 
-* Handoff File: [install-ata-step2.3d45321e7748ee948f41c47ba8a2385044872617.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/67a478d58fb7e4554377f300e93da35ecabc2138/ol-handoff/Microsoft/ATADocs-pr.de-de/master/install-ata-step2.3d45321e7748ee948f41c47ba8a2385044872617.de-de.xlf)
-* Handoff Datetime: 2016-03-28 19:13:17
-* Handoff Reason: Include
+* Handoff File: 
+* Handoff Datetime: 0001-01-01 00:00:00
+* Handoff Reason: Ignored
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
@@ -413,12 +413,12 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='4d8160eda8d5b5c5414ff938a254d752c6531e0314'></a> Source: [ATADocs\DeployUse\install-ata-step4.md](https://github.com/Microsoft/ATADocs-pr/blob/dffddac833cf1febb835d95f2c49482c77485211/ATADocs/DeployUse/install-ata-step4.md)
-* Status: HandedOffSuccess
+##### <a name='6170140efb5bff068840f72838a8b248f8e42ae114'></a> Source: [ATADocs\DeployUse\install-ata-step4.md](https://github.com/Microsoft/ATADocs-pr/blob/c89853d974ce4f7578a4be7b9aae6d8a3e10f514/ATADocs/DeployUse/install-ata-step4.md)
+* Status: Ignored
 * Target File: 
-* Handoff File: [install-ata-step4.2f79a925ca23bf573e0a526a5c2cb4eda0d405e8.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/67a478d58fb7e4554377f300e93da35ecabc2138/ol-handoff/Microsoft/ATADocs-pr.de-de/master/install-ata-step4.2f79a925ca23bf573e0a526a5c2cb4eda0d405e8.de-de.xlf)
-* Handoff Datetime: 2016-03-28 19:13:17
-* Handoff Reason: Include
+* Handoff File: 
+* Handoff Datetime: 0001-01-01 00:00:00
+* Handoff Reason: Ignored
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
@@ -437,12 +437,12 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='00fe63afb572c6953632598166dd722cc8bb251d16'></a> Source: [ATADocs\DeployUse\install-ata-step6.md](https://github.com/Microsoft/ATADocs-pr/blob/dffddac833cf1febb835d95f2c49482c77485211/ATADocs/DeployUse/install-ata-step6.md)
-* Status: HandedOffSuccess
+##### <a name='417943115718148fea9f61b06b7962c9a355dce016'></a> Source: [ATADocs\DeployUse\install-ata-step6.md](https://github.com/Microsoft/ATADocs-pr/blob/c89853d974ce4f7578a4be7b9aae6d8a3e10f514/ATADocs/DeployUse/install-ata-step6.md)
+* Status: Ignored
 * Target File: 
-* Handoff File: [install-ata-step6.cfd714775f8ca0497152aded917d1a1b0b009143.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/67a478d58fb7e4554377f300e93da35ecabc2138/ol-handoff/Microsoft/ATADocs-pr.de-de/master/install-ata-step6.cfd714775f8ca0497152aded917d1a1b0b009143.de-de.xlf)
-* Handoff Datetime: 2016-03-28 19:13:17
-* Handoff Reason: Include
+* Handoff File: 
+* Handoff Datetime: 0001-01-01 00:00:00
+* Handoff Reason: Ignored
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
@@ -837,12 +837,12 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='b2bba5f2f46d2dd9ddf7452113307bf0ca55759d48'></a> Source: [ATADocs\DeployUse\modifying-ata-config-centerip.md](https://github.com/Microsoft/ATADocs-pr/blob/dffddac833cf1febb835d95f2c49482c77485211/ATADocs/DeployUse/modifying-ata-config-centerip.md)
-* Status: HandedOffSuccess
+##### <a name='f02c908e012c294973ef05971b13d3fec189e30848'></a> Source: [ATADocs\DeployUse\modifying-ata-config-centerip.md](https://github.com/Microsoft/ATADocs-pr/blob/c89853d974ce4f7578a4be7b9aae6d8a3e10f514/ATADocs/DeployUse/modifying-ata-config-centerip.md)
+* Status: Ignored
 * Target File: 
-* Handoff File: [modifying-ata-config-centerip.95510f0562110a9a517b1f38b65d31e2b365e77e.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/67a478d58fb7e4554377f300e93da35ecabc2138/ol-handoff/Microsoft/ATADocs-pr.de-de/master/modifying-ata-config-centerip.95510f0562110a9a517b1f38b65d31e2b365e77e.de-de.xlf)
-* Handoff Datetime: 2016-03-28 19:13:17
-* Handoff Reason: Include
+* Handoff File: 
+* Handoff Datetime: 0001-01-01 00:00:00
+* Handoff Reason: Ignored
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
