@@ -6,14 +6,14 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [ATADocs\Understand\ata-architecture.md](https://github.com/Microsoft/ATADocs-pr/blob/35d14d800bc1dc645d4fd930251b6035f94bfa9d/ATADocs/Understand/ata-architecture.md) | HandedOffSuccess | [Details](#09ee4f9793b98e98caefd1fea581f32358fb5f30174)
+ [ATADocs\Understand\ata-architecture.md](https://github.com/Microsoft/ATADocs-pr/blob/5d2b6ec1321e6d0db6618aa49b59358b69e0aee6/ATADocs/Understand/ata-architecture.md) | HandedOffSuccess | [Details](#dbcd5e1523120a52a9af5d7fa4c46a3c14573af8174)
 
 ## Item Details
-##### <a name='09ee4f9793b98e98caefd1fea581f32358fb5f30174'></a> Source: [ATADocs\Understand\ata-architecture.md](https://github.com/Microsoft/ATADocs-pr/blob/35d14d800bc1dc645d4fd930251b6035f94bfa9d/ATADocs/Understand/ata-architecture.md)
+##### <a name='dbcd5e1523120a52a9af5d7fa4c46a3c14573af8174'></a> Source: [ATADocs\Understand\ata-architecture.md](https://github.com/Microsoft/ATADocs-pr/blob/5d2b6ec1321e6d0db6618aa49b59358b69e0aee6/ATADocs/Understand/ata-architecture.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [ata-architecture.76065513a13eb83d520e84ffefc28e530ce0a9fd.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/c7f7343423b3b498b89cdacd5585539c2ec74580/ol-handoff/Microsoft/ATADocs-pr.de-de/master/ata-architecture.76065513a13eb83d520e84ffefc28e530ce0a9fd.de-de.xlf)
-* Handoff Datetime: 2016-04-11 17:06:08
+* Handoff File: [ata-architecture.76065513a13eb83d520e84ffefc28e530ce0a9fd.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/08c16875b0e42a0ba3e371c1955b50c1c0841181/ol-handoff/Microsoft/ATADocs-pr.de-de/master/ata-architecture.76065513a13eb83d520e84ffefc28e530ce0a9fd.de-de.xlf)
+* Handoff Datetime: 2016-04-11 18:06:47
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
