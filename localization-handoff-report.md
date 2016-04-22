@@ -6,15 +6,15 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [ATADocs\Understand\ata-common-questions.md](https://github.com/Microsoft/ATADocs-pr/blob/32175b1a82ab95d63832a273433a52923dacf1e0/ATADocs/Understand/ata-common-questions.md) | HandedOffSuccess | [Details](#e954163a5f82594377ac5a8315e4f270d6e12de4179)
- [ATADocs\Understand\TOC.md](https://github.com/Microsoft/ATADocs-pr/blob/32175b1a82ab95d63832a273433a52923dacf1e0/ATADocs/Understand/TOC.md) | HandedOffSuccess | [Details](#862bb6ecde2fc84df2f593704a52f39930ffa1f3198)
+ [ATADocs\DeployUse\pre-installation-steps.md](https://github.com/Microsoft/ATADocs-pr/blob/5f875a689c2b3402ce08fab7496ea324a43e6d67/ATADocs/DeployUse/pre-installation-steps.md) | HandedOffSuccess | [Details](#e3831667a106e31109bc354a7ab4adc1c4109ce154)
+ [ATADocs\Understand\ata-common-questions.md](https://github.com/Microsoft/ATADocs-pr/blob/5f875a689c2b3402ce08fab7496ea324a43e6d67/ATADocs/Understand/ata-common-questions.md) | HandedOffSuccess | [Details](#eed994196b47e1e655237c409b46492c881f2762179)
 
 ## Item Details
-##### <a name='e954163a5f82594377ac5a8315e4f270d6e12de4179'></a> Source: [ATADocs\Understand\ata-common-questions.md](https://github.com/Microsoft/ATADocs-pr/blob/32175b1a82ab95d63832a273433a52923dacf1e0/ATADocs/Understand/ata-common-questions.md)
+##### <a name='e3831667a106e31109bc354a7ab4adc1c4109ce154'></a> Source: [ATADocs\DeployUse\pre-installation-steps.md](https://github.com/Microsoft/ATADocs-pr/blob/5f875a689c2b3402ce08fab7496ea324a43e6d67/ATADocs/DeployUse/pre-installation-steps.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [ata-common-questions.34c8a30faa1744c2311113b5d0d232bf40816e17.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/798f92e1a955ac4c0234138e3913692a4a85fc06/ol-handoff/Microsoft/ATADocs-pr.de-de/master/ata-common-questions.34c8a30faa1744c2311113b5d0d232bf40816e17.de-de.xlf)
-* Handoff Datetime: 2016-04-22 00:43:55
+* Handoff File: [pre-installation-steps.ccfffbb87b2b6e773b75cc3208e8fcf401365b8b.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/2f61ea54da0944e0edbfc63b15002c871e2a899c/ol-handoff/Microsoft/ATADocs-pr.de-de/master/pre-installation-steps.ccfffbb87b2b6e773b75cc3208e8fcf401365b8b.de-de.xlf)
+* Handoff Datetime: 2016-04-22 21:14:20
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
@@ -22,11 +22,11 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='862bb6ecde2fc84df2f593704a52f39930ffa1f3198'></a> Source: [ATADocs\Understand\TOC.md](https://github.com/Microsoft/ATADocs-pr/blob/32175b1a82ab95d63832a273433a52923dacf1e0/ATADocs/Understand/TOC.md)
+##### <a name='eed994196b47e1e655237c409b46492c881f2762179'></a> Source: [ATADocs\Understand\ata-common-questions.md](https://github.com/Microsoft/ATADocs-pr/blob/5f875a689c2b3402ce08fab7496ea324a43e6d67/ATADocs/Understand/ata-common-questions.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [TOC.602662a4c6e9c6b6819467b610eac5b1ea8b47e7.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/798f92e1a955ac4c0234138e3913692a4a85fc06/ol-handoff/Microsoft/ATADocs-pr.de-de/master/TOC.602662a4c6e9c6b6819467b610eac5b1ea8b47e7.de-de.xlf)
-* Handoff Datetime: 2016-04-22 00:43:55
+* Handoff File: [ata-common-questions.34c8a30faa1744c2311113b5d0d232bf40816e17.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/2f61ea54da0944e0edbfc63b15002c871e2a899c/ol-handoff/Microsoft/ATADocs-pr.de-de/master/ata-common-questions.34c8a30faa1744c2311113b5d0d232bf40816e17.de-de.xlf)
+* Handoff Datetime: 2016-04-22 21:14:20
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
