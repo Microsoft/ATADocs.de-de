@@ -6,15 +6,15 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [ATADocs\PlanDesign\configure-event-collection.md](https://github.com/Microsoft/ATADocs-pr/blob/45c0a051fc8b7b2b56802d6947928395bd3a6e4f/ATADocs/PlanDesign/configure-event-collection.md) | HandedOffSuccess | [Details](#da7fc285f828f5932a5b87172f606bc7982af2fa140)
- [ATADocs\Troubleshoot\troubleshooting-ata-using-logs.md](https://github.com/Microsoft/ATADocs-pr/blob/45c0a051fc8b7b2b56802d6947928395bd3a6e4f/ATADocs/Troubleshoot/troubleshooting-ata-using-logs.md) | HandedOffSuccess | [Details](#bc279aa12245049e4f7a8b79eea622e28dd0ea94176)
+ [ATADocs\Understand\ata-common-questions.md](https://github.com/Microsoft/ATADocs-pr/blob/32175b1a82ab95d63832a273433a52923dacf1e0/ATADocs/Understand/ata-common-questions.md) | HandedOffSuccess | [Details](#e954163a5f82594377ac5a8315e4f270d6e12de4179)
+ [ATADocs\Understand\TOC.md](https://github.com/Microsoft/ATADocs-pr/blob/32175b1a82ab95d63832a273433a52923dacf1e0/ATADocs/Understand/TOC.md) | HandedOffSuccess | [Details](#862bb6ecde2fc84df2f593704a52f39930ffa1f3198)
 
 ## Item Details
-##### <a name='da7fc285f828f5932a5b87172f606bc7982af2fa140'></a> Source: [ATADocs\PlanDesign\configure-event-collection.md](https://github.com/Microsoft/ATADocs-pr/blob/45c0a051fc8b7b2b56802d6947928395bd3a6e4f/ATADocs/PlanDesign/configure-event-collection.md)
+##### <a name='e954163a5f82594377ac5a8315e4f270d6e12de4179'></a> Source: [ATADocs\Understand\ata-common-questions.md](https://github.com/Microsoft/ATADocs-pr/blob/32175b1a82ab95d63832a273433a52923dacf1e0/ATADocs/Understand/ata-common-questions.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [configure-event-collection.3801e6c6906b6ccbddb4b52927299bc9ea18d42a.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/a388b0600eae5da43a653dd5b1169540cc7f7043/ol-handoff/Microsoft/ATADocs-pr.de-de/master/configure-event-collection.3801e6c6906b6ccbddb4b52927299bc9ea18d42a.de-de.xlf)
-* Handoff Datetime: 2016-04-21 18:44:09
+* Handoff File: [ata-common-questions.34c8a30faa1744c2311113b5d0d232bf40816e17.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/798f92e1a955ac4c0234138e3913692a4a85fc06/ol-handoff/Microsoft/ATADocs-pr.de-de/master/ata-common-questions.34c8a30faa1744c2311113b5d0d232bf40816e17.de-de.xlf)
+* Handoff Datetime: 2016-04-22 00:43:55
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
@@ -22,11 +22,11 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='bc279aa12245049e4f7a8b79eea622e28dd0ea94176'></a> Source: [ATADocs\Troubleshoot\troubleshooting-ata-using-logs.md](https://github.com/Microsoft/ATADocs-pr/blob/45c0a051fc8b7b2b56802d6947928395bd3a6e4f/ATADocs/Troubleshoot/troubleshooting-ata-using-logs.md)
+##### <a name='862bb6ecde2fc84df2f593704a52f39930ffa1f3198'></a> Source: [ATADocs\Understand\TOC.md](https://github.com/Microsoft/ATADocs-pr/blob/32175b1a82ab95d63832a273433a52923dacf1e0/ATADocs/Understand/TOC.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [troubleshooting-ata-using-logs.c237c8cdfd616baa4c8e47acb7d766c2f4de3c38.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/a388b0600eae5da43a653dd5b1169540cc7f7043/ol-handoff/Microsoft/ATADocs-pr.de-de/master/troubleshooting-ata-using-logs.c237c8cdfd616baa4c8e47acb7d766c2f4de3c38.de-de.xlf)
-* Handoff Datetime: 2016-04-21 18:44:09
+* Handoff File: [TOC.602662a4c6e9c6b6819467b610eac5b1ea8b47e7.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/798f92e1a955ac4c0234138e3913692a4a85fc06/ol-handoff/Microsoft/ATADocs-pr.de-de/master/TOC.602662a4c6e9c6b6819467b610eac5b1ea8b47e7.de-de.xlf)
+* Handoff Datetime: 2016-04-22 00:43:55
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
