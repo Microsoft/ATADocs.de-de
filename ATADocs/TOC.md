@@ -1,9 +1,9 @@
-# [Verstehen und Kennenlernen](/understand/what-is-ata.md)
-# [Planung und Entwurf](/plandesign/ata-capacity-planning.md)
-# [Bereitstellen und Verwenden](/deployuse/install-ata.md)
-# [Problembehandlung](/troubleshoot/troubleshooting-ata-using-logs.md)
+# [Verstehen und Kennenlernen](/understand-explore/what-is-ata)
+# [Planung und Entwurf](/plan-design/ata-architecture)
+# [Bereitstellen und Verwenden](/deploy-use/preinstall-ata)
+# [Problembehandlung](/troubleshoot/troubleshooting-ata-known-errors)
 
 
-<!--HONumber=Mar16_HO3-->
+<!--HONumber=May16_HO1-->
 
 
