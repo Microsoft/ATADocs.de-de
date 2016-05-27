@@ -26,20 +26,20 @@ ms.suite: ems
 ---
 
 # Verwalten von Telemetrieeinstellungen
-Advanced Threat Analytics (ATA) sammelt anonyme Telemetriedaten über ATA und überträgt die Daten über eine HTTPS-Verbindung an Microsoft-Server.  Diese Daten werden von Microsoft zur Verbesserung von zukünftigen ATA-Versionen verwendet.
+Advanced Threat Analytics (ATA) sammelt anonymisierte Telemetriedaten über ATA und überträgt die Daten über eine HTTPS-Verbindung an Microsoft-Server.  Diese Daten werden von Microsoft zur Verbesserung von zukünftigen ATA-Versionen verwendet.
 
 ## Gesammelte Daten
-Die gesammelten Daten enthalten folgende Elemente:
+Die gesammelten anonymisierten Daten enthalten folgende Elemente:
 
--   Leistungsindikatoren aus ATA Center und dem ATA-Gateway
+-   Leistungsindikatoren von ATA Center und vom ATA-Gateway
 
--   Produkt-ID nach Lizenzierung von ATA
+-   Produkt-ID von lizenzierten Kopien von ATA
 
 -   Bereitstellungsdatum von ATA Center
 
 -   Anzahl der bereitgestellten ATA-Gateways
 
--   Folgende Active Directory-Informationen:
+-   Die folgenden anonymisierten Active Directory-Informationen:
 
     -   Domänen-ID für die erste Domäne der in alphabetischer Reihenfolge aufgelisteten Domänennamen
 
@@ -55,7 +55,7 @@ Die gesammelten Daten enthalten folgende Elemente:
 
     -   Anzahl der Benutzer
 
--   Verdächtige Aktivitäten – die folgenden Daten werden für jede verdächtige Aktivität erfasst:
+-   Verdächtige Aktivitäten – die folgenden anonymisierten Daten werden für jede verdächtige Aktivität erfasst:
 
     (Computernamen, Benutzernamen und IP-Adressen werden **nicht** erfasst.)
 
@@ -70,18 +70,17 @@ Die gesammelten Daten enthalten folgende Elemente:
     -   Vorliegende Eingabe
 
 ### Datensammlung deaktivieren
-Befolgen Sie zum Anhalten der Datensammlung und Senden von Telemetriedaten an Microsoft folgende Schritte:
+Führen Sie die folgenden Schritte aus, um das Sammeln und Senden von Telemetriedaten an Microsoft zu beenden:
 
 1.  Melden Sie sich bei der ATA-Konsole an, klicken Sie auf der Symbolleiste auf die drei Punkte, und wählen Sie **Info** aus.
 
 2.  Deaktivieren Sie das Kontrollkästchen für **Senden Sie uns Nutzungsinformationen, um uns bei der Verbesserung der Benutzerfreundlichkeit zu unterstützen**.
 
-## Siehe auch
-- [Neuerungen in Version 1.5](whats-new-version-1.5.md)
-- [Neuerungen in Version 1.4](whats-new-version-1.4.md)
-- [Unterstützung finden Sie in unserem Forum.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+## Weitere Informationen
+- [Neuerungen in Version 1.6](/advanced-threat-analytics/understand-explore/whats-new-version-1.6)
+- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

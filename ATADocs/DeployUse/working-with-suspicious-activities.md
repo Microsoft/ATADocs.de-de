@@ -42,7 +42,7 @@ Zu jeder verdächtigen Aktivität stehen folgende Informationen zur Verfügung:
 
 -   Möglichkeit für Folgendes:
 
-    -   Sender der verdächtigen Aktivität per E-Mail an andere Personen in Ihrer Organisation. Hierzu muss ein E-Mail-Client auf dem Computer installiert sein, auf dem Sie browsen.
+    -   Teilen der verdächtigen Aktivität mit anderen Personen in Ihrer Organisation per E-Mail.
 
     -   Exportieren der verdächtigen Aktivität nach Excel.
 
@@ -61,9 +61,9 @@ Zu jeder verdächtigen Aktivität stehen folgende Informationen zur Verfügung:
 ## Filtern der Liste der verdächtigen Aktivitäten
 So filtern Sie die Liste der verdächtigen Aktivitäten
 
-1.  Wählen Sie auf der linken Seite des Bildschirms im Bereich **Filtern nach** eine der folgenden Optionen aus: **Alle**, **Offen**, **Aufgelöst** oder **Verworfen**.
+1.  Wählen Sie auf der linken Seite des Bildschirms im Bereich **Filtern nach** eine der folgenden Optionen aus: **Alle**, **Offen**, **Aufgelöst** oder **Verworfen**..
 
-2.  Um die Liste weiter zu filtern, wählen Sie **Hoch**, **Mittel** oder **Niedrig** aus.
+2.  Um die Liste weiter zu filtern, wählen Sie **Hoch**, **Mittel** oder **Niedrig** aus..
 
 **Schweregrad von verdächtigen Aktivitäten**
 
@@ -97,7 +97,7 @@ So filtern Sie die Liste der verdächtigen Aktivitäten
     Dies sind Aktivitäten, die Sie manuell verworfen haben. Wenn ATA eine ähnliche verdächtige Aktivität erkennt, wird eine neue Erkennung erstellt.
 
 ## Bereitstellen von Eingaben zu einer verdächtigen Aktivität
-Damit ATA Informationen zu Ihrem Netzwerk sammeln kann, werden bei einigen verdächtigen Aktivitäten (DNS-Reconnaissance, Pass-the-Ticket, nicht normales Verhalten und Remoteausführung) Eingaben von Ihnen angefordert, um die Erkennung von verdächtigen Aktivitäten zukünftig zu verbessern.
+Damit ATA Informationen zu Ihrem Netzwerk sammeln kann, werden bei einigen verdächtigen Aktivitäten (DNS-Reconnaissance, Pass-the-Ticket, SMB-Sitzungsenumeration, nicht normales Verhalten und Remoteausführung) Eingaben von Ihnen angefordert, um die Erkennung von verdächtigen Aktivitäten zukünftig zu verbessern.
 
 1.  Bei verdächtigen Aktivitäten, für die Sie Eingaben bereitstellen können, wird die Eingabeanforderung automatisch geöffnet. Sie werden aufgefordert, Fragen zu Aktivitäten in Ihrem Netzwerk zu beantworten und anzugeben, ob sie als verdächtig eingestuft werden sollen. Im folgenden Beispiel werden Sie gefragt, ob das Ausführen von Überprüfungstools von einem bestimmten Computer aus zulässig ist.
 
@@ -107,17 +107,17 @@ Damit ATA Informationen zu Ihrem Netzwerk sammeln kann, werden bei einigen verd�
 
 3.  Wenn Sie jedoch mit „Ja“ antworten, kann die verdächtige Aktivität verworfen werden und künftige Aktivitäten dieses Typs von diesem Computer generieren möglicherweise keine verdächtige Aktivität oder eine Aktivität, die automatisch verworfen wird.
 
-4.  Wenn Sie es nicht wissen, klicken Sie auf **Abbrechen**.
+4.  Wenn Sie es nicht wissen, klicken Sie auf **Abbrechen**..
 
 ## Ändern des Status einer verdächtigen Aktivität
-Sie können den Status einer verdächtigen Aktivität ändern, indem Sie auf den aktuellen Status der verdächtigen Aktivität klicken und eine der folgenden Optionen auswählen: **Offen**, **Aufgelöst** oder **Verworfen**.
+Sie können den Status einer verdächtigen Aktivität ändern, indem Sie auf den aktuellen Status der verdächtigen Aktivität klicken und eine der folgenden Optionen auswählen: **Offen**, **Aufgelöst** oder **Verworfen**..
 
-## Siehe auch
-- [Unterstützung finden Sie in unserem Forum.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+## Weitere Informationen
+- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 - [Arbeiten mit ATA-Erkennungseinstellungen](working-with-detection-settings.md)
 - [Ändern der ATA-Konfiguration](modifying-ata-configuration.md)
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO1-->
 
 

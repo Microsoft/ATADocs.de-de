@@ -39,14 +39,12 @@ Wenn Sie die Konfiguration nach der ersten Installation und Bereitstellung von A
 
 -   [Ändern des Domänenverbindungskennworts](modifying-ata-config-dcpassword.md)
 
--   [Ändern des Namens des Netzwerkadapters für die Erfassung](modifying-ata-config-nicname.md)
-
-## Siehe auch
-- [Arbeiten mit der ATA-Konsole](/advanced-threat-analytics/understand/working-with-ata-console)
+## Weitere Informationen
+- [Arbeiten mit der ATA-Konsole](working-with-ata-console.md)
 - [Installieren von ATA](install-ata.md)
-- [Unterstützung finden Sie in unserem Forum.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO1-->
 
 

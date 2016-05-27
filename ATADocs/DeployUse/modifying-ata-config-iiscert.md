@@ -45,13 +45,13 @@ Führen Sie zum Ändern des von IIS für ATA Center verwendeten Zertifikats die 
 
 2.  Öffnen Sie den Internetinformationsdienste (IIS)-Manager.
 
-3.  Erweitern Sie den Namen des Servers und dann den Ordner **Sites**.
+3.  Erweitern Sie den Namen des Servers und dann den Ordner **Sites**..
 
-4.  Wählen Sie die Site „Microsoft ATA Console“ aus, und klicken Sie im Bereich **Aktionen** auf **Bindungen**.
+4.  Wählen Sie die Site „Microsoft ATA Console“ aus, und klicken Sie im Bereich **Aktionen** auf **Bindungen**..
 
     ![Aktion „Bindungen“ in ATA-Konsole](media/ATA-console-change-IP-bindings.jpg)
 
-5.  Wählen Sie **HTTPS** aus, und klicken Sie auf **Bearbeiten**.
+5.  Wählen Sie **HTTPS** aus, und klicken Sie auf **Bearbeiten**..
 
 6.  Wählen Sie unter **SSL-Zertifikat** das neue Zertifikat aus.
 
@@ -62,11 +62,11 @@ Führen Sie zum Ändern des von IIS für ATA Center verwendeten Zertifikats die 
 [Domänenverbindungskennwort »](modifying-ata-config-dcpassword.md)
 
 ## Siehe auch
-- [Arbeiten mit der ATA-Konsole](/advanced-threat-analytics/understand/working-with-ata-console)
+- [Arbeiten mit der ATA-Konsole](working-with-ata-console.md)
 - [Installieren von ATA](install-ata.md)
-- [Unterstützung finden Sie in unserem Forum.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO1-->
 
 

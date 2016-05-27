@@ -48,19 +48,25 @@ Die ATA-Gateways speichern die IP-Adresse der ATA Center-Instanz, mit der eine V
 
 1.  Öffnen Sie die ATA-Konsole.
 
-2.  Wählen Sie auf der Symbolleiste die Einstellungsoption und dann **Konfiguration** aus.
+2.  Wählen Sie auf der Symbolleiste die Einstellungsoption aus, und wählen Sie **Konfiguration** aus..
 
     ![Symbol der ATA-Konfigurationseinstellungen](media/ATA-config-icon.JPG)
 
-3.  Wählen Sie **ATA Center** aus.
+3.  Wählen Sie **Allgemein** aus..
 
 4.  Wählen Sie unter **ATA Center-Dienst – IP-Adresse: Port** eine der vorhandenen IP-Adressen aus, oder wählen Sie **Benutzerdefinierte IP-Adresse hinzufügen** aus, und geben Sie eine IP-Adresse ein.
 
-5.  Klicken Sie auf **Speichern**.
+5.  Klicken Sie auf **Speichern**..
 
 6.  Daraufhin wird eine Benachrichtigung über die Anzahl der ATA-Gateways angezeigt, die mit der neuesten Konfiguration synchronisiert wurden.
 
     ![Abbildung – synchronisierte ATA Center-Gateways](media/ATA-chge-IP-after-clicking-save.png)
+
+    >[!IMPORTANT]
+    >Bevor Sie die neue Konfiguration aktivieren, vergewissern Sie sich, dass alle ATA-Gateways mit der neuesten Konfiguration synchronisiert sind. Wird die neue Konfiguration aktiviert, bevor alle ATA-Gateways synchronisiert sind, kann es passieren, dass die ATA-Gateway nicht mehr ordnungsgemäß funktionieren. Ist mindestens eines der ATA-Gateways nicht synchronisiert, erhalten Sie diesen Fehler, wenn Sie auf „Aktivieren“ klicken:
+    >
+    >    ![Synchronisierungsfehler bei ATA-Gateways](media/ataGW-not-synced.png)
+
 
 7.  Nachdem alle ATA-Gateways synchronisiert wurden, klicken Sie auf **Aktivieren**, um die neue IP-Adresse zu aktivieren.
 
@@ -74,11 +80,11 @@ Die ATA-Gateways speichern die IP-Adresse der ATA Center-Instanz, mit der eine V
 
 
 ## Siehe auch
-- [Arbeiten mit der ATA-Konsole](/advanced-threat-analytics/understand/working-with-ata-console)
+- [Arbeiten mit der ATA-Konsole](working-with-ata-console.md)
 - [Installieren von ATA](install-ata.md)
-- [Unterstützung finden Sie in unserem Forum.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO1-->
 
 

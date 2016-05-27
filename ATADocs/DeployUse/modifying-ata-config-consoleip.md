@@ -36,7 +36,7 @@ Standardmäßig ist die URL der ATA-Konsole die IP-Adresse, die Sie beim Install
 
 Die URL wird in den folgenden Szenarios verwendet:
 
--   Installation von ATA-Gateways: Wenn ein ATA-Gateway installiert wird, registriert es sich bei ATA Center. Diese Registrierung erfolgt durch Herstellen einer Verbindung mit der ATA-Konsole. Wenn Sie einen vollqualifizierten Domänennamen (FQDN) für die URL der ATA-Konsole eingeben, müssen Sie sicherstellen, dass das ATA-Gateway den FQDN in die IP-Adresse auflösen kann, mit der die ATA-Konsole an eine IIS-Site gebunden ist. Zudem wird die URL zum Erstellen der Verknüpfung mit der ATA-Konsole auf den ATA-Gateways verwendet.
+-   Installation von ATA-Gateways: Wenn ein ATA-Gateway installiert wird, registriert es sich bei ATA Center. Diese Registrierung erfolgt durch Herstellen einer Verbindung mit der ATA-Konsole. Wenn Sie einen vollqualifizierten Domänennamen (FQDN) für die URL der ATA-Konsole eingeben, müssen Sie sicherstellen, dass das ATA-Gateway den FQDN in die IP-Adresse auflösen kann, an die die ATA-Konsole in IIS gebunden ist. Zudem wird die URL zum Erstellen der Verknüpfung mit der ATA-Konsole auf den ATA-Gateways verwendet.
 
 -   Warnungen: Wenn ATA eine SIEM- oder E-Mail-Warnung sendet, enthält diese einen Link zur jeweiligen verdächtigen Aktivität. Dabei bildet die URL der ATA-Konsole den Hostteil des Links.
 
@@ -53,9 +53,9 @@ Führen Sie zum Ändern der von IIS für die ATA-Konsole verwendeten IP-Adresse 
 
 2.  Öffnen Sie den Internetinformationsdienste-Manager (Internet Information Services (IIS) Manager).
 
-3.  Erweitern Sie den Namen des Servers und dann den Ordner **Sites**.
+3.  Erweitern Sie den Namen des Servers und dann den Ordner **Sites**..
 
-4.  Wählen Sie die Site „Microsoft ATA Console“ aus, und klicken Sie im Bereich **Aktionen** auf **Bindungen**.
+4.  Wählen Sie die Site „Microsoft ATA Console“ aus, und klicken Sie im Bereich **Aktionen** auf **Bindungen**..
 
     ![Abbildung – Aktion „Bindungen“ in ATA-Konsole](media/ATA-console-change-IP-bindings.jpg)
 
@@ -63,15 +63,15 @@ Führen Sie zum Ändern der von IIS für die ATA-Konsole verwendeten IP-Adresse 
 
     ![Abbildung: Bearbeiten der Sitebindung](media/ATA-change-console-IP.jpg)
 
-6.  Klicken Sie im Bereich **Aktion** unter **Websites verwalten** auf **Neu starten**.
+6.  Klicken Sie im Bereich **Aktion** unter **Websites verwalten** auf **Neu starten**..
 
 7.  Öffnen Sie eine Administratorbefehlszeile, und geben Sie die folgenden Befehle zum Aktualisieren des HTTP.SYS-Treibers ein:
 
-    -   Hinzufügen der neuen IP-Adresse: `netsh http add iplisten ipaddress=newipaddress`
+    -   Hinzufügen der neuen IP-Adresse:  `netsh http add iplisten ipaddress=newipaddress`
 
-    -   Überprüfen, ob die neue Adresse verwendet wird: `netsh http show iplisten`
+    -   Überprüfen, ob die neue Adresse verwendet wird:  `netsh http show iplisten`
 
-    -   Löschen der alten IP-Adresse: `netsh http delete iplisten ipaddress=oldipaddress`
+    -   Löschen der alten IP-Adresse:  `netsh http delete iplisten ipaddress=oldipaddress`
 
 8.  Wenn die URL der ATA-Konsole noch eine IP-Adresse verwendet, ändern Sie die URL in die neue IP-Adresse, und laden Sie vor der Bereitstellung neuer ATA-Gateways das ATA-Gateway-Setuppaket herunter.
 
@@ -83,11 +83,11 @@ Führen Sie zum Ändern der von IIS für die ATA-Konsole verwendeten IP-Adresse 
 
 
 ## Siehe auch
-- [Arbeiten mit der ATA-Konsole](/advanced-threat-analytics/understand/working-with-ata-console)
+- [Arbeiten mit der ATA-Konsole](working-with-ata-console.md)
 - [Installieren von ATA](install-ata.md)
-- [Unterstützung finden Sie in unserem Forum.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO1-->
 
 

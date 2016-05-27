@@ -29,10 +29,10 @@ ms.suite: ems
 
 >[!div class="step-by-step"]
 [« IIS-Zertifikat](modifying-ata-config-iiscert.md)
-[Name des Netzwerkadapters für die Erfassung »](modifying-ata-config-nicname.md)
+
 
 ## Ändern des Domänenverbindungskennworts
-Wenn Sie Domänenverbindungskennwort ändern, stellen Sie sicher, dass das eingegebene Kennwort korrekt ist. Andernfalls wird der ATA-Dienst auf den ATA-Gateways nicht mehr ausgeführt.
+Wenn Sie das Domänenverbindungskennwort ändern, stellen Sie sicher, dass das eingegebene Kennwort korrekt ist. Andernfalls wird der ATA-Gateway-Dienst auf den ATA-Gateways nicht mehr ausgeführt.
 
 Wenn Sie vermuten, dass dies der Fall ist, prüfen Sie, ob auf dem ATA-Gateway in der Datei „Microsoft.Tri.Gateway-Errors.log“ der folgende Eintrag vorhanden ist:
 `The supplied credential is invalid.`
@@ -41,30 +41,29 @@ Um dies zu korrigieren, führen Sie die folgenden Schritte zum Ändern des Domä
 
 1.  Öffnen Sie die ATA-Konsole auf dem ATA-Gateway.
 
-2.  Wählen Sie auf der Symbolleiste die Einstellungsoption und dann **Konfiguration** aus.
+2.  Wählen Sie auf der Symbolleiste die Einstellungsoption aus, und wählen Sie **Konfiguration** aus..
 
     ![Symbol der ATA-Konfigurationseinstellungen](media/ATA-config-icon.JPG)
 
-3.  Wählen Sie **ATA-Gateways** aus.
+3.  Wählen Sie **Allgemein** aus..
 
     ![Abbildung – Ändern des Kennworts für ATA-Gateway](media/ATA-GW-change-DC-password.JPG)
 
-4.  Ändern Sie unter **Domänenverbindungseinstellungen** das Kennwort.
+4.  Unter Sie unter **Allgemein** das Kennwort.
 
-5.  Klicken Sie auf **Speichern**.
+5.  Klicken Sie auf **Speichern**..
 
 6.  Überprüfen Sie nach dem Ändern des Kennworts, ob der ATA-Gatewaydienst auf den ATA-Gatewayservern ausgeführt wird.
 
 >[!div class="step-by-step"]
 [« IIS-Zertifikat](modifying-ata-config-iiscert.md)
-[Name des Netzwerkadapters für die Erfassung »](modifying-ata-config-nicname.md)
 
-## Siehe auch
-- [Arbeiten mit der ATA-Konsole](/advanced-threat-analytics/understand/working-with-ata-console)
+## Weitere Informationen
+- [Arbeiten mit der ATA-Konsole](working-with-ata-console.md)
 - [Installieren von ATA](install-ata.md)
-- [Unterstützung finden Sie in unserem Forum.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO1-->
 
 
