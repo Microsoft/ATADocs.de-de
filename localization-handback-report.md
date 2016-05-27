@@ -1,11 +1,39 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 0
+ Total Files | 2
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [ATADocs\PlanDesign\ata-architecture.md](https://github.com/Microsoft/ATADocs-pr/blob/224f3c29c4a3e0ff62b9b3f42837c648dc838e3c/ATADocs/PlanDesign/ata-architecture.md) | InSyncHandedBackSuccess | [Details](#b7f4b07796ee90d45b40bc00b749b56c5f11c83b223)
+ [ATADocs\Understand\ata-technical-faq.md](https://github.com/Microsoft/ATADocs-pr/blob/283d8383a6e7674e3a9fba06f3a8f73dcb038ea2/ATADocs/Understand/ata-technical-faq.md) | InSyncHandedBackSuccess | [Details](#a5efa3f2b838af537126945aaf71ae522ce8a8d2423)
 
 ## Item Details
+##### <a name='b7f4b07796ee90d45b40bc00b749b56c5f11c83b223'></a> Source: [ATADocs\PlanDesign\ata-architecture.md](https://github.com/Microsoft/ATADocs-pr/blob/224f3c29c4a3e0ff62b9b3f42837c648dc838e3c/ATADocs/PlanDesign/ata-architecture.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [ATADocs\PlanDesign\ata-architecture.md](https://github.com/Microsoft/ATADocs-pr.de-de/blob/3c4f04458e2e716e7996e85e7c0290cdbb4e6081/ATADocs/PlanDesign/ata-architecture.md)
+* Handoff File: [ata-architecture.f3061a537234611f48c7c71f24b061804ad31b68.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/48794625c33284139742f5d3d2eb0df3f31042e7/ol-handoff/Microsoft/ATADocs-pr.de-de/master/ata-architecture.f3061a537234611f48c7c71f24b061804ad31b68.de-de.xlf)
+* Handoff Datetime: 2016-05-09 16:56:27
+* Handoff Reason: Include
+* Archive File: [ata-architecture.f3061a537234611f48c7c71f24b061804ad31b68.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/db381d4ec1c45c874f52091bf3e8e8be872e8c04/ol-handoff/Microsoft/ATADocs-pr.de-de/master/archive/ata-architecture.f3061a537234611f48c7c71f24b061804ad31b68.de-de.xlf)
+* Archive Datetime: 2016-05-20 00:30:19
+* Handback File: [ata-architecture.f3061a537234611f48c7c71f24b061804ad31b68.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/50f583a988ead34c1488490bca256db4da1d4384/ol-handback/Microsoft/ATADocs-pr.de-de/master/ata-architecture.f3061a537234611f48c7c71f24b061804ad31b68.de-de.xlf)
+* Handback Datetime: 2016-05-27 12:37:09
+* [Back to Top](#report-top)
+
+##### <a name='a5efa3f2b838af537126945aaf71ae522ce8a8d2423'></a> Source: [ATADocs\Understand\ata-technical-faq.md](https://github.com/Microsoft/ATADocs-pr/blob/283d8383a6e7674e3a9fba06f3a8f73dcb038ea2/ATADocs/Understand/ata-technical-faq.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [ATADocs\Understand\ata-technical-faq.md](https://github.com/Microsoft/ATADocs-pr.de-de/blob/3c4f04458e2e716e7996e85e7c0290cdbb4e6081/ATADocs/Understand/ata-technical-faq.md)
+* Handoff File: [ata-technical-faq.938a847200169f6a473355460f812f482e6eb068.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/87d25a09ab4fbcc6bd10c55d7bc79dea106fc458/ol-handoff/Microsoft/ATADocs-pr.de-de/master/ata-technical-faq.938a847200169f6a473355460f812f482e6eb068.de-de.xlf)
+* Handoff Datetime: 2016-05-18 17:33:21
+* Handoff Reason: Include
+* Archive File: [ata-technical-faq.938a847200169f6a473355460f812f482e6eb068.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/db381d4ec1c45c874f52091bf3e8e8be872e8c04/ol-handoff/Microsoft/ATADocs-pr.de-de/master/archive/ata-technical-faq.938a847200169f6a473355460f812f482e6eb068.de-de.xlf)
+* Archive Datetime: 2016-05-20 00:30:19
+* Handback File: [ata-technical-faq.938a847200169f6a473355460f812f482e6eb068.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/50f583a988ead34c1488490bca256db4da1d4384/ol-handback/Microsoft/ATADocs-pr.de-de/master/ata-technical-faq.938a847200169f6a473355460f812f482e6eb068.de-de.xlf)
+* Handback Datetime: 2016-05-27 12:37:09
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
