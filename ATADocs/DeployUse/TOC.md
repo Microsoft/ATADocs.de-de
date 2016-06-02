@@ -5,7 +5,6 @@
 ### [Konfigurieren der Portspiegelung](configure-port-mirroring.md)
 ### [Überprüfen der Portspiegelung](validate-port-mirroring.md)
 ### [Konfigurieren der Ereignissammlung](configure-event-collection.md)
-### [Konfigurieren von Software auf Ihren Servern](install-ata-preinstall-software.md)
 ## [Installieren von ATA](install-ata.md)
 ### [Schritt 1](install-ata-step1.md)
 ### [Schritt 2](install-ata-step2.md)
@@ -32,6 +31,6 @@
 # [Problembehandlung](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs)
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO1-->
 
 

@@ -32,10 +32,10 @@ Vor der Installation von ATA müssen die folgenden Schritte ausgeführt werden:
 1. [Konfigurieren der Portspiegelung](configure-port-mirroring.md)
 2. [Überprüfen der Portspiegelung](validate-port-mirroring.md)
 3. [Konfigurieren der Ereignissammlung](configure-event-collection.md)
-4. [Konfigurieren von Software auf Ihren Servern](install-ata-preinstall-software.md)
 
 
-## Weitere Informationen
+
+## Siehe auch
 
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
@@ -43,6 +43,6 @@ Vor der Installation von ATA müssen die folgenden Schritte ausgeführt werden:
 
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO1-->
 
 
