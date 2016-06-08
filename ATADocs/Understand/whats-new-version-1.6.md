@@ -48,24 +48,19 @@ Das Update auf ATA 1.6 bietet Verbesserungen in folgenden Bereichen:
 ### Neue Erkennungen
 
 
-- **Böswillige Anforderung privater Informationen im Rahmen der Datensicherheit**
-Datenschutz-API (Data Protection AP, DPAPI) ist ein kennwortbasierter Datenschutzdienst. Dieser Schutzdienst wird von verschiedenen Clientanwendungen verwendet, die vertrauliche Informationen eines Benutzers, etwa Websitekennwörter und Anmeldeinformationen für Dateifreigaben, speichern. Um Fälle mit Kennwortverlust zu unterstützen, können Benutzer geschützte Daten mithilfe eines Wiederherstellungsschlüssels entschlüsseln, der nichts mit dem jeweiligen Kennwort zu tun hat. In einer Domänenumgebung können externe Angreifer den Wiederherstellungsschlüssel stehlen und diesen dazu verwenden, geschützte Daten auf allen zur Domäne gehörenden Computern zu entschlüsseln.
+- **Böswillige Anforderung privater Informationen im Rahmen der Datensicherheit** Die Datenschutz-API (DPAPI) ist ein kennwortbasierter Datenschutzdienst. Dieser Schutzdienst wird von verschiedenen Clientanwendungen verwendet, die vertrauliche Informationen eines Benutzers, etwa Websitekennwörter und Anmeldeinformationen für Dateifreigaben, speichern. Um Fälle mit Kennwortverlust zu unterstützen, können Benutzer geschützte Daten mithilfe eines Wiederherstellungsschlüssels entschlüsseln, der nichts mit dem jeweiligen Kennwort zu tun hat. In einer Domänenumgebung können externe Angreifer den Wiederherstellungsschlüssel stehlen und diesen dazu verwenden, geschützte Daten auf allen zur Domäne gehörenden Computern zu entschlüsseln.
 
 
-- **net session-Enumeration**
-Reconnaissance ist eine Hauptstufe in der erweiterten Kette der Angriffsabwehr. Domänencontroller (DCs) fungieren als Dateiserver für die Verteilung von Gruppenrichtlinienobjekten über das SMB-Protokoll (Server Message Block). Im Rahmen der Reconnaissancephase können Angreifer den DC hinsichtlich aller aktiven SMB-Sitzungen auf dem Server abfragen. Dies ermöglicht ihnen Zugriff auf alle Benutzer und IP-Adressen, die diesen SMB-Sitzungen zugeordnet sind. SMB-Sitzungsenumeration kann von Angreifern verwendet werden, auf vertrauliche Konten abzuzielen, wodurch sie sich quer (seitlich) durch das Netzwerk bewegen können.
+- **net session-Enumeration** Reconnaissance ist eine Hauptstufe in der erweiterten Kette der Angriffsabwehr. Domänencontroller (DCs) fungieren als Dateiserver für die Verteilung von Gruppenrichtlinienobjekten über das SMB-Protokoll (Server Message Block). Im Rahmen der Reconnaissancephase können Angreifer den DC hinsichtlich aller aktiven SMB-Sitzungen auf dem Server abfragen. Dies ermöglicht ihnen Zugriff auf alle Benutzer und IP-Adressen, die diesen SMB-Sitzungen zugeordnet sind. SMB-Sitzungsenumeration kann von Angreifern verwendet werden, auf vertrauliche Konten abzuzielen, wodurch sie sich quer (seitlich) durch das Netzwerk bewegen können.
 
 
-- **Böswillige Replikationsanforderungen**
-In Active Directory-Umgebungen erfolgt Replikation regelmäßig zwischen Domänencontrollern. Ein Angreifer kann eine Active Directory-Replikationsanforderung (manchmal durch Annehmen der Identität eines Domänencontrollers) vortäuschen, wodurch es dem Angreifer gestattet wird, die in Active Directory gespeicherten Daten abzurufen, einschließlich Kennworthashes, ohne auffallendere Techniken wie Volumeschattenkopie zu nutzen.
+- **Böswillige Replikationsanforderungen** In Active Directory-Umgebungen erfolgt regelmäßig eine Replikation zwischen Domänencontrollern. Ein Angreifer kann eine Active Directory-Replikationsanforderung (manchmal durch Annehmen der Identität eines Domänencontrollers) vortäuschen, wodurch es dem Angreifer gestattet wird, die in Active Directory gespeicherten Daten abzurufen, einschließlich Kennworthashes, ohne auffallendere Techniken wie Volumeschattenkopie zu nutzen.
 
 
-- **Erkennung des MS11-013-Sicherheitsrisikos**
-Es gibt eine Erhöhung des Berechtigungssicherheitsrisikos in Kerberos, die es für bestimmte Aspekte eines Kerberos-Diensttickets ermöglicht, dass es gefälscht wird. Ein böswilliger Benutzer oder ein Angreifer, der dieses Sicherheitsrisiko Anfälligkeiten erfolgreich ausnutzt, kann ein Token mit erhöhten Rechten auf dem Domänencontroller abrufen.
+- **Erkennung des MS11-013-Sicherheitsrisikos** Es gibt eine Erhöhung des Berechtigungssicherheitsrisikos in Kerberos, die es für bestimmte Aspekte eines Kerberos-Diensttickets ermöglicht, dass es gefälscht wird. Ein böswilliger Benutzer oder ein Angreifer, der dieses Sicherheitsrisiko Anfälligkeiten erfolgreich ausnutzt, kann ein Token mit erhöhten Rechten auf dem Domänencontroller abrufen.
 
 
-- **Ungewöhnliche Protokollimplementierung**
-Authentifizierungsanforderungen (Kerberos oder NTLM) erfolgen in der Regel über einen standardmäßigen Satz von Methoden und Protokollen. Für eine erfolgreiche Authentifizierung muss die Anforderung jedoch nur einen bestimmten Satz von Anforderungen erfüllen. Angreifer können diese Protokolle mit geringfügigen Abweichungen von der Standardimplementierung in der Umgebung implementieren. Diese Abweichungen können die Anwesenheit eines Angreifers kennzeichnen, der versucht, Angriffe wie Pass-The-Hash, Brute-Force oder andere auszuführen.
+- **Ungewöhnliche Protokollimplementierung** Authentifizierungsanforderungen (Kerberos oder NTLM) erfolgen in der Regel über einen standardmäßigen Satz von Methoden und Protokollen. Für eine erfolgreiche Authentifizierung muss die Anforderung jedoch nur einen bestimmten Satz von Anforderungen erfüllen. Angreifer können diese Protokolle mit geringfügigen Abweichungen von der Standardimplementierung in der Umgebung implementieren. Diese Abweichungen können die Anwesenheit eines Angreifers kennzeichnen, der versucht, Angriffe wie Pass-The-Hash, Brute-Force oder andere auszuführen.
 
 
 ### Verbesserungen an vorhandenen Erkennungen
@@ -108,11 +103,13 @@ Vor dem Aktualisieren von ATA auf Version 1.6 müssen Sie den folgenden Registri
 ### Migrationsfehler, wenn von ATA 1.5 aktualisiert wird
 Beim Aktualisieren auf ATA 1.6 kann der Aktualisierungsvorgang mit dem folgenden Fehlercode fehlschlagen:
 
-![Fehler beim Aktualisieren auf ATA 1.6](http://i.imgur.com/QrLSApr.png)
-Wird dieser Fehler angezeigt, überprüfen Sie das Bereitstellungsprotokoll in **C:\Benutzer\<Benutzer>\AppData\Local\Temp**, und suchen Sie nach der folgenden Ausnahme:
+![Fehler beim Update auf ATA 1.6](http://i.imgur.com/QrLSApr.png) Wird dieser Fehler angezeigt, überprüfen Sie das Bereitstellungsprotokoll in **C:\Benutzer\<Benutzer>\AppData\Local\Temp**, und suchen Sie nach der folgenden Ausnahme:
 
     System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> MongoDB.Driver.MongoWriteException: A write operation resulted in an error. E11000 duplicate key error index: ATA.UniqueEntityProfile.$_id_ dup key: { : "<guid>" } ---> MongoDB.Driver.MongoBulkWriteException`1: A bulk write operation resulted in one or more errors.  E11000 duplicate key error index: ATA.UniqueEntityProfile.$_id_ dup key: { : " <guid> " }
 
+Möglicherweise wird auch dieser Fehler angezeigt: System.ArgumentNullException: Der Wert darf nicht NULL sein.
+    
+Wenn einer dieser Fehler angezeigt wird, führen Sie die folgenden Schritte zur Problemumgehung aus.
 
 **Problemumgehung**: 
 
@@ -130,7 +127,14 @@ Wird dieser Fehler angezeigt, überprüfen Sie das Bereitstellungsprotokoll in *
 7.  Überprüfen Sie die Protokolle, um sich zu vergewissern, dass das Produkt ohne Fehler ausgeführt wird.
 8.  [Herunterladen](http://aka.ms/ataremoveduplicateprofiles "Laden Sie das Tool „RemoveDuplicateProfiles.exe“ herunter"), und kopieren Sie es in den Hauptinstallationspfad (%ProgramFiles%\Microsoft Advanced Threat Analytics\Center).
 9.  Führen Sie „RemoveDuplicateProfiles.exe“ von einer Eingabeaufforderung mit erhöhten Rechten aus, und warten Sie, bis das Tool erfolgreich abgeschlossen wurde.
-10. Aktualisieren Sie auf ATA 1.6.
+10. Fahren Sie wie folgt fort: …\Microsoft Advanced Threat Analytics\Center\MongoDB\bin: **Mongo ATA**; geben Sie folgenden Befehl ein:
+
+    db.SuspiciousActivities.remove({ "_t" : "RemoteExecutionSuspiciousActivity", "DetailsRecords" : { "$elemMatch" : { "ReturnCode" : null } } }, { "_id" : 1 });
+
+![Problemumgehung beim Update](http://i.imgur.com/Nj99X2f.png)
+
+Es sollte ein WriteResult({ "nRemoved" : XX })-Wert zurückgegeben werden, wobei „XX“ der Anzahl von verdächtigen Aktivitäten entspricht, die gelöscht wurden. Wenn der Wert größer als 0 ist, beenden Sie die Eingabeaufforderung, und fahren Sie mit dem Updatevorgang fort.
+
 
 ### .NET Framework 4.6.1 erfordert einen Neustart des Servers
 
@@ -147,6 +151,6 @@ Im ATA-Aktualisierungsvorgang werden die Daten für den Fall, dass Sie diese fü
 
 [Aktualisieren von ATA auf Version 1.6 – Migrationshandbuch](ata-update-1.6-migration-guide.md)
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO1-->
 
 
