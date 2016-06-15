@@ -2,7 +2,7 @@
 # required metadata
 
 title: Festlegen von ATA-Benachrichtigungen | Microsoft Advanced Threat Analytics
-description: Beschreibt, wie ATA für den Versand von Benachrichtigungen (per E-Mail oder ATA-Ereignisweiterleitung) bei verdächtigen Aktivitäten konfiguriert werden kann 
+description: Beschreibt, wie ATA-Warnungen festgelegt werden, damit Sie bei verdächtigen Aktivitäten benachrichtigt werden.
 keywords:
 author: rkarlin
 manager: stevenpo
@@ -76,6 +76,6 @@ Um Syslog-Benachrichtigungen zu erhalten, legen Sie Folgendes fest:
 [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO1-->
 
 
