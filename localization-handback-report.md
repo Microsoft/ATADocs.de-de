@@ -1,26 +1,11 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 1
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [ATADocs\DeployUse\setting-ata-alerts.md](https://github.com/Microsoft/ATADocs-pr/blob/3e8caf366d7121e83e5726375c8e1eb9a49b0b12/ATADocs/DeployUse/setting-ata-alerts.md) | InSyncHandedBackSuccess | [Details](#6fc3c03e0933203437b0b3885f0b9f19539fed05120)
 
 ## Item Details
-##### <a name='6fc3c03e0933203437b0b3885f0b9f19539fed05120'></a> Source: [ATADocs\DeployUse\setting-ata-alerts.md](https://github.com/Microsoft/ATADocs-pr/blob/3e8caf366d7121e83e5726375c8e1eb9a49b0b12/ATADocs/DeployUse/setting-ata-alerts.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [ATADocs\DeployUse\setting-ata-alerts.md](https://github.com/Microsoft/ATADocs-pr.de-de/blob/7090f07e526097b5748cb426915cc5d3b42ddfab/ATADocs/DeployUse/setting-ata-alerts.md)
-* Handoff File: [setting-ata-alerts.451097ef44392d0ea58f76d60633ef3a1b47ee2d.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/8062a43989302b7460a9070d4d2b7f3f407e3a24/ol-handoff/Microsoft/ATADocs-pr.de-de/master/setting-ata-alerts.451097ef44392d0ea58f76d60633ef3a1b47ee2d.de-de.xlf)
-* Handoff Datetime: 2016-06-07 23:03:11
-* Handoff Reason: Include
-* Archive File: [setting-ata-alerts.451097ef44392d0ea58f76d60633ef3a1b47ee2d.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/08f0a3ce2d335fb76414d8c3f6081541a77df73e/ol-handoff/Microsoft/ATADocs-pr.de-de/master/archive/setting-ata-alerts.451097ef44392d0ea58f76d60633ef3a1b47ee2d.de-de.xlf)
-* Archive Datetime: 2016-06-09 00:47:29
-* Handback File: [setting-ata-alerts.451097ef44392d0ea58f76d60633ef3a1b47ee2d.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/95b43477df3be35271b7ad3723628c28a1ffcddc/ol-handback/Microsoft/ATADocs-pr.de-de/master/setting-ata-alerts.451097ef44392d0ea58f76d60633ef3a1b47ee2d.de-de.xlf)
-* Handback Datetime: 2016-06-15 16:38:33
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
