@@ -1,6 +1,6 @@
 {
   "LastProcessedCommit": "202953e179d021e80d4020e456bea4adc4a11284",
-  "LastTranslatedCommit": "7090f07e526097b5748cb426915cc5d3b42ddfab",
+  "LastTranslatedCommit": "a2bcbc62f43784b543db9835ba13814eeca319ed",
   "Items": {
     "19ffcb31b9fc0f69362ca0b4fd2e2fdb06dc11d6": {
       "FileHash": "19ffcb31b9fc0f69362ca0b4fd2e2fdb06dc11d6",
@@ -23584,14 +23584,14 @@
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
-      "TargetFileCommit": null,
-      "TargetFilePath": null,
-      "HandbackFilePath": null,
-      "HandbackFileCommit": null,
-      "HandbackDateTime": "0001-01-01T00:00:00",
+      "TargetFileCommit": "a2bcbc62f43784b543db9835ba13814eeca319ed",
+      "TargetFilePath": "ATADocs\\index.md",
+      "HandbackFilePath": "ol-handback\\Microsoft\\ATADocs-pr.de-de\\master\\index.cc3e62ac6c9901731450d753a0ecebc990048809.de-de.xlf",
+      "HandbackFileCommit": "2c186e9cd37cd5597d39b8e95a3b1f641ef3ffef",
+      "HandbackDateTime": "2016-06-24T16:43:10.4515578Z",
       "HandbackException": null,
       "HandbackFailureTimes": 0,
-      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "UpdatedDateTime": "2016-06-24T16:43:10.4515578Z",
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
