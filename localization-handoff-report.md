@@ -1,11 +1,29 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 0
+ Total Files | 1
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [ATADocs\Understand\ata-update-1.6-migration-guide.md](https://github.com/Microsoft/ATADocs-pr/blob/e756cbc54c12cc09e3801850baca293495a1a1e2/ATADocs/Understand/ata-update-1.6-migration-guide.md) | OutofSyncHandedBackSuccess | [Details](#cbed991d201eed0a7124efb7e484cc6e222348da425)
 
 ## Item Details
+##### <a name='cbed991d201eed0a7124efb7e484cc6e222348da425'></a> Source: [ATADocs\Understand\ata-update-1.6-migration-guide.md](https://github.com/Microsoft/ATADocs-pr/blob/e756cbc54c12cc09e3801850baca293495a1a1e2/ATADocs/Understand/ata-update-1.6-migration-guide.md)
+* Status: OutofSyncHandedBackSuccess
+* Target File: 
+* Handoff File: [ata-update-1.6-migration-guide.fe715980eb0702f6dda7862931a6921ccd723d15.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/dec24b45e3843e8d4261832ded93702d1e15a3eb/ol-handoff/Microsoft/ATADocs-pr.de-de/master/ata-update-1.6-migration-guide.fe715980eb0702f6dda7862931a6921ccd723d15.de-de.xlf)
+* Handoff Datetime: 2016-06-28 06:46:18
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [ATADocs\Understand\ata-update-1.6-migration-guide.md](https://github.com/Microsoft/ATADocs-pr.de-de/blob/3c3db87dadcbaaceeebc79ea4092bb596fbbdd52/ATADocs/Understand/ata-update-1.6-migration-guide.md)
+* Current Handback File: [ata-update-1.6-migration-guide.fe715980eb0702f6dda7862931a6921ccd723d15.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/27d4137ec25587e818fb610feaba5971c8fec955/ol-handback/Microsoft/ATADocs-pr.de-de/master/ata-update-1.6-migration-guide.fe715980eb0702f6dda7862931a6921ccd723d15.de-de.xlf)
+* Current Handback Datetime: 2016-06-08 13:08:13
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
