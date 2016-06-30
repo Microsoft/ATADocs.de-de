@@ -1,5 +1,5 @@
 {
-  "LastProcessedCommit": "9dd9cf214d51f5750a8e91b86824784304b86e64",
+  "LastProcessedCommit": "d564616deec88b44c6007eb30a0f536cce789a6f",
   "LastTranslatedCommit": "a2bcbc62f43784b543db9835ba13814eeca319ed",
   "Items": {
     "19ffcb31b9fc0f69362ca0b4fd2e2fdb06dc11d6": {
@@ -26334,6 +26334,41 @@
       "HandoffFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.de-de\\master\\index.cc3e62ac6c9901731450d753a0ecebc990048809.de-de.xlf",
       "HandoffFileCommit": "dca1a5401fa76f802435ed28b5b872ba9dbbf538",
       "HandoffDateTime": "2016-06-29T18:16:25.0079044Z",
+      "HandoffPriority": "",
+      "HandoffException": null,
+      "HandoffFailureTimes": 0,
+      "TargetFileCommit": null,
+      "TargetFilePath": null,
+      "HandbackFilePath": null,
+      "HandbackFileCommit": null,
+      "HandbackDateTime": "0001-01-01T00:00:00",
+      "HandbackException": null,
+      "HandbackFailureTimes": 0,
+      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": null,
+      "ArchiveFileCommit": null,
+      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
+    },
+    "da887431d8e63a7ae8ceeb3e7e22011d356e3590": {
+      "FileHash": "da887431d8e63a7ae8ceeb3e7e22011d356e3590",
+      "SourceFileCommit": "1f85b9a0f51bd18edaa91ea208d6e6c7c7de56cc",
+      "SourceFilePath": "ATADocs\\PlanDesign\\ata-prerequisites.md",
+      "HandoffReason": 1,
+      "DependencyFrom": null,
+      "TokenReference": null,
+      "FilePathList": [
+        "ATADocs\\PlanDesign\\ata-prerequisites.md"
+      ],
+      "HasMetadata": true,
+      "TranslationType": 1,
+      "HandoffFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.de-de\\master\\ata-prerequisites.79e9e750461cccf39f17f01df458a3eb6f3e6c8b.de-de.xlf",
+      "HandoffFileCommit": "14e95eca62b084fb963854dfba7d396dfe6e1ceb",
+      "HandoffDateTime": "2016-06-30T15:12:16.4766614Z",
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
