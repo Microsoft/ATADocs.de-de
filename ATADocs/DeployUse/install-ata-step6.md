@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Installieren von ATA | Microsoft Advanced Threat Analytics
 description: Im letzten Schritt beim Installieren von ATA konfigurieren Sie die Subnetze mit kurzer Leasedauer und den Honeytoken-Benutzer.
-keywords:
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 76305bc5f55e956c787fe3e8bd954a56f40fc56f
+
 
 ---
 
@@ -42,7 +36,7 @@ Subnetze mit kurzer Leasedauer sind Subnetze, bei denen die IP-Adresszuweisung s
 3.  Geben Sie für die Honeytoken-Konto-SIDs die SID für das Benutzerkonto ein, das keine Netzwerkaktivität aufweist, und klicken Sie dann auf das Pluszeichen. Beispiel: `S-1-5-21-72081277-1610778489-2625714895-10511`.
 
     > [!NOTE]
-    > Um die SID für einen Benutzer zu suchen, führen Sie das Windows PowerShell-Cmdlet `Get-ADUser UserName` aus.
+    > Die SID für einen Benutzer finden Sie, indem Sie in der ATA-Konsole nach dem Benutzer suchen und dann auf die Registerkarte **Kontoinformationen** klicken. 
 
 4.  Konfigurieren von Ausschlüssen: Sie können in der Konfiguration festlegen, dass IP-Adressen von bestimmten verdächtigen Aktivitäten ausgeschlossen werden. Weitere Informationen finden Sie unter [Arbeiten mit ATA-Erkennungseinstellungen](working-with-detection-settings.md).
 
@@ -54,20 +48,22 @@ Damit haben Sie Microsoft Advanced Threat Analytics erfolgreich bereitgestellt.
 
 Sie können nun die Angriffszeitleiste auf erkannte verdächtige Aktivitäten prüfen sowie nach Benutzern oder Computern suchen und deren Profile anzeigen.
 
-Denken Sie daran, dass es mindestens drei Wochen dauert, bis ATA Verhaltensprofile erstellt. Somit werden während der ersten drei Wochen keine verdächtigen Aktivitäten angezeigt.
+ATA startet sofort die automatische Überprüfung auf verdächtige Aktivitäten. Einige Aktivitäten, beispielsweise bestimmtes verdächtiges Verhalten, ist erst wieder verfügbar, nachdem ATA Verhaltensprofile erstellen konnte (nach mindestens drei Wochen).
 
 
 >[!div class="step-by-step"]
 [« Schritt 5](install-ata-step5.md)
 
 
-## Siehe auch
+## Weitere Informationen
 
-- [Unterstützung finden Sie in unserem Forum.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
-- [Konfigurieren der Ereignissammlung](/advanced-threat-analytics/plandesign/configure-event-collection)
-- [Voraussetzungen für ATA](/advanced-threat-analytics/plandesign/ata-prerequisites)
+- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [Konfigurieren der Ereignissammlung](configure-event-collection.md)
+- [Voraussetzungen für ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
-<!--HONumber=Apr16_HO2-->
+
+
+<!--HONumber=Jun16_HO4-->
 
 
