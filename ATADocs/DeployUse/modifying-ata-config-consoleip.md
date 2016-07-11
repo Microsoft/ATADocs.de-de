@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Ändern der ATA-Konfiguration – IP-Adresse der ATA-Konsole | Microsoft Advanced Threat Analytics
-description: Beschreibt, wie die IP-Adresse der ATA-Konsole geändert wird, über die eine Verknüpfung mit der ATA-Konsole auf den ATA-Gateways erstellt wird.
-keywords:
+title: "Ändern der ATA-Konfiguration – IP-Adresse der ATA-Konsole | Microsoft Advanced Threat Analytics"
+description: "Beschreibt, wie die IP-Adresse der ATA-Konsole geändert wird, über die eine Verknüpfung mit der ATA-Konsole auf den ATA-Gateways erstellt wird."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,23 +10,19 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 50118465-df34-4e04-b0cc-48808b6a96b1
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: ee775e66de1a56b5270b0d32c7d5ca33d4d7980c
+
 
 ---
 
 # Ändern der ATA-Konfiguration – IP-Adresse der ATA-Konsole
 
 >[!div class="step-by-step"]
-[« Zertifikat für ATA Center](modifying-ata-config-centercert.md)
+[« Zertifikat von ATA Center](modifying-ata-config-centercert.md)
 [IIS-Zertifikat »](modifying-ata-config-iiscert.md)
 
 ## Ändern der IP-Adresse der ATA-Konsole
@@ -53,9 +47,9 @@ Führen Sie zum Ändern der von IIS für die ATA-Konsole verwendeten IP-Adresse 
 
 2.  Öffnen Sie den Internetinformationsdienste-Manager (Internet Information Services (IIS) Manager).
 
-3.  Erweitern Sie den Namen des Servers und dann den Ordner **Sites**..
+3.  Erweitern Sie den Namen des Servers und dann den Ordner **Sites**.
 
-4.  Wählen Sie die Site „Microsoft ATA Console“ aus, und klicken Sie im Bereich **Aktionen** auf **Bindungen**..
+4.  Wählen Sie die Site „Microsoft ATA Console“ aus, und klicken Sie im Bereich **Aktionen** auf **Bindungen**.
 
     ![Abbildung – Aktion „Bindungen“ in ATA-Konsole](media/ATA-console-change-IP-bindings.jpg)
 
@@ -63,7 +57,7 @@ Führen Sie zum Ändern der von IIS für die ATA-Konsole verwendeten IP-Adresse 
 
     ![Abbildung: Bearbeiten der Sitebindung](media/ATA-change-console-IP.jpg)
 
-6.  Klicken Sie im Bereich **Aktion** unter **Websites verwalten** auf **Neu starten**..
+6.  Klicken Sie im Bereich **Aktion** unter **Websites verwalten** auf **Neu starten**.
 
 7.  Öffnen Sie eine Administratorbefehlszeile, und geben Sie die folgenden Befehle zum Aktualisieren des HTTP.SYS-Treibers ein:
 
@@ -78,16 +72,17 @@ Führen Sie zum Ändern der von IIS für die ATA-Konsole verwendeten IP-Adresse 
 9. Wenn für die URL der ATA-Konsole ein FQDN angegeben ist, aktualisieren Sie den DNS mit der neuen IP-Adresse für den FQDN.
 
 >[!div class="step-by-step"]
-[« Zertifikat für ATA Center](modifying-ata-config-centercert.md)
+[« Zertifikat von ATA Center](modifying-ata-config-centercert.md)
 [IIS-Zertifikat »](modifying-ata-config-iiscert.md)
 
 
 ## Siehe auch
 - [Arbeiten mit der ATA-Konsole](working-with-ata-console.md)
 - [Installieren von ATA](install-ata.md)
-- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

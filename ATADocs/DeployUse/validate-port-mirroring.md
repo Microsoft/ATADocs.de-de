@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Überprüfen der Portspiegelung | Microsoft Advanced Threat Analytics
-description: Beschreibt, wie die ordnungsgemäße Konfiguration der Portspiegelung überprüft wird.
-keywords:
+title: "Überprüfen der Portspiegelung | Microsoft Advanced Threat Analytics"
+description: "Beschreibt, wie die ordnungsgemäße Konfiguration der Portspiegelung überprüft wird."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,21 +10,18 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: ebd41719-c91a-4fdd-bcab-2affa2a2cace
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: d6e7d7bef97bfc4ffde07959dd9256f0319d685f
+ms.openlocfilehash: e1ce20c48323e1fca04211c2691f6dfb6fa57fe5
+
 
 ---
 
 # Überprüfen der Portspiegelung
-> [!NOTE] Dieser Artikel ist für Sie nur interessant, wenn Sie ATA-Gateways anstelle von ATA-Lightweight-Gateways bereitstellen. Um festzustellen, ob Sie ATA-Gateways verwenden müssen, lesen Sie [Auswählen des richtigen Gatewaytyps für Ihre Bereitstellung](/advanced-threat-analytics/plan-design/ata-capacity-planning#Choosing-the-right-gateway-type-for-your-deployment).
+> [!NOTE] 
+> Dieser Artikel ist für Sie nur interessant, wenn Sie ATA-Gateways anstelle von ATA-Lightweight-Gateways bereitstellen. Um festzustellen, ob Sie ATA-Gateways verwenden müssen, lesen Sie [Auswählen des richtigen Gateways für Ihre Bereitstellung](/advanced-threat-analytics/plan-design/ata-capacity-planning#choosing-the-right-gateway-type-for-your-deployment).
  
 Die folgenden Schritte führen Sie durch das Verfahren, mit dem Sie die ordnungsgemäße Konfiguration der Portspiegelung überprüfen. Damit ATA ordnungsgemäß funktioniert, muss das ATA-Gateway den Datenverkehr zum und vom Domänencontroller anzeigen können. Als primäre Datenquelle verwendet ATA eine ausführliche Paketüberprüfung (Deep Packet Inspection) des Netzwerkdatenverkehrs zu und von den Domänencontrollern. Damit ATA den Netzwerkdatenverkehr anzeigen kann, muss die Portspiegelung konfiguriert sein. Die Portspiegelung kopiert den Datenverkehr von einem Port (dem Quellport) zu einem anderen Port (dem Zielport).
 
@@ -193,7 +188,7 @@ Beispiel, wie das Skript ausgeführt wird:
     
     
 ## Überprüfen von Portspiegelung mit Netzwerkmonitor (Network Monitor)
-1.  Installieren Sie [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865).
+1.  Installieren Sie [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865).
 
     > [!IMPORTANT]
     > Installieren Sie auf dem ATA-Gateway nicht Microsoft Message Analyzer oder ein andere Software zur Erfassung des Datenverkehrs.
@@ -204,11 +199,11 @@ Beispiel, wie das Skript ausgeführt wird:
 
     2.  Stellen Sie sicher, dass „P-Modus“ aktiviert ist.
 
-    3.  Klicken Sie auf **Neue Erfassung**..
+    3.  Klicken Sie auf **Neue Erfassung**.
 
         ![Abbildung des Erstellens einer neuen Registerkarte für die Erfassung](media/ATA-Port-Mirroring-Capture.jpg)
 
-3.  Geben Sie im Fenster „Anzeigefilter“ den folgenden Filter ein: **KerberosV5 oder LDAP**. Klicken Sie dann auf **Übernehmen**..
+3.  Geben Sie im Fenster „Anzeigefilter“ den folgenden Filter ein: **KerberosV5 oder LDAP**. Klicken Sie dann auf **Übernehmen**.
 
     ![Abbildung des Filters „KerberosV5 oder LDAP“](media/ATA-Port-Mirroring-filter-settings.jpg)
 
@@ -225,9 +220,10 @@ Beispiel, wie das Skript ausgeführt wird:
 ## Siehe auch
 
 - [Konfigurieren der Portspiegelung](configure-port-mirroring.md)
-- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 
