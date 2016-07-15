@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Was ist Microsoft Advanced Threat Analytics (ATA)? | Microsoft Advanced Threat Analytics
-description: Hier wird erläutert, was Microsoft Advanced Threat Analytics (ATA) ist und welche Arten von verdächtigen Aktivitäten erkannt werden können
-keywords:
+description: "Hier wird erläutert, was Microsoft Advanced Threat Analytics (ATA) ist und welche Arten von verdächtigen Aktivitäten erkannt werden können"
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 4831e7a773b69a87bbcd505a8116230f14611250
+
 
 ---
 
@@ -69,7 +63,6 @@ Damit die Gefährdung von Anmeldeinformationen erkannt werden kann, nutzt ATA so
 
 Durch die Verwendung von Verhaltensanalysen und Machine Learning kann ATA verdächtige Aktivitäten wie ungewöhnliche Anmeldungen, Ressourcenzugriffe und Arbeitszeiten erkennen, die auf eine Gefährdung von Anmeldeinformationen hinweisen.
 Zum Schutz vor gefährdeten Anmeldeinformationen erkennt ATA die folgenden bekannten Angriffe und Techniken:
-:
 
  - **Brute-Force-Angriffe** <br>Bei Brute-Force-Angriffen versuchen die Angreifer, die Benutzeranmeldeinformationen zu erraten, indem sie mehrere Benutzerdaten mit mehreren Kennworteingaben kombinieren. Oft verwenden die Angreifer komplexe Algorithmen oder Wörterbücher, um so viele Werte auszuprobieren, wie das betreffende System erlaubt.
 
@@ -123,8 +116,7 @@ Bei Skeleton Key-Angriffen wird Malware auf Ihrem Domänencontroller installiert
 Bei Golden Ticket-Angriffen stiehlt ein Angreifer die KBTGT-Anmeldeinformationen, das Kerberos Golden Ticket. Dieses Ticket ermöglicht es dem Angreifer, offline ein TGT-Ticket zu erstellen, mit dem er dann Zugriff auf Ressourcen im Netzwerk erhält.
 - **Remoteausführung**<br>
 Angreifer können versuchen, die Kontrolle über Ihr Netzwerk zu erlangen, indem sie Code remote auf Ihrem Domänencontroller ausführen.
--   **Böswillige Replikationsanforderungen**
-In AD-Umgebungen (Active Directory) erfolgt Replikation regelmäßig zwischen Domänencontrollern. Ein Angreifer kann eine AD-Replikationsanforderung (manchmal durch Annehmen der Identität eines Domänencontrollers) vortäuschen, wodurch es dem Angreifer gestattet wird, die in AD gespeicherten Daten abzurufen, einschließlich Kennworthashes, ohne auffallendere Techniken wie Volumeschattenkopie zu nutzen.
+-   **Böswillige Replikationsanforderungen** In Active Directory-Umgebungen (AD) erfolgt regelmäßig eine Replikation zwischen Domänencontrollern. Ein Angreifer kann eine AD-Replikationsanforderung (manchmal durch Annehmen der Identität eines Domänencontrollers) vortäuschen, wodurch es dem Angreifer gestattet wird, die in AD gespeicherten Daten abzurufen, einschließlich Kennworthashes, ohne auffallendere Techniken wie Volumeschattenkopie zu nutzen.
 
 ## Wie geht es weiter?
 
@@ -133,9 +125,10 @@ In AD-Umgebungen (Active Directory) erfolgt Replikation regelmäßig zwischen Do
 -   Erste Schritte bei der Bereitstellung von ATA: [Installieren von ATA](/advanced-threat-analytics/deploy-use/install-ata)
 
 ## Weitere Informationen
-[Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+[Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

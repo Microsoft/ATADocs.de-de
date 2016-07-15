@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Konfigurieren der Portspiegelung | Microsoft Advanced Threat Analytics
-description: Beschreibt Optionen für die Portspiegelung und deren Konfiguration für ATA
-keywords:
+description: "Beschreibt Optionen für die Portspiegelung und deren Konfiguration für ATA"
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,21 +10,18 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: cdaddca3-e26e-4137-b553-8ed3f389c460
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 121f54e6d8da8220f1827188039e9a89c038f7ac
+ms.openlocfilehash: a4befce4003951b18a5e1a9d8bc1addf9e7ea255
+
 
 ---
 
 # Konfigurieren der Portspiegelung
-> [!NOTE] Dieser Artikel ist für Sie nur interessant, wenn Sie ATA-Gateways anstelle von ATA-Lightweight-Gateways bereitstellen. Um festzustellen, ob Sie ATA-Gateways verwenden müssen, lesen Sie [Auswählen des richtigen Gatewaytyps für Ihre Bereitstellung](/advanced-threat-analytics/plan-design/ata-capacity-planning#Choosing-the-right-gateway-type-for-your-deployment).
+> [!NOTE] 
+> Dieser Artikel ist für Sie nur interessant, wenn Sie ATA-Gateways anstelle von ATA-Lightweight-Gateways bereitstellen. Um festzustellen, ob Sie ATA-Gateways verwenden müssen, lesen Sie [Auswählen des richtigen Gateways für Ihre Bereitstellung](/advanced-threat-analytics/plan-design/ata-capacity-planning#choosing-the-right-gateway-type-for-your-deployment).
  
 Als primäre Datenquelle verwendet ATA eine ausführliche Paketüberprüfung (Deep Packet Inspection) des Netzwerkdatenverkehrs zu und von den Domänencontrollern. Damit ATA den Netzwerkdatenverkehr sieht, muss entweder eine Portspiegelung eingerichtet oder ein Netzwerk-TAP verwendet werden.
 
@@ -72,9 +67,10 @@ Die Domänencontroller und ATA-Gateways können physisch oder virtuell vorhanden
 ## Siehe auch
 - [Überprüfen der Portspiegelung](validate-port-mirroring.md)
 - [Installieren von ATA](install-ata.md)
-- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO5-->
 
 

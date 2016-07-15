@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Arbeiten mit verdächtigen Aktivitäten | Microsoft Advanced Threat Analytics
-description: Beschreibt, wie Sie von ATA identifizierte verdächtige Aktivitäten überprüfen.
-keywords:
+title: "Arbeiten mit verdächtigen Aktivitäten | Microsoft Advanced Threat Analytics"
+description: "Beschreibt, wie Sie von ATA identifizierte verdächtige Aktivitäten überprüfen."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 1214560096227e00af36ff7cb1a0a95988a2ad40
+
 
 ---
 
@@ -61,9 +55,9 @@ Zu jeder verdächtigen Aktivität stehen folgende Informationen zur Verfügung:
 ## Filtern der Liste der verdächtigen Aktivitäten
 So filtern Sie die Liste der verdächtigen Aktivitäten
 
-1.  Wählen Sie auf der linken Seite des Bildschirms im Bereich **Filtern nach** eine der folgenden Optionen aus: **Alle**, **Offen**, **Aufgelöst** oder **Verworfen**..
+1.  Wählen Sie auf der linken Seite des Bildschirms im Bereich **Filtern nach** eine der folgenden Optionen aus: **Alle**, **Offen**, **Aufgelöst** oder **Verworfen**.
 
-2.  Um die Liste weiter zu filtern, wählen Sie **Hoch**, **Mittel** oder **Niedrig** aus..
+2.  Um die Liste weiter zu filtern, wählen Sie **Hoch**, **Mittel** oder **Niedrig** aus.
 
 **Schweregrad von verdächtigen Aktivitäten**
 
@@ -107,17 +101,18 @@ Damit ATA Informationen zu Ihrem Netzwerk sammeln kann, werden bei einigen verd�
 
 3.  Wenn Sie jedoch mit „Ja“ antworten, kann die verdächtige Aktivität verworfen werden und künftige Aktivitäten dieses Typs von diesem Computer generieren möglicherweise keine verdächtige Aktivität oder eine Aktivität, die automatisch verworfen wird.
 
-4.  Wenn Sie es nicht wissen, klicken Sie auf **Abbrechen**..
+4.  Wenn Sie es nicht wissen, klicken Sie auf **Abbrechen**.
 
 ## Ändern des Status einer verdächtigen Aktivität
-Sie können den Status einer verdächtigen Aktivität ändern, indem Sie auf den aktuellen Status der verdächtigen Aktivität klicken und eine der folgenden Optionen auswählen: **Offen**, **Aufgelöst** oder **Verworfen**..
+Sie können den Status einer verdächtigen Aktivität ändern, indem Sie auf den aktuellen Status der verdächtigen Aktivität klicken und eine der folgenden Optionen auswählen: **Offen**, **Aufgelöst** oder **Verworfen**.
 
-## Weitere Informationen
-- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+## Siehe auch
+- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Arbeiten mit ATA-Erkennungseinstellungen](working-with-detection-settings.md)
 - [Ändern der ATA-Konfiguration](modifying-ata-configuration.md)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Häufig gestellte Fragen zu ATA | Microsoft Advanced Threat Analytics
-description: Liste häufig gestellter Fragen zu ATA und zugehörige Antworten
-keywords:
+title: "Häufig gestellte Fragen zu ATA | Microsoft Advanced Threat Analytics"
+description: "Liste häufig gestellter Fragen zu ATA und zugehörige Antworten"
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: bb6bc2bf0d0df3112ecfdb33c8e9d6e41f183145
+
 
 ---
 
@@ -30,7 +24,7 @@ Dieser Artikel enthält eine Reihe häufig gestellter Fragen zu ATA sowie Hinter
 
 
 ## Wie wird ATA lizenziert?
-Weitere Informationen zur Lizenzierung finden Sie unter [Bezugsquellen für Advanced Threat Analytics](https://www.microsoft.com/en-us/server-cloud/products/advanced-threat-analytics/Purchasing.aspx).
+Weitere Informationen zur Lizenzierung finden Sie unter [Bezugsquellen für Advanced Threat Analytics](https://www.microsoft.com/server-cloud/products/advanced-threat-analytics/Purchasing.aspx).
 
 
 ## Das ATA-Gateway startet nicht. Wie sollte ich vorgehen?
@@ -54,7 +48,7 @@ Verschlüsselter Datenverkehr wird nicht analysiert (z. B. LDAPS, IPSEC ESP).
 Die Aktivierung von Kerberos Armoring (auch als Flexible Authentication Secure Tunneling (FAST) bezeichnet) wird von ATA unterstützt. Einzige Ausnahme ist die Overpass-The-Hash-Erkennung, die nicht unterstützt wird.
 ## Wie viele ATA-Gateways benötige ich?
 
-Zunächst wird empfohlen, dass Sie auf allen Domänencontrollern, die über genügend Ressourcen verfügen, ATA-Lightweight-Gateways verwenden. Informationen dazu, wie Sie dies ermitteln, finden Sie unter [Dimensionierung von ATA-Lightweight-Gateways](/advanced-threat-analytics/plan-design/ata-capacity-planning#ATA-Lightweight-Gateway-Sizing). 
+Zunächst wird empfohlen, dass Sie auf allen Domänencontrollern, die über genügend Ressourcen verfügen, ATA-Lightweight-Gateways verwenden. Informationen dazu, wie Sie dies ermitteln, finden Sie unter [Dimensionierung von ATA-Lightweight-Gateways](/advanced-threat-analytics/plan-design/ata-capacity-planning#ata-lightweight-gateway-sizing). 
 
 Wenn alle Domänencontroller durch ATA-Lightweight-Gateways abgedeckt werden können, sind keine ATA-Gateways erforderlich.
 
@@ -92,7 +86,7 @@ ATA erkennt bekannte Angriffe und Techniken, Sicherheitsprobleme und Risiken.
 Die vollständige Liste der ATA-Erkennungen finden Sie unter [Was ist Microsoft Advanced Threat Analytics?](what-is-ata.md).
 
 ## Welche Art von Speicher benötige ich für ATA?
-Wir empfehlen schnellen Speicher (nicht Festplatten mit 7.200 U/min) mit niedrigen Latenzzeiten (unter 10 ms)  und eine RAID-Konfiguration, die intensive Schreiblasten unterstützt (nicht RAID-5/6 und Varianten davon).
+Wir empfehlen ein schnelles Speichermedium (Datenträger mit 7200 U/min werden nicht empfohlen) mit Datenträgerzugriff mit niedriger Latenz (weniger als 10 ms). Die RAID-Konfiguration sollte hohe Schreiblasten unterstützen (RAID-5/6 und zugehörige Ableitungen werden nicht empfohlen).
 
 ## Wie viele Netzwerkkarten sind für das ATA-Gateway erforderlich?
 Für das ATA-Gateway sind mindestens zwei Netzwerkkarten erforderlich:<br>1. Eine Netzwerkkarte für die Verbindung mit dem internen Netzwerk und ATA Center.<br>2. Eine Netzwerkkarte zum Erfassen des Domänencontroller-Netzwerkverkehrs über Portspiegelung.<br>* Dies gilt nicht für das ATA-Lightweight-Gateway, das systemintern alle Netzwerkadapter verwendet, die der Domänencontroller verwendet.
@@ -101,7 +95,7 @@ Für das ATA-Gateway sind mindestens zwei Netzwerkkarten erforderlich:<br>1. Ein
 ATA weist eine bidirektionale Integration mit SIEMs auf:
 
 1. ATA kann so konfiguriert werden, dass im Fall einer verdächtigen Aktivität eine Syslog-Warnung an alle SIEM-Server gesendet wird, die das CEF-Format verwenden.
-2. ATA kann so konfiguriert werden, dass für jedes Windows-Ereignis mit der ID 4776 Syslog-Meldungen von [diesen SIEMs](/advanced-threat-analytics/deploy-use/configure-event-collection#SIEM-support) empfangen werden.
+2. ATA kann so konfiguriert werden, dass für jedes Windows-Ereignis mit der ID 4776 Syslog-Meldungen von [diesen SIEMs](/advanced-threat-analytics/deploy-use/configure-event-collection#siem-support) empfangen werden.
 
 ## Kann ATA in Ihrer IaaS-Lösung dargestellte Domänencontroller überwachen?
 
@@ -143,10 +137,11 @@ Ja, Sie können die Gesamtintegrität der Bereitstellung sowie spezifische Probl
 - [ATA-Kapazitätsplanung](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [Konfigurieren der Ereignissammlung](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Konfigurieren der Windows-Ereignisweiterleitung](/advanced-threat-analytics/deploy-use/configure-event-collection#Configuring-Windows-Event-Forwarding)
-- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

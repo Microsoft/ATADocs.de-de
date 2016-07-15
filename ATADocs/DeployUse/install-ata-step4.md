@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Installieren von ATA – Schritt 4 | Microsoft Advanced Threat Analytics
+title: "Installieren von ATA – Schritt 4 | Microsoft Advanced Threat Analytics"
 description: Im vierten Schritt beim Installieren von ATA installieren Sie das ATA-Gateway.
-keywords:
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,27 +10,25 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: d6e7d7bef97bfc4ffde07959dd9256f0319d685f
+ms.openlocfilehash: f12e43a6918c0c02bb59e4a093720a805b7dbcfc
+
 
 ---
 
 # Installieren von ATA – Schritt 4
 
 >[!div class="step-by-step"]
-[« Schritt 3](install-ata-step3.md)
-[Schritt 5 »](install-ata-step5.md)
+[« Schritt 3](install-ata-step3.md)
+[Schritt 5 »](install-ata-step5.md)
 
 ## Schritt 4: Installieren des ATA-Gateways
-Überprüfen Sie vor der Installation des ATA-Gateways, ob die Portspiegelung ordnungsgemäß konfiguriert ist und ob das ATA-Gateway Datenverkehr zu und von den Domänencontrollern anzeigen kann. Weitere Informationen finden Sie unter [Überprüfen der Portspiegelung](/advanced-threat-analytics/plandesign/validate-port-mirroring).
+
+Überprüfen Sie vor der Installation des ATA-Gateways auf dem dedizierten Server, ob die Portspiegelung ordnungsgemäß konfiguriert ist und ob das ATA-Gateway Datenverkehr zu und von den Domänencontrollern anzeigen kann. Weitere Informationen finden Sie unter [Überprüfen der Portspiegelung](validate-port-mirroring.md).
+
 
 > [!IMPORTANT]
 > Stellen Sie sicher, dass [KB2919355](http://support.microsoft.com/kb/2919355/) installiert wurde.  Führen Sie das folgende PowerShell-Cmdlet aus, um zu überprüfen, ob der Hotfix installiert ist:
@@ -41,9 +37,11 @@ ms.suite: ems
 
 Führen Sie die folgenden Schritte auf dem ATA-Gatewayserver aus.
 
-1.  Extrahieren Sie die Dateien aus der ZIP-Datei.
+1.  Extrahieren Sie die Dateien aus der ZIP-Datei. 
+> [!NOTE] 
+> Eine Installation direkt aus der ZIP-Datei schlägt fehl.
 
-2.  Führen Sie „Microsoft ATA Gateway Setup.exe“ an einer Eingabeaufforderung mit erhöhten Rechten aus, und befolgen Sie die Anweisungen des Setup-Assistenten.
+2.  Führen Sie **Microsoft ATA Gateway Setup.exe** an einer Eingabeaufforderung mit erhöhten Rechten aus, und befolgen Sie die Anweisungen des Setup-Assistenten.
 
 3.  Wählen Sie auf der Seite **Willkommen** Ihre Sprache aus, und klicken Sie auf **Weiter**.
 
@@ -61,7 +59,7 @@ Führen Sie die folgenden Schritte auf dem ATA-Gatewayserver aus.
     -   KB3047154
 
         > [!IMPORTANT]
-        > -   Installieren Sie KB3047154 nicht auf einem Virtualisierungshost. Dies kann dazu führen, dass die Portspiegelung nicht mehr ordnungsgemäß ausgeführt wird.
+        > -   Installieren Sie KB 3047154 nicht auf einem Virtualisierungshost (der Host, auf dem die Virtualisierung ausgeführt wird; die Ausführung auf einem virtuellen Computer ist möglich). Dies kann dazu führen, dass die Portspiegelung nicht mehr ordnungsgemäß ausgeführt wird. 
         > -   Installieren Sie Message Analyzer, Wireshark oder andere Software zur Netzwerkerfassung nicht auf dem ATA-Gateway. Wenn Sie den Netzwerkverkehr erfassen möchten, installieren und verwenden Sie Microsoft Network Monitor 3.4.
 
     -   ATA-Gatewaydienst
@@ -70,20 +68,22 @@ Führen Sie die folgenden Schritte auf dem ATA-Gatewayserver aus.
 
     -   Benutzerdefinierter Systemmonitor-Datensammlungssatz
 
-5.  Klicken Sie nach Abschluss der Installation auf **Starten**, um den Browser zu öffnen und sich in der ATA-Konsole anzumelden.
+5.  Nach Abschluss der Installation klicken Sie für das ATA-Gateway auf **Starten**, um den Browser zu öffnen und sich bei der ATA-Konsole anzumelden, bzw. klicken Sie für das ATA-Lightweight-Gateway auf **Fertig stellen**.
 
 
 >[!div class="step-by-step"]
-[« Schritt 3](install-ata-step3.md)
-[Schritt 5 »](install-ata-step5.md)
+[« Schritt 3](install-ata-step3.md)
+[Schritt 5 »](install-ata-step5.md)
 
 ## Siehe auch
 
-- [Unterstützung finden Sie in unserem Forum.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
-- [Konfigurieren der Ereignissammlung](/advanced-threat-analytics/plandesign/configure-event-collection)
-- [Voraussetzungen für ATA](/advanced-threat-analytics/plandesign/ata-prerequisites)
+- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [Konfigurieren der Ereignissammlung](configure-event-collection.md)
+- [Voraussetzungen für ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
-<!--HONumber=Apr16_HO2-->
+
+
+<!--HONumber=Jun16_HO4-->
 
 
