@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Ändern der ATA-Konfiguration – IIS-Zertifikat | Microsoft Advanced Threat Analytics
-description: Beschreibt, wie das von IIS für ATA Center verwendete Zertifikat geändert wird.
-keywords:
+title: "Ändern der ATA-Konfiguration – IIS-Zertifikat | Microsoft Advanced Threat Analytics"
+description: "Beschreibt, wie das von IIS für ATA Center verwendete Zertifikat geändert wird."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: e58a0390-57ef-4c68-a987-2e75e5f3d6b3
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 07888a46e26a7f87dc3b6424d97aba0813b43d02
+
 
 ---
 
@@ -45,13 +39,13 @@ Führen Sie zum Ändern des von IIS für ATA Center verwendeten Zertifikats die 
 
 2.  Öffnen Sie den Internetinformationsdienste (IIS)-Manager.
 
-3.  Erweitern Sie den Namen des Servers und dann den Ordner **Sites**..
+3.  Erweitern Sie den Namen des Servers und dann den Ordner **Sites**.
 
-4.  Wählen Sie die Site „Microsoft ATA Console“ aus, und klicken Sie im Bereich **Aktionen** auf **Bindungen**..
+4.  Wählen Sie die Site „Microsoft ATA Console“ aus, und klicken Sie im Bereich **Aktionen** auf **Bindungen**.
 
     ![Aktion „Bindungen“ in ATA-Konsole](media/ATA-console-change-IP-bindings.jpg)
 
-5.  Wählen Sie **HTTPS** aus, und klicken Sie auf **Bearbeiten**..
+5.  Wählen Sie **HTTPS** aus, und klicken Sie auf **Bearbeiten**.
 
 6.  Wählen Sie unter **SSL-Zertifikat** das neue Zertifikat aus.
 
@@ -64,9 +58,10 @@ Führen Sie zum Ändern des von IIS für ATA Center verwendeten Zertifikats die 
 ## Siehe auch
 - [Arbeiten mit der ATA-Konsole](working-with-ata-console.md)
 - [Installieren von ATA](install-ata.md)
-- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

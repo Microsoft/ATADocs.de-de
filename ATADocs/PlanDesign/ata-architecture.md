@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: ATA-Architektur | Microsoft Advanced Threat Analytics
 description: Beschreibt die Architektur von Microsoft Advance Threat Analytics (ATA)
-keywords:
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 2d753060f30cbcc7d16959355b86d64fdaa2ecd8
+
 
 ---
 
@@ -96,7 +90,7 @@ Berücksichtigen Sie Folgendes bei der Entscheidung, wie viele ATA Center Sie in
 
 -   Ein ATA Center kann eine einzelne Active Directory-Gesamtstruktur überwachen. Wenn Sie über mehrere Active Directory-Gesamtstrukturen verfügen, benötigen Sie mindestens ein ATA Center pro Active Directory-Gesamtstruktur.
 
--    In sehr großen Active Directory-Bereitstellungen ist ein einzelnes ATA Center möglicherweise nicht in der Lage, den gesamten Datenverkehr von allen Domänencontrollern zu verarbeiten. In diesem Fall werden mehrere ATA Center benötigt. Die Anzahl der ATA Center sollte durch die [ATA-Kapazitätsplanung](ata-capacity-planning.md) vorgegeben werden..
+-    In sehr großen Active Directory-Bereitstellungen ist ein einzelnes ATA Center möglicherweise nicht in der Lage, den gesamten Datenverkehr von allen Domänencontrollern zu verarbeiten. In diesem Fall werden mehrere ATA Center benötigt. Die Anzahl der ATA Center sollte durch die [ATA-Kapazitätsplanung](ata-capacity-planning.md) vorgegeben werden.
 
 ## ATA-Gateway und ATA-Lightweight-Gateway
 
@@ -123,7 +117,7 @@ Das ATA-Gateway empfängt den Netzwerkverkehr und die Windows-Ereignisse aus Ihr
 |Ereignislistener|Der Ereignislistener ist dafür verantwortlich, die von einem SIEM-Server in Ihrem Netzwerk weitergeleiteten Windows-Ereignisse zu erfassen und zu analysieren.|
 |Windows-Ereignisprotokollleser|Der Windows-Ereignisprotokollleser ist dafür verantwortlich, die Windows-Ereignisse zu lesen und zu analysieren, die von den Domänencontrollern an das Windows-Ereignisprotokoll des ATA-Gateway weitergeleitet werden.|
 |Netzwerkaktivitätenübersetzer | Übersetzt analysierten Datenverkehr in eine logische Darstellung des von ATA verwendeten Datenverkehrs (NetworkActivity).
-|Entitäten-Resolver|Der Entitäten-Resolver löst die analysierten Daten (Netzwerkverkehr und Ereignisse) mit Active Directory auf, um Konten- und Identitätsdaten zu suchen. Anschließend werden diese den in den analysierten Daten gefundenen IP-Adressen zugeordnet. Der Entitäten-Resolver untersucht die Paketheader gründlich, um das Analysieren der Authentifizierungspakete für Computernamen, Eigenschaften und Identitäten zu ermöglichen,  und kombiniert die analysierten der Authentifizierungspakete mit den Daten im tatsächlichen Paket.|
+|Entitäten-Resolver|Der Entitäten-Resolver löst die analysierten Daten (Netzwerkverkehr und Ereignisse) mit Active Directory auf, um Konten- und Identitätsdaten zu suchen. Anschließend werden diese den in den analysierten Daten gefundenen IP-Adressen zugeordnet. Der Entitätenresolver untersucht die Paketheader gründlich, um die Analyse der Authentifizierungspakete in Bezug auf Computernamen, Eigenschaften und Identitäten zu ermöglichen. Der Entitätenresolver kombiniert die analysierten Authentifizierungspakete mit den Daten im tatsächlichen Paket.|
 |Entitätensender|Der Entitätensender ist dafür verantwortlich, die analysierten und zugeordneten Daten an ATA Center zu senden.|
 
 ## Funktionen des ATA-Lightweight-Gateways
@@ -173,19 +167,20 @@ Die Domänencontroller und die ATA-Gateways können physisch oder virtuell sein.
 ### Ereignisse
 Zur Erhöhung der ATA-Erkennung von Pass-the-Hash, Brute-Force und Honeytoken benötigt ATA die Windows-Ereignisprotokoll-ID 4776. Diese kann auf zwei Arten an das ATA-Gateway weitergeleitet werden: durch die Konfiguration des ATA-Gateways zum Überwachen von SIEM-Ereignissen oder durch die Verwendung der Windows-Ereignisweiterleitung.
 
--   Konfigurieren des ATA-Gateways zum Überwachen von SIEM-Ereignissen <br>Konfigurieren Sie SIEM zum Weiterleiten bestimmter Windows-Ereignisse an ATA. ATA unterstützt eine Reihe von SIEM-Anbietern. Weitere Informationen finden Sie unter [Konfigurieren der Ereignissammlung](/advanced-threat-analytics/deploy-use/configure-event-collection)..
+-   Konfigurieren des ATA-Gateways zum Überwachen von SIEM-Ereignissen <br>Konfigurieren Sie SIEM zum Weiterleiten bestimmter Windows-Ereignisse an ATA. ATA unterstützt eine Reihe von SIEM-Anbietern. Weitere Informationen finden Sie unter [Konfigurieren der Ereignissammlung](/advanced-threat-analytics/deploy-use/configure-event-collection).
 
--   Konfigurieren der Windows-Ereignisweiterleitung<br>Eine andere Möglichkeit, wie ATA Ihre Ereignisse erhalten kann, besteht darin, die Domänencontroller so zu konfigurieren, dass das Windows-Ereignis 4776 an das ATA-Gateway weitergeleitet wird. Dies ist insbesondere dann nützlich, wenn Sie nicht über SIEM verfügen oder SIEM von ATA derzeit nicht unterstützt wird. Weitere Informationen zur Windows-Ereignisweiterleitung in ATA finden Sie unter [Konfigurieren der Windows-Ereignisweiterleitung](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)..
+-   Konfigurieren der Windows-Ereignisweiterleitung<br>Eine andere Möglichkeit, wie ATA Ihre Ereignisse erhalten kann, besteht darin, die Domänencontroller so zu konfigurieren, dass das Windows-Ereignis 4776 an das ATA-Gateway weitergeleitet wird. Dies ist insbesondere dann nützlich, wenn Sie nicht über SIEM verfügen oder SIEM von ATA derzeit nicht unterstützt wird. Weitere Informationen zur Windows-Ereignisweiterleitung in ATA finden Sie unter [Konfigurieren der Windows-Ereignisweiterleitung](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding).
 
-## Weitere Informationen
+## Siehe auch
 - [ATA-Voraussetzungen](ata-prerequisites.md)
 - [ATA-Kapazitätsplanung](ata-capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Konfigurieren der Windows-Ereignisweiterleitung](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
-- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 
