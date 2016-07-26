@@ -1,5 +1,5 @@
 ---
-title: "Installieren von ATA – abgeschlossen | Microsoft Advanced Threat Analytics"
+title: "Installieren von ATA – vollständig | Microsoft ATA"
 description: "Erläuterung der erforderlichen Schritte zum Bereitstellen, Konfigurieren und Ausführen von ATA."
 keywords: 
 author: rkarlin
@@ -13,8 +13,8 @@ ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: 697da5ddc701c353ab1cc1b39c15939af9964497
+ms.sourcegitcommit: c512fd20f913c53ac936f7de288eb024d91cf9f1
+ms.openlocfilehash: 4587b384314bbc1ee89a82134386ce1ffd5beef5
 
 
 ---
@@ -39,16 +39,15 @@ Dazu führen Sie folgende Schritte aus:
 -   [Schritt 6: Konfigurieren der Subnetze mit kurzer Leasedauer und des Honeytoken-Benutzers](install-ata-step6.md)
 
 
-## Siehe auch
+## Weitere Informationen
 
-- [Besuchen Sie das ATA-Forum!](https://social.technet.microsoft.com/Forums/security/
-- home?forum=mata)
+- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
 - [Voraussetzungen für ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

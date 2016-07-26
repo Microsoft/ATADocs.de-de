@@ -1,5 +1,5 @@
 ---
-title: Behandeln von Problemen mit ATA mithilfe der ATA-Protokolle | Microsoft Advanced Threat Analytics
+title: Behandeln von Problemen mit ATA mithilfe der ATA-Protokolle | Microsoft ATA
 description: Beschreibt die Verwendung der ATA-Protokolle zum Behandeln von Problemen.
 keywords: 
 author: rkarlin
@@ -13,8 +13,8 @@ ms.assetid: b8ad5511-8893-4d1d-81ee-b9a86e378347
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: 4f02b0fba381eb76ad500e198392ec7624a3028a
+ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
+ms.openlocfilehash: f13b448399f4184ebb110883800e87902d3b7ac3
 
 
 ---
@@ -101,6 +101,6 @@ Bereitstellungsprotokolle für ATA-Gateway und ATA-Lightweight-Gateway:
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Installieren von ATA – Schritt 1 | Microsoft Advanced Threat Analytics"
+title: "Installieren von ATA – Schritt 1 | Microsoft ATA"
 description: "Im ersten Schritt beim Installieren von ATA wird ATA Center auf den ausgewählten Server heruntergeladen und dort installiert."
 keywords: 
 author: rkarlin
@@ -13,8 +13,8 @@ ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d6e7d7bef97bfc4ffde07959dd9256f0319d685f
-ms.openlocfilehash: c89d4d6f6af58bcc822b9599dcda65d0719a7419
+ms.sourcegitcommit: c512fd20f913c53ac936f7de288eb024d91cf9f1
+ms.openlocfilehash: 756c01d4fc4fbe7950cbbfc66fd65cf32b3bc44a
 
 
 ---
@@ -95,14 +95,13 @@ Da Sie sich mit einer IP-Adresse bei der Website anmelden, wird eine Warnung im 
 
 ## Siehe auch
 
-- [Besuchen Sie das ATA-Forum!](https://social.technet.microsoft.com/Forums/security/
-- home?forum=mata)
+- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
 - [Voraussetzungen für ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

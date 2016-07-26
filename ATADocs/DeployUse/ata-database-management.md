@@ -1,5 +1,5 @@
 ---
-title: ATA-Datenbankverwaltung | Microsoft Advanced Threat Analytics
+title: ATA-Datenbankverwaltung | Microsoft ATA
 description: "Vorgänge zum Verschieben, Sichern oder Wiederherstellen der ATA-Datenbank."
 keywords: 
 author: rkarlin
@@ -13,8 +13,8 @@ ms.assetid: 1d27dba8-fb30-4cce-a68a-f0b1df02b977
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: 6c0e2abe43da5351568cf8db4e6ffe6fa919d835
+ms.sourcegitcommit: 115ec28877665c79e5cbcd557528da156c8d7149
+ms.openlocfilehash: fd00623f9be396b3a2c384cce436996b5093cc3f
 
 
 ---
@@ -52,8 +52,7 @@ Informationen hierzu finden Sie in der [entsprechenden MongoDB-Dokumentation](ht
 
 8.  Führen Sie den folgenden Befehl aus: `db.SystemProfiles.update( {_t: "CenterSystemProfile"} , {$set:{"Configuration.CenterDatabaseClientConfiguration.DataPath" : "<New DB Location>"}})`
 
-
-    Anstelle von <New DB Location>, wobei `&lt;New DB Location&gt;` der neue Ordnerpfad ist.
+   Anstelle von <New DB Location>, wobei `&lt;New DB Location&gt;` der neue Ordnerpfad ist.
 
 9.  Aktualisieren Sie „HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Center\DatabaseDataPath“ auf den neuen Ordnerpfad.
 
@@ -61,13 +60,12 @@ Informationen hierzu finden Sie in der [entsprechenden MongoDB-Dokumentation](ht
 
 ## Siehe auch
 - [ATA-Architektur](/advanced-threat-analytics/plan-design/ata-architecture)
-- [Voraussetzungen für ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
-- [Besuchen Sie das ATA-Forum!](https://social.technet.microsoft.com/Forums/security/
-- home?forum=mata)
+- [ATA-Voraussetzungen](/advanced-threat-analytics/plan-design/ata-prerequisites)
+- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

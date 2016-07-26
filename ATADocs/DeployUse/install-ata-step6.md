@@ -1,5 +1,5 @@
 ---
-title: Installieren von ATA | Microsoft Advanced Threat Analytics
+title: Installieren von ATA | Microsoft ATA
 description: Im letzten Schritt beim Installieren von ATA konfigurieren Sie die Subnetze mit kurzer Leasedauer und den Honeytoken-Benutzer.
 keywords: 
 author: rkarlin
@@ -13,8 +13,8 @@ ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: 76305bc5f55e956c787fe3e8bd954a56f40fc56f
+ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
+ms.openlocfilehash: 461b59e0f03bd6ba6d982767fa78bb415d2c16e0
 
 
 ---
@@ -64,6 +64,6 @@ ATA startet sofort die automatische Überprüfung auf verdächtige Aktivitäten.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 
