@@ -3,18 +3,18 @@ title: Behandeln von Problemen mit ATA mithilfe der ATA-Datenbank | Microsoft AT
 description: Beschreibt die Verwendung der ATA-Datenbank zum Behandeln von Problemen.
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
-ms.openlocfilehash: d2d6549c731a90fb0cdd21ba910c1238d131bc43
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: c86b6dc880238e262f696e88c54bc1bc7e01a1db
 
 
 ---
@@ -64,6 +64,6 @@ Sie können alle Einstellungen wiederherstellen, indem Sie den folgenden Befehl 
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 
