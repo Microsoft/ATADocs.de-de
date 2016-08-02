@@ -3,18 +3,18 @@ title: "Installieren von ATA – Schritt 5 | Microsoft ATA"
 description: "Im fünften Schritt beim Installieren von ATA konfigurieren Sie die Einstellungen für das ATA-Gateway."
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
-ms.openlocfilehash: 3e9f68e9868dc9aaf20fe9d1c4fe2b8bdd685291
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 3580e748d21db73b6fa8384d84e03b9954b823f8
 
 
 ---
@@ -36,10 +36,11 @@ Führen Sie nach der Installation des ATA-Gateways die folgenden Schritte aus, u
   - **Beschreibung**: <br>Geben Sie eine Beschreibung des ATA-Gateways ein (optional).
   - **Domänencontroller mit Portspiegelung (FQDN)** (erforderlich für das ATA-Gateway; kann für das ATA-Lightweight-Gateway nicht festgelegt werden): <br>Geben Sie den vollqualifizierten Domänennamen (FQDN) des Domänencontrollers ein, und klicken Sie auf das Pluszeichen, um ihn der Liste hinzuzufügen, z. B. **dc01.contoso.com**.<br /><br />![Abbildung eines Beispiel-FQDN](media/ATAGWDomainController.png)
 
-Die folgenden Informationen gelten für die Server, die Sie in der Liste **Domänencontroller** eingeben: -   Alle Domänencontroller, deren Datenverkehr vom ATA-Gateway mittels Portspiegelung überwacht wird, müssen in der Liste **Domänencontroller** aufgeführt sein. Wenn ein Domänencontroller nicht in der Liste **Domänencontroller** aufgeführt ist, werden verdächtige Aktivitäten möglicherweise nicht wie erwartet erkannt.
--   Mindestens ein Domänencontroller in der Liste sollte ein globaler Katalogserver sein. Dadurch kann ATA Computer- und Benutzerobjekte in anderen Domänen in der Gesamtstruktur auflösen.
+Die folgenden Informationen gelten für die Server, die Sie in der Liste **Domänencontroller** eingeben.
 
- - **Netzwerkadapter für Erfassung** (erforderlich):<br>
+- Alle Domänencontroller, deren Datenverkehr vom ATA-Gateway mittels Portspiegelung überwacht wird, müssen in der Liste **Domänencontroller** aufgeführt sein. Wenn ein Domänencontroller nicht in der Liste **Domänencontroller** aufgeführt ist, werden verdächtige Aktivitäten möglicherweise nicht wie erwartet erkannt.
+- Mindestens ein Domänencontroller in der Liste sollte ein globaler Katalogserver sein. Dadurch kann ATA Computer- und Benutzerobjekte in anderen Domänen in der Gesamtstruktur auflösen.
+- **Netzwerkadapter für Erfassung** (erforderlich):<br>
      - Wählen Sie für ein ATA-Gateway auf einem dedizierten Server die Netzwerkadapter aus, als Zielspiegelport konfiguriert sind. Diese empfangen den Datenverkehr des gespiegelten Domänencontrollers.
      - Für ein ATA-Lightweight-Gateway sollten dies alle Netzwerkadapter sein, die für die Kommunikation mit anderen Computern in Ihrer Organisation verwendet werden.
 
@@ -92,6 +93,6 @@ Gehen Sie wie folgt vor, um zu überprüfen, ob das ATA-Gateway erfolgreich bere
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 
