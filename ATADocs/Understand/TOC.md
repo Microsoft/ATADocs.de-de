@@ -12,6 +12,6 @@
 # [Problembehandlung](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs)
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jul16_HO3-->
 
 

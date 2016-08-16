@@ -1,32 +1,26 @@
 ---
-# required metadata
-
-title: Problembehandlung bei ATA mithilfe der Leistungsindikatoren | Microsoft Advanced Threat Analytics
+title: Behandeln von Problemen mit ATA mithilfe der Leistungsindikatoren | Microsoft ATA
 description: Beschreibt die Verwendung von Leistungsindikatoren zum Behandeln von Problemen mit ATA
-keywords:
+keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: df162a62-f273-4465-9887-94271f5000d2
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 4b4ff22df77b904a654b57aca824c154ea935560
+
 
 ---
 
 # Problembehandlung bei ATA mithilfe der Leistungsindikatoren
-Die ATA-Leistungsindikatoren bieten Einblick in die Leistungsgrade der einzelnen ATA-Komponenten. Die Komponenten in ATA verarbeiten Daten sequenziell, d. h., liegt ein Problem vor, verursacht es eine Kettenreaktion, die verringerten Datenverkehr verursacht. Um das Problem zu beheben, müssen Sie herausfinden, welche Komponente den Fehler bewirkt, und das Problem am Anfang der Kette beheben.
+Die ATA-Leistungsindikatoren bieten Einblick in die Leistungsgrade der einzelnen ATA-Komponenten. Die Komponenten in ATA verarbeiten Daten sequenziell. Wenn also ein Problem vorliegt, kann dies dazu führen, dass an irgendeinem Punkt in der Komponentenkette ein Teil des Datenverkehrs verworfen wird. Um das Problem zu beheben, müssen Sie herausfinden, welche Komponente den Fehler bewirkt, und das Problem am Anfang der Kette beheben. Verwenden Sie Daten aus den Leistungsindikatoren, um zu verstehen, wie jede Komponente funktioniert.
 Eine Beschreibung des Datenflusses zwischen internen ATA-Komponenten finden Sie unter [ATA-Architektur](/advanced-threat-analytics/plan-design/ata-architecture).
 
 **ATA-Komponentenprozess**:
@@ -37,7 +31,6 @@ Eine Beschreibung des Datenflusses zwischen internen ATA-Komponenten finden Sie 
 
 3.  Dieser Vorgang setzt sich fort, bis die ursprüngliche NetworkListener-Komponente erreicht ist, die vorhandenen Datenverkehr abweist, wenn keine Entitäten mehr weitergeleitet werden können.
 
-4. Verwenden Sie Daten aus den Leistungsindikatoren, um zu verstehen, wie jede Komponente funktioniert.
 
 ## Leistungsindikatoren für das ATA-Gateway
 
@@ -98,7 +91,7 @@ In der folgenden Liste sind die Leistungsindikatoren des Betriebssystems aufgef�
 |LogicalDisk(&#42;)\Avg. Sek./Schreibvorgänge|Die durchschnittlich auftretende Latenz beim Schreiben von Daten auf den Datenträger (als Instanz sollte das Datenbanklaufwerk ausgewählt werden).|Sollte weniger als 10 Millisekunden betragen|Überprüfen Sie, ob ein bestimmter Prozess das Datenbanklaufwerk mehr als sinnvoll verwendet.<br /><br />Informieren Sie sich bei dem Team/Anbieter, von dem der Speicher bereitstellt wird, ob dieses Laufwerk die aktuelle Workload mit weniger als 10 ms Latenz bereitstellen kann. Die aktuelle Workload kann mithilfe der Leistungsindikatoren für die Laufwerkauslastung ermittelt werden.|
 |\LogicalDisk(&#42;)\Disk Reads/sec|Die Übertragungsrate für Lesevorgänge auf dem Datenträger.|Kein Schwellenwert|Leistungsindikatoren für die Laufwerkauslastung können nützliche Hinweise bei der Fehlerbehandlung der Speicherlatenz geben.|
 |\LogicalDisk(&#42;)\Disk Read Bytes/sec|Die Anzahl der Bytes pro Sekunde, die vom Datenträger gelesen werden.|Kein Schwellenwert|Leistungsindikatoren für die Laufwerkauslastung können nützliche Hinweise bei der Fehlerbehandlung der Speicherlatenz geben.|
-|\LogicalDisk(&#42;)\Disk Writes/sec|Die Übertragungsrate für Schreibvorgänge auf den Datenträger.|Kein Schwellenwert|Leistungsindikatoren für die Laufwerkauslastung (können nützliche Hinweise bei der Fehlerbehandlung der Speicherlatenz geben).|
+|\LogicalDisk&#42;\Disk Writes/sec|Die Übertragungsrate für Schreibvorgänge auf den Datenträger.|Kein Schwellenwert|Leistungsindikatoren für die Laufwerkauslastung (können nützliche Hinweise bei der Fehlerbehandlung der Speicherlatenz geben).|
 |\LogicalDisk(&#42;)\Disk Write Bytes/sec|Die Anzahl der Bytes pro Sekunde, die auf den Datenträger geschrieben werden.|Kein Schwellenwert|Leistungsindikatoren für die Laufwerkauslastung können nützliche Hinweise bei der Fehlerbehandlung der Speicherlatenz geben.|
 
 ## Weitere Informationen
@@ -106,9 +99,10 @@ In der folgenden Liste sind die Leistungsindikatoren des Betriebssystems aufgef�
 - [ATA-Kapazitätsplanung](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [Konfigurieren der Ereignissammlung](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Konfigurieren der Windows-Ereignisweiterleitung](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
-- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jul16_HO4-->
 
 

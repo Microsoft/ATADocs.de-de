@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: ATA Health Center | Microsoft Advanced Threat Analytics
-description: Mit ATA Health Center lässt sich die Integrität des ATA-Diensts überprüfen, und es werden Warnungen über mögliche Probleme angezeigt.
-keywords:
+title: ATA Health Center | Microsoft ATA
+description: "Mit ATA Health Center lässt sich die Integrität des ATA-Diensts überprüfen, und es werden Warnungen über mögliche Probleme angezeigt."
+keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: d6c783b2-46c5-4211-b21a-d6b17f08d03d
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 3f357d2b21c453e0057370f3dfbbe45e39f3ba97
+
 
 ---
 
@@ -31,10 +25,10 @@ Mit ATA Health Center lässt sich die Leistung des ATA-Diensts überprüfen, und
 ## Arbeiten mit dem ATA Health Center
 Das ATA Health Center zeigt Probleme durch einen roten Punkt über dem Health Center-Symbol auf der Menüleiste an.
 
-![ATA Health Center – Bild des roten Punkts](media/ATA-Health-Center-Alert-red-dot.png)
+![Roter Punkt auf der Symbolleiste für das ATA-Integritätscenter](media/ATA-Health-Center-Alert-red-dot.png)
 
 ### Verwalten der ATA-Integrität
-Um den Gesamtzustand des Systems zu überprüfen, klicken Sie auf der Menüleiste auf das Health Center-Symbol. ![ATA Health Center-Symbol](media/ATA-red-dot.png).
+Um den Gesamtzustand des Systems zu überprüfen, klicken Sie auf der Menüleiste auf das Health Center-Symbol. ![ATA Health Center-Symbol](media/ATA-red-dot.png)
 
 -   Alle offenen Warnungen lassen sich über die Einstellungen **Aufgelöst** und **Verworfen** verwalten. Klicken Sie hierzu in der Warnung auf **Öffnen**, und scrollen Sie abwärts zu **Aufgelöst** oder **Verworfen**.
 
@@ -47,9 +41,10 @@ Um den Gesamtzustand des Systems zu überprüfen, klicken Sie auf der Menüleist
 ## Siehe auch
 - [Arbeiten mit ATA-Erkennungseinstellungen](working-with-detection-settings.md)
 - [Arbeiten mit verdächtigen Aktivitäten](working-with-suspicious-activities.md)
-- [Unterstützung finden Sie in unserem Forum.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=Apr16_HO2-->
+
+<!--HONumber=Jul16_HO4-->
 
 

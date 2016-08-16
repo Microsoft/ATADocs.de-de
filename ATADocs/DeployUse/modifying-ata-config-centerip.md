@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Ändern der ATA-Konfiguration – IP-Adresse für ATA Center | Microsoft Advanced Threat Analytics
-description: Beschreibt, wie die IP-Adresse, der Port oder das Zertifikat für ATA Center geändert werden.
-keywords:
+title: "Ändern der ATA-Konfiguration – IP-Adresse für ATA Center | Microsoft ATA"
+description: "Beschreibt, wie die IP-Adresse, der Port oder das Zertifikat für ATA Center geändert werden."
+keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: 93b27f15-f7e5-49bb-870a-d81d09dfe9fc
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 4eb552b9f7d42895abf08ec4cd9216b5204c5e0b
+
 
 ---
 
@@ -48,15 +42,15 @@ Die ATA-Gateways speichern die IP-Adresse der ATA Center-Instanz, mit der eine V
 
 1.  Öffnen Sie die ATA-Konsole.
 
-2.  Wählen Sie auf der Symbolleiste die Einstellungsoption aus, und wählen Sie **Konfiguration** aus..
+2.  Wählen Sie auf der Symbolleiste die Einstellungsoption und dann **Konfiguration** aus.
 
     ![Symbol der ATA-Konfigurationseinstellungen](media/ATA-config-icon.JPG)
 
-3.  Wählen Sie **Allgemein** aus..
+3.  Wählen Sie **Allgemein** aus.
 
 4.  Wählen Sie unter **ATA Center-Dienst – IP-Adresse: Port** eine der vorhandenen IP-Adressen aus, oder wählen Sie **Benutzerdefinierte IP-Adresse hinzufügen** aus, und geben Sie eine IP-Adresse ein.
 
-5.  Klicken Sie auf **Speichern**..
+5.  Klicken Sie auf **Speichern**.
 
 6.  Daraufhin wird eine Benachrichtigung über die Anzahl der ATA-Gateways angezeigt, die mit der neuesten Konfiguration synchronisiert wurden.
 
@@ -82,9 +76,10 @@ Die ATA-Gateways speichern die IP-Adresse der ATA Center-Instanz, mit der eine V
 ## Siehe auch
 - [Arbeiten mit der ATA-Konsole](working-with-ata-console.md)
 - [Installieren von ATA](install-ata.md)
-- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO4-->
 
 

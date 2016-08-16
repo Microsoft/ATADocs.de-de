@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Ändern der ATA-Konfiguration – IIS-Zertifikat | Microsoft Advanced Threat Analytics
-description: Beschreibt, wie das von IIS für ATA Center verwendete Zertifikat geändert wird.
-keywords:
+title: "Ändern der ATA-Konfiguration – IIS-Zertifikat | Microsoft ATA"
+description: "Beschreibt, wie das von IIS für ATA Center verwendete Zertifikat geändert wird."
+keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: e58a0390-57ef-4c68-a987-2e75e5f3d6b3
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 18d3dfdc2262765d71d82f395273e2972118cbfb
+
 
 ---
 
@@ -45,13 +39,13 @@ Führen Sie zum Ändern des von IIS für ATA Center verwendeten Zertifikats die 
 
 2.  Öffnen Sie den Internetinformationsdienste (IIS)-Manager.
 
-3.  Erweitern Sie den Namen des Servers und dann den Ordner **Sites**..
+3.  Erweitern Sie den Namen des Servers und dann den Ordner **Sites**.
 
-4.  Wählen Sie die Site „Microsoft ATA Console“ aus, und klicken Sie im Bereich **Aktionen** auf **Bindungen**..
+4.  Wählen Sie die Site „Microsoft ATA Console“ aus, und klicken Sie im Bereich **Aktionen** auf **Bindungen**.
 
     ![Aktion „Bindungen“ in ATA-Konsole](media/ATA-console-change-IP-bindings.jpg)
 
-5.  Wählen Sie **HTTPS** aus, und klicken Sie auf **Bearbeiten**..
+5.  Wählen Sie **HTTPS** aus, und klicken Sie auf **Bearbeiten**.
 
 6.  Wählen Sie unter **SSL-Zertifikat** das neue Zertifikat aus.
 
@@ -64,9 +58,10 @@ Führen Sie zum Ändern des von IIS für ATA Center verwendeten Zertifikats die 
 ## Siehe auch
 - [Arbeiten mit der ATA-Konsole](working-with-ata-console.md)
 - [Installieren von ATA](install-ata.md)
-- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO4-->
 
 

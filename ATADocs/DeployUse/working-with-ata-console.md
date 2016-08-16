@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Arbeiten mit der ATA-Konsole | Microsoft Advanced Threat Analytics
+title: Arbeiten mit der ATA-Konsole | Microsoft ATA
 description: Beschreibt die Anmeldung bei der ATA-Konsole sowie die Komponenten der Konsole.
-keywords:
+keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 1eb9397b541eb64cef553f61e8517568d16b0092
+
 
 ---
 
@@ -39,14 +33,15 @@ Um einem Benutzer die Anmeldung bei der ATA-Konsole zu ermöglichen, ohne ihn zu
 
     ![Symbol für den ATA-Server](media/ata-server-icon.png)
 
-    > [!NOTE] Sie können auch entweder aus dem ATA Center oder dem ATA-Gateway einen Browser öffnen und zu der IP-Adresse navigieren, die Sie während der ATA Center-Installation für die ATA-Konsole konfiguriert haben.    
+>[!NOTE]
+> Sie können auch entweder in ATA Center oder auf dem ATA-Gateway einen Browser öffnen und zu der IP-Adresse navigieren, die Sie während der ATA Center-Installation für die ATA-Konsole konfiguriert haben.    
 
 2.  Geben Sie Ihren Benutzernamen und Ihr Kennwort ein, und klicken Sie auf **Anmelden**.
 
 ![Abbildung des ATA-Anmeldebildschirms](media/ATA-log-in-screen.jpg)
 
-    > [!NOTE]
-    > You have to log in with a user who is a member of the local administrator group OR of the Microsoft Advanced Threat Analytics Administrators group.
+> [!NOTE]
+> Sie müssen sich mit einem Benutzer anmelden, der Mitglied der lokalen Administratorgruppe ODER der Gruppe der Microsoft Advanced Threat Analytics-Administratoren ist.
 
 ## Die ATA-Konsole
 
@@ -125,9 +120,10 @@ An jeder Stelle in der Konsole, an der eine einzelne Entität angezeigt wird, z.
 
 
 ## Weitere Informationen
-[Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+[Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jul16_HO4-->
 
 

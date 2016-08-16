@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: ATA-Datenbankverwaltung | Microsoft Advanced Threat Analytics
-description: Vorgänge zum Verschieben, Sichern oder Wiederherstellen der ATA-Datenbank.
-keywords:
+title: ATA-Datenbankverwaltung | Microsoft ATA
+description: "Vorgänge zum Verschieben, Sichern oder Wiederherstellen der ATA-Datenbank."
+keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: 1d27dba8-fb30-4cce-a68a-f0b1df02b977
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 83222c6d29434d93fa1b5ecd613de30408ccfe59
+
 
 ---
 
@@ -42,7 +36,7 @@ Informationen hierzu finden Sie in der [entsprechenden MongoDB-Dokumentation](ht
 
 3.  Öffnen Sie die MongoDB-Konfigurationsdatei, die standardmäßig unter „C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\mongod.cfg“ zu finden ist.
 
-    Finden Sie den `storage: dbPath`-Parameter.
+    Suchen Sie den Parameter. `storage: dbPath`
 
 4.  Verschieben Sie den im `dbPath`-Parameter aufgeführten Ordner an den neuen Speicherort.
 
@@ -56,16 +50,22 @@ Informationen hierzu finden Sie in der [entsprechenden MongoDB-Dokumentation](ht
 
     Standardmäßig befindet sich „mongo.exe“ unter: „C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin“.
 
-8.  Führen Sie den folgenden Befehl aus: `db.SystemProfiles.update( {_t: "CenterSystemProfile"} , {$set:{"Configuration.CenterDatabaseClientConfiguration.DataPath" : "<New DB Location>"}}) Instead of <New DB Location>`, wobei &lt;New DB Location&gt; der neue Orderpfad ist.
+8.  Führen Sie den folgenden Befehl aus: `db.SystemProfiles.update( {_t: "CenterSystemProfile"} , {$set:{"Configuration.CenterDatabaseClientConfiguration.DataPath" : "<New DB Location>"}})`
+
+   Anstelle von <New DB Location>, wobei `&lt;New DB Location&gt;` der neue Ordnerpfad ist.
+
+9.  Aktualisieren Sie „HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Center\DatabaseDataPath“ auf den neuen Ordnerpfad.
 
 9. Starten Sie den Dienst **Microsoft Advanced Threat Analytics Center**.
 
 ## Siehe auch
-- [ATA-Architektur](/advanced-threat-analytics/understand/ata-architecture)
-- [Voraussetzungen für ATA](/advanced-threat-analytics/plandesign/ata-prerequisites)
-- [Unterstützung finden Sie in unserem Forum.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [ATA-Architektur](/advanced-threat-analytics/plan-design/ata-architecture)
+- [ATA-Voraussetzungen](/advanced-threat-analytics/plan-design/ata-prerequisites)
+- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=Apr16_HO2-->
+
+
+<!--HONumber=Jul16_HO4-->
 
 

@@ -1,34 +1,28 @@
 ---
-# required metadata
-
-title: Ändern der ATA-Konfiguration – Zertifikat für ATA Center | Microsoft Advanced Threat Analytics
-description: Beschreibt den zweistufigen Vorgang zum Erneuern oder Ersetzen des Zertifikats im lokalen Computerspeicher auf dem ATA Center-Server. 
-keywords:
+title: "Ändern der ATA-Konfiguration – Zertifikat für ATA Center | Microsoft ATA"
+description: Beschreibt den zweistufigen Vorgang zum Erneuern oder Ersetzen des Zertifikats im lokalen Computerspeicher auf dem ATA Center-Server.
+keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: c8855287-de3b-4cdd-be8f-2128f48a6f27
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 5ae9f13c417459e73d85cce3ebbb0293c3e08f83
+
 
 ---
 
 # Ändern der ATA-Konfiguration – Zertifikat für ATA Center
 
 >[!div class="step-by-step"]
-[« IP-Adresse des ATA Center-Servers](modifying-ata-config-centerip.md)
+[« IP-Adresse von ATA Center](modifying-ata-config-centerip.md)
 [IP-Adresse der ATA-Konsole »](modifying-ata-config-consoleip.md)
 
 ## Ändern des Zertifikats für ATA Center
@@ -45,15 +39,15 @@ Wenn Zertifikate ablaufen und nach dem Installieren des neuen Zertifikats im lok
 
 1.  Öffnen Sie die ATA-Konsole.
 
-2.  Wählen Sie auf der Symbolleiste die Einstellungsoption aus, und wählen Sie **Konfiguration** aus..
+2.  Wählen Sie auf der Symbolleiste die Einstellungsoption und dann **Konfiguration** aus.
 
     ![Symbol der ATA-Konfigurationseinstellungen](media/ATA-config-icon.JPG)
 
-3.  Wählen Sie **ATA Center** aus..
+3.  Wählen Sie **ATA Center** aus.
 
 4.  Wählen Sie unter **Zertifikat** eines der Zertifikate in der Liste aus.
 
-5.  Klicken Sie auf **Speichern**..
+5.  Klicken Sie auf **Speichern**.
 
 6.  Daraufhin wird eine Benachrichtigung über die Anzahl der ATA-Gateways angezeigt, die mit der neuesten Konfiguration synchronisiert wurden.
 
@@ -66,15 +60,16 @@ Wenn Zertifikate ablaufen und nach dem Installieren des neuen Zertifikats im lok
 8.  Stellen Sie sicher, dass die Konfiguration aller ATA-Gateways nach Aktivierung der Änderung synchronisiert werden kann.
 
 >[!div class="step-by-step"]
-[« IP-Adresse des ATA Center-Servers](modifying-ata-config-centerip.md)
+[« IP-Adresse von ATA Center](modifying-ata-config-centerip.md)
 [IP-Adresse der ATA-Konsole »](modifying-ata-config-consoleip.md)
 
 ## Siehe auch
 - [Arbeiten mit der ATA-Konsole](working-with-ata-console.md)
 - [Installieren von ATA](install-ata.md)
-- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO4-->
 
 

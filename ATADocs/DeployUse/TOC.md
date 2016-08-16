@@ -19,7 +19,7 @@
 #### [Zertifikat von ATA Center ändern](modifying-ata-config-centercert.md)
 #### [IP-Adresse der ATA-Konsole ändern](modifying-ata-config-consoleip.md)
 #### [IIS-Zertifikat ändern](modifying-ata-config-iiscert.md)
-#### [Kennwort des Domänencontrollers ändern](modifying-ata-config-dcpassword.md)
+#### [Ändern des Domänenverbindungskennworts](modifying-ata-config-dcpassword.md)
 ### [Arbeiten mit der ATA-Konsole](working-with-ata-console.md)
 ### [ATA-Warnungen einstellen](setting-ata-alerts.md)
 ### [Festlegen von Syslog- und E-Mail-Servereinstellungen](setting-syslog-email-server-settings.md)
@@ -31,6 +31,6 @@
 # [Problembehandlung](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs)
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jul16_HO3-->
 
 

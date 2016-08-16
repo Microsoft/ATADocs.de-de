@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Vor der Installation von ATA - vollständige Schritte | Microsoft Advanced Threat Analytics
-description: Führt Sie durch die erforderlichen Schritte, die Sie vor der ATA-Bereitstellung ausgeführt haben müssen.
-keywords:
+title: "Vor der Installation von ATA – vollständige Schritte | Microsoft ATA"
+description: "Führt Sie durch die erforderlichen Schritte, die Sie vor der ATA-Bereitstellung ausgeführt haben müssen."
+keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 1a6efd51647e267b4eb88af1b4815e5ee416d598
+
 
 ---
 
@@ -37,12 +31,13 @@ Vor der Installation von ATA müssen die folgenden Schritte ausgeführt werden:
 
 ## Siehe auch
 
-- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 - [Voraussetzungen für ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jul16_HO4-->
 
 

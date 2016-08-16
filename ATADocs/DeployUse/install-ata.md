@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Installieren von ATA – abgeschlossen | Microsoft Advanced Threat Analytics
-description: Erläuterung der erforderlichen Schritte zum Bereitstellen, Konfigurieren und Ausführen von ATA.
-keywords:
+title: "Installieren von ATA – vollständig | Microsoft ATA"
+description: "Erläuterung der erforderlichen Schritte zum Bereitstellen, Konfigurieren und Ausführen von ATA."
+keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 9448e5cf619e30f7ebae135e45c7a2fbab58332d
+
 
 ---
 
@@ -31,7 +25,6 @@ Es folgt die Anleitung zum Bereitstellen, Konfigurieren und Ausführen von ATA.
 
 Dazu führen Sie folgende Schritte aus:
 
--   [Schritte vor der Installation](install-ata-preinstall.md)
 
 -   [Schritt 1: Herunterladen und Installieren von ATA Center](install-ata-step1.md)
 
@@ -46,13 +39,15 @@ Dazu führen Sie folgende Schritte aus:
 -   [Schritt 6: Konfigurieren der Subnetze mit kurzer Leasedauer und des Honeytoken-Benutzers](install-ata-step6.md)
 
 
-## Siehe auch
+## Weitere Informationen
 
-- [Unterstützung finden Sie in unserem Forum.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
-- [Konfigurieren der Ereignissammlung](/advanced-threat-analytics/plandesign/configure-event-collection)
-- [Voraussetzungen für ATA](/advanced-threat-analytics/plandesign/ata-prerequisites)
+- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [Konfigurieren der Ereignissammlung](configure-event-collection.md)
+- [Voraussetzungen für ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
-<!--HONumber=Apr16_HO2-->
+
+
+<!--HONumber=Jul16_HO4-->
 
 

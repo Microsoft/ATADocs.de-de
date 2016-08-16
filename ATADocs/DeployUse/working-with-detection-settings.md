@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Arbeiten mit ATA-Erkennungseinstellungen | Microsoft Advanced Threat Analytics
-description: Beschreibt, wie Sie eine Liste von IP-Adressen und Subnetzen konfigurieren, bei denen ungewöhnliche Umstände vorliegen und die anders als andere Entitäten in Ihrem Netzwerk behandelt werden sollen.
-keywords:
+title: Arbeiten mit ATA-Erkennungseinstellungen | Microsoft ATA
+description: "Beschreibt, wie Sie eine Liste von IP-Adressen und Subnetzen konfigurieren, bei denen ungewöhnliche Umstände vorliegen und die anders als andere Entitäten in Ihrem Netzwerk behandelt werden sollen."
+keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: f4f2ae30-4849-4a4f-8f6d-bfe99a32c746
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 692247420a849db5d77c3c035ee59c4a5c533686
+
 
 ---
 
@@ -44,9 +38,10 @@ Sie können IP-Adressen aus den folgenden Erkennungen ausschließen. Wenn Sie ei
 ## Siehe auch
 - [Arbeiten mit verdächtigen Aktivitäten](working-with-suspicious-activities.md)
 - [Ändern der ATA-Konfiguration](modifying-ata-configuration.md)
-- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO4-->
 
 

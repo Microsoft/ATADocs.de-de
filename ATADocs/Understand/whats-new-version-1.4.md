@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Neuerungen in ATA 1.4 | Microsoft Advanced Threat Analytics
-description: Listet Neuerungen sowie bekannte Probleme in ATA 1.4 auf.
-keywords:
+title: Neuigkeiten in ATA Version 1.4 | Microsoft ATA
+description: "Listet Neuerungen sowie bekannte Probleme in ATA 1.4 auf."
+keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: cbea47f9-34c1-42b6-ae9e-6a472b49e1a5
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: b66a315c9a98192cbd3b6feea462445c085091b1
+
 
 ---
 
@@ -64,7 +58,7 @@ Die vorliegenden Anmerkungen zu dieser Version enthalten Informationen zu bekann
 In dieser Version bestehen die folgenden bekannten Probleme.
 
 ### Software zur Netzwerkerfassung
-Auf dem ATA-Gateway ist die einzige unterstützte Software zur Netzwerkerfassung, die Sie installieren können, [Microsoft Netzwerkmonitor 3.4](http://www.microsoft.com/en-us/download/details.aspx?id=4865). Installieren Sie nicht Microsoft Message Analyzer oder eine andere Software zur Netzwerkerfassung. Die Installation anderer Software führt dazu, dass das ATA-Gateway nicht mehr ordnungsgemäß funktioniert.
+Auf dem ATA-Gateway ist der [Microsoft-Netzwerkmonitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865) die einzige unterstützte Software zur Netzwerkerfassung, die installiert werden kann. Installieren Sie nicht Microsoft Message Analyzer oder eine andere Software zur Netzwerkerfassung. Die Installation anderer Software führt dazu, dass das ATA-Gateway nicht mehr ordnungsgemäß funktioniert.
 
 ### Installation über ZIP-Datei
 Stellen Sie beim Installieren des ATA-Gateways sicher, dass Sie die Dateien aus der ZIP-Datei in ein lokales Verzeichnis extrahieren und von dort aus installieren. Installieren Sie das ATA-Gateway nicht direkt aus der ZIP-Datei, da andernfalls die Installation fehlschlägt.
@@ -104,8 +98,9 @@ Installieren Sie KB3047154 nicht auf einem Virtualisierungshost. Dies kann dazu 
 
 [Aktualisieren von ATA auf Version 1.6 – Migrationshandbuch](ata-update-1.6-migration-guide.md)
 
-[Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+[Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jul16_HO4-->
 
 

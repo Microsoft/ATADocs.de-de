@@ -1,32 +1,26 @@
 ---
-# required metadata
-
-title: Konfigurieren der Ereignissammlung | Microsoft Advanced Threat Analytics
+title: Konfigurieren einer Ereignissammlung | Microsoft ATA
 description: Beschreibt die Optionen zum Konfigurieren der Ereignissammlung mit ATA
-keywords:
+keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: fd0b2539841e6938e0f82a81bce04ffb9b5202b4
+
 
 ---
 
 # Konfigurieren der Ereignissammlung
-Um die Erkennungsfunktionalität zu verbessern, benötigt ATA die Windows-Ereignisprotokoll-ID 4776. Diese kann auf zwei Arten an das ATA-Gateway weitergeleitet werden: durch das Konfigurieren des ATA-Gateways zum Überwachen von SIEM-Ereignissen oder durch das [Konfigurieren der Windows-Ereignisweiterleitung](#configuring-windows-event-forwarding)..
+Um die Erkennungsfunktionalität zu verbessern, benötigt ATA die Windows-Ereignisprotokoll-ID 4776. Diese kann auf zwei Arten an das ATA-Gateway weitergeleitet werden: durch das Konfigurieren des ATA-Gateways zum Überwachen von SIEM-Ereignissen oder durch das [Konfigurieren der Windows-Ereignisweiterleitung](#configuring-windows-event-forwarding).
 
 ## Ereignissammlung
 Zusätzlich zum Sammeln und Analysieren des Netzwerkverkehrs zu und von den Domänencontrollern kann ATA das Windows-Ereignis 4776 heranziehen, um die ATA-Erkennung von Pass-the-Hash weiter zu verbessern. Dies kann aus der SIEM heraus erfolgen oder indem Sie die Windows-Ereignisweiterleitung von Ihrem Domänencontroller aus einrichten. Die gesammelten Ereignisse versorgen ATA mit zusätzlichen Informationen, die nicht über den Netzwerkverkehr des Domänencontrollers verfügbar sind.
@@ -49,7 +43,7 @@ Wenn Sie keinen SIEM-/Syslog-Server verwenden, können Sie Ihre Windows-Domänen
 
 ## Konfigurieren des ATA-Gateways zum Abhören von SIEM-Ereignissen
 
-1.  Aktivieren Sie in der ATA-Gateway-Konfiguration die Option **Systemprotokolllistener UDP**..
+1.  Aktivieren Sie in der ATA-Gateway-Konfiguration **Syslog Listener UDP**.
 
     Legen Sie die Abhör-IP-Adresse wie in der untenstehenden Abbildung gezeigt fest. Der Standardport lautet 514.
 
@@ -158,7 +152,7 @@ Fehlercode:         0x0
 -   Die Reihenfolge der „Schlüssel = Wert“-Paare ist unerheblich.
 
 #### QRadar
-QRadar ermöglicht Ereignissammlung über einen Agent. Wenn die Daten mithilfe eines Agents erfasst werden, werden Zeiten ohne Millisekunden-Daten erfasst. Da ATA Millisekunden-Daten erfordert, muss QRadar so festgelegt werden, dass es die Windows-Ereignissammlung ohne Agents verwendet. Weitere Informationen finden Sie unter [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Agentless Windows Events Collection using the MSRPC Protocol")..
+QRadar ermöglicht Ereignissammlung über einen Agent. Wenn die Daten mithilfe eines Agents erfasst werden, werden Zeiten ohne Millisekunden-Daten erfasst. Da ATA Millisekunden-Daten erfordert, muss QRadar so festgelegt werden, dass es die Windows-Ereignissammlung ohne Agents verwendet. Weitere Informationen finden Sie unter [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Agentless Windows Events Collection using the MSRPC Protocol").
 
     <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
 
@@ -176,7 +170,8 @@ Die erforderlichen Felder sind:
 
 Stellen Sie sicher, dass „\t“ zwischen Schlüssel=Wert-Paaren steht.
 
->[!NOTE] Verwendung von WinCollect für die Windows-Ereignissammlung wird nicht unterstützt.
+>[!NOTE] 
+> Verwendung von WinCollect für die Windows-Ereignissammlung wird nicht unterstützt.
 
 ## Konfigurieren der Windows-Ereignisweiterleitung
 Wenn Sie nicht über einen SIEM-Server verfügen, können Sie Ihre Domänencontroller zum Weiterleiten von Windows-Ereignis-ID 4776 direkt auf einen der ATA-Gateways konfigurieren.
@@ -195,34 +190,34 @@ wecutil qc
 ![wef_ad_eventlogreaders](media/wef_ad_eventlogreaders.png)<br>
 Klicken Sie mit der rechten Maustaste darauf, und wählen Sie **Eigenschaften** aus. Fügen Sie auf der Registerkarte **Mitglieder** die Computerkonten der einzelnen ATA-Gateways hinzu.
 ![wef_ad event log reader popup](media/wef_ad-event-log-reader-popup.png)
-6.  Öffnen Sie auf dem ATA-Gateway die Ereignisanzeige, klicken Sie mit der rechten Maustaste auf **Abonnements**, und wählen Sie **Abonnement erstellen** aus..  
+6.  Öffnen Sie auf dem ATA-Gateway die Ereignisanzeige, klicken Sie mit der rechten Maustaste auf **Abonnements**, und wählen Sie **Abonnement erstellen** aus.  
 
     a. Klicken Sie unter **Abonnementtyp und Quellcomputer** auf **Computer auswählen**, fügen Sie die Domänencontroller hinzu, und testen Sie die Konnektivität.
     ![wef_subscription prop](media/wef_subscription-prop.png)
 
-    b. Klicken Sie unter **Zu sammelnde Ereignisse** auf **Ereignisse auswählen**. Wählen Sie **Nach Protokoll** aus, und scrollen Sie abwärts bis zu **Sicherheit**. Geben Sie dann unter **Ereignis-IDs ein-/ausschließen** die Zahl **4776** ein..<br>
+    b. Klicken Sie unter **Zu sammelnde Ereignisse** auf **Ereignisse auswählen**. Wählen Sie **Nach Protokoll** aus, und scrollen Sie abwärts bis zu **Sicherheit**. Geben Sie dann unter **Ereignis-IDs ein-/ausschließen** die Zahl **4776** ein.<br>
     ![wef_4776](media/wef_4776.png)
 
-    c. Klicken Sie unter **Benutzerkonto ändern oder erweiterte Einstellungen konfigurieren** auf **Erweitert**..
-Legen Sie **Protokoll** auf **HTTP** und den **Port** auf **5985** fest..<br>
+    c. Klicken Sie unter **Benutzerkonto ändern oder erweiterte Einstellungen konfigurieren** auf **Erweitert**.
+Legen Sie für das **Protokoll** **HTTP** und für **Port** **5985** fest.<br>
     ![wef_http](media/wef_http.png)
 
 7.  [Optional:] Falls ein kürzeres Abfrageintervall gewünscht wird, legen Sie auf dem ATA-Gateway den Abonnementpuls auf 5 Sekunden fest.
-    wecutil ss <CollectionName>/cm:custom
-    wecutil ss <CollectionName> /hi:5000
+    wecutil ss <CollectionName>/cm:custom wecutil ss <CollectionName> /hi:5000
 
-8. Aktivieren Sie auf der Konfigurationsseite des ATA-Gateways die Option **Windows-Ereignisweiterleitungssammlung**..
+8. Aktivieren Sie auf der Konfigurationsseite des ATA-Gateways die Option **Windows-Ereignisweiterleitungssammlung**.
 
 > [!NOTE]
-Wenn Sie diese Einstellung aktivieren, sucht das ATA-Gateway im Protokoll für weitergeleitete Ereignisse nach Windows-Ereignissen, die von den Domänencontrollern an das Gateway weitergeleitet wurden.
+> Wenn Sie diese Einstellung aktivieren, sucht das ATA-Gateway im Protokoll für weitergeleitete Ereignisse nach Windows-Ereignissen, die von den Domänencontrollern an das Gateway weitergeleitet wurden.
 
-Weitere Informationen finden Sie unter [Einrichten von Computern zum Weiterleiten und Sammeln von Ereignissen](https://technet.microsoft.com/en-us/library/cc748890)
+Weitere Informationen finden Sie unter [Einrichten von Computern zum Weiterleiten und Sammeln von Ereignissen](https://technet.microsoft.com/library/cc748890).
 
 ## Siehe auch
 - [Installieren von ATA](install-ata.md)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO4-->
 
 

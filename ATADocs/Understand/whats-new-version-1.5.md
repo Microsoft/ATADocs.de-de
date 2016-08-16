@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Neuerungen in ATA 1.5 | Microsoft Advanced Threat Analytics
-description: Listet Neuerungen sowie bekannte Probleme in ATA 1.5 auf.
-keywords:
+title: Neuigkeiten in ATA Version 1.5 | Microsoft ATA
+description: "Listet Neuerungen sowie bekannte Probleme in ATA 1.5 auf."
+keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: a0d64aff-ca9e-4300-b3f8-eb3c8b8ae045
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: c6e39cf057ed5e2a86acb8c41301252ed8339922
+
 
 ---
 
@@ -65,7 +59,7 @@ Stellen Sie beim Installieren des ATA-Gateways sicher, dass Sie die Dateien aus 
 Nachdem die Konfiguration für ein ATA-Gateway festgelegt wurde, wird beim ersten Starten des ATA-Gateways die Bezeichnung „Nicht synchronisiert“ angezeigt, bis der Dienst vollständig gestartet wurde. Dies kann beim ersten Starten des Diensts bis zu 10 Minuten dauern.
 
 ### Software zur Netzwerkerfassung
-Auf dem ATA-Gateway ist die einzige unterstützte Software zur Netzwerkerfassung, die Sie installieren können, [Microsoft Netzwerkmonitor 3.4](http://www.microsoft.com/en-us/download/details.aspx?id=4865). Installieren Sie nicht Microsoft Message Analyzer oder eine andere Software zur Netzwerkerfassung. Die Installation anderer Software führt dazu, dass das ATA-Gateway nicht mehr ordnungsgemäß funktioniert.
+Auf dem ATA-Gateway ist der [Microsoft-Netzwerkmonitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865) die einzige unterstützte Software zur Netzwerkerfassung, die installiert werden kann. Installieren Sie nicht Microsoft Message Analyzer oder eine andere Software zur Netzwerkerfassung. Die Installation anderer Software führt dazu, dass das ATA-Gateway nicht mehr ordnungsgemäß funktioniert.
 
 ### KB auf Virtualisierungshost
 Installieren Sie KB3047154 nicht auf einem Virtualisierungshost. Dies kann dazu führen, dass die Portspiegelung nicht mehr ordnungsgemäß ausgeführt wird.
@@ -76,9 +70,10 @@ Installieren Sie KB3047154 nicht auf einem Virtualisierungshost. Dies kann dazu 
 
 [Aktualisieren von ATA auf Version 1.6 – Migrationshandbuch](ata-update-1.6-migration-guide.md)
 
-[Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+[Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jul16_HO4-->
 
 

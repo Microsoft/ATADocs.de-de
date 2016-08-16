@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Verwalten von Telemetrieeinstellungen | Microsoft Advanced Threat Analytics
-description: Beschreibt die von ATA gesammelten Daten und enthält eine schrittweise Anleitung zum Deaktivieren der Datensammlung.
-keywords:
+title: Verwalten von Telemetrieeinstellungen | Microsoft ATA
+description: "Beschreibt die von ATA gesammelten Daten und enthält eine schrittweise Anleitung zum Deaktivieren der Datensammlung."
+keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 7e849e9d902873cec7140a14b6f0709d3ef9ddd1
+
 
 ---
 
@@ -78,9 +72,10 @@ Führen Sie die folgenden Schritte aus, um das Sammeln und Senden von Telemetrie
 
 ## Weitere Informationen
 - [Neuerungen in Version 1.6](/advanced-threat-analytics/understand-explore/whats-new-version-1.6)
-- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jul16_HO4-->
 
 

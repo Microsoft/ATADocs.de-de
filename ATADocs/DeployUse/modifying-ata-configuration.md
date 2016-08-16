@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Ändern der ATA-Konfiguration | Microsoft Advanced Threat Analytics
-description: Liste verschiedener Möglichkeiten zum Ändern der ATA-Konfiguration.
-keywords:
+title: "Ändern der ATA-Konfiguration | Microsoft ATA"
+description: "Liste verschiedener Möglichkeiten zum Ändern der ATA-Konfiguration."
+keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: bcf0f7d3-8027-45c0-8002-19f71fcb30a6
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 8fb7da294cc7b6f745b45e5c7406bc0a26308881
+
 
 ---
 
@@ -42,9 +36,10 @@ Wenn Sie die Konfiguration nach der ersten Installation und Bereitstellung von A
 ## Weitere Informationen
 - [Arbeiten mit der ATA-Konsole](working-with-ata-console.md)
 - [Installieren von ATA](install-ata.md)
-- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO4-->
 
 
