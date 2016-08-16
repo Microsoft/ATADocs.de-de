@@ -1,20 +1,20 @@
 ---
-title: "Ändern der ATA-Konfiguration – IP-Adresse für ATA Center | Microsoft Advanced Threat Analytics"
+title: "Ändern der ATA-Konfiguration – IP-Adresse für ATA Center | Microsoft ATA"
 description: "Beschreibt, wie die IP-Adresse, der Port oder das Zertifikat für ATA Center geändert werden."
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: 93b27f15-f7e5-49bb-870a-d81d09dfe9fc
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: 373eb5722a5450bca87cf66933990249286138ab
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 4eb552b9f7d42895abf08ec4cd9216b5204c5e0b
 
 
 ---
@@ -80,6 +80,6 @@ Die ATA-Gateways speichern die IP-Adresse der ATA Center-Instanz, mit der eine V
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

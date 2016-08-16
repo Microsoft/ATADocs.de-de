@@ -1,20 +1,20 @@
 ---
-title: "Migrationshandbuch zur Aktualisierung auf ATA 1.6 | Microsoft Advanced Threat Analytics"
+title: Migrationshandbuch zum Update auf ATA 1.6 | Microsoft ATA
 description: "Prozeduren zum Aktualisieren von ATA auf Version 1.6"
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d6e7d7bef97bfc4ffde07959dd9256f0319d685f
-ms.openlocfilehash: 190077cd6def34d5f15a6c7eb8f63fa85c3ec2f1
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 87cb9534a45d3a8ca29d6a803ca399a33a3d3ea6
 
 
 ---
@@ -140,6 +140,6 @@ Alle ATA-Gateways wurden erfolgreich aktualisiert, wenn alle ATA-Gateways die er
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

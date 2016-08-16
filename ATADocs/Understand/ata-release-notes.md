@@ -1,20 +1,20 @@
 ---
-title: Anmerkungen zu dieser Version von ATA | Microsoft Advanced Threat Analytics
+title: Anmerkungen zu dieser ATA-Version | Microsoft ATA
 description: "Listet die in den einzelnen Versionen erfolgten Aktualisierungen auf, beschreibt bekannte Probleme und nennt Handbücher für die Migration"
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: cbea47f9-34c1-42b6-ae9e-6a472b49e1a5
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: 2f35fd0267299a17f54a123d239d965a4b40b26d
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 090537e1065fcb742ed51ebcee46fdded63c90a3
 
 
 ---
@@ -35,6 +35,6 @@ Die folgenden Versionen sind verfügbar:
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

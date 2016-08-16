@@ -1,20 +1,20 @@
 ---
-title: "Migrationshandbuch zur Aktualisierung auf ATA 1.5 | Microsoft Advanced Threat Analytics"
+title: Migrationshandbuch zum Update auf ATA 1.5 | Microsoft ATA
 description: "Prozeduren zum Aktualisieren von ATA auf Version 1.5"
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: 87293e71e053e2d7a962a5b7362b92e5df677c77
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: be23c15ce709b710dc48b333fc464aa190772573
 
 
 ---
@@ -134,6 +134,6 @@ Alle ATA-Gateways wurden erfolgreich aktualisiert, wenn alle ATA-Gateways die er
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

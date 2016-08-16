@@ -1,20 +1,20 @@
 ---
-title: "Ändern der ATA-Konfiguration – Domänenverbindungskennwort | Microsoft Advanced Threat Analytics"
+title: "Ändern der ATA-Konfiguration – Domänenverbindungskennwort | Microsoft ATA"
 description: "Beschreibt, wie das Domänenverbindungskennwort auf dem ATA-Gateway geändert wird."
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: 4a25561b-a5ed-44aa-9b72-366976b3c72a
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: df1dbed75ad0c88de5a6c51d2e5d7e521a2577c4
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 7b8904bcb379004b2038e6b9a14c87c3914f1e1f
 
 
 ---
@@ -59,6 +59,6 @@ Um dies zu korrigieren, führen Sie die folgenden Schritte zum Ändern des Domä
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

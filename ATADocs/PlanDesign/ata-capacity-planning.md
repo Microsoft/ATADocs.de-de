@@ -1,28 +1,45 @@
 ---
-title: Planen der ATA-Bereitstellung | Microsoft Advanced Threat Analytics
+title: Planen Ihrer ATA-Bereitstellung | Microsoft ATA
 description: "Hilft bei der Planung Ihrer Bereitstellung und der Entscheidung, wie viele ATA-Server für Ihr Netzwerk erforderlich sind."
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod: identity-ata
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.prod: 
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d6e7d7bef97bfc4ffde07959dd9256f0319d685f
-ms.openlocfilehash: ff8eb5361d3dfeaa3715d325ed91c0ad422211ed
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: e0174ecac39b2a8cd469ed698853c447a85e4251
 
 
 ---
 
 # ATA-Kapazitätsplanung
-Dieses Thema hilft Ihnen bei der Ermittlung der für Ihr Netzwerk erforderlichen Anzahl der ATA-Server. Es wird erläutert, wie viele ATA-Gateways und ATA-Lightweight-Gateways benötigt werden und welche Serverkapazität für ATA Center und die ATA-Gateways erforderlich ist.
+Dieses Thema hilft Ihnen zu ermitteln, wie viele ATA-Server zur Überwachung Ihres Netzwerks erforderlich sind. Es wird erläutert, wie viele ATA-Gateways und/oder ATA-Lightweight-Gateways benötigt werden und welche Serverkapazität für ATA Center und die ATA-Gateways erforderlich ist.
 
-## Größenzuteilung für ATA Center
+##Verwenden das Tools zur Größenanpassung
+Die empfohlene und einfachste Methode zum Ermitteln der Kapazität für die ATA-Bereitstellung besteht in der Verwendung des [ATA-Tools zur Größenanpassung](http://aka.ms/atasizingtool). Führen Sie das ATA-Tool zur Größenanpassung aus, und verwenden Sie aus den Excel-Dateiergebnissen heraus die folgenden Felder zum Ermitteln der benötigten ATA-Kapazität:
+
+- ATA Center-CPU und -Arbeitsspeicher: Gleichen Sie das Feld **Busy Packets/sec** in der ATA Center-Tabelle in der Ergebnisdatei mit dem Feld **PACKETS PER SECOND** in der [ATA Center-Tabelle](#ata-center-sizing) ab.
+
+- ATA Center-Speicher: Gleichen Sie das Feld **Avg Packets/sec** in der ATA Center-Tabelle in der Ergebnisdatei mit dem Feld **PACKETS PER SECOND** in der [ATA Center-Tabelle](#ata-center-sizing) ab.
+- ATA-Gateway: Gleichen Sie das Feld **Busy Packets/sec** in der ATA-Gateway-Tabelle in der Ergebnisdatei mit dem Feld **PACKETS PER SECOND** in der [ATA Gateway-Tabelle](#ata-gateway-sizing) oder der [ATA Lightweight Gateway-Tabelle](#ata-lightweight-gateway-sizing) ab, je nach [ausgewähltem Gateway](#choosing-the-right-gateway-type-for-your-deployment).
+
+
+![Beispiel für das Kapazitätsplanungstool](media/capacity tool.png)
+
+
+
+Wenn Sie das ATA-Tool zur Größenanpassung aus irgendeinem Grund nicht verwenden können, müssen Sie die Informationen zum Pakete/Sek.-Leistungsindikator manuell von allen Domänencontrollern über einen Zeitraum von 24 Stunden mit einem sehr niedrigen Erfassungsintervall (etwa 5 Sekunden) sammeln. Anschließend müssen Sie für jeden Domänencontroller den Tagesdurchschnitt und den Durchschnitt der Zeitspanne (15 Minuten) mit der höchsten Auslastung berechnen.
+Die folgenden Abschnitte enthalten Anweisungen dazu, wie Sie Informationen zum Pakete/Sek.-Leistungsindikator für einen Domänencontroller sammeln.
+
+
+
+### Größenzuteilung für ATA Center
 Für die Analyse des Benutzerverhaltens benötigt das ATA Center die Daten von mindestens 30 Tagen. Der erforderliche Speicherplatz für die ATA-Datenbank pro Domänencontroller wird unten ausgeführt. Wenn mehrere Domänencontroller vorhanden sind, ergibt sich der Speicherplatzbedarf insgesamt aus der Summe des erforderlichen Speicherplatzes für die einzelnen Domänencontroller.
 > [!NOTE] 
 > Bei Ausführung als virtueller Computer wird kein dynamischer Arbeitsspeicher und keine andere Speichererweiterungsfunktion unterstützt.
@@ -74,7 +91,7 @@ Es folgen Beispiele für Szenarien, in denen Domänencontroller durch das ATA-Ga
 - Rechenzentren an Hauptstandorten (mit Domänencontrollern mit mehr als 10.000 Paketen pro Sekunde).
 
 
-## Dimensionierung von ATA-Lightweight-Gateways
+### Dimensionierung von ATA-Lightweight-Gateways
 
 Ein ATA-Lightweight-Gateway kann die Überwachung eines Domänencontrollers basierend auf der Menge des vom Domänencontroller erzeugten Netzwerkverkehrs unterstützen. 
 > [!NOTE] 
@@ -95,7 +112,7 @@ Ein ATA-Lightweight-Gateway kann die Überwachung eines Domänencontrollers basi
 > Wenn der Domänencontroller nicht über die für das ATA-Lightweight-Gateway erforderlichen Ressourcen verfügt, wird die Leistung des Domänencontrollers zwar nicht beeinträchtigt, aber das ATA-Lightweight-Gateway funktioniert möglicherweise nicht wie erwartet.
 
 
-## Bemessung von ATA-Gateways
+### Bemessung von ATA-Gateways
 
 Berücksichtigen Sie Folgendes bei der Entscheidung, wie viele ATA-Gateways bereitgestellt werden sollen.
 
@@ -121,7 +138,7 @@ Berücksichtigen Sie Folgendes bei der Entscheidung, wie viele ATA-Gateways bere
 |50.000|16|48|
 &#42;Durchschnittliche Gesamtanzahl der Pakete pro Sekunde von allen Domänencontrollern, die von dem betreffenden ATA-Gateway überwacht werden, und zwar zum Zeitpunkt der höchsten Nutzung.
 
-& #42;Die Gesamtmenge des per Portspiegelung verarbeiteten Domänencontroller-Datenverkehrs darf die Kapazität der für das Sammeln verwendeten NIC auf dem ATA-Gateway nicht überschreiten.
+&#42;Die Gesamtmenge des per Portspiegelung verarbeiteten Domänencontroller-Datenverkehrs darf die Kapazität der für das Sammeln verwendeten NIC auf dem ATA-Gateway nicht überschreiten.
 
 &#42;&#42;Hyperthreading muss deaktiviert sein.
 
@@ -184,6 +201,6 @@ Um die Pakete pro Sekunde zu ermitteln, gehen Sie auf jedem Domänencontroller w
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

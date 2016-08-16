@@ -1,20 +1,20 @@
 ---
-title: ATA-Voraussetzungen | Microsoft Advanced Threat Analytics
+title: ATA-Voraussetzungen | Microsoft ATA
 description: "Beschreibt die Voraussetzungen für eine erfolgreiche Bereitstellung von ATA in Ihrer Umgebung."
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f85b9a0f51bd18edaa91ea208d6e6c7c7de56cc
-ms.openlocfilehash: da887431d8e63a7ae8ceeb3e7e22011d356e3590
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 87891f6ad683ed9536d3d3f27449feac9bd9dee1
 
 
 ---
@@ -273,6 +273,6 @@ Der Zugriff auf die ATA-Konsole erfolgt über einen Browser. Folgende Browser we
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO4-->
 
 

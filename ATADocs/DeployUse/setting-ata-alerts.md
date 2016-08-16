@@ -1,20 +1,20 @@
 ---
-title: Festlegen von ATA-Benachrichtigungen | Microsoft Advanced Threat Analytics
+title: Festlegen von ATA-Benachrichtigungen | Microsoft ATA
 description: "Beschreibt, wie ATA-Warnungen festgelegt werden, damit Sie bei verdächtigen Aktivitäten benachrichtigt werden."
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: 14cb7513-5dc8-49cb-b3e0-94f469c443dd
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: a32799b68d9a8b2949033ab5d1fc5910cff71258
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 47796a385ce92217fe36040df0723f31e4cb8701
 
 
 ---
@@ -71,6 +71,6 @@ Um Syslog-Benachrichtigungen zu erhalten, legen Sie Folgendes fest:
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

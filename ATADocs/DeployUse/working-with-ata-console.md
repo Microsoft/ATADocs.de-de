@@ -1,20 +1,20 @@
 ---
-title: Arbeiten mit der ATA-Konsole | Microsoft Advanced Threat Analytics
+title: Arbeiten mit der ATA-Konsole | Microsoft ATA
 description: Beschreibt die Anmeldung bei der ATA-Konsole sowie die Komponenten der Konsole.
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: 7f9ca7dcb227f5dde1225c55150fd1c737722ce1
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 1eb9397b541eb64cef553f61e8517568d16b0092
 
 
 ---
@@ -124,6 +124,6 @@ An jeder Stelle in der Konsole, an der eine einzelne Entität angezeigt wird, z.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

@@ -1,20 +1,20 @@
 ---
-title: "Installieren von ATA – Schritt 4 | Microsoft Advanced Threat Analytics"
+title: "Installieren von ATA – Schritt 4 | Microsoft ATA"
 description: Im vierten Schritt beim Installieren von ATA installieren Sie das ATA-Gateway.
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d6e7d7bef97bfc4ffde07959dd9256f0319d685f
-ms.openlocfilehash: f12e43a6918c0c02bb59e4a093720a805b7dbcfc
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 6052a911c12f8dbb757ab8445f9e0c6ec09b530e
 
 
 ---
@@ -84,6 +84,6 @@ Führen Sie die folgenden Schritte auf dem ATA-Gatewayserver aus.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

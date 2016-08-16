@@ -1,20 +1,20 @@
 ---
-title: "Ändern der ATA-Konfiguration – Zertifikat für ATA Center | Microsoft Advanced Threat Analytics"
+title: "Ändern der ATA-Konfiguration – Zertifikat für ATA Center | Microsoft ATA"
 description: Beschreibt den zweistufigen Vorgang zum Erneuern oder Ersetzen des Zertifikats im lokalen Computerspeicher auf dem ATA Center-Server.
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: c8855287-de3b-4cdd-be8f-2128f48a6f27
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: 0cfeb67e663489d7264c88aafe04e77fcb63377f
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 5ae9f13c417459e73d85cce3ebbb0293c3e08f83
 
 
 ---
@@ -70,6 +70,6 @@ Wenn Zertifikate ablaufen und nach dem Installieren des neuen Zertifikats im lok
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

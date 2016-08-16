@@ -1,20 +1,20 @@
 ---
-title: ATA-Architektur | Microsoft Advanced Threat Analytics
+title: ATA-Architektur | Microsoft ATA
 description: Beschreibt die Architektur von Microsoft Advance Threat Analytics (ATA)
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: 2d753060f30cbcc7d16959355b86d64fdaa2ecd8
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 18ce237fad1bb0de8e50cd640231ce1b36ab9a6b
 
 
 ---
@@ -181,6 +181,6 @@ Zur Erhöhung der ATA-Erkennung von Pass-the-Hash, Brute-Force und Honeytoken be
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

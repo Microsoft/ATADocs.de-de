@@ -1,20 +1,20 @@
 ---
-title: "Überprüfen der Portspiegelung | Microsoft Advanced Threat Analytics"
+title: "Überprüfen der Portspiegelung | Microsoft ATA"
 description: "Beschreibt, wie die ordnungsgemäße Konfiguration der Portspiegelung überprüft wird."
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: ebd41719-c91a-4fdd-bcab-2affa2a2cace
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d6e7d7bef97bfc4ffde07959dd9256f0319d685f
-ms.openlocfilehash: e1ce20c48323e1fca04211c2691f6dfb6fa57fe5
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: d95fd582362fc650dffeb6c4fbf892ba3e367f12
 
 
 ---
@@ -224,6 +224,6 @@ Beispiel, wie das Skript ausgeführt wird:
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 
