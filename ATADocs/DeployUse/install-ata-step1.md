@@ -13,8 +13,8 @@ ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 29b3abd4308ec766e8b01b0b07f384130e1d14eb
+ms.sourcegitcommit: d89f6c5e0ac9712ce2fde057c9ef8e4025e8a144
+ms.openlocfilehash: 41d538039a8fa0511a74dd6cd5d840a1dea516e8
 
 
 ---
@@ -22,7 +22,6 @@ ms.openlocfilehash: 29b3abd4308ec766e8b01b0b07f384130e1d14eb
 # Installieren von ATA – Schritt 1
 
 >[!div class="step-by-step"]
-
 [Schritt 2 »](install-ata-step2.md)
 
 Diese Installationsschritte stellen Anweisungen zur Durchführung einer Neuinstallation von ATA 1.6 bereit. Informationen zum Aktualisieren einer vorhandenen früheren ATA-Bereitstellungsversion finden Sie im [ATA-Migrationshandbuch für Version 1.6](/advanced-threat-analytics/understand-explore/ata-update-1.6-migration-guide).
@@ -93,7 +92,7 @@ Da Sie sich mit einer IP-Adresse bei der Website anmelden, wird eine Warnung im 
 [« Vor der Installation](preinstall-ata.md)
 [Schritt 2 »](install-ata-step2.md)
 
-## Siehe auch
+## Weitere Informationen
 
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
@@ -102,6 +101,6 @@ Da Sie sich mit einer IP-Adresse bei der Website anmelden, wird eine Warnung im 
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 
