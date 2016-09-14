@@ -14,8 +14,8 @@ ms.technology:
 ms.suite: ems
 ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: c9914415db42c9bb7dbf25717fb0b51fa5edaae1
+ms.sourcegitcommit: 1d610cead982b7a87a03339d960e6a2236a97932
+ms.openlocfilehash: 6cca68b7f0410c9b40ffdb2c97feaf0663b93ae0
 
 
 ---
@@ -36,6 +36,7 @@ ms.openlocfilehash: c9914415db42c9bb7dbf25717fb0b51fa5edaae1
       <h2 class="section-heading"><span class="icon icon-warning"></span> Wichtige Inhalte</h2>
       <div class="features row">
         <ul class="column column-half">
+          <li><mark><b>NEU</b></mark> <a href="/understand-explore/whats-new-version-1.7">Veröffentlichung von ATA Version 1.7</a></li>
           <li><a href="/advanced-threat-analytics/understand-explore/what-is-ata">Was ist Advanced Threat Analytics?</a></li>
           <li><a href="/advanced-threat-analytics/understand-explore/ata-technical-faq">Häufig gestellte Fragen</a></li>
         </ul>
@@ -52,7 +53,7 @@ ms.openlocfilehash: c9914415db42c9bb7dbf25717fb0b51fa5edaae1
               <a href="/advanced-threat-analytics/understand-explore/what-is-ata">
                 <div class="title column-third">
                   <span class="step-number">1</span>
-                  <p>Kennenlernen</p>
+                  <p>Verstehen &amp; Kennenlernen</p>
                 </div>
                 <p class="description column-two-thirds">Lernen Sie die grundlegenden Konzepte, Features und Funktionen von Microsoft Advanced Threat Analytics kennen.
                 </p>
@@ -108,7 +109,7 @@ ms.openlocfilehash: c9914415db42c9bb7dbf25717fb0b51fa5edaae1
                 </li>
                 <li class="column-third">
                   <a href="/advanced-threat-analytics/plan-design/ata-prerequisites">
-                    <h3>Voraussetzungen für ATA</h3>
+                    <h3>ATA-Voraussetzungen</h3>
                     <p>Planen Sie die Anforderungen für eine erfolgreiche Bereitstellung von ATA in Ihrer Umgebung.</p>
                   </a>
                 </li>
@@ -195,6 +196,6 @@ ms.openlocfilehash: c9914415db42c9bb7dbf25717fb0b51fa5edaae1
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 
