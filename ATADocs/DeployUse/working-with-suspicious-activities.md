@@ -4,7 +4,7 @@ description: "Beschreibt, wie Sie von ATA identifizierte verdächtige Aktivität
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,15 @@ ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: e07ab99454133eab0480277ec2e54a1c3253a621
+ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
+ms.openlocfilehash: 30fbeb0682bd4b253d7a6eb52b8b31e487b363cb
 
 
 ---
+
+*Gilt für: Advanced Threat Analytics Version 1.7*
+
+
 
 # Arbeiten mit verdächtigen Aktivitäten
 In diesem Thema werden die Grundlagen des Arbeitens mit Advanced Threat Analytics erläutert.
@@ -113,6 +117,6 @@ Sie können den Status einer verdächtigen Aktivität ändern, indem Sie auf den
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

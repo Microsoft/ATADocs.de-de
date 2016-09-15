@@ -4,7 +4,7 @@ description: "Hilft bei der Planung Ihrer Bereitstellung und der Entscheidung, w
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
 ms.prod: 
@@ -12,11 +12,15 @@ ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: e0174ecac39b2a8cd469ed698853c447a85e4251
+ms.sourcegitcommit: e3b690767e5c6f5561a97a73eccfbf50ddb04148
+ms.openlocfilehash: 09bf48be4c651af6ca1ae66a47f940d504570c8a
 
 
 ---
+
+*Gilt für: Advanced Threat Analytics Version 1.7*
+
+
 
 # ATA-Kapazitätsplanung
 Dieses Thema hilft Ihnen zu ermitteln, wie viele ATA-Server zur Überwachung Ihres Netzwerks erforderlich sind. Es wird erläutert, wie viele ATA-Gateways und/oder ATA-Lightweight-Gateways benötigt werden und welche Serverkapazität für ATA Center und die ATA-Gateways erforderlich ist.
@@ -41,8 +45,7 @@ Die folgenden Abschnitte enthalten Anweisungen dazu, wie Sie Informationen zum P
 
 ### Größenzuteilung für ATA Center
 Für die Analyse des Benutzerverhaltens benötigt das ATA Center die Daten von mindestens 30 Tagen. Der erforderliche Speicherplatz für die ATA-Datenbank pro Domänencontroller wird unten ausgeführt. Wenn mehrere Domänencontroller vorhanden sind, ergibt sich der Speicherplatzbedarf insgesamt aus der Summe des erforderlichen Speicherplatzes für die einzelnen Domänencontroller.
-> [!NOTE] 
-> Bei Ausführung als virtueller Computer wird kein dynamischer Arbeitsspeicher und keine andere Speichererweiterungsfunktion unterstützt.
+ 
 
 |Pakete pro Sekunde&#42;|CPU (Kerne&#42;&#42;)|Arbeitsspeicher (GB)|Datenbankspeicher pro Tag (GB)|Datenbankspeicher pro Monat (GB)|IOPS&#42;&#42;&#42;|
 |---------------------------|-------------------------|-------------------|---------------------------------|-----------------------------------|-----------------------------------|
@@ -59,9 +62,13 @@ Für die Analyse des Benutzerverhaltens benötigt das ATA Center die Daten von m
 > [!NOTE]
 > -   ATA Center kann in der Summe aller überwachten Domänencontroller maximal 400.000 Frames pro Sekunde behandeln.
 > -   Die hier vorgegebenen Speichermengen sind Nennwerte und sollten stets im Hinblick auf künftiges Wachstum angepasst werden. Das Laufwerk, auf dem sich die Datenbank befindet, sollte mindestens 20 % freien Speicherplatz aufweisen.
-> -   Wenn der freie Speicherplatz auf 20 % oder 100 GB fällt, werden die Daten der ältesten Sammlung gelöscht. Dieser Vorgang wird weitergeführt, bis entweder die Daten nur noch zwei Tagen entsprechen oder der verbleibende Speicherplatz unter 5 % oder unter 50 GB fällt. In diesem Fall wird die Datensammlung abgebrochen.
-> -  Die Speicherlatenz für Lese- und Schreibvorgänge sollte unter 10 ms betragen.
-> -  Das Verhältnis zwischen Schreib- und Lesevorgängen beträgt unterhalb von 100.000 Paketen pro Sekunde etwa 1:3 und oberhalb dieser Grenze etwa 1:6.
+> -   Wenn der freie Speicherplatz auf 20 % oder 100 GB fällt, werden die Daten der ältesten Sammlung gelöscht. Dieser Vorgang wird weiter ausgeführt, bis nur noch 5% oder 50 GB an freiem Speicherplatz übrig bleiben. Sobald dies der Fall ist, wird die Datensammlung abgebrochen.
+> -   Die Speicherlatenz für Lese- und Schreibvorgänge sollte unter 10 ms betragen.
+> -   Das Verhältnis zwischen Schreib- und Lesevorgängen beträgt unterhalb von 100.000 Paketen pro Sekunde etwa 1:3 und oberhalb dieser Grenze etwa 1:6.
+> -   Bei Ausführung als virtueller Computer wird kein dynamischer Arbeitsspeicher und keine andere Speichererweiterungsfunktion unterstützt.
+> -   Um eine optimale Leistung zu erzielen, legen Sie die **Energieoption** von ATA Center auf **Hohe Leistung** fest.<br>
+> -   Wenn Sie auf einem physischen Server arbeiten, erfordert die ATA-Datenbank, dass Sie den nicht einheitlichen Speicherzugriff (Non-Uniform Memory Access, NUMA) im BIOS **deaktivieren**. Das System bezieht sich möglicherweise als Knotenüberlappung auf NUMA. In diesem Fall müssen Sie die Knotenüberlappung **aktivieren**, um NUMA zu deaktivieren. Weitere Informationen finden Sie in der BIOS-Dokumentation. Beachten Sie, dass dies nicht relevant ist, wenn ATA Center auf einem virtuellen Server ausgeführt wird.
+
 
 ## Auswählen des richtigen Gatewaytyps für die Bereitstellung
 In einer ATA-Umgebung wird jede Kombination der ATA-Gatewaytypen unterstützt:
@@ -94,8 +101,7 @@ Es folgen Beispiele für Szenarien, in denen Domänencontroller durch das ATA-Ga
 ### Dimensionierung von ATA-Lightweight-Gateways
 
 Ein ATA-Lightweight-Gateway kann die Überwachung eines Domänencontrollers basierend auf der Menge des vom Domänencontroller erzeugten Netzwerkverkehrs unterstützen. 
-> [!NOTE] 
-> Bei Ausführung als virtueller Computer wird kein dynamischer Arbeitsspeicher und keine andere Speichererweiterungsfunktion unterstützt.
+
 
 |Pakete pro Sekunde&#42;|CPU (Kerne&#42;&#42;)|Arbeitsspeicher (GB)&#42;&#42;&#42;|
 |---------------------------|-------------------------|---------------|
@@ -108,8 +114,11 @@ Ein ATA-Lightweight-Gateway kann die Überwachung eines Domänencontrollers basi
 &#42;&#42;Gesamtmenge der Kerne ohne Hyperthreading, die auf diesem Domänencontroller installiert sind.<br>Hyperthreading ist zwar für das ATA-Lightweight-Gateway akzeptabel, bei der Kapazitätsplanung sollten Sie aber die tatsächlichen Kernen und nicht die Kerne mit Hyperthreading zählen.
 
 &#42;&#42;&#42;Gesamtgröße des auf diesem Domänencontroller installierten Arbeitsspeichers.
+
 > [!NOTE]   
-> Wenn der Domänencontroller nicht über die für das ATA-Lightweight-Gateway erforderlichen Ressourcen verfügt, wird die Leistung des Domänencontrollers zwar nicht beeinträchtigt, aber das ATA-Lightweight-Gateway funktioniert möglicherweise nicht wie erwartet.
+> -   Wenn der Domänencontroller nicht über die für das ATA-Lightweight-Gateway erforderlichen Ressourcen verfügt, wird die Leistung des Domänencontrollers zwar nicht beeinträchtigt, aber das ATA-Lightweight-Gateway funktioniert möglicherweise nicht wie erwartet.
+> -   Bei Ausführung als virtueller Computer wird kein dynamischer Arbeitsspeicher und keine andere Speichererweiterungsfunktion unterstützt.
+> -   Um eine optimale Leistung zu erzielen, legen Sie die **Energieoption** des ATA-Lightweight-Gateways auf **Hohe Leistung** fest.
 
 
 ### Bemessung von ATA-Gateways
@@ -126,8 +135,7 @@ Berücksichtigen Sie Folgendes bei der Entscheidung, wie viele ATA-Gateways bere
     Ein ATA-Gateway kann die Überwachung von mehreren Domänencontrollern unterstützen, abhängig vom Umfang des Netzwerkverkehrs der überwachten Domänencontroller. 
 <br>
 
-> [!NOTE] 
-> Dynamischer Arbeitsspeicher wird nicht unterstützt.
+
 
 |Pakete pro Sekunde&#42;|CPU (Kerne&#42;&#42;)|Arbeitsspeicher (GB)|
 |---------------------------|-------------------------|---------------|
@@ -142,6 +150,9 @@ Berücksichtigen Sie Folgendes bei der Entscheidung, wie viele ATA-Gateways bere
 
 &#42;&#42;Hyperthreading muss deaktiviert sein.
 
+> [!NOTE] 
+> -   Dynamischer Arbeitsspeicher wird nicht unterstützt.
+> -   Um eine optimale Leistung zu erzielen, legen Sie die **Energieoption** des ATA-Gateways auf **Hohe Leistung** fest.
 
 
 ## Abschätzung des Datenverkehrs für Domänencontroller
@@ -201,6 +212,6 @@ Um die Pakete pro Sekunde zu ermitteln, gehen Sie auf jedem Domänencontroller w
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

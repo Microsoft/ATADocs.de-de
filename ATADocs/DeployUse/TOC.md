@@ -1,6 +1,6 @@
 # [Verstehen und Kennenlernen](/advanced-threat-analytics/understand-explore/what-is-ata)
 # [Planung und Entwurf](/advanced-threat-analytics/plan-design/ata-capacity-planning)
-# [Bereitstellen und Verwenden](install-ata.md)
+# [Bereitstellen und Verwenden](preinstall-ata.md)
 ## [Vor der Installation von ATA](preinstall-ata.md)
 ### [Konfigurieren der Portspiegelung](configure-port-mirroring.md)
 ### [Überprüfen der Portspiegelung](validate-port-mirroring.md)
@@ -17,12 +17,12 @@
 ### [Ändern der ATA-Konfiguration](modifying-ata-configuration.md)
 #### [IP-Adresse von ATA Center ändern](modifying-ata-config-centerip.md)
 #### [Zertifikat von ATA Center ändern](modifying-ata-config-centercert.md)
-#### [IP-Adresse der ATA-Konsole ändern](modifying-ata-config-consoleip.md)
-#### [IIS-Zertifikat ändern](modifying-ata-config-iiscert.md)
+#### [Ändern der URL der ATA-Konsole](modifying-ata-config-consoleurl.md)
 #### [Ändern des Domänenverbindungskennworts](modifying-ata-config-dcpassword.md)
 ### [Arbeiten mit der ATA-Konsole](working-with-ata-console.md)
-### [ATA-Warnungen einstellen](setting-ata-alerts.md)
+### [ATA-Rollengruppen](ata-role-groups.md)
 ### [Festlegen von Syslog- und E-Mail-Servereinstellungen](setting-syslog-email-server-settings.md)
+### [ATA-Warnungen einstellen](setting-ata-alerts.md)
 ### [Arbeiten mit Erkennungseinstellungen](working-with-detection-settings.md)
 ### [ATA Health Center](ata-health-center.md)
 ### [Arbeiten mit verdächtigen Aktivitäten](working-with-suspicious-activities.md)
@@ -31,6 +31,6 @@
 # [Problembehandlung](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO5-->
 
 
