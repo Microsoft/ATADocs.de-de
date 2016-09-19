@@ -4,7 +4,7 @@ description: Beschreibt die Anmeldung bei der ATA-Konsole sowie die Komponenten 
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,19 +13,22 @@ ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 1eb9397b541eb64cef553f61e8517568d16b0092
+ms.sourcegitcommit: a4ba68547d6746625a44aca5d05790c3ad138f4e
+ms.openlocfilehash: ab9abce7479971c80544476c54cbf0911d1a5822
 
 
 ---
+
+*Gilt für: Advanced Threat Analytics Version 1.7*
+
+
 
 # Arbeiten mit der ATA-Konsole
 
 Verwenden Sie die ATA-Konsole, um die von ATA erkannten verdächtigen Aktivitäten zu überwachen und darauf zu reagieren.
 
 ## Aktivieren des Zugriffs auf die ATA-Konsole
-Jeder Benutzer, der Mitglied der lokalen Administratorgruppe auf dem ATA Center-Server ist, verfügt über die Berechtigung, sich bei der ATA-Konsole anzumelden und ATA-Einstellungen zu verwalten.
-Um einem Benutzer die Anmeldung bei der ATA-Konsole zu ermöglichen, ohne ihn zu einem lokalen Administrator zu machen, fügen Sie ihn zur lokalen Gruppe der **Microsoft Advanced Threat Analytics-Administratoren** hinzu.
+Sie müssen sich mit einem Benutzer anmelden, dem die richtige ATA-Rolle für den Zugriff auf die ATA-Konsole zugewiesen wurde, damit die Anmeldung auf der Konsole erfolgreich verläuft. Weitere Informationen zur rollenbasierten Zugriffssteuerung (role-based access control; RBAC) in ATA finden Sie unter [Working with ATA role groups](ata-role-groups.md) (Arbeiten mit ATA-Rollengruppen).
 
 ## Anmelden bei der ATA-Konsole
 
@@ -38,10 +41,8 @@ Um einem Benutzer die Anmeldung bei der ATA-Konsole zu ermöglichen, ohne ihn zu
 
 2.  Geben Sie Ihren Benutzernamen und Ihr Kennwort ein, und klicken Sie auf **Anmelden**.
 
-![Abbildung des ATA-Anmeldebildschirms](media/ATA-log-in-screen.jpg)
+![Abbildung des ATA-Anmeldebildschirms](media/ATA-log-in-screen.png)
 
-> [!NOTE]
-> Sie müssen sich mit einem Benutzer anmelden, der Mitglied der lokalen Administratorgruppe ODER der Gruppe der Microsoft Advanced Threat Analytics-Administratoren ist.
 
 ## Die ATA-Konsole
 
@@ -54,7 +55,7 @@ Dies sind die wichtigsten Elemente der ATA-Konsole.
 
 Dies ist die Standardzielseite, auf die Sie gelangen, wenn Sie sich bei der ATA-Konsole anmelden. Standardmäßig werden alle offenen verdächtigen Aktivitäten auf der Angriffszeitachse angezeigt. Sie können die Angriffszeitachse filtern, um alle verdächtigen Aktivitäten bzw. offene, verworfene oder aufgelöste verdächtige Aktivitäten anzuzeigen. Außerdem wird der Schweregrad angezeigt, der den einzelnen Aktivitäten zugewiesen wurde.
 
-![Abbildung der Angriffszeitachse in ATA](media/attack-timeline.png)
+![Abbildung der Angriffszeitachse in ATA](media/attack-timeline-1.7.png)
 
 Weitere Informationen finden Sie unter [Arbeiten mit verdächtigen Aktivitäten](/advanced-threat-analytics/deploy-use/working-with-suspicious-activities).
 
@@ -62,7 +63,7 @@ Weitere Informationen finden Sie unter [Arbeiten mit verdächtigen Aktivitäten]
 
 Wenn eine neue verdächtige Aktivität erkannt wurde, wird auf der rechten Seite automatisch die Benachrichtigungsleiste geöffnet. Wenn seit Ihrer letzten Anmeldung neue verdächtige Aktivitäten erkannt wurden, wird die Benachrichtigungsleiste geöffnet, nachdem Sie sich erfolgreich angemeldet haben. Sie können jederzeit auf den Pfeil auf der rechten Seite klicken, um auf die Benachrichtigungsleiste zuzugreifen.
 
-![Abbildung der ATA-Benachrichtigungsleiste](media/notification-bar.png)
+![Abbildung der ATA-Benachrichtigungsleiste](media/notification-bar-1.7.png)
 
 ### Filterbereich
 
@@ -78,7 +79,7 @@ Im obersten Menü finden Sie eine Suchleiste. Sie können nach einem bestimmten 
 
 Das Integritätscenter warnt Sie, wenn in Ihrer ATA-Bereitstellung etwas nicht ordnungsgemäß funktioniert.
 
-![Abbildung des ATA-Integritätscenters](media/health-center.png)
+![Abbildung des ATA-Integritätscenters](media/ATA-Health-Issue.jpg)
 
 Jedes Mal, wenn auf Ihrem System ein Problem auftritt, z. B. ein Verbindungsfehler oder ein getrenntes ATA-Gateway, können Sie dies am Symbol für das Integritätscenter erkennen, auf dem ein roter Punkt angezeigt wird. ![Abbildung des roten Punkts auf dem Symbol für das ATA-Integritätscenter](media/ATA-Health-Center-Alert-red-dot.png)
 
@@ -124,6 +125,6 @@ An jeder Stelle in der Konsole, an der eine einzelne Entität angezeigt wird, z.
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

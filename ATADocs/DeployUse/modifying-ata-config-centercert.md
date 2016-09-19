@@ -4,7 +4,7 @@ description: Beschreibt den zweistufigen Vorgang zum Erneuern oder Ersetzen des 
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,20 +13,24 @@ ms.assetid: c8855287-de3b-4cdd-be8f-2128f48a6f27
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 5ae9f13c417459e73d85cce3ebbb0293c3e08f83
+ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
+ms.openlocfilehash: e707d354396f8eeed58c13ee1e9e91df9888e030
 
 
 ---
+
+*Gilt für: Advanced Threat Analytics Version 1.7*
+
+
 
 # Ändern der ATA-Konfiguration – Zertifikat für ATA Center
 
 >[!div class="step-by-step"]
 [« IP-Adresse von ATA Center](modifying-ata-config-centerip.md)
-[IP-Adresse der ATA-Konsole »](modifying-ata-config-consoleip.md)
+[URL der ATA-Konsole »](modifying-ata-config-consoleurl.md)
 
 ## Ändern des Zertifikats für ATA Center
-Wenn Zertifikate ablaufen und nach dem Installieren des neuen Zertifikats im lokalen Computerspeicher auf dem ATA Center-Server erneuert oder ersetzt werden müssen, können Sie das Zertifikat in einem zweistufigen Vorgang ersetzen:
+Wenn Ihr Zertifikate bald abläuft und nach dem Installieren des neuen Zertifikats im lokalen Computerspeicher auf dem ATA Center-Server erneuert oder ersetzt werden muss, können Sie das Zertifikat in einem zweistufigen Vorgang ersetzen:
 
 -   Erste Stufe: Aktualisieren Sie das Zertifikat, das vom ATA Center-Dienst verwendet werden soll. Zu diesem Zeitpunkt ist der ATA Center-Dienst noch an das ursprüngliche Zertifikat gebunden. Beim Synchronisieren der Konfiguration der ATA-Gateways sind zwei mögliche Zertifikate vorhanden, die für die gegenseitige Authentifizierung gültig sind. Solange ein ATA-Gateway eine Verbindung über das ursprüngliche Zertifikat herstellen kann, wird das neue Zertifikat nicht verwendet.
 
@@ -35,6 +39,7 @@ Wenn Zertifikate ablaufen und nach dem Installieren des neuen Zertifikats im lok
 > [!NOTE]
 > -   Wenn ein ATA-Gateway während der ersten Stufe offline geschaltet war und die aktualisierte Konfiguration nicht abrufen konnte, müssen Sie die JSON-Konfigurationsdatei im ATA-Gateway manuell aktualisieren.
 > -   Das verwendete Zertifikat muss von den ATA-Gateways als vertrauenswürdig eingestuft werden.
+> -   Das Zertifikat wird auch für die ATA-Konsole verwendet, deshalb sollte es der Adresse der ATA-Konsole entsprechen, um Browserwarnungen zu vermeiden.
 > -   Wenn Sie nach dem Aktivieren des neuen Zertifikats ein neues ATA-Gateway bereitstellen möchten, müssen Sie das ATA-Gateway-Setuppaket erneut herunterladen.
 
 1.  Öffnen Sie die ATA-Konsole.
@@ -43,7 +48,7 @@ Wenn Zertifikate ablaufen und nach dem Installieren des neuen Zertifikats im lok
 
     ![Symbol der ATA-Konfigurationseinstellungen](media/ATA-config-icon.JPG)
 
-3.  Wählen Sie **ATA Center** aus.
+3.  Wählen Sie **Center** aus.
 
 4.  Wählen Sie unter **Zertifikat** eines der Zertifikate in der Liste aus.
 
@@ -61,15 +66,15 @@ Wenn Zertifikate ablaufen und nach dem Installieren des neuen Zertifikats im lok
 
 >[!div class="step-by-step"]
 [« IP-Adresse von ATA Center](modifying-ata-config-centerip.md)
-[IP-Adresse der ATA-Konsole »](modifying-ata-config-consoleip.md)
+[URL der ATA-Konsole »](modifying-ata-config-consoleurl.md)
 
-## Siehe auch
+## Weitere Informationen
 - [Arbeiten mit der ATA-Konsole](working-with-ata-console.md)
 - [Installieren von ATA](install-ata.md)
-- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [Weitere Informationen finden Sie im ATA-Forum.](https://aka.ms/ata-forum)
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 
