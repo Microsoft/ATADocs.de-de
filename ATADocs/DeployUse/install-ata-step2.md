@@ -4,7 +4,7 @@ description: "Im zweiten Schritt beim Installieren von ATA konfigurieren Sie die
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,15 @@ ms.assetid: e1c5ff41-d989-46cb-aa38-5a3938f03c0f
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 65ec5c86478e9ded096b899d64eb257257095eaf
+ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
+ms.openlocfilehash: fc268bcb2e3d027b09fa3349427934f60783b971
 
 
 ---
+
+*Gilt für: Advanced Threat Analytics Version 1.7*
+
+
 
 # Installieren von ATA – Schritt 2
 
@@ -25,28 +29,24 @@ ms.openlocfilehash: 65ec5c86478e9ded096b899d64eb257257095eaf
 [« Schritt 1](install-ata-step1.md)
 [Schritt 3 »](install-ata-step3.md)
 
-## Schritt 2. Konfigurieren der allgemeinen ATA-Gatewayeinstellungen
-Die Einstellungen auf der Registerkarte **Allgemein** gelten für alle über ATA Center verwalteten ATA-Gateways.
+## Schritt 2. Geben Sie einen Benutzernamen und ein Kennwort an, um eine Verbindung mit Ihrer Active Directory-Gesamtstruktur herzustellen
 
-Gehen Sie folgendermaßen vor, um die allgemeinen ATA-Gatewayeinstellungen zu konfigurieren:
+Beim ersten Öffnen der ATA-Konsole wird der folgende Bildschirm angezeigt:
 
-1.  Öffnen Sie die ATA-Konsole, und melden Sie sich an. Entsprechende Anweisungen finden Sie unter [Arbeiten mit der ATA-Konsole](working-with-ata-console.md).
+![ATA welcome stage 1](media/ATA_1.7-welcome-provide-username.png)
 
-2.  Klicken Sie auf das Symbol „Einstellungen“, und wählen Sie **Konfiguration** aus.
-
-    ![Einstellungen für ATA-Gateway-Konfiguration](media/ATA-config-icon.JPG)
-
-3.  Geben Sie auf der Registerkarte **Allgemein** unter **ATA-Gateways** die folgenden Informationen ein, und klicken Sie auf **Speichern**.
+1.  Geben Sie die folgenden Informationen ein, und klicken Sie anschließend auf **Speichern**.
 
     |Feld|Kommentare|
     |---------|------------|
-    |**Benutzername** (erforderlich)|Geben Sie den schreibgeschützten Benutzernamen ein, z. B. **user1**.|
-    |**Kennwort** (erforderlich)|Geben Sie das Kennwort für den schreibgeschützten Benutzer ein, z. B. **Pencil1**. **Hinweis:** Stellen Sie sicher, dass Sie das richtige Kennwort eingeben. Wenn Sie das falsche Kennwort speichern, wird der ATA-Dienst auf den ATA-Gatewayservern nicht mehr ausgeführt.|
+    |**Benutzername** (erforderlich)|Geben Sie den schreibgeschützten Benutzernamen ein, z.B. **ATAuser**.|
+    |**Kennwort** (erforderlich)|Geben Sie das Kennwort für den schreibgeschützten Benutzer ein, z. B. **Pencil1**.|
     |**Domäne** (erforderlich)|Geben Sie die Domäne für den schreibgeschützten Benutzer ein, z. B. **contoso.com**. **Hinweis:** Es ist wichtig, dass Sie den vollqualifizierten Domänennamen (FQDN) der Domäne eingeben, in der sich das Benutzerkonto befindet. Wenn sich das Konto des Benutzers beispielsweise in der Domäne „corp.contoso.com“ befindet, müssen Sie `corp.contoso.com` und nicht „contoso.com“ eingeben.|
     |Alle ATA-Gateways automatisch aktualisieren |Wenn Sie diese Einstellung aktivieren, werden bei künftigen Versionen während des Updates von ATA Center alle ATA-Gateways automatisch aktualisiert.|
 
-    ![Abbildung ATA-Domänenverbindungseinstellungen](media/ata-domain-connectivity-user.jpg)
+    Nachdem Ihre Eingaben gespeichert wurden, ändert sich die Willkommensnachricht in der Konsole folgendermaßen: ![ATA welcome stage 1 finished](media/ATA_1.7-welcome-provide-username-finished.png)
 
+2. Klicken Sie in der Konsole auf **Download Gateway setup and install the first Gateway** (Herunterladen des Gateway-Setups und Installieren des ersten Gateways) um den Vorgang fortzusetzen.
 
 
 >[!div class="step-by-step"]
@@ -62,6 +62,6 @@ Gehen Sie folgendermaßen vor, um die allgemeinen ATA-Gatewayeinstellungen zu ko
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

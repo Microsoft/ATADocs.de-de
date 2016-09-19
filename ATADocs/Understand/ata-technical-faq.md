@@ -4,7 +4,7 @@ description: "Liste häufig gestellter Fragen zu ATA und zugehörige Antworten"
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,12 @@ ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 09de79e1f8fee6b27c7ba403df1af4431bd099a9
-ms.openlocfilehash: 51440757c89130f8454e9c2b1abe7182f2b7eb41
+ms.sourcegitcommit: b8ad2f343b8397184cd860803f06b0d59c492f5a
+ms.openlocfilehash: 96b3ce171ca07bf44163d49b50377fccd6472a08
 
 
 ---
+*Gilt für: Advanced Threat Analytics Version 1.7*
 
 # Häufig gestellte Fragen zu ATA
 Dieser Artikel enthält eine Reihe häufig gestellter Fragen zu ATA sowie Hintergrundwissen und Antworten.
@@ -39,23 +40,26 @@ Sie können einen End-to-End-Test durchführen und verdächtige Aktivitäten sim
 Dies muss remote für den überwachten Domänencontroller und nicht über das ATA-Gateway ausgeführt werden.
 
 ## Wie kann ich die Windows-Ereignisweiterleitung überprüfen?
-Führen Sie an einer Eingabeaufforderung im Verzeichnis **\Programme\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** folgenden Befehl aus:
+Sie können den folgenden Code in einer Datei ablegen und ihn dann über eine Eingabeaufforderung im Verzeichnis **\Programme\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** wie folgt ausführen:
 
-        mongo ATA --eval "printjson(db.getCollectionNames())" | find /C "NtlmEvents"`
+ATA-Dateiname mongo.exe
+
+        db.getCollectionNames().forEach(function(collection) {
+        if (collection.substring(0,10)=="NtlmEvent_") {
+                if (db[collection].count() > 0) {
+                                  print ("Found "+db[collection].count()+" NTLM events") 
+                                }
+                }
+        });
+
 ## Funktioniert ATA mit verschlüsseltem Datenverkehr?
-Verschlüsselter Datenverkehr wird nicht analysiert (z. B. LDAPS, IPSEC ESP).
+ATA stützt sich auf die Analyse mehrerer Netzwerkprotokolle sowie auf Ereignisse, die aus dem SIEM-Server oder über die Windows-Ereignisweiterleitung gesammelt wurden, sodass ATA wie gewohnt arbeitet und der Großteil der Erkennungen nicht betroffen ist, obwohl der verschlüsselte Datenverkehr nicht analysiert wird (z.B. LDAPS und IPSEC ESP).
+
 ## Funktioniert ATA mit Kerberos Armoring?
 Die Aktivierung von Kerberos Armoring (auch als Flexible Authentication Secure Tunneling (FAST) bezeichnet) wird von ATA unterstützt. Einzige Ausnahme ist die Overpass-The-Hash-Erkennung, die nicht unterstützt wird.
 ## Wie viele ATA-Gateways benötige ich?
 
-Zunächst wird empfohlen, dass Sie auf allen Domänencontrollern, die über genügend Ressourcen verfügen, ATA-Lightweight-Gateways verwenden. Informationen dazu, wie Sie dies ermitteln, finden Sie unter [Dimensionierung von ATA-Lightweight-Gateways](/advanced-threat-analytics/plan-design/ata-capacity-planning#ata-lightweight-gateway-sizing). 
-
-Wenn alle Domänencontroller durch ATA-Lightweight-Gateways abgedeckt werden können, sind keine ATA-Gateways erforderlich.
-
-Für alle Domänencontroller, die nicht mit dem ATA-Lightweight-Gateway abgedeckt werden können, berücksichtigen Sie Folgendes bei der Entscheidung, wie viele ATA-Gateways Sie benötigen:
-
- - Die Gesamtmenge des Datenverkehrs, die Ihre Domänencontroller erzeugen, sowie die Netzwerkarchitektur (zum Konfigurieren der Portspiegelung). Weitere Informationen zum Ermitteln des anfallenden Datenverkehrs Ihrer Domänencontroller finden Sie unter [Abschätzung des Datenverkehrs für Domänencontroller](/advanced-threat-analytics/plan-design/ata-capacity-planning#Domain-controller-traffic-estimation).
- - Zudem bestimmen die operativen Einschränkungen der Portspiegelung, wie viele ATA-Gateways zur Unterstützung Ihrer Domänencontroller erforderlich sind, z. B. pro Switch, pro Datencenter, pro Region. In jeder Umgebung sind besondere Aspekte zu berücksichtigen. 
+Die Anzahl der ATA-Gateways hängt von Ihrem Netzwerklayout, der Menge der Pakete und der Anzahl der Ereignisse ab, die von ATA erfasst werden. Lesen Sie den Abschnitt [Größenzuteilung für ATA Center](/advanced-threat-analytics/plan-design/ata-capacity-planning#ata-lightweight-gateway-sizing), um die genaue Anzahl zu ermitteln. 
 
 ## Wie viel Speicher benötige ich für ATA?
 Für jeden ganzen Tag mit durchschnittlich 1000 Paketen/Sekunde sind 0,3 GB Speicher erforderlich.<br /><br />Weitere Informationen zur Dimensionierung von ATA Center finden Sie unter [ATA-Kapazitätsplanung](/advanced-threat-analytics/plan-design/ata-capacity-planning).
@@ -79,11 +83,10 @@ Wenn ein virtueller Domänencontroller nicht durch das ATA-Lightweight-Gateway a
 Zwei Elemente müssen gesichert werden:
 
 -   Der Datenverkehr und die Ereignisse, die von ATA gespeichert werden und die mit jedem unterstützten Verfahren zur Datenbanksicherung gesichert werden können. Weitere Informationen hierzu finden Sie unter [ATA-Datenbankverwaltung](/advanced-threat-analytics/deploy-use/ata-database-management). 
--   Die Konfiguration von ATA, die in der Datenbank gespeichert ist und jede Stunde automatisch gesichert wird. 
-
+-   Die Konfiguration von ATA. Sie ist in der Datenbank gespeichert und wird automatisch jede Stunde im Ordner **Sicherung** im Bereitstellungsspeicherort von ATA Center gesichert.  Weitere Informationen finden Sie unter [ATA-Datenbankverwaltung](https://docs.microsoft.com/en-us/advanced-threat-analytics/deploy-use/ata-database-management).
 ## Was kann ATA erkennen?
 ATA erkennt bekannte Angriffe und Techniken, Sicherheitsprobleme und Risiken.
-Die vollständige Liste der ATA-Erkennungen finden Sie unter [Was ist Microsoft Advanced Threat Analytics?](what-is-ata.md).
+Die vollständige Liste der ATA-Erkennungen finden Sie unter [Welche Bedrohungen erkennt ATA?](ata-threats.md).
 
 ## Welche Art von Speicher benötige ich für ATA?
 Wir empfehlen ein schnelles Speichermedium (Datenträger mit 7200 U/min werden nicht empfohlen) mit Datenträgerzugriff mit niedriger Latenz (weniger als 10 ms). Die RAID-Konfiguration sollte hohe Schreiblasten unterstützen (RAID-5/6 und zugehörige Ableitungen werden nicht empfohlen).
@@ -95,9 +98,9 @@ Für das ATA-Gateway sind mindestens zwei Netzwerkkarten erforderlich:<br>1. Ein
 ATA weist eine bidirektionale Integration mit SIEMs auf:
 
 1. ATA kann so konfiguriert werden, dass im Fall einer verdächtigen Aktivität eine Syslog-Warnung an alle SIEM-Server gesendet wird, die das CEF-Format verwenden.
-2. ATA kann so konfiguriert werden, dass für jedes Windows-Ereignis mit der ID 4776 Syslog-Meldungen von [diesen SIEMs](/advanced-threat-analytics/deploy-use/configure-event-collection#siem-support) empfangen werden.
+2. ATA kann so konfiguriert werden, dass für jedes Windows-Ereignis mit der ID 4776 Syslog-Meldungen von [diesen SIEMs](/advanced-threat-analytics/deploy-use/configure-event-collection#siem-support) empfangen werden.
 
-## Kann ATA in Ihrer IaaS-Lösung dargestellte Domänencontroller überwachen?
+## Kann ATA in Ihrer IaaS-Lösung virtualisierte Domänencontroller überwachen?
 
 Ja, Sie können mit dem ATA-Lightweight-Gateway Domänencontroller in einer beliebigen IaaS-Lösung überwachen.
 
@@ -126,8 +129,7 @@ Nein. ATA überwacht alle Geräte im Netzwerk und führt die Authentifizierung s
 Ja. Da Computerkonten (ebenso wie alle anderen Entitäten) zum Durchführen böswilliger Aktivitäten verwendet werden können, überwacht ATA das Verhalten aller Computerkonten und aller weiteren Entitäten in der Umgebung.
 
 ## Kann ATA kann mehrere Domänen und mehrere Gesamtstrukturen unterstützen?
-Bei allgemeiner Verfügbarkeit unterstützt Microsoft Advanced Threat Analytics mehrere Domänen mit derselben Gesamtstrukturbegrenzung. Die Gesamtstruktur selbst ist die tatsächliche „Sicherheitsgrenze“, sodass die Unterstützung mehrerer Domänen unseren Kunden die 100%ige Abdeckung ihrer Umgebungen mit ATA ermöglicht.
-
+Microsoft Advanced Threat Analytics unterstützt-Umgebungen mit mehreren Domänen innerhalb der gleichen Gesamtstrukturbegrenzung. Mehrere Gesamtstrukturen erfordern eine ATA-Bereitstellung für jede Gesamtstruktur.
 ## Kann die Gesamtintegrität der Bereitstellung angezeigt werden?
 Ja, Sie können die Gesamtintegrität der Bereitstellung sowie spezifische Probleme im Zusammenhang mit der Konfiguration, Konnektivität usw. anzeigen, und werden bei Eintreten eines Problems benachrichtigt.
 
@@ -142,6 +144,6 @@ Ja, Sie können die Gesamtintegrität der Bereitstellung sowie spezifische Probl
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO5-->
 
 

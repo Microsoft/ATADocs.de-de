@@ -4,7 +4,7 @@ description: Beschreibt die Architektur von Microsoft Advance Threat Analytics (
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,16 @@ ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 18ce237fad1bb0de8e50cd640231ce1b36ab9a6b
+ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
+ms.openlocfilehash: c416fba5aace73cf585e7f6ca604a8c61c3c6fcc
 
 
 ---
+
+*Gilt für: Advanced Threat Analytics Version 1.7*
+
+
+
 
 # ATA-Architektur
 Dieses Diagramm veranschaulicht die Architektur von Advanced Threat Analytics:
@@ -181,6 +186,6 @@ Zur Erhöhung der ATA-Erkennung von Pass-the-Hash, Brute-Force und Honeytoken be
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

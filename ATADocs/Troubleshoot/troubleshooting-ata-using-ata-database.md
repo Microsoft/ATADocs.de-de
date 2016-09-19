@@ -4,7 +4,7 @@ description: Beschreibt die Verwendung der ATA-Datenbank zum Behandeln von Probl
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,15 @@ ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: c86b6dc880238e262f696e88c54bc1bc7e01a1db
+ms.sourcegitcommit: af0508f82d8cf190dcd3ff058f4c2ff37b4b0595
+ms.openlocfilehash: dfc6c902cb13b1a2bf927cd235806ec32d9fefc3
 
 
 ---
+
+*Gilt für: Advanced Threat Analytics Version 1.7*
+
+
 
 # Behandeln von Problemen mit ATA mithilfe der ATA-Datenbank
 ATA verwendet MongoDB als Datenbank.
@@ -45,15 +49,6 @@ Das folgende Beispiel enthält Beispielcode mit der oben aufgeführten Syntax. W
 `db.UniqueEntity.find({Name: "John Doe"})`<br>Notieren Sie sich seine ID, die durch den Wert von „`_id`“ angegeben ist. In diesem Beispiel gehen wir von der ID „`123bdd24-b269-h6e1-9c72-7737as875351`“ aus.<br>Suchen Sie dann die Sammlung mit dem nächstgelegenen Datum vor dem Datum, das Sie suchen, in diesem Beispiel 20.10.2015.<br>Suchen Sie anschließend die NTLM-Aktivitäten des Kontos von John Doe: 
 
 `db.Ntlms_<closest date>.find({SourceAccountId: "123bdd24-b269-h6e1-9c72-7737as875351"})`
-## ATA-Konfigurationsdatei
-Die Konfiguration von ATA ist in der Sammlung „SystemProfile“ in der Datenbank gespeichert.
-Diese Sammlung wird vom ATA Center-Dienst stündlich in der Datei „SystemProfile.json“ gespeichert. Diese Datei befindet sich im Unterordner „Backup“. Im ATA-Standardinstallationsverzeichnis ist die Datei unter **C:\Programme\Microsoft Advanced Threat Analytics\Center\Backup\SystemProfile.json** zu finden. 
-
-**Hinweis**: Wenn Sie größere Änderungen an ATA vornehmen, wird empfohlen, eine Sicherung dieser Datei zu erstellen.
-
-Sie können alle Einstellungen wiederherstellen, indem Sie den folgenden Befehl ausführen:
-
-`mongoimport.exe --db ATA --collection SystemProfile --file "<SystemProfile.json backup file>" --upsert`
 
 ## Weitere Informationen
 - [ATA-Voraussetzungen](/advanced-threat-analytics/plan-design/ata-prerequisites)
@@ -64,6 +59,6 @@ Sie können alle Einstellungen wiederherstellen, indem Sie den folgenden Befehl 
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

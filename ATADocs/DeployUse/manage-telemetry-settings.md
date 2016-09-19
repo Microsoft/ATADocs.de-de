@@ -4,7 +4,7 @@ description: "Beschreibt die von ATA gesammelten Daten und enthält eine schritt
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,15 @@ ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 7e849e9d902873cec7140a14b6f0709d3ef9ddd1
+ms.sourcegitcommit: 3a7e375da4acd5546347310c5965394b2addfe63
+ms.openlocfilehash: 0c6b8589fffe24298d0caf2cf2eb5e7e817e4da2
 
 
 ---
+
+*Gilt für: Advanced Threat Analytics Version 1.7*
+
+
 
 # Verwalten von Telemetrieeinstellungen
 Advanced Threat Analytics (ATA) sammelt anonymisierte Telemetriedaten über ATA und überträgt die Daten über eine HTTPS-Verbindung an Microsoft-Server.  Diese Daten werden von Microsoft zur Verbesserung von zukünftigen ATA-Versionen verwendet.
@@ -63,6 +67,21 @@ Die gesammelten anonymisierten Daten enthalten folgende Elemente:
 
     -   Vorliegende Eingabe
 
+- Integritätsprobleme – Die folgenden anonymisierten Daten werden für jedes Integritätsproblem erfasst:
+
+    (Computernamen, Benutzernamen und IP-Adressen werden nicht erfasst.)
+
+    -   Integritätsproblemtyp
+
+    -   Integritätsproblem-ID
+
+    -   Status
+
+    -   Start- und Endzeitpunkt
+
+- URL-Adressen der ATA-Konsole – URL-Adressen bei Verwendung der ATA-Konsole, d.h. welche Seite in der ATA-Konsole besucht werden.
+
+
 ### Datensammlung deaktivieren
 Führen Sie die folgenden Schritte aus, um das Sammeln und Senden von Telemetriedaten an Microsoft zu beenden:
 
@@ -76,6 +95,6 @@ Führen Sie die folgenden Schritte aus, um das Sammeln und Senden von Telemetrie
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

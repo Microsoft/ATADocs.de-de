@@ -4,7 +4,7 @@ description: "Führt Sie durch die erforderlichen Schritte, die Sie vor der ATA-
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,15 @@ ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 1a6efd51647e267b4eb88af1b4815e5ee416d598
+ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
+ms.openlocfilehash: 0c1a53ff7192ec5a343330750d600d545c0e0237
 
 
 ---
+
+*Gilt für: Advanced Threat Analytics Version 1.7*
+
+
 
 # Vor der Installation von ATA
 
@@ -29,15 +33,15 @@ Vor der Installation von ATA müssen die folgenden Schritte ausgeführt werden:
 
 
 
-## Siehe auch
+## Weitere Informationen
 
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
-- [Voraussetzungen für ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
+- [ATA-Voraussetzungen](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

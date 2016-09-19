@@ -4,7 +4,7 @@ description: "Liste verschiedener Möglichkeiten zum Ändern der ATA-Konfigurati
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,15 @@ ms.assetid: bcf0f7d3-8027-45c0-8002-19f71fcb30a6
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 8fb7da294cc7b6f745b45e5c7406bc0a26308881
+ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
+ms.openlocfilehash: b79a5726b40130b28b0b52d42eede69a4dacc8b6
 
 
 ---
+
+*Gilt für: Advanced Threat Analytics Version 1.7*
+
+
 
 # Ändern der ATA-Konfiguration
 
@@ -27,19 +31,17 @@ Wenn Sie die Konfiguration nach der ersten Installation und Bereitstellung von A
 
 -   [Ändern des Zertifikats für ATA Center](modifying-ata-config-centercert.md)
 
--   [Ändern der IP-Adresse der ATA-Konsole](modifying-ata-config-consoleip.md)
-
--   [Ändern des IIS-Zertifikats](modifying-ata-config-iiscert.md)
+-   [Ändern der URL der ATA-Konsole](modifying-ata-config-consoleurl.md)
 
 -   [Ändern des Domänenverbindungskennworts](modifying-ata-config-dcpassword.md)
 
 ## Weitere Informationen
 - [Arbeiten mit der ATA-Konsole](working-with-ata-console.md)
 - [Installieren von ATA](install-ata.md)
-- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [Weitere Informationen finden Sie im ATA-Forum.](https://aka.ms/ata-forum)
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

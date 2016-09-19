@@ -13,11 +13,15 @@ ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: fd0b2539841e6938e0f82a81bce04ffb9b5202b4
+ms.sourcegitcommit: 54e5105e78b6db9f33488135601381af5503aa4a
+ms.openlocfilehash: 118eb5bf505426f1947e96a4e01d0206abdce88d
 
 
 ---
+
+*Gilt für: Advanced Threat Analytics Version 1.6 und 1.7*
+
+
 
 # Konfigurieren der Ereignissammlung
 Um die Erkennungsfunktionalität zu verbessern, benötigt ATA die Windows-Ereignisprotokoll-ID 4776. Diese kann auf zwei Arten an das ATA-Gateway weitergeleitet werden: durch das Konfigurieren des ATA-Gateways zum Überwachen von SIEM-Ereignissen oder durch das [Konfigurieren der Windows-Ereignisweiterleitung](#configuring-windows-event-forwarding).
@@ -28,7 +32,7 @@ Zusätzlich zum Sammeln und Analysieren des Netzwerkverkehrs zu und von den Dom�
 ### SIEM/Syslog
 Damit ATA Daten aus einem Syslog-Server verwenden kann, müssen folgende Schritte ausgeführt werden:
 
--   Konfigurieren von einem der ATA-Gateway-Server zum Lauschen auf und Übernehmen von Ereignissen, die vom SIEM-/Syslog-Server weitergeleitet werden.
+-   Konfigurieren Ihres ATA-Gateway-Server zum Lauschen auf und Übernehmen von Ereignissen, die vom SIEM-/Syslog-Server weitergeleitet werden.
 
 -   Konfigurieren des SIEM-/Syslog-Servers zum Weiterleiten bestimmter Ereignisse an das ATA-Gateway.
 
@@ -41,15 +45,13 @@ Weitere Informationen über das Konfigurieren der Weiterleitung bestimmter Ereig
 ### Windows-Ereignisweiterleitung
 Wenn Sie keinen SIEM-/Syslog-Server verwenden, können Sie Ihre Windows-Domänencontroller zum Weiterleiten von Windows-Ereignis-ID 4776 konfigurieren, damit diese von ATA gesammelt und konfiguriert wird. Windows-Ereignis-ID 4776 enthält Daten über NTLM-Authentifizierungen.
 
-## Konfigurieren des ATA-Gateways zum Abhören von SIEM-Ereignissen
+## Konfigurieren des ATA-Gateways zum Überwachen von SIEM-Ereignissen
 
-1.  Aktivieren Sie in der ATA-Gateway-Konfiguration **Syslog Listener UDP**.
-
-    Legen Sie die Abhör-IP-Adresse wie in der untenstehenden Abbildung gezeigt fest. Der Standardport lautet 514.
+1.  Aktivieren Sie in der ATA-Konsole unter „Ereignisse“ **Syslog** und drücken Sie auf **Speichern**.
 
     ![Aktivieren des Syslog-Listener-UDP-Images](media/ATA-enable-siem-forward-events.png)
 
-2.  Konfigurieren Sie den SIEM-/Syslog-Server zum Weiterleiten von Windows-Ereignis-ID 4776 an die oben ausgewählte IP-Adresse. Weitere Informationen zum Konfigurieren der SIEM finden Sie in der SIEM-Onlinehilfe sowie in den Optionen für technischen Support für spezielle Formatierungserfordernisse einzelner SIEM-Server.
+2.  Konfigurieren Sie den SIEM-/Syslog-Server zum Weiterleiten von Windows-Ereignis-ID 4776 an die IP-Adresse von einem der ATA-Gateways. Weitere Informationen zum Konfigurieren der SIEM finden Sie in der SIEM-Onlinehilfe sowie in den Optionen für technischen Support für spezielle Formatierungserfordernisse einzelner SIEM-Server.
 
 ### SIEM-Unterstützung
 ATA unterstützt SIEM-Ereignisse in den folgenden Formaten:
@@ -174,50 +176,116 @@ Stellen Sie sicher, dass „\t“ zwischen Schlüssel=Wert-Paaren steht.
 > Verwendung von WinCollect für die Windows-Ereignissammlung wird nicht unterstützt.
 
 ## Konfigurieren der Windows-Ereignisweiterleitung
-Wenn Sie nicht über einen SIEM-Server verfügen, können Sie Ihre Domänencontroller zum Weiterleiten von Windows-Ereignis-ID 4776 direkt auf einen der ATA-Gateways konfigurieren.
 
-1.  Melden Sie sich bei allen Domänencontrollern und ATA-Gateway-Computer mit einem Domänenkonto mit Administratorrechten an.
-2. Stellen Sie sicher, dass die Domänencontroller und ATA-Gateways, mit denen Sie eine Verbindung herstellen, der gleichen Domäne angehören.
-3.  Geben Sie auf jedem Domänencontroller Folgendes in einem Eingabeaufforderungsfenster mit erhöhten Rechten ein:
-```
-winrm quickconfig
-```
-4.  Geben Sie auf dem ATA-Gateway an einer Eingabeaufforderung mit erhöhten Rechten den folgenden Befehl ein:
-```
-wecutil qc
-```
-5.  Navigieren Sie auf jedem Domänencontroller in **Active Directory-Benutzer und -Computer** zum Ordner **Vordefiniert**, und doppelklicken Sie auf die Gruppe **Ereignisprotokollleser**.<br>
-![wef_ad_eventlogreaders](media/wef_ad_eventlogreaders.png)<br>
-Klicken Sie mit der rechten Maustaste darauf, und wählen Sie **Eigenschaften** aus. Fügen Sie auf der Registerkarte **Mitglieder** die Computerkonten der einzelnen ATA-Gateways hinzu.
-![wef_ad event log reader popup](media/wef_ad-event-log-reader-popup.png)
-6.  Öffnen Sie auf dem ATA-Gateway die Ereignisanzeige, klicken Sie mit der rechten Maustaste auf **Abonnements**, und wählen Sie **Abonnement erstellen** aus.  
+### Konfiguration der Windows-Ereignisweiterleitung für ATA-Gateways mit Portspiegelung
 
-    a. Klicken Sie unter **Abonnementtyp und Quellcomputer** auf **Computer auswählen**, fügen Sie die Domänencontroller hinzu, und testen Sie die Konnektivität.
-    ![wef_subscription prop](media/wef_subscription-prop.png)
+Nachdem Sie die Portspiegelung von den Domänencontrollern zum ATA-Gateway konfiguriert haben, befolgen Sie die unten aufgeführten Anweisungen, um die Windows-Ereignisweiterleitung (Windows Event Forwarding; WEF) mithilfe der quellinitiierten Konfiguration zu konfigurieren. Dies ist eine Möglichkeit, die Windows-Ereignisweiterleitung zu konfigurieren. 
 
-    b. Klicken Sie unter **Zu sammelnde Ereignisse** auf **Ereignisse auswählen**. Wählen Sie **Nach Protokoll** aus, und scrollen Sie abwärts bis zu **Sicherheit**. Geben Sie dann unter **Ereignis-IDs ein-/ausschließen** die Zahl **4776** ein.<br>
-    ![wef_4776](media/wef_4776.png)
+**Schritt 1: Fügen Sie das Netzwerkdienstkonto zur Domäne „Event Log Readers Group“ hinzu.** 
 
-    c. Klicken Sie unter **Benutzerkonto ändern oder erweiterte Einstellungen konfigurieren** auf **Erweitert**.
-Legen Sie für das **Protokoll** **HTTP** und für **Port** **5985** fest.<br>
-    ![wef_http](media/wef_http.png)
+In diesem Szenario gehen wir davon aus, dass der ATA-Gateway Mitglied einer Domäne ist.
 
-7.  [Optional:] Falls ein kürzeres Abfrageintervall gewünscht wird, legen Sie auf dem ATA-Gateway den Abonnementpuls auf 5 Sekunden fest.
-    wecutil ss <CollectionName>/cm:custom wecutil ss <CollectionName> /hi:5000
+1.  Öffnen Sie „Active Directory-Benutzer und -Computer“, navigieren Sie zum Ordner **Vordefiniert**, und doppelklicken Sie auf **Ereignisprotokollleser**. 
+2.  Wählen Sie **Mitglieder** aus.
+4.  Wenn **Netzwerkdienst** nicht aufgelistet ist, klicken Sie auf **Hinzufügen**, und geben Sie **Netzwerkdienst** in das Feld **Geben Sie die zu verwendenden Objektnamen ein** ein. Klicken Sie anschließend auf **Namen überprüfen**, und klicken Sie zweimal auf **OK**. 
 
-8. Aktivieren Sie auf der Konfigurationsseite des ATA-Gateways die Option **Windows-Ereignisweiterleitungssammlung**.
+**Schritt 2: Erstellen Sie eine Richtlinie auf den Domänencontrollern, um die Einstellung „Ziel-Abonnement-Manager konfigurieren“ festzulegen.** 
+> [!Note] 
+> Sie können eine Gruppenrichtlinie für diese Einstellungen erstellen und die Gruppenrichtlinie auf jeden Domänencontroller anwenden, der vom ATA-Gateway überwacht wird. Die folgenden Schritte ändern die lokale Richtlinie des Domänencontrollers.     
 
-> [!NOTE]
-> Wenn Sie diese Einstellung aktivieren, sucht das ATA-Gateway im Protokoll für weitergeleitete Ereignisse nach Windows-Ereignissen, die von den Domänencontrollern an das Gateway weitergeleitet wurden.
+1.  Führen Sie den folgenden Befehl auf jedem Domänencontroller aus: *winrm quickconfig*
+2.  Geben Sie an einer Eingabeaufforderung *gpedit.msc* ein.
+3.  Erweitern Sie **Computerkonfiguration > Administrative Vorlagen > Windows-Komponenten > Ereignisweiterleitung**.
+
+ ![Local policy group editor image](media/wef 1 local group policy editor.png)
+
+4.  Doppelklicken Sie auf **Ziel-Abonnement-Manager konfigurieren**.
+   
+    1.  Wählen Sie **Aktiviert** aus.
+    2.  Klicken Sie unter **Optionen** auf **Anzeigen**.
+    3.  Geben Sie unter **SubscriptionManagers** den folgenden Wert ein, und Klicken Sie auf **OK**: *Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10* (z.B.: Server=http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
+ 
+   ![Configure target subscription image](media/wef 2 config target sub manager.png)
+   
+    5.  Klicken Sie auf **OK**.
+    6.  Geben Sie von einer Eingabeaufforderung mit erhöhten Rechten aus *gpupdate /force* ein. 
+
+**Schritt 3: Führen Sie die folgenden Schritte auf dem ATA-Gateway aus** 
+
+1.  Öffnen Sie eine Eingabeaufforderung mit erhöhten Rechten, und geben Sie *wecutil.qc* ein.
+2.  Öffnen Sie die **Ereignisanzeige**. 
+3.  Klicken Sie mit der rechten Maustaste auf **Abonnements** und wählen Sie **Erstellen von Abonnements** aus. 
+
+   1.   Geben Sie einen Namen und eine Beschreibung für das Abonnement ein. 
+   2.   Bestätigen Sie für **Zielprotokoll**, dass **Weitergeleitete Ereignisse** aktiviert ist. Damit ATA die Ereignisse lesen kann, muss das Zielprotokoll **Weitergeleitete Ereignisse** sein. 
+   3.   Wählen Sie **Quellcomputerinitiiert** aus, und klicken Sie auf **Computergruppen auswählen...** aus.
+        1.  Klicken Sie auf **Domänencomputer hinzufügen...**.
+        2.  Geben Sie den Namen des Domänencontrollers in das Feld **Namen des auszuwählenden Objekts eingeben** ein. Klicken Sie anschließend auf **Namen überprüfen**, und klicken Sie auf **OK**. 
+       
+        ![Event Viewer image](media/wef3 event viewer.png)
+   
+        
+        3.  Klicken Sie auf **OK**.
+   4.   Klicken Sie auf **Ereignisse auswählen**.
+
+        1. Klicken Sie auf **Per Protokoll** und wählen Sie **Sicherheit** aus.
+        2. Tippen Sie im Feld **Ereignis-IDs ein-/ausschließen** **4776** ein, und klicken Sie auf **OK**. 
+
+ ![Query filter image](media/wef 4 query filter.png)
+
+   5.   Klicken Sie mit der mit der rechten Maustaste auf das erstellte Abonnement, und wählen Sie **Laufzeitstatus** aus, um festzustellen, ob es Probleme mit dem Status gibt. 
+   6.   Überprüfen Sie nach einigen Minuten, ob das Ereignis 4776 im ATA-Gateway in „Weitergeleitete Ereignisse“ angezeigt wird.
+
+
+### WEF-Konfiguration für das ATA-Lightweight-Gateway
+Bei der Installation des ATA-Lightweight-Gateways auf Ihren Domänencontrollern können Sie Ihre Domänencontroller zum Weiterleiten der Ereignisse an sich selbst festlegen. Führen Sie die folgenden Schritte aus, um die Windows-Ereignisweiterleitung bei der Verwendung des ATA-Lightweight-Gateways zu konfigurieren. Dies ist eine Möglichkeit, die Windows-Ereignisweiterleitung zu konfigurieren.  
+
+**Schritt 1: Fügen Sie das Netzwerkdienstkonto zur Domäne „Event Log Readers Group“ hinzu** 
+
+1.  Öffnen Sie „Active Directory-Benutzer und -Computer“, navigieren Sie zum Ordner **Vordefiniert**, und doppelklicken Sie auf **Ereignisprotokollleser**. 
+2.  Wählen Sie **Mitglieder** aus.
+3.  Wenn **Netzwerkdienst** nicht aufgelistet ist, klicken Sie auf **Hinzufügen**, und geben Sie **Netzwerkdienst** in das Feld **Geben Sie die zu verwendenden Objektnamen ein** ein. Klicken Sie anschließend auf **Namen überprüfen**, und klicken Sie zweimal auf **OK**. 
+
+**Schritt 2: Führen Sie die folgenden Schritte auf dem Domänencontroller aus, nachdem der ATA-Lightweight-Gateway installiert wurde** 
+
+1.  Öffnen Sie eine Eingabeaufforderung mit erhöhten Rechten, und geben Sie *winrm quickconfig* und *wecutil qc* ein. 
+2.  Öffnen Sie die **Ereignisanzeige**. 
+3.  Klicken Sie mit der rechten Maustaste auf **Abonnements** und wählen Sie **Erstellen von Abonnements** aus. 
+
+   1.   Geben Sie einen Namen und eine Beschreibung für das Abonnement ein. 
+   2.   Bestätigen Sie für **Zielprotokoll**, dass **Weitergeleitete Ereignisse** aktiviert ist. Damit ATA die Ereignisse lesen kann, muss das Zielprotokoll „Weitergeleitete Ereignisse“ sein.
+
+        1.  Wählen Sie **Sammlungsinitiiert** aus, und klicken Sie auf **Computer auswählen**. Klicken Sie anschließend auf **Add Domain Computer** (Domänencomputer hinzufügen).
+        2.  Geben Sie den Namen des Domänencontrollers in **Namen des auszuwählenden Objekts eingeben** ein. Klicken Sie anschließend auf **Namen überprüfen**, und klicken Sie auf **OK**.
+
+            ![Subscription properties image](media/wef 5 sub properties computers.png)
+
+        3.  Klicken Sie auf **OK**.
+   3.   Klicken Sie auf **Ereignisse auswählen**.
+
+        1.  Klicken Sie auf **Per Protokoll** und wählen Sie **Sicherheit** aus.
+        2.  Tippen Sie **Includes/Excludes Event ID** (Ereignis-IDs ein-/ausschließen) *4776* ein, und klicken Sie auf **OK**. 
+
+![Query filter image](media/wef 4 query filter.png)
+
+
+  4.    Klicken Sie mit der mit der rechten Maustaste auf das erstellte Abonnement, und wählen Sie **Laufzeitstatus** aus, um festzustellen, ob es Probleme mit dem Status gibt. 
+
+> [!Note] 
+> Möglicherweise müssen Sie den Domänencontroller neu starten, bevor die Einstellung wirksam wird. 
+
+Überprüfen Sie nach einigen Minuten, ob das Ereignis 4776 im ATA-Gateway in „Weitergeleitete Ereignisse“ angezeigt wird.
+
+
 
 Weitere Informationen finden Sie unter [Einrichten von Computern zum Weiterleiten und Sammeln von Ereignissen](https://technet.microsoft.com/library/cc748890).
 
-## Siehe auch
+## Weitere Informationen
 - [Installieren von ATA](install-ata.md)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

@@ -13,17 +13,21 @@ ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: dce4cbaf894d383851a7039b6457a98c1d5ba5d4
+ms.sourcegitcommit: d0681cfa4ae763da9c88c8dec9b77a75494a5c9f
+ms.openlocfilehash: 7b9ba09d3757979c0b845f796a846e7e83b505af
 
 
 ---
+
+*Gilt für: Advanced Threat Analytics Version 1.7*
+
+
 
 # Unbeaufsichtigte ATA-Installation
 Dieser Artikel enthält Anweisungen zur unbeaufsichtigten Installation von ATA.
 ## Voraussetzungen
 
-Microsoft ATA v1.6 erfordert die Installation von Microsoft .NET Framework 4.6.1. 
+Microsoft ATA v1.7 erfordert die Installation von Microsoft .NET Framework 4.6.1. 
 
 Beim Installieren oder Aktualisieren von ATA, wird .Net Framework 4.6.1 automatisch als Teil der Bereitstellung von Microsoft ATA installiert.
 
@@ -210,13 +214,13 @@ Verwenden Sie den folgenden Befehl, um eine unbeaufsichtigte Deinstallation des 
 
 
 
-## Siehe auch
+## Weitere Informationen
 
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
 - [Voraussetzungen für ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 
