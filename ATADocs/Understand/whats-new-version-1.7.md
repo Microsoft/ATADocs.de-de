@@ -13,8 +13,8 @@ ms.assetid:
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e3b690767e5c6f5561a97a73eccfbf50ddb04148
-ms.openlocfilehash: 579e49a8dd9a5cc67961af14259bb8bb27130de5
+ms.sourcegitcommit: ae6a3295d2fffabdb8e5f713674379e4af499ac2
+ms.openlocfilehash: af9101260b1a0d5d9da32398f638f76e0c8c40a7
 
 
 ---
@@ -63,10 +63,53 @@ In dieser Version bestehen die folgenden bekannten Probleme.
 ### Die automatische Aktualisierung des Gateways kann fehlschlagen.
 **Symptome:** Das ATA-Gateway kann in einer Umgebung mit langsamen WAN-Verbindungen das Update-Timeout (100 Sekunden) erreichen. Updates können daraufhin nicht erfolgreich abgeschlossen werden.
 In der ATA-Konsole zeigt das ATA-Gateway über längere Zeit den Status „Wird aktualisiert (Paket wird heruntergeladen)“ an und schlägt schließlich fehl.
+
 **Problemumgehung:** Laden Sie das neueste ATA-Gateway-Paket aus der ATA-Konsole herunter, und aktualisieren das ATA-Gateway manuell, um dieses Problem zu umgehen.
 
- > [!IMPORTANT]
- Die automatische Erneuerung der von ATA verwendeten Zertifikate wird nicht unterstützt. Die Verwendung dieser Zertifikate kann dazu führen, dass ATA bei einer automatischen Erneuerung der Zertifikate nicht mehr funktioniert. 
+### Migrationsfehler beim Update von ATA 1.6 auf 1.7
+Beim Update auf ATA 1.7 kann der Aktualisierungsvorgang mit dem folgenden Fehlercode misslingen *0x80070643*:
+
+![Fehler beim Update auf ATA 1.7](media/ata-update-error.png)
+
+Überprüfen Sie das Bereitstellungsprotokoll, um die Ursache des Fehlers zu finden. Das Bereitstellungsprotokoll befindet sich am folgenden Speicherort: **%temp%\..\Microsoft Advanced Thread Analytics Center_{Datumsstempel}_MsiPackage.log**. 
+
+Die folgende Tabelle enthält die Fehler, nach denen Sie suchen sollten, und das entsprechende Mongo-Skript, um den Fehler zu beheben. Siehe das Beispiel unter der Tabelle, um zu erfahren, wie das Mongo-Skript ausgeführt wird:
+
+| Fehler in Bereitstellungsprotokolldatei                                                                                                                  | Mongo-Skript                                                                                                                                                                         |
+|---|---|
+| „System.FormatException: Size {Größe}“ ist größer als MaxDocumentSize 16777216 <br>Weiter unten in der Datei:<br>  Microsoft.Tri.Center.Deployment.Package.Actions.DatabaseActions.MigrateUniqueEntityProfiles(Boolean isPartial)                                                                                        | db.UniqueEntityProfile.find().forEach(function(obj){if(Object.bsonsize(obj) > 12582912) {print(obj._id);print(Object.bsonsize(obj));db.UniqueEntityProfile.remove({_id:obj._id});}}) |
+| System.OutOfMemoryException: Ausnahme des Typs 'System.OutOfMemoryException' ausgelöst<br>Weiter unten in der Datei:<br>Microsoft.Tri.Center.Deployment.Package.Actions.DatabaseActions.ReduceSuspiciousActivityDetailsRecords(IMongoCollection`1 suspiciousActivityCollection, Int32 deletedDetailRecordMaxCount) | db.SuspiciousActivity.find().forEach(function(obj){if(Object.bsonsize(obj) > 500000),{print(obj._id);print(Object.bsonsize(obj));db.SuspiciousActivity.remove({_id:obj._id});}})     |
+|System.Security.Cryptography.CryptographicException: Ungültige Länge<br>Weiter unten in der Datei:<br> Microsoft.Tri.Center.Deployment.Package.Actions.DatabaseActions.MigrateCenterSystemProfile(IMongoCollection`1 systemProfileCollection)| CenterThumbprint=db.SystemProfile.find({_t:"CenterSystemProfile"}).toArray()[0].Configuration.SecretManagerConfiguration.CertificateThumbprint;db.SystemProfile.update({_t:"CenterSystemProfile"},{$set:{"Configuration.ManagementClientConfiguration.ServerCertificateThumbprint":CenterThumbprint}})|
+
+
+Um das entsprechende Skript auszuführen, führen Sie die folgenden Schritte durch. 
+
+1.  Navigieren Sie an einer Eingabeaufforderung mit erhöhten Rechten zum folgenden Verzeichnis: **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**
+2.  Geben Sie „– **Mongo.exe ATA-**“ ein (*Hinweis*: ATA muss in Großbuchstaben angegeben werden.)
+3.  Fügen Sie das Skript ein, das dem Fehler im Bereitstellungsprotokoll in der obigen Tabelle entspricht.
+
+![ATA Mongo-Skript](media/ATA-mongoDB-script.png)
+
+An diesem Punkt sollten Sie das Upgrade neu starten können.
+
+### ATA meldet eine große Anzahl verdächtiger Aktivitäten des Typs *Reconnaissance mithilfe einer Verzeichnisdienstenumeration*:
+ 
+Dies passiert am ehesten, wenn auf allen (bzw. vielen) Clientcomputern in der Organisation ein Tool zum Scannen des Netzwerks ausgeführt wird. Wenn dieses Problem auftritt:
+
+1. Falls Sie den Grund oder die jeweilige Anwendung bestimmen können, die auf den Clientcomputern ausgeführt wird, senden Sie eine E-Mail mit den Informationen an ATAEval bei Microsoft.com.
+2. Verwenden Sie das folgende Mongo-Skript, um alle diese Ereignisse zu verwerfen (siehe oben, um zu erfahren, wie Sie das Mongo-Skript ausführen):
+
+db.SuspiciousActivity.update({_t: "SamrReconnaissanceSuspiciousActivity"}, {$set: {Status: "Dismissed"}}, {multi: true})
+
+### ATA sendet Benachrichtigungen bei verworfenen verdächtigen Aktivitäten:
+Wenn Benachrichtigungen konfiguriert wurden, sendet ATA möglicherweise weiterhin Benachrichtigungen (E-Mail, Syslog und Ereignisprotokolle) für verworfene verdächtige Aktivitäten.
+Für dieses Problem ist derzeit keine Problemumgehung bekannt. 
+
+### Das ATA-Gateway registriert sich ggf. nicht bei ATA Center, wenn TLS 1.0 und TLS 1.1 deaktiviert sind:
+Wenn TLS 1.0 und 1.1 von TLS auf dem ATA-Gateway (oder Lightweight Gateway) deaktiviert sind, kann sich das Gateway möglicherweise nicht beim ATA Center registrieren
+
+### Die automatische Erneuerung von Zertifikaten, die von ATA verwendet werden, wird nicht unterstützt
+Die Verwendung der automatischen Zertifikatserneuerung kann dazu führen, dass ATA bei einer automatischen Erneuerung der Zertifikate nicht mehr funktioniert. 
 
 
 ## Weitere Informationen
@@ -77,6 +120,6 @@ In der ATA-Konsole zeigt das ATA-Gateway über längere Zeit den Status „Wird 
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO2-->
 
 
