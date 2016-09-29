@@ -218,8 +218,8 @@ In diesem Szenario gehen wir davon aus, dass der ATA-Gateway Mitglied einer Dom�
 
    1.   Geben Sie einen Namen und eine Beschreibung für das Abonnement ein. 
    2.   Bestätigen Sie für **Zielprotokoll**, dass **Weitergeleitete Ereignisse** aktiviert ist. Damit ATA die Ereignisse lesen kann, muss das Zielprotokoll **Weitergeleitete Ereignisse** sein. 
-   3.   Wählen Sie **Quellcomputerinitiiert** aus, und klicken Sie auf **Computergruppen auswählen...** aus.
-        1.  Klicken Sie auf **Domänencomputer hinzufügen...**.
+   3.   Wählen Sie **Quellcomputerinitiiert** aus, und klicken Sie auf **Computergruppen auswählen** aus.
+        1.  Klicken Sie auf **Domänencomputer hinzufügen**.
         2.  Geben Sie den Namen des Domänencontrollers in das Feld **Namen des auszuwählenden Objekts eingeben** ein. Klicken Sie anschließend auf **Namen überprüfen**, und klicken Sie auf **OK**. 
        
         ![Event Viewer image](media/wef3 event viewer.png)
