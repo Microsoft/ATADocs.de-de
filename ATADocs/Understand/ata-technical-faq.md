@@ -13,8 +13,8 @@ ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b8ad2f343b8397184cd860803f06b0d59c492f5a
-ms.openlocfilehash: 96b3ce171ca07bf44163d49b50377fccd6472a08
+ms.sourcegitcommit: 7d081a6e14adffc675de203001074c3435cce6b2
+ms.openlocfilehash: 8896df26157f9da903e68ac7a1d21f7f80f95026
 
 
 ---
@@ -83,7 +83,7 @@ Wenn ein virtueller Domänencontroller nicht durch das ATA-Lightweight-Gateway a
 Zwei Elemente müssen gesichert werden:
 
 -   Der Datenverkehr und die Ereignisse, die von ATA gespeichert werden und die mit jedem unterstützten Verfahren zur Datenbanksicherung gesichert werden können. Weitere Informationen hierzu finden Sie unter [ATA-Datenbankverwaltung](/advanced-threat-analytics/deploy-use/ata-database-management). 
--   Die Konfiguration von ATA. Sie ist in der Datenbank gespeichert und wird automatisch jede Stunde im Ordner **Sicherung** im Bereitstellungsspeicherort von ATA Center gesichert.  Weitere Informationen finden Sie unter [ATA-Datenbankverwaltung](https://docs.microsoft.com/en-us/advanced-threat-analytics/deploy-use/ata-database-management).
+-   Die Konfiguration von ATA. Sie ist in der Datenbank gespeichert und wird automatisch jede Stunde im Ordner **Sicherung** im Bereitstellungsspeicherort von ATA Center gesichert.  Weitere Informationen finden Sie unter [ATA-Datenbankverwaltung](https://docs.microsoft.com/advanced-threat-analytics/deploy-use/ata-database-management).
 ## Was kann ATA erkennen?
 ATA erkennt bekannte Angriffe und Techniken, Sicherheitsprobleme und Risiken.
 Die vollständige Liste der ATA-Erkennungen finden Sie unter [Welche Bedrohungen erkennt ATA?](ata-threats.md).
@@ -144,6 +144,6 @@ Ja, Sie können die Gesamtintegrität der Bereitstellung sowie spezifische Probl
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO4-->
 
 

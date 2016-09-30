@@ -13,8 +13,8 @@ ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 54e5105e78b6db9f33488135601381af5503aa4a
-ms.openlocfilehash: 118eb5bf505426f1947e96a4e01d0206abdce88d
+ms.sourcegitcommit: d2c1c00ff649557c1a0a16385e025c9d597c3bbf
+ms.openlocfilehash: 91ce3a3fef27673712a708aa1e92c32298cedd84
 
 
 ---
@@ -54,7 +54,7 @@ Wenn Sie keinen SIEM-/Syslog-Server verwenden, können Sie Ihre Windows-Domänen
 2.  Konfigurieren Sie den SIEM-/Syslog-Server zum Weiterleiten von Windows-Ereignis-ID 4776 an die IP-Adresse von einem der ATA-Gateways. Weitere Informationen zum Konfigurieren der SIEM finden Sie in der SIEM-Onlinehilfe sowie in den Optionen für technischen Support für spezielle Formatierungserfordernisse einzelner SIEM-Server.
 
 ### SIEM-Unterstützung
-ATA unterstützt SIEM-Ereignisse in den folgenden Formaten:
+ATA unterstützt SIEM-Ereignisse in den folgenden Formaten:  
 
 #### RSA Security Analytics
 &lt;Syslog Header&gt;RsaSA\n2015-May-19 09:07:09\n4776\nMicrosoft-Windows-Security-Auditing\nSecurity\XXXXX.subDomain.domain.org.il\nYYYYY$\nMMMMM \n0x0
@@ -282,10 +282,10 @@ Weitere Informationen finden Sie unter [Einrichten von Computern zum Weiterleite
 
 ## Weitere Informationen
 - [Installieren von ATA](install-ata.md)
-- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO4-->
 
 
