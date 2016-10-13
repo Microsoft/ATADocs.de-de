@@ -4,7 +4,7 @@ description: "Führt Sie durch die Arbeit mit ATA-Rollengruppen."
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/20/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +13,8 @@ ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ba090fdd4f00c001020b1fbedf527e4fd69d3992
-ms.openlocfilehash: 41ae6655f2d69b5b879246eb03462cd7d7b091d7
+ms.sourcegitcommit: d47d9e7be294c68d764710c15c4bb78539e42f62
+ms.openlocfilehash: 869d8f830d5dc70c927f172d77642b0c97bdcd84
 
 
 ---
@@ -29,9 +29,9 @@ ms.openlocfilehash: 41ae6655f2d69b5b879246eb03462cd7d7b091d7
 Rollengruppen erlauben die Zugriffsverwaltung für ATA. Sie können durch Verwendung von Rollengruppen Aufgaben in Ihrem Sicherheitsteam aufteilen und nur so viel Zugriff gewähren, wie Benutzer für die Ausführung ihrer Arbeit benötigen. Dieser Artikel beschreibt die Zugriffsverwaltung und die Berechtigungen der einzelnen ATA-Rollengruppen und hilft Ihnen bei der Einrichtung und Ausführung von Rollengruppen in ATA.
 ## Typen von ATA-Rollengruppen 
 
-ATA führt 3 Typen von Rollengruppen ein: ATA-Administratoren, ATA-Benutzer und ATA-Viewer. Die folgende Tabelle beschreibt den Zugriffstyp in ATA, der pro Rolle verfügbar ist. Je nachdem welche Rolle Sie zuweisen, stehen verschiedene Bildschirme und Menüoptionen in ATA nicht zur Verfügung:
+ATA führt drei Typen von Rollengruppen ein: ATA Administrator, ATA Analyst und ATA Executive. Die folgende Tabelle beschreibt den Zugriffstyp in ATA, der pro Rolle verfügbar ist. Je nachdem welche Rolle Sie zuweisen, stehen verschiedene Bildschirme und Menüoptionen in ATA nicht zur Verfügung:
 
-|Aktivität |Microsoft Advanced Threat Analytics-Administratoren|Microsoft Advanced Threat Analytics-Benutzer|Microsoft Advanced Threat Analytics-Viewer|
+|Aktivität |Microsoft Advanced Threat Analytics Administrator|Microsoft Advanced Threat Analytics Analyst|Microsoft Advanced Threat Analytics Executive|
 |----|----|----|----|
 |Anmeldung|Verfügbar|Verfügbar|Verfügbar|
 |Bereitstellen von Eingaben für verdächtige Aktivitäten|Verfügbar|Verfügbar|Nicht verfügbar|
@@ -54,6 +54,6 @@ ATA verwendet die lokalen Windows-Gruppen als Grundlage für Rollengruppen. Zum 
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO4-->
 
 
