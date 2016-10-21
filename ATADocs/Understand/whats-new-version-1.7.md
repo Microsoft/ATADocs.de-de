@@ -13,8 +13,8 @@ ms.assetid:
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d47d9e7be294c68d764710c15c4bb78539e42f62
-ms.openlocfilehash: 62f2aadc978547647a1dc3c27ed3453f7ed15828
+ms.sourcegitcommit: a024cab5e706b32273d563095f5d7e690d6ed055
+ms.openlocfilehash: dec9fc03cdf718627dd72ac0c48f934fe507c7ac
 
 
 ---
@@ -73,6 +73,12 @@ In der ATA-Konsole zeigt das ATA-Gateway über längere Zeit den Status „Wird 
 ### Keine Browserunterstützung für JIS-Codierung
 **Symptome:** Die ATA-Konsole funktioniert in Browsern mit JIS-Codierung möglicherweise nicht erwartungsgemäß. **Problemumgehung:** Ändern Sie die Codierung des Browsers zu Unicode UTF-8.
  
+### „Netzwerkdatenverkehr aus Portspiegelung gelöscht“ bei Verwendung von VMware
+
+Die Warnung „Netzwerkdatenverkehr aus Portspiegelung gelöscht“ wird ausgegeben, wenn ein Lightweight-Gateway auf VMware verwendet wird.
+
+Wenn Sie Domänencontroller auf virtuellen VMware-Computern verwenden, wird möglicherweise die Warnung **Netzwerkverkehr aus Portspiegelung gelöscht** ausgegeben. Dies kann aufgrund von Konfigurationskonflikten in VMware auftreten. Um zu vermeiden, dass diese Warnung ausgegeben wird, können Sie überprüfen, ob die folgenden Einstellungen auf „0“ oder „deaktiviert“ festgelegt sind: TsoEnable, LargeSendOffload, IPv4, TSO Offload. Deaktivieren Sie ebenso IPv4 Giant TSO Offload. Weitere Informationen finden Sie in der VMware-Dokumentation.
+
 ## Kleinere Änderungen
 
 - ATA verwendet jetzt OWIN anstelle von IIS für die ATA-Konsole.
@@ -87,6 +93,6 @@ In der ATA-Konsole zeigt das ATA-Gateway über längere Zeit den Status „Wird 
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 
