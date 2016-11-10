@@ -4,7 +4,7 @@ description: Listet Neuerungen sowie bekannte Probleme in ATA Version 1.7 auf
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 09/20/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,16 +13,16 @@ ms.assetid:
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a024cab5e706b32273d563095f5d7e690d6ed055
-ms.openlocfilehash: dec9fc03cdf718627dd72ac0c48f934fe507c7ac
+ms.sourcegitcommit: f334f9c8440e4bb0202579de220f6530d0aabad8
+ms.openlocfilehash: 03a5e6a5398ffcc43e712bd4a3c2f872cd91c0b4
 
 
 ---
 
-# Neues in ATA Version 1.7
+# <a name="whats-new-in-ata-version-17"></a>Neues in ATA Version 1.7
 Die vorliegenden Anmerkungen zu dieser Version enthalten Informationen zu bekannten Problemen in dieser Version von Advanced Threat Analytics.
 
-## Neuerungen beim Update auf ATA 1.7
+## <a name="whats-new-in-the-ata-17-update"></a>Neuerungen beim Update auf ATA 1.7
 Das Update auf ATA 1.7 bietet Verbesserungen in folgenden Bereichen:
 
 -   Neue und aktualisierte Erkennung
@@ -36,7 +36,7 @@ Das Update auf ATA 1.7 bietet Verbesserungen in folgenden Bereichen:
 -   Kleinere Änderungen
 
 
-### Neue und aktualisierte Erkennung
+### <a name="new-updated-detections"></a>Neue und aktualisierte Erkennung
 
 
 - **Reconnaissance mithilfe von Verzeichnisdienstenumeration:** Im Rahmen dieser Phase der Reconnaissance sammeln Angreifer auf verschiedene Weise Informationen zu den Entitäten im Netzwerk. Die Verzeichnisdienstenumeration mit dem SAM-R-Protokoll ermöglicht es Angreifern, die Liste der Benutzer und Gruppen in einer Domäne zu erhalten und die Interaktion zwischen den verschiedenen Entitäten zu verstehen. 
@@ -50,19 +50,19 @@ Das Update auf ATA 1.7 bietet Verbesserungen in folgenden Bereichen:
 - **Verbesserungen bei der ungewöhnlichen Protokollimplementierung:** ATA erkennt nun die ungewöhnliche Protokollimplementierung im Kerberos-Protokoll, zusammen mit zusätzlichen Anomalien im NTLM-Protokoll. Diese neuen Kerberos-Anomalien werden gewöhnlicherweise für Overpass-the-Hash-Angriffe verwendet.
 
 
-### Infrastruktur
+### <a name="infrastructure"></a>Infrastruktur
 
 - **Rollenbasierte Zugriffskontrolle:** die Funktion für die rollenbasierte Zugriffskontrolle (Role-Based Access Control; RBAC) ATA 1.7 enthält drei Rollen: ATA Administrator, ATA Analyst und ATA Executive.
 
 - **Unterstützung für Windows Server 2016 und Windows Server Core:** ATA 1.7 unterstützt die Bereitstellung von Lightweight-Gateways auf Domänencontrollern unter Server Core für Windows Server 2012 und Server Core für Windows Server 2012 R2. Darüber hinaus unterstützt dieses Release Windows Server 2016 sowohl für die ATA Center- als auch die ATA-Gatewaykomponenten.
 
-### Benutzererfahrung
+### <a name="user-experience"></a>Benutzererfahrung
 - **Einfache Konfiguration:** Die ATA-Konfigurationsbenutzeroberfläche wurde in dieser Version neu gestaltet, um eine höhere Benutzerfreundlichkeit und eine bessere Unterstützung für Umgebungen mit mehreren ATA-Gateways zu gewährleisten. Mit diesem Release wird auch die Updateseite für das ATA-Gateway eingeführt, um die Verwaltung von automatische Updates für die verschiedenen Gateways zu erleichtern.
 
-## Bekannte Probleme
+## <a name="known-issues"></a>Bekannte Probleme
 In dieser Version bestehen die folgenden bekannten Probleme.
 
-### Die automatische Aktualisierung des Gateways kann fehlschlagen.
+### <a name="gateway-automatic-update-may-fail"></a>Die automatische Aktualisierung des Gateways kann fehlschlagen.
 **Symptome:** Das ATA-Gateway kann in einer Umgebung mit langsamen WAN-Verbindungen das Update-Timeout (100 Sekunden) erreichen. Updates können daraufhin nicht erfolgreich abgeschlossen werden.
 In der ATA-Konsole zeigt das ATA-Gateway über längere Zeit den Status „Wird aktualisiert (Paket wird heruntergeladen)“ an und schlägt schließlich fehl.
 **Problemumgehung:** Laden Sie das neueste ATA-Gateway-Paket aus der ATA-Konsole herunter, und aktualisieren das ATA-Gateway manuell, um dieses Problem zu umgehen.
@@ -70,22 +70,39 @@ In der ATA-Konsole zeigt das ATA-Gateway über längere Zeit den Status „Wird 
  > [!IMPORTANT]
  Die automatische Erneuerung der von ATA verwendeten Zertifikate wird nicht unterstützt. Die Verwendung dieser Zertifikate kann dazu führen, dass ATA bei einer automatischen Erneuerung der Zertifikate nicht mehr funktioniert. 
 
-### Keine Browserunterstützung für JIS-Codierung
+### <a name="no-browser-support-for-jis-encoding"></a>Keine Browserunterstützung für JIS-Codierung
 **Symptome:** Die ATA-Konsole funktioniert in Browsern mit JIS-Codierung möglicherweise nicht erwartungsgemäß. **Problemumgehung:** Ändern Sie die Codierung des Browsers zu Unicode UTF-8.
  
-### „Netzwerkdatenverkehr aus Portspiegelung gelöscht“ bei Verwendung von VMware
+### <a name="dropped-port-mirror-traffic-when-using-vmware"></a>„Netzwerkdatenverkehr aus Portspiegelung gelöscht“ bei Verwendung von VMware
 
 Die Warnung „Netzwerkdatenverkehr aus Portspiegelung gelöscht“ wird ausgegeben, wenn ein Lightweight-Gateway auf VMware verwendet wird.
 
 Wenn Sie Domänencontroller auf virtuellen VMware-Computern verwenden, wird möglicherweise die Warnung **Netzwerkverkehr aus Portspiegelung gelöscht** ausgegeben. Dies kann aufgrund von Konfigurationskonflikten in VMware auftreten. Um zu vermeiden, dass diese Warnung ausgegeben wird, können Sie überprüfen, ob die folgenden Einstellungen auf „0“ oder „deaktiviert“ festgelegt sind: TsoEnable, LargeSendOffload, IPv4, TSO Offload. Deaktivieren Sie ebenso IPv4 Giant TSO Offload. Weitere Informationen finden Sie in der VMware-Dokumentation.
 
-## Kleinere Änderungen
+### <a name="automatic-gateway-update-fail-when-updating-to-17-update-1"></a>Fehler bei der automatischen Gatewayaktualisierung auf Version 1.7 Update 1
+
+Beim Aktualisieren von ATA 1.7 auf ATA 1.7 Update 1 funktionieren sowohl der automatische ATA-Gatewayaktualisierungsprozess als auch die manuelle Installation des Gateways mithilfe des Gatewaypakets möglicherweise nicht wie erwartet.
+Dieses Problem tritt auf, wenn das vom ATA-Center verwendete Zertifikat vor der Aktualisierung von ATA geändert wurde.
+Um das Problem zu überprüfen, prüfen Sie das **Microsoft.Tri.Gateway.Updater.log** auf dem ATA-Gateway, und suchen Sie nach folgenden Ausnahmen: **System.Net.Http.HttpRequestException: Beim Senden der Anforderung ist ein Fehler aufgetreten. ---> System.Net.WebException: Die zugrunde liegende Verbindung wurde geschlossen: Unerwarteter Fehler beim Senden. ---> System.IdentityModel.Tokens.SecurityTokenValidationException: Fehler bei der Überprüfung des Zertifikatfingerabdrucks**
+
+![Fehler bei der Aktualisierung des ATA-Gateways](media/17update_gatewaybug.png)
+
+Um das Problem zu beheben, wechseln Sie nach dem Ändern des Zertifikats an einer Eingabeaufforderung mit erhöhten Rechten zum Speicherort **%ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**, und führen Sie Folgendes aus:
+
+1. Mongo.exe ATA (ATA muss groß geschrieben werden) 
+
+2. CenterThumbprint=db.SystemProfile.find({_t:"CenterSystemProfile"}).toArray()[0].Configuration.SecretManagerConfiguration.CertificateThumbprint;
+
+3. db.SystemProfile.update({_t:"ServiceSystemProfile"},{$set:{"Configuration.ManagementClientConfiguration.ServerCertificateThumbprint":CenterThumbprint}}, {multi: true})
+
+
+## <a name="minor-changes"></a>Kleinere Änderungen
 
 - ATA verwendet jetzt OWIN anstelle von IIS für die ATA-Konsole.
 - Wenn der ATA Center-Dienst nicht verfügbar ist, können Sie nicht auf die ATA-Konsole zugreifen.
 - Kurzfristige Lease-Subnetze sind aufgrund von Änderungen in der ATA NNR nicht mehr erforderlich.
 
-## Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 [Aktualisieren von ATA auf Version 1.7 – Migrationshandbuch](ata-update-1.7-migration-guide.md)
@@ -93,6 +110,6 @@ Wenn Sie Domänencontroller auf virtuellen VMware-Computern verwenden, wird mög
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Oct16_HO5-->
 
 

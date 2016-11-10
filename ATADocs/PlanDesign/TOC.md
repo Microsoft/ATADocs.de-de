@@ -1,12 +1,13 @@
 # [Verstehen und Kennenlernen](/advanced-threat-analytics/understand-explore/what-is-ata)
-# [Planung und Entwurf](ata-architecture.md)
+# [Planen und Entwerfen](ata-architecture.md)
 ## [ATA-Architektur](ata-architecture.md)
 ## [Planen der ATA-Kapazität](ata-capacity-planning.md)
-## [ATA-Voraussetzungen](ata-prerequisites.md)
-# [Bereitstellen und Verwenden](/advanced-threat-analytics/deploy-use/preinstall-ata)
-# [Problembehandlung](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs)
+## [Voraussetzungen für ATA](ata-prerequisites.md)
+# [Bereitstellen](/advanced-threat-analytics/deploy-use/preinstall-ata)
+# [Verwenden](/advanced-threat-analytics/deploy-use/operate-ata)
+# [Problembehandlung](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-known-errors)
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO5-->
 
 

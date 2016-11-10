@@ -4,7 +4,7 @@ description: "Beschreibt, wie Sie übliche Fehler in ATA beheben können"
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +13,8 @@ ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 15c1a0d7ae213876c0e3a955eaeea8887281b4e6
-ms.openlocfilehash: b073a1b969f8841c9bbe540722349a5ef70340d4
+ms.sourcegitcommit: f334f9c8440e4bb0202579de220f6530d0aabad8
+ms.openlocfilehash: aa16eeb45272ffcf28bbb28ed9a02f30f52b15d0
 
 
 ---
@@ -23,9 +23,9 @@ ms.openlocfilehash: b073a1b969f8841c9bbe540722349a5ef70340d4
 
 
 
-# Behandeln von Problemen im ATA-Fehlerprotokoll
+# <a name="troubleshooting-the-ata-error-log"></a>Behandeln von Problemen im ATA-Fehlerprotokoll
 In diesem Abschnitt sind mögliche Fehler, die es in den Bereitstellungen von ATA geben kann, und die Schritte zu deren Behebung aufgeführt.
-## ATA-Gateway-Fehler
+## <a name="ata-gateway-errors"></a>ATA-Gateway-Fehler
 |Fehler|Beschreibung|Lösung|
 |-------------|----------|---------|
 |System.DirectoryServices.Protocols.LdapException: Lokaler Fehler.|Die ATA-Gateway konnte sich nicht beim Domänencontroller authentifizieren.|1. Vergewissern Sie sich, dass der DNS-Eintrag des Domänencontrollers im DNS-Server ordnungsgemäß konfiguriert ist. <br>2. Vergewissern Sie sich, dass die Zeit des ATA-Gateways mit der Zeit des Domänencontrollers synchronisiert ist.|
@@ -44,12 +44,21 @@ In diesem Abschnitt sind mögliche Fehler, die es in den Bereitstellungen von AT
 |System.ApplicationException: Die ETW-Sitzung „MMA-ETW-Livecapture-a4f595bd-f567-49a7-b963-20fa4e370329“ kann nicht gestartet werden.|In der HOSTS-Datei existiert ein Hosteintrag, der auf den Kurznamen des Computers verweist.|Entfernen Sie den Hosteintrag aus „C:\Windows\System32\drivers\etc\HOSTS“, oder ändern Sie ihn in einen eindeutigen Domänennamen um.|
 
 
-## ATA-IIS-Fehler (gilt nicht für ATA Version 1.7 und höher)
+
+## <a name="ata-lightweight-gateway-errors"></a>Fehler bei ATA-Lightweight-Gateways
+
+**Fehler**: Beim Verwenden eines Lightweight-Gateways unter VMware wird eine Warnung ausgegeben, dass Datenverkehr aus einer Portspiegelung gelöscht wird.
+
+**Beschreibung**: Wenn Sie Domänencontroller auf virtuellen VMware-Computern verwenden, wird möglicherweise die Warnung **Netzwerkdatenverkehr aus Portspiegelung gelöscht** ausgegeben. Dies kann aufgrund von Konfigurationskonflikten in VMware auftreten. 
+**Lösung**: Um diese Warnungen zu vermeiden, überprüfen Sie, ob die folgenden Einstellungen auf „0“ oder „deaktiviert“ festgelegt sind: TsoEnable, LargeSendOffload, IPv4, TSO Offload. Deaktivieren Sie ebenso IPv4 Giant TSO Offload. Weitere Informationen finden Sie in der VMware-Dokumentation.
+
+
+## <a name="ata-iis-errors-not-applicable-for-ata-v17-and-above"></a>ATA-IIS-Fehler (gilt nicht für ATA Version 1.7 und höher)
 |Fehler|Beschreibung|Lösung|
 |-------------|----------|---------|
-|HTTP-Fehler 500.19 – Interner Serverfehler|Das IIS URL Rewrite-Modul konnte nicht ordnungsgemäß installiert werden.|Deinstallieren Sie das IIS URL Rewrite-Modul, und installieren Sie es dann erneut.<br>[Laden Sie das IIS URL Rewrite-Modul herunter.](http://go.microsoft.com/fwlink/?LinkID=615137)|
+|HTTP-Fehler 500.19 – Interner Serverfehler|Das IIS URL Rewrite-Modul konnte nicht ordnungsgemäß installiert werden.|Deinstallieren Sie das IIS URL Rewrite-Modul, und installieren Sie es dann erneut.<br>[Laden Sie das IIS URL Rewrite-Modul herunter](http://go.microsoft.com/fwlink/?LinkID=615137)|
 
-## Bereitstellungsfehler
+## <a name="deployment-errors"></a>Bereitstellungsfehler
 |Fehler|Beschreibung|Lösung|
 |-------------|----------|---------|
 |Fehler bei der Installation von .NET Framework 4.6.1. Fehlernummer ist 0x800713ec.|Die erforderlichen Komponenten für .NET Framework 4.6.1 sind nicht auf dem Server installiert. |Stellen Sie vor der Installation von ATA sicher, dass die Windows-Updates [KB2919442](https://www.microsoft.com/download/details.aspx?id=42135) und [KB2919355](https://support.microsoft.com/kb/2919355) auf dem Server installiert sind.|
@@ -57,8 +66,8 @@ In diesem Abschnitt sind mögliche Fehler, die es in den Bereitstellungen von AT
 ![Bild zu ATA-.NET-Installationsfehler](media/netinstallerror.png)
 
 
-## Weitere Informationen
-- [ATA-Voraussetzungen](/advanced-threat-analytics/plan-design/ata-prerequisites)
+## <a name="see-also"></a>Weitere Informationen
+- [Voraussetzungen für ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 - [ATA-Kapazitätsplanung](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [Konfigurieren der Ereignissammlung](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Konfigurieren der Windows-Ereignisweiterleitung](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
@@ -66,6 +75,6 @@ In diesem Abschnitt sind mögliche Fehler, die es in den Bereitstellungen von AT
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO5-->
 
 
