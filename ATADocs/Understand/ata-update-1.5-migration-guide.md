@@ -13,8 +13,8 @@ ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: be23c15ce709b710dc48b333fc464aa190772573
+ms.sourcegitcommit: c71d5ed1c705de558f1144820703ffe84850679b
+ms.openlocfilehash: 637d847af82d15a5b88fb43274f606a9b89da445
 
 
 ---
@@ -44,7 +44,7 @@ Wenn ATA Version 1.4 bereits bereitgestellt wurde, zeigt die vorliegende Anleit
 
 So aktualisieren Sie auf ATA, Version 1.5:
 
-1.  [Downloaden von Update 1.5](http://aka.ms/ata1_5update)
+1.  Laden Sie ATA v1.5 aus dem VLSC oder von MSDN herunter.
       > [!NOTE]
          Sie können zur Aktualisierung auf Version 1.5 auch die aktualisierte vollständige Version von ATA verwenden.
 
@@ -134,6 +134,6 @@ Alle ATA-Gateways wurden erfolgreich aktualisiert, wenn alle ATA-Gateways die er
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Oct16_HO4-->
 
 
