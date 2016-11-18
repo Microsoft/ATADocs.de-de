@@ -1,8 +1,9 @@
 ---
-title: ATA-Voraussetzungen | Microsoft ATA
+title: ATA-Voraussetzungen | Microsoft Docs
 description: "Beschreibt die Voraussetzungen für eine erfolgreiche Bereitstellung von ATA in Ihrer Umgebung."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: get-started-article
@@ -13,8 +14,8 @@ ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c71d5ed1c705de558f1144820703ffe84850679b
-ms.openlocfilehash: a6fe3a8f042ca7f35180e99e5bc3ffd14f0ea6d8
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: 56f397c373e0b6827aab084e21c804a135049a27
 
 
 ---
@@ -23,7 +24,7 @@ ms.openlocfilehash: a6fe3a8f042ca7f35180e99e5bc3ffd14f0ea6d8
 
 
 
-# ATA-Voraussetzungen
+# <a name="ata-prerequisites"></a>ATA-Voraussetzungen
 Dieser Artikel beschreibt die Voraussetzungen für eine erfolgreiche Bereitstellung von ATA in Ihrer Umgebung.
 
 >[!NOTE]
@@ -47,7 +48,7 @@ Das ATA-System arbeitet auf der Gesamtstrukturbegrenzung von Active Directory un
 
 ![ATA-Architekturdiagramm](media/ATA-architecture-topology.jpg)
 
-## Vorbereitung
+## <a name="before-you-start"></a>Vorbereitung
 In diesem Abschnitt werden die Informationen aufgeführt, die Sie sammeln sollten, und Konten und Netzwerkentitäten genannt, die vor der ATA-Installation vorhanden sein sollten.
 
 
@@ -64,9 +65,9 @@ In diesem Abschnitt werden die Informationen aufgeführt, die Sie sammeln sollte
 -   Optional: Zusätzlich zum Sammeln und Analysieren des Netzwerkverkehrs zu und von den Domänencontrollern kann ATA das Windows-Ereignis 4776 heranziehen, um die ATA-Erkennung von Pass-the-Hash weiter zu verbessern. Dies kann aus der SIEM heraus erfolgen oder indem Sie die Windows-Ereignisweiterleitung von Ihrem Domänencontroller aus einrichten. Die gesammelten Ereignisse versorgen ATA mit zusätzlichen Informationen, die nicht über den Netzwerkverkehr des Domänencontrollers verfügbar sind.
 
 
-## Voraussetzungen für ATA Center
+## <a name="ata-center-requirements"></a>Voraussetzungen für ATA Center
 In diesem Abschnitt werden die Voraussetzungen für ATA Center aufgeführt.
-### Allgemein
+### <a name="general"></a>Allgemein
 ATA Center unterstützt die Installation auf einem Server mit Windows Server 2012 R2 oder Windows Server 2016. ATA Center kann auf einem Server installiert werden, der Mitglied einer Domäne oder Arbeitsgruppe ist.
 
 Vergewissern Sie sich vor der Installation von ATA Center, das auf Windows 2012 R2 ausgeführt wird, dass das folgende Update installiert wurde: [KB2919355](https://support.microsoft.com/kb/2919355/).
@@ -79,17 +80,17 @@ Die Installation von ATA Center als virtueller Computer wird unterstützt.
 > Bei Ausführung als virtueller Computer wird kein dynamischer Arbeitsspeicher und keine andere Speichererweiterungsfunktion unterstützt.
 
 Wenn Sie ATA Center als virtuellen Computer ausführen, fahren Sie vor dem Erstellen eines neuen Prüfpunkts den Server herunter, um eine mögliche Beschädigung der Datenbank zu verhindern.
-### Serverspezifikationen
+### <a name="server-specifications"></a>Serverspezifikationen
 Wenn Sie auf einem physischen Server arbeiten, erfordert die ATA-Datenbank, dass Sie den nicht einheitlichen Speicherzugriff (Non-Uniform Memory Access, NUMA) im BIOS **deaktivieren**. Das System bezieht sich möglicherweise als Knotenüberlappung auf NUMA. In diesem Fall müssen Sie die Knotenüberlappung **aktivieren**, um NUMA zu deaktivieren. Weitere Informationen finden Sie in der BIOS-Dokumentation. Beachten Sie, dass dies nicht relevant ist, wenn ATA Center auf einem virtuellen Server ausgeführt wird.<br>
 Um eine optimale Leistung zu erzielen, legen Sie die **Energieoption** von ATA Center auf **Hohe Leistung** fest.<br>
 Die erforderlichen Serverspezifikationen hängen von der Anzahl der überwachten Domänencontroller und der Auslastung der einzelnen Domänencontroller ab. Weitere Informationen finden Sie unter [ATA-Kapazitätsplanung](ata-capacity-planning.md).
 
 
-### Zeitsynchronisierung
+### <a name="time-synchronization"></a>Zeitsynchronisierung
 Die Zeitsynchronisierung des ATA Center-Servers, der ATA-Gatewayserver und der Domänencontroller muss in einem Bereich von 5 Minuten zueinander liegen.
 
 
-### Netzwerkadapter
+### <a name="network-adapters"></a>Netzwerkadapter
 Sie benötigen Folgendes:
 -   Mindestens einen Netzwerkadapter (wenn Sie physische Server in einer VLAN-Umgebung verwenden, empfiehlt es sich, zwei Netzwerkadapter zu verwenden)
 
@@ -100,7 +101,7 @@ Die Kommunikation zwischen ATA Center und dem ATA-Gateway wird mithilfe von SSL 
 > [!NOTE]
 > Es kann zwar eine einzelne IP-Adresse mit zwei verschiedenen Ports verwendet werden, zwei IP-Adressen werden jedoch empfohlen.
 
-### Ports
+### <a name="ports"></a>Ports
 In der folgenden Tabelle sind die Ports aufgelistet, die mindestens geöffnet werden müssen, damit ATA Center ordnungsgemäß funktioniert.
 
 In dieser Tabelle ist IP-Adresse 1 an den ATA Center-Dienst gebunden, und IP-Adresse 2 ist an die ATA-Konsole gebunden:
@@ -114,7 +115,7 @@ In dieser Tabelle ist IP-Adresse 1 an den ATA Center-Dienst gebunden, und IP-Adr
 |**SMTPS** (optional)|TCP|465|SMTP-Server|Ausgehend|IP-Adresse 2|
 |**Syslog** (optional)|TCP|514|Syslog-Server|Ausgehend|IP-Adresse 2|
 
-### Zertifikate
+### <a name="certificates"></a>Zertifikate
 Stellen Sie sicher, dass ATA Center Zugriff auf den CRL-Verteilungspunkt hat. Wenn die ATA-Gateways keinen Zugriff auf das Internet haben, führen Sie [das Verfahren zum manuellen Importieren einer Zertifikatsperrliste](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx) durch. Achten Sie dabei darauf, alle CRL-Verteilungspunkte für die gesamte Kette zu installieren.
 
 Um die Installation von ATA zu erleichtern, können Sie während dieser Installation selbstsignierte Zertifikate installieren. Nach der Bereitstellung können Sie die selbstsignierten Zertifikate durch ein Zertifikat einer internen Zertifizierungsstelle ersetzen, das vom ATA-Gateway verwendet werden soll.<br>
@@ -128,9 +129,9 @@ Um die Installation von ATA zu erleichtern, können Sie während dieser Installa
 > [!NOTE]
 > Wenn Sie von anderen Computern aus auf die ATA-Konsole zugreifen werden, stellen Sie sicher, dass diese Computer dem von ATA Center verwendeten Zertifikat vertrauen. Andernfalls wird auf einer Warnseite die Meldung angezeigt, dass ein Problem mit dem Sicherheitszertifikat der Website vorliegt, bevor die Anmeldeseite geöffnet wird.
 
-## Voraussetzungen für das ATA-Gateway
+## <a name="ata-gateway-requirements"></a>Voraussetzungen für das ATA-Gateway
 In diesem Abschnitt sind die Voraussetzungen für das ATA-Gateway aufgeführt.
-### Allgemein
+### <a name="general"></a>Allgemein
 Das ATA-Gateway unterstützt die Installation auf einem Server mit Windows Server 2012 R2 oder Windows Server 2016 (einschließlich Server Core).
 Das ATA-Gateway kann auf einem Server installiert werden, der Mitglied einer Domäne oder Arbeitsgruppe ist.
 Das ATA-Gateway kann zur Überwachung von Domänencontrollern mit der Domänenfunktionsebene Windows 2003 und höher verwendet werden.
@@ -141,7 +142,7 @@ Dies können Sie überprüfen, indem Sie das folgende Windows PowerShell-Cmdlet 
 
 Informationen zur Verwendung von virtuellen Computern mit dem ATA-Gateway finden Sie unter [Konfigurieren der Portspiegelung](/advanced-threat-analytics/deploy-use/configure-port-mirroring).
 
-### Serverspezifikationen
+### <a name="server-specifications"></a>Serverspezifikationen
 Um eine optimale Leistung zu erzielen, legen Sie die **Energieoption** des ATA-Gateways auf **Hohe Leistung** fest.<br>
 Ein ATA-Gateway kann die Überwachung von mehreren Domänencontrollern unterstützen, abhängig vom Umfang des Netzwerkverkehrs zu und von den Domänencontrollern.
 
@@ -150,10 +151,10 @@ Ein ATA-Gateway kann die Überwachung von mehreren Domänencontrollern unterstü
 
 Weitere Informationen zu den Hardwareanforderungen des ATA-Gateways finden Sie unter [ATA-Kapazitätsplanung](ata-capacity-planning.md).
 
-### Zeitsynchronisierung
+### <a name="time-synchronization"></a>Zeitsynchronisierung
 Die Zeitsynchronisierung des ATA Center-Servers, der ATA-Gatewayserver und der Domänencontroller muss in einem Bereich von 5 Minuten zueinander liegen.
 
-### Netzwerkadapter
+### <a name="network-adapters"></a>Netzwerkadapter
 Das ATA-Gateway erfordert mindestens einen Verwaltungsadapter und mindestens einen Erfassungsadapter:
 
 -   **Verwaltungsadapter:** wird für die Kommunikation im Unternehmensnetzwerk verwendet. Dieser Adapter sollte wie folgt konfiguriert werden:
@@ -175,7 +176,7 @@ Das ATA-Gateway erfordert mindestens einen Verwaltungsadapter und mindestens ein
     > -   Konfigurieren Sie die Portspiegelung für den Erfassungsadapter als Ziel des Domänencontroller-Netzwerkdatenverkehrs. Weitere Informationen finden Sie unter [Konfigurieren der Portspiegelung](/advanced-threat-analytics/deploy-use/configure-port-mirroring). In der Regel müssen Sie mit dem Netzwerk- oder Virtualisierungsteam zusammenarbeiten, um die Portspiegelung zu konfigurieren.
     > -   Konfigurieren Sie eine statische, nicht routingfähige IP-Adresse für Ihre Umgebung ohne Standardgateway und ohne DNS-Serveradressen. Beispiel: 1.1.1.1/32. Dadurch wird sichergestellt, dass der Erfassungsnetzwerkadapter die maximale Menge an Datenverkehr erfassen kann und der Verwaltungsnetzwerkadapter zum Senden und Empfangen des erforderlichen Netzwerkdatenverkehrs verwendet wird.
 
-### Ports
+### <a name="ports"></a>Ports
 In der folgenden Tabelle sind die Ports aufgeführt, die für den Verwaltungsadapter des ATA-Gateways mindestens konfiguriert werden müssen:
 
 |Protokoll|Transport|Port|Zu/Von|Richtung|
@@ -199,7 +200,7 @@ In der folgenden Tabelle sind die Ports aufgeführt, die für den Verwaltungsada
 > -   NTLM über RPC (TCP-Port 135)
 > -   NetBIOS (UDP-Port 137)
 
-### Zertifikate
+### <a name="certificates"></a>Zertifikate
 Stellen Sie sicher, dass ATA Center Zugriff auf den CRL-Verteilungspunkt hat. Wenn die ATA-Gateways keinen Zugriff auf das Internet haben, führen Sie das Verfahren zum manuellen Importieren einer Zertifikatsperrliste durch. Achten Sie dabei darauf, alle CRL-Verteilungspunkte für die gesamte Kette zu installieren.<br>
 Um die Installation von ATA zu erleichtern, können Sie während dieser Installation selbstsignierte Zertifikate installieren. Nach der Bereitstellung können Sie die selbstsignierten Zertifikate durch ein Zertifikat einer internen Zertifizierungsstelle ersetzen, das vom ATA-Gateway verwendet werden soll.
 
@@ -208,9 +209,9 @@ Um die Installation von ATA zu erleichtern, können Sie während dieser Installa
 
 Im lokalen Computerspeicher des ATA-Gateways muss ein Zertifikat installiert werden, das die **Serverauthentifizierung** unterstützt. Dieses Zertifikat muss für ATA Center vertrauenswürdig sein.
 
-## ATA-Lightweight-Gateway-Anforderungen
+## <a name="ata-lightweight-gateway-requirements"></a>ATA-Lightweight-Gateway-Anforderungen
 In diesem Abschnitt sind die Voraussetzungen für das ATA-Lightweight-Gateway aufgeführt.
-### Allgemein
+### <a name="general"></a>Allgemein
 Das ATA-Lightweight-Gateway unterstützt die Installation auf einem Domänencontroller mit Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (einschließlich Core, jedoch kein Nano).
 
 Beim Domänencontroller kann es sich um einen schreibgeschützten Domänencontroller (Read Only Domain Controller, RODC) handeln.
@@ -218,7 +219,7 @@ Beim Domänencontroller kann es sich um einen schreibgeschützten Domänencontro
 Vergewissern Sie sich vor der Installation des ATA-Gateways auf einem Domänencontroller unter Windows Server 2012 R2 SP1, dass das folgende Update installiert wurde: [KB2919355](https://support.microsoft.com/kb/2919355/).
 Dies können Sie überprüfen, indem Sie das folgende Windows PowerShell-Cmdlet ausführen: `[Get-HotFix -Id kb2919355]`.
 
-### Serverspezifikationen
+### <a name="server-specifications"></a>Serverspezifikationen
 
 Das ATA-Lightweight-Gateway erfordert mindestens 2 Kerne und 6 GB RAM auf dem Domänencontroller.
 Um eine optimale Leistung zu erzielen, legen Sie die **Energieoption** des ATA-Lightweight-Gateways auf **Hohe Leistung** fest.
@@ -229,13 +230,13 @@ Das ATA-Lightweight-Gateway kann auf den Domänencontrollern verschiedener Ausla
 
 Weitere Informationen zu den Hardwareanforderungen des ATA-Lightweight-Gateways finden Sie unter [ATA-Kapazitätsplanung](ata-capacity-planning.md).
 
-### Zeitsynchronisierung
+### <a name="time-synchronization"></a>Zeitsynchronisierung
 Die Zeitsynchronisierung des ATA Center-Servers, der ATA-Lightweight-Gatewayserver und der Domänencontroller muss in einem Bereich von 5 Minuten zueinander liegen.
-### Netzwerkadapter
+### <a name="network-adapters"></a>Netzwerkadapter
 Das ATA-Lightweight-Gateway überwacht den lokalen Datenverkehr auf allen Netzwerkadaptern des Domänencontrollers. <br>
 Nach der Bereitstellung können Sie die ATA-Konsole verwenden, wenn Sie die überwachten Netzwerkadapter jemals ändern möchten.
 
-### Ports
+### <a name="ports"></a>Ports
 In der folgenden Tabelle sind die Ports aufgeführt, die für das ATA-Lightweight-Gateway mindestens konfiguriert werden müssen.
 
 |Protokoll|Transport|Port|Zu/Von|Richtung|
@@ -252,7 +253,7 @@ In der folgenden Tabelle sind die Ports aufgeführt, die für das ATA-Lightweigh
 > -   NTLM über RPC
 > -   NetBIOS
 
-### Zertifikate
+### <a name="certificates"></a>Zertifikate
 Stellen Sie sicher, dass ATA Center Zugriff auf den CRL-Verteilungspunkt hat. Wenn die ATA-Lightweight-Gateways keinen Zugriff auf das Internet haben, führen Sie das Verfahren zum manuellen Importieren einer Zertifikatsperrliste durch. Achten Sie dabei darauf, alle CRL-Verteilungspunkte für die gesamte Kette zu installieren.
 Um die Installation von ATA zu erleichtern, können Sie während dieser Installation selbstsignierte Zertifikate installieren. Nach der Bereitstellung können Sie die selbstsignierten Zertifikate durch ein Zertifikat einer internen Zertifizierungsstelle ersetzen, das vom ATA-Lightweight-Gateway verwendet werden soll.
 > [!NOTE]
@@ -260,7 +261,7 @@ Um die Installation von ATA zu erleichtern, können Sie während dieser Installa
 
 Im lokalen Computerspeicher des ATA-Lightweight-Gateways muss ein Zertifikat installiert werden, das die Serverauthentifizierung unterstützt. Dieses Zertifikat muss für ATA Center vertrauenswürdig sein.
 
-## ATA-Konsole
+## <a name="ata-console"></a>ATA-Konsole
 Der Zugriff auf die ATA-Konsole erfolgt über einen Browser. Folgende Browser werden unterstützt:
 
 -   Internet Explorer Version 10 oder höher
@@ -271,7 +272,7 @@ Der Zugriff auf die ATA-Konsole erfolgt über einen Browser. Folgende Browser we
 
 -   Mindestauflösung der Bildschirmbreite: 1.700 Pixel
 
-## Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ATA-Architektur](ata-architecture.md)
 - [Installieren von ATA](/advanced-threat-analytics/deploy-use/install-ata)
@@ -281,6 +282,6 @@ Der Zugriff auf die ATA-Konsole erfolgt über einen Browser. Folgende Browser we
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Nov16_HO3-->
 
 
