@@ -1,20 +1,21 @@
 ---
-title: Behandeln von Problemen mit ATA mithilfe der ATA-Datenbank | Microsoft ATA
+title: Behandeln von Problemen mit ATA mithilfe der ATA-Datenbank | Microsoft Docs
 description: Beschreibt die Verwendung der ATA-Datenbank zum Behandeln von Problemen.
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
 ms.technology: 
-ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
+ms.assetid: 377a3c81-5c1d-486f-8942-85249aacf560
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: af0508f82d8cf190dcd3ff058f4c2ff37b4b0595
-ms.openlocfilehash: dfc6c902cb13b1a2bf927cd235806ec32d9fefc3
+ms.sourcegitcommit: fca7f1b2b8260cad6e0ce32aad1c9e1b53fc0ad5
+ms.openlocfilehash: bff3224736981f38616172a6b1717d7d125c3c0a
 
 
 ---
@@ -23,11 +24,11 @@ ms.openlocfilehash: dfc6c902cb13b1a2bf927cd235806ec32d9fefc3
 
 
 
-# Behandeln von Problemen mit ATA mithilfe der ATA-Datenbank
+# <a name="troubleshooting-ata-using-the-ata-database"></a>Behandeln von Problemen mit ATA mithilfe der ATA-Datenbank
 ATA verwendet MongoDB als Datenbank.
 Die Interaktion mit der Datenbank ist über die Standardbefehlszeile möglich oder über ein Benutzeroberflächentool, mit dem Sie erweiterte Aufgaben und Problembehandlung ausführen können.
 
-## Interagieren mit der Datenbank
+## <a name="interacting-with-the-database"></a>Interagieren mit der Datenbank
 Die Datenbank lässt sich standardmäßig und am einfachsten über die Mongo-Shell abfragen:
 
 1.  Öffnen Sie ein Befehlszeilenfenster, und ändern Sie den Pfad in den MongoDB-Ordner „bin“. Der Standardpfad lautet **C:\Programme\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**.
@@ -50,8 +51,8 @@ Das folgende Beispiel enthält Beispielcode mit der oben aufgeführten Syntax. W
 
 `db.Ntlms_<closest date>.find({SourceAccountId: "123bdd24-b269-h6e1-9c72-7737as875351"})`
 
-## Weitere Informationen
-- [ATA-Voraussetzungen](/advanced-threat-analytics/plan-design/ata-prerequisites)
+## <a name="see-also"></a>Weitere Informationen
+- [Voraussetzungen für ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 - [ATA-Kapazitätsplanung](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [Konfigurieren der Ereignissammlung](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Konfigurieren der Windows-Ereignisweiterleitung](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
@@ -59,6 +60,6 @@ Das folgende Beispiel enthält Beispielcode mit der oben aufgeführten Syntax. W
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO3-->
 
 
