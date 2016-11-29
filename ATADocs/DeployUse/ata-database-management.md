@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/31/2016
+ms.date: 11/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -36,7 +36,6 @@ Informationen hierzu finden Sie in der [entsprechenden MongoDB-Dokumentation](ht
 ## <a name="moving-the-ata-database-to-another-drive"></a>Verschieben der ATA-Datenbank auf ein anderes Laufwerk
 
 1.  Halten Sie den Dienst **Microsoft Advanced Threat Analytics Center** an.
-
 > [!Important] 
 > Stellen Sie sicher, dass der ATA Center-Dienst beendet wurde, bevor Sie mit dem nächsten Schritt fortfahren.
 
