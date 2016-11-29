@@ -1,25 +1,26 @@
 ---
-title: Migrationshandbuch zum Update auf ATA 1.7 | Microsoft ATA
+title: Migrationsleitfaden zum Update auf ATA 1.7 | Microsoft Docs
 description: Prozeduren zum Aktualisieren von ATA auf Version 1.7
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
 ms.technology: 
-ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
+ms.assetid: 8eefcd45-7a4b-4074-ac5b-1ffc48e6654a
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3a821bf1479af529fd65e2153f8b722999c83a4f
-ms.openlocfilehash: 444bc4744834219d9db7bc8c209f33c039f90dad
+ms.sourcegitcommit: fca7f1b2b8260cad6e0ce32aad1c9e1b53fc0ad5
+ms.openlocfilehash: 4fa8b77aeffff327672396e9819215cc536af918
 
 
 ---
 
-# Migrationshandbuch zur Aktualisierung auf ATA 1.7
+# <a name="ata-update-to-17-migration-guide"></a>Migrationshandbuch zur Aktualisierung auf ATA 1.7
 Das Update auf ATA 1.7 bietet Verbesserungen in folgenden Bereichen:
 
 -   Neue Erkennungen
@@ -27,7 +28,7 @@ Das Update auf ATA 1.7 bietet Verbesserungen in folgenden Bereichen:
 -   Verbesserungen an vorhandenen Erkennungen
   
 
-## Aktualisieren von ATA auf Version 1.7
+## <a name="updating-ata-to-version-17"></a>Aktualisieren von ATA auf Version 1.7
 
 > [!NOTE] 
 > Wenn ATA in Ihrer Umgebung nicht installiert ist, laden Sie die vollständige ATA-Version (enthält Version 1.7) herunter, und befolgen Sie die unter [Installieren von ATA](/advanced-threat-analytics/deploy-use/install-ata) beschriebene Standardinstallation.
@@ -49,7 +50,7 @@ In dieser Version wird die gleiche Installationsdatei („Microsoft ATA Center S
     > [!IMPORTANT]
     > Aktualisieren Sie alle ATA-Gateways, damit ATA ordnungsgemäß funktioniert.
 
-### Schritt 1: Aktualisieren von ATA Center
+### <a name="step-1-update-the-ata-center"></a>Schritt 1: Aktualisieren von ATA Center
 
 1.  Sichern Sie die Datenbank (optional):
 
@@ -62,8 +63,8 @@ In dieser Version wird die gleiche Installationsdatei („Microsoft ATA Center S
     -  Wählen Sie auf der Seite **Willkommen** Ihre Sprache aus, und klicken Sie auf **Weiter**.
 
     -  Wenn Sie die automatischen Updates in Version 1.6 nicht aktiviert haben, werden Sie aufgefordert, ATA für die Verwendung von Microsoft Update für ATA festzulegen, um auf dem neuesten Stand zu bleiben.  Wählen Sie auf der Microsoft Update-Seite **Microsoft Update für die Suche nach Updates verwenden (empfohlen)** aus.
-    ![Abbildung zum Aktualisieren von ATA](media/ata_ms_update.png) Damit ändern Sie die Windows-Einstellungen so, dass Updates für andere Microsoft-Produkte (einschließlich ATA) möglich sind, wie hier zu sehen. 
-     ![Abbildung von Windows AutoUpdate](media/ata_installupdatesautomatically.png)
+    ![ATA-Aktualisierung](media/ata_ms_update.png) Damit ändern Sie die Windows-Einstellungen so, dass Updates für andere Microsoft-Produkte (einschließlich ATA) möglich sind, wie hier zu sehen. 
+     ![Automatisches Windows-Update](media/ata_installupdatesautomatically.png)
 
     -  Wählen Sie im Bildschirm **Datenmigration** aus, ob Sie alle Daten oder nur einen Teil davon migrieren möchten. Wenn Sie nur einen Teil der Daten migrieren, werden Ihr zuvor erfasster Netzwerkdatenverkehr und die Verhaltensprofile nicht migriert. Das bedeutet, dass es drei Wochen dauert, bis die Erkennung für ungewöhnliches Verhalten ein vollständiges Profil besitzt, um die Erkennung anormaler Aktivität zu aktivieren. Während dieser drei Wochen arbeiten alle anderen ATA-Erkennungen ordnungsgemäß. Für die Installation der **teilweise** Migration der Daten wird deutlich weniger Zeit benötigt. Wenn Sie die Option **vollständige** Datenmigration auswählen, nimmt der Abschluss der Installation möglicherweise sehr viel Zeit in Anspruch. Die auf dem Bildschirm **Datenmigration** aufgeführten Werte für die geschätzte Dauer und den benötigte Speicherplatz hängen von der Menge des zuvor erfassten Netzwerkdatenverkehr ab, den Sie in früheren Versionen von ATA gespeichert haben. Bevor Sie **Teilweise** oder **Vollständig** auswählen, überprüfen Sie diese Anforderungen.  
     
@@ -72,10 +73,10 @@ In dieser Version wird die gleiche Installationsdatei („Microsoft ATA Center S
     -  Klicken Sie auf **Aktualisieren**. Nachdem Sie auf „Aktualisieren“ geklickt haben, ist ATA bis zum Abschluss der Aktualisierung offline.
 
 4.  Nachdem das Update von ATA Center erfolgreich abgeschlossen wurde, klicken Sie auf **Starten**, um das Fenster **Updates** in der ATA-Konsole für die ATA-Gateways zu öffnen.
-    ![Update success screen](media/migration center success.png)
+    ![Update erfolgreich](media/migration center success.png)
 
 5.  Wenn Sie das automatische Update für Ihre ATA-Gateways schon im Fenster **Updates** festgelegt haben, werden Sie zu diesem Zeitpunkt ein Update durchführen. Falls dies nicht der Fall sein sollte, klicken Sie auf **Aktualisieren** neben jedem ATA-Gateway.
-  ![Abbildung „Gateways aktualisieren“](media/migration update gw.png)
+  ![Gateways aktualisieren](media/migration update gw.png)
 
   
 > [!IMPORTANT] 
@@ -83,16 +84,16 @@ In dieser Version wird die gleiche Installationsdatei („Microsoft ATA Center S
 > Der konfigurierte Syslog-Überwachungsport wird für alle Gateways auf 514 geändert.
  
 > [!NOTE] 
-> Wechseln Sie zum Installieren der neuen ATA-Gateways zum Bildschirm **Gateways**, klicken Sie auf **Gatewaysetup herunterladen**, um das ATA 1.7-Installationspaket zu erhalten, und folgen Sie den in [Schritt 4:  Installieren des ATA-Gateways](/advanced-threat-analytics/deploy-use/install-ata-step4) beschriebenen Installationsschritten für neue Gateways.
+> Wechseln Sie zum Installieren neuer ATA-Gateways zum Bildschirm **Gateways**, klicken Sie auf **Gatewaysetup herunterladen**, um das ATA 1.7-Installationspaket zu erhalten, und folgen Sie den Anweisungen zum Installieren eines neuen Gateways in [Schritt 4: Installieren des ATA-Gateways](/advanced-threat-analytics/deploy-use/install-ata-step4).
 
 
 
-## Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO3-->
 
 

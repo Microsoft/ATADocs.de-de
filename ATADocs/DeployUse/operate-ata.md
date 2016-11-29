@@ -1,20 +1,21 @@
 ---
-title: "Betreiben von ATA – vollständig | Microsoft ATA"
+title: "Betreiben von ATA – alle Schritte | Microsoft Docs"
 description: "Führt Sie durch das Arbeiten mit ATA und täglichen Aktivitäten."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
 ms.technology: 
-ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
+ms.assetid: cf6fcd3a-0295-450e-bd40-8cd4909f0cae
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 23aea01f07de4fc52fa404304df7698370c75cb9
-ms.openlocfilehash: 5f011486d7dff8aa70720351a465ce4db823cc66
+ms.sourcegitcommit: fca7f1b2b8260cad6e0ce32aad1c9e1b53fc0ad5
+ms.openlocfilehash: 737173f9d485004ca1a92dbede364048d450faa3
 
 
 ---
@@ -23,27 +24,27 @@ ms.openlocfilehash: 5f011486d7dff8aa70720351a465ce4db823cc66
 
 
 
-# Betreiben von ATA
+# <a name="operate-ata"></a>Betreiben von ATA
 
 Die folgenden Vorgänge können Sie mit ATA ausführen:
 
 - [Ändern der ATA-Konfiguration](modifying-ata-configuration.md)
-  - [IP-Adresse von ATA Center ändern](modifying-ata-config-centerip.md)
-  - [Zertifikat von ATA Center ändern](modifying-ata-config-centercert.md)
+  - [Ändern der IP-Adresse von ATA-Center](modifying-ata-config-centerip.md)
+  - [Ändern des Zertifikats für ATA-Center](modifying-ata-config-centercert.md)
   - [Ändern der URL der ATA-Konsole](modifying-ata-config-consoleurl.md)
-  - [Kennwort des Domänencontrollers ändern](modifying-ata-config-dcpassword.md)
+  - [Ändern des Kennworts für den Domänencontroller](modifying-ata-config-dcpassword.md)
 - [Arbeiten mit der ATA-Konsole](working-with-ata-console.md)
 - [ATA-Rollengruppen](ata-role-groups.md)
-- [ATA-Warnungen einstellen](setting-ata-alerts.md)
+- [Festlegen von ATA-Warnungen](setting-ata-alerts.md)
 - [Festlegen von Syslog- und E-Mail-Servereinstellungen](setting-syslog-email-server-settings.md)
 - [Arbeiten mit Erkennungseinstellungen](working-with-detection-settings.md)
-- [ATA Health Center](ata-health-center.md)
-- [ATA-Verdachtsmomente](working-with-suspicious-activities.md)
+- [ATA-Health Center](ata-health-center.md)
+- [Verdächtige Aktivitäten in ATA](working-with-suspicious-activities.md)
 - [ATA-Datenbankverwaltung](ata-database-management.md)
-- [ATA-Telemetrie verwalten](manage-telemetry-settings.md)
+- [Verwalten der ATA-Telemetrie](manage-telemetry-settings.md)
 
 
-## Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen
 
 - [Weitere Informationen finden Sie im ATA-Forum.](https://aka.ms/ata-forum)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
@@ -52,6 +53,6 @@ Die folgenden Vorgänge können Sie mit ATA ausführen:
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO3-->
 
 
