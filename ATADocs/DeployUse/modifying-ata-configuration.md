@@ -1,10 +1,11 @@
 ---
-title: "Ändern der ATA-Konfiguration | Microsoft ATA"
+title: "Ändern der ATA-Konfiguration | Microsoft Docs"
 description: "Liste verschiedener Möglichkeiten zum Ändern der ATA-Konfiguration."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 11/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +14,8 @@ ms.assetid: bcf0f7d3-8027-45c0-8002-19f71fcb30a6
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
-ms.openlocfilehash: b79a5726b40130b28b0b52d42eede69a4dacc8b6
+ms.sourcegitcommit: bc7af91a925928183d179391f15d3a24cda2b576
+ms.openlocfilehash: f1e0939160cfdc54d4474f43e01582893cda82ef
 
 
 ---
@@ -23,7 +24,7 @@ ms.openlocfilehash: b79a5726b40130b28b0b52d42eede69a4dacc8b6
 
 
 
-# Ändern der ATA-Konfiguration
+# <a name="change-ata-configuration"></a>Ändern der ATA-Konfiguration
 
 Wenn Sie die Konfiguration nach der ersten Installation und Bereitstellung von ATA aktualisieren oder ändern möchten, finden Sie in diesem Thema entsprechende Anweisungen zu folgenden Änderungen:
 
@@ -35,13 +36,12 @@ Wenn Sie die Konfiguration nach der ersten Installation und Bereitstellung von A
 
 -   [Ändern des Domänenverbindungskennworts](modifying-ata-config-dcpassword.md)
 
-## Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen
 - [Arbeiten mit der ATA-Konsole](working-with-ata-console.md)
-- [Installieren von ATA](install-ata.md)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://aka.ms/ata-forum)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO5-->
 
 

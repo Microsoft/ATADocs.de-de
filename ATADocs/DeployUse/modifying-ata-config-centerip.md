@@ -1,10 +1,11 @@
 ---
-title: "Ändern der ATA-Konfiguration – IP-Adresse für ATA Center | Microsoft ATA"
+title: "Ändern der ATA-Konfiguration – IP-Adresse für ATA Center | Microsoft Docs"
 description: "Beschreibt, wie die IP-Adresse, der Port oder das Zertifikat für ATA Center geändert werden."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 11/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +14,8 @@ ms.assetid: 93b27f15-f7e5-49bb-870a-d81d09dfe9fc
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
-ms.openlocfilehash: e6d42610d1c785da5b7c7b1cf035d94c2fddff4b
+ms.sourcegitcommit: bc7af91a925928183d179391f15d3a24cda2b576
+ms.openlocfilehash: d0fed03deb5f50747383a398dfb2eca74ad0cdf0
 
 
 ---
@@ -23,14 +24,14 @@ ms.openlocfilehash: e6d42610d1c785da5b7c7b1cf035d94c2fddff4b
 
 
 
-# Ändern der ATA-Konfiguration – IP-Adresse für ATA Center
+# <a name="change-ata-configuration---ata-center-ip-address"></a>Ändern der ATA-Konfiguration – IP-Adresse für ATA Center
 
 >[!div class="step-by-step"]
 [Zertifikat für ATA Center »](modifying-ata-config-centercert.md)
 
 Nach der ersten Bereitstellung sollten Änderungen an ATA Center vorsichtig vorgenommen werden. Gehen Sie wie folgt vor, wenn Sie die IP-Adresse und den Port oder das Zertifikat ändern.
 
-## Ändern der vom ATA Center-Server verwendeten IP-Adresse
+## <a name="change-the-ip-address-used-by-the-ata-center-server"></a>Ändern der vom ATA Center-Server verwendeten IP-Adresse
 Berücksichtigen Sie beim Ändern der IP-Adresse und des Ports oder des Zertifikats für ATA Center die folgenden Punkte.
 
 Die ATA-Gateways speichern die IP-Adresse der ATA Center-Instanz, mit der eine Verbindung hergestellt werden soll, lokal. Sie stellen in regelmäßigen Abständen eine Verbindung mit ATA Center her und rufen Konfigurationsänderungen ab. Änderungen im Hinblick auf die Herstellung der Verbindung mit ATA Center über die ATA-Gateways werden in zwei Stufen vorgenommen.
@@ -77,13 +78,12 @@ Die ATA-Gateways speichern die IP-Adresse der ATA Center-Instanz, mit der eine V
 [Ändern des Zertifikats für ATA Center »](modifying-ata-config-centercert.md)
 
 
-## Siehe auch
+## <a name="see-also"></a>Siehe auch
 - [Arbeiten mit der ATA-Konsole](working-with-ata-console.md)
-- [Installieren von ATA](install-ata.md)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://aka.ms/ata-forum)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO5-->
 
 
