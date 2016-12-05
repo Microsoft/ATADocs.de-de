@@ -1,10 +1,11 @@
 ---
-title: Konfigurieren einer Ereignissammlung | Microsoft ATA
+title: Konfigurieren der Ereignissammlung | Microsoft Docs
 description: Beschreibt die Optionen zum Konfigurieren der Ereignissammlung mit ATA
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
-ms.date: 09/28/2016
+ms.date: 11/28/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +14,8 @@ ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d2c1c00ff649557c1a0a16385e025c9d597c3bbf
-ms.openlocfilehash: 91ce3a3fef27673712a708aa1e92c32298cedd84
+ms.sourcegitcommit: bc7af91a925928183d179391f15d3a24cda2b576
+ms.openlocfilehash: 2932fd80fd3a5ff6830f8629df824591e3fc47c3
 
 
 ---
@@ -23,13 +24,13 @@ ms.openlocfilehash: 91ce3a3fef27673712a708aa1e92c32298cedd84
 
 
 
-# Konfigurieren der Ereignissammlung
+# <a name="configure-event-collection"></a>Konfigurieren der Ereignissammlung
 Um die Erkennungsfunktionalität zu verbessern, benötigt ATA die Windows-Ereignisprotokoll-ID 4776. Diese kann auf zwei Arten an das ATA-Gateway weitergeleitet werden: durch das Konfigurieren des ATA-Gateways zum Überwachen von SIEM-Ereignissen oder durch das [Konfigurieren der Windows-Ereignisweiterleitung](#configuring-windows-event-forwarding).
 
-## Ereignissammlung
-Zusätzlich zum Sammeln und Analysieren des Netzwerkverkehrs zu und von den Domänencontrollern kann ATA das Windows-Ereignis 4776 heranziehen, um die ATA-Erkennung von Pass-the-Hash weiter zu verbessern. Dies kann aus der SIEM heraus erfolgen oder indem Sie die Windows-Ereignisweiterleitung von Ihrem Domänencontroller aus einrichten. Die gesammelten Ereignisse versorgen ATA mit zusätzlichen Informationen, die nicht über den Netzwerkverkehr des Domänencontrollers verfügbar sind.
+## <a name="event-collection"></a>Ereignissammlung
+Zusätzlich zum Sammeln und Analysieren des Netzwerkverkehrs zu und von den Domänencontrollern kann ATA das Windows-Ereignis 4776 heranziehen, um die ATA-Erkennung von Pass-the-Hash weiter zu verbessern. Dies kann aus der SIEM heraus erfolgen oder indem Sie die Windows-Ereignisweiterleitung von Ihrem Domänencontroller aus einrichten. Die gesammelten Ereignisse versorgen ATA mit zusätzlichen Informationen, die nicht über den Netzwerkverkehr des Domänencontrollers verfügbar sind.
 
-### SIEM/Syslog
+### <a name="siemsyslog"></a>SIEM/Syslog
 Damit ATA Daten aus einem Syslog-Server verwenden kann, müssen folgende Schritte ausgeführt werden:
 
 -   Konfigurieren Ihres ATA-Gateway-Server zum Lauschen auf und Übernehmen von Ereignissen, die vom SIEM-/Syslog-Server weitergeleitet werden.
@@ -42,10 +43,10 @@ Damit ATA Daten aus einem Syslog-Server verwenden kann, müssen folgende Schritt
 
 Weitere Informationen über das Konfigurieren der Weiterleitung bestimmter Ereignisse an einen anderen Server finden Sie in der Produktdokumentation des SIEM-/Syslog-Servers. 
 
-### Windows-Ereignisweiterleitung
-Wenn Sie keinen SIEM-/Syslog-Server verwenden, können Sie Ihre Windows-Domänencontroller zum Weiterleiten von Windows-Ereignis-ID 4776 konfigurieren, damit diese von ATA gesammelt und konfiguriert wird. Windows-Ereignis-ID 4776 enthält Daten über NTLM-Authentifizierungen.
+### <a name="windows-event-forwarding"></a>Windows-Ereignisweiterleitung
+Wenn Sie keinen SIEM-/Syslog-Server verwenden, können Sie Ihre Windows-Domänencontroller zum Weiterleiten von Windows-Ereignis-ID 4776 konfigurieren, damit diese von ATA gesammelt und konfiguriert wird. Windows-Ereignis-ID 4776 enthält Daten über NTLM-Authentifizierungen.
 
-## Konfigurieren des ATA-Gateways zum Überwachen von SIEM-Ereignissen
+## <a name="configuring-the-ata-gateway-to-listen-for-siem-events"></a>Konfigurieren des ATA-Gateways zum Überwachen von SIEM-Ereignissen
 
 1.  Aktivieren Sie in der ATA-Konsole unter „Ereignisse“ **Syslog** und drücken Sie auf **Speichern**.
 
@@ -53,10 +54,10 @@ Wenn Sie keinen SIEM-/Syslog-Server verwenden, können Sie Ihre Windows-Domänen
 
 2.  Konfigurieren Sie den SIEM-/Syslog-Server zum Weiterleiten von Windows-Ereignis-ID 4776 an die IP-Adresse von einem der ATA-Gateways. Weitere Informationen zum Konfigurieren der SIEM finden Sie in der SIEM-Onlinehilfe sowie in den Optionen für technischen Support für spezielle Formatierungserfordernisse einzelner SIEM-Server.
 
-### SIEM-Unterstützung
+### <a name="siem-support"></a>SIEM-Unterstützung
 ATA unterstützt SIEM-Ereignisse in den folgenden Formaten:  
 
-#### RSA Security Analytics
+#### <a name="rsa-security-analytics"></a>RSA Security Analytics
 &lt;Syslog Header&gt;RsaSA\n2015-May-19 09:07:09\n4776\nMicrosoft-Windows-Security-Auditing\nSecurity\XXXXX.subDomain.domain.org.il\nYYYYY$\nMMMMM \n0x0
 
 -   Der Syslog-Header ist optional.
@@ -85,7 +86,7 @@ ATA unterstützt SIEM-Ereignisse in den folgenden Formaten:
 
 -   Die Reihenfolge ist wichtig, und es sollten keine weiteren Angaben in die Nachricht eingeschlossen werden.
 
-#### HP Arcsight
+#### <a name="hp-arcsight"></a>HP Arcsight
 CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|Der Domänencontroller hat versucht, die Anmeldeinformationen für ein Konto zu bestätigen.|Niedrig| externalId=4776 cat=Security rt=1426218619000 shost=KKKKKK dhost=YYYYYY.subDomain.domain.com duser=XXXXXX cs2=Security cs3=Microsoft-Windows-Security-Auditing cs4=0x0 cs3Label=EventSource cs4Label=Grund oder Fehlercode
 
 -   Muss der Protokolldefinition entsprechen.
@@ -116,7 +117,7 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|Der 
 
     -   „Ursache oder Fehlercode“ = Ergebniscode des NTLM
 
-#### Splunk
+#### <a name="splunk"></a>Splunk
 &lt;Syslog Header&gt;\r\nEventCode=4776\r\nLogfile=Security\r\nSourceName=Microsoft-Windows-Security-Auditing\r\nTimeGenerated=20150310132717.784882-000\r\ComputerName=YYYYY\r\nMessage=
 
 Es wurde versucht, die Anmeldeinformationen für ein Konto zu überprüfen.
@@ -153,7 +154,7 @@ Fehlercode:         0x0
 
 -   Die Reihenfolge der „Schlüssel = Wert“-Paare ist unerheblich.
 
-#### QRadar
+#### <a name="qradar"></a>QRadar
 QRadar ermöglicht Ereignissammlung über einen Agent. Wenn die Daten mithilfe eines Agents erfasst werden, werden Zeiten ohne Millisekunden-Daten erfasst. Da ATA Millisekunden-Daten erfordert, muss QRadar so festgelegt werden, dass es die Windows-Ereignissammlung ohne Agents verwendet. Weitere Informationen finden Sie unter [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Agentless Windows Events Collection using the MSRPC Protocol").
 
     <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
@@ -175,13 +176,13 @@ Stellen Sie sicher, dass „\t“ zwischen Schlüssel=Wert-Paaren steht.
 >[!NOTE] 
 > Verwendung von WinCollect für die Windows-Ereignissammlung wird nicht unterstützt.
 
-## Konfigurieren der Windows-Ereignisweiterleitung
+## <a name="configuring-windows-event-forwarding"></a>Konfigurieren der Windows-Ereignisweiterleitung
 
-### Konfiguration der Windows-Ereignisweiterleitung für ATA-Gateways mit Portspiegelung
+### <a name="wef-configuration-for-ata-gateways-with-port-mirroring"></a>Konfiguration der Windows-Ereignisweiterleitung für ATA-Gateways mit Portspiegelung
 
 Nachdem Sie die Portspiegelung von den Domänencontrollern zum ATA-Gateway konfiguriert haben, befolgen Sie die unten aufgeführten Anweisungen, um die Windows-Ereignisweiterleitung (Windows Event Forwarding; WEF) mithilfe der quellinitiierten Konfiguration zu konfigurieren. Dies ist eine Möglichkeit, die Windows-Ereignisweiterleitung zu konfigurieren. 
 
-**Schritt 1: Fügen Sie das Netzwerkdienstkonto zur Domäne „Event Log Readers Group“ hinzu.** 
+**Schritt 1: Fügen Sie das Netzwerkdienstkonto zur Domäne „Ereignisprotokolllesergruppe“ hinzu.** 
 
 In diesem Szenario gehen wir davon aus, dass der ATA-Gateway Mitglied einer Domäne ist.
 
@@ -210,7 +211,7 @@ In diesem Szenario gehen wir davon aus, dass der ATA-Gateway Mitglied einer Dom�
     5.  Klicken Sie auf **OK**.
     6.  Geben Sie von einer Eingabeaufforderung mit erhöhten Rechten aus *gpupdate /force* ein. 
 
-**Schritt 3: Führen Sie die folgenden Schritte auf dem ATA-Gateway aus** 
+**Schritt 3: Führen Sie die folgenden Schritte auf dem ATA-Gateway aus.** 
 
 1.  Öffnen Sie eine Eingabeaufforderung mit erhöhten Rechten, und geben Sie *wecutil.qc* ein.
 2.  Öffnen Sie die **Ereignisanzeige**. 
@@ -237,16 +238,16 @@ In diesem Szenario gehen wir davon aus, dass der ATA-Gateway Mitglied einer Dom�
    6.   Überprüfen Sie nach einigen Minuten, ob das Ereignis 4776 im ATA-Gateway in „Weitergeleitete Ereignisse“ angezeigt wird.
 
 
-### WEF-Konfiguration für das ATA-Lightweight-Gateway
+### <a name="wef-configuration-for-the-ata-lightweight-gateway"></a>WEF-Konfiguration für das ATA-Lightweight-Gateway
 Bei der Installation des ATA-Lightweight-Gateways auf Ihren Domänencontrollern können Sie Ihre Domänencontroller zum Weiterleiten der Ereignisse an sich selbst festlegen. Führen Sie die folgenden Schritte aus, um die Windows-Ereignisweiterleitung bei der Verwendung des ATA-Lightweight-Gateways zu konfigurieren. Dies ist eine Möglichkeit, die Windows-Ereignisweiterleitung zu konfigurieren.  
 
-**Schritt 1: Fügen Sie das Netzwerkdienstkonto zur Domäne „Event Log Readers Group“ hinzu** 
+**Schritt 1: Fügen Sie das Netzwerkdienstkonto zur Domäne „Ereignisprotokolllesergruppe“ hinzu.** 
 
 1.  Öffnen Sie „Active Directory-Benutzer und -Computer“, navigieren Sie zum Ordner **Vordefiniert**, und doppelklicken Sie auf **Ereignisprotokollleser**. 
 2.  Wählen Sie **Mitglieder** aus.
 3.  Wenn **Netzwerkdienst** nicht aufgelistet ist, klicken Sie auf **Hinzufügen**, und geben Sie **Netzwerkdienst** in das Feld **Geben Sie die zu verwendenden Objektnamen ein** ein. Klicken Sie anschließend auf **Namen überprüfen**, und klicken Sie zweimal auf **OK**. 
 
-**Schritt 2: Führen Sie die folgenden Schritte auf dem Domänencontroller aus, nachdem der ATA-Lightweight-Gateway installiert wurde** 
+**Schritt 2: Führen Sie die folgenden Schritte auf dem Domänencontroller aus, nachdem der ATA-Lightweight-Gateway installiert wurde.** 
 
 1.  Öffnen Sie eine Eingabeaufforderung mit erhöhten Rechten, und geben Sie *winrm quickconfig* und *wecutil qc* ein. 
 2.  Öffnen Sie die **Ereignisanzeige**. 
@@ -280,12 +281,12 @@ Bei der Installation des ATA-Lightweight-Gateways auf Ihren Domänencontrollern 
 
 Weitere Informationen finden Sie unter [Einrichten von Computern zum Weiterleiten und Sammeln von Ereignissen](https://technet.microsoft.com/library/cc748890).
 
-## Weitere Informationen
-- [Installieren von ATA](install-ata.md)
+## <a name="see-also"></a>Weitere Informationen
+- [Installieren von ATA](install-ata-step1.md)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO5-->
 
 
