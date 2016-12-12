@@ -5,14 +5,13 @@
 ### [Konfigurieren der Portspiegelung](configure-port-mirroring.md)
 ### [Überprüfen der Portspiegelung](validate-port-mirroring.md)
 ### [Konfigurieren der Ereignissammlung](configure-event-collection.md)
-## [Installieren von ATA](install-ata.md)
-### [Schritt 1](install-ata-step1.md)
-### [Schritt 2](install-ata-step2.md)
-### [Schritt 3](install-ata-step3.md)
-### [Schritt 4](install-ata-step4.md)
-### [Schritt 5](install-ata-step5.md)
-### [Schritt 6](install-ata-step6.md)
-### [Unbeaufsichtigte Installation](ata-silent-installation.md)
+## [Installieren von ATA – Schritt 1](install-ata-step1.md)
+## [Installieren von ATA – Schritt 2](install-ata-step2.md)
+## [Installieren von ATA – Schritt 3](install-ata-step3.md)
+## [Installieren von ATA – Schritt 4](install-ata-step4.md)
+## [Installieren von ATA – Installieren von ATA – Schritt 5](install-ata-step5.md)
+## [Installieren von ATA – Schritt 6](install-ata-step6.md)
+## [Unbeaufsichtigte Installation](ata-silent-installation.md)
 # [Verwenden](modifying-ata-config-centerip.md)
 ## [Ändern der IP-Adresse von ATA-Center](modifying-ata-config-centerip.md)
 ## [Ändern des Zertifikats für ATA-Center](modifying-ata-config-centercert.md)
@@ -21,16 +20,16 @@
 ## [Arbeiten mit der ATA-Konsole](working-with-ata-console.md)
 ## [ATA-Rollengruppen](ata-role-groups.md)
 ## [Festlegen von Syslog- und E-Mail-Servereinstellungen](setting-syslog-email-server-settings.md)
-## [Festlegen von ATA-Warnungen](setting-ata-alerts.md)
+## [Festlegen von ATA-Benachrichtigungen](setting-ata-alerts.md)
 ## [Arbeiten mit Erkennungseinstellungen](working-with-detection-settings.md)
 ## [ATA-Health Center](ata-health-center.md)
 ## [Arbeiten mit verdächtigen Aktivitäten](working-with-suspicious-activities.md)
 ## [ATA-Datenbankverwaltung](ata-database-management.md)
-## [ATA-Konfigurationsdatei](ata-configuration-file.md)
+## [Exportieren/Importieren der ATA-Konfiguration](ata-configuration-file.md)
 ## [Verwalten der ATA-Telemetrie](manage-telemetry-settings.md)
 # [Problembehandlung](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-known-errors)
 
 
-<!--HONumber=Oct16_HO5-->
+<!--HONumber=Nov16_HO5-->
 
 
