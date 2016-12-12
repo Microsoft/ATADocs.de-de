@@ -1,8 +1,9 @@
 ---
-title: Unbeaufsichtigtes Installieren von ATA | Microsoft ATA
+title: Unbeaufsichtigtes Installieren von ATA | Microsoft Docs
 description: Hier wird die unbeaufsichtigte Installation von ATA beschrieben.
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: get-started-article
@@ -13,8 +14,8 @@ ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d0681cfa4ae763da9c88c8dec9b77a75494a5c9f
-ms.openlocfilehash: 7b9ba09d3757979c0b845f796a846e7e83b505af
+ms.sourcegitcommit: b7f9dac8c00f213ee0cefc9ff93f2c9ca40cd28b
+ms.openlocfilehash: 7d7eeaf450a38a23c5c3a4d6d192a773f4cd036c
 
 
 ---
@@ -23,9 +24,9 @@ ms.openlocfilehash: 7b9ba09d3757979c0b845f796a846e7e83b505af
 
 
 
-# Unbeaufsichtigte ATA-Installation
+# <a name="ata-silent-installation"></a>Unbeaufsichtigte ATA-Installation
 Dieser Artikel enthält Anweisungen zur unbeaufsichtigten Installation von ATA.
-## Voraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 Microsoft ATA v1.7 erfordert die Installation von Microsoft .NET Framework 4.6.1. 
 
@@ -36,7 +37,7 @@ Beim Installieren oder Aktualisieren von ATA, wird .Net Framework 4.6.1 automati
 Wenn Sie die Methode zur unbeaufsichtigten Installation von ATA verwenden, ist das Installationsprogramm so konfiguriert, dass der Server am Ende der Installation automatisch neu gestartet wird (falls erforderlich). Um einen Neustart des Servers im Rahmen der Installation zu vermeiden, verwenden das `-NoRestart`-Flag. Wird das `-NoRestart`-Flag verwendet, und ist ein Neustart als Teil der Installation erforderlich, wird das Installationsprogramm angehalten, bis der Server neu gestartet wird. Zum Verfolgen des Fortschritts der Bereitstellung überwachen Sie die Protokolle des ATA-Installationsprogramms unter **%AppData%\Local\Temp**.
 
 
-## Installieren von ATA Center
+## <a name="install-the-ata-center"></a>Installieren von ATA Center
 
 Verwenden Sie zum Installieren von ATA Center den folgenden Befehl:
 
@@ -77,7 +78,7 @@ So installieren Sie ATA Center mit Standardinstallationspfaden, zwei IP-Adressen
     “Microsoft ATA Center Setup.exe” /quiet --LicenseAccepted NetFrameworkCommandLineArguments ="/q" CenterIpAddress=192.168.0.10 CenterPort=443 CenterCertificateThumbprint= ‎"1E2079739F624148ABDF502BF9C799FCB8C7212F”
     ConsoleIpAddress=192.168.0.11  ConsoleCertificateThumbprint=”G9530253C976BFA9342FD1A716C0EC94207BFD5A”
 
-## Aktualisieren von ATA Center
+## <a name="update-the-ata-center"></a>Aktualisieren von ATA Center
 
 Verwenden Sie zum Aktualisieren von ATA Center den folgenden Befehl:
 
@@ -102,7 +103,7 @@ Beim Aktualisieren von ATA erkennt das Installationsprogramm automatisch, dass A
 
         “Microsoft ATA Center Setup.exe” /quiet NetFrameworkCommandLineArguments="/q"
 
-## Unbeaufsichtigte Deinstallation von ATA Center
+## <a name="uninstall-the-ata-center-silently"></a>Unbeaufsichtigte Deinstallation von ATA Center
 
 Verwenden Sie den folgenden Befehl, um eine unbeaufsichtigte Deinstallation von ATA Center auszuführen: **Syntax**:
 
@@ -129,7 +130,7 @@ Verwenden Sie den folgenden Befehl, um eine unbeaufsichtigte Deinstallation von 
 
     “Microsoft ATA Center Setup.exe” /quiet /uninstall --DeleteExistingDatabaseData
 
-## Unbeaufsichtigte Installation des ATA-Gateways
+## <a name="ata-gateway-silent-installation"></a>Unbeaufsichtigte Installation des ATA-Gateways
 Verwenden Sie den folgenden Befehl für eine unbeaufsichtigte Installation des ATA-Gateways:
 
 **Syntax**:
@@ -146,15 +147,14 @@ Verwenden Sie den folgenden Befehl für eine unbeaufsichtigte Installation des A
 |NoRestart|/norestart|Nein|Unterdrückt alle Neustartversuche. Standardmäßig wird vor dem Neustart auf der Benutzeroberfläche eine Eingabeaufforderung angezeigt.|
 |Hilfe|/help|Nein|Stellt Hilfe und eine Kurzübersicht bereit. Zeigt die korrekte Verwendung des Installationsbefehl einschließlich einer Liste aller Optionen und Verhaltensweisen an.|
 |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Ja|Legt die Parameter für die Installation von .Net Framework fest. Muss festgelegt werden, um die unbeaufsichtigte Installation von .Net Framework zu erzwingen.|
-|LicenseAccepted|--LicenseAccepted|Ja|Gibt an, dass die Lizenz gelesen und genehmigt wurde. Muss für die unbeaufsichtigte Installation festgelegt werden.|
 
 **Installationsparameter**:
 
 |Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|Beschreibung|
 |-------------|----------|---------|---------|
 |GatewayCertificateThumbprint|GatewayCertificateThumbprint=„<CertThumbprint >“|Nein|Legt den Zertifikatsfingerabdruck für den ATA Center-Dienst fest. Dieses Zertifikat schützt die Kommunikation zwischen ATA Center und dem ATA-Gateway. Wird diese Option nicht festgelegt, wird bei der Installation ein selbstsigniertes Zertifikat generiert.|
-|ConsoleAccountName|ConsoleAccountName=„<AccountName>“|Ja|Legt den Namen des Benutzerkontos (Benutzer@Domäne.com.) fest, mit dem das ATA-Gateway bei ATA Center registriert wird.|
-|ConsoleAccountPassword|ConsoleAccountPassword=„<AccountPassword>“|Ja|Legt das Kennwort für das Benutzerkonto (Benutzer@Domäne.com.) fest, mit dem das ATA-Gateway bei ATA Center registriert wird.|
+|ConsoleAccountName|ConsoleAccountName=„<AccountName>“|Ja|Legt den Namen des Benutzerkontos ((user@domain.com)) fest, mit dem das ATA-Gateway bei ATA Center registriert wird.|
+|ConsoleAccountPassword|ConsoleAccountPassword=„<AccountPassword>“|Ja|Legt das Kennwort für das Benutzerkonto ((user@domain.com)) fest, mit dem das ATA-Gateway bei ATA Center registriert wird.|
 
 **Beispiele**: So führen Sie eine unbeaufsichtigte Installation des ATA-Gateways aus und registrieren es mit den angegebenen Anmeldeinformationen bei ATA Center:
 
@@ -162,7 +162,7 @@ Verwenden Sie den folgenden Befehl für eine unbeaufsichtigte Installation des A
     ConsoleAccountName=”user@contoso.com” ConsoleAccountPassword=“userpwd”
     
 
-## Aktualisieren des ATA-Gateways
+## <a name="update-the-ata-gateway"></a>Aktualisieren des ATA-Gateways
 
 Verwenden Sie den folgenden Befehl für ein unbeaufsichtigtes Update des ATA-Gateways:
 
@@ -185,7 +185,7 @@ Verwenden Sie den folgenden Befehl für ein unbeaufsichtigtes Update des ATA-Gat
 
         Microsoft ATA Gateway Setup.exe /quiet NetFrameworkCommandLineArguments="/q"
 
-## Unbeaufsichtigte Deinstallation des ATA-Gateways
+## <a name="uninstall-the-ata-gateway-silently"></a>Unbeaufsichtigte Deinstallation des ATA-Gateways
 
 Verwenden Sie den folgenden Befehl, um eine unbeaufsichtigte Deinstallation des ATA-Gateways auszuführen: **Syntax**:
 
@@ -214,13 +214,13 @@ Verwenden Sie den folgenden Befehl, um eine unbeaufsichtigte Deinstallation des 
 
 
 
-## Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen
 
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
 - [Voraussetzungen für ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Dec16_HO1-->
 
 
