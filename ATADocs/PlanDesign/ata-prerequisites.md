@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 12/14/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
-ms.openlocfilehash: 56f397c373e0b6827aab084e21c804a135049a27
+ms.sourcegitcommit: 67b430fbed97bd08e5f538043c783e70ed2ab956
+ms.openlocfilehash: 60ec036a8c22fb34c673653a6378437ab14f9853
 
 
 ---
@@ -142,6 +142,9 @@ Dies können Sie überprüfen, indem Sie das folgende Windows PowerShell-Cmdlet 
 
 Informationen zur Verwendung von virtuellen Computern mit dem ATA-Gateway finden Sie unter [Konfigurieren der Portspiegelung](/advanced-threat-analytics/deploy-use/configure-port-mirroring).
 
+> [!NOTE]
+> Mindestens 5 GB Speicherplatz wird benötigt, 10 GB wird empfohlen. Dies umfasst den Speicherplatz, der für die ATA-Binärdateien, [ATA-Protokolle](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs) und [Leistungsprotokolle](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters) benötigt wird.
+
 ### <a name="server-specifications"></a>Serverspezifikationen
 Um eine optimale Leistung zu erzielen, legen Sie die **Energieoption** des ATA-Gateways auf **Hohe Leistung** fest.<br>
 Ein ATA-Gateway kann die Überwachung von mehreren Domänencontrollern unterstützen, abhängig vom Umfang des Netzwerkverkehrs zu und von den Domänencontrollern.
@@ -212,12 +215,15 @@ Im lokalen Computerspeicher des ATA-Gateways muss ein Zertifikat installiert wer
 ## <a name="ata-lightweight-gateway-requirements"></a>ATA-Lightweight-Gateway-Anforderungen
 In diesem Abschnitt sind die Voraussetzungen für das ATA-Lightweight-Gateway aufgeführt.
 ### <a name="general"></a>Allgemein
-Das ATA-Lightweight-Gateway unterstützt die Installation auf einem Domänencontroller mit Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (einschließlich Core, jedoch kein Nano).
+Das ATA-Lightweight-Gateway unterstützt die Installation auf einem Domänencontroller mit Windows Server 2008 R2 SP1 (ohne Server Core), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (mit Core, jedoch ohne Nano).
 
 Beim Domänencontroller kann es sich um einen schreibgeschützten Domänencontroller (Read Only Domain Controller, RODC) handeln.
 
 Vergewissern Sie sich vor der Installation des ATA-Gateways auf einem Domänencontroller unter Windows Server 2012 R2 SP1, dass das folgende Update installiert wurde: [KB2919355](https://support.microsoft.com/kb/2919355/).
 Dies können Sie überprüfen, indem Sie das folgende Windows PowerShell-Cmdlet ausführen: `[Get-HotFix -Id kb2919355]`.
+
+> [!NOTE]
+> Mindestens 5 GB Speicherplatz wird benötigt, 10 GB wird empfohlen. Dies umfasst den Speicherplatz, der für die ATA-Binärdateien, [ATA-Protokolle](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs.md) und [Leistungsprotokolle](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters.md) benötigt wird.
 
 ### <a name="server-specifications"></a>Serverspezifikationen
 
@@ -282,6 +288,6 @@ Der Zugriff auf die ATA-Konsole erfolgt über einen Browser. Folgende Browser we
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 
