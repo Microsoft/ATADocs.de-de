@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/28/2016
+ms.date: 12/08/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bc7af91a925928183d179391f15d3a24cda2b576
-ms.openlocfilehash: 2932fd80fd3a5ff6830f8629df824591e3fc47c3
+ms.sourcegitcommit: d16364cd4113534c3101ebfa7750c0d0b837856d
+ms.openlocfilehash: 9ac9478512f2e5f6d15dd9b5cba9970a51ffa4da
 
 
 ---
@@ -28,13 +28,14 @@ ms.openlocfilehash: 2932fd80fd3a5ff6830f8629df824591e3fc47c3
 Um die Erkennungsfunktionalität zu verbessern, benötigt ATA die Windows-Ereignisprotokoll-ID 4776. Diese kann auf zwei Arten an das ATA-Gateway weitergeleitet werden: durch das Konfigurieren des ATA-Gateways zum Überwachen von SIEM-Ereignissen oder durch das [Konfigurieren der Windows-Ereignisweiterleitung](#configuring-windows-event-forwarding).
 
 ## <a name="event-collection"></a>Ereignissammlung
-Zusätzlich zum Sammeln und Analysieren des Netzwerkverkehrs zu und von den Domänencontrollern kann ATA das Windows-Ereignis 4776 heranziehen, um die ATA-Erkennung von Pass-the-Hash weiter zu verbessern. Dies kann aus der SIEM heraus erfolgen oder indem Sie die Windows-Ereignisweiterleitung von Ihrem Domänencontroller aus einrichten. Die gesammelten Ereignisse versorgen ATA mit zusätzlichen Informationen, die nicht über den Netzwerkverkehr des Domänencontrollers verfügbar sind.
+Zusätzlich zum Sammeln und Analysieren des Netzwerkverkehrs zu und von den Domänencontrollern kann ATA das Windows-Ereignis 4776 heranziehen, um die ATA-Erkennung von Pass-the-Hash weiter zu verbessern. Dies kann aus SIEM heraus empfangen werden oder indem Sie die Windows-Ereignisweiterleitung von Ihrem Domänencontroller aus einrichten. Die gesammelten Ereignisse versorgen ATA mit zusätzlichen Informationen, die nicht über den Netzwerkverkehr des Domänencontrollers verfügbar sind.
 
 ### <a name="siemsyslog"></a>SIEM/Syslog
 Damit ATA Daten aus einem Syslog-Server verwenden kann, müssen folgende Schritte ausgeführt werden:
 
 -   Konfigurieren Ihres ATA-Gateway-Server zum Lauschen auf und Übernehmen von Ereignissen, die vom SIEM-/Syslog-Server weitergeleitet werden.
-
+> [!NOTE]
+> ATA lauscht nur auf IPv4, nicht auf IPv6. 
 -   Konfigurieren des SIEM-/Syslog-Servers zum Weiterleiten bestimmter Ereignisse an das ATA-Gateway.
 
 > [!IMPORTANT]
@@ -44,7 +45,7 @@ Damit ATA Daten aus einem Syslog-Server verwenden kann, müssen folgende Schritt
 Weitere Informationen über das Konfigurieren der Weiterleitung bestimmter Ereignisse an einen anderen Server finden Sie in der Produktdokumentation des SIEM-/Syslog-Servers. 
 
 ### <a name="windows-event-forwarding"></a>Windows-Ereignisweiterleitung
-Wenn Sie keinen SIEM-/Syslog-Server verwenden, können Sie Ihre Windows-Domänencontroller zum Weiterleiten von Windows-Ereignis-ID 4776 konfigurieren, damit diese von ATA gesammelt und konfiguriert wird. Windows-Ereignis-ID 4776 enthält Daten über NTLM-Authentifizierungen.
+Wenn Sie keinen SIEM-/Syslog-Server verwenden, können Sie Ihre Windows-Domänencontroller zum Weiterleiten von Windows-Ereignis-ID 4776 konfigurieren, damit diese von ATA gesammelt und konfiguriert wird. Windows-Ereignis-ID 4776 enthält Daten über NTLM-Authentifizierungen.
 
 ## <a name="configuring-the-ata-gateway-to-listen-for-siem-events"></a>Konfigurieren des ATA-Gateways zum Überwachen von SIEM-Ereignissen
 
@@ -287,6 +288,6 @@ Weitere Informationen finden Sie unter [Einrichten von Computern zum Weiterleite
 
 
 
-<!--HONumber=Nov16_HO5-->
+<!--HONumber=Dec16_HO2-->
 
 

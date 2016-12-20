@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/25/2016
+ms.date: 12/08/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: be9ee613-4eb3-40f1-8973-e7f0a707ff57
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: fca7f1b2b8260cad6e0ce32aad1c9e1b53fc0ad5
-ms.openlocfilehash: 8032e373567ce500c7741480d56d232f34b05446
+ms.sourcegitcommit: 00ddddfd927ed1ba4c52d4774085da04ce359bde
+ms.openlocfilehash: 1c8d7983c5fd86ae3ef2c906eba3f0781cffb99b
 
 
 ---
@@ -30,14 +30,14 @@ Das Update auf ATA 1.7 bietet Verbesserungen in folgenden Bereichen:
 
 -   Rollenbasierte Zugriffssteuerung
 
--   Unterstützung für Windows Server 2016 und Windows Server Core
+-   Unterstützung für Windows Server 2016 und Windows Server 2016 Core
 
 -   Verbesserungen der Benutzeroberfläche
 
 -   Kleinere Änderungen
 
 
-### <a name="new-updated-detections"></a>Neue und aktualisierte Erkennung
+### <a name="new--updated-detections"></a>Neue und aktualisierte Erkennung
 
 
 - **Reconnaissance mithilfe von Verzeichnisdienstenumeration:** Im Rahmen dieser Phase der Reconnaissance sammeln Angreifer auf verschiedene Weise Informationen zu den Entitäten im Netzwerk. Die Verzeichnisdienstenumeration mit dem SAM-R-Protokoll ermöglicht es Angreifern, die Liste der Benutzer und Gruppen in einer Domäne zu erhalten und die Interaktion zwischen den verschiedenen Entitäten zu verstehen. 
@@ -55,7 +55,7 @@ Das Update auf ATA 1.7 bietet Verbesserungen in folgenden Bereichen:
 
 - **Rollenbasierte Zugriffskontrolle:** die Funktion für die rollenbasierte Zugriffskontrolle (Role-Based Access Control; RBAC) ATA 1.7 enthält drei Rollen: ATA Administrator, ATA Analyst und ATA Executive.
 
-- **Unterstützung für Windows Server 2016 und Windows Server Core:** ATA 1.7 unterstützt die Bereitstellung von Lightweight-Gateways auf Domänencontrollern unter Server Core für Windows Server 2012 und Server Core für Windows Server 2012 R2. Darüber hinaus unterstützt dieses Release Windows Server 2016 sowohl für die ATA Center- als auch die ATA-Gatewaykomponenten.
+- **Unterstützung für Windows Server 2016 und Windows Server Core:** ATA 1.7 unterstützt die Bereitstellung von Lightweight-Gateways auf Domänencontrollern unter Windows Server 2008 R2 SP1 (ohne Server Core), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (mit Core, jedoch ohne Nano). Darüber hinaus unterstützt dieses Release Windows Server 2016 sowohl für die ATA Center- als auch die ATA-Gatewaykomponenten.
 
 ### <a name="user-experience"></a>Benutzererfahrung
 - **Einfache Konfiguration:** Die ATA-Konfigurationsbenutzeroberfläche wurde in dieser Version neu gestaltet, um eine höhere Benutzerfreundlichkeit und eine bessere Unterstützung für Umgebungen mit mehreren ATA-Gateways zu gewährleisten. Mit diesem Release wird auch die Updateseite für das ATA-Gateway eingeführt, um die Verwaltung von automatische Updates für die verschiedenen Gateways zu erleichtern.
@@ -102,6 +102,12 @@ Um das Problem zu beheben, wechseln Sie nach dem Ändern des Zertifikats an eine
 
 3. db.SystemProfile.update({_t:"ServiceSystemProfile"},{$set:{"Configuration.ManagementClientConfiguration.ServerCertificateThumbprint":CenterThumbprint}}, {multi: true})
 
+### <a name="export-suspicious-activity-details-to-excel-may-fail"></a>Beim Export von Details über verdächtige Aktivität nach Excel tritt möglicherweise ein Fehler auf
+Beim Versuch, Details über verdächtige Aktivität in eine Excel-Datei zu exportieren, tritt möglicherweise der folgende Fehler auf: *Error [BsonClassMapSerializer`1] System.FormatException: An error occurred while deserializing the Activity property of class Microsoft.Tri.Common.Data.NetworkActivities.SuspiciousActivityActivity: Element 'ResourceIdentifier' does not match any field or property of class Microsoft.Tri.Common.Data.EventActivities.NtlmEvent. ---> System.FormatException: Element 'ResourceIdentifier' does not match any field or property of class Microsoft.Tri.Common.Data.EventActivities.NtlmEvent.* (Fehler [BsonClassMapSerializer`1] System.FormatException: Fehler beim Deserialisieren der Aktivitätseigenschaft der Klasse Microsoft.Tri.Common.Data.NetworkActivities.SuspiciousActivityActivity: Das Element 'ResourceIdentifier' stimmt mit keinem Feld und keiner Eigenschaft der Klasse Microsoft.Tri.Common.Data.EventActivities.NtlmEvent überein. ---> System.FormatException: Das Element 'ResourceIdentifier' stimmt mit keinem Feld und keiner Eigenschaft der Klasse Microsoft.Tri.Common.Data.EventActivities.NtlmEvent überein.)
+
+Um dieses Problem zu beheben, wechseln Sie an einer Eingabeaufforderung mit erhöhten Rechten zum Speicherort **%ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**, und führen Sie Folgendes aus:
+1.  **Mongo.exe ATA** (ATA muss groß geschrieben werden)
+2.  **db.SuspiciousActivityActivity.update({ "Activity._t": "NtlmEvent" },{$unset: {"Activity.ResourceIdentifier": ""}}, {multi: true});**
 
 ## <a name="minor-changes"></a>Kleinere Änderungen
 
@@ -117,6 +123,6 @@ Um das Problem zu beheben, wechseln Sie nach dem Ändern des Zertifikats an eine
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 
