@@ -1,8 +1,9 @@
 ---
-title: Behandeln von Problemen mit ATA mithilfe der ATA-Protokolle | Microsoft ATA
+title: Behandeln von Problemen mit ATA mithilfe der ATA-Protokolle | Microsoft Docs
 description: Beschreibt die Verwendung der ATA-Protokolle zum Behandeln von Problemen.
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: b8ad5511-8893-4d1d-81ee-b9a86e378347
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c71d5ed1c705de558f1144820703ffe84850679b
-ms.openlocfilehash: f8024edbfad1961db7fa469cc2907c55bb5ec93f
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: 3a2ae61ba1b54efd5dca5f0f71dc71b98872145d
 
 
 ---
@@ -23,10 +24,10 @@ ms.openlocfilehash: f8024edbfad1961db7fa469cc2907c55bb5ec93f
 
 
 
-# Behandeln von Problemen mit ATA mithilfe der ATA-Protokolle
+# <a name="troubleshooting-ata-using-the-ata-logs"></a>Behandeln von Problemen mit ATA mithilfe der ATA-Protokolle
 Die ATA-Protokolle geben Einblick in die Aktivitäten der einzelnen Komponenten von ATA zu einem bestimmten Zeitpunkt.
 
-## Protokolle des ATA-Gateways
+## <a name="ata-gateway-logs"></a>Protokolle des ATA-Gateways
 In diesem Abschnitt gilt jeder Verweis auf das ATA-Gateway ebenfalls für das ATA-Lightweight-Gateway. 
 
 Die Protokolle des ATA-Gateways befinden sich in einem Unterordner namens **Protokolle** im Installationsordner von ATA. Der Standardpfad lautet: **C:\Programme\Microsoft Advanced Threat Analytics\**. Dieser ist im Standardinstallationsverzeichnis unter **C:\Programme\Microsoft Advanced Threat Analytics\Gateway\Logs** zu finden.
@@ -47,7 +48,7 @@ Für das ATA-Gateway sind folgende Protokolle verfügbar:
 > [!NOTE]
 > Die ersten drei Protokolldateien haben eine maximale Größe von 50 MB. Wenn diese Größe erreicht ist, wird eine neue Protokolldatei geöffnet und die vorherige Datei in „&lt;Ursprünglicher Dateiname&gt;-Archived-00000“ umbenannt. Die Zahl erhöht sich bei jeder Umbenennung der Datei. Wenn bereits mehr als 10 Dateien des gleichen Typs vorhanden sind, werden die ältesten gelöscht.
 
-## Protokolle von ATA Center
+## <a name="ata-center-logs"></a>Protokolle von ATA Center
 Die Protokolle von ATA Center befinden sich im Unterordner **Logs**. Dieser ist im Standardinstallationsverzeichnis unter **C:\Programme\Microsoft Advanced Threat Analytics\Center\Logs** zu finden.
 > [!Note]
 > Die ATA-Konsolenprotokolle, die früher unter den IIS-Protokollen gespeichert wurden, befinden sich nun bei den ATA Center-Protokollen.
@@ -67,7 +68,7 @@ Für ATA Center sind folgende Protokolle verfügbar:
 > Die ersten drei Protokolldateien haben eine maximale Größe von 50 MB. Wenn diese Größe erreicht ist, wird eine neue Protokolldatei geöffnet und die vorherige Datei in „&lt;Ursprünglicher Dateiname&gt;-Archived-00000“ umbenannt. Die Zahl erhöht sich bei jeder Umbenennung der Datei. Wenn bereits mehr als 10 Dateien des gleichen Typs vorhanden sind, werden die ältesten gelöscht.
 
 
-## ATA-Bereitstellungsprotokolle
+## <a name="ata-deployment-logs"></a>ATA-Bereitstellungsprotokolle
 Die ATA-Bereitstellungsprotokolle befinden sich im temporären Verzeichnis des Benutzers, der das Produkt installiert hat. Es ist im Standardinstallationsverzeichnis unter **C:\Benutzer\Administrator\AppData\Local\Temp** (oder in dem „%temp%“ übergeordneten Verzeichnis) zu finden.
 
 Bereitstellungsprotokolle von ATA Center:
@@ -85,8 +86,8 @@ Bereitstellungsprotokolle für ATA-Gateway und ATA-Lightweight-Gateway:
 -   **Microsoft Advanced Threat Analytics Gateway_YYYYMMDDHHMMSS_001_MsiPackage.log**: In dieser Protokolldatei sind die Schritte im Verfahren zur Bereitstellung der Binärdateien des ATA-Gateways aufgeführt. Sein Hauptverwendungszweck besteht im Nachverfolgen der Bereitstellung der Binärdateien des ATA-Gateways.
 
 
-## Weitere Informationen
-- [ATA-Voraussetzungen](/advanced-threat-analytics/plan-design/ata-prerequisites)
+## <a name="see-also"></a>Weitere Informationen
+- [Voraussetzungen für ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 - [ATA-Kapazitätsplanung](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [Konfigurieren der Ereignissammlung](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Konfigurieren der Windows-Ereignisweiterleitung](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
@@ -94,6 +95,6 @@ Bereitstellungsprotokolle für ATA-Gateway und ATA-Lightweight-Gateway:
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Jan17_HO1-->
 
 
