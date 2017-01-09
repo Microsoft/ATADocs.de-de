@@ -1,8 +1,9 @@
 ---
-title: "Installieren von ATA – Schritt 1 | Microsoft ATA"
+title: "Installieren von ATA – Schritt 1 | Microsoft Docs"
 description: "Im ersten Schritt beim Installieren von ATA wird ATA Center auf den ausgewählten Server heruntergeladen und dort installiert."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 10/25/2016
 ms.topic: get-started-article
@@ -13,8 +14,8 @@ ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c71d5ed1c705de558f1144820703ffe84850679b
-ms.openlocfilehash: cf7ae4eccdf70e4e8661ac55ec15fff00bc9c62e
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: c946aa6cfde5bcb72ce8c6efba626c31c2413893
 
 
 ---
@@ -23,7 +24,7 @@ ms.openlocfilehash: cf7ae4eccdf70e4e8661ac55ec15fff00bc9c62e
 
 
 
-# Installieren von ATA – Schritt 1
+# <a name="install-ata---step-1"></a>Installieren von ATA – Schritt 1
 
 >[!div class="step-by-step"]
 [Schritt 2 »](install-ata-step2.md)
@@ -33,7 +34,7 @@ Diese Installationsschritte stellen Anweisungen zur Durchführung einer Neuinsta
 > [!IMPORTANT] 
 > Wenn Sie Windows 2012 R2 verwenden, installieren Sie vor ATA das Update KB2934520 auf dem ATA Center-Server und den ATA-Gatewayservern, da andernfalls bei der ATA-Installation dieses Update installiert wird und inmitten der ATA-Installation ein Neustart erforderlich ist.
 
-## Schritt 1: Herunterladen und Installieren von ATA Center
+## <a name="step-1-download-and-install-the-ata-center"></a>Schritt 1: Herunterladen und Installieren von ATA Center
 Nachdem Sie überprüft haben, ob der Server die Anforderungen erfüllt, können Sie mit der Installation von ATA Center fortfahren.
 
 Führen Sie die folgenden Schritte auf dem ATA Center-Server aus.
@@ -53,10 +54,10 @@ Führen Sie die folgenden Schritte auf dem ATA Center-Server aus.
 6.  Lesen Sie die Microsoft-Software-Lizenzbedingungen, aktivieren Sie das Kontrollkästchen, wenn Sie den Bedingungen zustimmen, und klicken Sie anschließend auf **Weiter**.
 
 7.  Sie sollten festlegen, dass ATA automatisch aktualisiert wird. Wenn Windows nicht für dieses automatische Update auf dem Computer konfiguriert ist, wird der Bildschirm **Verwenden Sie Microsoft Update, damit Ihr Computer sicher und auf dem aktuellen Stand bleibt** angezeigt. 
-    ![Abbildung – Aktualisieren von ATA](media/ata_ms_update.png)
+    ![ATA-Aktualisierung](media/ata_ms_update.png)
 
 8. Wählen Sie **Microsoft Update für die Suche nach Updates verwenden (empfohlen)**. Damit ändern Sie die Windows-Einstellungen so, dass Updates für andere Microsoft-Produkte (einschließlich ATA) möglich sind, wie hier zu sehen. 
-    ![Abbildung von Windows AutoUpdate](media/ata_installupdatesautomatically.png)
+    ![Automatisches Windows-Update](media/ata_installupdatesautomatically.png)
 
 8.  Geben Sie auf der Seite **ATA Center-Konfiguration** basierend auf Ihrer Umgebung die folgenden Informationen ein:
 
@@ -85,7 +86,7 @@ Führen Sie die folgenden Schritte auf dem ATA Center-Server aus.
 An dieser Stelle werden Sie automatisch zur Seite mit den **allgemeinen Einstellungen** weitergeleitet, auf der Sie die Konfiguration und Bereitstellung der ATA-Gateways fortsetzen können.
 Da Sie sich mit einer IP-Adresse bei der Website anmelden, wird eine Warnung im Zusammenhang mit dem Zertifikat angezeigt. Das ist normal, und Sie sollten auf **Laden dieser Website fortsetzen** klicken.
 
-### Überprüfen der Installation
+### <a name="validate-installation"></a>Überprüfen der Installation
 
 1.  Überprüfen Sie, ob der Dienst **Microsoft Advanced Threat Analytics-Gateway** ausgeführt wird.
 2.  Klicken Sie auf dem Desktop auf die Verknüpfung **Microsoft Advanced Threat Analytics**, um eine Verbindung mit der ATA-Konsole herzustellen. Melden Sie sich mit den gleichen Benutzeranmeldeinformationen an, die Sie auch zum Installieren von ATA Center verwendet haben.
@@ -96,7 +97,7 @@ Da Sie sich mit einer IP-Adresse bei der Website anmelden, wird eine Warnung im 
 [« Vor der Installation](preinstall-ata.md)
 [Schritt 2 »](install-ata-step2.md)
 
-## Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
@@ -105,6 +106,6 @@ Da Sie sich mit einer IP-Adresse bei der Website anmelden, wird eine Warnung im 
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Jan17_HO1-->
 
 

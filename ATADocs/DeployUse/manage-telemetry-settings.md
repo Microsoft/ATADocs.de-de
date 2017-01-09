@@ -1,8 +1,9 @@
 ---
-title: Verwalten von Telemetrieeinstellungen | Microsoft ATA
+title: Verwalten von Telemetrieeinstellungen | Microsoft Docs
 description: "Beschreibt die von ATA gesammelten Daten und enthält eine schrittweise Anleitung zum Deaktivieren der Datensammlung."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3a7e375da4acd5546347310c5965394b2addfe63
-ms.openlocfilehash: 0c6b8589fffe24298d0caf2cf2eb5e7e817e4da2
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: c7366dcc2cbd7a9eba1503e5af3290ec4ac73c32
 
 
 ---
@@ -23,10 +24,10 @@ ms.openlocfilehash: 0c6b8589fffe24298d0caf2cf2eb5e7e817e4da2
 
 
 
-# Verwalten von Telemetrieeinstellungen
+# <a name="manage-telemetry-settings"></a>Verwalten von Telemetrieeinstellungen
 Advanced Threat Analytics (ATA) sammelt anonymisierte Telemetriedaten über ATA und überträgt die Daten über eine HTTPS-Verbindung an Microsoft-Server.  Diese Daten werden von Microsoft zur Verbesserung von zukünftigen ATA-Versionen verwendet.
 
-## Gesammelte Daten
+## <a name="data-collected"></a>Gesammelte Daten
 Die gesammelten anonymisierten Daten enthalten folgende Elemente:
 
 -   Leistungsindikatoren von ATA Center und vom ATA-Gateway
@@ -82,19 +83,19 @@ Die gesammelten anonymisierten Daten enthalten folgende Elemente:
 - URL-Adressen der ATA-Konsole – URL-Adressen bei Verwendung der ATA-Konsole, d.h. welche Seite in der ATA-Konsole besucht werden.
 
 
-### Datensammlung deaktivieren
+### <a name="disable-data-collection"></a>Datensammlung deaktivieren
 Führen Sie die folgenden Schritte aus, um das Sammeln und Senden von Telemetriedaten an Microsoft zu beenden:
 
 1.  Melden Sie sich bei der ATA-Konsole an, klicken Sie auf der Symbolleiste auf die drei Punkte, und wählen Sie **Info** aus.
 
 2.  Deaktivieren Sie das Kontrollkästchen für **Senden Sie uns Nutzungsinformationen, um uns bei der Verbesserung der Benutzerfreundlichkeit zu unterstützen**.
 
-## Weitere Informationen
-- [Neuerungen in Version 1.6](/advanced-threat-analytics/understand-explore/whats-new-version-1.6)
+## <a name="see-also"></a>Siehe auch
+- [Neuigkeiten in Version 1.6](/advanced-threat-analytics/understand-explore/whats-new-version-1.6)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Jan17_HO1-->
 
 
