@@ -1,8 +1,9 @@
 ---
-title: "Installieren von ATA – Schritt 4 | Microsoft ATA"
+title: "Installieren von ATA – Schritt 4 | Microsoft Docs"
 description: Im vierten Schritt beim Installieren von ATA installieren Sie das ATA-Gateway.
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: get-started-article
@@ -13,8 +14,8 @@ ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 54e5105e78b6db9f33488135601381af5503aa4a
-ms.openlocfilehash: 305c939ebda636617ece6e41f0554af0e948c3ec
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: ebaab5e8768d6b78c6d9ff93fa1430673827e483
 
 
 ---
@@ -23,13 +24,13 @@ ms.openlocfilehash: 305c939ebda636617ece6e41f0554af0e948c3ec
 
 
 
-# Installieren von ATA – Schritt 4
+# <a name="install-ata---step-4"></a>Installieren von ATA – Schritt 4
 
 >[!div class="step-by-step"]
 [« Schritt 3](install-ata-step3.md)
 [Schritt 5 »](install-ata-step5.md)
 
-## Schritt 4: Installieren des ATA-Gateways
+## <a name="step-4-install-the-ata-gateway"></a>Schritt 4: Installieren des ATA-Gateways
 
 Überprüfen Sie vor der Installation des ATA-Gateways auf dem dedizierten Server, ob die Portspiegelung ordnungsgemäß konfiguriert ist und ob das ATA-Gateway Datenverkehr zu und von den Domänencontrollern anzeigen kann. Weitere Informationen finden Sie unter [Überprüfen der Portspiegelung](validate-port-mirroring.md).
 
@@ -89,7 +90,7 @@ Führen Sie die folgenden Schritte auf dem ATA-Gatewayserver aus.
 [« Schritt 3](install-ata-step3.md)
 [Schritt 5 »](install-ata-step5.md)
 
-## Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
@@ -98,6 +99,6 @@ Führen Sie die folgenden Schritte auf dem ATA-Gatewayserver aus.
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Jan17_HO1-->
 
 

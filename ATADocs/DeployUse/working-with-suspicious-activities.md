@@ -1,8 +1,9 @@
 ---
-title: "Arbeiten mit verdächtigen Aktivitäten | Microsoft ATA"
+title: "Arbeiten mit verdächtigen Aktivitäten | Microsoft Docs"
 description: "Beschreibt, wie Sie von ATA identifizierte verdächtige Aktivitäten überprüfen."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
-ms.openlocfilehash: 30fbeb0682bd4b253d7a6eb52b8b31e487b363cb
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: 29a8b5b76b4b435157f0907f0dc98731dacbc53a
 
 
 ---
@@ -23,10 +24,10 @@ ms.openlocfilehash: 30fbeb0682bd4b253d7a6eb52b8b31e487b363cb
 
 
 
-# Arbeiten mit verdächtigen Aktivitäten
+# <a name="working-with-suspicious-activities"></a>Arbeiten mit verdächtigen Aktivitäten
 In diesem Thema werden die Grundlagen des Arbeitens mit Advanced Threat Analytics erläutert.
 
-## Überprüfen verdächtiger Aktivitäten auf der Angriffszeitachse
+## <a name="review-suspicious-activities-on-the-attack-time-line"></a>Überprüfen verdächtiger Aktivitäten auf der Angriffszeitachse
 Nachdem Sie sich bei der ATA-Konsole angemeldet haben, gelangen Sie automatisch zur **Zeitachse mit den offenen verdächtigen Aktivitäten**. Die verdächtigen Aktivitäten werden in chronologischer Reihenfolge aufgeführt, wobei sich die neuesten verdächtigen Aktivitäten oben auf der Zeitachse befinden.
 Zu jeder verdächtigen Aktivität stehen folgende Informationen zur Verfügung:
 
@@ -56,7 +57,7 @@ Zu jeder verdächtigen Aktivität stehen folgende Informationen zur Verfügung:
 
 ![Abbildung der Zeitachse für verdächtige Aktivitäten von ATA](media/ATA-Suspicious-Activity-Timeline.JPG)
 
-## Filtern der Liste der verdächtigen Aktivitäten
+## <a name="filter-suspicious-activities-list"></a>Filtern der Liste der verdächtigen Aktivitäten
 So filtern Sie die Liste der verdächtigen Aktivitäten
 
 1.  Wählen Sie auf der linken Seite des Bildschirms im Bereich **Filtern nach** eine der folgenden Optionen aus: **Alle**, **Offen**, **Aufgelöst** oder **Verworfen**.
@@ -79,11 +80,11 @@ So filtern Sie die Liste der verdächtigen Aktivitäten
 
 **Status von verdächtigen Aktivitäten**
 
--   **Öffnen**
+-   **Offen**
 
     In dieser Liste werden alle neuen verdächtigen Aktivitäten angezeigt.
 
--   **Resolved**
+-   **Gelöst**
 
     Wird verwendet, um verdächtige Aktivitäten nachzuverfolgen, die Sie identifiziert, untersucht und behoben oder entschärft haben.
 
@@ -94,7 +95,7 @@ So filtern Sie die Liste der verdächtigen Aktivitäten
 
     Dies sind Aktivitäten, die Sie manuell verworfen haben. Wenn ATA eine ähnliche verdächtige Aktivität erkennt, wird eine neue Erkennung erstellt.
 
-## Bereitstellen von Eingaben zu einer verdächtigen Aktivität
+## <a name="provide-input-on-a-suspicious-activity"></a>Bereitstellen von Eingaben zu einer verdächtigen Aktivität
 Damit ATA Informationen zu Ihrem Netzwerk sammeln kann, werden bei einigen verdächtigen Aktivitäten (DNS-Reconnaissance, Pass-the-Ticket, SMB-Sitzungsenumeration, nicht normales Verhalten und Remoteausführung) Eingaben von Ihnen angefordert, um die Erkennung von verdächtigen Aktivitäten zukünftig zu verbessern.
 
 1.  Bei verdächtigen Aktivitäten, für die Sie Eingaben bereitstellen können, wird die Eingabeanforderung automatisch geöffnet. Sie werden aufgefordert, Fragen zu Aktivitäten in Ihrem Netzwerk zu beantworten und anzugeben, ob sie als verdächtig eingestuft werden sollen. Im folgenden Beispiel werden Sie gefragt, ob das Ausführen von Überprüfungstools von einem bestimmten Computer aus zulässig ist.
@@ -107,16 +108,16 @@ Damit ATA Informationen zu Ihrem Netzwerk sammeln kann, werden bei einigen verd�
 
 4.  Wenn Sie es nicht wissen, klicken Sie auf **Abbrechen**.
 
-## Ändern des Status einer verdächtigen Aktivität
+## <a name="change-the-status-of-a-suspicious-activity"></a>Ändern des Status einer verdächtigen Aktivität
 Sie können den Status einer verdächtigen Aktivität ändern, indem Sie auf den aktuellen Status der verdächtigen Aktivität klicken und eine der folgenden Optionen auswählen: **Offen**, **Aufgelöst** oder **Verworfen**.
 
-## Siehe auch
+## <a name="see-also"></a>Siehe auch
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Arbeiten mit ATA-Erkennungseinstellungen](working-with-detection-settings.md)
 - [Ändern der ATA-Konfiguration](modifying-ata-configuration.md)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Jan17_HO1-->
 
 

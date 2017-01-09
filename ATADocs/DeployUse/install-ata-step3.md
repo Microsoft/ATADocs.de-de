@@ -1,8 +1,9 @@
 ---
-title: "Installieren von ATA – Schritt 3 | Microsoft ATA"
+title: "Installieren von ATA – Schritt 3 | Microsoft Docs"
 description: Im dritten Schritt beim Installieren von ATA laden Sie das ATA-Gateway-Setuppaket herunter.
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: get-started-article
@@ -13,8 +14,8 @@ ms.assetid: 7fb024e6-297a-4ad9-b962-481bb75a0ba3
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ba090fdd4f00c001020b1fbedf527e4fd69d3992
-ms.openlocfilehash: 277d08756b456d1a61fb9fdcb5014a6a1b4782ad
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: c8f3f5453757fbc7a95aa2377a84c3a133d38181
 
 
 ---
@@ -23,13 +24,13 @@ ms.openlocfilehash: 277d08756b456d1a61fb9fdcb5014a6a1b4782ad
 
 
 
-# Installieren von ATA – Schritt 3
+# <a name="install-ata---step-3"></a>Installieren von ATA – Schritt 3
 
 >[!div class="step-by-step"]
 [« Schritt 2](install-ata-step2.md)
 [Schritt 4 »](install-ata-step4.md)
 
-## Schritt 3: Herunterladen des ATA-Gateway-Setuppakets
+## <a name="step-3-download-the-ata-gateway-setup-package"></a>Schritt 3: Herunterladen des ATA-Gateway-Setuppakets
 Nach dem Konfigurieren der Domänenverbindungseinstellungen können Sie das ATA-Gateway-Setuppaket herunterladen. Das ATA-Gateway kann auf einem dedizierten Server oder einem Domänencontroller installiert werden. Wenn Sie es auf einem Domänencontroller installieren, wird es als ATA-Lightweight-Gateway installiert. Weitere Informationen zum ATA-Lightweight-Gateway finden Sie unter [ATA-Architektur](/advanced-threat-analytics/plan-design/ata-architecture). 
 
 Wenn Sie zum ersten Mal einen ATA-Gateway herunterladen, erscheint folgender Bildschirm:
@@ -56,7 +57,7 @@ Die ZIP-Datei enthält Folgendes:
 [« Schritt 2](install-ata-step2.md)
 [Schritt 4 »](install-ata-step4.md)
 
-## Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
@@ -64,6 +65,6 @@ Die ZIP-Datei enthält Folgendes:
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Jan17_HO1-->
 
 
