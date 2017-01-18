@@ -22,7 +22,7 @@ ms.openlocfilehash: 2671937cf0ed9ff2865073b97ee735da99fa7d7f
 
 *Gilt für: Advanced Threat Analytics Version 1.7*
 
-## <a name="what-threats-does-ata-look-for"></a>Nach welchen Bedrohungen sucht ATA?
+# <a name="what-threats-does-ata-look-for"></a>Nach welchen Bedrohungen sucht ATA?
 
 ATA ermöglicht die Erkennung der folgenden verschiedenen Phasen eines erweiterten Angriffs: Reconnaissance, gefährdete Anmeldeinformationen, seitliche Verschiebung, Berechtigungsausweitung, Domänendominanz und mehr. Damit sollen erweiterte Angriffe und interne Bedrohungen erkannt werden, bevor sie Schaden in Ihrer Organisation anrichten.
 Die Erkennung von jeder Phase führt zu mehreren verdächtige Aktivitäten, die für die betreffende Phase relevant sind, wobei jede verdächtige Aktivität mit verschiedenen Varianten möglicher Angriffe korreliert.
