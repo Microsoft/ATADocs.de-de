@@ -1,7 +1,7 @@
-# [Verstehen und Kennenlernen](what-is-ata.md)
+# Verstehen und Kennenlernen
 ## [Was ist Microsoft Advanced Threat Analytics?](what-is-ata.md)
 ## [Welche Bedrohungen erkennt ATA?](ata-threats.md)
-## [Anmerkungen zu dieser ATA-Version](ata-release-notes.md)
+## Anmerkungen zu dieser ATA-Version
 ### [Neues in ATA-Version 1.7](whats-new-version-1.7.md)
 #### [Migrationshandbuch zur Aktualisierung auf ATA 1.7](ata-update-1.7-migration-guide.md)
 ### [Neues in ATA-Version 1.6](whats-new-version-1.6.md)
@@ -10,12 +10,46 @@
 #### [Migrationshandbuch zur Aktualisierung auf ATA 1.5](ata-update-1.5-migration-guide.md)
 ### [Neues in ATA-Version 1.4](whats-new-version-1.4.md)
 ## [Häufig gestellte Fragen](ata-technical-faq.md)
-# [Planen und Entwerfen](/advanced-threat-analytics/plan-design/ata-architecture)
-# [Bereitstellen](/advanced-threat-analytics/deploy-use/preinstall-ata)
-# [Verwenden](/advanced-threat-analytics/deploy-use/operate-ata)
-# [Problembehandlung](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-known-errors)
+# Planung und Entwurf
+## [ATA-Architektur](/advanced-threat-analytics/plan-design/ata-architecture)
+## [Planen der ATA-Kapazität](/advanced-threat-analytics/plan-design/ata-capacity-planning)
+## [Voraussetzungen für ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
+# Bereitstellen
+## Schritte vor der Installation
+### [1. Konfigurieren der Portspiegelung](/advanced-threat-analytics/deploy-use/configure-port-mirroring)
+### [2. Überprüfen der Portspiegelung](/advanced-threat-analytics/deploy-use/validate-port-mirroring)
+### [3. Konfigurieren der Ereignissammlung](/advanced-threat-analytics/deploy-use/configure-event-collection)
+## Installieren von ATA
+### [Schritt 1](/advanced-threat-analytics/deploy-use/install-ata-step1)
+### [Schritt 2](/advanced-threat-analytics/deploy-use/install-ata-step2)
+### [Schritt 3](/advanced-threat-analytics/deploy-use/install-ata-step3)
+### [Schritt 4](/advanced-threat-analytics/deploy-use/install-ata-step4)
+### [Schritt 5](/advanced-threat-analytics/deploy-use/install-ata-step5)
+### [Schritt 6](/advanced-threat-analytics/deploy-use/install-ata-step6)
+### [Unbeaufsichtigte Installation](/advanced-threat-analytics/deploy-use/ata-silent-installation)
+# Verwenden Sie
+## [Ändern der IP-Adresse von ATA-Center](/advanced-threat-analytics/deploy-use/modifying-ata-config-centerip)
+## [Ändern des Zertifikats für ATA-Center](/advanced-threat-analytics/deploy-use/modifying-ata-config-centercert)
+## [Ändern der URL der ATA-Konsole](/advanced-threat-analytics/deploy-use/modifying-ata-config-consoleurl)
+## [Ändern des Domänenverbindungskennworts](/advanced-threat-analytics/deploy-use/modifying-ata-config-dcpassword)
+## [Arbeiten mit der ATA-Konsole](/advanced-threat-analytics/deploy-use/working-with-ata-console)
+## [ATA-Rollengruppen](/advanced-threat-analytics/deploy-use/ata-role-groups)
+## [Festlegen von Syslog- und E-Mail-Servereinstellungen](/advanced-threat-analytics/deploy-use/setting-syslog-email-server-settings)
+## [Festlegen von ATA-Benachrichtigungen](/advanced-threat-analytics/deploy-use/setting-ata-alerts)
+## [Arbeiten mit Erkennungseinstellungen](/advanced-threat-analytics/deploy-use/working-with-detection-settings)
+## [ATA-Health Center](/advanced-threat-analytics/deploy-use/ata-health-center)
+## [Arbeiten mit verdächtigen Aktivitäten](/advanced-threat-analytics/deploy-use/working-with-suspicious-activities)
+## [ATA-Datenbankverwaltung](/advanced-threat-analytics/deploy-use/ata-database-management)
+## [Exportieren/Importieren der ATA-Konfiguration](/advanced-threat-analytics/deploy-use/ata-configuration-file)
+## [Verwalten der ATA-Telemetrie](/advanced-threat-analytics/deploy-use/manage-telemetry-settings)
+# Problembehandlung
+## [Problembehandlung mithilfe bekannter Fehler](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-known-errors)
+## [Problembehandlung mithilfe von Protokollen](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs)
+## [Problembehandlung mithilfe von Leistungsindikatoren](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters)
+## [Problembehandlung mithilfe der Datenbank](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-ata-database)
 
 
-<!--HONumber=Oct16_HO5-->
+
+<!--HONumber=Jan17_HO2-->
 
 
