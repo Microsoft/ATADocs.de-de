@@ -20,12 +20,12 @@
 ### [2. Überprüfen der Portspiegelung](/advanced-threat-analytics/deploy-use/validate-port-mirroring)
 ### [3. Konfigurieren der Ereignissammlung](/advanced-threat-analytics/deploy-use/configure-event-collection)
 ## Installieren von ATA
-### [Schritt 1](/advanced-threat-analytics/deploy-use/install-ata-step1)
-### [Schritt 2](/advanced-threat-analytics/deploy-use/install-ata-step2)
-### [Schritt 3](/advanced-threat-analytics/deploy-use/install-ata-step3)
-### [Schritt 4](/advanced-threat-analytics/deploy-use/install-ata-step4)
-### [Schritt 5](/advanced-threat-analytics/deploy-use/install-ata-step5)
-### [Schritt 6](/advanced-threat-analytics/deploy-use/install-ata-step6)
+### [Schritt 1: Herunterladen und Installieren von Center](/advanced-threat-analytics/deploy-use/install-ata-step1.md)
+### [Schritt 2: Verbinden mit AD](/advanced-threat-analytics/deploy-use/install-ata-step2.md)
+### [Schritt 3: Herunterladen des Gateway-Pakets](/advanced-threat-analytics/deploy-use/install-ata-step3.md)
+### [Schritt 4: Installieren des Gateways](/advanced-threat-analytics/deploy-use/install-ata-step4.md)
+### [Schritt 5: Konfigurieren des Gateways](/advanced-threat-analytics/deploy-use/install-ata-step5.md)
+### [Schritt 6: Exclusions und Honeytoken](/advanced-threat-analytics/deploy-use/install-ata-step6.md)
 ### [Unbeaufsichtigte Installation](/advanced-threat-analytics/deploy-use/ata-silent-installation)
 # Verwenden Sie
 ## [Ändern der IP-Adresse von ATA-Center](/advanced-threat-analytics/deploy-use/modifying-ata-config-centerip)
@@ -49,6 +49,6 @@
 ## [Problembehandlung mithilfe der Datenbank](troubleshooting-ata-using-ata-database.md)
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Feb17_HO1-->
 
 
