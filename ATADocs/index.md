@@ -2,8 +2,8 @@
 layout: LandingPage
 description: Erfahren Sie, wie Sie Advanced Threat Analytics verwenden.
 translationtype: Human Translation
-ms.sourcegitcommit: 514e92aa4cf9120b8ae642053ec5162b5dfd3347
-ms.openlocfilehash: d7429d5470b7eb70fdf2d1217232bbd241c457c9
+ms.sourcegitcommit: c4e5418a8b5f7093792f52f1553307039f38ff5f
+ms.openlocfilehash: 1fe4d6e06150cc1425c92165445fd087544b8904
 
 ---
 # <a name="advanced-threat-analytics-documentation"></a>Advanced Threat Analytics-Dokumentation
@@ -12,7 +12,7 @@ Helfen Sie dabei, E-Mails, Dokumente und sensible Daten zu schützen und zu steu
 
 <ul class="panelContent cardsFTitle">
     <li>
-        <a href="/advanced-threat-analytics/understand-explore/ata-release-notes">
+        <a href="/advanced-threat-analytics/understand-explore/whats-new-version-1.7">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -102,7 +102,7 @@ Helfen Sie dabei, E-Mails, Dokumente und sensible Daten zu schützen und zu steu
         </a>
     </li>
     <li>
-        <a href="/enterprisemobility/?product=microsoft-advanced-threat-analytics"> 
+        <a href="https://blogs.technet.microsoft.com/enterprisemobility/author/microsoft-advanced-threat-analytics-team/"> 
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -130,7 +130,7 @@ Helfen Sie dabei, E-Mails, Dokumente und sensible Daten zu schützen und zu steu
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-                        <p><a href="/evalcenter/evaluate-microsoft-advanced-threat-analytics">Auswerten</a></p>
+                        <p><a href="https://go.microsoft.com/fwlink/?linkid=836487">Auswerten</a></p>
                     </div>
                 </div>
             </div>
