@@ -1,11 +1,11 @@
 ---
-title: "Häufig gestellte Fragen zu ATA | Microsoft Docs"
+title: "Häufig gestellte Fragen zu Advanced Threat Analytics | Microsoft-Dokumentation"
 description: "Liste häufig gestellter Fragen zu ATA und zugehörige Antworten"
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 02/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
-ms.openlocfilehash: f806437df3a2c581631e924798a367e5e48be6f8
+ms.sourcegitcommit: bdb830bb7d8ecb6e04bb9c62b40904300fc1b404
+ms.openlocfilehash: 715d6987a74d2d6222acd6747f3cf425a6a901da
 
 
 ---
@@ -27,6 +27,7 @@ Dieser Artikel enthält eine Reihe häufig gestellter Fragen zu ATA sowie Hinter
 
 ## <a name="what-should-i-do-if-the-ata-gateway-wont-start"></a>Das ATA-Gateway startet nicht. Wie sollte ich vorgehen?
 Sehen Sie sich den letzten Fehlereintrag im aktuellen Fehlerprotokoll an (Installationsverzeichnis von ATA unter dem Ordner „Logs“).
+
 ## <a name="how-can-i-test-ata"></a>Wie kann ich ATA testen?
 Sie können einen End-to-End-Test durchführen und verdächtige Aktivitäten simulieren. Führen Sie dazu eine der folgenden Aktionen aus:
 
@@ -54,6 +55,7 @@ ATA stützt sich auf die Analyse mehrerer Netzwerkprotokolle sowie auf Ereigniss
 
 ## <a name="does-ata-work-with-kerberos-armoring"></a>Funktioniert ATA mit Kerberos Armoring?
 Die Aktivierung von Kerberos Armoring (auch als Flexible Authentication Secure Tunneling (FAST) bezeichnet) wird von ATA unterstützt. Einzige Ausnahme ist die Overpass-The-Hash-Erkennung, die nicht unterstützt wird.
+
 ## <a name="how-many-ata-gateways-do-i-need"></a>Wie viele ATA-Gateways benötige ich?
 
 Die Anzahl der ATA-Gateways hängt von Ihrem Netzwerklayout, der Menge der Pakete und der Anzahl der Ereignisse ab, die von ATA erfasst werden. Lesen Sie den Abschnitt [Größenzuteilung für ATA Center](/advanced-threat-analytics/plan-design/ata-capacity-planning#ata-lightweight-gateway-sizing), um die genaue Anzahl zu ermitteln. 
@@ -81,7 +83,11 @@ Zwei Elemente müssen gesichert werden:
 
 -   Der Datenverkehr und die Ereignisse, die von ATA gespeichert werden und die mit jedem unterstützten Verfahren zur Datenbanksicherung gesichert werden können. Weitere Informationen hierzu finden Sie unter [ATA-Datenbankverwaltung](/advanced-threat-analytics/deploy-use/ata-database-management). 
 -   Die Konfiguration von ATA. Sie ist in der Datenbank gespeichert und wird automatisch jede Stunde im Ordner **Sicherung** im Bereitstellungsspeicherort von ATA Center gesichert.  Weitere Informationen finden Sie unter [ATA-Datenbankverwaltung](https://docs.microsoft.com/advanced-threat-analytics/deploy-use/ata-database-management).
+
+
+
 ## <a name="what-can-ata-detect"></a>Was kann ATA erkennen?
+
 ATA erkennt bekannte Angriffe und Techniken, Sicherheitsprobleme und Risiken.
 Die vollständige Liste der ATA-Erkennungen finden Sie unter [Welche Bedrohungen erkennt ATA?](ata-threats.md).
 
@@ -98,7 +104,6 @@ ATA weist eine bidirektionale Integration mit SIEMs auf:
 2. ATA kann so konfiguriert werden, dass für jedes Windows-Ereignis mit der ID 4776 Syslog-Meldungen von [diesen SIEMs](/advanced-threat-analytics/deploy-use/configure-event-collection#siem-support) empfangen werden.
 
 ## <a name="can-ata-monitor-domain-controllers-virtualized-on-your-iaas-solution"></a>Kann ATA in Ihrer IaaS-Lösung virtualisierte Domänencontroller überwachen?
-
 Ja, Sie können mit dem ATA-Lightweight-Gateway Domänencontroller in einer beliebigen IaaS-Lösung überwachen.
 
 ## <a name="is-this-an-on-premises-or-in-cloud-offering"></a>Wird das Produkt lokal oder in der Cloud angeboten?
@@ -127,6 +132,7 @@ Ja. Da Computerkonten (ebenso wie alle anderen Entitäten) zum Durchführen bös
 
 ## <a name="can-ata-support-multi-domain-and-multi-forest"></a>Kann ATA kann mehrere Domänen und mehrere Gesamtstrukturen unterstützen?
 Microsoft Advanced Threat Analytics unterstützt-Umgebungen mit mehreren Domänen innerhalb der gleichen Gesamtstrukturbegrenzung. Mehrere Gesamtstrukturen erfordern eine ATA-Bereitstellung für jede Gesamtstruktur.
+
 ## <a name="can-you-see-the-overall-health-of-the-deployment"></a>Kann die Gesamtintegrität der Bereitstellung angezeigt werden?
 Ja, Sie können die Gesamtintegrität der Bereitstellung sowie spezifische Probleme im Zusammenhang mit der Konfiguration, Konnektivität usw. anzeigen, und werden bei Eintreten eines Problems benachrichtigt.
 
@@ -141,6 +147,6 @@ Ja, Sie können die Gesamtintegrität der Bereitstellung sowie spezifische Probl
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Feb17_HO1-->
 
 

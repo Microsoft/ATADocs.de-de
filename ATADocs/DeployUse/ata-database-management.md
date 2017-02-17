@@ -1,11 +1,11 @@
 ---
-title: ATA-Datenbankverwaltung | Microsoft Docs
+title: Advanced Threat Analytics-Datenbankverwaltung | Microsoft-Dokumentation
 description: "Vorgänge zum Verschieben, Sichern oder Wiederherstellen der ATA-Datenbank."
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/29/2016
+ms.date: 1/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: 05e49e23-6e0a-4ec0-9a63-a2093173c8a1
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7dc860fe31da1374a4466f8e56e55e6520bc10dc
-ms.openlocfilehash: 5ef56d1b615595baee95478be9baaebab7ed5cb4
+ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
+ms.openlocfilehash: 95ac5a45fb69e8b23c60ec95e285a8f8d361853c
 
 
 ---
@@ -63,6 +63,6 @@ Informationen hierzu finden Sie in der [entsprechenden MongoDB-Dokumentation](ht
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Feb17_HO1-->
 
 

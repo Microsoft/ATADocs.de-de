@@ -1,11 +1,11 @@
 ---
-title: Installieren von ATA | Microsoft Docs
+title: "Installieren von Advanced Threat Analytics – Schritt 6 | Microsoft-Dokumentation"
 description: Im letzten Schritt der Installation von ATA konfigurieren Sie den Honeytoken-Benutzer.
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 09/20/2016
+ms.date: 01/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
-ms.openlocfilehash: 17833f000135337fce82d69efb63fc6e1f9ea307
+ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
+ms.openlocfilehash: b5954bd6f0cd9ef8c8b0b958a92840e905189d71
 
 
 ---
@@ -76,6 +76,6 @@ ATA startet sofort die automatische Überprüfung auf verdächtige Aktivitäten.
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Feb17_HO1-->
 
 

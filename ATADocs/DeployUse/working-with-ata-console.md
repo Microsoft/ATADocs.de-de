@@ -1,11 +1,11 @@
 ---
-title: Arbeiten mit der ATA-Konsole | Microsoft Docs
+title: Verstehen der Advanced Threat Analytics-Konsole | Microsoft-Dokumentation
 description: Beschreibt die Anmeldung bei der ATA-Konsole sowie die Komponenten der Konsole.
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/29/2016
+ms.date: 1/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7dc860fe31da1374a4466f8e56e55e6520bc10dc
-ms.openlocfilehash: c315b3b307628b31b42a6d393513b86ce88e8aa1
+ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
+ms.openlocfilehash: cb712537b42c4e86ed24607e70c614e8d37025c0
 
 
 ---
@@ -82,17 +82,17 @@ Das Integritätscenter warnt Sie, wenn in Ihrer ATA-Bereitstellung etwas nicht o
 
 ![Abbildung des ATA-Integritätscenters](media/ATA-Health-Issue.jpg)
 
-Jedes Mal, wenn auf Ihrem System ein Problem auftritt, z. B. ein Verbindungsfehler oder ein getrenntes ATA-Gateway, können Sie dies am Symbol für das Integritätscenter erkennen, auf dem ein roter Punkt angezeigt wird. ![Abbildung des roten Punkts auf dem Symbol für das ATA-Integritätscenter](media/ATA-Health-Center-Alert-red-dot.png)
+Jedes Mal, wenn auf Ihrem System ein Problem auftritt, z. B. ein Verbindungsfehler oder ein getrenntes ATA-Gateway, können Sie dies am Symbol für das Integritätscenter erkennen, auf dem ein roter Punkt angezeigt wird. ![Abbildung des roten Punkts auf dem Symbol für das ATA-Integritätscenter](media/ATA-Health-Center-Alert-red-dot.png)
 
 Warnungen des Integritätscenters können verworfen oder aufgelöst werden, und sie sind in Abhängigkeit von ihrem Schweregrad als „Hoch“, „Mittel“ oder „Niedrig“ kategorisiert. Wenn Sie eine Warnung auflösen, die vom ATA-Dienst als noch aktiv erkannt wird, wird sie automatisch in die Liste der offenen Warnungen verschoben. Wenn das System erkennt, dass für eine Warnung keine Ursache mehr vorliegt (die Situation wurde behoben), wird sie automatisch in die Liste der aufgelösten Warnungen verschoben.
 
 ### <a name="user-and-computer-profiles"></a>Benutzer- und Computerprofil
 
-ATA erstellt ein Profil für jeden Benutzer und Computer im Netzwerk. Im Benutzerprofil zeigt ATA allgemeine Informationen an, z. B. die Gruppenmitgliedschaft, kürzliche Anmeldungen und Ressourcen, auf die kürzlich zugegriffen wurde.
+ATA erstellt ein Profil für jeden Benutzer und Computer im Netzwerk. Im Benutzerprofil zeigt ATA allgemeine Informationen an, z. B. die Gruppenmitgliedschaft, kürzliche Anmeldungen und Ressourcen, auf die kürzlich zugegriffen wurde.
 
 ![Benutzerprofil](media/user-profile.png)
 
-Im Computerprofil zeigt ATA allgemeine Informationen an, z. B. kürzliche Anmeldungen und Ressourcen, auf die kürzlich zugegriffen wurde.
+Im Computerprofil zeigt ATA allgemeine Informationen an, z. B. kürzliche Anmeldungen und Ressourcen, auf die kürzlich zugegriffen wurde.
 
 ![Computerprofil](media/computer-profile.png)
 
@@ -105,7 +105,7 @@ Ein Profil, das ATA nicht vollständig auflösen konnte, wird durch das Symbol e
 
 ### <a name="mini-profile"></a>Miniprofil
 
-An jeder Stelle in der Konsole, an der eine einzelne Entität angezeigt wird, z. B. ein Benutzer oder ein Computer, wird automatisch ein Miniprofil geöffnet, wenn Sie mit der Maus auf die Entität zeigen. Das Miniprofil enthält die folgenden Informationen (sofern verfügbar):
+An jeder Stelle in der Konsole, an der eine einzelne Entität angezeigt wird, z. B. ein Benutzer oder ein Computer, wird automatisch ein Miniprofil geöffnet, wenn Sie mit der Maus auf die Entität zeigen. Das Miniprofil enthält die folgenden Informationen (sofern verfügbar):
 
 ![Abbildung des ATA-Miniprofils](media/ATA-mini-profile.jpg)
 
@@ -126,6 +126,6 @@ An jeder Stelle in der Konsole, an der eine einzelne Entität angezeigt wird, z.
 
 
 
-<!--HONumber=Nov16_HO5-->
+<!--HONumber=Feb17_HO1-->
 
 
