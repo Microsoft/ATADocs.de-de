@@ -14,8 +14,8 @@ ms.assetid: 7620e171-76d5-4e3f-8b03-871678217a3a
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8ffbbfd96507612b8ec44f232f4ece42988eb588
-ms.openlocfilehash: 3bc9e48f1d8843aef40016a2c5a82f6c7510be3c
+ms.sourcegitcommit: e3f763f7c1cce6c451a1cc969771b73543c76673
+ms.openlocfilehash: 0669ccb78207dde1ede06a229af896bed0b19d28
 
 
 ---
@@ -30,7 +30,7 @@ Dieser Artikel beschreibt, wie Sie ATA Center und Ihre ATA-Funktionalität schne
 >[!NOTE]
 > Der beschriebene Prozess stellt keine zuvor erkannten verdächtigen Aktivitäten wieder her, sorgt jedoch dafür, dass ATA Center wieder voll funktionstüchtig ist. Darüber hinaus wird der erforderliche Lernzeitraum für einige Verhaltenserkennungen neu gestartet, jedoch sind die meisten Erkennungen, die ATA nach der Wiederherstellung von ATA Center zurückgibt, betriebsbereit. 
 
-## <a name="how-to-recovery-your-ata-center-after-disaster"></a>So stellen Sie ATA Center nach einem Notfall wieder her
+## <a name="how-to-recover-your-ata-center-after-a-disaster"></a>So stellen Sie ATA Center nach einem Notfall wieder her
 
 1. Die ATA Center-Konfiguration wird stündlich in einer Datei gesichert. Suchen Sie die neueste Sicherungskopie der ATA Center-Konfiguration, und speichern Sie sie auf einem separaten Computer. Eine ausführliche Erläuterung zum Auffinden dieser Dateien finden Sie unter [Exportieren und Importieren der ATA-Konfiguration](/advanced-threat-analytics/deploy-use/ata-configuration-file). 
 2. Exportieren Sie das Zertifikats für ATA Center.
@@ -72,6 +72,6 @@ Dieser Artikel beschreibt, wie Sie ATA Center und Ihre ATA-Funktionalität schne
 
 
 
-<!--HONumber=Feb17_HO2-->
+<!--HONumber=Feb17_HO3-->
 
 
