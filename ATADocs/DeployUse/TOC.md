@@ -20,12 +20,12 @@
 ### [2. Überprüfen der Portspiegelung](validate-port-mirroring.md)
 ### [3. Konfigurieren der Ereignissammlung](configure-event-collection.md)
 ## Installieren von ATA
-### [Schritt 1: Herunterladen und Installieren von Center](/advanced-threat-analytics/deploy-use/install-ata-step1.md)
-### [Schritt 2: Verbinden mit AD](/advanced-threat-analytics/deploy-use/install-ata-step2.md)
-### [Schritt 3: Herunterladen des Gateway-Pakets](/advanced-threat-analytics/deploy-use/install-ata-step3.md)
-### [Schritt 4: Installieren des Gateways](/advanced-threat-analytics/deploy-use/install-ata-step4.md)
-### [Schritt 5: Konfigurieren des Gateways](/advanced-threat-analytics/deploy-use/install-ata-step5.md)
-### [Schritt 6: Exclusions und Honeytoken](/advanced-threat-analytics/deploy-use/install-ata-step6.md)
+### [Schritt 1: Herunterladen und Installieren von Center](install-ata-step1.md)
+### [Schritt 2: Verbinden mit AD](install-ata-step2.md)
+### [Schritt 3: Herunterladen des Gateway-Pakets](install-ata-step3.md)
+### [Schritt 4: Installieren des Gateways](install-ata-step4.md)
+### [Schritt 5: Konfigurieren des Gateways](install-ata-step5.md)
+### [Schritt 6: Exclusions und Honeytoken](install-ata-step6.md)
 ### [Unbeaufsichtigte Installation](ata-silent-installation.md)
 # Verwenden Sie
 ## [Ändern der IP-Adresse von ATA-Center](modifying-ata-config-centerip.md)
@@ -49,6 +49,6 @@
 ## [Problembehandlung mithilfe der Datenbank](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-ata-database)
 ## [Notfallwiederherstellun](/advanced-threat-analytics/troubleshoot/disaster-recovery)
 
-<!--HONumber=Feb17_HO2-->
+<!--HONumber=Feb17_HO4-->
 
 
