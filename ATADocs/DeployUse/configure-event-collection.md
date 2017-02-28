@@ -14,8 +14,9 @@ ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: bc9bee71273fba1df0b62dbaf162570b22c49b44
+ms.sourcegitcommit: 6fddbbae0a0734834a21975c7690e06ac28dc64d
+ms.openlocfilehash: e31e3b8a94c8beef22be2f06ecaeb89545b3f62d
+ms.lasthandoff: 02/21/2017
 
 
 ---
@@ -187,56 +188,58 @@ Nachdem Sie die Portspiegelung von den Domänencontrollern zum ATA-Gateway konfi
 
 In diesem Szenario gehen wir davon aus, dass der ATA-Gateway Mitglied einer Domäne ist.
 
-1.  Öffnen Sie „Active Directory-Benutzer und -Computer“, navigieren Sie zum Ordner **Vordefiniert**, und doppelklicken Sie auf **Ereignisprotokollleser**. 
-2.  Wählen Sie **Mitglieder** aus.
-4.  Wenn **Netzwerkdienst** nicht aufgelistet ist, klicken Sie auf **Hinzufügen**, und geben Sie **Netzwerkdienst** in das Feld **Geben Sie die zu verwendenden Objektnamen ein** ein. Klicken Sie anschließend auf **Namen überprüfen**, und klicken Sie zweimal auf **OK**. 
+1.    Öffnen Sie „Active Directory-Benutzer und -Computer“, navigieren Sie zum Ordner **Vordefiniert**, und doppelklicken Sie auf **Ereignisprotokollleser**. 
+2.    Wählen Sie **Mitglieder** aus.
+4.    Wenn **Netzwerkdienst** nicht aufgelistet ist, klicken Sie auf **Hinzufügen**, und geben Sie **Netzwerkdienst** in das Feld **Geben Sie die zu verwendenden Objektnamen ein** ein. Klicken Sie anschließend auf **Namen überprüfen**, und klicken Sie zweimal auf **OK**. 
+
+Bitte beachten Sie, dass Sie die Domänencontroller neu starten müssen, nachdem Sie den **Netzwerkdienst** der **Ereignisprotokollleser**-Gruppe hinzugefügt haben, damit die Änderungen in Kraft treten können.
 
 **Schritt 2: Erstellen Sie eine Richtlinie auf den Domänencontrollern, um die Einstellung „Ziel-Abonnement-Manager konfigurieren“ festzulegen.** 
 > [!Note] 
 > Sie können eine Gruppenrichtlinie für diese Einstellungen erstellen und die Gruppenrichtlinie auf jeden Domänencontroller anwenden, der vom ATA-Gateway überwacht wird. Die folgenden Schritte ändern die lokale Richtlinie des Domänencontrollers.     
 
-1.  Führen Sie den folgenden Befehl auf jedem Domänencontroller aus: *winrm quickconfig*
+1.    Führen Sie den folgenden Befehl auf jedem Domänencontroller aus: *winrm quickconfig*
 2.  Geben Sie an einer Eingabeaufforderung *gpedit.msc* ein.
-3.  Erweitern Sie **Computerkonfiguration > Administrative Vorlagen > Windows-Komponenten > Ereignisweiterleitung**.
+3.    Erweitern Sie **Computerkonfiguration > Administrative Vorlagen > Windows-Komponenten > Ereignisweiterleitung**.
 
  ![Local policy group editor image](media/wef 1 local group policy editor.png)
 
-4.  Doppelklicken Sie auf **Ziel-Abonnement-Manager konfigurieren**.
+4.    Doppelklicken Sie auf **Ziel-Abonnement-Manager konfigurieren**.
    
-    1.  Wählen Sie **Aktiviert** aus.
-    2.  Klicken Sie unter **Optionen** auf **Anzeigen**.
-    3.  Geben Sie unter **SubscriptionManagers** den folgenden Wert ein, und Klicken Sie auf **OK**: *Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10* (z.B.: Server=http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
+    1.    Wählen Sie **Aktiviert** aus.
+    2.    Klicken Sie unter **Optionen** auf **Anzeigen**.
+    3.    Geben Sie unter **SubscriptionManagers** den folgenden Wert ein, und klicken Sie auf **OK**: *Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10* (z.B.: Server=http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
  
    ![Configure target subscription image](media/wef 2 config target sub manager.png)
    
-    5.  Klicken Sie auf **OK**.
-    6.  Geben Sie von einer Eingabeaufforderung mit erhöhten Rechten aus *gpupdate /force* ein. 
+    5.    Klicken Sie auf **OK**.
+    6.    Geben Sie von einer Eingabeaufforderung mit erhöhten Rechten aus *gpupdate /force* ein. 
 
 **Schritt 3: Führen Sie die folgenden Schritte auf dem ATA-Gateway aus.** 
 
-1.  Öffnen Sie eine Eingabeaufforderung mit erhöhten Rechten, und geben Sie *wecutil.qc* ein.
-2.  Öffnen Sie die **Ereignisanzeige**. 
-3.  Klicken Sie mit der rechten Maustaste auf **Abonnements** und wählen Sie **Erstellen von Abonnements** aus. 
+1.    Öffnen Sie eine Eingabeaufforderung mit erhöhten Rechten, und geben Sie *wecutil.qc* ein.
+2.    Öffnen Sie die **Ereignisanzeige**. 
+3.    Klicken Sie mit der rechten Maustaste auf **Abonnements** und wählen Sie **Erstellen von Abonnements** aus. 
 
-   1.   Geben Sie einen Namen und eine Beschreibung für das Abonnement ein. 
-   2.   Bestätigen Sie für **Zielprotokoll**, dass **Weitergeleitete Ereignisse** aktiviert ist. Damit ATA die Ereignisse lesen kann, muss das Zielprotokoll **Weitergeleitete Ereignisse** sein. 
-   3.   Wählen Sie **Quellcomputerinitiiert** aus, und klicken Sie auf **Computergruppen auswählen** aus.
-        1.  Klicken Sie auf **Domänencomputer hinzufügen**.
-        2.  Geben Sie den Namen des Domänencontrollers in das Feld **Namen des auszuwählenden Objekts eingeben** ein. Klicken Sie anschließend auf **Namen überprüfen**, und klicken Sie auf **OK**. 
+   1.    Geben Sie einen Namen und eine Beschreibung für das Abonnement ein. 
+   2.    Bestätigen Sie für **Zielprotokoll**, dass **Weitergeleitete Ereignisse** aktiviert ist. Damit ATA die Ereignisse lesen kann, muss das Zielprotokoll **Weitergeleitete Ereignisse** sein. 
+   3.    Wählen Sie **Quellcomputerinitiiert** aus, und klicken Sie auf **Computergruppen auswählen** aus.
+        1.    Klicken Sie auf **Domänencomputer hinzufügen**.
+        2.    Geben Sie den Namen des Domänencontrollers in das Feld **Namen des auszuwählenden Objekts eingeben** ein. Klicken Sie anschließend auf **Namen überprüfen**, und klicken Sie auf **OK**. 
        
         ![Event Viewer image](media/wef3 event viewer.png)
    
         
-        3.  Klicken Sie auf **OK**.
-   4.   Klicken Sie auf **Ereignisse auswählen**.
+        3.    Klicken Sie auf **OK**.
+   4.    Klicken Sie auf **Ereignisse auswählen**.
 
         1. Klicken Sie auf **Per Protokoll** und wählen Sie **Sicherheit** aus.
         2. Tippen Sie im Feld **Ereignis-IDs ein-/ausschließen** **4776** ein, und klicken Sie auf **OK**. 
 
  ![Query filter image](media/wef 4 query filter.png)
 
-   5.   Klicken Sie mit der mit der rechten Maustaste auf das erstellte Abonnement, und wählen Sie **Laufzeitstatus** aus, um festzustellen, ob es Probleme mit dem Status gibt. 
-   6.   Überprüfen Sie nach einigen Minuten, ob das Ereignis 4776 im ATA-Gateway in „Weitergeleitete Ereignisse“ angezeigt wird.
+   5.    Klicken Sie mit der mit der rechten Maustaste auf das erstellte Abonnement, und wählen Sie **Laufzeitstatus** aus, um festzustellen, ob es Probleme mit dem Status gibt. 
+   6.    Überprüfen Sie nach einigen Minuten, ob das Ereignis 4776 im ATA-Gateway in „Weitergeleitete Ereignisse“ angezeigt wird.
 
 
 ### <a name="wef-configuration-for-the-ata-lightweight-gateway"></a>WEF-Konfiguration für das ATA-Lightweight-Gateway
@@ -244,29 +247,29 @@ Bei der Installation des ATA-Lightweight-Gateways auf Ihren Domänencontrollern 
 
 **Schritt 1: Fügen Sie das Netzwerkdienstkonto zur Domäne „Ereignisprotokolllesergruppe“ hinzu.** 
 
-1.  Öffnen Sie „Active Directory-Benutzer und -Computer“, navigieren Sie zum Ordner **Vordefiniert**, und doppelklicken Sie auf **Ereignisprotokollleser**. 
-2.  Wählen Sie **Mitglieder** aus.
-3.  Wenn **Netzwerkdienst** nicht aufgelistet ist, klicken Sie auf **Hinzufügen**, und geben Sie **Netzwerkdienst** in das Feld **Geben Sie die zu verwendenden Objektnamen ein** ein. Klicken Sie anschließend auf **Namen überprüfen**, und klicken Sie zweimal auf **OK**. 
+1.    Öffnen Sie „Active Directory-Benutzer und -Computer“, navigieren Sie zum Ordner **Vordefiniert**, und doppelklicken Sie auf **Ereignisprotokollleser**. 
+2.    Wählen Sie **Mitglieder** aus.
+3.    Wenn **Netzwerkdienst** nicht aufgelistet ist, klicken Sie auf **Hinzufügen**, und geben Sie **Netzwerkdienst** in das Feld **Geben Sie die zu verwendenden Objektnamen ein** ein. Klicken Sie anschließend auf **Namen überprüfen**, und klicken Sie zweimal auf **OK**. 
 
 **Schritt 2: Führen Sie die folgenden Schritte auf dem Domänencontroller aus, nachdem der ATA-Lightweight-Gateway installiert wurde.** 
 
-1.  Öffnen Sie eine Eingabeaufforderung mit erhöhten Rechten, und geben Sie *winrm quickconfig* und *wecutil qc* ein. 
-2.  Öffnen Sie die **Ereignisanzeige**. 
-3.  Klicken Sie mit der rechten Maustaste auf **Abonnements** und wählen Sie **Erstellen von Abonnements** aus. 
+1.    Öffnen Sie eine Eingabeaufforderung mit erhöhten Rechten, und geben Sie *winrm quickconfig* und *wecutil qc* ein. 
+2.    Öffnen Sie die **Ereignisanzeige**. 
+3.    Klicken Sie mit der rechten Maustaste auf **Abonnements** und wählen Sie **Erstellen von Abonnements** aus. 
 
-   1.   Geben Sie einen Namen und eine Beschreibung für das Abonnement ein. 
-   2.   Bestätigen Sie für **Zielprotokoll**, dass **Weitergeleitete Ereignisse** aktiviert ist. Damit ATA die Ereignisse lesen kann, muss das Zielprotokoll „Weitergeleitete Ereignisse“ sein.
+   1.    Geben Sie einen Namen und eine Beschreibung für das Abonnement ein. 
+   2.    Bestätigen Sie für **Zielprotokoll**, dass **Weitergeleitete Ereignisse** aktiviert ist. Damit ATA die Ereignisse lesen kann, muss das Zielprotokoll „Weitergeleitete Ereignisse“ sein.
 
-        1.  Wählen Sie **Sammlungsinitiiert** aus, und klicken Sie auf **Computer auswählen**. Klicken Sie anschließend auf **Add Domain Computer** (Domänencomputer hinzufügen).
-        2.  Geben Sie den Namen des Domänencontrollers in **Namen des auszuwählenden Objekts eingeben** ein. Klicken Sie anschließend auf **Namen überprüfen**, und klicken Sie auf **OK**.
+        1.    Wählen Sie **Sammlungsinitiiert** aus, und klicken Sie auf **Computer auswählen**. Klicken Sie anschließend auf **Add Domain Computer** (Domänencomputer hinzufügen).
+        2.    Geben Sie den Namen des Domänencontrollers in **Namen des auszuwählenden Objekts eingeben** ein. Klicken Sie anschließend auf **Namen überprüfen**, und klicken Sie auf **OK**.
 
             ![Subscription properties image](media/wef 5 sub properties computers.png)
 
-        3.  Klicken Sie auf **OK**.
-   3.   Klicken Sie auf **Ereignisse auswählen**.
+        3.    Klicken Sie auf **OK**.
+   3.    Klicken Sie auf **Ereignisse auswählen**.
 
-        1.  Klicken Sie auf **Per Protokoll** und wählen Sie **Sicherheit** aus.
-        2.  Tippen Sie **Includes/Excludes Event ID** (Ereignis-IDs ein-/ausschließen) *4776* ein, und klicken Sie auf **OK**. 
+        1.    Klicken Sie auf **Per Protokoll** und wählen Sie **Sicherheit** aus.
+        2.    Tippen Sie **Includes/Excludes Event ID** (Ereignis-IDs ein-/ausschließen) *4776* ein, und klicken Sie auf **OK**. 
 
 ![Query filter image](media/wef 4 query filter.png)
 
@@ -285,9 +288,4 @@ Weitere Informationen finden Sie unter [Einrichten von Computern zum Weiterleite
 ## <a name="see-also"></a>Weitere Informationen
 - [Installieren von ATA](install-ata-step1.md)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

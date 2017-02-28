@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 02/19/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,9 @@ ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: 31fca93099bbd44f6429f9274c941ed65556d588
+ms.sourcegitcommit: 9d26567a0a9a00d4cb1a9421a4ef2e30a52c11a8
+ms.openlocfilehash: 9e550cf8fe795cb679fbcfe10ef40d2ede7875b4
+ms.lasthandoff: 02/21/2017
 
 
 ---
@@ -43,8 +44,8 @@ Verwenden Sie zum Installieren von ATA Center den folgenden Befehl:
 
 **Syntax**:
 
-    “Microsoft ATA Center Setup.exe” [/quiet] [/NoRestart] [/Help] [--LicenseAccepted] [NetFrameworkCommandLineArguments=”/q”] [InstallationPath=“<InstallPath>”] [DatabaseDataPath= “<DBPath>”] [CenterIpAddress=<CenterIPAddress>] [CenterPort=<CenterPort>] [CenterCertificateThumbprint=“<CertThumbprint>”] 
-    [ConsoleIpAddress=<ConsoleIPAddress>] [ConsoleCertificateThumbprint=”<CertThumbprint >”]
+    "Microsoft ATA Center Setup.exe" [/quiet] [/NoRestart] [/Help] [--LicenseAccepted] [NetFrameworkCommandLineArguments="/q"] [InstallationPath="<InstallPath>"] [DatabaseDataPath= "<DBPath>"] [CenterIpAddress=<CenterIPAddress>] [CenterPort=<CenterPort>] [CenterCertificateThumbprint="<CertThumbprint>"] 
+    [ConsoleIpAddress=<ConsoleIPAddress>] [ConsoleCertificateThumbprint="<CertThumbprint >"]
     
 **Installationsoptionen**:
 
@@ -60,23 +61,23 @@ Verwenden Sie zum Installieren von ATA Center den folgenden Befehl:
 
 |Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|Beschreibung|
 |-------------|----------|---------|---------|
-|InstallationPath|InstallationPath=„<InstallPath>“|Nein|Legt den Pfad für die Installation der ATA-Binärdateien fest. Standardpfad: „C:\Programme\Microsoft Advanced Threat Analytics\Center“.|
-|DatabaseDataPath|DatabaseDataPath=„<DBPath>“|Nein|Legt den Pfad für den Datenordner der ATA-Datenbank fest. Standardpfad: „C:\Programme\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data“.|
+|InstallationPath|InstallationPath=„<InstallPath>"|Nein|Legt den Pfad für die Installation der ATA-Binärdateien fest. Standardpfad: „C:\Programme\Microsoft Advanced Threat Analytics\Center“.|
+|DatabaseDataPath|DatabaseDataPath= „<DBPath>"|Nein|Legt den Pfad für den Datenordner der ATA-Datenbank fest. Standardpfad: „C:\Programme\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data“.|
 |CenterIpAddress|CenterIpAddress=<CenterIPAddress>|Ja|Legt die IP-Adresse des ATA Center-Diensts fest.|
 |CenterPort|CenterPort=<CenterPort>|Ja|Legt den Netzwerkport des ATA Center-Diensts fest.|
-|CenterCertificateThumbprint|CenterCertificateThumbprint=„<CertThumbprint>“|Nein|Legt den Zertifikatsfingerabdruck für den ATA Center-Dienst fest. Dieses Zertifikat schützt die Kommunikation zwischen ATA Center und dem ATA-Gateway. Wird diese Option nicht festgelegt, wird bei der Installation ein selbstsigniertes Zertifikat generiert.|
+|CenterCertificateThumbprint|CenterCertificateThumbprint=„<CertThumbprint>"|Nein|Legt den Zertifikatsfingerabdruck für den ATA Center-Dienst fest. Dieses Zertifikat schützt die Kommunikation zwischen ATA Center und dem ATA-Gateway. Wird diese Option nicht festgelegt, wird bei der Installation ein selbstsigniertes Zertifikat generiert.|
 |ConsoleIpAddress|ConsoleIpAddress=<ConsoleIPAddress>|Ja|Legt die IP-Adresse der ATA-Konsole fest.|
 |ConsoleCertificateThumbprint|ConsoleCertificateThumbprint=„<CertThumbprint >“|Nein|Gibt den Zertifikatsfingerabdruck für die ATA-Konsole an. Dieses Zertifikat wird zum Überprüfen der Identität der Website der ATA-Konsole verwendet. Wird diese Option nicht festgelegt, wird bei der Installation ein selbstsigniertes Zertifikat generiert.|
 
 **Beispiele**: So installieren Sie ATA Center mit Standardinstallationspfaden und einer einzigen IP-Adresse:
 
-    “Microsoft ATA Center Setup.exe” /quiet --LicenseAccepted NetFrameworkCommandLineArguments="/q" CenterIpAddress=192.168.0.10
+    "Microsoft ATA Center Setup.exe" /quiet --LicenseAccepted NetFrameworkCommandLineArguments="/q" CenterIpAddress=192.168.0.10
     CenterPort=444 ConsoleIpAddress=192.168.0.10
 
 So installieren Sie ATA Center mit Standardinstallationspfaden, zwei IP-Adressen und benutzerdefinierten Zertifikatfingerabdrücken:
 
-    “Microsoft ATA Center Setup.exe” /quiet --LicenseAccepted NetFrameworkCommandLineArguments ="/q" CenterIpAddress=192.168.0.10 CenterPort=443 CenterCertificateThumbprint= ‎"1E2079739F624148ABDF502BF9C799FCB8C7212F”
-    ConsoleIpAddress=192.168.0.11  ConsoleCertificateThumbprint=”G9530253C976BFA9342FD1A716C0EC94207BFD5A”
+    "Microsoft ATA Center Setup.exe" /quiet --LicenseAccepted NetFrameworkCommandLineArguments ="/q" CenterIpAddress=192.168.0.10 CenterPort=443 CenterCertificateThumbprint= ‎"1E2079739F624148ABDF502BF9C799FCB8C7212F"
+    ConsoleIpAddress=192.168.0.11  ConsoleCertificateThumbprint="G9530253C976BFA9342FD1A716C0EC94207BFD5A"
 
 ## <a name="update-the-ata-center"></a>Aktualisieren von ATA Center
 
@@ -84,7 +85,7 @@ Verwenden Sie zum Aktualisieren von ATA Center den folgenden Befehl:
 
 **Syntax**:
 
-    Microsoft ATA Center Setup.exe” [/quiet] [-NoRestart] /Help] [NetFrameworkCommandLineArguments=”/q”]
+    "Microsoft ATA Center Setup.exe" [/quiet] [-NoRestart] /Help] [NetFrameworkCommandLineArguments="/q"]
 
 
 **Installationsoptionen**:
@@ -101,7 +102,7 @@ Beim Aktualisieren von ATA erkennt das Installationsprogramm automatisch, dass A
 
 **Beispiele**: So führen Sie ein unbeaufsichtigtes Update von ATA Center aus. Das ATA Center-Update kann in großen Umgebungen etwas Zeit in Anspruch nehmen. Überwachen Sie die ATA-Protokolle, um den Fortschritt des Updates zu verfolgen.
 
-        “Microsoft ATA Center Setup.exe” /quiet NetFrameworkCommandLineArguments="/q"
+        "Microsoft ATA Center Setup.exe" /quiet NetFrameworkCommandLineArguments="/q"
 
 ## <a name="uninstall-the-ata-center-silently"></a>Unbeaufsichtigte Deinstallation von ATA Center
 
@@ -128,7 +129,7 @@ Verwenden Sie den folgenden Befehl, um eine unbeaufsichtigte Deinstallation von 
 **Beispiele**: So führen Sie eine unbeaufsichtigte Deinstallation von ATA Center vom Server aus und entfernen alle vorhandenen Datenbankdaten:
 
 
-    “Microsoft ATA Center Setup.exe” /quiet /uninstall --DeleteExistingDatabaseData
+    "Microsoft ATA Center Setup.exe" /quiet /uninstall --DeleteExistingDatabaseData
 
 ## <a name="ata-gateway-silent-installation"></a>Unbeaufsichtigte Installation des ATA-Gateways
 Verwenden Sie den folgenden Befehl für eine unbeaufsichtigte Installation des ATA-Gateways:
@@ -136,8 +137,8 @@ Verwenden Sie den folgenden Befehl für eine unbeaufsichtigte Installation des A
 **Syntax**:
 
     Microsoft ATA Gateway Setup.exe [/quiet] [/NoRestart] [/Help] [NetFrameworkCommandLineArguments ="/q"] 
-    [GatewayCertificateThumbprint=”<CertThumbprint >”] [ConsoleAccountName=”<AccountName>”] 
-    [ConsoleAccountPassword=”<AccountPassword>”]
+    [GatewayCertificateThumbprint="<CertThumbprint >"] [ConsoleAccountName="<AccountName>"] 
+    [ConsoleAccountPassword="<AccountPassword>"]
 
 **Installationsoptionen**:
 
@@ -153,13 +154,13 @@ Verwenden Sie den folgenden Befehl für eine unbeaufsichtigte Installation des A
 |Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|Beschreibung|
 |-------------|----------|---------|---------|
 |GatewayCertificateThumbprint|GatewayCertificateThumbprint=„<CertThumbprint >“|Nein|Legt den Zertifikatsfingerabdruck für den ATA Center-Dienst fest. Dieses Zertifikat schützt die Kommunikation zwischen ATA Center und dem ATA-Gateway. Wird diese Option nicht festgelegt, wird bei der Installation ein selbstsigniertes Zertifikat generiert.|
-|ConsoleAccountName|ConsoleAccountName=„<AccountName>“|Ja|Legt den Namen des Benutzerkontos ((user@domain.com)) fest, mit dem das ATA-Gateway bei ATA Center registriert wird.|
-|ConsoleAccountPassword|ConsoleAccountPassword=„<AccountPassword>“|Ja|Legt das Kennwort für das Benutzerkonto ((user@domain.com)) fest, mit dem das ATA-Gateway bei ATA Center registriert wird.|
+|ConsoleAccountName|ConsoleAccountName=„<AccountName>“|Ja|Legt den Namen des Benutzerkontos (user@domain.com) fest, mit dem das ATA-Gateway mit ATA Center registriert wird.|
+|ConsoleAccountPassword|ConsoleAccountPassword=„<AccountPassword>"|Ja|Legt das Passwort für das Benutzerkonto (user@domain.com) fest, mit dem das ATA-Gateway mit ATA Center registriert wird.|
 
 **Beispiele**: So führen Sie eine unbeaufsichtigte Installation des ATA-Gateways aus und registrieren es mit den angegebenen Anmeldeinformationen bei ATA Center:
 
-    “Microsoft ATA Gateway Setup.exe” /quiet NetFrameworkCommandLineArguments="/q" 
-    ConsoleAccountName=”user@contoso.com” ConsoleAccountPassword=“userpwd”
+    "Microsoft ATA Gateway Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" 
+    ConsoleAccountName="user@contoso.com" ConsoleAccountPassword="userpwd"
     
 
 ## <a name="update-the-ata-gateway"></a>Aktualisieren des ATA-Gateways
@@ -219,8 +220,3 @@ Verwenden Sie den folgenden Befehl, um eine unbeaufsichtigte Deinstallation des 
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
 - [Voraussetzungen für ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
-
-
-<!--HONumber=Feb17_HO1-->
-
-
