@@ -1,11 +1,11 @@
 ---
-title: Migrationsleitfaden zum Update auf ATA 1.7 | Microsoft Docs
+title: Migrationshandbuch zur Aktualisierung auf Advanced Threat Analytics 1.7 | Microsoft-Dokumentation
 description: Prozeduren zum Aktualisieren von ATA auf Version 1.7
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: 8eefcd45-7a4b-4074-ac5b-1ffc48e6654a
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: fca7f1b2b8260cad6e0ce32aad1c9e1b53fc0ad5
-ms.openlocfilehash: 4fa8b77aeffff327672396e9819215cc536af918
+ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
+ms.openlocfilehash: 3dd8cdfca31f8177b9c915fe85e5b8ecb33b4d58
 
 
 ---
@@ -94,6 +94,6 @@ In dieser Version wird die gleiche Installationsdatei („Microsoft ATA Center S
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO1-->
 
 

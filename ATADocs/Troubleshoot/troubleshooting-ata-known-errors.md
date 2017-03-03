@@ -1,11 +1,11 @@
 ---
-title: Behandeln von Problemen mit dem ATA-Fehlerprotokoll | Microsoft Docs
+title: Behandeln von Problemen im Advanced Threat Analytics-Fehlerprotokoll | Microsoft-Dokumentation
 description: "Beschreibt, wie Sie übliche Fehler in ATA beheben können"
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/25/2016
+ms.date: 1/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3ba53b7b1c34359f00da9fc9717496cfc7d4271d
-ms.openlocfilehash: 8687263977c7bfdf12581a200bba3a60633fca4d
+ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
+ms.openlocfilehash: 47fe467a9244d6ea8925a255552aa0f5c785dce3
 
 
 ---
@@ -55,7 +55,7 @@ In diesem Abschnitt sind mögliche Fehler, die es in den Bereitstellungen von AT
 **Lösung**: Um diese Warnungen zu vermeiden, überprüfen Sie, ob die folgenden Einstellungen auf „0“ oder „deaktiviert“ festgelegt sind: TsoEnable, LargeSendOffload, IPv4, TSO Offload. Deaktivieren Sie ebenso IPv4 Giant TSO Offload. Weitere Informationen finden Sie in der VMware-Dokumentation.
 
 
-## <a name="ata-iis-errors-not-applicable-for-ata-v17-and-above"></a>ATA-IIS-Fehler (gilt nicht für ATA Version 1.7 und höher)
+## <a name="ata-iis-errors-not-applicable-for-ata-v17-and-above"></a>ATA-IIS-Fehler (gilt nicht für ATA Version&1;.7 und höher)
 |Fehler|Beschreibung|Lösung|
 |-------------|----------|---------|
 |HTTP-Fehler 500.19 – Interner Serverfehler|Das IIS URL Rewrite-Modul konnte nicht ordnungsgemäß installiert werden.|Deinstallieren Sie das IIS URL Rewrite-Modul, und installieren Sie es dann erneut.<br>[Laden Sie das IIS URL Rewrite-Modul herunter](http://go.microsoft.com/fwlink/?LinkID=615137)|
@@ -77,6 +77,6 @@ In diesem Abschnitt sind mögliche Fehler, die es in den Bereitstellungen von AT
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Feb17_HO1-->
 
 

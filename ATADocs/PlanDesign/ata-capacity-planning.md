@@ -1,11 +1,11 @@
 ---
-title: Planen Ihrer ATA-Bereitstellung | Microsoft Docs
+title: Planen der Advanced Threat Analytics-Bereitstellung (ATA) | Microsoft-Dokumentation
 description: "Hilft bei der Planung Ihrer Bereitstellung und der Entscheidung, wie viele ATA-Server für Ihr Netzwerk erforderlich sind."
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2016
+ms.date: 1/23/2017
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 56eff27ffdd988d5cc9e67352859ddfedebb2144
-ms.openlocfilehash: 93ec7373a166529332d7c4809c756ab3ba240868
+ms.sourcegitcommit: 0bacaaaa543d74e9575811d64b4cd41ac0fdb140
+ms.openlocfilehash: 2cdf7e00b575ee759a54fb99fb97cbfcee5a43de
 
 
 ---
@@ -54,13 +54,13 @@ Für die Analyse des Benutzerverhaltens benötigt das ATA Center die Daten von m
 |10.000|4|48|3|90|200 (300)
 |40.000|8|64|12|360|500 (1.000)
 |100.000|12|96|30|900|1.000 (1.500)
-|400.000|40|128|120|1.800|2.000 (2.500)
+|400.000|40|128|120|3,600|4,000 (5,000)
 
 &#42;Dies umfasst physische Kerne, keine Hyperthreadingkerne.
 
 &#42;&#42;Durchschnittliche Werte (Spitzenwerte)
 > [!NOTE]
-> -   ATA Center kann in der Summe aller überwachten Domänencontroller maximal 400.000 Frames pro Sekunde behandeln.
+> -   ATA Center kann in der Summe aller überwachten Domänencontroller maximal 400.000 Frames pro Sekunde behandeln. In einigen Umgebungen kann dasselbe ATA Center auf den gesamten Datenverkehr, der höher als 400.000 ist, reagieren. Wenden Sie sich an askcesec@microsoft.com, um Unterstützung bei Umgebungen wie diesen zu erhalten.
 > -   Die hier vorgegebenen Speichermengen sind Nennwerte und sollten stets im Hinblick auf künftiges Wachstum angepasst werden. Das Laufwerk, auf dem sich die Datenbank befindet, sollte mindestens 20 % freien Speicherplatz aufweisen.
 > -   Wenn der freie Speicherplatz auf 20 % oder 100 GB fällt, werden die Daten der ältesten Sammlung gelöscht. Dieser Vorgang wird weiter ausgeführt, bis nur noch 5% oder 50 GB an freiem Speicherplatz übrig bleiben. Sobald dies der Fall ist, wird die Datensammlung abgebrochen.
 > -   Die Speicherlatenz für Lese- und Schreibvorgänge sollte unter 10 ms betragen.
@@ -115,7 +115,7 @@ Ein ATA-Lightweight-Gateway kann die Überwachung eines Domänencontrollers basi
 
 &#42;&#42;&#42;Gesamtgröße des auf diesem Domänencontroller installierten Arbeitsspeichers.
 
-> [!NOTE]   
+> [!NOTE]    
 > -   Wenn der Domänencontroller nicht über die für das ATA-Lightweight-Gateway erforderlichen Ressourcen verfügt, wird die Leistung des Domänencontrollers zwar nicht beeinträchtigt, aber das ATA-Lightweight-Gateway funktioniert möglicherweise nicht wie erwartet.
 > -   Bei Ausführung als virtueller Computer wird kein dynamischer Arbeitsspeicher und keine andere Speichererweiterungsfunktion unterstützt.
 > -   Um eine optimale Leistung zu erzielen, legen Sie die **Energieoption** des ATA-Lightweight-Gateways auf **Hohe Leistung** fest.
@@ -126,13 +126,13 @@ Ein ATA-Lightweight-Gateway kann die Überwachung eines Domänencontrollers basi
 
 Berücksichtigen Sie Folgendes bei der Entscheidung, wie viele ATA-Gateways bereitgestellt werden sollen.
 
--   **Active Directory-Gesamtstrukturen und -Domänen**<br>
+-    **Active Directory-Gesamtstrukturen und -Domänen**<br>
     ATA kann den Datenverkehr aus mehreren Domänen einer einzigen Active Directory-Gesamtstruktur überwachen. Die Überwachung mehrerer Active Directory-Gesamtstrukturen erfordert separate ATA-Bereitstellungen. Für die Überwachung des Netzwerkdatenverkehrs von Domänencontrollern in unterschiedlichen Gesamtstrukturen sollte keine einzelne ATA-Bereitstellung konfiguriert werden.
 
--   **Portspiegelung**<br>
+-    **Portspiegelung**<br>
 Überlegungen zur Portspiegelung machen möglicherweise die Bereitstellung mehrerer ATA-Gateways pro Rechenzentrum oder Filialstandort erforderlich.
 
--   **Kapazität**<br>
+-    **Kapazität**<br>
     Ein ATA-Gateway kann die Überwachung von mehreren Domänencontrollern unterstützen, abhängig vom Umfang des Netzwerkverkehrs der überwachten Domänencontroller. 
 <br>
 
@@ -214,6 +214,6 @@ Um die Pakete pro Sekunde zu ermitteln, gehen Sie auf jedem Domänencontroller w
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Feb17_HO2-->
 
 
