@@ -1,11 +1,11 @@
 ---
-title: Neuigkeiten in ATA Version 1.6 | Microsoft Docs
+title: Neuerungen in Advanced Threat Analytics Version 1.6 | Microsoft-Dokumentation
 description: "Listet Neuerungen sowie bekannte Probleme in ATA 1.6 auf."
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: 27b139e5-12b9-4953-8f53-eb58e8ce0038
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: fca7f1b2b8260cad6e0ce32aad1c9e1b53fc0ad5
-ms.openlocfilehash: 2cf155b0a54d12e78b5cac5be1ac077786e8cd07
+ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
+ms.openlocfilehash: e31dabc43ada8eac4ebed86af0ac4b43dc410246
 
 
 ---
@@ -109,9 +109,9 @@ Wenn einer dieser Fehler angezeigt wird, führen Sie die folgenden Schritte zur 
 **Problemumgehung**: 
 
 1.  Verschieben Sie den Ordner „data_old“ in einen temporären Ordner (befindet sich normalerweise in „%ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin“).
-2.  Deinstallieren Sie ATA Center 1.5, und löschen Sie alle Datenbankdaten.
+2.  Deinstallieren Sie ATA Center&1;.5, und löschen Sie alle Datenbankdaten.
 ![Deinstallieren von ATA 1.5](http://i.imgur.com/x4nJycx.png)
-3.  Installieren Sie ATA Center 1.5 erneut. Verwenden Sie dieselbe Konfiguration wie bei der vorherigen ATA 1.5-Installation (Zertifikate, IP-Adressen, Datenbankpfad usw.).
+3.  Installieren Sie ATA Center&1;.5 erneut. Verwenden Sie dieselbe Konfiguration wie bei der vorherigen ATA 1.5-Installation (Zertifikate, IP-Adressen, Datenbankpfad usw.).
 4.  Beenden Sie diese Dienste in der folgenden Reihenfolge:
     1.  Microsoft Advanced Threat Analytics Center
     2.  MongoDB
@@ -147,6 +147,6 @@ Im ATA-Aktualisierungsvorgang werden die Daten für den Fall, dass Sie diese fü
 [Aktualisieren von ATA auf Version 1.6 – Migrationsleitfaden](ata-update-1.6-migration-guide.md)
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO1-->
 
 

@@ -1,11 +1,11 @@
 ---
-title: Konfigurieren der Portspiegelung | Microsoft Docs
+title: Konfigurieren der Portspiegelung in Advanced Threat Analytics | Microsoft-Dokumentation
 description: "Beschreibt Optionen für die Portspiegelung und deren Konfiguration für ATA"
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/28/2016
+ms.date: 1/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: cdaddca3-e26e-4137-b553-8ed3f389c460
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bc7af91a925928183d179391f15d3a24cda2b576
-ms.openlocfilehash: 9312287da04f393282857005b68799f82e0bdfa5
+ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
+ms.openlocfilehash: 8e18bcefc023f1c37b2255000c244bc54bca4fe7
 
 
 ---
@@ -37,9 +37,9 @@ Die Domänencontroller und ATA-Gateways können physisch oder virtuell vorhanden
 
 **Switched Port Analyzer (SPAN):** kopiert Netzwerkdatenverkehr von einem oder mehreren Switchports an einen anderen Port auf demselben Switch. Das ATA-Gateway und der Domänencontroller müssen mit demselben physischen Switch verbunden werden.
 
-**Remote Switch Port Analyzer (RSPAN):** ermöglicht die Überwachung des Netzwerkdatenverkehrs aus Quellenports über mehrere physische Switches hinweg. RSPAN kopiert den Quellendatenverkehr in ein speziell für RSPAN konfiguriertes VLAN. Dieses VLAN muss mit den anderen beteiligten Switches einen Trunk bilden. RSPAN arbeitet in Schicht 2.
+**Remote Switch Port Analyzer (RSPAN):** ermöglicht die Überwachung des Netzwerkdatenverkehrs aus Quellenports über mehrere physische Switches hinweg. RSPAN kopiert den Quellendatenverkehr in ein speziell für RSPAN konfiguriertes VLAN. Dieses VLAN muss mit den anderen beteiligten Switches einen Trunk bilden. RSPAN arbeitet in Schicht 2.
 
-**Encapsulated Remote Switch Port Analyzer (ERSPAN):** eine proprietäre Cisco-Technologie für Schicht 3. ERSPAN ermöglicht das Überwachen von Datenverkehr über Switches hinweg, ohne Bedarf an VLAN-Trunks. ERSPAN verwendet für das Kopieren des überwachten Netzwerkverkehrs Generic Routing Encapsulation (GRE). ATA kann derzeit ERSPAN-Datenverkehr nicht direkt empfangen. Damit ATA mit ERSPAN-Datenverkehr arbeiten kann, muss ein Switch oder Router entsprechend als Ziel des ERSPAN-Datenverkehrs konfiguriert werden, um den Datenverkehr im Vorfeld aufzuschlüsseln. Der Switch oder Router muss dann so konfiguriert werden, dass der Datenverkehr mithilfe von SPAN oder RSPAN an das ATA-Gateway weitergeleitet wird.
+**Encapsulated Remote Switch Port Analyzer (ERSPAN):** eine proprietäre Cisco-Technologie für Schicht 3. ERSPAN ermöglicht das Überwachen von Datenverkehr über Switches hinweg, ohne Bedarf an VLAN-Trunks. ERSPAN verwendet für das Kopieren des überwachten Netzwerkverkehrs Generic Routing Encapsulation (GRE). ATA kann derzeit ERSPAN-Datenverkehr nicht direkt empfangen. Damit ATA mit ERSPAN-Datenverkehr arbeiten kann, muss ein Switch oder Router entsprechend als Ziel des ERSPAN-Datenverkehrs konfiguriert werden, um den Datenverkehr im Vorfeld aufzuschlüsseln. Der Switch oder Router muss dann so konfiguriert werden, dass der Datenverkehr mithilfe von SPAN oder RSPAN an das ATA-Gateway weitergeleitet wird.
 
 > [!NOTE]
 > Wenn der Domänencontroller mit der Portspiegelung über eine WAN-Anbindung angeschlossen ist, muss darauf geachtet werden, dass die WAN-Anbindung die zusätzliche Last des ERSPAN-Datenverkehrs aufnehmen kann.
@@ -57,7 +57,7 @@ Die Domänencontroller und ATA-Gateways können physisch oder virtuell vorhanden
 &#42;ERSPAN wird nur unterstützt, wenn der Datenverkehr vor der Analyse durch ATA aufgeschlüsselt wird.
 
 > [!NOTE]
-> Achten Sie darauf, dass die Zeitsynchronisierung der ATA-Gateways und der Domänencontroller, mit denen sie verbunden sind, in einem Bereich von 5 Minuten zueinander liegt.
+> Achten Sie darauf, dass die Zeitsynchronisierung der ATA-Gateways und der Domänencontroller, mit denen sie verbunden sind, in einem Bereich von 5 Minuten zueinander liegt.
 
 **Falls Sie mit Virtualisierungsclustern arbeiten:**
 
@@ -75,6 +75,6 @@ Die Domänencontroller und ATA-Gateways können physisch oder virtuell vorhanden
 
 
 
-<!--HONumber=Nov16_HO5-->
+<!--HONumber=Feb17_HO1-->
 
 
