@@ -1,10 +1,9 @@
 ---
 layout: LandingPage
 description: Erfahren Sie, wie Sie Advanced Threat Analytics verwenden.
-translationtype: Human Translation
-ms.sourcegitcommit: c4e5418a8b5f7093792f52f1553307039f38ff5f
-ms.openlocfilehash: 1fe4d6e06150cc1425c92165445fd087544b8904
-
+ms.openlocfilehash: d81c3fcc7e8de6a0c73ef78a7fc827e21fe662c5
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
 # <a name="advanced-threat-analytics-documentation"></a>Advanced Threat Analytics-Dokumentation
 
@@ -137,9 +136,3 @@ Helfen Sie dabei, E-Mails, Dokumente und sensible Daten zu schützen und zu steu
         </div>
     </li>  
 </ul>
-
-
-
-<!--HONumber=Feb17_HO1-->
-
-

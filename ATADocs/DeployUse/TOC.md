@@ -48,7 +48,3 @@
 ## [Problembehandlung mithilfe von Leistungsindikatoren](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters)
 ## [Problembehandlung mithilfe der Datenbank](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-ata-database)
 ## [Notfallwiederherstellun](/advanced-threat-analytics/troubleshoot/disaster-recovery)
-
-<!--HONumber=Feb17_HO4-->
-
-
