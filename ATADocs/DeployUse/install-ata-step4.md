@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: 9b5891f4e864dcd7bfa8c5cc5ba6d9977806e033
-
-
+ms.openlocfilehash: a5a9b0672fa6a571e265ff5472cb7f7d1cfb034f
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 *Gilt für: Advanced Threat Analytics Version 1.7*
 
 
@@ -95,10 +92,4 @@ Führen Sie die folgenden Schritte auf dem ATA-Gatewayserver aus.
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
 - [Voraussetzungen für ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
-
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 
