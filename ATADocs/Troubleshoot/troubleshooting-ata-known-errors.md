@@ -1,22 +1,15 @@
 ---
-title: Behandeln von Problemen im Advanced Threat Analytics-Fehlerprotokoll | Microsoft-Dokumentation
-description: "Beschreibt, wie Sie übliche Fehler in ATA beheben können"
-keywords: 
-author: rkarlin
-ms.author: rkarlin
-manager: mbaldwin
-ms.date: 1/23/2017
-ms.topic: article
-ms.prod: 
-ms.service: advanced-threat-analytics
-ms.technology: 
-ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
-ms.reviewer: bennyl
-ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: 47fe467a9244d6ea8925a255552aa0f5c785dce3
+# <a name="required-metadata"></a>erforderliche Metadaten
 
+title: Behandeln von Problemen im Advanced Threat Analytics-Fehlerprotokoll | Microsoft-Dokumentation description: Beschreibt, wie Sie häufige Probleme in folgenden ATA-Schlüsselwörtern beheben können: rkarlin ms author: rkarlin manager: mbaldwin ms.date: 1/23/2017 ms.topic: article ms.prod: ms.service: advanced-threat-analytics ms.technology: ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
+
+# <a name="optional-metadata"></a>optionale Metadaten
+
+#<a name="robots"></a>ROBOTS:
+#<a name="audience"></a>Zielgruppe:
+#<a name="msdevlang"></a>ms.devlang:
+ms.reviewer: arzinger ms.suite: ems#ms.tgt_pltfrm:
+#<a name="mscustom"></a>ms.custom:
 
 ---
 
@@ -74,9 +67,3 @@ In diesem Abschnitt sind mögliche Fehler, die es in den Bereitstellungen von AT
 - [Konfigurieren der Ereignissammlung](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Konfigurieren der Windows-Ereignisweiterleitung](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
-

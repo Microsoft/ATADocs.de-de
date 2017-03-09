@@ -13,18 +13,15 @@ ms.technology:
 ms.assetid: bff20bf7-8b53-49da-81e5-b818a1c3b24e
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 22d08a20291b1651a36247e9ffbeff8c881aefc5
-ms.openlocfilehash: 9b4db2f6489afc1687783d0a879f9303f3a8c775
-
-
+ms.openlocfilehash: 0723eb35f181ca1186099fd11eb23d6d4ab9e525
+ms.sourcegitcommit: 2b87cd81ac96f12c47b756493b85da8154ee7a0a
+translationtype: HT
 ---
-
 *Gilt für: Advanced Threat Analytics Version 1.7*
 
 
 
-# <a name="provide-ata-with-up-your-email-server-settings"></a>Bereitstellen der Einstellungen Ihres E-Mail-Servers für ATA
+# <a name="provide-ata-with-your-email-server-settings"></a>Bereitstellen der Einstellungen Ihres E-Mail-Servers für ATA
 ATA kann Benachrichtigungen senden, wenn eine verdächtige Aktivität erkannt wird. Damit ATA E-Mail-Benachrichtigungen senden kann, müssen Sie zunächst die **E-Mail-Servereinstellungen** konfigurieren.
 
 1.  Klicken Sie auf dem ATA Center-Server auf das Symbol **Microsoft Advanced Threat Analytics Management** auf dem Desktop.
@@ -80,9 +77,3 @@ ATA kann Sie durch Senden der Benachrichtigung an den Syslog-Server benachrichti
 
 ## <a name="see-also"></a>Siehe auch
 [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
-
