@@ -13,8 +13,8 @@ ms.technology:
 ms.assetid: df162a62-f273-4465-9887-94271f5000d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 929885891e2fc490e3ff358559e4995c545466b3
-ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+ms.openlocfilehash: 5c4662cd2d83135227cf86e339d5e30f9713f022
+ms.sourcegitcommit: 998e8aed5835b228e907aab78845723a02521741
 translationtype: HT
 ---
 *Gilt für: Advanced Threat Analytics Version 1.7*
@@ -32,6 +32,16 @@ Eine Beschreibung des Datenflusses zwischen internen ATA-Komponenten finden Sie 
 2.  Dadurch steigt die Größe der **vorgeschalteten** Komponente, bis auch sie die eigene vorgeschaltete Komponente am Versand weiterer Entitäten hindert.
 
 3.  Dieser Vorgang setzt sich fort, bis die NetworkListener-Komponente erreicht ist, die vorhandenen Datenverkehr löscht, wenn keine Entitäten mehr weitergeleitet werden können.
+
+
+## <a name="retrieving-performance-monitor-files-for-troubleshooting"></a>Abrufen von Leistungsüberwachungsdateien für die Problembehandlung
+
+Um die Leistungsüberwachungsdateien (BLG) aus den verschiedenen ATA-Komponenten abzurufen, gehen Sie wie folgt vor:
+1.  Öffnen Sie perfmon.
+2.  Beenden Sie den Datensammlersatz mit dem Namen „Microsoft ATA Gateway“ oder „Microsoft ATA Center“.
+3.  Navigieren Sie zum Ordner „Datensammlersatz“ (In der Standardeinstellung finden Sie diesen unter „C:\Programme\Microsoft Advanced Thread Analytics\Gateway\Protokolle\DataCollectorSets“ oder „C:\Programme\Microsoft Advanced Threat Analytics\Center\Protokolle\DataCollectorSets“).
+4.  Kopieren Sie die BLG-Datei, die zuletzt geändert wurde.
+5.  Starten Sie den Datensammlersatz mit dem Namen „Microsoft ATA Gateway“ oder „Microsoft ATA Center“ erneut.
 
 
 ## <a name="ata-gateway-performance-counters"></a>Leistungsindikatoren für das ATA-Gateway

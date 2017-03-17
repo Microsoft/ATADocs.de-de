@@ -5,15 +5,15 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 1/23/2017
+ms.date: 3/5/2017
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
 ms.prod: 
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 4e0a6dd325c172ba4eb3b68fe4d4aab96f20684b
-ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+ms.openlocfilehash: ce017adf26e30a5fde3c89a30c33f87d71716a4c
+ms.sourcegitcommit: 998e8aed5835b228e907aab78845723a02521741
 translationtype: HT
 ---
 *Gilt für: Advanced Threat Analytics Version 1.7*
@@ -22,6 +22,9 @@ translationtype: HT
 
 # <a name="ata-capacity-planning"></a>ATA-Kapazitätsplanung
 Dieses Thema hilft Ihnen zu ermitteln, wie viele ATA-Server zur Überwachung Ihres Netzwerks erforderlich sind. Es wird erläutert, wie viele ATA-Gateways und/oder ATA-Lightweight-Gateways benötigt werden und welche Serverkapazität für ATA Center und die ATA-Gateways erforderlich ist.
+
+> [!NOTE] 
+> ATA Center kann auf jedem IaaS-Anbieter bereitgestellt werden, solange die Leistungsanforderungen erfüllt werden, die in diesem Artikel beschrieben sind.
 
 ##<a name="using-the-sizing-tool"></a>Verwenden das Tools zur Größenanpassung
 Die empfohlene und einfachste Methode zum Ermitteln der Kapazität für die ATA-Bereitstellung besteht in der Verwendung des [ATA-Tools zur Größenanpassung](http://aka.ms/atasizingtool). Führen Sie das ATA-Tool zur Größenanpassung aus, und verwenden Sie aus den Excel-Dateiergebnissen heraus die folgenden Felder zum Ermitteln der benötigten ATA-Kapazität:
@@ -60,6 +63,7 @@ Für die Analyse des Benutzerverhaltens benötigt das ATA Center die Daten von m
 > -   ATA Center kann in der Summe aller überwachten Domänencontroller maximal 400.000 Frames pro Sekunde behandeln. In einigen Umgebungen kann dasselbe ATA Center auf den gesamten Datenverkehr, der höher als 400.000 ist, reagieren. Wenden Sie sich an askcesec@microsoft.com, um Unterstützung bei Umgebungen wie diesen zu erhalten.
 > -   Die hier vorgegebenen Speichermengen sind Nennwerte und sollten stets im Hinblick auf künftiges Wachstum angepasst werden. Das Laufwerk, auf dem sich die Datenbank befindet, sollte mindestens 20 % freien Speicherplatz aufweisen.
 > -   Wenn der freie Speicherplatz auf 20 % oder 100 GB fällt, werden die Daten der ältesten Sammlung gelöscht. Dieser Vorgang wird weiter ausgeführt, bis nur noch 5% oder 50 GB an freiem Speicherplatz übrig bleiben. Sobald dies der Fall ist, wird die Datensammlung abgebrochen.
+> - Es ist möglich, ATA Center auf jedem IaaS-Anbieter bereitzustellen, solange die Leistungsanforderungen erfüllt werden, die in diesem Artikel beschrieben sind.
 > -   Die Speicherlatenz für Lese- und Schreibvorgänge sollte unter 10 ms betragen.
 > -   Das Verhältnis zwischen Schreib- und Lesevorgängen beträgt unterhalb von 100.000 Paketen pro Sekunde etwa 1:3 und oberhalb dieser Grenze etwa 1:6.
 > -   Bei Ausführung als virtueller Computer wird kein dynamischer Arbeitsspeicher und keine andere Speichererweiterungsfunktion unterstützt.

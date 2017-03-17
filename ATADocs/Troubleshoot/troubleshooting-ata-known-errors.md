@@ -1,14 +1,17 @@
----
+--
 # <a name="required-metadata"></a>erforderliche Metadaten
 
-title: Behandeln von Problemen im Advanced Threat Analytics-Fehlerprotokoll | Microsoft-Dokumentation description: Beschreibt, wie Sie häufige Probleme in folgenden ATA-Schlüsselwörtern beheben können: rkarlin ms author: rkarlin manager: mbaldwin ms.date: 1/23/2017 ms.topic: article ms.prod: ms.service: advanced-threat-analytics ms.technology: ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
+title: Behandeln von Problemen im Advanced Threat Analytics-Fehlerprotokoll | Microsoft-Dokumentation description: Beschreibt, wie Sie häufige Probleme in folgenden ATA-Schlüsselwörtern beheben können: rkarlin ms author: rkarlin manager: mbaldwin ms.date: 3/14/2017 ms.topic: article ms.prod: ms.service: advanced-threat-analytics ms.technology: ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 
 # <a name="optional-metadata"></a>optionale Metadaten
 
 #<a name="robots"></a>ROBOTS:
 #<a name="audience"></a>Zielgruppe:
 #<a name="msdevlang"></a>ms.devlang:
-ms.reviewer: arzinger ms.suite: ems#ms.tgt_pltfrm:
+ms.reviewer: arzinger
+
+ms.suite: ems
+#<a name="mstgtpltfrm"></a>ms.tgt_pltfrm:
 #<a name="mscustom"></a>ms.custom:
 
 ---
