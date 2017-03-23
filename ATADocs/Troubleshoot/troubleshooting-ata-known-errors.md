@@ -1,28 +1,32 @@
---
-# <a name="required-metadata"></a>erforderliche Metadaten
-
-title: Behandeln von Problemen im Advanced Threat Analytics-Fehlerprotokoll | Microsoft-Dokumentation description: Beschreibt, wie Sie häufige Probleme in folgenden ATA-Schlüsselwörtern beheben können: rkarlin ms author: rkarlin manager: mbaldwin ms.date: 3/14/2017 ms.topic: article ms.prod: ms.service: advanced-threat-analytics ms.technology: ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
-
-# <a name="optional-metadata"></a>optionale Metadaten
-
-#<a name="robots"></a>ROBOTS:
-#<a name="audience"></a>Zielgruppe:
-#<a name="msdevlang"></a>ms.devlang:
-ms.reviewer: arzinger
-
-ms.suite: ems
-#<a name="mstgtpltfrm"></a>ms.tgt_pltfrm:
-#<a name="mscustom"></a>ms.custom:
-
 ---
-
+title: Behandeln von Problemen im Advanced Threat Analytics-Fehlerprotokoll | Microsoft-Dokumentation
+description: "Beschreibt, wie Sie übliche Fehler in ATA beheben können"
+keywords: 
+author: rkarlin
+ms.author: rkarlin
+manager: mbaldwin
+ms.date: 3/14/2017
+ms.topic: article
+ms.prod: 
+ms.service: advanced-threat-analytics
+ms.technology: 
+ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
+ms.reviewer: arzinger
+ms.suite: ems
+ms.openlocfilehash: 0c72b14a042e473c0cd59811db63ecafc4ec02d4
+ms.sourcegitcommit: f18c0841d85e54eca940c8cbf226938b3c2bc80f
+translationtype: HT
+---
 *Gilt für: Advanced Threat Analytics Version 1.7*
 
 
 
 # <a name="troubleshooting-the-ata-error-log"></a>Behandeln von Problemen im ATA-Fehlerprotokoll
+
 In diesem Abschnitt sind mögliche Fehler, die es in den Bereitstellungen von ATA geben kann, und die Schritte zu deren Behebung aufgeführt.
+
 ## <a name="ata-gateway-errors"></a>ATA-Gateway-Fehler
+
 |Fehler|Beschreibung|Lösung|
 |-------------|----------|---------|
 |System.DirectoryServices.Protocols.LdapException: Lokaler Fehler.|Die ATA-Gateway konnte sich nicht beim Domänencontroller authentifizieren.|1. Vergewissern Sie sich, dass der DNS-Eintrag des Domänencontrollers im DNS-Server ordnungsgemäß konfiguriert ist. <br>2. Vergewissern Sie sich, dass die Zeit des ATA-Gateways mit der Zeit des Domänencontrollers synchronisiert ist.|
