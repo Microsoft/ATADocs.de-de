@@ -27,7 +27,7 @@ Die ATA-Protokolle geben Einblick in die Aktivitäten der einzelnen Komponenten 
 ## <a name="ata-gateway-logs"></a>Protokolle des ATA-Gateways
 In diesem Abschnitt gilt jeder Verweis auf das ATA-Gateway ebenfalls für das ATA-Lightweight-Gateway. 
 
-Die Protokolle des ATA-Gateways befinden sich in einem Unterordner namens **Protokolle** im Installationsordner von ATA. Der Standardpfad lautet: **C:\Programme\Microsoft Advanced Threat Analytics\**. Dieser ist im Standardinstallationsverzeichnis unter **C:\Programme\Microsoft Advanced Threat Analytics\Gateway\Logs** zu finden.
+Die Protokolle des ATA-Gateways befinden sich in einem Unterordner namens **Protokolle** im Installationsordner von ATA. Der Standardpfad lautet: **C:\Programme\Microsoft Advanced Threat Analytics\**. Dieser ist im Standardinstallationsverzeichnis unter**C:\Programme\Microsoft Advanced Threat Analytics\Gateway\Logs** zu finden.
 
 Für das ATA-Gateway sind folgende Protokolle verfügbar:
 
