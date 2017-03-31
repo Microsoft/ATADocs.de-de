@@ -1,8 +1,8 @@
 ---
 layout: LandingPage
 description: Erfahren Sie, wie Sie Advanced Threat Analytics verwenden.
-ms.openlocfilehash: af0cd91660b33f2d9a38e713085576e1ed180b8f
-ms.sourcegitcommit: 998e8aed5835b228e907aab78845723a02521741
+ms.openlocfilehash: ddf06db756bd991c49200ba35b6a515832ccc3cb
+ms.sourcegitcommit: 9b128d6946e32b00f595e00902b9ff95f18141ff
 translationtype: HT
 ---
 # <a name="advanced-threat-analytics-documentation"></a>Advanced Threat Analytics-Dokumentation
@@ -130,6 +130,7 @@ Advanced Threat Analytics (ATA) ist eine lokale Plattform, die Sie beim Schutz I
                 <div class="card">
                     <div class="cardText">
                         <p><a href="https://go.microsoft.com/fwlink/?linkid=836487">Auswerten</a></p>
+                        <p><a href="https://docs.microsoft.com/enterprise-mobility-security/solutions/ata-attack-simulation-playbook">Sammlung von Angriffssimulationsszenarios von Advanced Threat Analytics</a></p>
                     </div>
                 </div>
             </div>
