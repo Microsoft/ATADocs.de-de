@@ -13,8 +13,8 @@ ms.technology:
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 70b8c4886f1c7459412eafc0646abfe1cc5d37d3
-ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+ms.openlocfilehash: da6e72ac5c2966f3e77ce3bef8fe23fcda6770a4
+ms.sourcegitcommit: 9b128d6946e32b00f595e00902b9ff95f18141ff
 translationtype: HT
 ---
 *Gilt für: Advanced Threat Analytics Version 1.7*
@@ -58,6 +58,8 @@ Damit haben Sie Microsoft Advanced Threat Analytics erfolgreich bereitgestellt.
 Sie können nun die Angriffszeitleiste auf erkannte verdächtige Aktivitäten prüfen sowie nach Benutzern oder Computern suchen und deren Profile anzeigen.
 
 ATA startet sofort die automatische Überprüfung auf verdächtige Aktivitäten. Einige Aktivitäten, beispielsweise bestimmtes verdächtiges Verhalten, ist erst wieder verfügbar, nachdem ATA Verhaltensprofile erstellen konnte (nach mindestens drei Wochen).
+
+Sie können sich die [Sammlung von Angriffssimulationsszenarios von Advanced Threat Analytics](https://docs.microsoft.com/enterprise-mobility-security/solutions/ata-attack-simulation-playbook) ansehen, um zu überprüfen, ob ATA ordnungsgemäß funktioniert und Sicherheitslücken in Ihrem Netzwerk erfasst.
 
 
 >[!div class="step-by-step"]
