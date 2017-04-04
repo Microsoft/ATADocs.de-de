@@ -25,7 +25,7 @@
 ### [Schritt 3: Herunterladen des Gateway-Pakets](install-ata-step3.md)
 ### [Schritt 4: Installieren des Gateways](install-ata-step4.md)
 ### [Schritt 5: Konfigurieren des Gateways](install-ata-step5.md)
-### [Schritt 6: Exclusions und Honeytoken](install-ata-step6.md)
+### [Schritt 6: Ausschlüsse und Honeytoken](install-ata-step6.md)
 ### [Unbeaufsichtigte Installation](ata-silent-installation.md)
 # Verwenden Sie
 ## [Ändern der IP-Adresse von ATA-Center](modifying-ata-config-centerip.md)
