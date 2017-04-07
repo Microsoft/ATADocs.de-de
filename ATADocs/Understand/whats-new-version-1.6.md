@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: 27b139e5-12b9-4953-8f53-eb58e8ce0038
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: e31dabc43ada8eac4ebed86af0ac4b43dc410246
-
-
+ms.openlocfilehash: ac10d24c443e0278a1d0995598fb9c1cf0fb4de6
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 # <a name="whats-new-in-ata-version-16"></a>Neuerungen in ATA 1.6
 Die vorliegenden Anmerkungen zu dieser Version enthalten Informationen zu bekannten Problemen in dieser Version von Advanced Threat Analytics.
 
@@ -108,21 +105,21 @@ Wenn einer dieser Fehler angezeigt wird, führen Sie die folgenden Schritte zur 
 
 **Problemumgehung**: 
 
-1.  Verschieben Sie den Ordner „data_old“ in einen temporären Ordner (befindet sich normalerweise in „%ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin“).
-2.  Deinstallieren Sie ATA Center&1;.5, und löschen Sie alle Datenbankdaten.
+1.    Verschieben Sie den Ordner „data_old“ in einen temporären Ordner (befindet sich normalerweise in „%ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin“).
+2.    Deinstallieren Sie ATA Center&1;.5, und löschen Sie alle Datenbankdaten.
 ![Deinstallieren von ATA 1.5](http://i.imgur.com/x4nJycx.png)
-3.  Installieren Sie ATA Center&1;.5 erneut. Verwenden Sie dieselbe Konfiguration wie bei der vorherigen ATA 1.5-Installation (Zertifikate, IP-Adressen, Datenbankpfad usw.).
-4.  Beenden Sie diese Dienste in der folgenden Reihenfolge:
-    1.  Microsoft Advanced Threat Analytics Center
-    2.  MongoDB
-5.  Ersetzen Sie die MongoDB-Datenbankdateien durch die Dateien im Ordner „data_old“.
-6.  Starten Sie diese Dienste in der folgenden Reihenfolge:
-    1.  MongoDB
-    2.  Microsoft Advanced Threat Analytics Center
-7.  Überprüfen Sie die Protokolle, um sich zu vergewissern, dass das Produkt ohne Fehler ausgeführt wird.
-8.  [Herunterladen](http://aka.ms/ataremoveduplicateprofiles "Laden Sie das Tool „RemoveDuplicateProfiles.exe“ herunter"), und kopieren Sie es in den Hauptinstallationspfad (%ProgramFiles%\Microsoft Advanced Threat Analytics\Center).
-9.  Führen Sie „RemoveDuplicateProfiles.exe“ von einer Eingabeaufforderung mit erhöhten Rechten aus, und warten Sie, bis das Tool erfolgreich abgeschlossen wurde.
-10. Fahren Sie wie folgt fort: …\Microsoft Advanced Threat Analytics\Center\MongoDB\bin: **Mongo ATA**; geben Sie folgenden Befehl ein:
+3.    Installieren Sie ATA Center&1;.5 erneut. Verwenden Sie dieselbe Konfiguration wie bei der vorherigen ATA 1.5-Installation (Zertifikate, IP-Adressen, Datenbankpfad usw.).
+4.    Beenden Sie diese Dienste in der folgenden Reihenfolge:
+    1.    Microsoft Advanced Threat Analytics Center
+    2.    MongoDB
+5.    Ersetzen Sie die MongoDB-Datenbankdateien durch die Dateien im Ordner „data_old“.
+6.    Starten Sie diese Dienste in der folgenden Reihenfolge:
+    1.    MongoDB
+    2.    Microsoft Advanced Threat Analytics Center
+7.    Überprüfen Sie die Protokolle, um sich zu vergewissern, dass das Produkt ohne Fehler ausgeführt wird.
+8.    [Herunterladen](http://aka.ms/ataremoveduplicateprofiles "Laden Sie das Tool „RemoveDuplicateProfiles.exe“ herunter"), und kopieren Sie es in den Hauptinstallationspfad (%ProgramFiles%\Microsoft Advanced Threat Analytics\Center).
+9.    Führen Sie „RemoveDuplicateProfiles.exe“ von einer Eingabeaufforderung mit erhöhten Rechten aus, und warten Sie, bis das Tool erfolgreich abgeschlossen wurde.
+10.    Fahren Sie wie folgt fort: …\Microsoft Advanced Threat Analytics\Center\MongoDB\bin: **Mongo ATA**; geben Sie folgenden Befehl ein:
 
     db.SuspiciousActivities.remove({ "_t" : "RemoteExecutionSuspiciousActivity", "DetailsRecords" : { "$elemMatch" : { "ReturnCode" : null } } }, { "_id" : 1 });
 
@@ -145,8 +142,3 @@ Im ATA-Aktualisierungsvorgang werden die Daten für den Fall, dass Sie diese fü
 [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 [Aktualisieren von ATA auf Version 1.6 – Migrationsleitfaden](ata-update-1.6-migration-guide.md)
-
-
-<!--HONumber=Feb17_HO1-->
-
-

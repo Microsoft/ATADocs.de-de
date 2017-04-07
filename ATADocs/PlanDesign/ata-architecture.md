@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: 2c4ae574b3ce7346ba05abb357c23cfdab6482a4
-
-
+ms.openlocfilehash: 489d85e7e8250dffe8d40225b31ed308a9a79969
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 *Gilt für: Advanced Threat Analytics Version 1.7*
 
 
@@ -52,11 +49,11 @@ Eine ATA-Bereitstellung kann aus einem einzigen ATA Center bestehen, das mit all
 ## <a name="deployment-options"></a>Bereitstellungsoptionen
 Sie können ATA mit der folgenden Kombination von Gateways bereitstellen:
 
--   **Ausschließliche Verwendung von ATA-Gateways** <br>
+-    **Ausschließliche Verwendung von ATA-Gateways** <br>
 Enthält Ihre ATA-Bereitstellung nur ATA-Gateways und keine ATA-Lightweight-Gateways, müssen alle Domänencontroller für die Portspiegelung auf ein ATA-Gateway konfiguriert sein, oder es müssen Netzwerk-TAPs vorhanden sein.
--   **Ausschließliche Verwendung von ATA-Lightweight-Gateways**<br>
+-    **Ausschließliche Verwendung von ATA-Lightweight-Gateways**<br>
 Enthält Ihre ATA-Bereitstellung nur ATA-Lightweight-Gateways, werden die ATA-Lightweight-Gateways auf jedem Domänencontroller bereitgestellt. Es werden keine zusätzliche Server und keine Portspiegelungskonfiguration benötigt.
--   **Verwendung von ATA-Gateways und ATA-Lightweight-Gateways**<br>
+-    **Verwendung von ATA-Gateways und ATA-Lightweight-Gateways**<br>
 Ihre ATA-Bereitstellung enthält sowohl ATA-Gateways als auch ATA-Lightweight-Gateways, wobei ATA-Lightweight-Gateways auf einigen der Domänencontroller (z. B. auf allen Domänencontrollern an den Filialstandorten) installiert sind und andere Domänencontroller durch ATA-Gateways überwacht werden (z. B. die größeren Domänencontroller in den Hauptrechenzentren).
 
 In allen drei Szenarien senden alle Gateways ihre Daten an ATA Center.
@@ -130,7 +127,7 @@ Das ATA-Gateway empfängt den Netzwerkverkehr und die Windows-Ereignisse aus Ihr
 
 Die folgenden Funktionen funktionieren für ATA-Gateways und ATA-Lightweight-Gateways unterschiedlich.
 
--   **Kandidat für die Domänensynchronisierung**<br>
+-    **Kandidat für die Domänensynchronisierung**<br>
 Das Gateway für die Domänensynchronisierung ist für die proaktive Synchronisierung aller Entitäten aus einer bestimmten Active Directory-Domäne verantwortlich (ähnlich dem Mechanismus, der von den Domänencontrollern selbst für die Replikation verwendet wird). Aus der Liste der Kandidaten wird nach dem Zufallsprinzip ein Gateway für die Domänensynchronisierung ausgewählt. <br><br>
 Wenn das Gateway für die Domänensynchronisierung mehr als 30 Minuten offline ist, wird stattdessen ein anderer Kandidaten ausgewählt. Wenn für eine bestimmte Domäne kein Gateway für die Domänensynchronisierung verfügbar ist, kann ATA Entitäten und ihre Änderungen nicht proaktiv synchronisieren, ATA ruft jedoch reaktiv neue Entitäten ab werden, sobald sie im überwachten Datenverkehr erkannt werden. 
 <br>Ist kein Gateway für die Domänensynchronisierung verfügbar und suchen Sie nach einer Entität, der kein Datenverkehr zugeordnet ist, werden keine Suchergebnisse angezeigt.<br><br>
@@ -138,7 +135,7 @@ Standardmäßig sind alle ATA-Gateways Kandidaten für die Domänensynchronisier
 Da alle ATA-Lightweight-Gateways eher in Filialen und auf kleinen Domänencontrollern bereitgestellt werden, sind sie standardmäßig keine Kandidaten für die Domänensynchronisierung.
 
 
--   **Ressourceneinschränkungen**<br>
+-    **Ressourceneinschränkungen**<br>
 Das ATA-Lightweight-Gateway enthält eine Überwachungskomponente, die die verfügbare Rechen- und Arbeitsspeicherkapazität auf dem Domänencontroller auswertet, auf dem es ausgeführt wird. Der Überwachungsprozess wird alle 10 Sekunden ausgeführt und aktualisiert das CPU- und Arbeitsspeicher-Auslastungskontingent für den ATA-Lightweight-Gateway-Prozess dynamisch, um sicherzustellen, dass der Domänencontroller zu jedem Zeitpunkt über mindestens 15 % freie Rechen- und Arbeitsspeicherressourcen verfügt.<br><br>
 Unabhängig davon, was auf dem Domänencontroller geschieht, gibt dieser Prozess immer Ressourcen frei, um sicherzustellen, dass die Kernfunktionalität des Domänencontrollers nicht beeinträchtigt wird.<br><br>
 Wenn dem ATA-Lightweight-Gateway dadurch nicht mehr genügend Ressourcen zur Verfügung stehen, wird nur ein Teil des Datenverkehrs überwacht, und die Überwachungswarnung „Netzwerkdatenverkehr aus Portspiegelung gelöscht“ wird auf der Statusseite angezeigt.
@@ -183,10 +180,4 @@ Zur Erhöhung der ATA-Erkennung von Pass-the-Hash, Brute-Force und Honeytoken be
 - [Konfigurieren der Ereignissammlung](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Konfigurieren der Windows-Ereignisweiterleitung](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

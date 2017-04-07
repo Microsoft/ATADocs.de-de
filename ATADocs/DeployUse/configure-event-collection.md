@@ -13,14 +13,10 @@ ms.technology:
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 6fddbbae0a0734834a21975c7690e06ac28dc64d
-ms.openlocfilehash: e31e3b8a94c8beef22be2f06ecaeb89545b3f62d
-ms.lasthandoff: 02/21/2017
-
-
+ms.openlocfilehash: f807b428dfcc12a15b814106cc190f2a72fa4254
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 *Gilt für: Advanced Threat Analytics Version 1.6 und 1.7*
 
 
@@ -288,4 +284,3 @@ Weitere Informationen finden Sie unter [Einrichten von Computern zum Weiterleite
 ## <a name="see-also"></a>Weitere Informationen
 - [Installieren von ATA](install-ata-step1.md)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-

@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: f61bbb895e4a2f239f91328f8d8b2b5260452cc2
-ms.openlocfilehash: 764d20fd113b8d40d359a8976c175e889f554dba
-
-
+ms.openlocfilehash: ebc02319374079ebb09bb6480ebef7f871bc9beb
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 *Gilt für: Advanced Threat Analytics Version 1.7*
 
 
@@ -288,11 +285,5 @@ Der Zugriff auf die ATA-Konsole erfolgt über einen Browser. Folgende Browser we
 - [ATA-Architektur](ata-architecture.md)
 - [Installieren von ATA](/advanced-threat-analytics/deploy-use/install-ata)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-
-
-<!--HONumber=Feb17_HO3-->
 
 

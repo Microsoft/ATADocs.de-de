@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: be9ee613-4eb3-40f1-8973-e7f0a707ff57
 ms.reviewer: 
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 00ddddfd927ed1ba4c52d4774085da04ce359bde
-ms.openlocfilehash: 1c8d7983c5fd86ae3ef2c906eba3f0781cffb99b
-
-
+ms.openlocfilehash: b9ba013c76c785290649037c8a01af1cd2feced5
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 # <a name="whats-new-in-ata-version-17"></a>Neues in ATA Version 1.7
 Die vorliegenden Anmerkungen zu dieser Version enthalten Informationen zu bekannten Problemen in dieser Version von Advanced Threat Analytics.
 
@@ -106,8 +103,8 @@ Um das Problem zu beheben, wechseln Sie nach dem Ändern des Zertifikats an eine
 Beim Versuch, Details über verdächtige Aktivität in eine Excel-Datei zu exportieren, tritt möglicherweise der folgende Fehler auf: *Error [BsonClassMapSerializer`1] System.FormatException: An error occurred while deserializing the Activity property of class Microsoft.Tri.Common.Data.NetworkActivities.SuspiciousActivityActivity: Element 'ResourceIdentifier' does not match any field or property of class Microsoft.Tri.Common.Data.EventActivities.NtlmEvent. ---> System.FormatException: Element 'ResourceIdentifier' does not match any field or property of class Microsoft.Tri.Common.Data.EventActivities.NtlmEvent.* (Fehler [BsonClassMapSerializer`1] System.FormatException: Fehler beim Deserialisieren der Aktivitätseigenschaft der Klasse Microsoft.Tri.Common.Data.NetworkActivities.SuspiciousActivityActivity: Das Element 'ResourceIdentifier' stimmt mit keinem Feld und keiner Eigenschaft der Klasse Microsoft.Tri.Common.Data.EventActivities.NtlmEvent überein. ---> System.FormatException: Das Element 'ResourceIdentifier' stimmt mit keinem Feld und keiner Eigenschaft der Klasse Microsoft.Tri.Common.Data.EventActivities.NtlmEvent überein.)
 
 Um dieses Problem zu beheben, wechseln Sie an einer Eingabeaufforderung mit erhöhten Rechten zum Speicherort **%ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**, und führen Sie Folgendes aus:
-1.  **Mongo.exe ATA** (ATA muss groß geschrieben werden)
-2.  **db.SuspiciousActivityActivity.update({ "Activity._t": "NtlmEvent" },{$unset: {"Activity.ResourceIdentifier": ""}}, {multi: true});**
+1.    **Mongo.exe ATA** (ATA muss groß geschrieben werden)
+2.    **db.SuspiciousActivityActivity.update({ "Activity._t": "NtlmEvent" },{$unset: {"Activity.ResourceIdentifier": ""}}, {multi: true});**
 
 ## <a name="minor-changes"></a>Kleinere Änderungen
 
@@ -119,10 +116,4 @@ Um dieses Problem zu beheben, wechseln Sie an einer Eingabeaufforderung mit erh�
 [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 [Aktualisieren von ATA auf Version 1.7 – Migrationshandbuch](ata-update-1.7-migration-guide.md)
-
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

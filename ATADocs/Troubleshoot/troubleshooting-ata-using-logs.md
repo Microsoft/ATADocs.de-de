@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: b8ad5511-8893-4d1d-81ee-b9a86e378347
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: 58df6ec3473118d0e11a5128eabd8feaa29f9fd2
-
-
+ms.openlocfilehash: 5bde3ff8abbdace3c56bb86b8889b53320470b00
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 *Gilt für: Advanced Threat Analytics Version 1.7*
 
 
@@ -30,7 +27,7 @@ Die ATA-Protokolle geben Einblick in die Aktivitäten der einzelnen Komponenten 
 ## <a name="ata-gateway-logs"></a>Protokolle des ATA-Gateways
 In diesem Abschnitt gilt jeder Verweis auf das ATA-Gateway ebenfalls für das ATA-Lightweight-Gateway. 
 
-Die Protokolle des ATA-Gateways befinden sich in einem Unterordner namens **Protokolle** im Installationsordner von ATA. Der Standardpfad lautet: **C:\Programme\Microsoft Advanced Threat Analytics\**. Dieser ist im Standardinstallationsverzeichnis unter **C:\Programme\Microsoft Advanced Threat Analytics\Gateway\Logs** zu finden.
+Die Protokolle des ATA-Gateways befinden sich in einem Unterordner namens **Protokolle** im Installationsordner von ATA. Der Standardpfad lautet: **C:\Programme\Microsoft Advanced Threat Analytics\**. Dieser ist im Standardinstallationsverzeichnis unter**C:\Programme\Microsoft Advanced Threat Analytics\Gateway\Logs** zu finden.
 
 Für das ATA-Gateway sind folgende Protokolle verfügbar:
 
@@ -42,8 +39,8 @@ Für das ATA-Gateway sind folgende Protokolle verfügbar:
 
 -   **Microsoft.Tri.Gateway-ExceptionStatistics.log:** In diesem Protokoll werden alle ähnlichen Fehler und Ausnahmen zusammengefasst und ihre Anzahl gemessen.
     Diese Datei ist bei jedem Start des ATA-Gatewaydiensts leer und wird jede Minute aktualisiert. Sein Hauptverwendungszweck besteht im Ermitteln, ob neue Fehler oder Probleme mit dem ATA-Gateway aufgetreten sind. Die Gruppierung der Fehler erleichtert das Lesen und die Feststellung, ob neue Probleme hinzugekommen sind.
--   **Microsoft.Tri.Gateway.Updater.log:** Dieses Protokoll wird für den Updateprozess des Gateways verwendet, der für das Aktualisieren des Gateways verantwortlich ist, wenn es für ein automatisches Update konfiguriert wurde. Der Updateprozess des Gateways ist auch für die Ressourcenbeschränkungen des ATA-Lightweight-Gateways verantwortlich.
--   **Microsoft.Tri.Gateway.Updater-ExceptionStatistics.log:** In diesem Protokoll werden alle ähnlichen Fehler und Ausnahmen zusammengefasst und ihre Anzahl gemessen. Diese Datei ist bei jedem Start des ATA-Updatediensts leer und wird jede Minute aktualisiert. Mithilfe dieser Datei können Sie bestimmen, ob neue Fehler oder Probleme mit dem ATA-Updatedienst vorliegen. Die Fehler werden gruppiert, um schneller festzustellen, ob neue Fehler oder Probleme erkannt wurden.
+-    **Microsoft.Tri.Gateway.Updater.log:** Dieses Protokoll wird für den Updateprozess des Gateways verwendet, der für das Aktualisieren des Gateways verantwortlich ist, wenn es für ein automatisches Update konfiguriert wurde. Der Updateprozess des Gateways ist auch für die Ressourcenbeschränkungen des ATA-Lightweight-Gateways verantwortlich.
+-    **Microsoft.Tri.Gateway.Updater-ExceptionStatistics.log:** In diesem Protokoll werden alle ähnlichen Fehler und Ausnahmen zusammengefasst und ihre Anzahl gemessen. Diese Datei ist bei jedem Start des ATA-Updatediensts leer und wird jede Minute aktualisiert. Mithilfe dieser Datei können Sie bestimmen, ob neue Fehler oder Probleme mit dem ATA-Updatedienst vorliegen. Die Fehler werden gruppiert, um schneller festzustellen, ob neue Fehler oder Probleme erkannt wurden.
 
 > [!NOTE]
 > Die ersten drei Protokolldateien haben eine maximale Größe von 50 MB. Wenn diese Größe erreicht ist, wird eine neue Protokolldatei geöffnet und die vorherige Datei in „&lt;Ursprünglicher Dateiname&gt;-Archived-00000“ umbenannt. Die Zahl erhöht sich bei jeder Umbenennung der Datei. Wenn bereits mehr als 10 Dateien des gleichen Typs vorhanden sind, werden die ältesten gelöscht.
@@ -92,9 +89,3 @@ Bereitstellungsprotokolle für ATA-Gateway und ATA-Lightweight-Gateway:
 - [Konfigurieren der Ereignissammlung](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Konfigurieren der Windows-Ereignisweiterleitung](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
-

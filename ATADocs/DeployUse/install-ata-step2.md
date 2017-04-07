@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: e1c5ff41-d989-46cb-aa38-5a3938f03c0f
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: 23ea3185e0d3556f524d8131a715a6057988f04c
-
-
+ms.openlocfilehash: fea114b062a7861ac284b4bf746fff68c5c1bd52
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 *Gilt für: Advanced Threat Analytics Version 1.7*
 
 
@@ -44,7 +41,7 @@ Beim ersten Öffnen der ATA-Konsole wird der folgende Bildschirm angezeigt:
     |**Kennwort** (erforderlich)|Geben Sie das Kennwort für den schreibgeschützten Benutzer ein, z. B. **Pencil1**.|
     |**Domäne** (erforderlich)|Geben Sie die Domäne für den schreibgeschützten Benutzer ein, z. B. **contoso.com**. **Hinweis:** Es ist wichtig, dass Sie den vollqualifizierten Domänennamen (FQDN) der Domäne eingeben, in der sich das Benutzerkonto befindet. Wenn sich das Konto des Benutzers beispielsweise in der Domäne „corp.contoso.com“ befindet, müssen Sie `corp.contoso.com` und nicht „contoso.com“ eingeben.|
 
-2. Optional können Sie auf **Testverbindung** klicken, um die Konnektivität zur Domäne zu testen und um zu prüfen, ob der Zugriff mit den bereitgestellten Anmeldeinformationen erfolgreich ist. Dies ist nur möglich, wenn das ATA-Center mit der Domäne verbunden ist.   
+2. Optional können Sie auf **Testverbindung** klicken, um die Konnektivität zur Domäne zu testen und um zu prüfen, ob der Zugriff mit den bereitgestellten Anmeldeinformationen erfolgreich ist. Dies ist nur möglich, wenn das ATA-Center mit der Domäne verbunden ist.     
 
     Nachdem Ihre Eingaben gespeichert wurden, ändert sich die Willkommensnachricht in der Konsole folgendermaßen: ![ATA welcome stage 1 finished](media/ATA_1.7-welcome-provide-username-finished.png)
 
@@ -61,9 +58,3 @@ Beim ersten Öffnen der ATA-Konsole wird der folgende Bildschirm angezeigt:
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
 - [Voraussetzungen für ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
-
