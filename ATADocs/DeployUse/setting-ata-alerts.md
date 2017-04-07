@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: 14cb7513-5dc8-49cb-b3e0-94f469c443dd
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: 782c066e6a7ef8a5da9e2b8ceb16742da6f52506
-
-
+ms.openlocfilehash: 06aa85cededdc3647aadaaca7d594ce3bbbb0723
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 *Gilt für: Advanced Threat Analytics Version 1.7*
 
 
@@ -40,7 +37,7 @@ Um E-Mail-Benachrichtigungen zu erhalten, legen Sie Folgendes fest:
 
 2. Wählen Sie **Einstellungen** im Abschnitt **Benachrichtigungen** aus.
 3. Geben Sie unter **E-Mail-Empfänger** die Empfänger an, die die Benachrichtigungen per E-Mail erhalten sollen.
->   [!NOTE]
+>    [!NOTE]
 >   E-Mail-Benachrichtigungen über verdächtige Aktivitäten werden nur beim Erstellen der verdächtigen Aktivität gesendet.
 
 4. Verwenden Sie die Optionen unter **Benachrichtigen, wenn:**, um auszuwählen, welche Benachrichtigungen gesendet werden sollen:
@@ -77,9 +74,3 @@ Um Syslog-Benachrichtigungen zu erhalten, legen Sie Folgendes fest:
 
 ## <a name="see-also"></a>Weitere Informationen
 [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
-

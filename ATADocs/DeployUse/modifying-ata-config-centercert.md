@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: c8855287-de3b-4cdd-be8f-2128f48a6f27
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: 9d3e4a76c37fcd3cd90afe068e904e64cd9f45b0
-
-
+ms.openlocfilehash: a10232f97daac13ead191fa6ce651c34d6ee9798
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 *Gilt für: Advanced Threat Analytics Version 1.7*
 
 
@@ -72,9 +69,3 @@ Wenn Ihr Zertifikate bald abläuft und nach dem Installieren des neuen Zertifika
 ## <a name="see-also"></a>Weitere Informationen
 - [Arbeiten mit der ATA-Konsole](working-with-ata-console.md)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://aka.ms/ata-forum)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
-

@@ -25,7 +25,7 @@
 ### [Schritt 3: Herunterladen des Gateway-Pakets](/advanced-threat-analytics/deploy-use/install-ata-step3)
 ### [Schritt 4: Installieren des Gateways](/advanced-threat-analytics/deploy-use/install-ata-step4)
 ### [Schritt 5: Konfigurieren des Gateways](/advanced-threat-analytics/deploy-use/install-ata-step5)
-### [Schritt 6: Exclusions und Honeytoken](/advanced-threat-analytics/deploy-use/install-ata-step6)
+### [Schritt 6: Ausschlüsse und Honeytoken](/advanced-threat-analytics/deploy-use/install-ata-step6)
 ### [Unbeaufsichtigte Installation](/advanced-threat-analytics/deploy-use/ata-silent-installation)
 # Verwenden Sie
 ## [Ändern der IP-Adresse von ATA-Center](/advanced-threat-analytics/deploy-use/modifying-ata-config-centerip)
@@ -48,8 +48,3 @@
 ## [Problembehandlung mithilfe von Leistungsindikatoren](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters)
 ## [Problembehandlung mithilfe der Datenbank](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-ata-database)
 ## [Notfallwiederherstellun](/advanced-threat-analytics/troubleshoot/disaster-recovery)
-
-
-<!--HONumber=Feb17_HO2-->
-
-

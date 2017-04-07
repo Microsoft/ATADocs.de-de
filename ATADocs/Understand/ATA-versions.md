@@ -12,20 +12,17 @@ ms.technology:
 ms.assetid: a8afbd91-c888-4dfc-94ab-72e38745163e
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: cae588383a7ea64a8e907e64cd2d7d15223feae3
-
-
+ms.openlocfilehash: 21c7486061b6945d557a42d3964b70637829f4b0
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 # <a name="support-for-microsoft-advanced-threat-analytics-ata-versions"></a>Support für Microsoft Advanced Threat Analytics-Versionen (ATA)
 
 Microsoft plant mehrmals jährlich die Veröffentlichung von Updates für ATA. Jede Updateversion wird dabei ab dem Datum der allgemeinen Verfügbarkeit&12; Monate lang unterstützt. Technischer Support wird für die gesamten&12; Monate zur Verfügung gestellt. Unsere Supportstruktur ist jetzt dynamisch und folgt zwei unterschiedlichen Wartungsphasen, die von der Verfügbarkeit der neuesten Version abhängig sind.
 
--   Wartungsphase mit wichtigen Updates und Sicherheitsupdates: Wenn Sie die neueste Version von ATA ausführen, erhalten Sie Updates der Kategorien „Sicherheit“ und „Wichtig“.
+-    Wartungsphase mit wichtigen Updates und Sicherheitsupdates: Wenn Sie die neueste Version von ATA ausführen, erhalten Sie Updates der Kategorien „Sicherheit“ und „Wichtig“.
 
--   Wartungsphase nur mit Sicherheitsupdates: Nach Veröffentlichung einer neuen ATA-Version wird der Support für ältere Versionen für den verbleibenden Zeitraum des&12;-monatigen Produktlebenszyklus auf Sicherheitsupdates beschränkt (wie im folgenden Beispiel zum Versionswartungssupport dargestellt).
+-    Wartungsphase nur mit Sicherheitsupdates: Nach Veröffentlichung einer neuen ATA-Version wird der Support für ältere Versionen für den verbleibenden Zeitraum des&12;-monatigen Produktlebenszyklus auf Sicherheitsupdates beschränkt (wie im folgenden Beispiel zum Versionswartungssupport dargestellt).
  
 ![Beispiele für Versionswartungssupport](media/versions.png)
 
@@ -50,9 +47,3 @@ Microsoft plant mehrmals jährlich die Veröffentlichung von Updates für ATA. J
 
 ## <a name="see-also"></a>Siehe auch
 [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
-
