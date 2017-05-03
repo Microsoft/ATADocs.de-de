@@ -55,7 +55,7 @@ In diesem Abschnitt sind mögliche Fehler, die es in den Bereitstellungen von AT
 **Lösung**: Um diese Warnungen zu vermeiden, überprüfen Sie, ob die folgenden Einstellungen auf „0“ oder „deaktiviert“ festgelegt sind: TsoEnable, LargeSendOffload, IPv4, TSO Offload. Deaktivieren Sie ebenso IPv4 Giant TSO Offload. Weitere Informationen finden Sie in der VMware-Dokumentation.
 
 
-## <a name="ata-iis-errors-not-applicable-for-ata-v17-and-above"></a>ATA-IIS-Fehler (gilt nicht für ATA Version&1;.7 und höher)
+## <a name="ata-iis-errors-not-applicable-for-ata-v17-and-above"></a>ATA-IIS-Fehler (gilt nicht für ATA Version 1.7 und höher)
 |Fehler|Beschreibung|Lösung|
 |-------------|----------|---------|
 |HTTP-Fehler 500.19 – Interner Serverfehler|Das IIS URL Rewrite-Modul konnte nicht ordnungsgemäß installiert werden.|Deinstallieren Sie das IIS URL Rewrite-Modul, und installieren Sie es dann erneut.<br>[Laden Sie das IIS URL Rewrite-Modul herunter](http://go.microsoft.com/fwlink/?LinkID=615137)|
