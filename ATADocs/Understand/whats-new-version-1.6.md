@@ -106,9 +106,9 @@ Wenn einer dieser Fehler angezeigt wird, führen Sie die folgenden Schritte zur 
 **Problemumgehung**: 
 
 1.    Verschieben Sie den Ordner „data_old“ in einen temporären Ordner (befindet sich normalerweise in „%ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin“).
-2.    Deinstallieren Sie ATA Center&1;.5, und löschen Sie alle Datenbankdaten.
+2.    Deinstallieren Sie ATA Center 1.5, und löschen Sie alle Datenbankdaten.
 ![Deinstallieren von ATA 1.5](http://i.imgur.com/x4nJycx.png)
-3.    Installieren Sie ATA Center&1;.5 erneut. Verwenden Sie dieselbe Konfiguration wie bei der vorherigen ATA 1.5-Installation (Zertifikate, IP-Adressen, Datenbankpfad usw.).
+3.    Installieren Sie ATA Center 1.5 erneut. Verwenden Sie dieselbe Konfiguration wie bei der vorherigen ATA 1.5-Installation (Zertifikate, IP-Adressen, Datenbankpfad usw.).
 4.    Beenden Sie diese Dienste in der folgenden Reihenfolge:
     1.    Microsoft Advanced Threat Analytics Center
     2.    MongoDB
