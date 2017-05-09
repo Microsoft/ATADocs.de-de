@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 04/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: b8ad5511-8893-4d1d-81ee-b9a86e378347
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 5bde3ff8abbdace3c56bb86b8889b53320470b00
-ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
-translationtype: HT
+ms.openlocfilehash: 4a5b48f490a13cfb990f49b864462b556e36c3ce
+ms.sourcegitcommit: cb2a4df6805d41bf030d3439ef87281fc6acc98f
+ms.translationtype: HT
+ms.contentlocale: de-DE
 ---
 *Gilt für: Advanced Threat Analytics Version 1.7*
 
@@ -27,7 +28,7 @@ Die ATA-Protokolle geben Einblick in die Aktivitäten der einzelnen Komponenten 
 ## <a name="ata-gateway-logs"></a>Protokolle des ATA-Gateways
 In diesem Abschnitt gilt jeder Verweis auf das ATA-Gateway ebenfalls für das ATA-Lightweight-Gateway. 
 
-Die Protokolle des ATA-Gateways befinden sich in einem Unterordner namens **Protokolle** im Installationsordner von ATA. Der Standardpfad lautet: **C:\Programme\Microsoft Advanced Threat Analytics\**. Dieser ist im Standardinstallationsverzeichnis unter**C:\Programme\Microsoft Advanced Threat Analytics\Gateway\Logs** zu finden.
+Die Protokolle des ATA-Gateways befinden sich im Unterordner **Protokolle** im Installationsordner von ATA. Der Standardpfad lautet: **C:\Programme\Microsoft Advanced Threat Analytics\**. Dieser ist im Standardinstallationsverzeichnis unter **C:\Programme\Microsoft Advanced Threat Analytics\Gateway\Logs** zu finden.
 
 Für das ATA-Gateway sind folgende Protokolle verfügbar:
 
@@ -83,7 +84,11 @@ Bereitstellungsprotokolle für ATA-Gateway und ATA-Lightweight-Gateway:
 -   **Microsoft Advanced Threat Analytics Gateway_YYYYMMDDHHMMSS_001_MsiPackage.log**: In dieser Protokolldatei sind die Schritte im Verfahren zur Bereitstellung der Binärdateien des ATA-Gateways aufgeführt. Sein Hauptverwendungszweck besteht im Nachverfolgen der Bereitstellung der Binärdateien des ATA-Gateways.
 
 
-## <a name="see-also"></a>Weitere Informationen
+> [!NOTE] 
+> Zusätzlich zu den hier erwähnten Bereitstellungsprotokollen gibt es andere Protokolle, die mit „Microsoft Advanced Threat Analytics“ beginnen und zusätzliche Informationen zum Bereitstellungsprozess bieten können.
+
+
+## <a name="see-also"></a>Siehe auch
 - [Voraussetzungen für ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 - [ATA-Kapazitätsplanung](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [Konfigurieren der Ereignissammlung](/advanced-threat-analytics/deploy-use/configure-event-collection)
