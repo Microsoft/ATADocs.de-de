@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/16/2017
+ms.date: 4/30/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ebc02319374079ebb09bb6480ebef7f871bc9beb
-ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
-translationtype: HT
+ms.openlocfilehash: 270a16feada7db5462c5232f023c0bab9ef23c7e
+ms.sourcegitcommit: cb2a4df6805d41bf030d3439ef87281fc6acc98f
+ms.translationtype: HT
+ms.contentlocale: de-DE
 ---
 *Gilt für: Advanced Threat Analytics Version 1.7*
 
@@ -137,6 +138,7 @@ Vergewissern Sie sich vor der Installation des ATA-Gateways mit Windows 2012 R2,
 
 Dies können Sie überprüfen, indem Sie das folgende Windows PowerShell-Cmdlet ausführen: `[Get-HotFix -Id kb2919355]`.
 
+
 Informationen zur Verwendung von virtuellen Computern mit dem ATA-Gateway finden Sie unter [Konfigurieren der Portspiegelung](/advanced-threat-analytics/deploy-use/configure-port-mirroring).
 
 > [!NOTE]
@@ -223,6 +225,10 @@ Dies können Sie überprüfen, indem Sie dieses Windows PowerShell-Cmdlet ausfü
 Wenn die Installation unter Windows Server 2012 R2 Server Core erfolgt, muss auch das folgende Update installiert werden:  [KB3000850](https://support.microsoft.com/help/3000850/november-2014-update-rollup-for-windows-rt-8.1%2c-windows-8.1%2c-and-windows-server-2012-r2).
 
  Dies können Sie überprüfen, indem Sie dieses Windows PowerShell-Cmdlet ausführen: `[Get-HotFix -Id kb3000850]`.
+
+
+Während der Installation wird .NET Framework 4.6.1 installiert und verursacht möglicherweise den Neustart des Domänencontrollers.
+
 
 > [!NOTE]
 > Mindestens 5 GB Speicherplatz wird benötigt, 10 GB wird empfohlen. Dies umfasst den Speicherplatz, der für die ATA-Binärdateien, [ATA-Protokolle](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs.md) und [Leistungsprotokolle](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters.md) benötigt wird.
