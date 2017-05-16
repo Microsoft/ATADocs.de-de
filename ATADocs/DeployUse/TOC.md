@@ -42,6 +42,7 @@
 ## [ATA-Datenbankverwaltung](ata-database-management.md)
 ## [Exportieren/Importieren der ATA-Konfiguration](ata-configuration-file.md)
 ## [Verwalten der ATA-Telemetrie](manage-telemetry-settings.md)
+## [Untersuchen von Angriffen mit gefälschten PAC-Dateien](use-case-forged-pac.md)
 # Problembehandlung
 ## [Problembehandlung mithilfe bekannter Fehler](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-known-errors)
 ## [Problembehandlung mithilfe von Protokollen](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs)
