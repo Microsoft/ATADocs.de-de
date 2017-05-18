@@ -13,9 +13,11 @@ ms.technology:
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 0c72b14a042e473c0cd59811db63ecafc4ec02d4
-ms.sourcegitcommit: f18c0841d85e54eca940c8cbf226938b3c2bc80f
-translationtype: HT
+ms.openlocfilehash: a87fed6bf8ce69ea3391e729c57217d1cff8ffc2
+ms.sourcegitcommit: a1595b51c95235eede3d3b34a02f24bedd5dfc5a
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/14/2017
 ---
 *Gilt für: Advanced Threat Analytics Version 1.7*
 
@@ -43,7 +45,7 @@ In diesem Abschnitt sind mögliche Fehler, die es in den Bereitstellungen von AT
 |System.InvalidOperationException: Die Instanz „Microsoft.Tri.Gateway“ existiert nicht in der angegebenen Kategorie.|Die PIDs wurden für Prozessnamen im ATA-Gateway aktiviert.|Verwenden Sie [KB281884](https://support.microsoft.com/en-us/kb/281884), um die PIDs in den Prozessnamen zu deaktivieren.|
 |System.InvalidOperationException: Die Kategorie ist nicht vorhanden.|Möglicherweise wurden die Leistungsindikatoren in der Registrierung deaktiviert.|Verwenden Sie [KB2554336](https://support.microsoft.com/en-us/kb/2554336), um die Leistungsindikatoren neu zu erstellen.|
 |System.ApplicationException: Die ETW-Sitzung „MMA-ETW-Livecapture-a4f595bd-f567-49a7-b963-20fa4e370329“ kann nicht gestartet werden.|In der HOSTS-Datei existiert ein Hosteintrag, der auf den Kurznamen des Computers verweist.|Entfernen Sie den Hosteintrag aus „C:\Windows\System32\drivers\etc\HOSTS“, oder ändern Sie ihn in einen eindeutigen Domänennamen um.|
-|System.IO.IOException: Fehler bei der Authentifizierung, da die Gegenseite den Transportstream geschlossen hat.|TLS 1.0 ist auf dem ATA-Gateway deaktiviert, .NET ist aber für die Verwendung von TLS 1.2 eingerichtet.|Verwenden Sie eine der folgenden Optionen: </br> TLS 1.0 auf dem ATA-Gateway aktivieren </br>Aktivieren Sie TLS 1.2 in .NET, indem Sie die Registrierungsschlüssel wie folgt für die Verwendung der Standardwerte des Betriebssystems für LLS und TLS einrichten: `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"`|
+|System.IO.IOException: Fehler bei der Authentifizierung, da die Gegenseite den Transportstream geschlossen hat.|TLS 1.0 ist auf dem ATA-Gateway deaktiviert, .NET ist aber für die Verwendung von TLS 1.2 eingerichtet.|Verwenden Sie eine der folgenden Optionen: </br> TLS 1.0 auf dem ATA-Gateway aktivieren </br>Aktivieren Sie TLS 1.2 in .NET, indem Sie die Registrierungsschlüssel wie folgt für die Verwendung der Standardwerte des Betriebssystems für LLS und TLS einrichten: `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`|
 
 
 
