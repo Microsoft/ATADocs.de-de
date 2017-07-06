@@ -1,9 +1,11 @@
 ---
 layout: LandingPage
 description: Erfahren Sie, wie Sie Advanced Threat Analytics verwenden.
-ms.openlocfilehash: ddf06db756bd991c49200ba35b6a515832ccc3cb
-ms.sourcegitcommit: 9b128d6946e32b00f595e00902b9ff95f18141ff
-translationtype: HT
+ms.openlocfilehash: 187c9d85f9ce0d8c695962c0e7a1dfce7053d59c
+ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/03/2017
 ---
 # <a name="advanced-threat-analytics-documentation"></a>Advanced Threat Analytics-Dokumentation
 
@@ -11,7 +13,7 @@ Advanced Threat Analytics (ATA) ist eine lokale Plattform, die Sie beim Schutz I
 
 <ul class="panelContent cardsFTitle">
     <li>
-        <a href="/advanced-threat-analytics/understand-explore/whats-new-version-1.7">
+        <a href="/advanced-threat-analytics/whats-new-version-1.8">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
