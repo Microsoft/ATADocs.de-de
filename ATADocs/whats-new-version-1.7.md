@@ -1,141 +1,121 @@
 ---
-# required metadata
-
-title: What's new in ATA version 1.7 | Microsoft Docs
-description: Lists what was new in ATA version 1.7 along with known issues
-keywords:
+title: Neuigkeiten in ATA Version 1.7 | Microsoft Docs
+description: Listet Neuerungen sowie bekannte Probleme in ATA Version 1.7 auf
+keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 1/23/2017
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology:
+ms.technology: 
 ms.assetid: be9ee613-4eb3-40f1-8973-e7f0a707ff57
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: 
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
+ms.openlocfilehash: 036871da05f59e380b045139e735762c1cc8a363
+ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/30/2017
 ---
+# <a name="whats-new-in-ata-version-17"></a>Neues in ATA Version 1.7
+Die vorliegenden Anmerkungen zu dieser Version enthalten Informationen zu bekannten Problemen in dieser Version von Advanced Threat Analytics.
 
-# What's new in ATA version 1.7
-These release notes provide information about known issues in this version of Advanced Threat Analytics.
+## <a name="whats-new-in-the-ata-17-update"></a>Neuerungen beim Update auf ATA 1.7
+Das Update auf ATA 1.7 bietet Verbesserungen in folgenden Bereichen:
 
-## What's new in the ATA 1.7 update?
-The update to ATA 1.7 provides improvements in the following areas:
+-   Neue und aktualisierte Erkennung
 
--   New & updated detections
+-   Rollenbasierte Zugriffssteuerung
 
--   Role-based access control
+-   Unterstützung für Windows Server 2016 und Windows Server 2016 Core
 
--   Support for Windows Server 2016 and Windows Server 2016 Core
+-   Verbesserungen der Benutzeroberfläche
 
--   User experience improvements
-
--   Minor changes
-
-
-### New & updated detections
+-   Kleinere Änderungen
 
 
-- **Reconnaissance using Directory Services Enumeration**
-As part of the reconnaissance phase, attackers gather information about the entities in the network using different methods. Directory services enumeration using the SAM-R protocol enables attackers to obtain the list of users and groups in a domain and understand the interaction between the different entities. 
-
-- **Pass-the-Hash Enhancements**
-To enhance Pass-the-Hash detection, we added additional behavioral models for the authentication patterns of entities. These models enable ATA to correlate entity behavior with suspicious NTLM authentications, and differentiate real Pass-the-Hash attacks from the behavior of false positive scenarios.
-
-- **Pass-the-Ticket Enhancements**
-To successfully detect advanced attacks in general and Pass-the-Ticket in particular, the correlation between an IP address and the computer account must be accurate. This is a challenge in environments where IP addresses change rapidly by design (for example Wi-Fi networks and multiple virtual machines sharing the same host). To overcome this challenge and improve the accuracy of the Pass-the-Ticket detection, ATA’s Network Name Resolution (NNR) mechanism was improved significantly to reduce false-positives.
-
-- **Abnormal Behavior Enhancements**
-In ATA 1.7, NTLM authentication data was added as a data source for the abnormal behavior detections, providing the algorithms with broader coverage of entity behavior in the network. 
-
-- **Unusual Protocol Implementation Enhancements**
-ATA now detects unusual protocol implementation in the Kerberos protocol, along with additional anomalies in the NTLM protocol. Specifically, these new anomalies for Kerberos are commonly used in Over-pass-the-Hash attacks.
+### <a name="new--updated-detections"></a>Neue und aktualisierte Erkennung
 
 
-### Infrastructure
+- **Reconnaissance mithilfe von Verzeichnisdienstenumeration:** Im Rahmen dieser Phase der Reconnaissance sammeln Angreifer auf verschiedene Weise Informationen zu den Entitäten im Netzwerk. Die Verzeichnisdienstenumeration mit dem SAM-R-Protokoll ermöglicht es Angreifern, die Liste der Benutzer und Gruppen in einer Domäne zu erhalten und die Interaktion zwischen den verschiedenen Entitäten zu verstehen. 
 
-- **Role based access control**
-Role-Based Access Control (RBAC) capability. ATA 1.7 includes three roles: ATA Administrator, ATA Analyst and ATA Executive.
+- **Verbesserungen bei Pass-the-Hash-Angriffen:** Wir haben zusätzliche Verhaltensmodelle für Authentifizierungsmuster von Entitäten hinzugefügt, um die Pass-the-Hash-Erkennung zu verbessern. Dank dieser Modelle kann ATA das Verhalten von Entitäten verdächtigen NTLM-Authentifizierungen zuordnen und echte Pass-the-Hash-Angriffe vom Verhalten falsch-positiver Szenarien unterscheiden.
 
-- **Support for Windows Server 2016 and Windows Server Core**
-ATA 1.7 supports the deployment of Lightweight Gateways on domain controllers running Windows Server 2008 R2 SP1 (not including Server Core), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (including Core but not Nano). Additionally, this release supports Windows Server 2016 both for the ATA Center and ATA Gateway components.
+- **Verbesserungen bei Pass-the-Ticket-Angriffen:** Um hochentwickelte Attacken (allgemein, aber auch speziell Pass-the-Ticket-Angriffe) erfolgreich zu erkennen, muss die Korrelation zwischen einer IP-Adresse und dem Computerkonto präzise sein. Dies ist eine Herausforderung in Umgebungen, in denen IP-Adressen sich beabsichtigt schnell ändern, (z.B. Wi-Fi-Netzwerke und wenn mehrere virtuelle Maschinen einen gemeinsamen Host nutzen). Um diese Herausforderung zu überwinden und die Genauigkeit der Erkennung von Pass-the-Ticket-Angriffen zu verbessern, wurde der Mechanismus zur Auflösung des Netzwerknamens (Network Name Resolution; NNR) von ATA deutlich verbessert, um Fehlerquote zu reduzieren.
 
-### User Experience
-- **Configuration Experience**
-In this release, the ATA configuration experience was redesigned for a better user experience and to better support of environments with multiple ATA Gateways. This release also introduces the ATA Gateway update page for simpler, better management of automatic updates for the various Gateways.
+- **Verbesserungen bei ungewöhnlichem/nicht normalem Verhalten:** In ATA 1.7 wurden die NTLM-Authentifizierungsdaten als Datenquelle für nicht normales Verhalten hinzugefügt. Dazu decken die Algorithmen nun ein größeres Spektrum von Entitätsverhalten im Netzwerk ab. 
 
-## Known issues
-The following known issues exist in this version.
+- **Verbesserungen bei der ungewöhnlichen Protokollimplementierung:** ATA erkennt nun die ungewöhnliche Protokollimplementierung im Kerberos-Protokoll, zusammen mit zusätzlichen Anomalien im NTLM-Protokoll. Diese neuen Kerberos-Anomalien werden gewöhnlicherweise für Overpass-the-Hash-Angriffe verwendet.
 
-### Gateway automatic update may fail
-**Symptoms:** In environments with slow WAN links, the ATA Gateway update may reach the timeout for the update (100 seconds) and fail to complete successfully.
-In the ATA Console, the ATA Gateway will have the status of "Updating (downloading package)" for a long amount of time and it eventually fails.
-**Workaround:** To work around this issue, download the latest ATA Gateway package from the ATA Console, and update the ATA Gateway manually.
+
+### <a name="infrastructure"></a>Infrastruktur
+
+- **Rollenbasierte Zugriffskontrolle:** die Funktion für die rollenbasierte Zugriffskontrolle (Role-Based Access Control; RBAC) ATA 1.7 enthält drei Rollen: ATA Administrator, ATA Analyst und ATA Executive.
+
+- **Unterstützung für Windows Server 2016 und Windows Server Core:** ATA 1.7 unterstützt die Bereitstellung von Lightweight-Gateways auf Domänencontrollern unter Windows Server 2008 R2 SP1 (ohne Server Core), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (mit Core, jedoch ohne Nano). Darüber hinaus unterstützt dieses Release Windows Server 2016 sowohl für die ATA Center- als auch die ATA-Gatewaykomponenten.
+
+### <a name="user-experience"></a>Benutzererfahrung
+- **Einfache Konfiguration:** Die ATA-Konfigurationsbenutzeroberfläche wurde in dieser Version neu gestaltet, um eine höhere Benutzerfreundlichkeit und eine bessere Unterstützung für Umgebungen mit mehreren ATA-Gateways zu gewährleisten. Mit diesem Release wird auch die Updateseite für das ATA-Gateway eingeführt, um die Verwaltung von automatische Updates für die verschiedenen Gateways zu erleichtern.
+
+## <a name="known-issues"></a>Bekannte Probleme
+In dieser Version bestehen die folgenden bekannten Probleme.
+
+### <a name="gateway-automatic-update-may-fail"></a>Die automatische Aktualisierung des Gateways kann fehlschlagen.
+**Symptome:** Das ATA-Gateway kann in einer Umgebung mit langsamen WAN-Verbindungen das Update-Timeout (100 Sekunden) erreichen. Updates können daraufhin nicht erfolgreich abgeschlossen werden.
+In der ATA-Konsole zeigt das ATA-Gateway über längere Zeit den Status „Wird aktualisiert (Paket wird heruntergeladen)“ an und schlägt schließlich fehl.
+**Problemumgehung:** Laden Sie das neueste ATA-Gateway-Paket aus der ATA-Konsole herunter, und aktualisieren das ATA-Gateway manuell, um dieses Problem zu umgehen.
 
  > [!IMPORTANT]
- Automatic certificate renewal for the certificates used by ATA is not supported. The use of these certificates may cause ATA to stop functioning when the certificate is automatically renewed. 
+ Die automatische Erneuerung der von ATA verwendeten Zertifikate wird nicht unterstützt. Die Verwendung dieser Zertifikate kann dazu führen, dass ATA bei einer automatischen Erneuerung der Zertifikate nicht mehr funktioniert. 
 
-### No browser support for JIS encoding
-**Symptoms:** The ATA Console may not function as expected on browsers using JIS encoding
-**Workaround:** Change the browser’s encoding to Unicode UTF-8.
+### <a name="no-browser-support-for-jis-encoding"></a>Keine Browserunterstützung für JIS-Codierung
+**Symptome:** Die ATA-Konsole funktioniert in Browsern mit JIS-Codierung möglicherweise nicht erwartungsgemäß. **Problemumgehung:** Ändern Sie die Codierung des Browsers zu Unicode UTF-8.
  
-### Dropped port mirror traffic when using VMware
+### <a name="dropped-port-mirror-traffic-when-using-vmware"></a>„Netzwerkdatenverkehr aus Portspiegelung gelöscht“ bei Verwendung von VMware
 
-Dropped port mirror traffic alerts when using lightweight gateway on VMware.
+Die Warnung, dass Netzwerkdatenverkehr aus der Portspiegelung gelöscht wurde, wird ausgegeben, wenn ein Lightweight-Gateway auf VMware verwendet wird.
 
-If you are using domain controllers on VMware virtual machines, you might receive alerts about **Dropped port mirrored network traffic**. This might happens because of a configuration mismatch in VMware. 
-To avoid these alerts, you can check that the following settings are set to 0 or Disabled in the virtual machine:  
+Wenn Sie Domänencontroller auf virtuellen VMware-Computern verwenden, wird möglicherweise die Warnung **Netzwerkverkehr aus Portspiegelung gelöscht** ausgegeben. Dies kann aufgrund von Konfigurationskonflikten in VMware auftreten. Um zu vermeiden, dass diese Warnung ausgegeben wird, können Sie überprüfen, ob auf dem virtuellen Computer die folgenden Einstellungen auf „0“ oder „deaktiviert“ festgelegt sind:  
 
 - TsoEnable
 - LargeSendOffload(IPv4)
 - IPv4 TSO Offload
 
-Also, consider disabling IPv4 Giant TSO Offload. For more information consult your VMware documentation.
+Deaktivieren Sie ebenso IPv4 Giant TSO Offload. Weitere Informationen finden Sie in der VMware-Dokumentation.
 
-### Automatic Gateway update fail when updating to 1.7 update 1
+### <a name="automatic-gateway-update-fail-when-updating-to-17-update-1"></a>Fehler bei der automatischen Gatewayaktualisierung auf Version 1.7 Update 1
 
-When updating from ATA 1.7 to ATA 1.7 update 1, both the automatic ATA Gateway update process and the manual installation of Gateways using the Gateway package may not work as expected.
-This issue will occur if the certificate used by the ATA Center was changed prior to updating ATA.
-To verify this issue, review the **Microsoft.Tri.Gateway.Updater.log** on the ATA Gateway and look for the following exceptions:
-**System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a send. ---> System.IdentityModel.Tokens.SecurityTokenValidationException: Failed to validate certificate thumbprint**
+Beim Aktualisieren von ATA 1.7 auf ATA 1.7 Update 1 funktionieren sowohl der automatische ATA-Gatewayaktualisierungsprozess als auch die manuelle Installation des Gateways mithilfe des Gatewaypakets möglicherweise nicht wie erwartet.
+Dieses Problem tritt auf, wenn das vom ATA-Center verwendete Zertifikat vor der Aktualisierung von ATA geändert wurde.
+Um das Problem zu überprüfen, prüfen Sie das **Microsoft.Tri.Gateway.Updater.log** auf dem ATA-Gateway, und suchen Sie nach folgenden Ausnahmen: **System.Net.Http.HttpRequestException: Beim Senden der Anforderung ist ein Fehler aufgetreten. ---> System.Net.WebException: Die zugrunde liegende Verbindung wurde geschlossen: Unerwarteter Fehler beim Senden. ---> System.IdentityModel.Tokens.SecurityTokenValidationException: Fehler bei der Überprüfung des Zertifikatfingerabdrucks**
 
-![ATA update gateway bug](media/17update_gatewaybug.png)
+![Fehler bei der Aktualisierung des ATA-Gateways](media/17update_gatewaybug.png)
 
-In order to resolve this issue, after changing the certificate, from an elevated command prompt, browse to the following location: **%ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** 
-and run the following:
+Um das Problem zu beheben, wechseln Sie nach dem Ändern des Zertifikats an einer Eingabeaufforderung mit erhöhten Rechten zum Speicherort **%ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**, und führen Sie Folgendes aus:
 
-1. Mongo.exe ATA (ATA must be capitalized) 
+1. Mongo.exe ATA (ATA muss groß geschrieben werden) 
 
 2. CenterThumbprint=db.SystemProfile.find({_t:"CenterSystemProfile"}).toArray()[0].Configuration.SecretManagerConfiguration.CertificateThumbprint;
 
 3. db.SystemProfile.update({_t:"ServiceSystemProfile"},{$set:{"Configuration.ManagementClientConfiguration.ServerCertificateThumbprint":CenterThumbprint}}, {multi: true})
 
-### Export suspicious activity details to Excel may fail
-When trying to export suspicious activity details to an Excel file, the operation may fail with the following error:
-*Error [BsonClassMapSerializer`1] System.FormatException: An error occurred while deserializing the Activity property of class Microsoft.Tri.Common.Data.NetworkActivities.SuspiciousActivityActivity: Element 'ResourceIdentifier' does not match any field or property of class Microsoft.Tri.Common.Data.EventActivities.NtlmEvent. ---> System.FormatException: Element 'ResourceIdentifier' does not match any field or property of class Microsoft.Tri.Common.Data.EventActivities.NtlmEvent.*
+### <a name="export-suspicious-activity-details-to-excel-may-fail"></a>Beim Export von Details über verdächtige Aktivität nach Excel tritt möglicherweise ein Fehler auf
+Beim Versuch, Details über verdächtige Aktivität in eine Excel-Datei zu exportieren, tritt möglicherweise der folgende Fehler auf: *Error [BsonClassMapSerializer`1] System.FormatException: An error occurred while deserializing the Activity property of class Microsoft.Tri.Common.Data.NetworkActivities.SuspiciousActivityActivity: Element 'ResourceIdentifier' does not match any field or property of class Microsoft.Tri.Common.Data.EventActivities.NtlmEvent. ---> System.FormatException: Element 'ResourceIdentifier' does not match any field or property of class Microsoft.Tri.Common.Data.EventActivities.NtlmEvent.* (Fehler [BsonClassMapSerializer`1] System.FormatException: Fehler beim Deserialisieren der Aktivitätseigenschaft der Klasse Microsoft.Tri.Common.Data.NetworkActivities.SuspiciousActivityActivity: Das Element 'ResourceIdentifier' stimmt mit keinem Feld und keiner Eigenschaft der Klasse Microsoft.Tri.Common.Data.EventActivities.NtlmEvent überein. ---> System.FormatException: Das Element 'ResourceIdentifier' stimmt mit keinem Feld und keiner Eigenschaft der Klasse Microsoft.Tri.Common.Data.EventActivities.NtlmEvent überein.)
 
-To resolve this issue, from an elevated command prompt, browse to the following location: **%ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** and run the following:
-1.	**Mongo.exe ATA** (ATA must be capitalized)
-2.	**db.SuspiciousActivityActivity.update({ "Activity._t": "NtlmEvent" },{$unset: {"Activity.ResourceIdentifier": ""}}, {multi: true});**
+Um dieses Problem zu beheben, wechseln Sie an einer Eingabeaufforderung mit erhöhten Rechten zum Speicherort **%ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**, und führen Sie Folgendes aus:
+1.  **Mongo.exe ATA** (ATA muss groß geschrieben werden)
+2.  **db.SuspiciousActivityActivity.update({ "Activity._t": "NtlmEvent" },{$unset: {"Activity.ResourceIdentifier": ""}}, {multi: true});**
 
-## Minor changes
+## <a name="minor-changes"></a>Kleinere Änderungen
 
-- ATA is now using OWIN instead of IIS for the ATA Console.
-- If the ATA Center service is down you will not be able to access the ATA Console.
-- Short-term Lease subnets are no longer necessary due to changes in the ATA NNR.
+- ATA verwendet jetzt OWIN anstelle von IIS für die ATA-Konsole.
+- Wenn der ATA Center-Dienst nicht verfügbar ist, können Sie nicht auf die ATA-Konsole zugreifen.
+- Kurzfristige Lease-Subnetze sind aufgrund von Änderungen in der ATA NNR nicht mehr erforderlich.
 
-## See Also
-[Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+## <a name="see-also"></a>Siehe auch
+[Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
-[Update ATA to version 1.7 - migration guide](ata-update-1.7-migration-guide.md)
+[Aktualisieren von ATA auf Version 1.7 – Migrationshandbuch](ata-update-1.7-migration-guide.md)
 
