@@ -1,111 +1,109 @@
 ---
-# required metadata
-
-title: Install Advanced Threat Analytics - Step 1 | Microsoft Docs
-description: First step to install ATA involves downloading and installing the ATA Center onto your chosen server.
-keywords:
+title: "Installieren von Advanced Threat Analytics – Schritt 1 | Microsoft-Dokumentation"
+description: "Im ersten Schritt beim Installieren von ATA wird ATA Center auf den ausgewählten Server heruntergeladen und dort installiert."
+keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 1/23/2017
+ms.date: 6/12/2017
 ms.topic: get-started-article
-ms.prod:
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology:
+ms.technology: 
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
+ms.openlocfilehash: 97fa1522ca43cf92416ac845b8886f2905e9981b
+ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/03/2017
 ---
-
-*Applies to: Advanced Threat Analytics version 1.7*
-
+*Gilt für: Advanced Threat Analytics Version 1.8*
 
 
-# Install ATA - Step 1
+# Installieren von ATA – Schritt 1
+<a id="install-ata---step-1" class="xliff"></a>
 
 >[!div class="step-by-step"]
-[Step 2 »](install-ata-step2.md)
+[Schritt 2 »](install-ata-step2.md)
 
-This installation procedure provides instructions for performing a fresh installation of ATA 1.7. For information on updating an existing ATA deployment from an earlier version, see [the ATA migration guide for version 1.7](ata-update-1.7-migration-guide.md).
+Diese Installationsschritte stellen Anweisungen zur Durchführung einer Neuinstallation von ATA 1.8 bereit. Informationen zum Aktualisieren einer vorhandenen früheren ATA-Bereitstellungsversion finden Sie im [ATA-Migrationshandbuch für Version 1.8](ata-update-1.8-migration-guide.md).
 
 > [!IMPORTANT] 
-> If using Windows 2012 R2, you can install KB2934520 on the ATA Center server and on the ATA Gateway servers before beginning installation, otherwise the ATA installation will install this update and will require a restart in the middle of the ATA installation.
+> Wenn Sie Windows 2012 R2 verwenden, installieren Sie vor ATA das Update KB2934520 auf dem ATA Center-Server und den ATA-Gatewayservern, da andernfalls bei der ATA-Installation dieses Update installiert wird und inmitten der ATA-Installation ein Neustart erforderlich ist.
 
-## Step 1. Download and Install the ATA Center
-After you have verified that the server meets the requirements, you can proceed with the installation of the ATA Center.
+## Schritt 1: Herunterladen und Installieren von ATA Center
+<a id="step-1-download-and-install-the-ata-center" class="xliff"></a>
+Nachdem Sie überprüft haben, ob der Server die Anforderungen erfüllt, können Sie mit der Installation von ATA Center fortfahren.
+    
+> [!NOTE]
+>Wenn Sie eine Lizenz für Enterprise Mobility + Security (EMS) direkt über das Office 365-Portal oder über das Cloud Solution Partner-Lizenzmodell (CSP) erworben haben, und Sie keinen Zugriff auf ATA über das Microsoft Volume Licensing Center (VLSC) verfügen, kontaktieren Sie den Microsoft-Kundendienst, um den Prozess zum Aktivieren von Advanced Threat Analytics (ATA) abzurufen.
 
-Perform the following steps on the ATA Center server.
+Führen Sie die folgenden Schritte auf dem ATA Center-Server aus.
 
-1.  Download ATA from the [Microsoft Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) or from the [TechNet Evaluation Center](http://www.microsoft.com/evalcenter/) or from [MSDN](https://msdn.microsoft.com/subscriptions/downloads).
+1.  Laden Sie ATA aus dem [Microsoft Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx), dem [TechNet-Evaluierungscenter](http://www.microsoft.com/evalcenter/) oder aus [MSDN](https://msdn.microsoft.com/subscriptions/downloads) herunter.
 
-2.  Log in to the computer onto which you are installing the ATA Center as a user who is a member of the local administrators group.
+2.  Melden Sie sich bei dem Computer, auf dem Sie ATA Center installieren, als ein Benutzer an, der Mitglied der lokalen Administratorgruppe ist.
 
-3.  Run **Microsoft ATA Center Setup.EXE** and follow the setup wizard.
+3.  Führen Sie **Microsoft ATA Center Setup.exe** aus, und befolgen Sie die Anweisungen des Setup-Assistenten.
 
 > [!NOTE]   
-> Make sure to run the installation file from a local drive and not from a mounted ISO file to avoid issues in case a reboot is required as part of the installation.   
+> Stellen Sie sicher, dass Sie die Installationsdatei von einem lokalen Laufwerk und nicht von einer bereitgestellten ISO-Datei ausführen, um Probleme bei einem im Rahmen der Installation ggf. erforderlichen Neustart zu vermeiden.   
 
-4.  If Microsoft .Net Framework is not installed, you will be prompted to install it when you start installation. You may be prompted to reboot after .NET Framework installation.
-5.  On the **Welcome** page, select the language to be used for the ATA installation screens and click **Next**.
+4.  Wenn Microsoft .Net Framework nicht installiert ist, werden Sie beim Starten der Installation aufgefordert, .Net Framework zu installieren. Möglicherweise werden Sie nach der Installation von .NET Framework zu einem Neustart aufgefordert.
+5.  Wählen Sie auf der Seite **Willkommen** die Sprache für die ATA-Installationsbildschirme aus, und klicken Sie auf **Weiter**.
 
-6.  Read the Microsoft Software License Terms and if you accept the terms, click the check box and then click **Next**.
+6.  Lesen Sie die Microsoft-Software-Lizenzbedingungen, aktivieren Sie das Kontrollkästchen, wenn Sie den Bedingungen zustimmen, und klicken Sie anschließend auf **Weiter**.
 
-7.  It is recommended that you set ATA to update automatically. If Windows isn't set to do this on your computer, you will get the **Use Microsoft Update to help keep your computer secure and up to date** screen. 
-    ![Keep ATA up to date image](media/ata_ms_update.png)
+7.  Sie sollten festlegen, dass ATA automatisch aktualisiert wird. Wenn Windows nicht für dieses automatische Update auf dem Computer konfiguriert ist, wird der Bildschirm **Verwenden Sie Microsoft Update, damit Ihr Computer sicher und auf dem aktuellen Stand bleibt** angezeigt. 
+    ![ATA-Aktualisierung](media/ata_ms_update.png)
 
-8. Select **Use Microsoft Update when I check for updates (recommended)**. This will adjust the Windows settings to enable updates for other Microsoft products (including ATA), as seen here. 
-    ![Windows auto-update image](media/ata_installupdatesautomatically.png)
+8. Wählen Sie **Microsoft Update für die Suche nach Updates verwenden (empfohlen)**. Damit ändern Sie die Windows-Einstellungen so, dass Updates für andere Microsoft-Produkte (einschließlich ATA) möglich sind, wie hier zu sehen. 
 
-8.  On the **ATA Center Configuration** page, enter the following information based on your environment:
+    ![Abbildung von Windows AutoUpdate](media/ata_installupdatesautomatically.png)
 
-    |Field|Description|Comments|
+8.  Geben Sie auf der Seite **Configure the Center (Konfigurieren von ATA Center)** basierend auf Ihrer Umgebung die folgenden Informationen ein:
+
+    |Feld|Beschreibung|Kommentare|
     |---------|---------------|------------|
-    |Installation Path|This is the location where the ATA Center will be installed. By default this is  %programfiles%\Microsoft Advanced Threat Analytics\Center|Leave the default value|
-    |Database Data Path|This is the location where the MongoDB database files will be located. By default this is %programfiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data|Change the location to a place where you have room to grow based on your sizing. **Note:** <ul><li>In production environments you should use a drive that has enough space based on capacity planning.</li><li>For large deployments the database should be on a separate physical disk.</li></ul>See [ATA capacity planning](ata-capacity-planning.md) for sizing information.|
-    |Center Service IP address: Port|This is the IP address that the ATA Center service will listen on for communication from the ATA Gateways.<br /><br />**Default port:** 443|Click the down arrow to select the IP address to be used by the ATA Center service.<br /><br />The IP address and port of the ATA Center service cannot be the same as the IP address and port of the ATA Console. Make sure to change the port of the ATA Console.|
-    |Center Service SSL Certificate|This is the certificate that will be used by the ATA Console and ATA Center service.|Click the key icon to select a certificate installed or check self-signed certificate when deploying in a lab environment.|
-    |Console IP address|This is the IP address that will be used for the ATA Console.|Click the down arrow to select the IP address used by the ATA Console. **Note:** Make a note of this IP address to make it easier to access the ATA Console from the ATA Gateway.|
-    
-    ![ATA center configuration image](media/ATA-Center-Configuration.png)
+    |Installationspfad|Dies ist der Speicherort, an dem ATA Center installiert wird. Standardmäßig ist dies „%programfiles%\Microsoft Advanced Threat Analytics\Center“.|Behalten Sie den Standardwert bei.|
+    |Datenbankdatenpfad|Dies ist der Speicherort, an dem sich die MongoDB-Datenbankdateien befinden. Standardmäßig ist dies „%programfiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data“.|Ändern Sie den Speicherort, sodass ausreichend Speicherplatz für Ihre Größenanpassung verfügbar ist. **Hinweis:** <ul><li>In Produktionsumgebungen sollten Sie ein Laufwerk verwenden, das der Kapazitätsplanung entsprechend über ausreichend Speicherplatz verfügt.</li><li>Für umfangreiche Bereitstellungen sollte sich die Datenbank auf einem separaten physischen Datenträger befinden.</li></ul>Informationen zur Größenanpassung finden Sie unter [ATA-Kapazitätsplanung](ata-capacity-planning.md).|
+    |SSL-Zertifikat für Center-Dienst|Dies ist das Zertifikat, das von der ATA-Konsole und vom ATA Center-Dienst verwendet wird.|Klicken Sie auf das Schlüsselsymbol, um ein installiertes Zertifikat auszuwählen oder bei der Bereitstellung in einer Testumgebung ein selbstsigniertes Zertifikat zu überprüfen. Beachten Sie, dass Sie die Option zum Erstellen eines selbstsignierten Zertifikats in der Benutzeroberfläche des ACS-Filters haben.|
+        
+    ![Abbildung ATA Center-Konfiguration](media/ATA-Center-Configuration.png)
 
-10.  Click **Install** to install the ATA Center and its components.
-    The following components are installed and configured during the installation of ATA Center:
+10.  Klicken Sie auf **Installieren**, um ATA Center und die zugehörigen Komponenten zu installieren.
+    Bei der Installation von ATA Center werden die folgenden Komponenten installiert und konfiguriert:
 
-    -   ATA Center service
+    -   ATA Center-Dienst
 
     -   MongoDB
 
-    -   Custom Performance Monitor data collection set
+    -   Benutzerdefinierter Systemmonitor-Datensammlungssatz
 
-    -   Self-signed certificates (if selected during the installation)
+    -   Selbstsignierte Zertifikate (sofern bei der Installation ausgewählt)
 
-11.  When the installation completes, click **Launch**  to connect to the ATA Console.
-At this point you will be brought automatically to the **General** settings page to continue the configuration and the deployment of the ATA Gateways.
-Because you are logging into the site using an IP address, you will receive a warning related to the certificate, this is normal and you should click **Continue to this website**.
+11.  Wenn die Installation abgeschlossen ist, klicken Sie auf **Start**, um die ATA-Konsole zu öffnen, und schließen Sie das Setup auf der Seite **Konfiguration**.
+An dieser Stelle werden Sie automatisch zur Seite mit den **allgemeinen Einstellungen** weitergeleitet, auf der Sie die Konfiguration und Bereitstellung der ATA-Gateways fortsetzen können.
+Da Sie sich mit einer IP-Adresse bei der Website anmelden, wird eine Warnung im Zusammenhang mit dem Zertifikat angezeigt. Das ist normal, und Sie sollten auf **Laden dieser Website fortsetzen** klicken.
 
-### Validate installation
+### Überprüfen der Installation
+<a id="validate-installation" class="xliff"></a>
 
-1.  Check to see that the service named **Microsoft Advanced Threat Analytics Center** is running.
-2.  On the desktop, click the **Microsoft Advanced Threat Analytics** shortcut to connect to the ATA Console. Log in with the same user credentials that you used to install the ATA Center.
+1.  Überprüfen Sie, ob der Dienst **Microsoft Advanced Threat Analytics-Gateway** ausgeführt wird.
+2.  Klicken Sie auf dem Desktop auf die Verknüpfung **Microsoft Advanced Threat Analytics**, um eine Verbindung mit der ATA-Konsole herzustellen. Melden Sie sich mit den gleichen Benutzeranmeldeinformationen an, die Sie auch zum Installieren von ATA Center verwendet haben.
 
 
 
 >[!div class="step-by-step"]
-[« Pre-install](configure-port-mirroring.md)
-[Step 2 »](install-ata-step2.md)
+[« Vor der Installation](configure-port-mirroring.md)
+[Schritt 2 »](install-ata-step2.md)
 
-## See Also
+## Siehe auch
+<a id="see-also" class="xliff"></a>
 
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-- [Configure event collection](configure-event-collection.md)
-- [ATA prerequisites](ata-prerequisites.md)
+- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [Konfigurieren der Ereignissammlung](configure-event-collection.md)
+- [Voraussetzungen für ATA](ata-prerequisites.md)
 
