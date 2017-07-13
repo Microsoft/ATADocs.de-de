@@ -1,55 +1,59 @@
 ---
-# required metadata
-
-title: Monitor Advanced Threat Analytics Health Center alerts | Microsoft Docs
-description: Use the ATA Health Center to check how the ATA service is working and be alerted to potential problems.
-keywords:
+title: "Überwachen von Systemintegrität und Ereignissen von Advanced Threat Analytics| Microsoft-Dokumentation"
+description: "Mit ATA Health Center lässt sich die Integrität des ATA-Diensts überprüfen, und es werden Warnungen über mögliche Probleme sowie Systemereignisse in der Ereignisanzeige angezeigt."
+keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 07/2/2017
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology:
+ms.technology: 
 ms.assetid: d6c783b2-46c5-4211-b21a-d6b17f08d03d
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
+ms.openlocfilehash: 7e396cddb818c0e80f8b7d78764a58d6abd560e5
+ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/03/2017
 ---
-
-*Applies to: Advanced Threat Analytics version 1.7*
-
+*Gilt für: Advanced Threat Analytics Version 1.8*
 
 
-# ATA Health Center
-The ATA Health Center lets you know how your ATA service is performing and alerts you to problems.
+# Arbeiten mit der Systemintegrität und Ereignissen von ATA
+<a id="working-with-ata-system-health-and-events" class="xliff"></a>
 
-## Working with the ATA Health Center
-The ATA Health Center lets you know that there's a problem by raising an alert (a red dot) above the Health Center icon in the menu bar.
+## ATA Health Center
+<a id="ata-health-center" class="xliff"></a>
+Mit ATA Health Center lässt sich die Leistung des ATA-Diensts überprüfen, und es werden Warnungen über Probleme angezeigt.
 
-![ATA Health Center red dot toolbar](media/ATA-Health-Center-Alert-red-dot.png)
+## Arbeiten mit dem ATA Health Center
+<a id="working-with-the-ata-health-center" class="xliff"></a>
+Das ATA Health Center zeigt Probleme durch einen roten Punkt über dem Health Center-Symbol auf der Menüleiste an.
 
-### Managing ATA health
-To check up on your system's overall health, click the Health Center icon in the menu bar ![ATA Health Center icon](media/ATA-red-dot.png)
+![Roter Punkt auf der Symbolleiste für das ATA-Integritätscenter](media/ATA-Health-Center-Alert-red-dot.png)
 
--   All open alerts can be managed by setting them to **Resolved** or **Dismissed**. In the Alert, click **Open** and scroll down to either **Resolved** or **Dismissed**.
+### Verwalten der ATA-Integrität
+<a id="managing-ata-health" class="xliff"></a>
+Um den Gesamtzustand des Systems zu überprüfen, klicken Sie auf der Menüleiste auf das Health Center-Symbol. ![ATA Health Center-Symbol](media/ATA-red-dot.png)
 
--   If you resolve an issue and ATA detects that the issue persists, the issue will automatically be moved back to the **Open** issues list. If ATA detects that an open issue is resolved, it will automatically be moved to the **Resolved** issues list.
+-   Alle offenen Warnungen lassen sich über die Einstellungen **Aufgelöst** und **Verworfen** verwalten. Klicken Sie hierzu in der Warnung auf **Öffnen**, und scrollen Sie abwärts zu **Aufgelöst** oder **Verworfen**.
 
--   **Dismissed** issues are issues that you do not want ATA to continue to check - for example, if you are alerted to an issue that you know exists and you do not plan to resolve the issue but do not want to continue to get notifications about it and you no longer want to see it in your **Open** issues list, you can set it to **Dismissed**.
+-   Wenn ein Problem als behoben markiert wird, ATA jedoch erkennt, dass das Problem weiterhin besteht, wird es automatisch erneut in die Liste der Probleme mit dem Zustand **Offen** aufgenommen. Wenn ATA erkennt, dass ein offenes Problem behoben wurde, wird dieses automatisch in die Liste **Aufgelöst** aufgenommen.
 
-![ATA Health Center issues image](media/ATA-Health-Issue.JPG)
+-   Probleme mit dem Status **Verworfen** sind solche, die ATA nicht länger überprüfen soll – beispielsweise bekannte Probleme, die derzeit nicht behoben werden sollen und nicht mehr in der Liste **Offen** aufgeführt werden sollen. Legen Sie für solche Probleme **Verworfen** fest.
 
-## See Also
-- [Working with ATA detection settings](working-with-detection-settings.md)
-- [Working with suspicious activities](working-with-suspicious-activities.md)
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+![Abbildung eines ATA Health Center-Problems](media/ATA-Health-Issue.JPG)
+
+
+
+
+
+
+## Weitere Informationen
+<a id="see-also" class="xliff"></a>
+- [Arbeiten mit ATA-Erkennungseinstellungen](working-with-detection-settings.md)
+- [Arbeiten mit verdächtigen Aktivitäten](working-with-suspicious-activities.md)
+- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

@@ -1,49 +1,54 @@
 ---
-# required metadata
-
-title: Advanced Threat Analytics frequently asked questions | Microsoft Docs
-description: Provides a list of frequently asked questions about ATA and the associated answers
-keywords:
+title: "Häufig gestellte Fragen zu Advanced Threat Analytics | Microsoft-Dokumentation"
+description: "Liste häufig gestellter Fragen zu ATA und zugehörige Antworten"
+keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 06/5/2017
+ms.date: 07/3/2017
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology:
+ms.technology: 
 ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
+ms.openlocfilehash: 5beabd2617f55ecbcc717338dc40d9f597cc25d4
+ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/03/2017
 ---
-*Applies to: Advanced Threat Analytics version 1.7*
+*Gilt für: Advanced Threat Analytics Version 1.8*
 
-# ATA frequently asked questions
-This article provides a list of frequently asked questions about ATA and provides insight and answers.
-
-
-## What should I do if the ATA Gateway won’t start?
-Look at the most recent error in the current error log (Where ATA is installed under the "Logs" folder).
-
-## How can I test ATA?
-You can simulate suspicious activities which is an end to end test by doing one of the following:
-
-1.  DNS reconnaissance by using Nslookup.exe
-2.  Remote execution by using psexec.exe
+# Häufig gestellte Fragen zu ATA
+<a id="ata-frequently-asked-questions" class="xliff"></a>
+Dieser Artikel enthält eine Reihe häufig gestellter Fragen zu ATA sowie Hintergrundwissen und Antworten.
 
 
-This needs to run remotely against the domain controller being monitored and not from the ATA Gateway.
+## Wo erhalte ich eine Lizenz für Advanced Threat Analytics (ATA)?
+<a id="where-can-i-get-a-license-for-advanced-threat-analytics-ata" class="xliff"></a>
 
-## Which ATA build corresponds to each version?
+Wenn Sie über ein aktives Enterprise Agreement verfügen, können Sie die Software aus dem Microsoft Volume Licensing Center (VLSC) herunterladen.
+
+Wenn Sie eine Lizenz für Enterprise Mobility + Security (EMS) direkt über das Office 365-Portal oder über das Cloud Solution Partner-Lizenzmodell (CSP) erworben haben, und Sie keinen Zugriff auf ATA über das Microsoft Volume Licensing Center (VLSC) verfügen, kontaktieren Sie den Microsoft-Kundendienst, um den Prozess zum Aktivieren von Advanced Threat Analytics (ATA) abzurufen.
+
+## Das ATA-Gateway startet nicht. Wie sollte ich vorgehen?
+<a id="what-should-i-do-if-the-ata-gateway-wont-start" class="xliff"></a>
+Sehen Sie sich den letzten Fehlereintrag im aktuellen Fehlerprotokoll an (Installationsverzeichnis von ATA unter dem Ordner „Logs“).
+
+## Wie kann ich ATA testen?
+<a id="how-can-i-test-ata" class="xliff"></a>
+Sie können einen End-to-End-Test durchführen und verdächtige Aktivitäten simulieren. Führen Sie dazu eine der folgenden Aktionen aus:
+
+1.  DNS-Reconnaissance durch Verwendung von „Nslookup.exe“
+2.  Remoteausführung durch Verwendung von „psexec.exe“
+
+
+Dies muss remote für den überwachten Domänencontroller und nicht über das ATA-Gateway ausgeführt werden.
+
+## Welcher ATA-Build entspricht der jeweiligen Version?
+<a id="which-ata-build-corresponds-to-each-version" class="xliff"></a>
 
 |Version|Build #|
 |----|----|
@@ -52,11 +57,19 @@ This needs to run remotely against the domain controller being monitored and not
 |1.7|1.7.5402| 
 |1.7 Update 1|1.7.5647|
 |1.7 Update 2|1.7.5757|
+|1,8|1.8.6645|
 
-## How do I verify Windows Event Forwarding?
-You can place the the following code into a file and then execute it from a command prompt in the directory:  **\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** as follows:
+## Welche Version soll ich verwenden, um meine aktuelle ATA-Bereitstellung auf die neueste Version upzugraden?
+<a id="what-version-should-i-use-to-upgrade-my-current-ata-deployment-to-the-latest-version" class="xliff"></a>
 
-mongo.exe ATA filename
+![Matrix zum Upgrade der ATA-Version](./media/version-matrix.png)
+
+
+## Wie kann ich die Windows-Ereignisweiterleitung überprüfen?
+<a id="how-do-i-verify-windows-event-forwarding" class="xliff"></a>
+Sie können den folgenden Code in einer Datei ablegen und ihn dann über eine Eingabeaufforderung im Verzeichnis **\Programme\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** wie folgt ausführen:
+
+ATA-Dateiname mongo.exe
 
         db.getCollectionNames().forEach(function(collection) {
         if (collection.substring(0,10)=="NtlmEvent_") {
@@ -66,97 +79,118 @@ mongo.exe ATA filename
                 }
         });
 
-## Does ATA work with encrypted traffic?
-ATA relies on analyzing multiple network protocols, as well as events collected from the SIEM or via Windows Event Forwarding so that even though encrypted traffic will not be analyzed (for example, LDAPS and IPSEC ESP) ATA will still work and most of the detections will not be affected.
+## Funktioniert ATA mit verschlüsseltem Datenverkehr?
+<a id="does-ata-work-with-encrypted-traffic" class="xliff"></a>
+ATA stützt sich auf die Analyse mehrerer Netzwerkprotokolle sowie auf Ereignisse, die aus dem SIEM-Server oder über die Windows-Ereignisweiterleitung gesammelt wurden, sodass ATA wie gewohnt arbeitet und der Großteil der Erkennungen nicht betroffen ist, obwohl der verschlüsselte Datenverkehr nicht analysiert wird (z.B. LDAPS und IPSEC ESP).
 
-## Does ATA work with Kerberos Armoring?
-Enabling Kerberos Armoring, also known as Flexible Authentication Secure Tunneling (FAST), is supported by ATA, with the exception of over-pass the hash detection which will not work.
+## Funktioniert ATA mit Kerberos Armoring?
+<a id="does-ata-work-with-kerberos-armoring" class="xliff"></a>
+Die Aktivierung von Kerberos Armoring (auch als Flexible Authentication Secure Tunneling (FAST) bezeichnet) wird von ATA unterstützt. Einzige Ausnahme ist die Overpass-The-Hash-Erkennung, die nicht unterstützt wird.
 
-## How many ATA Gateways do I need?
+## Wie viele ATA-Gateways benötige ich?
+<a id="how-many-ata-gateways-do-i-need" class="xliff"></a>
 
-The number of ATA Gateways depend on your network layout, volume of packets and volume of events captured by ATA. To determine the exact number, see [ATA Lightweight Gateway Sizing](ata-capacity-planning.md#ata-lightweight-gateway-sizing). 
+Die Anzahl der ATA-Gateways hängt von Ihrem Netzwerklayout, der Menge der Pakete und der Anzahl der Ereignisse ab, die von ATA erfasst werden. Lesen Sie den Abschnitt [Größenzuteilung für ATA Center](ata-capacity-planning.md#ata-lightweight-gateway-sizing), um die genaue Anzahl zu ermitteln. 
 
-## How much storage do I need for ATA?
-For every one full day with an average of 1000 packets/sec you need 0.3 GB of storage.<br /><br />For more information about ATA Center sizing see, [ATA Capacity Planning](ata-capacity-planning.md).
-
-
-## Why are certain accounts considered sensitive?
-This happens when an account is a member of certain groups which we designate as sensitive (for example: "Domain Admins").
-
-To understand why an account is sensitive you can review its group membership to understand which sensitive groups it belongs to (the group that it belongs to can also be sensitive due to another group, so the same process should be performed until you locate the highest level sensitive group).
-
-## How do I monitor a virtual domain controller using ATA?
-Most virtual domain controllers can be covered by the ATA Lightweight Gateway, to determine whether the ATA Lightweight Gateway is appropriate for your environment, see [ATA Capacity Planning](ata-capacity-planning.md).
-
-If a virtual domain controller can't be covered by the ATA Lightweight Gateway, you can have either a virtual or physical ATA Gateways as described in [Configure port mirroring](configure-port-mirroring.md).  <br />The easiest way is to have a virtual ATA Gateway on every host where a virtual domain controller exists.<br />If your virtual domain controllers move between hosts, you need to perform one of the following:
-
--   When the virtual domain controller moves to another host, preconfigure the ATA Gateway in that host to receive the traffic from the recently moved virtual domain controller.
--   Make sure that you affiliate the virtual ATA Gateway with the virtual domain controller so that if it is moved, the ATA Gateway moves with it.
--   There are some virtual switches that can send traffic between hosts.
-
-## How do I back up ATA?
-There are 2 things to back up:
-
--   The traffic and events stored by ATA, which can be backed using any supported database backup procedure, for more information see [ATA database management](ata-database-management.md). 
--   The configuration of ATA. This is stored in the database and is automatically backed up every hour in the **Backup** folder in the ATA Center deployment location.  See [ATA database management](https://docs.microsoft.com/advanced-threat-analytics/deploy-use/ata-database-management) for more information.
+## Wie viel Speicher benötige ich für ATA?
+<a id="how-much-storage-do-i-need-for-ata" class="xliff"></a>
+Für jeden ganzen Tag mit durchschnittlich 1000 Paketen/Sekunde sind 0,3 GB Speicher erforderlich.<br /><br />Weitere Informationen zur Dimensionierung von ATA Center finden Sie unter [ATA-Kapazitätsplanung](ata-capacity-planning.md).
 
 
+## Warum gelten bestimmte Konten als sensible Konten?
+<a id="why-are-certain-accounts-considered-sensitive" class="xliff"></a>
+Dies ist der Fall, wenn ein Konto bestimmten Gruppen angehört, die als sensibel festgelegt sind (z. B. „Domänen-Admins“).
 
-## What can ATA detect?
+Um nachzuvollziehen, warum ein Konto ein sensibles Konto ist, können Sie seine Gruppenmitgliedschaft überprüfen, um festzustellen, welchen sensiblen Gruppen es angehört (die Gruppe, der das Konto angehört, kann auch wegen einer anderen Gruppe eine sensible Gruppe sein. Daher sollten Sie immer die höchste sensible Gruppe überprüfen).
 
-ATA detects known malicious attacks and techniques, security issues, and risks.
-For the full list of ATA detections, see [What detections does ATA perform?](ata-threats.md).
+## Wie kann ich einen virtuellen Domänencontroller mit ATA überwachen?
+<a id="how-do-i-monitor-a-virtual-domain-controller-using-ata" class="xliff"></a>
+Die meisten virtuellen Domänencontroller können vom ATA-Lightweight-Gateway abgedeckt werden. Um festzustellen, ob das ATA-Lightweight-Gateway sich für Ihre Umgebung eignet, lesen Sie die Informationen unter [ATA-Kapazitätsplanung](ata-capacity-planning.md).
 
-## What kind of storage do I need for ATA?
-We recommend fast storage (7200 RPM disks are not recommended) with low latency disk access (less than 10 ms). The RAID configuration should support heavy write loads (RAID-5/6 and their derivatives are not recommended).
+Wenn ein virtueller Domänencontroller nicht durch das ATA-Lightweight-Gateway abgedeckt werden kann, können Sie ein virtuelles oder physisches ATA-Gateway verwenden, wie unter [Konfigurieren der Portspiegelung](configure-port-mirroring.md) beschrieben.  <br />Die einfachste Möglichkeit ist jeweils ein virtuelles ATA-Gateway auf jedem Host, auf dem ein virtueller Domänencontroller vorhanden ist.<br />Wenn die virtuellen Domänencontroller zwischen Hosts verschoben werden, müssen Sie eine der folgenden Aktionen ausführen:
 
-## How many NICs does the ATA Gateway require?
-The ATA Gateway needs a minimum of two network adapters:<br>1. A NIC to connect to the internal network and the ATA Center<br>2. A NIC that will be used to capture the domain controller network traffic via port mirroring.<br>* This does not apply to the ATA Lightweight Gateway, which natively uses all of the network adapters that the domain controller uses.
+-   Wenn der virtuelle Domänencontroller auf einen anderen Host verschoben wird, konfigurieren Sie das ATA-Gateway auf diesem Host so vor, dass der Datenverkehr von dem zuvor verschobenen virtuellen Domänencontroller empfangen wird.
+-   Stellen Sie sicher, dass Sie das virtuelle ATA-Gateway dem virtuellen Domänencontroller zuordnen, sodass das ATA-Gateway ggf. mit dem Controller verschoben wird.
+-   Es gibt einige virtuelle Switches, über die der Datenverkehr zwischen Hosts gesendet werden kann.
 
-## What kind of integration does ATA have with SIEMs?
-ATA has a bi-directional integration with SIEMs as follows:
+## Wie kann ich ATA sichern?
+<a id="how-do-i-back-up-ata" class="xliff"></a>
 
-1. ATA can be configured to send a Syslog alert in the event of a suspicious activity to any SIEM server using the CEF format.
-2. ATA can be configured to receive Syslog messages for each Windows event with the ID 4776, from  [these SIEMs](configure-event-collection.md#siem-support).
-
-## Can ATA monitor domain controllers virtualized on your IaaS solution?
-Yes, you can use the ATA Lightweight Gateway to monitor domain controllers that are in any IaaS solution.
-
-## Is this an on-premises or in-cloud offering?
-Microsoft Advanced Threat Analytics is an on-premises product.
-
-## Is this going to be a part of Azure Active Directory or on-premises Active Directory?
-This solution is currently a standalone offering—it is not a part of Azure Active Directory or on-premises Active Directory.
-
-## Do you have to write your own rules and create a threshold/baseline?
-With Microsoft Advanced Threat Analytics, there is no need to create rules, thresholds, or baselines and then fine-tune. ATA analyzes the behaviors among users, devices, and resources—as well as their relationship to one another—and can detect suspicious activity and known attacks fast. Three weeks after deployment, ATA starts to detect behavioral suspicious activities. On the other hand, ATA will start detecting known malicious attacks and security issues immediately after deployment.
-
-## If you are already breached, will Microsoft Advanced Threat Analytics be able to identify abnormal behavior?
-Yes, even when ATA is installed after you have been breached, ATA can still detect suspicious activities of the hacker. ATA is not only looking at the user’s behavior but also against the other users in the organization security map. During the initial analysis time, if the attacker’s behavior is abnormal, then it is identified as an “outlier” and ATA keeps reporting on the abnormal behavior. Additionally ATA can detect the suspicious activity if the hacker attempts to steal another users credentials, such as Pass-the-Ticket, or attempts to perform a remote execution on one of the domain controllers.
-
-## Does this only leverage traffic from Active Directory?
-In addition to analyzing Active Directory traffic using deep packet inspection technology, ATA can also collect relevant events from your Security Information and Event Management (SIEM) and create entity profiles based on information from Active Directory Domain Services. ATA can also collect events from the event logs if the organization configures Windows Event Log forwarding.
-
-## What is port mirroring?
-Also known as SPAN (Switched Port Analyzer), port mirroring is a method of monitoring network traffic. With port mirroring enabled, the switch sends a copy of all network packets seen on one port (or an entire VLAN) to another port, where the packet can be analyzed.
-
-## Does ATA monitor only domain-joined devices?
-No. ATA monitors all devices in the network performing authentication and authorization requests against Active Directory, including non-Windows and mobile devices.
-
-## Does ATA monitor computer accounts as well as user accounts?
-Yes. Since computer accounts (as well as any other entities) can be used to perform malicious activities ATA monitors all computer accounts behavior and all other entities in the environment.
-
-## Can ATA support multi-domain and multi-forest?
-Microsoft Advanced Threat Analytics supports multi-domain environments within the same forest boundary. Multiple forests require an ATA deployment for each forest.
-
-## Can you see the overall health of the deployment?
-Yes, you can view the overall health of the deployment as well as specific issues related to configuration, connectivity etc., and you will be alerted as they occur.
+Informationen finden Sie unter [ATA-Notfallwiederherstellung](disaster-recovery.md)
 
 
-## See Also
-- [ATA prerequisites](ata-prerequisites.md)
-- [ATA capacity planning](ata-capacity-planning.md)
-- [Configure event collection](configure-event-collection.md)
-- [Configuring Windows event forwarding](configure-event-collection.md#configuring-windows-event-forwarding)
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+
+## Was kann ATA erkennen?
+<a id="what-can-ata-detect" class="xliff"></a>
+
+ATA erkennt bekannte Angriffe und Techniken, Sicherheitsprobleme und Risiken.
+Die vollständige Liste der ATA-Erkennungen finden Sie unter [Welche Bedrohungen erkennt ATA?](ata-threats.md).
+
+## Welche Art von Speicher benötige ich für ATA?
+<a id="what-kind-of-storage-do-i-need-for-ata" class="xliff"></a>
+Wir empfehlen ein schnelles Speichermedium (Datenträger mit 7200 U/min werden nicht empfohlen) mit Datenträgerzugriff mit niedriger Latenz (weniger als 10 ms). Die RAID-Konfiguration sollte hohe Schreiblasten unterstützen (RAID-5/6 und zugehörige Ableitungen werden nicht empfohlen).
+
+## Wie viele Netzwerkkarten sind für das ATA-Gateway erforderlich?
+<a id="how-many-nics-does-the-ata-gateway-require" class="xliff"></a>
+Für das ATA-Gateway sind mindestens zwei Netzwerkkarten erforderlich:<br>1. Eine Netzwerkkarte für die Verbindung mit dem internen Netzwerk und ATA Center.<br>2. Eine Netzwerkkarte zum Erfassen des Domänencontroller-Netzwerkverkehrs über Portspiegelung.<br>* Dies gilt nicht für das ATA-Lightweight-Gateway, das systemintern alle Netzwerkadapter verwendet, die der Domänencontroller verwendet.
+
+## Welche Art der Integration weist ATA mit SIEMs auf?
+<a id="what-kind-of-integration-does-ata-have-with-siems" class="xliff"></a>
+ATA weist eine bidirektionale Integration mit SIEMs auf:
+
+1. ATA kann so konfiguriert werden, dass im Fall einer verdächtigen Aktivität eine Syslog-Warnung an alle SIEM-Server gesendet wird, die das CEF-Format verwenden.
+2. ATA kann so konfiguriert werden, dass für jedes Windows-Ereignis Syslog-Meldungen von [diesen SIEMs](install-ata-step6.md) empfangen werden.
+
+## Kann ATA in Ihrer IaaS-Lösung virtualisierte Domänencontroller überwachen?
+<a id="can-ata-monitor-domain-controllers-virtualized-on-your-iaas-solution" class="xliff"></a>
+Ja, Sie können mit dem ATA-Lightweight-Gateway Domänencontroller in einer beliebigen IaaS-Lösung überwachen.
+
+## Wird das Produkt lokal oder in der Cloud angeboten?
+<a id="is-this-an-on-premises-or-in-cloud-offering" class="xliff"></a>
+Microsoft Advanced Threat Analytics ist ein lokales Produkt.
+
+## Wird das Produkt ein Bestandteil von Azure Active Directory oder von lokalem Active Directory sein?
+<a id="is-this-going-to-be-a-part-of-azure-active-directory-or-on-premises-active-directory" class="xliff"></a>
+Diese Lösung ist derzeit ein eigenständiges Angebot und ist weder ein Bestandteil von Azure Active Directory noch von lokalem Active Directory.
+
+## Müssen eigene Regeln geschrieben und ein Schwellenwert/eine Basislinie erstellt werden?
+<a id="do-you-have-to-write-your-own-rules-and-create-a-thresholdbaseline" class="xliff"></a>
+Bei Microsoft Advanced Threat Analytics besteht keine Notwendigkeit zum Erstellen von Regeln, Schwellenwerten oder Basislinien und der anschließenden Optimierung. ATA analysiert das Verhalten von Benutzern, Geräten und Ressourcen – sowie deren Beziehungen untereinander – und kann verdächtige Aktivitäten und bekannte Angriffe schnell erkennen. Drei Wochen nach der Bereitstellung beginnt ATA, verdächtige Verhaltensaktivitäten zu erkennen. Bekannte Angriffe und Sicherheitsprobleme werden hingegen sofort nach der Bereitstellung von ATA erkannt.
+
+## Wenn bei Ihnen bereits eine Sicherheitsverletzung aufgetreten ist, kann Microsoft Advanced Threat Analytics dann auch nicht normales Verhalten erkennen?
+<a id="if-you-are-already-breached-will-microsoft-advanced-threat-analytics-be-able-to-identify-abnormal-behavior" class="xliff"></a>
+Ja, selbst wenn ATA nach einer Sicherheitsverletzung installiert wird, kann ATA verdächtige Aktivitäten des Hackers erkennen. ATA überprüft nicht nur das Verhalten des einen Benutzers, sondern auch das der anderen Benutzer in der Sicherheitsstruktur der Organisation. Wenn das Verhalten des Angreifers während der ersten Analyse nicht normal ist, wird es als „Ausreißer“ identifiziert, und ATA fährt damit fort, das nicht normale Verhalten zu melden. Darüber hinaus kann ATA die verdächtige Aktivität erkennen, wenn der Hacker versucht, die Anmeldeinformationen eines anderen Benutzers zu stehlen, z.B. Pass-the-Ticket, oder wenn er versucht, eine Remoteausführung auf einem Domänencontroller durchzuführen.
+
+## Wird nur Active Directory-Datenverkehr genutzt?
+<a id="does-this-only-leverage-traffic-from-active-directory" class="xliff"></a>
+Zusätzlich zur Analyse des Active Directory-Datenverkehrs mit der DPI-Technologie (Deep Packet Inspection) kann ATA auch relevante Ereignisse aus Ihrem SIEM-System (Security Information and Event Management) sammeln und Entitätenprofile auf Grundlage von Informationen aus Active Directory-Domänendiensten erstellen. ATA kann auch Ereignisse aus den Ereignisprotokollen erfassen, wenn die Organisation die Windows-Ereignisprotokollweiterleitung konfiguriert hat.
+
+## Was ist Portspiegelung?
+<a id="what-is-port-mirroring" class="xliff"></a>
+Auch als SPAN (Switched Port Analyzer) bekannt, ist die Portspiegelung eine Methode zur Überwachung des Netzwerkverkehrs. Wenn die Portspiegelung aktiviert ist, sendet der Switch eine Kopie aller Netzwerkpakete von einem Port (oder einem gesamten VLAN) an einen anderen Port, an dem das Paket analysiert werden kann.
+
+## Überwacht ATA nur Geräte, die der Domäne angehören?
+<a id="does-ata-monitor-only-domain-joined-devices" class="xliff"></a>
+Nein. ATA überwacht alle Geräte im Netzwerk und führt die Authentifizierung sowie Autorisierungsanfragen für Active Directory durch. Dies schließt Nicht-Windows-Geräte und mobile Geräte ein.
+
+## Überwacht ATA sowohl Computerkonten als auch Benutzerkonten?
+<a id="does-ata-monitor-computer-accounts-as-well-as-user-accounts" class="xliff"></a>
+Ja. Da Computerkonten (ebenso wie alle anderen Entitäten) zum Durchführen böswilliger Aktivitäten verwendet werden können, überwacht ATA das Verhalten aller Computerkonten und aller weiteren Entitäten in der Umgebung.
+
+## Kann ATA kann mehrere Domänen und mehrere Gesamtstrukturen unterstützen?
+<a id="can-ata-support-multi-domain-and-multi-forest" class="xliff"></a>
+Microsoft Advanced Threat Analytics unterstützt-Umgebungen mit mehreren Domänen innerhalb der gleichen Gesamtstrukturbegrenzung. Mehrere Gesamtstrukturen erfordern eine ATA-Bereitstellung für jede Gesamtstruktur.
+
+## Kann die Gesamtintegrität der Bereitstellung angezeigt werden?
+<a id="can-you-see-the-overall-health-of-the-deployment" class="xliff"></a>
+Ja, Sie können die Gesamtintegrität der Bereitstellung sowie spezifische Probleme im Zusammenhang mit der Konfiguration, Konnektivität usw. anzeigen, und werden bei Eintreten eines Problems benachrichtigt.
+
+
+## Weitere Informationen
+<a id="see-also" class="xliff"></a>
+- [Voraussetzungen für ATA](ata-prerequisites.md)
+- [ATA-Kapazitätsplanung](ata-capacity-planning.md)
+- [Konfigurieren der Ereignissammlung](configure-event-collection.md)
+- [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-collection.md#configuring-windows-event-forwarding)
+- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 

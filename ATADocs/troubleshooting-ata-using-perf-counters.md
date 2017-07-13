@@ -1,144 +1,144 @@
 ---
-# required metadata
-
-title: Troubleshooting Advanced Threat Analytics with performance counters | Microsoft Docs
-description: Describes how you can use performance counters to troubleshoot issues with ATA
-keywords:
+title: Problembehandlung bei Advanced Threat Analytics mithilfe der Leistungsindikatoren | Microsoft-Dokumentation
+description: Beschreibt die Verwendung von Leistungsindikatoren zum Behandeln von Problemen mit ATA
+keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 06/23/2017
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology:
+ms.technology: 
 ms.assetid: df162a62-f273-4465-9887-94271f5000d2
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
+ms.openlocfilehash: ae72f7a25f0c57dadd02049fe3a570a0da7b84fd
+ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/30/2017
 ---
-
-*Applies to: Advanced Threat Analytics version 1.7*
-
+*Gilt für: Advanced Threat Analytics Version 1.8*
 
 
-# Troubleshooting ATA using the performance counters
-The ATA performance counters provide insight into how well each component of ATA is performing. The components in ATA process data sequentially, so that when there's a problem, it might cause partial dropped traffic somewhere along the chain of components. In order to fix the problem, you have to figure out which component is backfiring and fix the problem at the beginning of the chain. Use the data found in the performance counters to understand how each component is functioning.
-    Refer to [ATA architecture](ata-architecture.md) to understand the flow of internal ATA components.
 
-**ATA component process**:
+# Problembehandlung bei ATA mithilfe der Leistungsindikatoren
+<a id="troubleshooting-ata-using-the-performance-counters" class="xliff"></a>
+Die ATA-Leistungsindikatoren bieten Einblick in die Leistungsgrade der einzelnen ATA-Komponenten. Die Komponenten in ATA verarbeiten Daten sequenziell. Wenn also ein Problem vorliegt, kann dies dazu führen, dass an irgendeinem Punkt in der Komponentenkette ein Teil des Datenverkehrs verworfen wird. Um das Problem zu beheben, müssen Sie herausfinden, welche Komponente den Fehler bewirkt, und das Problem am Anfang der Kette beheben. Verwenden Sie Daten aus den Leistungsindikatoren, um zu verstehen, wie jede Komponente funktioniert.
+Eine Beschreibung des Datenflusses zwischen internen ATA-Komponenten finden Sie unter [ATA-Architektur](ata-architecture.md).
 
-1.  When a component reaches its maximum size, it blocks the previous component from sending more entities to it.
+**ATA-Komponentenprozess**:
 
-2.  Then, eventually the previous component will start to increase **its** own size until it blocks the component before it, from sending more entities.
+1.  Wenn eine Komponente ihre maximale Größe erreicht, wird verhindert, dass die vorgeschaltete Komponente weitere Entitäten an sie sendet.
 
-3.  This happens all the way back to the NetworkListener component which will drop traffic when it can no longer forward entities.
+2.  Dadurch steigt die Größe der **vorgeschalteten** Komponente, bis auch sie die eigene vorgeschaltete Komponente am Versand weiterer Entitäten hindert.
 
-
-## Retrieving performance monitor files for troubleshooting
-
-To retrieve the performance monitor files (BLG) from the various ATA components:
-1.  Open perfmon.
-2.  Stop the data collector set named: "Microsoft ATA Gateway " or “Microsoft ATA Center”.
-3.  Go to the data collector set folder (by default, this is "C:\Program Files\Microsoft Advanced Threat Analytics\Gateway\Logs\DataCollectorSets" or “C:\Program Files\Microsoft Advanced Threat Analytics\Center\Logs\DataCollectorSets”).
-4.  Copy the BLG file that was most recently modified.
-5.  Restart the data collector set named: "Microsoft ATA Gateway" or “Microsoft ATA Center”.
+3.  Dieser Vorgang setzt sich fort, bis die NetworkListener-Komponente erreicht ist, die vorhandenen Datenverkehr löscht, wenn keine Entitäten mehr weitergeleitet werden können.
 
 
-## ATA Gateway performance counters
+## Abrufen von Leistungsüberwachungsdateien für die Problembehandlung
+<a id="retrieving-performance-monitor-files-for-troubleshooting" class="xliff"></a>
 
-In this section, every reference to ATA Gateway refers also to the ATA Lightweight Gateway.
+Um die Leistungsüberwachungsdateien (BLG) aus den verschiedenen ATA-Komponenten abzurufen, gehen Sie wie folgt vor:
+1.  Öffnen Sie perfmon.
+2.  Beenden Sie den Datensammlersatz mit dem Namen „Microsoft ATA Gateway“ oder „Microsoft ATA Center“.
+3.  Navigieren Sie zum Ordner „Datensammlersatz“ (In der Standardeinstellung finden Sie diesen unter „C:\Programme\Microsoft Advanced Thread Analytics\Gateway\Protokolle\DataCollectorSets“ oder „C:\Programme\Microsoft Advanced Threat Analytics\Center\Protokolle\DataCollectorSets“).
+4.  Kopieren Sie die BLG-Datei, die zuletzt geändert wurde.
+5.  Starten Sie den Datensammlersatz mit dem Namen „Microsoft ATA Gateway“ oder „Microsoft ATA Center“ erneut.
 
-You can observe the real time performance status of the ATA Gateway by adding the ATA Gateway's performance counters.
-This is done by opening "Performance Monitor" and adding all counters for the ATA Gateway. The name of the performance counter object is: "Microsoft ATA Gateway".
 
-Here is the list of the main ATA Gateway counters to pay attention to:
+## Leistungsindikatoren für das ATA-Gateway
+<a id="ata-gateway-performance-counters" class="xliff"></a>
 
-|Counter|Description|Threshold|Troubleshooting|
+In diesem Abschnitt gilt jeder Verweis auf das ATA-Gateway auch für das ATA-Lightweight-Gateway.
+
+Sie können den Leistungszustand des ATA-Gateways in Echtzeit verfolgen, indem Sie die Leistungsindikatoren des ATA-Gateways hinzufügen.
+Hierzu öffnen Sie „Leistungsüberwachung“ und fügen dort die Indikatoren für das ATA-Gateway hinzu. Der Name des Leistungsindikatorobjekts lautet: „Microsoft ATA-Gateway“.
+
+Auf folgende Indikatoren für das ATA-Gateway sollte hauptsächlich geachtet werden:
+
+|Leistungsindikator|Beschreibung|Schwellenwert|Problembehandlung|
 |-----------|---------------|-------------|-------------------|
-|Microsoft ATA Gateway\NetworkListener PEF Parsed Messages\Sec|The amount of traffic being processed by the ATA Gateway every second.|No threshold|Helps you understand the amount of traffic that is being parsed by the ATA Gateway.|
-|NetworkListener PEF Dropped Events\Sec|The amount of traffic being dropped by the ATA Gateway every second.|This number should be zero all of the time (rare short burst of drops are acceptable).|Check if there is any component that reached its maximum size and is blocking previous components all the way to the NetworkListener. Refer to the **ATA Component Process** above.<br /><br />Check that there is no issue with the CPU or memory.|
-|Microsoft ATA Gateway\NetworkListener ETW Dropped Events\Sec|The amount of traffic being dropped by the ATA Gateway every second.|This number should be zero all of the time (rare short burst of drops are acceptable).|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener. Refer to the **ATA Component Process** above.<br /><br />Check that there is no issue with the CPU or memory.|
-|Microsoft ATA Gateway\NetworkActivityTranslator Message Data # Block Size|The amount of traffic queued for translation to Network Activities (NAs).|Should be less than the maximum-1 (default maximum: 100,000)|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener. Refer to the **ATA Component Process** above.<br /><br />Check that there is no issue with the CPU or memory.|
-|Microsoft ATA Gateway\EntityResolver Activity Block Size|The amount of Network Activities (NAs) queued for resolution.|Should be less than the maximum-1 (default maximum: 10,000)|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener. Refer to the **ATA Component Process** above.<br /><br />Check that there is no issue with the CPU or memory.|
-|Microsoft ATA Gateway\EntitySender Entity Batch Block Size|The amount of Network Activities (NAs) queued to be sent to the ATA Center.|Should be less than the maximum-1 (default maximum: 1,000,000)|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener. Refer to the **ATA Component Process** above.<br /><br />Check that there is no issue with the CPU or memory.|
-|Microsoft ATA Gateway\EntitySender Batch Send Time|The amount of time it took to send the last batch.|Should be less than 1000 milliseconds most of the time|Check if there are any networking issues between the ATA Gateway and the ATA Center.|
+|Microsoft ATA Gateway\NetworkListener PEF Parser Messages\Sec|Die Menge des Datenverkehrs, der pro Sekunde vom ATA-Gateway verarbeitet wird.|Kein Schwellenwert|Hilft bei der Einschätzung des vom ATA-Gateway analysierten Datenverkehrs.|
+|NetworkListener PEF Dropped Events\Sec|Die Menge des Datenverkehrs, der pro Sekunde vom ATA-Gateway gelöscht wird.|Diese Zahl muss immer 0 sein (seltene kurze Löschvorgänge sind akzeptabel).|Überprüfen Sie, ob Komponenten vorhanden sind, die ihre Maximalgröße erreicht haben und daher vorgeschaltete Komponenten bis hin zum NetworkListener blockieren. Informationen hierzu finden Sie oben im Abschnitt **ATA-Komponentenprozess**.<br /><br />Überprüfen Sie, ob Probleme bei CPU oder Arbeitsspeicher vorliegen.|
+|Microsoft ATA Gateway\NetworkListener ETW Dropped Events\Sec|Die Menge des Datenverkehrs, der pro Sekunde vom ATA-Gateway gelöscht wird.|Diese Zahl muss immer 0 sein (seltene kurze Löschvorgänge sind akzeptabel).|Überprüfen Sie, ob Komponenten vorhanden sind, die ihre Maximalgröße erreicht haben und daher vorgeschaltete Komponenten bis hin zum NetworkListener blockieren. Informationen hierzu finden Sie oben im Abschnitt **ATA-Komponentenprozess**.<br /><br />Überprüfen Sie, ob Probleme bei CPU oder Arbeitsspeicher vorliegen.|
+|Microsoft ATA Gateway\NetworkActivityTranslator Message Data # Block Size|Die Menge des Datenverkehrs in der Warteschlange für die Übersetzung in Netzwerkaktivitäten (NAs).|Sollte niedriger sein als der Maximalwert - 1 (Standardmaximalwert: 100.000)|Überprüfen Sie, ob Komponenten vorhanden sind, die ihre Maximalgröße erreicht haben und daher vorgeschaltete Komponenten bis hin zum NetworkListener blockieren. Informationen hierzu finden Sie oben im Abschnitt **ATA-Komponentenprozess**.<br /><br />Überprüfen Sie, ob Probleme bei CPU oder Arbeitsspeicher vorliegen.|
+|Microsoft ATA Gateway\EntityResolver Activity Block Size|Die Menge der Netzwerkaktivitäten (NAs) in der Warteschlange für die Auflösung.|Sollte niedriger sein als der Maximalwert - 1 (Standardmaximalwert: 10.000)|Überprüfen Sie, ob Komponenten vorhanden sind, die ihre Maximalgröße erreicht haben und daher vorgeschaltete Komponenten bis hin zum NetworkListener blockieren. Informationen hierzu finden Sie oben im Abschnitt **ATA-Komponentenprozess**.<br /><br />Überprüfen Sie, ob Probleme bei CPU oder Arbeitsspeicher vorliegen.|
+|Microsoft ATA Gateway\EntitySender Entity Batch Block Size|Die Menge der Netzwerkaktivitäten (NAs) in der Warteschlange für den Versand an ATA Center.|Sollte niedriger sein als der Maximalwert - 1 (Standardmaximalwert: 1.000.000)|Überprüfen Sie, ob Komponenten vorhanden sind, die ihre Maximalgröße erreicht haben und daher vorgeschaltete Komponenten bis hin zum NetworkListener blockieren. Informationen hierzu finden Sie oben im Abschnitt **ATA-Komponentenprozess**.<br /><br />Überprüfen Sie, ob Probleme bei CPU oder Arbeitsspeicher vorliegen.|
+|Microsoft ATA Gateway\EntitySender Batch Send Time|Die Zeitdauer, die zum Senden des letzten Batches benötigt wurde.|Sollte in den meisten Fällen weniger als 1000 Millisekunden betragen.|Überprüfen Sie, ob Netzwerkprobleme zwischen dem ATA-Gateway und ATA Center vorliegen.|
 
 > [!NOTE]
-> -   Timed counters are in milliseconds.
-> -   It is sometimes more convenient to monitor the full list of the counters by using the "Report" graph type (example: real time monitoring of all the counters)
+> -   Die Zeitindikatoren werden in Millisekunden angegeben.
+> -   Es ist manchmal hilfreich, die vollständige Liste der Leistungsindikatoren in Form des Diagrammtyps „Bericht“ zu überwachen. (Beispiel: Echtzeitüberwachung aller Leistungsindikatoren)
 
-## ATA Lightweight Gateway performance counters
-The performance counters can be used for quota management in the Lightweight Gateway, to make sure that ATA doesn't drain too many resources from the domain controllers on which it is installed.
-To measure the resource limitations that ATA enforces on the Lightweight Gateway, add these counters.
+## Leistungsindikatoren für das ATA-Lightweight-Gateway
+<a id="ata-lightweight-gateway-performance-counters" class="xliff"></a>
+Die Leistungsindikatoren können zur Kontingentverwaltung auf dem Lightweight-Gateway verwendet werden, um sicherzustellen, dass ATA nicht zu viele Ressourcen von den Domänencontrollern bezieht, auf denen es installiert ist.
+Fügen Sie diese Leistungsindikatoren hinzu, um die Ressourcenbeschränkungen zu messen, die ATA auf dem Lightweight-Gateway erzwingt.
 
-This is done by opening "Performance Monitor" and adding all counters for the ATA Lightweight Gateway. The name of the performance counter objects are: "Microsoft ATA Gateway" and "Microsoft ATA Gateway Updater".
+Hierzu öffnen Sie „Leistungsüberwachung“ und fügen alle Indikatoren für das ATA-Lightweight-Gateway hinzu. Der Name der Leistungsindikatorobjekte lautet: „Microsoft ATA Gateway“ und „Microsoft ATA Gateway Updater“.
 
 
-|Counter|Description|Threshold|Troubleshooting|
+|Leistungsindikator|Beschreibung|Schwellenwert|Problembehandlung|
 |-----------|---------------|-------------|-------------------|
-|Microsoft ATA Gateway Updater\GatewayUpdaterResourceManager CPU Time Max %|The maximum amount of CPU time (in percentage) that the Lightweight Gateway process can consume. |No threshold. | This is the limitation that protects the domain controller resources from being used up by the ATA Lightweight Gateway. If you see that the process reaches the maximum limit often over a period of time (the process reaches the limit and then starts to drop traffic) it means that you need to add more resources to the server running the domain controller..|
-|Microsoft ATA Gateway Updater\GatewayUpdaterResourceManager Commit Memory Max Size|The maximum amount of committed memory (in bytes) that the Lightweight Gateway process can consume.|No threshold. | This is the limitation that protects the domain controller resources from being used up by the ATA Lightweight Gateway. If you see that the process reaches the maximum limit often over a period of time (the process reaches the limit and then starts to drop traffic) it means that you need to add more resources to the server running the domain controller.| 
-|Microsoft ATA Gateway Updater\GatewayUpdaterResourceManager Working Set Limit Size|The Maximum amount of physical memory (in bytes) that the Lightweight Gateway process can consume.|No threshold. | This is the limitation that protects the domain controller resources from being used up by the ATA Lightweight Gateway. If you see that the process reaches the maximum limit often over a period of time (the process reaches the limit and then starts to drop traffic) it means that you need to add more resources to the server running the domain controller.|
+|Microsoft ATA Gateway Updater\GatewayUpdaterResourceManager CPU Time Max %|Die maximale CPU-Zeit (in Prozent), die der Lightweight-Gatewayprozess nutzen kann. |Kein Schwellenwert. | Dies ist die Einschränkung, die verhindert, dass das ATA-Lightweight-Gateway die Ressourcen des Domänencontrollers vollständig erschöpft. Wenn Sie bemerken, dass der Prozess innerhalb eines Zeitraums häufig den maximalen Grenzwert erreicht (der Prozess erreicht das Limit und anschließend wird Datenverkehr gelöscht), müssen Sie dem Server mit dem Domänencontroller mehr Ressourcen hinzufügen.|
+|Microsoft ATA Gateway Updater\GatewayUpdaterResourceManager Commit Memory Max Size|Die maximale Menge von zugewiesenem Arbeitsspeicher (in Bytes), die der Lightweight-Gatewayprozess nutzen kann.|Kein Schwellenwert. | Dies ist die Einschränkung, die verhindert, dass das ATA-Lightweight-Gateway die Ressourcen des Domänencontrollers vollständig erschöpft. Wenn Sie bemerken, dass der Prozess innerhalb eines Zeitraums häufig den maximalen Grenzwert erreicht (der Prozess erreicht das Limit und anschließend wird Datenverkehr gelöscht), müssen Sie dem Server mit dem Domänencontroller mehr Ressourcen hinzufügen.| 
+|Microsoft ATA Gateway Updater\GatewayUpdaterResourceManager Working Set Limit Size|Die maximale Menge von physischem Speicher (in Bytes), die der Lightweight-Gatewayprozess nutzen kann.|Kein Schwellenwert. | Dies ist die Einschränkung, die verhindert, dass das ATA-Lightweight-Gateway die Ressourcen des Domänencontrollers vollständig erschöpft. Wenn Sie bemerken, dass der Prozess innerhalb eines Zeitraums häufig den maximalen Grenzwert erreicht (der Prozess erreicht das Limit und anschließend wird Datenverkehr gelöscht), müssen Sie dem Server mit dem Domänencontroller mehr Ressourcen hinzufügen.|
 
 
 
-In order to see your actual consumption, refer to the following counters:
+Verwenden Sie die folgenden Leistungsindikatoren, um Ihren tatsächlichen Verbrauch zu erfahren:
 
 
 
-|Counter|Description|Threshold|Troubleshooting|
+|Leistungsindikator|Beschreibung|Schwellenwert|Problembehandlung|
 |-----------|---------------|-------------|-------------------|
-|Process(Microsoft.Tri.Gateway)\%Processor Time|The amount of CPU time (in percentage) that the Lightweight Gateway process is actually consuming. |No threshold. | Compare the results of this counter to the limit found in GatewayUpdaterResourceManager CPU Time Max %. If you see that the process reaches the maximum limit often over a period of time (the process reaches the limit and then starts to drop traffic) it means that you need to dedicate more resources to the Lightweight Gateway.|
-|Process(Microsoft.Tri.Gateway)\Private Bytes|The amount of committed memory (in bytes) that the Lightweight Gateway process is actually consuming.|No threshold. | Compare the results of this counter to the limit found in GatewayUpdaterResourceManager Commit Memory Max Size. If you see that the process reaches the maximum limit often over a period of time (the process reaches the limit and then starts to drop traffic) it means that you need to dedicate more resources to the Lightweight Gateway.| 
-|Process(Microsoft.Tri.Gateway)\Working Set|The amount of physical memory (in bytes) that the Lightweight Gateway process is actually consuming.|No threshold. |Compare the results of this counter to the limit found in GatewayUpdaterResourceManager Working Set Limit Size. If you see that the process reaches the maximum limit often over a period of time (the process reaches the limit and then starts to drop traffic) it means that you need to dedicate more resources to the Lightweight Gateway.|
+|Process(Microsoft.Tri.Gateway)\%Processor Time|Die CPU-Zeit (in Prozent), die der Lightweight-Gatewayprozess zurzeit verwendet. |Kein Schwellenwert. | Vergleichen Sie die Ergebnisse dieses Leistungsindikators mit dem Grenzwert von GatewayUpdaterResourceManager CPU Time Max %. Wenn Sie bemerken, dass der Prozess innerhalb eines Zeitraums häufig den maximalen Grenzwert erreicht (der Prozess erreicht das Limit und anschließend wird Datenverkehr gelöscht), müssen Sie für das Lightweight-Gateway mehr Ressourcen bereitstellen.|
+|Process(Microsoft.Tri.Gateway)\Private Bytes|Die Menge von zugewiesenem Arbeitsspeicher (in Bytes), die der Lightweight-Gatewayprozess zurzeit verwendet.|Kein Schwellenwert. | Vergleichen Sie die Ergebnisse dieses Leistungsindikators mit dem Grenzwert von GatewayUpdaterResourceManager Commit Memory Max Size. Wenn Sie bemerken, dass der Prozess innerhalb eines Zeitraums häufig den maximalen Grenzwert erreicht (der Prozess erreicht das Limit und anschließend wird Datenverkehr gelöscht), müssen Sie für das Lightweight-Gateway mehr Ressourcen bereitstellen.| 
+|Process(Microsoft.Tri.Gateway)\Working Set|Die Menge von physischem Speicher (in Bytes), die der Lightweight-Gatewayprozess zurzeit verwendet.|Kein Schwellenwert. |Vergleichen Sie die Ergebnisse dieses Leistungsindikators mit dem Grenzwert von GatewayUpdaterResourceManager Working Set Limit Size. Wenn Sie bemerken, dass der Prozess innerhalb eines Zeitraums häufig den maximalen Grenzwert erreicht (der Prozess erreicht das Limit und anschließend wird Datenverkehr gelöscht), müssen Sie für das Lightweight-Gateway mehr Ressourcen bereitstellen.|
 
-## ATA Center performance counters
-You can observe the real-time performance status of the ATA Center by adding the ATA Center's performance counters.
+## Leistungsindikatoren für ATA Center
+<a id="ata-center-performance-counters" class="xliff"></a>
+Sie können den Leistungszustand von ATA Center in Echtzeit verfolgen, indem Sie die Leistungsindikatoren von ATA Center hinzufügen.
 
-This is done by opening "Performance Monitor" and adding all counters for the ATA Center. The name of the performance counter object is: "Microsoft ATA Center".
+Hierzu öffnen Sie „Leistungsüberwachung“ und fügen dort die Indikatoren für ATA Center hinzu. Der Name des Leistungsindikatorobjekts lautet: „Microsoft ATA Center“.
 
-Here is the list of the main ATA Center counters to pay attention to:
+Auf folgende Indikatoren für ATA Center sollte hauptsächlich geachtet werden:
 
-|Counter|Description|Threshold|Troubleshooting|
+|Leistungsindikator|Beschreibung|Schwellenwert|Problembehandlung|
 |-----------|---------------|-------------|-------------------|
-|Microsoft ATA Center\EntityReceiver Entity Batch Block Size|The number of entity batches queued by the ATA Center.|Should be less than the maximum-1 (default maximum: 10,000)|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener.  Refer to the **ATA Component Process** above.<br /><br />Check that there is no issue with the CPU or memory.|
-|Microsoft ATA Center\NetworkActivityProcessor Network Activity Block Size|The number of Network Activities (NAs) queued for processing.|Should be less than the maximum-1 (default maximum: 50,000)|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener. Refer to the **ATA Component Process** above.<br /><br />Check that there is no issue with the CPU or memory.|
-|Microsoft ATA Center\EntityProfiler Network Activity Block Size|The number of Network Activities (NAs) queued for profiling.|Should be less than the maximum-1 (default maximum: 10,000)|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener. Refer to the **ATA Component Process** above.<br /><br />Check that there is no issue with the CPU or memory.|
-|Microsoft ATA Center\Database &#42; Block Size|The number of Network Activities, of a specific type, queued to be written to the database.|Should be less than the maximum-1 (default maximum: 50,000)|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener. Refer to the **ATA Component Process** above.<br /><br />Check that there is no issue with the CPU or memory.|
+|Microsoft ATA Center\EntityReceiver Entity Batch Block Size|Die Anzahl der Entitätenbatches in der Warteschlange von ATA Center.|Sollte niedriger sein als der Maximalwert - 1 (Standardmaximalwert: 10.000)|Überprüfen Sie, ob Komponenten vorhanden sind, die ihre Maximalgröße erreicht haben und daher vorgeschaltete Komponenten bis hin zum NetworkListener blockieren.  Informationen hierzu finden Sie oben im Abschnitt **ATA-Komponentenprozess**.<br /><br />Überprüfen Sie, ob Probleme bei CPU oder Arbeitsspeicher vorliegen.|
+|Microsoft ATA Center\NetworkActivityProcessor Network Activity Block Size|Die Anzahl der Netzwerkaktivitäten (NAs) in der Warteschlange für die Verarbeitung.|Sollte niedriger sein als der Maximalwert - 1 (Standardmaximalwert: 50.000)|Überprüfen Sie, ob Komponenten vorhanden sind, die ihre Maximalgröße erreicht haben und daher vorgeschaltete Komponenten bis hin zum NetworkListener blockieren. Informationen hierzu finden Sie oben im Abschnitt **ATA-Komponentenprozess**.<br /><br />Überprüfen Sie, ob Probleme bei CPU oder Arbeitsspeicher vorliegen.|
+|Microsoft ATA Center\EntityProfiler Network Activity Block Size|Die Anzahl der Netzwerkaktivitäten (NAs) in der Warteschlange für die Profilerstellung.|Sollte niedriger sein als der Maximalwert - 1 (Standardmaximalwert: 10.000)|Überprüfen Sie, ob Komponenten vorhanden sind, die ihre Maximalgröße erreicht haben und daher vorgeschaltete Komponenten bis hin zum NetworkListener blockieren. Informationen hierzu finden Sie oben im Abschnitt **ATA-Komponentenprozess**.<br /><br />Überprüfen Sie, ob Probleme bei CPU oder Arbeitsspeicher vorliegen.|
+|Microsoft ATA Center\Database &#42; Block Size|Die Anzahl der Netzwerkaktivitäten eines bestimmten Typs in der Warteschlange für das Schreiben in die Datenbank.|Sollte niedriger sein als der Maximalwert - 1 (Standardmaximalwert: 50.000)|Überprüfen Sie, ob Komponenten vorhanden sind, die ihre Maximalgröße erreicht haben und daher vorgeschaltete Komponenten bis hin zum NetworkListener blockieren. Informationen hierzu finden Sie oben im Abschnitt **ATA-Komponentenprozess**.<br /><br />Überprüfen Sie, ob Probleme bei CPU oder Arbeitsspeicher vorliegen.|
 
 
 > [!NOTE]
-> -   Timed counters are in milliseconds
-> -   It is sometimes more convenient to monitor the full list of the counters using the graph type for Report (example: real time monitoring of all the counters).
+> -   Die Zeitindikatoren werden in Millisekunden angegeben
+> -   Es ist manchmal hilfreich, die vollständige Liste der Leistungsindikatoren in Form des Diagrammtyps „Bericht“ zu überwachen. (Beispiel: Echtzeitüberwachung aller Leistungsindikatoren)
 
-## Operating system counters
-The following is the list of main operating system counters to pay attention to:
+## Leistungsindikatoren des Betriebssystems
+<a id="operating-system-counters" class="xliff"></a>
+In der folgenden Liste sind die Leistungsindikatoren des Betriebssystems aufgeführt, auf die hauptsächlich geachtet werden sollte:
 
-|Counter|Description|Threshold|Troubleshooting|
+|Leistungsindikator|Beschreibung|Schwellenwert|Problembehandlung|
 |-----------|---------------|-------------|-------------------|
-|Processor(_Total)\% Processor Time|The percentage of elapsed time that the processor spends to execute a non-Idle thread.|Less than 80% on average|Check if there is a specific process that is taking a lot more processor time than it should.<br /><br />Add more processors.<br /><br />Reduce the amount of traffic per server.<br /><br />The "Processor(_Total)\% Processor Time" counter may be less accurate on virtual servers, in which case the more accurate way to measure the lack of processor power is through the "System\Processor Queue Length" counter.|
-|System\Context Switches\sec|The combined rate at which all processors are switched from one thread to another.|Less than 5000&#42;cores (physical cores)|Check if there is a specific process that is taking a lot more processor time than it should.<br /><br />Add more processors.<br /><br />Reduce the amount of traffic per server.<br /><br />The "Processor(_Total)\% Processor Time" counter may be less accurate on virtual servers, in which case the more accurate way to measure the lack of processor power is through the "System\Processor Queue Length" counter.|
-|System\Processor Queue Length|The number of threads that are ready to execute and are waiting to be scheduled.|Less than 5&#42;cores (physical cores)|Check if there is a specific process that is taking a lot more processor time than it should.<br /><br />Add more processors.<br /><br />Reduce the amount of traffic per server.<br /><br />The "Processor(_Total)\% Processor Time" counter may be less accurate on virtual servers, in which case the more accurate way to measure the lack of processor power is through the "System\Processor Queue Length" counter.|
-|Memory\Available MBytes|The amount of physical memory (RAM) available for allocation.|Should be more then 512|Check if there is a specific process that is taking a lot more physical memory than it should.<br /><br />Increase the amount of physical memory.<br /><br />Reduce the amount of traffic per server.|
-|LogicalDisk(&#42;)\Avg. Disk sec\Read|The average latency for reading data from the disk (you should choose the database drive as the instance).|Should be less than 10 milliseconds|Check if there is a specific process that is utilizing the database drive more than it should.<br /><br />Consult with your storage team/vendor if this drive can deliver the current workload while having less than 10ms of latency. The current workload can be determined by using the disk utilization counters.|
-|LogicalDisk(&#42;)\Avg. Disk sec\Write|The average latency for writing data to the disk (you should choose the database drive as the instance).|Should be less than 10 milliseconds|Check if there is a specific process that is utilizing the database drive more than it should.<br /><br />Consult with your storage team\vendor if this drive can deliver the current workload while having less than 10ms of latency. The current workload can be determined by using the disk utilization counters.|
-|\LogicalDisk(&#42;)\Disk Reads\sec|The rate of performing read operations to the disk.|No threshold|Disk utilization counters can add insight when troubleshooting storage latency.|
-|\LogicalDisk(&#42;)\Disk Read Bytes\sec|The number of bytes per second that are being read from the disk.|No threshold|Disk utilization counters can add insight when troubleshooting storage latency.|
-|\LogicalDisk&#42;\Disk Writes\sec|The rate of performing write operations to the disk.|No threshold|Disk utilization counters (can add insights when troubleshooting the storage latency)|
-|\LogicalDisk(&#42;)\Disk Write Bytes\sec|The number of bytes per second that are being written to the disk.|No threshold|Disk utilization counters can add insight when troubleshooting storage latency.|
+|Prozessor(_Total)\%Prozessorzeit (%)|Die prozentuale Angabe der vergangenen Prozessorzeit, die zum Ausführen eines Threads benötigt wird, der sich nicht im Leerlauf befindet.|Weniger als 80 % im Durchschnitt|Überprüfen Sie, ob ein bestimmter Prozess wesentlich mehr Prozessorzeit verbraucht, als sinnvoll ist.<br /><br />Fügen Sie weitere Prozessoren hinzu.<br /><br />Reduzieren Sie den Umfang des Datenverkehrs pro Server.<br /><br />Der Indikator „Prozessor(_Total)\%Prozessorzeit (%)“ ist möglicherweise auf virtuellen Servern weniger genau. In diesem Fall ist die genauere Möglichkeit zum Messen einer verringerten Prozessorleistung der Indikator „System\Prozessor-Warteschlangenlänge“.|
+|System\Context Switches\sec|Die kombinierte Häufigkeit, mit der die Prozessoren von einem Thread zu einem anderen umgeschaltet werden.|Weniger als 5.000 &#42; Kerne (physische Kerne)|Überprüfen Sie, ob ein bestimmter Prozess wesentlich mehr Prozessorzeit verbraucht, als sinnvoll ist.<br /><br />Fügen Sie weitere Prozessoren hinzu.<br /><br />Reduzieren Sie den Umfang des Datenverkehrs pro Server.<br /><br />Der Indikator „Prozessor(_Total)\%Prozessorzeit (%)“ ist möglicherweise auf virtuellen Servern weniger genau. In diesem Fall ist die genauere Möglichkeit zum Messen einer verringerten Prozessorleistung der Indikator „System\Prozessor-Warteschlangenlänge“.|
+|System\Prozessor-Warteschlangenlänge|Die Anzahl der Threads, die zur Ausführung bereit sind und auf Zeitplanung warten.|Weniger als 5 &#42; Kerne (physische Kerne)|Überprüfen Sie, ob ein bestimmter Prozess wesentlich mehr Prozessorzeit verbraucht, als sinnvoll ist.<br /><br />Fügen Sie weitere Prozessoren hinzu.<br /><br />Reduzieren Sie den Umfang des Datenverkehrs pro Server.<br /><br />Der Indikator „Prozessor(_Total)\%Prozessorzeit (%)“ ist möglicherweise auf virtuellen Servern weniger genau. In diesem Fall ist die genauere Möglichkeit zum Messen einer verringerten Prozessorleistung der Indikator „System\Prozessor-Warteschlangenlänge“.|
+|Memory\Available MBytes|Die Menge des für die Zuteilung zur Verfügung stehenden physischen Speichers (RAM).|Sollte mehr als 512 betragen|Überprüfen Sie, ob ein bestimmter Prozess wesentlich mehr physischen Speicher verbraucht, als sinnvoll ist.<br /><br />Erhöhen Sie die Menge des physischen Speichers.<br /><br />Reduzieren Sie den Umfang des Datenverkehrs pro Server.|
+|LogicalDisk(&#42;)\Avg. Disk sec\Read|Die durchschnittlich auftretende Latenz beim Lesen von Daten vom Datenträger (als Instanz sollte das Datenbanklaufwerk ausgewählt werden).|Sollte weniger als 10 Millisekunden betragen|Überprüfen Sie, ob ein bestimmter Prozess das Datenbanklaufwerk mehr als sinnvoll verwendet.<br /><br />Informieren Sie sich bei dem Team/Anbieter, von dem der Speicher bereitstellt wird, ob dieses Laufwerk die aktuelle Workload mit weniger als 10 ms Latenz bereitstellen kann. Die aktuelle Workload kann mithilfe der Leistungsindikatoren für die Laufwerkauslastung ermittelt werden.|
+|LogicalDisk(&#42;)\Avg. Disk sec\Write|Die durchschnittlich auftretende Latenz beim Schreiben von Daten auf den Datenträger (als Instanz sollte das Datenbanklaufwerk ausgewählt werden).|Sollte weniger als 10 Millisekunden betragen|Überprüfen Sie, ob ein bestimmter Prozess das Datenbanklaufwerk mehr als sinnvoll verwendet.<br /><br />Informieren Sie sich beim Team/Anbieter, von dem der Speicher bereitstellt wird, ob dieses Laufwerk die aktuelle Workload mit weniger als 10 ms Latenz bereitstellen kann. Die aktuelle Workload kann mithilfe der Leistungsindikatoren für die Laufwerkauslastung ermittelt werden.|
+|\LogicalDisk(&#42;)\Disk Reads\sec|Die Übertragungsrate für Lesevorgänge auf dem Datenträger.|Kein Schwellenwert|Leistungsindikatoren für die Laufwerkauslastung können nützliche Hinweise bei der Fehlerbehandlung der Speicherlatenz geben.|
+|\LogicalDisk(&#42;)\Disk Read Bytes\sec|Die Anzahl der Bytes pro Sekunde, die vom Datenträger gelesen werden.|Kein Schwellenwert|Leistungsindikatoren für die Laufwerkauslastung können nützliche Hinweise bei der Fehlerbehandlung der Speicherlatenz geben.|
+|\LogicalDisk&#42;\Disk Writes\sec|Die Übertragungsrate für Schreibvorgänge auf den Datenträger.|Kein Schwellenwert|Leistungsindikatoren für die Laufwerkauslastung (können nützliche Hinweise bei der Fehlerbehandlung der Speicherlatenz geben).|
+|\LogicalDisk(&#42;)\Disk Write Bytes\sec|Die Anzahl der Bytes pro Sekunde, die auf den Datenträger geschrieben werden.|Kein Schwellenwert|Leistungsindikatoren für die Laufwerkauslastung können nützliche Hinweise bei der Fehlerbehandlung der Speicherlatenz geben.|
 
-## See Also
-- [ATA prerequisites](ata-prerequisites.md)
-- [ATA capacity planning](ata-capacity-planning.md)
-- [Configure event collection](configure-event-collection.md)
-- [Configuring Windows event forwarding](configure-event-collection.md#configuring-windows-event-forwarding)
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+## Weitere Informationen
+<a id="see-also" class="xliff"></a>
+- [Voraussetzungen für ATA](ata-prerequisites.md)
+- [ATA-Kapazitätsplanung](ata-capacity-planning.md)
+- [Konfigurieren der Ereignissammlung](configure-event-collection.md)
+- [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-collection.md#configuring-windows-event-forwarding)
+- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
