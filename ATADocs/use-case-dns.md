@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1d186a96-ef70-4787-aa64-c03d1db94ce0
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 436b96f679836060cfaf40f6be3b92cf96dc0e04
-ms.sourcegitcommit: 4118dd4bd98994ec8a7ea170b09aa301a4be2c8a
+ms.openlocfilehash: f85d52420c55e2f1119ad14eb1a6c957fbc50be6
+ms.sourcegitcommit: be6bdfa24a9b25a3375a4768d513b93900b3a498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2017
+ms.lasthandoff: 07/11/2017
 ---
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
@@ -55,18 +55,18 @@ ATA zeigt den Namen des Quellcomputers sowie zusätzliche Details über die eige
 Um Reconnaissance mithilfe von DNS zu untersuchen, müssen Sie zuerst den Grund der Abfragen bestimmen. Diese können mit einer der folgenden Kategorien identifiziert werden: 
 -   Wahr positiv: Es gibt einen Angreifer oder böswillige Schadsoftware auf Ihrem Netzwerk. Dies kann ein Angreifer sein, der eine Sicherheitsverletzung des Netzwerkperimeters ausgelöst hat, oder eine Bedrohung von Innen.
 -   Unbedenklich wahr positiv: Dies können Warnungen sein, die durch Prüfen von Stiften, Team Rot-Aktivität, Sicherheitsscanner, eine Firewall der nächsten Generation oder IT-Administratoren, die sanktionierte Aktivitäten ausgeführt haben, ausgelöst wurden.
--   Falsch positiv: Sie erhalten womöglich Warnungen, die aufgrund einer Fehlkonfiguration aufgetreten sind, z.B: wenn Port 53 zwischen dem ATA-Gateway und Ihrem DNS-Server blockiert ist (oder ein anderes Netzwerkproblem).
+-   Falsch positiv: Sie erhalten möglicherweise Warnungen, die aufgrund einer Fehlkonfiguration auftreten, z.B. wenn UDP-Port 53 zwischen dem ATA-Gateway und Ihrem DNS-Server blockiert ist (oder ein anderes Netzwerkproblem vorliegt).
 
-Folgendes Diagramm hilft Ihnen dabei, zu bestimmen, welche Schritte sie durchführen müssen:
+Folgendes Diagramm hilft Ihnen dabei, zu bestimmen, welche Schritte Sie durchführen müssen:
 
 ![Auflösen der DNS-Reconnaissance mit ATA](./media/dns-recon-diagram.png)
  
 1.  Der erste Schritt ist, den Computer zu identifizieren, von dem die Warnung stammt, so wie unten dargestellt:
  
-    ![Anzeigen der verdächtigen DNS-Reconnaissance-Aktivität in ATA](./media/dns-recon-2.png)
+    ![Anzeigen der verdächtigen DNS-Reconnaissance-Aktivität in ATA](./media/dns-recon.png)
 2.  Identifizieren Sie den Computer. Ist der Computer eine Arbeitsstation, ein Server, eine Administratorarbeitsstation, eine Station zum Prüfen von Stiften usw.?
 3.  Wenn es sich um einen DNS-Server handelt, der legitime Rechte zum Anfordern einer zweiten Kopie der Zone hat, dann ist dies ein falsch-positiver-Fall. Wenn Sie einen falsch-positiven-Fall haben, verwenden Sie die Option **Ausschließen**, damit Sie diese bestimmte Warnung für diesen Computer nicht noch einmal erhalten.
-4. Stellen Sie sicher, dass Port 53 zwischen dem ATA-Gateway und Ihrem DNS-Server geöffnet ist.
+4. Stellen Sie sicher, dass UDP-Port 53 zwischen dem ATA-Gateway und Ihrem DNS-Server geöffnet ist.
 4.  Wenn der Computer für administrative Arbeit oder zur Stifteprüfung verwendet wird, ist es unbedenklicher wahr-positiv-Fall, und der betroffene Computer kann auch als Ausnahme betrachtet werden.
 5.  Wenn er nicht für die Stifteprüfung verwendet wird, untersuchen Sie, ob der Computer in einem Sicherheitsscanner oder einer Firewall der nächsten Generation ausgeführt wird, was zu DNS-Anforderungen vom Typ AXFR führen kann.
 6.  Wenn schließlich keine diese Kriterien erfüllt werden, besteht die Möglichkeit, dass der Computer kompromittiert ist und vollständig untersucht werden muss. 

@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 07/5/2017
+ms.date: 07/9/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: e5a9718c-b22e-41f7-a614-f00fc4997682
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1042f464f424d2805542a8145d2e09d592fe8a51
-ms.sourcegitcommit: 53b56220fa761671442da273364bdb3d21269c9e
+ms.openlocfilehash: ff61d12eefaf6fb0a6b3d92568ef8c25c9d4c49b
+ms.sourcegitcommit: 3177d5894413fbd363b9aca8130f3f7a369223b8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2017
+ms.lasthandoff: 07/10/2017
 ---
 # Aktualisieren von ATA auf Version 1.8
 <a id="updating-ata-to-version-18" class="xliff"></a>
@@ -58,9 +58,8 @@ In der Migrationsversion kann die Datei nur für die Aktualisierung von ATA 1.7 
     -  Wenn Sie die automatischen Updates in Version 1.7 nicht aktiviert haben, werden Sie aufgefordert, ATA für die Verwendung von Microsoft Update für ATA festzulegen, um auf dem neuesten Stand zu bleiben.  Wählen Sie auf der Microsoft Update-Seite **Microsoft Update für die Suche nach Updates verwenden (empfohlen)** aus.
     ![ATA-Aktualisierung](media/ata_ms_update.png)
      
-     Damit ändern Sie die Windows-Einstellungen so, dass Updates für andere Microsoft-Produkte (einschließlich ATA) möglich sind, wie hier zu sehen. 
-    ![Automatisches Windows-Update](media/ata_installupdatesautomatically.png)
-
+     Dadurch werden die Windows-Einstellungen angepasst und Updates für ATA aktiviert. 
+    
     -  Wählen Sie im Bildschirm **Datenmigration** aus, ob Sie alle Daten oder nur einen Teil davon migrieren möchten. Wenn Sie nur Teildaten migrieren möchten, funktionieren alle Erkennungen sofort, mit Ausnahme der Erkennung von ungewöhnlichem Verhalten, da es drei Wochen dauert, bis ein vollständige Profil erstellt wurde.  
     
     Für die Installation der **teilweisen** Migration der Daten wird deutlich weniger Zeit benötigt. Wenn Sie die Option **vollständige** Datenmigration auswählen, nimmt der Abschluss der Installation möglicherweise sehr viel Zeit in Anspruch. Achten Sie darauf, sich die geschätzte Dauer und den erforderlichen Speicherplatz anzuschauen. Diese sind beide auf der Seite **Datenmigration** aufgelistet. Diese Zahlen sind abhängig von der von Ihnen in vorherigen ATA-Versionen gespeicherten Menge an erfasstem Datenverkehr. Auf der Seite unten können Sie sich z.B. eine Datenmigration aus einer großen Datenbank ansehen:
