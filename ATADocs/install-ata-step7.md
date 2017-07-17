@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 07/2/2017
+ms.date: 07/9/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d261273adfa23392a9c0b8408483aa02708f1eee
-ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
+ms.openlocfilehash: 2b969089d8c4c2d861591342f7367e8cc5430b24
+ms.sourcegitcommit: 3177d5894413fbd363b9aca8130f3f7a369223b8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/10/2017
 ---
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
@@ -49,7 +49,7 @@ Führen Sie folgende Schritte durch, um dies zu konfigurieren:
 
    ![Honeytoken](media/honeytoken.png)
 
-3. Klicken Sie auf **Ausschlüsse**. Geben Sie für jeden Bedrohungstyp ein Benutzerkonto oder eine IP-Adresse ein, das/die von der Erkennung dieser Bedrohungen ausgeschlossen werden soll, und klicken Sie auf das *Pluszeichen*. Das Feld „Hinzufügen einer Entität“ (Benutzer oder Computer) kann durchsucht werden und füllt automatisch Ihr Netzwerk mit Entitäten auf.
+3. Klicken Sie auf **Ausschlüsse**. Geben Sie für jeden Bedrohungstyp ein Benutzerkonto oder eine IP-Adresse ein, das/die von der Erkennung dieser Bedrohungen ausgeschlossen werden soll, und klicken Sie auf das *Pluszeichen*. Das Feld **Entität hinzufügen** (Benutzer oder Computer) kann durchsucht werden und wird automatisch mit Entitäten in Ihrem Netzwerk gefüllt. Weitere Informationen finden Sie unter [Ausschließen von Entitäten von der Erkennung](excluding-entities-from-detections.md).
 
    ![Ausschlüsse](media/exclusions.png)
 

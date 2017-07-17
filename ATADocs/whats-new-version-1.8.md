@@ -13,14 +13,17 @@ ms.technology:
 ms.assetid: 9592d413-df0e-4cec-8e03-be1ae00ba5dc
 ms.reviewer: 
 ms.suite: ems
-ms.openlocfilehash: f2a4ed151db38497a6cec977f1090faf2eb4133e
-ms.sourcegitcommit: 53b56220fa761671442da273364bdb3d21269c9e
+ms.openlocfilehash: 6850c5e8e264a9610e377a9ab4aadca338971ee1
+ms.sourcegitcommit: be6bdfa24a9b25a3375a4768d513b93900b3a498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2017
+ms.lasthandoff: 07/11/2017
 ---
 # Neuerungen in ATA 1.8
 <a id="whats-new-in-ata-version-18" class="xliff"></a>
+
+Die neueste Updateversion von ATA kann [aus dem Download Center heruntergeladen](https://www.microsoft.com/download/details.aspx?id=55536) werden. Die Vollversion kann aus dem [Evaluation Center](http://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics) heruntergeladen werden.
+
 Die vorliegenden Anmerkungen zu dieser Version enthalten Informationen zu Updates, neuen Funktionen, Fehlerbehebungen und bekannten Problemen in dieser Version von Advanced Threat Analytics.
 
 
@@ -65,7 +68,6 @@ Die vorliegenden Anmerkungen zu dieser Version enthalten Informationen zu Update
 
 -   Die Leistung von ATA Center wurde verbessert. In ATA 1.8 kann ATA Center per als 1 Mio. Pakete in der Sekunde behandeln.
 -   Das ATA-Lightweight-Gateway kann jetzt Ereignisse lokal lesen, ohne die Ereignisweiterleitung zu konfigurieren.
--   Erhöhung der Barrierefreiheit: ATA und Microsoft bieten nun ein Produkt, das jeder nutzen kann. 
 -   Sie können jetzt E-Mails für Überwachungsbenachrichtigungen und verdächtige Aktivitäten getrennt konfigurieren.
 
 ## Sicherheitsverbesserungen
