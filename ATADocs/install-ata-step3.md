@@ -23,15 +23,13 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# Installieren von ATA – Schritt 3
-<a id="install-ata---step-3" class="xliff"></a>
+# <a name="install-ata---step-3"></a>Installieren von ATA – Schritt 3
 
 >[!div class="step-by-step"]
 [« Schritt 2](install-ata-step2.md)
 [Schritt 4 »](install-ata-step4.md)
 
-## Schritt 3: Herunterladen des ATA-Gateway-Setuppakets
-<a id="step-3-download-the-ata-gateway-setup-package" class="xliff"></a>
+## <a name="step-3-download-the-ata-gateway-setup-package"></a>Schritt 3: Herunterladen des ATA-Gateway-Setuppakets
 Nach dem Konfigurieren der Domänenverbindungseinstellungen können Sie das ATA-Gateway-Setuppaket herunterladen. Das ATA-Gateway kann auf einem dedizierten Server oder einem Domänencontroller installiert werden. Wenn Sie es auf einem Domänencontroller installieren, wird es als ATA-Lightweight-Gateway installiert. Weitere Informationen zum ATA-Lightweight-Gateway finden Sie unter [ATA-Architektur](ata-architecture.md). 
 
 Klicken Sie in der Liste mit den Schritten am Anfang der Seite auf „Gatewaysetup herunterladen“, um zu der Seite mit den Gateways zu gelangen:
@@ -57,8 +55,7 @@ Die ZIP-Datei enthält Folgendes:
 [« Schritt 2](install-ata-step2.md)
 [Schritt 4 »](install-ata-step4.md)
 
-## Weitere Informationen
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Weitere Informationen
 
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)

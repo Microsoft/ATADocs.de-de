@@ -23,14 +23,12 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# Bearbeiten der ATA Center-Konfiguration
-<a id="modifying-the-ata-center-configuration" class="xliff"></a>
+# <a name="modifying-the-ata-center-configuration"></a>Bearbeiten der ATA Center-Konfiguration
 
 
 Nach der ersten Bereitstellung sollten Änderungen an ATA Center vorsichtig vorgenommen werden. Gehen Sie wie folgt vor, wenn Sie die IP-Adresse und den Port, die URL der Konsole oder das Zertifikat ändern.
 
-## Die IP-Adresse von ATA-Center
-<a id="the-ata-center-ip-address" class="xliff"></a>
+## <a name="the-ata-center-ip-address"></a>Die IP-Adresse von ATA-Center
 
 Die ATA-Gateways speichern die IP-Adresse der ATA Center-Instanz, mit der eine Verbindung hergestellt werden soll, lokal. Sie stellen in regelmäßigen Abständen eine Verbindung mit ATA Center her und rufen Konfigurationsänderungen ab. Änderungen im Hinblick auf die Herstellung der Verbindung mit ATA Center über die ATA-Gateways werden in zwei Stufen vorgenommen.
 
@@ -43,8 +41,7 @@ Die ATA-Gateways speichern die IP-Adresse der ATA Center-Instanz, mit der eine V
 > -   Wenn die neue IP-Adresse auf dem ATA Center-Server installiert ist, können Sie sie beim Vornehmen der Änderung in der Liste der IP-Adressen auswählen. Wenn Sie die IP-Adresse jedoch aus bestimmten Gründen nicht auf dem ATA Center-Server installieren können, müssen Sie die benutzerdefinierte IP-Adresse manuell auswählen und hinzufügen. Sie können die neue IP-Adresse erst aktivieren, wenn sie auf dem Server installiert ist.
 > -   Wenn Sie nach dem Aktivieren der neuen IP-Adresse ein neues ATA-Gateway bereitstellen möchten, müssen Sie das ATA-Gateway-Setuppaket erneut herunterladen.
 
-## URL der ATA-Konsole
-<a id="the-console-url" class="xliff"></a>
+## <a name="the-console-url"></a>URL der ATA-Konsole
 
 Die URL wird in den folgenden Szenarios verwendet:
 
@@ -59,8 +56,7 @@ Die URL wird in den folgenden Szenarios verwendet:
 > [!NOTE]
 > Nach dem Ändern der URL der ATA-Konsole sollten Sie vor der Installation neuer ATA-Gateways das ATA-Gateway-Setuppaket herunterladen.
 
-## Zertifikat für ATA Center
-<a id="the-ata-center-certificate" class="xliff"></a>
+## <a name="the-ata-center-certificate"></a>Zertifikat für ATA Center
 Wenn Ihr Zertifikate bald abläuft und nach dem Installieren des neuen Zertifikats im lokalen Computerspeicher auf dem ATA Center-Server erneuert oder ersetzt werden muss, können Sie das Zertifikat in einem zweistufigen Vorgang ersetzen:
 
 -   Erste Stufe: Aktualisieren Sie das Zertifikat, das vom ATA Center-Dienst verwendet werden soll. Zu diesem Zeitpunkt ist der ATA Center-Dienst noch an das ursprüngliche Zertifikat gebunden. Beim Synchronisieren der Konfiguration der ATA-Gateways sind zwei mögliche Zertifikate vorhanden, die für die gegenseitige Authentifizierung gültig sind. Solange ein ATA-Gateway eine Verbindung über das ursprüngliche Zertifikat herstellen kann, wird das neue Zertifikat nicht verwendet.
@@ -73,8 +69,7 @@ Wenn Ihr Zertifikate bald abläuft und nach dem Installieren des neuen Zertifika
 > -   Das Zertifikat wird auch für die ATA-Konsole verwendet, deshalb sollte es der Adresse der ATA-Konsole entsprechen, um Browserwarnungen zu vermeiden.
 > -   Wenn Sie nach dem Aktivieren des neuen Zertifikats ein neues ATA-Gateway bereitstellen möchten, müssen Sie das ATA-Gateway-Setuppaket erneut herunterladen.
 
-## Ändern der ATA Center-Konfiguration
-<a id="changing-the-ata-center-configuration" class="xliff"></a>
+## <a name="changing-the-ata-center-configuration"></a>Ändern der ATA Center-Konfiguration
 
 1.  Öffnen Sie die ATA-Konsole.
 
@@ -106,7 +101,6 @@ Wenn Ihr Zertifikate bald abläuft und nach dem Installieren des neuen Zertifika
 
 
 
-## Siehe auch
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Siehe auch
 - [Arbeiten mit der ATA-Konsole](working-with-ata-console.md)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://aka.ms/ata-forum)

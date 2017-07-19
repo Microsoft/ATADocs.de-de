@@ -23,16 +23,14 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# Installieren von ATA – Schritt 5
-<a id="install-ata---step-5" class="xliff"></a>
+# <a name="install-ata---step-5"></a>Installieren von ATA – Schritt 5
 
 >[!div class="step-by-step"]
 [« Schritt 4](install-ata-step4.md)
 [Schritt 6 »](install-ata-step6.md)
 
 
-## Schritt 5: Konfigurieren der Einstellungen des ATA-Gateways
-<a id="step-5-configure-the-ata-gateway-settings" class="xliff"></a>
+## <a name="step-5-configure-the-ata-gateway-settings"></a>Schritt 5: Konfigurieren der Einstellungen des ATA-Gateways
 Führen Sie nach der Installation des ATA-Gateways die folgenden Schritte aus, um die Einstellungen für das ATA-Gateway zu konfigurieren.
 
 1.  Gehen Sie in der ATA-Konsole zu **Konfiguration**, und wählen Sie unter **System** **Gateways** aus.
@@ -70,8 +68,7 @@ Führen Sie nach der Installation des ATA-Gateways die folgenden Schritte aus, u
 5. Klicken Sie auf **Speichern**.
 
 
-## Überprüfen von Installationen
-<a id="validate-installations" class="xliff"></a>
+## <a name="validate-installations"></a>Überprüfen von Installationen
 Gehen Sie wie folgt vor, um zu überprüfen, ob das ATA-Gateway erfolgreich bereitgestellt wurde:
 
 1.  Überprüfen Sie, ob der Dienst **Microsoft Advanced Threat Analytics-Gateway** ausgeführt wird. Es kann einige Minuten dauern, bis der Dienst nach dem Speichern der ATA-Gatewayeinstellungen gestartet wird.
@@ -91,8 +88,7 @@ Gehen Sie wie folgt vor, um zu überprüfen, ob das ATA-Gateway erfolgreich bere
 [« Schritt 4](install-ata-step4.md)
 [Schritt 6 »](install-ata-step6.md)
 
-## Weitere Informationen
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Weitere Informationen
 
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)

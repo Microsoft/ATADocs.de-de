@@ -23,8 +23,7 @@ ms.lasthandoff: 07/11/2017
 
 
 
-# Ausschließen von Entitäten von der Erkennung
-<a id="excluding-entities-from-detections" class="xliff"></a>
+# <a name="excluding-entities-from-detections"></a>Ausschließen von Entitäten von der Erkennung
 Dieses Thema erläutert, wie Sie Entitäten ausschließen, sodass diese keine Warnungen auslösen. So können Sie unbedenklich wahr positive Ergebnisse minimieren, aber gleichzeitig sicherstellen, dass die wahr positiven Ergebnisse erfasst werden. Um zu verhindern, dass ATA unnötige Warnungen bei Aktivitäten ausgibt, die bei bestimmten Benutzern zu Ihrem ganz normalen Geschäftsalltag gehören, können Sie bestimmte Entitäten ausschließen, sodass diese keine Warnungen auslösen.
 
 Beispiele: Ein Sicherheitsscanner führt eine DNS-Reconnaissance aus, oder ein Administrator führt remote Skripts auf dem Domänencontroller aus. Beides sind sanktionierte Aktivitäten, die im Rahmen des alltäglichen IT-Betriebs in Ihrer Organisation durchgeführt werden.
@@ -58,7 +57,6 @@ Wenn Sie die Möglichkeit haben, eine IP-Adresse oder einen Computer auszuschlie
 > Die Seiten für die Konfiguration können nur von ATA-Administratoren bearbeitet werden.
 
 
-## Siehe auch
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Siehe auch
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Ändern der ATA-Konfiguration](modifying-ata-center-configuration.md)

@@ -23,13 +23,11 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# Behandeln von Problemen mit ATA mithilfe der ATA-Datenbank
-<a id="troubleshooting-ata-using-the-ata-database" class="xliff"></a>
+# <a name="troubleshooting-ata-using-the-ata-database"></a>Behandeln von Problemen mit ATA mithilfe der ATA-Datenbank
 ATA verwendet MongoDB als Datenbank.
 Die Interaktion mit der Datenbank ist über die Standardbefehlszeile möglich oder über ein Benutzeroberflächentool, mit dem Sie erweiterte Aufgaben und Problembehandlung ausführen können.
 
-## Interagieren mit der Datenbank
-<a id="interacting-with-the-database" class="xliff"></a>
+## <a name="interacting-with-the-database"></a>Interagieren mit der Datenbank
 Die Datenbank lässt sich standardmäßig und am einfachsten über die Mongo-Shell abfragen:
 
 1.  Öffnen Sie ein Befehlszeilenfenster, und ändern Sie den Pfad in den MongoDB-Ordner „bin“. Der Standardpfad lautet **C:\Programme\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**.
@@ -51,8 +49,7 @@ Das folgende Beispiel enthält Beispielcode mit der oben aufgeführten Syntax. W
 
 `db.Ntlms_<closest date>.find({SourceAccountId: "123bdd24-b269-h6e1-9c72-7737as875351"})`
 
-## Weitere Informationen
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Weitere Informationen
 - [Voraussetzungen für ATA](ata-prerequisites.md)
 - [ATA-Kapazitätsplanung](ata-capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)

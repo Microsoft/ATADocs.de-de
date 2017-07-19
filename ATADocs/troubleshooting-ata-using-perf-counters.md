@@ -23,8 +23,7 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# Problembehandlung bei ATA mithilfe der Leistungsindikatoren
-<a id="troubleshooting-ata-using-the-performance-counters" class="xliff"></a>
+# <a name="troubleshooting-ata-using-the-performance-counters"></a>Problembehandlung bei ATA mithilfe der Leistungsindikatoren
 Die ATA-Leistungsindikatoren bieten Einblick in die Leistungsgrade der einzelnen ATA-Komponenten. Die Komponenten in ATA verarbeiten Daten sequenziell. Wenn also ein Problem vorliegt, kann dies dazu führen, dass an irgendeinem Punkt in der Komponentenkette ein Teil des Datenverkehrs verworfen wird. Um das Problem zu beheben, müssen Sie herausfinden, welche Komponente den Fehler bewirkt, und das Problem am Anfang der Kette beheben. Verwenden Sie Daten aus den Leistungsindikatoren, um zu verstehen, wie jede Komponente funktioniert.
 Eine Beschreibung des Datenflusses zwischen internen ATA-Komponenten finden Sie unter [ATA-Architektur](ata-architecture.md).
 
@@ -37,8 +36,7 @@ Eine Beschreibung des Datenflusses zwischen internen ATA-Komponenten finden Sie 
 3.  Dieser Vorgang setzt sich fort, bis die NetworkListener-Komponente erreicht ist, die vorhandenen Datenverkehr löscht, wenn keine Entitäten mehr weitergeleitet werden können.
 
 
-## Abrufen von Leistungsüberwachungsdateien für die Problembehandlung
-<a id="retrieving-performance-monitor-files-for-troubleshooting" class="xliff"></a>
+## <a name="retrieving-performance-monitor-files-for-troubleshooting"></a>Abrufen von Leistungsüberwachungsdateien für die Problembehandlung
 
 Um die Leistungsüberwachungsdateien (BLG) aus den verschiedenen ATA-Komponenten abzurufen, gehen Sie wie folgt vor:
 1.  Öffnen Sie perfmon.
@@ -48,8 +46,7 @@ Um die Leistungsüberwachungsdateien (BLG) aus den verschiedenen ATA-Komponenten
 5.  Starten Sie den Datensammlersatz mit dem Namen „Microsoft ATA Gateway“ oder „Microsoft ATA Center“ erneut.
 
 
-## Leistungsindikatoren für das ATA-Gateway
-<a id="ata-gateway-performance-counters" class="xliff"></a>
+## <a name="ata-gateway-performance-counters"></a>Leistungsindikatoren für das ATA-Gateway
 
 In diesem Abschnitt gilt jeder Verweis auf das ATA-Gateway auch für das ATA-Lightweight-Gateway.
 
@@ -72,8 +69,7 @@ Auf folgende Indikatoren für das ATA-Gateway sollte hauptsächlich geachtet wer
 > -   Die Zeitindikatoren werden in Millisekunden angegeben.
 > -   Es ist manchmal hilfreich, die vollständige Liste der Leistungsindikatoren in Form des Diagrammtyps „Bericht“ zu überwachen. (Beispiel: Echtzeitüberwachung aller Leistungsindikatoren)
 
-## Leistungsindikatoren für das ATA-Lightweight-Gateway
-<a id="ata-lightweight-gateway-performance-counters" class="xliff"></a>
+## <a name="ata-lightweight-gateway-performance-counters"></a>Leistungsindikatoren für das ATA-Lightweight-Gateway
 Die Leistungsindikatoren können zur Kontingentverwaltung auf dem Lightweight-Gateway verwendet werden, um sicherzustellen, dass ATA nicht zu viele Ressourcen von den Domänencontrollern bezieht, auf denen es installiert ist.
 Fügen Sie diese Leistungsindikatoren hinzu, um die Ressourcenbeschränkungen zu messen, die ATA auf dem Lightweight-Gateway erzwingt.
 
@@ -98,8 +94,7 @@ Verwenden Sie die folgenden Leistungsindikatoren, um Ihren tatsächlichen Verbra
 |Process(Microsoft.Tri.Gateway)\Private Bytes|Die Menge von zugewiesenem Arbeitsspeicher (in Bytes), die der Lightweight-Gatewayprozess zurzeit verwendet.|Kein Schwellenwert. | Vergleichen Sie die Ergebnisse dieses Leistungsindikators mit dem Grenzwert von GatewayUpdaterResourceManager Commit Memory Max Size. Wenn Sie bemerken, dass der Prozess innerhalb eines Zeitraums häufig den maximalen Grenzwert erreicht (der Prozess erreicht das Limit und anschließend wird Datenverkehr gelöscht), müssen Sie für das Lightweight-Gateway mehr Ressourcen bereitstellen.| 
 |Process(Microsoft.Tri.Gateway)\Working Set|Die Menge von physischem Speicher (in Bytes), die der Lightweight-Gatewayprozess zurzeit verwendet.|Kein Schwellenwert. |Vergleichen Sie die Ergebnisse dieses Leistungsindikators mit dem Grenzwert von GatewayUpdaterResourceManager Working Set Limit Size. Wenn Sie bemerken, dass der Prozess innerhalb eines Zeitraums häufig den maximalen Grenzwert erreicht (der Prozess erreicht das Limit und anschließend wird Datenverkehr gelöscht), müssen Sie für das Lightweight-Gateway mehr Ressourcen bereitstellen.|
 
-## Leistungsindikatoren für ATA Center
-<a id="ata-center-performance-counters" class="xliff"></a>
+## <a name="ata-center-performance-counters"></a>Leistungsindikatoren für ATA Center
 Sie können den Leistungszustand von ATA Center in Echtzeit verfolgen, indem Sie die Leistungsindikatoren von ATA Center hinzufügen.
 
 Hierzu öffnen Sie „Leistungsüberwachung“ und fügen dort die Indikatoren für ATA Center hinzu. Der Name des Leistungsindikatorobjekts lautet: „Microsoft ATA Center“.
@@ -118,8 +113,7 @@ Auf folgende Indikatoren für ATA Center sollte hauptsächlich geachtet werden:
 > -   Die Zeitindikatoren werden in Millisekunden angegeben
 > -   Es ist manchmal hilfreich, die vollständige Liste der Leistungsindikatoren in Form des Diagrammtyps „Bericht“ zu überwachen. (Beispiel: Echtzeitüberwachung aller Leistungsindikatoren)
 
-## Leistungsindikatoren des Betriebssystems
-<a id="operating-system-counters" class="xliff"></a>
+## <a name="operating-system-counters"></a>Leistungsindikatoren des Betriebssystems
 In der folgenden Liste sind die Leistungsindikatoren des Betriebssystems aufgeführt, auf die hauptsächlich geachtet werden sollte:
 
 |Leistungsindikator|Beschreibung|Schwellenwert|Problembehandlung|
@@ -135,8 +129,7 @@ In der folgenden Liste sind die Leistungsindikatoren des Betriebssystems aufgef�
 |\LogicalDisk&#42;\Disk Writes\sec|Die Übertragungsrate für Schreibvorgänge auf den Datenträger.|Kein Schwellenwert|Leistungsindikatoren für die Laufwerkauslastung (können nützliche Hinweise bei der Fehlerbehandlung der Speicherlatenz geben).|
 |\LogicalDisk(&#42;)\Disk Write Bytes\sec|Die Anzahl der Bytes pro Sekunde, die auf den Datenträger geschrieben werden.|Kein Schwellenwert|Leistungsindikatoren für die Laufwerkauslastung können nützliche Hinweise bei der Fehlerbehandlung der Speicherlatenz geben.|
 
-## Weitere Informationen
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Weitere Informationen
 - [Voraussetzungen für ATA](ata-prerequisites.md)
 - [ATA-Kapazitätsplanung](ata-capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)

@@ -22,15 +22,13 @@ ms.lasthandoff: 07/11/2017
 
 
 
-# ATA-Kapazitätsplanung
-<a id="ata-capacity-planning" class="xliff"></a>
+# <a name="ata-capacity-planning"></a>ATA-Kapazitätsplanung
 In diesem Thema können Sie ermitteln, wie viele ATA-Server zur Überwachung Ihres Netzwerks benötigt werden. Dieses Thema hilft Ihnen dabei, herauszufinden, wie viele ATA-Gateways und/oder ATA-Lightweight-Gateways erforderlich sind sowie die Serverkapazität für Ihr ATA Center und die ATA-Gateways.
 
 > [!NOTE] 
 > ATA Center kann auf jedem IaaS-Anbieter bereitgestellt werden, solange die Leistungsanforderungen erfüllt werden, die in diesem Artikel beschrieben sind.
 
-##Verwenden das Tools zur Größenanpassung
-<a id="using-the-sizing-tool" class="xliff"></a>
+##<a name="using-the-sizing-tool"></a>Verwenden das Tools zur Größenanpassung
 Die empfohlene und einfachste Methode zum Ermitteln der Kapazität für die ATA-Bereitstellung besteht in der Verwendung des [ATA-Tools zur Größenanpassung](http://aka.ms/atasizingtool). Führen Sie das ATA-Tool zur Größenanpassung aus, und verwenden Sie aus den Excel-Dateiergebnissen heraus die folgenden Felder zum Ermitteln der benötigten ATA-Kapazität:
 
 - ATA Center-CPU und -Arbeitsspeicher: Gleichen Sie das Feld **Busy Packets/sec** in der ATA Center-Tabelle in der Ergebnisdatei mit dem Feld **PACKETS PER SECOND** in der [ATA Center-Tabelle](#ata-center-sizing) ab.
@@ -48,8 +46,7 @@ Die folgenden Abschnitte enthalten Anweisungen dazu, wie Sie Informationen zum P
 
 
 
-### Größenzuteilung für ATA Center
-<a id="ata-center-sizing" class="xliff"></a>
+### <a name="ata-center-sizing"></a>Größenzuteilung für ATA Center
 Für die Analyse des Benutzerverhaltens benötigt das ATA Center die Daten von mindestens 30 Tagen.
  
 
@@ -77,8 +74,7 @@ Für die Analyse des Benutzerverhaltens benötigt das ATA Center die Daten von m
 > -   Wenn Sie auf einem physischen Server arbeiten, erfordert die ATA-Datenbank, dass Sie den nicht einheitlichen Speicherzugriff (Non-Uniform Memory Access, NUMA) im BIOS **deaktivieren**. Das System bezieht sich möglicherweise als Knotenüberlappung auf NUMA. In diesem Fall müssen Sie die Knotenüberlappung **aktivieren**, um NUMA zu deaktivieren. Weitere Informationen finden Sie in der BIOS-Dokumentation. Dies ist nicht relevant, wenn ATA Center auf einem virtuellen Server ausgeführt wird.
 
 
-## Auswählen des richtigen Gatewaytyps für die Bereitstellung
-<a id="choosing-the-right-gateway-type-for-your-deployment" class="xliff"></a>
+## <a name="choosing-the-right-gateway-type-for-your-deployment"></a>Auswählen des richtigen Gatewaytyps für die Bereitstellung
 In einer ATA-Umgebung wird jede Kombination der ATA-Gatewaytypen unterstützt:
 
 - Ausschließlich ATA-Gateways
@@ -106,8 +102,7 @@ Es folgen Beispiele für Szenarien, in denen Domänencontroller durch das ATA-Ga
 - Rechenzentren an Hauptstandorten (mit Domänencontrollern mit mehr als 10.000 Paketen pro Sekunde).
 
 
-### Dimensionierung von ATA-Lightweight-Gateways
-<a id="ata-lightweight-gateway-sizing" class="xliff"></a>
+### <a name="ata-lightweight-gateway-sizing"></a>Dimensionierung von ATA-Lightweight-Gateways
 
 Ein ATA-Lightweight-Gateway kann die Überwachung eines Domänencontrollers basierend auf der Menge des vom Domänencontroller erzeugten Netzwerkverkehrs unterstützen. 
 
@@ -131,8 +126,7 @@ Ein ATA-Lightweight-Gateway kann die Überwachung eines Domänencontrollers basi
 > -   Es sind mindestens 5 GB Speicherplatz erforderlich und 10 GB empfohlen, einschließlich des Speicherplatzes, der für die ATA-Binärdateien, [ATA-Protokolle](troubleshooting-ata-using-logs.md) und [Leistungsprotokolle](troubleshooting-ata-using-perf-counters.md) benötigt wird.
 
 
-### Bemessung von ATA-Gateways
-<a id="ata-gateway-sizing" class="xliff"></a>
+### <a name="ata-gateway-sizing"></a>Bemessung von ATA-Gateways
 
 Berücksichtigen Sie folgende Fehler bei der Entscheidung, wie viele ATA-Gateways bereitgestellt werden sollen.
 
@@ -167,8 +161,7 @@ Berücksichtigen Sie folgende Fehler bei der Entscheidung, wie viele ATA-Gateway
 > -   Es sind mindestens 5 GB Speicherplatz erforderlich und 10 GB empfohlen, einschließlich des Speicherplatzes, der für die ATA-Binärdateien, [ATA-Protokolle](troubleshooting-ata-using-logs.md) und [Leistungsprotokolle](troubleshooting-ata-using-perf-counters.md) benötigt wird.
 
 
-## Abschätzung des Datenverkehrs für Domänencontroller
-<a id="domain-controller-traffic-estimation" class="xliff"></a>
+## <a name="domain-controller-traffic-estimation"></a>Abschätzung des Datenverkehrs für Domänencontroller
 Es gibt verschiedene Tools, die Sie verwenden können, um die durchschnittliche Anzahl der Pakete pro Sekunde eines Domänencontrollers zu ermitteln. Auch ohne den Einsatz solcher Werkzeuge können Sie diesen Leistungsindikator mit dem Systemmonitor ermitteln.
 
 Um die Pakete pro Sekunde zu ermitteln, gehen Sie auf jedem Domänencontroller wie folgt vor:
@@ -218,8 +211,7 @@ Um die Pakete pro Sekunde zu ermitteln, gehen Sie auf jedem Domänencontroller w
 
     ![Abbildung Leistungsindikator für Pakete pro Sekunde](media/ATA-traffic-estimation-14.png)
 
-## Siehe auch
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Siehe auch
 - [Voraussetzungen für ATA](ata-prerequisites.md)
 - [ATA-Architektur](ata-architecture.md)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

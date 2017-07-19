@@ -23,11 +23,9 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# Unbeaufsichtigte ATA-Installation
-<a id="ata-silent-installation" class="xliff"></a>
+# <a name="ata-silent-installation"></a>Unbeaufsichtigte ATA-Installation
 Dieser Artikel enthält Anweisungen zur unbeaufsichtigten Installation von ATA.
-## Voraussetzungen
-<a id="prerequisites" class="xliff"></a>
+## <a name="prerequisites"></a>Voraussetzungen
 
 ATA Version 1.8 erfordert die Installation von Microsoft .NET Framework 4.6.1. 
 
@@ -40,8 +38,7 @@ Wenn Sie die Methode zur unbeaufsichtigten Installation von ATA verwenden, ist d
 Zum Verfolgen des Fortschritts der Bereitstellung überwachen Sie die Protokolle des ATA-Installationsprogramms unter **%AppData%\Local\Temp**.
 
 
-## Installieren von ATA Center
-<a id="install-the-ata-center" class="xliff"></a>
+## <a name="install-the-ata-center"></a>Installieren von ATA Center
 
 Verwenden Sie zum Installieren von ATA Center den folgenden Befehl:
 
@@ -81,8 +78,7 @@ So installieren Sie ATA Center mit Standardinstallationspfaden, zwei IP-Adressen
     "Microsoft ATA Center Setup.exe" /quiet --LicenseAccepted NetFrameworkCommandLineArguments ="/q" CenterIpAddress=192.168.0.10 CenterPort=443 CenterCertificateThumbprint= ‎"1E2079739F624148ABDF502BF9C799FCB8C7212F"
     ConsoleIpAddress=192.168.0.11  ConsoleCertificateThumbprint="G9530253C976BFA9342FD1A716C0EC94207BFD5A"
 
-## Aktualisieren von ATA Center
-<a id="update-the-ata-center" class="xliff"></a>
+## <a name="update-the-ata-center"></a>Aktualisieren von ATA Center
 
 Verwenden Sie zum Aktualisieren von ATA Center den folgenden Befehl:
 
@@ -106,8 +102,7 @@ Beim Aktualisieren von ATA erkennt das Installationsprogramm automatisch, dass A
 
         "Microsoft ATA Center Setup.exe" /quiet NetFrameworkCommandLineArguments="/q"
 
-## Unbeaufsichtigte Deinstallation von ATA Center
-<a id="uninstall-the-ata-center-silently" class="xliff"></a>
+## <a name="uninstall-the-ata-center-silently"></a>Unbeaufsichtigte Deinstallation von ATA Center
 
 Verwenden Sie den folgenden Befehl, um eine unbeaufsichtigte Deinstallation von ATA Center auszuführen: **Syntax**:
 
@@ -133,8 +128,7 @@ Verwenden Sie den folgenden Befehl, um eine unbeaufsichtigte Deinstallation von 
 
     "Microsoft ATA Center Setup.exe" /quiet /uninstall --DeleteExistingDatabaseData
 
-## Unbeaufsichtigte Installation des ATA-Gateways
-<a id="ata-gateway-silent-installation" class="xliff"></a>
+## <a name="ata-gateway-silent-installation"></a>Unbeaufsichtigte Installation des ATA-Gateways
 Verwenden Sie den folgenden Befehl für eine unbeaufsichtigte Installation des ATA-Gateways:
 
 **Syntax**:
@@ -169,8 +163,7 @@ Verwenden Sie den folgenden Befehl für eine unbeaufsichtigte Installation des A
     ConsoleAccountName="user@contoso.com" ConsoleAccountPassword="userpwd"
     
 
-## Aktualisieren des ATA-Gateways
-<a id="update-the-ata-gateway" class="xliff"></a>
+## <a name="update-the-ata-gateway"></a>Aktualisieren des ATA-Gateways
 
 Verwenden Sie den folgenden Befehl für ein unbeaufsichtigtes Update des ATA-Gateways:
 
@@ -192,8 +185,7 @@ Verwenden Sie den folgenden Befehl für ein unbeaufsichtigtes Update des ATA-Gat
 
         Microsoft ATA Gateway Setup.exe /quiet NetFrameworkCommandLineArguments="/q"
 
-## Unbeaufsichtigte Deinstallation des ATA-Gateways
-<a id="uninstall-the-ata-gateway-silently" class="xliff"></a>
+## <a name="uninstall-the-ata-gateway-silently"></a>Unbeaufsichtigte Deinstallation des ATA-Gateways
 
 Verwenden Sie den folgenden Befehl, um eine unbeaufsichtigte Deinstallation des ATA-Gateways auszuführen: **Syntax**:
 
@@ -221,8 +213,7 @@ Verwenden Sie den folgenden Befehl, um eine unbeaufsichtigte Deinstallation des 
 
 
 
-## Weitere Informationen
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Weitere Informationen
 
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)

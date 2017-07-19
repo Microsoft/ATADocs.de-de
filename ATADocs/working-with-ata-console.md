@@ -23,19 +23,16 @@ ms.lasthandoff: 07/03/2017
 
 
 
-# Arbeiten mit der ATA-Konsole
-<a id="working-with-the-ata-console" class="xliff"></a>
+# <a name="working-with-the-ata-console"></a>Arbeiten mit der ATA-Konsole
 
 Verwenden Sie die ATA-Konsole, um die von ATA erkannten verdächtigen Aktivitäten zu überwachen und darauf zu reagieren.
 
 Das Eingeben der ?-Taste stellt die Tastenkombinationen für den Zugriff auf das ATA-Portal bereit. 
 
-## Aktivieren des Zugriffs auf die ATA-Konsole
-<a id="enabling-access-to-the-ata-console" class="xliff"></a>
+## <a name="enabling-access-to-the-ata-console"></a>Aktivieren des Zugriffs auf die ATA-Konsole
 Sie müssen sich mit einem Benutzer anmelden, dem die richtige ATA-Rolle für den Zugriff auf die ATA-Konsole zugewiesen wurde, damit die Anmeldung auf der Konsole erfolgreich verläuft. Weitere Informationen zur rollenbasierten Zugriffssteuerung (role-based access control; RBAC) in ATA finden Sie unter [Working with ATA role groups](ata-role-groups.md) (Arbeiten mit ATA-Rollengruppen).
 
-## Anmelden bei der ATA-Konsole
-<a id="logging-into-the-ata-console" class="xliff"></a>
+## <a name="logging-into-the-ata-console"></a>Anmelden bei der ATA-Konsole
 
 1. Klicken Sie auf dem Desktop des ATA Center-Servers auf das Symbol für die **Microsoft ATA-Konsole**, oder öffnen Sie einen Browser, und navigieren Sie zur ATA-Konsole.
 
@@ -56,16 +53,14 @@ Stellen Sie bei der Anmeldung mit SSO sicher, dass der Standort der ATA-Konsole 
 
 
 
-## Die ATA-Konsole
-<a id="the-ata-console" class="xliff"></a>
+## <a name="the-ata-console"></a>Die ATA-Konsole
 
 Die ATA-Konsole stellt Ihnen einen schnellen Überblick über alle verdächtigen Aktivitäten in zeitlicher Reihenfolge zur Verfügung. Sie ermöglicht es Ihnen, sich die Details einer Aktivität anzusehen und Aktionen entsprechend der jeweiligen Aktivität auszuführen. Die Konsole zeigt außerdem Warnungen und Benachrichtigungen an, um Probleme mit dem ATA-Netzwerk oder neue Aktivitäten hervorzuheben, die als verdächtig eingestuft werden.
 
 Dies sind die wichtigsten Elemente der ATA-Konsole.
 
 
-### Angriffszeitachse
-<a id="attack-time-line" class="xliff"></a>
+### <a name="attack-time-line"></a>Angriffszeitachse
 
 Dies ist die Standardzielseite, auf die Sie gelangen, wenn Sie sich bei der ATA-Konsole anmelden. Standardmäßig werden alle offenen verdächtigen Aktivitäten auf der Angriffszeitachse angezeigt. Sie können die Angriffszeitachse filtern, um alle verdächtigen Aktivitäten bzw. offene, verworfene oder aufgelöste verdächtige Aktivitäten anzuzeigen. Außerdem wird der Schweregrad angezeigt, der den einzelnen Aktivitäten zugewiesen wurde.
 
@@ -73,27 +68,23 @@ Dies ist die Standardzielseite, auf die Sie gelangen, wenn Sie sich bei der ATA-
 
 Weitere Informationen finden Sie unter [Arbeiten mit verdächtigen Aktivitäten](working-with-suspicious-activities.md).
 
-### Benachrichtigungsleiste
-<a id="notification-bar" class="xliff"></a>
+### <a name="notification-bar"></a>Benachrichtigungsleiste
 
 Wenn eine neue verdächtige Aktivität erkannt wurde, wird auf der rechten Seite automatisch die Benachrichtigungsleiste geöffnet. Wenn seit Ihrer letzten Anmeldung neue verdächtige Aktivitäten erkannt wurden, wird die Benachrichtigungsleiste geöffnet, nachdem Sie sich erfolgreich angemeldet haben. Sie können jederzeit auf den Pfeil auf der rechten Seite klicken, um auf die Benachrichtigungsleiste zuzugreifen.
 
 ![Abbildung der ATA-Benachrichtigungsleiste](media/notification-bar-1.7.png)
 
-### Filterbereich
-<a id="filtering-panel" class="xliff"></a>
+### <a name="filtering-panel"></a>Filterbereich
 
 Sie können basierend auf Status und Schweregrad filtern, welche verdächtigen Aktivitäten auf der Angriffszeitachse oder auf der Registerkarte für verdächtige Aktivitäten des Entitätsprofils angezeigt werden.
 
-### Suchleiste
-<a id="search-bar" class="xliff"></a>
+### <a name="search-bar"></a>Suchleiste
 
 Im obersten Menü finden Sie eine Suchleiste. Sie können nach einem bestimmten Benutzer, einem Computer oder Gruppen in ATA suchen. Beginnen Sie als Versuch einfach mit der Eingabe.
 
 ![Abbildung der Suche in der ATA-Konsole](media/ATA-console-search.png)
 
-### Integritätscenter
-<a id="health-center" class="xliff"></a>
+### <a name="health-center"></a>Integritätscenter
 
 Das Integritätscenter warnt Sie, wenn in Ihrer ATA-Bereitstellung etwas nicht ordnungsgemäß funktioniert.
 
@@ -103,8 +94,7 @@ Jedes Mal, wenn auf Ihrem System ein Problem auftritt, z. B. ein Verbindungsfeh
 
 Warnungen des Integritätscenters können verworfen oder aufgelöst werden, und sie sind in Abhängigkeit von ihrem Schweregrad als „Hoch“, „Mittel“ oder „Niedrig“ kategorisiert. Wenn Sie eine Warnung auflösen, die vom ATA-Dienst als noch aktiv erkannt wird, wird sie automatisch in die Liste der offenen Warnungen verschoben. Wenn das System erkennt, dass für eine Warnung keine Ursache mehr vorliegt (die Situation wurde behoben), wird sie automatisch in die Liste der aufgelösten Warnungen verschoben.
 
-### Benutzer- und Computerprofil
-<a id="user-and-computer-profiles" class="xliff"></a>
+### <a name="user-and-computer-profiles"></a>Benutzer- und Computerprofil
 
 ATA erstellt ein Profil für jeden Benutzer und Computer im Netzwerk. Im Benutzerprofil zeigt ATA allgemeine Informationen an, z. B. die Gruppenmitgliedschaft, kürzliche Anmeldungen und Ressourcen, auf die kürzlich zugegriffen wurde. Es wird auch eine Liste der Orte bereitgestellt, wo der Benutzer über VPN eine Verbindung hergestellt hat. Eine Liste der Gruppenmitgliedschaften, die ATA als sensibel einstuft, finden Sie unten.
 
@@ -121,8 +111,7 @@ Ein Profil, das ATA nicht vollständig auflösen konnte, wird durch das Symbol e
 
 ![Abbildung eines nicht aufgelösten Profils in ATA](media/ATA-Unresolved-Profile.jpg)
 
-### Sensible Gruppen
-<a id="sensitive-groups" class="xliff"></a>
+### <a name="sensitive-groups"></a>Sensible Gruppen
 
 Die folgende Liste von Gruppen werden von ATA als **sensibel** eingestuft. Das sind Gruppen, die als Besitzer administrativer Privilegien gekennzeichnet werden und die Warnungen ausgeben, die mit sensiblen Konten übereinstimmen:
 
@@ -146,8 +135,7 @@ Die folgende Liste von Gruppen werden von ATA als **sensibel** eingestuft. Das s
 - DNS-Administratoren 
 
 
-### Miniprofil
-<a id="mini-profile" class="xliff"></a>
+### <a name="mini-profile"></a>Miniprofil
 
 An jeder Stelle in der Konsole, an der eine einzelne Entität angezeigt wird, z. B. ein Benutzer oder ein Computer, wird automatisch ein Miniprofil geöffnet, wenn Sie mit der Maus auf die Entität zeigen. Das Miniprofil enthält die folgenden Informationen (sofern verfügbar):
 
@@ -165,6 +153,5 @@ An jeder Stelle in der Konsole, an der eine einzelne Entität angezeigt wird, z.
 
 
 
-## Weitere Informationen
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Weitere Informationen
 [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

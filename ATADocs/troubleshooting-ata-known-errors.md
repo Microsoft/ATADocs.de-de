@@ -23,13 +23,11 @@ ms.lasthandoff: 07/03/2017
 
 
 
-# Behandlung von bekannten Problemen bei ATA
-<a id="troubleshooting-ata-known-issues" class="xliff"></a>
+# <a name="troubleshooting-ata-known-issues"></a>Behandlung von bekannten Problemen bei ATA
 
 In diesem Abschnitt sind mögliche Fehler, die es in den Bereitstellungen von ATA geben kann, und die Schritte zu deren Behebung aufgeführt.
 
-## Fehler im ATA-Gateway und Lightweight-Gateway
-<a id="ata-gateway-and-lightweight-gateway-errors" class="xliff"></a>
+## <a name="ata-gateway-and-lightweight-gateway-errors"></a>Fehler im ATA-Gateway und Lightweight-Gateway
 
 |Fehler|Beschreibung|Lösung|
 |-------------|----------|---------|
@@ -52,8 +50,7 @@ In diesem Abschnitt sind mögliche Fehler, die es in den Bereitstellungen von AT
 |Die Warnung, dass Netzwerkdatenverkehr aus der Portspiegelung gelöscht wurde, wird ausgegeben, wenn ein Lightweight-Gateway auf VMware verwendet wird.|Wenn Sie Domänencontroller auf virtuellen VMware-Computern verwenden, wird möglicherweise die Warnung **Netzwerkdatenverkehr aus Portspiegelung gelöscht** ausgegeben. Dies kann aufgrund von Konfigurationskonflikten in VMware auftreten. |Um zu vermeiden, dass diese Warnung ausgegeben wird, können Sie überprüfen, ob die folgenden Einstellungen auf „0“ oder „deaktiviert“ festgelegt sind: TsoEnable, LargeSendOffload, IPv4, TSO Offload. Deaktivieren Sie ebenso IPv4 Giant TSO Offload. Weitere Informationen finden Sie in der VMware-Dokumentation.|
 
 
-## Bereitstellungsfehler
-<a id="deployment-errors" class="xliff"></a>
+## <a name="deployment-errors"></a>Bereitstellungsfehler
 |Fehler|Beschreibung|Lösung|
 |-------------|----------|---------|
 |Fehler bei der Installation von .NET Framework 4.6.1. Fehlernummer ist 0x800713ec.|Die erforderlichen Komponenten für .NET Framework 4.6.1 sind nicht auf dem Server installiert. |Stellen Sie vor der Installation von ATA sicher, dass die Windows-Updates [KB2919442](https://www.microsoft.com/download/details.aspx?id=42135) und [KB2919355](https://support.microsoft.com/kb/2919355) auf dem Server installiert sind.|
@@ -65,8 +62,7 @@ In diesem Abschnitt sind mögliche Fehler, die es in den Bereitstellungen von AT
 
 
 
-## Siehe auch
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Siehe auch
 - [Voraussetzungen für ATA](ata-prerequisites.md)
 - [ATA-Kapazitätsplanung](ata-capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
