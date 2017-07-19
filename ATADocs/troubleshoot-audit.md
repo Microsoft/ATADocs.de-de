@@ -21,8 +21,7 @@ ms.lasthandoff: 07/05/2017
 ---
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
-# Arbeiten mit ATA-Überwachungsprotokollen
-<a id="working-with-ata-audit-logs" class="xliff"></a>
+# <a name="working-with-ata-audit-logs"></a>Arbeiten mit ATA-Überwachungsprotokollen
 
 Die ATA-Überwachungsprotokolle befinden Sich im Windows-Ereignisprotokoll unter **Anwendungen und Dienste** und dann unter **Microsoft-ATA** sowohl in ATA Center als auch auf ATA-Gateway-Computern.
 
@@ -40,7 +39,6 @@ Das Überwachungsprotokoll vom ATA-Gateway enthält:
 *Das Überwachungsprotokoll zu Konfigurationsänderungen enthält sowohl die vorherige als auch die neue Konfiguration.
 
 
-## Siehe auch
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Siehe auch
 - [Arbeiten mit verdächtigen Aktivitäten](working-with-suspicious-activities.md)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

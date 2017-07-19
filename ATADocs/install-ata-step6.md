@@ -23,16 +23,13 @@ ms.lasthandoff: 07/05/2017
 
 
 
-# Installieren von ATA – Schritt 6
-<a id="install-ata---step-6" class="xliff"></a>
+# <a name="install-ata---step-6"></a>Installieren von ATA – Schritt 6
 
 >[!div class="step-by-step"]
 [« Schritt 5](install-ata-step5.md)
 
-## Schritt 6: Konfigurieren der Ereignissammlung und VPN
-<a id="step-6-configure-event-collection-and-vpn" class="xliff"></a>
-### Konfigurieren der Ereignissammlung
-<a id="configure-event-collection" class="xliff"></a>
+## <a name="step-6-configure-event-collection-and-vpn"></a>Schritt 6: Konfigurieren der Ereignissammlung und VPN
+### <a name="configure-event-collection"></a>Konfigurieren der Ereignissammlung
 Um die Erkennungsfunktionalität zu verbessern, benötigt ATA die folgenden Windows-Ereignisse: 4776, 4732, 4733, 4728, 4729, 4756, 4757. Diese können entweder automatisch vom ATA-Lightweight-Gateway gelesen werden, oder, falls das ATA-Lightweight-Gateway nicht bereitgestellt wurde, an das ATA-Gateway weitergeleitet werden. Dazu gibt es zwei Möglichkeiten: zum einen das Konfigurieren des ATA-Gateways, sodass es auf SIEM-Ereignisse lauscht, oder das [Konfigurieren der Windows-Ereignisweiterleitung](#configuring-windows-event-forwarding).
 
 > [!NOTE]
@@ -40,8 +37,7 @@ Um die Erkennungsfunktionalität zu verbessern, benötigt ATA die folgenden Wind
 
 Zusätzlich zum Sammeln und Analysieren des Netzwerkverkehrs zu und von den Domänencontrollern kann ATA Windows-Ereignisse heranziehen, um Erkennungen weiter zu verbessern. Es werden das Ereignis 4776 für die integrierte Windows-Authentifizierung verwendet, die unterschiedliche Erkennungen verbessert, sowie die Ereignisse 4732, 4733, 4728, 4729, 4756 und 4757 zur Verbesserung der Erkennung sensibler Gruppenänderungen. Dies kann aus SIEM heraus empfangen werden oder indem Sie die Windows-Ereignisweiterleitung von Ihrem Domänencontroller aus einrichten. Die gesammelten Ereignisse versorgen ATA mit zusätzlichen Informationen, die nicht über den Netzwerkverkehr des Domänencontrollers verfügbar sind.
 
-#### SIEM/Syslog
-<a id="siemsyslog" class="xliff"></a>
+#### <a name="siemsyslog"></a>SIEM/Syslog
 Damit ATA Daten aus einem Syslog-Server verwenden kann, müssen folgende Schritte ausgeführt werden:
 
 -   Konfigurieren Ihres ATA-Gateway-Server zum Lauschen auf und Übernehmen von Ereignissen, die vom SIEM-/Syslog-Server weitergeleitet werden.
@@ -58,8 +54,7 @@ Weitere Informationen über das Konfigurieren der Weiterleitung bestimmter Ereig
 > [!NOTE]
 >Wenn Sie keinen SIEM-/Syslog-Server verwenden, können Sie Ihre Windows-Domänencontroller zum Weiterleiten von Windows-Ereignis-ID 4776 konfigurieren, damit diese von ATA gesammelt und konfiguriert wird. Windows-Ereignis-ID 4776 enthält Daten über NTLM-Authentifizierungen.
 
-#### Konfigurieren des ATA-Gateways zum Überwachen von SIEM-Ereignissen
-<a id="configuring-the-ata-gateway-to-listen-for-siem-events" class="xliff"></a>
+#### <a name="configuring-the-ata-gateway-to-listen-for-siem-events"></a>Konfigurieren des ATA-Gateways zum Überwachen von SIEM-Ereignissen
 
 1.  Klicken Sie in der ATA-Konfiguration unter **Datenquellen** auf **SIEM**, aktivieren Sie **Syslog**, und klicken Sie auf **Speichern**.
 
@@ -69,8 +64,7 @@ Weitere Informationen über das Konfigurieren der Weiterleitung bestimmter Ereig
 
 ATA unterstützt SIEM-Ereignisse in den folgenden Formaten:  
 
-#### RSA Security Analytics
-<a id="rsa-security-analytics" class="xliff"></a>
+#### <a name="rsa-security-analytics"></a>RSA Security Analytics
 &lt;Syslog Header&gt;RsaSA\n2015-May-19 09:07:09\n4776\nMicrosoft-Windows-Security-Auditing\nSecurity\XXXXX.subDomain.domain.org.il\nYYYYY$\nMMMMM \n0x0
 
 -   Der Syslog-Header ist optional.
@@ -99,8 +93,7 @@ ATA unterstützt SIEM-Ereignisse in den folgenden Formaten:
 
 -   Die Reihenfolge ist wichtig, und es sollten keine weiteren Angaben in die Nachricht eingeschlossen werden.
 
-#### HP Arcsight
-<a id="hp-arcsight" class="xliff"></a>
+#### <a name="hp-arcsight"></a>HP Arcsight
 CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|Der Domänencontroller hat versucht, die Anmeldeinformationen für ein Konto zu bestätigen.|Niedrig| externalId=4776 cat=Security rt=1426218619000 shost=KKKKKK dhost=YYYYYY.subDomain.domain.com duser=XXXXXX cs2=Security cs3=Microsoft-Windows-Security-Auditing cs4=0x0 cs3Label=EventSource cs4Label=Grund oder Fehlercode
 
 -   Muss der Protokolldefinition entsprechen.
@@ -131,8 +124,7 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|Der 
 
     -   „Ursache oder Fehlercode“ = Ergebniscode des NTLM
 
-#### Splunk
-<a id="splunk" class="xliff"></a>
+#### <a name="splunk"></a>Splunk
 &lt;Syslog Header&gt;\r\nEventCode=4776\r\nLogfile=Security\r\nSourceName=Microsoft-Windows-Security-Auditing\r\nTimeGenerated=20150310132717.784882-000\r\ComputerName=YYYYY\r\nMessage=
 
 Es wurde versucht, die Anmeldeinformationen für ein Konto zu überprüfen.
@@ -169,8 +161,7 @@ Fehlercode:         0x0
 
 -   Die Reihenfolge der „Schlüssel = Wert“-Paare ist unerheblich.
 
-#### QRadar
-<a id="qradar" class="xliff"></a>
+#### <a name="qradar"></a>QRadar
 QRadar ermöglicht Ereignissammlung über einen Agent. Wenn die Daten mithilfe eines Agents erfasst werden, werden Zeiten ohne Millisekunden-Daten erfasst. Da ATA Millisekunden-Daten erfordert, muss QRadar so festgelegt werden, dass es die Windows-Ereignissammlung ohne Agents verwendet. Weitere Informationen finden Sie unter [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Agentless Windows Events Collection using the MSRPC Protocol").
 
     <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
@@ -193,8 +184,7 @@ Stellen Sie sicher, dass „\t“ zwischen Schlüssel=Wert-Paaren steht.
 > Verwendung von WinCollect für die Windows-Ereignissammlung wird nicht unterstützt.
 
 
-### Konfigurieren des VPN
-<a id="configuring-vpn" class="xliff"></a>
+### <a name="configuring-vpn"></a>Konfigurieren des VPN
 
 ATA sammelt VPN-Daten, die bei der Profilerstellung der Orte helfen, von denen aus sich Computer mit dem Netzwerk verbinden.
 
@@ -216,8 +206,7 @@ Um das gemeinsame Geheimnis zu erhalten, beziehen Sie sich auf die VPN-Dokumenta
 [Schritt 7 »](install-ata-step7.md)
 
 
-## Weitere Informationen
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Weitere Informationen
 
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
