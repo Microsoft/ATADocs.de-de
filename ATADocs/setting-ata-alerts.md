@@ -23,8 +23,7 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# Festlegen von ATA-Benachrichtigungen
-<a id="set-ata-notifications" class="xliff"></a>
+# <a name="set-ata-notifications"></a>Festlegen von ATA-Benachrichtigungen
 ATA kann Sie bei Erkennen einer verdächtigen Aktivität per E-Mail oder über ATA-Ereignisweiterleitung benachrichtigen und das Ereignis an den SIEM-/Syslog-Server weiterleiten. Bevor Sie auswählen, welche Benachrichtigungen Sie erhalten möchten, müssen Sie [Ihren E-Mail-Server und Ihren Syslog-Server einrichten](setting-syslog-email-server-settings.md).
 
 > [!NOTE]
@@ -51,6 +50,5 @@ Um Benachrichtigungen zu erhalten, legen Sie Folgendes fest:
 
 
 
-## Weitere Informationen
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Weitere Informationen
 [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

@@ -23,12 +23,10 @@ ms.lasthandoff: 07/10/2017
 
 
 
-# Arbeiten mit verdächtigen Aktivitäten
-<a id="working-with-suspicious-activities" class="xliff"></a>
+# <a name="working-with-suspicious-activities"></a>Arbeiten mit verdächtigen Aktivitäten
 In diesem Thema werden die Grundlagen des Arbeitens mit Advanced Threat Analytics erläutert.
 
-## Überprüfen verdächtiger Aktivitäten auf der Angriffszeitachse
-<a id="review-suspicious-activities-on-the-attack-time-line" class="xliff"></a>
+## <a name="review-suspicious-activities-on-the-attack-time-line"></a>Überprüfen verdächtiger Aktivitäten auf der Angriffszeitachse
 Nachdem Sie sich bei der ATA-Konsole angemeldet haben, gelangen Sie automatisch zur **Zeitachse mit den offenen verdächtigen Aktivitäten**. Die verdächtigen Aktivitäten werden in chronologischer Reihenfolge aufgeführt, wobei sich die neuesten verdächtigen Aktivitäten oben auf der Zeitachse befinden.
 Zu jeder verdächtigen Aktivität stehen folgende Informationen zur Verfügung:
 
@@ -58,8 +56,7 @@ Zu jeder verdächtigen Aktivität stehen folgende Informationen zur Verfügung:
 
 ![Abbildung der Zeitachse für verdächtige Aktivitäten von ATA](media/ATA-Suspicious-Activity-Timeline.JPG)
 
-## Filtern der Liste der verdächtigen Aktivitäten
-<a id="filter-suspicious-activities-list" class="xliff"></a>
+## <a name="filter-suspicious-activities-list"></a>Filtern der Liste der verdächtigen Aktivitäten
 So filtern Sie die Liste der verdächtigen Aktivitäten
 
 1.  Wählen Sie auf der linken Seite des Bildschirms im Bereich **Filtern nach** eine der folgenden Optionen aus: **Alle**, **Offen**, **Aufgelöst** oder **Verworfen**.
@@ -83,8 +80,7 @@ So filtern Sie die Liste der verdächtigen Aktivitäten
 
 
 
-## Beheben verdächtiger Aktivitäten
-<a id="remediating-suspicious-activities" class="xliff"></a>
+## <a name="remediating-suspicious-activities"></a>Beheben verdächtiger Aktivitäten
 Sie können den Status einer verdächtigen Aktivität ändern, indem Sie auf den aktuellen Status der verdächtigen Aktivität klicken und eine der folgenden Optionen auswählen: **Offen**, **Unterdrückt**, **Aufgelöst** oder **Verworfen**.
 Klicken Sie dafür auf die drei Punkte in der oberen rechten Ecke einer besonders verdächtigen Aktivität, um die Liste der verfügbaren Aktionen anzuzeigen.
 
@@ -108,7 +104,6 @@ Klicken Sie dafür auf die drei Punkte in der oberen rechten Ecke einer besonder
 > Die Seiten für die Konfiguration können nur von ATA-Administratoren bearbeitet werden.
 
 
-## Siehe auch
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Siehe auch
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Ändern der ATA-Konfiguration](modifying-ata-center-configuration.md)

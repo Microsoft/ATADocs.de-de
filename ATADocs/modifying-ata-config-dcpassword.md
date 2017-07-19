@@ -23,13 +23,11 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# Ändern der ATA-Konfiguration – Domänenverbindungskennwort
-<a id="change-ata-configuration---domain-connectivity-password" class="xliff"></a>
+# <a name="change-ata-configuration---domain-connectivity-password"></a>Ändern der ATA-Konfiguration – Domänenverbindungskennwort
 
 
 
-## Ändern des Domänenverbindungskennworts
-<a id="change-the-domain-connectivity-password" class="xliff"></a>
+## <a name="change-the-domain-connectivity-password"></a>Ändern des Domänenverbindungskennworts
 Wenn Sie das Domänenverbindungskennwort ändern, stellen Sie sicher, dass das eingegebene Kennwort korrekt ist. Andernfalls wird der ATA-Gateway-Dienst auf den ATA-Gateways nicht mehr ausgeführt.
 
 Wenn Sie vermuten, dass dies der Fall ist, prüfen Sie, ob auf dem ATA-Gateway in der Datei „Microsoft.Tri.Gateway-Errors.log“ der folgende Eintrag vorhanden ist: `The supplied credential is invalid.`
@@ -56,7 +54,6 @@ Um dies zu korrigieren, führen Sie die folgenden Schritte zum Ändern des Domä
 
 
 
-## Siehe auch
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Siehe auch
 - [Arbeiten mit der ATA-Konsole](working-with-ata-console.md)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

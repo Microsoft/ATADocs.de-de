@@ -23,15 +23,13 @@ ms.lasthandoff: 07/03/2017
 
 
 
-# Installieren von ATA – Schritt 2
-<a id="install-ata---step-2" class="xliff"></a>
+# <a name="install-ata---step-2"></a>Installieren von ATA – Schritt 2
 
 >[!div class="step-by-step"]
 [« Schritt 1](install-ata-step1.md)
 [Schritt 3 »](install-ata-step3.md)
 
-## Schritt 2. Geben Sie einen Benutzernamen und ein Kennwort an, um eine Verbindung mit Ihrer Active Directory-Gesamtstruktur herzustellen
-<a id="step-2-provide-a-username-and-password-to-connect-to-your-active-directory-forest" class="xliff"></a>
+## <a name="step-2-provide-a-username-and-password-to-connect-to-your-active-directory-forest"></a>Schritt 2. Geben Sie einen Benutzernamen und ein Kennwort an, um eine Verbindung mit Ihrer Active Directory-Gesamtstruktur herzustellen
 
 Beim ersten Öffnen der ATA-Konsole wird der folgende Bildschirm angezeigt:
 
@@ -57,8 +55,7 @@ Beim ersten Öffnen der ATA-Konsole wird der folgende Bildschirm angezeigt:
 [Schritt 3 »](install-ata-step3.md)
 
 
-## Siehe auch
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Siehe auch
 
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)

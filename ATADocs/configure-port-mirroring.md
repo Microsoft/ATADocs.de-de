@@ -23,8 +23,7 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# Konfigurieren der Portspiegelung
-<a id="configure-port-mirroring" class="xliff"></a>
+# <a name="configure-port-mirroring"></a>Konfigurieren der Portspiegelung
 > [!NOTE] 
 > Dieser Artikel ist für Sie nur interessant, wenn Sie ATA-Gateways anstelle von ATA-Lightweight-Gateways bereitstellen. Lesen Sie [Auswählen des richtigen Gatewaytyps für die Bereitstellung](ata-capacity-planning.md#choosing-the-right-gateway-type-for-your-deployment), um zu ermitteln, ob Sie ATA-Gateways verwenden müssen.
  
@@ -45,8 +44,7 @@ Die Domänencontroller und ATA-Gateways können physisch oder virtuell vorhanden
 > Wenn der Domänencontroller mit der Portspiegelung über eine WAN-Anbindung angeschlossen ist, muss darauf geachtet werden, dass die WAN-Anbindung die zusätzliche Last des ERSPAN-Datenverkehrs aufnehmen kann.
 > ATA unterstützt nur dann die Überwachung des Netzwerkdatenverkehrs, wenn der Datenverkehr die NIC und den Domänencontroller auf die gleiche Weise erreicht. ATA unterstützt die Überwachung des Netzwerkdatenverkehrs nicht, wenn der Verkehr auf verschiedene Ports aufgeteilt ist.
 
-## Unterstützte Optionen für die Portspiegelung
-<a id="supported-port-mirroring-options" class="xliff"></a>
+## <a name="supported-port-mirroring-options"></a>Unterstützte Optionen für die Portspiegelung
 
 |ATA-Gateway|Domänencontroller|Überlegungen|
 |---------------|---------------------|------------------|
@@ -71,7 +69,6 @@ Die Domänencontroller und ATA-Gateways können physisch oder virtuell vorhanden
 
 Überprüfen Sie nach dem Konfigurieren der Portspiegelung deren ordnungsgemäße Funktion, bevor Sie die ATA-Gateways installieren.
 
-## Weitere Informationen
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Weitere Informationen
 - [Überprüfen der Portspiegelung](validate-port-mirroring.md)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

@@ -23,15 +23,13 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# Installieren von ATA – Schritt 4
-<a id="install-ata---step-4" class="xliff"></a>
+# <a name="install-ata---step-4"></a>Installieren von ATA – Schritt 4
 
 >[!div class="step-by-step"]
 [« Schritt 3](install-ata-step3.md)
 [Schritt 5 »](install-ata-step5.md)
 
-## Schritt 4: Installieren des ATA-Gateways
-<a id="step-4-install-the-ata-gateway" class="xliff"></a>
+## <a name="step-4-install-the-ata-gateway"></a>Schritt 4: Installieren des ATA-Gateways
 
 Überprüfen Sie vor der Installation des ATA-Gateways auf dem dedizierten Server, ob die Portspiegelung ordnungsgemäß konfiguriert ist und ob das ATA-Gateway Datenverkehr zu und von den Domänencontrollern anzeigen kann. Weitere Informationen finden Sie unter [Überprüfen der Portspiegelung](validate-port-mirroring.md).
 
@@ -90,8 +88,7 @@ Führen Sie die folgenden Schritte auf dem ATA-Gatewayserver aus.
 [« Schritt 3](install-ata-step3.md)
 [Schritt 5 »](install-ata-step5.md)
 
-## Weitere Informationen
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Weitere Informationen
 
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)

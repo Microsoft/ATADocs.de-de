@@ -21,8 +21,7 @@ ms.lasthandoff: 07/03/2017
 ---
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
-# Nach welchen Bedrohungen sucht ATA?
-<a id="what-threats-does-ata-look-for" class="xliff"></a>
+# <a name="what-threats-does-ata-look-for"></a>Nach welchen Bedrohungen sucht ATA?
 
 ATA ermöglicht die Erkennung der folgenden verschiedenen Phasen eines erweiterten Angriffs: Reconnaissance, gefährdete Anmeldeinformationen, seitliche Verschiebung, Berechtigungsausweitung, Domänendominanz und mehr. Damit sollen erweiterte Angriffe und interne Bedrohungen erkannt werden, bevor sie Schaden in Ihrer Organisation anrichten.
 Die Erkennung von jeder Phase führt zu mehreren verdächtige Aktivitäten, die für die betreffende Phase relevant sind, wobei jede verdächtige Aktivität mit verschiedenen Varianten möglicher Angriffe korreliert.
@@ -31,8 +30,7 @@ Diese Phasen in der Angriffskette, in der ATA derzeit Erkennungen bereitstellt, 
 ![ATA focus on lateral activity in attack kill chain](media/attack-kill-chain-small.jpg)
 
 
-### Reconnaissance
-<a id="reconnaissance" class="xliff"></a>
+### <a name="reconnaissance"></a>Reconnaissance
 
 ATA bietet mehrere Reconnaissance-Erkennungen. Diese Erkennungen umfassen:
 
@@ -45,8 +43,7 @@ ATA bietet mehrere Reconnaissance-Erkennungen. Diese Erkennungen umfassen:
 -   **Reconnaissance mithilfe von Verzeichnisdienstenumeration**<br></br>Erkennen von Entitätssuchen (Benutzer, Gruppen, etc.), die mithilfe des SAM-Remoteprotokolls ausgeführt werden, um Abfragen für die Domänencontroller auszuführen. Diese Reconnaissancemethode kommt häufig in vielen Arten von Schadsoftware vor, die in realen Angriffsszenarios zum Einsatz kommt. 
 
 
-### Gefährdete Anmeldeinformationen
-<a id="compromised-credentials" class="xliff"></a>
+### <a name="compromised-credentials"></a>Gefährdete Anmeldeinformationen
 
 Damit die Gefährdung von Anmeldeinformationen erkannt werden kann, nutzt ATA sowohl Verhaltensanalysen auf Machine Learning-Basis als auch die Erkennung bekannter Angriffe und Verfahren.
 Durch die Verwendung von Verhaltensanalysen und Machine Learning kann ATA verdächtige Aktivitäten wie ungewöhnliche Anmeldungen, Ressourcenzugriffe und Arbeitszeiten erkennen, die auf eine Gefährdung von Anmeldeinformationen hinweisen. Zum Schutz vor gefährdeten Anmeldeinformationen erkennt ATA die folgenden bekannten Angriffe und Techniken:
@@ -67,8 +64,7 @@ Durch die Verwendung von Verhaltensanalysen und Machine Learning kann ATA verdä
 
 -   **Ungewöhnliches Verhalten**<br></br>Häufig werden in Fällen von Bedrohungen von innen sowie von erweiterten Angriffen die Anmeldeinformationen eines Kontos mit Social-Engineering-Methoden oder neuen, noch nicht bekannten Methoden und Techniken gefährdet. ATA kann diese Arten von Gefährdungen erkennen, indem es das Verhalten der jeweiligen Entität analysiert und Auffälligkeiten der Vorgänge, die von der Entität ausgeführt werden, erkennt und vor diesen warnt.
 
-### Seitliche Verschiebung
-<a id="lateral-movement" class="xliff"></a>
+### <a name="lateral-movement"></a>Seitliche Verschiebung
 
 Um Erkennung von seitlicher Verschiebung (Bewegung) zu bieten, wenn Benutzer Anmeldeinformationen nutzen, die Zugriff auf einige Ressourcen ermöglichen, auf die die Benutzer eigentlich keinen Zugriff haben sollen, nutzt ATA sowohl verhaltensbasierte Analysen auf Machine Learning-Basis als auch bekannte Erkennung von böswilligen Attacken und Techniken.
 Mithilfe von verhaltensbasierten Analysen und Machine Learning erkennt ATA nicht ordnungsgemäßen Zugriff auf Ressourcen, ungewöhnliche Geräte, die verwendet werden, und weitere Indikatoren, die auf seitliche Verschiebungen hindeuten.
@@ -82,8 +78,7 @@ Darüber hinaus kann ATA seitliche Verschiebungen erkennen, indem die Techniken 
 
 -   **Ungewöhnliches Verhalten**<br></br>Seitliche Verschiebung ist eine Technik, die häufig von Angreifern verwendet wird, um sich zwischen Geräten und Bereichen im Netzwerk des Opfers zu bewegen, um Zugriff auf privilegierte Anmeldeinformationen oder vertrauliche Informationen zu erhalten, an denen der Angreifer interessiert ist. ATA kann seitliche Verschiebung durch Analysieren des Verhaltens von Benutzern und Geräten sowie deren Beziehungen im Unternehmensnetzwerk erkennen und kann ungewöhnliche Zugriffsmuster erkennen, die auf eine seitliche Bewegung hindeuten, die von einem Angreifer ausgeführt wird.
 
-### Ausweitung von Berechtigungen
-<a id="privilege-escalation" class="xliff"></a>
+### <a name="privilege-escalation"></a>Ausweitung von Berechtigungen
 
 ATA erkennt erfolgreiche und versuchte Berechtigungsausweitungsangriffe, in denen Angreifer versuchen, vorhandene Berechtigungen auszuweiten und diese mehrmals zu verwenden, um schließlich die vollständige Kontrolle über die Umgebung des Opfers zu erlangen.
 ATA ermöglicht Erkennung von Berechtigungsausweitung durch Kombinieren von verhaltensbasierten Analysen, um ungewöhnliches Verhaltens von privilegierten Konten zu erkennen, und Erkennung von bekannten und böswilligen Angriffen und Techniken, die häufig zur Ausweitung von Berechtigungen verwendet werden, so beispielsweise:
@@ -94,8 +89,7 @@ ATA ermöglicht Erkennung von Berechtigungsausweitung durch Kombinieren von verh
 
 -   **Ungewöhnliche Modifizierung von sensiblen Gruppen**  <br></br>Im Rahmen der Rechteausweitungsphase modifizieren Angreifer Gruppen mit hohen Berechtigungen, um Zugriff auf sensible Ressourcen zu erhalten. ATA erkennt jetzt, wenn ungewöhnliche Änderungen in Gruppen mit erhöhten Berechtigungen vorgenommen werden.
 
-### Domänendominanz
-<a id="domain-dominance" class="xliff"></a>
+### <a name="domain-dominance"></a>Domänendominanz
 
 ATA erkennt Angreifer, die versuchen oder Erfolg damit hatten, vollständige Kontrolle und Dominanz über die Umgebung des Opfers zu erlangen. Dazu führt ATA Erkennung über bekannte Techniken aus, die von Angreifern genutzt werden, wozu gehören:
 
@@ -110,13 +104,11 @@ ATA erkennt Angreifer, die versuchen oder Erfolg damit hatten, vollständige Kon
 -   **Böswillige Replikationsanforderungen** <br></br>In AD-Umgebungen (Active Directory) erfolgt Replikation regelmäßig zwischen Domänencontrollern. Ein Angreifer kann eine AD-Replikationsanforderung (manchmal durch Annehmen der Identität eines Domänencontrollers) vortäuschen, wodurch es dem Angreifer gestattet wird, die in AD gespeicherten Daten abzurufen, einschließlich Kennworthashes, ohne auffallendere Techniken wie Volumeschattenkopie zu nutzen.
 
 
-## Wie geht es weiter?
-<a id="whats-next" class="xliff"></a>
+## <a name="whats-next"></a>Wie geht es weiter?
 
 -   Weitere Informationen zum Integrieren von ATA in Ihr Netzwerk: [ATA-Architektur](ata-architecture.md)
 
 -   Erste Schritte bei der Bereitstellung von ATA: [Installieren von ATA](install-ata-step1.md)
 
-## Siehe auch
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Siehe auch
 [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

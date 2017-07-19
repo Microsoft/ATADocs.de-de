@@ -22,8 +22,7 @@ ms.lasthandoff: 06/30/2017
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
 
-# ATA-Berichte
-<a id="ata-reports" class="xliff"></a>
+# <a name="ata-reports"></a>ATA-Berichte
 
 Der Abschnitt der ATA-Berichte in der Konsole erlaubt Ihnen, Berichte zu generieren, die Ihnen Informationen zum Systemstatus sowie zur Systemintegrität und einen Bericht über verdächtige Aktivitäten, die in Ihrer Umgebung ermittelt wurden, bereitzustellen.
 
@@ -55,8 +54,7 @@ So legen Sie einen geplanten Bericht fest:
 > Geplante Berichte können per E-Mail übermittelt werden und können nur gesendet werden, wenn Sie schon einen E-Mail-Server unter **Konfiguration** konfiguriert haben. Wählen Sie anschließend unter „Benachrichtigungen und Berichte“ **E-Mail-Server** aus.
 
 
-## Weitere Informationen
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Weitere Informationen
 - [Voraussetzungen für ATA](ata-prerequisites.md)
 - [ATA-Kapazitätsplanung](ata-capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)

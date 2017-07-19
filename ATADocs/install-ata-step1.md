@@ -22,8 +22,7 @@ ms.lasthandoff: 07/03/2017
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
 
-# Installieren von ATA – Schritt 1
-<a id="install-ata---step-1" class="xliff"></a>
+# <a name="install-ata---step-1"></a>Installieren von ATA – Schritt 1
 
 >[!div class="step-by-step"]
 [Schritt 2 »](install-ata-step2.md)
@@ -33,8 +32,7 @@ Diese Installationsschritte stellen Anweisungen zur Durchführung einer Neuinsta
 > [!IMPORTANT] 
 > Wenn Sie Windows 2012 R2 verwenden, installieren Sie vor ATA das Update KB2934520 auf dem ATA Center-Server und den ATA-Gatewayservern, da andernfalls bei der ATA-Installation dieses Update installiert wird und inmitten der ATA-Installation ein Neustart erforderlich ist.
 
-## Schritt 1: Herunterladen und Installieren von ATA Center
-<a id="step-1-download-and-install-the-ata-center" class="xliff"></a>
+## <a name="step-1-download-and-install-the-ata-center"></a>Schritt 1: Herunterladen und Installieren von ATA Center
 Nachdem Sie überprüft haben, ob der Server die Anforderungen erfüllt, können Sie mit der Installation von ATA Center fortfahren.
     
 > [!NOTE]
@@ -88,8 +86,7 @@ Führen Sie die folgenden Schritte auf dem ATA Center-Server aus.
 An dieser Stelle werden Sie automatisch zur Seite mit den **allgemeinen Einstellungen** weitergeleitet, auf der Sie die Konfiguration und Bereitstellung der ATA-Gateways fortsetzen können.
 Da Sie sich mit einer IP-Adresse bei der Website anmelden, wird eine Warnung im Zusammenhang mit dem Zertifikat angezeigt. Das ist normal, und Sie sollten auf **Laden dieser Website fortsetzen** klicken.
 
-### Überprüfen der Installation
-<a id="validate-installation" class="xliff"></a>
+### <a name="validate-installation"></a>Überprüfen der Installation
 
 1.  Überprüfen Sie, ob der Dienst **Microsoft Advanced Threat Analytics-Gateway** ausgeführt wird.
 2.  Klicken Sie auf dem Desktop auf die Verknüpfung **Microsoft Advanced Threat Analytics**, um eine Verbindung mit der ATA-Konsole herzustellen. Melden Sie sich mit den gleichen Benutzeranmeldeinformationen an, die Sie auch zum Installieren von ATA Center verwendet haben.
@@ -100,8 +97,7 @@ Da Sie sich mit einer IP-Adresse bei der Website anmelden, wird eine Warnung im 
 [« Vor der Installation](configure-port-mirroring.md)
 [Schritt 2 »](install-ata-step2.md)
 
-## Siehe auch
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Siehe auch
 
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)

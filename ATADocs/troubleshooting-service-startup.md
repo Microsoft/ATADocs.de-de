@@ -23,8 +23,7 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# Problembehandlung beim Starten des ATA Center-Diensts
-<a id="troubleshooting-ata-center-service-startup" class="xliff"></a>
+# <a name="troubleshooting-ata-center-service-startup"></a>Problembehandlung beim Starten des ATA Center-Diensts
 
 Wenn ATA Center nicht gestartet wird, führen Sie das folgende Verfahren zur Fehlerbehebung durch:
 
@@ -37,8 +36,7 @@ Wenn der Dienst startet, dann ist die Plattform aller Voraussicht nach in Ordnun
 
 
 
-## Weitere Informationen
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Weitere Informationen
 - [Voraussetzungen für ATA](ata-prerequisites.md)
 - [ATA-Kapazitätsplanung](ata-capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)

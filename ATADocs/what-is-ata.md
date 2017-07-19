@@ -22,12 +22,10 @@ ms.lasthandoff: 07/03/2017
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
 
-# Was ist Advanced Threat Analytics?
-<a id="what-is-advanced-threat-analytics" class="xliff"></a>
+# <a name="what-is-advanced-threat-analytics"></a>Was ist Advanced Threat Analytics?
 Advanced Threat Analytics (ATA) ist eine lokale Plattform, mit deren Hilfe Sie Ihr Unternehmen vor verschiedenen hochentwickelten und gezielten Cyberangriffen und Insiderbedrohungen schützen können.
 
-## So funktioniert ATA
-<a id="how-ata-works" class="xliff"></a>
+## <a name="how-ata-works"></a>So funktioniert ATA
 
 ATA nutzt ein proprietäres Netzwerkanalysemodul, um den Netzwerkverkehr verschiedener Protokolle (z.B. Kerberos, DNS, RPC, NTLM und andere) zwecks Authentifizierung, Autorisierung und zum Sammeln von Informationen zu erfassen und zu analysieren. ATA sammelt die Informationen über:
 
@@ -44,8 +42,7 @@ ATA kann Ereignisse und Protokolle aus folgenden Quellen beziehen:
 
 Weitere Informationen zur ATA-Architektur finden Sie unter [ATA-Architektur](ata-architecture.md).
 
-## Wie funktioniert ATA?
-<a id="what-does-ata-do" class="xliff"></a>
+## <a name="what-does-ata-do"></a>Wie funktioniert ATA?
 
 Die ATA-Technologie erkennt verschiedene verdächtige Aktivitäten und konzentriert sich dabei auf die verschiedenen Phasen der Angriffskette von Cyber-Angriffen, so z.B.:
 
@@ -97,21 +94,18 @@ Sie können die verdächtigen Aktivitäten dieses Typs im ATA-Dashboard anzeigen
   ![sample ATA screen broken trust](media/broken-trust-sa.png)
 
 
-## Bekannte Probleme
-<a id="known-issues" class="xliff"></a>
+## <a name="known-issues"></a>Bekannte Probleme
 
 - Wenn Sie ein Update auf ATA 1.7 durchführen und anschließen sofort auf ATA 1.8, ohne vorher die ATA-Gateways zu aktualisieren, können Sie nicht zu ATA 1.8 migrieren. Sie müssen zunächst alle Gateways auf Version 1.7.1 oder 1.7.2 aktualisieren, bevor Sie ATA Center auf Version 1.8 aktualisieren können.
 
 - Wenn Sie sich dazu entscheiden, eine vollständige Migration durchzuführen, kann dies einige Zeit in Anspruch nehmen, je nach Größe der Datenbank. Bei der Auswahl der Migrationsoptionen wird die geschätzte Dauer angezeigt. Beachten Sie diese, bevor Sie sich für eine Option entscheiden. 
 
 
-## Wie geht es weiter?
-<a id="whats-next" class="xliff"></a>
+## <a name="whats-next"></a>Wie geht es weiter?
 
 -   Weitere Informationen zum Integrieren von ATA in Ihr Netzwerk: [ATA-Architektur](ata-architecture.md)
 
 -   Erste Schritte bei der Bereitstellung von ATA: [Installieren von ATA](install-ata-step1.md)
 
-## Siehe auch
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Siehe auch
 [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
