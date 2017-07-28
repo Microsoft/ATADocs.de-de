@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: df162a62-f273-4465-9887-94271f5000d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ae72f7a25f0c57dadd02049fe3a570a0da7b84fd
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: bc3ad332e1a8af6259eadaecc4638f27fded67c6
+ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/25/2017
 ---
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
@@ -55,6 +55,7 @@ Hierzu öffnen Sie „Leistungsüberwachung“ und fügen dort die Indikatoren f
 
 Auf folgende Indikatoren für das ATA-Gateway sollte hauptsächlich geachtet werden:
 
+> [!div class="mx-tableFixed"]
 |Leistungsindikator|Beschreibung|Schwellenwert|Problembehandlung|
 |-----------|---------------|-------------|-------------------|
 |Microsoft ATA Gateway\NetworkListener PEF Parser Messages\Sec|Die Menge des Datenverkehrs, der pro Sekunde vom ATA-Gateway verarbeitet wird.|Kein Schwellenwert|Hilft bei der Einschätzung des vom ATA-Gateway analysierten Datenverkehrs.|
@@ -75,7 +76,7 @@ Fügen Sie diese Leistungsindikatoren hinzu, um die Ressourcenbeschränkungen zu
 
 Hierzu öffnen Sie „Leistungsüberwachung“ und fügen alle Indikatoren für das ATA-Lightweight-Gateway hinzu. Der Name der Leistungsindikatorobjekte lautet: „Microsoft ATA Gateway“ und „Microsoft ATA Gateway Updater“.
 
-
+> [!div class="mx-tableFixed"]
 |Leistungsindikator|Beschreibung|Schwellenwert|Problembehandlung|
 |-----------|---------------|-------------|-------------------|
 |Microsoft ATA Gateway Updater\GatewayUpdaterResourceManager CPU Time Max %|Die maximale CPU-Zeit (in Prozent), die der Lightweight-Gatewayprozess nutzen kann. |Kein Schwellenwert. | Dies ist die Einschränkung, die verhindert, dass das ATA-Lightweight-Gateway die Ressourcen des Domänencontrollers vollständig erschöpft. Wenn Sie bemerken, dass der Prozess innerhalb eines Zeitraums häufig den maximalen Grenzwert erreicht (der Prozess erreicht das Limit und anschließend wird Datenverkehr gelöscht), müssen Sie dem Server mit dem Domänencontroller mehr Ressourcen hinzufügen.|
@@ -87,7 +88,7 @@ Hierzu öffnen Sie „Leistungsüberwachung“ und fügen alle Indikatoren für 
 Verwenden Sie die folgenden Leistungsindikatoren, um Ihren tatsächlichen Verbrauch zu erfahren:
 
 
-
+> [!div class="mx-tableFixed"]
 |Leistungsindikator|Beschreibung|Schwellenwert|Problembehandlung|
 |-----------|---------------|-------------|-------------------|
 |Process(Microsoft.Tri.Gateway)\%Processor Time|Die CPU-Zeit (in Prozent), die der Lightweight-Gatewayprozess zurzeit verwendet. |Kein Schwellenwert. | Vergleichen Sie die Ergebnisse dieses Leistungsindikators mit dem Grenzwert von GatewayUpdaterResourceManager CPU Time Max %. Wenn Sie bemerken, dass der Prozess innerhalb eines Zeitraums häufig den maximalen Grenzwert erreicht (der Prozess erreicht das Limit und anschließend wird Datenverkehr gelöscht), müssen Sie für das Lightweight-Gateway mehr Ressourcen bereitstellen.|
@@ -101,6 +102,7 @@ Hierzu öffnen Sie „Leistungsüberwachung“ und fügen dort die Indikatoren f
 
 Auf folgende Indikatoren für ATA Center sollte hauptsächlich geachtet werden:
 
+> [!div class="mx-tableFixed"]
 |Leistungsindikator|Beschreibung|Schwellenwert|Problembehandlung|
 |-----------|---------------|-------------|-------------------|
 |Microsoft ATA Center\EntityReceiver Entity Batch Block Size|Die Anzahl der Entitätenbatches in der Warteschlange von ATA Center.|Sollte niedriger sein als der Maximalwert - 1 (Standardmaximalwert: 10.000)|Überprüfen Sie, ob Komponenten vorhanden sind, die ihre Maximalgröße erreicht haben und daher vorgeschaltete Komponenten bis hin zum NetworkListener blockieren.  Informationen hierzu finden Sie oben im Abschnitt **ATA-Komponentenprozess**.<br /><br />Überprüfen Sie, ob Probleme bei CPU oder Arbeitsspeicher vorliegen.|
@@ -116,6 +118,7 @@ Auf folgende Indikatoren für ATA Center sollte hauptsächlich geachtet werden:
 ## <a name="operating-system-counters"></a>Leistungsindikatoren des Betriebssystems
 In der folgenden Liste sind die Leistungsindikatoren des Betriebssystems aufgeführt, auf die hauptsächlich geachtet werden sollte:
 
+> [!div class="mx-tableFixed"]
 |Leistungsindikator|Beschreibung|Schwellenwert|Problembehandlung|
 |-----------|---------------|-------------|-------------------|
 |Prozessor(_Total)\%Prozessorzeit (%)|Die prozentuale Angabe der vergangenen Prozessorzeit, die zum Ausführen eines Threads benötigt wird, der sich nicht im Leerlauf befindet.|Weniger als 80 % im Durchschnitt|Überprüfen Sie, ob ein bestimmter Prozess wesentlich mehr Prozessorzeit verbraucht, als sinnvoll ist.<br /><br />Fügen Sie weitere Prozessoren hinzu.<br /><br />Reduzieren Sie den Umfang des Datenverkehrs pro Server.<br /><br />Der Indikator „Prozessor(_Total)\%Prozessorzeit (%)“ ist möglicherweise auf virtuellen Servern weniger genau. In diesem Fall ist die genauere Möglichkeit zum Messen einer verringerten Prozessorleistung der Indikator „System\Prozessor-Warteschlangenlänge“.|
