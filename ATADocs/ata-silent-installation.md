@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 06/28/2017
+ms.date: 07/20/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 5b46d53d4e72ebe32b6e1f57960694194b71b31c
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: 7e130da2b5a177658e176a428101c11d02bc2a3f
+ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/25/2017
 ---
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
@@ -49,6 +49,7 @@ Verwenden Sie zum Installieren von ATA Center den folgenden Befehl:
     
 **Installationsoptionen**:
 
+> [!div class="mx-tableFixed"]
 |Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|Beschreibung|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|Ja|Führt das Installationsprogramm ohne Benutzeroberfläche und Eingabeaufforderungen aus.|
@@ -58,6 +59,7 @@ Verwenden Sie zum Installieren von ATA Center den folgenden Befehl:
 
 **Installationsparameter**:
 
+> [!div class="mx-tableFixed"]
 |Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|Beschreibung|
 |-------------|----------|---------|---------|
 |InstallationPath|InstallationPath=„<InstallPath>"|Nein|Legt den Pfad für die Installation der ATA-Binärdateien fest. Standardpfad: „C:\Programme\Microsoft Advanced Threat Analytics\Center“.|
@@ -89,6 +91,7 @@ Verwenden Sie zum Aktualisieren von ATA Center den folgenden Befehl:
 
 **Installationsoptionen**:
 
+> [!div class="mx-tableFixed"]
 |Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|Beschreibung|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|Ja|Führt das Installationsprogramm ohne Benutzeroberfläche und Eingabeaufforderungen aus.|
@@ -111,6 +114,7 @@ Verwenden Sie den folgenden Befehl, um eine unbeaufsichtigte Deinstallation von 
 
 **Installationsoptionen**:
 
+> [!div class="mx-tableFixed"]
 |Name|Syntax|Erforderlich für die unbeaufsichtigte Deinstallation?|Beschreibung|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|Ja|Führt das Deinstallationsprogramm ohne Benutzeroberfläche und Eingabeaufforderungen aus.|
@@ -119,6 +123,7 @@ Verwenden Sie den folgenden Befehl, um eine unbeaufsichtigte Deinstallation von 
 
 **Installationsparameter**:
 
+> [!div class="mx-tableFixed"]
 |Name|Syntax|Erforderlich für die unbeaufsichtigte Deinstallation?|Beschreibung|
 |-------------|----------|---------|---------|
 |DeleteExistingDatabaseData|DeleteExistingDatabaseData|Nein|Löscht alle Dateien in der vorhandenen Datenbank.|
@@ -134,7 +139,7 @@ Verwenden Sie den folgenden Befehl für eine unbeaufsichtigte Installation des A
 **Syntax**:
 
     Microsoft ATA Gateway Setup.exe [/quiet] [/Help] [NetFrameworkCommandLineArguments ="/q"] 
-    [GatewayCertificateThumbprint="<CertThumbprint >"] [ConsoleAccountName="<AccountName>"] 
+    [ConsoleAccountName="<AccountName>"] 
     [ConsoleAccountPassword="<AccountPassword>"]
 
 > [!NOTE]
@@ -143,6 +148,7 @@ Verwenden Sie den folgenden Befehl für eine unbeaufsichtigte Installation des A
 
 **Installationsoptionen**:
 
+> [!div class="mx-tableFixed"]
 |Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|Beschreibung|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|Ja|Führt das Installationsprogramm ohne Benutzeroberfläche und Eingabeaufforderungen aus.|
@@ -151,9 +157,9 @@ Verwenden Sie den folgenden Befehl für eine unbeaufsichtigte Installation des A
 
 **Installationsparameter**:
 
+> [!div class="mx-tableFixed"]
 |Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|Beschreibung|
 |-------------|----------|---------|---------|
-|GatewayCertificateThumbprint|GatewayCertificateThumbprint=„<CertThumbprint >“|Nein|Legt den Zertifikatsfingerabdruck für den ATA Center-Dienst fest. Dieses Zertifikat schützt die Kommunikation zwischen ATA Center und dem ATA-Gateway. Wird diese Option nicht festgelegt, wird bei der Installation ein selbstsigniertes Zertifikat generiert.|
 |ConsoleAccountName|ConsoleAccountName=„<AccountName>“|Ja|Legt den Namen des Benutzerkontos (user@domain.com) fest, mit dem das ATA-Gateway mit ATA Center registriert wird.|
 |ConsoleAccountPassword|ConsoleAccountPassword=„<AccountPassword>"|Ja|Legt das Passwort für das Benutzerkonto (user@domain.com) fest, mit dem das ATA-Gateway mit ATA Center registriert wird.|
 
@@ -174,6 +180,7 @@ Verwenden Sie den folgenden Befehl für ein unbeaufsichtigtes Update des ATA-Gat
 
 **Installationsoptionen**:
 
+> [!div class="mx-tableFixed"]
 |Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|Beschreibung|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|Ja|Führt das Installationsprogramm ohne Benutzeroberfläche und Eingabeaufforderungen aus.|
@@ -193,6 +200,7 @@ Verwenden Sie den folgenden Befehl, um eine unbeaufsichtigte Deinstallation des 
     
 **Installationsoptionen**:
 
+> [!div class="mx-tableFixed"]
 |Name|Syntax|Erforderlich für die unbeaufsichtigte Deinstallation?|Beschreibung|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|Ja|Führt das Deinstallationsprogramm ohne Benutzeroberfläche und Eingabeaufforderungen aus.|
