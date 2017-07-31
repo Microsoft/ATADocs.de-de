@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3d687087dd9e1ae7f7642f9fdd7d89420f3bec27
-ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
+ms.openlocfilehash: 7067477066a2341fa15b2b0d283b2d7721239d5e
+ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/25/2017
 ---
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
@@ -34,19 +34,22 @@ Sie müssen sich mit einem Benutzer anmelden, dem die richtige ATA-Rolle für de
 
 ## <a name="logging-into-the-ata-console"></a>Anmelden bei der ATA-Konsole
 
+>[!NOTE]
+ > Ab ATA 1.8 erfolgt die Anmeldung in der ATA-Konsole über das einmalige Anmelden.
+
 1. Klicken Sie auf dem Desktop des ATA Center-Servers auf das Symbol für die **Microsoft ATA-Konsole**, oder öffnen Sie einen Browser, und navigieren Sie zur ATA-Konsole.
 
     ![Symbol für den ATA-Server](media/ata-server-icon.png)
 
->[!NOTE]
-> Sie können auch entweder in ATA Center oder auf dem ATA-Gateway einen Browser öffnen und zu der IP-Adresse navigieren, die Sie während der ATA Center-Installation für die ATA-Konsole konfiguriert haben.    
+ >[!NOTE]
+ > Sie können auch entweder in ATA Center oder auf dem ATA-Gateway einen Browser öffnen und zu der IP-Adresse navigieren, die Sie während der ATA Center-Installation für die ATA-Konsole konfiguriert haben.    
 
 2.  Wenn der Computer, auf dem ATA Center installiert ist, und der Computer, von dem aus Sie versuchen, auf die ATA-Konsole zuzugreifen, beide zu einer Domäne gehören, unterstützt ATA das einmalige Anmelden, das in der Windows-Authentifizierung integriert ist. Sollten sie sich bereits an Ihrem Computer angemeldet haben, verwendet ATA dieses Token, um sich bei der ATA-Konsole anzumelden. Sie können sich auch mit einer Smartcard anmelden. Ihre Berechtigungen in ATA entsprechen dann Ihrer [Administratorrolle](ata-role-groups.md).
 
-> [!NOTE]
-> Stellen Sie sicher, dass Sie sich an dem Computer anmelden, von dem aus Sie auf die ATA-Konsole zugreifen möchten. Verwenden Sie hierzu Ihren ATA-Administratorbenutzernamen und das dazugehörige Kennwort. Alternativ können Sie Ihren Browser als ein anderer Benutzer ausführen oder sich von Windows abmelden und danach mit Ihrem ATA-Administratorbenutzerkonto anmelden. Um die ATA-Konsole aufzufordern, nach Anmeldeinformationen zu fragen, greifen Sie mithilfe einer IP-Adresse auf die Konsole zu, und Sie werden aufgefordert, Anmeldeinformationen einzugeben.
+ > [!NOTE]
+ > Stellen Sie sicher, dass Sie sich an dem Computer anmelden, von dem aus Sie auf die ATA-Konsole zugreifen möchten. Verwenden Sie hierzu Ihren ATA-Administratorbenutzernamen und das dazugehörige Kennwort. Alternativ können Sie Ihren Browser als ein anderer Benutzer ausführen oder sich von Windows abmelden und danach mit Ihrem ATA-Administratorbenutzerkonto anmelden. Um die ATA-Konsole aufzufordern, nach Anmeldeinformationen zu fragen, greifen Sie mithilfe einer IP-Adresse auf die Konsole zu, und Sie werden aufgefordert, Anmeldeinformationen einzugeben.
 
-Stellen Sie bei der Anmeldung mit SSO sicher, dass der Standort der ATA-Konsole als lokale Intranetsite in Ihrem Browser definiert ist, und dass Sie auf diese mit einem Kurznamen oder einem Localhost zugreifen.
+3. Stellen Sie bei der Anmeldung mit SSO sicher, dass der Standort der ATA-Konsole als lokale Intranetsite in Ihrem Browser definiert ist, und dass Sie auf diese mit einem Kurznamen oder einem Localhost zugreifen.
 
 > [!NOTE]
 > Zusätzlich zum Protokollieren jeder verdächtigen Aktivität und Integritätswarnung wird jede Konfigurationsänderung, die Sie in der ATA-Konsole vornehmen, im Windows-Ereignisprotokoll auf dem ATA Center-Computer unter **Applications and services log** (Protokoll für Anwendungen und Dienste) und dann unter **Microsoft ATA** überprüft. Es wird ebenso jede Anmeldung bei der ATA-Konsole überprüft.<br></br>  Eine Konfiguration, die das ATA-Gateway betrifft, wird auch im Windows-Ereignisprotokoll des ATA-Gateway-Computers protokolliert. 
@@ -113,7 +116,7 @@ Ein Profil, das ATA nicht vollständig auflösen konnte, wird durch das Symbol e
 
 ### <a name="sensitive-groups"></a>Sensible Gruppen
 
-Die folgende Liste von Gruppen werden von ATA als **sensibel** eingestuft. Das sind Gruppen, die als Besitzer administrativer Privilegien gekennzeichnet werden und die Warnungen ausgeben, die mit sensiblen Konten übereinstimmen:
+Die folgende Liste von Gruppen werden von ATA als **sensibel** eingestuft. Jede Entität, die Mitglied dieser Gruppen ist, wird als sensibel angesehen:
 
 - Domänencontroller der Organisation ohne Schreibzugriff 
 - Domänen-Admins 
