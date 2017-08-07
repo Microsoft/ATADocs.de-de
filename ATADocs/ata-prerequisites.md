@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/2/2017
+ms.date: 8/2/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 14b0d68ce797eeaa99c9e067f7f8caacee1a7b74
-ms.sourcegitcommit: 3cd268cf353ff8bc3d0b8f9a8c10a34353d1fcf1
+ms.openlocfilehash: 0a9d92e5851f1cf64c5e4b4e1ee57d7ee4562d96
+ms.sourcegitcommit: 7bc04eb4d004608764b3ded1febf32bc4ed020be
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2017
+ms.lasthandoff: 08/02/2017
 ---
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
@@ -51,12 +51,12 @@ Das ATA-System arbeitet auf der Gesamtstrukturbegrenzung von Active Directory un
 In diesem Abschnitt werden die Informationen aufgeführt, die Sie sammeln sollten, und Konten und Netzwerkentitäten genannt, die vor der ATA-Installation vorhanden sein sollten.
 
 
--   Benutzerkonto und -kennwort mit Lesezugriff auf alle Objekte in den Domänen, die überwacht werden.
+-   Benutzerkonto und -kennwort mit Lesezugriff auf alle Objekte in den überwachten Domänen.
 
     > [!NOTE]
     > Wenn Sie benutzerdefinierte ACLs für verschiedene Organisationseinheiten (OU) in Ihrer Domäne festgelegt haben, stellen Sie sicher, dass der ausgewählte Benutzer Leseberechtigungen für diese Organisationseinheiten hat.
 
--   Installieren Sie Microsoft Message Analyzer nicht auf einem ATA-Gateway oder einem Lightweight-Gateway. Der Treiber von Message Analyzer steht mit dem Treiber des ATA-Gateways und des Lightweight-Gateways in Konflikt. Wenn Sie Wireshark auf einem ATA-Gateway ausführen, müssen Sie den Dienst Microsoft Advanced Threat Analytics Gateway neu starten, nachdem Sie das Erfassen mit Wireshark abgeschlossen haben. Falls Sie dies nicht tun, erfasst das Gateway keinen Datenverkehr mehr. Beachten Sie, dass das Ausführen von Wireshark auf einem ATA-Lightweight-Gateway nicht in das ATA-Lightweight-Gateway eingreift.
+-   Installieren Sie Microsoft Message Analyzer nicht auf einem ATA-Gateway oder einem Lightweight-Gateway. Der Treiber von Message Analyzer steht mit dem Treiber des ATA-Gateways und des Lightweight-Gateways in Konflikt. Wenn Sie Wireshark auf einem ATA-Gateway ausführen, müssen Sie den Dienst Microsoft Advanced Threat Analytics Gateway neu starten, nachdem Sie das Erfassen mit Wireshark abgeschlossen haben. Wenn dies nicht der Fall ist, beendet das Gateway die Erfassung von Datenverkehr. Beachten Sie, dass das Ausführen von Wireshark auf einem ATA-Lightweight-Gateway nicht in das ATA-Lightweight-Gateway eingreift.
 
 -    Empfohlen: Der Benutzer sollte über den schreibgeschützten Zugriff auf den Container mit gelöschten Objekten verfügen. Dadurch wird es ATA ermöglicht, die Massenlöschung von Objekten in der Domäne zu erkennen. Weitere Informationen zum Konfigurieren des schreibgeschützten Zugriffs auf den Container für gelöschte Objekte finden Sie im Abschnitt **Changing permissions on a deleted object container** (Ändern von Berechtigungen für einen Container mit gelöschten Objekten) im Thema [View or Set Permissions on a Directory Object](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) (Anzeigen und Festlegen von Berechtigungen für ein Verzeichnisobjekt).
 
@@ -94,7 +94,7 @@ Die Zeitsynchronisierung des ATA Center-Servers, der ATA-Gatewayserver und der D
 Sie benötigen Folgendes:
 -   Mindestens einen Netzwerkadapter (wenn Sie physische Server in einer VLAN-Umgebung verwenden, empfiehlt es sich, zwei Netzwerkadapter zu verwenden)
 
--   Eine IP-Adresse für die Kommunikation zwischen ATA Center und dem ATA-Gateway, die mithilfe von SSL über Port 443 verschlüsselt wird. 
+-   Eine IP-Adresse für die Kommunikation zwischen ATA Center und dem ATA-Gateway, die mithilfe von SSL über Port 443 verschlüsselt wird. (Der ATA-Diensts bindet an alle IP-Adressen, die ATA Center auf Port 443 hat.)
 
 ### <a name="ports"></a>Ports
 In der folgenden Tabelle sind die Ports aufgelistet, die mindestens geöffnet werden müssen, damit ATA Center ordnungsgemäß funktioniert.
@@ -114,19 +114,23 @@ In der folgenden Tabelle sind die Ports aufgelistet, die mindestens geöffnet we
 |**Netlogon** (optional, wenn eine Domäne verknüpft ist)|TCP und UDP|445|Domänencontroller|Ausgehend|
 |**Windows Time** (optional, wenn eine Domäne verknüpft ist)|UDP|123|Domänencontroller|Ausgehend|
 
+> [!NOTE]
+> LDAP ist erforderlich, um die Anmeldeinformationen zwischen den ATA-Gateways und den Domänencontrollern zu testen. Bei dem Test zwischen ATA Center und einem Domänencontroller wird die Gültigkeit dieser Anmeldeinformationen überprüft. Danach verwendet ATA-Gateway LDAP im Rahmen der normalen Kommunikation.
+
+
 ### <a name="certificates"></a>Zertifikate
 Stellen Sie sicher, dass ATA Center Zugriff auf den CRL-Verteilungspunkt hat. Wenn die ATA-Gateways keinen Zugriff auf das Internet haben, führen Sie [das Verfahren zum manuellen Importieren einer Zertifikatsperrliste](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx) durch. Achten Sie dabei darauf, alle CRL-Verteilungspunkte für die gesamte Kette zu installieren.
 
 Um die Installation von ATA zu erleichtern, können Sie während dieser Installation selbstsignierte Zertifikate installieren. Nach der Bereitstellung können Sie die selbstsignierten Zertifikate durch ein Zertifikat einer internen Zertifizierungsstelle ersetzen, das vom ATA-Gateway verwendet werden soll.<br>
-> [!NOTE]
-> Der Anbietertyp des Zertifikats kann „Kryptografiedienstanbieter (CSP)“ oder „Schlüsselspeicheranbieter (KSP)“ sein.
 
-
-> Die Verwendung einer der automatischen Zertifikaterneuerung wird nicht unterstützt.
+> [!WARNING]
+> - Die Erneuerung eines vorhandenen Zertifikats wird nicht unterstützt. Zertifikate lassen sich nur erneuern, indem ein neues Zertifikat erstellt und ATA für die Verwendung des neuen Zertifikats konfiguriert wird.
 
 
 > [!NOTE]
-> Wenn Sie von anderen Computern aus auf die ATA-Konsole zugreifen werden, stellen Sie sicher, dass diese Computer dem von ATA Center verwendeten Zertifikat vertrauen. Andernfalls wird auf einer Warnseite die Meldung angezeigt, dass ein Problem mit dem Sicherheitszertifikat der Website vorliegt, bevor die Anmeldeseite geöffnet wird.
+> - Der Anbietertyp des Zertifikats kann „Kryptografiedienstanbieter (CSP)“ oder „Schlüsselspeicheranbieter (KSP)“ sein.
+> - ATA Center-Zertifikate DÜRFEN NICHT erneuert werden. Die korrekte Vorgehensweise für die Erneuerung ist, ein neues Zertifikat zu erstellen, bevor das alte abläuft, und das neue Zertifikat auszuwählen. 
+> - Wenn Sie von anderen Computern aus auf die ATA-Konsole zugreifen werden, stellen Sie sicher, dass diese Computer dem von ATA Center verwendeten Zertifikat vertrauen. Andernfalls wird auf einer Warnseite die Meldung angezeigt, dass ein Problem mit dem Sicherheitszertifikat der Website vorliegt, bevor die Anmeldeseite geöffnet wird.
 
 ## <a name="ata-gateway-requirements"></a>Voraussetzungen für das ATA-Gateway
 In diesem Abschnitt sind die Voraussetzungen für das ATA-Gateway aufgeführt.

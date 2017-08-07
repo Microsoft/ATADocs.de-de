@@ -5,18 +5,18 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/9/2017
+ms.date: 7/25/2017
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
 ms.prod: 
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: af88c02c6e2e5f679aca75b17a288c72ab300069
-ms.sourcegitcommit: be6bdfa24a9b25a3375a4768d513b93900b3a498
+ms.openlocfilehash: 54dd8bab3381fc221c75c53191ef052fc83b61ec
+ms.sourcegitcommit: e7f83eb636db00333fe3965324a10a2ef5e2beba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 07/30/2017
 ---
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
@@ -65,7 +65,7 @@ Für die Analyse des Benutzerverhaltens benötigt das ATA Center die Daten von m
 > [!NOTE]
 > -   ATA Center kann insgesamt maximal 1 Million Pakete pro Sekunde von allen überwachten Domänencontrollern verarbeiten. In einigen Umgebungen kann dasselbe ATA Center auf den gesamten Datenverkehr, der höher als 400.000 ist, reagieren. Wenden Sie sich an askcesec@microsoft.com, um Unterstützung bei Umgebungen wie diesen zu erhalten.
 > -   Die Menge an Speicherplatz, die hier vorgeschrieben ist, sind Nennwerte. Sie sollten sie stets im Hinblick auf künftiges Wachstum anpassen und sicherstellen, dass das Laufwerk, auf dem sich die Datenbank befindet, mindestens 20 % freien Speicherplatz aufweist.
-> -   Wenn der freie Speicherplatz auf 20 % oder 100 GB fällt, werden die Daten der ältesten Sammlung gelöscht. Die Löschung wird weiter ausgeführt, bis nur noch 5 % oder 50 GB an freiem Speicherplatz übrig bleiben. Sobald dies der Fall ist, wird die Datensammlung abgebrochen.
+> -   Wenn der freie Speicherplatz auf 20 % oder 200 GB fällt, wird die älteste Sammlung gelöscht. Die Löschung wird weiter ausgeführt, bis nur noch 5 % oder 50 GB an freiem Speicherplatz übrig bleiben. Sobald dies der Fall ist, wird die Datensammlung abgebrochen.
 > - Es ist möglich, ATA Center auf jedem IaaS-Anbieter bereitzustellen, solange die Leistungsanforderungen erfüllt werden, die in diesem Artikel beschrieben sind.
 > -   Die Speicherlatenz für Lese- und Schreibvorgänge sollte unter 10 ms betragen.
 > -   Das Verhältnis zwischen Schreib- und Lesevorgängen beträgt unterhalb von 100.000 Paketen pro Sekunde etwa 1:3 und oberhalb dieser Grenze etwa 1:6.

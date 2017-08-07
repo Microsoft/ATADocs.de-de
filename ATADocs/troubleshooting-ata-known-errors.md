@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/23/2017
+ms.date: 7/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 28b3bca7e84213b0f41bd8e2de61c006592819d5
-ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
+ms.openlocfilehash: 734455b06514cadb232916b8db76e47b8bf3e67a
+ms.sourcegitcommit: e7f83eb636db00333fe3965324a10a2ef5e2beba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2017
+ms.lasthandoff: 07/30/2017
 ---
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
@@ -51,6 +51,7 @@ In diesem Abschnitt sind mögliche Fehler, die es in den Bereitstellungen von AT
 |Die Warnung, dass Netzwerkdatenverkehr aus der Portspiegelung gelöscht wurde, wird ausgegeben, wenn ein Lightweight-Gateway auf VMware verwendet wird.|Wenn Sie Domänencontroller auf virtuellen VMware-Computern verwenden, wird möglicherweise die Warnung **Netzwerkdatenverkehr aus Portspiegelung gelöscht** ausgegeben. Dies kann aufgrund von Konfigurationskonflikten in VMware auftreten. |Um zu vermeiden, dass diese Warnung ausgegeben wird, können Sie überprüfen, ob die folgenden Einstellungen auf „0“ oder „deaktiviert“ festgelegt sind: TsoEnable, LargeSendOffload, IPv4, TSO Offload. Deaktivieren Sie ebenso IPv4 Giant TSO Offload. Weitere Informationen finden Sie in der VMware-Dokumentation.|
 |System.Net.WebException: Der Remoteserver hat einen Fehler ausgegeben: (407) Proxyauthentifizierung erforderlich|Die Kommunikation des ATA-Gateways mit dem ATA Center wurde durch einen Proxyserver unterbrochen.|Deaktivieren Sie den Proxy auf dem Computer des ATA-Gateways. <br></br>Beachten Sie, dass Proxyeinstellungen pro Konto gelten können.|
 |System.IO.DirectoryNotFoundException: Das System kann den angegebenen Pfad nicht finden. (Ausnahme von HRESULT: 0x80070003)|Mindestens einer der erforderlichen Dienste zur Ausführung von ATA konnte nicht gestartet werden.|Starten Sie die folgenden Dienste: <br></br>Leistungsprotokolle und -warnungen (PLA), Taskplaner (Zeitplan).|
+|System.Net.WebException: The remote server returned an error: (403) Forbidden (System.Net.WebException: Der Remoteserver hat einen Fehler zurückgegeben: (403) Verboten)|Es wurde nicht zugelassen, dass das ATA-Gateway oder das Lightweight-Gateway eine HTTP-Verbindung herstellt, da dem ATA Center nicht vertrauenswürdig ist.|Fügen Sie der Liste der vertrauenswürdigen Websites den NetBIOS-Namen und den FQDN von ATA Center hinzu, und löschen Sie den Cache in Internet Explorer (oder den Namen von ATA Center, wie er in der Konfiguration angegeben ist, wenn sich die Konfiguration vom NetBIOS/FQDN unterscheidet).|
 
 ## <a name="deployment-errors"></a>Bereitstellungsfehler
 > [!div class="mx-tableFixed"]
