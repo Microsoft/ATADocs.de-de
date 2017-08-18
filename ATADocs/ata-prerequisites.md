@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: bd3ddca6f233499441bf82a0cdb5a79078df0bf5
-ms.sourcegitcommit: 28f5d0f39149955c0d1059e13db289d13be9b642
+ms.openlocfilehash: dfcdffb3458124cade644cc06a4c359458eb26fe
+ms.sourcegitcommit: 8b622fa5457cf1a540504899c8c98e860b946e01
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/14/2017
 ---
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
@@ -118,9 +118,12 @@ In der folgenden Tabelle sind die Ports aufgelistet, die mindestens geöffnet we
 > LDAP ist erforderlich, um die Anmeldeinformationen, die zwischen den ATA-Gateways und den Domänencontrollern verwendet werden sollen, zu testen. Bei dem Test zwischen ATA Center und einem Domänencontroller wird die Gültigkeit dieser Anmeldeinformationen überprüft. Danach verwendet ATA-Gateway LDAP im Rahmen seines normalen Auflösungsprozesses.
 
 ### <a name="certificates"></a>Zertifikate
-Stellen Sie sicher, dass ATA Center Zugriff auf den CRL-Verteilungspunkt hat. Wenn die ATA-Gateways keinen Zugriff auf das Internet haben, führen Sie [das Verfahren zum manuellen Importieren einer Zertifikatsperrliste](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx) durch. Achten Sie dabei darauf, alle CRL-Verteilungspunkte für die gesamte Kette zu installieren.
 
-Um die Installation von ATA zu erleichtern, können Sie während dieser Installation selbstsignierte Zertifikate installieren. Nach der Bereitstellung können Sie die selbstsignierten Zertifikate durch ein Zertifikat einer internen Zertifizierungsstelle ersetzen, das vom ATA-Gateway verwendet werden soll.<br>
+Um die Installation von ATA zu erleichtern, können Sie während dieser Installation selbstsignierte Zertifikate installieren. Nach der Bereitstellung sollten Sie die selbstsignierten Zertifikate durch ein Zertifikat einer internen Zertifizierungsstelle ersetzen, das vom ATA-Center verwendet werden soll.
+
+
+Stellen Sie sicher, dass das ATA-Center und die ATA-Gateways Zugriff auf den CRL-Verteilungspunkt haben. Wenn sie keinen Zugriff auf das Internet haben, führen Sie [das Verfahren zum manuellen Importieren einer Zertifikatsperrliste](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx) durch. Achten Sie dabei darauf, alle CRL-Verteilungspunkte für die gesamte Kette zu installieren.
+
 
 > [!WARNING]
 > - Die Erneuerung eines vorhandenen Zertifikats wird nicht unterstützt. Zertifikate lassen sich nur erneuern, indem ein neues Zertifikat erstellt und ATA für die Verwendung des neuen Zertifikats konfiguriert wird.
@@ -128,8 +131,8 @@ Um die Installation von ATA zu erleichtern, können Sie während dieser Installa
 
 > [!NOTE]
 > - Der Anbietertyp des Zertifikats kann „Kryptografiedienstanbieter (CSP)“ oder „Schlüsselspeicheranbieter (KSP)“ sein.
-> - ATA Center-Zertifikate DÜRFEN NICHT erneuert werden. Die korrekte Vorgehensweise für die Erneuerung ist, ein neues Zertifikat zu erstellen, bevor das alte abläuft, und das neue Zertifikat auszuwählen. 
 > - Wenn Sie von anderen Computern aus auf die ATA-Konsole zugreifen werden, stellen Sie sicher, dass diese Computer dem von ATA Center verwendeten Zertifikat vertrauen. Andernfalls wird auf einer Warnseite die Meldung angezeigt, dass ein Problem mit dem Sicherheitszertifikat der Website vorliegt, bevor die Anmeldeseite geöffnet wird.
+> - Ab ATA Version 1.8 verwalten die ATA-Gateways und Lightweight-Gateways ihre eigenen Zertifikate, sodass keine Administratorinteraktion für die Verwaltung nötig ist.
 
 ## <a name="ata-gateway-requirements"></a>Voraussetzungen für das ATA-Gateway
 In diesem Abschnitt sind die Voraussetzungen für das ATA-Gateway aufgeführt.

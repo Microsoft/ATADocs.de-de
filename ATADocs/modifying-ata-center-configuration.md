@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 8/2/2017
+ms.date: 8/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 93b27f15-f7e5-49bb-870a-d81d09dfe9fc
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e9fa0b9162aabdaa9a42c532cf69af37decf3e05
-ms.sourcegitcommit: 7bc04eb4d004608764b3ded1febf32bc4ed020be
+ms.openlocfilehash: bfd86dadbc773b349f28a6327ec2e177da74be8d
+ms.sourcegitcommit: 8b622fa5457cf1a540504899c8c98e860b946e01
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/14/2017
 ---
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
@@ -68,7 +68,7 @@ Die URL wird in den folgenden Szenarios verwendet:
 
 Ersetzen Sie das Zertifikat wie folgt:
 
-1. Bevor das aktuelle Zertifikat abläuft, erstellen Sie ein neues Zertifikat, und stellen Sie sicher, dass es auf dem ATA Center-Server installiert ist. 
+1. Bevor das aktuelle Zertifikat abläuft, erstellen Sie ein neues Zertifikat, und stellen Sie sicher, dass es auf dem ATA Center-Server installiert ist. <br></br>Es wird empfohlen, dass Sie ein Zertifikat von einer internen Zertifizierungsstelle auswählen. Es ist jedoch auch möglich, ein neues selbstsigniertes Zertifikat zu erstellen. Weitere Informationen finden Sie unter [New-SelfSignedCertificate](https://technet.microsoft.com/itpro/powershell/windows/pkiclient/new-selfsignedcertificate).
 
 2. Wählen Sie in den ATA-Einstellungen unter **Center** dieses neu erstellte Zertifikat aus. Zu diesem Zeitpunkt ist der ATA Center-Dienst noch an das ursprüngliche Zertifikat gebunden. 
 
