@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 8c93f4485998bbb1b2b440f01fed8d96ad4e2842
-ms.sourcegitcommit: 7bc04eb4d004608764b3ded1febf32bc4ed020be
+ms.openlocfilehash: f9f9fee8ad8d75d3510c86890201dd719e074b8c
+ms.sourcegitcommit: 129bee06ff89b72d21b64f9aa0d1a29f66bf9153
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/20/2017
 ---
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
@@ -204,7 +204,13 @@ Bei der Reconnaissance von Verzeichnisdiensten handelt es sich um eine Technik, 
 |------|----|------|----------|
 | ATA löst diese Warnung aus, wenn mehr als 5% aller Konten gelöscht werden. Dafür müssen Sie Lesezugriff auf die gelöschten Elementcontainer haben. | Bringen Sie in Erfahrung, weshalb 5% aller Konten auf einmal gelöscht wurden. | Entziehen Sie Benutzern die Berechtigung, Konten in AD löschen zu können. Weitere Informationen finden Sie unter [View or Set Permissions on a Directory Object (Anzeigen oder Festlegen von Berechtigungen in einem Verzeichnisobjekt)](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx). | Niedrig |
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="related-videos"></a>Verwandte Videos
+- [Joining the security community](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community) (Der Sicherheitscommunity beitreten)
+
+
+## <a name="see-also"></a>Siehe auch
+- [Verdächtige ATA-Aktivitäten – Playbook](http://aka.ms/ataplaybook)
+- [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Arbeiten mit verdächtigen Aktivitäten](working-with-suspicious-activities.md)
 - [Investigating Forged PAC attacks (Untersuchen von Angriffen mit gefälschten PAC-Dateien)](use-case-forged-pac.md)
 - [Troubleshooting ATA known errors (Problembehandlung bei bekannten ATA-Fehlern)](troubleshooting-ata-known-errors.md)

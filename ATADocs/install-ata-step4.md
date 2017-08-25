@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 06/18/2017
+ms.date: 08/20/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 2713f6939c8756d0ecb438e866e6649f13d3c490
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: 7a900229942235a175a463a6f581873ce0dab70b
+ms.sourcegitcommit: 129bee06ff89b72d21b64f9aa0d1a29f66bf9153
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/20/2017
 ---
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
@@ -88,8 +88,13 @@ Führen Sie die folgenden Schritte auf dem ATA-Gatewayserver aus.
 [« Schritt 3](install-ata-step3.md)
 [Schritt 5 »](install-ata-step5.md)
 
-## <a name="see-also"></a>Weitere Informationen
 
+## <a name="related-videos"></a>Verwandte Videos
+- [Auswählen des richtigen ATA-Gatewaytyps](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
+
+## <a name="see-also"></a>Siehe auch
+- [Handbuch für die ATA POC-Bereitstellung](http://aka.ms/atapoc)
+- [Tool zur Bemessung von ATA-Gateways](http://aka.ms/atasizingtool)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
 - [Voraussetzungen für ATA](ata-prerequisites.md)

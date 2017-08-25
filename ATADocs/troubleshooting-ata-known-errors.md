@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 8/6/2017
+ms.date: 8/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 675543c11e07bcc243131e2350cfb33bfe8e7e39
-ms.sourcegitcommit: 28f5d0f39149955c0d1059e13db289d13be9b642
+ms.openlocfilehash: 89d1472b18f20d9702fcd7dfd47fa4b22858ab83
+ms.sourcegitcommit: 37fdfb6a21d1b81f5a4b4c1351112bdf727a633f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/20/2017
 ---
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
@@ -53,7 +53,9 @@ In diesem Abschnitt sind mögliche Fehler, die es in den Bereitstellungen von AT
 |System.Net.WebException: Der Remoteserver hat einen Fehler ausgegeben: (407) Proxyauthentifizierung erforderlich|Die Kommunikation des ATA-Gateways mit dem ATA Center wurde durch einen Proxyserver unterbrochen.|Deaktivieren Sie den Proxy auf dem Computer des ATA-Gateways. <br></br>Beachten Sie, dass Proxyeinstellungen pro Konto gelten können.|
 |System.IO.DirectoryNotFoundException: Das System kann den angegebenen Pfad nicht finden. (Ausnahme von HRESULT: 0x80070003)|Mindestens einer der erforderlichen Dienste zur Ausführung von ATA konnte nicht gestartet werden.|Starten Sie die folgenden Dienste: <br></br>Leistungsprotokolle und -warnungen (PLA), Taskplaner (Zeitplan).|
 |System.Net.WebException: The remote server returned an error: (403) Forbidden (System.Net.WebException: Der Remoteserver hat einen Fehler zurückgegeben: (403) Verboten)|Es wurde nicht zugelassen, dass das ATA-Gateway oder das Lightweight-Gateway eine HTTP-Verbindung herstellt, da dem ATA Center nicht vertrauenswürdig ist.|Fügen Sie der Liste der vertrauenswürdigen Websites den NetBIOS-Namen und den FQDN von ATA Center hinzu, und löschen Sie den Cache in Internet Explorer (oder den Namen von ATA Center, wie er in der Konfiguration angegeben ist, wenn sich die Konfiguration vom NetBIOS/FQDN unterscheidet).|
+|System.Net.Http.HttpRequestException: PostAsync fehlerhaft [requestTypeName=StopNetEventSessionRequest]|ATA Gateway oder ATA Lightweight Gateway kann aufgrund eines WMI-Problems nicht die ETW-Sitzung, die Netzwerkdatenverkehr erfasst, beenden und starten.|Befolgen Sie die Anweisungen unter [WMI: Neuerstellen des WMI-Repositorys](https://blogs.technet.microsoft.com/askperf/2009/04/13/wmi-rebuilding-the-wmi-repository/), um das WMI-Problem zu beheben.|
 
+ 
 ## <a name="deployment-errors"></a>Bereitstellungsfehler
 > [!div class="mx-tableFixed"]
 |Fehler|Beschreibung|Lösung|
