@@ -17,19 +17,18 @@
 ## [Planen der ATA-Kapazität](ata-capacity-planning.md)
 ## [Voraussetzungen für ATA](ata-prerequisites.md)
 # Bereitstellen
-## Schritte vor der Installation
+## [1: Herunterladen und Installieren von Center](install-ata-step1.md)
+## [2 Mit AD DS verbinden](install-ata-step2.md)
+## [3 So laden Sie das ATA-Gateway-Paket herunter](install-ata-step3.md)
+## [4 Installieren des ATA-Gateways](install-ata-step4.md)
+## [5: Konfigurieren des ATA-Gateways](install-ata-step5.md)
+## [6: Ereignissammlung und VPN](install-ata-step6.md)
+## [7: Ausschlüsse und Honeytoken](install-ata-step7.md)
+## [Unbeaufsichtigte Installation](ata-silent-installation.md)
+## Zusätzliche Schritte für ATA-Gateway
 ### [1. Konfigurieren der Portspiegelung](configure-port-mirroring.md)
 ### [2. Überprüfen der Portspiegelung](validate-port-mirroring.md)
 ### [3. Konfigurieren der Windows-Ereignisweiterleitung](configure-event-collection.md)
-## Installieren von ATA
-### [Schritt 1: Herunterladen und Installieren von Center](install-ata-step1.md)
-### [Schritt 2: Verbinden mit AD](install-ata-step2.md)
-### [Schritt 3: Herunterladen des ATA-Gateway-Pakets](install-ata-step3.md)
-### [Schritt 4: Installieren des ATA-Gateways](install-ata-step4.md)
-### [Schritt 5: Konfigurieren des ATA-Gateways](install-ata-step5.md)
-### [Schritt 6: Ereignissammlung und VPN](install-ata-step6.md)
-### [Schritt 7: Ausschlüsse und Honeytoken](install-ata-step7.md)
-### [Unbeaufsichtigte Installation](ata-silent-installation.md)
 # Verwendung
 ## [Arbeiten mit der ATA-Konsole](working-with-ata-console.md)
 ## [Arbeiten mit verdächtigen Aktivitäten](working-with-suspicious-activities.md)
