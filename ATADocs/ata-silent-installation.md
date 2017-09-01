@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 07/20/2017
+ms.date: 08/29/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,18 +13,18 @@ ms.technology:
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 7e130da2b5a177658e176a428101c11d02bc2a3f
-ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
+ms.openlocfilehash: c38db312ea877b63580d745153aa58ea34a160a6
+ms.sourcegitcommit: 9ce330726e5de8c05eae6a20d3e6c1d8bef3cd0e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2017
+ms.lasthandoff: 08/29/2017
 ---
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
 
-
 # <a name="ata-silent-installation"></a>Unbeaufsichtigte ATA-Installation
 Dieser Artikel enthält Anweisungen zur unbeaufsichtigten Installation von ATA.
+
 ## <a name="prerequisites"></a>Voraussetzungen
 
 ATA Version 1.8 erfordert die Installation von Microsoft .NET Framework 4.6.1. 
@@ -134,6 +134,11 @@ Verwenden Sie den folgenden Befehl, um eine unbeaufsichtigte Deinstallation von 
     "Microsoft ATA Center Setup.exe" /quiet /uninstall --DeleteExistingDatabaseData
 
 ## <a name="ata-gateway-silent-installation"></a>Unbeaufsichtigte Installation des ATA-Gateways
+
+> [!NOTE]
+> Bei der unbeaufsichtigten Bereitstellung des ATA-Lightweight-Gateways über System Center Configuration Manager oder ein anderes System für die Softwarebereitstellung empfiehlt es sich, zwei Bereitstellungspakete zu erstellen:</br>– Net Framework 4.6.1 einschließlich Neustart des Domänencontrollers</br>– ATA Gateway </br>Machen Sie das ATA-Gateway-Paket abhängig von der .Net Framework-Paketbereitstellung. </br>Rufen Sie das [.Net Framework 4.6.1-Paket für die Offlinebereitstellung](https://www.microsoft.com/download/details.aspx?id=49982) ab. 
+
+
 Verwenden Sie den folgenden Befehl für eine unbeaufsichtigte Installation des ATA-Gateways:
 
 **Syntax**:
