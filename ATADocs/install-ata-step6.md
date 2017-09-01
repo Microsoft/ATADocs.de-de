@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/20/2017
+ms.date: 08/29/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 61ff0535d3497d39d58b96f1b4acc255b74e05b5
-ms.sourcegitcommit: 129bee06ff89b72d21b64f9aa0d1a29f66bf9153
+ms.openlocfilehash: ac591d960028268f6c1ebd74706839a3b91597da
+ms.sourcegitcommit: 9ce330726e5de8c05eae6a20d3e6c1d8bef3cd0e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2017
+ms.lasthandoff: 08/29/2017
 ---
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 08/20/2017
 
 ## <a name="step-6-configure-event-collection-and-vpn"></a>Schritt 6: Konfigurieren der Ereignissammlung und VPN
 ### <a name="configure-event-collection"></a>Konfigurieren der Ereignissammlung
-Um die Erkennungsfunktionalität zu verbessern, benötigt ATA die folgenden Windows-Ereignisse: 4776, 4732, 4733, 4728, 4729, 4756, 4757. Diese können entweder automatisch vom ATA-Lightweight-Gateway gelesen werden, oder, falls das ATA-Lightweight-Gateway nicht bereitgestellt wurde, an das ATA-Gateway weitergeleitet werden. Dazu gibt es zwei Möglichkeiten: zum einen das Konfigurieren des ATA-Gateways, sodass es auf SIEM-Ereignisse lauscht, oder das [Konfigurieren der Windows-Ereignisweiterleitung](#configuring-windows-event-forwarding).
+Um die Erkennungsfunktionalität zu verbessern, benötigt ATA die folgenden Windows-Ereignisse: 4776, 4732, 4733, 4728, 4729, 4756, 4757. Diese können entweder automatisch vom ATA-Lightweight-Gateway gelesen werden, oder, falls das ATA-Lightweight-Gateway nicht bereitgestellt wurde, an das ATA-Gateway weitergeleitet werden. Dazu gibt es zwei Möglichkeiten: zum einen das Konfigurieren des ATA-Gateways, sodass es auf SIEM-Ereignisse lauscht, oder das [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-collection.md).
 
 > [!NOTE]
 > Für die ATA-Version 1.8 und höher ist die Konfiguration der Ereignissammlung nicht länger für ATA-Lightweight-Gateways erforderlich. Das ATA-Lightweight-Gateway kann jetzt Ereignisse lokal lesen, ohne die Ereignisweiterleitung zu konfigurieren.
