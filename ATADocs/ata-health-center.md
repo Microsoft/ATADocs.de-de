@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 07/2/2017
+ms.date: 08/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: d6c783b2-46c5-4211-b21a-d6b17f08d03d
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 59e5cafcff7b84ffb9dc161cd0b50cd3014e455a
-ms.sourcegitcommit: 3177d5894413fbd363b9aca8130f3f7a369223b8
+ms.openlocfilehash: cdd046eeaca1d8aeb7ea3afa001b34b82cb468b0
+ms.sourcegitcommit: 46dd0e695f16a0dd23bbfa140eba15ea6a34d7af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 08/28/2017
 ---
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
@@ -35,11 +35,20 @@ Das ATA Health Center zeigt Probleme durch einen roten Punkt über dem Health Ce
 ### <a name="managing-ata-health"></a>Verwalten der ATA-Integrität
 Um den Gesamtzustand des Systems zu überprüfen, klicken Sie auf der Menüleiste auf das Health Center-Symbol. ![ATA Health Center-Symbol](media/ATA-red-dot.png)
 
--   Alle offenen Warnungen lassen sich über die Einstellungen **Aufgelöst** und **Verworfen** verwalten. Klicken Sie hierzu in der Warnung auf **Öffnen**, und scrollen Sie abwärts zu **Aufgelöst** oder **Verworfen**.
+-   Sie können alle offenen Warnungen auf **Schließen**, **Unterdrücken** oder **Löschen** festlegen, indem Sie auf die drei Punkte in der Ecke einer Warnung klicken und die gewünschte Option auswählen.
 
--   Wenn ein Problem als behoben markiert wird, ATA jedoch erkennt, dass das Problem weiterhin besteht, wird es automatisch erneut in die Liste der Probleme mit dem Zustand **Offen** aufgenommen. Wenn ATA erkennt, dass ein offenes Problem behoben wurde, wird dieses automatisch in die Liste **Aufgelöst** aufgenommen.
+-   **Öffnen**: In dieser Liste werden alle neuen verdächtigen Aktivitäten angezeigt.
 
--   Probleme mit dem Status **Verworfen** sind solche, die ATA nicht länger überprüfen soll – beispielsweise bekannte Probleme, die derzeit nicht behoben werden sollen und nicht mehr in der Liste **Offen** aufgeführt werden sollen. Legen Sie für solche Probleme **Verworfen** fest.
+-   **Auflösen**: Wird verwendet, um verdächtige Aktivitäten nachzuverfolgen, die Sie identifiziert, untersucht und behoben oder entschärft haben.
+
+    > [!NOTE]
+    > ATA kann geschlossene Aktivitäten wieder öffnen, wenn sie innerhalb eines kurzen Zeitraums erneut erkannt werden.
+
+-   **Unterdrücken**: Das Unterdrücken einer Aktivität bedeutet, dass Sie sie gerade ignorieren möchten und nur wieder gewarnt werden möchten, wenn es eine neue Instanz gibt. Das bedeutet, dass wenn es eine ähnliche Warnung gibt, ATA diese nicht mehr öffnen würde. Wen die Warnung jedoch für 7 Tage lang angehalten ist und anschließend wieder angezeigt wird, werden Sie erneut gewarnt.
+
+- **Verwerfen**: Wenn Sie eine Warnung verwerfen, wird Sie aus dem System aus der Datenbank gelöscht, und Sie können sie NICHT mehr wiederherstellen. Nachdem Sie auf „Verwerfen“ geklickt haben, können Sie alle verdächtigen Aktivitäten für den gleichen Typ löschen.
+
+
 
 ![Abbildung eines ATA Health Center-Problems](media/ATA-Health-Issue.JPG)
 

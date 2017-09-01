@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/20/2017
+ms.date: 08/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: fcee6f1887e6842d1ccdfd2863620af8a5a8279f
-ms.sourcegitcommit: 129bee06ff89b72d21b64f9aa0d1a29f66bf9153
+ms.openlocfilehash: 62ce117423a189a1c2ce00b862f323db6ed328cb
+ms.sourcegitcommit: 46dd0e695f16a0dd23bbfa140eba15ea6a34d7af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2017
+ms.lasthandoff: 08/28/2017
 ---
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
@@ -59,7 +59,7 @@ Zu jeder verdächtigen Aktivität stehen folgende Informationen zur Verfügung:
 ## <a name="filter-suspicious-activities-list"></a>Filtern der Liste der verdächtigen Aktivitäten
 So filtern Sie die Liste der verdächtigen Aktivitäten
 
-1.  Wählen Sie auf der linken Seite des Bildschirms im Bereich **Filtern nach** eine der folgenden Optionen aus: **Alle**, **Offen**, **Aufgelöst** oder **Verworfen**.
+1.  Wählen Sie auf der linken Seite des Bildschirms im Bereich **Filtern nach** eine der folgenden Optionen aus: **Alle**, **Offen**, **Geschlossen** oder **Unterdrückt**.
 
 2.  Um die Liste weiter zu filtern, wählen Sie **Hoch**, **Mittel** oder **Niedrig** aus.
 
@@ -93,7 +93,7 @@ Klicken Sie dafür auf die drei Punkte in der oberen rechten Ecke einer besonder
 -   **Auflösen**: Wird verwendet, um verdächtige Aktivitäten nachzuverfolgen, die Sie identifiziert, untersucht und behoben oder entschärft haben.
 
     > [!NOTE]
-    > ATA kann aufgelöste Aktivitäten wieder öffnen, wenn sie innerhalb eines kurzen Zeitraums erneut erkannt werden.
+    > ATA kann geschlossene Aktivitäten wieder öffnen, wenn sie innerhalb eines kurzen Zeitraums erneut erkannt werden.
 
 -   **Unterdrücken**: Das Unterdrücken einer Aktivität bedeutet, dass Sie sie gerade ignorieren möchten und nur wieder gewarnt werden möchten, wenn es eine neue Instanz gibt. Das bedeutet, dass wenn es eine ähnliche Warnung gibt, ATA diese nicht mehr öffnen würde. Wen die Warnung jedoch für 7 Tage lang angehalten ist und anschließend wieder angezeigt wird, werden Sie erneut gewarnt.
 
