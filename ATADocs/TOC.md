@@ -16,6 +16,7 @@
 ## [ATA-Architektur](ata-architecture.md)
 ## [Planen der ATA-Kapazität](ata-capacity-planning.md)
 ## [Voraussetzungen für ATA](ata-prerequisites.md)
+## [Empfohlener Upgradepfad](upgrade-path.md)
 # Bereitstellen
 ## [1: Herunterladen und Installieren von Center](install-ata-step1.md)
 ## [2 Mit AD DS verbinden](install-ata-step2.md)
