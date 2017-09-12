@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 8/20/2017
+ms.date: 9/3/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f9c2df3c454e2098277f4c475dc1d69378a90987
-ms.sourcegitcommit: 46dd0e695f16a0dd23bbfa140eba15ea6a34d7af
+ms.openlocfilehash: d7f5423104b3e42777b6ce8013832b3bac6353be
+ms.sourcegitcommit: 654500928025e3cb127e095c17cc1d6444defd3a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/03/2017
 ---
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
@@ -124,13 +124,19 @@ Um die Installation von ATA zu erleichtern, können Sie während dieser Installa
 
 Stellen Sie sicher, dass das ATA-Center und die ATA-Gateways Zugriff auf den CRL-Verteilungspunkt haben. Wenn sie keinen Zugriff auf das Internet haben, führen Sie [das Verfahren zum manuellen Importieren einer Zertifikatsperrliste](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx) durch. Achten Sie dabei darauf, alle CRL-Verteilungspunkte für die gesamte Kette zu installieren.
 
+Ein Zertifikat muss Folgendes besitzen:
+-   Einen privaten Schlüssel
+-   Den Anbietertyp „Kryptografiedienstanbieter“ (CSP) oder „Schlüsselspeicheranbieter“ (KSP)
+-   Eine Länge von 2048 Bits für öffentliche Schlüssel
+-   Einen festgelegten Wert für die Flags KeyEncipherment und ServerAuthentication
+
+Sie können beispielsweise den **Standardwebserver** oder **Computervorlagen** verwenden.
 
 > [!WARNING]
 > - Die Erneuerung eines vorhandenen Zertifikats wird nicht unterstützt. Zertifikate lassen sich nur erneuern, indem ein neues Zertifikat erstellt und ATA für die Verwendung des neuen Zertifikats konfiguriert wird.
 
 
 > [!NOTE]
-> - Der Anbietertyp des Zertifikats kann „Kryptografiedienstanbieter (CSP)“ oder „Schlüsselspeicheranbieter (KSP)“ sein.
 > - Wenn Sie von anderen Computern aus auf die ATA-Konsole zugreifen werden, stellen Sie sicher, dass diese Computer dem von ATA Center verwendeten Zertifikat vertrauen. Andernfalls wird auf einer Warnseite die Meldung angezeigt, dass ein Problem mit dem Sicherheitszertifikat der Website vorliegt, bevor die Anmeldeseite geöffnet wird.
 > - Ab ATA Version 1.8 verwalten die ATA-Gateways und Lightweight-Gateways ihre eigenen Zertifikate, sodass keine Administratorinteraktion für die Verwaltung nötig ist.
 
@@ -280,7 +286,7 @@ Der Zugriff auf die ATA-Konsole erfolgt über einen Browser. Folgende Browser we
 - [Auswählen des richtigen ATA-Gatewaytyps](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 - [Tool zur Bemessung von ATA-Gateways](http://aka.ms/atasizingtool)
 - [ATA-Architektur](ata-architecture.md)
 - [Installieren von ATA](install-ata-step1.md)

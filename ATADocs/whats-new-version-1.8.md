@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 8/14/2017
+ms.date: 9/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 9592d413-df0e-4cec-8e03-be1ae00ba5dc
 ms.reviewer: 
 ms.suite: ems
-ms.openlocfilehash: 1ec9308e046a228ac1276eb1aace58eec47e95d0
-ms.sourcegitcommit: 8b622fa5457cf1a540504899c8c98e860b946e01
+ms.openlocfilehash: 2793a602a0cd0fb9902197acd45dd5bdd4612ea4
+ms.sourcegitcommit: 654500928025e3cb127e095c17cc1d6444defd3a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 09/03/2017
 ---
 # <a name="whats-new-in-ata-version-18"></a>Neuerungen in ATA 1.8
 
@@ -127,8 +127,16 @@ In Windows Server 2016 Core sehen Sie den Fehler möglicherweise nicht, aber der
 
 **Problemumgehung**: Deaktivieren Sie die Verwendung des Proxyservers auf dem Dienstkonto des ATA-Gateways. Es wird ein Update zur Behebung dieses Problems in einer zukünftigen Version vorhanden sein.
 
+### <a name="report-settings-reset"></a>Zurücksetzen der Berichtseinstellungen
 
-## <a name="see-also"></a>Siehe auch
+**Symptome**: Alle Einstellungen, die an den geplanten Berichten vorgenommen wurden, werden gelöscht, wenn Sie auf Version 1.8 Update 1 aktualisieren.
+
+**Beschreibung**: Das Aktualisieren von Version 1.8 Update 1 von Version 1.8 setzt die Einstellungen für geplante Berichte zurück.
+
+**Problemumgehung**: Bevor Sie auf Version 1.8 Update 1 aktualisieren, erstellen Sie eine Kopie der Berichtseinstellungen, und geben Sie diese erneut ein. Dies kann auch über ein Skript erfolgen, weitere Informationen dazu finden Sie unter [Exportieren und Importieren der Advanced Threat Analytics-Konfiguration](ata-configuration-file.md).
+
+
+## <a name="see-also"></a>Weitere Informationen
 [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 [Aktualisieren von ATA auf Version 1.8: Migrationshandbuch](ata-update-1.8-migration-guide.md)
