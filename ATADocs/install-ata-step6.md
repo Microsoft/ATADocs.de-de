@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/29/2017
+ms.date: 09/19/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ac591d960028268f6c1ebd74706839a3b91597da
-ms.sourcegitcommit: 9ce330726e5de8c05eae6a20d3e6c1d8bef3cd0e
+ms.openlocfilehash: 068c3ca2858934f68beea9d092fbeb113b77ba2a
+ms.sourcegitcommit: 34c3d6f56f175994b672842c7576040956ceea69
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 09/19/2017
 ---
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
@@ -26,9 +26,10 @@ ms.lasthandoff: 08/29/2017
 # <a name="install-ata---step-6"></a>Installieren von ATA – Schritt 6
 
 >[!div class="step-by-step"]
-[« Schritt 5](install-ata-step5.md)
+[« Schritt 5](install-ata-step5.md)
+[Schritt 7 »](vpn-integration-install-step.md)
 
-## <a name="step-6-configure-event-collection-and-vpn"></a>Schritt 6: Konfigurieren der Ereignissammlung und VPN
+## <a name="step-6-configure-event-collection"></a>Schritt 6: Konfigurieren der Ereignissammlung
 ### <a name="configure-event-collection"></a>Konfigurieren der Ereignissammlung
 Um die Erkennungsfunktionalität zu verbessern, benötigt ATA die folgenden Windows-Ereignisse: 4776, 4732, 4733, 4728, 4729, 4756, 4757. Diese können entweder automatisch vom ATA-Lightweight-Gateway gelesen werden, oder, falls das ATA-Lightweight-Gateway nicht bereitgestellt wurde, an das ATA-Gateway weitergeleitet werden. Dazu gibt es zwei Möglichkeiten: zum einen das Konfigurieren des ATA-Gateways, sodass es auf SIEM-Ereignisse lauscht, oder das [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-collection.md).
 
@@ -184,26 +185,10 @@ Stellen Sie sicher, dass „\t“ zwischen Schlüssel=Wert-Paaren steht.
 > Verwendung von WinCollect für die Windows-Ereignissammlung wird nicht unterstützt.
 
 
-### <a name="configuring-vpn"></a>Konfigurieren des VPN
-
-ATA sammelt VPN-Daten, die bei der Profilerstellung der Orte helfen, von denen aus sich Computer mit dem Netzwerk verbinden.
-
-Zum Konfigurieren von VPN-Daten, gehen Sie unter **Konfiguration** > **VPN**, und geben Sie das **gemeinsame Geheimnis Ihrer Radius-Kontoführung** Ihres VPN an.
-
-![Konfigurieren des VPN](./media/vpn.png)
-
-Um das gemeinsame Geheimnis zu erhalten, beziehen Sie sich auf die VPN-Dokumentation. Die unterstützten VPN-Lieferanten sind folgende:
-
-- Microsoft
-- F5
-- Check Point
-- Cisco ASA
-
-
 
 >[!div class="step-by-step"]
 [« Schritt 5](install-ata-step5.md)
-[Schritt 7 »](install-ata-step7.md)
+[Schritt 7 »](vpn-integration-install-step.md)
 
 
 
