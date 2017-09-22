@@ -1,11 +1,11 @@
 ---
-title: "Installieren von Advanced Threat Analytics – Schritt 7 | Microsoft-Dokumentation"
+title: "Installieren von Advanced Threat Analytics – Schritt 8 | Microsoft-Dokumentation"
 description: Im letzten Schritt der Installation von ATA konfigurieren Sie den Honeytoken-Benutzer.
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 09/03/2017
+ms.date: 09/19/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,22 +13,22 @@ ms.technology:
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f5cb87148741c92dc7832da16cc37a749fa72fae
-ms.sourcegitcommit: 654500928025e3cb127e095c17cc1d6444defd3a
+ms.openlocfilehash: 3a8ccb1412bbd8e2013c84d36f4142301159c46c
+ms.sourcegitcommit: 34c3d6f56f175994b672842c7576040956ceea69
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2017
+ms.lasthandoff: 09/19/2017
 ---
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
 
 
-# <a name="install-ata---step-7"></a>Installieren von ATA – Schritt 7
+# <a name="install-ata---step-8"></a>Installieren von ATA – Schritt 8
 
 >[!div class="step-by-step"]
-[« Schritt 6 ](install-ata-step6.md)
+[« Schritt 7 ](vpn-integration-install-step.md)
 
-## <a name="step-7-configure-ip-address-exclusions-and-honeytoken-user"></a>Schritt 7: Konfigurieren von IP-Adressausschlüssen und Honeytoken-Benutzern
+## <a name="step-8-configure-ip-address-exclusions-and-honeytoken-user"></a>Schritt 8: Konfigurieren von IP-Adressausschlüssen und Honeytoken-Benutzern
 ATA ermöglicht den Ausschluss bestimmter IP-Adressen oder Benutzer aus einer Reihe von Erkennungen. 
 
 Angenommen, ein **DNS-Reconnaissance-Ausschluss** könnte eine Sicherheitsprüfung sein, die DNS als Überprüfungsmechanismus verwendet. Der Ausschluss hilft ATA, Überprüfungen dieser Art zu ignorieren. Ein Beispiel für einen *Pass-the-Ticket*-Ausschluss ist ein NAT-Gerät.    
@@ -64,7 +64,7 @@ Sie können sich die [Sammlung von Angriffssimulationsszenarios von Advanced Thr
 
 
 >[!div class="step-by-step"]
-[« Schritt 6 ](install-ata-step6.md)
+[« Schritt 7 ](vpn-integration-install-step.md)
 
 
 
@@ -72,7 +72,7 @@ Sie können sich die [Sammlung von Angriffssimulationsszenarios von Advanced Thr
 - [Auswählen des richtigen ATA-Gatewaytyps](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 - [Handbuch für die ATA POC-Bereitstellung](http://aka.ms/atapoc)
 - [Tool zur Bemessung von ATA-Gateways](http://aka.ms/atasizingtool)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
