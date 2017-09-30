@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 9/3/2017
+ms.date: 9/24/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d7f5423104b3e42777b6ce8013832b3bac6353be
-ms.sourcegitcommit: 654500928025e3cb127e095c17cc1d6444defd3a
+ms.openlocfilehash: b681a6a27189d2e1aec3f7f9913b97f9e7717911
+ms.sourcegitcommit: 47b2b9ebaadff79c087d14f86462d3d8102cc551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2017
+ms.lasthandoff: 09/24/2017
 ---
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
@@ -62,7 +62,7 @@ In diesem Abschnitt werden die Informationen aufgeführt, die Sie sammeln sollte
 
 -   Optional: ein Benutzerkonto eines Benutzers ohne Netzwerkaktivitäten. Dieses Konto wird als ATA-Honeytoken-Benutzer konfiguriert. Zum Konfigurieren des Honeytoken-Benutzers benötigen Sie die SID des Benutzerkontos, nicht den Benutzernamen. Weitere Informationen finden Sie im Thema [Arbeiten mit ATA-Erkennungseinstellungen](https://docs.microsoft.com/en-us/advanced-threat-analytics/deploy-use/working-with-detection-settings).
 
--   Optional: Zusätzlich zum Sammeln und Analysieren des Netzwerkverkehrs zu und von den Domänencontrollern kann ATA das Windows-Ereignis 4776, 4732, 4733, 4728, 4729, 4756 und 4757 heranziehen, um die ATA-Erkennung von Pass-the-Hash weiter zu verbessern. Dies kann aus dem SIEM-Agent heraus erfolgen oder indem Sie die Windows-Ereignisweiterleitung von Ihrem Domänencontroller aus einrichten. Die gesammelten Ereignisse versorgen ATA mit zusätzlichen Informationen, die nicht über den Netzwerkverkehr des Domänencontrollers verfügbar sind.
+-   Optional: Zusätzlich zum Sammeln und Analysieren des Netzwerkverkehrs zu und von den Domänencontrollern kann ATA die Windows-Ereignisse 4776, 4732, 4733, 4728, 4729, 4756 und 4757 heranziehen, um die ATA-Erkennung von Pass-the-Hash weiter zu verbessern. Dies kann aus dem SIEM-Agent heraus erfolgen oder indem Sie die Windows-Ereignisweiterleitung von Ihrem Domänencontroller aus einrichten. Die gesammelten Ereignisse versorgen ATA mit zusätzlichen Informationen, die nicht über den Netzwerkverkehr des Domänencontrollers verfügbar sind.
 
 
 ## <a name="ata-center-requirements"></a>Voraussetzungen für ATA Center
@@ -81,13 +81,13 @@ Die Installation von ATA Center als virtueller Computer wird unterstützt.
 
 Wenn Sie ATA Center als virtuellen Computer ausführen, fahren Sie vor dem Erstellen eines neuen Prüfpunkts den Server herunter, um eine mögliche Beschädigung der Datenbank zu verhindern.
 ### <a name="server-specifications"></a>Serverspezifikationen
-Wenn Sie auf einem physischen Server arbeiten, erfordert die ATA-Datenbank, dass Sie den nicht einheitlichen Speicherzugriff (Non-Uniform Memory Access, NUMA) im BIOS **deaktivieren**. Das System bezieht sich möglicherweise als Knotenüberlappung auf NUMA. In diesem Fall müssen Sie die Knotenüberlappung **aktivieren**, um NUMA zu deaktivieren. Weitere Informationen finden Sie in der BIOS-Dokumentation. Beachten Sie, dass dies nicht relevant ist, wenn ATA Center auf einem virtuellen Server ausgeführt wird.<br>
+Wenn Sie auf einem physischen Server arbeiten, erfordert die ATA-Datenbank, dass Sie den nicht einheitlichen Speicherzugriff (Non-Uniform Memory Access, NUMA) im BIOS **deaktivieren**. Das System bezieht sich möglicherweise als Knotenüberlappung auf NUMA. In diesem Fall müssen Sie die Knotenüberlappung **aktivieren**, um NUMA zu deaktivieren. Weitere Informationen finden Sie in der BIOS-Dokumentation. Dies ist nicht relevant, wenn ATA Center auf einem virtuellen Server ausgeführt wird.<br>
 Um eine optimale Leistung zu erzielen, legen Sie die **Energieoption** von ATA Center auf **Hohe Leistung** fest.<br>
 Die erforderlichen Serverspezifikationen hängen von der Anzahl der überwachten Domänencontroller und der Auslastung der einzelnen Domänencontroller ab. Weitere Informationen finden Sie unter [ATA-Kapazitätsplanung](ata-capacity-planning.md).
 
 
 ### <a name="time-synchronization"></a>Zeitsynchronisierung
-Die Zeitsynchronisierung des ATA Center-Servers, der ATA-Gatewayserver und der Domänencontroller muss in einem Bereich von 5 Minuten zueinander liegen.
+Die Zeitsynchronisierung des ATA Center-Servers, der ATA-Gatewayserver und der Domänencontroller muss in einem Bereich von fünf Minuten zueinander liegen.
 
 
 ### <a name="network-adapters"></a>Netzwerkadapter
@@ -155,7 +155,7 @@ Dies können Sie überprüfen, indem Sie das folgende Windows PowerShell-Cmdlet 
 Informationen zur Verwendung von virtuellen Computern mit dem ATA-Gateway finden Sie unter [Konfigurieren der Portspiegelung](configure-port-mirroring.md).
 
 > [!NOTE]
-> Mindestens 5 GB Speicherplatz wird benötigt, 10 GB wird empfohlen. Dies umfasst den Speicherplatz, der für die ATA-Binärdateien, [ATA-Protokolle](troubleshooting-ata-using-logs.md) und [Leistungsprotokolle](troubleshooting-ata-using-perf-counters.md) benötigt wird.
+> Mindestens 5 GB Speicherplatz wird benötigt, 10 GB wird empfohlen. Dies umfasst den Speicherplatz, der für die ATA-Binärdateien, ATA-Protokolle und [Leistungsprotokolle](troubleshooting-ata-using-perf-counters.md) benötigt wird.
 
 ### <a name="server-specifications"></a>Serverspezifikationen
 Um eine optimale Leistung zu erzielen, legen Sie die **Energieoption** des ATA-Gateways auf **Hohe Leistung** fest.<br>
@@ -167,12 +167,12 @@ Ein ATA-Gateway kann die Überwachung von mehreren Domänencontrollern unterstü
 Weitere Informationen zu den Hardwareanforderungen des ATA-Gateways finden Sie unter [ATA-Kapazitätsplanung](ata-capacity-planning.md).
 
 ### <a name="time-synchronization"></a>Zeitsynchronisierung
-Die Zeitsynchronisierung des ATA Center-Servers, der ATA-Gatewayserver und der Domänencontroller muss in einem Bereich von 5 Minuten zueinander liegen.
+Die Zeitsynchronisierung des ATA Center-Servers, der ATA-Gatewayserver und der Domänencontroller muss in einem Bereich von fünf Minuten zueinander liegen.
 
 ### <a name="network-adapters"></a>Netzwerkadapter
 Das ATA-Gateway erfordert mindestens einen Verwaltungsadapter und mindestens einen Erfassungsadapter:
 
--   **Verwaltungsadapter:** wird für die Kommunikation im Unternehmensnetzwerk verwendet. Dieser Adapter sollte wie folgt konfiguriert werden:
+-   **Verwaltungsadapter:** wird für die Kommunikation im Unternehmensnetzwerk verwendet. Dieser Adapter sollte mit den folgenden Einstellungen konfiguriert werden:
 
     -   Statische IP-Adresse, einschließlich des Standardgateways
 
@@ -235,11 +235,11 @@ Während der Installation wird .NET Framework 4.6.1 installiert und verursacht m
 
 
 > [!NOTE]
-> Mindestens 5 GB Speicherplatz wird benötigt, 10 GB wird empfohlen. Dies umfasst den Speicherplatz, der für die ATA-Binärdateien, [ATA-Protokolle](troubleshooting-ata-using-logs.md) und [Leistungsprotokolle](troubleshooting-ata-using-perf-counters.md) benötigt wird.
+> Mindestens 5 GB Speicherplatz wird benötigt, 10 GB wird empfohlen. Dies umfasst den Speicherplatz, der für die ATA-Binärdateien, ATA-Protokolle und [Leistungsprotokolle](troubleshooting-ata-using-perf-counters.md) benötigt wird.
 
 ### <a name="server-specifications"></a>Serverspezifikationen
 
-Das ATA-Lightweight-Gateway erfordert mindestens 2 Kerne und 6 GB RAM auf dem Domänencontroller.
+Das ATA-Lightweight-Gateway erfordert mindestens zwei Kerne und 6 GB RAM auf dem Domänencontroller.
 Um eine optimale Leistung zu erzielen, legen Sie die **Energieoption** des ATA-Lightweight-Gateways auf **Hohe Leistung** fest.
 Das ATA-Lightweight-Gateway kann auf den Domänencontrollern verschiedener Auslastungen und Größen bereitgestellt werden, abhängig vom Umfang des Netzwerkverkehrs zwischen den Domänencontrollern und der auf dem Domänencontroller installierten Ressourcen.
 
@@ -249,7 +249,7 @@ Das ATA-Lightweight-Gateway kann auf den Domänencontrollern verschiedener Ausla
 Weitere Informationen zu den Hardwareanforderungen des ATA-Lightweight-Gateways finden Sie unter [ATA-Kapazitätsplanung](ata-capacity-planning.md).
 
 ### <a name="time-synchronization"></a>Zeitsynchronisierung
-Die Zeitsynchronisierung des ATA Center-Servers, der ATA-Lightweight-Gatewayserver und der Domänencontroller muss in einem Bereich von 5 Minuten zueinander liegen.
+Die Zeitsynchronisierung des ATA Center-Servers, der ATA-Lightweight-Gatewayserver und der Domänencontroller muss in einem Bereich von fünf Minuten zueinander liegen.
 ### <a name="network-adapters"></a>Netzwerkadapter
 Das ATA-Lightweight-Gateway überwacht den lokalen Datenverkehr auf allen Netzwerkadaptern des Domänencontrollers. <br>
 Nach der Bereitstellung können Sie die ATA-Konsole verwenden, wenn Sie die überwachten Netzwerkadapter jemals ändern möchten.
@@ -272,7 +272,7 @@ In der folgenden Tabelle sind die Ports aufgeführt, die für das ATA-Lightweigh
 > -   NetBIOS
 
 ## <a name="ata-console"></a>ATA-Konsole
-Der Zugriff auf die ATA-Konsole erfolgt über einen Browser. Folgende Browser werden unterstützt:
+Der Zugriff auf die ATA-Konsole erfolgt über einen Browser. Folgende Browser und Einstellungen werden unterstützt:
 
 -   Internet Explorer Version 10 oder höher
 
@@ -286,7 +286,7 @@ Der Zugriff auf die ATA-Konsole erfolgt über einen Browser. Folgende Browser we
 - [Auswählen des richtigen ATA-Gatewaytyps](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 - [Tool zur Bemessung von ATA-Gateways](http://aka.ms/atasizingtool)
 - [ATA-Architektur](ata-architecture.md)
 - [Installieren von ATA](install-ata-step1.md)
