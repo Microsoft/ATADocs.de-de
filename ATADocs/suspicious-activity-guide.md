@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 05550e56479de0390d7f2d990ffae4b319dec9f9
-ms.sourcegitcommit: 74cce0c1d52086fdf10ea70f590b306c1c7e8b14
+ms.openlocfilehash: cd6e2968cad2393e2f56ece03be880622a3a0c6a
+ms.sourcegitcommit: 79abfe095f5def259ebb5018d49f9aadd5f2d4f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 10/01/2017
 ---
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
@@ -285,7 +285,7 @@ Durch bekannte Sicherheitslücken in älteren Versionen von Windows Server könn
 
 2. Ist der Zielcomputer (in der Spalte **ACCESSED**) mit MS14-068 (Domänencontroller) oder MS11-013 (Server) gepatcht? Falls ja, **schließen** Sie die verdächtige Aktivität (diese ist falsch positiv).
 
-3. Wenn nicht, wird auf dem Quellcomputer (in der Spalte **FROM**) ein Betriebssystem bzw. eine Anwendung ausgeführt, die dafür bekannt sind, das PAC zu ändern? Falls ja, **unterdrücken** Sie die verdächtige Aktivität (diese ist unbedenklich richtig positiv).
+3. Wenn nicht, wird auf dem Quellcomputer ausgeführt (in der Spalte **FROM**) ein Betriebssystem bzw. eine Anwendung ausgeführt, die dafür bekannt sind, das PAC zu ändern? Falls ja, **unterdrücken** Sie die verdächtige Aktivität (diese ist unbedenklich richtig positiv).
 
 4. Wenn die Antwort auf die obigen zwei Fragen „nein“ ist, gehen Sie von einem böswilligen Ereignis aus.
 
@@ -487,7 +487,7 @@ Patchen Sie all Ihre Computer, und führen Sie insbesondere Sicherheitsupdates d
 - [Joining the security community](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community) (Der Sicherheitscommunity beitreten)
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 - [Verdächtige ATA-Aktivitäten – Playbook](http://aka.ms/ataplaybook)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Arbeiten mit verdächtigen Aktivitäten](working-with-suspicious-activities.md)
