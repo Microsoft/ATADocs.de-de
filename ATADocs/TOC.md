@@ -38,14 +38,16 @@
 ## [ATA-Rollengruppen](ata-role-groups.md)
 ## [Ändern der ATA Center-Konfiguration](modifying-ata-center-configuration.md)
 ## [Ändern des Domänenverbindungskennworts](modifying-ata-config-dcpassword.md)
-###[Ausschließen von Entitäten von der Erkennung](excluding-entities-from-detections.md)
+## [Ausschließen von Entitäten von der Erkennung](excluding-entities-from-detections.md)
 ## [Exportieren/Importieren der ATA-Konfiguration](ata-configuration-file.md)
 ## [Verwalten der ATA-Telemetrie](manage-telemetry-settings.md)
 ## [Festlegen von ATA-Benachrichtigungen](setting-ata-alerts.md)
 ## [Festlegen von Syslog- und E-Mail-Servereinstellungen](setting-syslog-email-server-settings.md)
-## [Referenz zum SIEM-Protokoll](cef-format-sa.md)
 ## [Arbeiten mit verdächtigen Aktivitäten](working-with-suspicious-activities.md)
 ## [Arbeiten mit der ATA-Konsole](working-with-ata-console.md)
+## [ATA Referenzinformationen]
+### [Referenz zum SIEM-Protokoll](cef-format-sa.md)
+### [Ereignis-ID Referenz](event-id-reference.md)
 # Untersuchen
 ## [Handbuch zu verdächtigen Aktivitäten](suspicious-activity-guide.md)
 # Problembehandlung
