@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 8/20/2017
+ms.date: 10/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 2362f6bf64147b972e9c45e3b97bab4280c6eeac
-ms.sourcegitcommit: 46dd0e695f16a0dd23bbfa140eba15ea6a34d7af
+ms.openlocfilehash: 09936cf9f86711ea6d48d0571178d2387694d412
+ms.sourcegitcommit: 835ea2b8190eb753aaf8d400531040ce1845d75a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 10/23/2017
 ---
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
@@ -48,12 +48,11 @@ In diesem Abschnitt sind mögliche Fehler, die es in den Bereitstellungen von AT
 |System.ApplicationException: Die ETW-Sitzung „MMA-ETW-Livecapture-a4f595bd-f567-49a7-b963-20fa4e370329“ kann nicht gestartet werden.|In der HOSTS-Datei existiert ein Hosteintrag, der auf den Kurznamen des Computers verweist.|Entfernen Sie den Hosteintrag aus „C:\Windows\System32\drivers\etc\HOSTS“, oder ändern Sie ihn in einen eindeutigen Domänennamen um.|
 |System.IO.IOException: Fehler bei der Authentifizierung, da die Gegenseite den Transportstream geschlossen hat.|TLS 1.0 ist auf dem ATA-Gateway deaktiviert, .NET ist aber für die Verwendung von TLS 1.2 eingerichtet.|Verwenden Sie eine der folgenden Optionen: </br> TLS 1.0 auf dem ATA-Gateway aktivieren </br>Aktivieren Sie TLS 1.2 in .NET, indem Sie die Registrierungsschlüssel wie folgt für die Verwendung der Standardwerte des Betriebssystems für SSL und TLS einrichten: </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001 `</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`|
 |System.TypeLoadException: Could not load type 'Microsoft.Opn.Runtime.Values.BinaryValueBufferManager' from assembly 'Microsoft.Opn.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' (System.TypeLoadException: Der Typ „Microsoft.Opn.Runtime.Values.BinaryValueBufferManager“ konnte nicht aus der Assembly „Microsoft.Opn.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35“ geladen werden.)|Das ATA-Gateway konnte erforderliche Analysedateien nicht laden.|Überprüfen Sie, ob die Microsoft-Nachrichtenanalyse aktuell installiert ist. Die Nachrichtenanalyse wird nicht für die Installation mit dem ATA-Gateway bzw. Lightweight-Gateway unterstützt. Deinstallieren Sie die Nachrichtenanalyse und starten Sie den Gatewaydienst neu.|
-|Die Warnung, dass Netzwerkdatenverkehr aus der Portspiegelung gelöscht wurde, wird ausgegeben, wenn ein Lightweight-Gateway auf VMware verwendet wird.|Wenn Sie Domänencontroller auf virtuellen VMware-Computern verwenden, wird möglicherweise die Warnung **Netzwerkdatenverkehr aus Portspiegelung gelöscht** ausgegeben. Dies kann aufgrund von Konfigurationskonflikten in VMware auftreten. |Um zu vermeiden, dass diese Warnung ausgegeben wird, können Sie überprüfen, ob die folgenden Einstellungen auf „0“ oder „deaktiviert“ festgelegt sind: TsoEnable, LargeSendOffload, IPv4, TSO Offload. Deaktivieren Sie ebenso IPv4 Giant TSO Offload. Weitere Informationen finden Sie in der VMware-Dokumentation.|
 |System.Net.WebException: Der Remoteserver hat einen Fehler ausgegeben: (407) Proxyauthentifizierung erforderlich|Die Kommunikation des ATA-Gateways mit dem ATA Center wurde durch einen Proxyserver unterbrochen.|Deaktivieren Sie den Proxy auf dem Computer des ATA-Gateways. <br></br>Beachten Sie, dass Proxyeinstellungen pro Konto gelten können.|
 |System.IO.DirectoryNotFoundException: Das System kann den angegebenen Pfad nicht finden. (Ausnahme von HRESULT: 0x80070003)|Mindestens einer der erforderlichen Dienste zur Ausführung von ATA konnte nicht gestartet werden.|Starten Sie die folgenden Dienste: <br></br>Leistungsprotokolle und -warnungen (PLA), Taskplaner (Zeitplan).|
 |System.Net.WebException: The remote server returned an error: (403) Forbidden (System.Net.WebException: Der Remoteserver hat einen Fehler zurückgegeben: (403) Verboten)|Es wurde nicht zugelassen, dass das ATA-Gateway oder das Lightweight-Gateway eine HTTP-Verbindung herstellt, da dem ATA Center nicht vertrauenswürdig ist.|Fügen Sie der Liste der vertrauenswürdigen Websites den NetBIOS-Namen und den FQDN von ATA Center hinzu, und löschen Sie den Cache in Internet Explorer (oder den Namen von ATA Center, wie er in der Konfiguration angegeben ist, wenn sich die Konfiguration vom NetBIOS/FQDN unterscheidet).|
 |System.Net.Http.HttpRequestException: PostAsync fehlerhaft [requestTypeName=StopNetEventSessionRequest]|ATA Gateway oder ATA Lightweight Gateway kann aufgrund eines WMI-Problems nicht die ETW-Sitzung, die Netzwerkdatenverkehr erfasst, beenden und starten.|Befolgen Sie die Anweisungen unter [WMI: Neuerstellen des WMI-Repositorys](https://blogs.technet.microsoft.com/askperf/2009/04/13/wmi-rebuilding-the-wmi-repository/), um das WMI-Problem zu beheben.|
-
+|System.Net.Sockets.SocketException: Es wurde versucht, über durch die Zugriffsberechtigungen verbotene Wege auf einen Socket zuzugreifen.|Eine andere Anwendung verwendet Port 514 auf dem ATA-Gateway.|Verwenden Sie `netstat -o`, um festzulegen, durch welchen Vorgang der Port benutzt werden soll.|
  
 ## <a name="deployment-errors"></a>Bereitstellungsfehler
 > [!div class="mx-tableFixed"]

@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/9/2017
+ms.date: 10/31/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: e0aed853-ba52-46e1-9c55-b336271a68e7
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c02649a6acb6a083145ba81b3b9c1647e7f8ea2a
-ms.sourcegitcommit: e9f2bfd610b7354ea3fef749275f16819d60c186
+ms.openlocfilehash: 748121a709ac05756edf34e04e13b996190e9711
+ms.sourcegitcommit: b951c64228d4f165ee1fcc5acc0ad6bb8482d6a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 10/31/2017
 ---
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
@@ -31,31 +31,65 @@ ms.lasthandoff: 10/09/2017
 
 ## <a name="step-7-integrate-vpn"></a>Schritt 7: Integrieren des VPN
 
-### <a name="configuring-vpn"></a>Konfigurieren des VPN
+Die Version 1.8 von Microsoft Advanced Threat Analytics (ATA) kann Kontoführungsinformationen aus VPN-Lösungen erfassen. Nach der Konfiguration beinhaltet die Profilseite des Benutzers Informationen aus den VPN-Verbindungen, wie IP-Adressen und Standorte, aus denen die Verbindungen entstammen. Dadurch wird der Untersuchungsvorgang durch zusätzliche Informationen zur Benutzeraktivität ergänzt. Der Aufruf zum Auflösen einer externen IP-Adresse an einem Standort ist anonym. In diesem Aufruf wird kein persönlicher Bezeichner gesendet.
+
+ATA arbeitet mit Ihrer VPN-Lösung zusammen, indem es RADIUS-Buchhaltungsereignisse abhört, die an die ATA-Gateways weitergeleitet werden. Dieser Mechanismus basiert auf einer standardmäßigen RADIUS-Kontoführung ([RFC 2866](https://tools.ietf.org/html/rfc2866)). Die folgenden VPN-Anbieter werden unterstützt:
+
+-   Microsoft
+-   F5
+-   Check Point
+-   Cisco ASA
+
+## <a name="prerequisites"></a>Voraussetzungen
+
+Stellen Sie für die Aktivierung der VPN-Integration sicher, dass die folgenden Einstellungen ausgewählt sind:
+
+-   Öffnen Sie den Port UDP 1813 für Ihre ATA-Gateways und ATA-Lightweight-Gateways.
+
+-   Verbinden Sie das ATA Center mit dem Internet, damit es den Standort von eingehenden IP-Adressen abfragen kann.
+
+In dem untenstehenden Beispiel wird Microsoft Routing und der Remotezugriffsserver (RRAS) zur Beschreibung des VPN-Konfigurationsvorgangs verwendet.
+
+Wenn Sie die VPN-Lösung eines Drittanbieters nutzen, greifen Sie auf dessen Dokumentation zurück, um zu erfahren, wie Sie die RADIUS-Kontoführung aktivieren.
+
+## <a name="configure-radius-accounting-on-the-vpn-system"></a>Konfigurieren der RADIUS-Kontoführung auf dem VPN-System
+
+Führen Sie auf Ihrem RRAS-Server folgende Vorgänge aus:
+ 
+1.  Öffnen Sie die Routing- und Remotezugriffs-Konsole.
+2.  Klicken Sie mit der rechten Maustaste auf den Server, und klicken Sie anschließend auf **Eigenschaften**.
+3.  Wählen Sie unter **Kontoführungsanbieter** in der Registerkarte **Sicherheit** **RADIUS-Kontoführung** aus, und klicken Sie auf **Konfigurieren**.
+
+    ![RADIUS-Setup](./media/radius-setup.png)
+
+4.  Tippen Sie im Fenster **RADIUS-Server hinzufügen** den **Servernamen** des nächsten ATA-Gateways oder ATA-Lightweight-Gateways ein. Stellen Sie unter **Port** sicher, dass die Standardeinstellung 1813 konfiguriert ist. Klicken Sie auf **Ändern**, und tippen Sie eine neue, geheime Zeichenfolge von alphanumerischen Zeichen an, die Sie sich merken können, da Sie sie später in Ihre ATA-Konfiguration eingeben müssen. Prüfen Sie das Feld **Send RADIUS Account On and Accounting Off messages** („RADIUS-Kontoführung aktiviert“- und „RADIUS-Kontoführung deaktiviert“-Nachrichten senden), und klicken Sie anschließend in allen geöffneten Dialogfeldern auf **OK**.
+ 
+     ![VPN-Setup](./media/vpn-set-accounting.png)
+     
+### <a name="configure-vpn-in-ata"></a>Konfigurieren von VPN in ATA
 
 ATA erfasst VPN-Daten zur Erstellung von Profilen der Standorte, über die Computer eine Verbindung mit dem Netzwerk herstellen und mit denen diese ungewöhnliche VPN-Verbindungen erkennen können.
 
 So konfigurieren Sie VPN-Daten in ATA
 
-1. Wechseln Sie zu **Konfiguration**, und klicken Sie dann auf die Registerkarte **VPN**.
+1.  Öffnen Sie in der ATA-Konsole die ATA-Konfigurationsseite, und gehen Sie auf **VPN**.
+ 
+  ![ATA-Konfigurationsmenü](./media/config-menu.png)
 
-2. Geben Sie einen Wert für **Gemeinsames Geheimnis** für das Konto Ihres RADIUS-Servers ein. Das gemeinsame Geheimnis finden Sie in der VPN-Dokumentation.
+2.  Aktivieren Sie die **RADIUS-Kontoführung**, und geben Sie den **Gemeinsamen geheimer Schlüssel** ein, den Sie zuvor auf Ihrem RRAS-VPN-Server konfiguriert haben. Klicken Sie dann auf **Save** (Speichern).
+ 
 
- ![Konfigurieren des ATA-VPN](media/vpn.png)
+  ![Konfigurieren des ATA-VPN](./media/vpn.png)
 
-3.  Nachdem Sie diese Option aktiviert haben, hören alle ATA-Gateways und Lightweight-Gateways Port 1813 auf RADIUS-Buchhaltungsereignisse ab. 
 
-4.  Nach Abschluss dieser Konfiguration sollten die RADIUS-Buchhaltungsereignisse des VPN an ATA-Gateways oder ATA-Lightweight-Gateways weitergeleitet werden.
+Nachdem Sie diese Option aktiviert haben, lauschen alle ATA-Gateways und ATA-Lightweight-Gateways an Port 1813 für RADIUS-Buchhaltungsereignisse. 
 
-5.  Nachdem das ATA-Gateway die VPN-Ereignisse empfängt und zur Verarbeitung an das ATA Center sendet, benötigt ATA Center Internetkonnektivität für HTTPS-Port 443, um die externen IP-Adressen in den VPN-Ereignissen an ihren jeweiligen geografischen Standorten aufzulösen.
+Ihr Setup ist nun vollständig, und Sie sehen jetzt die VPN-Aktivität auf der Profilseite des Benutzers:
+ 
+   ![VPN-Setup](./media/vpn-user.png)
 
-Der Aufruf zum Auflösen einer externen IP-Adresse an einem Standort ist anonym. In diesem Aufruf wird kein persönlicher Bezeichner gesendet.
+Nachdem das ATA-Gateway die VPN-Ereignisse empfängt und zur Verarbeitung an das ATA Center sendet, benötigt ATA Center Internetkonnektivität für HTTPS-Port 443, um die externen IP-Adressen in den VPN-Ereignissen an ihren jeweiligen geografischen Standorten aufzulösen.
 
-Die unterstützten VPN-Lieferanten sind folgende:
-- Microsoft
-- F5
-- Check Point
-- Cisco ASA
 
 
 
