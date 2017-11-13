@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 27b139e5-12b9-4953-8f53-eb58e8ce0038
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c5beb4868fb8ced42457a8cadd1123956dd69ad7
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: 47a8b5c52bf978d5e07007a3402a567be39e2157
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="whats-new-in-ata-version-16"></a>Neuerungen in ATA 1.6
 Die vorliegenden Anmerkungen zu dieser Version enthalten Informationen zu bekannten Problemen in dieser Version von Advanced Threat Analytics.
@@ -103,7 +103,7 @@ Beim Aktualisieren auf ATA 1.6 kann der Aktualisierungsvorgang mit dem folgenden
 
 Möglicherweise wird auch dieser Fehler angezeigt: System.ArgumentNullException: Der Wert darf nicht NULL sein.
     
-Wenn einer dieser Fehler angezeigt wird, führen Sie die folgenden Schritte zur Problemumgehung aus.
+Wenn einer dieser Fehler angezeigt wird, führen Sie die folgenden Schritte zur Problemumgehung aus:
 
 **Problemumgehung**: 
 
@@ -120,14 +120,14 @@ Wenn einer dieser Fehler angezeigt wird, führen Sie die folgenden Schritte zur 
     2.  Microsoft Advanced Threat Analytics Center
 7.  Überprüfen Sie die Protokolle, um sich zu vergewissern, dass das Produkt ohne Fehler ausgeführt wird.
 8.  [Herunterladen](http://aka.ms/ataremoveduplicateprofiles "Laden Sie das Tool „RemoveDuplicateProfiles.exe“ herunter"), und kopieren Sie es in den Hauptinstallationspfad (%ProgramFiles%\Microsoft Advanced Threat Analytics\Center).
-9.  Führen Sie „RemoveDuplicateProfiles.exe“ von einer Eingabeaufforderung mit erhöhten Rechten aus, und warten Sie, bis das Tool erfolgreich abgeschlossen wurde.
+9.  Führen Sie `RemoveDuplicateProfiles.exe` von einer Eingabeaufforderung mit erhöhten Rechten aus, und warten Sie, bis das Tool erfolgreich abgeschlossen wurde.
 10. Fahren Sie wie folgt fort: …\Microsoft Advanced Threat Analytics\Center\MongoDB\bin: **Mongo ATA**; geben Sie folgenden Befehl ein:
 
-    db.SuspiciousActivities.remove({ "_t" : "RemoteExecutionSuspiciousActivity", "DetailsRecords" : { "$elemMatch" : { "ReturnCode" : null } } }, { "_id" : 1 });
+          db.SuspiciousActivities.remove({ "_t" : "RemoteExecutionSuspiciousActivity", "DetailsRecords" : { "$elemMatch" : { "ReturnCode" : null } } }, { "_id" : 1 });
 
 ![Problemumgehung beim Update](http://i.imgur.com/Nj99X2f.png)
 
-Es sollte ein WriteResult({ "nRemoved" : XX })-Wert zurückgegeben werden, wobei „XX“ der Anzahl von verdächtigen Aktivitäten entspricht, die gelöscht wurden. Wenn der Wert größer als 0 ist, beenden Sie die Eingabeaufforderung, und fahren Sie mit dem Updatevorgang fort.
+Es sollte ein `WriteResult({ "nRemoved" : XX })`-Wert zurückgegeben werden, wobei „XX“ der Anzahl von verdächtigen Aktivitäten entspricht, die gelöscht wurden. Wenn der Wert größer als 0 ist, beenden Sie die Eingabeaufforderung, und fahren Sie mit dem Updatevorgang fort.
 
 
 ### <a name="net-framework-461-requires-restarting-the-server"></a>.NET Framework 4.6.1 erfordert einen Neustart des Servers

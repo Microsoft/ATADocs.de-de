@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/4/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1d186a96-ef70-4787-aa64-c03d1db94ce0
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f85d52420c55e2f1119ad14eb1a6c957fbc50be6
-ms.sourcegitcommit: be6bdfa24a9b25a3375a4768d513b93900b3a498
+ms.openlocfilehash: 5ec554b303a19a6e7b12cd788755604f1aaf43db
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
@@ -30,7 +30,7 @@ Wenn ATA **Reconnaissance mithilfe von DNS** auf Ihrem Netzwerk erkennt und Sie 
 Die Warnung **Reconnaissance mithilfe von DNS** gibt an, dass verdächtige Domain Name System-Abfragen (DNS) von einem ungewöhnlichen Host durchgeführt werden, um Reconnaissance auf Ihrem internen Netzwerk durchzuführen.
 
 Das Domain Name System (DNS) ist ein Dienst, der als hierarchische, verteilte Datenbank implementiert wird, die die Auflösung von Hostnamen und Domänennamen bereitstellt. Die Namen in einer DNS-Datenbank bilden eine hierarchische Baumstruktur, genannt Domänennamespace.
-Für einen Angreifer enthält Ihr DNS wertvolle Informationen über die Zuordnung eines internen Netzwerks, einschließlich einer Liste aller Server und auch oft aller Clients, die Ihren IP-Adressen zugeordnet sind. Des Weiteren sind diese Informationen von Wert, da Hostnamen aufgelistet werden, die oft in einer gegebenen Netzwerkumgebung beschreibend sind. Durch Abrufen dieser Information kann ein Angreifer den Aufwand für die relevanten Entitäten während einer Kampagne besser priorisieren. Tools, z.B. [Nmap](https://nmap.org/), [Fierce](https://github.com/mschwager/fierce), und integrierte Tools wie [Nslookup](https://technet.microsoft.com/library/cc725991(v=ws.11).aspx) bieten Funktionen für die Hostermittlung mithilfe der DNS-Reconnaissance.
+Für einen Angreifer enthält Ihr DNS wertvolle Informationen über die Zuordnung eines internen Netzwerks, einschließlich einer Liste aller Server und auch oft aller Clients, die Ihren IP-Adressen zugeordnet sind. Des Weiteren sind diese Informationen hilfreich, da Hostnamen aufgelistet werden, die in einer gegebenen Netzwerkumgebung oft beschreibend sind. Durch Abrufen dieser Information kann ein Angreifer den Aufwand für die relevanten Entitäten während einer Kampagne besser priorisieren. Tools, z.B. [Nmap](https://nmap.org/), [Fierce](https://github.com/mschwager/fierce), und integrierte Tools wie [Nslookup](https://technet.microsoft.com/library/cc725991(v=ws.11).aspx) bieten Funktionen für die Hostermittlung mithilfe der DNS-Reconnaissance.
 Die Erkennung von Reconnaissance mithilfe von DNS-Abfragen von einem internen Host ist besorgniserregend und zeigt einen möglichen Angriff auf vorhandene Hosts, einen Angriff auf das weitere Netzwerk oder die Möglichkeit einer Bedrohung von Innen.
 
 ## <a name="dns-query-types"></a>DNS-Abfragetypen
@@ -56,7 +56,7 @@ Folgendes Diagramm hilft Ihnen dabei, zu bestimmen, welche Schritte Sie durchfü
 
 ![Auflösen der DNS-Reconnaissance mit ATA](./media/dns-recon-diagram.png)
  
-1.  Der erste Schritt ist, den Computer zu identifizieren, von dem die Warnung stammt, so wie unten dargestellt:
+1.  Der erste Schritt besteht darin, den Computer zu identifizieren, von dem die Warnung stammt, so wie im folgenden Bildschirm dargestellt:
  
     ![Anzeigen der verdächtigen DNS-Reconnaissance-Aktivität in ATA](./media/dns-recon.png)
 2.  Identifizieren Sie den Computer. Ist der Computer eine Arbeitsstation, ein Server, eine Administratorarbeitsstation, eine Station zum Prüfen von Stiften usw.?
@@ -80,7 +80,7 @@ Es wird von Microsoft empfohlen, ein professionelles Team zur Reaktion auf Siche
 
 ## <a name="mitigation"></a>Maßnahme
 
-Die Sicherung eines internen DNS-Servers, um zu verhindern, dass Reconnaissance mithilfe von DNS auftritt, kann von der Deaktivierung oder Einschränkung von Zonenübertragungen nur auf bestimmte IP-Adressen erreicht werden. Zusätzliche Informationen zum Beschränken der Zonenübertragung finden Sie im Windows Server-TechNet-Artikel [Restrict Zone Transfers (Beschränken von Zonenübertragungen)](https://technet.microsoft.com/library/ee649273(v=ws.10).aspx). Beschränkte Zonenübertragungen können weiterhin durch die [Sicherung von Zonenübertragungen mithilfe von IPsec](https://technet.microsoft.com/library/ee649192(v=ws.10).aspx) gesperrt werden. Das Bearbeiten von Zonenübertragungen ist eine Aufgabe innerhalb einer Prüfliste, die für [Sichern des DNS-Servers gegen interne und externe Angriffe](https://technet.microsoft.com/library/cc770432(v=ws.11).aspx) gelten sollte.
+Die Sicherung eines internen DNS-Servers, um zu verhindern, dass Reconnaissance mithilfe von DNS auftritt, kann von der Deaktivierung oder Einschränkung von Zonenübertragungen nur auf bestimmte IP-Adressen erreicht werden. Weitere Informationen zum Einschränken von Zonenübertragungen finden Sie unter [Restrict Zone Transfers](https://technet.microsoft.com/library/ee649273(v=ws.10).aspx) (Einschränken von Zonenübertragungen). Beschränkte Zonenübertragungen können weiterhin durch die [Sicherung von Zonenübertragungen mithilfe von IPsec](https://technet.microsoft.com/library/ee649192(v=ws.10).aspx) gesperrt werden. Das Bearbeiten von Zonenübertragungen ist eine Aufgabe innerhalb einer Prüfliste, die für [Sichern des DNS-Servers gegen interne und externe Angriffe](https://technet.microsoft.com/library/cc770432(v=ws.11).aspx) gelten sollte.
 
 
 

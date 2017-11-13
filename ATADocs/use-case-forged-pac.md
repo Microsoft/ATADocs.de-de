@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/4/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,17 +13,17 @@ ms.technology:
 ms.assetid: f3db435e-9553-40a2-a2ad-278fad4f0ef5
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 842e9866c5fdb447f49600501c4486da6db902f2
-ms.sourcegitcommit: 4118dd4bd98994ec8a7ea170b09aa301a4be2c8a
+ms.openlocfilehash: 1820687d1340dfbef703129e5fad7d7a63cfd632
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
 # <a name="investigating-privilege-escalation-using-forged-authorization-data-attacks"></a>Berechtigungsausweitung über Angriffe mit gefälschten Autorisierungsdaten
 
-Die Funktionen zum Erkennen von Sicherheitsrisiken werden von Microsoft laufend optimiert. Außerdem wird daran gearbeitet, Informationen, die Handlungen erfordern, zeitnah an Sicherheitsanalytiker weiterzugeben. Advanced Threat Analytics (ATA) von Microsoft hilft bei diesem Wandel. Wenn ATA auf Ihrem Netzwerk eine Aktivität erkennt, die möglicherweise ein Angriff mit gefälschten Autorisierungsdaten ist, und dies an Sie meldet, hilft Ihnen dieser Artikel dabei, diese Bedrohung zu verstehen und zu untersuchen.
+Die Funktionen zum Erkennen von Sicherheitsrisiken werden von Microsoft laufend optimiert. Außerdem wird daran gearbeitet, Informationen, die Handlungen erfordern, zeitnah an Sicherheitsanalytiker weiterzugeben. Advanced Threat Analytics (ATA) von Microsoft hilft bei diesem Wandel. Wenn ATA auf Ihrem Netzwerk eine verdächtige Aktivität zur Rechteausweitung über gefälschte Autorisierungsdaten erkennt und an Sie meldet, hilft Ihnen dieser Artikel dabei, diese Bedrohung zu verstehen und zu untersuchen.
 
 ## <a name="what-is-a-privileged-attribute-certificate-pac"></a>Was ist ein Privileged Attribute Certificate (PAC)?
 
@@ -49,7 +49,7 @@ Die Sicherheitsbulletins [MS14-068](https://technet.microsoft.com/library/securi
 Mit einem Angriff mit gefälschten Autorisierungsdaten versucht ein Angreifer, diese PAC-Sicherheitslücken auszunutzen, um seine Berechtigungen in Ihrer AD-Struktur oder -Domäne zu erweitern. Für einen Angriff braucht der Angreifer Folgendes:
 -   Anmeldeinformationen eines Domänenbenutzers
 -   eine Netzwerkverbindung mit einem DC, der zur Authentifizierung mit kompromittierten Domänenanmeldeinformationen verwendet wird
--   die passenden Tools Das PyKEK (Python Kerberos Exploitation Kit) ist ein Tool, das zum Fälschen von PAC-Dateien verwendet werden kann.
+-   die passenden Tools Das PyKEK (Python Kerberos Exploitation Kit) ist ein bekanntes Tool, das zum Fälschen von PAC-Dateien verwendet werden kann.
 
 Wenn der Angreifer über die nötigen Anmeldeinformationen und die erforderliche Verbindung verfügt, kann er die PAC-Datei des Anmeldetokens eines vorhandenen Kerberos-Benutzers (Ticket Granting Ticket, TGT) fälschen oder modifizieren. Der Angreifer ändert den Anspruch der Gruppenmitgliedschaft in eine Gruppe mit erweiterten Berechtigungen (z.B. „Domänenadministratoren“ oder „Administratoren des Unternehmens“). Dann fügt der Angreifer die modifizierte PAC-Datei in das Kerberos-Ticket ein. Dieses Kerberos-Ticket verwendet er dann, um von einem nicht gepatchten DC ein Dienstticket anzufordern. Damit erhält der Angreifer erweiterte Berechtigungen in der Domäne und ist autorisiert, Aktionen auszuführen, die er eigentlich nicht ausführen darf. Ein Angreifer kann mit dem modifizierten Anmeldetoken (TGT) Zugriff auf jede Ressource in der Domäne erhalten, indem er Ressourcenzugriffstoken anfragt (Ticket Granting Server). Das heißt, dass ein Angreifer alle für Ressourcen konfigurierte ACLs umgehen kann, die den Zugriff auf das Netzwerk einschränken, indem er Autorisierungsdaten (PAC) für jeden Benutzer in AD spooft.
 
@@ -61,7 +61,7 @@ Wenn der Angreifer versucht, seine Berechtigungen zu erweitern, wird dies von AT
 ATA gibt in der Warnung zur verdächtigen Aktivität an, ob die Rechteausweitung mit gefälschten Autorisierungsdaten Erfolg hatte. Sowohl erfolgreiche als auch fehlgeschlagene Warnungen sollten untersucht werden, da auch erfolglose Versuche auf einen Angreifer in Ihrer Umgebung hinweisen können.
 
 ## <a name="investigating"></a>Untersuchung
-Nachdem Sie eine Warnung bezüglich einer Rechteausweitung mit gefälschten Autorisierungsdaten erhalten haben, müssen Sie entscheiden, was gemacht werden muss, um die Auswirkungen des Angriffs abzuschwächen. Dazu müssen Sie die Warnung zuerst in eine der folgenden Kategorien einordnen: 
+Nachdem Sie eine Warnung bezüglich einer Rechteausweitung mit gefälschten Autorisierungsdaten erhalten haben, müssen Sie entscheiden, was gemacht werden muss, um die Auswirkungen des Angriffs abzuschwächen. Dazu müssen Sie die Warnung zuerst als einen der folgenden Warnungstypen klassifizieren: 
 -   Richtig positiv: eine böswillige, von ATA erkannte Aktion
 -   Falsch positiv: Eine falsche Warnung. Es gab keine Rechteausweitung mit gefälschten Autorisierungsdaten (dies ist ein Ereignis, das ATA fälschlicherweise für einen Datenangriff zur Rechteausweitung mit gefälschten Autorisierungsdaten gehalten hat)
 -   Unbedenklich richtig positiv: eine von ATA erkannte Aktion, die tatsächlich durchgeführt wurde, aber nicht böswillig ist, wie z.B. ein Penetrationstest
@@ -76,7 +76,7 @@ Folgendes Diagramm hilft Ihnen dabei, zu bestimmen, welche Schritte sie durchfü
 
 
 2.  Wenn der erkannte Angriff zur Rechteausweitung mit gefälschten Autorisierungsdaten Erfolg hatte:
-    -   Wenn der DC, auf dem die Warnung ausgelöst wurde, ordnungsgemäß gepatcht ist, ist die Warnung falsch positiv. In diesem Fall können Sie die Warnung schließen und eine E-Mail mit der entsprechenden Information an das ATA-Team unter ATAEval@microsoft.com schicken, damit die Erkennung laufend verbessert werden kann. 
+    -   Wenn der DC, auf dem die Warnung ausgelöst wurde, ordnungsgemäß gepatcht ist, ist die Warnung falsch positiv. In diesem Fall können Sie die Warnung schließen und eine E-Mail mit der entsprechenden Information an das ATA-Team unter ATAEval@microsoft.com senden, damit die Erkennung durch ATA weiterhin verbessert werden kann. 
     -   Wenn der DC, den die Warnung betrifft, nicht ordnungsgemäß gepatcht ist:
         -   Wenn der in der Warnung aufgelistete Dienst nicht über einen eigenen Autorisierungsmechanismus verfügt, handelt es sich um eine richtig positive Meldung. Dann sollten Sie den Prozess der Reaktion auf Sicherheitsfälle einleiten. 
         -   Wenn der in der Warnung aufgelistete Dienst über einen internen Autorisierungsmechanismus verfügt, der Autorisierungsdaten verlangt, kann es sein, dass er fälschlicherweise als Angriff zur Rechteausweitung mit gefälschten Autorisierungsdaten identifiziert wird. 

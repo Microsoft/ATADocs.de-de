@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/9/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 7fb024e6-297a-4ad9-b962-481bb75a0ba3
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f466dddfd2c490d71a57fb27aa833c5ee3a0e5e2
-ms.sourcegitcommit: e9f2bfd610b7354ea3fef749275f16819d60c186
+ms.openlocfilehash: ab80ec5b172311e955a25fed677c40cee1e95269
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 10/09/2017
 ## <a name="step-3-download-the-ata-gateway-setup-package"></a>Schritt 3: Herunterladen des ATA-Gateway-Setuppakets
 Nach dem Konfigurieren der Domänenverbindungseinstellungen können Sie das ATA-Gateway-Setuppaket herunterladen. Das ATA-Gateway kann auf einem dedizierten Server oder einem Domänencontroller installiert werden. Wenn Sie es auf einem Domänencontroller installieren, wird es als ATA-Lightweight-Gateway installiert. Weitere Informationen zum ATA-Lightweight-Gateway finden Sie unter [ATA-Architektur](ata-architecture.md). 
 
-Klicken Sie in der Liste mit den Schritten am Anfang der Seite auf „Gatewaysetup herunterladen“, um zu der Seite mit den Gateways zu gelangen:
+Klicken Sie in der Liste mit den Schritten am Anfang der Seite auf **Gatewaysetup herunterladen**, um zur Seite **Gateways** zu gelangen.
 
 ![Einstellungen für ATA-Gateway-Konfiguration](media/ATA_1.7-welcome-download-gateway.PNG)
 
@@ -44,7 +44,7 @@ Klicken Sie in der Liste mit den Schritten am Anfang der Seite auf „Gatewayset
 2.  Speichern Sie das Paket lokal.
 3.  Kopieren Sie das Paket auf den dedizierten Server oder Domänencontroller, auf dem das ATA-Gateway installiert werden soll. Alternativ können Sie die ATA-Konsole vom dedizierten Server oder vom Domänencontroller aus öffnen und diesen Schritt überspringen.
 
-Die ZIP-Datei enthält Folgendes:
+Die ZIP-Datei enthält die folgenden Dateien:
 
 -   Installationsprogramm für ATA-Gateway
 

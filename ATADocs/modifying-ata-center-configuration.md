@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 8/14/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 93b27f15-f7e5-49bb-870a-d81d09dfe9fc
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: bfd86dadbc773b349f28a6327ec2e177da74be8d
-ms.sourcegitcommit: 8b622fa5457cf1a540504899c8c98e860b946e01
+ms.openlocfilehash: 4fe4569cd6477775e8a888d2acd05511f16fb5f6
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
@@ -44,7 +44,7 @@ Die URL wird in den folgenden Szenarios verwendet:
 
 1. Vergewissern Sie sich, dass die neue URL, die Sie verwenden möchten, in die IP-Adresse der ATA-Konsole aufgelöst wird.
 
-2. Geben Sie in den ATA-Einstellungen unter **Center** die neue URL ein. Momentan verwendet ATA Center noch immer das ursprüngliche Zertifikat. 
+2. Geben Sie in den ATA-Einstellungen unter **Center** die neue URL ein. Momentan verwendet ATA Center noch immer die ursprüngliche URL. 
 
  ![Ändern der ATA-Konfiguration](media/change-center-config.png)
 
@@ -76,7 +76,7 @@ Ersetzen Sie das Zertifikat wie folgt:
 
 3. Warten Sie, bis die ATA-Gateways synchronisiert wurden. Sie verfügen jetzt über zwei potenzielle Zertifikate, die für die gegenseitige Authentifizierung gültig sind. Solange ein ATA-Gateway eine Verbindung über das ursprüngliche Zertifikat herstellen kann, wird das neue Zertifikat nicht verwendet.
 
-4. Nachdem alle ATA-Gateways mit der aktualisierten Konfiguration synchronisiert wurden, aktivieren Sie das neue Zertifikat, an das der ATA Center-Dienst gebunden ist. Wenn Sie das neue Zertifikat aktivieren, bindet der ATA Center-Dienst an das neue Zertifikat. ATA-Gateways werden das neue Zertifikat von jetzt an für die Authentifizierung bei ATA Center verwenden. Nach dem Herstellen der Verbindung mit dem ATA Center-Dienst ruft das ATA-Gateway die neueste Konfiguration ab und verfügt nur noch über das neue Zertifikat für ATA Center. 
+4. Nachdem alle ATA-Gateways mit der aktualisierten Konfiguration synchronisiert wurden, aktivieren Sie das neue Zertifikat, an das der ATA Center-Dienst gebunden ist. Wenn Sie das neue Zertifikat aktivieren, bindet der ATA Center-Dienst an das neue Zertifikat. ATA-Gateways verwenden von jetzt an das neue Zertifikat für die Authentifizierung bei ATA Center. Nach dem Herstellen der Verbindung mit dem ATA Center-Dienst ruft das ATA-Gateway die neueste Konfiguration ab und verfügt nur noch über das neue Zertifikat für ATA Center. 
 
 > [!NOTE]
 > -   Wenn ein ATA-Gateway während der Aktivierung des neuen Zertifikats offline geschaltet war und die aktualisierte Konfiguration nicht abrufen konnte, aktualisieren Sie die JSON-Konfigurationsdatei im ATA-Gateway manuell.

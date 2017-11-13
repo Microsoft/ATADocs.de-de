@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 07/30/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: b04fb8a4-b366-4b55-9d4c-6f054fa58a90
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c581bc48aa57c6eb9e0c1db6eeec81400ea9061a
-ms.sourcegitcommit: e7f83eb636db00333fe3965324a10a2ef5e2beba
+ms.openlocfilehash: 0d3b57e852a18bf9602d3a75ab627c23496f7285
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
@@ -38,7 +38,7 @@ Dieser Artikel beschreibt alle Überwachungswarnungen für jede Komponente und l
 ### <a name="center-overloaded"></a>Center überlastet
 |Warnung|Beschreibung|Lösung|Schweregrad|
 |----|----|----|----|
-|The ATA Center is not able to handle the amount of data being transferred from the ATA Gateways. (ATA Center kann die Menge der Daten, die von ATA-Gateways übertragen werden, nicht verarbeiten.) |ATA Center stoppt die Analyse von neuem Netzwerkverkehr und Ereignissen. Das bedeutet, dass die Exaktheit der Erkennungen und Profile minimiert wird, während diese Überwachungswarnung aktiv ist.|Stellen Sie sicher, dass Sie genügen Ressourcen für ATA Center bereitgestellt haben. Weitere Details zur genauen Planung der ATA Center-Kapazität finden Sie unter [ATA capacity planning (ATA Center – Kapazitätsplanung)](ata-capacity-planning.md). Untersuchen Sie die Leistung von ATA Center mithilfe der [Problembehandlung bei ATA mithilfe der Leistungsindikatoren](troubleshooting-ata-using-perf-counters.md).|Hoch|
+|The ATA Center is not able to handle the amount of data being transferred from the ATA Gateways. (ATA Center kann die Menge der Daten, die von ATA-Gateways übertragen werden, nicht verarbeiten.) |ATA Center beendet die Analyse von neuem Netzwerkverkehr und Ereignissen. Das bedeutet, dass die Exaktheit der Erkennungen und Profile minimiert wird, während diese Überwachungswarnung aktiv ist.|Stellen Sie sicher, dass Sie genügen Ressourcen für ATA Center bereitgestellt haben. Weitere Details zur genauen Planung der ATA Center-Kapazität finden Sie unter [ATA-Kapazitätsplanung](ata-capacity-planning.md). Untersuchen Sie die Leistung von ATA Center mithilfe der [Problembehandlung bei ATA mithilfe der Leistungsindikatoren](troubleshooting-ata-using-perf-counters.md).|Hoch|
 
 ### <a name="failure-connecting-to-the-siem-server-using-syslog"></a>Fehler bei der Verbindungsherstellung mit dem SIEM-Server unter Verwendung von Syslog.
 |Warnung|Beschreibung|Lösung|Schweregrad|
@@ -47,16 +47,16 @@ Dieser Artikel beschreibt alle Überwachungswarnungen für jede Komponente und l
 ### <a name="center-certificate-is-about-to-expire"></a>Center certificate is about to expire (Center-Zertifikat läuft bald ab)
 |Warnung|Beschreibung|Lösung|Schweregrad|
 |----|----|----|----|
-|The ATA Center certificate will expire in less than 3 weeks. (Das ATA Center-Zertifikat läuft in weniger als 3 Wochen ab.)|Nach dem Ablauf des Zertifikats: Die Konnektivität vom ATA-Gateway zu ATA Center schlägt fehl. Der ATA Center-Prozess stürzt ab und alle ATA-Funktionen werden angehalten.|[Ersetzen Sie das Zertifikat für ATA Center](modifying-ata-center-configuration.md)|Mittel|
+|The ATA Center certificate will expire in less than 3 weeks. (Das ATA Center-Zertifikat läuft in weniger als 3 Wochen ab.)|Nach dem Ablauf des Zertifikats: Die Konnektivität vom ATA-Gateway zu ATA Center schlägt fehl. Der ATA Center-Prozess stürzt ab, und alle ATA-Funktionen werden angehalten.|[Ersetzen Sie das Zertifikat für ATA Center](modifying-ata-center-configuration.md)|Mittel|
 ### <a name="ata-center-certificate-expired"></a>Das ATA Center-Zertifikat ist abgelaufen
 |Warnung|Beschreibung|Lösung|Schweregrad|
 |----|----|----|----|
-|The ATA Center certificate expired. (Das ATA Center-Zertifikat ist abgelaufen.)|Nach dem Ablauf des Zertifikats: Die Konnektivität vom ATA-Gateway zu ATA Center schlägt fehl. Der ATA Center-Prozess stürzt ab und alle ATA-Funktionen werden angehalten.|[Ersetzen Sie das Zertifikat für ATA Center](modifying-ata-center-configuration.md)|Hoch|
+|The ATA Center certificate expired. (Das ATA Center-Zertifikat ist abgelaufen.)|Nach dem Ablauf des Zertifikats: Die Konnektivität vom ATA-Gateway zu ATA Center kann nicht hergestellt werden. Der ATA Center-Prozess stürzt ab, und alle ATA-Funktionen werden angehalten.|[Ersetzen Sie das Zertifikat für ATA Center](modifying-ata-center-configuration.md)|Hoch|
 ## <a name="ata-gateway-issues"></a>Probleme mit dem ATA-Gateway
 ### <a name="read-only-user-password-to-expire-shortly"></a>Kennwort für schreibgeschützten Benutzer läuft bald ab
 |Warnung|Beschreibung|Lösung|Schweregrad|
 |----|----|----|----|
-|The read-only user password, used to perform resolution of entities against Active Directory, is about to expire in less than 30 days. (Das schreibgeschützte Benutzerkennwort, das zum Ausführen von Auflösungen von Entitäten für Active Directory verwendet wird, läuft in weniger als 30 Tagen ab.)|Wenn das Kennwort für diesen Benutzer abläuft, werden alle ATA-Gateways nicht mehr ausgeführt, und es werden keine neuen Daten gesammelt.|[Ändern Sie das Domänenverbindungskennwort](modifying-ata-config-dcpassword.md), und ändern Sie das Kennwort in der ATA-Konsole.|Mittel|
+|The read-only user password, used to perform resolution of entities against Active Directory, is about to expire in less than 30 days. (Das schreibgeschützte Benutzerkennwort, das zum Ausführen von Auflösungen von Entitäten für Active Directory verwendet wird, läuft in weniger als 30 Tagen ab.)|Wenn das Kennwort für diesen Benutzer abläuft, werden ATA-Gateways nicht mehr ausgeführt, und es werden keine neuen Daten gesammelt.|[Ändern Sie das Domänenverbindungskennwort](modifying-ata-config-dcpassword.md), und ändern Sie das Kennwort in der ATA-Konsole.|Mittel|
 ### <a name="read-only-user-password-expired"></a>Kennwort für schreibgeschützten Benutzer abgelaufen
 |Warnung|Beschreibung|Lösung|Schweregrad|
 |----|----|----|----|
@@ -64,7 +64,7 @@ Dieser Artikel beschreibt alle Überwachungswarnungen für jede Komponente und l
 ### <a name="gateway-certificate-about-to-expire"></a>Gatewayzertifikat läuft bald ab
 |Warnung|Beschreibung|Lösung|Schweregrad|
 |----|----|----|----|
-|The ATA Gateway certificate will expire in less than 3 weeks. (Das ATA-Gatewayzertifikat läuft in weniger als 3 Wochen ab.)|Die Konnektivität vom bestimmten ATA-Gateway zu ATA Center schlägt fehl. Es werden keine Daten von diesem ATA-Gateway gesendet.|Das ATA-Gatewayzertifikat sollt automatisch erneuert werden. Lesen Sie die Protokolle für das ATA-Gateway und ATA Center, um zu verstehen, warum das Zertifikat sich nicht automatisch erneuert hat.|Mittel|
+|The ATA Gateway certificate will expire in less than 3 weeks. (Das ATA-Gatewayzertifikat läuft in weniger als 3 Wochen ab.)|Es gibt keine Konnektivität vom jeweiligen ATA-Gateway zu ATA Center. Es werden keine Daten von diesem ATA-Gateway gesendet.|Das ATA-Gatewayzertifikat sollt automatisch erneuert werden. Lesen Sie die Protokolle für das ATA-Gateway und ATA Center, um zu verstehen, warum das Zertifikat sich nicht automatisch erneuert hat.|Mittel|
 
 ### <a name="gateway-certificate-expired"></a>Gatewayzertifikat abgelaufen
 |Warnung|Beschreibung|Lösung|Schweregrad|
@@ -73,7 +73,7 @@ Dieser Artikel beschreibt alle Überwachungswarnungen für jede Komponente und l
 ### <a name="domain-synchronizer-not-assigned"></a>Domain synchronizer not assigned (Domänensynchronizer nicht zugewiesen)
 |Warnung|Beschreibung|Lösung|Schweregrad|
 |----|----|----|----|
-|No domain synchronizer is assigned to any ATA Gateway. (Es sind keine Domänensynchronizer einem ATA-Gateway zugewiesen.) Das kann passieren, wenn kein ATA-Gateway als Kandidat für die Domänensynchronisierung konfiguriert ist.|Wenn die Domäne nicht synchronisiert ist, können Änderungen an Entitäten dazu führen, dass Entitätsinformationen in ATA veraltet werden oder fehlen, jedoch keine Erkennung beeinträchtigen.|Stellen Sie sicher, dass zumindest ein ATA-Gateway als [Domänensynchronizer](install-ata-step5.md) festgelegt ist.|Niedrig|
+|No domain synchronizer is assigned to any ATA Gateway. (Es sind keine Domänensynchronizer einem ATA-Gateway zugewiesen.) Das kann passieren, wenn kein ATA-Gateway als Kandidat für die Domänensynchronisierung konfiguriert ist.|Wenn die Domäne nicht synchronisiert ist, können Änderungen an Entitäten dazu führen, dass Entitätsinformationen in ATA veraltet sind oder fehlen. Die Erkennung wird jedoch nicht beeinträchtigt.|Stellen Sie sicher, dass zumindest ein ATA-Gateway als [Domänensynchronizer](install-ata-step5.md) festgelegt ist.|Niedrig|
 ### <a name="allsome-of-the-capture-network-adapters-on-a-gateway-are-not-available"></a>Keiner der Netzwerkadapter für die Erfassung auf einem Gateway ist verfügbar/Einige der Netzwerkadapter für die Erfassung auf einem Gateway sind nicht verfügbar
 |Warnung|Beschreibung|Lösung|Schweregrad|
 |----|----|----|----|
@@ -85,7 +85,7 @@ Dieser Artikel beschreibt alle Überwachungswarnungen für jede Komponente und l
 ### <a name="all-domain-controllers-are-unreachable-by-a-gateway"></a>Keiner der Domänencontroller kann durch ein Gateway erreicht werden.
 |Warnung|Beschreibung|Lösung|Schweregrad|
 |----|----|----|----|
-|The ATA Gateway is currently offline due to connectivity issues to all the configured domain controllers. (Das ATA-Gateway ist derzeit aufgrund von Verbindungsproblemen mit allen der konfigurierten Domänencontrollern offline.)|Dadurch wird die Fähigkeit von ATA beeinträchtigt, verdächtige Aktivitäten zu ermitteln, die im Zusammenhang mit den Domänencontrollern stehen, die von diesem ATA-Gateway überwacht werden.| Stellen Sie sicher, dass die Domänencontroller ausgeführt werden und der ATA-Gateway LDAP-Verbindungen für sie öffnen kann.|Mittel|
+|The ATA Gateway is currently offline due to connectivity issues to all the configured domain controllers. (Das ATA-Gateway ist derzeit aufgrund von Verbindungsproblemen mit allen der konfigurierten Domänencontrollern offline.)|Dadurch wird die Fähigkeit von ATA beeinträchtigt, verdächtige Aktivitäten im Zusammenhang mit den von diesem ATA-Gateway überwachten Domänencontrollern zu ermitteln.| Stellen Sie sicher, dass die Domänencontroller ausgeführt werden und der ATA-Gateway LDAP-Verbindungen für sie öffnen kann.|Mittel|
 ### <a name="gateway-stopped-communicating"></a>Gateway hat Kommunikation eingestellt
 |Warnung|Beschreibung|Lösung|Schweregrad|
 |----|----|----|----|

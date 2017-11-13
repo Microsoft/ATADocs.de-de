@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: daaa2b3d495900d84fe7b61afb8e3bb22b3d7f72
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: 654312c841c38c86c9efa826227d7cc93eb772cf
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="ata-update-to-15-migration-guide"></a>Migrationshandbuch zur Aktualisierung auf ATA 1.5
 Das Update auf ATA 1.5 bietet Verbesserungen in folgenden Bereichen:
@@ -38,9 +38,9 @@ Das Update auf ATA 1.5 bietet Verbesserungen in folgenden Bereichen:
 
 ## <a name="updating-ata-to-version-15"></a>Aktualisieren von ATA auf Version 1.5
 > [!NOTE]
-> Wenn ATA in Ihrer Umgebung nicht installiert ist, laden Sie die vollständige ATA-Version (enthält Version 1.5) herunter, und befolgen Sie die unter [Installieren von ATA](install-ata-step1.md) beschriebene Standardinstallation.
+> Wenn ATA in Ihrer Umgebung nicht installiert ist, laden Sie die vollständige ATA-Version (enthält Version 1.5) herunter, und befolgen Sie die unter [Installieren von ATA](install-ata-step1.md) beschriebene Standardinstallation.
 
-Wenn ATA Version 1.4 bereits bereitgestellt wurde, zeigt die vorliegende Anleitung die für die Aktualisierung der Installation erforderlichen Schritte.
+Wenn ATA Version 1.4 bereits bereitgestellt wird, zeigt die vorliegende Anleitung die für die Aktualisierung der Installation erforderlichen Schritte.
 
 So aktualisieren Sie auf ATA, Version 1.5:
 
@@ -62,7 +62,7 @@ So aktualisieren Sie auf ATA, Version 1.5:
 
 1.  Sichern Sie die Datenbank (optional):
 
-    -   Falls das ATA Center als virtueller Computer ausgeführt wird und Sie einen Prüfpunkt erstellen möchten, fahren Sie den virtuellen Computer zunächst herunter.
+    -   Falls ATA Center als virtueller Computer ausgeführt wird und Sie einen Prüfpunkt erstellen möchten, fahren Sie den virtuellen Computer zunächst herunter.
 
     -   Wenn ATA Center auf einem physischen Server ausgeführt wird, befolgen Sie die empfohlene Vorgehensweise zum [Sichern der MongoDB](https://docs.mongodb.org/manual/core/backups/).
 
@@ -76,9 +76,9 @@ So aktualisieren Sie auf ATA, Version 1.5:
 
         ![Auswählen der vollständigen oder teilweisen Migration](media/ATA-center-fullpartial.png)
 
-        -   Wenn Sie die **teilweise** Migration auswählen, werden der bisher gesammelte Netzwerkverkehr sowie die von ATA analysierten weitergeleiteten Windows-Ereignisse gelöscht, und die Verhaltensprofile müssen neu gelernt werden. Dieser Vorgang dauert mindestens drei Wochen. Bei wenig verbleibendem Speicherplatz auf dem Datenträger ist die Durchführung einer **teilweisen** Migration von Vorteil.
+        -   Wenn Sie die **teilweise** Migration auswählen, werden der bisher gesammelte Netzwerkverkehr sowie die von ATA analysierten weitergeleiteten Windows-Ereignisse gelöscht, und die Verhaltensprofile müssen neu erlernt werden. Dieser Vorgang dauert mindestens drei Wochen. Bei wenig verbleibendem Speicherplatz auf dem Datenträger ist die Durchführung einer **teilweisen** Migration von Vorteil.
 
-        -   Wenn Sie die **vollständige** Migration ausführen, ist gemäß den diesbezüglichen Berechnung auf der Upgrade-Seite zusätzlicher Speicherplatz erforderlich, und die Migration kann je nach Netzwerkverkehr länger dauern. Bei der vollständigen Migration werden alle zuvor gesammelten Daten und Verhaltensprofile beibehalten, sodass kein zusätzlicher Zeitaufwand durch das Neulernen von Verhaltensprofilen durch ATA entsteht, und Verhaltensanomalien können direkt nach der Aktualisierung erkannt werden.
+        -   Wenn Sie die **vollständige** Migration ausführen, ist gemäß den diesbezüglichen Berechnungen auf der Upgradeseite zusätzlicher Speicherplatz erforderlich, und die Migration kann je nach Netzwerkdatenverkehr länger dauern. Bei der vollständigen Migration werden alle zuvor gesammelten Daten und Verhaltensprofile beibehalten, sodass kein zusätzlicher Zeitaufwand durch das Neulernen von Verhaltensprofilen durch ATA entsteht, und Verhaltensanomalien können direkt nach der Aktualisierung erkannt werden.
 
 3.  Klicken Sie auf **Aktualisieren**. Nachdem Sie auf „Aktualisieren“ geklickt haben, ist ATA bis zum Abschluss der Aktualisierung offline.
 
@@ -104,7 +104,7 @@ So laden Sie das ATA-Gateway-Paket herunter
 
 4.  Speichern Sie das Paket lokal.
 
-Die ZIP-Datei enthält Folgendes:
+Die ZIP-Datei enthält die folgenden Dateien:
 
 -   Installationsprogramm für ATA-Gateway
 

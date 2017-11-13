@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: cbea47f9-34c1-42b6-ae9e-6a472b49e1a5
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 69127773d9c3130bd07dee0b65956b93848ec399
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: c60e577ed5df2beecd9737a4637c7a3162a9e706
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="what39s-new-in-ata-version-14"></a>Neuerungen in ATA 1.4
 Die vorliegenden Anmerkungen zu dieser Version enthalten Informationen zu bekannten Problemen in Version 1.4 von Advanced Threat Analytics.
@@ -61,7 +61,7 @@ In dieser Version bestehen die folgenden bekannten Probleme.
 Auf dem ATA-Gateway ist der [Microsoft-Netzwerkmonitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865) die einzige unterstützte Software zur Netzwerkerfassung, die installiert werden kann. Installieren Sie nicht Microsoft Message Analyzer oder eine andere Software zur Netzwerkerfassung. Die Installation anderer Software führt dazu, dass das ATA-Gateway nicht mehr ordnungsgemäß funktioniert.
 
 ### <a name="installation-from-zip-file"></a>Installation über ZIP-Datei
-Stellen Sie beim Installieren des ATA-Gateways sicher, dass Sie die Dateien aus der ZIP-Datei in ein lokales Verzeichnis extrahieren und von dort aus installieren. Installieren Sie das ATA-Gateway nicht direkt aus der ZIP-Datei, da andernfalls die Installation fehlschlägt.
+Stellen Sie beim Installieren des ATA-Gateways sicher, dass Sie die Dateien aus der ZIP-Datei in ein lokales Verzeichnis extrahieren und von dort aus installieren. Installieren Sie das ATA-Gateway nicht direkt aus der ZIP-Datei, da dann ein Fehler bei der Installation auftritt.
 
 ### <a name="uninstalling-previous-versions-of-ata"></a>Deinstallieren früherer Versionen von ATA
 Wenn Sie eine frühere Version von ATA, eine öffentliche Vorschauversion oder eine private Vorschauversion installiert haben, müssen Sie ATA Center und die ATA-Gateways deinstallieren, bevor Sie diese Version von ATA installieren.
@@ -89,7 +89,7 @@ Wenn Sie versuchen, ATA Center oder das ATA-Gateway zu deinstallieren, und die A
 Löschen Sie nach dem Deinstallieren den Installationsordner in ATA Center und auf dem ATA-Gateway.  Wenn Sie die Datenbank in einem separaten Ordner installiert haben, löschen Sie den Datenbankordner in ATA Center.
 
 ### <a name="health-alert---disconnected-ata-gateway"></a>Integritätswarnung – getrenntes ATA-Gateway
-Wenn Sie über mehrere ATA-Gateways verfügen und Warnungen erhalten, dass das ATA-Gateway getrennt ist, funktioniert die automatische Auflösung nur auf einem der Gateways, sodass die übrigen im Status „Offen“ verbleiben. Sie müssen manuell bestätigen, dass das ATA-Gateway in Betrieb ist und der Dienst ausgeführt wird, und die Warnung manuell auflösen.
+Wenn Sie über mehrere ATA-Gateways verfügen und Warnungen erhalten, dass das ATA-Gateway getrennt ist, funktioniert die automatische Auflösung nur auf einem der Gateways, sodass die übrigen im Status „Geöffnet“ verbleiben. Bestätigen Sie manuell, dass das ATA-Gateway in Betrieb ist und der Dienst ausgeführt wird, und lösen Sie die Warnung manuell auf.
 
 ### <a name="kb-on-virtualization-host"></a>KB auf Virtualisierungshost
 Installieren Sie KB3047154 nicht auf einem Virtualisierungshost. Dies kann dazu führen, dass die Portspiegelung nicht mehr ordnungsgemäß ausgeführt wird.
