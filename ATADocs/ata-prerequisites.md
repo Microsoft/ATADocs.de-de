@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 11/14/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d0d7ce6aae1bb59d266ddc0f7162ecfbc477b78a
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 29aef3eeddf6045d200f9b27809567f18a2fa2d0
+ms.sourcegitcommit: 4d9d1e089bbb50baceb87f273ddf2d3aaa9a78e8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 11/14/2017
 ---
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
@@ -101,7 +101,7 @@ In der folgenden Tabelle sind die Ports aufgelistet, die mindestens geöffnet we
 
 |Protokoll|Transport|Port|Zu/Von|Richtung|
 |------------|-------------|--------|-----------|-------------|
-|**SSL** (ATA-Kommunikation)|TCP|443 oder konfigurierbar|ATA-Gateway|Eingehend|
+|**SSL** (ATA-Kommunikation)|TCP|443|ATA-Gateway|Eingehend|
 |**HTTP** (optional)|TCP|80|Unternehmensnetzwerk|Eingehend|
 |**HTTPS**|TCP|443|Unternehmensnetzwerk und ATA-Gateway|Eingehend|
 |**SMTP** (optional)|TCP|25|SMTP-Server|Ausgehend|
@@ -206,7 +206,7 @@ In der folgenden Tabelle sind die Ports aufgeführt, die für den Verwaltungsada
 |DNS|TCP und UDP|53|DNS-Server|Ausgehend|
 |NTLM über RPC|TCP|135|Alle Geräte im Netzwerk|Ausgehend|
 |NetBIOS|UDP|137|Alle Geräte im Netzwerk|Ausgehend|
-|SSL|TCP|443 oder wie für den Center-Dienst konfiguriert|ATA Center:<br /><br />– IP-Adresse des Center-Diensts<br />– IP-Adresse der Konsole|Ausgehend|
+|SSL|TCP|443|ATA Center|Ausgehend|
 |Syslog (optional)|UDP|514|SIEM-Server|Eingehend|
 
 > [!NOTE]
@@ -262,7 +262,7 @@ In der folgenden Tabelle sind die Ports aufgeführt, die für das ATA-Lightweigh
 |DNS|TCP und UDP|53|DNS-Server|Ausgehend|
 |NTLM über RPC|TCP|135|Alle Geräte im Netzwerk|Ausgehend|
 |NetBIOS|UDP|137|Alle Geräte im Netzwerk|Ausgehend|
-|SSL|TCP|443 oder wie für den Center-Dienst konfiguriert|ATA Center:<br /><br />– IP-Adresse des Center-Diensts<br />– IP-Adresse der Konsole|Ausgehend|
+|SSL|TCP|443|ATA Center|Ausgehend|
 |Syslog (optional)|UDP|514|SIEM-Server|Eingehend|
 
 > [!NOTE]
