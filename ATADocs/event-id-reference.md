@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/25/2017
+ms.date: 11/6/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 5d639e84-2e37-43a9-9667-49be6c4fa8b7
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 7bd0f90acbb6a2d8eb84fd09bc4d859fff082273
-ms.sourcegitcommit: 5563c6861bb5db5cb73e058e5a51b4938b9a7d46
+ms.openlocfilehash: 07be2dad511158a9234c99287f7eefd7cc12ba83
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
@@ -64,7 +64,7 @@ Die Ereignisse finden Sie hier:
 
 1017 – Integritätswarnung, wenn das Center keinen Datenverkehr empfängt 
 
-1018 – Integritätswarnung bei fehlgeschlagenem Start von ATA-Gateway 
+1018 – Integritätswarnung bei fehlerhaftem Start von ATA-Gateway 
 
 1019 – Integritätswarnung bei geringem Speicherplatz in ATA-Gateway 
 
@@ -74,7 +74,7 @@ Die Ereignisse finden Sie hier:
 
 1022 – Integritätswarnung bei einem Fehler der Auflösung der externen IP-Adresse in ATA Center 
  
-## <a name="ata-suspicious-ctivity-events"></a>Verdächtige ATA-Aktivitätsereignisse
+## <a name="ata-suspicious-activity-events"></a>Verdächtige ATA-Aktivitätsereignisse
 
 2001 – Ungewöhnliches Verhalten im Zusammenhang mit einer verdächtigen Aktivität 
 
@@ -84,7 +84,7 @@ Die Ereignisse finden Sie hier:
 
 2004 – Verdächtige Aktivität eines Brute Force-LDAPs 
 
-2005 – Verdächtige Aktivität bei einer fehlgeschlagenen Vorauthentifizierung eines Computers 
+2005 – Verdächtige Aktivität bei einer fehlerhaften Vorauthentifizierung eines Computers 
 
 2006 – Verdächtige Aktivität bei einer Replikation von Verzeichnisdiensten 
 
@@ -114,9 +114,9 @@ Die Ereignisse finden Sie hier:
 
 2022 – Verdächtige Aktivität bei Golden Ticket 
 
-2023 – Verdächtige Aktivität bei Änderung einer ungewöhnlich sensiblen Gruppenmitgliedschaft 
-
 2023 – Verdächtige Brute Force-Aktivität 
+
+2024 – Verdächtige Aktivität bei Änderung einer ungewöhnlich sensiblen Gruppenmitgliedschaft  
 
 ## <a name="ata-auditing-events"></a>ATA-Überwachungsereignisse
 

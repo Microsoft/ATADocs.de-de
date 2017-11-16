@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/9/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1afaf258198c1b18aca5cc2e4be6774600f72a73
-ms.sourcegitcommit: e9f2bfd610b7354ea3fef749275f16819d60c186
+ms.openlocfilehash: 44f50b2daefb5a54c56b90289faf08b897494093
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
@@ -46,7 +46,7 @@ Weitere Informationen zur ATA-Architektur finden Sie unter [ATA-Architektur](ata
 
 Die ATA-Technologie erkennt verschiedene verdächtige Aktivitäten und konzentriert sich dabei auf die verschiedenen Phasen der Angriffskette von Cyber-Angriffen, so z.B.:
 
--   Die Reconnaissance: Die Angreifer sammeln Informationen über die Bauweise der Umgebung und die unterschiedlichen, vorhandenen Ressourcen und Entitäten und erstellen ihren Plan für die nächsten Angriffsphasen.
+-   Reconnaissance, während der die Angreifer Informationen zum Aufbau der Umgebung, zu den verschiedenen Assets und zu den vorhandenen Entitäten erfassen. Sie erstellen ganz allgemein einen Plan für die nächsten Phasen ihres Angriffs.
 -   Der Zyklus der Seitwärtsbewegung: Die Angreifer investieren Zeit und Mühe in die Verbreiterung ihrer Angriffsfläche in Ihrem Netzwerk.
 -   Domänendominanz (-persistenz): Die Angreifer sammeln die Informationen, mithilfe derer sie ihren Angriff fortsetzen und dabei eine Vielzahl von Einstiegspunkten, Anmeldeinformationen und Techniken anwenden können. 
 
@@ -65,7 +65,8 @@ ATA sucht nach drei Haupttypen von Angriffen: böswillige Angriffe, ungewöhnlic
 -   Brute-Force-Angriffe
 -   Remoteausführung
 
-Eine vollständige Liste der Erkennungstypen und deren Beschreibungen finden Sie unter [What Suspicious Activities Can ATA detect?](ata-threats.md) (Welche verdächtigen Aktivitäten kann ATA erkennen?).
+Eine vollständige Liste der Erkennungstypen und deren Beschreibungen finden Sie unter [Nach welchen Bedrohungen sucht ATA](ata-threats.md). 
+
 ATA erkennt diese verdächtigen Aktivitäten und zeigt Informationen dazu in der ATA-Konsole an, einschließlich einer Übersicht darüber, wer den Angriff wann und wie ausgeführt hat und was dabei geschehen ist. Durch die Überwachung dieses einfachen und benutzerfreundlichen Dashboards werden Sie also benachrichtigt, wenn ATA vermutet, dass ein Pass-the-Ticket-Angriff auf die Computer Client 1 und Client 2 in Ihrem Netzwerk versucht wurde.
 
  ![beispiel ATA bildschirm pass-the-ticket](media/pass_the_ticket_sa.png)
@@ -79,7 +80,7 @@ ATA erkennt diese verdächtigen Aktivitäten und zeigt Informationen dazu in der
 -   Modifizierung von sensiblen Gruppen
 
 
-Sie können die verdächtigen Aktivitäten dieses Typs im ATA-Dashboard anzeigen. Im folgenden Beispiel benachrichtigt Sie ATA, wenn ein Benutzer auf 4 Computer zugreift, die in der Regel nicht von diesem Benutzer verwendet werden. Dies kann Anlass zur Sorge geben.
+Sie können die verdächtigen Aktivitäten dieses Typs im ATA-Dashboard anzeigen. Im folgenden Beispiel werden Sie von ATA benachrichtigt, wenn ein Benutzer auf vier Computer zugreift, die in der Regel nicht von diesem Benutzer verwendet werden. Dies kann Anlass für eine Warnung geben.
 
  ![sample ATA screen abnormal behavior](media/abnormal-behavior-sa.png) 
 

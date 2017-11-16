@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 0756ef64-3aef-4a69-8981-24fa8f285c6a
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b8979b7a032e8f44f2da3844cbcb975d4f3f5c84
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: c1be20cc147e88f55d227818331f06d409dd08e7
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="ata-update-to-16-migration-guide"></a>Migrationshandbuch zur Aktualisierung auf ATA 1.6
 Das Update auf ATA 1.6 bietet Verbesserungen in folgenden Bereichen:
@@ -38,12 +38,12 @@ Das Update auf ATA 1.6 bietet Verbesserungen in folgenden Bereichen:
 
 ## <a name="updating-ata-to-version-16"></a>Aktualisieren von ATA auf Version 1.6
 > [!NOTE] 
-> Wenn ATA in Ihrer Umgebung nicht installiert ist, laden Sie die vollständige ATA-Version (enthält Version 1.6) herunter, und befolgen Sie die unter [Installieren von ATA](install-ata-step1.md) beschriebene Standardinstallation.
+> Wenn ATA in Ihrer Umgebung nicht installiert ist, laden Sie die vollständige ATA-Version (enthält Version 1.6) herunter, und befolgen Sie die unter [Installieren von ATA](install-ata-step1.md) beschriebene Standardinstallation.
 
-Wenn ATA Version 1.5 bereits bereitgestellt wurde, zeigt die vorliegende Anleitung die für die Aktualisierung der Bereitstellung erforderlichen Schritte.
+Wenn ATA Version 1.5 bereits bereitgestellt wird, zeigt die vorliegende Anleitung die für die Aktualisierung der Bereitstellung erforderlichen Schritte.
 
 > [!NOTE] 
-> ATA 1.6 kann nicht direkt auf ATA 1.4 installiert werden. Sie müssen zuerst ATA 1.5 installieren. Wenn Sie versehentlich versucht haben, ATA 1.6 zu installieren, ohne zuerst ATA 1.5 zu installieren, wird folgende Fehlermeldung angezeigt: **Auf Ihrem Computer ist bereits eine neuere Version installiert.** Sie müssen die Elemente von ATA 1.6, die trotz des Fehlers bei der Installation auf dem Computer verbleiben, deinstallieren, bevor Sie ATA 1.5 installieren.
+> ATA 1.6 kann nicht direkt auf ATA 1.4 installiert werden. Sie müssen zuerst ATA 1.5 installieren. Wenn Sie versehentlich versucht haben, ATA 1.6 zu installieren, ohne zuerst ATA 1.5 zu installieren, wird folgende Fehlermeldung angezeigt: **Auf Ihrem Computer ist bereits eine neuere Version installiert.** Sie müssen die Elemente von ATA 1.6, die trotz des Fehlers bei der Installation auf dem Computer verbleiben, deinstallieren, bevor Sie ATA 1.5 installieren.
 
 So aktualisieren Sie auf ATA, Version 1.6:
 
@@ -65,13 +65,13 @@ In dieser Version wird die gleiche Installationsdatei („Microsoft ATA Center S
 
 1.  Sichern Sie die Datenbank (optional):
 
-    -   Falls das ATA Center als virtueller Computer ausgeführt wird und Sie einen Prüfpunkt erstellen möchten, fahren Sie den virtuellen Computer zunächst herunter.
+    -   Falls ATA Center als virtueller Computer ausgeführt wird und Sie einen Prüfpunkt erstellen möchten, fahren Sie den virtuellen Computer zunächst herunter.
 
     -   Wenn ATA Center auf einem physischen Server ausgeführt wird, befolgen Sie die empfohlene Vorgehensweise zum [Sichern der MongoDB](https://docs.mongodb.org/manual/core/backups/).
 
 2.  Führen Sie die Installationsdatei („Microsoft ATA Center Setup.exe“) aus, und befolgen Sie die Anweisungen auf dem Bildschirm, um das Update zu installieren.
 
-    1.  Für ATA 1.6 muss .NET Framework 4.6.1 installiert sein. Wenn .NET Framework 4.6.1 noch nicht installiert ist, wird es als Teil der ATA-Installation installiert.
+    1.  Für ATA 1.6 muss .NET Framework 4.6.1 installiert sein. Wenn .NET Framework 4.6.1 noch nicht installiert ist, wird es als Teil der ATA-Installation installiert.
     
         > [!NOTE] 
         > Die Installation von .Net Framework 4.6.1 macht möglicherweise einen Neustart des Servers erforderlich. Die ATA-Installation wird erst nach dem Neustart des Servers fortgesetzt.
@@ -84,7 +84,7 @@ In dieser Version wird die gleiche Installationsdatei („Microsoft ATA Center S
     ![ATA-Aktualisierung](media/ata_ms_update.png) Damit ändern Sie die Windows-Einstellungen so, dass Updates für andere Microsoft-Produkte (einschließlich ATA) möglich sind, wie hier zu sehen. 
      ![Automatisches Windows-Update](media/ata_installupdatesautomatically.png)
 
-    5.  Vor Beginn der Installation führt ATA eine Bereitschaftsprüfung aus. Schauen Sie sich die Ergebnisse der Überprüfung an, um sicherzustellen, dass die erforderlichen Komponenten erfolgreich konfiguriert wurden und Sie mindestens über die Mindestmenge an Speicherplatz verfügen. 
+    5.  Vor Beginn der Installation führt ATA eine Bereitschaftsprüfung aus. Schauen Sie sich die Ergebnisse der Überprüfung an, um sicherzustellen, dass die erforderlichen Komponenten erfolgreich konfiguriert sind und die Mindestmenge an Speicherplatz verfügbar ist. 
     ![ATA-Bereitschaftsprüfung](media/ata_install_readinesschecks.png)
 
     6.  Klicken Sie auf **Aktualisieren**. Nachdem Sie auf „Aktualisieren“ geklickt haben, ist ATA bis zum Abschluss der Aktualisierung offline.
@@ -111,7 +111,7 @@ So laden Sie das ATA-Gateway-Paket herunter
 
 4.  Speichern Sie das Paket lokal.
 
-Die ZIP-Datei enthält Folgendes:
+Die ZIP-Datei enthält die folgenden Dateien:
 
 -   Installationsprogramm für ATA-Gateway
 

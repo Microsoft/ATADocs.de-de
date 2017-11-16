@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 6/21/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 601b48ba-a327-4aff-a1f9-2377a2bb7a42
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: ca460647fbed07820e8d19083d5aca19a05bc0a8
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: d9e226f06c407cb16a3486f81658e05433b00fb1
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
@@ -34,7 +34,7 @@ Die folgenden Felder und deren Werte werden an Ihren SIEM-Agent weitergeleitet:
 -   shost: der Quellcomputer für diese Warnung
 -   outcome: für Warnungen; die in der Warnung ausgeführte Aktivität ist erfolgreich/schlägt fehl  
 -   msg: die Beschreibung für die Warnung
--   cnt: für Warnungen, die die Zeiten angeben, wann die Warnung aufgetreten ist (z.B. Brute-Force mit einer Anzahl geschätzter Kennwörter)
+-   cnt: für Warnungen, die die Zeiten angeben, wann die Warnung aufgetreten ist (z.B. Brute Force mit einer Anzahl geschätzter Kennwörter)
 -   app: das in dieser Warnung verwendete Protokoll
 -   externalId: die Ereignis-ID, die ATA in das Ereignisprotokoll schreibt, das dieser Warnung entspricht
 -   cs#label & cs#: die Zeichenfolgen der Kunden, für die CEF zulässt, dass sie cs#label (Name des neuen Felds) und cs# (Wert) verwenden, z.B.: cs1Label=url cs1=https://192.168.0.220/suspiciousActivity/5909ae198ca1ec04d05e65fa

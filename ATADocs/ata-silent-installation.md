@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/29/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c38db312ea877b63580d745153aa58ea34a160a6
-ms.sourcegitcommit: 9ce330726e5de8c05eae6a20d3e6c1d8bef3cd0e
+ms.openlocfilehash: 3210d9153cd6781ae13a784e1f2b5927e0703009
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
@@ -29,11 +29,11 @@ Dieser Artikel enthält Anweisungen zur unbeaufsichtigten Installation von ATA.
 
 ATA Version 1.8 erfordert die Installation von Microsoft .NET Framework 4.6.1. 
 
-Beim Installieren oder Aktualisieren von ATA, wird .Net Framework 4.6.1 automatisch als Teil der Bereitstellung von Microsoft ATA installiert.
+Beim Installieren oder Aktualisieren von ATA wird .NET Framework 4.6.1 automatisch als Teil der Bereitstellung von Microsoft ATA installiert.
 
 > [!Note] 
 > Die Installation von .Net Framework 4.6.1 macht möglicherweise einen Neustart des Servers erforderlich. Wenn Sie beim das ATA-Gateway auf Domänencontrollern installieren, sollten Sie ein Wartungsfenster für diese Domänencontroller planen.
-Wenn Sie die Methode zur unbeaufsichtigten Installation von ATA verwenden, ist das Installationsprogramm so konfiguriert, dass der Server am Ende der Installation automatisch neu gestartet wird (falls erforderlich). Aufgrund eines Windows Installer-Fehlers, kann das „/norestart“-Flag nicht verlässlich verwendet werden, um sicherzustellen, dass der Server keinen Neustart ausführt. Führen Sie also nur eine unbeaufsichtigte Installation während der Anzeige eines Wartungsfensters aus.
+Wenn Sie die Methode zur unbeaufsichtigten Installation von ATA verwenden, ist das Installationsprogramm so konfiguriert, dass der Server am Ende der Installation automatisch neu gestartet wird (falls erforderlich). Aufgrund eines Windows Installer-Fehlers kann anhand des /norestart-Flags nicht mehr verlässlich sichergestellt werden, dass der Server keinen Neustart ausführt. Führen Sie eine unbeaufsichtigte Installation daher nur während eines Wartungsfensters aus.
 
 Zum Verfolgen des Fortschritts der Bereitstellung überwachen Sie die Protokolle des ATA-Installationsprogramms unter **%AppData%\Local\Temp**.
 
@@ -66,9 +66,9 @@ Verwenden Sie zum Installieren von ATA Center den folgenden Befehl:
 |DatabaseDataPath|DatabaseDataPath= „<DBPath>"|Nein|Legt den Pfad für den Datenordner der ATA-Datenbank fest. Standardpfad: „C:\Programme\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data“.|
 |CenterIpAddress|CenterIpAddress=<CenterIPAddress>|Ja|Legt die IP-Adresse des ATA Center-Diensts fest.|
 |CenterPort|CenterPort=<CenterPort>|Ja|Legt den Netzwerkport des ATA Center-Diensts fest.|
-|CenterCertificateThumbprint|CenterCertificateThumbprint=„<CertThumbprint>"|Nein|Legt den Zertifikatsfingerabdruck für den ATA Center-Dienst fest. Dieses Zertifikat schützt die Kommunikation zwischen ATA Center und dem ATA-Gateway. Wird diese Option nicht festgelegt, wird bei der Installation ein selbstsigniertes Zertifikat generiert.|
+|CenterCertificateThumbprint|CenterCertificateThumbprint=„<CertThumbprint>"|Nein|Legt den Zertifikatsfingerabdruck für den ATA Center-Dienst fest. Dieses Zertifikat schützt die Kommunikation zwischen ATA Center und dem ATA-Gateway. Wird keines festgelegt, wird bei der Installation ein selbstsigniertes Zertifikat generiert.|
 |ConsoleIpAddress|ConsoleIpAddress=<ConsoleIPAddress>|Ja|Legt die IP-Adresse der ATA-Konsole fest.|
-|ConsoleCertificateThumbprint|ConsoleCertificateThumbprint=„<CertThumbprint >“|Nein|Gibt den Zertifikatsfingerabdruck für die ATA-Konsole an. Dieses Zertifikat wird zum Überprüfen der Identität der Website der ATA-Konsole verwendet. Wird diese Option nicht festgelegt, wird bei der Installation ein selbstsigniertes Zertifikat generiert.|
+|ConsoleCertificateThumbprint|ConsoleCertificateThumbprint=„<CertThumbprint >“|Nein|Gibt den Zertifikatsfingerabdruck für die ATA-Konsole an. Anhand dieses Zertifikats wird die Identität der ATA-Konsolenwebsite geprüft. Falls keines angegeben wird, wird bei der Installation ein selbstsigniertes Zertifikat generiert.|
 
 **Beispiele**: So installieren Sie ATA Center mit Standardinstallationspfaden und einer einzigen IP-Adresse:
 
@@ -168,7 +168,7 @@ Verwenden Sie den folgenden Befehl für eine unbeaufsichtigte Installation des A
 |ConsoleAccountName|ConsoleAccountName=„<AccountName>“|Ja|Legt den Namen des Benutzerkontos (user@domain.com) fest, mit dem das ATA-Gateway mit ATA Center registriert wird.|
 |ConsoleAccountPassword|ConsoleAccountPassword=„<AccountPassword>"|Ja|Legt das Passwort für das Benutzerkonto (user@domain.com) fest, mit dem das ATA-Gateway mit ATA Center registriert wird.|
 
-**Beispiele**: Für eine unbeaufsichtigte Installation des ATA-Gateway-Protokolls melden Sie sich auf dem mit einer Domäne verbundenen Computer mit Ihren ATA-Administratoranmeldeinformationen an, und Sie müssen keine Anmeldeinformationen angeben. Registrieren Sie es alternativ mit den angegebenen Anmeldeinformationen bei ATA Center:
+**Beispiele**: Melden Sie sich für eine unbeaufsichtigte Installation des ATA-Gateways mit Ihren ATA-Administratoranmeldeinformationen bei dem in die Domäne eingebundenen Computer an, sodass Sie bei der Installation keine Anmeldeinformationen angeben müssen. Registrieren Sie es alternativ mit den angegebenen Anmeldeinformationen bei ATA Center:
 
     "Microsoft ATA Gateway Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" 
     ConsoleAccountName="user@contoso.com" ConsoleAccountPassword="userpwd"
