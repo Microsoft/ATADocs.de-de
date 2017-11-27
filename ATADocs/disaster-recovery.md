@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 12/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 7620e171-76d5-4e3f-8b03-871678217a3a
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 005f698c19c99c31dfa0e660e489f8c402eb1bc6
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: fca262cde38ea35c431b12173b6395eed32abc54
+ms.sourcegitcommit: 261a8ed1a28089c3e40ba4aff43f287db5d9dd4a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 11/21/2017
 ---
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
@@ -40,23 +40,25 @@ Dieser Artikel beschreibt, wie Sie ATA Center und Ihre ATA-Funktionalität schne
     4. Sichern Sie die exportierte Zertifikatsdatei auf einem separaten Computer.
 
   > [!NOTE] 
-  > Wenn der private Schlüssel nicht exportiert werden konnte, müssen Sie ein neues Zertifikat erstellen, es auf ATA bereitstellen, wie in [Ändern des Zertifikats für ATA Center](modifying-ata-center-configuration#the-ata-center-certificate) beschrieben, und es dann exportieren. 
+  > Wenn der private Schlüssel nicht exportiert werden konnte, müssen Sie ein neues Zertifikat erstellen, es auf ATA bereitstellen, wie in [Ändern des Zertifikats für ATA Center](modifying-ata-center-configuration.md) beschrieben, und es dann exportieren. 
 
 ## <a name="recover-your-ata-center"></a>Wiederherstellen von ATA Center
 
 1. Erstellen Sie einen neuen Windows Server-Computer mit der gleichen IP-Adresse und dem gleichen Computernamen wie beim vorherigen ATA Center-Computer.
-4. Importieren Sie das zuvor gesicherte Zertifikat auf dem neuen Server.
-5. Befolgen Sie die Anweisungen unter [Deploy the ATA Center (Bereitstellen von ATA Center)](install-ata-step1.md) auf dem neu erstellten Windows Server-Computer. Die ATA-Gateways müssen nicht noch einmal bereitgestellt werden. Erhalten Sie eine Aufforderung zur Angabe eines Zertifikats, dann stellen Sie das Zertifikat bereit, das Sie bei der Sicherung der ATA Center-Konfiguration exportiert haben. 
+2. Importieren Sie das zuvor gesicherte Zertifikat auf dem neuen Server.
+3. Befolgen Sie die Anweisungen unter [Deploy the ATA Center (Bereitstellen von ATA Center)](install-ata-step1.md) auf dem neu erstellten Windows Server-Computer. Die ATA-Gateways müssen nicht noch einmal bereitgestellt werden. Erhalten Sie eine Aufforderung zur Angabe eines Zertifikats, dann stellen Sie das Zertifikat bereit, das Sie bei der Sicherung der ATA Center-Konfiguration exportiert haben. 
 ![Wiederherstellung von ATA Center](media/disaster-recovery-deploymentss.png)
-6. Importieren Sie die gesicherte ATA Center-Konfiguration:
+4. Beenden Sie den ATA Center-Dienst.
+5. Importieren Sie die gesicherte ATA Center-Konfiguration:
     1. Entfernen Sie das Systemprofildokument von ATA Center aus MongoDB: 
         1. Gehen Sie unter **C:\Programme\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**. 
         2. Ausführen von `mongo.exe ATA` 
-        3. Führen Sie zum Entfernen des Standardsystemprofils diesen Befehl aus: `db.SystemProfile.remove({})`
+        3. Starten Sie den ATA Center-Dienst.
+        4. Führen Sie zum Entfernen des Standardsystemprofils diesen Befehl aus: `db.SystemProfile.remove({})`
     2. Führen Sie den folgenden Befehl `mongoimport.exe --db ATA --collection SystemProfile --file "<SystemProfile.json backup file>" --upsert` mithilfe der Sicherungsdatei aus Schritt 1 aus.</br>
     Eine ausführliche Erläuterung zum Auffinden und Importieren von Sicherungsdateien finden Sie unter [Exportieren und Importieren der ATA-Konfiguration](ata-configuration-file.md). 
     3. Öffnen Sie die ATA-Konsole. Sie sollten alle ATA-Gateways auf der Registerkarte „Konfiguration/Gateways“ verknüpft sehen. 
-    5. Definieren Sie einen [**Verzeichnisdienstebenutzer**](install-ata-step2.md), und wählen Sie eine [**Domänencontrollersynchronisierung**](install-ata-step5.md) aus. 
+    4. Definieren Sie einen [**Verzeichnisdienstebenutzer**](install-ata-step2.md), und wählen Sie eine [**Domänencontrollersynchronisierung**](install-ata-step5.md) aus. 
 
 
 
