@@ -56,4 +56,5 @@
 ## [Problembehandlung mithilfe von Protokollen](troubleshooting-ata-using-logs.md)
 ## [Problembehandlung mithilfe von Leistungsindikatoren](troubleshooting-ata-using-perf-counters.md)
 ## [Problembehandlung mithilfe der Datenbank](troubleshooting-ata-using-ata-database.md)
+## [Problembehandlung von Problemen beim Starten eines Diensts](troubleshooting-service-startup.md)
 ## [Notfallwiederherstellun](disaster-recovery.md)
