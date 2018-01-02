@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 12/10/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 25c2defd02e260248d30eb76f6ae297c1b36325f
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: da225af4578d4673040315f8814b9067a46517ce
+ms.sourcegitcommit: d41dcc40196a165026fd27db7bbd74d87b8fedda
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/10/2017
 ---
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
@@ -66,7 +66,8 @@ ATA-Dateiname mongo.exe
         });
 
 ## <a name="does-ata-work-with-encrypted-traffic"></a>Funktioniert ATA mit verschlüsseltem Datenverkehr?
-ATA analysiert verschiedene Netzwerkprotokolle und Ereignisse, die mit SIEM oder der Windows-Ereignisweiterleitung gesammelt wurden, sodass ATA weiterhin funktioniert und die meisten Erkennungen nicht betroffen sind, obwohl der verschlüsselte Verkehr nicht analysiert wird (z.B. LDAPS und IPSEC).
+ATA analysiert mehrere Netzwerkprotokolle sowie von SIEM oder der Windows-Ereignisweiterleitung erfasste Ereignisse. Erkennungen auf Grundlage von Netzwerkprotokollen mit verschlüsseltem Datenverkehr (z.B. LDAPS und IPSEC) werden nicht analysiert.
+
 
 ## <a name="does-ata-work-with-kerberos-armoring"></a>Funktioniert ATA mit Kerberos Armoring?
 Die Aktivierung von Kerberos Armoring (auch als Flexible Authentication Secure Tunneling (FAST) bezeichnet) wird von ATA unterstützt. Einzige Ausnahme ist die Overpass-The-Hash-Erkennung, die nicht unterstützt wird.
