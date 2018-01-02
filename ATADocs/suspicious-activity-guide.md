@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 12/13/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: bff477a66b837d82bb10a43a0dad7d36c6542d9f
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: b72b60aabb616f6ef5f1307d9d229ae1229681d2
+ms.sourcegitcommit: 2550ea51d36a7411d84ef19c5af25595289b02bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/13/2017
 ---
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
@@ -292,6 +292,34 @@ Durch bekannte Sicherheitslücken in älteren Versionen von Windows Server könn
 **Wartung**
 
 Stellen Sie sicher, dass alle Domänencontroller mit Betriebssystemen bis Windows Server 2012 R2 mit [KB3011780](https://support.microsoft.com/help/2496930/ms11-013-vulnerabilities-in-kerberos-could-allow-elevation-of-privilege) installiert sind, und dass alle Memberserver und Domänencontroller bis 2012 R2 das aktuellste KB2496930 haben. Weitere Informationen finden Sie unter [Silver PAC](https://technet.microsoft.com/library/security/ms11-013.aspx) und [Gefälschte PAC-Datei](https://technet.microsoft.com/library/security/ms14-068.aspx).
+
+## <a name="reconnaissance-using-account-enumeration"></a>Reconnaissance mithilfe von Kontoenumeration
+
+**Beschreibung**
+
+Bei einer Reconnaissance zur Kontoenumeration verwendet ein Angreifer ein Wörterbuch mit tausenden von Benutzernamen oder Tools wie KrbGuess, um Benutzernamen in Ihrer Domäne zu erraten. Der Angreifer führt Kerberos-Anforderungen mit diesen Namen durch, um so auf einen gültigen Benutzernamen zu stoßen. Wenn dadurch ein Benutzername bestimmt wird, erhält der Angreifer die Kerberos-Fehlermeldung **Preauthentication required** (Vorauthentifizierung erforderlich) statt der Meldung **Security principal unknown** (Unbekannter Sicherheitsprinzipal). 
+
+Bei dieser Erkennung kann ATA erkennen, von wo der Angriff durchgeführt wurde, wie viele Versuche vorgenommen wurden und bei vielen dieser Versuche Übereinstimmungen gefunden wurden. Wenn es zu viele unbekannte Benutzer gibt, erkennt ATA dies als verdächtige Aktivität. 
+
+**Untersuchung**
+
+1. Klicken Sie auf die Warnung, um auf die Seite „Details“ zu gelangen. 
+
+2. Ist es zulässig, dass dieser Hostcomputer den Domänencontroller nach der Existenz von Konten abfragt (z.B. Exchange-Server)? <br></br>
+Wird auf dem Host ein Skript oder eine Anwendung ausgeführt, die dieses Verhalten verursachen könnten? <br></br>
+Wenn Sie eine dieser Fragen mit „ja“ beantworten können, **schließen Sie die verdächtige Aktivität** (dabei handelt es sich um ein falsch positives Ergebnis), und schließen Sie den Host aus der verdächtigen Aktivität aus.
+
+3. Laden Sie die Warnungsdetails in einer Excel-Tabelle herunter, um sich eine nach vorhandenen und nicht vorhandenen Konten aufgeteilte Liste anzusehen. Wenn Sie sich das Arbeitsblatt mit den nicht vorhandenen Konten ansehen, und Ihnen diese Konten bekannt vorkommen, handelt es sich dabei möglicherweise um deaktivierte Konten oder Angestellte, die nicht mehr in Ihrem Unternehmen arbeiten. In diesem Fall ist es unwahrscheinlich, dass es sich um einen Angriff mit einem Wörterbuch mit Benutzernamen handelt. Wahrscheinlich ging das Verhalten von einer Anwendung oder einem Skript aus, die überprüfen, welche Konten in Active Directory noch vorhanden sind. Es handelt sich um ein unbedenkliches, richtig positives Ereignis.
+
+3. Wenn Ihnen die Namen zum größten Teil unbekannt sind, fragen Sie sich Folgendes: Stimmt einer der geratenen Benutzernamen mit einem tatsächlichen Kontonamen in Active Directory überein? Wenn es keine Übereinstimmungen gibt, war der Versuch nicht erfolgreich. Dennoch sollten Sie diese Warnung im Blick behalten, falls Sie im Laufe der Zeit aktualisiert wird.
+
+4. Wenn ein geratener Benutzername mit einem vorhandenen Kontonamen übereinstimmt, sollten Sie dies als Warnung mit höchster Priorität ansehen. Der Angreifer kennt vorhandene Konten in Ihrer Umgebung und kann mit Brute-Force-Angriffen und gefundenen Benutzernamen versuchen, Zugriff auf Ihre Domäne zu erhalten. Überprüfen Sie die erratenen Kontonamen auf weitere verdächtige Aktivitäten. Überprüfen Sie, ob es sich bei den Konten um sensible Konten handelt.
+
+
+**Wartung**
+
+[Komplexe bzw. lange Kennwörter](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) stellen die erste Sicherheitsstufe zum Schutz gegen Brute-Force-Angriffe dar.
+
 
 ## <a name="reconnaissance-using-directory-services-queries"></a>Reconnaissance mithilfe von Verzeichnisdienstabfragen
 
