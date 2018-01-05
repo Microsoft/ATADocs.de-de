@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 12/13/2017
+ms.date: 12/17/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b72b60aabb616f6ef5f1307d9d229ae1229681d2
-ms.sourcegitcommit: 2550ea51d36a7411d84ef19c5af25595289b02bf
+ms.openlocfilehash: 0d951edf1037422c1ee52c8b1e35308665aad256
+ms.sourcegitcommit: 91158e5e63ce2021a1f5f85d47de03d963b7cb70
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2017
+ms.lasthandoff: 12/20/2017
 ---
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
@@ -307,13 +307,13 @@ Bei dieser Erkennung kann ATA erkennen, von wo der Angriff durchgeführt wurde, 
 
 2. Ist es zulässig, dass dieser Hostcomputer den Domänencontroller nach der Existenz von Konten abfragt (z.B. Exchange-Server)? <br></br>
 Wird auf dem Host ein Skript oder eine Anwendung ausgeführt, die dieses Verhalten verursachen könnten? <br></br>
-Wenn Sie eine dieser Fragen mit „ja“ beantworten können, **schließen Sie die verdächtige Aktivität** (dabei handelt es sich um ein falsch positives Ergebnis), und schließen Sie den Host aus der verdächtigen Aktivität aus.
+Wenn Sie eine dieser Fragen mit „ja“ beantworten können, **schließen Sie die verdächtige Aktivität** (dabei handelt es sich um ein harmloses richtig positives Ergebnis), und schließen Sie den Host aus der verdächtigen Aktivität aus.
 
-3. Laden Sie die Warnungsdetails in einer Excel-Tabelle herunter, um sich eine nach vorhandenen und nicht vorhandenen Konten aufgeteilte Liste anzusehen. Wenn Sie sich das Arbeitsblatt mit den nicht vorhandenen Konten ansehen, und Ihnen diese Konten bekannt vorkommen, handelt es sich dabei möglicherweise um deaktivierte Konten oder Angestellte, die nicht mehr in Ihrem Unternehmen arbeiten. In diesem Fall ist es unwahrscheinlich, dass es sich um einen Angriff mit einem Wörterbuch mit Benutzernamen handelt. Wahrscheinlich ging das Verhalten von einer Anwendung oder einem Skript aus, die überprüfen, welche Konten in Active Directory noch vorhanden sind. Es handelt sich um ein unbedenkliches, richtig positives Ereignis.
+3. Laden Sie die Warnungsdetails in einer Excel-Tabelle herunter, um sich eine nach vorhandenen und nicht vorhandenen Konten aufgeteilte Liste anzusehen. Wenn Sie sich das Arbeitsblatt mit den nicht vorhandenen Konten ansehen, und Ihnen diese Konten bekannt vorkommen, handelt es sich dabei möglicherweise um deaktivierte Konten oder Angestellte, die nicht mehr in Ihrem Unternehmen arbeiten. In diesem Fall ist es unwahrscheinlich, dass es sich um einen Angriff mit einem Wörterbuch mit Benutzernamen handelt. Wahrscheinlich ging das Verhalten von einer Anwendung oder einem Skript aus, die überprüfen, welche Konten in Active Directory noch vorhanden sind. Dies bedeutet, dass es sich um ein harmloses richtig positives Ergebnis handelt.
 
 3. Wenn Ihnen die Namen zum größten Teil unbekannt sind, fragen Sie sich Folgendes: Stimmt einer der geratenen Benutzernamen mit einem tatsächlichen Kontonamen in Active Directory überein? Wenn es keine Übereinstimmungen gibt, war der Versuch nicht erfolgreich. Dennoch sollten Sie diese Warnung im Blick behalten, falls Sie im Laufe der Zeit aktualisiert wird.
 
-4. Wenn ein geratener Benutzername mit einem vorhandenen Kontonamen übereinstimmt, sollten Sie dies als Warnung mit höchster Priorität ansehen. Der Angreifer kennt vorhandene Konten in Ihrer Umgebung und kann mit Brute-Force-Angriffen und gefundenen Benutzernamen versuchen, Zugriff auf Ihre Domäne zu erhalten. Überprüfen Sie die erratenen Kontonamen auf weitere verdächtige Aktivitäten. Überprüfen Sie, ob es sich bei den Konten um sensible Konten handelt.
+4. Wenn einer der Rateversuche mit einem vorhandenen Kontonamen übereinstimmt, kennt der Angreifer vorhandene Konten in Ihrer Umgebung und kann mit Brute-Force-Angriffen und gefundenen Benutzernamen versuchen, Zugriff auf Ihre Domäne zu erhalten. Überprüfen Sie die erratenen Kontonamen auf weitere verdächtige Aktivitäten. Überprüfen Sie, ob es sich bei den Konten um sensible Konten handelt.
 
 
 **Wartung**
@@ -350,6 +350,9 @@ In dieser Erkennung werden im ersten Monat nach der Bereitstellung von ATA keine
 **Wartung**
 
 Verwenden Sie das [SAMRi10-Tool](https://gallery.technet.microsoft.com/SAMRi10-Hardening-Remote-48d94b5b), um den Schutz Ihrer Umgebung gegen diese Technik zu erhöhen.
+Wenn das Tool nicht auf Ihren DC angewendet werden kann:
+1. Wird ein Tool zur Überprüfung des Sicherheitsrisikos auf Ihrem Computer ausgeführt?  
+2. Überprüfen Sie, ob die im Angriff abgefragten Benutzer und Gruppen über hohe Berechtigungen verfügen oder anderweitig wichtig sind (d.h. CEO, CFO, IT-Abteilung usw.).  Falls dies der Fall ist, überprüfen Sie auch andere Aktivitäten auf diesem Endpunkt, und überwachen Sie Computer, auf denen die abgefragten Konten angemeldet sind, da diese für Lateral Movement-Methoden verwendet werden können.
 
 ## <a name="reconnaissance-using-dns"></a>Reconnaissance über DNS
 
@@ -515,7 +518,7 @@ Patchen Sie all Ihre Computer, und führen Sie insbesondere Sicherheitsupdates d
 - [Joining the security community](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community) (Der Sicherheitscommunity beitreten)
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 - [Verdächtige ATA-Aktivitäten – Playbook](http://aka.ms/ataplaybook)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Arbeiten mit verdächtigen Aktivitäten](working-with-suspicious-activities.md)

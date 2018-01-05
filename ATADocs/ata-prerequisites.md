@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/14/2017
+ms.date: 12/20/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 29aef3eeddf6045d200f9b27809567f18a2fa2d0
-ms.sourcegitcommit: 4d9d1e089bbb50baceb87f273ddf2d3aaa9a78e8
+ms.openlocfilehash: d3f112c455fbf2bbab2137d158cbd31fe6e02f7e
+ms.sourcegitcommit: 5a02c6d497265e65633f96f5f8264a29a18a1114
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 12/20/2017
 ---
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
@@ -249,10 +249,15 @@ Das ATA-Lightweight-Gateway kann auf den Domänencontrollern verschiedener Ausla
 Weitere Informationen zu den Hardwareanforderungen des ATA-Lightweight-Gateways finden Sie unter [ATA-Kapazitätsplanung](ata-capacity-planning.md).
 
 ### <a name="time-synchronization"></a>Zeitsynchronisierung
+
 Die Zeitsynchronisierung des ATA Center-Servers, der ATA-Lightweight-Gatewayserver und der Domänencontroller muss in einem Bereich von fünf Minuten zueinander liegen.
+
 ### <a name="network-adapters"></a>Netzwerkadapter
+
 Das ATA-Lightweight-Gateway überwacht den lokalen Datenverkehr auf allen Netzwerkadaptern des Domänencontrollers. <br>
 Nach der Bereitstellung können Sie die ATA-Konsole verwenden, wenn Sie die überwachten Netzwerkadapter jemals ändern möchten.
+
+Das Lightweight-Gateway wird nicht in Domänencontrollern unter Windows 2008 R2 mit aktivierten Teamvorgängen für Broadcom-Netzwerkadapter unterstützt.
 
 ### <a name="ports"></a>Ports
 In der folgenden Tabelle sind die Ports aufgeführt, die für das ATA-Lightweight-Gateway mindestens konfiguriert werden müssen.
@@ -286,7 +291,7 @@ Der Zugriff auf die ATA-Konsole erfolgt über einen Browser. Folgende Browser un
 - [Auswählen des richtigen ATA-Gatewaytyps](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 - [Tool zur Bemessung von ATA-Gateways](http://aka.ms/atasizingtool)
 - [ATA-Architektur](ata-architecture.md)
 - [Installieren von ATA](install-ata-step1.md)
