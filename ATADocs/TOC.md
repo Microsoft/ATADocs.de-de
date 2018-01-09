@@ -58,3 +58,4 @@
 ## [Problembehandlung mithilfe der Datenbank](troubleshooting-ata-using-ata-database.md)
 ## [Problembehandlung von Problemen beim Starten eines Diensts](troubleshooting-service-startup.md)
 ## [Notfallwiederherstellun](disaster-recovery.md)
+# [Ressourcen](ata-resources.md)
