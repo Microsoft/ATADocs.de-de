@@ -5,18 +5,18 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 2/1/2018
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
 ms.prod: 
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a0cc958cd7c802d02c96b6d7d3bc7e7180bd3d95
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 76173dfa0b41195e641235f8792723fa7b038a68
+ms.sourcegitcommit: 7684a9942719a90444ab567ffe9b2ff86438c04b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 02/01/2018
 ---
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
@@ -39,6 +39,9 @@ Die empfohlene und einfachste Methode zum Ermitteln der Kapazität für die ATA-
 
 ![Beispiel für das Kapazitätsplanungstool](media/capacity tool.png)
 
+
+> [!NOTE]
+> Da sich Umgebungen unterscheiden und besondere und unerwartete Eigenschaften beim Datenverkehr aufweisen, kann es sein, dass Sie, nachdem Sie ATA zum ersten Mal bereitgestellt haben und das Tool zum Anpassen der Größe ausführen, die Kapazität Ihrer Bereitstellung anpassen und optimieren müssen.
 
 
 Wenn Sie das ATA-Tool zur Größenanpassung aus irgendeinem Grund nicht verwenden können, sammeln Sie die Informationen zum Pakete/Sek.-Leistungsindikator manuell von allen Domänencontrollern über einen Zeitraum von 24 Stunden mit einem niedrigen Erfassungsintervall (etwa 5 Sekunden). Anschließend müssen Sie für jeden Domänencontroller den Tagesdurchschnitt und den Durchschnitt der Zeitspanne (15 Minuten) mit der höchsten Auslastung berechnen.
@@ -216,7 +219,7 @@ Um die Pakete pro Sekunde zu ermitteln, gehen Sie auf jedem Domänencontroller w
 - [Auswählen des richtigen ATA-Gatewaytyps](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 - [Tool zur Bemessung von ATA-Gateways](http://aka.ms/atasizingtool)
 - [Voraussetzungen für ATA](ata-prerequisites.md)
 - [ATA-Architektur](ata-architecture.md)
