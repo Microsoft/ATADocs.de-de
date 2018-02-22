@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: e0aed853-ba52-46e1-9c55-b336271a68e7
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 8d7468103e14e31116c4b6cb9846ecdcd2bf0ef0
-ms.sourcegitcommit: 55f7ac32bcd4ac8edb8b8b3b47993bf96b9acce2
+ms.openlocfilehash: f8a4e3ce06e775706f9bf05f5511d6b5ee53e8cc
+ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2018
+ms.lasthandoff: 02/21/2018
 ---
 *Gilt für: Advanced Threat Analytics Version 1.8*
 
@@ -105,7 +105,7 @@ Nachdem das ATA-Gateway die VPN-Ereignisse empfängt und zur Verarbeitung an das
 
 ## <a name="see-also"></a>Weitere Informationen
 - [Handbuch für die ATA POC-Bereitstellung](http://aka.ms/atapoc)
-- [Tool zur Bemessung von ATA-Gateways](http://aka.ms/atasizingtool)
+- [Tool zur Bemessung von ATA-Gateways](http://aka.ms/aatpsizingtool)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
 - [Voraussetzungen für ATA](ata-prerequisites.md)
