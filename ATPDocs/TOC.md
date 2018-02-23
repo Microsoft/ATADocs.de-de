@@ -1,1 +1,41 @@
-# [Index](index.md)
+# Verstehen und Kennenlernen: Vorschauversion!
+## [Was ist Azure Advanced Threat Protection?](what-is-atp.md)
+## [Häufig gestellte Fragen](atp-technical-faq.md)
+# Planung und Entwurf
+## [Voraussetzungen für Azure ATP](atp-prerequisites.md)
+## [Azure ATP-Architektur](atp-architecture.md)
+## [Planen Ihrer Azure ATP-Kapazität](atp-capacity-planning.md)
+# Bereitstellen
+## [1 Erstellen eines Arbeitsbereichs im Arbeitsbereich-Verwaltungsportal](install-atp-step1.md)
+## [2 Mit AD DS verbinden](install-atp-step2.md)
+## [3 Herunterladen des Azure ATP-Sensorpakets](install-atp-step3.md)
+## [4 Installieren des Azure ATP-Sensors](install-atp-step4.md)
+## [5 Konfigurieren des Azure ATP-Sensors](install-atp-step5.md)
+## [6: VPN-Integration](install-atp-step6-vpn.md)
+## [7: Ausschlüsse und Honeytoken-Konten](install-atp-step7.md)
+### [8 Konfigurieren von für SAM-R erforderliche Berechtigungen](install-atp-step8-samr.md)
+## [Unbeaufsichtigte Installation](ATP-silent-installation.md)
+## Azure ATP-Sensor – zusätzliche Schritte
+### [Konfigurieren der Portspiegelung](configure-port-mirroring.md)
+### [Konfigurieren der Ereignissammlung](configure-event-collection.md)
+### [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-forwarding.md)
+### [Konfigurieren von Proxy zum Ermöglichen der Kommunikation](configure-proxy.md)
+# Verwendung
+## [Azure ATP-Integritätscenter](atp-health-center.md)
+## [Azure ATP-Berichte](reports.md)
+## [Azure ATP-Rollengruppen](atp-role-groups.md)
+## [Ändern des Domänenverbindungskennworts](modifying-atp-config-dcpassword.md)
+## [Ausschließen von Entitäten von der Erkennung](excluding-entities-from-detections.md)
+## [Integration in Windows Defender ATP](integrate-wd-atp.md)
+## [Überwachen von Warnungen](monitoring-alerts.md)
+## [Festlegen von Azure ATP-Benachrichtigungen](notifications.md)
+## [Integration in Syslog](setting-syslog.md)
+## [Arbeiten mit vertrauliche Konten](sensitive-accounts.md)
+## [Arbeiten mit dem Azure ATP-Arbeitsbereichsportal](workspace-portal.md)
+## Azure ATP-Referenzinformationen
+### [Referenz zum SIEM-Protokoll](cef-format-sa.md)
+# Untersuchen
+## [Arbeiten mit verdächtigen Aktivitäten](working-with-suspicious-activities.md)
+## [Handbuch zu verdächtigen Aktivitäten](suspicious-activity-guide.md)
+## [Untersuchen von Pfaden mit seitlicher Verschiebung mit Azure ATP](use-case-lateral-movement-path.md)
+## [Untersuchen von Entitäten](entity-profiles.md)
