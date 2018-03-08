@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 3/3/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 47fa5ad5d6fb7800c7df4b878d16ec335e2b70e5
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: f077bbd9990affbb6c552c5ad8875fdfebbd70f2
+ms.sourcegitcommit: 84556e94a3efdf20ca1ebf89a481550d7f8f0f69
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/08/2018
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -29,7 +29,7 @@ Für die Kommunikation Ihrer Domänencontroller mit dem Clouddienst müssen Sie 
  
 1.  Bestätigen Sie, dass der **aktuelle Benutzer** Zugriff auf den Prozessorendpunkt mit IE hat, indem Sie vom DC aus folgende URL öffnen: https://triprd1wcuse1sensorapi.eastus.cloudapp.azure.com (für USA). Der Fehler 503 sollte daraufhin angezeigt werden:
 
- ![Dienst nicht verfügbar.](/media/service-unavailable.png)
+ ![Dienst nicht verfügbar.](./media/service-unavailable.png)
  
 2.  Wenn der Fehler 503 nicht auftritt, überprüfen Sie die Proxykonfiguration, und versuchen Sie es erneut.
 
@@ -39,11 +39,11 @@ Für die Kommunikation Ihrer Domänencontroller mit dem Clouddienst müssen Sie 
 
 Wenn der Fehler „Fehler: Der angegebene Registrierungsschlüssel bzw. Wert wurde nicht gefunden.“ angezeigt wird, bedeutet dies, dass kein Proxy auf der Ebene **LOCAL_SYSTEM** festgelegt wurde.
  
- ![Lokaler Proxysystemfehler](/media/proxy-local-system-error.png)
+ ![Lokaler Proxysystemfehler](./media/proxy-local-system-error.png)
 
 Wenn das Ergebnis „ Ergebnis verglichen: unterschiedlich“ angezeigt wird, bedeutet das, dass der Proxy für **LOCAL_SYSTEM** festgelegt ist, er aber nicht der gleiche wie **CURRENT_USER** ist:
  
-  ![Proxy-Ergebnis im Vergleich](/media/proxy-result-compared.png)
+  ![Proxy-Ergebnis im Vergleich](./media/proxy-result-compared.png)
 
 5.  Wenn **LOCAL_SYSTEM** nicht über dieselben Proxyeinstellungen verfügt (entweder nicht konfiguriert, oder sie unterscheiden sich von **CURRENT_USER**), sollten Sie die Proxyeinstellung aus **CURRENT_USER** in **LOCAL_SYSTEM** kopieren. Stellen Sie sicher, dass Sie diesen Registrierungsschlüssel sichern, bevor Sie ihn bearbeiten:
 
