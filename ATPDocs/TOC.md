@@ -2,7 +2,7 @@
 ## [Was ist Azure Advanced Threat Protection?](what-is-atp.md)
 ## [Häufig gestellte Fragen](atp-technical-faq.md)
 # Planung und Entwurf
-## [Voraussetzungen für Azure ATP](atp-prerequisites.md)
+## [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](atp-prerequisites.md)
 ## [Azure ATP-Architektur](atp-architecture.md)
 ## [Planen Ihrer Azure ATP-Kapazität](atp-capacity-planning.md)
 # Bereitstellen
@@ -13,10 +13,11 @@
 ## [5 Konfigurieren des Azure ATP-Sensors](install-atp-step5.md)
 ## [6: VPN-Integration](install-atp-step6-vpn.md)
 ## [7: Ausschlüsse und Honeytoken-Konten](install-atp-step7.md)
-### [8 Konfigurieren von für SAM-R erforderliche Berechtigungen](install-atp-step8-samr.md)
+## [8 Konfigurieren von für SAM-R erforderliche Berechtigungen](install-atp-step8-samr.md)
 ## [Unbeaufsichtigte Installation](ATP-silent-installation.md)
 ## Azure ATP-Sensor – zusätzliche Schritte
 ### [Konfigurieren der Portspiegelung](configure-port-mirroring.md)
+### [Überprüfen der Portspiegelung](validate-port-mirroring.md)
 ### [Konfigurieren der Ereignissammlung](configure-event-collection.md)
 ### [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-forwarding.md)
 ### [Konfigurieren von Proxy zum Ermöglichen der Kommunikation](configure-proxy.md)
@@ -37,5 +38,7 @@
 # Untersuchen
 ## [Arbeiten mit verdächtigen Aktivitäten](working-with-suspicious-activities.md)
 ## [Handbuch zu verdächtigen Aktivitäten](suspicious-activity-guide.md)
-## [Untersuchen von Pfaden mit seitlicher Verschiebung mit Azure ATP](use-case-lateral-movement-path.md)
+## [Investigate lateral movement paths with Azure ATP (Untersuchen von Lateral Movement-Pfaden mit Azure ATP)](use-case-lateral-movement-path.md)
 ## [Untersuchen von Entitäten](entity-profiles.md)
+# Problembehandlung
+## [Behandeln häufiger Probleme](troubleshooting-atp-known-issues.md)

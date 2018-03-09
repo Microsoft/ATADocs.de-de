@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 2/27/2018
 ms.topic: article
 ms.prod: 
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 09f82fa21bbaf61573b39fbe7a051db5c5e3b92a
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: ffa58d4e6ca24773f7168dd94ad0596878eaf151
+ms.sourcegitcommit: 21d8f9abf909fc5f0e0da03cd100fa8fb950baa4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 02/27/2018
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -71,6 +71,9 @@ Ihre Azure ATP-Bereitstellung umfasst sowohl eigenständige Azure ATP-Sensoren a
 -   Integrieren in andere Microsoft-Sicherheitsdienste
 
 Legen Sie Ihren Hauptarbeitsbereich als **Primär** fest. Sie können nur einen Arbeitsbereich als „Primär“ festlegen. Wenn Sie einen Arbeitsbereich als „Primär“ festlegen, hat dies Konsequenzen für die Integration: Sie können nur für Ihren primären Arbeitsbereich Azure ATP in Windows Defender ATP integrieren. Sie können auch später einen anderen Arbeitsbereich als „Primär“ kennzeichnen. Dafür müssen Sie zuvor jedoch bereits für den aktuellen Arbeitsbereich vorgenommene Integrationen entfernen.
+
+> [!NOTE]
+> Azure ATP unterstützt derzeit die Erstellung von zwei Arbeitsbereichen. Es wird empfohlen, einen primären Arbeitsbereich für die Produktionsumgebung und einen zusätzlichen Arbeitsbereich als Stagingumgebung zu erstellen.
 
 ### <a name="azure-atp-workspace-portal"></a>Azure ATP-Arbeitsbereichsportal
 

@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 2/25/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 819eeb73c57e7b1de5e7e5e837aa2d6db2e0848d
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 3cb4eb8a914f1fd4be0c1ddb26f9be3964c529f7
+ms.sourcegitcommit: 26d833f7d9502db73876ced9879789db395224f7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 02/27/2018
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -51,7 +51,7 @@ Jeder Azure ATP-Arbeitsbereich unterstützt eine Active Directory-Gesamtstruktur
 In diesem Abschnitt werden die Informationen aufgeführt, die Sie sammeln sollten, und Konten- und Netzwerk-Entitäten genannt, die vor der Installation von Azure ATP vorhanden sein sollten.
 
 
--   Ein **lokales** Azure AD-Benutzerkonto und Azure AD-Kennwort mit Lesezugriff auf alle Objekte in den überwachten Domänen.
+-   Ein **lokales** AD-Benutzerkonto und -Kennwort mit Lesezugriff auf alle Objekte in den überwachten Domänen.
 
     > [!NOTE]
     > Wenn Sie benutzerdefinierte ACLs für verschiedene Organisationseinheiten (OU) in Ihrer Domäne festgelegt haben, stellen Sie sicher, dass der ausgewählte Benutzer Leseberechtigungen für diese Organisationseinheiten hat.
@@ -216,7 +216,7 @@ In der folgenden Tabelle sind die Ports aufgeführt, die für den Azure ATP-Sens
 
 ## <a name="see-also"></a>Weitere Informationen
 - [Azure ATP sizing tool (Azure ATP-Tool zur Größenanpassung)](http://aka.ms/aatpsizingtool)
-- [Azure ATP-Architektur](atp-architecture.md)
-- [ATP installieren](install-atp-step1.md)
+- [Azure ATP architecture (Azure ATP-Architektur)](atp-architecture.md)
+- [Install ATP (Installieren von ATP)](install-atp-step1.md)
 - [Weitere Informationen finden Sie im ATP-Forum.](https://aka.ms/azureatpcommunity)
 
