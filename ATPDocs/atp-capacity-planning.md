@@ -5,18 +5,18 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 3/3/2018
 ms.topic: get-started-article
 ms.service: azure-advanced-threat-protection
 ms.prod: 
 ms.assetid: da0ee438-35f8-4097-b3a1-1354ad59eb32
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3939cba25f262991b000dbdd09bdfbf78f5102e7
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 0191ca50a5ea6328cc50ada6d9231ccb73da5c21
+ms.sourcegitcommit: 84556e94a3efdf20ca1ebf89a481550d7f8f0f69
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/08/2018
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -40,7 +40,7 @@ Die empfohlene und einfachste Methode zum Ermitteln der Kapazität für die Azur
 Wenn Sie das Azure ATP-Tool zur Größenanpassung nicht verwenden können, sammeln Sie die Informationen zum Leistungsindikator „Pakete pro Sek.“ manuell von allen Domänencontrollern über einen Zeitraum von 24 Stunden mit einem niedrigen Erfassungsintervall (etwa 5 Sekunden). Anschließend müssen Sie für jeden Domänencontroller den Tagesdurchschnitt und den Durchschnitt der Zeitspanne (15 Minuten) mit der höchsten Auslastung berechnen.
 Die folgenden Abschnitte enthalten Anweisungen dazu, wie Sie Informationen zum Pakete/Sek.-Leistungsindikator für einen Domänencontroller sammeln.
 
-## <a name="choosing-the-right-sensor-type-for-your-deployment"></a>Auswählen des richtigen Sensortyps für die Bereitstellung
+## Auswählen des richtigen Sensortyps für die Bereitstellung<a name="choosing-the right-sensor-type-for-your-deployment"></a>
 In einer Azure ATP-Bereitstellung wird jede Kombination aus den Typen des eigenständigen Azure ATP-Sensors unterstützt:
 
 - Nur eigenständige Azure ATP-Sensoren
@@ -82,7 +82,7 @@ Ein Azure ATP-Sensor kann die Überwachung eines Domänencontrollers basierend a
 |75.000 – 100.000|3,50 |9,50|
 
 > [!NOTE]
-> - Gesamtanzahl der Kerne ohne Hyperthreading, die auf diesem Domänencontroller installiert sind.<br>Hyperthreading ist zwar für den Azure ATP-Sensor akzeptabel, bei der Kapazitätsplanung sollten Sie aber die tatsächlichen Kerne und nicht die Kerne mit Hyperthreading zählen.
+> - Gesamtanzahl der Kerne, die auf diesem Domänencontroller installiert sind.<br>Es wird empfohlen, nicht mit Hyperthreadingkernen zu arbeiten.
 > - Gesamtgröße des auf diesem Domänencontroller installierten Arbeitsspeichers.
 > -   Wenn der Domänencontroller nicht über die für den Azure ATP-Sensor erforderlichen Ressourcen verfügt, wird die Leistung des Domänencontrollers zwar nicht beeinträchtigt, aber der Azure ATP-Sensor funktioniert möglicherweise nicht wie erwartet.
 > -   Bei Ausführung als virtueller Computer wird kein dynamischer Arbeitsspeicher und keine andere Speichererweiterungsfunktion unterstützt.
