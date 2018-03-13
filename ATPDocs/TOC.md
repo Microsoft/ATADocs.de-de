@@ -1,6 +1,7 @@
-# Verstehen und Kennenlernen: Vorschauversion!
+# Verstehen und Kennenlernen
 ## [Was ist Azure Advanced Threat Protection?](what-is-atp.md)
 ## [Häufig gestellte Fragen](atp-technical-faq.md)
+## [Neuerungen in Azure ATP](atp-whats-new.md)
 # Planung und Entwurf
 ## [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](atp-prerequisites.md)
 ## [Azure ATP-Architektur](atp-architecture.md)
