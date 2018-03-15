@@ -25,7 +25,7 @@ ms.lasthandoff: 11/07/2017
 
 # <a name="export-and-import-the-ata-configuration"></a>Exportieren und Importieren der ATA-Konfiguration
 Die Konfiguration von ATA ist in der Sammlung „SystemProfile“ in der Datenbank gespeichert.
-Diese Sammlung wird vom ATA Center-Dienst stündlich in Dateien mit dem Namen **SystemProfile_*Zeitstempel*.json **gespeichert. Die 10 neuesten Versionen werden gespeichert. Diese Datei befindet sich im Unterordner **Backup**. Im ATA-Standardinstallationsverzeichnis ist die Datei unter *C:\Programme\Microsoft Advanced Threat Analytics\Center\Backup\SystemProfile_*Zeitstempel*.json* zu finden. 
+Diese Sammlung wird vom ATA Center-Dienst stündlich in Dateien mit dem Namen **SystemProfile_*Zeitstempel*.json**gespeichert. Die 10 neuesten Versionen werden gespeichert. Diese Datei befindet sich im Unterordner **Backup**. Im ATA-Standardinstallationsverzeichnis ist die Datei unter *C:\Programme\Microsoft Advanced Threat Analytics\Center\Backup\SystemProfile_*Zeitstempel*.json* zu finden. 
 
 **Hinweis**: Wenn Sie größere Änderungen an ATA vornehmen, wird empfohlen, eine Sicherung dieser Datei zu erstellen.
 
