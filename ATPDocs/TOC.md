@@ -43,3 +43,4 @@
 ## [Untersuchen von Entitäten](entity-profiles.md)
 # Problembehandlung
 ## [Behandeln häufiger Probleme](troubleshooting-atp-known-issues.md)
+## [Support und Informationen](atp-support.md)
