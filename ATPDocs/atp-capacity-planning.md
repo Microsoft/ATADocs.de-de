@@ -5,18 +5,18 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/3/2018
+ms.date: 3/11/2018
 ms.topic: get-started-article
 ms.service: azure-advanced-threat-protection
 ms.prod: 
 ms.assetid: da0ee438-35f8-4097-b3a1-1354ad59eb32
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0191ca50a5ea6328cc50ada6d9231ccb73da5c21
-ms.sourcegitcommit: 84556e94a3efdf20ca1ebf89a481550d7f8f0f69
+ms.openlocfilehash: 577b7a5105e8de773f57b1e00bc1c9cb51096799
+ms.sourcegitcommit: 912e453753156902618ae6ebb8489c2320c06fc6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/12/2018
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -68,8 +68,9 @@ Die Durchführung der Portspiegelung erfordert möglicherweise die Bereitstellun
 
 ## Größenanpassung des Azure ATP-Sensors und des eigenständigen Azure ATP-Sensors <a name="sizing"></a>
 
-Ein Azure ATP-Sensor kann die Überwachung eines Domänencontrollers basierend auf der Menge des vom Domänencontroller erzeugten Datenverkehrs unterstützen. Die folgende Tabelle ist eine Schätzung – die tatsächliche vom Sensor analysierte Menge ist abhängig von Ihrem Datenverkehr. 
-
+Ein Azure ATP-Sensor kann die Überwachung eines Domänencontrollers basierend auf der Menge des vom Domänencontroller erzeugten Datenverkehrs unterstützen. Die folgende Tabelle ist eine Schätzung – die tatsächliche vom Sensor analysierte Menge ist abhängig vom Datenverkehr und dessen Verteilung. 
+> [!NOTE]
+> Die folgende CPU- und Arbeitsspeicherkapazität bezieht sich auf die Auslastung des Sensors selbst und nicht auf die Domänencontrollerkapazität.
 
 |Pakete pro Sekunde*|CPU (Kerne)|Arbeitsspeicher (GB)|
 |----|----|-----|
@@ -82,12 +83,12 @@ Ein Azure ATP-Sensor kann die Überwachung eines Domänencontrollers basierend a
 |75.000 – 100.000|3,50 |9,50|
 
 > [!NOTE]
-> - Gesamtanzahl der Kerne, die auf diesem Domänencontroller installiert sind.<br>Es wird empfohlen, nicht mit Hyperthreadingkernen zu arbeiten.
-> - Gesamtgröße des auf diesem Domänencontroller installierten Arbeitsspeichers.
+> - Gesamtanzahl der vom Sensordienst verwendeten Kerne<br>Es wird empfohlen, nicht mit Hyperthreadingkernen zu arbeiten.
+> - Gesamtarbeitsspeicher, der vom Sensordienst verwendet wird
 > -   Wenn der Domänencontroller nicht über die für den Azure ATP-Sensor erforderlichen Ressourcen verfügt, wird die Leistung des Domänencontrollers zwar nicht beeinträchtigt, aber der Azure ATP-Sensor funktioniert möglicherweise nicht wie erwartet.
 > -   Bei Ausführung als virtueller Computer wird kein dynamischer Arbeitsspeicher und keine andere Speichererweiterungsfunktion unterstützt.
 > -   Um eine optimale Leistung zu erzielen, legen Sie die **Energieoption** des Azure ATP-Sensors auf **Hohe Leistung** fest.
-> -   Es werden mindestens 2 Kerne und 6 GB Speicherplatz benötigt (10 GB empfohlen), einschließlich des Speicherplatzes, der für die Azure ATP-Binärdateien benötigt wird.
+> -   Es werden mindestens 2 Kerne und 6 GB Speicherplatz benötigt (10 GB empfohlen), einschließlich des Speicherplatzes, der für die Azure ATP-Binärdateien und -Protokolle benötigt wird.
 
 
 ## <a name="domain-controller-traffic-estimation"></a>Abschätzung des Datenverkehrs für Domänencontroller

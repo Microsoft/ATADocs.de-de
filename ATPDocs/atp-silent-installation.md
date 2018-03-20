@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2017
+ms.date: 3/11/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 24eca4c6-c949-42ea-97b9-41ef0fb611f1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 862420fb6914dbf9ee57c36bc21103cc7dddf7af
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: f27020f1b4a5fa7aa8fefbda28eac0c2ad6c64d0
+ms.sourcegitcommit: 912e453753156902618ae6ebb8489c2320c06fc6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/12/2018
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -31,7 +31,10 @@ Azure ATP erfordert die Installation von Microsoft .NET Framework 4.7.
 
 Beim Installieren von Azure ATP wird .NET Framework 4.7 automatisch als Teil der Bereitstellung von Azure ATP installiert.
 
-> [!Note] 
+> [!IMPORTANT] 
+> Stellen Sie sicher, dass Sie die neueste Version von .NET Framework installiert haben. Wenn Sie eine frühere Version von .NET installiert haben, bleibt die automatische Azure ATP-Installation in einer Schleife hängen und schlägt fehl. 
+
+> [!NOTE] 
 > Die Installation von .Net Framework 4.7 macht möglicherweise einen Neustart des Servers erforderlich. Wenn Sie den Azure ATP-Sensor auf Domänencontrollern installieren, sollten Sie die Planung eines Wartungsfensters für diese Domänencontroller in Betracht ziehen.
 Wenn Sie die Methode zur automatischen Installation von Azure ATP verwenden, ist das Installationsprogramm so konfiguriert, dass der Server am Ende der Installation (falls erforderlich) automatisch neu gestartet wird. Aufgrund eines Windows Installer-Fehlers kann anhand des *norestart*-Flags nicht mehr verlässlich sichergestellt werden, dass der Server keinen Neustart ausführt. Führen Sie eine automatische Installation daher nur während eines Wartungsfensters aus.
 
