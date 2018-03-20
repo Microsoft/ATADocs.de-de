@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/27/2018
+ms.date: 3/11/2018
 ms.topic: article
 ms.prod: 
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ffa58d4e6ca24773f7168dd94ad0596878eaf151
-ms.sourcegitcommit: 21d8f9abf909fc5f0e0da03cd100fa8fb950baa4
+ms.openlocfilehash: 640974bbeb0ff147b21da24d6ad6df2f54e9ab4d
+ms.sourcegitcommit: 912e453753156902618ae6ebb8489c2320c06fc6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -74,6 +74,8 @@ Legen Sie Ihren Hauptarbeitsbereich als **Primär** fest. Sie können nur einen 
 
 > [!NOTE]
 > Azure ATP unterstützt derzeit die Erstellung von zwei Arbeitsbereichen. Es wird empfohlen, einen primären Arbeitsbereich für die Produktionsumgebung und einen zusätzlichen Arbeitsbereich als Stagingumgebung zu erstellen.
+> Nachdem Sie einen Arbeitsbereich gelöscht haben, können Sie den Support kontaktieren, um den Arbeitsbereich erneut zu aktivieren. Sie können maximal drei Arbeitsbereiche löschen. Kontaktieren Sie den Azure ATP-Support, um die Anzahl an gespeicherten bzw. gelöschten Arbeitsbereichen zu erhöhen.
+
 
 ### <a name="azure-atp-workspace-portal"></a>Azure ATP-Arbeitsbereichsportal
 
@@ -119,6 +121,8 @@ Der **Azure ATP-Sensor** und der **eigenständige Azure ATP-Sensor** verfügen b
 -   Übertragen von relevanten Daten in den Azure ATP-Clouddienst
 
 -   Überwachen von mehreren Domänencontrollern über einen einzelnen eigenständigen Azure ATP-Sensor, oder Überwachen von einem Domänencontroller für einen Azure ATP-Sensor.
+
+Azure ATP unterstützt bis zu 100 Sensoren. Kontaktieren Sie den Azure ATP-Support, wenn Sie noch mehr Sensoren installieren möchten.
 
 Der eigenständige Azure ATP-Sensor empfängt den Netzwerkdatenverkehr und die Windows-Ereignisse aus Ihrem Netzwerk und verarbeitet diese in den folgenden Hauptkomponenten:
 
