@@ -1,25 +1,25 @@
 ---
-title: "Überwachen von Systemintegrität und Ereignissen von Advanced Threat Analytics| Microsoft-Dokumentation"
-description: "Mit ATA Health Center lässt sich die Integrität des ATA-Diensts überprüfen, und es werden Warnungen über mögliche Probleme sowie Systemereignisse in der Ereignisanzeige angezeigt."
-keywords: 
+title: Überwachen von Systemintegrität und Ereignissen von Advanced Threat Analytics| Microsoft-Dokumentation
+description: Mit ATA Health Center lässt sich die Integrität des ATA-Diensts überprüfen, und es werden Warnungen über mögliche Probleme sowie Systemereignisse in der Ereignisanzeige angezeigt.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 3/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: d6c783b2-46c5-4211-b21a-d6b17f08d03d
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e5009d126f3c1b9d73f064787049068b071c5319
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 0c8eb2c368a81a64e62f79b9fb606b9fc04efd8b
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Gilt für: Advanced Threat Analytics Version 1.8*
+*Gilt für: Advanced Threat Analytics Version 1.9*
 
 
 # <a name="working-with-ata-system-health-and-events"></a>Arbeiten mit der Systemintegrität und Ereignissen von ATA
@@ -57,7 +57,7 @@ Um den Gesamtzustand des Systems zu überprüfen, klicken Sie auf der Menüleist
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Arbeiten mit verdächtigen Aktivitäten](working-with-suspicious-activities.md)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

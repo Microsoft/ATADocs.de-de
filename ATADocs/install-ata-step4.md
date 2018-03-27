@@ -1,25 +1,25 @@
 ---
-title: "Installieren von Advanced Threat Analytics – Schritt 4 | Microsoft-Dokumentation"
+title: Installieren von Advanced Threat Analytics – Schritt 4 | Microsoft-Dokumentation
 description: Im vierten Schritt beim Installieren von ATA installieren Sie das ATA-Gateway.
-keywords: 
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 3/21/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 4abeda5a54de771c6e6d3c73d9217113dfe88b8e
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 5b516c3179e5a870b022bd4c890dcd4099adcb67
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Gilt für: Advanced Threat Analytics Version 1.8*
+*Gilt für: Advanced Threat Analytics Version 1.9*
 
 
 
@@ -93,7 +93,7 @@ Führen Sie die folgenden Schritte auf dem ATA-Gatewayserver aus.
 - [Übersicht über die ATA-Bereitstellung](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
 - [Auswählen des richtigen ATA-Gatewaytyps](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 - [Handbuch für die ATA POC-Bereitstellung](http://aka.ms/atapoc)
 - [Tool zur Bemessung von ATA-Gateways](http://aka.ms/atasizingtool)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

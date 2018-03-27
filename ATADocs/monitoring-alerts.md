@@ -1,28 +1,28 @@
 ---
-title: "Verstehen von ATA-Überwachungswarnungen | Microsoft-Dokumentation"
+title: Verstehen von ATA-Überwachungswarnungen | Microsoft-Dokumentation
 description: Beschreibt die Verwendung der ATA-Protokolle zum Behandeln von Problemen.
-keywords: 
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 3/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: b04fb8a4-b366-4b55-9d4c-6f054fa58a90
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0d3b57e852a18bf9602d3a75ab627c23496f7285
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 6506ecf445641e9789cb1817916089f5463ba289
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Gilt für: Advanced Threat Analytics Version 1.8*
+*Gilt für: Advanced Threat Analytics Version 1.9*
 
 
-
+# <a name="understanding-ata-monitoring-alerts"></a>Grundlegendes zu ATA-Überwachungswarnungen
 Das ATA Health Center informiert Sie, wenn ein Problem mit der ATA-Bereitstellung aufgetreten ist, indem eine Überwachungswarnung ausgegeben wird.
 Dieser Artikel beschreibt alle Überwachungswarnungen für jede Komponente und listet den Grund sowie die erforderlichen Schritte zur Lösung des Problems auf.
 ## <a name="ata-center-issues"></a>ATA Center-Probleme

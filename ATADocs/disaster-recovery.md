@@ -1,25 +1,25 @@
 ---
-title: "Notfallwiederherstellung für Advanced Threat Analytics | Microsoft-Dokumentation"
-description: "Beschreibt, wie Sie die ATA-Funktionalität nach einem Notfall schnell wiederherstellen können"
-keywords: 
+title: Notfallwiederherstellung für Advanced Threat Analytics | Microsoft-Dokumentation
+description: Beschreibt, wie Sie die ATA-Funktionalität nach einem Notfall schnell wiederherstellen können
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 12/11/2017
+ms.date: 3/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 7620e171-76d5-4e3f-8b03-871678217a3a
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: fca262cde38ea35c431b12173b6395eed32abc54
-ms.sourcegitcommit: 261a8ed1a28089c3e40ba4aff43f287db5d9dd4a
+ms.openlocfilehash: 72598380f574e0475e4796887f44131009911be2
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Gilt für: Advanced Threat Analytics Version 1.8*
+*Gilt für: Advanced Threat Analytics Version 1.9*
 
 
 
@@ -65,7 +65,7 @@ Dieser Artikel beschreibt, wie Sie ATA Center und Ihre ATA-Funktionalität schne
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 - [Voraussetzungen für ATA](ata-prerequisites.md)
 - [ATA-Kapazitätsplanung](ata-capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](install-ata-step6.md)

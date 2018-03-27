@@ -1,24 +1,24 @@
 ---
 title: Planen der Advanced Threat Analytics-Bereitstellung (ATA) | Microsoft-Dokumentation
-description: "Hilft bei der Planung Ihrer Bereitstellung und der Entscheidung, wie viele ATA-Server für Ihr Netzwerk erforderlich sind."
-keywords: 
+description: Hilft bei der Planung Ihrer Bereitstellung und der Entscheidung, wie viele ATA-Server für Ihr Netzwerk erforderlich sind.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/1/2018
+ms.date: 3/21/2018
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
-ms.prod: 
+ms.prod: ''
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 76173dfa0b41195e641235f8792723fa7b038a68
-ms.sourcegitcommit: 7684a9942719a90444ab567ffe9b2ff86438c04b
+ms.openlocfilehash: e58fe62fc655fed8f17ae800dda20e022e198a26
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/22/2018
 ---
-*Gilt für: Advanced Threat Analytics Version 1.8*
+*Gilt für: Advanced Threat Analytics Version 1.9*
 
 
 
@@ -28,7 +28,7 @@ Anhand dieses Artikels können Sie ermitteln, wie viele ATA-Server zur Überwach
 > [!NOTE] 
 > ATA Center kann auf jedem IaaS-Anbieter bereitgestellt werden, solange die Leistungsanforderungen erfüllt werden, die in diesem Artikel beschrieben sind.
 
-##<a name="using-the-sizing-tool"></a>Verwenden das Tools zur Größenanpassung
+## <a name="using-the-sizing-tool"></a>Verwenden das Tools zur Größenanpassung
 Die empfohlene und einfachste Methode zum Ermitteln der Kapazität für die ATA-Bereitstellung besteht in der Verwendung des [ATA-Tools zur Größenanpassung](http://aka.ms/atasizingtool). Führen Sie das ATA-Tool zur Größenanpassung aus, und verwenden Sie aus den Excel-Dateiergebnissen heraus die folgenden Felder zum Ermitteln der benötigten ATA-Kapazität:
 
 - ATA Center-CPU und -Arbeitsspeicher: Gleichen Sie das Feld **Busy Packets/sec** in der ATA Center-Tabelle in der Ergebnisdatei mit dem Feld **PACKETS PER SECOND** in der [ATA Center-Tabelle](#ata-center-sizing) ab.
@@ -47,6 +47,9 @@ Die empfohlene und einfachste Methode zum Ermitteln der Kapazität für die ATA-
 Wenn Sie das ATA-Tool zur Größenanpassung aus irgendeinem Grund nicht verwenden können, sammeln Sie die Informationen zum Pakete/Sek.-Leistungsindikator manuell von allen Domänencontrollern über einen Zeitraum von 24 Stunden mit einem niedrigen Erfassungsintervall (etwa 5 Sekunden). Anschließend müssen Sie für jeden Domänencontroller den Tagesdurchschnitt und den Durchschnitt der Zeitspanne (15 Minuten) mit der höchsten Auslastung berechnen.
 Die folgenden Abschnitte enthalten Anweisungen dazu, wie Sie Informationen zum Pakete/Sek.-Leistungsindikator für einen Domänencontroller sammeln.
 
+
+> [!NOTE]
+> Da sich Umgebungen unterscheiden und besondere und unerwartete Eigenschaften beim Datenverkehr aufweisen, kann es sein, dass Sie, nachdem Sie ATA zum ersten Mal bereitgestellt haben und das Tool zum Anpassen der Größe ausführen, die Kapazität Ihrer Bereitstellung anpassen und optimieren müssen.
 
 
 ### <a name="ata-center-sizing"></a>Größenzuteilung für ATA Center
@@ -67,8 +70,7 @@ Für die Analyse des Benutzerverhaltens benötigt das ATA Center die Daten von m
 &#42;&#42;Durchschnittliche Werte (Spitzenwerte)
 > [!NOTE]
 > -   ATA Center kann insgesamt maximal 1 Million Pakete pro Sekunde von allen überwachten Domänencontrollern verarbeiten. In einigen Umgebungen kann dasselbe ATA Center den gesamten Datenverkehr, der mehr als 1 Million Pakete beträgt, verarbeiten. Wenden Sie sich an askcesec@microsoft.com, um Unterstützung bei Umgebungen wie diesen zu erhalten.
-> -   Die Menge an Speicherplatz, die hier vorgeschrieben ist, sind Nennwerte. Sie sollten sie stets im Hinblick auf künftiges Wachstum anpassen und sicherstellen, dass das Laufwerk, auf dem sich die Datenbank befindet, mindestens 20 % freien Speicherplatz aufweist.
-> -   Wenn der freie Speicherplatz auf 20 % oder 200 GB fällt, wird die älteste Sammlung gelöscht. Die Löschung wird weiter ausgeführt, bis nur noch 5 % oder 50 GB an freiem Speicherplatz übrig bleiben. Sobald dies der Fall ist, wird die Datensammlung abgebrochen.
+> -   Wenn der freie Speicherplatz auf 20 % oder 200 GB fällt, wird die älteste Sammlung gelöscht. Wenn es nicht möglich ist, die Datensammlung erfolgreich auf diesen Wert zu senken, wird eine Warnung ausgelöst.  ATA funktioniert weiterhin, bis der Grenzwert von 5 % oder 50 GB erreicht ist.  Dann füllt ATA die Datenbank nicht weiter mit Daten auf, und eine Warnung wird ausgelöst.
 > - Es ist möglich, ATA Center auf jedem IaaS-Anbieter bereitzustellen, solange die Leistungsanforderungen erfüllt werden, die in diesem Artikel beschrieben sind.
 > -   Die Speicherlatenz für Lese- und Schreibvorgänge sollte unter 10 ms betragen.
 > -   Das Verhältnis zwischen Schreib- und Lesevorgängen beträgt unterhalb von 100.000 Paketen pro Sekunde etwa 1:3 und oberhalb dieser Grenze etwa 1:6.
@@ -163,56 +165,6 @@ Berücksichtigen Sie folgende Fehler bei der Entscheidung, wie viele ATA-Gateway
 > -   Um eine optimale Leistung zu erzielen, legen Sie die **Energieoption** des ATA-Gateways auf **Hohe Leistung** fest.
 > -   Es sind mindestens 5 GB Speicherplatz erforderlich, und 10 GB werden empfohlen, einschließlich des Speicherplatzes, der für die ATA-Binärdateien, [ATA-Protokolle](troubleshooting-ata-using-logs.md) und [Leistungsprotokolle](troubleshooting-ata-using-perf-counters.md) benötigt wird.
 
-
-## <a name="domain-controller-traffic-estimation"></a>Abschätzung des Datenverkehrs für Domänencontroller
-Es gibt verschiedene Tools, die Sie verwenden können, um die durchschnittliche Anzahl der Pakete pro Sekunde eines Domänencontrollers zu ermitteln. Auch ohne den Einsatz solcher Werkzeuge können Sie diesen Leistungsindikator mit dem Systemmonitor ermitteln.
-
-Um die Pakete pro Sekunde zu ermitteln, gehen Sie auf jedem Domänencontroller wie folgt vor:
-
-1.  Öffnen Sie den Systemmonitor.
-
-    ![Abbildung des Systemmonitors](media/ATA-traffic-estimation-1.png)
-
-2.  Erweitern Sie **Datensammlersätze**.
-
-    ![Abbildung der Datensammlersätze](media/ATA-traffic-estimation-2.png)
-
-3.  Klicken Sie mit der rechten Maustaste auf **Benutzerdefiniert**, und wählen Sie **Neu** &gt; **Datensammlersatz** aus.
-
-    ![Abbildung eines neuen Datensammlersatzes](media/ATA-traffic-estimation-3.png)
-
-4.  Geben Sie einen Namen für den Sammlersatz ein, und wählen Sie **Manuell erstellen (Erweitert)** aus.
-
-5.  Wählen Sie unter **Welcher Datentyp soll eingeschlossen werden?** die Option **Datenprotokolle und Leistungsindikator erstellen** aus.
-
-    ![Abbildung für Datentyp des neuen Sammlersatzes](media/ATA-traffic-estimation-5.png)
-
-6.  Klicken Sie unter **Welche Leistungsindikatoren möchten Sie protokollieren?** auf **Hinzufügen**.
-
-7.  Erweitern Sie **Netzwerkadapter**, wählen Sie **Pakete/Sek.** aus, und wählen Sie die richtige Instanz aus. Wenn Sie sich dabei nicht sicher sind, können Sie **&lt;Alle Instanzen&gt;** auswählen und auf **Hinzufügen** und **OK** klicken.
-
-    > [!NOTE]
-    > Um diesen Vorgang auf einer Befehlszeile auszuführen, führen Sie `ipconfig /all` aus, um den Namen des Adapters und die Konfiguration zu ermitteln.
-
-    ![Abbildung – Hinzufügen von Leistungsindikatoren](media/ATA-traffic-estimation-7.png)
-
-8.  Ändern Sie das **Abtastintervall** auf **1 Sekunde**.
-
-9. Legen Sie den Speicherort fest, an dem die Daten gespeichert werden sollen.
-
-10. Wählen Sie unter **Neuen Datensammlersatz erstellen** die Option **Diesen Datensammlersatz jetzt starten** aus, und klicken Sie auf **Fertig stellen**.
-
-    Jetzt sollte der erstellte Datensammlersatz mit einem grünen Dreieck als Zeichen der Funktion dargestellt werden.
-
-11. Beenden Sie nach 24 Stunden den Datensammlersatz, indem Sie mit der rechten Maustaste auf das zugehörige Symbol klicken und die Option **Beenden** auswählen.
-
-    ![Abbildung für das Beenden des Datensammlersatzes](media/ATA-traffic-estimation-12.png)
-
-12. Wechseln Sie im Datei-Explorer zu dem Ordner, in dem die BLG-Datei gespeichert wurde, und doppelklicken Sie darauf, um sie im Systemmonitor zu öffnen.
-
-13. Wählen Sie den Leistungsindikator für Pakete/Sekunde aus, und notieren Sie die durchschnittlichen und maximalen Werte.
-
-    ![Abbildung Leistungsindikator für Pakete pro Sekunde](media/ATA-traffic-estimation-14.png)
 
 
 ## <a name="related-videos"></a>Verwandte Videos

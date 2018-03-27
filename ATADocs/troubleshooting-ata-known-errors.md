@@ -1,25 +1,25 @@
 ---
 title: Behandlung von bekannten Problemen bei ATA | Microsoft-Dokumentation
-description: "Beschreibt, wie sie bekannte Probleme in Advanced Threat Analytics (ATA) behandeln können"
-keywords: 
+description: Beschreibt, wie sie bekannte Probleme in Advanced Threat Analytics (ATA) behandeln können
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 3/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: f13416c4179d65ee8096d246ea92969b1cf9af43
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: a7172447de5b4d4088da2d8d687a7bec47a01551
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Gilt für: Advanced Threat Analytics Version 1.8*
+*Gilt für: Advanced Threat Analytics Version 1.9*
 
 
 
@@ -79,7 +79,7 @@ In diesem Abschnitt sind mögliche Fehler, die es in den Bereitstellungen von AT
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 - [Voraussetzungen für ATA](ata-prerequisites.md)
 - [ATA-Kapazitätsplanung](ata-capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)

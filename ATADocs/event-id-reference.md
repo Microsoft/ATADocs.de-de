@@ -1,25 +1,25 @@
 ---
 title: Verweis auf ATA-Ereignis-IDs | Microsoft-Dokumentation
-description: "Gibt eine Liste der ATA-Ereignis-IDs und deren Beschreibungen zurück."
-keywords: 
+description: Gibt eine Liste der ATA-Ereignis-IDs und deren Beschreibungen zurück.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 3/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 5d639e84-2e37-43a9-9667-49be6c4fa8b7
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 07be2dad511158a9234c99287f7eefd7cc12ba83
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: e9147f4333f481eaec4967dd32846bd123866941
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Gilt für: Advanced Threat Analytics Version 1.8*
+*Gilt für: Advanced Threat Analytics Version 1.9*
 
 
 # <a name="ata-event-id-reference"></a>Verweis auf ATA-Ereignis-IDs
@@ -84,8 +84,6 @@ Die Ereignisse finden Sie hier:
 
 2004 – Verdächtige Aktivität eines Brute Force-LDAPs 
 
-2005 – Verdächtige Aktivität bei einer fehlerhaften Vorauthentifizierung eines Computers 
-
 2006 – Verdächtige Aktivität bei einer Replikation von Verzeichnisdiensten 
 
 2007 – Verdächtige Aktivität bei einer DNS-Reconnaissance 
@@ -97,8 +95,6 @@ Die Ereignisse finden Sie hier:
 2013 – Verdächtige Aktivität mit gefälschtem PAC 
 
 2014 – Verdächtige Aktivität einer Honeytoken-Aktivität 
-
-2015 – Verdächtige Aktivität eines LDAP-Kennworts in Klartext 
 
 2016 – Verdächtige Aktivität bei einer umfangreichen Objektlöschung 
 
@@ -135,7 +131,7 @@ Die Ereignisse finden Sie hier:
 3007 – Manuelle Änderung zum Status „verdächtige Aktivität“ 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 - [Voraussetzungen für ATA](ata-prerequisites.md)
 - [ATA-Kapazitätsplanung](ata-capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)

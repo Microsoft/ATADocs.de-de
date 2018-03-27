@@ -1,25 +1,25 @@
 ---
 title: Advanced Threat Analytics-Architektur | Microsoft-Dokumentation
 description: Beschreibt die Architektur von Microsoft Advance Threat Analytics (ATA)
-keywords: 
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 3/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 66f5678285c203476aee3daafae22ac7b34d0ae2
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: b620e5b6203d387de389cfb857c2dd6125239ed9
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Gilt für: Advanced Threat Analytics Version 1.8*
+*Gilt für: Advanced Threat Analytics Version 1.9*
 
 
 
@@ -158,7 +158,7 @@ Wenn Active Directory mehr Rechenkapazität erfordert, wird das vom ATA-Lightwei
 ||||||
 |-|-|-|-|-|
 |Active Directory (Lsass.exe)|ATA-Lightweight-Gateway (Microsoft.Tri.Gateway.exe)|Sonstiges (andere Prozesse) |ATA-Lightweight-Gateway-Kontingent|Nimmt Gateway Löschungen vor|
-|60%|15%|10%|15%|Ja|
+|60%|15%|10%|15%|Ja |
 
 
 ## <a name="your-network-components"></a>Ihre Netzwerkkomponenten
@@ -183,7 +183,7 @@ Um die ATA-Erfassung von Pass-the-Hash, Brute Force, die Modifizierung von sensi
 - [Auswählen des richtigen ATA-Gatewaytyps](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 - [Voraussetzungen für ATA](ata-prerequisites.md)
 - [Tool zur Bemessung von ATA-Gateways](http://aka.ms/atasizingtool)
 - [ATA-Kapazitätsplanung](ata-capacity-planning.md)

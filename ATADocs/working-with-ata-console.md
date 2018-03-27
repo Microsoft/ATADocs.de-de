@@ -1,25 +1,25 @@
 ---
 title: Verstehen der Advanced Threat Analytics-Konsole | Microsoft-Dokumentation
 description: Beschreibt die Anmeldung bei der ATA-Konsole sowie die Komponenten der Konsole.
-keywords: 
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 3/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 26c093c4163593611b175f4f0002f443e593f952
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 2ecffce7d692a9f1ecea8d8c5220ce3b2dbf848e
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Gilt für: Advanced Threat Analytics Version 1.8*
+*Gilt für: Advanced Threat Analytics Version 1.9*
 
 
 
@@ -77,6 +77,10 @@ Wenn eine neue verdächtige Aktivität erkannt wird, öffnet sich auf der rechte
 
 ![Abbildung der ATA-Benachrichtigungsleiste](media/notification-bar-1.7.png)
 
+### <a name="whats-new"></a>Neuheiten
+
+Nach der Veröffentlichung einer neuen Version von ATA wird das Fenster **Neuigkeiten** in der oberen rechten Ecke angezeigt. Darüber erhalten Sie Informationen dazu, was in der neusten Version hinzugefügt wurde. Außerdem erhalten Sie einen Link zum Download der Version.
+
 ### <a name="filtering-panel"></a>Filterbereich
 
 Sie können basierend auf Status und Schweregrad filtern, welche verdächtigen Aktivitäten auf der Angriffszeitachse oder auf der Registerkarte für verdächtige Aktivitäten des Entitätsprofils angezeigt werden.
@@ -94,23 +98,6 @@ Das Integritätscenter warnt Sie, wenn in Ihrer ATA-Bereitstellung etwas nicht o
 ![Abbildung des ATA-Integritätscenters](media/ATA-Health-Issue.jpg)
 
 Jedes Mal, wenn auf Ihrem System ein Problem auftritt (z.B. ein Verbindungsfehler oder ein getrenntes ATA-Gateway), können Sie dies am Symbol für das Integritätscenter erkennen, auf dem ein roter Punkt angezeigt wird. ![Abbildung des roten Punkts auf dem Symbol für das ATA-Integritätscenter](media/ATA-Health-Center-Alert-red-dot.png)
-
-### <a name="user-and-computer-profiles"></a>Benutzer- und Computerprofil
-
-ATA erstellt ein Profil für jeden Benutzer und Computer im Netzwerk. Im Benutzerprofil zeigt ATA allgemeine Informationen an, z. B. die Gruppenmitgliedschaft, kürzliche Anmeldungen und Ressourcen, auf die kürzlich zugegriffen wurde. Es wird auch eine Liste der Standorte bereitgestellt, von denen aus der Benutzer eine Verbindung über VPN hergestellt hat. Eine Liste der Gruppenmitgliedschaften, die ATA als sensibel einstuft, finden Sie unten.
-
-![Benutzerprofil](media/user-profile.png)
-
-Im Computerprofil zeigt ATA allgemeine Informationen an, z.B. kürzliche Anmeldungen und Ressourcen, auf die kürzlich zugegriffen wurde.
-
-![Computerprofil](media/computer-profile.png)
-
-ATA stellt auf folgenden Seiten zusätzliche Informationen zu Entitäten (Computer, Geräte, Benutzer) bereit: „Zusammenfassung“, „Aktivitäten“ und „Verdächtige Aktivitäten“.
-
-Ein Profil, das ATA nicht vollständig auflösen konnte, wird durch das Symbol eines halb gefüllten Kreises gekennzeichnet.
-
-
-![Abbildung eines nicht aufgelösten Profils in ATA](media/ATA-Unresolved-Profile.jpg)
 
 ### <a name="sensitive-groups"></a>Sensible Gruppen
 
