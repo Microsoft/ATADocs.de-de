@@ -1,25 +1,25 @@
 ---
-title: "Advanced Threat Analytics-Rollengruppen für die Zugangsverwaltung | Microsoft-Dokumentation"
-description: "Führt Sie durch die Arbeit mit ATA-Rollengruppen."
-keywords: 
+title: Advanced Threat Analytics-Rollengruppen für die Zugangsverwaltung | Microsoft-Dokumentation
+description: Führt Sie durch die Arbeit mit ATA-Rollengruppen.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 3/21/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 06f96ad4627cd5400d822caabeaff15dfaabfb72
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 3fdee9a98adaaacfa354a4ce95ad45c12b9be548
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Gilt für: Advanced Threat Analytics Version 1.8*
+*Gilt für: Advanced Threat Analytics Version 1.9*
 
 
 

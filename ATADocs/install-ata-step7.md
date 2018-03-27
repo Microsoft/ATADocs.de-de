@@ -1,32 +1,33 @@
 ---
-title: "Installieren von Advanced Threat Analytics – Schritt 8 | Microsoft-Dokumentation"
+title: Installieren von Advanced Threat Analytics – Schritt 8 | Microsoft-Dokumentation
 description: Im letzten Schritt der Installation von ATA konfigurieren Sie den Honeytoken-Benutzer.
-keywords: 
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 3/21/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0feb12a2e86adae124016c90431209ec33cdbcb5
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 8d7d53222c4eb98fba554b59f14d8728a88c9d95
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Gilt für: Advanced Threat Analytics Version 1.8*
+*Gilt für: Advanced Threat Analytics Version 1.9*
 
 
 
 # <a name="install-ata---step-8"></a>Installieren von ATA – Schritt 8
 
 >[!div class="step-by-step"]
-[« Schritt 7 ](vpn-integration-install-step.md)
+[« Schritt 7](vpn-integration-install-step.md)
+[Schritt 9 »](install-ata-step9-samr.md)
 
 ## <a name="step-8-configure-ip-address-exclusions-and-honeytoken-user"></a>Schritt 8: Konfigurieren von IP-Adressausschlüssen und Honeytoken-Benutzern
 ATA ermöglicht den Ausschluss bestimmter IP-Adressen oder Benutzer aus einer Reihe von Erkennungen. 
@@ -64,8 +65,8 @@ Sie können sich die [Sammlung von Angriffssimulationsszenarios von Advanced Thr
 
 
 >[!div class="step-by-step"]
-[« Schritt 7 ](vpn-integration-install-step.md)
-
+[« Schritt 7](vpn-integration-install-step.md)
+[Schritt 9 »](install-ata-step9-samr.md)
 
 
 ## <a name="related-videos"></a>Verwandte Videos
@@ -73,7 +74,7 @@ Sie können sich die [Sammlung von Angriffssimulationsszenarios von Advanced Thr
 - [Auswählen des richtigen ATA-Gatewaytyps](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 - [Handbuch für die ATA POC-Bereitstellung](http://aka.ms/atapoc)
 - [Tool zur Bemessung von ATA-Gateways](http://aka.ms/atasizingtool)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

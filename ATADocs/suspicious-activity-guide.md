@@ -1,25 +1,25 @@
 ---
-title: "ATA-Handbuch zu verdächtigen Aktivitäten | Microsoft-Dokumentation"
+title: ATA-Handbuch zu verdächtigen Aktivitäten | Microsoft-Dokumentation
 d|Description: This article provides a list of the suspicious activities ATA can detect and steps for remediation.
-keywords: 
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 12/17/2017
+ms.date: 3/21/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0d951edf1037422c1ee52c8b1e35308665aad256
-ms.sourcegitcommit: 91158e5e63ce2021a1f5f85d47de03d963b7cb70
+ms.openlocfilehash: d76c34b115bd38bdb1eb82fbff1c0857b0ad8dfa
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Gilt für: Advanced Threat Analytics Version 1.8*
+*Gilt für: Advanced Threat Analytics Version 1.9*
 
 
 # <a name="advanced-threat-analytics-suspicious-activity-guide"></a>Advanced Threat Analytics-Handbuch zu verdächtigen Aktivitäten
@@ -63,6 +63,8 @@ Richten Sie gegebenenfalls [Privileged Access Management for Active Directory (P
 
 ## <a name="broken-trust-between-computers-and-domain"></a>Fehlerhafte Vertrauensstellung zwischen Computern und Domäne
 
+> ![Hinweis] Diese verdächtige Aktivität ist veraltet und wird nur in ATA-Versionen vor 1.9 angezeigt.
+
 **Beschreibung**
 
 Eine fehlerhafte Vertrauensstellung bedeutet, dass Sicherheitsanforderungen von Active Directory für die fraglichen Computer möglicherweise nicht wirksam sind. Dies ist ein grundlegender Sicherheits- und Kompatibilitätsfehler und stellt ein leichtes Ziel für Angreifer dar. In dieser Erkennung wird eine Warnung ausgelöst, wenn mehr als fünf Kerberos-Authentifizierungsfehler von einem Computerkonto in 24 Stunden angezeigt werden.
@@ -76,6 +78,7 @@ Gestattet der fragliche Computer Domänenbenutzern das Anmelden?
 
 Verknüpfen Sie den Computer falls notwendig erneut mit der Domäne, oder setzen Sie das Computerkennwort zurück.
 
+
 ## <a name="brute-force-attack-using-ldap-simple-bind"></a>Brute-Force-Angriff mithilfe einer einfachen LDAP-Bindung
 
 **Beschreibung**
@@ -85,7 +88,7 @@ Verknüpfen Sie den Computer falls notwendig erneut mit der Domäne, oder setzen
 
 Bei einem Brute-Force-Angriff versucht ein Angreifer, sich mit vielen verschiedenen Kennwörtern für verschiedene Konten anzumelden, bis ein korrektes Kennwort für mindestens ein Konto gefunden wird. Sobald eines gefunden wurde, kann sich der Angreifer mit diesem Konto anmelden.
 
-In dieser Erkennung wird eine Warnung ausgelöst, wenn ATA die Verwendung von vielen verschiedenen Kennwörtern erkennt. Dies kann entweder *horizontal* mit einem kleinen Satz von Kennwörtern für viele Benutzer oder *vertikal* mit einem großen Satz von Kennwörtern für wenige Benutzer geschehen. Auch eine beliebige Kombination dieser beiden Optionen ist möglich.
+In dieser Erkennung wird eine Warnung ausgelöst, wenn ATA eine signifikante Anzahl von Authentifizierungen mit einfacher Bindung erkennt. Dies kann entweder *horizontal* mit einem kleinen Satz von Kennwörtern für viele Benutzer oder *vertikal* mit einem großen Satz von Kennwörtern für wenige Benutzer geschehen. Auch eine beliebige Kombination dieser beiden Optionen ist möglich.
 
 **Untersuchung**
 
@@ -103,15 +106,15 @@ In dieser Erkennung wird eine Warnung ausgelöst, wenn ATA die Verwendung von vi
 
 **Beschreibung**
 
-Verschiedene Angriffsmethoden nutzen schwache Kerberos-Verschlüsselungsverfahren. In dieser Erkennung lernt ATA die Kerberos-Verschlüsselungsverfahren, die von Computern und Benutzern verwendet werden und benachrichtigt Sie, wenn ein schwächeres Verschlüsselungsverfahren verwendet wird, das: (1) unüblich für den Quellcomputer und/oder den Benutzer ist und (2) mit bekannten Angriffstechniken übereinstimmt.
+Die Herabstufung der Verschlüsselung ist eine Methode, die dazu dient, Kerberos zu schwächen, indem für die Verschlüsselungsstufe von unterschiedlichen Feldern des Protokolls, die normalerweise mit der höchsten Verschlüsselungsstufe verschlüsselt werden, ein Downgrade durchgeführt wird. Ein abgeschwächtes verschlüsseltes Feld ist ein leichteres Ziel für versuchte Brute-Force-Angriffe offline. Verschiedene Angriffsmethoden nutzen schwache Kerberos-Verschlüsselungsverfahren. In dieser Erkennung lernt ATA die Kerberos-Verschlüsselungsverfahren, die von Computern und Benutzern verwendet werden und benachrichtigt Sie, wenn ein schwächeres Verschlüsselungsverfahren verwendet wird, das: (1) unüblich für den Quellcomputer und/oder den Benutzer ist und (2) mit bekannten Angriffstechniken übereinstimmt.
 
 Es gibt drei Arten von Erkennung:
 
-1.  Skeleton Key ist eine Schadsoftware, die auf einem Domänencontroller ausgeführt wird und mit der eine Authentifizierung bei der Domäne mit jedem Konto möglich ist, ohne das jeweilige Kennwort zu wissen. Diese Schadsoftware verwendet häufig schwächere Verschlüsselungsalgorithmen, um das Kennwort des Benutzers auf dem Domänencontroller zu verschlüsseln. In dieser Erkennung wurde die Verschlüsselungsmethode der KRB_ERR-Nachricht vom Quellcomputer im Vergleich zum zuvor gelernten Verhalten heruntergestuft.
+1.  Skeleton Key ist eine Schadsoftware, die auf einem Domänencontroller ausgeführt wird und mit der eine Authentifizierung bei der Domäne mit jedem Konto möglich ist, ohne das jeweilige Kennwort zu wissen. Diese Schadsoftware verwendet häufig schwächere Verschlüsselungsalgorithmen, um einen Hashwert für das Kennwort des Benutzers auf dem Domänencontroller zu erstellen. In dieser Erkennung wurde die Verschlüsselungsmethode der KRB_ERR-Nachricht vom Domänencontroller an das Konto, von dem aus ein Ticket erstellt wird, im Vergleich zum zuvor gelernten Verhalten heruntergestuft.
 
 2.  Golden Ticket: Bei einer [Golden Ticket](#golden-ticket)-Warnung wurde die Verschlüsselungsmethode des TGT-Felds der TGS_REQ-Nachricht (Dienstanforderung) vom Quellcomputer im Vergleich zum zuvor gelernten Verhalten heruntergestuft. Dies basiert nicht auf einer Zeitanomalie (wie bei der anderen Golden Ticket-Erkennung). Zusätzlich gab es keine Kerberos-Authentifizierungsanforderung, die der vorherigen von ATA erkannten Dienstanforderung zugeordnet ist.
 
-3.  Overpass-the-Hash: Der AS_REQ-Nachrichtenverschlüsselungstyp des Quellcomputers wurde im Vergleich zum zuvor gelernten Verhalten heruntergestuft (der Computer hat also AES verwendet).
+3.  Overpass-the-Hash: Ein Angreifer kann einen schwachen gestohlenen Hash zur Erstellung eines starken Tickets verwenden, zusammen mit einer Anfrage für die Kerberos-Authentifizierung. In dieser Erkennung wurde der AS_REQ-Nachrichtenverschlüsselungstyp des Quellcomputers im Vergleich zum zuvor gelernten Verhalten heruntergestuft (der Computer hat also AES verwendet).
 
 **Untersuchung**
 
@@ -347,6 +350,8 @@ In dieser Erkennung werden im ersten Monat nach der Bereitstellung von ATA keine
 
  - Wenn die Antwort auf alle obigen Fragen „nein“ ist, gehen Sie von einem böswilligen Ereignis aus.
 
+6. Wenn es keine Informationen über das involvierte Konto gibt, können Sie zum Endpunkt navigieren und überprüfen, welches Konto zur Zeit der Warnung angemeldet war.
+
 **Wartung**
 
 Verwenden Sie das [SAMRi10-Tool](https://gallery.technet.microsoft.com/SAMRi10-Hardening-Remote-48d94b5b), um den Schutz Ihrer Umgebung gegen diese Technik zu erhöhen.
@@ -428,6 +433,9 @@ Angreifer, die Administratoranmeldeinformationen kompromittiert haben oder einen
 
 ## <a name="sensitive-account-credentials-exposed--services-exposing-account-credentials"></a>Offengelegte sensible Anmeldeinformationen und Dienste, die Anmeldeinformationen offenlegen
 
+> [!NOTE]
+> Diese verdächtige Aktivität ist veraltet und wird nur in ATA-Versionen vor 1.9 angezeigt. Informationen zu ATA 1.9 und höher finden Sie unter [Berichte](reports.md).
+
 **Beschreibung**
 
 Einige Dienste senden Anmeldeinformationen im Nur-Text-Format. Dies kann sogar bei sensiblen Konten geschehen. Angreifer, die Ihren Netzwerkdatenverkehr überwachen, können diese Anmeldeinformationen abfangen und diese zu böswilligen Zwecken verwenden. Jedes Klartextkennwort für ein sensibles Konto löst eine Warnung aus. Bei nicht sensiblen Konten wird die Warnung hingegen ausgelöst, wenn mindestens fünf verschiedene Konten Klartextkennwörter vom selben Quellcomputer aus senden. 
@@ -448,7 +456,7 @@ Klicken Sie auf die Warnung, um auf die Seite „Details“ zu gelangen. Sie kö
 
 Bei einem Brute-Force-Angriff versucht ein Angreifer, sich mit vielen verschiedenen Kennwörtern für verschiedene Konten anzumelden, bis ein korrektes Kennwort für mindestens ein Konto gefunden wird. Sobald eines gefunden wurde, kann sich der Angreifer mit diesem Konto anmelden.
 
-In dieser Erkennung wird eine Warnung ausgelöst, wenn viele Authentifizierungsfehler auftreten. Dies kann entweder horizontal mit einem kleinen Satz von Kennwörtern für viele Benutzer oder vertikal mit einem großen Satz von Kennwörtern für wenige Benutzer geschehen. Auch eine beliebige Kombination dieser beiden Optionen ist möglich.
+In dieser Erkennung wird eine Warnung ausgelöst, wenn viele Authentifizierungsfehler mit Kerberos oder der integrierten Windows-Authentifizierung auftreten. Dies kann entweder horizontal mit einem kleinen Satz von Kennwörtern für viele Benutzer oder vertikal mit einem großen Satz von Kennwörtern für wenige Benutzer geschehen. Auch eine beliebige Kombination dieser beiden Optionen ist möglich. Der Mindestzeitraum, bevor eine Warnung ausgelöst werden kann, beträgt eine Woche.
 
 **Untersuchung**
 
@@ -461,6 +469,30 @@ In dieser Erkennung wird eine Warnung ausgelöst, wenn viele Authentifizierungsf
 **Wartung**
 
 [Komplexe bzw. lange Kennwörter](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) stellen die erste Sicherheitsstufe zum Schutz gegen Brute-Force-Angriffe dar.
+
+## Erstellen eines verdächtigen Diensts <a name="suspicious-service-creation"></a>
+
+**Beschreibung**
+
+Angreifer versuchen, verdächtige Dienste auf Ihrem Netzwerk auszuführen. ATA löst eine Warnung aus, wenn ein neuer Dienst, der verdächtig erscheint, auf einem Domänencontroller erstellt wird. Diese Warnung basiert auf Ereignis 7045 und wird von jedem Domänencontroller erkannt, der von einem ATA- oder einem Lightweight-Gateway abgedeckt wird.
+
+**Untersuchung**
+
+1. Wenn es sich bei dem betroffenen Computer um eine Arbeitsstation oder einen Computer handelt, auf dem Mitglieder des IT-Teams und Dienstkonten administrative Aufgaben ausführen, kann das Resultat ein falsch positives Ergebnis sein, und Sie sollten die Warnung **unterdrücken** und sie wenn nötig der Ausschlussliste hinzufügen.
+
+2. Erkennen Sie den Dienst auf dem Computer?
+
+ - Darf das fragliche **Konto** diesen Dienst installieren?
+
+ - Wenn die Antwort auf beide Fragen *ja* ist, **schließen** Sie die Warnung, oder fügen Sie sie der Ausschlussliste hinzu.
+
+3. Wenn die Antwort auf beide Fragen *nein* ist, sollte dieses Ereignis als richtig positiv behandelt werden.
+
+**Wartung**
+
+- Implementieren Sie den Zugriff mit weniger privilegierten Rechten auf Domänencomputern, um nur bestimmten Benutzern die Erstellung neuer Dienste zu erlauben.
+
+
 
 ## <a name="suspicion-of-identity-theft-based-on-abnormal-behavior"></a>Verdacht des Identitätsdiebstahls auf Grundlage von ungewöhnlichem Verhalten
 
@@ -484,7 +516,7 @@ Je nachdem, wodurch dieses ungewöhnliche Verhalten ausgelöst wurde, sollten ve
 
 **Beschreibung**
 
-Angreifer verwenden Tools, die verschiedene Protokolle (SMB, Kerberos, NTLM) auf nicht standardmäßige Arten implementieren. Während diese Art des Netzwerkdatenverkehrs von Windows ohne Warnungen akzeptiert wird, kann ATA potenziell böswillige Absichten erkennen. Das Verhalten ist maßgeblich für Techniken wie Overpass-the-Hash, Brute Force und Exploits, die von erweiterter Ransomware, z.B. WannaCry, verwendet werden.
+Angreifer verwenden Tools, die verschiedene Protokolle (SMB, Kerberos, NTLM) auf nicht standardmäßige Arten implementieren. Während diese Art des Netzwerkdatenverkehrs von Windows ohne Warnungen akzeptiert wird, kann ATA potenziell böswillige Absichten erkennen. Das Verhalten ist maßgeblich für Techniken wie Overpass-the-Hash und Exploits, die von erweiterter Ransomware, z.B. WannaCry, verwendet werden.
 
 **Untersuchung**
 
@@ -513,6 +545,10 @@ Patchen Sie all Ihre Computer, und führen Sie insbesondere Sicherheitsupdates d
 2. [Entfernen von WannaCry](https://support.microsoft.com/help/890830/remove-specific-prevalent-malware-with-windows-malicious-software-remo)
 
 3. WanaKiwi kann für einige Ransomwares die Daten in deren Besitz entschlüsseln. Dies ist aber nur möglich, wenn der Benutzer den Computer nicht ausgeschaltet oder neu gestartet hat. Weitere Informationen finden Sie unter [Wanna Cry Ransomware (WannaCry-Ransomware)](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
+
+
+>[!NOTE]
+> Wenden Sie sich an den Support, um eine verdächtige Aktivität zu deaktivieren.
 
 ## <a name="related-videos"></a>Verwandte Videos
 - [Joining the security community](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community) (Der Sicherheitscommunity beitreten)

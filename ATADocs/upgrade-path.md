@@ -1,25 +1,25 @@
 ---
-title: "Empfohlener Upgradepfad für Advanced Threat Analytics | Microsoft-Dokumentation"
-description: "Enthält Anweisungen zum Aktualisieren Ihrer Version von Advanced Threat Analytics (ATA)."
-keywords: 
+title: Empfohlener Upgradepfad für Advanced Threat Analytics | Microsoft-Dokumentation
+description: Enthält Anweisungen zum Aktualisieren Ihrer Version von Advanced Threat Analytics (ATA).
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/9/2017
+ms.date: 3/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 88720401-1fb2-4353-ad39-32bc0088f0de
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b82c9da819302ef7cf3f94746b156c2053b20ca4
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 314c86b1a1e13dd20e52210e4b75ff5fe66ecd2c
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Gilt für: Advanced Threat Analytics Version 1.8*
+*Gilt für: Advanced Threat Analytics Version 1.9*
 
 # <a name="recommended-upgrade-path-for-ata"></a>Empfohlener Upgradepfad für ATA
 Dieser Artikel enthält Informationen über die verfügbaren Versionen von Advanced Threat Analytics und über das Aktualisieren von ATA abhängig von der Version, die bei Ihnen ausgeführt wird.
@@ -36,6 +36,7 @@ Dieser Artikel enthält Informationen über die verfügbaren Versionen von Advan
 |1.7 Update 2|1.7.5757|
 |1,8|1.8.6645|
 |1.8 Update 1|1.8.6765|
+|1.9|1.9.7312|
 
 ## <a name="ata-version-upgrade-matrix"></a>Matrix zum Upgrade der ATA-Version
 
@@ -43,7 +44,7 @@ Dieser Artikel enthält Informationen über die verfügbaren Versionen von Advan
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 - [Voraussetzungen für ATA](ata-prerequisites.md)
 - [ATA-Kapazitätsplanung](ata-capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
