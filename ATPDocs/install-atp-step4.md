@@ -1,23 +1,23 @@
 ---
-title: "Installieren von Azure Advanced Threat Protection – Schritt 4 | Microsoft-Dokumentation"
-description: "Im vierten Schritt der Azure ATP-Installation erhalten Sie Hilfe zur Installation des eigenständigen Azure ATP-Sensors."
-keywords: 
+title: Installieren von Azure Advanced Threat Protection – Schritt 4 | Microsoft-Dokumentation
+description: Im vierten Schritt der Azure ATP-Installation erhalten Sie Hilfe zur Installation des eigenständigen Azure ATP-Sensors.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2017
+ms.date: 3/25/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 51911e39-76c7-4dcd-bc0b-ec6235d0403f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7b003882f21f22b3427fb95534ca2bde255b14e6
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 56b3cea2089c64e2c78361c44d049d6de67764b6
+ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -35,11 +35,16 @@ ms.lasthandoff: 02/21/2018
 
 
 > [!IMPORTANT]
->Stellen Sie sicher, dass .NET Framework 4.7 auf dem Computer installiert ist. Wenn .NET Framework 4.7 nicht installiert ist, wird es vom Azure ATP-Sensorsetuppaket installiert, wodurch ein Neustart des Servers erforderlich ist. Stellen Sie sicher, dass der Computer mit dem Endpunkt des Azure ATP-Clouddiensts verbunden ist: https://triprd1wceuw1sensorapi.atp.azure.com (für Europa) oder https://triprd1wcuse1sensorapi.atp.azure.com (für die USA).
+>Stellen Sie sicher, dass .NET Framework 4.7 auf dem Computer installiert ist. Wenn .NET Framework 4.7 nicht installiert ist, wird es vom Azure ATP-Sensorsetuppaket installiert, wodurch ein Neustart des Servers erforderlich ist.
 
 Führen Sie die folgenden Schritte auf dem Azure ATP-Sensorserver oder -Domänencontroller aus.
 
-1.  Extrahieren Sie die Dateien aus der ZIP-Datei. 
+1. Stellen Sie sicher, dass der Computer mit dem relevanten Azure ATP-Clouddienst-Endpunkt verbunden ist:
+  - https://triprd1wceuw1sensorapi.atp.azure.com (für Europa)  
+  - https://triprd1wcuse1sensorapi.atp.azure.com (für die USA)
+  - https://triprd1wcasse1sensorapi.atp.azure.com (für Asien)
+
+2. Extrahieren Sie die Installationsdateien aus der ZIP-Datei. 
 > [!NOTE] 
 > Eine Installation direkt aus der ZIP-Datei verursacht einen Fehler.
 

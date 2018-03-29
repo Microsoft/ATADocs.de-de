@@ -1,23 +1,23 @@
 ---
-title: "Azure ATP-Handbuch zu verdächtigen Aktivitäten | Microsoft-Dokumentation"
+title: Azure ATP-Handbuch zu verdächtigen Aktivitäten | Microsoft-Dokumentation
 d|Description: This article provides a list of the suspicious activities Azure ATP can detect and steps for remediation.
-keywords: 
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 3/25/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ee8e45b6ef2da2d8866a1795bdab3987180acefe
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: ec9a2bc18262f88ada0a7a4ac56b5a4b2c104165
+ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -240,6 +240,21 @@ In dieser Erkennung wird eine Warnung ausgelöst, wenn eine Replikationsanforder
 Weitere Informationen finden Sie unter [Grant Active Directory Domain Services permissions for profile synchronization in SharePoint Server 2013 (Erteilen von AD DS-Berechtigungen für die Profilsynchronisierung in SharePoint Server 2013)](https://technet.microsoft.com/library/hh296982.aspx).
 Nutzen Sie [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/), oder erstellen Sie ein Windows PowerShell-Skript, um festzustellen, wer in der Domäne über diese Berechtigungen verfügt.
 
+
+## <a name="password-exposed-in-cleartext-report"></a>Kennwort ist in Klartextbericht offengelegt
+
+**Beschreibung**
+
+Einige Dienste senden Anmeldeinformationen im Nur-Text-Format. Dies kann sogar bei Benutzerkonten geschehen. Angreifer, die Ihren Netzwerkdatenverkehr überwachen, können diese Anmeldeinformationen abfangen und diese zu böswilligen Zwecken verwenden. 
+
+**Untersuchung**
+
+Klicken Sie auf die Berichtseite, und laden Sie den Bericht mit dem im Klartext offengelegten Kennwort herunter. Entnehmen Sie der Excel-Tabelle, welche Konten offengelegt sind.
+Üblicherweise gibt es ein Skript oder eine ältere Anwendung auf den Quellcomputern, die die einfache LDAP-Bindung verwenden.
+
+**Wartung**
+
+Überprüfen Sie die Konfiguration des Quellcomputers, um sicherzustellen, dass Sie keine einfache LDAP-Bindung verwenden. Statt einfachen LDAP-Bindungen können Sie LDAP SALS oder LDAPS verwenden.
 
 ## <a name="privilege-escalation-using-forged-authorization-data"></a>Berechtigungsausweitung mithilfe von gefälschten Autorisierungsdaten
 

@@ -1,23 +1,23 @@
 ---
 title: Azure Advanced Threat Protection-Architektur | Microsoft-Dokumentation
 description: Beschreibt die Architektur von Azure Advance Threat Analytics (ATP)
-keywords: 
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/11/2018
+ms.date: 3/27/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 640974bbeb0ff147b21da24d6ad6df2f54e9ab4d
-ms.sourcegitcommit: 912e453753156902618ae6ebb8489c2320c06fc6
+ms.openlocfilehash: 57f4eb56eaa0547d18421b17fb5804840e4997e3
+ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -122,7 +122,7 @@ Der **Azure ATP-Sensor** und der **eigenständige Azure ATP-Sensor** verfügen b
 
 -   Überwachen von mehreren Domänencontrollern über einen einzelnen eigenständigen Azure ATP-Sensor, oder Überwachen von einem Domänencontroller für einen Azure ATP-Sensor.
 
-Azure ATP unterstützt bis zu 100 Sensoren. Kontaktieren Sie den Azure ATP-Support, wenn Sie noch mehr Sensoren installieren möchten.
+Standardmäßig unterstützt Azure ATP bis zu 100 Sensoren. Kontaktieren Sie den Azure ATP-Support, wenn Sie noch mehr Sensoren installieren möchten.
 
 Der eigenständige Azure ATP-Sensor empfängt den Netzwerkdatenverkehr und die Windows-Ereignisse aus Ihrem Netzwerk und verarbeitet diese in den folgenden Hauptkomponenten:
 

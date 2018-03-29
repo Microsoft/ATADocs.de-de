@@ -1,23 +1,23 @@
 ---
 title: Arbeiten mit Azure ATP-Berichten | Microsoft-Dokumentation
-description: "Beschreibt, wie Sie Berichte in Azure ATP generieren können, um Ihr Netzwerk zu überwachen."
-keywords: 
+description: Beschreibt, wie Sie Berichte in Azure ATP generieren können, um Ihr Netzwerk zu überwachen.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 2/27/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 2c2d6b1a-fc8c-4ff7-b07d-64ce6159f84d
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2ebc0d9bb860bd93f14c4c511b034c740b59dffb
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 8d9c7f9208ce76e6c2ca915729b9c64f769ae7bd
+ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -25,6 +25,7 @@ ms.lasthandoff: 02/21/2018
 # <a name="azure-atp-reports"></a>Azure ATP-Berichte
 
 Über den Abschnitt der Azure ATP-Berichte im Arbeitsbereichsportal können Sie Berichte generieren, die Ihnen Informationen zum Systemstatus sowie zur Systemintegrität und einen Bericht über verdächtige Aktivitäten bereitstellen, die in Ihrer Umgebung ermittelt wurden.
+
 
 Um auf diese Berichtsseite zuzugreifen, klicken Sie auf das Berichtssymbol auf der Berichtsleiste: ![Berichtssymbol](./media/atp-report-icon.png).
 Die verfügbaren Berichte sind: 
@@ -51,6 +52,9 @@ So legen Sie einen geplanten Bericht fest:
 1. Klicken Sie auf der Seite **Berichte** auf **Geplante Berichte festlegen** oder auf der Konfigurationsseite des Azure ATP-Arbeitsbereichs unter „Benachrichtigungen und Berichte“ auf **Geplante Berichte**.
 
    ![Planen von Berichten](./media/atp-sched-reports.png)
+ 
+ > [!NOTE]
+ > Die tägliche Berichte sind so konzipiert, dass sie kurz nach Mitternacht (UTC) gesendet werden.
 
 2. Klicken Sie neben dem ausgewählten Berichttyp auf **Zeitplan**, um die Häufigkeit und E-Mail-Adresse für die Lieferung der Berichte festzulegen. Klicken Sie anschließend auf das Pluszeichen neben den E-Mail-Adressen, um sie hinzuzufügen, und klicken Sie auf **Speichern**.
 
