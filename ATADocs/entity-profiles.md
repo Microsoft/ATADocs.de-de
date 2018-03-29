@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 3/25/2018
 ms.topic: article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 581a3257-32dc-453f-b84e-b9f99186f5d3
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f9e19a1d033238f506fc0523bf50af6e204ba0cf
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: f2fd6f28eb6bf11aa3705f5320fcdae01d02f6d0
+ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/28/2018
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -46,6 +46,8 @@ Im oberen Bereich können Sie Kacheln für die Zusammenfassung anzeigen, in dene
 - Die Anzahl der Ressourcen, auf die der Benutzer zugegriffen hat
 - Die Standorten, von denen sich der Benutzer im VPN-Netzwerk angemeldet hat
 
+  ![Entitätsmenü](media/entity-menu.png)
+
 Für Computer wird Folgendes angezeigt:
 - Die Anzahl der offenen verdächtigen Aktivitäten für den Computer
 - Die Anzahl der auf dem Computer angemeldeten Benutzer
@@ -53,7 +55,7 @@ Für Computer wird Folgendes angezeigt:
 - Die Anzahl der Standorte, von denen über den Computer auf das VPN-Netzwerk zugegriffen wurde
 - Eine Liste der vom Computer verwendeten IP-Adressen
 
-![Entitätsmenü](media/entity-menu.png)
+  ![Computer mit Entitätsmenü](media/entity-computer.png)
 
 Wenn Sie die Schaltfläche **Filter by** (Filtern nach) oberhalb der Aktivitätszeitachse verwenden, können Sie die Aktivitäten nach Aktivitätstyp filtern. Außerdem können Sie auch einen bestimmten (störenden) Aktivitätstyp herausfiltern. Dies erweist sich für die Untersuchung als sehr nützlich, wenn Sie die Grundlagen der Funktionsweise einer Entität im Netzwerk nachvollziehen möchten. Sie können auch ein bestimmtes Datum auswählen und die Aktivitäten als „Nach Excel gefiltert“ exportieren. In der exportierten Datei ist dann eine Seite mit Änderungen der Verzeichnisdienste (Dinge, die sich in Active Directory für das Konto geändert haben) und eine separate Seite mit den Aktivitäten enthalten. 
 

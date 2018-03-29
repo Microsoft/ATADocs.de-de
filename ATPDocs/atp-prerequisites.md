@@ -1,23 +1,23 @@
 ---
-title: "Voraussetzungen für Azure Advanced Threat Protection | Microsoft Dokumentation"
-description: "Beschreibt die Voraussetzungen für eine erfolgreiche Bereitstellung von Azure ATP in Ihrer Umgebung."
-keywords: 
+title: Voraussetzungen für Azure Advanced Threat Protection | Microsoft Dokumentation
+description: Beschreibt die Voraussetzungen für eine erfolgreiche Bereitstellung von Azure ATP in Ihrer Umgebung.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/25/2018
+ms.date: 3/28/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3cb4eb8a914f1fd4be0c1ddb26f9be3964c529f7
-ms.sourcegitcommit: 26d833f7d9502db73876ced9879789db395224f7
+ms.openlocfilehash: 3c8e0b239c335981b2030021d1d4e319b2810fda
+ms.sourcegitcommit: 7c9fe4eb781bec71129310a6e0c5e76b022a0213
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/28/2018
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -131,11 +131,13 @@ In der folgenden Tabelle sind die Ports aufgeführt, die für den Verwaltungsada
 
 |Protokoll|Transport|Port|Zu/Von|Richtung|
 |------------|-------------|--------|-----------|-------------|
+|**Internetports**|||||
+|SSL (*.atp.azure.com)|TCP|443|Azure ATP-Clouddienst|Ausgehend|
+|**Interne Ports**|||||
 |LDAP|TCP und UDP|389|Domänencontroller|Ausgehend|
 |Sicheres LDAP (LDAPS)|TCP|636|Domänencontroller|Ausgehend|
 |LDAP an globalen Katalog|TCP|3268|Domänencontroller|Ausgehend|
 |LDAPs an globalen Katalog|TCP|3269|Domänencontroller|Ausgehend|
-|SSL (*.atp.azure.com)|TCP|443|Azure ATP-Clouddienst|Ausgehend|
 |Kerberos|TCP und UDP|88|Domänencontroller|Ausgehend|
 |Netlogon (SMB, CIFS, SAM-R)|TCP und UDP|445|Domänencontroller|Ausgehend|
 |Windows-Zeitdienst|UDP|123|Domänencontroller|Ausgehend|
@@ -195,7 +197,9 @@ In der folgenden Tabelle sind die Ports aufgeführt, die für den Azure ATP-Sens
 
 |Protokoll|Transport|Port|Zu/Von|Richtung|
 |------------|-------------|--------|-----------|-------------|
+|**Internetports**|||||
 |SSL (*.atp.azure.com)|TCP|443|Azure ATP-Clouddienst|Ausgehend|
+|**Interne Ports**|||||
 |DNS|TCP und UDP|53|DNS-Server|Ausgehend|
 |NTLM über RPC|TCP|135|Alle Geräte im Netzwerk|Ausgehend|
 |Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Domänencontroller|Ausgehend|
