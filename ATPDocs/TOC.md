@@ -6,6 +6,7 @@
 ## [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](atp-prerequisites.md)
 ## [Azure ATP-Architektur](atp-architecture.md)
 ## [Planen Ihrer Azure ATP-Kapazität](atp-capacity-planning.md)
+### [Konfigurieren von Proxy zum Ermöglichen der Kommunikation](configure-proxy.md)
 # Bereitstellen
 ## [1 Erstellen eines Arbeitsbereichs im Arbeitsbereich-Verwaltungsportal](install-atp-step1.md)
 ## [2 Mit AD DS verbinden](install-atp-step2.md)
@@ -21,8 +22,7 @@
 ### [Überprüfen der Portspiegelung](validate-port-mirroring.md)
 ### [Konfigurieren der Ereignissammlung](configure-event-collection.md)
 ### [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-forwarding.md)
-### [Konfigurieren von Proxy zum Ermöglichen der Kommunikation](configure-proxy.md)
-# Verwendung
+# Verwenden Sie
 ## [Azure ATP-Integritätscenter](atp-health-center.md)
 ## [Azure ATP-Berichte](reports.md)
 ## [Azure ATP-Rollengruppen](atp-role-groups.md)
@@ -44,3 +44,4 @@
 # Problembehandlung
 ## [Behandeln häufiger Probleme](troubleshooting-atp-known-issues.md)
 ## [Support und Informationen](atp-support.md)
+## [Roadmap für die Azure ATP-Bereitschaft](atp-resources.md)
