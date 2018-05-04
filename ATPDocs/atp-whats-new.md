@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/25/2018
+ms.date: 4/22/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,42 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0693bd3a25d6438874d422bedf8da05931a15d54
-ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
+ms.openlocfilehash: edf9222f7ccaca33317120a7cdaacf04873a67a4
+ms.sourcegitcommit: d2d2750bfb0198c8488d538f1773fda6eda5e6f9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/23/2018
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
 
 # <a name="whats-new-in-azure-atp"></a>Neuerungen in Azure ATP 
+
+
+
+## <a name="azure-atp-release-229"></a>Azure ATP-Version 2.29
+
+Veröffentlicht: 22. April 2018
+ 
+- Diese Version enthält Fehlerbehebungen und Verbesserungen für mehrere Probleme. 
+ 
+ 
+## <a name="azure-atp-release-228"></a>Azure ATP-Version 2.28
+
+Veröffentlicht: 15. April 2018
+ 
+-   Benutzer, die Mitglieder der Rollengruppen für Azure ATP-Benutzer und anzeigende Azure ATP-Benutzer sind, sind jetzt berechtigt, Überwachungswarnungen anzuzeigen.
+- Diese Version enthält Fehlerbehebungen und Verbesserungen für mehrere Probleme. 
+
+
+## <a name="azure-atp-release-227"></a>Azure ATP-Version 2.27
+
+Veröffentlicht: 8. April 2018
+
+- Sie haben jetzt die Möglichkeit, Benutzerfeedback über die obere Navigationsleiste bereitzustellen. Durch Klicken auf das Smileysymbol in der Menüleiste können Sie eine E-Mail mit Ihrem Feedback an das Azure Advanced Threat Protection-Team senden.
+
+- Diese Version enthält Fehlerbehebungen und Verbesserungen für mehrere Probleme. 
+ 
 
 ## <a name="azure-atp-release-226"></a>Azure ATP-Version 2.26
 

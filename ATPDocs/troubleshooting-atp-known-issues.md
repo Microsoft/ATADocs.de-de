@@ -1,28 +1,33 @@
 ---
 title: Behandlung von bekannten Problemen bei Azure ATP | Microsoft-Dokumentation
-description: "Beschreibt, wie Sie häufige Fehler in Azure ATP beheben können."
-keywords: 
+description: Beschreibt, wie Sie häufige Fehler in Azure ATP beheben können.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/6/2018
+ms.date: 4/10/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2895a38e2328fb7de4fe7f47d00c4e40ac854e74
-ms.sourcegitcommit: 84556e94a3efdf20ca1ebf89a481550d7f8f0f69
+ms.openlocfilehash: 2112e9fea1f316ff12d87b3a477b78bff4457a5f
+ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
 
 # <a name="troubleshooting-azure-atp-known-issues"></a>Behandlung von bekannten Problemen bei Azure ATP 
+
+
+## <a name="deployment-log-location"></a>Speicherort des Bereitstellungsprotokolls
+ 
+Die Azure ATP-Bereitstellungsprotokolle befinden sich im temporären Verzeichnis des Benutzers, der das Produkt installiert hat. Sie sind im Standardinstallationsverzeichnis unter „C:\Benutzer\Administrator\AppData\Local\Temp“ (oder in dem „%temp%“ übergeordneten Verzeichnis) zu finden.
 
 ## <a name="azure-atp-sensor-nic-teaming-issue"></a>Problem mit NIC-Teamvorgang beim Azure ATP-Sensor
 
@@ -30,14 +35,14 @@ Wenn Sie versuchen, den ATP-Sensor auf einem Computer zu installieren, der mit e
 
 Wenn den Sensor noch nicht installiert haben:
 
-1.  Laden Sie Npcap unter [https://nmap.org/npcap/](https://nmap.org/npcap/) herunter.
+1.  Laden Sie Npcap von [https://nmap.org/npcap/](https://nmap.org/npcap/) herunter.
 2.  Deinstallieren Sie WinPcap (falls installiert).
 3.  Installieren Sie Npcap mit den folgenden Optionen: loopback_support=no & winpcap_mode=yes
 4.  Installieren Sie das Sensorpaket.
 
 Wenn der Sensor bereits installiert ist:
 
-1.  Laden Sie Npcap unter [https://nmap.org/npcap/](https://nmap.org/npcap/) herunter.
+1.  Laden Sie Npcap von [https://nmap.org/npcap/](https://nmap.org/npcap/) herunter.
 2.  Deinstallieren Sie den Sensor.
 3.  Deinstallieren Sie WinPcap.
 4.  Installieren Sie Npcap mit den folgenden Optionen: loopback_support=no & winpcap_mode=yes

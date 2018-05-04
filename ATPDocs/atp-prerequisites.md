@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/28/2018
+ms.date: 4/22/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3c8e0b239c335981b2030021d1d4e319b2810fda
-ms.sourcegitcommit: 7c9fe4eb781bec71129310a6e0c5e76b022a0213
+ms.openlocfilehash: 9a9998360a24fd7f4d4151d4572c7715be03d34d
+ms.sourcegitcommit: d2d2750bfb0198c8488d538f1773fda6eda5e6f9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/23/2018
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -88,7 +88,7 @@ Für die Kommunikation Ihrer Domänencontroller mit dem Clouddienst müssen Sie 
 Informationen zur Verwendung von virtuellen Computern mit dem eigenständigen Azure ATP-Sensor finden Sie unter [Konfigurieren der Portspiegelung](configure-port-mirroring.md).
 
 > [!NOTE]
-> Mindestens 5 GB Speicherplatz wird benötigt, 10 GB wird empfohlen. Dies umfasst den Speicherplatz, der für die Azure ATP-Binärdateien, Azure ATP-Protokolle und Leistungsprotokolle benötigt wird.
+> Mindestens 5 GB Speicherplatz auf dem Datenträger wird benötigt, 10 GB wird empfohlen. Dies umfasst den Speicherplatz, der für die Azure ATP-Binärdateien, Azure ATP-Protokolle und Leistungsprotokolle benötigt wird.
 
 ### <a name="server-specifications"></a>Serverspezifikationen
 Um eine optimale Leistung zu erzielen, legen Sie die **Energieoptionen** des eigenständigen Azure ATP-Sensors auf **Hohe Leistung** fest.<br>
@@ -107,9 +107,9 @@ Die Zeitsynchronisierung der Server und Domänencontroller, auf denen der Sensor
 ### <a name="network-adapters"></a>Netzwerkadapter
 Der eigenständige Azure ATP-Sensor erfordert mindestens einen Verwaltungsadapter und mindestens einen Erfassungsadapter:
 
--   **Verwaltungsadapter:** wird für die Kommunikation im Unternehmensnetzwerk verwendet. Dieser Adapter sollte mit den folgenden Einstellungen konfiguriert werden:
+-   **Verwaltungsadapter:** wird für die Kommunikation im Unternehmensnetzwerk verwendet. Der Sensor nutzt diesen Adapter für Abfragen des Domänencontrollers, den er schützt, und für Korrekturen an Computerkonten. <br>Dieser Adapter sollte mit den folgenden Einstellungen konfiguriert werden:
 
-    -   Statische IP-Adresse, einschließlich Standardsensor
+    -   Statische IP-Adresse, einschließlich des Standardgateways
 
     -   Bevorzugte und alternative DNS-Server
 
@@ -164,11 +164,11 @@ Beim Domänencontroller kann es sich um einen schreibgeschützten Domänencontro
 
 Für die Kommunikation Ihrer Domänencontroller mit dem Clouddienst müssen Sie in Ihrer Firewall und auf Ihrem Proxyserver Port 443 für „*.atp.azure.com“ freigeben.
 
-Während der Installation wird .NET Framework 4.7 installiert und verursacht möglicherweise den Neustart des Domänencontrollers.
+Während der Installation wird .NET Framework 4.7 installiert und erfordert möglicherweise einen Neustart des Domänencontrollers,wenn ein Neustart bereits aussteht.
 
 
 > [!NOTE]
-> Mindestens 5 GB Speicherplatz wird benötigt, 10 GB wird empfohlen. Dies umfasst den Speicherplatz, der für die Azure ATP-Binärdateien, Azure ATP-Protokolle und Leistungsprotokolle benötigt wird.
+> Mindestens 5 GB Speicherplatz auf dem Datenträger wird benötigt, 10 GB wird empfohlen. Dies umfasst den Speicherplatz, der für die Azure ATP-Binärdateien, Azure ATP-Protokolle und Leistungsprotokolle benötigt wird.
 
 ### <a name="server-specifications"></a>Serverspezifikationen
 

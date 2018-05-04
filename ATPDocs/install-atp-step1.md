@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/15/2018
+ms.date: 4/10/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 833e0bdf61ce25a8c56d820ad04981cd44321ac2
-ms.sourcegitcommit: f9d07a6b1f2193f0d2906092e252eb1d7398b493
+ms.openlocfilehash: a4c2f03955eddb4615b347fa8a211501546e6f4a
+ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -32,7 +32,8 @@ Diese Installationsschritte enthalten Anweisungen zum Erstellen und Verwalten ei
 Bei Azure ATP haben Sie die Möglichkeit, mehrere Arbeitsbereiche zu verwalten und zu überwachen. Dies ist besonders hilfreich, wenn Sie einen Demo-Arbeitsbereich und einen Testarbeitsbereich erstellen möchten, in denen Sie vor dem Rollout für Ihre gesamte Organisation einen Proof of Concept für Azure ATP durchführen können. Dies ist auch erforderlich, um Bereitstellungen mit mehreren Gesamtstrukturen zu unterstützen. Ein einzelner Arbeitsbereich kann nur mehrere Domänen aus einer einzelnen Gesamtstruktur überwachen. 
 
 > [!NOTE]
-> Sie können maximal zwei aktive Arbeitsbereiche haben. Nachdem Sie einen Arbeitsbereich gelöscht haben, können Sie den Support kontaktieren, um den Arbeitsbereich erneut zu aktivieren. Sie können maximal drei Arbeitsbereiche löschen. Kontaktieren Sie den Azure ATP-Support, um die Anzahl an gespeicherten bzw. gelöschten Arbeitsbereichen zu erhöhen.
+> - Sie können maximal zwei aktive Arbeitsbereiche haben. Nachdem Sie einen Arbeitsbereich gelöscht haben, können Sie den Support kontaktieren, um den Arbeitsbereich erneut zu aktivieren. Sie können maximal drei Arbeitsbereiche löschen. Kontaktieren Sie den Azure ATP-Support, um die Anzahl an gespeicherten bzw. gelöschten Arbeitsbereichen zu erhöhen.
+> - Derzeit werden Azure ATP-Rechenzentren in Europa, Nordamerika/Mittelamerika/Karibik und Asien bereitgestellt.
 
 ## <a name="step-1-enter-the-workspace-management-portal"></a>Schritt 1: Ins Portal zur Verwaltung von Arbeitsbereichen wechseln
 

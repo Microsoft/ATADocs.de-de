@@ -1,23 +1,23 @@
 ---
-title: "Grundlegende Informationen zu Überwachungswarnungen in Azure ATP | Microsoft-Dokumentation"
+title: Grundlegende Informationen zu Überwachungswarnungen in Azure ATP | Microsoft-Dokumentation
 description: Beschreibt die Verwendung der Azure ATP-Protokolle zum Behandeln von Problemen.
-keywords: 
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 4/15/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: d0551e91-3b21-47d5-ad9d-3362df6d47c0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: cdb440e92aef0f9d09d3aa9411d0ce65435469d1
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 34702edcde2b96ca16570af5803a03d4f0f66c6e
+ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/16/2018
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
