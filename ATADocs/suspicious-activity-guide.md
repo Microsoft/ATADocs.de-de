@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 4/29/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d76c34b115bd38bdb1eb82fbff1c0857b0ad8dfa
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: a5e93ab47f454acc3157a9c6ee4053255be59f23
+ms.sourcegitcommit: 5c0f914b44bfb8e03485f12658bfa9a7cd3d8bbc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/30/2018
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -118,14 +118,14 @@ Es gibt drei Arten von Erkennung:
 
 **Untersuchung**
 
-Überprüfen Sie zunächst die Beschreibung der Warnung, um festzustellen, mit welcher der drei obenstehenden Arten der Erkennung Sie es zu tun haben.
-
-1.  Skeleton Key: Sie können überprüfen, ob Ihre Domänencontroller von Skeleton Key betroffen sind, indem Sie [den vom ATA-Team entwickelten Scanner](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73) verwenden.
-    Wenn der Scanner Schadsoftware auf einem oder mehreren Ihrer Domänencontroller findet, ist dies ein richtig positives Ereignis.
-
-2.  Golden Ticket: Es gibt Fälle, in denen eine benutzerdefinierte Anwendung, die selten benutzt wird, mit einem niedrigeren Verschlüsselungsverfahren authentifiziert wird. Überprüfen Sie, ob solche Apps auf dem Quellcomputer vorhanden sind. Falls ja, ist dies wahrscheinlich ein unbedenklich richtig positives Ereignis und kann unterdrückt werden.
-
-3.  Overpass-the-Hash: Es gibt Fälle, in denen diese Warnung ausgelöst werden kann, wenn Benutzer, die mit Smartcards konfiguriert wurden, für die interaktive Anmeldung erforderlich sind und diese Einstellung deaktiviert ist und anschließend aktiviert wird. Überprüfen Sie, ob solche Änderungen für die beteiligten Konten vorgenommen wurden. Falls ja, ist dies wahrscheinlich ein unbedenklich richtig positives Ereignis und kann unterdrückt werden.
+Überprüfen Sie zunächst die Beschreibung der Warnung, um festzustellen, mit welcher der drei obenstehenden Arten der Erkennung Sie es zu tun haben. Laden Sie für weitere Informationen das Excel-Arbeitsblatt herunter.
+1.  Skeleton Key: Sie können überprüfen, ob Ihre Domänencontroller von Skeleton Key betroffen sind, indem Sie den vom ATA-Team entwickelten Scanner verwenden. Wenn der Scanner Schadsoftware auf einem oder mehreren Ihrer Domänencontroller findet, ist dies ein richtig positives Ereignis.
+2.  Golden Ticket: Wechseln Sie im Excel-Arbeitsblatt zur Registerkarte **Netzwerkaktivität**. Sie werden feststellen, dass das entsprechende heruntergestufte Feld **Request Ticket Encryption Type** ist und dass **Source Computer Supported Encryption Types** stärkere Verschlüsselungsmethoden enthält.
+  a.    Überprüfen Sie den Quellcomputer und das Konto. Überprüfen Sie im Fall von mehreren Quellcomputern und Konten, ob diese etwas gemeinsam haben (alle Marketingmitarbeiter verwenden z.B. eine bestimmte App, die die Warnung möglicherweise ausgelöst hat). Es gibt Fälle, in denen eine benutzerdefinierte Anwendung, die selten genutzt wird, mit einem niedrigeren Verschlüsselungschiffre authentifiziert wird. Überprüfen Sie, ob solche Apps auf dem Quellcomputer vorhanden sind. Falls ja, ist dies wahrscheinlich ein unbedenklich richtig positives Ereignis und kann **unterdrückt** werden.
+  b.    Überprüfen Sie die Ressource, auf die von diesen Tickets aus zugegriffen wird. Wenn auf eine Ressource von allen zugegriffen wird, stellen Sie sicher, dass es sich um eine gültige Ressource handelt, auf die zugegriffen werden soll. Überprüfen Sie zudem, ob die Zielressource starke Verschlüsselungsmethoden unterstützt. Sie können dies in Active Directory überprüfen, indem Sie das Attribut `msDS-SupportedEncryptionTypes` des Ressourcendienstkontos überprüfen.
+3.  Overpass-the-Hash: Wechseln Sie im Excel-Arbeitsblatt zur Registerkarte **Netzwerkaktivität**. Sie werden feststellen, dass das entsprechende heruntergestufte Feld **Encrypted Timestamp Encryption Type** ist und dass **Source Computer Supported Encryption Types** stärkere Verschlüsselungsmethoden enthält.
+  a.    Es gibt Fälle, in denen diese Warnung ausgelöst werden kann, wenn sich Benutzer mit Smartcards anmelden und die Smartcardkonfiguration kürzlich geändert wurde. Überprüfen Sie, ob solche Änderungen für die beteiligten Konten vorgenommen wurden. Falls ja, ist dies wahrscheinlich ein unbedenklich richtig positives Ereignis und kann **unterdrückt** werden.
+  b.    Überprüfen Sie die Ressource, auf die von diesen Tickets aus zugegriffen wird. Wenn auf eine Ressource von allen zugegriffen wird, stellen Sie sicher, dass es sich um eine gültige Ressource handelt, auf die zugegriffen werden soll. Überprüfen Sie zudem, ob die Zielressource starke Verschlüsselungsmethoden unterstützt. Sie können dies in Active Directory überprüfen, indem Sie das Attribut `msDS-SupportedEncryptionTypes` des Ressourcendienstkontos überprüfen.
 
 **Wartung**
 
@@ -244,9 +244,10 @@ In dieser Erkennung wird eine Warnung ausgelöst, wenn eine Replikationsanforder
 
 **Untersuchung**
 
-1. Ist der fragliche Computer ein Domänencontroller? Beispielsweise ein neu hochgestufter Domänencontroller mit Replikationsproblemen. Falls ja, können Sie die verdächtige Aktivität **schließen und ausschließen**.  
+1.  Ist der fragliche Computer ein Domänencontroller? Beispielsweise ein neu hochgestufter Domänencontroller mit Replikationsproblemen. Falls ja, **schließen** Sie die verdächtige Aktivität. 
+2.  Soll der fragliche Computer Daten von Active Directory replizieren? Beispielsweise Azure AD Connect. Falls ja, können Sie die verdächtige Aktivität **schließen und ausschließen**.
+3.  Klicken Sie auf den Quellcomputer oder das Konto, um die entsprechende Profilseite aufzurufen. Überprüfen Sie, was zum Zeitpunkt der Replikation passiert ist. Suchen Sie nach ungewöhnlichen Aktivitäten, indem Sie beispielsweise überprüfen, wer angemeldet war und auf welche Ressourcen zugegriffen wurde. 
 
-2. Soll der fragliche Computer Daten von Active Directory replizieren? Beispielsweise Azure AD Connect. Falls ja, können Sie die verdächtige Aktivität **schließen und ausschließen**.
 
 **Wartung**
 
@@ -369,11 +370,10 @@ Es gibt mehrere Abfragetypen im DNS-Protokoll. ATA erkennt die AXFR-Anforderung 
 
 **Untersuchung**
 
-1. Ist der Quellcomputer (**Stammt von...**) ein DNS-Server? Falls ja, ist dieses Ereignis wahrscheinlich falsch positiv. Klicken Sie zur Überprüfung auf die Warnung, um auf die Seite „Details“ zu gelangen. Überprüfen Sie in der Tabelle unter **Abfrage**, welche Domänen abgefragt wurden. Sind diese Domänen vorhanden? Falls ja, **schließen** Sie die verdächtige Aktivität (diese ist falsch positiv). Stellen Sie zusätzlich sicher, dass der UDP-Port 53 zwischen den ATA-Gateways und dem Quellcomputer geöffnet ist, um falsch positive Ereignisse zukünftig zu verhindern.
+1. Ist der Quellcomputer (**Stammt von...**) ein DNS-Server? Falls ja, ist dieses Ereignis wahrscheinlich falsch positiv. Klicken Sie zur Überprüfung auf die Warnung, um auf die Seite „Details“ zu gelangen. Überprüfen Sie in der Tabelle unter **Abfrage**, welche Domänen abgefragt wurden. Sind diese Domänen vorhanden? Falls ja, **schließen** Sie die verdächtige Aktivität (diese ist falsch positiv). Stellen Sie zusätzlich sicher, dass der UDP-Port 53 zwischen dem ATA-Gateway und dem Quellcomputer geöffnet ist, um falsch positive Ereignisse zukünftig zu verhindern.
+2.  Wird auf dem Quellcomputer ein Sicherheitsscanner ausgeführt? Falls ja, **schließen Sie die Entitäten** in ATA aus, entweder direkt mit **Schließen und Ausschließen** oder über die Seite **Ausschluss** (unter **Konfiguration**, verfügbar für ATA-Administratoren).
+3.  Falls Sie alle obigen Fragen verneinen können, setzen Sie die Untersuchung mit Fokus auf dem Quellcomputer fort. Klicken Sie auf den Quellcomputer, um die entsprechende Profilseite aufzurufen. Überprüfen Sie, was zum Zeitpunkt der Anforderung passiert ist. Suchen Sie nach ungewöhnlichen Aktivitäten, indem Sie beispielsweise überprüfen, wer angemeldet war und auf welche Ressourcen zugegriffen wurde.
 
-2. Wird auf dem Quellcomputer ein Sicherheitsscanner ausgeführt? Falls ja, **schließen Sie die Entitäten** in ATA aus, entweder direkt mit **Schließen und Ausschließen** oder über die Seite **Ausschluss** (unter **Konfiguration**, verfügbar für ATA-Administratoren).
-
-3. Wenn die Antwort auf alle obigen Fragen „nein“ ist, gehen Sie von einem böswilligen Ereignis aus.
 
 **Wartung**
 
@@ -411,19 +411,16 @@ Verwenden Sie das [Net Cease-Tool](https://gallery.technet.microsoft.com/Net-Cea
 
 **Beschreibung**
 
-Angreifer, die Administratoranmeldeinformationen kompromittiert haben oder einen Zero-Day-Exploit verwenden, können Remotebefehle auf Ihrem Domänencontroller ausführen. Damit können sie Beständigkeit erhalten, Informationen sammeln, oder DOS-Attacken (Denial of Service) ausführen usw. ATA erkennt PSexec-Verbindungen und WMI-Remoteverbindungen.
+Angreifer, die Administratoranmeldeinformationen kompromittiert haben oder einen Zero-Day-Exploit verwenden, können Remotebefehle auf Ihrem Domänencontroller ausführen. Damit können sie Persistenz erhalten, Informationen sammeln, DOS-Attacken (Denial of Service) ausführen usw. ATA erkennt PSexec-Verbindungen und WMI-Remoteverbindungen.
 
 **Untersuchung**
 
-1. Dies tritt häufig bei administrativen Arbeitsstationen, IT-Teammitgliedern und Dienstkonten auf, die administrative Aufgaben auf den Domänencontrollern ausführen. Wenn dies der Fall ist und die Warnung aktualisiert wird, da die Aufgabe vom selben Administrator und/oder Computer ausgeführt wird, **unterdrücken** Sie die Warnung.
+1. Dies tritt häufig bei administrativen Arbeitsstationen, IT-Teammitgliedern und Dienstkonten auf, die administrative Aufgaben auf den Domänencontrollern ausführen. Wenn dies der Fall ist und die Warnung aktualisiert wird, da die Aufgabe vom selben Administrator oder Computer ausgeführt wird, **unterdrücken** Sie die Warnung.
+2.  Ist der fragliche Computer berechtigt, diese Remoteausführung auf Ihrem Domänencontroller auszuführen?
+  - Ist das fragliche Konto berechtigt, diese Remoteausführung auf Ihrem Domänencontroller auszuführen?
+  - Wenn Sie beide Fragen bejahen können, **schließen** Sie die Warnung.
+3.  Wenn Sie beide Fragen verneinen können, sollte dieses Ereignis als richtig positiv behandelt werden. Versuchen Sie, die Quelle des Versuchs zu ermitteln, indem Sie Computer- und Kontoprofile überprüfen. Klicken Sie auf den Quellcomputer oder das Konto, um die entsprechende Profilseite aufzurufen. Überprüfen Sie, was zum Zeitpunkt der Versuche passiert ist. Suchen Sie nach ungewöhnlichen Aktivitäten, indem Sie beispielsweise überprüfen, wer angemeldet war und auf welche Ressourcen zugegriffen wurde.
 
-2. Ist der fragliche **Computer** berechtigt, diese Remoteausführung auf Ihrem Domänencontroller auszuführen?
-
- - Ist das fragliche **Konto** berechtigt, diese Remoteausführung auf Ihrem Domänencontroller auszuführen?
-
- - Wenn die Antwort auf beide Fragen *ja* ist, **schließen** Sie die Warnung.
-
-3. Wenn die Antwort auf beide Fragen *nein* ist, sollte dieses Ereignis als richtig positiv behandelt werden.
 
 **Wartung**
 
@@ -460,11 +457,14 @@ In dieser Erkennung wird eine Warnung ausgelöst, wenn viele Authentifizierungsf
 
 **Untersuchung**
 
-1. Wenn viele Konten beteiligt sind, klicken Sie auf **Details herunterladen**, um die Liste in einem Excel-Arbeitsblatt anzuzeigen.
+1.  Klicken Sie auf **Details herunterladen**, um die vollständigen Informationen in einem Excel-Arbeitsblatt anzuzeigen. Sie können die folgenden Informationen abrufen: 
+  - Liste der angegriffenen Konten
+  - Liste der erratenen Konten, bei denen Anmeldeversuche mit einer erfolgreichen Authentifizierung endeten
+  - Wenn die Authentifizierungsversuche über NTLM ausgeführt wurden, werden die relevanten Ereignisaktivitäten angezeigt. 
+  - Wenn die Authentifizierungsversuche über Kerberos ausgeführt wurden, werden die relevanten Netzwerkaktivitäten angezeigt.
+2.  Klicken Sie auf den Quellcomputer, um die entsprechende Profilseite aufzurufen. Überprüfen Sie, was zum Zeitpunkt der Versuche passiert ist. Suchen Sie nach ungewöhnlichen Aktivitäten, indem Sie beispielsweise überprüfen, wer angemeldet war und auf welche Ressourcen zugegriffen wurde. 
+3.  Wenn die Authentifizierung mithilfe von NTLM durchgeführt wurde und Sie sehen, dass die Warnung mehrfach aufgetreten ist, aber keine ausreichenden Informationen zum Server verfügbar sind, auf den der Quellcomputer zugreifen wollte, sollten Sie die **NTLM-Überwachung** auf dem betroffenen Domänencontroller aktivieren. Aktivieren Sie dazu Ereignis 8004. Dies ist das NTLM-Authentifizierungsereignis, das Informationen zum Quellcomputer, Benutzerkonto und **Server** enthält, auf die der Quellcomputer zugreifen wollte. Wenn Sie wissen, welcher Server die Authentifizierungsüberprüfung gesendet hat, sollten Sie den Server untersuchen, indem Sie seine Ereignisse, z.B. 4624, überprüfen, um den Authentifizierungsprozess besser nachvollziehen zu können. 
 
-2. Klicken Sie auf die Warnung, um auf die Seite „Details“ zu gelangen. Überprüfen Sie, ob Anmeldeversuche mit einer erfolgreichen Authentifizierung beendet wurden. Diese werden als **Erratene Konten** auf der rechten Seite der Infografik angezeigt. Falls ja, werden von den **erratenen Konten** einige normalerweise vom Quellcomputer verwendet? Falls ja, **unterdrücken** Sie die verdächtige Aktivität.
-
-3. Wenn es keine **erratenen Konten** gibt, werden einige von den **angegriffenen Konten** normalerweise vom Quellcomputer verwendet? Falls ja, **unterdrücken** Sie die verdächtige Aktivität.
 
 **Wartung**
 
@@ -554,7 +554,7 @@ Patchen Sie all Ihre Computer, und führen Sie insbesondere Sicherheitsupdates d
 - [Joining the security community](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community) (Der Sicherheitscommunity beitreten)
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 - [Verdächtige ATA-Aktivitäten – Playbook](http://aka.ms/ataplaybook)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Arbeiten mit verdächtigen Aktivitäten](working-with-suspicious-activities.md)

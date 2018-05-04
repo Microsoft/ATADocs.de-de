@@ -1,23 +1,23 @@
 ---
-title: "Konfigurieren von SAM-R zum Aktivieren eines Erkennungsvorgangs für Lateral Movement-Pfade in Azure ATP | Microsoft-Dokumentation"
+title: Konfigurieren von SAM-R zum Aktivieren eines Erkennungsvorgangs für Lateral Movement-Pfade in Azure ATP | Microsoft-Dokumentation
 description: Informationen zum Konfigurieren von SAM-R zum Aktivieren eines Lateral Movement-Pfads in Azure ATP
-keywords: 
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 4/29/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: b09adce3-0fbc-40e3-a53f-31f57fe79ca3
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0e2ac4fb68fb1429610a0416582c871c9ae704df
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 24b42c5425933d8931a85e0ba454a69e0ca94a21
+ms.sourcegitcommit: 5c0f914b44bfb8e03485f12658bfa9a7cd3d8bbc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/30/2018
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 02/21/2018
 
 Der Erkennungsvorgang für [Lateral Movement-Pfade](use-case-lateral-movement-path.md) ist abhängig von Abfragen, die lokale Administratoren auf bestimmten Computern ermitteln. Diese Abfragen werden mithilfe des SAMR-R-Protokolls über das in [Schritt 2: Verbinden mit AD](install-atp-step2.md) erstellte Azure ATP-Dienstkonto durchgeführt .
  
-Sie müssen eine Änderung an der Gruppenrichtlinie vornehmen, um sicherzustellen, dass Windows-Clients und -Server zulassen, dass das Azure ATP-Dienstkonto diesen SAM-R-Vorgang durchführt.
+Wenn Sie sicherstellen möchten, dass Windows-Clients und -Server zulassen, dass das Azure ATP-Konto diesen SAM-R-Vorgang durchführt, muss die **Gruppenrichtlinie** geändert werden, damit das Azure ATP-Dienstkonto zu den konfigurierten Konten hinzugefügt wird, die in der Richtlinie für den **Netzwerkzugriff** aufgeführt sind.
 
 1. Finden der Richtlinie:
 
@@ -53,6 +53,6 @@ Weitere Informationen zu SAM-R und dieser Gruppenrichtlinie finden Sie unter [Ne
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 - [Investigating lateral movement path attacks with Azure ATP (Untersuchen von Lateral Movement-Pfaden mit Azure ATP)](use-case-lateral-movement-path.md)
 - [Weitere Informationen finden Sie im ATP-Forum.](https://aka.ms/azureatpcommunity)

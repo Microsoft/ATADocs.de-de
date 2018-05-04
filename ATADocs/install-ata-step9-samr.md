@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 4/25/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 7597ed25-87f5-472c-a496-d5f205c9c391
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a49478698adea15637698f4c715cdd34a9a601c4
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 6e32f3ce59b049d0ced68a1330eefca7315bf49d
+ms.sourcegitcommit: 5c0f914b44bfb8e03485f12658bfa9a7cd3d8bbc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/30/2018
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 03/22/2018
 
 Der Erkennungsvorgang für [Lateral Movement-Pfade](use-case-lateral-movement-path.md) ist abhängig von Abfragen, die lokale Administratoren auf bestimmten Computern ermitteln. Diese Abfragen werden mithilfe des SAMR-R-Protokolls über das in [Schritt 2: Verbinden mit AD](install-ata-step2.md) erstellte ATA-Dienstkonto durchgeführt. .
  
-Sie müssen eine Änderung an der Gruppenrichtlinie vornehmen, um sicherzustellen, dass Windows-Clients und -Server zulassen, dass das ATA-Dienstkonto diesen SAM-R-Vorgang durchführt.
+Wenn Sie sicherstellen möchten, dass Windows-Clients und -Server zulassen, dass der ATA-Dienst diesen SAM-R-Vorgang durchführt, muss die **Gruppenrichtlinie** geändert werden, damit das ATA-Dienstkonto zu den konfigurierten Konten hinzugefügt wird, die in der Richtlinie für den **Netzwerkzugriff** aufgeführt sind.
 
 1. Finden der Richtlinie:
 
@@ -51,7 +51,7 @@ Weitere Informationen zu SAM-R und dieser Gruppenrichtlinie finden Sie unter [Ne
 >[!div class="step-by-step"]
 [« Schritt 8 ](install-ata-step7.md)
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 - [Handbuch für die ATA POC-Bereitstellung](http://aka.ms/atapoc)
 - [Tool zur Bemessung von ATA-Gateways](http://aka.ms/atasizingtool)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
