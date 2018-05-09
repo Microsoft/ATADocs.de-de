@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/27/2018
+ms.date: 4/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 435e5141c8abda338c1115004d1876ff5b7736a4
-ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
+ms.openlocfilehash: 838c5ce470bdf78ec81aed5d6fa1cf2407abc6f9
+ms.sourcegitcommit: 5c0f914b44bfb8e03485f12658bfa9a7cd3d8bbc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/30/2018
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -30,6 +30,8 @@ Dieses Diagramm veranschaulicht die Azure Advanced Threat Protection-Architektur
 Azure ATP überwacht den Datenverkehr Ihres Domänencontrollernetzwerks über die Portspiegelung an einem eigenständigen Azure ATP-Sensor mit physischen oder virtuellen Switches. Wenn Sie den Azure ATP-Sensor direkt auf Ihren Domänencontrollern bereitstellen, ist die Portspiegelung nicht mehr erforderlich. Darüber hinaus kann Azure ATP (direkt von den Domänencontrollern oder von einem SIEM-Server weitergeleitete) Windows-Ereignisse nutzen und die Daten analysieren, um nach Angriffen und Sicherheitsrisiken zu suchen. Azure ATP empfängt analysierten Datenverkehr von dem eigenständigen Azure ATP-Sensor und dem Azure ATP-Sensor. Anschließend führt es die Profilerstellung, die deterministische Erkennung sowie Machine Learning- und Verhaltensalgorithmen aus, um Informationen über Ihr Netzwerk zu sammeln, um Anomalien zu erkennen und Sie bei verdächtigen Aktivitäten warnen zu können.
 
 In diesem Abschnitt wird der Ablauf der Netzwerk- und Ereigniserfassung beschrieben. Außerdem werden die Funktionen der Hauptkomponenten von ATP detailliert erläutert: der eigenständige Azure ATP-Sensor und der Azure ATP-Sensor, der über dieselben Kernfunktionen wie der eigenständige Azure ATP-Sensor verfügt, und der Azure ATP-Clouddienst. 
+
+Bei direkter Installation auf Domänencontrollern greift der Sensor direkt vom Domänencontroller auf die erforderlichen Ereignisprotokolle zu. Nach Analyse dieser Protokolle und des Netzwerkdatenverkehrs durch den Sensor sendet Azure ATP nur diese analysierten Informationen (nicht alle Protokolle) an den Azure ATP-Dienst.
 
 ## <a name="azure-atp-components"></a>Azure ATP-Komponenten
 Azure ATP umfasst die folgenden Komponenten:
