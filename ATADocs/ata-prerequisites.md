@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 5/6/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 419df4c4404bf26a85c1a955139d0dee6f50828e
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 91ce961b832fd02ba343b3f55ae3570fe4b10207
+ms.sourcegitcommit: 39a1ddeb6c9dd0817f92870b711627350b7f6f03
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/08/2018
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -121,9 +121,7 @@ In der folgenden Tabelle sind die Ports aufgelistet, die mindestens geöffnet we
 |**LDAPS** (optional)|TCP|636|Domänencontroller|Ausgehend|
 |**DNS**|TCP und UDP|53|DNS-Server|Ausgehend|
 |**Kerberos** (optional, wenn eine Domäne verknüpft ist)|TCP und UDP|88|Domänencontroller|Ausgehend|
-|**Netlogon** (optional, wenn eine Domäne verknüpft ist)|TCP und UDP|445|Domänencontroller|Ausgehend|
 |**Windows Time** (optional, wenn eine Domäne verknüpft ist)|UDP|123|Domänencontroller|Ausgehend|
-|**Netlogon (SMB, CIFS, SAM-R)**|TCP und UDP|445|Gateways und Geräte|Eingehend und ausgehend|
 
 > [!NOTE]
 > LDAP ist erforderlich, um die Anmeldeinformationen, die zwischen den ATA-Gateways und den Domänencontrollern verwendet werden sollen, zu testen. Bei dem Test zwischen ATA Center und einem Domänencontroller wird die Gültigkeit dieser Anmeldeinformationen überprüft. Danach verwendet ATA-Gateway LDAP im Rahmen seines normalen Auflösungsprozesses.
@@ -212,7 +210,7 @@ In der folgenden Tabelle sind die Ports aufgeführt, die für den Verwaltungsada
 |LDAP an globalen Katalog|TCP|3268|Domänencontroller|Ausgehend|
 |LDAPs an globalen Katalog|TCP|3269|Domänencontroller|Ausgehend|
 |Kerberos|TCP und UDP|88|Domänencontroller|Ausgehend|
-|Netlogon|TCP und UDP|445|Domänencontroller|Ausgehend|
+|Netlogon (SMB, CIFS, SAM-R)|TCP und UDP|445|Alle Geräte im Netzwerk|Ausgehend|
 |Windows-Zeitdienst|UDP|123|Domänencontroller|Ausgehend|
 |DNS|TCP und UDP|53|DNS-Server|Ausgehend|
 |NTLM über RPC|TCP|135|Alle Geräte im Netzwerk|Ausgehend|
@@ -225,6 +223,10 @@ In der folgenden Tabelle sind die Ports aufgeführt, die für den Verwaltungsada
 >
 > -   NTLM über RPC (TCP-Port 135)
 > -   NetBIOS (UDP-Port 137)
+> - Bei Verwendung des Verzeichnisdienst-Benutzerkontos fragt der ATA Gateway mithilfe von SAM-R (Netzwerkanmeldung) Endpunkte in Ihrer Organisation für lokale Administratoren ab, um [den Graph des Lateral-Movement-Pfads](use-case-lateral-movement-path.md) zu erstellen. Weitere Informationen finden Sie unter [Erforderliche Berechtigung für SAM-R konfigurieren](install-ata-step9-samr.md).
+> - Die folgenden Ports müssen auf eingehenden Geräten im Netzwerk des ATA-Gateways freigegeben sein:
+>   -   NTLM über RPC (TCP-Port 135) für Lösungszwecke
+>   -   NetBIOS (UDP-Port 137) für Lösungszwecke
 
 ## <a name="ata-lightweight-gateway-requirements"></a>ATA-Lightweight-Gateway-Anforderungen
 In diesem Abschnitt sind die Voraussetzungen für das ATA-Lightweight-Gateway aufgeführt.
@@ -280,12 +282,17 @@ In der folgenden Tabelle sind die Ports aufgeführt, die für das ATA-Lightweigh
 |NetBIOS|UDP|137|Alle Geräte im Netzwerk|Ausgehend|
 |SSL|TCP|443|ATA Center|Ausgehend|
 |Syslog (optional)|UDP|514|SIEM-Server|Eingehend|
+|Netlogon (SMB, CIFS, SAM-R)|TCP und UDP|445|Alle Geräte im Netzwerk|Ausgehend|
 
 > [!NOTE]
 > Als Teil des vom ATA-Lightweight-Gateway durchgeführten Auflösungsprozesses müssen die folgenden eingehenden Ports für Geräte im Netzwerk geöffnet werden.
 >
 > -   NTLM über RPC
 > -   NetBIOS
+> - Bei Verwendung des Verzeichnisdienst-Benutzerkontos fragt der ATA-Lightweight-Gateway mithilfe von SAM-R (Netzwerkanmeldung) Endpunkte in Ihrer Organisation für lokale Administratoren ab, um [den Graph des Lateral-Movement-Pfads](use-case-lateral-movement-path.md) zu erstellen. Weitere Informationen finden Sie unter [Erforderliche Berechtigung für SAM-R konfigurieren](install-ata-step9-samr.md).
+> - Die folgenden Ports müssen auf eingehenden Geräten im Netzwerk des ATA-Gateways freigegeben sein:
+>   -   NTLM über RPC (TCP-Port 135) für Lösungszwecke
+>   -   NetBIOS (UDP-Port 137) für Lösungszwecke
 
 ## <a name="ata-console"></a>ATA-Konsole
 Der Zugriff auf die ATA-Konsole erfolgt über einen Browser. Folgende Browser und Einstellungen werden unterstützt:

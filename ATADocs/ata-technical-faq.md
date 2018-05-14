@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 5/6/2018
 ms.topic: article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 5fe0e6f0d8c75c099aa6623cd0f5245c955d9ffa
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: f372b4b85c240079da157052e2c20c46801398be
+ms.sourcegitcommit: 39a1ddeb6c9dd0817f92870b711627350b7f6f03
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/08/2018
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -51,6 +51,10 @@ Weitere Informationen zum Upgrade der Version finden Sie unter [ATA-Upgradepfad]
 
 Weitere Informationen zur Matrix zum Upgrade der ATA-Version finden Sie unter [ATA-Upgradepfad](upgrade-path.md).
 
+
+## <a name="how-does-the-ata-center-update-its-latest-signatures"></a>Wie aktualisiert das ATA Center seine neuesten Signaturen?
+
+Der ATA-Erkennungsmechanismus wird erweitert, wenn eine neue Version im ATA Center installiert wird. Sie können ein Upgrade für das Center entweder über Microsoft Update (MU) durchführen, oder indem Sie manuell die neueste Version aus dem Download Center oder von der Volume License-Website herunterladen.
 
 ## <a name="how-do-i-verify-windows-event-forwarding"></a>Wie kann ich die Windows-Ereignisweiterleitung überprüfen?
 Sie können den folgenden Code in einer Datei ablegen und ihn dann über eine Eingabeaufforderung im Verzeichnis **\Programme\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** wie folgt ausführen:
