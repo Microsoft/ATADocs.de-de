@@ -1,23 +1,23 @@
 ---
 title: Integration von Azure Advanced Threat Protection in Windows Defender ATP | Microsoft-Dokumentation
-description: "Integration von Azure Advanced Threat Protection in Windows Defender ATP, damit sämtliche Bedrohungen ermittelt werden können"
-keywords: 
+description: Integration von Azure Advanced Threat Protection in Windows Defender ATP, damit sämtliche Bedrohungen ermittelt werden können
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 5/16/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: f6f3ed75-d6bb-4966-a9a7-5339c4f3ebac
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3521e500548b04febbff37d3dfe9150cf6f2d35b
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 17ade33a55039eaf8abc98901cdab9ebeef850c5
+ms.sourcegitcommit: 714a01edc9006b38d1163d03852dafc2a5fddb5f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/16/2018
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -96,8 +96,10 @@ Wenn Sie auf den Badge klicken, gelangen Sie zum Windows Defender ATP-Portal, in
  ![Windows Defender ATP (ausgegraut)](./media/wd-grey.png)
 
 Im Windows Defender ATP-Portal können Sie Azure ATP-Warnungen anzeigen lassen, wenn Sie auf einen Endpunkt klicken. Wenn Sie auf die Warnungen für diese Entität in Windows Defender ATP klicken, öffnet sich die Profilseite der Entität in Azure ATP. 
+ 
+ > ![HINWEIS] Die Integration von Azure Advanced Threat Protection mit Windows Defender ATP unterstützt nur Benutzer und Computer aus dem lokalen Azure Active Directory. Benutzer von Azure AD mit virtuellen Computern, die in Azure verwaltet werden, werden nicht als Teil der Integration angezeigt. 
 
- ![Windows Defender ATP-Warnungen](./media/wd-atp-alerts.png)
+![Windows Defender ATP-Warnungen](./media/wd-atp-alerts.png)
 
 
 ## <a name="see-also"></a>Weitere Informationen
