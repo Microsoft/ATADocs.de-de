@@ -2,6 +2,7 @@
 ## [Was ist Azure Advanced Threat Protection?](what-is-atp.md)
 ## [Häufig gestellte Fragen](atp-technical-faq.md)
 ## [Neuerungen in Azure ATP](atp-whats-new.md)
+## [Sicherheit und Datenschutz für Azure ATP](atp-privacy-compliance.md)
 # Planung und Entwurf
 ## [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](atp-prerequisites.md)
 ## [Azure ATP-Architektur](atp-architecture.md)
@@ -22,7 +23,7 @@
 ### [Überprüfen der Portspiegelung](validate-port-mirroring.md)
 ### [Konfigurieren der Ereignissammlung](configure-event-collection.md)
 ### [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-forwarding.md)
-# Verwenden Sie
+# Verwendung
 ## [Azure ATP-Integritätscenter](atp-health-center.md)
 ## [Azure ATP-Berichte](reports.md)
 ## [Azure ATP-Rollengruppen](atp-role-groups.md)
