@@ -44,7 +44,7 @@
 ## [Ändern des Domänenverbindungskennworts](modifying-ata-config-dcpassword.md)
 ## [Ausschließen von Entitäten von der Erkennung](excluding-entities-from-detections.md)
 ## [Exportieren/Importieren der ATA-Konfiguration](ata-configuration-file.md)
-## [Verwalten der ATA-Telemetrie](manage-telemetry-settings.md)
+## [Verwalten von systemgenerierten Protokollen](manage-telemetry-settings.md)
 ## [Festlegen von ATA-Benachrichtigungen](setting-ata-alerts.md)
 ## [Festlegen von Syslog- und E-Mail-Servereinstellungen](setting-syslog-email-server-settings.md)
 ## [Kennzeichnen von sensiblen Konten](tag-sensitive-accounts.md)
