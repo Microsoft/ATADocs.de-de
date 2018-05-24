@@ -1,22 +1,22 @@
 ---
 title: Planen der Azure Advanced Threat Protection-Bereitstellung | Microsoft-Dokumentation
-description: "Hilft bei der Planung Ihrer Bereitstellung und der Entscheidung, wie viele Azure ATP-Server für Ihr Netzwerk erforderlich sind."
-keywords: 
+description: Hilft bei der Planung Ihrer Bereitstellung und der Entscheidung, wie viele Azure ATP-Server für Ihr Netzwerk erforderlich sind.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/11/2018
+ms.date: 5/22/2018
 ms.topic: get-started-article
 ms.service: azure-advanced-threat-protection
-ms.prod: 
+ms.prod: ''
 ms.assetid: da0ee438-35f8-4097-b3a1-1354ad59eb32
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 577b7a5105e8de773f57b1e00bc1c9cb51096799
-ms.sourcegitcommit: 912e453753156902618ae6ebb8489c2320c06fc6
+ms.openlocfilehash: 35d3495585cce321adccb05f202fd664356db37f
+ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 05/22/2018
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -40,7 +40,7 @@ Die empfohlene und einfachste Methode zum Ermitteln der Kapazität für die Azur
 Wenn Sie das Azure ATP-Tool zur Größenanpassung nicht verwenden können, sammeln Sie die Informationen zum Leistungsindikator „Pakete pro Sek.“ manuell von allen Domänencontrollern über einen Zeitraum von 24 Stunden mit einem niedrigen Erfassungsintervall (etwa 5 Sekunden). Anschließend müssen Sie für jeden Domänencontroller den Tagesdurchschnitt und den Durchschnitt der Zeitspanne (15 Minuten) mit der höchsten Auslastung berechnen.
 Die folgenden Abschnitte enthalten Anweisungen dazu, wie Sie Informationen zum Pakete/Sek.-Leistungsindikator für einen Domänencontroller sammeln.
 
-## Auswählen des richtigen Sensortyps für die Bereitstellung<a name="choosing-the right-sensor-type-for-your-deployment"></a>
+## Auswählen des richtigen Sensortyps für die Bereitstellung<a name="choosing-the-right-sensor-type-for-your-deployment"></a>
 In einer Azure ATP-Bereitstellung wird jede Kombination aus den Typen des eigenständigen Azure ATP-Sensors unterstützt:
 
 - Nur eigenständige Azure ATP-Sensoren
