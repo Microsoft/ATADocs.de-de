@@ -1,23 +1,24 @@
 ---
-title: "Arbeiten mit verdächtigen Aktivitäten in Azure Advanced Threat Protection | Microsoft-Dokumentation"
-description: "Beschreibt, wie Sie von Azure ATP identifizierte verdächtige Aktivitäten überprüfen."
-keywords: 
+title: Arbeiten mit verdächtigen Aktivitäten in Azure Advanced Threat Protection | Microsoft-Dokumentation
+description: Beschreibt, wie Sie von Azure ATP identifizierte verdächtige Aktivitäten überprüfen.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 5/22/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: a06004bd-9f77-4e8e-a0e5-4727d6651a0f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a5e7598e94e1d6d4b09c827770e062be9fefd1c4
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 1dccee094f4d6a8ec9bdc94a1d1314fa0675da9d
+ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34444619"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -26,7 +27,7 @@ ms.lasthandoff: 02/21/2018
 # <a name="working-with-suspicious-activities"></a>Arbeiten mit verdächtigen Aktivitäten
 In diesem Artikel werden die Grundlagen der Arbeit mit Azure Advanced Threat Protection erläutert.
 
-## <a name="review-suspicious-activities-on-the-attack-time-line"></a>Überprüfen verdächtiger Aktivitäten auf der Angriffszeitachse
+## Überprüfen verdächtiger Aktivitäten auf der Angriffszeitachse <a name="review-suspicious-activities-on-the-attack-time-line"></a>
 Nachdem Sie sich im Arbeitsbereichsportal für Azure ATP angemeldet haben, gelangen Sie automatisch zur **Zeitachse mit den offenen verdächtigen Aktivitäten**. Die verdächtigen Aktivitäten werden in chronologischer Reihenfolge aufgeführt, wobei sich die neuesten verdächtigen Aktivitäten oben auf der Zeitachse befinden.
 Zu jeder verdächtigen Aktivität stehen folgende Informationen zur Verfügung:
 
