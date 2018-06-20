@@ -1,15 +1,15 @@
 ---
 title: Neuerungen in Advanced Threat Analytics Version 1.6 | Microsoft-Dokumentation
-description: "Listet Neuerungen sowie bekannte Probleme in ATA 1.6 auf."
-keywords: 
+description: Listet Neuerungen sowie bekannte Probleme in ATA 1.6 auf.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 01/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 27b139e5-12b9-4953-8f53-eb58e8ce0038
 ms.reviewer: bennyl
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/07/2017
+ms.locfileid: "24018557"
 ---
 # <a name="whats-new-in-ata-version-16"></a>Neuerungen in ATA 1.6
 Die vorliegenden Anmerkungen zu dieser Version enthalten Informationen zu bekannten Problemen in dieser Version von Advanced Threat Analytics.

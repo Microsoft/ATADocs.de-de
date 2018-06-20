@@ -18,6 +18,7 @@ ms.sourcegitcommit: adfa7a3a3918518b6b14b94d3c0a9f899142196a
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/19/2018
+ms.locfileid: "29977572"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 

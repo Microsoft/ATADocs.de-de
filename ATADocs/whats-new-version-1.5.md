@@ -1,15 +1,15 @@
 ---
 title: Neuerungen in Advanced Threat Analytics Version 1.5 | Microsoft-Dokumentation
-description: "Listet Neuerungen sowie bekannte Probleme in ATA 1.5 auf."
-keywords: 
+description: Listet Neuerungen sowie bekannte Probleme in ATA 1.5 auf.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 01/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: a0d64aff-ca9e-4300-b3f8-eb3c8b8ae045
 ms.reviewer: bennyl
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/07/2017
+ms.locfileid: "24018268"
 ---
 # <a name="whats-new-in-ata-version-15"></a>Neuerungen in ATA 1.5
 Die vorliegenden Anmerkungen zu dieser Version enthalten Informationen zu bekannten Problemen in dieser Version von Advanced Threat Analytics.

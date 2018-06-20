@@ -1,15 +1,15 @@
 ---
 title: Migrationshandbuch zur Aktualisierung auf Advanced Threat Analytics 1.6 | Microsoft-Dokumentation
-description: "Prozeduren zum Aktualisieren von ATA auf Version 1.6"
-keywords: 
+description: Prozeduren zum Aktualisieren von ATA auf Version 1.6
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 01/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 0756ef64-3aef-4a69-8981-24fa8f285c6a
 ms.reviewer: bennyl
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/07/2017
+ms.locfileid: "24018183"
 ---
 # <a name="ata-update-to-16-migration-guide"></a>Migrationshandbuch zur Aktualisierung auf ATA 1.6
 Das Update auf ATA 1.6 bietet Verbesserungen in folgenden Bereichen:

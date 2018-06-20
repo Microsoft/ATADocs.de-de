@@ -1,15 +1,15 @@
 ---
 title: Konfigurieren der Windows-Ereignisweiterleitung in Azure Advanced Threat Protection | Microsoft-Dokumentation
 description: Beschreibt die Optionen zur Windows-Ereignisweiterleitung mit Azure ATP
-keywords: 
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 02/21/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 3547519f-8d9c-40a9-8f0e-c7ba21081203
 ms.reviewer: itargoet
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 02/21/2018
+ms.locfileid: "29445006"
 ---
 *Gilt für: Azure Advanced Threat Protection Version 1.9*
 
