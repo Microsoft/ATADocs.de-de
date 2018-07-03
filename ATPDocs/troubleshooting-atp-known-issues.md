@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 15c857085fb7d003f783981a89fe02e920a8e49a
-ms.sourcegitcommit: 3539dd3f9ab7729e5326b904fc64985c808bc8ce
+ms.openlocfilehash: d460a57d82f3eb233192235067e116f5ede5f5df
+ms.sourcegitcommit: b218f60b42a25fe486d774d97719590e6fa74e10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2018
-ms.locfileid: "34402036"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34760055"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -69,7 +69,7 @@ Wenn der Sensor bereits installiert ist:
 
 ## <a name="windows-defender-atp-integration-issue"></a>Problem mit der Windows Defender-ATP-Integration
 
-Mithilfe von Azure Advanced Threat Protection können Sie Azure ATP in Windows Defender ATP integrieren. Die Integration ist derzeit nur aktiviert, wenn Sie ein Windows Defender ATP-Kunde für die private Vorschau sind. 
+Mithilfe von Azure Advanced Threat Protection können Sie Azure ATP in Windows Defender ATP integrieren. 
 
 ## <a name="vmware-virtual-machine-sensor-issue"></a>Problem mit dem Sensor des virtuellen VMware-Computers
 
