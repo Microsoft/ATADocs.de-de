@@ -18,6 +18,7 @@
 ## [7: Ausschlüsse und Honeytoken-Konten](install-atp-step7.md)
 ## [8 Konfigurieren von für SAM-R erforderliche Berechtigungen](install-atp-step8-samr.md)
 ## [Unbeaufsichtigte Installation](ATP-silent-installation.md)
+## [Aktualisieren von ATP-Sensoren](sensor-update.md)
 ## Azure ATP-Sensor – zusätzliche Schritte
 ### [Konfigurieren der Portspiegelung](configure-port-mirroring.md)
 ### [Überprüfen der Portspiegelung](validate-port-mirroring.md)
