@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/13/2018
+ms.date: 6/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,72 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a40c2b188e777ca78462e4a3901b311af457d9ae
-ms.sourcegitcommit: 170bc1c04d1ea0538dddbb497d8045781a6a8b74
+ms.openlocfilehash: 7282b58e25c3cc79f40ca05477bb015f8746cd0d
+ms.sourcegitcommit: 7d025a2518ce63f38ce609dc21d8c3bacdd6a8e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948996"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
 
 # <a name="whats-new-in-azure-atp"></a>Neuerungen in Azure ATP 
+
+## <a name="azure-atp-release-237"></a>Azure ATP Release 2.37
+
+Veröffentlicht: 24. Juni 2018
+
+- Diese Version enthält Fehlerbehebungen und Verbesserungen für mehrere Probleme. 
+
+## <a name="azure-atp-release-236"></a>Azure ATP Release 2.36
+
+Veröffentlicht: 17. Juni 2018
+
+- Diese Version enthält Fehlerbehebungen und Verbesserungen für mehrere Probleme. 
+
+
+## <a name="azure-atp-release-235"></a>Azure ATP Release 2.35
+
+Veröffentlicht am 10. Juni 2018
+ 
+- **Vorschauversionen neuer Erkennungen**<br></br>Ab jetzt nutzt Azure ATP seine Funktion als Clouddienst – für den neue Features in kürzeren Zyklen bereitgestellt werden können –und bietet Ihnen so schnell wie möglich neue Erkennungen. Diese neuen Erkennungen werden als „Vorschauversion“ markiert, wenn sie das erste Mal veröffentlicht werden. In der Regel wechselt eine neue Erkennung innerhalb weniger Wochen von der Vorschauversion zu einer allgemein verfügbaren Version. Es werden standardmäßig Vorschauversionen neuer Erkennungen angezeigt. Weitere Informationen zum Deaktivieren dieser Standardeinstellung finden Sie unter [Preview Detections (Vorschauversionen neuer Erkennungen)](working-with-suspicious-activities.md#preview-detections).
+ 
+- **Erkennung verdächtiger VPNs**<br></br>Mit dieser Vorschauversion wird eine Vorschauversion für eine Erkennung verdächtiger VPNs eingeführt. Azure ATP speichert Informationen zum VPN-Verhalten des Benutzers, einschließlich der Computer, auf denen die Benutzer angemeldet sind, und der Orte, von denen die Benutzer eine Verbindung herstellen. Sie erhalten eine Warnung, wenn nicht das erwartete Verhalten eintritt. Weitere Informationen finden Sie unter [Suspicious VPN detection (Erkennung verdächtiger VPNs)](suspicious-activity-guide.md#suspicious-vpn-detection).
+
+- **Delayed update** (Verzögertes Update)<br></br>Sie haben jetzt die Möglichkeit auszuwählen, dass Azure ATP-Sensoren bei jedem Update von Azure ATP erst später aktualisiert werden. Sie können für jeden einzelnen Sensor die Option **Delayed update** (Verzögertes Update) auswählen, sodass das Update erst 24 Stunden nach dem Update des Azure ATP-Clouddiensts ausgeführt wird. Durch dieses Feature können Sie das Update für bestimmte Testsensoren ausprobieren und Ihre Produktionssensoren erst später aktualisieren. Wenn bei dem ersten Updatezyklus ein Problem auftritt, erstellen Sie ein Supportticket. Weitere Informationen finden Sie unter [Aktualisieren von Azure ATP-Sensoren](sensor-update.md).
+
+- **Aktualisierte Erkennung für ungewöhnliche Protokollimplementierungen**<br></br>Mithilfe der Erkennung für ungewöhnliche Protokollimplementierungen können jetzt mehr Informationen bereitgestellt werden. Sie können jetzt sehen, welches potenzielle Angriffstool Azure ATP verdächtigt, auf Ihrem Netzwerk zu arbeiten. Weitere Informationen finden Sie im [Leitfaden zu verdächtigen Aktivitäten](suspicious-activity-guide.md).
+ 
+- **Warnung bei veralteten Sensoren**<br></br>Azure ATP umfasst eine neue Überwachungswarnung, über die Sie informiert werden, wenn es bereits drei neue Versionen eines Sensors gibt und noch kein Update ausgeführt wurde. Wenn Ihnen diese Warnung angezeigt wird, sollten Sie den Sensor aktualisieren oder prüfen, warum der Sensor nicht automatisch aktualisiert wird. Wenn die Warnung wiederholt auftritt, deinstallieren Sie den Sensor und installieren Sie ihn erneut.
+
+- Diese Version enthält Fehlerbehebungen und Verbesserungen für mehrere Probleme. 
+
+## <a name="azure-atp-release-234"></a>Azure ATP Release 2.34
+
+Veröffentlicht: 3. Juni 2018
+ 
+- Diese Version enthält Fehlerbehebungen und Verbesserungen für mehrere Probleme. 
+
+ 
+## <a name="azure-atp-release-233"></a>Azure ATP Release 2.33
+
+Veröffentlicht: 27. Mai 2018
+
+- Feature der Vorschauversion: Azure ATP unterstützt jetzt neue Sprachen und 13 neue Gebietsschemas:
+    - Tschechisch
+    - Ungarisch
+    - Italienisch
+    - Koreanisch
+    - Niederländisch
+    - Polnisch
+    - Portugiesisch (Brasilien)
+    - Portugiesisch (Portugal)
+    - Russische Föderation
+    - Schwedisch
+    - Türkisch
+    - Chinesisch (China)
+    - Chinesisch (Taiwan)
 
 
 

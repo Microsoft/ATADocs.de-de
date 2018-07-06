@@ -13,11 +13,12 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 91ce961b832fd02ba343b3f55ae3570fe4b10207
-ms.sourcegitcommit: 39a1ddeb6c9dd0817f92870b711627350b7f6f03
+ms.openlocfilehash: 90c4bcad1b5a2d6da06153706129d9670ad57e1c
+ms.sourcegitcommit: 321ff1af2c140f41600c4c42ac4d455b3cdb9440
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36233003"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -26,7 +27,7 @@ ms.lasthandoff: 05/08/2018
 # <a name="ata-prerequisites"></a>ATA-Voraussetzungen
 Dieser Artikel beschreibt die Voraussetzungen für eine erfolgreiche Bereitstellung von ATA in Ihrer Umgebung.
 
->[!NOTE]
+> [!NOTE]
 > Informationen zum Planen von Ressourcen und Kapazitäten finden Sie unter [ATA-Kapazitätsplanung](ata-capacity-planning.md).
 
 
@@ -81,7 +82,7 @@ Dies können Sie überprüfen, indem Sie das folgende Windows PowerShell-Cmdlet 
 
 Die Installation von ATA Center als virtueller Computer wird unterstützt. 
 
->[!NOTE] 
+> [!NOTE] 
 > Bei Ausführung als virtueller Computer wird kein dynamischer Arbeitsspeicher und keine andere Speichererweiterungsfunktion unterstützt.
 
 Wenn Sie ATA Center als virtuellen Computer ausführen, fahren Sie vor dem Erstellen eines neuen Prüfpunkts den Server herunter, um eine mögliche Beschädigung der Datenbank zu verhindern.
@@ -142,7 +143,7 @@ Ein Zertifikat muss Folgendes besitzen:
 Sie können beispielsweise den **Standardwebserver** oder **Computervorlagen** verwenden.
 
 > [!WARNING]
-> - Die Erneuerung eines vorhandenen Zertifikats wird nicht unterstützt. Zertifikate lassen sich nur erneuern, indem ein neues Zertifikat erstellt und ATA für die Verwendung des neuen Zertifikats konfiguriert wird.
+> Die Erneuerung eines vorhandenen Zertifikats wird nicht unterstützt. Zertifikate lassen sich nur erneuern, indem ein neues Zertifikat erstellt und ATA für die Verwendung des neuen Zertifikats konfiguriert wird.
 
 
 > [!NOTE]
@@ -170,7 +171,7 @@ Informationen zur Verwendung von virtuellen Computern mit dem ATA-Gateway finden
 Um eine optimale Leistung zu erzielen, legen Sie die **Energieoption** des ATA-Gateways auf **Hohe Leistung** fest.<br>
 Ein ATA-Gateway kann die Überwachung von mehreren Domänencontrollern unterstützen, abhängig vom Umfang des Netzwerkverkehrs zu und von den Domänencontrollern.
 
->[!NOTE] 
+> [!NOTE] 
 > Bei Ausführung als virtueller Computer wird kein dynamischer Arbeitsspeicher und keine andere Speichererweiterungsfunktion unterstützt.
 
 Weitere Informationen zu den Hardwareanforderungen des ATA-Gateways finden Sie unter [ATA-Kapazitätsplanung](ata-capacity-planning.md).
@@ -218,6 +219,7 @@ In der folgenden Tabelle sind die Ports aufgeführt, die für den Verwaltungsada
 |SSL|TCP|443|ATA Center|Ausgehend|
 |Syslog (optional)|UDP|514|SIEM-Server|Eingehend|
 
+
 > [!NOTE]
 > Als Teil des vom ATA-Gateway durchgeführten Auflösungsprozesses müssen die folgenden eingehenden Ports für Geräte im Netzwerk geöffnet werden.
 >
@@ -256,7 +258,7 @@ Das ATA-Lightweight-Gateway erfordert mindestens 2 Kerne und 6 GB RAM auf dem Do
 Um eine optimale Leistung zu erzielen, legen Sie die **Energieoption** des ATA-Lightweight-Gateways auf **Hohe Leistung** fest.
 Das ATA-Lightweight-Gateway kann auf den Domänencontrollern verschiedener Auslastungen und Größen bereitgestellt werden, abhängig vom Umfang des Netzwerkverkehrs zwischen den Domänencontrollern und der auf dem Domänencontroller installierten Ressourcen.
 
->[!NOTE] 
+> [!NOTE] 
 > Bei Ausführung als virtueller Computer wird kein dynamischer Arbeitsspeicher und keine andere Speichererweiterungsfunktion unterstützt.
 
 Weitere Informationen zu den Hardwareanforderungen des ATA-Lightweight-Gateways finden Sie unter [ATA-Kapazitätsplanung](ata-capacity-planning.md).
@@ -270,7 +272,8 @@ Die Zeitsynchronisierung des ATA Center-Servers, der ATA-Lightweight-Gatewayserv
 Das ATA-Lightweight-Gateway überwacht den lokalen Datenverkehr auf allen Netzwerkadaptern des Domänencontrollers. <br>
 Nach der Bereitstellung können Sie die ATA-Konsole verwenden, wenn Sie die überwachten Netzwerkadapter jemals ändern möchten.
 
-Das Lightweight-Gateway wird nicht in Domänencontrollern unter Windows 2008 R2 mit aktivierten Teamvorgängen für Broadcom-Netzwerkadapter unterstützt.
+> [!NOTE]
+> Das Lightweight-Gateway wird nicht in Domänencontrollern unter Windows 2008 R2 mit aktivierten Teamvorgängen für Broadcom-Netzwerkadapter unterstützt.
 
 ### <a name="ports"></a>Ports
 In der folgenden Tabelle sind die Ports aufgeführt, die für das ATA-Lightweight-Gateway mindestens konfiguriert werden müssen.

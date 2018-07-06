@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/22/2018
+ms.date: 6/26/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 77a2464634b4286d2f6d35504e9ab7512cf7b612
-ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
+ms.openlocfilehash: 39709e4749b7f897bffb914dd1e15c80277d6ed8
+ms.sourcegitcommit: 7d025a2518ce63f38ce609dc21d8c3bacdd6a8e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34444772"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948964"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -29,8 +29,7 @@ ms.locfileid: "34444772"
 
 Azure ATP bietet eine rollenbasierte Sicherheit, um Daten gemäß den spezifischen Sicherheits- und Konformitätsanforderungen einer Organisation zu schützen. Azure ATP unterstützt drei separate Rollen: Administratoren, Benutzer und Betrachter. 
 
-> [!NOTE]
-> Wenn Sie mehr über das Anzeigen oder Löschen von personenbezogenen Daten erfahren möchten, finden Sie weitere Informationen in der Anleitung im [Microsoft Compliance Manager](https://servicetrust.microsoft.com/ComplianceManager) und im [Abschnitt „DSGVO“ auf der Website zur Konformität von Microsoft 365 Enterprise](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr). Allgemeine Informationen zur DSGVO finden Sie [im Abschnitt „DSGVO“ im Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+[!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
 
 Rollengruppen erlauben die Zugriffsverwaltung für Azure ATP. Sie können durch Verwendung von Rollengruppen Aufgaben in Ihrem Sicherheitsteam aufteilen und nur so viel Zugriff gewähren, wie Benutzer für die Ausführung ihrer Arbeit benötigen. Dieser Artikel beschreibt die Zugriffsverwaltung und die Berechtigungen der einzelnen Azure ATP-Rollengruppen und hilft Ihnen bei der Einrichtung und Ausführung von Rollengruppen in ATP.
 
@@ -67,7 +66,7 @@ Wenn Benutzer versuchen, auf eine Seite zuzugreifen, die nicht für deren Rollen
 
 ## <a name="add-and-remove-users"></a>Hinzufügen und Entfernen von Benutzern 
 
-Azure ATP verwendet Azure AD-Sicherheitsgruppen als eine Basis für Rollengruppen. Die Rollengruppen können über [https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All groups](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All groups) verwaltet werden.  Nur Azure AD-Benutzer können zu Sicherheitsgruppen hinzugefügt bzw. aus ihnen entfernt werden. 
+Azure ATP verwendet Azure AD-Sicherheitsgruppen als eine Basis für Rollengruppen. Die Rollengruppen können über [https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All%20groups](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All%20groups) verwaltet werden. Nur Azure AD-Benutzer können zu Sicherheitsgruppen hinzugefügt bzw. aus ihnen entfernt werden. 
 
 
 ## <a name="see-also"></a>Weitere Informationen

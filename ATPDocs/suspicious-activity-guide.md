@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/6/2018
+ms.date: 6/10/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9b28cf2497e1f742416f996e4b2dcaf934dc9142
-ms.sourcegitcommit: 39a1ddeb6c9dd0817f92870b711627350b7f6f03
+ms.openlocfilehash: de0b8f1673098a1b4b00255f4543ca18a903c83f
+ms.sourcegitcommit: f61616a8269d27a8fcde6ecf070a00e2c56481ac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35259224"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -462,6 +463,26 @@ Ein verdächtiger Dienst wurde von Ihrer Organisation auf einem Domänencontroll
 **Wartung**
 
 - Implementieren Sie den Zugriff mit weniger privilegierten Rechten auf Domänencomputern, um nur bestimmten Benutzern die Erstellung neuer Dienste zu erlauben.
+
+## Verdächtige VPN-Verbindung: Vorschauversion<a name="suspicious-vpn-detection"></a>
+
+**Beschreibung**
+
+Azure ATP speichert Informationen zum Entitätsverhalten für VPN-Verbindungen von Benutzern für einen gleitenden Zeitraum von einem Monat. 
+
+Das Modell für das VPN-Verhalten basiert auf den folgenden Aktivitäten: die Computer, auf denen sich die Benutzer angemeldet haben und die Standorte, von denen diese eine Verbindung hergestellt haben. 
+
+Es wird eine Warnung ausgelöst, wenn basierend auf den Machine-Learning-Algorithmen eine Abweichung des Verhaltens der Entität vorliegt.
+
+**Untersuchung**
+
+1.  Soll der fragliche Benutzer diese Vorgänge ausführen?
+2.  Die folgenden Fälle gelten als falsch positive Ergebnisse: ein Benutzer, der seinen Standort gewechselt hat und ein Benutzer, der unterwegs ist und sich von einem neuen Gerät aus anmeldet.
+
+**Wartung**
+
+1.  Sie sollten das Kennwort dieses Benutzers zurückzusetzen. Dadurch wird vermieden, dass der Angreifer mit den alten Anmeldeinformationen neue VPN-Verbindungen herstellt.
+2.  Sie sollten für diesen Benutzer die Option blockieren, über VPN eine Verbindung herzustellen.
 
 ## <a name="unusual-protocol-implementation"></a>Ungewöhnliche Protokollimplementierung
 

@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/16/2018
+ms.date: 5/29/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,12 @@ ms.technology: ''
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5a1fd5631a568419c600f35d44f09c9c61f17129
-ms.sourcegitcommit: 714a01edc9006b38d1163d03852dafc2a5fddb5f
+ms.openlocfilehash: 2f39c0d3628c3a3cc9e034fa1da8bb5a66bc704b
+ms.sourcegitcommit: 3eade64779002d2c8ae005565bc69e1b3f89fb7d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34560240"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -70,8 +71,9 @@ Wenn ein Proxy oder eine Firewall standardmäßig den gesamten Datenverkehr bloc
 
 
 Sie können auch die Firewall oder Proxyregeln für einen bestimmten selbst erstellten Arbeitsbereich aushärten, indem Sie eine Regel für die folgenden DNS-Einträge erstellen:
-- <Name_des_Arbeitsbereichs>.atp.azure.com: für die Konsolenkonnektivität
-- <Name_des_Arbeitsbereichs>.sensorapi.atp.azure.com: für die Sensorkonnektivität
+- <Name_des_Arbeitsbereichs>.atp.azure.com: für die Konsolenkonnektivität. Z.B. contosoATP.atp.azure.com
+- <Name_des_Arbeitsbereichs>.sensorapi.atp.azure.com: für die Sensorkonnektivität. Z.B. contosoATPsensorapi.atp.azure.com
+
  
 > [!NOTE]
 > Wenn Sie eine SSL-Überprüfung des Azure ATP-Netzwerkdatenverkehrs durchführen (zwischen dem Sensor und dem Azure ATP-Dienst), muss die SSL-Überprüfung die gegenseitige Überprüfung unterstützen.

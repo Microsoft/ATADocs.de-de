@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a06004bd-9f77-4e8e-a0e5-4727d6651a0f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1dccee094f4d6a8ec9bdc94a1d1314fa0675da9d
-ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
+ms.openlocfilehash: 7caae52ff7402fdc8cb18ce1a01bba469c2d649b
+ms.sourcegitcommit: f61616a8269d27a8fcde6ecf070a00e2c56481ac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34444619"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35259207"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -50,6 +50,25 @@ Zu jeder verdächtigen Aktivität stehen folgende Informationen zur Verfügung:
 > -   Wenn Sie auf eine Entität klicken, gelangen Sie zum Entitätsprofil des Benutzers oder Computers.
 
 ![Abbildung der Zeitachse für verdächtige Aktivitäten von Azure ATP](media/atp-sa-timeline.png)
+
+## Erkennungen von Vorschauversionen<a name="preview-detections"></a>
+
+Das Azure ATP-Forschungsteam arbeitet kontinuierlich daran, neue Erkennungen für neu entdeckte Angriffe zu implementieren. Da Azure ATP ein Clouddienst ist, können diese neuen Erkennungen schnell veröffentlicht werden, damit Azure ATP-Kunden so schnell wie möglich von neuen Erkennungen profitieren können.
+
+Diese Erkennungen werden als Vorschauversionen markiert, damit Sie die neuen Erkennungen schneller ermitteln können und wissen, dass sie neu für das Produkt sind. Wenn Sie die Erkennungen von Vorschauversionen deaktivieren, werden diese nicht mehr in der Azure ATP-Konsole (und auch nicht auf der Zeitachse oder in den Entitätsprofilen) angezeigt, und es werden keine Warnungen mehr geöffnet.
+
+![Vorschauversion für VPN-Erkennungen](./media/preview-detection-vpn.png) 
+
+Erkennungen von Vorschauversionen werden standardmäßig in Azure ATP aktiviert. 
+
+Gehen Sie wie folgt vor, um die Erkennung von Vorschauversionen zu deaktivieren:
+
+1. Klicken Sie in der Azure ATP-Konsole auf das Zahnradsymbol für Einstellungen.
+2. Klicken Sie im Menü auf der linken Seite unter „Vorschauversion“ auf **Erkennungen**.
+3. Verwenden Sie den Schieberegler, um die Erkennungen für Vorschauversionen zu (de)aktivieren.
+ 
+![Erkennungen von Vorschauversionen](./media/preview-detections.png) 
+
 
 ## <a name="filter-suspicious-activities-list"></a>Filtern der Liste der verdächtigen Aktivitäten
 So filtern Sie die Liste der verdächtigen Aktivitäten

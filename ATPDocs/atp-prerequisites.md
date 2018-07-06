@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/21/2018
+ms.date: 6/7/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1fc2b3656701ee5db54a4f918ab617a2ad487780
-ms.sourcegitcommit: 3539dd3f9ab7729e5326b904fc64985c808bc8ce
+ms.openlocfilehash: 070062cccb26bd99be48614bf8d40bd781d7b240
+ms.sourcegitcommit: 37b9ff946aad31eed1c6eab5d55d44fce167e20a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2018
-ms.locfileid: "34401985"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827484"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -83,7 +83,7 @@ Der eigenständige Azure ATP-Sensor unterstützt die Installation auf einem Serv
 Der eigenständige Azure ATP-Sensor kann auf einem Server installiert werden, der Mitglied einer Domäne oder Arbeitsgruppe ist.
 Der eigenständige Azure ATP-Sensor kann zur Überwachung von Domänencontrollern mit der Domänenfunktionsebene Windows 2003 und höher verwendet werden.
 
-Für die Kommunikation Ihrer Domänencontroller mit dem Clouddienst müssen Sie in Ihrer Firewall und auf Ihrem Proxyserver Port 443 für „*.atp.azure.com“ freigeben.
+Damit Ihr eigenständiger Sensor mit dem Clouddienst kommunizieren kann, müssen Sie in Ihrer Firewall und auf Ihrem Proxyserver Port 443 für „*.atp.azure.com“ freigeben.
 
 
 Informationen zur Verwendung von virtuellen Computern mit dem eigenständigen Azure ATP-Sensor finden Sie unter [Konfigurieren der Portspiegelung](configure-port-mirroring.md).
@@ -146,7 +146,7 @@ In der folgenden Tabelle sind die Ports aufgeführt, die für den Verwaltungsada
 |NTLM über RPC|TCP|135|Alle Geräte im Netzwerk|Ausgehend|
 |NetBIOS|UDP|137|Alle Geräte im Netzwerk|Ausgehend|
 |Syslog (optional)|TCP/UDP|514, je nach Konfiguration|SIEM-Server|Eingehend|
-|RADIUS|UDDP|1813|RADIUS|Eingehend|
+|RADIUS|UDP|1813|RADIUS|Eingehend|
 |RDP|TCP|3389|Alle Geräte im Netzwerk|Ausgehend|
 
 > [!NOTE]
@@ -206,7 +206,7 @@ In der folgenden Tabelle sind die Ports aufgeführt, die für den Azure ATP-Sens
 |Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Alle Geräte im Netzwerk|Ausgehend|
 |NetBIOS|UDP|137|Alle Geräte im Netzwerk|Ausgehend|
 |Syslog (optional)|TCP/UDP|514, je nach Konfiguration|SIEM-Server|Eingehend|
-|RADIUS|UDDP|1813|RADIUS|Eingehend|
+|RADIUS|UDP|1813|RADIUS|Eingehend|
 |TLS-zu-RDP-Port|TCP|3389|Alle Geräte im Netzwerk|Ausgehend|
 
 > [!NOTE]
