@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a4c2f03955eddb4615b347fa8a211501546e6f4a
-ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
+ms.openlocfilehash: cadd708c20733324b939db1e35d12aae3f2d80f2
+ms.sourcegitcommit: 40dbce8045f689376a50275fb12e3c5c32ca8092
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31007269"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37799075"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -33,8 +33,7 @@ Diese Installationsschritte enthalten Anweisungen zum Erstellen und Verwalten ei
 Bei Azure ATP haben Sie die Möglichkeit, mehrere Arbeitsbereiche zu verwalten und zu überwachen. Dies ist besonders hilfreich, wenn Sie einen Demo-Arbeitsbereich und einen Testarbeitsbereich erstellen möchten, in denen Sie vor dem Rollout für Ihre gesamte Organisation einen Proof of Concept für Azure ATP durchführen können. Dies ist auch erforderlich, um Bereitstellungen mit mehreren Gesamtstrukturen zu unterstützen. Ein einzelner Arbeitsbereich kann nur mehrere Domänen aus einer einzelnen Gesamtstruktur überwachen. 
 
 > [!NOTE]
-> - Sie können maximal zwei aktive Arbeitsbereiche haben. Nachdem Sie einen Arbeitsbereich gelöscht haben, können Sie den Support kontaktieren, um den Arbeitsbereich erneut zu aktivieren. Sie können maximal drei Arbeitsbereiche löschen. Kontaktieren Sie den Azure ATP-Support, um die Anzahl an gespeicherten bzw. gelöschten Arbeitsbereichen zu erhöhen.
-> - Derzeit werden Azure ATP-Rechenzentren in Europa, Nordamerika/Mittelamerika/Karibik und Asien bereitgestellt.
+> Derzeit werden Azure ATP-Rechenzentren in Europa, Nordamerika/Mittelamerika/Karibik und Asien bereitgestellt.
 
 ## <a name="step-1-enter-the-workspace-management-portal"></a>Schritt 1: Ins Portal zur Verwaltung von Arbeitsbereichen wechseln
 
@@ -69,7 +68,7 @@ Nachdem Sie überprüft haben, ob Ihr Netzwerk den Anforderungen des Sensors ent
 - Es kann nur der primäre Arbeitsbereich bearbeitet werden. Um Änderungen an anderen Arbeitsbereichen vorzunehmen, können Sie diese löschen und erneut hinzufügen. Wenn Sie den primären Arbeitsbereich löschen möchten, müssen Sie zunächst Integrationen deaktivieren und den Arbeitsbereich auf **Primär** festlegen, bevor er gelöscht werden kann.
 - Um einen primären Arbeitsbereich zu bearbeiten, müssen Sie zunächst vorhandene Integrationen im Arbeitsbereich deaktivieren.
 
-- Datenaufbewahrung: Gelöschte Arbeitsbereiche werden nicht auf der Benutzeroberfläche angezeigt. Die Daten werden jedoch gemäß der [Microsoft-Richtlinie zur Datenaufbewahrung](https://www.microsoft.com/trustcenter/privacy/you-own-your-data) aufbewahrt.
+- Datenaufbewahrung: Gelöschte Arbeitsbereiche werden nicht auf der Benutzeroberfläche angezeigt. Weitere Informationen zur Datenaufbewahrung in Azure ATP finden Sie unter [Sicherheit und Datenschutz für Azure ATP](atp-privacy-compliance.md).
 
 
 >[!div class="step-by-step"]

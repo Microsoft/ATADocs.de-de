@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 4/29/2018
+ms.date: 7/4/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,12 @@ ms.technology: ''
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 838c5ce470bdf78ec81aed5d6fa1cf2407abc6f9
-ms.sourcegitcommit: 5c0f914b44bfb8e03485f12658bfa9a7cd3d8bbc
+ms.openlocfilehash: 3f99aff656f6eff67a4077817c761c7627511bb2
+ms.sourcegitcommit: 40dbce8045f689376a50275fb12e3c5c32ca8092
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37799179"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -72,11 +73,12 @@ Ihre Azure ATP-Bereitstellung umfasst sowohl eigenständige Azure ATP-Sensoren a
 
 -   Integrieren in andere Microsoft-Sicherheitsdienste
 
-Legen Sie Ihren Hauptarbeitsbereich als **Primär** fest. Sie können nur einen Arbeitsbereich als „Primär“ festlegen. Wenn Sie einen Arbeitsbereich als „Primär“ festlegen, hat dies Konsequenzen für die Integration: Sie können nur für Ihren primären Arbeitsbereich Azure ATP in Windows Defender ATP integrieren. Sie können auch später einen anderen Arbeitsbereich als „Primär“ kennzeichnen. Dafür müssen Sie zuvor jedoch bereits für den aktuellen Arbeitsbereich vorgenommene Integrationen entfernen.
+Legen Sie Ihren Hauptarbeitsbereich als **Primär** fest. Wenn Sie einen Arbeitsbereich als „Primär“ festlegen, hat dies Konsequenzen für die Integration: Sie können nur für Ihren primären Arbeitsbereich Azure ATP in Windows Defender ATP integrieren. 
 
 > [!NOTE]
-> Azure ATP unterstützt derzeit die Erstellung von zwei Arbeitsbereichen. Es wird empfohlen, einen primären Arbeitsbereich für die Produktionsumgebung und einen zusätzlichen Arbeitsbereich als Stagingumgebung zu erstellen.
-> Nachdem Sie einen Arbeitsbereich gelöscht haben, können Sie den Support kontaktieren, um den Arbeitsbereich erneut zu aktivieren. Sie können maximal drei Arbeitsbereiche löschen. Kontaktieren Sie den Azure ATP-Support, um die Anzahl an gespeicherten bzw. gelöschten Arbeitsbereichen zu erhöhen.
+> - Azure ATP unterstützt derzeit die Erstellung von lediglich einem Arbeitsbereich. Nachdem Sie einen Arbeitsbereich gelöscht haben, können Sie den Support kontaktieren, um den Arbeitsbereich erneut zu aktivieren. Sie können maximal drei Arbeitsbereiche löschen. Kontaktieren Sie den Azure ATP-Support, um die Anzahl an gespeicherten bzw. gelöschten Arbeitsbereichen zu erhöhen.
+> - Wenn innerhalb von 60 Tagen kein Sensor in Ihrem Arbeitsbereich installiert wird, kann es sein, dass der Arbeitsbereich gelöscht wird und Sie ihn erneut erstellen müssen.
+
 
 
 ### <a name="azure-atp-workspace-portal"></a>Azure ATP-Arbeitsbereichsportal
