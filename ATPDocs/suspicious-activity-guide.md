@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 6/10/2018
+ms.date: 7/5/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: de0b8f1673098a1b4b00255f4543ca18a903c83f
-ms.sourcegitcommit: f61616a8269d27a8fcde6ecf070a00e2c56481ac
+ms.openlocfilehash: 610a84ac0e9b3c199971ced47dc5a5d08db00287
+ms.sourcegitcommit: 4170888deee71060e9a17c8a1ac772cc2fe4b51e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35259224"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37800673"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -186,21 +186,40 @@ Pass-the-Ticket ist eine Technik mit seitlicher Bewegung, bei der die Angreifer 
 
 **Beschreibung**
 
-Angreifer mit Domänenadministratorrechten können das [KRBTGT account (KRBTGT-Konto)](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT) beeinträchtigen. Indem diese das KRBTGT-Konto verwenden, können sie ein Kerberos Ticket Granting Ticket (TGT) erstellen, das die Autorisierung für jede Ressource erteilen und den Ablaufzeitpunkt des Tickets auf einen beliebigen Zeitpunkt festlegen kann. Dieses gefälschte TGT wird als „Golden Ticket“ bezeichnet und ermöglicht es Angreifern, Beständigkeit im Netzwerk zu erreichen.
+Angreifer mit Domänenadministratorrechten können das [KRBTGT account (KRBTGT-Konto)](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT) beeinträchtigen. Indem diese das KRBTGT-Konto verwenden, können sie ein Kerberos Ticket Granting Ticket (TGT) erstellen, das die Autorisierung für jede Ressource erteilen und den Ablaufzeitpunkt des Tickets auf einen beliebigen Zeitpunkt festlegen kann. Dieses gefälschte TGT wird als „Golden Ticket“ bezeichnet und ermöglicht Angreifern, Beständigkeit im Netzwerk zu erreichen.
 
-In dieser Erkennung wird eine Warnung ausgelöst, wenn ein Kerberos Ticket Granting Ticket länger als die erlaubte Dauer verwendet wird. Diese ist in der Sicherheitsrichtlinie [Max. Gültigkeitsdauer des Benutzertickets](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx) angegeben.
+In dieser Erkennung wird eine Warnung ausgelöst, wenn ein Kerberos Ticket Granting Ticket über die erlaubte [maximale Lebensdauer für Benutzertickets](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx) hinaus verwendet wird. Dieser Golden Ticket-Angriff basiert auf einer **Zeitanomalie**. Ein Golden Ticket-Angriff kann auch auf einem **nicht vorhandenen Konto** beruhen.
+Sicherheitsrichtlinie
 
 **Untersuchung**
 
-1. Wurden kürzlich (innerhalb der letzten Stunden) Änderungen an der Einstellung **Maximale Lebensdauer für Benutzertickets** in der Gruppenrichtlinie vorgenommen? Falls ja, **schließen** Sie die Warnung (diese war falsch positiv).
+- **Zeitanomalie**
+   1.   Wurden kürzlich (innerhalb der letzten Stunden) Änderungen an der Einstellung „Maximale Lebensdauer für Benutzertickets“ in der Gruppenrichtlinie vorgenommen? Überprüfen Sie, ob der spezifische Wert niedriger als der Zeitwert der Ticketnutzungsdauer ist. Falls ja, schließen Sie die Warnung (sie war falsch positiv).
+   2.   Ist der Azure ATP-Sensor in dieser Warnung ein virtueller Computer? Falls ja, wurde dieser kürzlich aus einem gespeicherten Zustand fortgesetzt? Falls ja, schließen Sie diese Warnung.
+   3.   Wenn die Antwort auf die obigen Fragen „nein“ ist, gehen Sie von einem böswilligen Ereignis aus.
+- **Nicht vorhandenes Konto**
+   1.   Untersuchen Sie die folgenden Fragen:
+         - Ist der Benutzer ein bekannter und gültiger Domänenbenutzer? Falls ja, schließen Sie die Warnung (sie war falsch positiv).
+         - Wurde der Benutzer kürzlich hinzugefügt? Falls Ja, schließen Sie die Warnung. Möglicherweise wurde die Änderung noch nicht synchronisiert.
+         - Wurde der Benutzer kürzlich aus AD gelöscht? Falls ja, schließen Sie die Warnung.
+   2.   Wenn die Antwort auf die obigen Fragen „nein“ ist, gehen Sie von einem böswilligen Ereignis aus.
 
-2. Ist der eigenständige Azure ATP-Sensor in diese Warnung an einen virtuellen Computer involviert? Falls ja, wurde dieser kürzlich aus einem gespeicherten Zustand fortgesetzt? Falls ja, **schließen** Sie diese Warnung.
+1. Im Falle beider Golden Ticket-Angriffe: Klicken Sie auf den Quellcomputer, um zu seiner **Profil**-Seite zu gelangen. Überprüfen Sie, was ungefähr zum Zeitpunkt der Aktivität passiert ist. Achten Sie auf ungewöhnliche Aktivitäten, z. B. welcher Benutzer angemeldet war und auf welche Ressourcen zugegriffen wurde. 
 
-3. Wenn die Antwort auf die obigen Fragen „nein“ ist, gehen Sie von einem böswilligen Ereignis aus.
+2.  Sollen alle Benutzer, die am Computer angemeldet waren, angemeldet sein? Welche Berechtigungen haben sie? 
+
+3.  Sollen diese Benutzer Zugriff auf diese Ressourcen haben?<br>
+Wenn die Windows Defender ATP-Integration aktiviert ist, klicken Sie auf das Windows Defender ATP-Badge ![WD ATP](./media/wd-badge.png).
+ 
+ 4. Um den Computer weiter zu untersuchen, überprüfen Sie in Windows Defender ATP, welche Prozesse und Warnungen ungefähr dann aufgetreten sind, als die Warnung ausgelöst wurde.
 
 **Wartung**
 
+
 Ändern Sie das Kennwort für das Kerberos Ticket Granting Ticket (KRBTGT) zweimal gemäß den Anweisungen unter [KRBTGT Account Password Reset Scripts now available for customers (Skripts zum Zurücksetzen von Kennwörtern des KRBTGT-Kontos stehen Kunden jetzt zur Verfügung)](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) mithilfe des [Reset the KRBTGT account password/keys tool (Tools zum Zurücksetzen des Kennworts/Schlüssels eines KRBTGT-Kontos)](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Durch das zweimalige Zurücksetzen von KRBTGT werden alle Kerberos-Tickets in dieser Domäne ungültig. Daher sollten Sie diesen Schritt im Voraus planen. Implementieren Sie ebenfalls die [Pass the hash recommendations (Empfehlungen zu Pass-the-Hash)](http://aka.ms/PtH), da für das Erstellen eines Golden Tickets Domänenadministratorrechte erforderlich sind.
+
+
+
 
 ## <a name="malicious-data-protection-private-information-request"></a>Böswillige Anforderung privater Informationen im Rahmen der Datensicherheit
 
@@ -232,9 +251,14 @@ In dieser Erkennung wird eine Warnung ausgelöst, wenn eine Replikationsanforder
 
 **Untersuchung**
 
-1.  Ist der fragliche Computer ein Domänencontroller? Beispielsweise ein neu hochgestufter Domänencontroller mit Replikationsproblemen. Falls ja, **schließen** Sie die verdächtige Aktivität. 
-2.  Soll der fragliche Computer Daten von Active Directory replizieren? Beispielsweise Azure AD Connect. Falls ja, können Sie die verdächtige Aktivität **schließen und ausschließen**.
-3.  Klicken Sie auf den Quellcomputer oder das Konto, um die entsprechende Profilseite aufzurufen. Überprüfen Sie, was ungefähr zum Zeitpunkt der Replikation passiert ist. Suchen Sie nach ungewöhnlichen Aktivitäten wie z.B.: Wer war angemeldet, auf welche Ressourcen wurde zugegriffen. Wenn Sie die Windows Defender ATP-Integration aktiviert haben, klicken Sie auf das Windows Defender ATP-Badge, ![Windows Defender ATP-Badge](./media/wd-badge.png) um den Computer weiter zu untersuchen. In Windows Defender ATP können Sie sehen, welche Prozesse und Warnungen ungefähr gleichzeitig mit der Warnung aufgetreten sind. 
+> [!NOTE]
+> Falls Sie Domänencontroller haben, auf denen keine Azure ATP-Sensoren installiert sind, werden diese nicht von Azure ATP abgedeckt. Wenn Sie dann einen neuen Domänencontroller auf einem nicht registrierten oder ungeschützten Domänencontroller bereitstellen, wird dieser möglicherweise zunächst nicht von Azure ATP als Domänencontroller erkannt. Es wird dringend empfohlen, den Azure ATP-Sensor für eine vollständige Abdeckung auf jedem Domänencontroller zu installieren.
+
+1. Ist der fragliche Computer ein Domänencontroller? Beispielsweise ein neu hochgestufter Domänencontroller mit Replikationsproblemen. Falls ja, **schließen** Sie die verdächtige Aktivität. 
+2.  Soll der fragliche Computer Daten von Active Directory replizieren? Z. B. Azure AD Connect oder Geräte zur Netzwerkleistungsüberwachung. Falls ja, können Sie die verdächtige Aktivität **schließen und ausschließen**.
+3. Wurde die IP-Adresse, von der die Replikationsanforderung gesendet wurde, über NAT oder Proxy übermittelt? Falls ja, überprüfen Sie, ob sich hinter dem Gerät ein neuer Domänencontroller befindet, oder ob andere verdächtige Aktivitäten für das Gerät aufgetreten sind. 
+
+4. Klicken Sie auf den Quellcomputer oder das Konto, um die entsprechende Profilseite aufzurufen. Überprüfen Sie, was ungefähr zum Zeitpunkt der Replikation passiert ist. Suchen Sie nach ungewöhnlichen Aktivitäten wie z.B.: Wer war angemeldet, auf welche Ressourcen wurde zugegriffen. Wenn Sie die Windows Defender ATP-Integration aktiviert haben, klicken Sie auf das Windows Defender ATP-Badge, ![Windows Defender ATP-Badge](./media/wd-badge.png) um den Computer weiter zu untersuchen. In Windows Defender ATP können Sie sehen, welche Prozesse und Warnungen ungefähr gleichzeitig mit der Warnung aufgetreten sind. 
 
 
 **Wartung**
@@ -505,9 +529,9 @@ Um festzustellen, ob es sich dabei um einen WannaCry-Angriff handelt, führen Si
 
 2. Wenn keine Angriffstools gefunden werden, überprüfen Sie, ob auf dem Quellcomputer eine Anwendung ausgeführt wird, die ihren eigenen NTLM- oder SMB-Stapel implementiert.
 
-3. Wenn nicht, überprüfen Sie, ob dies von WannaCry verursacht wird, indem Sie ein WannaCry-Scannerskript (z.B. [diesen Scanner](https://github.com/apkjet/TrustlookWannaCryToolkit/tree/master/scanner)) auf dem Quellcomputer ausführen, der an der verdächtigen Aktivität beteiligt ist. Wenn der Scanner feststellt, dass der Computer infiziert oder anfällig ist, patchen Sie den Computer, entfernen Sie die Schadsoftware, und blockieren Sie diese vom Netzwerk.
+3. Klicken Sie auf den Quellcomputer, um die entsprechende Profilseite aufzurufen. Überprüfen Sie, was ungefähr zum Zeitpunkt der Warnung passiert ist. Suchen Sie nach ungewöhnlichen Aktivitäten, z. B.: Wer war angemeldet, auf welche Ressourcen wurde zugegriffen. Wenn Sie die Windows Defender ATP-Integration aktiviert haben, klicken Sie auf das Windows Defender ATP-Badge, ![WD ATP](./media/wd-badge.png) um den Computer weiter zu untersuchen. In Windows Defender ATP können Sie sehen, welche Prozesse und Warnungen ungefähr gleichzeitig mit der Warnung aufgetreten sind.
 
-4. Wenn das Skript feststellt, dass der Computer nicht infiziert oder anfällig ist, könnte er trotzdem infiziert sein, denn SMBv1 könnte deaktiviert, oder der Computer könnte gepatcht worden sein. Beides beeinflusst das Überprüfungstool.
+
 
 **Wartung**
 
