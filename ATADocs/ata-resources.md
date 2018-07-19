@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 7/15/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 42a1a34f-ed6b-4538-befb-452168a30e8c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a56a24a2012239ed05f0a2f214dba345a817df39
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 39451c20d934c0d3e49f8790dc55169a230e238c
+ms.sourcegitcommit: a9b8bc26d3cb5645f21a68dc192b4acef8f54895
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30010226"
+ms.lasthandoff: 07/16/2018
+ms.locfileid: "39064048"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -29,7 +29,7 @@ Dieses Dokument bietet einen Überblick über die Bereitschaft, der Ihnen beim E
 
 Advanced Threat Analytics (ATA) ist eine lokale Plattform, mit deren Hilfe Sie Ihr Unternehmen vor verschiedenen hochentwickelten und gezielten Cyberangriffen und Insiderbedrohungen schützen können. In den folgenden Artikeln finden Sie weitere Informationen zu ATA zu erhalten:
 
-- [ATA-Übersicht](https://aka.ms/ATAOverview)
+- [ATA-Übersicht](what-is-ata.md)
 
 - [Einführungsvideo zu ATA (kurz)](https://aka.ms/ATAShort)
 
@@ -49,9 +49,9 @@ ATA besteht aus ATA Center, das Sie auf einem Server installieren können, sowie
 
 Wenn Sie physische Server verwenden, sollten Sie die Kapazität planen. Sie können das Tool zur Größenanpassung zum Zuweisen von Speicherplatz für ATA verwenden:
 
-[ATA-Tool zur Größenanpassung](http://aka.ms/atasizing): Das Tool zur Größenanpassung automatisiert die Auflistung der Menge an Datenverkehr, die von ATA benötigt wird. Es stellt automatisch Empfehlungen zu Unterstützbarkeit und Ressourcen für ATA Center und ATA-Lightweight-Gateways bereit.
+[ATA-Tool zur Größenanpassung](ata-capacity-planning.md): Das Tool zur Größenanpassung automatisiert die Auflistung der Menge an Datenverkehr, die von ATA benötigt wird. Es stellt automatisch Empfehlungen zu Unterstützbarkeit und Ressourcen für ATA Center und ATA-Lightweight-Gateways bereit.
 
-[ATA-Kapazitätsplanung](https://docs.microsoft.com/en-us/advanced-threat-analytics/ata-capacity-planning)
+[ATA-Kapazitätsplanung](ata-capacity-planning.md)
 
 ## <a name="deploy-ata"></a>Bereitstellung von ATA
 
@@ -69,7 +69,7 @@ Die grundlegenden, erforderlichen Einstellungen in ATA werden als Teil des Insta
 
 [Überwachungseinstellungen](https://aka.ms/ataauditingblog): Überwachen Sie die Integrität Ihres Domänencontrollers vor und nach der ATA-Bereitstellung.
 
-[Allgemeine ATA-Dokumentation](https://docs.microsoft.com/en-us/advanced-threat-analytics/)
+[Allgemeine ATA-Dokumentation](https://docs.microsoft.com/advanced-threat-analytics/)
 
 ## <a name="work-with-ata"></a>Arbeiten mit ATA
 
@@ -77,7 +77,7 @@ Sobald ATA einsatzbereit ist, können Sie verdächtige Aktivitäten anzeigen, di
 
 [Verdächtige ATA-Aktivitäten – Playbook](http://aka.ms/ataplaybook): Dieser Artikel führt Sie durch die Angriffstechniken für den Diebstahl von Anmeldeinformationen durch jederzeit verfügbare Recherchetools aus dem Internet. Zu jedem Zeitpunkt des Angriffs sehen Sie, wie ATA Ihnen dabei hilft, weitere Einblicken in diese Bedrohungen zu erhalten.
 
-[Handbuch zu verdächtigen ATA-Aktivitäten](http://aka.ms/atasaguide)
+[Handbuch zu verdächtigen ATA-Aktivitäten](suspicious-activity-guide.md)
 
 
 
@@ -85,7 +85,7 @@ Sobald ATA einsatzbereit ist, können Sie verdächtige Aktivitäten anzeigen, di
 
 [Bewährte Methoden für ATA](https://aka.ms/atasecbestpractices): Bewährte Methoden zum Sichern von ATA.
 
-[Häufig gestellte Fragen zu ATA](http://aka.ms/atafaq): Dieser Artikel enthält eine Reihe häufig gestellter Fragen zu ATA sowie Hintergrundwissen und Antworten.
+[Häufig gestellte Fragen zu ATA](ata-technical-faq.md): Dieser Artikel enthält eine Reihe häufig gestellter Fragen zu ATA sowie Hintergrundwissen und Antworten.
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 

@@ -17,6 +17,7 @@
 ## [6: VPN-Integration](install-atp-step6-vpn.md)
 ## [7: Ausschlüsse und Honeytoken-Konten](install-atp-step7.md)
 ## [8 Konfigurieren von für SAM-R erforderliche Berechtigungen](install-atp-step8-samr.md)
+## [9 Unterstützen für das Einrichten mit mehreren Gesamtstrukturen](atp-multi-forest.md)
 ## [Unbeaufsichtigte Installation](ATP-silent-installation.md)
 ## [Aktualisieren von ATP-Sensoren](sensor-update.md)
 ## Azure ATP-Sensor – zusätzliche Schritte
