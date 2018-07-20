@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/5/2018
+ms.date: 7/15/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,17 +13,25 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f533d835c9129dd56db5ac6e0ef2cca4b33cc043
-ms.sourcegitcommit: 4170888deee71060e9a17c8a1ac772cc2fe4b51e
+ms.openlocfilehash: 9e28c18f118f7a2dc9d516cf62a113245a7be1fa
+ms.sourcegitcommit: a9b8bc26d3cb5645f21a68dc192b4acef8f54895
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37800707"
+ms.lasthandoff: 07/16/2018
+ms.locfileid: "39064082"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
 
 # <a name="whats-new-in-azure-atp"></a>Neuerungen in Azure ATP 
+
+## <a name="azure-atp-release-240"></a>Azure ATP Release 2.40
+
+Veröffentlicht: 15. Juli 2018
+
+- Die Pass-the-Ticket-Erkennung enthält jetzt auf der Seite „Warnungsdetails“ einen Beweisabschnitt. Dort werden zusätzliche Informationen zu einer Warnung angezeigt.
+
+- Benutzerzugriffssteuerungs-Flags, die im Profil eines Benutzers unter den Verzeichnisdaten zu finden sind, enthalten jetzt eine Legende, um zu verdeutlichen, welche Attribute aktiviert und welche deaktiviert sind.  
 
 ## <a name="azure-atp-release-239"></a>Azure ATP Release 2.39
 

@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 610a84ac0e9b3c199971ced47dc5a5d08db00287
-ms.sourcegitcommit: 4170888deee71060e9a17c8a1ac772cc2fe4b51e
+ms.openlocfilehash: 83c855a89ad418769c81a4f1da3950ae0b6c54f7
+ms.sourcegitcommit: a9b8bc26d3cb5645f21a68dc192b4acef8f54895
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37800673"
+ms.lasthandoff: 07/16/2018
+ms.locfileid: "39064116"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -107,9 +107,11 @@ Es gibt drei Arten von Erkennung:
 
 2.  Golden Ticket: Wechseln Sie im Excel-Arbeitsblatt zur Registerkarte mit der Netzwerkaktivität. Sie werden feststellen, dass das entsprechende heruntergestufte Feld **Request Ticket Encryption Type** ist und dass **Source Computer Supported Encryption Types** stärkere Verschlüsselungsmethoden enthält.
 
-  1. Überprüfen Sie den Quellcomputer und das Konto. Überprüfen Sie im Fall von mehreren Quellcomputern und Konten, ob sie etwas gemeinsam haben (alle Marketingmitarbeiter verwenden z.B. eine bestimmte App, die die Warnung möglicherweise auslöst). Es gibt Fälle, in denen eine benutzerdefinierte Anwendung, die selten genutzt wird, mit einem niedrigeren Verschlüsselungsverfahren authentifiziert wird. Überprüfen Sie, ob solche Apps auf dem Quellcomputer vorhanden sind. Falls ja, ist dies wahrscheinlich ein unbedenklich richtig positives Ereignis und kann unterdrückt werden.
+  1. Überprüfen Sie die Ressource, auf die von diesen Tickets aus zugegriffen wird. Wenn auf eine Ressource von allen zugegriffen wird, stellen Sie sicher, dass es sich um eine gültige Ressource handelt, auf die zugegriffen werden soll. Überprüfen Sie zudem, ob die Zielressource starke Verschlüsselungsmethoden unterstützt. Sie können dies in Active Directory überprüfen, indem Sie das Attribut „msDS-SupportedEncryptionTypes“ des Ressourcendienstkontos überprüfen.
   
-  2. Überprüfen Sie die Ressource, auf die von diesen Tickets aus zugegriffen wird. Wenn auf eine Ressource von allen zugegriffen wird, stellen Sie sicher, dass es sich um eine gültige Ressource handelt, auf die zugegriffen werden soll. Überprüfen Sie zudem, ob die Zielressource starke Verschlüsselungsmethoden unterstützt. Sie können dies in Active Directory überprüfen, indem Sie das Attribut „msDS-SupportedEncryptionTypes“ des Ressourcendienstkontos überprüfen.
+  2. Überprüfen Sie den Quellcomputer und das Konto. Überprüfen Sie im Fall von mehreren Quellcomputern und Konten, ob diese etwas gemeinsam haben (alle Marketingmitarbeiter verwenden z.B. eine bestimmte App, die die Warnung möglicherweise ausgelöst hat). Es gibt Fälle, in denen eine benutzerdefinierte Anwendung, die selten genutzt wird, mit einem niedrigeren Verschlüsselungsverfahren authentifiziert wird. Überprüfen Sie, ob solche Apps auf dem Quellcomputer vorhanden sind. Falls ja, ist dies wahrscheinlich ein unbedenklich richtig positives Ereignis und kann unterdrückt werden.
+  
+  
 
 3.  Overpass-the-Hash: Wechseln Sie im Excel-Arbeitsblatt zur Registerkarte mit der Netzwerkaktivität. Sie werden feststellen, dass das entsprechende heruntergestufte Feld **Encrypted Timestamp Encryption Type** ist und dass **Source Computer Supported Encryption Types** stärkere Verschlüsselungsmethoden enthält.
 
@@ -197,7 +199,8 @@ Sicherheitsrichtlinie
    1.   Wurden kürzlich (innerhalb der letzten Stunden) Änderungen an der Einstellung „Maximale Lebensdauer für Benutzertickets“ in der Gruppenrichtlinie vorgenommen? Überprüfen Sie, ob der spezifische Wert niedriger als der Zeitwert der Ticketnutzungsdauer ist. Falls ja, schließen Sie die Warnung (sie war falsch positiv).
    2.   Ist der Azure ATP-Sensor in dieser Warnung ein virtueller Computer? Falls ja, wurde dieser kürzlich aus einem gespeicherten Zustand fortgesetzt? Falls ja, schließen Sie diese Warnung.
    3.   Wenn die Antwort auf die obigen Fragen „nein“ ist, gehen Sie von einem böswilligen Ereignis aus.
-- **Nicht vorhandenes Konto**
+
+- **Nicht vorhandenes Konto** (Vorschau)
    1.   Untersuchen Sie die folgenden Fragen:
          - Ist der Benutzer ein bekannter und gültiger Domänenbenutzer? Falls ja, schließen Sie die Warnung (sie war falsch positiv).
          - Wurde der Benutzer kürzlich hinzugefügt? Falls Ja, schließen Sie die Warnung. Möglicherweise wurde die Änderung noch nicht synchronisiert.

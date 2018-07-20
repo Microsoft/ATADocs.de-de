@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 7/15/2018
 ms.topic: article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 88720401-1fb2-4353-ad39-32bc0088f0de
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 314c86b1a1e13dd20e52210e4b75ff5fe66ecd2c
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 52d500bfb61818b9cc1785382f92c7d3b4ca3501
+ms.sourcegitcommit: a9b8bc26d3cb5645f21a68dc192b4acef8f54895
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30009971"
+ms.lasthandoff: 07/16/2018
+ms.locfileid: "39064150"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -38,10 +38,11 @@ Dieser Artikel enthält Informationen über die verfügbaren Versionen von Advan
 |1,8|1.8.6645|
 |1.8 Update 1|1.8.6765|
 |1.9|1.9.7312|
+|1.9 Update 1|1.9.7412|
 
 ## <a name="ata-version-upgrade-matrix"></a>Matrix zum Upgrade der ATA-Version
 
-![Matrix zum Upgrade der ATA-Version](./media/version-matrix.png)
+![Matrix zum Upgrade der ATA-Version](./media/upgrade-path.png)
 
 
 

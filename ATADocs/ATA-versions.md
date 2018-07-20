@@ -4,7 +4,7 @@ description: Erläutert die unterschiedlichen Supportoptionen für die Versionen
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 4/10/2018
+ms.date: 7/15/2018
 ms.topic: article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: a8afbd91-c888-4dfc-94ab-72e38745163e
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 93c26e0049936b3db1253a785c6b28bffe0ab197
-ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
+ms.openlocfilehash: 2aebec8f93153f626905067880235479705aa20a
+ms.sourcegitcommit: a9b8bc26d3cb5645f21a68dc192b4acef8f54895
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31007286"
+ms.lasthandoff: 07/16/2018
+ms.locfileid: "39064017"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -29,14 +29,12 @@ Microsoft plant mehrmals jährlich die Veröffentlichung von Updates für ATA. J
 
 -   Wartungsphase nur mit Sicherheitsupdates: Nach Veröffentlichung einer neuen ATA-Version wird der Support für ältere Versionen für den verbleibenden Zeitraum des 12-monatigen Produktlebenszyklus auf Sicherheitsupdates beschränkt (wie im folgenden Beispiel zum Versionswartungssupport dargestellt).
  
-![Beispiele für Versionswartungssupport](media/versions.png)
-
 > [!Note]
 > Die neueste ATA-Version befindet sich immer in der Wartungsphase für Sicherheitsupdates und wichtige Updates. Das bedeutet, dass im Fall eines Codefehlers, der ein kritisches Update erfordert, die neueste Current Branch-Version installiert sein muss, damit Sie einen Fix zur Behebung des Fehlers erhalten. Bei allen anderen unterstützten Versionen haben Sie lediglich Anspruch auf Sicherheitsupdates. Nach Ablauf des 12-monatigen Lebenszyklus der aktuellen Version endet jeglicher Support. Dann müssen Kunden auf eine unterstützte Version aktualisieren.
 
 ## <a name="version-history"></a>Versionsverlauf
 
-|VERSION|BUILDNUMMER|VERFÜGBARKEITSDATUM| SUPPORTENDDATUM|
+|VERSION|BUILDNUMMER|VERFÜGBARKEITSDATUM|SUPPORTENDDATUM|
 |----|----|----|----|
 |1.4|1.4.2457|31. AUGUST 2015|30. AUGUST 2016|
 |1.5|1.5.2946|17. DEZEMBER 2015|16. DEZEMBER 2016|
@@ -48,7 +46,7 @@ Microsoft plant mehrmals jährlich die Veröffentlichung von Updates für ATA. J
 |1,8|1.8.6645|30. JUNI 2017|30. JUNI 2018|
 |1.8.1|1.8.6765|02. AUGUST 2017|02. AUGUST 2018|
 |1.9|1.9.7312|21. MÄRZ 2018|21. MÄRZ 2019|
-
+|1.9.1|1.9.7412|01-JUL-2018|01-JUL-2019|
 
 
 
