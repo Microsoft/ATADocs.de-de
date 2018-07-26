@@ -2,10 +2,10 @@
 title: Liste nützlicher Ressourcen für Azure Advanced Threat Protection | Microsoft-Dokumentation
 description: Dieser Artikel enthält eine Liste nützlicher Ressourcen für Azure ATP.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 4/29/2018
+ms.date: 7/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 34dc152c-6b7f-4128-93fe-aad56c282730
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b8d91468664a76436078772ad1fc8510ea56d67a
-ms.sourcegitcommit: 5c0f914b44bfb8e03485f12658bfa9a7cd3d8bbc
+ms.openlocfilehash: 498d1b4d14db079583da1999bfb68a5648111362
+ms.sourcegitcommit: 63a36cd96aec30e90dd77bee1d0bddb13d2c4c64
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "32298483"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39227137"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -46,7 +46,7 @@ Diese Ressourcen unterstützen Sie beim Einrichten von Azure ATP, bei der Verbin
 - [Testen Sie Azure ATP (Teil von EMS E5):](http://aka.ms/aatptrial) Die Testversion ist 90 Tage gültig.
 - [Bereitstellungshandbuch:](install-atp-step1.md) Stellen Sie Azure ATP in Ihrer Umgebung bereit, indem Sie diese Schritte befolgen.
 - [Integrieren von Azure ATP in Windows Defender ATP](integrate-wd-atp.md)
-- 
+
 ## <a name="azure-atp-settings"></a>Einstellungen für Azure ATP
 
 Diese grundlegenden erforderlichen Einstellungen in Azure ATP werden bei der Erstellung des Arbeitsbereichs konfiguriert. Es gibt jedoch einige andere Einstellungen, die Sie zur Optimierung von Azure ATP verwenden können, um die Erkennungen für Ihre Umgebung präziser durchzuführen, z.B. die SIEM-Integration oder Überwachungseinstellungen. 
@@ -61,9 +61,10 @@ Sobald Azure ATP einsatzbereit ist, können Sie verdächtige Aktivitäten anzeig
 - [Azure ATP suspicious activity guide (Handbuch zu verdächtigen Aktivitäten bei Azure ATP):](suspicious-activity-guide.md) Erfahren Sie mehr über die Selektierung und die nächsten Schritte mit Azure ATP-Erkennungen.
 - [Tag groups as sensitive (Kennzeichnen von Gruppen als vertraulich):](sensitive-accounts.md) Erhalten Sie Einblicke in die Offenlegung von Anmeldeinformationen bei vertraulichen Sicherheitsgruppen.
 
-## <a name="security-best-practices"></a>Bewährte Sicherheitsmethoden
+## <a name="security-best-practices"></a>Bewährte Methoden für die Sicherheit
 
 - [Häufig gestellte Fragen zu Azure ATP:](atp-technical-faq.md) Dieser Artikel enthält einige häufig gestellter Fragen zu Azure ATP sowie Hintergrundwissen und Antworten. 
+
 ## <a name="community-resources"></a>Communityressourcen
 
 Blog: [Azure ATP-Blog](https://aka.ms/aatpblog)
@@ -76,7 +77,7 @@ Channel 9: [Seite zu Microsoft Security Channel 9](https://channel9.msdn.com/Sho
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Working with sensitive accounts (Arbeiten mit sensiblen Konten)](sensitive-accounts.md)
 - [Weitere Informationen finden Sie im ATP-Forum.](https://aka.ms/azureatpcommunity)
