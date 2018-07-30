@@ -2,10 +2,10 @@
 title: Was ist Microsoft Advanced Threat Analytics (ATA)? | Microsoft-Dokumentation
 description: Hier wird erläutert, was Microsoft Advanced Threat Analytics (ATA) ist und welche Arten von verdächtigen Aktivitäten erkannt werden können
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 7/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 2f83f3ff564596c37716d79b955ac4fca7d94aa2
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: adca31a6767031fce19f1a14bf8031c911717c9c
+ms.sourcegitcommit: 63a36cd96aec30e90dd77bee1d0bddb13d2c4c64
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30009760"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39227239"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -28,12 +28,12 @@ Advanced Threat Analytics (ATA) ist eine lokale Plattform, mit deren Hilfe Sie I
 
 ## <a name="how-ata-works"></a>So funktioniert ATA
 
-ATA nutzt ein proprietäres Netzwerkanalysemodul, um den Netzwerkverkehr verschiedener Protokolle (z.B. Kerberos, DNS, RPC, NTLM und andere) zwecks Authentifizierung, Autorisierung und zum Sammeln von Informationen zu erfassen und zu analysieren. ATA sammelt die Informationen über:
+ATA nutzt eine proprietäre Netzwerkanalyse-Engine, um den Netzwerkverkehr verschiedener Protokolle (z.B. Kerberos, DNS, RPC, NTLM und andere) zwecks Authentifizierung, Autorisierung und zum Sammeln von Informationen zu erfassen und zu analysieren. ATA sammelt die Informationen über:
 
 -   die Portspiegelung von Domänencontrollern und DNS-Servern bis zum ATA-Gateway bzw.
 -   die direkt Bereitstellung eines ATA-Lightweight-Gateways (LGW) auf Domänencontrollern.
 
-ATA bezieht aus mehreren Datenquellen wie Protokollen und Ereignissen in Ihrem Netzwerk Informationen, um das Verhalten von Benutzern und anderen Personen in der Organisation zu lernen und anschließend ein Verhaltensprofil zu erstellen.
+ATA bezieht Informationen aus mehreren Datenquellen, wie z.B. aus Protokollen und Ereignissen in Ihrem Netzwerk, um das Verhalten von Benutzern und anderen Entitäten in der Organisation zu lernen und anschließend ein Verhaltensprofil zu erstellen.
 ATA kann Ereignisse und Protokolle aus folgenden Quellen beziehen:
 
 -   SIEM-Integration
@@ -47,9 +47,9 @@ Weitere Informationen zur ATA-Architektur finden Sie unter [ATA-Architektur](ata
 
 Die ATA-Technologie erkennt verschiedene verdächtige Aktivitäten und konzentriert sich dabei auf die verschiedenen Phasen der Angriffskette von Cyber-Angriffen, so z.B.:
 
--   Reconnaissance, während der die Angreifer Informationen zum Aufbau der Umgebung, zu den verschiedenen Assets und zu den vorhandenen Entitäten erfassen. Sie erstellen ganz allgemein einen Plan für die nächsten Phasen ihres Angriffs.
+-   Reconnaissance, während der die Angreifer Informationen zum Aufbau der Umgebung, zu den verschiedenen Assets und zu den vorhandenen Entitäten erfassen. Häufig ist dies der Punkt, an dem Angreifer die nächsten Angriffsphasen planen.
 -   Der Zyklus der Seitwärtsbewegung: Die Angreifer investieren Zeit und Mühe in die Verbreiterung ihrer Angriffsfläche in Ihrem Netzwerk.
--   Domänendominanz (-persistenz): Die Angreifer sammeln die Informationen, mithilfe derer sie ihren Angriff fortsetzen und dabei eine Vielzahl von Einstiegspunkten, Anmeldeinformationen und Techniken anwenden können. 
+-   Domänendominanz (Domänenpersistenz): In dieser Phase sammeln Angreifer die Informationen, mit deren Hilfe sie ihren Angriff fortsetzen und dabei verschiedene Einstiegspunkte, Anmeldeinformationen und Techniken nutzen können. 
 
 Diese Phasen eines Cyberangriffs ähneln sich und sind vorhersagbar, unabhängig davon, welche Art von Unternehmen angegriffen oder auf welche Art von Informationen abgezielt wird.
 ATA sucht nach drei Haupttypen von Angriffen: böswillige Angriffe, ungewöhnliches/nicht normales Verhalten und Sicherheitsprobleme und -risiken.
@@ -68,7 +68,7 @@ ATA sucht nach drei Haupttypen von Angriffen: böswillige Angriffe, ungewöhnlic
 
 Eine vollständige Liste der Erkennungstypen und deren Beschreibungen finden Sie unter [Nach welchen Bedrohungen sucht ATA](ata-threats.md). 
 
-ATA erkennt diese verdächtigen Aktivitäten und zeigt Informationen dazu in der ATA-Konsole an, einschließlich einer Übersicht darüber, wer den Angriff wann und wie ausgeführt hat und was dabei geschehen ist. Durch die Überwachung dieses einfachen und benutzerfreundlichen Dashboards werden Sie also benachrichtigt, wenn ATA vermutet, dass ein Pass-the-Ticket-Angriff auf die Computer Client 1 und Client 2 in Ihrem Netzwerk versucht wurde.
+ATA erkennt diese verdächtigen Aktivitäten und zeigt Informationen dazu in der ATA-Konsole an, einschließlich einer Übersicht darüber, wer den Angriff wann und wie ausgeführt hat und was dabei geschehen ist. Durch die Überwachung dieses einfachen und benutzerfreundlichen Dashboards werden Sie also benachrichtigt, wenn ATA vermutet, dass ein Pass-the-Ticket-Angriff auf die Computer „Client 1“ und „Client 2“ in Ihrem Netzwerk versucht wurde.
 
  ![beispiel ATA bildschirm pass-the-ticket](media/pass_the_ticket_sa.png)
 

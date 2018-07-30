@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/17/2018
+ms.date: 7/20/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c76e459709c786082bea7566a61e5384a235eda4
-ms.sourcegitcommit: 8feb9b65dc0e1de0ace00aca11784e54f9852a15
+ms.openlocfilehash: a48bf96bd6a71282455d932a35aac23ba4c8193a
+ms.sourcegitcommit: 7909deafdd9323f074d0ff2f590e307bcfaaabad
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39098182"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39202131"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -44,7 +44,7 @@ Die Möglichkeit, mehrere Active Directory-Gesamtstrukturen zu unterstützen, bi
 Zum Erkennen von Aktivitäten, die mehrere Gesamtstrukturen umfassen, fragen Azure ATP-Sensoren Domänencontroller in Remotegesamtstrukturen ab, um Profile für alle beteiligten Entitäten zu erstellen, z.B. Benutzer und Computer aus Remotegesamtstrukturen. 
 
 > [!NOTE]
-> - Damit dies funktioniert, muss seine Vertrauensstellung zwischen allen anderen Gesamtstrukturen und der Gesamtstruktur, in der die Azure ATP-Sensoren installiert sind, bestehen.
+> - Azure ATP-Sensoren können in allen Gesamtstrukturen installiert werden (sofern eine minimale unidirektionale Vertrauensstellung vorhanden ist).
 > - Der Benutzer, den Sie in der Azure ATP-Konsole unter **Verzeichnisdienste** konfigurieren, muss in allen anderen Gesamtstrukturen vertrauenswürdig sein.
 
 

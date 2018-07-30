@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/15/2018
+ms.date: 7/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,17 +13,40 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9e28c18f118f7a2dc9d516cf62a113245a7be1fa
-ms.sourcegitcommit: a9b8bc26d3cb5645f21a68dc192b4acef8f54895
+ms.openlocfilehash: be3a4315384d5df03b1f04f0a71a960c66858b05
+ms.sourcegitcommit: 63a36cd96aec30e90dd77bee1d0bddb13d2c4c64
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2018
-ms.locfileid: "39064082"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39227222"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
 
 # <a name="whats-new-in-azure-atp"></a>Neuerungen in Azure ATP 
+
+
+## <a name="azure-atp-release-241"></a>Azure ATP Release 2.41
+
+Veröffentlicht: 22. Juli 2018
+
+- **Unterstützung für mehrere Azure ATP-Gesamtstrukturen wird schrittweise eingeführt (Vorschau)** <br> Azure ATP kann jetzt Organisationen mit mehreren Gesamtstrukturen unterstützen, wodurch Sie die Möglichkeit erhalten, Aktivitäten und Profilbenutzer in allen Gesamtstrukturen zu überwachen. Diese neue Funktionalität ermöglicht Ihnen Folgendes:
+
+  - Sie können Aktivitäten, die von Benutzern in mehreren Gesamtstrukturen ausgeführt werden, in einer zentralen Konsole im Blick behalten und untersuchen.
+  - Durch erweiterte Active Directory-Integration und -Kontoauflösung lassen sich falsch positive Ergebnisse besser erkennen und reduzieren.
+  - Sie profitieren von besseren Überwachungswarnungen und -berichten für eine organisationsübergreifende Übersicht.
+
+
+-   **Neue Erkennungsoptionen: DCShadow**<br>Zwei neue Erkennungsfunktionen helfen Ihnen beim Schutz vor DCShadow-Angriffen (Domain Controller Shadow):
+
+    -   Verdächtige Hochstufung zu Domänencontrollern (potenzieller DCShadow-Angriff): Diese Funktion hilft bei der Erkennung von Angriffen, bei denen ein Computer die Identität eines Domänencontrollers annimmt und dann versucht, die Replikation zu verwenden, um Änderungen an andere Domänencontroller in Ihrer Domäne zu verteilen.
+
+    -   Verdächtige Replikationsanforderung (potenzieller DCShadow-Angriff): Diese Funktion hilft beim Schutz vor Angriffen, bei denen versucht wird, Computer, die keine Domänencontroller sind, zu Domänencontrollern hochzustufen, um Verzeichnisobjekte zu ändern.
+
+-   **Verbesserte Informationen zu Verschlüsselungsdowngrades**<br>Die Erkennung von Verschlüsselungsdowngrades bietet jetzt mehr Informationen zum Typ des erkannten Angriffs: Overpass-the-Hash, Golden Ticket und Skeleton Key. Darüber hinaus wurden diese Warnungen aggregiert, um die Untersuchung zu vereinfachen.
+- Diese Version enthält Fehlerbehebungen und Verbesserungen für mehrere Probleme. 
+
+
 
 ## <a name="azure-atp-release-240"></a>Azure ATP Release 2.40
 
@@ -45,7 +68,7 @@ Veröffentlicht: 5. Juli 2018
 
 Veröffentlicht: 1. Juli 2018
 
-- Diese Version enthält Fehlerbehebungen und Verbesserungen für verschiedene Probleme sowie Erweiterungen des Azure ATP-Portals. 
+- Diese Version enthält Fehlerbehebungen und Verbesserungen für verschiedene Probleme sowie Erweiterungen des Azure ATP-Portals.
 
 ## <a name="azure-atp-release-237"></a>Azure ATP Release 2.37
 

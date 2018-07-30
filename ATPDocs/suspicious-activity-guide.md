@@ -2,10 +2,10 @@
 title: Azure ATP-Handbuch zu verdächtigen Aktivitäten | Microsoft-Dokumentation
 d|Description: This article provides a list of the suspicious activities Azure ATP can detect and steps for remediation.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/5/2018
+ms.date: 7/24/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 83c855a89ad418769c81a4f1da3950ae0b6c54f7
-ms.sourcegitcommit: a9b8bc26d3cb5645f21a68dc192b4acef8f54895
+ms.openlocfilehash: 7ae5ac30d1d17084df4c30d502a58767b97a4582
+ms.sourcegitcommit: 63a36cd96aec30e90dd77bee1d0bddb13d2c4c64
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2018
-ms.locfileid: "39064116"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39227171"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -468,6 +468,72 @@ In dieser Erkennung wird eine Warnung ausgelöst, wenn viele Authentifizierungsf
 **Wartung**
 
 [Komplexe bzw. lange Kennwörter](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) stellen die erste Sicherheitsstufe zum Schutz gegen Brute-Force-Angriffe dar.
+
+## <a name="suspicious-domain-controller-promotion-potential-dcshadow-attack---preview"></a>Verdächtige Hochstufung zu Domänencontrollern (potenzieller DCShadow-Angriff) – Vorschau
+
+**Beschreibung**
+
+Bei einem DCShadow-Angriff (Domain Controller Shadow) handelt es sich um einen Angriff, bei dem mithilfe einer schädlichen Replikation Verzeichnisobjekte geändert werden sollen. Ein solcher Angriff kann von jedem Computer aus erfolgen, indem mithilfe eines Replikationsvorgangs ein nicht autorisierter Domänencontroller erstellt wird.
+ 
+DCShadow verwendet RPC und LDAP zu folgenden Zwecken:
+1. Das Computerkonto wird (unter Verwendung von Domänenadministratorrechten) als Domänencontroller registriert.
+2. Die Replikation wird (unter Verwendung der gewährten Replikationsrechte) über DRSUAPI durchgeführt, und Änderungen werden an Verzeichnisobjekte gesendet.
+ 
+Bei dieser Erkennungsfunktion wird eine Warnung ausgelöst, wenn ein Computer im Netzwerk versucht, sich als nicht autorisierter Domänencontroller zu registrieren. 
+
+**Untersuchung**
+ 
+1. Ist der fragliche Computer ein Domänencontroller? Beispielsweise ein neu hochgestufter Domänencontroller mit Replikationsproblemen. Falls ja, **schließen** Sie die verdächtige Aktivität.
+2. Soll der fragliche Computer Daten von Active Directory replizieren? Beispielsweise Azure AD Connect. Falls ja, können Sie die verdächtige Aktivität **schließen und ausschließen**.
+3. Klicken Sie auf den Quellcomputer oder das Konto, um die entsprechende Profilseite aufzurufen. Überprüfen Sie, was ungefähr zum Zeitpunkt der Replikation passiert ist. Suchen Sie nach ungewöhnlichen Aktivitäten wie z.B.: Wer war angemeldet, auf welche Ressourcen wurde zugegriffen, und um welches Computerbetriebssystem handelt es sich?
+   1. Sollen alle Benutzer, die am Computer angemeldet waren, tatsächlich angemeldet sein? Welche Berechtigungen haben sie? Verfügen sie über die Berechtigung, einen Computer zum Domänencontroller hochzustufen? Handelt es sich um Domänenadministratoren?
+   2. Sollen die Benutzer Zugriff auf diese Ressourcen haben?
+   3. Wird auf dem Computer ein Windows Server-Betriebssystem (oder Windows/Linux) ausgeführt? Ein Computer, bei dem es sich nicht um einen Server handelt, darf keine Daten replizieren.
+Wenn die Windows Defender ATP-Integration aktiviert ist, klicken Sie auf das Windows Defender ATP-Badge ![Windows Defender ATP-Badge](./media/wd-badge.png), um den Computer genauer zu untersuchen. In Windows Defender ATP können Sie sehen, welche Prozesse und Warnungen ungefähr gleichzeitig mit der Warnung aufgetreten sind.
+
+4. Sehen Sie sich in der Ereignisanzeige [Active Directory-Ereignisse an, die im Protokoll der Verzeichnisdienste aufgezeichnet wurden](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)). Sie können das Protokoll verwenden, um Änderungen in Active Directory zu überwachen. Standardmäßig zeichnet Active Directory nur kritische Fehlerereignisse auf. Wenn diese Warnung aber wiederholt auftritt, aktivieren Sie diese Überwachung auf dem entsprechenden Domänencontroller, um eine weitere Untersuchung zu ermöglichen.
+
+**Korrektur**
+
+Überprüfen Sie, welche Benutzer in Ihrer Organisation über die folgenden Berechtigungen verfügen: 
+- Replizieren von Verzeichnisänderungen 
+- Replizieren von allen Verzeichnisänderungen 
+ 
+ 
+Weitere Informationen finden Sie unter [Grant Active Directory Domain Services permissions for profile synchronization in SharePoint Server 2013 (Erteilen von AD DS-Berechtigungen für die Profilsynchronisierung in SharePoint Server 2013)](https://technet.microsoft.com/library/hh296982.aspx). 
+
+Nutzen Sie [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/), oder erstellen Sie ein Windows PowerShell-Skript, um festzustellen, wer in der Domäne über diese Berechtigungen verfügt.
+ 
+
+
+
+## <a name="suspicious-replication-request-potential-dcshadow-attack---preview"></a>Verdächtige Replikationsanforderung (potenzieller DCShadow-Angriff) – Vorschau
+
+**Beschreibung** 
+
+Bei der Active Directory-Replikation werden Änderungen, die auf einem Domänencontroller durchgeführt wurden, mit anderen Domänencontrollern synchronisiert. Wenn Angreifer über die erforderlichen Berechtigungen verfügen, können sie ihren Computerkonten Rechte gewähren, die es ihnen ermöglichen, die Identität eines Domänencontrollers anzunehmen. Die Angreifer werden versuchen, eine schädliche Replikationsanforderung zu initiieren, die es ihnen ermöglicht, Active Directory-Objekte auf einem echten Domänencontroller zu ändern und so in die Domäne einzudringen.
+Bei dieser Erkennungsfunktion wird eine Warnung ausgelöst, wenn eine verdächtige Replikationsanforderung für einen echten Domänencontroller generiert wird, der durch Azure ATP geschützt ist. Dieses Verhalten weist auf Techniken hin, die bei DCShadow-Angriffen verwendet werden.
+
+**Untersuchung** 
+ 
+1. Ist der fragliche Computer ein Domänencontroller? Beispielsweise ein neu hochgestufter Domänencontroller mit Replikationsproblemen. Falls ja, **schließen** Sie die verdächtige Aktivität.
+2. Soll der fragliche Computer Daten von Active Directory replizieren? Beispielsweise Azure AD Connect. Falls ja, können Sie die verdächtige Aktivität **schließen und ausschließen**.
+3. Klicken Sie auf den Quellcomputer, um die entsprechende Profilseite aufzurufen. Überprüfen Sie, was **ungefähr zum Zeitpunkt** der Replikation passiert ist. Suchen Sie nach ungewöhnlichen Aktivitäten wie z.B.: Wer war angemeldet, welche Ressourcen wurden verwendet, und um welches Computerbetriebssystem handelt es sich?
+
+   1.  Sollen alle Benutzer, die am Computer angemeldet waren, tatsächlich angemeldet sein? Welche Berechtigungen haben sie? Besitzen sie die Berechtigung, Replikationen auszuführen (sind sie Domänenadministratoren)?
+   2.  Sollen die Benutzer Zugriff auf diese Ressourcen haben?
+   3. Wird auf dem Computer ein Windows Server-Betriebssystem (oder Windows/Linux) ausgeführt? Ein Computer, bei dem es sich nicht um einen Server handelt, darf keine Daten replizieren.
+Wenn die Windows Defender ATP-Integration aktiviert ist, klicken Sie auf das Windows Defender ATP-Badge ![Windows Defender ATP-Badge](./media/wd-badge.png), um den Computer genauer zu untersuchen. In Windows Defender ATP können Sie sehen, welche Prozesse und Warnungen ungefähr gleichzeitig mit der Warnung aufgetreten sind.
+1. Sehen Sie sich in der Ereignisanzeige [Active Directory-Ereignisse an, die im Protokoll der Verzeichnisdienste aufgezeichnet wurden](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)). Sie können das Protokoll verwenden, um Änderungen in Active Directory zu überwachen. Standardmäßig zeichnet Active Directory nur kritische Fehlerereignisse auf. Wenn diese Warnung aber wiederholt auftritt, aktivieren Sie diese Überwachung auf dem entsprechenden Domänencontroller, um eine weitere Untersuchung zu ermöglichen.
+
+**Wartung**
+
+Überprüfen Sie, welche Benutzer in Ihrer Organisation über die folgenden Berechtigungen verfügen: 
+- Replizieren von Verzeichnisänderungen 
+- Replizieren von allen Verzeichnisänderungen 
+
+Nutzen Sie zu diesem Zweck den [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/), oder erstellen Sie ein Windows PowerShell-Skript, um zu ermitteln, wer in der Domäne über diese Berechtigungen verfügt.
+
 
 ## <a name="suspicious-service-creation"></a>Erstellen eines verdächtigen Diensts
 
