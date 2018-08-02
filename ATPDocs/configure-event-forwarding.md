@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3547519f-8d9c-40a9-8f0e-c7ba21081203
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: df06235de3a29051f9ffcd889bb95936ed9fc27d
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 1b37bcbfc304ee0ef71d80eb84f6298d64e50d3f
+ms.sourcegitcommit: eebf1156aaae199b6aaa7e431cd6372e572b1e9f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2018
-ms.locfileid: "29445006"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39396416"
 ---
 *Gilt für: Azure Advanced Threat Protection Version 1.9*
 
@@ -57,15 +57,15 @@ Sie müssen die Domänencontroller neu starten, nachdem Sie den **Netzwerkdienst
 2.  Geben Sie an einer Eingabeaufforderung *gpedit.msc* ein.
 3.  Erweitern Sie **Computerkonfiguration > Administrative Vorlagen > Windows-Komponenten > Ereignisweiterleitung**.
 
- ![Local policy group editor image](media/wef 1 local group policy editor.png)
+ ![Local policy group editor image](media/wef%201%20local%20group%20policy%20editor.png)
 
 4.  Doppelklicken Sie auf **Ziel-Abonnement-Manager konfigurieren**.
    
     1.  Wählen Sie **Aktiviert** aus.
     2.  Klicken Sie unter **Optionen** auf **Anzeigen**.
-    3.  Geben Sie unter **SubscriptionManagers** den folgenden Wert ein, und klicken Sie auf **OK**: *Server=http://<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10* (z.B.: Server=http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
+    3.  Geben Sie unter **SubscriptionManagers** folgenden Wert ein, und klicken Sie auf **OK**: *Server=http://<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10* (Zum Beispiel: Server=http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
  
-   ![Configure target subscription image](media/wef 2 config target sub manager.png)
+   ![Configure target subscription image](media/wef%202%20config%20target%20sub%20manager.png)
    
     5.  Klicken Sie auf **OK**.
     6.  Geben Sie von einer Eingabeaufforderung mit erhöhten Rechten aus *gpupdate /force* ein. 
@@ -82,7 +82,7 @@ Sie müssen die Domänencontroller neu starten, nachdem Sie den **Netzwerkdienst
         1.  Klicken Sie auf **Domänencomputer hinzufügen**.
         2.  Geben Sie den Namen des Domänencontrollers in das Feld **Namen des auszuwählenden Objekts eingeben** ein. Klicken Sie anschließend auf **Namen überprüfen**, und klicken Sie auf **OK**. 
        
-        ![Event Viewer image](media/wef3 event viewer.png)
+        ![Event Viewer image](media/wef3%20event%20viewer.png)
    
         
         3.  Klicken Sie auf **OK**.
