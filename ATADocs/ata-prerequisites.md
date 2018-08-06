@@ -2,10 +2,10 @@
 title: Advanced Threat Analytics-Voraussetzungen | Microsoft-Dokumentation
 description: Beschreibt die Voraussetzungen für eine erfolgreiche Bereitstellung von ATA in Ihrer Umgebung.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 5/6/2018
+ms.date: 7/25/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 90c4bcad1b5a2d6da06153706129d9670ad57e1c
-ms.sourcegitcommit: 321ff1af2c140f41600c4c42ac4d455b3cdb9440
+ms.openlocfilehash: 199830a6cd0b84cf897311cc80472a078f582b59
+ms.sourcegitcommit: 759e99f670c42c2dd60d07b2200d3de01ddf6055
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36233003"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39335910"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -129,7 +129,7 @@ In der folgenden Tabelle sind die Ports aufgelistet, die mindestens geöffnet we
 
 ### <a name="certificates"></a>Zertifikate
 
-Um die Installation von ATA zu erleichtern, können Sie während dieser Installation selbstsignierte Zertifikate installieren. Nach der Bereitstellung sollten Sie die selbstsignierten Zertifikate durch ein Zertifikat einer internen Zertifizierungsstelle ersetzen, das vom ATA-Center verwendet werden soll.
+Um die Installation und Bereitstellung von ATA zu beschleunigen, können Sie während dieser Installation selbstsignierte Zertifikate installieren. Wenn Sie selbstsignierte Zertifikate verwendet haben, empfiehlt es sich nach der ersten Bereitstellung, die selbstsignierten Zertifikate durch Zertifikate einer internen Zertifizierungsstelle zu ersetzen, damit ATA Center diese verwendet.
 
 
 Stellen Sie sicher, dass das ATA-Center und die ATA-Gateways Zugriff auf den CRL-Verteilungspunkt haben. Wenn sie keinen Zugriff auf das Internet haben, führen Sie [das Verfahren zum manuellen Importieren einer Zertifikatsperrliste](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx) durch. Achten Sie dabei darauf, alle CRL-Verteilungspunkte für die gesamte Kette zu installieren.
@@ -139,6 +139,7 @@ Ein Zertifikat muss Folgendes besitzen:
 -   Den Anbietertyp „Kryptografiedienstanbieter“ (CSP) oder „Schlüsselspeicheranbieter“ (KSP)
 -   Eine Länge von 2048 Bits für öffentliche Schlüssel
 -   Einen festgelegten Wert für die Flags KeyEncipherment und ServerAuthentication
+-   Den KeySpec- bzw. KeyNumber-Wert „KeyExchange“ (AT\_KEYEXCHANGE). Beachten Sie, dass der Wert „Signature“ (AT\_SIGNATURE) nicht unterstützt wird. 
 
 Sie können beispielsweise den **Standardwebserver** oder **Computervorlagen** verwenden.
 

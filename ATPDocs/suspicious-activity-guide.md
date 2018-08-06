@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7ae5ac30d1d17084df4c30d502a58767b97a4582
-ms.sourcegitcommit: 63a36cd96aec30e90dd77bee1d0bddb13d2c4c64
+ms.openlocfilehash: 4e6a7d90ad5670b3d1c01ba70d7b5a81e8808b5e
+ms.sourcegitcommit: 759e99f670c42c2dd60d07b2200d3de01ddf6055
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39227171"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39335876"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -101,7 +101,7 @@ Es gibt drei Arten von Erkennung:
 
 **Untersuchung**
 
-Überprüfen Sie zunächst die Beschreibung der Warnung, um festzustellen, welche der drei oben aufgeführten Arten von Erkennung vorliegt. Laden Sie für weitere Informationen das Excel-Arbeitsblatt herunter.
+Überprüfen Sie zunächst die Beschreibung der Warnung, um festzustellen, mit welcher der drei obenstehenden Arten der Erkennung Sie es zu tun haben. Laden Sie für weitere Informationen das Excel-Arbeitsblatt herunter.
 
 1.  Skeleton Key: Sie können überprüfen, ob Ihre Domänencontroller von Skeleton Key betroffen sind, indem Sie [den vom Azure ATP-Team entwickelten Scanner](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73) verwenden. Wenn der Scanner Schadsoftware auf einem oder mehreren Ihrer Domänencontroller findet, ist dies ein richtig positives Ereignis.
 
@@ -109,9 +109,9 @@ Es gibt drei Arten von Erkennung:
 
   1. Überprüfen Sie die Ressource, auf die von diesen Tickets aus zugegriffen wird. Wenn auf eine Ressource von allen zugegriffen wird, stellen Sie sicher, dass es sich um eine gültige Ressource handelt, auf die zugegriffen werden soll. Überprüfen Sie zudem, ob die Zielressource starke Verschlüsselungsmethoden unterstützt. Sie können dies in Active Directory überprüfen, indem Sie das Attribut „msDS-SupportedEncryptionTypes“ des Ressourcendienstkontos überprüfen.
   
-  2. Überprüfen Sie den Quellcomputer und das Konto. Überprüfen Sie im Fall von mehreren Quellcomputern und Konten, ob diese etwas gemeinsam haben (alle Marketingmitarbeiter verwenden z.B. eine bestimmte App, die die Warnung möglicherweise ausgelöst hat). Es gibt Fälle, in denen eine benutzerdefinierte Anwendung, die selten genutzt wird, mit einem niedrigeren Verschlüsselungsverfahren authentifiziert wird. Überprüfen Sie, ob solche Apps auf dem Quellcomputer vorhanden sind. Falls ja, ist dies wahrscheinlich ein unbedenklich richtig positives Ereignis und kann unterdrückt werden.
+  2. Überprüfen Sie den Quellcomputer und das Quellkonto. Wenn mehrere Quellcomputer und -konten vorhanden sind, überprüfen, ob diese eine Gemeinsamkeit aufweisen. Beispielsweise könnten alle Marketingmitarbeiter eine bestimmte App verwenden, die das Auslösen der Warnung verursacht. Es gibt Fälle, in denen eine benutzerdefinierte Anwendung, die selten genutzt wird, mit einem niedrigeren Verschlüsselungsverfahren authentifiziert wird. Überprüfen Sie, ob solche Apps auf dem Quellcomputer vorhanden sind. Falls ja, ist dies wahrscheinlich ein unbedenklich richtig positives Ereignis und kann unterdrückt werden.
   
-  
+
 
 3.  Overpass-the-Hash: Wechseln Sie im Excel-Arbeitsblatt zur Registerkarte mit der Netzwerkaktivität. Sie werden feststellen, dass das entsprechende heruntergestufte Feld **Encrypted Timestamp Encryption Type** ist und dass **Source Computer Supported Encryption Types** stärkere Verschlüsselungsmethoden enthält.
 
@@ -120,7 +120,7 @@ Es gibt drei Arten von Erkennung:
 
 **Wartung**
 
-1.  Skeleton Key – Entfernen der Schadsoftware Weitere Informationen finden Sie in der [Skeleton Key Malware Analysis (Analyse der Skeleton Key-Schadsoftware)](https://www.secureworks.com/research/skeleton-key-malware-analysis) von SecureWorks.
+1.  Skeleton Key – Entfernen der Schadsoftware Weitere Informationen finden Sie in der [Skeleton Key Malware Analysis](https://www.virusbulletin.com/virusbulletin/2016/01/paper-digital-bian-lian-face-changing-skeleton-key-malware) (Analyse der Skeleton Key-Schadsoftware).
 
 2.  Golden Ticket: Befolgen Sie die Anweisungen zu verdächtigen Aktivitäten unter [Golden Ticket](#golden-ticket).   
     Implementieren Sie ebenfalls die [Pass the hash recommendations (Empfehlungen zu Pass-the-Hash)](http://aka.ms/PtH), da für das Erstellen eines Golden Tickets Domänenadministratorrechte erforderlich sind.

@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: b8ad5511-8893-4d1d-81ee-b9a86e378347
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 9f00d01d7986b6a04c4ba69f25e5c84259c66f99
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: b2b00342c3c13615386fa1c16d98d28fbbf1d121
+ms.sourcegitcommit: eebf1156aaae199b6aaa7e431cd6372e572b1e9f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30010355"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39396382"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -30,7 +30,7 @@ Die ATA-Protokolle geben Einblick in die Aktivitäten der einzelnen Komponenten 
 ## <a name="ata-gateway-logs"></a>Protokolle des ATA-Gateways
 In diesem Abschnitt gilt jeder Verweis auf das ATA-Gateway ebenfalls für das ATA-Lightweight-Gateway. 
 
-Die Protokolle des ATA-Gateways befinden sich im Unterordner **Protokolle** im Installationsordner von ATA. Der Standardpfad lautet: **C:\Programme\Microsoft Advanced Threat Analytics\**. Dieser ist im Standardinstallationsverzeichnis unter **C:\Programme\Microsoft Advanced Threat Analytics\Gateway\Logs** zu finden.
+Die Protokolle des ATA-Gateways befinden sich im Unterordner **Protokolle** im Installationsordner von ATA. Der Standardpfad lautet: **C:\Programme\Microsoft Advanced Threat Analytics\\**. Dieser ist im Standardinstallationsverzeichnis unter **C:\Programme\Microsoft Advanced Threat Analytics\Gateway\Logs** zu finden.
 
 Für das ATA-Gateway sind folgende Protokolle verfügbar:
 

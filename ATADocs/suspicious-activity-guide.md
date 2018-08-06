@@ -2,10 +2,10 @@
 title: ATA-Handbuch zu verdächtigen Aktivitäten | Microsoft-Dokumentation
 d|Description: This article provides a list of the suspicious activities ATA can detect and steps for remediation.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 5/21/2018
+ms.date: 7/29/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b6c11292fd8e7436257e4616c65d76aad1aed8de
-ms.sourcegitcommit: c01f93bd9e41355d2f47f648e3fea7736e1218f6
+ms.openlocfilehash: 1a2585ac6d9bf73e7ad92dd6a053d7daf77a40f5
+ms.sourcegitcommit: 759e99f670c42c2dd60d07b2200d3de01ddf6055
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2018
-ms.locfileid: "34402094"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39335927"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -130,7 +130,7 @@ Es gibt drei Arten von Erkennung:
 
 **Wartung**
 
-1.  Skeleton Key – Entfernen der Schadsoftware Weitere Informationen finden Sie in der [Skeleton Key Malware Analysis (Analyse der Skeleton Key-Schadsoftware)](https://www.secureworks.com/research/skeleton-key-malware-analysis) von SecureWorks.
+1.  Skeleton Key – Entfernen der Schadsoftware Weitere Informationen finden Sie in der [Skeleton Key Malware Analysis](https://www.virusbulletin.com/virusbulletin/2016/01/paper-digital-bian-lian-face-changing-skeleton-key-malware) (Analyse der Skeleton Key-Schadsoftware).
 
 2.  Golden Ticket: Befolgen Sie die Anweisungen zu verdächtigen Aktivitäten unter [Golden Ticket](#golden-ticket).   
     Implementieren Sie ebenfalls die [Pass the hash recommendations (Empfehlungen zu Pass-the-Hash)](http://aka.ms/PtH), da für das Erstellen eines Golden Tickets Domänenadministratorrechte erforderlich sind.

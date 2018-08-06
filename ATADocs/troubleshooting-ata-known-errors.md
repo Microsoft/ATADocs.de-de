@@ -2,10 +2,10 @@
 title: Behandlung von bekannten Problemen bei ATA | Microsoft-Dokumentation
 description: Beschreibt, wie sie bekannte Probleme in Advanced Threat Analytics (ATA) behandeln können
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 7/25/2018
 ms.topic: article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: a7172447de5b4d4088da2d8d687a7bec47a01551
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 3433da5ca3d6d08f91cd97b24f6b97251c6b28ae
+ms.sourcegitcommit: 759e99f670c42c2dd60d07b2200d3de01ddf6055
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30010481"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39335995"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -66,7 +66,11 @@ In diesem Abschnitt sind mögliche Fehler, die es in den Bereitstellungen von AT
 |Fehler [\[]DeploymentModel[\]] Verwaltungsauthentifizierung mit Fehler [\[]CurrentlyLoggedOnUser=<domain>\<username>Status=FailedAuthentication Exception=[\]]|Der Bereitstellungsprozess für das ATA-Gateway oder das ATA-Lightweight-Gateway konnte in ATA Center nicht erfolgreich authentifiziert werden.|Öffnen Sie auf dem Computer, auf dem der fehlerhafte Bereitstellungsprozess ausgeführt wurde, einen Browser, und versuchen Sie, die ATA-Konsole zu erreichen. </br>Wenn dies nicht möglich ist, starten Sie die Problembehandlung, um zu ermitteln, warum der Browser sich nicht in ATA Center authentifizieren kann. </br>Überprüfen Sie Folgendes: </br>Proxykonfiguration</br>Netzwerkprobleme</br>Gruppenrichtlinieneinstellungen für die Authentifizierung auf diesem Computer, die sich von den Einstellungen in ATA Center unterscheiden|
 
 
-
+## <a name="ata-center-errors"></a>ATA Center-Fehler
+> [!div class="mx-tableFixed"]
+|Fehler|Beschreibung|Lösung|
+|-------------|----------|---------|
+|System.Security.Cryptography.CryptographicException: Zugriff verweigert.|ATA Center konnte das ausgestellte Zertifikat nicht für die Entschlüsselung verwenden. Dies liegt höchstwahrscheinlich daran, dass ein Zertifikat verwendet wurde, dessen KeySpec- bzw. KeyNumber-Wert auf „Signature“ (AT\_SIGNATURE) festgelegt wurde. Dies wird für die Entschlüsselung nicht unterstützt. Stattdessen sollte KeyExchange (AT\_KEYEXCHANGE) verwendet werden.|1.    Beenden Sie den ATA Center-Dienst. <br></br>2.     Löschen Sie das ATA Center-Zertifikat aus dem ATA Center-Zertifikatspeicher. (Stellen Sie vor dem Löschen sicher, dass Sie das Zertifikat mit dem privaten Schlüssel in einer PFX-Datei gesichert haben.) <br></br>3.    Öffnen Sie eine Eingabeaufforderung mit erhöhten Rechten, und führen Sie folgenden Befehl aus: certutil -importpfx "CenterCertificate.pfx" AT\_KEYEXCHANGE <br></br>4.     Starten Sie den ATA Center-Dienst. <br></br>5.     Überprüfen Sie, ob alles wie erwartet funktioniert.|
 
 
 ## <a name="ata-gateway-and-lightweight-gateway-issues"></a>Probleme im ATA-Gateway und Lightweight-Gateway
