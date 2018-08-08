@@ -25,7 +25,7 @@
 ### [Überprüfen der Portspiegelung](validate-port-mirroring.md)
 ### [Konfigurieren der Ereignissammlung](configure-event-collection.md)
 ### [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-forwarding.md)
-# Verwendung
+# Verwenden Sie
 ## [Azure ATP-Integritätscenter](atp-health-center.md)
 ## [Azure ATP-Berichte](reports.md)
 ## [Azure ATP-Rollengruppen](atp-role-groups.md)
@@ -43,7 +43,8 @@
 ## [Arbeiten mit verdächtigen Aktivitäten](working-with-suspicious-activities.md)
 ## [Handbuch zu verdächtigen Aktivitäten](suspicious-activity-guide.md)
 ## [Investigate lateral movement paths with Azure ATP (Untersuchen von Lateral Movement-Pfaden mit Azure ATP)](use-case-lateral-movement-path.md)
-## [Untersuchen von Entitäten](entity-profiles.md)
+## [Untersuchen von Entitäten](investigate-entity.md)
+## [Grundlegendes zu Entitätenprofilen](entity-profiles.md)
 # Problembehandlung
 ## [Behandeln häufiger Probleme](troubleshooting-atp-known-issues.md)
 ## [Support und Informationen](atp-support.md)
