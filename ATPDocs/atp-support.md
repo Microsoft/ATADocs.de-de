@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 8ae459ac-9fca-4923-9a1a-dc10d5c50b29
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 58e3b0d04b196f0c49b6e146952c1819c8413ee3
-ms.sourcegitcommit: adfa7a3a3918518b6b14b94d3c0a9f899142196a
+ms.openlocfilehash: 281db5cfee9366babfcdf30e14a80122aa6d04c8
+ms.sourcegitcommit: 7ab273d1a4c05b457ee02f1631f642346d687b1e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2018
-ms.locfileid: "29977572"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39625607"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -30,7 +30,7 @@ In den folgenden Ressourcen erhalten Sie allgemeine Informationen sowie Informat
 
 |Zweck|Vorgehensweise|
 |----|----|
-|Unsere beliebteste Dokumentation|Lesen Sie die fünf beliebtesten Seiten:|- [What is Azure Advanced Threat Protection? (Was ist Azure Advanced Threat Protection?)](what-is-atp.md)<br>- [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](atp-prerequisites.md)<br>- [Azure ATP architecture (Azure ATP-Architektur)](atp-architecture.md)<br>- [Azure ATP capacity planning (Azure ATP-Kapazitätsplanung)](atp-capacity-planning.md)<br>- [Creating a workspace (Erstellen eines Arbeitsbereichs)](install-atp-step1.md)|
+|Unsere beliebteste Dokumentation|Lesen Sie die fünf beliebtesten Seiten:<br>- [What is Azure Advanced Threat Protection? (Was ist Azure Advanced Threat Protection?)](what-is-atp.md)<br>- [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](atp-prerequisites.md)<br>- [Azure ATP architecture (Azure ATP-Architektur)](atp-architecture.md)<br>- [Azure ATP capacity planning (Azure ATP-Kapazitätsplanung)](atp-capacity-planning.md)<br>- [Creating a workspace (Erstellen eines Arbeitsbereichs)](install-atp-step1.md)|
 |Mit dem Produktteam und Ihren Kollegen in Kontakt treten|Besuchen Sie die [Tech Community](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) für Azure Advanced Threat Protection.|
 |Sehen Sie sich die Abonnementinformationen und eine Liste der unterstützten Features an.|Informationen dazu finden Sie in den [Abonnementinformationen](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) und der [Featureliste](https://www.microsoft.com/cloud-platform/azure-information-protection-features) auf der Azure Advanced Threat Protection-Website.|
 

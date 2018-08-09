@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: cdaddca3-e26e-4137-b553-8ed3f389c460
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 9ed585d37363fbae2604fe0ea705a0ea30b9b283
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 6f54967cfdbe7710168bf8f57a3280d5138923f1
+ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30010294"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39585202"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -55,6 +55,7 @@ Die Domänencontroller und ATA-Gateways können physisch oder virtuell vorhanden
 |Physisch|Virtuell|Achten Sie darauf, dass der virtuelle Switch dieses Szenario unterstützt. Ebenfalls erforderlich ist eine entsprechende Konfiguration für die Portspiegelung auf den physischen Switches für folgendes Szenario:<br /><br />Wenn sich der virtuelle Host auf demselben physischen Switch befindet, muss auf Switchebene ein SPAN konfiguriert werden.<br /><br />Wenn sich der virtuelle Host auf einem anderen Switch befindet, muss RSPAN oder ERSPAN&#42; konfiguriert werden.|
 |Physisch|Physisch auf demselben Switch|Der physische Switch muss SPAN/Portspiegelung unterstützen.|
 |Physisch|Physisch auf einem anderen Switch|Erfordert physische Switches mit Unterstützung für RSPAN oder ERSPAN&#42;.|
+
 &#42;ERSPAN wird nur unterstützt, wenn der Datenverkehr vor der Analyse durch ATA aufgeschlüsselt wird.
 
 > [!NOTE]

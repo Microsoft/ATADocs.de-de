@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 51911e39-76c7-4dcd-bc0b-ec6235d0403f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 56b3cea2089c64e2c78361c44d049d6de67764b6
-ms.sourcegitcommit: 759e99f670c42c2dd60d07b2200d3de01ddf6055
+ms.openlocfilehash: a6876de4f5cf293d58da08ab4e3a8443e76480f1
+ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "30202271"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39585068"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -49,14 +49,14 @@ Führen Sie die folgenden Schritte auf dem Azure ATP-Sensorserver oder -Domänen
 > [!NOTE] 
 > Eine Installation direkt aus der ZIP-Datei verursacht einen Fehler.
 
-2.  Führen Sie **Azure ATP sensor setup.exe** aus, und befolgen Sie die Anweisungen des Setup-Assistenten.
+3.  Führen Sie **Azure ATP sensor setup.exe** aus, und befolgen Sie die Anweisungen des Setup-Assistenten.
 
-3.  Wählen Sie auf der Seite **Willkommen** Ihre Sprache aus, und klicken Sie auf **Weiter**.
+4.  Wählen Sie auf der Seite **Willkommen** Ihre Sprache aus, und klicken Sie auf **Weiter**.
 
      ![Sprache der Installation des eigenständigen Azure ATP-Sensors](media/sensor-install-language.png)
 
 
-4.  Der Installations-Assistent überprüft automatisch, ob der Server ein Domänencontroller oder ein dedizierter Server ist. Wenn es sich um einen Domänencontroller handelt, wird der Azure ATP-Sensor installiert. Wenn es sich um einen dedizierten Server handelt, wird der eigenständige Azure ATP-Sensor installiert. 
+5.  Der Installations-Assistent überprüft automatisch, ob der Server ein Domänencontroller oder ein dedizierter Server ist. Wenn es sich um einen Domänencontroller handelt, wird der Azure ATP-Sensor installiert. Wenn es sich um einen dedizierten Server handelt, wird der eigenständige Azure ATP-Sensor installiert. 
     
     Beispielsweise wird im Falle eines eigenständigen Azure ATP-Sensors der folgende Bildschirm angezeigt, um Sie darüber zu informieren, dass ein eigenständiger Azure ATP-Sensor auf Ihrem dedizierten Server installiert wird:
     
@@ -67,7 +67,7 @@ Führen Sie die folgenden Schritte auf dem Azure ATP-Sensorserver oder -Domänen
     > [!NOTE] 
     > Wenn der Domänencontroller oder der dedizierte Server nicht den Mindestanforderungen der Hardware für die Installation entspricht, erhalten Sie eine Warnung. Dies verhindert nicht, dass Sie auf **Weiter** klicken können und mit der Installation fortfahren können. Dies ist möglicherweise die richtige Option für die Installation von Azure ATP in einer Testumgebung für ein kleines Labor, in der Sie nicht so viel Platz für die Datenspeicherung benötigen. Für Produktionsumgebungen wird dringend empfohlen, mit dem Handbuch zur [Kapazitätsplanung](atp-capacity-planning.md) von Azure ATP zu arbeiten, um sicherzustellen, dass Ihre Domänencontroller oder dedizierten Server den nötigen Anforderungen entsprechen.
 
-4.  Geben Sie basierend auf Ihrer Umgebung unter **Configure the sensor** (Sensor konfigurieren) den Installationspfad und den Zugriffsschlüssel ein, die Sie im vorherigen Schritt kopiert haben:
+6.  Geben Sie basierend auf Ihrer Umgebung unter **Configure the sensor** (Sensor konfigurieren) den Installationspfad und den Zugriffsschlüssel ein, die Sie im vorherigen Schritt kopiert haben:
 
     ![Bild: Konfiguration des eigenständigen Azure ATP-Sensors](media/sensor-install-config.png)
 
@@ -75,7 +75,7 @@ Führen Sie die folgenden Schritte auf dem Azure ATP-Sensorserver oder -Domänen
 
       - Zugriffsschlüssel: Dieser wird vom Arbeitsbereichsportal im vorherigen Schritt abgerufen.
     
-5. Klicken Sie auf **Installieren**. Bei der Installation des Azure ATP-Sensors werden die folgenden Komponenten installiert und konfiguriert:
+7. Klicken Sie auf **Installieren**. Bei der Installation des Azure ATP-Sensors werden die folgenden Komponenten installiert und konfiguriert:
 
     -   KB 3047154 (nur für Windows Server 2012 R2)
 
@@ -86,7 +86,7 @@ Führen Sie die folgenden Schritte auf dem Azure ATP-Sensorserver oder -Domänen
     -   Azure ATP-Sensordienst und Azure ATP-Sensorupdatedienst
     -   Microsoft Visual C++ 2013 Redistributable
 
-5.  Klicken Sie nach Abschluss der Installation auf **Starten**, um den Browser zu öffnen und sich beim Azure ATP-Arbeitsbereichsportal anzumelden.
+8.  Klicken Sie nach Abschluss der Installation auf **Starten**, um den Browser zu öffnen und sich beim Azure ATP-Arbeitsbereichsportal anzumelden.
 
 
 >[!div class="step-by-step"]
