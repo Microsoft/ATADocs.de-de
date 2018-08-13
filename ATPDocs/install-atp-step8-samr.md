@@ -2,10 +2,10 @@
 title: Konfigurieren von SAM-R zum Aktivieren eines Erkennungsvorgangs für Lateral Movement-Pfade in Azure ATP | Microsoft-Dokumentation
 description: Informationen zum Konfigurieren von SAM-R zum Aktivieren eines Lateral Movement-Pfads in Azure ATP
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/17/2018
+ms.date: 7/31/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: b09adce3-0fbc-40e3-a53f-31f57fe79ca3
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a529c9751fc993ec0913a54772d46161f39199f6
-ms.sourcegitcommit: 8feb9b65dc0e1de0ace00aca11784e54f9852a15
+ms.openlocfilehash: 955051a93b017af2f1d97bccf32735e9ceaaf19f
+ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39098167"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39567847"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -30,9 +30,9 @@ ms.locfileid: "39098167"
 
 ## <a name="step-8-configure-sam-r-required-permissions"></a>Schritt 8: Konfigurieren von für SAM-R erforderliche Berechtigungen
 
-Der Erkennungsvorgang für [Lateral Movement-Pfade](use-case-lateral-movement-path.md) ist abhängig von Abfragen, die lokale Administratoren auf bestimmten Computern ermitteln. Diese Abfragen werden mithilfe des SAM-R-Protokolls über das in [Schritt 2 erstellte Azure-ATP-Dienstkonto ausgeführt. Verbinden mit AD](install-atp-step2.md).
+Der Erkennungsvorgang für [Lateral Movement-Pfade](use-case-lateral-movement-path.md) ist abhängig von Abfragen, die lokale Administratoren auf bestimmten Computern ermitteln. Diese Abfragen werden mithilfe des SAM-R-Protokolls über das in [Schritt 2 erstellte Azure ATP-Dienstkonto ausgeführt. Verbinden mit AD](install-atp-step2.md).
  
-Wenn Sie sicherstellen möchten, dass Windows-Clients und -Server zulassen, dass das Azure ATP-Konto diesen SAM-R-Vorgang durchführt, muss die **Gruppenrichtlinie** geändert werden, damit das Azure ATP-Dienstkonto zu den konfigurierten Konten hinzugefügt wird, die in der Richtlinie für den **Netzwerkzugriff** aufgeführt sind.
+Wenn Sie sicherstellen möchten, dass Windows-Clients und -Server zulassen, dass Ihr Azure ATP-Konto SAM-R durchführt, muss die **Gruppenrichtlinie** geändert werden, damit das Azure ATP-Dienstkonto zu den konfigurierten Konten hinzugefügt wird, die in der Richtlinie für den **Netzwerkzugriff** aufgeführt sind.
 
 1. Finden der Richtlinie:
 
@@ -45,9 +45,12 @@ Wenn Sie sicherstellen möchten, dass Windows-Clients und -Server zulassen, dass
  
   ![Hinzufügen des Diensts](./media/samr-add-service.png)
 
-3. Der **Azure ATP-Dienst**, der bei der Installation erstellt wurde, weist nun die nötigen Berechtigungen auf, um SAMR in der Umgebung auszuführen.
+3. Der **Azure ATP-Dienst**, der bei der Installation erstellt wurde, weist nun die nötigen Berechtigungen auf, um SAM-R in der Umgebung auszuführen.
 
-Weitere Informationen zu SAM-R und dieser Gruppenrichtlinie finden Sie unter [Network access: Restrict clients allowed to make remote calls to SAM (Netzwerkzugriff: Einschränken der Clients, die Remoteaufrufe an SAM durchführen dürfen)](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
+> [!NOTE]
+> Stellen Sie vor der Erzwingung neuer Richtlinien sicher, dass Ihre Umgebung weiterhin geschützt ist, ohne dass Ihre Anwendungskompatibilität beeinträchtigt wird, indem Sie den Überwachungsmodus aktivieren und die vorgeschlagenen Änderungen im Überwachungsmodus überprüfen.
+
+Weitere Informationen zu SAM-R und dieser Gruppenrichtlinie finden Sie unter [Netzwerkzugriff: Einschränken der Clients, die Remoteaufrufe an SAM durchführen dürfen](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
 
 >[!div class="step-by-step"]

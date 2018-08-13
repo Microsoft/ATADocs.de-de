@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/25/2018
+ms.date: 8/1/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 199830a6cd0b84cf897311cc80472a078f582b59
-ms.sourcegitcommit: 759e99f670c42c2dd60d07b2200d3de01ddf6055
+ms.openlocfilehash: 6a51832f3dbff55ed2ad396307a487ad607b3a2b
+ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39335910"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39567660"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -117,7 +117,7 @@ In der folgenden Tabelle sind die Ports aufgelistet, die mindestens geöffnet we
 |**HTTPS**|TCP|443|Unternehmensnetzwerk und ATA-Gateway|Eingehend|
 |**SMTP** (optional)|TCP|25|SMTP-Server|Ausgehend|
 |**SMTPS** (optional)|TCP|465|SMTP-Server|Ausgehend|
-|**Syslog** (optional)|TCP|514|Syslog-Server|Ausgehend|
+|**Syslog** (optional)|TCP/UPS/TLS (konfigurierbar)|514 (Standard)|Syslog-Server|Ausgehend|
 |**LDAP**|TCP und UDP|389|Domänencontroller|Ausgehend|
 |**LDAPS** (optional)|TCP|636|Domänencontroller|Ausgehend|
 |**DNS**|TCP und UDP|53|DNS-Server|Ausgehend|

@@ -2,10 +2,10 @@
 title: Azure Advanced Threat Protection-Architektur | Microsoft-Dokumentation
 description: Beschreibt die Architektur von Azure Advance Threat Analytics (ATP)
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/4/2018
+ms.date: 8/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,18 +13,18 @@ ms.technology: ''
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3f99aff656f6eff67a4077817c761c7627511bb2
-ms.sourcegitcommit: 40dbce8045f689376a50275fb12e3c5c32ca8092
+ms.openlocfilehash: 8264799f3aad2fb27287f56513458f34a3a7b0c6
+ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37799179"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39567643"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
 
 # <a name="azure-atp-architecture"></a>Azure ATP-Architektur
-Dieses Diagramm veranschaulicht die Azure Advanced Threat Protection-Architektur:
+Architektur von Azure Advanced Threat Protection:
 
 ![Topologiediagramm der Azure ATP-Architektur](media/atp-architecture-topology.png)
 
@@ -110,13 +110,13 @@ Berücksichtigen Sie die folgenden Kriterien bei der Entscheidung, wie viele Azu
 
 ## <a name="azure-atp-sensor-and-azure-atp-standalone-sensor"></a>Azure ATP-Sensor und eigenständiger Azure ATP-Sensor
 
-Der **Azure ATP-Sensor** und der **eigenständige Azure ATP-Sensor** verfügen beide über die gleichen Kernfunktionen:
+Der **Azure ATP-Sensor** und der **eigenständige Azure ATP-Sensor** verfügen über die gleichen Kernfunktionen:
 
 -   Erfassen und Untersuchen von Datenverkehr des Domänencontrollernetzwerks Dabei handelt es sich um portgespiegelten Datenverkehr für eigenständige Azure ATP-Sensoren und lokalen Datenverkehr von Domänencontrollern in Azure ATP-Sensoren. 
 
 -   Empfangen von Windows-Ereignissen – entweder direkt über den Domänencontroller (für ATP-Sensoren) oder über SIEM- bzw. Syslog-Server (für eigenständige Azure ATP-Sensoren)
 
--  Empfangen von Informationen zur RADIUS-Kontoführung über den VPN-Anbieter
+-   Empfangen von Informationen zur RADIUS-Kontoführung über den VPN-Anbieter
 
 -   Abrufen von Daten über Benutzer und Computer aus der Active Directory-Domäne
 

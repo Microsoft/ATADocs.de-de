@@ -2,10 +2,10 @@
 title: Aktualisieren Ihrer Azure ATP-Sensoren | Microsoft-Dokumentation
 description: Im Folgenden wird erläutert, wie Sie Azure ATP-Sensoren aktualisieren können.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 6/24/2018
+ms.date: 8/06/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 603d9e09-a07d-4357-862f-d5682c8bc3dd
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b6a9cbb203068e1318425631f9f83c796bb26aa8
-ms.sourcegitcommit: 7d025a2518ce63f38ce609dc21d8c3bacdd6a8e7
+ms.openlocfilehash: 35ca436a1da10b1675daed974920c9dc8ccc3da0
+ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948989"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39585017"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -30,7 +30,7 @@ Der Azure ATP-Dienst wird mehrmals pro Monat mithilfe von Fehlerbehebungen, Leis
 
 Wenn Sie Ihre Sensoren nicht aktualisieren, können diese möglicherweise nicht mit dem Azure ATP-Clouddienst kommunizieren, wodurch der Dienst beeinträchtigt wird.
 
-Jedes Update wird getestet und auf allen unterstützten Betriebssystemen überprüft, damit Ihr Netzwerk und Ihre Vorgänge nur minimal beeinträchtigt werden.
+Jedes Update wird getestet und für alle unterstützten Betriebssysteme überprüft, damit Ihr Netzwerk und Ihre Vorgänge nur minimal beeinträchtigt werden.
 
 ### <a name="azure-atp-sensor-update-types"></a>Updatetypen für den Azure ATP-Sensor   
 

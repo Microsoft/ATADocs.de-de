@@ -2,10 +2,10 @@
 title: Überwachen von Systemintegrität und Ereignissen von Azure Advanced Threat Protection| Microsoft-Dokumentation
 description: Im Integritätscenter für den Azure ATP-Arbeitsbereich können Sie überprüfen, wie der Azure ATP-Dienst funktioniert, und es werden Warnungen über mögliche Probleme sowie Systemereignisse in der Ereignisanzeige angezeigt.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 8/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 1b7e72c3-a538-443f-981c-398ffafa5ab8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 86eb90f452d5aee2504e525e64bfc62c22207880
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 75a0c9515f552c0ca18dbe2fd88cf27990fd59e1
+ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2018
-ms.locfileid: "29444906"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39584999"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -50,9 +50,9 @@ Um den Gesamtzustand des Arbeitsbereichs zu überprüfen, klicken Sie auf der Me
 
 -   **Unterdrücken**: Das Unterdrücken einer Aktivität bedeutet, dass Sie sie gerade ignorieren möchten und nur wieder gewarnt werden möchten, wenn es eine neue Instanz gibt. Wenn eine ähnliche Warnung ausgelöst wird, wird diese von Azure ATP nicht erneut geöffnet. Wenn die Warnung jedoch für sieben Tage angehalten wurde und anschließend erneut auftritt, werden Sie erneut gewarnt.
 
--   **Erneut öffnen:** Wenn Sie ein Problem schließen oder unterdrücken, können Sie es auch erneut öffnen, sodass es auf der Zeitachse als „Offen“ angezeigt wird.
-- 
-- **Löschen:** Sie können Integritätsprobleme auch über die Zeitachse für verdächtige Aktivitäten löschen. Wenn Sie allerdings eine Warnung löschen, wird diese vollständig aus dem Arbeitsbereich gelöscht, und Sie können diese nicht wiederherstellen. Nachdem Sie auf „Verwerfen“ geklickt haben, können Sie alle verdächtigen Aktivitäten für den gleichen Typ löschen.
+-   **Erneut öffnen**: Ein geschlossenes oder unterdrücktes Problem kann erneut geöffnet werden, sodass es auf der Zeitachse als „Offen“ angezeigt wird.
+
+-   **Löschen:** Sie können Integritätsprobleme auch über die Zeitachse für verdächtige Aktivitäten löschen. Wenn Sie allerdings eine Warnung löschen, wird diese vollständig aus dem Arbeitsbereich gelöscht, und Sie können diese nicht wiederherstellen. Nachdem Sie auf „Verwerfen“ geklickt haben, können Sie alle verdächtigen Aktivitäten für den gleichen Typ löschen.
 
 
 

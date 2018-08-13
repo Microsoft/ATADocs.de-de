@@ -2,10 +2,10 @@
 title: Untersuchen von Benutzern und Computern mit Azure ATP | Microsoft-Dokumentation
 description: Dieser Artikel beschreibt, wie verdächtige Aktivitäten, die von Benutzern ausgeführt werden, sowie Entitäten, Computer oder Geräte mithilfe von Azure Advanced Threat Protection (ATP) untersucht werden können.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 5/6/2018
+ms.date: 8/6/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,14 +13,14 @@ ms.technology: ''
 ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4ef4151a311dd5b076737cba9f3c7aa7454a32a7
-ms.sourcegitcommit: 714a01edc9006b38d1163d03852dafc2a5fddb5f
+ms.openlocfilehash: 722ef73fe2c039a567b4f3d807f97e4ede16dc67
+ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34190450"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39585219"
 ---
-*Gilt für: Azure Advanced Threat Protection Version 1.9*
+*Gilt für: Azure Advanced Threat Protection*
 
 
 
@@ -30,11 +30,11 @@ In diesem Artikel wird der Prozess zum Untersuchen von Entitäten beschrieben, n
 
 ## <a name="look-at-the-entity-profile"></a>Anzeigen des Entitätsprofils
 
-Über das Entitätsprofil erhalten Sie eine umfassende Entitätsseite, die für eine detaillierte Untersuchung von Benutzern, Computern, Geräten und Ressourcen, auf die sie zugreifen können, sowie auf deren Verlauf, ausgerichtet ist. Die Profilseite nutzt den neuen logischen Aktivitätenübersetzer von Azure ATP, der eine Gruppe von Aktivitäten (für bis zu eine Minute zusammengefasst) überprüfen und diese in genau eine logische Aktivität gruppieren kann, um die tatsächlichen Aktivitäten der Benutzer zu verdeutlichen.
+Das Entitätsprofil bietet eine umfassende Entitätsseite, die für eine detaillierte Untersuchung von Benutzern, Computern, Geräten und Ressourcen, auf die sie zugreifen können, sowie auf deren Verlauf, ausgerichtet ist. Die Profilseite nutzt den neuen logischen Aktivitätenübersetzer von Azure ATP, der eine Gruppe von Aktivitäten (für bis zu eine Minute zusammengefasst) überprüfen und diese in genau eine logische Aktivität gruppieren kann, um die tatsächlichen Aktivitäten der Benutzer zu verdeutlichen.
 
 Wenn Sie auf die Profilseite einer Entität zugreifen möchten, klicken Sie auf der Zeitachse der verdächtigen Aktivität auf den Namen der Entität, z.B. den Benutzernamen. Sie können auch eine Miniversion des Entitätsprofils auf der Seite der verdächtigen Aktivität anzeigen, indem Sie mit der Maus auf den Entitätsnamen zeigen.
 
-Über das Entitätsprofil können Sie Entitätsaktivitäten sowie Verzeichnisdaten und Lateral Movement-Pfade für die Entität anzeigen. Weitere Informationen finden Sie unter [Untersuchen von Entitätsprofilen](entity-profiles.md).
+Über das Entitätsprofil können Sie Entitätsaktivitäten sowie Verzeichnisdaten und Lateral Movement-Pfade für die Entität anzeigen. Weitere Informationen finden Sie unter [Grundlegendes zu Entitätsprofilen](entity-profiles.md).
 
 ## <a name="check-entity-tags"></a>Überprüfen von Entitätstags
 
@@ -47,9 +47,9 @@ Azure ATP zieht Tags aus Active Directory, damit Sie eine einzelne Schnittstelle
 - Abgelaufen: Die Entität ist in Active Directory abgelaufen.
 - Neu: Die Entität wurde vor weniger als 30 Tagen erstellt.
 
-## <a name="look-at-the-user-access-control-flags"></a>Anzeigen der Flags für die Benutzerzugriffssteuerung
+## <a name="look-at-the-user-account-control-flags"></a>Anzeigen der Flags für die Benutzerkontensteuerung
 
-Die Flags für die Benutzerzugriffssteuerung werden ebenfalls von Active Directory importiert. Azure ATP enthält 10 Flags, die für die Untersuchung gültig sind: 
+Die Flags für die Benutzerkontensteuerung werden ebenfalls von Active Directory importiert. Azure ATP-Entitätsverzeichnisdaten enthalten 10 Flags, die für die Untersuchung gültig sind: 
 - Kennwort läuft nie ab
 - Gilt für die Delegierung
 - Smartcard erforderlich
@@ -61,9 +61,9 @@ Die Flags für die Benutzerzugriffssteuerung werden ebenfalls von Active Directo
 - Kerberos-Vorauthentifizierung nicht erforderlich
 - Konto deaktiviert 
 
-Über Azure ATP erfahren Sie, ob diese Flags in Azure Active Directory aktiviert oder deaktiviert sind. Bunte Symbole weisen darauf hin, dass das Flag in Active Directory aktiviert ist. Im Beispiel unten ist nur **Konto deaktiviert** in Active Directory aktiviert.
+Über Azure ATP erfahren Sie, ob diese Flags in Azure Active Directory aktiviert oder deaktiviert sind. Farbige Symbole und die entsprechende Umschaltfläche zeigen den Status der einzelnen Flags an. Im folgenden Beispiel ist nur **Kennwort läuft nie ab** in Active Directory aktiviert.
 
- ![Flags für die Benutzerzugriffssteuerung](./media/user-access-flags.png)
+ ![Flags für die Benutzerkontensteuerung](./media/user-access-flags.png)
 
 ## <a name="cross-check-with-windows-defender"></a>Gegenprüfung mit Windows Defender
 
@@ -105,7 +105,7 @@ Weitere Informationen finden Sie unter [Untersuchen von Angriffen mit Lateral Mo
 
 ## <a name="is-it-a-honeytoken-entity"></a>Handelt es sich um eine Honeytoken-Entität?
 
-Bevor Sie mit Ihrer Untersuchung fortfahren, ist es wichtig, zu wissen, ob die Entität ein Honeytoken ist. Der Einfachheit halber ermöglicht Azure ATP die Markierung von Konten und Entitäten als Honeytoken. Während der Untersuchung wird dann beim Öffnen des Entitätsprofils oder Miniprofils der Honeytokenbadge angezeigt, um Sie zu warnen, dass die Aktivität, die Sie sich gerade ansehen, von einem Konto durchgeführt wurde, das Sie als Honeytoken markiert haben.
+Bevor Sie mit Ihrer Untersuchung fortfahren, ist es wichtig, zu wissen, ob die Entität ein Honeytoken ist. Sie können Konten und Entitäten als Honeytoken in Azure ATP markieren. Wenn Sie das Entitäts- oder Miniprofil eines Kontos oder einer Entität öffnen, das bzw. die Sie als Honeytoken markiert haben, wird der Honeytokenbadge angezeigt. Der Honeytokenbadge warnt bei der Überprüfung, dass die unter Überprüfung stehende Aktivität von einem Konto ausgeführt wurde, das Sie als Honeytoken markiert haben.
 
 
     

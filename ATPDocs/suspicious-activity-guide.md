@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4e6a7d90ad5670b3d1c01ba70d7b5a81e8808b5e
-ms.sourcegitcommit: 759e99f670c42c2dd60d07b2200d3de01ddf6055
+ms.openlocfilehash: 4667e13af4e86a18d1b50a2ea575f9c749f0c541
+ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39335876"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39585236"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -101,7 +101,7 @@ Es gibt drei Arten von Erkennung:
 
 **Untersuchung**
 
-Überprüfen Sie zunächst die Beschreibung der Warnung, um festzustellen, mit welcher der drei obenstehenden Arten der Erkennung Sie es zu tun haben. Laden Sie für weitere Informationen das Excel-Arbeitsblatt herunter.
+Überprüfen Sie zunächst die Beschreibung der Warnung, um festzustellen, mit welcher der drei oben genannten Arten der Erkennung Sie es zu tun haben. Laden Sie für weitere Informationen das Excel-Arbeitsblatt herunter.
 
 1.  Skeleton Key: Sie können überprüfen, ob Ihre Domänencontroller von Skeleton Key betroffen sind, indem Sie [den vom Azure ATP-Team entwickelten Scanner](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73) verwenden. Wenn der Scanner Schadsoftware auf einem oder mehreren Ihrer Domänencontroller findet, ist dies ein richtig positives Ereignis.
 
@@ -191,7 +191,7 @@ Pass-the-Ticket ist eine Technik mit seitlicher Bewegung, bei der die Angreifer 
 Angreifer mit Domänenadministratorrechten können das [KRBTGT account (KRBTGT-Konto)](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT) beeinträchtigen. Indem diese das KRBTGT-Konto verwenden, können sie ein Kerberos Ticket Granting Ticket (TGT) erstellen, das die Autorisierung für jede Ressource erteilen und den Ablaufzeitpunkt des Tickets auf einen beliebigen Zeitpunkt festlegen kann. Dieses gefälschte TGT wird als „Golden Ticket“ bezeichnet und ermöglicht Angreifern, Beständigkeit im Netzwerk zu erreichen.
 
 In dieser Erkennung wird eine Warnung ausgelöst, wenn ein Kerberos Ticket Granting Ticket über die erlaubte [maximale Lebensdauer für Benutzertickets](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx) hinaus verwendet wird. Dieser Golden Ticket-Angriff basiert auf einer **Zeitanomalie**. Ein Golden Ticket-Angriff kann auch auf einem **nicht vorhandenen Konto** beruhen.
-Sicherheitsrichtlinie
+
 
 **Untersuchung**
 
@@ -275,21 +275,6 @@ In dieser Erkennung wird eine Warnung ausgelöst, wenn eine Replikationsanforder
 Weitere Informationen finden Sie unter [Grant Active Directory Domain Services permissions for profile synchronization in SharePoint Server 2013 (Erteilen von AD DS-Berechtigungen für die Profilsynchronisierung in SharePoint Server 2013)](https://technet.microsoft.com/library/hh296982.aspx).
 Nutzen Sie [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/), oder erstellen Sie ein Windows PowerShell-Skript, um festzustellen, wer in der Domäne über diese Berechtigungen verfügt.
 
-
-## <a name="password-exposed-in-cleartext-report"></a>Kennwort ist in Klartextbericht offengelegt
-
-**Beschreibung**
-
-Einige Dienste senden Anmeldeinformationen im Nur-Text-Format. Dies kann sogar bei Benutzerkonten geschehen. Angreifer, die Ihren Netzwerkdatenverkehr überwachen, können diese Anmeldeinformationen abfangen und diese zu böswilligen Zwecken verwenden. 
-
-**Untersuchung**
-
-Klicken Sie auf die Berichtseite, und laden Sie den Bericht mit dem im Klartext offengelegten Kennwort herunter. Entnehmen Sie der Excel-Tabelle, welche Konten offengelegt sind.
-Üblicherweise gibt es ein Skript oder eine ältere Anwendung auf den Quellcomputern, die die einfache LDAP-Bindung verwenden.
-
-**Wartung**
-
-Überprüfen Sie die Konfiguration des Quellcomputers, um sicherzustellen, dass Sie keine einfache LDAP-Bindung verwenden. Statt einfachen LDAP-Bindungen können Sie LDAP SALS oder LDAPS verwenden.
 
 ## <a name="privilege-escalation-using-forged-authorization-data"></a>Berechtigungsausweitung mithilfe von gefälschten Autorisierungsdaten
 
