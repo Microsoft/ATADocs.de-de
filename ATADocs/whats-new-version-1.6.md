@@ -14,10 +14,10 @@ ms.assetid: 27b139e5-12b9-4953-8f53-eb58e8ce0038
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 47a8b5c52bf978d5e07007a3402a567be39e2157
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.sourcegitcommit: 1de2b047c0e9f92a106169f7634c480f694baf10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 08/13/2018
 ms.locfileid: "24018557"
 ---
 # <a name="whats-new-in-ata-version-16"></a>Neuerungen in ATA 1.6
@@ -137,8 +137,8 @@ In einigen Fällen erfordert die Installation von .NET Framework 4.6.1 mögliche
     ![.NET Framework-Neustart](media/ata-net-framework-restart.png)
 
 ### <a name="historical-network-activities-no-longer-migrated"></a>Frühere Netzwerkaktivitäten werden nicht mehr migriert
-Diese Version von ATA umfasst ein verbessertes Erkennungsmodul, das eine genauere Erkennung bietet und viele falsch positive Szenarien eliminiert, insbesondere für Pass-the-Hash.
-Für das neue und verbesserte Erkennungsmodul wird Inline-Erkennungstechnologie genutzt, die eine Erkennung ohne Auswertung früherer Netzwerkaktivitäten ermöglicht, um die Leistung von ATA Center erheblich zu erhöhen. Dies bedeutet auch, dass es nicht erforderlich ist, frühere Netzwerkaktivitäten während des Aktualisierungsvorgangs zu migrieren.
+Diese Version von ATA umfasst eine verbesserte Erkennungs-Engine, das eine genauere Erkennung bietet und viele falsch positive Szenarien eliminiert, insbesondere für Pass-the-Hash.
+Für die neue und verbesserte Erkennungs-Engine wird Inline-Erkennungstechnologie genutzt, die eine Erkennung ohne Auswertung früherer Netzwerkaktivitäten ermöglicht, um die Leistung von ATA Center erheblich zu erhöhen. Dies bedeutet auch, dass es nicht erforderlich ist, frühere Netzwerkaktivitäten während des Aktualisierungsvorgangs zu migrieren.
 Im ATA-Aktualisierungsvorgang werden die Daten für den Fall, dass Sie diese für zukünftige Untersuchungen benötigen, als JSON-Datei in `<Center Installation Path>\Migration` exportiert.
 
 ## <a name="see-also"></a>Weitere Informationen
