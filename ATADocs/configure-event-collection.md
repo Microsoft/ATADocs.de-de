@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 2c8f67d0c8d9020eb0e7ae16e8410db473ace044
-ms.sourcegitcommit: 759e99f670c42c2dd60d07b2200d3de01ddf6055
+ms.openlocfilehash: 755450654d870ec0235232e08194c1094c22f030
+ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "30010243"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39585087"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -56,15 +56,15 @@ Sie müssen die Domänencontroller neu starten, nachdem Sie den **Netzwerkdienst
 2.  Geben Sie an einer Eingabeaufforderung *gpedit.msc* ein.
 3.  Erweitern Sie **Computerkonfiguration > Administrative Vorlagen > Windows-Komponenten > Ereignisweiterleitung**.
 
- ![Local policy group editor image](media/wef 1 local group policy editor.png)
+![Local policy group editor image](media/wef 1 local group policy editor.png)
 
 4.  Doppelklicken Sie auf **Ziel-Abonnement-Manager konfigurieren**.
    
     1.  Wählen Sie **Aktiviert** aus.
     2.  Klicken Sie unter **Optionen** auf **Anzeigen**.
-    3.  Geben Sie unter **SubscriptionManagers** folgenden Wert ein, und klicken Sie auf **OK**: *Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10* (Zum Beispiel: Server=http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
+    3.  Geben Sie unter **SubscriptionManagers** folgenden Wert ein, und klicken Sie auf **OK**: *Server=`http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10*` (zum Beispiel: Server=`http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
  
-   ![Configure target subscription image](media/wef 2 config target sub manager.png)
+    ![Configure target subscription image](media/wef 2 config target sub manager.png)
    
     5.  Klicken Sie auf **OK**.
     6.  Geben Sie von einer Eingabeaufforderung mit erhöhten Rechten aus *gpupdate /force* ein. 
@@ -75,25 +75,25 @@ Sie müssen die Domänencontroller neu starten, nachdem Sie den **Netzwerkdienst
 2.  Öffnen Sie die **Ereignisanzeige**. 
 3.  Klicken Sie mit der rechten Maustaste auf **Abonnements**, und wählen Sie **Abonnement erstellen** aus. 
 
-   1.   Geben Sie einen Namen und eine Beschreibung für das Abonnement ein. 
-   2.   Bestätigen Sie für **Zielprotokoll**, dass **Weitergeleitete Ereignisse** aktiviert ist. Damit ATA die Ereignisse lesen kann, muss das Zielprotokoll **Weitergeleitete Ereignisse** sein. 
-   3.   Wählen Sie **Quellcomputerinitiiert** aus, und klicken Sie auf **Computergruppen auswählen** aus.
+    1.  Geben Sie einen Namen und eine Beschreibung für das Abonnement ein. 
+    2.  Bestätigen Sie für **Zielprotokoll**, dass **Weitergeleitete Ereignisse** aktiviert ist. Damit ATA die Ereignisse lesen kann, muss das Zielprotokoll **Weitergeleitete Ereignisse** sein. 
+    3.  Wählen Sie **Quellcomputerinitiiert** aus, und klicken Sie auf **Computergruppen auswählen** aus.
         1.  Klicken Sie auf **Domänencomputer hinzufügen**.
         2.  Geben Sie den Namen des Domänencontrollers in das Feld **Namen des auszuwählenden Objekts eingeben** ein. Klicken Sie anschließend auf **Namen überprüfen**, und klicken Sie auf **OK**. 
-       
-        ![Event Viewer image](media/wef3 event viewer.png)
-   
-        
+ 
+    ![Event Viewer image](media/wef3 event viewer.png)
+ 
+ 
         3.  Klicken Sie auf **OK**.
-   4.   Klicken Sie auf **Ereignisse auswählen**.
+     4. Klicken Sie auf **Ereignisse auswählen**.
 
         1. Klicken Sie auf **Per Protokoll** und wählen Sie **Sicherheit** aus.
         2. Tippen Sie im Feld **Ereignis-IDs ein-/ausschließen** die Ereignisnummer ein, und klicken Sie auf **OK**. Geben Sie wie im folgenden Beispiel 4776 ein.
 
- ![Query filter image](media/wef 4 query filter.png)
+    ![Query filter image](media/wef 4 query filter.png)
 
-   5.   Klicken Sie mit der rechten Maustaste auf das erstellte Abonnement, und wählen Sie **Laufzeitstatus** aus, um festzustellen, ob es Probleme mit dem Status gibt. 
-   6.   Überprüfen Sie nach einigen Minuten, ob die festgelegten Ereignisse im ATA-Gateway in „Weitergeleitete Ereignisse“ angezeigt wird.
+    5.  Klicken Sie mit der rechten Maustaste auf das erstellte Abonnement, und wählen Sie **Laufzeitstatus** aus, um festzustellen, ob es Probleme mit dem Status gibt. 
+    6.  Überprüfen Sie nach einigen Minuten, ob die festgelegten Ereignisse im ATA-Gateway in „Weitergeleitete Ereignisse“ angezeigt wird.
 
 
 Weitere Informationen finden Sie unter [Einrichten von Computern zum Weiterleiten und Sammeln von Ereignissen](https://technet.microsoft.com/library/cc748890).

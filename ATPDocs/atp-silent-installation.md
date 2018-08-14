@@ -2,10 +2,10 @@
 title: Automatisches Installieren von Azure Advanced Threat Protection | Microsoft-Dokumentation
 description: Hier wird die automatische Installation von Azure ATP beschrieben.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/11/2017
+ms.date: 8/7/2017
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,18 +13,18 @@ ms.technology: ''
 ms.assetid: 24eca4c6-c949-42ea-97b9-41ef0fb611f1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f27020f1b4a5fa7aa8fefbda28eac0c2ad6c64d0
-ms.sourcegitcommit: 912e453753156902618ae6ebb8489c2320c06fc6
+ms.openlocfilehash: b318e4eefe05aee9ab99221d4ccd1e20764047a2
+ms.sourcegitcommit: 1de2b047c0e9f92a106169f7634c480f694baf10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2018
-ms.locfileid: "29856480"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "39631632"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
 
-# <a name="azure-atp-silent-installation"></a>Automatische Azure ATP-Installation
-Dieser Artikel enthält Anweisungen zur automatischen Installation von Azure ATP.
+# <a name="azure-atp-switches-and-silent-installation"></a>Azure ATP-Switches und automatische Installation
+Dieser Artikel enthält Anleitungen und Informationen zu Azure ATP-Switches und der automatischen Installation.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -37,7 +37,7 @@ Beim Installieren von Azure ATP wird .NET Framework 4.7 automatisch als Teil der
 
 > [!NOTE] 
 > Die Installation von .Net Framework 4.7 macht möglicherweise einen Neustart des Servers erforderlich. Wenn Sie den Azure ATP-Sensor auf Domänencontrollern installieren, sollten Sie die Planung eines Wartungsfensters für diese Domänencontroller in Betracht ziehen.
-Wenn Sie die Methode zur automatischen Installation von Azure ATP verwenden, ist das Installationsprogramm so konfiguriert, dass der Server am Ende der Installation (falls erforderlich) automatisch neu gestartet wird. Aufgrund eines Windows Installer-Fehlers kann anhand des *norestart*-Flags nicht mehr verlässlich sichergestellt werden, dass der Server keinen Neustart ausführt. Führen Sie eine automatische Installation daher nur während eines Wartungsfensters aus.
+Wenn Sie die automatische Installation von Azure ATP verwenden, ist das Installationsprogramm so konfiguriert, dass der Server am Ende der Installation automatisch neu gestartet wird (falls erforderlich). Stellen Sie sicher, dass Sie die automatische Installation nur während eines Wartungsfensters ausführen. Aufgrund eines Windows Installer-Fehlers kann mit dem *norestart*-Flag nicht mehr verlässlich sichergestellt werden, dass der Server keinen Neustart ausführt.
 
 Zur Nachverfolgung des Bereitstellungsfortschritts überwachen Sie die Protokolle des Azure ATP-Installationsprogramms unter **%AppData%\Local\Temp**.
 
@@ -49,11 +49,12 @@ Zur Nachverfolgung des Bereitstellungsfortschritts überwachen Sie die Protokoll
 > Bei der automatischen Bereitstellung des Azure ATP-Sensors über System Center Configuration Manager oder ein anderes System zur Softwarebereitstellung empfiehlt es sich, zwei Bereitstellungspakete zu erstellen:</br>– Net Framework 4.7 einschließlich Neustart des Domänencontrollers</br>– Azure ATP-Sensor. </br>Erstellen Sie eine Abhängigkeit des Azure ATP-Sensorpakets von der .NET Framework-Paketbereitstellung. </br>Rufen Sie das [.NET Framework 4.7-Paket für die Offlinebereitstellung](https://www.microsoft.com/download/details.aspx?id=49982) ab. 
 
 
-Verwenden Sie den folgenden Befehl für eine automatische Installation des Azure ATP-Sensors:
+Verwenden Sie den folgenden Befehl, um eine vollständig automatische Installation des Azure ATP-Sensors auszuführen:
+
 
 **Syntax**:
 
-    Azure ATP sensor Setup.exe [/AccessKey=<Access Key>] [/quiet] [/Help] [NetFrameworkCommandLineArguments ="/q"] 
+    Azure ATP sensor Setup.exe /AccessKey=<Access Key> /quiet NetFrameworkCommandLineArguments ="/q" 
    
 
 > [!NOTE]
@@ -74,7 +75,7 @@ Verwenden Sie den folgenden Befehl für eine automatische Installation des Azure
 > [!div class="mx-tableFixed"]
 |Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|Beschreibung|
 |-------------|----------|---------|---------|
-|AccessKey|AccessKey="**"|Ja |Legt den Zugriffsschlüssel fest, mit dem der Azure ATP-Sensor beim Azure ATP-Arbeitsbereich registriert wird.|
+|AccessKey|AccessKey="\*\*"|Ja |Legt den Zugriffsschlüssel fest, mit dem der Azure ATP-Sensor beim Azure ATP-Arbeitsbereich registriert wird.|
 
 **Beispiele**: Melden Sie sich für eine automatische Installation des Azure ATP-Sensors mit Ihren Azure ATP-Administratoranmeldeinformationen bei dem in die Domäne eingebundenen Computer an, sodass Sie bei der Installation keine Anmeldeinformationen angeben müssen. Registrieren Sie ihn alternativ mit den angegebenen Anmeldeinformationen beim Azure ATP-Clouddienst:
 
@@ -88,7 +89,7 @@ Verwenden Sie den folgenden Befehl, um den Azure ATP-Sensor automatisch zu aktua
 
 **Syntax**:
 
-    Azure ATP  sensor Setup.exe [/quiet] [/Help] [NetFrameworkCommandLineArguments="/q"]
+    Azure ATP sensor Setup.exe [/quiet] [/Help] [NetFrameworkCommandLineArguments="/q"]
 
 
 **Installationsoptionen**:
@@ -103,7 +104,7 @@ Verwenden Sie den folgenden Befehl, um den Azure ATP-Sensor automatisch zu aktua
 
 **Beispiele**: So aktualisieren Sie den Azure ATP-Sensor automatisch:
 
-        Azure ATP sensor Setup.exe /quiet NetFrameworkCommandLineArguments="/q"
+    Azure ATP sensor Setup.exe /quiet NetFrameworkCommandLineArguments="/q"
 
 ## <a name="uninstall-the-azure-atp-sensor-silently"></a>Automatisches Deinstallieren des Azure ATP-Sensors
 
