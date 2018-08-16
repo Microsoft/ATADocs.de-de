@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/1/2018
+ms.date: 8/9/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 6a51832f3dbff55ed2ad396307a487ad607b3a2b
-ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
+ms.openlocfilehash: 04284a622aec1985e363bac7f0215cfd031d9854
+ms.sourcegitcommit: 1de2b047c0e9f92a106169f7634c480f694baf10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39567660"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "39723411"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -215,8 +215,8 @@ In der folgenden Tabelle sind die Ports aufgeführt, die für den Verwaltungsada
 |Netlogon (SMB, CIFS, SAM-R)|TCP und UDP|445|Alle Geräte im Netzwerk|Ausgehend|
 |Windows-Zeitdienst|UDP|123|Domänencontroller|Ausgehend|
 |DNS|TCP und UDP|53|DNS-Server|Ausgehend|
-|NTLM über RPC|TCP|135|Alle Geräte im Netzwerk|Ausgehend|
-|NetBIOS|UDP|137|Alle Geräte im Netzwerk|Ausgehend|
+|NTLM über RPC|TCP|135|Alle Geräte im Netzwerk|Beide|
+|NetBIOS|UDP|137|Alle Geräte im Netzwerk|Beide|
 |SSL|TCP|443|ATA Center|Ausgehend|
 |Syslog (optional)|UDP|514|SIEM-Server|Eingehend|
 
@@ -282,8 +282,8 @@ In der folgenden Tabelle sind die Ports aufgeführt, die für das ATA-Lightweigh
 |Protokoll|Transport|Port|Zu/Von|Richtung|
 |------------|-------------|--------|-----------|-------------|
 |DNS|TCP und UDP|53|DNS-Server|Ausgehend|
-|NTLM über RPC|TCP|135|Alle Geräte im Netzwerk|Ausgehend|
-|NetBIOS|UDP|137|Alle Geräte im Netzwerk|Ausgehend|
+|NTLM über RPC|TCP|135|Alle Geräte im Netzwerk|Beide|
+|NetBIOS|UDP|137|Alle Geräte im Netzwerk|Beide|
 |SSL|TCP|443|ATA Center|Ausgehend|
 |Syslog (optional)|UDP|514|SIEM-Server|Eingehend|
 |Netlogon (SMB, CIFS, SAM-R)|TCP und UDP|445|Alle Geräte im Netzwerk|Ausgehend|
