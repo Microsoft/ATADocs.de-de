@@ -2,10 +2,10 @@
 title: Notfallwiederherstellung für Advanced Threat Analytics | Microsoft-Dokumentation
 description: Beschreibt, wie Sie die ATA-Funktionalität nach einem Notfall schnell wiederherstellen können
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 8/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 7620e171-76d5-4e3f-8b03-871678217a3a
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 72598380f574e0475e4796887f44131009911be2
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 5e6fac695e1dc51a1a0afcf20330918be82c75e9
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30009552"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734661"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -54,12 +54,12 @@ Dieser Artikel beschreibt, wie Sie ATA Center und Ihre ATA-Funktionalität schne
     1. Entfernen Sie das Systemprofildokument von ATA Center aus MongoDB: 
         1. Gehen Sie unter **C:\Programme\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**. 
         2. Ausführen von `mongo.exe ATA` 
-        3. Starten Sie den ATA Center-Dienst.
-        4. Führen Sie zum Entfernen des Standardsystemprofils diesen Befehl aus: `db.SystemProfile.remove({})`
+        3. Führen Sie zum Entfernen des Standardsystemprofils diesen Befehl aus: `db.SystemProfile.remove({})`
     2. Führen Sie den folgenden Befehl `mongoimport.exe --db ATA --collection SystemProfile --file "<SystemProfile.json backup file>" --upsert` mithilfe der Sicherungsdatei aus Schritt 1 aus.</br>
     Eine ausführliche Erläuterung zum Auffinden und Importieren von Sicherungsdateien finden Sie unter [Exportieren und Importieren der ATA-Konfiguration](ata-configuration-file.md). 
-    3. Öffnen Sie die ATA-Konsole. Sie sollten alle ATA-Gateways auf der Registerkarte „Konfiguration/Gateways“ verknüpft sehen. 
-    4. Definieren Sie einen [**Verzeichnisdienstebenutzer**](install-ata-step2.md), und wählen Sie eine [**Domänencontrollersynchronisierung**](install-ata-step5.md) aus. 
+    3. Starten Sie den ATA Center-Dienst.
+    4. Öffnen Sie die ATA-Konsole. Sie sollten alle ATA-Gateways auf der Registerkarte „Konfiguration/Gateways“ verknüpft sehen.
+    5. Definieren Sie einen [**Verzeichnisdienstebenutzer**](install-ata-step2.md), und wählen Sie eine [**Domänencontrollersynchronisierung**](install-ata-step5.md) aus. 
 
 
 

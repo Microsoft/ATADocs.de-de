@@ -2,10 +2,10 @@
 title: 'Installieren von Azure Advanced Threat Protection: Schritt 5 | Microsoft-Dokumentation'
 description: Im fünften Schritt der Installation von Azure ATP konfigurieren Sie Einstellungen für Ihren eigenständigen Azure ATP-Sensor.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/21/2017
+ms.date: 8/12/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: d7c95f8c-04f8-4946-9bae-c27ed362fcb0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a2e61758e06aedfe607afc0d3365227af872fe20
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 05355460ec8dac4febc24096e802135cf52e1cc8
+ms.sourcegitcommit: dc56b9e9533db1a2dc314b199e90191bb25adaba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2018
-ms.locfileid: "29444926"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "41734524"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -54,8 +54,7 @@ Führen Sie nach der Installation des Azure ATP-Sensors die folgenden Schritte a
      - Wählen Sie für einen eigenständigen Azure ATP-Sensor auf einem dedizierten Server die Netzwerkadapter aus, die als Zielspiegelport konfiguriert sind. Diese empfangen den Datenverkehr des gespiegelten Domänencontrollers.
      - Für einen Azure ATP-Sensor sollten dies alle Netzwerkadapter sein, die für die Kommunikation mit anderen Computern in Ihrer Organisation verwendet werden.
 
-
-  - **Kandidat für die Domänensynchronisierung**: Alle eigenständigen Azure ATP-Sensoren, die als Kandidat für die Domänensynchronisierung festgelegt sind, können die Synchronisierung zwischen Azure ATP und Ihrer Active Directory-Domäne übernehmen. Je nach Größe der Domäne ist die erste Synchronisierung ressourcenintensiv und kann einige Zeit dauern. Standardmäßig sind nur eigenständige Azure ATP-Sensoren als Kandidaten für die Domänensynchronisierung festgelegt.
+    - **Kandidat für die Domänensynchronisierung**: Alle eigenständigen Azure ATP-Sensoren, die als Kandidat für die Domänensynchronisierung festgelegt sind, können die Synchronisierung zwischen Azure ATP und Ihrer Active Directory-Domäne übernehmen. Je nach Größe der Domäne ist die erste Synchronisierung ressourcenintensiv und kann einige Zeit dauern. Standardmäßig sind nur eigenständige Azure ATP-Sensoren als Kandidaten für die Domänensynchronisierung festgelegt.
    Es empfiehlt sich, alle Azure ATP-Sensoren an Remotestandorten als Kandidaten für die Domänensynchronisierung zu deaktivieren.
    Wenn Ihr Domänencontroller schreibgeschützt ist, verwenden Sie ihn nicht als Kandidat für die Domänensynchronisierung. Weitere Informationen finden Sie unter [Azure ATP architecture (Azure ATP-Architektur](atp-architecture.md#azure-atp-sensor-features).
   

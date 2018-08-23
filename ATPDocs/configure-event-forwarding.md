@@ -2,10 +2,10 @@
 title: Konfigurieren der Windows-Ereignisweiterleitung in Azure Advanced Threat Protection | Microsoft-Dokumentation
 description: Beschreibt die Optionen zur Windows-Ereignisweiterleitung mit Azure ATP
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 02/21/2018
+ms.date: 08/12/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,14 +13,14 @@ ms.technology: ''
 ms.assetid: 3547519f-8d9c-40a9-8f0e-c7ba21081203
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1b37bcbfc304ee0ef71d80eb84f6298d64e50d3f
-ms.sourcegitcommit: eebf1156aaae199b6aaa7e431cd6372e572b1e9f
+ms.openlocfilehash: 730ff2e96da8dc6329cf4855e9e7d279ef5a067d
+ms.sourcegitcommit: 845b8c0b6e0ec2d2e882672fd9f17ed573fafa56
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39396416"
+ms.lasthandoff: 08/17/2018
+ms.locfileid: "41734621"
 ---
-*Gilt für: Azure Advanced Threat Protection Version 1.9*
+*Gilt für: Azure Advanced Threat Protection*
 
 
 
@@ -63,12 +63,12 @@ Sie müssen die Domänencontroller neu starten, nachdem Sie den **Netzwerkdienst
    
     1.  Wählen Sie **Aktiviert** aus.
     2.  Klicken Sie unter **Optionen** auf **Anzeigen**.
-    3.  Geben Sie unter **SubscriptionManagers** folgenden Wert ein, und klicken Sie auf **OK**: *Server=http://<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10* (Zum Beispiel: Server=http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
- 
-   ![Configure target subscription image](media/wef%202%20config%20target%20sub%20manager.png)
-   
-    5.  Klicken Sie auf **OK**.
-    6.  Geben Sie von einer Eingabeaufforderung mit erhöhten Rechten aus *gpupdate /force* ein. 
+    3.  Geben Sie unter **SubscriptionManagers** folgenden Wert ein, und klicken Sie auf **OK**: *Server=`http://<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10*` (zum Beispiel: Server=`http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
+    
+    ![Configure target subscription image](media/wef%202%20config%20target%20sub%20manager.png)
+    
+5.  Klicken Sie auf **OK**.
+6.  Geben Sie von einer Eingabeaufforderung mit erhöhten Rechten aus *gpupdate /force* ein. 
 
 **Schritt 3: Führen Sie die folgenden Schritte für den eigenständigen Azure ATP-Sensor aus** 
 
@@ -91,7 +91,7 @@ Sie müssen die Domänencontroller neu starten, nachdem Sie den **Netzwerkdienst
         1. Klicken Sie auf **Per Protokoll** und wählen Sie **Sicherheit** aus.
         2. Tippen Sie im Feld **Ereignis-IDs ein-/ausschließen** die Ereignisnummer ein, und klicken Sie auf **OK**. Geben Sie wie im folgenden Beispiel 4776 ein:
 
- ![Query filter image](media/wef-4-query-filter.png)
+        ![Query filter image](media/wef-4-query-filter.png)
 
    5.   Klicken Sie mit der rechten Maustaste auf das erstellte Abonnement, und wählen Sie **Laufzeitstatus** aus, um festzustellen, ob es Probleme mit dem Status gibt. 
    6.   Überprüfen Sie nach einigen Minuten, ob die festgelegten Ereignisse im eigenständigen Azure ATP-Sensor unter „Weitergeleitete Ereignisse“ angezeigt werden.
