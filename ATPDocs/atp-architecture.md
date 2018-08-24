@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/05/2018
+ms.date: 8/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8264799f3aad2fb27287f56513458f34a3a7b0c6
-ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
+ms.openlocfilehash: a6cb3ca9b4f9498caa0810cec129c24b0f2e587b
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39567643"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734688"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -28,20 +28,17 @@ Architektur von Azure Advanced Threat Protection:
 
 ![Topologiediagramm der Azure ATP-Architektur](media/atp-architecture-topology.png)
 
-Azure ATP überwacht den Datenverkehr Ihres Domänencontrollernetzwerks über die Portspiegelung an einem eigenständigen Azure ATP-Sensor mit physischen oder virtuellen Switches. Wenn Sie den Azure ATP-Sensor direkt auf Ihren Domänencontrollern bereitstellen, ist die Portspiegelung nicht mehr erforderlich. Darüber hinaus kann Azure ATP (direkt von den Domänencontrollern oder von einem SIEM-Server weitergeleitete) Windows-Ereignisse nutzen und die Daten analysieren, um nach Angriffen und Sicherheitsrisiken zu suchen. Azure ATP empfängt analysierten Datenverkehr von dem eigenständigen Azure ATP-Sensor und dem Azure ATP-Sensor. Anschließend führt es die Profilerstellung, die deterministische Erkennung sowie Machine Learning- und Verhaltensalgorithmen aus, um Informationen über Ihr Netzwerk zu sammeln, um Anomalien zu erkennen und Sie bei verdächtigen Aktivitäten warnen zu können.
+Azure ATP überwacht den Datenverkehr Ihres Domänencontrollernetzwerks über die Portspiegelung an einem eigenständigen Azure ATP-Sensor mit physischen oder virtuellen Switches. Wenn Sie den Azure ATP-Sensor direkt auf Ihren Domänencontrollern bereitstellen, ist die Portspiegelung nicht mehr erforderlich. Darüber hinaus kann Azure ATP (direkt von den Domänencontrollern oder von einem SIEM-Server weitergeleitete) Windows-Ereignisse nutzen und die Daten analysieren, um nach Angriffen und Sicherheitsrisiken zu suchen. Azure ATP empfängt analysierten Datenverkehr von dem Azure ATP-Sensor und dem eigenständigen Azure ATP-Sensor. Anschließend führt Azure ATP die Profilerstellung, die deterministische Erkennung sowie Machine Learning- und Verhaltensalgorithmen aus, um Informationen über Ihr Netzwerk sammeln, die Erkennung von Anomalien ermöglichen und Sie bei verdächtigen Aktivitäten warnen zu können.
 
-In diesem Abschnitt wird der Ablauf der Netzwerk- und Ereigniserfassung beschrieben. Außerdem werden die Funktionen der Hauptkomponenten von ATP detailliert erläutert: der eigenständige Azure ATP-Sensor und der Azure ATP-Sensor, der über dieselben Kernfunktionen wie der eigenständige Azure ATP-Sensor verfügt, und der Azure ATP-Clouddienst. 
+In diesem Abschnitt wird der Ablauf der Netzwerk- und Ereigniserfassung beschrieben. Außerdem werden die Funktionen der Hauptkomponenten von ATP detailliert erläutert: der Azure ATP-Sensor, der eigenständige Azure ATP-Sensor (der über dieselben Kernfunktionen wie der Azure ATP-Sensor verfügt, jedoch zusätzliche Hardware, Portspiegelung und Konfigurationen erfordert und nicht die Erkennung basierend auf der Ereignisablaufverfolgung für Windows (ETW) unterstützt) und der Azure ATP-Clouddienst. 
 
-Bei direkter Installation auf Domänencontrollern greift der Sensor direkt vom Domänencontroller auf die erforderlichen Ereignisprotokolle zu. Nach Analyse dieser Protokolle und des Netzwerkdatenverkehrs durch den Sensor sendet Azure ATP nur diese analysierten Informationen (nicht alle Protokolle) an den Azure ATP-Dienst.
+Bei direkter Installation auf Domänencontrollern greift der ATP-Sensor direkt vom Domänencontroller auf die erforderlichen Ereignisprotokolle zu. Nach Analyse dieser Protokolle und des Netzwerkdatenverkehrs durch den Sensor sendet Azure ATP nur diese analysierten Informationen (nicht alle Protokolle) an den Azure ATP-Dienst.
 
 ## <a name="azure-atp-components"></a>Azure ATP-Komponenten
 Azure ATP umfasst die folgenden Komponenten:
 
 -   **Azure ATP-Portal zur Verwaltung von Arbeitsbereichen** <br>
-Über das Azure ATP-Portal zur Verwaltung von Arbeitsbereichen können Sie Arbeitsbereiche erstellen und eine Integration in Microsoft-Dienste vornehmen.
-
-> [!NOTE]
-> Nur die Sensoren aus einer Active Directory-Gesamtstruktur können eine Verbindung zu einem Arbeitsbereich herstellen.
+Über das Azure ATP-Portal zur Verwaltung von Arbeitsbereichen können Sie Arbeitsbereiche erstellen und verwalten und Integrationen in andere Microsoft-Dienste vornehmen.
 
 -   **Azure ATP-Arbeitsbereichsportal** <br>
 Das Azure ATP-Arbeitsbereichsportal empfängt Daten von ATP-Sensoren und eigenständigen Sensoren. Es überwacht, verwaltet und untersucht Bedrohungen in Ihrer Umgebung.
@@ -50,30 +47,28 @@ Das Azure ATP-Arbeitsbereichsportal empfängt Daten von ATP-Sensoren und eigenst
 Der Azure ATP-Sensor wird direkt auf den Domänencontrollern installiert und überwacht den Datenverkehr direkt, ohne dass ein dedizierter Server benötigt wird oder die Portspiegelung konfiguriert werden muss. 
 
 -   **Eigenständiger Azure ATP-Sensor**<br>
-Der eigenständige Azure ATP-Sensor wird auf einem dedizierten Server installiert, der den Datenverkehr der Domänencontroller mit Portspiegelung oder einem Netzwerk-TAP überwacht. Er stellt eine Alternative zum Azure ATP-Sensor dar.
+Der eigenständige Azure ATP-Sensor wird auf einem dedizierten Server installiert, der den Datenverkehr der Domänencontroller mit Portspiegelung oder einem Netzwerk-TAP überwacht. Es stellt eine Alternative zum Azure ATP-Sensor dar, der zusätzliche Hardware, Portspiegelung und Konfigurationen erfordert. Eigenständige Azure ATP-Sensoren unterstützen nicht die Erkennung basierend auf der Ereignisablaufverfolgung für Windows (ETW), die vom ATP-Sensor unterstützt werden. 
 
 ## <a name="deployment-options"></a>Bereitstellungsoptionen
 Sie können Azure ATP mit der folgenden Kombination von Sensoren bereitstellen:
 
 -   **Ausschließliche Verwendung von Azure ATP-Sensoren**<br>
-Ihre Azure ATP-Bereitstellung kann ausschließlich Azure ATP-Sensoren enthalten: die Azure ATP-Sensoren werden auf jedem Domänencontroller bereitgestellt, und es sind keine zusätzlichen Server oder Konfigurationen für die Portspiegelung erforderlich.
+Ihre Azure ATP-Bereitstellung kann ausschließlich Azure ATP-Sensoren enthalten: Die Azure ATP-Sensoren werden direkt auf jedem Domänencontroller bereitgestellt, und es sind keine zusätzlichen Server oder Konfigurationen für die Portspiegelung erforderlich.
 
 -   **Ausschließliche Verwendung von eigenständigen Azure ATP-Sensoren** <br>
 Ihre Azure ATP-Bereitstellung kann ausschließlich eigenständige Azure ATP-Sensoren (ohne Azure ATP-Sensoren) enthalten: Alle Domänencontroller müssen so konfiguriert sein, dass die Portspiegelung auf eigenständigen Azure ATP-Sensoren oder Netzwerk-TAPs aktiviert ist.
 
 -   **Verwendung von sowohl eigenständigen Azure ATP-Sensoren als auch Azure ATP-Sensoren**<br>
-Ihre Azure ATP-Bereitstellung umfasst sowohl eigenständige Azure ATP-Sensoren als auch Azure ATP-Sensoren. Die Azure ATP-Sensoren werden auf einigen Ihrer Domänencontroller installiert (z.B. alle Domänencontroller in Ihren Filialen). Gleichzeitig werden andere Domänencontroller von eigenständigen Azure ATP-Sensoren überwacht (z.B. die größeren Domänencontroller in Ihren Hauptdatenzentren).
+Ihre Azure ATP-Bereitstellung umfasst sowohl eigenständige Azure ATP-Sensoren als auch Azure ATP-Sensoren. Die Azure ATP-Sensoren werden auf einigen Ihrer Domänencontroller installiert (z.B. alle Domänencontroller in Ihren Filialen). Gleichzeitig werden andere Domänencontroller von eigenständigen Azure ATP-Sensoren überwacht (z.B. die größeren Domänencontroller in Ihren Hauptrechenzentren). 
 
 
-### <a name="azure-atp-workspace-management-portal"></a>Azure ATP-Portal zur Verwaltung von Arbeitsbereichen
+### <a name="azure-atp-management-portal"></a>Azure ATP-Verwaltungsportal
 
-Über das Azure ATP-Portal zur Verwaltung von Arbeitsbereichen können Sie folgende Vorgänge durchführen:
+Über das Azure ATP-Verwaltungsportal können Sie folgende Vorgänge durchführen:
 
--   Erstellen und Verwalten von Azure ATP-Arbeitsbereichen
+-   Erstellen und Verwalten Ihres Azure ATP-Arbeitsbereichs
 
 -   Integrieren in andere Microsoft-Sicherheitsdienste
-
-Legen Sie Ihren Hauptarbeitsbereich als **Primär** fest. Wenn Sie einen Arbeitsbereich als „Primär“ festlegen, hat dies Konsequenzen für die Integration: Sie können nur für Ihren primären Arbeitsbereich Azure ATP in Windows Defender ATP integrieren. 
 
 > [!NOTE]
 > - Azure ATP unterstützt derzeit die Erstellung von lediglich einem Arbeitsbereich. Nachdem Sie einen Arbeitsbereich gelöscht haben, können Sie den Support kontaktieren, um den Arbeitsbereich erneut zu aktivieren. Sie können maximal drei Arbeitsbereiche löschen. Kontaktieren Sie den Azure ATP-Support, um die Anzahl an gespeicherten bzw. gelöschten Arbeitsbereichen zu erhöhen.
@@ -99,20 +94,16 @@ Legen Sie Ihren Hauptarbeitsbereich als **Primär** fest. Wenn Sie einen Arbeits
 |Entitätenempfänger|Empfängt Batches von Entitäten von allen Azure ATP-Sensoren und eigenständigen Azure ATP-Sensoren|
 |Netzwerkaktivitätenverarbeitung|Verarbeitet alle Netzwerkaktivitäten innerhalb der einzelnen empfangenen Batches. Beispiel: Zuordnung unterschiedlicher Kerberos-Schritte, die von potenziell verschiedenen Computern ausgeführt werden|
 |Entityprofilerstellung|Erstellt Profile für alle eindeutigen Entitäten gemäß dem Datenverkehr und den Ereignissen. Azure ATP aktualisiert zum Beispiel die Liste der angemeldeten Computer für jedes Benutzerprofil.|
-|Azure ATP-Portal zur Verwaltung von Arbeitsbereichen|Verwaltet Ihre Azure ATP-Arbeitsbereiche|
+|Azure ATP-Verwaltungsportal|Verwaltet Ihren Azure ATP-Arbeitsbereich.|
 |Azure ATP-Arbeitsbereichsportal|Der Azure ATP-Arbeitsbereich wird verwendet, um Azure ATP zu konfigurieren und verdächtige Aktivitäten zu überwachen, die von Azure ATP auf Ihrem Netzwerk erkannt werden. Der Azure ATP-Arbeitsbereich ist nicht vom Azure ATP-Sensor abhängig und wird sogar weiter ausgeführt, wenn der Azure ATP-Sensordienst angehalten wird. |
 |Detektoren|Die Detektoren verwenden Machine Learning-Algorithmen und deterministische Regeln, um verdächtige Aktivitäten und ungewöhnliches Benutzerverhalten im Netzwerk zu suchen.|
-
-Berücksichtigen Sie die folgenden Kriterien bei der Entscheidung, wie viele Azure ATP-Arbeitsbereiche Sie in Ihrem Netzwerk bereitstellen möchten:
-
--   Ein Azure ATP-Arbeitsbereich kann eine einzelne Active Directory-Gesamtstruktur überwachen. Wenn Sie über mehrere Active Directory-Gesamtstrukturen verfügen, benötigen Sie mindestens einen Azure ATP-Clouddienst pro Active Directory-Gesamtstruktur.
 
 
 ## <a name="azure-atp-sensor-and-azure-atp-standalone-sensor"></a>Azure ATP-Sensor und eigenständiger Azure ATP-Sensor
 
 Der **Azure ATP-Sensor** und der **eigenständige Azure ATP-Sensor** verfügen über die gleichen Kernfunktionen:
 
--   Erfassen und Untersuchen von Datenverkehr des Domänencontrollernetzwerks Dabei handelt es sich um portgespiegelten Datenverkehr für eigenständige Azure ATP-Sensoren und lokalen Datenverkehr von Domänencontrollern in Azure ATP-Sensoren. 
+-   Erfassen und Untersuchen von Datenverkehr des Domänencontrollernetzwerks Dabei handelt es sich um lokalen Datenverkehr von Domänencontrollern in Azure ATP-Sensoren und portgespiegelten Datenverkehr für eigenständige Azure ATP-Sensoren. 
 
 -   Empfangen von Windows-Ereignissen – entweder direkt über den Domänencontroller (für ATP-Sensoren) oder über SIEM- bzw. Syslog-Server (für eigenständige Azure ATP-Sensoren)
 
@@ -124,7 +115,7 @@ Der **Azure ATP-Sensor** und der **eigenständige Azure ATP-Sensor** verfügen �
 
 -   Übertragen von relevanten Daten in den Azure ATP-Clouddienst
 
--   Überwachen von mehreren Domänencontrollern über einen einzelnen eigenständigen Azure ATP-Sensor, oder Überwachen von einem Domänencontroller für einen Azure ATP-Sensor.
+-   Überwachen eines einzelnen Domänencontrollers für einen Azure ATP-Sensor oder Überwachen von mehreren Domänencontrollern über einen eigenständigen Azure ATP-Sensor.
 
 Standardmäßig unterstützt Azure ATP bis zu 100 Sensoren. Kontaktieren Sie den Azure ATP-Support, wenn Sie noch mehr Sensoren installieren möchten.
 
@@ -141,9 +132,9 @@ Der eigenständige Azure ATP-Sensor empfängt den Netzwerkdatenverkehr und die W
 
 ## <a name="azure-atp-sensor-features"></a>Azure ATP-Sensorfeatures
 
-Die folgenden Features funktionieren für den eigenständigen Azure ATP-Sensor und den Azure ATP-Sensor auf unterschiedliche Weise.
+Die folgenden Features funktionieren für den Azure ATP-Sensor und den eigenständigen Azure ATP-Sensor auf unterschiedliche Weise.
 
--   Der Azure ATP-Sensor kann Ereignisse lokal lesen, ohne die Ereignisweiterleitung zu konfigurieren.
+-   Der Azure ATP-Sensor liest lokal Ereignisse, ohne dass zusätzliche Hardware erworben und verwaltet oder die bei eigenständigen ATP-Sensoren erforderliche Ereignisweiterleitung konfiguriert werden muss. Der Azure ATP-Sensor unterstützt zudem die Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW), die die Protokollinformationen für mehrere Erkennungen bereitstellt. Die Erkennung basierend auf der ETW umfasst sowohl verdächtige Replikationsanforderungen als auch die Heraufstufung verdächtiger Domänencontroller. Beide stellen potenzielle DcShadow-Angriffe dar und werden nicht von eigenständigen ATP-Sensoren unterstützt.  
 
 -   **Kandidat für die Domänensynchronisierung**<br>
 Der Kandidat für den Domänensynchronizer ist für die proaktive Synchronisierung aller Entitäten aus einer bestimmten Active Directory-Domäne verantwortlich (ähnlich dem Mechanismus, der von den Domänencontrollern selbst für die Replikation verwendet wird). Aus der Liste der Kandidaten wird nach dem Zufallsprinzip ein Sensor für den Domänensynchronizer ausgewählt. <br><br>
@@ -179,7 +170,7 @@ Wenn Active Directory mehr Computeleistung erfordert, wird das vom Azure ATP-Sen
 Stellen Sie sicher, dass die folgenden Komponenten eingerichtet sind, um mit Azure ATP arbeiten zu können.
 
 ### <a name="port-mirroring"></a>Portspiegelung
-Wenn Sie den eigenständigen Azure ATP-Sensor verwenden, müssen Sie für die Domänencontroller, die überwacht werden, die Portspiegelung einrichten und den eigenständigen Azure ATP-Sensor über die physischen oder virtuellen Switches als Ziel festlegen. Eine andere Möglichkeit ist die Verwendung von Netzwerk-TAPs. Azure ATP funktioniert auch, wenn nur einige Domänencontroller überwacht werden, allerdings ist die Erkennung dann weniger effektiv.
+Wenn Sie eigenständige Azure ATP-Sensoren verwenden, muss die Portspiegelung für die überwachten Domänencontroller eingerichtet werden. Legen Sie den eigenständigen Azure ATP-Sensor über die physischen oder virtuellen Switches als Ziel fest. Eine andere Möglichkeit ist die Verwendung von Netzwerk-TAPs. Azure ATP funktioniert auch, wenn nur einige Domänencontroller überwacht werden, allerdings ist die Erkennung dann weniger effektiv.
 
 In diesem Fall wird nur ein kleiner Prozentsatz dieses Datenverkehrs komprimiert und zur Analyse an den eigenständigen Azure ATP-Sensor gesendet, während durch die Portspiegelung sämtlicher Netzwerkverkehr der Domänencontroller an den Azure ATP-Clouddienst gesendet wird.
 
@@ -187,9 +178,12 @@ Die Domänencontroller und der eigenständige Azure ATP-Sensor können physisch 
 
 
 ### <a name="events"></a>Ereignisse
-Wenn Sie den Azure ATP-Vorgang zur Erkennung der Angriffstypen Pass-the-Hash, Brute Force, Änderung sensibler Gruppen, Erstellen von verdächtigen Diensten und Änderungen an Honey Tokens über Azure ATP verbessern möchten, werden die folgenden Windows-Ereignisse benötigt: 4776, 4732, 4733, 4728, 4729, 4756, 4757 und 7045. Diese können entweder automatisch vom Azure ATP-Sensor gelesen oder, falls dieser nicht bereitgestellt wurde, an den eigenständigen Azure ATP-Sensor weitergeleitet werden. Dazu gibt es zwei Möglichkeiten: die Konfiguration des eigenständigen Azure ATP-Sensors, sodass dieser auf SIEM-Ereignisse lauscht, oder die [Konfiguration der Windows-Ereignisweiterleitung](configure-event-forwarding.md).
+Um die Abdeckung der Azure ATP-Erkennung von Pass-the-Hash-Angriffen, verdächtigen Authentifizierungsfehlern, Änderungen an sensiblen Gruppen, der Erstellung von verdächtigen Diensten und Angriffen mit Honeytoken-Aktivitätstypen zu verbessern, muss Azure ATP die Protokolle folgender Windows-Ereignisse analysieren: 4776, 4732, 4733, 4728, 4729, 4756, 4757 und 7045. Diese Ereignisse werden automatisch von Azure ATP-Sensoren mit den richtigen erweiterten Überwachungsrichtlinieneinstellungen gelesen. In Situationen, in denen eigenständige Azure ATP-Sensoren bereitgestellt werden, können Ereignisprotokolle auf zwei Arten weitergeleitet werden: durch die Konfiguration des eigenständigen Azure ATP-Sensors, sodass dieser auf SIEM-Ereignisse lauscht, oder durch die [Konfiguration der Windows-Ereignisweiterleitung](configure-event-forwarding.md). 
 
--   Konfigurieren des eigenständigen Azure ATP-Sensors zum Lauschen an SIEM-Ereignissen <br>Konfigurieren Sie SIEM zum Weiterleiten bestimmter Windows-Ereignisse an ATP. Azure ATP unterstützt eine Reihe von SIEM-Lieferanten. Weitere Informationen finden Sie unter [Configure event forwarding (Konfigurieren der Ereignisweiterleitung)](configure-event-forwarding.md).
+> [!NOTE]
+> - Die Windows-Ereignisweiterleitung für eigenständige Sensoren unterstützt nicht die ETW (Event Tracing for Windows). Die Erkennung basierend auf der ETW umfasst sowohl verdächtige Replikationsanforderungen als auch die verdächtige Heraufstufung zu Domänencontrollern. Beide stellen potenzielle DcShadow-Angriffe dar.  
+
+-   Konfigurieren des eigenständigen Azure ATP-Sensors zum Lauschen an SIEM-Ereignissen <br>Konfigurieren Sie SIEM zum Weiterleiten bestimmter Windows-Ereignisse an ATP. Azure ATP unterstützt eine Reihe von SIEM-Lieferanten. Weitere Informationen finden Sie unter [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-forwarding.md).
 
 -   Konfigurieren der Windows-Ereignisweiterleitung<br>Eine andere Möglichkeit, wie Azure ATP Ihre Ereignisse abrufen kann, besteht darin, die Domänencontroller so zu konfigurieren, dass die Windows-Ereignisse 4776, 4732, 4733, 4728, 4729, 4756, 4757 und 7045 an den eigenständigen Azure ATP-Sensor weitergeleitet werden. Dies ist insbesondere dann nützlich, wenn Sie nicht über SIEM verfügen oder SIEM von ATP derzeit nicht unterstützt wird. Weitere Informationen zur Windows-Ereignisweiterleitung in ATP finden Sie unter [Configuring Windows event forwarding (Konfigurieren der Windows-Ereignisweiterleitung)](configure-event-forwarding.md). Dies gilt nicht für den Azure ATP-Sensor, sondern nur für physische eigenständige Azure ATP-Sensoren.
 

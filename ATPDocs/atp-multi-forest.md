@@ -2,10 +2,10 @@
 title: Azure Advanced Threat Protection-Unterstützung für mehrere Gesamtstrukturen | Microsoft-Dokumentation
 description: Erfahren Sie, wie Sie Unterstützung für mehrere Active Directory-Gesamtstrukturen in Azure ATP einrichten.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/20/2018
+ms.date: 8/20/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a48bf96bd6a71282455d932a35aac23ba4c8193a
-ms.sourcegitcommit: 7909deafdd9323f074d0ff2f590e307bcfaaabad
+ms.openlocfilehash: 2a3460c39d6428831cc34231321fff745dbe0701
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39202131"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734624"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -29,14 +29,14 @@ ms.locfileid: "39202131"
 
 ## <a name="step-9--set-up-azure-advanced-threat-protection-multi-forest-support"></a>Schritt 9:  Einrichten der Azure Advanced Threat Protection-Unterstützung für mehrere Gesamtstrukturen
 
-Azure ATP kann Organisationen mit mehreren Gesamtstrukturen unterstützen, wodurch diese die Möglichkeit erhalten, Aktivitäten und Benutzerprofile in allen Gesamtstrukturen zu überwachen. 
+Azure ATP kann Organisationen mit mehreren Gesamtstrukturen unterstützen, wodurch diese die Möglichkeit erhalten, Aktivitäten und Benutzerprofile in allen Gesamtstrukturen ganz einfach über eine zentrale Konsole zu überwachen. 
 
-Eine Unternehmensorganisation kann über mehrere Active Directory-Gesamtstrukturen verfügen, die oft für verschiedene Zwecke genutzt werden. Dies schließt auch ältere, aus Unternehmenszusammenschlüssen und -übernahmen stammende Infrastrukturen, die geografischen Verteilung und Sicherheitsgrenzen (Red Forests) ein. Sie können mehrere Gesamtstrukturen mit Azure ATP schützen, indem Sie einen Bericht zu allen Daten an einen einzigen, primären Arbeitsbereich senden, um die Überwachung und Untersuchungen über eine zentrale Konsole auszuführen.
+Unternehmensorganisationen können in der Regel über mehrere Active Directory-Gesamtstrukturen verfügen, die oft für verschiedene Zwecke genutzt werden. Dies schließt auch ältere, aus Unternehmenszusammenschlüssen und -übernahmen stammende Infrastrukturen, die geografische Verteilung und Sicherheitsbegrenzungen (Red Forests) ein. Sie können mehrere Gesamtstrukturen mit Azure ATP schützen, um die Überwachung und Untersuchungen über eine zentrale Konsole auszuführen.
 
 Die Möglichkeit, mehrere Active Directory-Gesamtstrukturen zu unterstützen, bietet folgende Vorteile:
--   Sie können in mehreren Gesamtstrukturen ausgeführte Benutzeraktivitäten von einer zentralen Konsole aus im Blick halten und untersuchen. 
--   Die Unterstützung mehrerer Gesamtstrukturen verbessert die Erkennung und reduziert falsch positive Ergebnisse durch erweiterte Active Directory-Integration und -Kontoauflösung. 
--   Da Sie durch die Unterstützung mehrerer Gesamtstrukturen nicht mehr mehrere Arbeitsbereiche benötigen, haben Sie mehr Kontrolle und auch die Bereitstellung wird einfacher. Gleichzeitig werden Ihre Domänencontroller alle zentral von einer einzigen Azure ATP-Konsole aus überwacht, die eine bessere, organisationsübergreifende Überwachung und Berichterstattung bietet.
+-   Sie können Aktivitäten, die von Benutzern in mehreren Gesamtstrukturen ausgeführt werden, in einer zentralen Konsole im Blick behalten und untersuchen. 
+-   Durch erweiterte Active Directory-Integration und -Kontoauflösung lassen sich falsch positive Ergebnisse besser erkennen und reduzieren. 
+-   Sie ermöglicht eine bessere Kontrolle und eine einfachere Bereitstellung. Die Überwachung von Warnungen und Berichterstellung für die organisationsübergreifende Abdeckung wurde verbessert, wenn all Ihre Domänencontroller über eine einzelne Azure ATP-Konsole überwacht werden.
 
 
 ## <a name="how-azure-atp-detects-activities-across-multiple-forests"></a>Erkennung von Aktivitäten in mehreren Gesamtstrukturen durch Azure ATP 
@@ -48,7 +48,7 @@ Zum Erkennen von Aktivitäten, die mehrere Gesamtstrukturen umfassen, fragen Azu
 > - Der Benutzer, den Sie in der Azure ATP-Konsole unter **Verzeichnisdienste** konfigurieren, muss in allen anderen Gesamtstrukturen vertrauenswürdig sein.
 
 
-Wenn Gesamtstrukturen ohne installierte Azure ATP-Sensoren vorhanden sind, kann Azure ATP die Aktivitäten in diesen Gesamtstrukturen dennoch anzeigen und überwachen. Die installierten ATP-Sensoren können alle angeschlossenen Domänencontroller der Remotegesamtstrukturen abfragen, um Benutzer und Computer aufzulösen und entsprechende Profile zu erstellen. 
+Wenn Gesamtstrukturen ohne installierte Azure ATP-Sensoren vorhanden sind, kann Azure ATP die Aktivitäten in diesen Gesamtstrukturen dennoch anzeigen und überwachen. Die installierten ATP-Sensoren können alle verbundenen Domänencontroller der Remotegesamtstrukturen abfragen, um Benutzer und Computer aufzulösen und entsprechende Profile zu erstellen. 
 
 ## <a name="installation-requirements"></a>Installationsanforderungen 
 
@@ -87,8 +87,8 @@ Der Prozess des Zuordnens von Gesamtstrukturen durch Azure ATP hat folgende Ausw
 
 
 ## <a name="see-also"></a>Weitere Informationen
-- [Tool zur Bemessung von ATA-Gateways](http://aka.ms/aatpsizingtool)
-- [ATA-Architektur](atp-architecture.md)
-- [Installieren von ATA](install-atp-step1.md)
+- [ATP-Tool zur Größenanpassung](http://aka.ms/aatpsizingtool)
+- [ATP-Architektur](atp-architecture.md)
+- [Install ATP (Installieren von ATP)](install-atp-step1.md)
 - [Weitere Informationen finden Sie im ATP-Forum.](https://aka.ms/azureatpcommunity)
 

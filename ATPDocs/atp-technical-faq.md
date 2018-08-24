@@ -2,10 +2,10 @@
 title: Häufig gestellte Fragen zu Azure Advanced Threat Protection | Microsoft-Dokumentation
 description: Liste häufig gestellter Fragen zu Azure ATP und zugehörige Antworten
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/13/2018
+ms.date: 8/13/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d7f7f4841c40fb78dc06bae1c06e3c57d2e7f7ee
-ms.sourcegitcommit: c77e378d18e654bea4b4af4f24cc941a6659ce99
+ms.openlocfilehash: 6550f6b6575af56eab7de911b22b1e4f27cff0f3
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "29883949"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734656"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -31,19 +31,21 @@ Dieser Artikel enthält eine Reihe häufig gestellter Fragen zu Azure ATP sowie 
 Sie können eine Lizenz für Enterprise Mobility + Security 5 (EMS E5) entweder direkt über das [Office 365-Portal](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) oder über das CSP-Lizenzierungsmodell (Cloud Solution Partner) erwerben.                  
 
 ## <a name="what-should-i-do-if-the-azure-atp-sensor-or-standalone-sensor-doesnt-start"></a>Wie soll ich vorgehen, wenn der Azure ATP-Sensor oder der eigenständige Sensor nicht gestartet wird?
-Sehen Sie sich den letzten Fehlereintrag im aktuellen Fehlerprotokoll an (Installationsverzeichnis von Azure ATP unter dem Ordner „Logs“ (Protokolle)).
+Sehen Sie sich den letzten Fehlereintrag im aktuellen [Fehlerprotokoll](troubleshooting-atp-using-logs.md) an (Installationsverzeichnis von Azure ATP unter dem Ordner „Logs“ (Protokolle)).
 
 ## <a name="how-can-i-test-azure-atp"></a>Wie kann ich Azure ATP testen?
-Sie können einen End-to-End-Test durchführen und verdächtige Aktivitäten simulieren. Führen Sie dazu einen der folgenden Befehle aus:
+Sie können verdächtige Aktivitäten in einem End-to-End-Test simulieren. Im folgenden Szenario wird die DNS-Reconnaissance simuliert:
 
--  DNS-Reconnaissance durch Verwendung von „Nslookup.exe“
-
-
-Dies muss remote für den überwachten Domänencontroller und nicht über den eigenständigen Azure ATP-Sensor ausgeführt werden.
-
+1.  Vergewissern Sie sich, dass Azure ATP-Sensoren auf den Domänencontrollern (oder eigenständige Sensoren und die zugehörige Portspiegelung) installiert und konfiguriert sind.
+2.  Rufen Sie die Befehlszeile auf.
+3.  Führen Sie den folgenden Befehl aus: nslookup -<DC iP address>
+    1.  Drücken Sie die EINGABETASTE.
+    2.  Geben Sie Folgendes ein: Is -d <FQDN>
+    3.  Abhängig von der Konfiguration Ihrer Umgebung können die Antworten von „Abfrage zurückgewiesen“ bis hin zu einer Liste von DNS-Einträgen reichen. 
+4. Zeigen Sie die Warnung im Zusammenhang mit der simulierten DNS-Reconnaissance in der Azure ATP-Konsole an. 
 
 ## <a name="does-azure-atp-work-with-encrypted-traffic"></a>Funktioniert Azure ATP mit verschlüsseltem Datenverkehr?
-Azure ATP analysiert mehrere Netzwerkprotokolle sowie von SIEM oder der Windows-Ereignisweiterleitung erfasste Ereignisse. Erkennungen auf Grundlage von Netzwerkprotokollen mit verschlüsseltem Datenverkehr (z.B. LDAPS und IPSEC) werden nicht analysiert.
+Azure ATP analysiert mehrere Netzwerkprotokolle sowie von SIEM oder der Windows-Ereignisweiterleitung erfasste Ereignisse.  Netzwerkprotokolle mit verschlüsseltem Datenverkehr (z.B. LDAPS und IPsec) werden nicht verschlüsselt, sondern analysiert.
 
 
 ## <a name="does-azure-atp-work-with-kerberos-armoring"></a>Funktioniert Azure ATP mit Kerberos Armoring?
@@ -81,7 +83,7 @@ Der eigenständige Azure ATP-Sensor benötigt mindestens zwei Netzwerkadapter:<b
 Azure ATP weist eine bidirektionale Integration in SIEMs auf:
 
 1. Azure ATP kann so konfiguriert werden, dass bei Integritätswarnungen und Feststellung einer verdächtigen Aktivität eine Syslog-Warnung an einen SIEM-Server gesendet wird, der das CEF-Format verwendet.
-2. Azure ATP kann so konfiguriert werden, dass für jedes Windows-Ereignis Syslog-Meldungen von [diesen SIEMs](configure-event-collection.md) empfangen werden.
+2. Azure ATP kann so konfiguriert werden, dass für Windows-Ereignisse Syslog-Meldungen von [diesen SIEMs](configure-event-collection.md) empfangen werden.
 
 ## <a name="how-do-i-configure-the-azure-atp-sensors-to-communicate-with-azure-atp-cloud-service-when-i-have-a-proxy"></a>Wie konfiguriere ich Azure ATP-Sensoren so, dass sie mit dem Azure ATP-Clouddienst kommunizieren, wenn ich über einen Proxyserver verfüge?
 
@@ -110,7 +112,7 @@ Nein. Azure ATP überwacht alle Geräte im Netzwerk und führt die Authentifizie
 Ja. Da Computerkonten (ebenso wie alle anderen Entitäten) zum Durchführen böswilliger Aktivitäten verwendet werden können, überwacht Azure ATP das Verhalten aller Computerkonten und aller weiteren Entitäten in der Umgebung.
 
 ## <a name="can-azure-atp-support-multi-domain-and-multi-forest"></a>Kann Azure ATP mehrere Domänen und mehrere Gesamtstrukturen unterstützen?
-Azure Advanced Threat Protection unterstützt-Umgebungen mit mehreren Domänen innerhalb der gleichen Gesamtstrukturbegrenzung. Mehrere Gesamtstrukturen erfordern einen Azure ATP-Arbeitsbereich für jede Gesamtstruktur.
+Azure Advanced Threat Protection unterstützt Umgebungen und mehrere Gesamtstrukturen. Dieses Feature befindet sich zurzeit in der Public Preview. Weitere Informationen und bekannte Einschränkungen finden Sie unter [Schritt 9: Einrichten der Azure Advanced Threat Protection-Unterstützung für mehrere Gesamtstrukturen](atp-multi-forest.md).
 
 ## <a name="can-you-see-the-overall-health-of-the-deployment"></a>Kann die Gesamtintegrität der Bereitstellung angezeigt werden?
 Ja, Sie können die Gesamtintegrität der Bereitstellung sowie spezifische Probleme im Zusammenhang mit der Konfiguration, Konnektivität usw. anzeigen und werden bei Eintreten eines Problems benachrichtigt.

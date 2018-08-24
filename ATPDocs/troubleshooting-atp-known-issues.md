@@ -2,10 +2,10 @@
 title: Behandlung von bekannten Problemen bei Azure ATP | Microsoft-Dokumentation
 description: Beschreibt, wie Sie häufige Fehler in Azure ATP beheben können.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 5/21/2018
+ms.date: 8/13/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d460a57d82f3eb233192235067e116f5ede5f5df
-ms.sourcegitcommit: b218f60b42a25fe486d774d97719590e6fa74e10
+ms.openlocfilehash: 986dc057127e8de1e26a78dd7a138b02efeebf99
+ms.sourcegitcommit: dc56b9e9533db1a2dc314b199e90191bb25adaba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34760055"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "41734610"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -28,7 +28,7 @@ ms.locfileid: "34760055"
 
 ## <a name="deployment-log-location"></a>Speicherort des Bereitstellungsprotokolls
  
-Die Azure ATP-Bereitstellungsprotokolle befinden sich im temporären Verzeichnis des Benutzers, der das Produkt installiert hat. Sie sind im Standardinstallationsverzeichnis unter „C:\Benutzer\Administrator\AppData\Local\Temp“ (oder in dem „%temp%“ übergeordneten Verzeichnis) zu finden.
+Die Azure ATP-Bereitstellungsprotokolle befinden sich im temporären Verzeichnis des Benutzers, der das Produkt installiert hat. Sie sind im Standardinstallationsverzeichnis unter „C:\Benutzer\Administrator\AppData\Local\Temp“ (oder in dem „%temp%“ übergeordneten Verzeichnis) zu finden. Weitere Informationen finden Sie unter [Problembehandlung für den Azure Advanced Threat Protection-Sensor (ATP) mithilfe der ATP-Protokolle](troubleshooting-atp-using-logs.md).
 
 ## <a name="proxy-authentication-problem-presents-as-licensing-error"></a>Proxyauthentifizierungsproblem wird als Lizenzierungsfehler dargestellt
 

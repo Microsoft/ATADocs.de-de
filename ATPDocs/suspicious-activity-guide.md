@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/24/2018
+ms.date: 8/20/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4667e13af4e86a18d1b50a2ea575f9c749f0c541
-ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
+ms.openlocfilehash: 4aa58228ea23f58ea37b10f941467e9dc076992f
+ms.sourcegitcommit: f534a318be71b840aecb6a84744d8cd1f251a7aa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39585236"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41734837"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -200,7 +200,7 @@ In dieser Erkennung wird eine Warnung ausgelöst, wenn ein Kerberos Ticket Grant
    2.   Ist der Azure ATP-Sensor in dieser Warnung ein virtueller Computer? Falls ja, wurde dieser kürzlich aus einem gespeicherten Zustand fortgesetzt? Falls ja, schließen Sie diese Warnung.
    3.   Wenn die Antwort auf die obigen Fragen „nein“ ist, gehen Sie von einem böswilligen Ereignis aus.
 
-- **Nicht vorhandenes Konto** (Vorschau)
+- **Nicht vorhandenes Konto**
    1.   Untersuchen Sie die folgenden Fragen:
          - Ist der Benutzer ein bekannter und gültiger Domänenbenutzer? Falls ja, schließen Sie die Warnung (sie war falsch positiv).
          - Wurde der Benutzer kürzlich hinzugefügt? Falls Ja, schließen Sie die Warnung. Möglicherweise wurde die Änderung noch nicht synchronisiert.
@@ -454,7 +454,7 @@ In dieser Erkennung wird eine Warnung ausgelöst, wenn viele Authentifizierungsf
 
 [Komplexe bzw. lange Kennwörter](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) stellen die erste Sicherheitsstufe zum Schutz gegen Brute-Force-Angriffe dar.
 
-## <a name="suspicious-domain-controller-promotion-potential-dcshadow-attack---preview"></a>Verdächtige Hochstufung zu Domänencontrollern (potenzieller DCShadow-Angriff) – Vorschau
+## <a name="suspicious-domain-controller-promotion-potential-dcshadow-attack---new"></a>Verdächtige Heraufstufung zu Domänencontrollern (potenzieller DcShadow-Angriff) – Neu
 
 **Beschreibung**
 
@@ -489,10 +489,11 @@ Weitere Informationen finden Sie unter [Grant Active Directory Domain Services p
 
 Nutzen Sie [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/), oder erstellen Sie ein Windows PowerShell-Skript, um festzustellen, wer in der Domäne über diese Berechtigungen verfügt.
  
+> [!NOTE]
+> Die Erkennung verdächtiger Heraufstufungen zu Domänencontrollern (potenzieller DcShadow-Angriff) wird nur von ATP-Sensoren unterstützt. 
 
 
-
-## <a name="suspicious-replication-request-potential-dcshadow-attack---preview"></a>Verdächtige Replikationsanforderung (potenzieller DCShadow-Angriff) – Vorschau
+## <a name="suspicious-replication-request-potential-dcshadow-attack---new"></a>Verdächtige Replikationsanforderung (potenzieller DcShadow-Angriff) – Neu
 
 **Beschreibung** 
 
@@ -519,6 +520,9 @@ Wenn die Windows Defender ATP-Integration aktiviert ist, klicken Sie auf das Win
 
 Nutzen Sie zu diesem Zweck den [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/), oder erstellen Sie ein Windows PowerShell-Skript, um zu ermitteln, wer in der Domäne über diese Berechtigungen verfügt.
 
+> [!NOTE]
+> Die Erkennung verdächtiger Replikationsanforderungen (potenzieller DcShadow-Angriff) wird nur von ATP-Sensoren unterstützt. 
+
 
 ## <a name="suspicious-service-creation"></a>Erstellen eines verdächtigen Diensts
 
@@ -542,7 +546,7 @@ Ein verdächtiger Dienst wurde von Ihrer Organisation auf einem Domänencontroll
 
 - Implementieren Sie den Zugriff mit weniger privilegierten Rechten auf Domänencomputern, um nur bestimmten Benutzern die Erstellung neuer Dienste zu erlauben.
 
-## Verdächtige VPN-Verbindung: Vorschauversion<a name="suspicious-vpn-detection"></a>
+## Verdächtige VPN-Verbindung <a name="suspicious-vpn-detection"></a>
 
 **Beschreibung**
 

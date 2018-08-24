@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 2d14d0e9-1b03-4bcc-ae97-8fd41526ffc5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5ccac90a171c895ee8b4d5336a125ccd7fa66239
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: c889fc070ffaf79a89c072d83edf6cc6f1cd0413
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2018
-ms.locfileid: "29445076"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734662"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -28,7 +28,7 @@ Bei Azure Advanced Threat Protection (ATP) handelt es sich um einen Clouddienst,
 
 ## <a name="how-azure-atp-works"></a>Wie funktioniert Azure ATP?
 
-Azure ATP nutzt ein proprietäres Netzwerkanalysemodul, um den Netzwerkverkehr verschiedener Protokolle (z.B. Kerberos, DNS, RPC, NTLM und andere) zwecks Authentifizierung, Autorisierung und zum Sammeln von Informationen zu erfassen und zu analysieren. Azure ATP sammelt die Informationen über:
+Azure ATP nutzt eine proprietäre Netzwerkanalyse-Engine, um den Netzwerkverkehr verschiedener Protokolle (z.B. Kerberos, DNS, RPC, NTLM und andere) zwecks Authentifizierung, Autorisierung und zum Sammeln von Informationen zu erfassen und zu analysieren. Azure ATP sammelt die Informationen über:
 
 -   die Bereitstellung von Azure ATP-Sensoren direkt über Ihre Domänencontroller
 -   die Portspiegelung von Domänencontrollern und DNS-Servern bis zum eigenständigen Azure ATP-Sensor
@@ -62,6 +62,8 @@ Azure ATP sucht nach drei Haupttypen von Angriffen: böswillige Angriffe, ungew�
 -   Overpass-the-Hash
 -   Forged PAC (MS14-068)
 -   Golden Ticket
+    -   Zeitanomalie
+    -   Nicht vorhandenes Konto – Neu
 -   Böswillige Replikation
 -   Verzeichnisdienstenumeration
 -   SMB-Sitzungsenumeration
@@ -73,6 +75,9 @@ Azure ATP sucht nach drei Haupttypen von Angriffen: böswillige Angriffe, ungew�
 -   Herunterstufung der Verschlüsselung
 -   Remoteausführung
 -   Erstellen eines schädlichen Diensts
+-   Verdächtige Heraufstufung zu Domänencontrollern (potenzieller DcShadow-Angriff) – Neu
+-   Verdächtige Replikationsanforderung (potenzieller DcShadow-Angriff) – Neu
+-   VPN 
 
 
 Azure ATP erkennt diese verdächtigen Aktivitäten und zeigt Informationen dazu im Azure ATP-Arbeitsbereichsportal an, einschließlich einer Übersicht darüber, wer den Angriff wann und wie ausgeführt hat und was dabei geschehen ist. Durch die Überwachung dieses einfachen und benutzerfreundlichen Dashboards werden Sie also benachrichtigt, wenn Azure ATP vermutet, dass ein Pass-the-Ticket-Angriff auf die Computer Client 1 und Client 2 in Ihrem Netzwerk versucht wurde.

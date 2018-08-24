@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8e7af3846d31031b645c65c7550b696fe4738e5d
-ms.sourcegitcommit: a9b8bc26d3cb5645f21a68dc192b4acef8f54895
+ms.openlocfilehash: a6b4f668533ab3169c10cfc9b194b8bd392db6d1
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2018
-ms.locfileid: "39064065"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734516"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -31,14 +31,14 @@ Azure ATP bietet eine rollenbasierte Sicherheit, um Daten gemäß den spezifisch
 
 [!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
 
-Rollengruppen erlauben die Zugriffsverwaltung für Azure ATP. Sie können durch Verwendung von Rollengruppen Aufgaben in Ihrem Sicherheitsteam aufteilen und nur so viel Zugriff gewähren, wie Benutzer für die Ausführung ihrer Arbeit benötigen. Dieser Artikel beschreibt die Zugriffsverwaltung und die Berechtigungen der einzelnen Azure ATP-Rollengruppen und hilft Ihnen bei der Einrichtung und Ausführung von Rollengruppen in ATP.
+Rollengruppen erlauben die Zugriffsverwaltung für Azure ATP. Sie können durch Verwendung von Rollengruppen Aufgaben in Ihrem Sicherheitsteam aufteilen und nur so viel Zugriff gewähren, wie Benutzer für die Ausführung ihrer Arbeit benötigen. Dieser Artikel beschreibt die Zugriffsverwaltung sowie die Berechtigungen der einzelnen Azure ATP-Rollengruppen und hilft Ihnen bei der Einrichtung und Ausführung von Rollengruppen in ATP.
 
 > [!NOTE]
 > Sämtliche globalen Administratoren und Sicherheitsadministratoren für die Azure Active Directory-Version des Mandanten werden automatisch als Azure ATP-Administratoren angesehen.
 
-## <a name="accessing-the-workspace-management-portal"></a>Zugreifen auf das Portal zur Verwaltung von Arbeitsbereichen
+## <a name="accessing-the-management-portal"></a>Zugreifen auf das Verwaltungsportal
 
-Nur Azure AD-Benutzer mit den Verzeichnisrollen „globaler Administrator“ oder „Sicherheitsadministrator“ können auf das Portal zur Verwaltung von Arbeitsbereichen (portal.atp.azure.com) zugreifen. Wenn Sie das Portal öffnen, können Sie verschiedene Arbeitsbereiche erstellen. Der Azure ATP-Dienst erstellt für jeden Arbeitsbereich drei Sicherheitsgruppen in Ihrem Azure Active Directory-Mandanten: Administratoren, Benutzer, Viewers. 
+Nur Azure AD-Benutzer mit den Verzeichnisrollen „globaler Administrator“ oder „Sicherheitsadministrator“ können auf das Verwaltungsportal (portal.atp.azure.com) zugreifen. Wenn Sie das Portal öffnen, können Sie Ihren Arbeitsbereich erstellen. Der Azure ATP-Dienst erstellt drei Sicherheitsgruppen in Ihrem Azure Active Directory-Mandanten: Administratoren, Benutzer, Viewer. 
 
 > [!NOTE]
 > Nur Benutzer, die zu der Azure AD-Sicherheitsgruppe für diesen Arbeitsbereich gehören sowie globale Administratoren und Sicherheitsadministratoren, können auf das Azure ATP-Arbeitsbereichsportal zugreifen.

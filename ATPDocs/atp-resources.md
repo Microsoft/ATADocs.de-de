@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/23/2018
+ms.date: 8/15/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 34dc152c-6b7f-4128-93fe-aad56c282730
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 498d1b4d14db079583da1999bfb68a5648111362
-ms.sourcegitcommit: 63a36cd96aec30e90dd77bee1d0bddb13d2c4c64
+ms.openlocfilehash: 7018fb46a9d9da326ba999aff34a5ac2de6b860c
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39227137"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734517"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -36,7 +36,7 @@ Bei Azure Advanced Threat Protection (ATP) handelt es sich um einen Clouddienst,
 
 ## <a name="deployment-decisions"></a>Entscheidungen für die Bereitstellung
 
-Azure ATP besteht aus dem Clouddienst von Azure sowie aus Sensoren, die auf einem Domänencontroller oder auf dedizierten Servern installiert werden können. Bevor Sie Azure ATP einrichten, sollten Sie auswählen, welche Sensoren am besten zu Ihrer Bereitstellung passen.<br>Wenn Sie physische Server verwenden, sollten Sie die Kapazität planen. Sie können das Tool zur Größenanpassung zum Zuweisen von Speicherplatz für Ihre Sensoren verwenden: 
+Azure ATP besteht aus dem Clouddienst von Azure sowie aus integrierten Sensoren, die auf einem Domänencontroller oder auf eigenständigen Sensoren auf dedizierten Servern installiert werden können. Bevor Sie Azure ATP einrichten, sollten Sie den Typ der Sensoren auswählen, der am besten zu Ihrer Bereitstellung und Ihren Anforderungen passen. Integrierte Azure ATP-Sensoren zeichnen sich durch eine höhere Sicherheit, niedrigere Betriebskosten und eine einfachere Bereitstellung aus. Eigenständige Azure ATP-Sensoren erfordern physische Hardware, zusätzliche Konfigurationsschritte und umfangreichere Betriebskosten. <br>Beim Einsatz physischer Server ist die Kapazitätsplanung von entscheidender Bedeutung. Sie können das Tool zur Größenanpassung zum Zuweisen von Speicherplatz für Ihre Sensoren verwenden: 
 - [Azure ATP-Tool zur Größenanpassung](http://aka.ms/aatpsizingtool): Das Tool zur Größenanpassung automatisiert die Auflistung der Menge an Datenverkehr, den Azure ATP überwacht. Es stellt automatisch Empfehlungen zur Unterstützbarkeit und Ressourcen für Sensoren bereit. 
 - [Handbuch zur ATA-Kapazitätsplanung](atp-capacity-planning.md)
 
@@ -49,14 +49,14 @@ Diese Ressourcen unterstützen Sie beim Einrichten von Azure ATP, bei der Verbin
 
 ## <a name="azure-atp-settings"></a>Einstellungen für Azure ATP
 
-Diese grundlegenden erforderlichen Einstellungen in Azure ATP werden bei der Erstellung des Arbeitsbereichs konfiguriert. Es gibt jedoch einige andere Einstellungen, die Sie zur Optimierung von Azure ATP verwenden können, um die Erkennungen für Ihre Umgebung präziser durchzuführen, z.B. die SIEM-Integration oder Überwachungseinstellungen. 
+Diese grundlegenden Einstellungen, die in Azure ATP erforderlich sind, werden bei der Erstellung des Arbeitsbereichs konfiguriert. Es gibt jedoch einige weitere Einstellungen, die Sie zur Optimierung von Azure ATP verwenden können, um die Erkennungen für Ihre Umgebung präziser durchzuführen, z.B. die SIEM-Integration und Überwachungseinstellungen. 
 
 - [Allgemeine ATP-Dokumentation](what-is-atp.md)
-- [Überwachungseinstellungen](https://blogs.technet.microsoft.com/positivesecurity/2017/08/18/ata-auditing-auditpol-advanced-audit-settings-enforcement-lightweight-gateway-service-discovery/): Überwachen Sie die Integrität Ihres Domänencontrollers vor und nach der ATA-Bereitstellung. 
+- [Überwachungseinstellungen](https://blogs.technet.microsoft.com/positivesecurity/2017/08/18/ata-auditing-auditpol-advanced-audit-settings-enforcement-lightweight-gateway-service-discovery/): Überwachen Sie die Integrität Ihres Domänencontrollers vor und nach einer ATP-Bereitstellung. 
 
 ## <a name="work-with-azure-atp"></a>Arbeiten mit Azure ATP
 
-Sobald Azure ATP einsatzbereit ist, können Sie verdächtige Aktivitäten anzeigen, die in der Zeitachse für Aktivitäten erkannt werden. Dies ist die Standardseite, auf die Sie gelangen, wenn Sie sich im Azure ATP-Portal anmelden. Standardmäßig werden alle offenen verdächtigen Aktivitäten auf der Angriffszeitachse angezeigt. Außerdem wird der Schweregrad angezeigt, der den einzelnen Aktivitäten zugewiesen wurde. Untersuchen Sie jede verdächtige Aktivität, indem Sie zu den Entitäten (Computer, Geräte, Benutzer) navigieren, um deren Profilseiten zu öffnen, die weitere Informationen bereitstellen. Mithilfe folgender Ressourcen können Sie mit den verdächtigen Aktivitäten von Azure ATP arbeiten: 
+Sobald Azure ATP einsatzbereit ist, können Sie verdächtige Aktivitäten anzeigen, die in der Azure ATP-Portalzeitachse für Aktivitäten erkannt werden. Die Zeitachse für Aktivitäten ist die standardmäßige Landing Page nach der Anmeldung beim Azure ATP-Portal. Standardmäßig werden alle offenen verdächtigen Aktivitäten auf der Angriffszeitachse angezeigt. Außerdem wird der Schweregrad angezeigt, der den einzelnen Aktivitäten zugewiesen wurde. Untersuchen Sie jede verdächtige Aktivität, indem Sie zu den Entitäten (Computer, Geräte, Benutzer) navigieren, um deren Profilseiten mit weiteren Informationen zu öffnen. Mithilfe folgender Ressourcen können Sie mit den verdächtigen Aktivitäten von Azure ATP arbeiten: 
 
 - [Azure ATP suspicious activity guide (Handbuch zu verdächtigen Aktivitäten bei Azure ATP):](suspicious-activity-guide.md) Erfahren Sie mehr über die Selektierung und die nächsten Schritte mit Azure ATP-Erkennungen.
 - [Tag groups as sensitive (Kennzeichnen von Gruppen als vertraulich):](sensitive-accounts.md) Erhalten Sie Einblicke in die Offenlegung von Anmeldeinformationen bei vertraulichen Sicherheitsgruppen.
