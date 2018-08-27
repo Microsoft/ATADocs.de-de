@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/06/2018
+ms.date: 8/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,40 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0062fc22df357e338d8eaf446688ea8bba56019c
-ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
+ms.openlocfilehash: 83b7b88d2b1ba61a2ae2733f1401d98b341ad3bd
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39567949"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734669"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
 # <a name="whats-new-in-azure-atp"></a>Neuerungen in Azure ATP 
+
+
+## <a name="azure-atp-release-245"></a>Azure ATP Release 2.45
+
+Veröffentlicht: 19. August 2018
+
+- **Azure ATP verfügt nun über die Event Trace for Windows (ETW) als zusätzliche Datenquelle**  <br> Die Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW) wurde neben dem vorhandenen Netzwerkverkehr und den Windows-Ereignissen als zusätzliche Datenquelle hinzugefügt. Die ETW bietet zusätzlich die Erkennung von verdächtigen Aktivitäten wie den Folgenden: Verdächtige Heraufstufung zu Domänencontroller und verdächtige Domänencontroller-Replikationsanforderungen (beide stellen potenzielle DcShadow-Angriffe dar). <br>
+Nur die auf Domänencontrollern installierten ATP-Sensoren unterstützen die Erkennung basierend auf der ETW. Die Erkennung der auf ETW basierenden Ereignissenke wird nicht von eigenständigen ATP-Sensoren unterstützt. <br>  
+
+- **Vier neue Erkennungen ab sofort allgemein verfügbar** <br>
+  - Verdächtige VPN-Verbindung
+  - Kerberos Golden Ticket – nicht vorhandenes Konto 
+  - Erkennung verdächtiger Heraufstufungen zu Domänencontrollern (potenzieller DcShadow-Angriff) – Erkennung basierend auf der ETW, nur bei ATP-Sensoren verfügbar 
+  - Verdächtige Domänencontroller-Replikationsanforderung (potenzieller DcShadow-Angriff) – Erkennung basierend auf der ETW, nur bei ATP-Sensoren verfügbar
+
+- Diese Version enthält darüber hinaus Fehlerbehebungen und Verbesserungen für mehrere Probleme.
+
+
+## <a name="azure-atp-release-244"></a>Azure ATP Release 2.44
+
+Veröffentlicht: 12. August 2018
+
+- Diese Version enthält Fehlerbehebungen und Verbesserungen für mehrere Probleme.
+- Die auf dem Sensorcomputer erstellten Protokolldateien enthalten nicht mehr das Protokoll „Ausnahmestatistik“.
 
 
 ## <a name="azure-atp-release-243"></a>Azure ATP Release 2.43
