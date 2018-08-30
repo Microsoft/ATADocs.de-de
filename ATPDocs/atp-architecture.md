@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a6cb3ca9b4f9498caa0810cec129c24b0f2e587b
-ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
+ms.openlocfilehash: c7fda04658dc70406fc7c0d543286e46da4cfa86
+ms.sourcegitcommit: 56886d06abd25035ffc9885c69aca9b0ebf14abc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "41734688"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43039078"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -91,9 +91,6 @@ Ihre Azure ATP-Bereitstellung umfasst sowohl eigenständige Azure ATP-Sensoren a
 
 |||
 |-|-|
-|Entitätenempfänger|Empfängt Batches von Entitäten von allen Azure ATP-Sensoren und eigenständigen Azure ATP-Sensoren|
-|Netzwerkaktivitätenverarbeitung|Verarbeitet alle Netzwerkaktivitäten innerhalb der einzelnen empfangenen Batches. Beispiel: Zuordnung unterschiedlicher Kerberos-Schritte, die von potenziell verschiedenen Computern ausgeführt werden|
-|Entityprofilerstellung|Erstellt Profile für alle eindeutigen Entitäten gemäß dem Datenverkehr und den Ereignissen. Azure ATP aktualisiert zum Beispiel die Liste der angemeldeten Computer für jedes Benutzerprofil.|
 |Azure ATP-Verwaltungsportal|Verwaltet Ihren Azure ATP-Arbeitsbereich.|
 |Azure ATP-Arbeitsbereichsportal|Der Azure ATP-Arbeitsbereich wird verwendet, um Azure ATP zu konfigurieren und verdächtige Aktivitäten zu überwachen, die von Azure ATP auf Ihrem Netzwerk erkannt werden. Der Azure ATP-Arbeitsbereich ist nicht vom Azure ATP-Sensor abhängig und wird sogar weiter ausgeführt, wenn der Azure ATP-Sensordienst angehalten wird. |
 |Detektoren|Die Detektoren verwenden Machine Learning-Algorithmen und deterministische Regeln, um verdächtige Aktivitäten und ungewöhnliches Benutzerverhalten im Netzwerk zu suchen.|
