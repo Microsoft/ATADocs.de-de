@@ -35,7 +35,7 @@
 ### [1. Konfigurieren der Portspiegelung](configure-port-mirroring.md)
 ### [2. Überprüfen der Portspiegelung](validate-port-mirroring.md)
 ### [3. Konfigurieren der Windows-Ereignisweiterleitung](configure-event-collection.md)
-# Verwenden Sie
+# Verwendung
 ## [ATA-Datenbankverwaltung](ata-database-management.md)
 ## [ATA-Health Center](ata-health-center.md)
 ## [ATA-Berichte](reports.md)
@@ -60,7 +60,7 @@
 # Problembehandlung
 ## [Arbeiten mit Überwachungsprotokollen](troubleshoot-audit.md)
 ## [Behandeln häufiger Probleme](troubleshooting-ata-known-errors.md)
-## [Problembehandlung mithilfe von Protokollen](troubleshooting-ata-using-logs.md)
+## [Problembehandlung mithilfe der Protokolle](troubleshooting-ata-using-logs.md)
 ## [Problembehandlung mithilfe von Leistungsindikatoren](troubleshooting-ata-using-perf-counters.md)
 ## [Problembehandlung mithilfe der Datenbank](troubleshooting-ata-using-ata-database.md)
 ## [Problembehandlung von Problemen beim Starten eines Diensts](troubleshooting-service-startup.md)
