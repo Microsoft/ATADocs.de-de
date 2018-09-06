@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 755450654d870ec0235232e08194c1094c22f030
-ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
+ms.openlocfilehash: e337c56730e1672ce1a4382a49bb16dab7b3a95d
+ms.sourcegitcommit: d8ee6c236dc91802a8315fb97a9dc0ac501861cf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39585087"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43353095"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -79,11 +79,8 @@ Sie müssen die Domänencontroller neu starten, nachdem Sie den **Netzwerkdienst
     2.  Bestätigen Sie für **Zielprotokoll**, dass **Weitergeleitete Ereignisse** aktiviert ist. Damit ATA die Ereignisse lesen kann, muss das Zielprotokoll **Weitergeleitete Ereignisse** sein. 
     3.  Wählen Sie **Quellcomputerinitiiert** aus, und klicken Sie auf **Computergruppen auswählen** aus.
         1.  Klicken Sie auf **Domänencomputer hinzufügen**.
-        2.  Geben Sie den Namen des Domänencontrollers in das Feld **Namen des auszuwählenden Objekts eingeben** ein. Klicken Sie anschließend auf **Namen überprüfen**, und klicken Sie auf **OK**. 
- 
-    ![Event Viewer image](media/wef3 event viewer.png)
- 
- 
+        2.  Geben Sie den Namen des Domänencontrollers in das Feld **Namen des auszuwählenden Objekts eingeben** ein. Klicken Sie anschließend auf **Namen überprüfen**, und klicken Sie auf **OK**.  
+          ![Event Viewer image](media/wef3 event viewer.png)  
         3.  Klicken Sie auf **OK**.
      4. Klicken Sie auf **Ereignisse auswählen**.
 

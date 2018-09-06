@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1c75b9c74e1b53f81b5f957d9e78a8b425b6b28e
-ms.sourcegitcommit: ad83eaba24d5a6af465351291ba0e423319f78d3
+ms.openlocfilehash: 50a46bad5f138344cc3e62a3fca236e98e71f904
+ms.sourcegitcommit: 6f1406f28c4c2af6a36bc691ebaf4e819adc6b4b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42903922"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43675167"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -53,8 +53,7 @@ Führen Sie nach der Installation des ATA-Gateways die folgenden Schritte aus, u
   - **Netzwerkadapter für Erfassung** (erforderlich):
   - Wählen Sie für ein ATA-Gateway auf einem dedizierten Server die Netzwerkadapter aus, als Zielspiegelport konfiguriert sind. Diese empfangen den Datenverkehr des gespiegelten Domänencontrollers.
   - Für ein ATA-Lightweight-Gateway sollten dies alle Netzwerkadapter sein, die für die Kommunikation mit anderen Computern in Ihrer Organisation verwendet werden.
-
-
+  
   - **Kandidat für die Domänensynchronisierung**: Alle ATA-Gateways, die als Kandidat für die Domänensynchronisierung festgelegt sind, können die Synchronisierung zwischen ATA und Ihrer Active Directory-Domäne übernehmen. Je nach Größe der Domäne ist die erste Synchronisierung ressourcenintensiv und kann einige Zeit dauern. Standardmäßig sind nur ATA-Gateways Kandidaten als Kandidaten für die Domänensynchronisierung festgelegt.
    Es empfiehlt sich, alle ATA-Gateways an Remotestandorten als Kandidaten für die Domänensynchronisierung zu deaktivieren.
    Wenn Ihr Domänencontroller schreibgeschützt ist, verwenden Sie ihn nicht als Kandidat für die Domänensynchronisierung. Weitere Informationen finden Sie unter [ATA-Architektur](ata-architecture.md#ata-lightweight-gateway-features).
