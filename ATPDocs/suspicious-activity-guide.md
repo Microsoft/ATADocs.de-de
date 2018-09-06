@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4aa58228ea23f58ea37b10f941467e9dc076992f
-ms.sourcegitcommit: f534a318be71b840aecb6a84744d8cd1f251a7aa
+ms.openlocfilehash: f382c5a7625ff29303ad92d05ec703c9ef1d72e3
+ms.sourcegitcommit: 04ec22abdfa571ec0e6e036e809f4e108a5c6f3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41734837"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42709775"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -200,7 +200,7 @@ In dieser Erkennung wird eine Warnung ausgelöst, wenn ein Kerberos Ticket Grant
    2.   Ist der Azure ATP-Sensor in dieser Warnung ein virtueller Computer? Falls ja, wurde dieser kürzlich aus einem gespeicherten Zustand fortgesetzt? Falls ja, schließen Sie diese Warnung.
    3.   Wenn die Antwort auf die obigen Fragen „nein“ ist, gehen Sie von einem böswilligen Ereignis aus.
 
-- **Nicht vorhandenes Konto**
+- **Nicht vorhandenes Konto – Neu** 
    1.   Untersuchen Sie die folgenden Fragen:
          - Ist der Benutzer ein bekannter und gültiger Domänenbenutzer? Falls ja, schließen Sie die Warnung (sie war falsch positiv).
          - Wurde der Benutzer kürzlich hinzugefügt? Falls Ja, schließen Sie die Warnung. Möglicherweise wurde die Änderung noch nicht synchronisiert.
@@ -546,7 +546,8 @@ Ein verdächtiger Dienst wurde von Ihrer Organisation auf einem Domänencontroll
 
 - Implementieren Sie den Zugriff mit weniger privilegierten Rechten auf Domänencomputern, um nur bestimmten Benutzern die Erstellung neuer Dienste zu erlauben.
 
-## Verdächtige VPN-Verbindung <a name="suspicious-vpn-detection"></a>
+
+## Verdächtige VPN-Verbindung – Neu<a name="suspicious-vpn-detection"></a>
 
 **Beschreibung**
 
