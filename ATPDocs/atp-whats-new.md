@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/26/2018
+ms.date: 9/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,18 +13,31 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b4a72c4dbde37a415797c467afac2c7c2636bfec
-ms.sourcegitcommit: 56886d06abd25035ffc9885c69aca9b0ebf14abc
+ms.openlocfilehash: 91e20af8e0bfedd626ee4625b0a5ec5647a41f97
+ms.sourcegitcommit: f9400ae27d22607e4146dc9b8a0b9ba6f61fdd38
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43039037"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43743398"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
 # <a name="whats-new-in-azure-atp"></a>Neuerungen in Azure ATP 
 
+## <a name="azure-atp-release-247"></a>Azure ATP Release 2.47
+Veröffentlicht: 2. September 2018
 
+- **Überprüfung der erweiterten Überwachungsrichtlinie von Azure ATP**
+ 
+Azure Advanced Threat Protection überprüft jetzt die in Ihrem Domänencontroller vorhandenen erweiterten Überwachungsrichtlinien und empfiehlt Richtlinienänderungen, um die maximale Serviceabdeckung durch Azure ATP für Ihre Organisation zu garantieren. 
+
+**Mit dieser Überprüfung können Sie nun folgende Aktionen ausführen:**
+  -  fehlende Ereignisse in Ihren Windows-Ereignisprotokollen identifizieren, die derzeit von der Abdeckung durch Azure ATP ausgeschlossen sind
+  -  ideale Einstellungen überprüfen und Änderungen basierend auf den bereitgestellten Empfehlungen für die Integritätswarnung durchführen
+  -  zudem wird eine einzelne aggregierte Integritätswarnung für alle Ihre Domänencontroller ausgegeben, einschließlich Vorschlägen für die Wartung (falls benötigt).
+
+Überprüfen Sie, wie [erweiterte Überwachungsrichtlinien konfiguriert werden](atp-advanced-audit-policy.md), um sicherzustellen, dass Ihr System ordnungsgemäß konfiguriert ist. 
+- Diese Version enthält darüber hinaus Fehlerbehebungen und Verbesserungen für mehrere Probleme.
 
 ## <a name="azure-atp-release-246"></a>Azure ATP Release 2.46
 

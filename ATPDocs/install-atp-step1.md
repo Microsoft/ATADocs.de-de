@@ -1,11 +1,11 @@
 ---
 title: Installieren von Azure Advanced Threat Protection – Schritt 1 | Microsoft-Dokumentation
-description: Der erste Schritt zur Installation von Azure ATP umfasst das Erstellen eines Arbeitsbereichs für Ihre Azure ATP-Bereitstellung.
+description: Der erste Schritt zur Installation von Azure ATP umfasst das Erstellen der Instanz für Ihre Azure ATP-Bereitstellung.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 4/10/2018
+ms.date: 9/04/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: cadd708c20733324b939db1e35d12aae3f2d80f2
-ms.sourcegitcommit: 40dbce8045f689376a50275fb12e3c5c32ca8092
+ms.openlocfilehash: 9ba476c579de3c468ce9c8ca09e8b8bab4fa9e1d
+ms.sourcegitcommit: f9400ae27d22607e4146dc9b8a0b9ba6f61fdd38
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37799075"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43743313"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -28,30 +28,30 @@ ms.locfileid: "37799075"
 >[!div class="step-by-step"]
 [Schritt 2 »](install-atp-step2.md)
 
-Diese Installationsschritte enthalten Anweisungen zum Erstellen und Verwalten eines Arbeitsbereichs im Arbeitsbereich-Verwaltungsportal für Azure ATP. Weitere Informationen zur Azure ATP-Architektur finden Sie unter [Azure ATP architecture (Azure ATP-Architektur)](atp-architecture.md).
+Diese Installationsschritte enthalten Anweisungen zum Erstellen und Verwalten Ihrer Azure ATP-Instanz. Weitere Informationen zur Azure ATP-Architektur finden Sie unter [Azure ATP architecture (Azure ATP-Architektur)](atp-architecture.md).
 
-Bei Azure ATP haben Sie die Möglichkeit, mehrere Arbeitsbereiche zu verwalten und zu überwachen. Dies ist besonders hilfreich, wenn Sie einen Demo-Arbeitsbereich und einen Testarbeitsbereich erstellen möchten, in denen Sie vor dem Rollout für Ihre gesamte Organisation einen Proof of Concept für Azure ATP durchführen können. Dies ist auch erforderlich, um Bereitstellungen mit mehreren Gesamtstrukturen zu unterstützen. Ein einzelner Arbeitsbereich kann nur mehrere Domänen aus einer einzelnen Gesamtstruktur überwachen. 
+In Azure ATP verfügen Sie über einen einzelnen Arbeitsbereich bzw. eine einzelne Instanz, die Ihnen bei der Verwaltung mehrerer Strukturen von einer einzelnen zentralen Konsole aus hilft. 
 
 > [!NOTE]
 > Derzeit werden Azure ATP-Rechenzentren in Europa, Nordamerika/Mittelamerika/Karibik und Asien bereitgestellt.
 
-## <a name="step-1-enter-the-workspace-management-portal"></a>Schritt 1: Ins Portal zur Verwaltung von Arbeitsbereichen wechseln
+## <a name="step-1-enter-the-management-portal"></a>Schritt 1: Zugreifen auf das Verwaltungsportal
 
 Nachdem Sie überprüft haben, ob Ihr Netzwerk den Anforderungen des Sensors entspricht, können Sie mit der Erstellung des Azure ATP-Arbeitsbereichs fortfahren.
 
 > [!NOTE]
->Damit Sie auf das Portal zur Verwaltung von Arbeitsbereichen zugreifen können, müssen Sie ein globaler Administrator, ein Sicherheitsadministrator oder der Mandant sein.
+>Damit Sie auf das Verwaltungsportal zugreifen können, müssen Sie ein globaler Administrator, ein Sicherheitsadministrator oder der Mandant sein.
 
 
-1.  Wechseln Sie ins [Azure ATP-Arbeitsbereichsportal](https://portal.atp.azure.com).
+1.  Wechseln Sie ins [Azure ATP-Portal](https://portal.atp.azure.com).
 
 2.  Melden Sie sich mit ihrem Azure Active Directory-Benutzerkonto an.
 
-## <a name="step-2-create-a-workspace"></a>Schritt 2. Erstellen eines Arbeitsbereichs
+## <a name="step-2-create-your-workspace"></a>Schritt 2. Erstellen Ihres Arbeitsbereichs
 
 1. Klicken Sie auf **Arbeitsbereich erstellen**.
 
-2. Benennen Sie im Dialogfeld **Neuen Arbeitsbereich erstellen** Ihren Arbeitsbereich, entscheiden Sie sich, ob es sich dabei um Ihren primären Arbeitsbereich handelt oder nicht, und wählen Sie eine **Geolocation** für Ihr Rechenzentrum. Sie können nur einen Arbeitsbereich als „Primär“ festlegen. Wenn Sie einen Arbeitsbereich als „Primär“ festlegen, hat dies Konsequenzen für die Integration: Sie können nur für Ihren primären Arbeitsbereich Azure ATP in Windows Defender ATP integrieren. Sie können auch später einen anderen Arbeitsbereich als „Primär“ kennzeichnen. Dafür müssen Sie zuvor jedoch bereits für den aktuellen Arbeitsbereich vorgenommene Integrationen entfernen.
+2. Benennen Sie im Dialogfeld **Neuen Arbeitsbereich erstellen** Ihren Arbeitsbereich, und wählen Sie eine **Geolocation** für Ihr Rechenzentrum aus. Sie können nur einen Arbeitsbereich als „Primär“ festlegen. Wenn Sie einen Arbeitsbereich als „Primär“ festlegen, hat dies Konsequenzen für die Integration: Sie können nur für Ihren primären Arbeitsbereich Azure ATP in Windows Defender ATP integrieren. Sie können auch später einen anderen Arbeitsbereich als „Primär“ kennzeichnen. Dafür müssen Sie zuvor jedoch bereits für den aktuellen Arbeitsbereich vorgenommene Integrationen entfernen.
  > [!NOTE]
  > Nachdem Sie eine Geolocation festgelegt haben, können Sie sie nicht mehr ändern.
     ![Azure ATP-Arbeitsbereich](media/create-workspace.png)

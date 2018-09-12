@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a06004bd-9f77-4e8e-a0e5-4727d6651a0f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7caae52ff7402fdc8cb18ce1a01bba469c2d649b
-ms.sourcegitcommit: f61616a8269d27a8fcde6ecf070a00e2c56481ac
+ms.openlocfilehash: 4cf099faae920f23eeeaacdc8f10129005fdc896
+ms.sourcegitcommit: 93a133430ac85d6db7afad5f6f2583b3a39c423a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35259207"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43469667"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -53,7 +53,7 @@ Zu jeder verdächtigen Aktivität stehen folgende Informationen zur Verfügung:
 
 ## Erkennungen von Vorschauversionen<a name="preview-detections"></a>
 
-Das Azure ATP-Forschungsteam arbeitet kontinuierlich daran, neue Erkennungen für neu entdeckte Angriffe zu implementieren. Da Azure ATP ein Clouddienst ist, können diese neuen Erkennungen schnell veröffentlicht werden, damit Azure ATP-Kunden so schnell wie möglich von neuen Erkennungen profitieren können.
+Das Azure ATP-Forschungsteam arbeitet kontinuierlich daran, neue Erkennungen für neu entdeckte Angriffe zu implementieren. Da es sich bei Azure ATP um einen Clouddienst handelt, werden neue Erkennungen schnell veröffentlicht, damit Azure ATP-Kunden so schnell wie möglich von diesen profitieren können.
 
 Diese Erkennungen werden als Vorschauversionen markiert, damit Sie die neuen Erkennungen schneller ermitteln können und wissen, dass sie neu für das Produkt sind. Wenn Sie die Erkennungen von Vorschauversionen deaktivieren, werden diese nicht mehr in der Azure ATP-Konsole (und auch nicht auf der Zeitachse oder in den Entitätsprofilen) angezeigt, und es werden keine Warnungen mehr geöffnet.
 
