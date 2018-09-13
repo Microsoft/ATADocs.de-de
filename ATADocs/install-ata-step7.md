@@ -5,19 +5,20 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
-ms.topic: get-started-article
+ms.date: 6/14/2018
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 8d7d53222c4eb98fba554b59f14d8728a88c9d95
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: f15f897539f2f41941675960e425f669cba2c878
+ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44126024"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -42,7 +43,7 @@ Führen Sie zur Konfiguration die folgenden Schritte aus:
 
     ![ATA-Konfigurationseinstellungen](media/ATA-config-icon.png)
 
-2.  Klicken Sie unter **Erkennung** auf **Allgemein**.
+2.  Klicken Sie unter **Erkennung** auf **Entitätstag**.
 
 2. Geben Sie unter **Honeytoken-Konto** den Honeytoken-Kontonamen an. Das Honeytoken-Kontenfeld kann gesucht werden und zeigt automatisch Entitäten in Ihrem Netzwerk an.
 

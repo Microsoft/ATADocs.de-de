@@ -6,19 +6,19 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e337c56730e1672ce1a4382a49bb16dab7b3a95d
-ms.sourcegitcommit: d8ee6c236dc91802a8315fb97a9dc0ac501861cf
+ms.openlocfilehash: 0a939f36a86e1ad6cd275a16a4dd4468defa7a76
+ms.sourcegitcommit: a5823d0dfc48783ab990a99ca3f65b614fb49e75
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43353095"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44697207"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -56,7 +56,7 @@ Sie müssen die Domänencontroller neu starten, nachdem Sie den **Netzwerkdienst
 2.  Geben Sie an einer Eingabeaufforderung *gpedit.msc* ein.
 3.  Erweitern Sie **Computerkonfiguration > Administrative Vorlagen > Windows-Komponenten > Ereignisweiterleitung**.
 
-![Local policy group editor image](media/wef 1 local group policy editor.png)
+![Local policy group editor image](media/wef%201%20local%20group%20policy%20editor.png)
 
 4.  Doppelklicken Sie auf **Ziel-Abonnement-Manager konfigurieren**.
    
@@ -64,7 +64,7 @@ Sie müssen die Domänencontroller neu starten, nachdem Sie den **Netzwerkdienst
     2.  Klicken Sie unter **Optionen** auf **Anzeigen**.
     3.  Geben Sie unter **SubscriptionManagers** folgenden Wert ein, und klicken Sie auf **OK**: *Server=`http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10*` (zum Beispiel: Server=`http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
  
-    ![Configure target subscription image](media/wef 2 config target sub manager.png)
+    ![Configure target subscription image](media/wef%202%20config%20target%20sub%20manager.png)
    
     5.  Klicken Sie auf **OK**.
     6.  Geben Sie von einer Eingabeaufforderung mit erhöhten Rechten aus *gpupdate /force* ein. 
@@ -80,14 +80,14 @@ Sie müssen die Domänencontroller neu starten, nachdem Sie den **Netzwerkdienst
     3.  Wählen Sie **Quellcomputerinitiiert** aus, und klicken Sie auf **Computergruppen auswählen** aus.
         1.  Klicken Sie auf **Domänencomputer hinzufügen**.
         2.  Geben Sie den Namen des Domänencontrollers in das Feld **Namen des auszuwählenden Objekts eingeben** ein. Klicken Sie anschließend auf **Namen überprüfen**, und klicken Sie auf **OK**.  
-          ![Event Viewer image](media/wef3 event viewer.png)  
+          ![Event Viewer image](media/wef3%20event%20viewer.png)  
         3.  Klicken Sie auf **OK**.
      4. Klicken Sie auf **Ereignisse auswählen**.
 
         1. Klicken Sie auf **Per Protokoll** und wählen Sie **Sicherheit** aus.
         2. Tippen Sie im Feld **Ereignis-IDs ein-/ausschließen** die Ereignisnummer ein, und klicken Sie auf **OK**. Geben Sie wie im folgenden Beispiel 4776 ein.
 
-    ![Query filter image](media/wef 4 query filter.png)
+        ![Query filter image](media/wef%204%20query%20filter.png)
 
     5.  Klicken Sie mit der rechten Maustaste auf das erstellte Abonnement, und wählen Sie **Laufzeitstatus** aus, um festzustellen, ob es Probleme mit dem Status gibt. 
     6.  Überprüfen Sie nach einigen Minuten, ob die festgelegten Ereignisse im ATA-Gateway in „Weitergeleitete Ereignisse“ angezeigt wird.
