@@ -7,18 +7,18 @@ ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: conceptual
-ms.prod: ''
-ms.service: advanced-threat-analytics
+ms.prod: advanced-threat-analytics
+ms.service: ''
 ms.technology: ''
 ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 5414539edca088b49d16dc03c17dfe0ee0a2bfc5
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 886b044725976559a35ee40e461e455320cb2200
+ms.sourcegitcommit: 9f02f0f6669b25f39b616bb0885bb55b8c4f050b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44125871"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46362458"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -82,7 +82,7 @@ Führen Sie die folgenden Schritte auf dem ATA-Gatewayserver aus.
     -   Microsoft Visual C++ 2013 Redistributable
     -   Benutzerdefinierter Systemmonitor-Datensammlungssatz
 
-5.  Nach Abschluss der Installation klicken Sie für das ATA-Gateway auf **Starten**, um den Browser zu öffnen und sich bei der ATA-Konsole anzumelden, bzw. klicken Sie für das ATA-Lightweight-Gateway auf **Fertig stellen**.
+6.  Nach Abschluss der Installation klicken Sie für das ATA-Gateway auf **Starten**, um den Browser zu öffnen und sich bei der ATA-Konsole anzumelden, bzw. klicken Sie für das ATA-Lightweight-Gateway auf **Fertig stellen**.
 
 
 >[!div class="step-by-step"]

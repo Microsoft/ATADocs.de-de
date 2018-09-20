@@ -7,18 +7,18 @@ ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: conceptual
-ms.prod: ''
-ms.service: advanced-threat-analytics
+ms.prod: advanced-threat-analytics
+ms.service: ''
 ms.technology: ''
 ms.assetid: 14cb7513-5dc8-49cb-b3e0-94f469c443dd
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 808268a10a4de0bb4d3a1655064ee3c6b08b0943
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: 444fd71f4c343619ceeea4056fbe98dce4f06b6a
+ms.sourcegitcommit: 9f02f0f6669b25f39b616bb0885bb55b8c4f050b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44166730"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46362441"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -42,8 +42,8 @@ Um Benachrichtigungen zu erhalten, legen Sie folgende Parameter fest:
 1. Wählen Sie im Abschnitt **Benachrichtigungen und Berichte** die Option **Benachrichtigung** aus.
 1. Geben Sie unter **E-Mail-Benachrichtigungen** an, welche Benachrichtigungen via E-Mail gesendet werden sollen – neue verdächtige Aktivitäten oder neue Integritätsprobleme. Sie können eine separate E-Mail-Adresse festlegen, an die die verdächtigen Aktivitäten und die Integritätswarnungen gesendet werden, damit z.B. verdächtige Aktivitätsbenachrichtigungen an Ihren Sicherheitsanalysten und Ihre Integritätswarnungsbenachrichtigungen an Ihren IT-Administrator gesendet werden können.
     
-    >   [!NOTE]
-    >   E-Mail-Benachrichtigungen über verdächtige Aktivitäten werden nur beim Erstellen der verdächtigen Aktivität gesendet.
+  > [!NOTE]
+  > E-Mail-Benachrichtigungen über verdächtige Aktivitäten werden nur beim Erstellen der verdächtigen Aktivität gesendet.
 
 1. Geben Sie unter **Syslog-Benachrichtigungen** an, welche Benachrichtigungen an Ihren Syslog-Server gesendet werden sollen: neue verdächtige Aktivitäten, aktualisierte verdächtige Aktivitäten und neue Integritätsprobleme.
 1. Klicken Sie auf **Speichern**.
