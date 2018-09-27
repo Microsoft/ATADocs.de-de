@@ -2,10 +2,10 @@
 title: Problembehandlung bei Advanced Threat Analytics mithilfe der Leistungsindikatoren | Microsoft-Dokumentation
 description: Beschreibt die Verwendung von Leistungsindikatoren zum Behandeln von Problemen mit ATA
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 9/25/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: df162a62-f273-4465-9887-94271f5000d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c7a0ded6092740f92c12fbd7c57100293bf735c2
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 455e66b286916f125fcc34d61b167b86ccc59740
+ms.sourcegitcommit: caaa864708ec631ca4903f6270ad0012951ceef1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46134125"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47114458"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -108,7 +108,7 @@ Auf folgende Indikatoren für ATA Center sollte hauptsächlich geachtet werden:
 |-----------|---------------|-------------|-------------------|
 |Microsoft ATA Center\EntityReceiver Entity Batch Block Size|Die Anzahl der Entitätenbatches in der Warteschlange von ATA Center.|Sollte niedriger sein als der Maximalwert - 1 (Standardmaximalwert: 10.000)|Überprüfen Sie, ob Komponenten vorhanden sind, die ihre Maximalgröße erreicht haben und daher vorgeschaltete Komponenten bis hin zum NetworkListener blockieren.  Informationen hierzu finden Sie im vorhergehenden Abschnitt **ATA-Komponentenprozess**.<br /><br />Überprüfen Sie, ob Probleme bei CPU oder Arbeitsspeicher vorliegen.|
 |Microsoft ATA Center\NetworkActivityProcessor Network Activity Block Size|Die Anzahl der Netzwerkaktivitäten (NAs) in der Warteschlange für die Verarbeitung.|Sollte niedriger sein als der Maximalwert - 1 (Standardmaximalwert: 50.000)|Überprüfen Sie, ob Komponenten vorhanden sind, die ihre Maximalgröße erreicht haben und daher vorgeschaltete Komponenten bis hin zum NetworkListener blockieren. Informationen hierzu finden Sie im vorhergehenden Abschnitt **ATA-Komponentenprozess**.<br /><br />Überprüfen Sie, ob Probleme bei CPU oder Arbeitsspeicher vorliegen.|
-|Microsoft ATA Center\EntityProfiler Network Activity Block Size|Die Anzahl der Netzwerkaktivitäten (NAs) in der Warteschlange für die Profilerstellung.|Sollte niedriger sein als der Maximalwert - 1 (Standardmaximalwert: 10.000)|Überprüfen Sie, ob Komponenten vorhanden sind, die ihre Maximalgröße erreicht haben und daher vorgeschaltete Komponenten bis hin zum NetworkListener blockieren. Informationen hierzu finden Sie im vorhergehenden Abschnitt **ATA-Komponentenprozess**.<br /><br />Überprüfen Sie, ob Probleme bei CPU oder Arbeitsspeicher vorliegen.|
+|Microsoft ATA Center\EntityProfiler Network Activity Block Size|Die Anzahl der Netzwerkaktivitäten (NAs) in der Warteschlange für die Profilerstellung.|Sollte niedriger sein als der Maximalwert - 1 (Standardmaximalwert: 100.000)|Überprüfen Sie, ob Komponenten vorhanden sind, die ihre Maximalgröße erreicht haben und daher vorgeschaltete Komponenten bis hin zum NetworkListener blockieren. Informationen hierzu finden Sie im vorhergehenden Abschnitt **ATA-Komponentenprozess**.<br /><br />Überprüfen Sie, ob Probleme bei CPU oder Arbeitsspeicher vorliegen.|
 |Microsoft ATA Center\Database &#42; Block Size|Die Anzahl der Netzwerkaktivitäten eines bestimmten Typs in der Warteschlange für das Schreiben in die Datenbank.|Sollte niedriger sein als der Maximalwert - 1 (Standardmaximalwert: 50.000)|Überprüfen Sie, ob Komponenten vorhanden sind, die ihre Maximalgröße erreicht haben und daher vorgeschaltete Komponenten bis hin zum NetworkListener blockieren. Informationen hierzu finden Sie im vorhergehenden Abschnitt **ATA-Komponentenprozess**.<br /><br />Überprüfen Sie, ob Probleme bei CPU oder Arbeitsspeicher vorliegen.|
 
 
