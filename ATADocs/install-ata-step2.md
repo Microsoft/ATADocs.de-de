@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: e1c5ff41-d989-46cb-aa38-5a3938f03c0f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 4b2e7ae1dad939db3a2394876acfe9ed4042924b
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 431368a1ceee57870a3eadf176b5899b69784c98
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133258"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47454121"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -26,9 +26,9 @@ ms.locfileid: "46133258"
 
 # <a name="install-ata---step-2"></a>Installieren von ATA – Schritt 2
 
->[!div class="step-by-step"]
-[« Schritt 1](install-ata-step1.md)
-[Schritt 3 »](install-ata-step3.md)
+> [!div class="step-by-step"]
+> [« Schritt 1](install-ata-step1.md)
+> [Schritt 3 »](install-ata-step3.md)
 
 ## <a name="step-2-provide-a-username-and-password-to-connect-to-your-active-directory-forest"></a>Schritt 2. Geben Sie einen Benutzernamen und ein Kennwort an, um eine Verbindung mit Ihrer Active Directory-Gesamtstruktur herzustellen
 
@@ -51,9 +51,9 @@ Beim ersten Öffnen der ATA-Konsole wird der folgende Bildschirm angezeigt:
 3. Klicken Sie in der Konsole auf **Download Gateway setup and install the first Gateway** (Herunterladen des Gateway-Setups und Installieren des ersten Gateways) um den Vorgang fortzusetzen.
 
 
->[!div class="step-by-step"]
-[« Schritt 1](install-ata-step1.md)
-[Schritt 3 »](install-ata-step3.md)
+> [!div class="step-by-step"]
+> [« Schritt 1](install-ata-step1.md)
+> [Schritt 3 »](install-ata-step3.md)
 
 
 ## <a name="see-also"></a>Weitere Informationen

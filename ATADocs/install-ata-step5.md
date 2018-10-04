@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 4cde555ea3b42e6e88aef6fa73f663f52515ed58
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: f43503bb64ab79280782c1fc81a4821a8b905ff7
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133666"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47454053"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -26,9 +26,9 @@ ms.locfileid: "46133666"
 
 # <a name="install-ata---step-5"></a>Installieren von ATA – Schritt 5
 
->[!div class="step-by-step"]
-[« Schritt 4](install-ata-step4.md)
-[Schritt 6 »](install-ata-step6.md)
+> [!div class="step-by-step"]
+> [« Schritt 4](install-ata-step4.md)
+> [Schritt 6 »](install-ata-step6.md)
 
 
 ## <a name="step-5-configure-the-ata-gateway-settings"></a>Schritt 5: Konfigurieren der Einstellungen des ATA-Gateways
@@ -84,9 +84,9 @@ Gehen Sie wie folgt vor, um zu überprüfen, ob das ATA-Gateway erfolgreich bere
     ![Abbildung – Hinzufügen von Leistungsindikatoren](media/ATA-performance-monitoring-add-counters.png)
 
 
->[!div class="step-by-step"]
-[« Schritt 4](install-ata-step4.md)
-[Schritt 6 »](install-ata-step6.md)
+> [!div class="step-by-step"]
+> [« Schritt 4](install-ata-step4.md)
+> [Schritt 6 »](install-ata-step6.md)
 
 
 

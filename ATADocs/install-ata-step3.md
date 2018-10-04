@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 7fb024e6-297a-4ad9-b962-481bb75a0ba3
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 86941e2081c3893d3ea8499b435968fbad243015
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: d49770f435985027690ddfc05a9359e84841c0ff
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133156"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47454036"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -26,9 +26,9 @@ ms.locfileid: "46133156"
 
 # <a name="install-ata---step-3"></a>Installieren von ATA – Schritt 3
 
->[!div class="step-by-step"]
-[« Schritt 2](install-ata-step2.md)
-[Schritt 4 »](install-ata-step4.md)
+> [!div class="step-by-step"]
+> [« Schritt 2](install-ata-step2.md)
+> [Schritt 4 »](install-ata-step4.md)
 
 ## <a name="step-3-download-the-ata-gateway-setup-package"></a>Schritt 3: Herunterladen des ATA-Gateway-Setuppakets
 Nach dem Konfigurieren der Domänenverbindungseinstellungen können Sie das ATA-Gateway-Setuppaket herunterladen. Das ATA-Gateway kann auf einem dedizierten Server oder einem Domänencontroller installiert werden. Wenn Sie es auf einem Domänencontroller installieren, wird es als ATA-Lightweight-Gateway installiert. Weitere Informationen zum ATA-Lightweight-Gateway finden Sie unter [ATA-Architektur](ata-architecture.md). 
@@ -52,9 +52,9 @@ Die ZIP-Datei enthält die folgenden Dateien:
 -   Konfigurationseinstellungsdatei mit den erforderlichen Informationen für die Verbindung mit ATA Center
 
 
->[!div class="step-by-step"]
-[« Schritt 2](install-ata-step2.md)
-[Schritt 4 »](install-ata-step4.md)
+> [!div class="step-by-step"]
+> [« Schritt 2](install-ata-step2.md)
+> [Schritt 4 »](install-ata-step4.md)
 
 
 ## <a name="related-videos"></a>Verwandte Videos

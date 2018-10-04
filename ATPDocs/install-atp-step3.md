@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 95bb4ec1-841f-41b7-92fe-fbd144085724
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f10dd0714b2574ff9e1e476bc1865b1a0ed337b8
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 96d459bd00d39bb21ce363d079b5b24ceca4ace7
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44125905"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47454019"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -26,9 +26,9 @@ ms.locfileid: "44125905"
 
 # <a name="install-azure-atp---step-3"></a>Installieren von Azure ATP: Schritt 3
 
->[!div class="step-by-step"]
-[« Schritt 2](install-atp-step2.md)
-[Schritt 4 »](install-atp-step4.md)
+> [!div class="step-by-step"]
+> [« Schritt 2](install-atp-step2.md)
+> [Schritt 4 »](install-atp-step4.md)
 
 ## <a name="step-3-download-the-azure-atp-sensor-setup-package"></a>Schritt 3: Herunterladen des Setuppakets für den Azure ATP-Sensor
 Nach dem Konfigurieren der Verbindungseinstellungen der Domäne können Sie das Setuppaket für den Azure ATP-Sensor herunterladen. Das Setuppaket für den Azure ATP-Sensor kann auf einem dedizierten Server oder einem Domänencontroller installiert werden. Wenn Sie die Installation direkt auf einem Domänencontroller durchführen, erfolgt die Installation als Azure ATP-Sensor. Wenn Sie auf einem dedizierten Server installieren und Portspiegelung verwenden, wird ein eigenständiger Azure ATP-Sensor installiert. Weitere Informationen zum Azure ATP-Sensor finden Sie unter [Azure ATP-Architektur](atp-architecture.md). 
@@ -52,9 +52,9 @@ Die ZIP-Datei enthält die folgenden Dateien:
 -   Konfigurationseinstellungsdatei mit den erforderlichen Informationen für die Verbindung mit dem Azure ATP-Clouddienst
 
 
->[!div class="step-by-step"]
-[« Schritt 2](install-atp-step2.md)
-[Schritt 4 »](install-atp-step4.md)
+> [!div class="step-by-step"]
+> [« Schritt 2](install-atp-step2.md)
+> [Schritt 4 »](install-atp-step4.md)
 
 
 ## <a name="see-also"></a>Weitere Informationen

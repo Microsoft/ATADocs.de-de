@@ -13,19 +13,19 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a6ba913710d5158c2e39105061acbebd566c5f13
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: ad120cfe3e736935a557f66417794cd531fa5b2e
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126194"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47454087"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
 # <a name="install-azure-atp---step-9"></a>Installieren von Azure ATP: Schritt 9
 
->[!div class="step-by-step"]
-[« Schritt 8 ](install-atp-step8-samr.md)
+> [!div class="step-by-step"]
+> [« Schritt 8 ](install-atp-step8-samr.md)
 
 ## <a name="step-9--set-up-azure-advanced-threat-protection-multi-forest-support"></a>Schritt 9:  Einrichten der Azure Advanced Threat Protection-Unterstützung für mehrere Gesamtstrukturen
 
@@ -82,8 +82,8 @@ Der Prozess des Zuordnens von Gesamtstrukturen durch Azure ATP hat folgende Ausw
 -   Interaktive Anmeldungen, die von Benutzern in einer Gesamtstruktur durchgeführt werden, um auf Ressourcen in einer anderen Gesamtstruktur zuzugreifen, werden nicht im Azure ATP-Dashboard angezeigt.
 
 
->[!div class="step-by-step"]
-[« Schritt 8 ](install-atp-step8-samr.md)
+> [!div class="step-by-step"]
+> [« Schritt 8 ](install-atp-step8-samr.md)
 
 
 ## <a name="see-also"></a>Weitere Informationen
