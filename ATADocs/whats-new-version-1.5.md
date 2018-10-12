@@ -6,19 +6,19 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 01/23/2017
-ms.topic: article
-ms.prod: ''
-ms.service: advanced-threat-analytics
+ms.topic: conceptual
+ms.prod: advanced-threat-analytics
+ms.service: ''
 ms.technology: ''
 ms.assetid: a0d64aff-ca9e-4300-b3f8-eb3c8b8ae045
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a00a555c0dc4590043f93abcd650f6e38d719e6c
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 800d5d0ebf7eb044982c35e1f348b6c2faf14b07
+ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2017
-ms.locfileid: "24018268"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46133241"
 ---
 # <a name="whats-new-in-ata-version-15"></a>Neuerungen in ATA 1.5
 Die vorliegenden Anmerkungen zu dieser Version enthalten Informationen zu bekannten Problemen in dieser Version von Advanced Threat Analytics.

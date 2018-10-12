@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 9/04/2018
+ms.date: 9/27/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 1b2d185c-62cd-45f0-b0dd-687b51317f32
 ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: 0f4a7546b6231fb263d1734b731f6be3cae7570a
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 08876085e3fe5d86c8219c6b0ad7beb8c44c700a
+ms.sourcegitcommit: 1b23381ca4551a902f6343428d98f44480077d30
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46134003"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47403232"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -44,7 +44,7 @@ Gehen Sie folgendermaßen vor, um die benutzerspezifischen Daten dauerhaft aus d
 
 1. [Laden Sie das Skript „MongoDB“ (gdpr.js) herunter.](https://aka.ms/ata-gdpr-script)  
 
-2. Kopieren Sie das Skript auf den ATA Center-Computer, und führen Sie dort den folgenden Befehl aus: 
+2. Kopieren Sie das Skript in den ATA-Ordner (unter `"C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB`), und führen Sie den folgenden Befehl auf dem ATA Center-Computer aus: 
 
 Verwenden Sie ATA-GDPR-Datenbankskripts, um Entitäten und Aktivitätsdaten von Entitäten zu löschen. Dies wird in den folgenden Abschnitten beschrieben.
 

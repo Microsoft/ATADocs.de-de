@@ -6,18 +6,19 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 4/15/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: d0551e91-3b21-47d5-ad9d-3362df6d47c0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 34702edcde2b96ca16570af5803a03d4f0f66c6e
-ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
+ms.openlocfilehash: 7cffaef77a80b5c1c9bb33694ef2c7a73ef80ee0
+ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44166917"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -97,6 +98,11 @@ Das Azure ATP-Integritätscenter informiert Sie, wenn ein Problem im Zusammenhan
 |----|----|----|----|
 |The Azure ATP sensor stopped itself and will restart automatically to protect the domain controller from a low memory condition. (Der Azure ATP-Sensor hat sich selbst angehalten und startet automatisch neu, um die Domänencontroller vor einem niedrigen Speicherzustand zu schützen.)|Der Azure ATP-Sensor erzwingt Arbeitsspeicherbeschränkungen auf sich selbst, um zu verhindern, dass beim Domänencontroller Ressourceneinschränkungen auftreten. Dies geschieht, wenn die Speicherauslastung auf dem Domänencontroller hoch ist. Daten von diesem Domänencontroller werden nur teilweise überwacht.|Erhöhen Sie die Menge des Arbeitsspeichers (RAM) auf dem Domänencontroller, oder fügen Sie diesem Standort mehr Domänencontroller zur besseren Verteilung der Last dieses Domänencontrollers hinzu.|Mittel|
 
+## <a name="sensor-outdated"></a>Sensor ist veraltet
+
+|Warnung|Beschreibung|Lösung|Schweregrad|
+|----|----|----|----|
+|Ein Azure ATP-Sensor ist veraltet.|Eine veraltete Version des Azure ATP-Sensors wird ausgeführt (mindestens drei Versionen älter).|Aktualisieren Sie den Sensor manuell, und prüfen Sie, warum der Sensor nicht automatisch aktualisiert wird. Wenn das nicht funktioniert, laden Sie das neueste Installationspaket für den Sensor herunter, deinstallieren Sie den Sensor, und installieren Sie ihn neu. Weitere Informationen finden Sie unter [Installieren des Azure ATP-Sensors](install-atp-step4.md).|Mittel|
 
 ## <a name="see-also"></a>Weitere Informationen
 

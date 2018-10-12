@@ -6,19 +6,19 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 01/23/2017
-ms.topic: article
-ms.prod: ''
-ms.service: advanced-threat-analytics
+ms.topic: conceptual
+ms.prod: advanced-threat-analytics
+ms.service: ''
 ms.technology: ''
 ms.assetid: 27b139e5-12b9-4953-8f53-eb58e8ce0038
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 47a8b5c52bf978d5e07007a3402a567be39e2157
-ms.sourcegitcommit: 1de2b047c0e9f92a106169f7634c480f694baf10
+ms.openlocfilehash: 5fd3b7a0abb3c70e87634e28273fe5ce8b6d4d9a
+ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "24018557"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46133615"
 ---
 # <a name="whats-new-in-ata-version-16"></a>Neuerungen in ATA 1.6
 Die vorliegenden Anmerkungen zu dieser Version enthalten Informationen zu bekannten Problemen in dieser Version von Advanced Threat Analytics.
@@ -43,23 +43,24 @@ Das Update auf ATA 1.6 bietet Verbesserungen in folgenden Bereichen:
 ### <a name="new-detections"></a>Neue Erkennungen
 
 
-- **Böswillige Anforderung privater Informationen im Rahmen der Datensicherheit** Die Datenschutz-API (DPAPI) ist ein kennwortbasierter Datenschutzdienst. Dieser Schutzdienst wird von verschiedenen Clientanwendungen verwendet, die vertrauliche Informationen eines Benutzers, etwa Websitekennwörter und Anmeldeinformationen für Dateifreigaben, speichern. Um Fälle mit Kennwortverlust zu unterstützen, können Benutzer geschützte Daten mithilfe eines Wiederherstellungsschlüssels entschlüsseln, der nichts mit dem jeweiligen Kennwort zu tun hat. In einer Domänenumgebung können externe Angreifer den Wiederherstellungsschlüssel stehlen und diesen dazu verwenden, geschützte Daten auf allen zur Domäne gehörenden Computern zu entschlüsseln.
+- **Böswillige Anforderung privater Informationen im Rahmen der Datensicherheit** Die Datenschutz-API (DPAPI) ist ein kennwortbasierter Datenschutzdienst. Dieser Schutzdienst wird von verschiedenen Clientanwendungen verwendet, die vertrauliche Informationen eines Benutzers, etwa Websitekennwörter und Anmeldeinformationen für Dateifreigaben, speichern. Um Szenarios mit Kennwortverlust zu unterstützen, können Benutzer geschützte Daten mithilfe eines Wiederherstellungsschlüssels entschlüsseln, der nichts mit dem jeweiligen Kennwort zu tun hat. In einer Domänenumgebung können externe Angreifer den Wiederherstellungsschlüssel stehlen und diesen dazu verwenden, geschützte Daten auf allen zur Domäne gehörenden Computern zu entschlüsseln.
 
 
-- **net session-Enumeration** Reconnaissance ist eine Hauptstufe in der erweiterten Kette der Angriffsabwehr. Domänencontroller (DCs) fungieren als Dateiserver für die Verteilung von Gruppenrichtlinienobjekten über das SMB-Protokoll (Server Message Block). Im Rahmen der Reconnaissancephase können Angreifer den DC hinsichtlich aller aktiven SMB-Sitzungen auf dem Server abfragen. Dies ermöglicht ihnen Zugriff auf alle Benutzer und IP-Adressen, die diesen SMB-Sitzungen zugeordnet sind. SMB-Sitzungsenumeration kann von Angreifern verwendet werden, auf vertrauliche Konten abzuzielen, wodurch sie sich quer (seitlich) durch das Netzwerk bewegen können.
+- **net session-Enumeration** Reconnaissance ist eine Hauptstufe in der erweiterten Kette der Angriffsabwehr. Domänencontroller (DCs) fungieren als Dateiserver für die Verteilung von Gruppenrichtlinienobjekten über das SMB-Protokoll (Server Message Block). Angreifer können im Rahmen der Reconnaissancephase den DC für alle aktiven SMB-Sitzungen auf dem Server abfragen. So erhalten sie Zugriff auf alle Benutzer und IP-Adressen, die diesen SMB-Sitzungen zugeordnet sind. SMB-Sitzungsenumeration kann von Angreifern verwendet werden, auf vertrauliche Konten abzuzielen, wodurch sie sich quer (seitlich) durch das Netzwerk bewegen können.
 
 
-- **Böswillige Replikationsanforderungen** In Active Directory-Umgebungen erfolgt regelmäßig eine Replikation zwischen Domänencontrollern. Ein Angreifer kann eine Active Directory-Replikationsanforderung (manchmal durch Annehmen der Identität eines Domänencontrollers) vortäuschen, wodurch es dem Angreifer gestattet wird, die in Active Directory gespeicherten Daten abzurufen, einschließlich Kennworthashes, ohne auffallendere Techniken wie Volumeschattenkopie zu nutzen.
+- **Böswillige Replikationsanforderungen** In Active Directory-Umgebungen erfolgt regelmäßig eine Replikation zwischen Domänencontrollern. Ein Angreifer kann für eine Active Directory-Replikationsanforderung (die manchmal die Identität eines Domänencontrollers annimmt) einen unzulässigen Vorgang durchführen. Mit diesem unzulässigen Vorgang kann der Angreifer die in Active Directory gespeicherten Daten abrufen, einschließlich Kennworthashes, ohne auffallendere Verfahren wie Volumeschattenkopien zu nutzen.
 
 
-- **Erkennung des MS11-013-Sicherheitsrisikos** Es gibt eine Erhöhung des Berechtigungssicherheitsrisikos in Kerberos, die es für bestimmte Aspekte eines Kerberos-Diensttickets ermöglicht, dass es gefälscht wird. Ein böswilliger Benutzer oder ein Angreifer, der dieses Sicherheitsrisiko Anfälligkeiten erfolgreich ausnutzt, kann ein Token mit erhöhten Rechten auf dem Domänencontroller abrufen.
+- **Erkennung des MS11-013-Sicherheitsrisikos**  
+Es gibt eine Sicherheitsrisiko bei Rechteerweiterungen in Kerberos, wodurch bestimmte Aspekte eines Kerberos-Diensttickets gefälscht werden können. Ein böswilliger Benutzer oder ein Angreifer, der dieses Sicherheitsrisiko Anfälligkeiten erfolgreich ausnutzt, kann ein Token mit erhöhten Rechten auf dem Domänencontroller abrufen.
 
 
-- **Ungewöhnliche Protokollimplementierung** Authentifizierungsanforderungen (Kerberos oder NTLM) erfolgen in der Regel über einen standardmäßigen Satz von Methoden und Protokollen. Für eine erfolgreiche Authentifizierung muss die Anforderung jedoch nur einen bestimmten Satz von Anforderungen erfüllen. Angreifer können diese Protokolle mit geringfügigen Abweichungen von der Standardimplementierung in der Umgebung implementieren. Diese Abweichungen können die Anwesenheit eines Angreifers kennzeichnen, der versucht, Angriffe wie Pass-The-Hash, Brute-Force oder andere auszuführen.
+- **Ungewöhnliche Protokollimplementierung** Authentifizierungsanforderungen (Kerberos oder NTLM) erfolgen in der Regel über einen standardmäßigen Satz von Methoden und Protokollen. Für eine erfolgreiche Authentifizierung muss die Anforderung jedoch nur einen bestimmten Satz von Anforderungen erfüllen. Angreifer können diese Protokolle mit geringfügigen Abweichungen von der Standardimplementierung in der Umgebung implementieren. Diese Abweichungen können auf die Anwesenheit eines Angreifers hindeuten, der versucht, Angriffe wie z.B. Pass-The-Hash oder Brute-Force auszuführen.
 
 
 ### <a name="improvements-to-existing-detections"></a>Verbesserungen an vorhandenen Erkennungen
-ATA-1.6 enthält verbesserte Erkennungslogik, die falsch positive und falsch negative Szenarien für vorhandene Erkennungen wie Golden Ticket, Honeytoken, Brute-Force und Remoteausführung verringert.
+ATA-1.6 enthält verbesserte Erkennungslogik, die falsch positive und falsch negative Szenarios für vorhandene Erkennungen wie Golden Ticket, Honeytoken, Brute-Force und Remoteausführung verringert.
 
 ### <a name="the-ata-lightweight-gateway"></a>Das ATA-Lightweight-Gateway
 Ab dieser Version von ATA gibt es eine neue Bereitstellungsoption für das ATA-Gateway, die es ermöglicht, ein ATA-Gateway direkt auf dem Domänencontroller zu installieren. Diese Bereitstellungsoption entfernt nicht kritische Funktionalität des ATA-Gateways und führt dynamische Ressourcenverwaltung entsprechend den auf dem DC verfügbaren Ressourcen ein. Dadurch ist sicherstellt, dass die vorhandenen Vorgänge des DCs nicht betroffen sind. Das ATA-Lightweight-Gateway reduziert die Kosten der ATA-Bereitstellung. Gleichzeitig vereinfacht es die Bereitstellung in Filialstandorten, in denen es begrenzte Hardwareressourcen oder keine Möglichkeit gibt, Unterstützung für Portspiegelung einzurichten.
@@ -77,14 +78,14 @@ Ab dieser Version ermöglichen eine kleinere Datenbanklast und ein effizienteres
 ATA 1.6 erfordert erheblich weniger Speicherplatz zum Ausführen der ATA-Datenbank: Es erfordert nur noch 20 % des Speicherplatzes, der in früheren Versionen verwendet wird.
 
 ### <a name="support-for-ibm-qradar"></a>Unterstützung für IBM QRadar
-ATA kann nun Ereignisse von IBMs SIEM-Lösung QRadar zusätzlich zu den zuvor unterstützten SIEM-Lösungen empfangen.
+ATA kann Ereignisse von IBMs SIEM-Lösung QRadar zusätzlich zu den zuvor unterstützten SIEM-Lösungen empfangen.
 
 ## <a name="known-issues"></a>Bekannte Probleme
 In dieser Version bestehen die folgenden bekannten Probleme.
 
 ### <a name="failure-to-recognize-new-path-in-manually-moved-databases"></a>Fehler beim Erkennen eines neuen Pfads in manuell verschobenen Datenbanken
 
-In Bereitstellungen, in denen der Datenbankpfad manuell verschoben wird, verwendet die ATA-Bereitstellung nicht den neuen Datenbankpfad für die Aktualisierung. Dies kann die folgenden Probleme verursachen:
+In Bereitstellungen, in denen der Datenbankpfad manuell verschoben wird, verwendet die ATA-Bereitstellung nicht den neuen Datenbankpfad für die Aktualisierung. Dieser manuell verschobene Datenbankpfad kann folgende Probleme verursachen:
 
 
 - ATA verwendet möglicherweise den gesamten freien Speicherplatz auf dem Systemlaufwerk von ATA Center, ohne alte Netzwerkaktivitäten regelmäßig zu löschen.
@@ -92,9 +93,10 @@ In Bereitstellungen, in denen der Datenbankpfad manuell verschoben wird, verwend
 
 - Beim Aktualisieren von ATA auf Version 1.6 tritt bei den vorbereitenden Bereitschaftsprüfungen möglicherweise ein Fehler auf (siehe folgende Abbildung).
     ![Fehler bei Bereitschaftsprüfung](media/ata_failed_readinesschecks.png)
-    >[!Important]
-Vor dem Aktualisieren von ATA auf Version 1.6 müssen Sie den folgenden Registrierungsschlüssel mit dem richtigen Datenbankpfad aktualisieren:  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Center\DatabaseDataPath`
-
+    
+    > [!IMPORTANT]
+    > Vor der Aktualisierung von ATA auf Version 1.6 müssen Sie den folgenden Registrierungsschlüssel mit dem richtigen Datenbankpfad aktualisieren: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Center\DatabaseDataPath`
+    
 ### <a name="migration-failure-when-updating-from-ata-15"></a>Migrationsfehler, wenn von ATA 1.5 aktualisiert wird
 Beim Aktualisieren auf ATA 1.6 kann der Aktualisierungsvorgang mit dem folgenden Fehlercode fehlschlagen:
 
@@ -133,8 +135,7 @@ Es sollte ein `WriteResult({ "nRemoved" : XX })`-Wert zurückgegeben werden, wob
 
 ### <a name="net-framework-461-requires-restarting-the-server"></a>.NET Framework 4.6.1 erfordert einen Neustart des Servers
 
-In einigen Fällen erfordert die Installation von .NET Framework 4.6.1 möglicherweise einen Neustart des Servers. Wenn Sie im Dialogfeld **Microsoft Advanced Threat Analytics Center Setup** auf „OK“ klicken, wird der Server automatisch neu gestartet. Dies ist insbesondere wichtig, wenn das ATA-Lightweight-Gateway auf einem Domänencontroller installiert wird, denn möglicherweise möchten Sie ein Wartungsfenster vor der Installation planen.
-    ![.NET Framework-Neustart](media/ata-net-framework-restart.png)
+![.NET Framework-Neustart](media/ata-net-framework-restart.png)
 
 ### <a name="historical-network-activities-no-longer-migrated"></a>Frühere Netzwerkaktivitäten werden nicht mehr migriert
 Diese Version von ATA umfasst eine verbesserte Erkennungs-Engine, das eine genauere Erkennung bietet und viele falsch positive Szenarien eliminiert, insbesondere für Pass-the-Hash.

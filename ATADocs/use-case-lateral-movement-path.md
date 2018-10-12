@@ -5,19 +5,20 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
-ms.topic: article
-ms.prod: ''
-ms.service: advanced-threat-analytics
+ms.date: 6/14/2018
+ms.topic: conceptual
+ms.prod: advanced-threat-analytics
+ms.service: ''
 ms.technology: ''
 ms.assetid: 710f01bd-c878-4406-a7b2-ce13f98736ea
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: dc03cfe1719541dac0f8509c0f8f22987ecb96bb
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 0d247671c43e4c62f740eca263f2e0e680c7d319
+ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46133971"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -27,13 +28,13 @@ Selbst wenn Sie sich sehr darum bemühen, Ihre sensiblen Benutzer zu schützen, 
 
 ## <a name="what-is-a-lateral-movement-path"></a>Was ist ein Lateral Movement-Pfad?
 
-Lateral Movement bedeutet, dass ein Angreifer proaktiv nicht-sensible Konten benutzt, um Zugriff auf sensible Konten zu erhalten. Die Angreifer können alle Methoden verwenden, die im [Handbuch zu verdächtigen Aktivitäten](suspicious-activity-guide.md) beschrieben werden, um das erste nicht sensible Kennwort zu erhalten. Dann werden Tools wie Bloodhound verwendet, um herauszufinden, wer die Administratoren in Ihrem Netzwerk sind, und auf welche Computer sie zugegriffen haben. Sie können dann auf die Daten auf Ihren Domänencontrollern zugreifen, um herauszufinden, wer über welche Konten bzw. über Zugriff auf Ressourcen und Dateien verfügt, um dann die Anmeldeinformationen von anderen (teilweise sensiblen) Benutzern zu stehlen, die auf den Computern gespeichert sind, auf die sie bereits Zugriff hatten. Infolgedessen bewegen sie sich lateral durch weitere Benutzer und Ressourcen, bis sie Administratorrechte auf Ihr Netzwerk erhalten. 
+Lateral Movement bedeutet, dass ein Angreifer nicht sensible Konten benutzt, um Zugriff auf sensible Konten zu erhalten. Dies kann mithilfe der im [Leitfaden zu verdächtigen Aktivitäten](suspicious-activity-guide.md) beschriebenen Methoden erfolgen. Der Angreifer kann die Daten auf Ihren Domänencontrollern nutzen, um zu erfahren, wer die Administratoren in Ihrem Netzwerk sind und auf welche Computer zugegriffen werden kann. 
 
 Mit ATA können Sie Lateral Movement-Angriffe in Ihrem Netzwerk verhindern.
 
 ## <a name="discovery-your-at-risk-sensitive-accounts"></a>Ermittlung Ihrer gefährdeten sensiblen Konten
 
-Folgen Sie diesen Schritten, um zu ermitteln, welche sensiblen Konten in Ihrem Netzwerk aufgrund einer Verbindung mit nicht sensiblen Konten oder Ressourcen anfällig sind. Um Ihr Netzwerk vor Lateral Movement-Angriffen zu schützen, arbeitet ATA rückwärts und gibt Ihnen eine Übersicht, die von Ihren privilegierten Konten ausgeht und Ihnen anzeigt, welche Benutzer und Geräte sich auf den lateralen Pfaden dieser Benutzer und deren Anmeldeinformationen befinden.
+Befolgen Sie diese Schritte, um zu ermitteln, welche sensiblen Konten in Ihrem Netzwerk aufgrund einer Verbindung mit nicht sensiblen Konten oder Ressourcen innerhalb eines bestimmten Zeitraums anfällig sind. 
 
 1. Klicken Sie im Menü der ATA-Konsole auf das Symbol „Berichte“ ![Symbol „Berichte“](./media/ata-report-icon.png).
 
@@ -43,20 +44,20 @@ Folgen Sie diesen Schritten, um zu ermitteln, welche sensiblen Konten in Ihrem N
 
 3. Klicken Sie auf **Herunterladen**.
 
-3. Die erstellte Excel-Datei gibt Ihnen Informationen über gefährdete sensible Konten. Die Registerkarte **Zusammenfassung** liefert Graphen mit Informationen über die Anzahl sensibler Konten und Computer, sowie Durchschnittswerte für gefährdete Ressourcen. Die Registerkarte **Details** enthält eine Liste von sensiblen Konten, um die Sie sich kümmern sollten.
+3. Die erstellte Excel-Datei gibt Ihnen Informationen über gefährdete sensible Konten. Die Registerkarte **Zusammenfassung** liefert Graphen mit Informationen über die Anzahl sensibler Konten und Computer, sowie Durchschnittswerte für gefährdete Ressourcen. Die Registerkarte **Details** enthält eine Liste von sensiblen Konten, um die Sie sich kümmern sollten. Beachten Sie, dass die Pfade in der Vergangenheit verfügbar waren. Es kann also durchaus sein, dass sie heute nicht mehr verfügbar sind.
 
 
 ## <a name="investigate"></a>Untersuchen
 
 Da Sie nun wissen, welche sensiblen Konten gefährdet sind, können Sie sich eingehend mit ATA beschäftigen und mehr darüber erfahren, wie man präventive Maßnahmen ergreift.
 
-1. Suchen Sie in der ATA-Konsole nach dem Benutzer (z.B. Samira Abbasi), dessen Konto unter **Lateral Movement-Pfade zu sensiblen Konten** als anfällig aufgelistet wird. Sie können auch nach dem Lateral Movement-Badge suchen, das dem Entitätsprofil hinzugefügt wird, wenn sich die Entität im ![Symbol „Lateral“](./media/lateral-movement-icon.png) oder im ![Pfadsymbol](./media/paths-icon.png) eines Lateral Movement-Pfads befindet.
+1. Suchen Sie in der ATA-Konsole nach dem Lateral Movement-Badge, das dem Entitätsprofil hinzugefügt wird, wenn sich die Entität in einem Lateral Movement-Pfad befindet. ![Symbol „lateral“](./media/lateral-movement-icon.png) oder ![Symbol „Pfad“](./media/paths-icon.png). Dieses Badge ist verfügbar, wenn innerhalb der letzten zwei Tage ein Lateral Movement-Pfad aufgetreten ist.
 
 2. Klicken Sie auf der sich öffnenden Benutzerprofilseite auf die Registerkarte **Lateral Movement-Pfade**.
 
-3. Das angezeigte Diagramm stellt Ihnen eine Übersicht der möglichen Pfade zu Ihrem sensiblen Benutzer bereit. Der Graph zeigt die Verbindungen der letzten zwei Tage an und ist somit aktuell.
+3. Das angezeigte Diagramm bietet eine Übersicht der möglichen Pfade zum sensiblen Benutzer. Der Graph zeigt die Verbindungen der letzten zwei Tage an.
 
-4. Überprüfen Sie den Graphen, um weitere Informationen über die Offenlegung der Anmeldeinformationen Ihres sensiblen Benutzers zu erhalten. Beispielsweise können Sie in der Übersicht von Samira Abbasi über den abgeblendeten Pfeil **Angemeldet als** anzeigen lassen, wo sich Samira mit ihren privilegierten Anmeldeinformationen angemeldet hat. In diesem Fall wurden Samiras sensible Anmeldeinformationen auf dem Computer „REDMOND-WA-DEV“ gespeichert. Überprüfen Sie anschließend, welche anderen Benutzer sich an welchen Computern angemeldet haben und die größte Offenlegung von Daten und das höchste Sicherheitsrisiko darstellten. Über den schwarzen Pfeil **Administrator auf** können Sie sich anzeigen lassen, wer Administratorrechte für die Ressource hat. In diesem Beispiel hat jeder in der Gruppe „Contoso All“ Zugriff auf die Benutzeranmeldeinformationen dieser Ressource.  
+4. Überprüfen Sie den Graphen, um weitere Informationen über die Offenlegung der Anmeldeinformationen Ihres sensiblen Benutzers zu erhalten. Beispielsweise können Sie in dieser Zuordnung über die grauen Pfeile **Angemeldet durch** anzeigen lassen, wo sich Samira mit ihren privilegierten Anmeldeinformationen angemeldet hat. In diesem Fall wurden Samiras sensible Anmeldeinformationen auf dem Computer „REDMOND-WA-DEV“ gespeichert. Überprüfen Sie anschließend, welche anderen Benutzer sich an welchen Computern angemeldet haben und die größte Offenlegung von Daten und das höchste Sicherheitsrisiko darstellten. Über den schwarzen Pfeil **Administrator auf** können Sie sich anzeigen lassen, wer Administratorrechte für die Ressource hat. In diesem Beispiel hat jeder in der Gruppe **Contoso All** Zugriff auf die Benutzeranmeldeinformationen dieser Ressource.  
 
  ![Lateral Movement-Pfade zum Benutzerprofil](media/user-profile-lateral-movement-paths.png)
 
@@ -67,7 +68,13 @@ Da Sie nun wissen, welche sensiblen Konten gefährdet sind, können Sie sich ein
 
 - Außerdem wird empfohlen, sicherzustellen, dass niemand über unnötige lokale administrative Berechtigungen verfügt. Im Beispiel sollten Sie überprüfen, ob jeder in der Gruppe „Contoso All“ wirklich Administratorrechte für „REDMOND-WA-DEV“ benötigt.
 
-- Es ist immer von Vorteil, wenn Personen nur Zugriff auf notwendige Ressourcen haben. Wie Sie im Beispiel sehen können, erweitert Oscar Posada Samiras Offenlegung von Daten signifikant. Ist es erforderlich, Mitglied in der Gruppe „Contoso All“ zu sein? Könnten Sie Untergruppen erstellen, um die Offenlegung von Daten zu minimieren?
+- Stellen Sie sicher, dass Personen nur Zugriff auf die Ressourcen haben, die sie benötigen. Im Beispiel erhöht Oscar Posada die Anfälligkeit von Samiras Konto signifikant. Ist es erforderlich, dass er Mitglied in der Gruppe **Contoso All** ist? Könnten Sie Untergruppen erstellen, um die Offenlegung von Daten zu minimieren?
+
+**Tipp:** Wenn während der vergangenen zwei Tage keine Aktivitäten ermittelt wurden, wird zwar der Graph nicht angezeigt, aber Sie können immer noch auf den Bericht zu den Lateral Movement-Pfaden zugreifen, der Informationen zu den Lateral Movement-Pfaden der vergangenen 60 Tage enthält.
+
+**Tipp:** Unter [Konfigurieren von SAM-R](install-ata-step9-samr.md) finden Sie Informationen darüber, wie Sie auf Ihren Servern ATA das Ausführen des für die Lateral Movement-Pfaderkennung nötigen SAM-R-Vorgangs erlauben.
+
+
 
 
 ## <a name="see-also"></a>Weitere Informationen

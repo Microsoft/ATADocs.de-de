@@ -6,19 +6,19 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
-ms.topic: article
-ms.prod: ''
-ms.service: advanced-threat-analytics
+ms.topic: conceptual
+ms.prod: advanced-threat-analytics
+ms.service: ''
 ms.technology: ''
 ms.assetid: 601b48ba-a327-4aff-a1f9-2377a2bb7a42
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 7c6eaba8f80dcc7a8fc767f2bb8168221fbc7207
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: e4dc613ded1234bad931a67af679bb067c2d7719
+ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30009869"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46134080"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -76,7 +76,7 @@ May  3 13:39:18 CENTER ATA:CEF:0|Microsoft|ATA|1.8.5942.64854|RetrieveDataProtec
 ### <a name="account-enumeration"></a>Kontoenumeration
 05-10-2017          16:44:22               Auth.Warning    192.168.0.220     1 2017-05-10T13:44:22.706381+00:00 CENTER ATA 596 AccountEnumerationSuspiciousActi ï»¿CEF:0|Microsoft|ATA|1.8.6455.41882|AccountEnumerationSuspiciousActivity|Reconnaissance mithilfe von Kontoenumeration|5|start=2017-05-10T13:44:20.9930644Z app=Kerberos shost=CLIENT3 msg=Eine verdächtige Kontoenumerationsaktivität mithilfe des Kerberos-Protokolls (Ursprung: CLIENT3) wurde beobachtet. Der Angreifer hat insgesamt 72 geschätzte Versuche für Kontonamen ausgeführt. 2 geschätzte Versuche ergaben eine Übereinstimmung mit vorhandenen Namen in Active Directory. externalId=2003 cs1Label=url cs1=https://center/suspiciousActivity/591319368ca1ec02543c56ee
 ### <a name="dns-recon"></a>DNS-Reconnaissance
-05-03-2017          13:16:57               Auth.Warning    192.168.0.220     May  3 10:16:57 CENTER ATA:CEF:0|Microsoft|ATA|1.8.5942.64854|DnsReconnaissanceSuspiciousActivity|Reconnaissance mithilfe DNS|5|start=2017-05-03T10:16:41.8297467Z app=Dns shost=CLIENT1 msg=Eine verdächtige DNS-Aktivität (Ursprung: CLIENT1 - kein DNS-Server) für DC1 wurde beobachtet. cs1Label=url cs1=https://192.168.0.220/suspiciousActivity/5909ae198ca1ec04d05e65fa 05-03-2017          13:24:21               Auth.Warning    192.168.0.220     May  3 10:24:21 CENTER ATA:CEF:0|Microsoft|ATA|1.8.5942.64854|DnsReconnaissanceSuspiciousActivity|Reconnaissance mithilfe DNS|5|start=2017-05-03T10:24:08.0950753Z app=Dns shost=CLIENT1 request=contoso.com requestMethod=Axfr reason=NameError outcome=Failure msg=Eine verdächtige DNS-Aktivität (Ursprung: CLIENT1- kein DNS-Server) wurde beobachtet. Die Abfrage erfolgte für contoso.com (Typ Axfr). Die Antwort war NameError. cs1Label=url cs1=https://192.168.0.220/suspiciousActivity/5909ae198ca1ec04d05e65fa
+05-03-2017          13:16:57               Auth.Warning    192.168.0.220     May  3 10:16:57 CENTER ATA:CEF:0|Microsoft|ATA|1.8.5942.64854|DnsReconnaissanceSuspiciousActivity|Reconnaissance mithilfe DNS|5|start=2017-05-03T10:16:41.8297467Z app=Dns shost=CLIENT1 msg=Eine verdächtige DNS-Aktivität (Ursprung: CLIENT1 - kein DNS-Server) für DC1 wurde beobachtet. cs1Label=url cs1=https://192.168.0.220/suspiciousActivity/5909ae198ca1ec04d05e65fa 05-03-2017          13:24:21               Auth.Warning    192.168.0.220     May  3 10:24:21 CENTER ATA:CEF:0|Microsoft|ATA|1.8.5942.64854|DnsReconnaissanceSuspiciousActivity|Reconnaissance mithilfe von DNS|5|start=2017-05-03T10:24:08.0950753Z app=Dns shost=CLIENT1 request=contoso.com requestMethod=Axfr reason=NameError outcome=Failure msg=Eine verdächtige DNS-Aktivität (Ursprung: CLIENT1 - kein DNS-Server) wurde beobachtet. Die Abfrage erfolgte für contoso.com (Typ Axfr). Die Antwort war NameError. cs1Label=url cs1=https://192.168.0.220/suspiciousActivity/5909ae198ca1ec04d05e65fa
 ### <a name="smb-session-enumeration"></a>SMB-Sitzungsauflistung
 May  3 11:55:43 CENTER ATA:CEF:0|Microsoft|ATA|1.8.5942.64854|EnumerateSessionsSuspiciousActivity|Reconnaissance mithilfe von SMB-Sitzungsauflistung|5|start=2017-05-03T11:52:02.4360718Z app=SrvSvc shost=CLIENT1 msg=Es wurde von "CLIENT1" aus erfolgreich versucht, eine SMB-Sitzungsauflistung auf "DC1" durchzuführen. user1 (daf::1) wurde offengelegt. cs1Label=url cs1=https://192.168.0.220/suspiciousActivity/5909c53f8ca1ec04d05f1cf1
 ### <a name="samr-enumeration"></a>SAMR-Enumeration

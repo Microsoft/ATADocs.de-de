@@ -2,23 +2,23 @@
 title: Integration von Azure Advanced Threat Protection in Windows Defender ATP | Microsoft-Dokumentation
 description: Integration von Azure Advanced Threat Protection in Windows Defender ATP, damit sämtliche Bedrohungen ermittelt werden können
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 6/5/2018
-ms.topic: get-started-article
+ms.date: 9/12/2018
+ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: f6f3ed75-d6bb-4966-a9a7-5339c4f3ebac
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6d6c2cdb157d4e3f75794c8c40abfc7556e314d5
-ms.sourcegitcommit: b218f60b42a25fe486d774d97719590e6fa74e10
+ms.openlocfilehash: 4dca942b6c7b066cfec44e51aaad0f1e003da6ec
+ms.sourcegitcommit: 5ff50807f855db1051b977a64eb6e90487ea196c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34760072"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45750417"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -59,13 +59,9 @@ Zur Aktivierung dieses Features benötigen Sie Lizenzen für Azure ATP und Windo
 
 ## <a name="how-to-integrate-azure-atp-with-windows-defender-atp"></a>Integrieren von Azure ATP in Windows Defender ATP
 
-1. Legen Sie den Arbeitsbereich, den Sie integrieren möchten, als **Primär** fest. Nur ein Arbeitsbereich kann als „Primär“ gekennzeichnet sein, und nur ein primärer Arbeitsbereich kann in andere Dienste integriert werden. Wenn Sie zu einem späteren Zeitpunkt dem Arbeitsbereich die Kennzeichnung als „Primär“ entziehen möchten, müssen Sie zunächst die Integration entfernen, bevor Sie diesen als „Nicht primär“ kennzeichnen können.
+1. Klicken Sie zunächst auf **Konfiguration** und anschließend unter **Datenquellen** auf **Windows Defender ATP**. Klicken Sie dann auf den Link zur **Verwaltung von Arbeitsbereichen**. Dies ist nur möglich, wenn Sie über eine Windows Defender ATP-Lizenz verfügen und Sie bereits den Integrationsvorgang für Windows Defender ATP durchgeführt haben. 
 
- ![Primärer Arbeitsbereich](./media/primary-workspace.png)
-
-2. Klicken Sie zunächst auf **Konfiguration** und anschließend unter **Datenquellen** auf **Windows Defender ATP**. Klicken Sie dann auf den Link zur **Verwaltung von Arbeitsbereichen**. Dies ist nur möglich, wenn Sie über eine Windows Defender ATP-Lizenz verfügen und Sie bereits den Integrationsvorgang für Windows Defender ATP durchgeführt haben. 
-
-3. Klicken Sie in Ihrem primären Arbeitsbereich auf das Zahnrad „Einstellungen“.
+2. Klicken Sie in Ihrem Arbeitsbereich auf das Zahnrad „Einstellungen“.
 
  ![Integration des Arbeitsbereichs](./media/edit-workspace.png)
  
@@ -95,7 +91,8 @@ Wenn Sie auf den Badge klicken, gelangen Sie zum Windows Defender ATP-Portal, in
 
 Im Windows Defender ATP-Portal können Sie Azure ATP-Warnungen anzeigen lassen, wenn Sie auf einen Endpunkt klicken. Wenn Sie auf die Warnungen für diese Entität in Windows Defender ATP klicken, öffnet sich die Profilseite der Entität in Azure ATP. 
  
- > ![HINWEIS] Die Integration von Azure Advanced Threat Protection mit Windows Defender ATP unterstützt nur Benutzer und Computer aus dem lokalen Azure Active Directory. Benutzer von Azure AD mit virtuellen Computern, die in Azure verwaltet werden, werden nicht als Teil der Integration angezeigt. 
+ > [!NOTE]
+ > Die Integration von Azure ATP mit Windows Defender ATP unterstützt nur Benutzer und Computer aus dem lokalen Azure Active Directory. Benutzer von Azure AD mit virtuellen Computern, die in Azure verwaltet werden, werden nicht als Teil der Integration angezeigt. 
 
 ![Windows Defender ATP-Warnungen](./media/wd-atp-alerts.png)
 

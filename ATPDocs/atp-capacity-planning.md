@@ -12,12 +12,12 @@ ms.prod: ''
 ms.assetid: da0ee438-35f8-4097-b3a1-1354ad59eb32
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3426829c0c3b9b52ec1c0fb2c7f19e5a0944bfdf
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: e894422e7264650186c6f4eea28d5a9099ca7914
+ms.sourcegitcommit: 56065ee43dac299203871cd6f025315520750b3b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126364"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47233897"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -32,7 +32,7 @@ In diesem Artikel erfahren Sie, wie viele Azure ATP-Sensoren und eigenständige 
 ## <a name="using-the-sizing-tool"></a>Verwenden das Tools zur Größenanpassung
 Die empfohlene und einfachste Methode zum Ermitteln der Kapazität für die Azure ATP-Bereitstellung besteht in der Verwendung des [Azure ATP-Tools zur Größenanpassung](http://aka.ms/aatpsizingtool). Führen Sie das Azure ATP-Tool zur Größenanpassung aus, und verwenden Sie aus den Ergebnis der Excel-Datei die folgenden Felder zum Ermitteln des vom Sensor benötigten Speichers und der CPU:
 
-- Azure ATP-Sensor: Ordnen Sie das Feld **Busy Packets/sec** (Belegte Pakete pro Sek.) in der Azure ATP-Sensortabelle in der Ergebnisdatei dem Feld **PAKETE PRO SEKUNDE** in der [Eigenständigen Azure ATP-Sensor-Tabelle](#azure-atp-sensor-sizing) oder der [Azure ATP-Sensor-Tabelle](#azure-atp-standalone-sensor-sizing) zu, abhängig vom [gewählten Sensortyp](#choosing-the-right-sensor-type-for-your-deployment).
+- Azure ATP-Sensor: Ordnen Sie das Feld **Busy Packets/sec** (Belegte Pakete pro Sek.) in der Azure ATP-Sensortabelle in der Ergebnisdatei abhängig vom [gewählten Sensortyp](#choosing-the-right-sensor-type-for-your-deployment) dem Feld **PAKETE PRO SEKUNDE** in der [Eigenständigen Azure ATP-Sensortabelle](#azure-atp-sensor-sizing) oder der [Azure ATP-Sensortabelle](#azure-atp-standalone-sensor-sizing) zu.
 
 
 ![Beispiel für das Kapazitätsplanungstool](media/capacity-tool.png)
@@ -58,7 +58,7 @@ Berücksichtigen Sie folgende Vorteile bei der Auswahl des Bereitstellungstyps d
 Berücksichtigen Sie folgende Fehler bei der Entscheidung, wie viele eigenständige Azure ATP-Sensoren bereitgestellt werden sollen.
 
 -   **Active Directory-Gesamtstrukturen und -Domänen**<br>
-    Azure ATP kann Datenverkehr aus mehreren Domänen innerhalb einer einzelnen Active Directory-Gesamtstruktur für jeden Arbeitsbereich überwachen, den Sie erstellen. Sie müssen mehrere Arbeitsbereiche erstellen, um mehrere Gesamtstrukturen überwachen zu können. 
+    Azure ATP kann Datenverkehr aus mehreren Domänen innerhalb mehrerer Active Directory-Gesamtstrukturen für jeden Arbeitsbereich überwachen, den Sie erstellen. 
 
 -   **Portspiegelung**<br>
 Die Durchführung der Portspiegelung erfordert möglicherweise die Bereitstellung mehrerer eigenständiger Azure ATP-Sensoren pro Rechenzentrum oder Filialstandort.

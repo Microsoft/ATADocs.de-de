@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/9/2018
+ms.date: 9/27/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service: ''
@@ -13,19 +13,19 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 06789ac50d52a9b202eea9fb9fb6ea74aaf7a5f3
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: f5a21b1b84d164542e04d77e3a6a57fe5c944102
+ms.sourcegitcommit: 1b23381ca4551a902f6343428d98f44480077d30
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133946"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47403198"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
 
 
 # <a name="ata-prerequisites"></a>ATA-Voraussetzungen
-Dieser Artikel beschreibt die Voraussetzungen für eine erfolgreiche Bereitstellung von ATA in Ihrer Umgebung.
+In diesem Artikel werden die Voraussetzungen für eine erfolgreiche Bereitstellung von ATA in Ihrer Umgebung beschrieben.
 
 > [!NOTE]
 > Informationen zum Planen von Ressourcen und Kapazitäten finden Sie unter [ATA-Kapazitätsplanung](ata-capacity-planning.md).
@@ -61,7 +61,7 @@ In diesem Abschnitt werden die Informationen aufgeführt, die Sie sammeln sollte
 
 -    Empfohlen: Benutzer sollten über schreibgeschützten Zugriff auf den Container mit gelöschten Objekten verfügen. So kann ATA eine Massenlöschung von Objekten in der Domäne erkennen. Informationen zum Konfigurieren des schreibgeschützten Zugriffs auf den Container mit gelöschten Objekten finden Sie im Abschnitt **Changing permissions on a deleted object container** (Ändern von Berechtigungen für einen Container mit gelöschten Objekten) im Artikel [View or Set Permissions on a Directory Object](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) (Anzeigen und Festlegen von Berechtigungen für ein Verzeichnisobjekt).
 
--   Optional: ein Benutzerkonto eines Benutzers ohne Netzwerkaktivitäten. Dieses Konto wird als ATA-Honeytoken-Benutzer konfiguriert. Zum Konfigurieren des Honeytoken-Benutzers benötigen Sie die SID des Benutzerkontos, nicht den Benutzernamen. Weitere Informationen finden Sie unter [Configure IP address exclusions and Honeytoken user (Konfigurieren von IP-Adressausschlüssen und Honeytoken-Benutzern)](install-ata-step7.md).
+-   Optional: ein Benutzerkonto eines Benutzers ohne Netzwerkaktivitäten. Dieses Konto kann als ATA-Honeytoken-Benutzer konfiguriert werden. Zum Konfigurieren eines Kontos als Honeytoken-Benutzer ist nur der Benutzername erforderlich. Weitere Informationen zum Konfigurieren von Honeytoken finden Sie unter [Konfigurieren von IP-Adressausschlüssen und Honeytoken-Benutzern](install-ata-step7.md).
 
 -   Optional: Zusätzlich zum Sammeln und Analysieren des Netzwerkverkehrs zu und von den Domänencontrollern kann ATA die Windows-Ereignisse 4776, 4732, 4733, 4728, 4729, 4756 und 4757 heranziehen, um die ATA-Erkennung von Pass-the-Hash weiter zu verbessern. Diese Ereignisse können von SIEM erhalten oder durch Festlegen der Windows-Ereignisweiterleitung von Ihrem Domänencontroller aus abgerufen werden. Die gesammelten Ereignisse versorgen ATA mit zusätzlichen Informationen, die nicht über den Netzwerkverkehr des Domänencontrollers verfügbar sind.
 

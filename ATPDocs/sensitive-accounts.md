@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b8b48b8090e109c9fc23c52b05f986b34e2549eb
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: ccb87ab6b3fabed5edaf7c32324701c74259f098
+ms.sourcegitcommit: 5ff50807f855db1051b977a64eb6e90487ea196c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44165880"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45750436"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -37,7 +37,6 @@ In der folgenden Liste werden die Gruppen aufgeführt, die von Azure ATP als „
 -   Druck-Operatoren
 -   Sicherungsoperatoren
 -   Replikatoren
--   Remotedesktopbenutzer 
 -   Netzwerkkonfigurations-Operatoren 
 -   Eingehende Gesamtstruktur-Vertrauensstellung
 -   Domänen-Admins
@@ -48,6 +47,8 @@ In der folgenden Liste werden die Gruppen aufgeführt, die von Azure ATP als „
 -   Schema-Admins 
 -   Organisations-Admins
 
+ > [!NOTE]
+ > Bis September 2018 wurden auch Remotedesktopbenutzer von Azure ATP automatisch als sensibel erkannt. Remotedesktopentitäten oder -gruppen, die nach diesem Datum hinzugefügt wurden, werden nicht mehr automatisch als sensibel erkannt, während Remotedesktopentitäten oder -gruppen, die vor diesem Datum hinzugefügt wurden, möglicherweise als sensibel markiert bleiben. Diese „Sensibel“-Einstellung kann nun manuell geändert werden.  
 
 ## <a name="tagging-sensitive-accounts"></a>Kennzeichnen von sensiblen Konten
 

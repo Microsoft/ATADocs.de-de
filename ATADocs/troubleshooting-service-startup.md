@@ -6,19 +6,19 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
-ms.topic: article
-ms.prod: ''
-ms.service: advanced-threat-analytics
+ms.topic: conceptual
+ms.prod: advanced-threat-analytics
+ms.service: ''
 ms.technology: ''
 ms.assetid: 5a65285c-d1de-4025-9bb4-ef9c20b13cfa
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 87d3f1de8167c1198e6b334826f90df83cc96780
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: e3f59bc7c6873407d8764dc5ab64bfd7a52fdebe
+ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30009267"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46133343"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -30,7 +30,8 @@ ms.locfileid: "30009267"
 
 Wenn ATA Center nicht gestartet wird, führen Sie das folgende Verfahren zur Fehlerbehebung durch:
 
-1.  Führen Sie den folgenden Windows PowerShell-Befehl aus: `Get-Service Pla | Select Status`. So stellen Sie sicher, dass der Leistungsindikatordienst ausgeführt wird. Wenn es nicht funktioniert, liegt das Problem bei der Plattform, und Sie müssen sicherstellen, dass der Dienst wieder ausgeführt werden kann.
+1.  Führen Sie den folgenden Windows PowerShell-Befehl aus: `Get-Service Pla | Select Status`,
+    um sicherzustellen, dass der Leistungsindikatordienst ausgeführt wird. Wenn es nicht funktioniert, liegt das Problem bei der Plattform, und Sie müssen sicherstellen, dass der Dienst wieder ausgeführt werden kann.
 2.  Wenn er ausgeführt wurde, versuchen Sie einen Neustart, und beobachten Sie, ob das Problem behoben wird: `Restart-Service Pla`
 3.  Versuchen Sie, manuell einen neuen Datensammler zu erstellen (einer reicht aus, auch nur um z.B. CPUs von Computern zu sammeln).
 Wenn er gestartet werden kann, ist die Plattform wahrscheinlich in Ordnung. Andernfalls liegt noch immer ein Plattformproblem vor.
@@ -58,7 +59,8 @@ Der Grund ist folgender: Im Rahmen des Installationsprozesses des Lightweight-Ga
 
 **Lösung**
 
-1. Wenn sich unter dem Registrierungsschlüssel ein DWORD-Wert mit dem Namen **Disable Performance Counters** befindet, achten Sie darauf, dass dieser auf **0**: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\` `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfProc\Performance` festgelegt ist.
+1. Wenn sich unter dem Registrierungsschlüssel ein DWORD-Wert mit dem Namen **Disable Performance Counters** befindet, achten Sie darauf, dass dieser auf **0**: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\` festgelegt ist.
+    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfProc\Performance`
  
 2. Starten Sie dann den PLA-Dienst neu. Das ATA-Lightweight-Gateway erkennt die Änderung automatisch und startet den Dienst neu.
 

@@ -5,20 +5,20 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/30/2018
-ms.topic: get-started-article
+ms.date: 9/25/2018
+ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: ab1e8dd9-a6c2-4c68-89d5-343b8ec56142
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d37a55bdb1c437f7775f530cfc143146eb38ba96
-ms.sourcegitcommit: 93a133430ac85d6db7afad5f6f2583b3a39c423a
+ms.openlocfilehash: d54bfa71c2f587450fe7c68aaca1e721356c11d7
+ms.sourcegitcommit: 8e80f59409c65e7d8d60ec7de8b96b621795699a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43469726"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47168534"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -32,7 +32,9 @@ Damit Sie den aktuellen Status jeder erweiterten Überwachungsrichtlinien Ihres 
 ![Integritätswarnung der erweiterten Überwachungsrichtlinie](media/atp-health-alert-audit-policy.png)
 
 
-Die erweiterten Sicherheitsüberwachungsrichtlinie ist über GPO aktiviert. Diese Überprüfungsereignisse können in den Windows-Ereignissen des Domänencontrollers aufgezeichnet werden. Dies muss in der **Richtlinie des Standarddomänencontrollers** in Active Directory aktiviert werden.
+Advanced Security Audit Policy (Erweiterte Sicherheitsüberwachungsrichtlinien) ist über das Gruppenrichtlinienobjekt **Standarddomänencontroller-Richtlinie** aktiviert. Diese Überprüfungsereignisse können in den Windows-Ereignissen des Domänencontrollers aufgezeichnet werden. 
+
+
 
 <br>Ändern Sie mithilfe der folgenden Anweisungen die erweiterten Überwachungsrichtlinien Ihres Domänencontrollers:
 
@@ -50,9 +52,12 @@ Die erweiterten Sicherheitsüberwachungsrichtlinie ist über GPO aktiviert. Dies
 
     ![Überprüfen der Anmeldeinformationen](media/atp-advanced-audit-policy-check-step-3.png)
 
-6. Wechseln Sie zur Kontoanmeldung, doppelklicken Sie auf **Sicherheitsgruppenverwaltung überwachen**, und wählen Sie jeweils für erfolgreiche und erfolglose Ereignisse die Option **Configure the following audit events** (Folgende Überwachungsereignisse konfigurieren) aus.
+6. Wechseln Sie zur Kontoverwaltung, doppelklicken Sie auf **Sicherheitsgruppenverwaltung überwachen**, und wählen Sie jeweils für erfolgreiche und erfolglose Ereignisse die Option **Configure the following audit events** (Folgende Überwachungsereignisse konfigurieren) aus.
 
     ![Sicherheitsgruppenverwaltung überwachen](media/atp-advanced-audit-policy-check-step-4.png)
+
+> [!NOTE]
+> - Wenn Sie sich für die Verwendung lokaler Richtlinien entscheiden, stellen Sie sicher, dass Sie darin die Überwachungsprotokolle **Kontoanmeldung** und **Kontoverwaltung** hinzufügen. Wenn Sie die erweiterte Überwachungsrichtlinie konfigurieren, stellen Sie sicher, dass Sie die [Überwachungsrichtlinien-Unterkategorie](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/audit-force-audit-policy-subcategory-settings-to-override) erzwingen.
 
 7. Nachdem die neuen Ereignisse über GPO angewendet wurden, sind sie unter Ihren **Windows-Ereignisprotokollen** sichtbar.
 

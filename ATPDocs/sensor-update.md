@@ -5,20 +5,20 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/06/2018
-ms.topic: get-started-article
+ms.date: 9/12/2018
+ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: 603d9e09-a07d-4357-862f-d5682c8bc3dd
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 35ca436a1da10b1675daed974920c9dc8ccc3da0
-ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
+ms.openlocfilehash: 8a6481070abf1188507f31dbd01b26f7221b2e36
+ms.sourcegitcommit: a5823d0dfc48783ab990a99ca3f65b614fb49e75
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39585017"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44697241"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -28,7 +28,9 @@ Azure Advanced Threat Protection muss aktuell sein, damit Ihre Organisation best
 
 Der Azure ATP-Dienst wird mehrmals pro Monat mithilfe von Fehlerbehebungen, Leistungsverbesserungen und neuen Erkennungen aktualisiert. Gelegentlich erfordern diese Updates auch entsprechende Updates der Sensoren. 
 
-Wenn Sie Ihre Sensoren nicht aktualisieren, können diese möglicherweise nicht mit dem Azure ATP-Clouddienst kommunizieren, wodurch der Dienst beeinträchtigt wird.
+Wenn Sie Ihre Sensoren nicht aktualisieren, können diese möglicherweise nicht mit dem Azure ATP-Clouddienst kommunizieren, wodurch der Dienst beeinträchtigt wird. 
+
+Die Authentifizierung zwischen Ihren Sensoren und dem Azure-Clouddienst verwendet sichere, zertifikatbasierte gegenseitige Authentifizierung. 
 
 Jedes Update wird getestet und für alle unterstützten Betriebssysteme überprüft, damit Ihr Netzwerk und Ihre Vorgänge nur minimal beeinträchtigt werden.
 

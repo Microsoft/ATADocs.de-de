@@ -1,13 +1,20 @@
 ---
 layout: LandingPage
+title: 'Azure Advanced Threat Protection-Dokumentation: Tutorials, Beispiele, Referenzen und Ressourcen'
 description: Erfahren Sie, wie Sie Azure Advanced Threat Protection verwenden.
 ms.service: azure-advanced-threat-protection
-ms.openlocfilehash: 5c7261a99e1b6209598a29e5d3a751ea77a150ce
-ms.sourcegitcommit: e0b9252c770b3a3695af1642b76e3304f3df15d4
+keywords: advanced threat protection, azure, atp, tutorials, beispiele, referenz
+author: rkarlin
+manager: mbaldwin
+ms.author: rkarlin
+ms.topic: landing-page
+ms.date: 09/26/2018
+ms.openlocfilehash: ac88b5b2acad571ce0d578847fe9eeb795f6b45a
+ms.sourcegitcommit: 56065ee43dac299203871cd6f025315520750b3b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46566586"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47233880"
 ---
 # <a name="azure-advanced-threat-protection-documentation"></a>Dokumentation zu Azure Advanced Threat Protection
 
@@ -105,3 +112,4 @@ Azure Advanced Threat Protection (ATP) ist ein Clouddienst, mit dem Sie Ihre hyb
         </a>
     </li>
 </ul>
+
