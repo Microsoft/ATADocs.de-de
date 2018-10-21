@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/29/2018
+ms.date: 10/14/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: be809f422e797f08655b7841fc7f9ecb7423a0a6
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: be1a699ffd1ab0925df43910aec7f8166d4e423d
+ms.sourcegitcommit: 58c75026e5ec4dcab3b0852a41f9f0a0ad6f22eb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133921"
+ms.lasthandoff: 10/14/2018
+ms.locfileid: "49315845"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -42,7 +42,7 @@ Bei Fragen oder Feedback wenden Sie sich unter [ATAEval@microsoft.com](mailto:AT
 
 **Beschreibung**
 
-Angreifer fügen Benutzer zu sehr privilegierten Gruppen hinzu. Dadurch können Sie Zugriff auf weitere Ressourcen und Beständigkeit erhalten. Die Erkennung basiert auf dem Erfassen der Aktivitäten von Benutzern, die Gruppen ändern und den Warnungen, die bei nicht ordnungsgemäßen Ergänzungen zu einer sensiblen Gruppe angezeigt werden. Die Erfassung wird kontinuierlich von ATA ausgeführt. Der Mindestzeitraum, bevor eine Warnung ausgelöst werden kann, beträgt einen Monat pro Domänencontroller.
+Angreifer fügen Benutzer zu sehr privilegierten Gruppen hinzu. Dadurch können sie Zugriff auf weitere Ressourcen und Beständigkeit erhalten. Erkennungen basieren auf dem Erfassen der Aktivitäten von Benutzergruppen, die Aktivitäten ändern, und den Warnungen, die bei nicht ordnungsgemäßen Ergänzungen zu einer sensiblen Gruppe angezeigt werden. Die Erfassung wird kontinuierlich von ATA ausgeführt. Der Mindestzeitraum, bevor eine Warnung ausgelöst werden kann, beträgt einen Monat pro Domänencontroller.
 
 Eine Definition von sensiblen Gruppen in ATA finden Sie unter [Arbeiten mit der ATA-Konsole](working-with-ata-console.md#sensitive-groups).
 
@@ -64,15 +64,16 @@ Richten Sie gegebenenfalls [Privileged Access Management for Active Directory (P
 
 ## <a name="broken-trust-between-computers-and-domain"></a>Fehlerhafte Vertrauensstellung zwischen Computern und Domäne
 
-> ![Hinweis] Diese verdächtige Aktivität ist veraltet und wird nur in ATA-Versionen vor 1.9 angezeigt.
+> [!NOTE]
+> Die Warnung „Fehlerhafte Vertrauensstellung zwischen Computern und Domäne“ ist veraltet und wird nur in ATA-Versionen vor 1.9 angezeigt.
 
 **Beschreibung**
 
-Eine fehlerhafte Vertrauensstellung bedeutet, dass Sicherheitsanforderungen von Active Directory für die fraglichen Computer möglicherweise nicht wirksam sind. Dies ist ein grundlegender Sicherheits- und Kompatibilitätsfehler und stellt ein leichtes Ziel für Angreifer dar. In dieser Erkennung wird eine Warnung ausgelöst, wenn mehr als fünf Kerberos-Authentifizierungsfehler von einem Computerkonto in 24 Stunden angezeigt werden.
+Eine fehlerhafte Vertrauensstellung bedeutet, dass Sicherheitsanforderungen von Active Directory für diese Computer möglicherweise nicht wirksam sind. Dies ist ein grundlegender Sicherheits- und Kompatibilitätsfehler und stellt ein leichtes Ziel für Angreifer dar. In dieser Erkennung wird eine Warnung ausgelöst, wenn mehr als fünf Kerberos-Authentifizierungsfehler von einem Computerkonto innerhalb von 24 Stunden angezeigt werden.
 
 **Untersuchung**
 
-Gestattet der fragliche Computer Domänenbenutzern das Anmelden? 
+Gestattet der untersuchte Computer Domänenbenutzern das Anmelden? 
 - Falls ja, können Sie diesen Computer in den Wiederherstellungsschritten ignorieren.
 
 **Wartung**
@@ -121,7 +122,7 @@ Es gibt drei Arten von Erkennung:
 
 Überprüfen Sie zunächst die Beschreibung der Warnung, um festzustellen, mit welcher der drei obenstehenden Arten der Erkennung Sie es zu tun haben. Laden Sie für weitere Informationen das Excel-Arbeitsblatt herunter.
 1.  Skeleton Key: Sie können überprüfen, ob Ihre Domänencontroller von Skeleton Key betroffen sind, indem Sie [den vom ATA-Team entwickelten Scanner verwenden](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73). Wenn der Scanner Schadsoftware auf einem oder mehreren Ihrer Domänencontroller findet, ist dies ein richtig positives Ereignis.
-2.  Golden Ticket: Wechseln Sie im Excel-Arbeitsblatt zur Registerkarte **Netzwerkaktivität**. Sie werden feststellen, dass das entsprechende heruntergestufte Feld **Request Ticket Encryption Type** ist und dass **Source Computer Supported Encryption Types** stärkere Verschlüsselungsmethoden enthält.
+2.  Golden Ticket: Wechseln Sie im Excel-Arbeitsblatt zur Registerkarte **Netzwerkaktivität**. Sie werden feststellen, dass das entsprechende heruntergestufte Feld **Request Ticket Encryption Type** ist und dass **Source Computer Supported Encryption Types** stärkere Verschlüsselungsmethoden auflistet.
   ein.    Überprüfen Sie den Quellcomputer und das Konto. Überprüfen Sie im Fall von mehreren Quellcomputern und Konten, ob diese etwas gemeinsam haben (alle Marketingmitarbeiter verwenden z.B. eine bestimmte App, die die Warnung möglicherweise ausgelöst hat). Es gibt Fälle, in denen eine benutzerdefinierte Anwendung, die selten genutzt wird, mit einem niedrigeren Verschlüsselungschiffre authentifiziert wird. Überprüfen Sie, ob solche Apps auf dem Quellcomputer vorhanden sind. Falls ja, ist dies wahrscheinlich ein unbedenklich richtig positives Ereignis und kann **unterdrückt** werden.
   b.    Überprüfen Sie die Ressource, auf die von diesen Tickets aus zugegriffen wird. Wenn auf eine Ressource von allen zugegriffen wird, stellen Sie sicher, dass es sich um eine gültige Ressource handelt, auf die zugegriffen werden soll. Überprüfen Sie zudem, ob die Zielressource starke Verschlüsselungsmethoden unterstützt. Sie können dies in Active Directory überprüfen, indem Sie das Attribut `msDS-SupportedEncryptionTypes` des Ressourcendienstkontos überprüfen.
 3.  Overpass-the-Hash: Wechseln Sie im Excel-Arbeitsblatt zur Registerkarte **Netzwerkaktivität**. Sie werden feststellen, dass das entsprechende heruntergestufte Feld **Encrypted Timestamp Encryption Type** ist und dass **Source Computer Supported Encryption Types** stärkere Verschlüsselungsmethoden enthält.
@@ -133,9 +134,9 @@ Es gibt drei Arten von Erkennung:
 1.  Skeleton Key – Entfernen der Schadsoftware Weitere Informationen finden Sie in der [Skeleton Key Malware Analysis](https://www.virusbulletin.com/virusbulletin/2016/01/paper-digital-bian-lian-face-changing-skeleton-key-malware) (Analyse der Skeleton Key-Schadsoftware).
 
 2.  Golden Ticket: Befolgen Sie die Anweisungen zu verdächtigen Aktivitäten unter [Golden Ticket](#golden-ticket).   
-    Implementieren Sie ebenfalls die [Pass the hash recommendations (Empfehlungen zu Pass-the-Hash)](http://aka.ms/PtH), da für das Erstellen eines Golden Tickets Domänenadministratorrechte erforderlich sind.
+    Implementieren Sie ebenfalls die [Pass the hash recommendations (Empfehlungen zu Pass-the-Hash)](https://www.microsoft.com/download/details.aspx?id=36036), da für das Erstellen eines Golden Tickets Domänenadministratorrechte erforderlich sind.
 
-3.  Overpass-the-Hash: Wenn das beteiligte Konto nicht vertraulich ist, setzen Sie das Kennwort für dieses Konto zurück. Dies hindert den Angreifer daran, neue Kerberos-Tickets aus dem Kennworthash zu erstellen. Bestehende Tickets können jedoch weiterhin verwendet werden, bis sie ablaufen. Wenn es sich um ein vertrauliches Konto handelt, sollten Sie das KRBTGT-Konto wie bei verdächtigen Aktivitäten mit Golden Tickets zweimal zurücksetzen. Durch das zweimalige Zurücksetzen von KRBTGT werden alle Kerberos-Tickets in dieser Domäne ungültig. Daher sollten Sie diesen Schritt im Voraus planen. Weitere Informationen finden Sie im Leitfaden [KRBTGT Account Password Reset Scripts now available for customers (Skripts zum Zurücksetzen von Kennwörtern des KRBTGT-Kontos stehen Kunden jetzt zur Verfügung)](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Beachten Sie auch die Verwendung des [Reset the KRBTGT account password/keys tool (Tools zum Zurücksetzen des Kennworts/Schlüssels eines KRBTGT-Kontos)](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Da es sich dabei um eine Technik mit seitlicher Bewegung handelt, führen Sie die bewährten Methoden der [Pass the hash recommendations (Empfehlungen zu Pass-the-Hash)](http://aka.ms/PtH) aus.
+3.  Overpass-the-Hash: Wenn das beteiligte Konto nicht vertraulich ist, setzen Sie das Kennwort für dieses Konto zurück. Dies hindert den Angreifer daran, neue Kerberos-Tickets aus dem Kennworthash zu erstellen. Bestehende Tickets können jedoch weiterhin verwendet werden, bis sie ablaufen. Wenn es sich um ein vertrauliches Konto handelt, sollten Sie das KRBTGT-Konto wie bei verdächtigen Aktivitäten mit Golden Tickets zweimal zurücksetzen. Durch das zweimalige Zurücksetzen von KRBTGT werden alle Kerberos-Tickets in dieser Domäne ungültig. Daher sollten Sie diesen Schritt im Voraus planen. Weitere Informationen finden Sie im Leitfaden [KRBTGT Account Password Reset Scripts now available for customers (Skripts zum Zurücksetzen von Kennwörtern des KRBTGT-Kontos stehen Kunden jetzt zur Verfügung)](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Beachten Sie auch die Verwendung des [Reset the KRBTGT account password/keys tool (Tools zum Zurücksetzen des Kennworts/Schlüssels eines KRBTGT-Kontos)](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Da es sich dabei um eine Technik mit seitlicher Bewegung handelt, führen Sie die bewährten Methoden der [Pass the hash recommendations (Empfehlungen zu Pass-the-Hash)](https://www.microsoft.com/download/details.aspx?id=36036) aus.
 
 
 ## <a name="honeytoken-activity"></a>Honeytoken-Aktivität
@@ -169,13 +170,13 @@ Pass-the-Hash ist eine Technik mit seitlicher Bewegung, bei der Angreifer den NT
 
 **Untersuchung**
 
-Stammt der verwendete Hash von einem Computer, der dem Zielbenutzer gehört oder regelmäßig von diesem verwendet wird? Falls ja, handelt es sich dabei um ein falsch positives Ereignis. Wenn nicht, handelt es sich dabei wahrscheinlich um ein richtig positives Ereignis.
+Überprüfen Sie, ob der verwendete Hash von einem Computer stammt, der dem Zielbenutzer gehört oder von diesem regelmäßig verwendet wird. Falls dies zutrifft, ist die Warnung falsch positiv, andernfalls ist sie wahrscheinlich richtig positiv.
 
 **Wartung**
 
-1. Wenn das beteiligte Konto nicht vertraulich ist, setzen Sie das Kennwort für dieses Konto zurück. Dies hindert den Angreifer daran, neue Kerberos-Tickets aus dem Kennworthash zu erstellen. Bestehende Tickets können jedoch weiterhin verwendet werden, bis sie ablaufen. 
+1. Wenn das beteiligte Konto nicht vertraulich ist, setzen Sie das Kennwort für dieses Konto zurück. Durch Zurücksetzen des Kennworts wird verhindert, dass der Angreifer neue Kerberos-Tickets aus dem Kennworthash erstellt. Vorhandene Tickets sind immer noch verwendbar, bis sie ablaufen. 
 
-2. Wenn es sich um ein vertrauliches Konto handelt, sollten Sie das KRBTGT-Konto wie bei verdächtigen Aktivitäten mit Golden Tickets zweimal zurücksetzen. Durch das zweimalige Zurücksetzen von KRBTGT werden alle Kerberos-Tickets in dieser Domäne ungültig. Daher sollten Sie diesen Schritt im Voraus planen. Siehe [KRBTGT Account Password Reset Scripts now available for customers (Skripts zum Zurücksetzen von Kennwörtern des KRBTGT-Kontos stehen Kunden jetzt zur Verfügung)](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Beachten Sie auch die Verwendung des [Reset the KRBTGT account password/keys tool (Tools zum Zurücksetzen des Kennworts/Schlüssels eines KRBTGT-Kontos)](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Da es sich dabei um eine Technik mit seitlicher Bewegung handelt, führen Sie die bewährten Methoden der [Pass the hash recommendations (Empfehlungen zu Pass-the-Hash)](http://aka.ms/PtH) aus.
+2. Wenn das betroffene Konto vertraulich ist, sollten Sie das KRBTGT-Konto wie bei verdächtigen Aktivitäten mit Golden Tickets zweimal zurücksetzen. Weil durch das zweimalige Zurücksetzen von KRBTGT alle Domänen-Kerberos-Tickets ungültig werden, sollten Sie diesen Schritt im Hinblick auf die Auswirkungen im Voraus planen. Siehe [KRBTGT Account Password Reset Scripts now available for customers (Skripts zum Zurücksetzen von Kennwörtern des KRBTGT-Kontos stehen Kunden jetzt zur Verfügung)](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Beachten Sie auch die Verwendung des [Reset the KRBTGT account password/keys tool (Tools zum Zurücksetzen des Kennworts/Schlüssels eines KRBTGT-Kontos)](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Da es sich dabei normalerweise um eine Technik mit seitlicher Bewegung handelt, führen Sie die bewährten Methoden der [Pass the hash recommendations (Empfehlungen zu Pass-the-Hash)](https://www.microsoft.com/download/details.aspx?id=36036) aus.
 
 ## <a name="identity-theft-using-pass-the-ticket-attack"></a>Identitätsdiebstahl mithilfe eines Pass-the-Ticket-Angriffs
 
@@ -185,23 +186,23 @@ Pass-the-Ticket ist eine Technik mit seitlicher Bewegung, bei der die Angreifer 
 
 **Untersuchung**
 
-1. Klicken Sie auf die Schaltfläche **Details herunterladen**, um eine vollständige Liste der beteiligten IP-Adressen anzuzeigen. Gehört die IP-Adresse von einem oder beiden Computern zu einem Subnetz, das aus einem zu kleinen DHCP-Pool (z.B. VPN oder WiFi) zugewiesen wird? Ist die IP-Adresse freigegeben? Beispielsweise durch ein NAT-Gerät? Wenn die Antwort auf eine dieser Fragen „ja“ lautet, handelt es sich um ein falsch positives Ereignis.
+1. Klicken Sie auf die Schaltfläche **Details herunterladen**, um eine vollständige Liste der beteiligten IP-Adressen anzuzeigen. Ist die IP-Adresse von einem oder beiden Computern Teil eines Subnetzes, das aus einem zu kleinen DHCP-Pool (z.B. VPN oder WiFi) zugewiesen wurde? Ist die IP-Adresse freigegeben? Beispielsweise durch ein NAT-Gerät? Wenn die Antwort auf eine dieser Fragen „ja“ lautet, handelt es sich um eine falsch positive Warnung.
 
 2. Gibt es eine benutzerdefinierte Anwendung, die Tickets im Auftrag des Benutzers weiterleitet? Falls ja, handelt es sich um ein unbedenklich richtig positives Ereignis.
 
 **Wartung**
 
-1. Wenn das beteiligte Konto nicht vertraulich ist, setzen Sie das Kennwort für dieses Konto zurück. Dies hindert den Angreifer daran, neue Kerberos-Tickets aus dem Kennworthash zu erstellen. Bestehende Tickets können jedoch weiterhin verwendet werden, bis sie ablaufen.  
+1. Wenn das beteiligte Konto nicht vertraulich ist, setzen Sie das Kennwort für dieses Konto zurück. Durch erneutes Senden des Kennworts wird verhindert, dass der Angreifer neue Kerberos-Tickets aus dem Kennworthash erstellt. Alle vorhandenen Tickets bleiben verwendbar, bis sie abgelaufen sind.  
 
-2. Wenn es sich um ein vertrauliches Konto handelt, sollten Sie das KRBTGT-Konto wie bei verdächtigen Aktivitäten mit Golden Tickets zweimal zurücksetzen. Durch das zweimalige Zurücksetzen von KRBTGT werden alle Kerberos-Tickets in dieser Domäne ungültig. Daher sollten Sie diesen Schritt im Voraus planen. Siehe [KRBTGT Account Password Reset Scripts now available for customers (Skripts zum Zurücksetzen von Kennwörtern des KRBTGT-Kontos stehen Kunden jetzt zur Verfügung)](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Beachten Sie auch die Verwendung des [Reset the KRBTGT account password/keys tool (Tools zum Zurücksetzen des Kennworts/Schlüssels eines KRBTGT-Kontos)](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Da es sich dabei um eine Technik mit seitlicher Bewegung handelt, führen Sie die bewährten Methoden der [Pass the hash recommendations (Empfehlungen zu Pass-the-Hash)](http://aka.ms/PtH) aus.
+2. Wenn es sich um ein vertrauliches Konto handelt, sollten Sie das KRBTGT-Konto wie bei verdächtigen Aktivitäten mit Golden Tickets zweimal zurücksetzen. Durch das zweimalige Zurücksetzen von KRBTGT werden alle Kerberos-Tickets in dieser Domäne ungültig. Daher sollten Sie diesen Schritt im Voraus planen. Siehe [KRBTGT Account Password Reset Scripts now available for customers (Skripts zum Zurücksetzen von Kennwörtern des KRBTGT-Kontos stehen Kunden jetzt zur Verfügung)](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Beachten Sie auch die Verwendung des [Reset the KRBTGT account password/keys tool (Tools zum Zurücksetzen des Kennworts/Schlüssels eines KRBTGT-Kontos)](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Da es sich dabei um eine Technik mit seitlicher Bewegung handelt, führen Sie die bewährten Methoden der [Pass the hash recommendations (Empfehlungen zu Pass-the-Hash)](https://www.microsoft.com/download/details.aspx?id=36036) aus.
 
 ## Kerberos Golden Ticket<a name="golden-ticket"></a>
 
 **Beschreibung**
 
-Angreifer mit Domänenadministratorrechten können das [KRBTGT account (KRBTGT-Konto)](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT) beeinträchtigen. Indem diese das KRBTGT-Konto verwenden, können sie ein Kerberos Ticket Granting Ticket (TGT) erstellen, das die Autorisierung für jede Ressource erteilen und den Ablaufzeitpunkt des Tickets auf einen beliebigen Zeitpunkt festlegen kann. Dieses gefälschte TGT wird als „Golden Ticket“ bezeichnet und ermöglicht es Angreifern, Beständigkeit im Netzwerk zu erreichen.
+Angreifer mit Domänenadministratorrechten können Ihr [KRBTGT-Konto](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT) beeinträchtigen. Angreifer können das KRBTGT-Konto verwenden, um ein Kerberos Ticket Granting Ticket (TGT) zu erstellen, das Autorisierung für jede Ressource bietet. Der Ablaufzeitpunkt des Tickets kann auf einen beliebigen Zeitpunkt festgelegt werden. Dieses gefälschte TGT wird als „Golden Ticket“ bezeichnet und ermöglicht es Angreifern, Beständigkeit in Ihrem Netzwerk zu erreichen und beizubehalten.
 
-In dieser Erkennung wird eine Warnung ausgelöst, wenn ein Kerberos Ticket Granting Ticket länger als die erlaubte Dauer verwendet wird. Diese ist in der Sicherheitsrichtlinie [Max. Gültigkeitsdauer des Benutzertickets](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx) angegeben.
+In dieser Erkennung wird eine Warnung ausgelöst, wenn ein Kerberos Ticket Granting Ticket (TGT) länger als die erlaubte Dauer verwendet wird. Diese ist in der Sicherheitsrichtlinie [Max. Gültigkeitsdauer des Benutzertickets](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx) angegeben.
 
 **Untersuchung**
 
@@ -214,7 +215,7 @@ In dieser Erkennung wird eine Warnung ausgelöst, wenn ein Kerberos Ticket Grant
 **Wartung**
 
 Ändern Sie das Kennwort für das Kerberos Ticket Granting Ticket (KRBTGT) zweimal gemäß den Anweisungen unter [KRBTGT Account Password Reset Scripts now available for customers (Skripts zum Zurücksetzen von Kennwörtern des KRBTGT-Kontos stehen Kunden jetzt zur Verfügung)](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) mithilfe des [Reset the KRBTGT account password/keys tool (Tools zum Zurücksetzen des Kennworts/Schlüssels eines KRBTGT-Kontos)](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Durch das zweimalige Zurücksetzen von KRBTGT werden alle Kerberos-Tickets in dieser Domäne ungültig. Daher sollten Sie diesen Schritt im Voraus planen.  
-Implementieren Sie ebenfalls die [Pass the hash recommendations (Empfehlungen zu Pass-the-Hash)](http://aka.ms/PtH), da für das Erstellen eines Golden Tickets Domänenadministratorrechte erforderlich sind.
+Implementieren Sie ebenfalls die [Pass the hash recommendations (Empfehlungen zu Pass-the-Hash)](https://www.microsoft.com/download/details.aspx?id=36036), da für das Erstellen eines Golden Tickets Domänenadministratorrechte erforderlich sind.
 
 
 ## <a name="malicious-data-protection-private-information-request"></a>Böswillige Anforderung privater Informationen im Rahmen der Datensicherheit
@@ -230,11 +231,11 @@ In dieser Erkennung wird eine Warnung ausgelöst, wenn die DPAPI zum Abrufen des
 
 2. Falls dies zutrifft und von Ihnen so gewünscht ist, können Sie die verdächtige Aktivität **schließen und ausschließen**.
 
-3. Falls dies zutrifft und von Ihnen nicht so gewünscht ist, **schließen** Sie die verdächtige Aktivität.
+3. Falls dies zutrifft und von Ihnen nicht so gewünscht ist, **schließen Sie die verdächtige Aktivität.
 
 **Wartung**
 
-Ein Angreifer benötigt Domänenadministratorrechte zum Verwenden der DPAPI. Implementieren Sie [Pass the hash recommendations (Empfehlungen zu Pass-the-Hash)](http://aka.ms/PtH).
+Ein Angreifer benötigt Domänenadministratorrechte zum Verwenden der DPAPI. Implementieren Sie [Pass the hash recommendations (Empfehlungen zu Pass-the-Hash)](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## <a name="malicious-replication-of-directory-services"></a>Böswillige Replikation von Verzeichnisdiensten
 
@@ -267,14 +268,14 @@ Nutzen Sie [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/
 
 **Beschreibung**
 
-In manchen Szenarios führen Angreifer einen Denial-of-Service-Angriff (DoS) durch, statt nur Informationen zu stehlen. Das Löschen einer großen Anzahl von Konten ist eine DoS-Technik.
+In manchen Szenarien führen Angreifer Denial-of-Service-Angriffe (DoS) durch, statt nur Informationen zu stehlen. Das Löschen einer großen Anzahl von Konten ist eine Methode des Versuchs eines DoS-Angriffs. 
 
-In dieser Erkennung wird eine Warnung ausgelöst, wenn mehr als 5 % aller Konten gelöscht werden. Die Erkennung erfordert Lesezugriff auf die gelöschten Objektcontainer.  
+In dieser Erkennung wird eine Warnung immer dann ausgelöst, wenn mehr als 5 % aller Konten gelöscht werden. Die Erkennung erfordert Lesezugriff auf die gelöschten Objektcontainer.  
 Informationen zum Konfigurieren des schreibgeschützten Zugriffs auf den Container mit gelöschten Objekten finden Sie unter **Ändern von Berechtigungen für einen Container mit gelöschten Objekten** in [View or Set Permissions on a Directory Object (Anzeigen und Festlegen von Berechtigungen für ein Verzeichnisobjekt)](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
 
 **Untersuchung**
 
-Überprüfen Sie die Liste der gelöschten Konten nach einem Muster oder einem geschäftlichen Grund, der diese massive Löschung möglicherweise rechtfertigt.
+Überprüfen Sie die Liste der gelöschten Konten, und ermitteln Sie, ob es ein Muster oder einen geschäftlichen Grund gibt, der einen umfangreichen Löschvorgang rechtfertigt.
 
 **Wartung**
 
@@ -284,17 +285,17 @@ Entziehen Sie Benutzern die Berechtigung, Konten in AD löschen zu können. Weit
 
 **Beschreibung**
 
-Durch bekannte Sicherheitslücken in älteren Versionen von Windows Server können Angreifer das Privileged Attribute Certificate (PAC) manipulieren. Dabei handelt es sich um ein Feld im Kerberos-Ticket, das die Autorisierungsdaten eines Benutzer enthält (in Active Directory ist dies die Gruppenmitgliedschaft) und Angreifern zusätzliche Berechtigungen erteilt.
+Über bekannte Sicherheitslücken in älteren Versionen von Windows Server können Angreifer das Privileged Attribute Certificate (PAC) manipulieren. PAC ist ein Feld im Kerberos-Ticket, das über Benutzerdaten für die Autorisierung verfügt (in Active Directory ist dies eine Gruppenmitgliedschaft) und das Angreifern zusätzliche Berechtigungen gewährt.
 
 **Untersuchung**
 
-1. Klicken Sie auf die Warnung, um auf die Seite „Details“ zu gelangen.
+1. Klicken Sie auf die Warnung, um auf die Seite „Details“ zuzugreifen.
 
 2. Ist der Zielcomputer (in der Spalte **ACCESSED**) mit MS14-068 (Domänencontroller) oder MS11-013 (Server) gepatcht? Falls ja, **schließen** Sie die verdächtige Aktivität (diese ist falsch positiv).
 
-3. Wenn nicht, wird auf dem Quellcomputer ausgeführt (in der Spalte **FROM**) ein Betriebssystem bzw. eine Anwendung ausgeführt, die dafür bekannt sind, das PAC zu ändern? Falls ja, **unterdrücken** Sie die verdächtige Aktivität (diese ist unbedenklich richtig positiv).
+3. Wenn der Zielcomputer nicht gepatcht ist, wird auf dem Quellcomputer (in der Spalte **FROM**) ein Betriebssystem bzw. eine Anwendung ausgeführt, die dafür bekannt ist, das PAC zu ändern? Falls ja, **unterdrücken** Sie die verdächtige Aktivität (diese ist unbedenklich richtig positiv).
 
-4. Wenn die Antwort auf die obigen zwei Fragen „nein“ ist, gehen Sie von einem böswilligen Ereignis aus.
+4. Wenn die Antwort auf die beiden vorstehenden Fragen „Nein“ lautet, gehen Sie von einer böswilligen Aktivität aus.
 
 **Wartung**
 
@@ -316,7 +317,7 @@ Bei dieser Erkennung kann ATA erkennen, von wo der Angriff durchgeführt wurde, 
 Wird auf dem Host ein Skript oder eine Anwendung ausgeführt, die dieses Verhalten verursachen könnten? <br></br>
 Wenn Sie eine dieser Fragen mit „ja“ beantworten können, **schließen Sie die verdächtige Aktivität** (dabei handelt es sich um ein harmloses richtig positives Ergebnis), und schließen Sie den Host aus der verdächtigen Aktivität aus.
 
-3. Laden Sie die Warnungsdetails in einer Excel-Tabelle herunter, um sich eine nach vorhandenen und nicht vorhandenen Konten aufgeteilte Liste anzusehen. Wenn Sie sich das Arbeitsblatt mit den nicht vorhandenen Konten ansehen, und Ihnen diese Konten bekannt vorkommen, handelt es sich dabei möglicherweise um deaktivierte Konten oder Angestellte, die nicht mehr in Ihrem Unternehmen arbeiten. In diesem Fall ist es unwahrscheinlich, dass es sich um einen Angriff mit einem Wörterbuch mit Benutzernamen handelt. Wahrscheinlich ging das Verhalten von einer Anwendung oder einem Skript aus, die überprüfen, welche Konten in Active Directory noch vorhanden sind. Dies bedeutet, dass es sich um ein harmloses richtig positives Ergebnis handelt.
+3. Laden Sie die Warnungsdetails in einer Excel-Tabelle herunter, um sich eine nach vorhandenen und nicht vorhandenen Konten aufgeteilte Liste anzusehen. Wenn Sie sich das Arbeitsblatt mit den nicht vorhandenen Konten ansehen und Ihnen diese Konten bekannt vorkommen, handelt es sich dabei möglicherweise um deaktivierte Konten oder Angestellte, die nicht mehr in Ihrem Unternehmen arbeiten. In diesem Fall ist es unwahrscheinlich, dass es sich um einen Angriff mit einem Wörterbuch mit Benutzernamen handelt. Wahrscheinlich ging das Verhalten von einer Anwendung oder einem Skript aus, die überprüfen, welche Konten in Active Directory noch vorhanden sind. Dies bedeutet, dass es sich um ein harmloses richtig positives Ergebnis handelt.
 
 3. Wenn Ihnen die Namen zum größten Teil unbekannt sind, fragen Sie sich Folgendes: Stimmt einer der geratenen Benutzernamen mit einem tatsächlichen Kontonamen in Active Directory überein? Wenn es keine Übereinstimmungen gibt, war der Versuch nicht erfolgreich. Dennoch sollten Sie diese Warnung im Blick behalten, falls Sie im Laufe der Zeit aktualisiert wird.
 
@@ -359,7 +360,7 @@ In dieser Erkennung werden im ersten Monat nach der Bereitstellung von ATA keine
 **Wartung**
 
 Verwenden Sie das [SAMRi10-Tool](https://gallery.technet.microsoft.com/SAMRi10-Hardening-Remote-48d94b5b), um den Schutz Ihrer Umgebung gegen diese Technik zu erhöhen.
-Wenn das Tool nicht auf Ihren DC angewendet werden kann:
+Wenn das Tool auf Ihren Domänencontroller nicht angewendet werden kann:
 1. Wird ein Tool zur Überprüfung des Sicherheitsrisikos auf Ihrem Computer ausgeführt?  
 2. Überprüfen Sie, ob die im Angriff abgefragten Benutzer und Gruppen über hohe Berechtigungen verfügen oder anderweitig wichtig sind (d.h. CEO, CFO, IT-Abteilung usw.).  Falls dies der Fall ist, überprüfen Sie auch andere Aktivitäten auf diesem Endpunkt, und überwachen Sie Computer, auf denen die abgefragten Konten angemeldet sind, da diese für Lateral Movement-Methoden verwendet werden können.
 
@@ -390,11 +391,11 @@ Das Bearbeiten von Zonenübertragungen ist eine Aufgabe innerhalb einer Prüflis
 
 Mit der SMB-Enumeration (Server Message Block) können Angreifer Informationen dazu erhalten, welche Benutzer sich zuletzt angemeldet haben. Sobald Angreifer diese Informationen besitzen, können sie sich seitlich im Netzwerk bewegen, um zu einem bestimmten sensiblen Konto zu gelangen.
 
-In dieser Erkennung wird eine Warnung ausgelöst, wenn eine SMB-Sitzungsenumeration auf einem Domänencontroller ausgeführt wird, denn dies sollte nicht der Fall sein.
+In dieser Erkennung wird eine Warnung ausgelöst, wenn eine SMB-Sitzungsenumeration auf einem Domänencontroller ausgeführt wird.
 
 **Untersuchung**
 
-1. Klicken Sie auf die Warnung, um auf die Seite „Details“ zu gelangen. Überprüfen Sie, welche Konten den Vorgang ausgeführt haben und gegebenenfalls, welche Konten verfügbar gemacht wurden.
+1. Klicken Sie auf die Warnung, um auf die Seite „Details“ zu gelangen. Überprüfen Sie das Konto/die Konten, das/die den Vorgang ausgeführt haben und gegebenenfalls, welche Konten verfügbar gemacht wurden.
 
  - Wird auf dem Quellcomputer eine Art Sicherheitsscanner ausgeführt? Falls ja, können Sie die verdächtige Aktivität **schließen und ausschließen**.
 
@@ -402,13 +403,13 @@ In dieser Erkennung wird eine Warnung ausgelöst, wenn eine SMB-Sitzungsenumerat
 
 3. Falls dies zutrifft und die Warnung aktualisiert wird, **unterdrücken** Sie die verdächtige Aktivität.  
 
-4. Falls dies zutrifft, aber nicht weiterhin so gehandhabt werden soll, **schließen** Sie die verdächtige Aktivität.
+4. Falls dies zutrifft und die Warnung nicht aktualisiert werden sollte, **schließen** Sie die verdächtige Aktivität.
 
-5. Wenn die Antwort auf alle obigen Fragen „nein“ ist, gehen Sie von einem böswilligen Ereignis aus.
+5. Wenn die Antwort auf alle vorstehenden Fragen „nein“ lautet, gehen Sie von einer böswilligen Aktivität aus.
 
 **Wartung**
 
-Verwenden Sie das [Net Cease-Tool](https://gallery.technet.microsoft.com/Net-Cease-Blocking-Net-1e8dcb5b), um den Schutz Ihrer Umgebung gegen diese Attacken zu erhöhen.
+Verwenden Sie das [Net Cease-Tool](https://gallery.technet.microsoft.com/Net-Cease-Blocking-Net-1e8dcb5b), um den Schutz Ihrer Umgebung gegen diese Art von Angriff zu erhöhen.
 
 ## <a name="remote-execution-attempt-detected"></a>Erkannter Remoteausführungsversuch
 
@@ -418,11 +419,11 @@ Angreifer, die Administratoranmeldeinformationen kompromittiert haben oder einen
 
 **Untersuchung**
 
-1. Dies tritt häufig bei administrativen Arbeitsstationen, IT-Teammitgliedern und Dienstkonten auf, die administrative Aufgaben auf den Domänencontrollern ausführen. Wenn dies der Fall ist und die Warnung aktualisiert wird, da die Aufgabe vom selben Administrator oder Computer ausgeführt wird, **unterdrücken** Sie die Warnung.
+1. Dies tritt häufig bei administrativen Arbeitsstationen, IT-Teammitgliedern und Dienstkonten auf, die administrative Aufgaben auf den Domänencontrollern ausführen. Wenn dies der Fall ist und die Warnung aktualisiert wird, weil die Aufgabe vom selben Administrator oder Computer ausgeführt wird, **unterdrücken** Sie die Warnung.
 2.  Ist der fragliche Computer berechtigt, diese Remoteausführung auf Ihrem Domänencontroller auszuführen?
   - Ist das fragliche Konto berechtigt, diese Remoteausführung auf Ihrem Domänencontroller auszuführen?
   - Wenn Sie beide Fragen bejahen können, **schließen** Sie die Warnung.
-3.  Wenn Sie beide Fragen verneinen können, sollte dieses Ereignis als richtig positiv behandelt werden. Versuchen Sie, die Quelle des Versuchs zu ermitteln, indem Sie Computer- und Kontoprofile überprüfen. Klicken Sie auf den Quellcomputer oder das Konto, um die entsprechende Profilseite aufzurufen. Überprüfen Sie, was ungefähr zum Zeitpunkt dieser Versuche passiert ist. Suchen Sie nach ungewöhnlichen Aktivitäten wie z.B.: Wer war angemeldet, auf welche Ressourcen wurde zugegriffen.
+3.  Wenn Sie beide Fragen verneinen können, sollte diese Aktivität als richtig positiv behandelt werden. Versuchen Sie, die Quelle des Versuchs zu ermitteln, indem Sie Computer- und Kontoprofile überprüfen. Klicken Sie auf den Quellcomputer oder das Konto, um die entsprechende Profilseite aufzurufen. Überprüfen Sie, was ungefähr zum Zeitpunkt dieser Versuche passiert ist. Suchen Sie nach ungewöhnlichen Aktivitäten wie z.B.: Wer war angemeldet, auf welche Ressourcen wurde zugegriffen.
 
 
 **Wartung**
@@ -496,7 +497,6 @@ Angreifer versuchen, verdächtige Dienste auf Ihrem Netzwerk auszuführen. ATA l
 - Implementieren Sie den Zugriff mit weniger privilegierten Rechten auf Domänencomputern, um nur bestimmten Benutzern die Erstellung neuer Dienste zu erlauben.
 
 
-
 ## <a name="suspicion-of-identity-theft-based-on-abnormal-behavior"></a>Verdacht des Identitätsdiebstahls auf Grundlage von ungewöhnlichem Verhalten
 
 **Beschreibung**
@@ -512,7 +512,7 @@ ATA erlernt das Entitätsverhalten für Benutzer, Computer und Ressourcen über 
 
 **Wartung**
 
-Je nachdem, wodurch dieses ungewöhnliche Verhalten ausgelöst wurde, sollten verschiedene Aktionen ausgeführt werden. Wenn der Grund zum Beispiel die Überprüfung des Netzwerks ist, sollte der Computer, von dem aus diese ausgeführt wird, vom Netzwerk blockiert werden (außer diese ist genehmigt).
+ Je nachdem, wodurch dieses ungewöhnliche Verhalten ausgelöst wurde, sollten verschiedene Aktionen ausgeführt werden. Wenn das Netzwerk beispielsweise gescannt wurde, sollte der Quellcomputer aus dem Netzwerk blockiert werden (außer wenn er genehmigt wurde).
 
 ## <a name="unusual-protocol-implementation"></a>Ungewöhnliche Protokollimplementierung
 
@@ -523,35 +523,35 @@ Angreifer verwenden Tools, die verschiedene Protokolle (SMB, Kerberos, NTLM) auf
 
 **Untersuchung**
 
-Identifizieren Sie das ungewöhnliche Protokoll, und klicken Sie auf der Zeitachse der verdächtigen Aktivitäten auf die verdächtige Aktivität, um zu der Seite „Details“ zu gelangen. Das Protokoll wird über dem Pfeil angezeigt: Kerberos oder NTLM.
+Identifizieren Sie das ungewöhnliche Protokoll, und klicken Sie auf der Zeitachse der verdächtigen Aktivitäten auf die verdächtige Aktivität, um auf die Seite „Details“ zuzugreifen. Das Protokoll wird über dem Pfeil angezeigt: Kerberos oder NTLM.
 
-- **Kerberos**: Dies wird häufig ausgelöst, wenn ein Hacking-Tool wie Mimikatz verwendet wurde, das möglicherweise einen Overpass-the-Hash-Angriff ausführt. Überprüfen Sie, ob auf dem Quellcomputer eine Anwendung ausgeführt wird, die im Widerspruch zur Kerberos-RFC ihren eigenen Kerberos-Stapel implementiert. Wenn dies der Fall ist, ist das Ereignis unbedenklich richtig positiv, und Sie können die Warnung **schließen**. Wenn die Warnung weiterhin ausgelöst wird und dies immer noch der Fall ist, können Sie die Warnung **unterdrücken**.
+- **Kerberos**: Wird häufig ausgelöst, wenn ein Hacking-Tool wie Mimikatz möglicherweise für einen Overpass-the-Hash-Angriff verwendet wurde. Überprüfen Sie, ob auf dem Quellcomputer eine Anwendung ausgeführt wird, die im Widerspruch zur Kerberos-RFC ihren eigenen Kerberos-Stapel implementiert. In diesem Fall ist das Ereignis unbedenklich richtig positiv, und die Warnung kann **Geschlossen** werden. Wenn die Warnung weiterhin ausgelöst wird und dies immer noch der Fall ist, können Sie die Warnung **unterdrücken**.
 
 - **NTLM**: Es könnte sich um WannaCry oder Tools wie Metasploit, Medusa und Hydra handeln.  
 
-Um festzustellen, ob es sich dabei um einen WannaCry-Angriff handelt, führen Sie folgende Schritte aus:
+Um festzustellen, ob es sich bei der Aktivität um einen WannaCry-Angriff handelt, führen Sie folgende Schritte aus:
 
 1. Überprüfen Sie, ob auf dem Quellcomputer ein Angriffstool wie Metasploit, Medusa oder Hydra ausgeführt wird.
 
 2. Wenn keine Angriffstools gefunden werden, überprüfen Sie, ob auf dem Quellcomputer eine Anwendung ausgeführt wird, die ihren eigenen NTLM- oder SMB-Stapel implementiert.
 
-3. Wenn nicht, überprüfen Sie, ob dies von WannaCry verursacht wird, indem Sie ein WannaCry-Scannerskript (z.B. [diesen Scanner](https://github.com/apkjet/TrustlookWannaCryToolkit/tree/master/scanner)) auf dem Quellcomputer ausführen, der an der verdächtigen Aktivität beteiligt ist. Wenn der Scanner feststellt, dass der Computer infiziert oder anfällig ist, patchen Sie den Computer, entfernen Sie die Schadsoftware, und blockieren Sie diese vom Netzwerk.
+3. Wenn nicht, überprüfen Sie, ob es von WannaCry verursacht wird, indem Sie ein WannaCry-Scannerskript (z.B. [diesen Scanner](https://github.com/apkjet/TrustlookWannaCryToolkit/tree/master/scanner)) auf dem Quellcomputer ausführen, der an der verdächtigen Aktivität beteiligt ist. Wenn der Scanner feststellt, dass der Computer infiziert oder anfällig ist, patchen Sie den Computer, entfernen Sie die Schadsoftware, und blockieren Sie diese vom Netzwerk.
 
 4. Wenn das Skript feststellt, dass der Computer nicht infiziert oder anfällig ist, könnte er trotzdem infiziert sein, denn SMBv1 könnte deaktiviert, oder der Computer könnte gepatcht worden sein. Beides beeinflusst das Überprüfungstool.
 
 **Wartung**
 
-Patchen Sie all Ihre Computer, und führen Sie insbesondere Sicherheitsupdates durch.
+Wenden Sie die aktuellsten Patches auf alle Ihre Computer an, und überprüfen Sie, ob alle Sicherheitsupdates angewendet wurden.
 
 1. [Deaktivieren von SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
 
 2. [Entfernen von WannaCry](https://support.microsoft.com/help/890830/remove-specific-prevalent-malware-with-windows-malicious-software-remo)
 
-3. WanaKiwi kann für einige Ransomwares die Daten in deren Besitz entschlüsseln. Dies ist aber nur möglich, wenn der Benutzer den Computer nicht ausgeschaltet oder neu gestartet hat. Weitere Informationen finden Sie unter [Wanna Cry Ransomware (WannaCry-Ransomware)](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
+3.  Daten unter der Kontrolle von bestimmter Ransomware können manchmal verschlüsselt werden. Entschlüsselung ist nur möglich, wenn der Benutzer den Computer nicht neu gestartet oder ausgeschaltet hat. Weitere Informationen finden Sie unter [Wanna Cry Ransomware (WannaCry-Ransomware)](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
 
 
 >[!NOTE]
-> Wenden Sie sich an den Support, um eine verdächtige Aktivität zu deaktivieren.
+> Wenn Sie eine Warnung zu verdächtiger Aktivität deaktivieren möchten, wenden Sie sich an den Support.
 
 ## <a name="related-videos"></a>Verwandte Videos
 - [Joining the security community](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community) (Der Sicherheitscommunity beitreten)
