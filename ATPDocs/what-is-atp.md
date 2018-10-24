@@ -1,11 +1,11 @@
 ---
-title: Was ist Azure Advanced Threat Protection (ATP)? | Microsoft-Dokumentation
-description: Hier wird erläutert, worum es sich bei Azure Advanced Threat Protection (ATP) handelt und welche Arten von verdächtigen Aktivitäten erkannt werden können
+title: Was ist Azure Advanced Threat Protection (Azure ATP)? | Microsoft-Dokumentation
+description: Hier wird erläutert, worum es sich bei Azure Advanced Threat Protection (Azure ATP) handelt und welche Arten von verdächtigen Aktivitäten erkannt werden können
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 9/16/2018
+ms.date: 10/04/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 2d14d0e9-1b03-4bcc-ae97-8fd41526ffc5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f3e03f5307a9a09ffb2a62e7313be4629f4bc060
-ms.sourcegitcommit: 5ff50807f855db1051b977a64eb6e90487ea196c
+ms.openlocfilehash: 80038b04a95d09c25baf1e2b5d216796cb12c9f6
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45750469"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783679"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -33,7 +33,7 @@ Azure Advanced Threat Protection (ATP) ist eine cloudbasierte Sicherheitslösung
 Azure ATP überwacht und analysiert netzwerkübergreifend Benutzeraktivitäten und -informationen, wie z.B. Berechtigungen und Gruppenmitgliedschaften, und erstellt dabei für jeden Benutzer eine verhaltensbasierte Baseline. Anschließend identifiziert Azure ATP Anomalien bei integrierter adaptiver Intelligenz und gewährt Ihnen Einblicke in verdächtige Aktivitäten und Ereignisse. Dabei werden Ihnen komplexe Bedrohungen, gefährdete Benutzer und Insider-Bedrohungen Ihrer Organisation angezeigt. Mit den Sensoren von Azure ATP werden Domänencontroller der Organisation überwacht. Dadurch wird von jedem Gerät aus ein umfassender Überblick für alle Benutzeraktivitäten geboten. 
  
 ## <a name="protect-user-identities-and-reduce-the-attack-surface"></a>Schutz von Benutzeridentitäten und Verringern der Angriffsfläche   
-Azure ATP gewährt Ihnen wertvolle Einblicke in Identitätskonfigurationen und stellt empfohlene Best Practices für die Sicherheit bereit. Mithilfe von Azure ATP können Sie durch Sicherheitsberichte und die Analyse von Benutzerprofilen die Angriffsfläche Ihrer Organisation deutlich reduzieren, wodurch auch die Gefährdung von Benutzeranmeldeinformationen sowie die Gefährdung durch einen Angriff verringert werden kann. Mithilfe der visuellen Lateral Movement-Pfade von ATP verstehen Sie schnell, wie genau sich ein Angreifer lateral innerhalb Ihrer Organisation bewegen kann, um sensible Konten zu gefährden. Die Lösung unterstützt Sie dabei, diese Risiken im Vorhinein zu vermeiden. Zudem können Sie mithilfe der Sicherheitsberichte von ATP Benutzer und Geräte identifizieren, die sich mit Klartextkennwörtern authentifizieren, und weitere Einblicke gewinnen, um den Sicherheitsstatus und die Richtlinien Ihrer Organisation zu verbessern.  
+Azure ATP gewährt Ihnen wertvolle Einblicke in Identitätskonfigurationen und stellt empfohlene Best Practices für die Sicherheit bereit. Mithilfe von Azure ATP können Sie durch Sicherheitsberichte und die Analyse von Benutzerprofilen die Angriffsfläche Ihrer Organisation deutlich reduzieren, wodurch auch die Gefährdung von Benutzeranmeldeinformationen sowie die Gefährdung durch einen Angriff verringert werden kann. Mithilfe der visuellen Lateral Movement-Pfade von Azure ATP verstehen Sie schnell, wie genau sich ein Angreifer lateral innerhalb Ihrer Organisation bewegen kann, um sensible Konten zu gefährden. Die Lösung unterstützt Sie dabei, diese Risiken im Vorhinein zu vermeiden. Zudem können Sie mithilfe der Sicherheitsberichte von Azure ATP Benutzer und Geräte identifizieren, die sich mit Klartextkennwörtern authentifizieren, und weitere Einblicke gewinnen, um den Sicherheitsstatus und die Richtlinien Ihrer Organisation zu verbessern.  
  
 ## <a name="identify-suspicious-activities-and-advanced-attacks-across-the-attack-kill-chain"></a>Identifizieren verdächtiger Aktivitäten und erweiterter Angriffe über die Kill Chain 
 Angriffe werden in der Regel gegen eine beliebige zugängliche Entität gestartet, wie z.B. einen Benutzer mit geringfügigen Berechtigungen, und verschieben sich anschließend schnell seitwärts, bis der Angreifer Zugriff auf wertvolle Objekte erhält (z.B. sensible Konten, Domänenadministratoren und streng vertrauliche Daten). Azure ATP erkennt diese erweiterten Bedrohungen von Grund auf während der gesamten Kill Chain zur Angriffsabwehr: 
@@ -70,7 +70,7 @@ Es wird empfohlen, Azure ATP in 3 Phasen bereitzustellen:
 
 ### <a name="phase-1"></a>Phase 1
 
-1. Richten Sie Azure ATP zum Schutz Ihrer primären Umgebungen ein. Mit dem Azure ATP-Modell zur schnellen Bereitstellung können Sie mit dem Schutz Ihrer Organisation noch heute beginnen. [Install ATP (Installieren von ATP)](install-atp-step1.md)  
+1. Richten Sie Azure ATP zum Schutz Ihrer primären Umgebungen ein. Mit dem Azure ATP-Modell zur schnellen Bereitstellung können Sie mit dem Schutz Ihrer Organisation noch heute beginnen. [Install Azure ATP (Installieren von Azure ATP)](install-atp-step1.md)  
 2. Legen Sie [Sensitive Accounts](sensitive-accounts.md) (sensible Konten) und [Honeytoken-Konten](install-atp-step7.md) fest.   
 3. Überprüfen Sie die Berichte und [Lateral Movement-Pfade](use-case-lateral-movement-path.md).  
 
@@ -89,4 +89,4 @@ Es wird empfohlen, Azure ATP in 3 Phasen bereitzustellen:
 ## <a name="see-also"></a>Weitere Informationen
 - [Häufig gestellte Fragen zu Azure ATP](atp-technical-faq.md)
 - [Arbeiten mit Sicherheitswarnungen](working-with-suspicious-activities.md)
-- [Weitere Informationen finden Sie im ATP-Forum.](https://aka.ms/azureatpcommunity)
+- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)

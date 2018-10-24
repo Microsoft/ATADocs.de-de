@@ -1,24 +1,24 @@
 ---
-title: 'Installieren von Azure Advanced Threat Protection: Schritt 3 | Microsoft-Dokumentation'
-description: Im dritten Schritt der Azure ATP-Installation erhalten Sie Hilfe zum Download des Setuppakets des eigenständigen Azure ATP-Sensors.
+title: Installieren von Azure Advanced Threat Protection | Microsoft-Dokumentation
+description: Im dritten Schritt der Azure ATP-Installation erhalten Sie Hilfe zum Download des Setuppakets für den Azure ATP-Sensor.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/21/2017
-ms.topic: conceptual
+ms.date: 10/04/2018
+ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: 95bb4ec1-841f-41b7-92fe-fbd144085724
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 96d459bd00d39bb21ce363d079b5b24ceca4ace7
-ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
+ms.openlocfilehash: 5a9eea9550af90577ad1763384a134f5889edc5f
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47454019"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783779"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -42,7 +42,7 @@ Klicken Sie in der Liste mit den Schritten am Anfang der Seite auf **Download**,
 
 1.  Klicken Sie auf **Sensor**.
 2.  Speichern Sie das Paket lokal.
-3.  Kopieren Sie den **Zugriffsschlüssel**. Der Azure ATP-Sensor benötigt den Zugriffsschlüssel, um eine Verbindung mit Ihrem Azure ATP-Arbeitsbereich herzustellen. Der Zugriffsschlüssel ist ein Einmalkennwort für die Sensorbereitstellung. Danach wird die gesamte Kommunikation mittels Zertifikaten für die Authentifizierung und TLS-Verschlüsselung ausgeführt. Klicken Sie auf die Schaltfläche **Erneut generieren**, wenn Sie den neuen Zugriffsschlüssel erneut generieren müssen. Dies ist möglich und wirkt sich nicht auf zuvor bereitgestellte Sensoren aus, da der Zugriffsschlüssel nur für die erste Registrierung des Sensors verwendet wird.
+3.  Kopieren Sie den **Zugriffs****schlüssel**. Der Azure ATP-Sensor benötigt den Zugriffsschlüssel, um eine Verbindung mit Ihrem Azure ATP-Arbeitsbereich herzustellen. Der Zugriffsschlüssel ist ein Einmalkennwort für die Sensorbereitstellung. Danach wird die gesamte Kommunikation mittels Zertifikaten für die Authentifizierung und TLS-Verschlüsselung ausgeführt. Klicken Sie auf die Schaltfläche **Erneut generieren**, wenn Sie den neuen Zugriffsschlüssel erneut generieren müssen. Dies ist möglich und wirkt sich nicht auf zuvor bereitgestellte Sensoren aus, da der Zugriffsschlüssel nur für die erste Registrierung des Sensors verwendet wird.
 4.  Kopieren Sie das Paket auf den dedizierten Server oder Domänencontroller, auf dem der Azure ATP-Sensor installiert werden soll. Alternativ können Sie das Azure ATP-Arbeitsbereichsportal vom dedizierten Server oder vom Domänencontroller aus öffnen und diesen Schritt überspringen.
 
 Die ZIP-Datei enthält die folgenden Dateien:
@@ -65,4 +65,4 @@ Die ZIP-Datei enthält die folgenden Dateien:
 
 - [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](atp-prerequisites.md)
 
-- [Weitere Informationen finden Sie im ATP-Forum.](https://aka.ms/azureatpcommunity)
+- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)

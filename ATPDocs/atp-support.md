@@ -2,10 +2,10 @@
 title: Azure ATP-Support | Microsoft-Dokumentation
 description: Hier erfahren Sie, wie Sie Hilfe zur Unterstützung von Azure ATP erhalten.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/18/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 8ae459ac-9fca-4923-9a1a-dc10d5c50b29
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: fa4577377c32562e0441014958e9702cbbb7399b
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: 2c4f82ce7bf4e8ba7bf9e6ae56198ca1f6e4aefb
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44166420"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783235"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -66,7 +66,7 @@ Gehen Sie auf die Seite [**Systemstatus**](https://health.atp.azure.com/), um de
 
 #### <a name="on-demand-videos"></a>Videos auf Abruf
 
-- Microsoft Ignite 2017-Vorträge zu [Azure Advanced Threat Protection](https://myignite.microsoft.com/sessions/53476?source=sessions)
+- Microsoft Ignite 2018-Vorträge zu [Azure Advanced Threat Protection](https://myignite.techcommunity.microsoft.com/sessions?t=%257B%2522from%2522%253A%25222018-09-23T08%253A00%253A00-04%253A00%2522%252C%2522to%2522%253A%25222018-09-28T19%253A00%253A00-04%253A00%2522%257D&q=azure%2520advanced%2520threat%2520protection#ignite-html-anchor)
 
 Problembehandlung:
 
@@ -76,8 +76,8 @@ Problembehandlung:
 
 - Unter [Integrate with Windows Defender ATP (Integration in Windows Defender ATP)](integrate-wd-atp.md) finden Sie Informationen zur Integration von Windows Defender ATP in Azure Advanced Threat Protection, wenn dieser Dienst in Ihrer Umgebung bereitgestellt wird.
 
-- Informationen zur Untersuchung einer verdächtigen Aktivität finden Sie im [Leitfaden zu verdächtigen Aktivitäten](suspicious-activity-guide.md).
+- Informationen zur Untersuchung einer Sicherheitswarnung finden Sie im [Leitfaden für Sicherheitswarnungen](suspicious-activity-guide.md).
 
 ### <a name="community-resources"></a>Communityressourcen
 
-Es wird folgende [Ressource zu Azure Advanced Threat Protection](https://www.yammer.com/AskIPTeam) empfohlen: Diese Ressource ermöglicht es Ihnen, direkte Antworten vom Azure Advanced Threat Protection-Team zu erhalten und zusätzlich von gemeinsamen Erfahrungen und dem Wissen anderer Administratoren und Berater zu profitieren.
+Wir empfehlen die [Yammer-Gruppe zu Azure Advanced Threat Protection](https://www.yammer.com/AskIPTeam). Diese Ressource ermöglicht es Ihnen, direkte Antworten vom Azure Advanced Threat Protection-Team zu erhalten und zusätzlich von gemeinsamen Erfahrungen und dem Wissen anderer Administratoren und Berater zu profitieren.

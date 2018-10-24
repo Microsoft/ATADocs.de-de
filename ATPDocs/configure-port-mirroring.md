@@ -2,10 +2,10 @@
 title: Konfigurieren der Portspiegelung in Azure Advanced Threat Protection | Microsoft-Dokumentation
 description: Beschreibt Optionen für die Portspiegelung und deren Konfiguration für Azure ATP
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/4/2018
+ms.date: 10/4/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 9ec7eb4c-3cad-4543-bbf0-b951d8fc8ffe
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9ac3c584f5eb73b33415c6c1250eee4c41a12763
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 5ca24df927bc91383449926bdcd67a1c29585618
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44125990"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783575"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -26,7 +26,7 @@ ms.locfileid: "44125990"
 
 # <a name="configure-port-mirroring"></a>Konfigurieren der Portspiegelung
 > [!NOTE] 
-> Dieser Artikel ist für Sie nur interessant, wenn Sie den eigenständigen Azure ATP-Sensor anstelle des Azure ATP-Sensors bereitstellen. Lesen Sie den Abschnitt [Choosing the right sensors for your deployment (Auswählen der richtigen Sensoren für die Bereitstellung)](atp-capacity-planning.md#choosing-the-right-sensor-type-for-your-deployment), um zu ermitteln, ob Sie dem Azure ATP-Sensor verwenden müssen.
+> Dieser Artikel ist für Sie nur interessant, wenn Sie eigenständige Azure ATP-Sensoren anstelle von Azure ATP-Sensoren bereitstellen. Lesen Sie den Abschnitt [Choosing the right sensors for your deployment (Auswählen der richtigen Sensoren für die Bereitstellung)](atp-capacity-planning.md#choosing-the-right-sensor-type-for-your-deployment), um zu ermitteln, ob Sie Azure ATP-Sensoren verwenden müssen.
  
 Als primäre Datenquelle verwendet Azure ATP eine ausführliche Paketüberprüfung (Deep Packet Inspection) des Netzwerkdatenverkehrs zu und von den Domänencontrollern. Damit Azure ATP den Netzwerkdatenverkehr sieht, muss entweder eine Portspiegelung eingerichtet oder ein Netzwerk-TAP verwendet werden.
 
@@ -74,4 +74,4 @@ Die Domänencontroller und der eigenständige Azure ATP-Sensor können physisch 
 
 ## <a name="see-also"></a>Weitere Informationen
 - [Configure event forwarding (Konfigurieren der Ereignisweiterleitung)](configure-event-forwarding.md)
-- [Weitere Informationen finden Sie im ATP-Forum.](https://aka.ms/azureatpcommunity)
+- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)

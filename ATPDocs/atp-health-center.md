@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/05/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 1b7e72c3-a538-443f-981c-398ffafa5ab8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 033d338e9c1e5e85673e362069ff0a815cda127c
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: 8fdaa7311d39680ed8e9389f5dc9b7cdeca73197
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44165591"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782895"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -46,8 +46,7 @@ Um den Gesamtzustand des Arbeitsbereichs zu überprüfen, klicken Sie auf der Me
 
     > [!NOTE]
     > Azure ATP kann geschlossene Aktivitäten wieder öffnen, wenn diese innerhalb eines kurzen Zeitraums erneut erkannt werden.
-    > Jeder Arbeitsbereich verfügt über ein eigenes Integritätscenter.
-
+    
 -   **Unterdrücken**: Das Unterdrücken einer Aktivität bedeutet, dass Sie sie gerade ignorieren möchten und nur wieder gewarnt werden möchten, wenn es eine neue Instanz gibt. Wenn eine ähnliche Warnung ausgelöst wird, wird diese von Azure ATP nicht erneut geöffnet. Wenn die Warnung jedoch für sieben Tage angehalten wurde und anschließend erneut auftritt, werden Sie erneut gewarnt.
 
 -   **Erneut öffnen**: Ein geschlossenes oder unterdrücktes Problem kann erneut geöffnet werden, sodass es auf der Zeitachse als „Offen“ angezeigt wird.
@@ -56,7 +55,7 @@ Um den Gesamtzustand des Arbeitsbereichs zu überprüfen, klicken Sie auf der Me
 
 
 
-![Abbildung von Problemen im Integritätscenter für den Azure ATP-Arbeitsbereich](media/atp-health-issue.png)
+![Abbildung eines Problems im Azure ATP-Integritätscenter](media/atp-health-issue.png)
 
 
 
@@ -66,4 +65,4 @@ Um den Gesamtzustand des Arbeitsbereichs zu überprüfen, klicken Sie auf der Me
 ## <a name="see-also"></a>Weitere Informationen
 
 - [Arbeiten mit verdächtigen Aktivitäten](working-with-suspicious-activities.md)
-- [Weitere Informationen finden Sie im ATP-Forum.](https://aka.ms/azureatpcommunity)
+- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)

@@ -1,11 +1,11 @@
 ---
 title: Einrichten von Azure Advanced Threat Protection-Benachrichtigungen | Microsoft-Dokumentation
-description: Beschreibt, wie Azure ATP-Warnungen festgelegt werden, damit Sie bei verdächtigen Aktivitäten benachrichtigt werden.
+description: Beschreibt, wie Azure ATP-Sicherheitswarnungen festgelegt werden, damit Sie bei verdächtigen Aktivitäten benachrichtigt werden.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,24 +13,24 @@ ms.technology: ''
 ms.assetid: 4308f03e-b2a7-4e38-a750-540ff94faa81
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c3fc5adbb700c4b8df66c243a655cf98aacc79af
-ms.sourcegitcommit: 9f02f0f6669b25f39b616bb0885bb55b8c4f050b
+ms.openlocfilehash: e6f3647ecaab82a32950fadd0a101385a2cc0051
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46362424"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783048"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
 
 # <a name="set-azure-atp-notifications"></a>Festlegen von Azure ATP-Benachrichtigungen
 
-Azure ATP kann Sie per E-Mail darüber benachrichtigen, wenn eine verdächtige Aktivität oder eine Integritätswarnung ermittelt wird. 
+Azure ATP kann Sie darüber benachrichtigen, wenn eine verdächtige Aktivität oder eine Integritätswarnung ermittelt wird, und gibt eine Sicherheitswarnung oder Integritätswarnung per E-Mail aus. 
 
 Legen Sie folgende Parameter fest, damit Benachrichtigungen an eine bestimmte E-Mail-Adresse gesendet werden:
 
 
-1. Klicken Sie im Azure ATP-Arbeitsbereichsportal in der Symbolleiste erst auf die Einstellungsoption und dann auf **Konfiguration**.
+1. Klicken Sie im Azure ATP-Portal in der Symbolleiste erst auf die Einstellungsoption und dann auf **Konfiguration**.
 
 ![Symbol der Azure ATP-Konfigurationseinstellungen](media/atp-config-menu.png)
 
@@ -51,4 +51,4 @@ Legen Sie folgende Parameter fest, damit Benachrichtigungen an eine bestimmte E-
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
 
 - [Set Syslog settings (Einrichten der Syslog-Einstellungen)](setting-syslog.md)
-- [Weitere Informationen finden Sie im ATP-Forum.](https://aka.ms/azureatpcommunity)
+- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)

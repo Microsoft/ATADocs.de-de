@@ -1,11 +1,11 @@
 ---
-title: 'Installieren von Azure Advanced Threat Protection: Schritt 2 | Microsoft-Dokumentation'
+title: Installieren von Azure Advanced Threat Protection | Microsoft-Dokumentation
 description: Im zweiten Schritt der Installation von Azure ATP konfigurieren Sie die Domänenverbindungseinstellungen in Ihrem Azure ATP-Clouddienst.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/21/2017
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ae8a95f0-278c-4a12-ae69-14282364fba1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 45c1ddfc80c481549ceb08ed45f535ca029b9626
-ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
+ms.openlocfilehash: 7e13bf0e3d32fc14cf1f0a91f3e7d18accea067c
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47453832"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782998"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -32,7 +32,7 @@ ms.locfileid: "47453832"
 
 ## <a name="step-2-provide-a-username-and-password-to-connect-to-your-active-directory-forest"></a>Schritt 2. Angeben eines Benutzernamens und eines Kennworts, um eine Verbindung mit Ihrer Active Directory-Gesamtstruktur herzustellen
 
-Beim ersten Öffnen des Azure ATP-Arbeitsbereichsportals wird die folgende Anzeige angezeigt:
+Beim ersten Öffnen des Azure ATP-Portals wird die folgende Anzeige angezeigt:
 
 ![Azure ATP-Willkommensseite 1](media/directory-services.png)
 
@@ -48,7 +48,7 @@ Beim ersten Öffnen des Azure ATP-Arbeitsbereichsportals wird die folgende Anzei
     |**Kennwort** (erforderlich)|Geben Sie das Kennwort für den schreibgeschützten Benutzer ein, z. B. **Pencil1**.|
     |**Domäne** (erforderlich)|Geben Sie die Domäne für den schreibgeschützten Benutzer ein, z. B. **contoso.com**. **Hinweis:** Es ist wichtig, dass Sie den vollqualifizierten Domänennamen (FQDN) der Domäne eingeben, in der sich das Benutzerkonto befindet. Wenn sich das Konto des Benutzers beispielsweise in der Domäne „corp.contoso.com“ befindet, müssen Sie `corp.contoso.com` und nicht „contoso.com“ eingeben.|
 
-3. Klicken Sie im Arbeitsbereichsportal auf **Download sensor setup and install the first sensor** (Sensorsetup herunterladen und ersten Sensor installieren), um fortzufahren.
+3. Klicken Sie im Azure ATP-Portal auf **Download sensor setup and install the first sensor** (Sensorsetup herunterladen und ersten Sensor installieren), um fortzufahren.
 
 
 > [!div class="step-by-step"]
@@ -60,4 +60,4 @@ Beim ersten Öffnen des Azure ATP-Arbeitsbereichsportals wird die folgende Anzei
 - [Azure ATP sizing tool (Azure ATP-Tool zur Größenanpassung)](http://aka.ms/aatpsizingtool)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
 - [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](atp-prerequisites.md)
-- [Weitere Informationen finden Sie im ATP-Forum.](https://aka.ms/azureatpcommunity)
+- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)

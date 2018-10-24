@@ -2,10 +2,10 @@
 title: Grundlegende Informationen zu Überwachungswarnungen in Azure ATP | Microsoft-Dokumentation
 description: Beschreibt die Verwendung der Azure ATP-Protokolle zum Behandeln von Problemen.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 4/15/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,30 +13,30 @@ ms.technology: ''
 ms.assetid: d0551e91-3b21-47d5-ad9d-3362df6d47c0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7cffaef77a80b5c1c9bb33694ef2c7a73ef80ee0
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: eed1509cb31885bccdfcc40505284dbdbdfc4cca
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44166917"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783881"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
 # <a name="understanding-azure-atp-sensor-and-standalone-sensor-monitoring-alerts"></a>Grundlegende Informationen zu Überwachungswarnungen für Azure ATP-Sensor und selbstständige Azure ATP-Sensoren
 
-Das Azure ATP-Integritätscenter informiert Sie, wenn ein Problem im Zusammenhang mit einem Ihrer Azure ATP-Arbeitsbereiche aufgetreten ist, indem es eine Überwachungswarnung ausgibt. Dieser Artikel beschreibt alle Überwachungswarnungen für jede Komponente und listet den Grund sowie die erforderlichen Schritte zur Lösung des Problems auf.
+Das Azure ATP-Integritätscenter informiert Sie, wenn ein Problem im Zusammenhang mit Ihrem Azure ATP-Arbeitsbereich aufgetreten ist, indem es eine Überwachungswarnung ausgibt. Dieser Artikel beschreibt alle Überwachungswarnungen für jede Komponente und listet den Grund sowie die erforderlichen Schritte zur Lösung des Problems auf.
 
 ## <a name="read-only-user-password-to-expire-shortly"></a>Kennwort für schreibgeschützten Benutzer läuft bald ab
 
 |Warnung|Beschreibung|Lösung|Schweregrad|
 |----|----|----|----|
-|The read-only user password, used to perform resolution of entities against Active Directory, is about to expire in less than 30 days. (Das schreibgeschützte Benutzerkennwort, das zum Ausführen von Auflösungen von Entitäten für Active Directory verwendet wird, läuft in weniger als 30 Tagen ab.)|Wenn das Kennwort für diesen Benutzer abläuft, werden alle Azure ATP-Sensoren nicht mehr ausgeführt und keine neuen Daten gesammelt.|[Ändern Sie das Domänenverbindungskennwort](modifying-atp-config-dcpassword.md), und aktualisieren Sie dann das Kennwort in der Azure ATP-Konsole.|Mittel|
+|The read-only user password, used to perform resolution of entities against Active Directory, is about to expire in less than 30 days. (Das schreibgeschützte Benutzerkennwort, das zum Ausführen von Auflösungen von Entitäten für Active Directory verwendet wird, läuft in weniger als 30 Tagen ab.)|Wenn das Kennwort für diesen Benutzer abläuft, werden alle Azure ATP-Sensoren nicht mehr ausgeführt und keine neuen Daten gesammelt.|[Ändern Sie das Domänenverbindungskennwort](modifying-atp-config-dcpassword.md), und aktualisieren Sie dann das Kennwort im Azure ATP-Portal.|Mittel|
 
 ## <a name="read-only-user-password-expired"></a>Kennwort für schreibgeschützten Benutzer abgelaufen
 
 |Warnung|Beschreibung|Lösung|Schweregrad|
 |----|----|----|----|
-|The read-only user password, used to get directory data, expired. (Das Kennwort für schreibgeschützten Benutzer, das zum Abrufen von Verzeichnisdaten verwendet wird, ist abgelaufen.)|Es werden keine Azure ATP-Sensoren mehr ausgeführt (oder bald nicht mehr ausgeführt), und es werden keine neuen Daten gesammelt.|[Ändern Sie das Domänenverbindungskennwort](modifying-atp-config-dcpassword.md), und aktualisieren Sie dann das Kennwort in der Azure ATP-Konsole.|Hoch|
+|The read-only user password, used to get directory data, expired. (Das Kennwort für schreibgeschützten Benutzer, das zum Abrufen von Verzeichnisdaten verwendet wird, ist abgelaufen.)|Es werden keine Azure ATP-Sensoren mehr ausgeführt (oder bald nicht mehr ausgeführt), und es werden keine neuen Daten gesammelt.|[Ändern Sie das Domänenverbindungskennwort](modifying-atp-config-dcpassword.md), und aktualisieren Sie dann das Kennwort im Azure ATP-Portal.|Hoch|
 
 ## <a name="domain-synchronizer-not-assigned"></a>Domain synchronizer not assigned (Domänensynchronizer nicht zugewiesen)
 
@@ -110,4 +110,4 @@ Das Azure ATP-Integritätscenter informiert Sie, wenn ein Problem im Zusammenhan
 - [Azure ATP capacity planning (Azure ATP-Kapazitätsplanung)](atp-capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
 - [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-forwarding.md#configuring-windows-event-forwarding)
-- [Weitere Informationen finden Sie im ATP-Forum.](https://aka.ms/azureatpcommunity)
+- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)

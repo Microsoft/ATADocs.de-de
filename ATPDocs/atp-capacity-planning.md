@@ -2,22 +2,22 @@
 title: Planen der Azure Advanced Threat Protection-Bereitstellung | Microsoft-Dokumentation
 description: Hilft bei der Planung Ihrer Bereitstellung und der Entscheidung, wie viele Azure ATP-Server für Ihr Netzwerk erforderlich sind.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 5/22/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.service: azure-advanced-threat-protection
 ms.prod: ''
 ms.assetid: da0ee438-35f8-4097-b3a1-1354ad59eb32
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e894422e7264650186c6f4eea28d5a9099ca7914
-ms.sourcegitcommit: 56065ee43dac299203871cd6f025315520750b3b
+ms.openlocfilehash: 9f2b8f31f88c14f67c8a03b748ac3d2fb6179a62
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47233897"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783456"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -26,11 +26,11 @@ ms.locfileid: "47233897"
 # <a name="azure-atp-capacity-planning"></a>Azure ATP-Kapazitätsplanung
 In diesem Artikel erfahren Sie, wie viele Azure ATP-Sensoren und eigenständige Azure ATP-Sensoren Sie benötigen.
 
-> [!NOTE] 
-> Das Tool zur Größenanpassung verfügt über zwei Blätter: eins für ATA und eins für Azure ATP. Stellen Sie sicher, dass Sie sich auf dem richtigen Blatt befinden.
-
 ## <a name="using-the-sizing-tool"></a>Verwenden das Tools zur Größenanpassung
 Die empfohlene und einfachste Methode zum Ermitteln der Kapazität für die Azure ATP-Bereitstellung besteht in der Verwendung des [Azure ATP-Tools zur Größenanpassung](http://aka.ms/aatpsizingtool). Führen Sie das Azure ATP-Tool zur Größenanpassung aus, und verwenden Sie aus den Ergebnis der Excel-Datei die folgenden Felder zum Ermitteln des vom Sensor benötigten Speichers und der CPU:
+
+> [!NOTE] 
+> Das Tool zur Größenanpassung verfügt über zwei Blätter: eins für ATA und eins für Azure ATP. Vergewissern Sie sich, dass Sie sich auf dem richtigen Blatt befinden.
 
 - Azure ATP-Sensor: Ordnen Sie das Feld **Busy Packets/sec** (Belegte Pakete pro Sek.) in der Azure ATP-Sensortabelle in der Ergebnisdatei abhängig vom [gewählten Sensortyp](#choosing-the-right-sensor-type-for-your-deployment) dem Feld **PAKETE PRO SEKUNDE** in der [Eigenständigen Azure ATP-Sensortabelle](#azure-atp-sensor-sizing) oder der [Azure ATP-Sensortabelle](#azure-atp-standalone-sensor-sizing) zu.
 
@@ -42,10 +42,10 @@ Wenn Sie das Azure ATP-Tool zur Größenanpassung nicht verwenden können, samme
 Die folgenden Abschnitte enthalten Anweisungen dazu, wie Sie Informationen zum Pakete/Sek.-Leistungsindikator für einen Domänencontroller sammeln.
 
 ## Auswählen des richtigen Sensortyps für die Bereitstellung<a name="choosing-the-right-sensor-type-for-your-deployment"></a>
-In einer Azure ATP-Bereitstellung wird jede Kombination aus den Typen des eigenständigen Azure ATP-Sensors unterstützt:
+In einer Azure ATP-Bereitstellung wird jede Kombination aus den Typen des Azure ATP-Sensors unterstützt:
 
+- Nur Azure ATP-Sensoren
 - Nur eigenständige Azure ATP-Sensoren
-- Nur Azure ATP-Sensor
 - Eine Kombination aus beiden Typen
 
 Berücksichtigen Sie folgende Vorteile bei der Auswahl des Bereitstellungstyps des Sensors:
@@ -61,7 +61,7 @@ Berücksichtigen Sie folgende Fehler bei der Entscheidung, wie viele eigenständ
     Azure ATP kann Datenverkehr aus mehreren Domänen innerhalb mehrerer Active Directory-Gesamtstrukturen für jeden Arbeitsbereich überwachen, den Sie erstellen. 
 
 -   **Portspiegelung**<br>
-Die Durchführung der Portspiegelung erfordert möglicherweise die Bereitstellung mehrerer eigenständiger Azure ATP-Sensoren pro Rechenzentrum oder Filialstandort.
+    Die Durchführung der Portspiegelung erfordert möglicherweise die Bereitstellung mehrerer eigenständiger Azure ATP-Sensoren pro Rechenzentrum oder Filialstandort.
 
 -   **Kapazität**<br>
     Ein eigenständiger Azure ATP-Sensor kann die Überwachung von mehreren Domänencontrollern unterstützen, abhängig vom Umfang des Datenverkehrs des überwachten Domänencontrollers. 
@@ -149,4 +149,4 @@ Um die Pakete pro Sekunde zu ermitteln, gehen Sie auf jedem Domänencontroller w
 - [Azure ATP sizing tool (Azure ATP-Tool zur Größenanpassung)](http://aka.ms/aatpsizingtool)
 - [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](atp-prerequisites.md)
 - [Azure ATP architecture (Azure ATP-Architektur)](atp-architecture.md)
-- [Weitere Informationen finden Sie im ATP-Forum.](https://aka.ms/azureatpcommunity)
+- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)

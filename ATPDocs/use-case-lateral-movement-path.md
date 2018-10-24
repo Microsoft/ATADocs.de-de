@@ -1,11 +1,11 @@
 ---
-title: Untersuchen von Angriffen mit Lateral Movement-Pfaden mit Azure ATP | Microsoft Dokumentation
-description: Dieser Artikel beschreibt, wie Angriffe mit Lateral Movement-Pfaden mit Azure Advanced Threat Protection (ATP) erkannt werden können.
+title: Untersuchen von Lateral Movement-Angriffen mit Azure ATP | Microsoft-Dokumentation
+description: Dieser Artikel beschreibt, wie Lateral Movement-Angriffe mit Azure Advanced Threat Protection (ATP) erkannt werden können.
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/05/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: de15c920-8904-4124-8bdc-03abd9f667cf
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0fcdfdbeaeed7e42aff9d63f4f88300346c73465
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: e6a223405f4aa1e8daa1d393428db43c4e692daa
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44165574"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783490"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -32,7 +32,7 @@ Lateral Movement bedeutet, dass ein Angreifer nicht sensible Konten benutzt, um 
 
 Führen Sie die folgenden Schritte aus, um zu ermitteln, welche sensiblen Konten in Ihrem Netzwerk aufgrund einer Verbindung mit nicht sensiblen Konten, Gruppen oder Computern anfällig sind. 
 
-1. Klicken Sie im Menü des Azure ATP-Arbeitsbereichsportals auf das Symbol „Berichte“. ![Symbol „Berichte“](./media/atp-report-icon.png).
+1. Klicken Sie im Menü des Azure ATP-Portals auf das Symbol „Berichte“. ![Symbol „Berichte“](./media/atp-report-icon.png).
 
 2. Wenn keine potenziellen Lateral Movement-Pfade gefunden wurden, ist der Bericht unter **Lateral Movement-Pfade zu sensiblen Konten** abgeblendet. Wenn potenzielle Lateral Movement-Pfade mit relevanten Daten gefunden wurden, wird aus den Daten des Berichts automatisch das früheste Datum ausgewählt. Der Bericht über Lateral Movement-Pfade enthält Daten für bis zu 60 Tage.
 
@@ -47,7 +47,7 @@ Führen Sie die folgenden Schritte aus, um zu ermitteln, welche sensiblen Konten
 
 
 
-1. Suchen Sie im Portal des Azure ATP-Arbeitsbereichs nach dem Lateral Movement-Badge, das dem Entitätsprofil hinzugefügt wird, wenn sich die Entität in einem Lateral Movement-Pfad befindet. ![Symbol „lateral“](./media/lateral-movement-icon.png) oder ![Symbol „Pfad“](./media/paths-icon.png). Beachten Sie, dass Badges nur angezeigt werden, wenn in den letzten 48 Stunden ein Lateral Movement-Angriff stattgefunden hat. 
+1. Suchen Sie im Azure ATP-Portal nach dem Lateral Movement-Badge, das dem Entitätsprofil hinzugefügt wird, wenn sich die Entität in einem Lateral Movement-Pfad befindet. ![Symbol „lateral“](./media/lateral-movement-icon.png) oder ![Symbol „Pfad“](./media/paths-icon.png). Beachten Sie, dass Badges nur angezeigt werden, wenn in den letzten 48 Stunden ein Lateral Movement-Angriff stattgefunden hat. 
 
 2. Klicken Sie auf der sich öffnenden Benutzerprofilseite auf die Registerkarte **Lateral Movement-Pfade**. 
 
@@ -73,6 +73,6 @@ Führen Sie die folgenden Schritte aus, um zu ermitteln, welche sensiblen Konten
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Configure SAM-R required permissions (Konfigurieren von für SAM-R erforderliche Berechtigungen)](install-atp-step8-samr.md)
-- [Arbeiten mit verdächtigen Aktivitäten](working-with-suspicious-activities.md)
-- [Weitere Informationen finden Sie im ATP-Forum.](https://aka.ms/azureatpcommunity)
+- [Konfigurieren von Azure ATP für das Ausführen von Remoteaufrufen an SAM](install-atp-step8-samr.md)
+- [Arbeiten mit Sicherheitswarnungen](working-with-suspicious-activities.md)
+- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)

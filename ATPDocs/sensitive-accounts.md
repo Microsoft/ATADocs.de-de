@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/12/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ccb87ab6b3fabed5edaf7c32324701c74259f098
-ms.sourcegitcommit: 5ff50807f855db1051b977a64eb6e90487ea196c
+ms.openlocfilehash: 31871a03795b1c08e4fd8954cac80a00538863db
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45750436"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783337"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -54,7 +54,7 @@ In der folgenden Liste werden die Gruppen aufgeführt, die von Azure ATP als „
 
 Neben den obenstehend aufgelisteten Gruppen können Sie auch manuell Gruppen oder Konten als sensibel markieren, um den Erkennungsvorgang zu verbessern. Dies ist wichtig, da für einige Azure ATP-Erkennungsvorgänge, wie die Vorgänge zum Erkennen von Änderungen sensibler Gruppen und von Lateral Movement-Pfaden, die Information erforderlich ist, welche Gruppen und Konten als sensibel angesehen werden. Sie können manuell andere Benutzer und Gruppen als sensibel markieren, z.B. Vorstandsmitglieder, leitende Angestellte und Verkaufsleiter, damit Azure ATP diese als sensibel erkennt.
 
-1.  Klicken Sie im Azure ATP-Arbeitsbereichsportal in der Menüleiste auf das Zahnrad **Konfiguration**.
+1.  Klicken Sie im Azure ATP-Portal in der Menüleiste auf das Zahnrad **Konfiguration**.
 
 2.  Klicken Sie unter **Erkennung** auf **Entitätstag**.
 
@@ -70,4 +70,4 @@ Neben den obenstehend aufgelisteten Gruppen können Sie auch manuell Gruppen ode
 ## <a name="see-also"></a>Siehe auch
 
 - [Arbeiten mit verdächtigen Aktivitäten](working-with-suspicious-activities.md)
-- [Weitere Informationen finden Sie im ATP-Forum.](https://aka.ms/azureatpcommunity)
+- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)

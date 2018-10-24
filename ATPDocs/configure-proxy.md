@@ -2,23 +2,23 @@
 title: Konfigurieren Ihres Proxy oder der Firewall zum Aktivieren der Azure ATP-Kommunikation mit dem Sensor | Microsoft-Dokumentation
 description: Beschreibt, wie Sie Ihre Firewall oder den Proxyserver so einrichten, um die Kommunikation zwischen dem Azure ATP-Clouddienst und den Azure ATP-Sensoren zuzulassen.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 5/29/2018
-ms.topic: get-started-article
+ms.date: 10/04/2018
+ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2f39c0d3628c3a3cc9e034fa1da8bb5a66bc704b
-ms.sourcegitcommit: 3eade64779002d2c8ae005565bc69e1b3f89fb7d
+ms.openlocfilehash: a7dc9b6c9243377a613490e166fb7c0294ecde99
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34560240"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783320"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -45,15 +45,15 @@ Der statische Proxy kann über die Registrierung konfiguriert werden. Sie müsse
 
 1.   Stellen Sie sicher, dass Sie diese Registrierungsschlüssel sichern, bevor Sie sie bearbeiten.
 
-2. Suchen Sie in der Registrierung den Wert `DefaultConnectionSetting` als REG_BINARY unter dem Registrierungsschlüssel `HKCU\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSetting`, und kopieren Sie ihn.
+2. Suchen Sie in der Registrierung den Wert `DefaultConnectionSettings` als REG_BINARY unter dem Registrierungsschlüssel `HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\DefaultConnectionSettings`, und kopieren Sie ihn.
  
-2.  Wenn „LocalSystem“ nicht über die richtigen Proxyeinstellungen verfügt (weil sie nicht konfiguriert sind oder sich von „Current_User“ unterscheiden), kopieren Sie die Proxyeinstellung von „Current_User“ in „LocalSystem“. Unter dem Registrierungsschlüssel `HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSetting`.
+2.  Wenn „LocalSystem“ nicht über die richtigen Proxyeinstellungen verfügt (weil sie nicht konfiguriert sind oder sich von „Current_User“ unterscheiden), kopieren Sie die Proxyeinstellung von „Current_User“ in „LocalSystem“. Unter dem Registrierungsschlüssel `HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\DefaultConnectionSettings`.
 
-3.  Fügen Sie den Wert `DefaultConnectionSetting` von „Current_User“ als REG_BINARY ein.
+3.  Fügen Sie den Wert `DefaultConnectionSettings` von „Current_User“ als REG_BINARY ein.
 
-4.  Wenn „LocalService“ nicht über die richtigen Proxyeinstellungen verfügt, kopieren Sie die Proxyeinstellung von „Current_User“ in „LocalService“. Unter dem Registrierungsschlüssel `HKU\S-1-5-19\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSetting`.
+4.  Wenn „LocalService“ nicht über die richtigen Proxyeinstellungen verfügt, kopieren Sie die Proxyeinstellung von „Current_User“ in „LocalService“. Unter dem Registrierungsschlüssel `HKU\S-1-5-19\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\DefaultConnectionSettings`.
 
-5.  Fügen Sie den Wert `DefaultConnectionSetting` von „Current_User“ als REG_BINARY ein.
+5.  Fügen Sie den Wert `DefaultConnectionSettings` von „Current_User“ als REG_BINARY ein.
 
 > [!NOTE]
 > Dies wirkt sich auf alle Anwendungen aus, einschließlich der Windows-Dienste, die WinINET mit „LocalService“- und „LocalSystem“-Kontext verwenden.
@@ -71,8 +71,8 @@ Wenn ein Proxy oder eine Firewall standardmäßig den gesamten Datenverkehr bloc
 
 
 Sie können auch die Firewall oder Proxyregeln für einen bestimmten selbst erstellten Arbeitsbereich aushärten, indem Sie eine Regel für die folgenden DNS-Einträge erstellen:
-- <Name_des_Arbeitsbereichs>.atp.azure.com: für die Konsolenkonnektivität. Z.B. contosoATP.atp.azure.com
-- <Name_des_Arbeitsbereichs>.sensorapi.atp.azure.com: für die Sensorkonnektivität. Z.B. contosoATPsensorapi.atp.azure.com
+- \<Name_Ihres_Arbeitsbereichs>.atp.azure.com: für die Konsolenkonnektivität. Beispielsweise „Contoso-corp.atp.azure.com“
+- \<Name_Ihres_Arbeitsbereichs>.sensorapi.atp.azure.com: für die Sensorkonnektivität. Beispielsweise „contoso-corpsensorapi.atp.azure.com“
 
  
 > [!NOTE]
@@ -81,4 +81,4 @@ Sie können auch die Firewall oder Proxyregeln für einen bestimmten selbst erst
 
 ## <a name="see-also"></a>Weitere Informationen
 - [Configure event forwarding (Konfigurieren der Ereignisweiterleitung)](configure-event-forwarding.md)
-- [Weitere Informationen finden Sie im ATP-Forum.](https://aka.ms/azureatpcommunity)
+- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)

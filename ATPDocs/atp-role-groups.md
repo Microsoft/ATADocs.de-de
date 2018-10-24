@@ -2,10 +2,10 @@
 title: Azure Advanced Threat Protection-Rollengruppen für die Zugriffsverwaltung | Microsoft-Dokumentation
 description: 'Exemplarische Vorgehensweise: Arbeit mit Azure ATP-Rollengruppen.'
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/15/2018
+ms.date: 10/07/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 28a500aeeeef127425ac292b53dbdc34aa1aad45
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 7ae3f0adca3137664f0a89c15e8feee71d0cd915
+ms.sourcegitcommit: c4978be196e0039c7a5d5887bec4cbc5c01d64f9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44125939"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848612"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -31,35 +31,40 @@ Azure ATP bietet eine rollenbasierte Sicherheit, um Daten gemäß den spezifisch
 
 [!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
 
-Rollengruppen erlauben die Zugriffsverwaltung für Azure ATP. Sie können durch Verwendung von Rollengruppen Aufgaben in Ihrem Sicherheitsteam aufteilen und nur so viel Zugriff gewähren, wie Benutzer für die Ausführung ihrer Arbeit benötigen. Dieser Artikel beschreibt die Zugriffsverwaltung sowie die Berechtigungen der einzelnen Azure ATP-Rollengruppen und hilft Ihnen bei der Einrichtung und Ausführung von Rollengruppen in ATP.
+Rollengruppen erlauben die Zugriffsverwaltung für Azure ATP. Sie können durch Verwendung von Rollengruppen Aufgaben in Ihrem Sicherheitsteam aufteilen und nur so viel Zugriff gewähren, wie Benutzer für die Ausführung ihrer Arbeit benötigen. Dieser Artikel beschreibt die Zugriffsverwaltung sowie die Berechtigungen der einzelnen Azure ATP-Rollengruppen und hilft Ihnen bei der Einrichtung und Ausführung von Rollengruppen in Azure ATP.
 
 > [!NOTE]
 > Sämtliche globalen Administratoren und Sicherheitsadministratoren für die Azure Active Directory-Version des Mandanten werden automatisch als Azure ATP-Administratoren angesehen.
 
-## <a name="accessing-the-management-portal"></a>Zugreifen auf das Verwaltungsportal
+## <a name="accessing-the-azure-atp-portal"></a>Zugreifen auf das Azure ATP-Portal
 
-Nur Azure AD-Benutzer mit den Verzeichnisrollen „globaler Administrator“ oder „Sicherheitsadministrator“ können auf das Verwaltungsportal (portal.atp.azure.com) zugreifen. Wenn Sie das Portal öffnen, können Sie Ihren Arbeitsbereich erstellen. Der Azure ATP-Dienst erstellt drei Sicherheitsgruppen in Ihrem Azure Active Directory-Mandanten: Administratoren, Benutzer, Viewer. 
+Nur Azure AD-Benutzer mit den Verzeichnisrollen „globaler Administrator“ oder „Sicherheitsadministrator“ können auf das Azure ATP-Portal (portal.atp.azure.com) zugreifen. Wenn Sie das Portal öffnen, können Sie Ihren Arbeitsbereich erstellen. Der Azure ATP-Dienst erstellt drei Sicherheitsgruppen in Ihrem Azure Active Directory-Mandanten: Administratoren, Benutzer, Viewer. 
 
 > [!NOTE]
-> Nur Benutzer, die zu der Azure AD-Sicherheitsgruppe für diesen Arbeitsbereich gehören sowie globale Administratoren und Sicherheitsadministratoren, können auf das Azure ATP-Arbeitsbereichsportal zugreifen.
+> Nur Benutzer, die zu der Azure ATP-Sicherheitsgruppe in Ihrem Azure Active Directory gehören sowie globale Administratoren und Sicherheitsadministratoren des Mandanten, können auf das Azure ATP-Portal zugreifen.
 
 
 ## <a name="types-of-azure-atp-security-groups"></a>Typen von Azure ATP-Sicherheitsgruppen 
 
-Azure ATP umfasst drei Typen von Sicherheitsgruppen: *Arbeitsbereichsname* von Azure ATP-Administratoren, *Arbeitsbereichsname* von Azure ATP-Benutzern und *Arbeitsbereichsname* von Azure ATP-Viewern. Die folgende Tabelle beschreibt den Zugriffstyp im Azure ATP-Arbeitsbereichsportal, der pro Rolle verfügbar ist. Je nachdem, welche Rolle Sie zuweisen, stehen verschiedene Anzeigen und Menüoptionen im Azure ATP-Arbeitsbereich nicht zur Verfügung:
+Azure ATP stellt drei Typen von Sicherheitsgruppen bereit: *Arbeitsbereichsname* von Azure ATP-Administratoren, *Arbeitsbereichsname* von Azure ATP-Benutzern und *Arbeitsbereichsname* von Azure ATP-Viewern. Die folgende Tabelle beschreibt den Zugriffstyp im Azure ATP-Portal, der für jede Rolle verfügbar ist. Je nachdem, welche Rolle Sie zuweisen, stehen verschiedene Anzeigen und Menüoptionen im Azure ATP-Portal für folgende Benutzer nicht zur Verfügung:
 
 |Aktivität |Azure ATP-Administratoren für *Arbeitsbereichsname*|Azure ATP-Benutzer für *Arbeitsbereichsname*|Azure ATP-Viewers für *Arbeitsbereichsname*|
 |----|----|----|----|
 |Anmeldung|Verfügbar|Verfügbar|Verfügbar|
-|Ändern des Status von verdächtigen Aktivitäten|Verfügbar|Verfügbar|Nicht verfügbar|
-|Freigeben/Exportieren von verdächtiger Aktivität über E-Mail/Abruflink|Verfügbar|Verfügbar|Verfügbar|
+|Der Status der Sicherheitswarnungen wurde geändert (erneut öffnen, schließen, ausschließen, unterdrücken)|Verfügbar|Verfügbar|Nicht verfügbar|
+|Sicherheitswarnungen für Freigeben/Exportieren (über E-Mail, Link abrufen und Download von Details)|Verfügbar|Verfügbar|Verfügbar|
+|Herunterladen eines Berichts|Verfügbar|Verfügbar|Verfügbar|
 |Ändern des Status der Überwachung von Warnungen|Verfügbar|Nicht verfügbar|Nicht verfügbar|
-|Aktualisieren der Azure ATP-Konfiguration|Verfügbar|Nicht verfügbar|Nicht verfügbar|
-|Sensor: hinzufügen|Verfügbar|Nicht verfügbar|Nicht verfügbar|
-|Sensor: löschen |Verfügbar|Nicht verfügbar|Nicht verfügbar|
-|Überwachter DC – Hinzufügen |Verfügbar|Nicht verfügbar|Nicht verfügbar|
-|Überwachter DC – Löschen|Verfügbar|Nicht verfügbar|Nicht verfügbar|
-|Anzeigen von Warnungen und verdächtigen Aktivitäten|Verfügbar|Verfügbar|Verfügbar|
+|Aktualisieren der Azure ATP-Konfiguration: Sensoren (Download, Schlüssel neu generieren, konfigurieren, löschen)|Verfügbar|Nicht verfügbar|Nicht verfügbar|
+|Aktualisieren der Azure ATP-Konfiguration: Datenquellen (Verzeichnisdienste, SIEM, VPN WD-ATP)|Verfügbar|Nicht verfügbar|Nicht verfügbar|
+|Aktualisieren der Azure ATP-Konfiguration: Updates|Verfügbar|Nicht verfügbar|Nicht verfügbar|
+|Aktualisieren der Azure ATP-Konfiguration: geplante Berichte|Verfügbar|Verfügbar|Nicht verfügbar|
+|Aktualisieren der Azure ATP-Konfiguration: Entitätstags (vertraulich und Honeytoken)|Verfügbar|Verfügbar|Nicht verfügbar|
+|Aktualisieren der Azure ATP-Konfiguration: Ausschlüsse|Verfügbar|Verfügbar|Nicht verfügbar|
+|Aktualisieren der Azure ATP-Konfiguration: Sprache|Verfügbar|Verfügbar|Nicht verfügbar|
+|Aktualisieren der Azure ATP-Konfiguration: Benachrichtigungen (E-Mail und Syslog)|Verfügbar|Verfügbar|Nicht verfügbar|
+|Aktualisieren der Azure ATP-Konfiguration: Vorschau von Erkennungen|Verfügbar|Verfügbar|Nicht verfügbar|
+|Anzeigen von Entitätsprofilen und Sicherheitswarnungen|Verfügbar|Verfügbar|Verfügbar|
 
 
 Wenn Benutzer versuchen, auf eine Seite zuzugreifen, die nicht für deren Rollengruppe verfügbar ist, werden sie auf eine Azure ATP-Seite weitergeleitet, die ihnen mitteilt, dass Sie für den Zugriff nicht autorisiert sind. 
@@ -70,8 +75,8 @@ Wenn Benutzer versuchen, auf eine Seite zuzugreifen, die nicht für deren Rollen
 Azure ATP verwendet Azure AD-Sicherheitsgruppen als eine Basis für Rollengruppen. Die Rollengruppen können über [https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/All%20groups](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/All%20groups) verwaltet werden. Nur Azure AD-Benutzer können zu Sicherheitsgruppen hinzugefügt bzw. aus ihnen entfernt werden. 
 
 ## <a name="see-also"></a>Weitere Informationen
-- [Tool zur Bemessung von ATA-Gateways](http://aka.ms/aatpsizingtool)
-- [ATA-Architektur](atp-architecture.md)
-- [Installieren von ATA](install-atp-step1.md)
-- [Weitere Informationen finden Sie im ATP-Forum.](https://aka.ms/azureatpcommunity)
+- [ATP-Tool zur Größenanpassung](http://aka.ms/aatpsizingtool)
+- [ATP-Architektur](atp-architecture.md)
+- [Install Azure ATP (Installieren von Azure ATP)](install-atp-step1.md)
+- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)
 

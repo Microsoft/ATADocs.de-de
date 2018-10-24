@@ -2,10 +2,10 @@
 title: Arbeiten mit Azure ATP-Berichten | Microsoft-Dokumentation
 description: Beschreibt, wie Sie Berichte in Azure ATP generieren können, um Ihr Netzwerk zu überwachen.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/27/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,19 +13,19 @@ ms.technology: ''
 ms.assetid: 2c2d6b1a-fc8c-4ff7-b07d-64ce6159f84d
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: eb1a29038d8afb47328970ff7179f0e1ff01614d
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: 367ad07bd1d0be80486bfc10c2b70546d360805c
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44165931"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783184"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
 
 # <a name="azure-atp-reports"></a>Azure ATP-Berichte
 
-Über den Abschnitt der Azure ATP-Berichte im Arbeitsbereichsportal können Sie Berichte generieren, die Ihnen Informationen zum Systemstatus sowie zur Systemintegrität und einen Bericht über verdächtige Aktivitäten bereitstellen, die in Ihrer Umgebung ermittelt wurden.
+Über den Abschnitt der Azure ATP-Berichte im Azure ATP-Portal können Sie Berichte generieren, die Ihnen Informationen zum Systemstatus sowie zur Systemintegrität und einen Bericht über verdächtige Aktivitäten bereitstellen, die in Ihrer Umgebung ermittelt wurden.
 
 
 Um auf diese Berichtsseite zuzugreifen, klicken Sie auf das Berichtssymbol auf der Berichtsleiste: ![Berichtssymbol](./media/atp-report-icon.png).
@@ -43,7 +43,7 @@ Es gibt zwei Möglichkeiten, einen Bericht zu generieren: entweder bei Bedarf od
 
 So generieren Sie einen Bericht nach Bedarf:
 
-1. Klicken Sie im Azure ATP-Arbeitsbereichsportal in der Menüleiste auf das Berichtsymbol: ![Berichtsymbol](./media/atp-report-icon.png).
+1. Klicken Sie im Azure ATP-Portal in der Menüleiste auf das Berichtsymbol: ![Berichtsymbol](./media/atp-report-icon.png).
 
 2. Legen Sie unter einem der ausgewählten Berichttypen die Datumsangaben **Von** und **Bis** fest (also das Start- und Enddatum), und klicken Sie auf **Herunterladen**. 
  ![Berichte](./media/reports.png)
@@ -67,4 +67,4 @@ So legen Sie einen geplanten Bericht fest:
 - [Azure ATP capacity planning (Azure ATP-Kapazitätsplanung)](atp-capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
 - [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-forwarding.md#configuring-windows-event-forwarding)
-- [Weitere Informationen finden Sie im ATP-Forum.](https://aka.ms/azureatpcommunity)
+- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)

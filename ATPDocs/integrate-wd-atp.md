@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 9/12/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,16 @@ ms.technology: ''
 ms.assetid: f6f3ed75-d6bb-4966-a9a7-5339c4f3ebac
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4dca942b6c7b066cfec44e51aaad0f1e003da6ec
-ms.sourcegitcommit: 5ff50807f855db1051b977a64eb6e90487ea196c
+ms.openlocfilehash: a888cbb80bba74d920e236b04c353008c7b56daf
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45750417"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783660"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
-# <a name="integrating-azure-atp-with-windows-defender-atp"></a>Integration von Azure ATP in Windows Defender ATP
+# <a name="integrate-azure-atp-with-windows-defender-atp"></a>Integrieren von Azure ATP in Windows Defender ATP
 
 Mithilfe von Azure Advanced Threat Protection können Sie Azure ATP in Windows Defender ATP integrieren, wodurch Sie eine noch umfangreichere Möglichkeit zum Schutz vor Bedrohungen erhalten. Während Azure ATP den Datenverkehr auf Ihren Domänencontrollern überwacht, überwacht Windows Defender ATP Ihre Endpunkte. Beide Dienste stellen gemeinsam eine Schnittstelle bereit, über die Sie Ihre Umgebung schützen können.
 
@@ -73,11 +73,11 @@ Zur Aktivierung dieses Features benötigen Sie Lizenzen für Azure ATP und Windo
 
  ![Aktivieren der Windows Defender-ATP-Integration](./media/wd-atp-enable.png)
 
-5. Wenn Sie den Status der Integration im Azure ATP-Arbeitsbereichsportal überprüfen möchten, gehen Sie zu **Einstellungen** > **Windows Defender ATP integration** (Windows Defender ATP-Integration). Dann wird Ihnen der Status der Integration angezeigt. Wenn ein Fehler ausgelöst wird, wird dieser angezeigt. Außerdem wird Ihnen angezeigt, welcher Arbeitsbereich in Windows Defender ATP integriert wird.
+5. Wenn Sie den Status der Integration im Azure ATP-Portal überprüfen möchten, gehen Sie zu **Einstellungen** > **Windows Defender ATP integration** (Windows Defender ATP-Integration). Dann wird Ihnen der Status der Integration angezeigt. Wenn ein Fehler ausgelöst wird, wird dieser angezeigt. Außerdem wird Ihnen angezeigt, welcher Arbeitsbereich in Windows Defender ATP integriert wird.
 
 ## <a name="how-it-works"></a>Funktionsweise
 
-Nach der vollständigen Integration von Azure ATP und Windows Defender ATP umfasst jede Entität in Windows Defender ATP (im Azure ATP-Arbeitsbereichsportal und im Popupelement „Miniprofil“) einen Badge, der dafür steht, dass diese Entität in Windows Defender ATP integriert ist. 
+Nach der vollständigen Integration von Azure ATP und Windows Defender ATP umfasst jede Entität in Windows Defender ATP (im Azure ATP-Portal und im Popupelement „Miniprofil“) einen Badge, der dafür steht, dass diese Entität in Windows Defender ATP integriert ist. 
 
  ![Windows Defender ATP-Warnungen](./media/profile-alerts-wd.png)
 
@@ -103,5 +103,5 @@ Im Windows Defender ATP-Portal können Sie Azure ATP-Warnungen anzeigen lassen, 
 - [Azure ATP sizing tool (Azure ATP-Tool zur Größenanpassung)](http://aka.ms/aatpsizingtool)
 - [Azure ATP architecture (Azure ATP-Architektur)](atp-architecture.md)
 - [Install ATP (Installieren von ATP)](install-atp-step1.md)
-- [Weitere Informationen finden Sie im ATP-Forum.](https://aka.ms/azureatpcommunity)
+- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)
 

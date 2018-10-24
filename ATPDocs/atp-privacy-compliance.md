@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/15/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 224e629a-0e82-458c-bb03-b67070a9241d
 ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: 274e016f7a870b8879fad0dec4628dcea60bc538
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: e05424c8a29d3dc77f7e7bbfe2351bb97d65160f
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126143"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782946"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -28,7 +28,7 @@ ms.locfileid: "44126143"
 
 ## <a name="search-for-and-identify-personal-data"></a>Suchen und Identifizieren von personenbezogenen Daten 
 
-In Azure Advanced Threat Protection können Sie identifizierbare personenbezogene Daten über die [Suchleiste](workspace-portal.md#search-bar) des [Arbeitsbereichsportals](workspace-portal.md) anzeigen. 
+In Azure Advanced Threat Protection können Sie identifizierbare personenbezogene Daten über die [Suchleiste](workspace-portal.md#search-bar) des [Azure ATP-Portals](workspace-portal.md) anzeigen. 
 
 Suchen Sie einen bestimmten Benutzer oder Computer, und klicken Sie auf die Entität, um zur [Profilseite](entity-profiles.md) des Benutzers oder Computers geleitet zu werden. Die Profile stellen umfassende Details über die Entität aus Active Directory bereit, einschließlich der Netzwerkaktivität im Zusammenhang mit dieser Entität und des Verlaufs.
 

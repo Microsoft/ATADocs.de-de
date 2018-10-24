@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 08/12/2018
+ms.date: 10/07/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3547519f-8d9c-40a9-8f0e-c7ba21081203
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4adae00e0985a831cddf1d9b5276c937e82523d3
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 90de9f0f02fa1b87fd2d741349a1d81e089b6fb1
+ms.sourcegitcommit: bbbe808c08ce703a314c82b46aedaae79ab256a3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126041"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848523"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -45,7 +45,7 @@ In diesem Szenario wird davon ausgegangen, dass der eigenständige Azure ATP-Sen
 
 1.  Öffnen Sie „Active Directory-Benutzer und -Computer“, navigieren Sie zum Ordner **BuiltIn**, und doppelklicken Sie auf **Ereignisprotokollleser**. 
 2.  Wählen Sie **Mitglieder** aus.
-4.  Wenn **Netzwerkdienst** nicht aufgelistet ist, klicken Sie auf **Hinzufügen**, und geben Sie **Netzwerkdienst** in das Feld **Geben Sie die zu verwendenden Objektnamen ein** ein. Klicken Sie anschließend auf **Namen überprüfen**, und klicken Sie zweimal auf **OK**. 
+3.  Wenn **Netzwerkdienst** nicht aufgelistet ist, klicken Sie auf **Hinzufügen**, und geben Sie **Netzwerkdienst** in das Feld **Geben Sie die zu verwendenden Objektnamen ein** ein. Klicken Sie anschließend auf **Namen überprüfen**, und klicken Sie zweimal auf **OK**. 
 
 Sie müssen die Domänencontroller neu starten, nachdem Sie den **Netzwerkdienst** der **Ereignisprotokollleser**-Gruppe hinzugefügt haben, damit die Änderungen in Kraft treten können.
 
@@ -63,7 +63,7 @@ Sie müssen die Domänencontroller neu starten, nachdem Sie den **Netzwerkdienst
    
     1.  Wählen Sie **Aktiviert** aus.
     2.  Klicken Sie unter **Optionen** auf **Anzeigen**.
-    3.  Geben Sie unter **SubscriptionManagers** folgenden Wert ein, und klicken Sie auf **OK**: *Server=`http://<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10*` (zum Beispiel: Server=`http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
+    3.  Geben Sie unter **SubscriptionManagers** folgenden Wert ein, und klicken Sie auf **OK**: *Server=`http://<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10*` *(zum Beispiel: Server=`http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
     
     ![Configure target subscription image](media/wef%202%20config%20target%20sub%20manager.png)
     
@@ -81,18 +81,11 @@ Sie müssen die Domänencontroller neu starten, nachdem Sie den **Netzwerkdienst
    3.   Wählen Sie **Quellcomputerinitiiert** aus, und klicken Sie auf **Computergruppen auswählen** aus.
         1.  Klicken Sie auf **Domänencomputer hinzufügen**.
         2.  Geben Sie den Namen des Domänencontrollers in das Feld **Namen des auszuwählenden Objekts eingeben** ein. Klicken Sie anschließend auf **Namen überprüfen**, und klicken Sie auf **OK**. 
-       
-        ![Event Viewer image](media/wef3%20event%20viewer.png)
-   
-        
         3.  Klicken Sie auf **OK**.
+        ![Event Viewer image](media/wef3%20event%20viewer.png)     
    4.   Klicken Sie auf **Ereignisse auswählen**.
-
         1. Klicken Sie auf **Per Protokoll** und wählen Sie **Sicherheit** aus.
-        2. Tippen Sie im Feld **Ereignis-IDs ein-/ausschließen** die Ereignisnummer ein, und klicken Sie auf **OK**. Geben Sie wie im folgenden Beispiel 4776 ein:
-
-        ![Query filter image](media/wef-4-query-filter.png)
-
+        2. Tippen Sie im Feld **Ereignis-IDs ein-/ausschließen** die Ereignisnummer ein, und klicken Sie auf **OK**. Geben Sie 4776 ein, wie im folgenden Beispiel: ![Abbildung von Abfragefilter](media/wef-4-query-filter.png)
    5.   Klicken Sie mit der rechten Maustaste auf das erstellte Abonnement, und wählen Sie **Laufzeitstatus** aus, um festzustellen, ob es Probleme mit dem Status gibt. 
    6.   Überprüfen Sie nach einigen Minuten, ob die festgelegten Ereignisse im eigenständigen Azure ATP-Sensor unter „Weitergeleitete Ereignisse“ angezeigt werden.
 
@@ -102,4 +95,4 @@ Weitere Informationen finden Sie unter [Einrichten von Computern zum Weiterleite
 ## <a name="see-also"></a>Weitere Informationen
 
 - [Install Azure ATP (Installieren von Azure ATP)](install-atp-step1.md)
-- [Weitere Informationen finden Sie im ATP-Forum.](https://aka.ms/azureatpcommunity)
+- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)

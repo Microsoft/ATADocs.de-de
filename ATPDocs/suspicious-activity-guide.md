@@ -1,11 +1,11 @@
 ---
-title: Azure ATP-Handbuch zu verdächtigen Aktivitäten | Microsoft-Dokumentation
-d|Description: This article provides a list of the suspicious activities Azure ATP can detect and steps for remediation.
+title: Azure ATP-Leitfaden zu Sicherheitswarnungen | Microsoft-Dokumentation
+d|Description: This article provides a list of the security alerts issued by Azure ATP and steps for remediation.
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/20/2018
+ms.date: 10/10/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,19 +13,19 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7146c9830a6d3e4f9f655020aa2711e8aeeba40d
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: ca22fc6430556d49a6709be2f46c0c0b8746fa38
+ms.sourcegitcommit: 0c05308c832e4b03ea3945788de39feabfdb5671
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126449"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48914501"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
 
-# <a name="azure-advanced-threat-protection-suspicious-activity-guide"></a>Azure Advanced Threat Protection-Handbuch zu verdächtigen Aktivitäten
+# <a name="azure-advanced-threat-protection-security-alert-guide"></a>Azure Advanced Threat Protection – Leitfaden zu Sicherheitswarnungen
 
-Wenn eine ordnungsgemäße Untersuchung befolgt wird, kann jede verdächtige Aktivität folgendermaßen klassifiziert werden:
+Nach einer gründlichen Untersuchung können alle Azure ATP-Sicherheitswarnungen wie folgt klassifiziert werden:
 
 -   **Richtig positiv**: Eine böswillige, von Azure ATP erkannte Aktion.
 
@@ -33,33 +33,9 @@ Wenn eine ordnungsgemäße Untersuchung befolgt wird, kann jede verdächtige Akt
 
 -   **Falsch positiv**: Ein falscher Alarm, das heißt, die Aktivität wurde nicht ausgeführt.
 
-Weitere Informationen zum Arbeiten mit Azure ATP-Warnungen finden Sie unter [Arbeiten mit verdächtigen Aktivitäten](working-with-suspicious-activities.md).
+Weitere Informationen zum Arbeiten mit Azure ATP-Sicherheitswarnungen finden Sie unter [Arbeiten mit Sicherheitswarnungen](working-with-suspicious-activities.md).
 
 
-## <a name="abnormal-sensitive-group-modification"></a>Ungewöhnliche Modifizierung von sensiblen Gruppen
-
-
-**Beschreibung**
-
-Angreifer fügen Benutzer zu sehr privilegierten Gruppen hinzu. Dadurch können Sie Zugriff auf weitere Ressourcen und Beständigkeit erhalten. Die Erkennung basiert auf dem Erfassen der Aktivitäten von Benutzern, die Gruppen ändern und den Warnungen, die bei nicht ordnungsgemäßen Ergänzungen zu einer sensiblen Gruppe angezeigt werden. Die Erfassung wird kontinuierlich von ATP ausgeführt. Der Mindestzeitraum, bevor eine Warnung ausgelöst werden kann, beträgt einen Monat pro Domänencontroller.
-
-Eine Definition von sensiblen Gruppen in Azure ATP finden Sie unter [Working with the sensitive accounts (Arbeiten mit sensiblen Konten)](sensitive-accounts.md).
-
-
-Die Erkennung basiert auf [Ereignissen, die auf Domänencontrollern überwacht werden](configure-event-collection.md).
-So stellen Sie sicher, dass Ihre Domänencontroller die benötigten Ereignisse überwachen.
-
-**Untersuchung**
-
-1. Ist das Ändern der Gruppe zulässig? </br>Zulässige Änderungen an Gruppen, die selten auftreten und nicht als „normal“ gelernt wurden, können eine Warnung auslösen. Dies würde als unbedenklich richtig positives Ereignis betrachtet werden.
-
-2. Wenn es sich beim hinzugefügten Objekt um ein Benutzerkonto handelt, überprüfen Sie, welche Aktionen das Benutzerkonto durchgeführt hat, nachdem es zu der Administratorgruppe hinzugefügt wurde. Wechseln Sie für weiteren Kontext zu der Seite des Benutzers in Azure ATP. Gab es vor oder nach dem Hinzufügen andere verdächtige Aktivitäten im Zusammenhang mit dem Konto? Laden Sie den Bericht **Änderungen an sensiblen Gruppen** herunter, um festzustellen, welche Änderungen von wem im gleichen Zeitraum vorgenommen wurden.
-
-**Wartung**
-
-Halten Sie die Zahl der Benutzer, die zum Ändern von sensiblen Gruppen autorisiert sind, so gering wie möglich.
-
-Richten Sie gegebenenfalls [Privileged Access Management for Active Directory (Privileged Access Management für Active Directory)](https://docs.microsoft.com/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services) ein.
 
 
 ## <a name="brute-force-attack-using-ldap-simple-bind"></a>Brute-Force-Angriff mithilfe einer einfachen LDAP-Bindung
@@ -406,7 +382,7 @@ In dieser Erkennung wird eine Warnung ausgelöst, wenn eine SMB-Sitzungsenumerat
 
 Verwenden Sie das [Net Cease-Tool](https://gallery.technet.microsoft.com/Net-Cease-Blocking-Net-1e8dcb5b), um den Schutz Ihrer Umgebung gegen diese Attacken zu erhöhen.
 
-## <a name="remote-execution-attempt"></a>Remoteausführungsversuch
+## <a name="remote-code-execution-attempt"></a>Versuchte Remote-Codeausführung
 
 **Beschreibung**
 
@@ -454,7 +430,25 @@ In dieser Erkennung wird eine Warnung ausgelöst, wenn viele Authentifizierungsf
 
 [Komplexe bzw. lange Kennwörter](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) stellen die erste Sicherheitsstufe zum Schutz gegen Brute-Force-Angriffe dar.
 
-## <a name="suspicious-domain-controller-promotion-potential-dcshadow-attack---new"></a>Verdächtige Heraufstufung zu Domänencontrollern (potenzieller DcShadow-Angriff) – Neu
+## <a name="suspicious-communication-over-dns---preview"></a>Verdächtige Kommunikation über DNS – Vorschau
+
+**Beschreibung**
+
+In den meisten Organisationen wird das DNS-Protokoll nicht überwacht und nur selten wegen böswilliger Angriffe blockiert. Das gibt einem Angreifer auf einem kompromittierten Computer die Möglichkeit, das DNS-Protokoll zu missbrauchen. Böswillige Kommunikation über DNS kann zur Datenexfiltration, Kommando- und Führungssystemeinschränkung und/oder zur Umgehung von Netzwerkeinschränkungen führen.
+
+**Untersuchung**
+> [!NOTE]
+> *Verdächtige Kommunikation über DNS*: Diese Sicherheitswarnungen listen die vermutete Domäne auf. Neue Domänen, oder Domänen, die erst vor Kurzem hinzugefügt wurden, Azure ATP aber noch nicht bekannt sind und nicht erkannt werden, von denen aber feststeht, dass sie Teil Ihrer Organisation sind, können geschlossen werden. 
+
+
+1.  In einigen legitimen Unternehmen wird DNS für die reguläre Kommunikation verwendet. Überprüfen Sie, ob die registrierte Abfragedomäne zu einer vertrauenswürdigen Quelle gehört, wie etwa Ihrem Virenschutzanbieter. Wenn die Domäne bekannt und vertrauenswürdig ist und DNS-Abfragen zulässig sind, kann die Warnung geschlossen werden und die Domäne für zukünftige Warnungen [ausgeschlossen](excluding-entities-from-detections.md) werden. 
+3.   Wenn die registrierte Abfragedomäne nicht vertrauenswürdig ist, identifizieren Sie den Prozess, der die Anforderung erstellt hat, auf dem Quellcomputer. Verwenden Sie zur Unterstützung bei dieser Aufgabe den [Prozessmonitor](https://docs.microsoft.com/en-us/sysinternals/downloads/procmon).
+4.  Bestimmen des Anfangs der verdächtigen Aktivität Wurden neue Programme (AV?) in der Organisation bereitgestellt oder installiert? Gibt es weitere Warnungen um die gleiche Uhrzeit?
+5.  Klicken Sie auf den Quellcomputer, um auf dessen Profilseite zuzugreifen. Überprüfen Sie, was ungefähr zum Zeitpunkt der DNS-Abfrage passiert ist. Suchen Sie nach ungewöhnlichen Aktivitäten, z.B.: Wer war angemeldet, und welche Ressourcen wurden verwendet. Wenn Sie die Windows Defender ATP-Integration bereits aktiviert haben, klicken Sie auf das Windows Defender ATP-Badge, ![Windows Defender ATP-Badge](./media/wd-badge.png) um den Computer weiter zu untersuchen. Mithilfe von Windows Defender ATP können Sie sehen, welche Prozesse und Warnungen ungefähr gleichzeitig mit der Warnung aufgetreten sind.
+
+**Wartung** Wenn sich die registrierte Domäne nach Ihrer Untersuchung als nicht vertrauenswürdig erweist, empfehlen wir, die Zieldomäne zu blockieren, um zukünftig jede Kommunikation zu vermeiden. 
+
+## <a name="suspicious-domain-controller-promotion-potential-dcshadow-attack"></a>Verdächtige Heraufstufung zu Domänencontrollern (potenzieller DcShadow-Angriff)
 
 **Beschreibung**
 
@@ -492,8 +486,33 @@ Nutzen Sie [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/
 > [!NOTE]
 > Die Erkennung verdächtiger Heraufstufungen zu Domänencontrollern (potenzieller DcShadow-Angriff) wird nur von ATP-Sensoren unterstützt. 
 
+## <a name="suspicious-modification-of-sensitive-groups"></a>Verdächtige Modifizierung von sensiblen Gruppen
 
-## <a name="suspicious-replication-request-potential-dcshadow-attack---new"></a>Verdächtige Replikationsanforderung (potenzieller DcShadow-Angriff) – Neu
+**Beschreibung**
+
+Angreifer fügen Benutzer zu sehr privilegierten Gruppen hinzu. Dadurch können Sie Zugriff auf weitere Ressourcen und Beständigkeit erhalten. Die Erkennung basiert auf dem Erfassen der Aktivitäten von Benutzern, die Gruppen ändern und den Warnungen, die bei nicht ordnungsgemäßen Ergänzungen zu einer sensiblen Gruppe angezeigt werden. Die Erfassung wird kontinuierlich von Azure ATP ausgeführt. Der Mindestzeitraum, bevor eine Warnung ausgelöst werden kann, beträgt einen Monat pro Domänencontroller.
+
+Eine Definition von sensiblen Gruppen in Azure ATP finden Sie unter [Working with the sensitive accounts (Arbeiten mit sensiblen Konten)](sensitive-accounts.md).
+
+
+Die Erkennung basiert auf [Ereignissen, die auf Domänencontrollern überwacht werden](configure-event-collection.md).
+So stellen Sie sicher, dass Ihre Domänencontroller die benötigten Ereignisse überwachen.
+
+**Untersuchung**
+
+1. Ist das Ändern der Gruppe zulässig? </br>Zulässige Änderungen an Gruppen, die selten auftreten und nicht als „normal“ gelernt wurden, können eine Warnung auslösen. Dies würde als unbedenklich richtig positives Ereignis betrachtet werden.
+
+2. Wenn es sich beim hinzugefügten Objekt um ein Benutzerkonto handelt, überprüfen Sie, welche Aktionen das Benutzerkonto durchgeführt hat, nachdem es zu der Administratorgruppe hinzugefügt wurde. Wechseln Sie für weiteren Kontext zu der Seite des Benutzers in Azure ATP. Gab es vor oder nach dem Hinzufügen andere verdächtige Aktivitäten im Zusammenhang mit dem Konto? Laden Sie den Bericht **Änderungen an sensiblen Gruppen** herunter, um festzustellen, welche Änderungen von wem im gleichen Zeitraum vorgenommen wurden.
+
+**Wartung**
+
+Halten Sie die Zahl der Benutzer, die zum Ändern von sensiblen Gruppen autorisiert sind, so gering wie möglich.
+
+Richten Sie gegebenenfalls [Privileged Access Management for Active Directory (Privileged Access Management für Active Directory)](https://docs.microsoft.com/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services) ein.
+
+
+
+## <a name="suspicious-replication-request-potential-dcshadow-attack"></a>Verdächtige Replikationsanforderung (potenzieller DCShadow-Angriff) 
 
 **Beschreibung** 
 
@@ -547,7 +566,7 @@ Ein verdächtiger Dienst wurde von Ihrer Organisation auf einem Domänencontroll
 - Implementieren Sie den Zugriff mit weniger privilegierten Rechten auf Domänencomputern, um nur bestimmten Benutzern die Erstellung neuer Dienste zu erlauben.
 
 
-## Verdächtige VPN-Verbindung – Neu<a name="suspicious-vpn-detection"></a>
+## Verdächtige VPN-Verbindung <a name="suspicious-vpn-detection"></a>
 
 **Beschreibung**
 
@@ -604,9 +623,9 @@ Patchen Sie all Ihre Computer, und führen Sie insbesondere Sicherheitsupdates d
 
 
 > [!NOTE]
-> Wenden Sie sich an den Support, um eine verdächtige Aktivität zu deaktivieren.
+> Wenn Sie eine Sicherheitswarnung deaktivieren möchten, wenden Sie sich an den Support.
 
 
 ## <a name="see-also"></a>Weitere Informationen
 - [Arbeiten mit verdächtigen Aktivitäten](working-with-suspicious-activities.md)
-- [Weitere Informationen finden Sie im ATP-Forum.](https://aka.ms/azureatpcommunity)
+- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)

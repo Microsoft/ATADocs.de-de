@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/26/2018
+ms.date: 10/7/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 78c30240489e81109aadcb17f9f7395642d2b19b
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: e3cf97c4bd95a1fefc0aef29009f644cd5ef907d
+ms.sourcegitcommit: bbbe808c08ce703a314c82b46aedaae79ab256a3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126347"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848540"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -31,26 +31,26 @@ Dieser Artikel beschreibt die Voraussetzungen für eine erfolgreiche Bereitstell
 > Informationen zum Planen von Ressourcen und Kapazitäten finden Sie unter [Azure ATP-Kapazitätsplanung](atp-capacity-planning.md).
 
 
-Azure ATP besteht aus dem Azure ATP-Clouddienst, der aus dem Verwaltungsportal und dem Arbeitsbereichsportal besteht, dem Azure ATP-Sensor und/oder dem eigenständigen Azure ATP-Sensor. Weitere Informationen zu den einzelnen Azure ATP-Komponenten finden Sie unter [Azure ATP-Architektur](atp-architecture.md).
+Azure ATP besteht aus dem Azure ATP-Clouddienst, der sich aus dem Azure ATP-Portal, dem Azure ATP-Sensor und/oder dem eigenständigen Azure ATP-Sensor zusammensetzt. Weitere Informationen zu den einzelnen Azure ATP-Komponenten finden Sie unter [Azure ATP-Architektur](atp-architecture.md).
 
-Jede Azure ATP-Instanz unterstützt mehrere Active Directory-Gesamtstrukturbegrenzungen und die Gesamtstrukturfunktionsebene (Forest Functional Level, FFL) von Windows 2003 und höher. 
+Zum Erstellen Ihrer Azure ATP-Instanz benötigen Sie einen AAD-Mandanten mit mindestens einem globalen Administrator bzw. einem Sicherheitsadministrator. Jede Azure ATP-Instanz unterstützt mehrere Active Directory-Gesamtstrukturbegrenzungen und die Gesamtstrukturfunktionsebene (Forest Functional Level, FFL) von Windows 2003 und höher. 
 
+Dieser Leitfaden zu Voraussetzungen wird in die folgenden Abschnitte unterteilt, um sicherzustellen, dass Sie über alle erforderlichen Informationen verfügen, die Sie für eine erfolgreiche Bereitstellung von Azure ATP benötigen. 
 
-[Vorbereitung](#before-you-start): In diesem Abschnitt werden die Informationen aufgeführt, die Sie sammeln sollten, und Konten und Netzwerkentitäten genannt, die vor der Installation von Azure ATP vorhanden sein sollten.
+[Vorbereitung:](#before-you-start) In diesem Abschnitt werden die zu sammelnden Informationen aufgeführt sowie Konten und Netzwerkentitäten, die vor Beginn der Installation vorhanden sein sollten.
 
-[Azure ATP-Verwaltungsportal](#azure-atp-workspace-management-portal-and-workspace-portal-requirements): In diesem Abschnitt werden die Browseranforderungen für das Azure ATP-Verwaltungsportal beschrieben.
-
-[Azure ATP-Arbeitsbereichsportal](#azure-atp-workspace-management-portal-and-workspace-portal-requirements): In diesem Abschnitt werden die Browseranforderungen für das Ausführen des Azure ATP-Arbeitsbereichsportals beschrieben.
+[Azure ATP-Portal](#azure-atp-workspace-management-portal-and-workspace-portal-requirements): In diesem Abschnitt werden die Browseranforderungen für das Azure ATP-Portal erläutert.
 
 [Azure ATP-Sensor](#azure-atp-lightweight-sensor-requirements): In diesem Abschnitt werden die Hardware- und Softwareanforderungen für den Azure ATP-Sensor beschrieben.
 
 [Eigenständiger Azure ATP-Sensor](#azure-atp-sensor-requirements): In diesem Abschnitt werden die Hardware- und Softwareanforderungen für den eigenständigen Azure ATP-Sensor beschrieben und Einstellungen genannt, die Sie auf Ihren eigenständigen Azure ATP-Sensorservern konfigurieren müssen.
 
-![Azure ATP-Architekturdiagramm](media/ATP-architecture-topology.png)
-
 ## <a name="before-you-start"></a>Vorbereitung
 In diesem Abschnitt werden die Informationen aufgeführt, die Sie sammeln sollten, und Konten- und Netzwerk-Entitäten genannt, die vor der Installation von Azure ATP vorhanden sein sollten.
 
+- Sie können eine Lizenz für Enterprise Mobility + Security 5 (EMS E5) entweder direkt über das [Office 365-Portal](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) oder über das CSP-Lizenzierungsmodell (Cloud Solution Partner) erwerben.  
+
+- Überprüfen Sie, ob die Domänencontroller, auf denen Sie Azure ATP-Sensoren installieren möchten, über das Internet mit dem Azure ATP-Clouddienst verbunden sind. Der Azure ATP-Sensor unterstützt die Verwendung eines Proxys. Weitere Informationen zur Proxykonfiguration finden Sie unter [Konfigurieren eines Proxys für Azure ATP](configure-proxy.md).  
 
 -   Ein **lokales** AD-Benutzerkonto und -Kennwort mit Lesezugriff auf alle Objekte in den überwachten Domänen.
 
@@ -59,22 +59,87 @@ In diesem Abschnitt werden die Informationen aufgeführt, die Sie sammeln sollte
 
 -   Wenn Sie Wireshark auf einem eigenständigen Azure ATP-Sensor ausführen, müssen Sie den Azure Advanced Threat Protection-Sensordienst neu starten, nachdem Sie das Erfassen mit Wireshark abgeschlossen haben. Wenn dies nicht der Fall ist, beendet der Sensor die Erfassung von Datenverkehr.
 
-- Wenn Sie versuchen, den ATP-Sensor auf einem Computer zu installieren, der mit einem NIC-Teaming-Adapter konfiguriert ist, wird ein Installationsfehler gemeldet. Wenn Sie den ATP-Sensor auf einem Computer installieren möchten, der mit NIC-Teamvorgang konfiguriert ist, finden Sie weitere Informationen unter [Problem mit NIC-Teamvorgängen beim Azure ATP-Sensor](troubleshooting-atp-known-issues.md#nic-teaming).
+- Wenn Sie versuchen, den Azure ATP-Sensor auf einem Computer zu installieren, der mit einem NIC-Teaming-Adapter konfiguriert ist, wird ein Installationsfehler gemeldet. Wenn Sie den Azure ATP-Sensor auf einem Computer installieren möchten, der mit NIC-Teamvorgang konfiguriert ist, finden Sie weitere Informationen unter [Problem mit NIC-Teamvorgängen beim Azure ATP-Sensor](troubleshooting-atp-known-issues.md#nic-teaming).
 
--    Empfohlen: Benutzer sollten über schreibgeschützten Zugriff auf den Container mit gelöschten Objekten verfügen. So kann Azure ATP eine Massenlöschung von Objekten in der Domäne erkennen. Informationen zum Konfigurieren des schreibgeschützten Zugriffs auf den Container mit gelöschten Objekten finden Sie im Abschnitt **Changing permissions on a deleted object container** (Ändern von Berechtigungen für einen Container mit gelöschten Objekten) im Artikel [View or Set Permissions on a Directory Object](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) (Anzeigen und Festlegen von Berechtigungen für ein Verzeichnisobjekt).
+-    Empfohlen: Benutzer sollten über schreibgeschützten Zugriff auf den Container mit gelöschten Objekten verfügen. Dadurch kann Azure ATP Löschungen von Benutzern über Ihr Active Directory erkennen. Informationen zum Konfigurieren des schreibgeschützten Zugriffs auf den Container mit gelöschten Objekten finden Sie im Abschnitt **Changing permissions on a deleted object container** (Ändern von Berechtigungen für einen Container mit gelöschten Objekten) im Artikel [View or Set Permissions on a Directory Object](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) (Anzeigen und Festlegen von Berechtigungen für ein Verzeichnisobjekt).
 
 -   Optional: ein Benutzerkonto eines Benutzers ohne Netzwerkaktivitäten. Dieses Konto wird als Azure ATP-Honeytoken-Benutzer konfiguriert. Weitere Informationen finden Sie unter [Configure IP address exclusions and Honeytoken user (Konfigurieren von Ausschlüssen und Honeytoken-Benutzern)](install-atp-step7.md).
 
--   Optional: Wenn Sie den eigenständigen Sensor bereitstellen, ist die Weiterleitung der Windows-Ereignisse 4776, 4732, 4733, 4728, 4729, 4756, 4757 und 7045 an ATP nötig, um in Azure ATP die Erkennung von Pass-the-Hash- und Brute Force-Angriffen, Änderungen an sensiblen Gruppen, Honeytoken und der Erstellung eines schädlichen Diensts zu verbessern. Der Azure ATP-Sensor empfängt diese Ereignisse automatisch. Im eigenständigen Azure ATP-Sensor können diese Ereignisse von SIEM empfangen oder durch Festlegen der Windows-Ereignisweiterleitung von Ihrem Domänencontroller aus abgerufen werden. Die gesammelten Ereignisse versorgen Azure ATP mit zusätzlichen Informationen, die nicht über den Datenverkehr des Domänencontrollers verfügbar sind.
+-   Optional: Wenn Sie den eigenständigen Sensor bereitstellen, ist die Weiterleitung der Windows-Ereignisse 4776, 4732, 4733, 4728, 4729, 4756, 4757 und 7045 an Azure ATP erforderlich, um in Azure ATP die Erkennung von Pass-the-Hash- und Brute Force-Angriffen, Änderungen an sensiblen Gruppen, Honeytoken und der Erstellung eines schädlichen Diensts zu verbessern. Der Azure ATP-Sensor empfängt diese Ereignisse automatisch. Im eigenständigen Azure ATP-Sensor können diese Ereignisse von SIEM empfangen oder durch Festlegen der Windows-Ereignisweiterleitung von Ihrem Domänencontroller aus abgerufen werden. Die gesammelten Ereignisse versorgen Azure ATP mit zusätzlichen Informationen, die nicht über den Datenverkehr des Domänencontrollers verfügbar sind.
 
-
-## <a name="azure-atp-workspace-management-portal-and-workspace-portal-requirements"></a>Voraussetzungen für Azure ATP-Arbeitsbereich-Verwaltungsportal und -Arbeitsbereichsportal
-Zugriff auf das Azure ATP-Arbeitsbereichsportal und das Azure ATP-Arbeitsbereich-Verwaltungsportal erfolgt über einen Browser. Folgende Browser und Einstellungen werden unterstützt:
+## <a name="azure-atp-portal-requirements"></a>Anforderungen an das Azure ATP-Portal
+Der Zugriff auf das Azure ATP-Portal erfolgt über einen Browser. Folgende Browser und Einstellungen werden unterstützt:
 -   Microsoft Edge
 -   Internet Explorer Version 10 oder höher
 -   Google Chrome 4.0 und höher
 -   Mindestauflösung der Bildschirmbreite: 1.700 Pixel
--   Firewall/Proxy freigeben – Um mit dem Azure ATP-Clouddienst zu kommunizieren, muss in Ihrer Firewall und auf Ihrem Proxyserver Port 443 für „*.atp.azure.com“ freigegeben sein. 
+-   Firewall/Proxy freigeben – Um mit dem Azure ATP-Clouddienst zu kommunizieren, muss in Ihrer Firewall und auf Ihrem Proxyserver Port 443 für „*.atp.azure.com“ freigegeben sein.
+
+ ![Azure ATP-Architekturdiagramm](media/ATP-architecture-topology.png)
+
+
+> [!NOTE]
+> Standardmäßig unterstützt Azure ATP bis zu 100 Sensoren. Kontaktieren Sie den Azure ATP-Support, wenn Sie noch mehr Sensoren installieren möchten.
+
+## <a name="azure-atp-sensor-requirements"></a>Voraussetzungen für den Azure ATP-Sensor
+In diesem Abschnitt sind die Voraussetzungen für den Azure ATP-Sensor aufgeführt.
+### <a name="general"></a>Allgemein
+Der Azure ATP-Sensor unterstützt die Installation auf einem Domänencontroller mit Windows Server 2008 R2 SP1 (ohne Server Core), Windows Server 2012, Windows Server 2012 R2 und Windows Server 2016 (mit Core, jedoch ohne Nano).
+
+Beim Domänencontroller kann es sich um einen schreibgeschützten Domänencontroller (Read Only Domain Controller, RODC) handeln.
+
+Für die Kommunikation Ihrer Domänencontroller mit dem Clouddienst müssen Sie in Ihrer Firewall und auf Ihrem Proxyserver Port 443 für „*.atp.azure.com“ freigeben.
+
+Während der Installation wird .NET Framework 4.7 installiert und erfordert möglicherweise einen Neustart des Domänencontrollers,wenn ein Neustart bereits aussteht.
+
+
+> [!NOTE]
+> Mindestens 5 GB Speicherplatz auf dem Datenträger wird benötigt, 10 GB wird empfohlen. Dies umfasst den Speicherplatz, der für die Azure ATP-Binärdateien, Azure ATP-Protokolle und Leistungsprotokolle benötigt wird.
+
+### <a name="server-specifications"></a>Serverspezifikationen
+
+Der Azure ATP-Sensor erfordert mindestens zwei Kerne und 6 GB RAM auf dem Domänencontroller.
+Um eine optimale Leistung zu erzielen, legen Sie die **Energieoption** des Azure ATP-Sensors auf **Hohe Leistung** fest.
+Der Azure ATP-Sensor kann auf Domänencontrollern verschiedener Auslastungen und Größen bereitgestellt werden, abhängig vom Umfang des Datenverkehrs zwischen den Domänencontrollern und der installierten Ressourcen auf dem Domänencontroller.
+
+>[!NOTE] 
+> Bei Ausführung als virtueller Computer wird kein dynamischer Arbeitsspeicher und keine andere Speichererweiterungsfunktion unterstützt.
+
+Weitere Informationen zu den Hardwareanforderungen des Azure ATP-Sensors finden Sie unter [Azure ATP-Kapazitätsplanung](atp-capacity-planning.md).
+
+### <a name="time-synchronization"></a>Zeitsynchronisierung
+
+Die Zeitsynchronisierung der Server und Domänencontroller, auf denen der Sensor installiert ist, muss in einem Bereich von fünf Minuten zueinander liegen.
+
+### <a name="network-adapters"></a>Netzwerkadapter
+
+Der Azure ATP-Sensor überwacht den lokalen Datenverkehr auf allen Netzwerkadaptern des Domänencontrollers. <br>
+Nach der Bereitstellung können Sie das Azure ATP-Arbeitsbereichsportal verwenden, wenn Sie die überwachten Netzwerkadapter ändern möchten.
+
+Der Sensor wird nicht in Domänencontrollern unter Windows 2008 R2 mit aktivierten Teamvorgängen für Broadcom-Netzwerkadapter unterstützt.
+
+### <a name="ports"></a>Ports
+In der folgenden Tabelle sind die Ports aufgeführt, die für den Azure ATP-Sensor mindestens konfiguriert werden müssen:
+
+|Protokoll|Transport|Port|Zu/Von|Richtung|
+|------------|-------------|--------|-----------|-------------|
+|**Internetports**|||||
+|SSL (*.atp.azure.com)|TCP|443|Azure ATP-Clouddienst|Ausgehend|
+|**Interne Ports**|||||
+|DNS|TCP und UDP|53|DNS-Server|Ausgehend|
+|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Alle Geräte im Netzwerk|Ausgehend|
+|NTLM über RPC|TCP|135|Alle Geräte im Netzwerk|Beide|
+|NetBIOS|UDP|137|Alle Geräte im Netzwerk|Beide|
+|Syslog (optional)|TCP/UDP|514, je nach Konfiguration|SIEM-Server|Eingehend|
+|RADIUS|UDP|1813|RADIUS|Eingehend|
+|TLS-zu-RDP-Port|TCP|3389|Alle Geräte im Netzwerk|Beide|
+
+> [!NOTE]
+> - Bei Verwendung des Verzeichnisdienst-Benutzerkontos fragt der Sensor mithilfe von SAM-R (Netzwerkanmeldung) Endpunkte in Ihrer Organisation für lokale Administratoren ab, um [den Graph des Lateral-Movement-Pfads](use-case-lateral-movement-path.md) zu erstellen. Weitere Informationen finden Sie unter [Erforderliche Berechtigung für SAM-R konfigurieren](install-atp-step8-samr.md).
+> - Die folgenden Ports müssen auf eingehenden Geräten im Netzwerk des eigenständigen Azure ATP-Sensors geöffnet sein:
+>   -   NTLM über RPC (TCP-Port 135) für Lösungszwecke
+>   -   NetBIOS (UDP-Port 137) für Lösungszwecke
+>   -   RDP (TCP-Port 3389), nur das erste Paket von *Client hello* zu Auflösungszwecken<br> Beachten Sie, dass auf keinem Port eine Authentifizierung durchgeführt wird.
 
 ## <a name="azure-atp-standalone-sensor-requirements"></a>Voraussetzungen für den eigenständigen Azure ATP-Sensor
 In diesem Abschnitt werden die Voraussetzungen für den eigenständigen Azure ATP-Sensor aufgeführt.
@@ -156,72 +221,11 @@ In der folgenden Tabelle sind die Ports aufgeführt, die für den Verwaltungsada
 >   -   NetBIOS (UDP-Port 137) für Lösungszwecke
 >   -   RDP (TCP-Port 3389), nur das erste Paket von *Client hello* zu Auflösungszwecken<br> Beachten Sie, dass auf keinem Port eine Authentifizierung durchgeführt wird.
 
-## <a name="azure-atp-sensor-requirements"></a>Voraussetzungen für den Azure ATP-Sensor
-In diesem Abschnitt sind die Voraussetzungen für den Azure ATP-Sensor aufgeführt.
-### <a name="general"></a>Allgemein
-Der Azure ATP-Sensor unterstützt die Installation auf einem Domänencontroller mit Windows Server 2008 R2 SP1 (ohne Server Core), Windows Server 2012, Windows Server 2012 R2 und Windows Server 2016 (mit Core, jedoch ohne Nano).
-
-Beim Domänencontroller kann es sich um einen schreibgeschützten Domänencontroller (Read Only Domain Controller, RODC) handeln.
-
-Für die Kommunikation Ihrer Domänencontroller mit dem Clouddienst müssen Sie in Ihrer Firewall und auf Ihrem Proxyserver Port 443 für „*.atp.azure.com“ freigeben.
-
-Während der Installation wird .NET Framework 4.7 installiert und erfordert möglicherweise einen Neustart des Domänencontrollers,wenn ein Neustart bereits aussteht.
-
-
-> [!NOTE]
-> Mindestens 5 GB Speicherplatz auf dem Datenträger wird benötigt, 10 GB wird empfohlen. Dies umfasst den Speicherplatz, der für die Azure ATP-Binärdateien, Azure ATP-Protokolle und Leistungsprotokolle benötigt wird.
-
-### <a name="server-specifications"></a>Serverspezifikationen
-
-Der Azure ATP-Sensor erfordert mindestens zwei Kerne und 6 GB RAM auf dem Domänencontroller.
-Um eine optimale Leistung zu erzielen, legen Sie die **Energieoption** des Azure ATP-Sensors auf **Hohe Leistung** fest.
-Der Azure ATP-Sensor kann auf Domänencontrollern verschiedener Auslastungen und Größen bereitgestellt werden, abhängig vom Umfang des Datenverkehrs zwischen den Domänencontrollern und der installierten Ressourcen auf dem Domänencontroller.
-
->[!NOTE] 
-> Bei Ausführung als virtueller Computer wird kein dynamischer Arbeitsspeicher und keine andere Speichererweiterungsfunktion unterstützt.
-
-Weitere Informationen zu den Hardwareanforderungen des Azure ATP-Sensors finden Sie unter [Azure ATP-Kapazitätsplanung](atp-capacity-planning.md).
-
-### <a name="time-synchronization"></a>Zeitsynchronisierung
-
-Die Zeitsynchronisierung der Server und Domänencontroller, auf denen der Sensor installiert ist, muss in einem Bereich von fünf Minuten zueinander liegen.
-
-### <a name="network-adapters"></a>Netzwerkadapter
-
-Der Azure ATP-Sensor überwacht den lokalen Datenverkehr auf allen Netzwerkadaptern des Domänencontrollers. <br>
-Nach der Bereitstellung können Sie das Azure ATP-Arbeitsbereichsportal verwenden, wenn Sie die überwachten Netzwerkadapter jemals ändern möchten.
-
-Der Sensor wird nicht in Domänencontrollern unter Windows 2008 R2 mit aktivierten Teamvorgängen für Broadcom-Netzwerkadapter unterstützt.
-
-### <a name="ports"></a>Ports
-In der folgenden Tabelle sind die Ports aufgeführt, die für den Azure ATP-Sensor mindestens konfiguriert werden müssen:
-
-|Protokoll|Transport|Port|Zu/Von|Richtung|
-|------------|-------------|--------|-----------|-------------|
-|**Internetports**|||||
-|SSL (*.atp.azure.com)|TCP|443|Azure ATP-Clouddienst|Ausgehend|
-|**Interne Ports**|||||
-|DNS|TCP und UDP|53|DNS-Server|Ausgehend|
-|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Alle Geräte im Netzwerk|Ausgehend|
-|NTLM über RPC|TCP|135|Alle Geräte im Netzwerk|Beide|
-|NetBIOS|UDP|137|Alle Geräte im Netzwerk|Beide|
-|Syslog (optional)|TCP/UDP|514, je nach Konfiguration|SIEM-Server|Eingehend|
-|RADIUS|UDP|1813|RADIUS|Eingehend|
-|TLS-zu-RDP-Port|TCP|3389|Alle Geräte im Netzwerk|Beide|
-
-> [!NOTE]
-> - Bei Verwendung des Verzeichnisdienst-Benutzerkontos fragt der Sensor mithilfe von SAM-R (Netzwerkanmeldung) Endpunkte in Ihrer Organisation für lokale Administratoren ab, um [den Graph des Lateral-Movement-Pfads](use-case-lateral-movement-path.md) zu erstellen. Weitere Informationen finden Sie unter [Erforderliche Berechtigung für SAM-R konfigurieren](install-atp-step8-samr.md).
-> - Die folgenden Ports müssen auf eingehenden Geräten im Netzwerk des eigenständigen Azure ATP-Sensors geöffnet sein:
->   -   NTLM über RPC (TCP-Port 135) für Lösungszwecke
->   -   NetBIOS (UDP-Port 137) für Lösungszwecke
->   -   RDP (TCP-Port 3389), nur das erste Paket von *Client hello* zu Auflösungszwecken<br> Beachten Sie, dass auf keinem Port eine Authentifizierung durchgeführt wird.
-
-
 
 
 ## <a name="see-also"></a>Weitere Informationen
 - [Azure ATP sizing tool (Azure ATP-Tool zur Größenanpassung)](http://aka.ms/aatpsizingtool)
 - [Azure ATP architecture (Azure ATP-Architektur)](atp-architecture.md)
-- [Install ATP (Installieren von ATP)](install-atp-step1.md)
-- [Weitere Informationen finden Sie im ATP-Forum.](https://aka.ms/azureatpcommunity)
+- [Install Azure ATP (Installieren von Azure ATP)](install-atp-step1.md)
+- [Check out the Azure ATP forum! (Besuchen Sie das Azure ATP-Forum)](https://aka.ms/azureatpcommunity)
 

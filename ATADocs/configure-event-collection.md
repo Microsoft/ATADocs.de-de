@@ -7,18 +7,18 @@ ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: conceptual
-ms.prod: ''
-ms.service: advanced-threat-analytics
+ms.prod: advanced-threat-analytics
+ms.service: ''
 ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0a939f36a86e1ad6cd275a16a4dd4468defa7a76
-ms.sourcegitcommit: a5823d0dfc48783ab990a99ca3f65b614fb49e75
+ms.openlocfilehash: 512e7fa979a6fd5e140d65836b533b720a6dc03b
+ms.sourcegitcommit: 1b23381ca4551a902f6343428d98f44480077d30
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44697207"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47403215"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -27,16 +27,16 @@ ms.locfileid: "44697207"
 # <a name="configuring-windows-event-forwarding"></a>Konfigurieren der Windows-Ereignisweiterleitung
 
 > [!NOTE]
-> Für die ATA-Version 1.8 und höher ist die Konfiguration der Ereignissammlung nicht länger für ATA-Lightweight-Gateways erforderlich. Das ATA-Lightweight-Gateway kann jetzt Ereignisse lokal lesen, ohne die Ereignisweiterleitung zu konfigurieren.
-
+> Für die ATA-Version 1.8 und höher ist die Konfiguration der Ereignissammlung nicht länger für ATA-Lightweight-Gateways erforderlich. Das ATA-Lightweight-Gateway liest jetzt Ereignisse lokal, ohne die Ereignisweiterleitung zu konfigurieren.
 
 Um die Erkennungsfunktionalität zu verbessern, benötigt ATA die folgenden Windows-Ereignisse:4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045. Diese können entweder automatisch vom ATA-Lightweight-Gateway gelesen oder, falls das ATA-Lightweight-Gateway nicht bereitgestellt wurde, an das ATA-Gateway weitergeleitet werden. Dazu gibt es zwei Möglichkeiten: Konfigurieren des ATA-Gateways, sodass es auf SIEM-Ereignisse lauscht, oder Konfigurieren der Windows-Ereignisweiterleitung.
 
-
+> [!NOTE]
+> Bei Verwendung von Server Core kann [wecutil](https://docs.microsoft.com/windows-server/administration/windows-commands/wecutil) zum Erstellen und Verwalten von Abonnements für Ereignisse verwendet werden, die von Remotecomputern weitergeleitet werden.
 
 ### <a name="wef-configuration-for-ata-gateways-with-port-mirroring"></a>Konfiguration der Windows-Ereignisweiterleitung für ATA-Gateways mit Portspiegelung
 
-Nachdem Sie die Portspiegelung von den Domänencontrollern zum ATA-Gateway konfiguriert haben, befolgen Sie die folgenden Anweisungen, um die Windows-Ereignisweiterleitung mithilfe der quellinitiierten Konfiguration zu konfigurieren. Dies ist eine Möglichkeit, die Windows-Ereignisweiterleitung zu konfigurieren. 
+Nachdem Sie die Portspiegelung von den Domänencontrollern zum ATA-Gateway konfiguriert haben, verwenden Sie die folgenden Anweisungen, um die Windows-Ereignisweiterleitung mithilfe der quellinitiierten Konfiguration zu konfigurieren. Dies ist eine Möglichkeit, die Windows-Ereignisweiterleitung zu konfigurieren. 
 
 **Schritt 1: Fügen Sie das Netzwerkdienstkonto zur Domäne „Ereignisprotokolllesergruppe“ hinzu.** 
 
@@ -44,7 +44,7 @@ In diesem Szenario gehen wir davon aus, dass das ATA-Gateway Mitglied der Domän
 
 1.  Öffnen Sie „Active Directory-Benutzer und -Computer“, navigieren Sie zum Ordner **BuiltIn**, und doppelklicken Sie auf **Ereignisprotokollleser**. 
 2.  Wählen Sie **Mitglieder** aus.
-4.  Wenn **Netzwerkdienst** nicht aufgelistet ist, klicken Sie auf **Hinzufügen**, und geben Sie **Netzwerkdienst** in das Feld **Geben Sie die zu verwendenden Objektnamen ein** ein. Klicken Sie anschließend auf **Namen überprüfen**, und klicken Sie zweimal auf **OK**. 
+3.  Wenn **Netzwerkdienst** nicht aufgelistet ist, klicken Sie auf **Hinzufügen**, und geben Sie **Netzwerkdienst** in das Feld **Geben Sie die zu verwendenden Objektnamen ein** ein. Klicken Sie anschließend auf **Namen überprüfen**, und klicken Sie zweimal auf **OK**. 
 
 Sie müssen die Domänencontroller neu starten, nachdem Sie den **Netzwerkdienst** der **Ereignisprotokollleser**-Gruppe hinzugefügt haben, damit die Änderungen in Kraft treten können.
 
@@ -62,7 +62,9 @@ Sie müssen die Domänencontroller neu starten, nachdem Sie den **Netzwerkdienst
    
     1.  Wählen Sie **Aktiviert** aus.
     2.  Klicken Sie unter **Optionen** auf **Anzeigen**.
-    3.  Geben Sie unter **SubscriptionManagers** folgenden Wert ein, und klicken Sie auf **OK**: *Server=`http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10*` (zum Beispiel: Server=`http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
+    3.  Geben Sie unter **SubscriptionManagers** folgenden Wert ein, und klicken Sie auf **OK**: *Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10* 
+    
+        *(Beispiel: Server =http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC, Refresh = 10)*
  
     ![Configure target subscription image](media/wef%202%20config%20target%20sub%20manager.png)
    

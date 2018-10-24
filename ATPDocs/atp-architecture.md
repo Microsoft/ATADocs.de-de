@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 9/25/2018
+ms.date: 10/04/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,19 +13,19 @@ ms.technology: ''
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: fb9e99d43a800f6b7bc080fa3fe0bc2453f3d754
-ms.sourcegitcommit: 8e80f59409c65e7d8d60ec7de8b96b621795699a
+ms.openlocfilehash: 6853a2a768fabde94c7aa613c9a6c0403f14e066
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47168568"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783558"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
 
 # <a name="azure-atp-architecture"></a>Azure ATP-Architektur
 
-Azure ATP erfasst und analysiert Netzwerkdatenverkehr und nutzt Windows-Ereignisse (direkt von Ihren Domänencontrollern oder von einem SIEM-Server), um Ihre Domänencontroller zu überwachen. Diese Daten werden auf Angriffe oder Bedrohungen geprüft. Azure ATP erhält durch Profilerstellung, deterministische Erkennungsmethoden, maschinelles Lernen und Verhaltensalgorithmen Informationen zu Ihrem Netzwerk, erkennt Anomalien und warnt Sie bei verdächtigen Aktivitäten.
+Azure ATP erfasst und analysiert Netzwerkdatenverkehr und nutzt Windows-Ereignisse direkt von Ihren Domänencontrollern, um Ihre Domänencontroller zu überwachen. Diese Daten werden dann auf Angriffe oder Bedrohungen geprüft. Azure ATP erhält durch Profilerstellung, deterministische Erkennungsmethoden, maschinelles Lernen und Verhaltensalgorithmen Informationen zu Ihrem Netzwerk, erkennt Anomalien und warnt Sie bei verdächtigen Aktivitäten.
 
 Architektur von Azure Advanced Threat Protection:
 
@@ -40,7 +40,6 @@ Azure ATP umfasst die folgenden Komponenten:
 
 -   **Azure ATP-Portal** <br>
 Über das Azure ATP-Portal können Sie Ihre Azure ATP-Instanz erstellen. Im Portal haben Sie zudem Zugriff auf die von Azure ATP-Sensoren erfassten Daten. Damit können Sie Bedrohungen in Ihrer Netzwerkumgebung überwachen, verwalten und untersuchen.  
-
 -   **Azure ATP-Sensor**<br>
 Azure ATP-Sensoren werden direkt auf Ihren Domänencontrollern installiert. Der Sensor überwacht den Datenverkehr des Domänencontrollers direkt, ohne dass ein dedizierter Server oder die Konfiguration der Portspiegelung erforderlich ist.
 
@@ -67,11 +66,10 @@ Dies sind die Hauptfunktionen des Azure ATP-Sensors:
 - Abrufen von Daten über Benutzer und Computer aus der Active Directory-Domäne
 - Auflösen von Netzwerkentitäten (Benutzer, Gruppen und Computer)
 - Übertragen von relevanten Daten in den Azure ATP-Clouddienst
-> [!NOTE]
-> - Standardmäßig unterstützt Azure ATP bis zu 100 Sensoren. Kontaktieren Sie den Azure ATP-Support, wenn Sie noch mehr Sensoren installieren möchten.
+
  
 ## <a name="azure-atp-sensor-features"></a>Features des Azure ATP-Sensors
-Der Azure ATP-Sensor liest lokal Ereignisse, ohne dass zusätzliche Hardware erworben und verwaltet oder Konfigurationen vorgenommen werden müssen. Der Azure ATP-Sensor unterstützt zudem die Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW), die die Protokollinformationen für mehrere Erkennungen bereitstellt. Die Erkennung basierend auf der ETW umfasst sowohl verdächtige Replikationsanforderungen als auch die verdächtige Heraufstufung von Domänencontrollern. Beide stellen potenzielle DcShadow-Angriffe dar.
+Der Azure ATP-Sensor liest lokal Ereignisse, ohne dass zusätzliche Hardware erworben und verwaltet oder Konfigurationen vorgenommen werden müssen. Der Azure ATP-Sensor unterstützt zudem die Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW), die die Protokollinformationen für mehrere Erkennungen bereitstellt. Die Erkennung basierend auf der ETW umfasst sowohl verdächtige Replikationsanforderungen als auch die verdächtige Heraufstufung zu Domänencontrollern. Beide stellen potenzielle DCShadow-Angriffe dar.
 - Kandidat für die Domänensynchronisierung
 
     Der Kandidat für den Domänensynchronizer ist für die proaktive Synchronisierung aller Entitäten aus einer bestimmten Active Directory-Domäne verantwortlich (ähnlich dem Mechanismus, der von den Domänencontrollern selbst für die Replikation verwendet wird). Aus der Liste der Kandidaten wird nach dem Zufallsprinzip ein Sensor für den Domänensynchronizer ausgewählt. 
@@ -99,4 +97,4 @@ Der Azure ATP-Sensor liest lokal Ereignisse, ohne dass zusätzliche Hardware erw
 - [Azure ATP capacity planning (Azure ATP-Kapazitätsplanung)](atp-capacity-planning.md)
 - [Configure event forwarding (Konfigurieren der Ereignisweiterleitung)](configure-event-forwarding.md)
 - [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-forwarding.md)
-- [Weitere Informationen finden Sie im ATP-Forum.](https://aka.ms/azureatpcommunity)
+- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)

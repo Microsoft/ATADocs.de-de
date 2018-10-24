@@ -5,20 +5,20 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/15/2018
-ms.topic: conceptual
+ms.date: 10/04/2018
+ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 91e3caf8e15313069e4c2cec194a11855fd45c24
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: eaf798149c828b641ba037ffbb6854ca07c6732a
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126177"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783592"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -29,7 +29,7 @@ ms.locfileid: "44126177"
 Um die Erkennungsfunktionalität zu verbessern, benötigt Azure ATP die folgenden Windows-Ereignisse: 4776, 4732, 4733, 4728, 4729, 4756, 4757 und 7045. Diese können entweder automatisch vom Azure ATP-Sensor gelesen oder, falls dieser nicht bereitgestellt wurde, an den eigenständigen Azure ATP-Sensor weitergeleitet werden. Dazu gibt es zwei Möglichkeiten: die Konfiguration des eigenständigen Azure ATP-Sensors, sodass dieser auf SIEM-Ereignisse lauscht, oder die [Konfiguration der Windows-Ereignisweiterleitung](configure-event-forwarding.md).
 
 > [!NOTE]
-> Es ist wichtig, das ATA-Überwachungsskript vor der Konfiguration der Ereignissammlung auszuführen, um sicherzustellen, dass die Domänencontroller ordnungsgemäß für die Aufzeichnung der benötigten Ereignisse konfiguriert sind. 
+> Es ist wichtig, das Azure ATP-Überwachungsskript vor der Konfiguration der Ereignissammlung auszuführen, um sicherzustellen, dass die Domänencontroller ordnungsgemäß für die Aufzeichnung der benötigten Ereignisse konfiguriert sind. 
 
 Zusätzlich zum Sammeln und Analysieren des Netzwerkverkehrs zu und von den Domänencontrollern kann Azure ATP Windows-Ereignisse heranziehen, um Erkennungen weiter zu verbessern. Das Ereignis 4776 für NTLM wird verwendet, um verschiedene Erkennungen zu verbessern, und die Ereignisse 4732, 4733, 4728, 4729, 4756, 4757 und 7045 dienen zur Verbesserung der Erkennung sensibler Gruppenänderungen und zur Diensterstellung. Dies kann aus SIEM heraus empfangen werden oder indem Sie die Windows-Ereignisweiterleitung von Ihrem Domänencontroller aus einrichten. Die gesammelten Ereignisse versorgen Azure ATP mit zusätzlichen Informationen, die nicht über den Datenverkehr des Domänencontrollers verfügbar sind.
 
@@ -50,7 +50,7 @@ Damit Azure ATP Daten von einem Syslog-Server verwenden kann, müssen folgende S
 Weitere Informationen über das Konfigurieren der Weiterleitung bestimmter Ereignisse an einen anderen Server finden Sie in der Produktdokumentation des SIEM-/Syslog-Servers. 
 
 > [!NOTE]
->Wenn Sie keinen SIEM-/Syslog-Server verwenden, können Sie Ihre Windows-Domänencontroller zum Weiterleiten von allen erforderlichen Ereignissen konfigurieren, damit diese von ATP gesammelt und konfiguriert wird.
+>Wenn Sie keinen SIEM-/Syslog-Server verwenden, können Sie Ihre Windows-Domänencontroller zum Weiterleiten von allen erforderlichen Ereignissen konfigurieren, damit diese von Azure ATP gesammelt und konfiguriert wird.
 
 ## <a name="configuring-the-azure-atp-sensor-to-listen-for-siem-events"></a>Konfigurieren des Azure ATP-Sensors zum Lauschen auf SIEM-Ereignisse
 
@@ -188,4 +188,4 @@ Stellen Sie sicher, dass „\t“ zwischen Schlüssel=Wert-Paaren steht.
 - [Azure ATP sizing tool (Azure ATP-Tool zur Größenanpassung)](http://aka.ms/aatpsizingtool)
 - [Referenz zum Azure ATP-SIEM-Protokoll](cef-format-sa.md)
 - [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](atp-prerequisites.md)
-- [Weitere Informationen finden Sie im ATP-Forum.](https://aka.ms/azureatpcommunity)
+- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)

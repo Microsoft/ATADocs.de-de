@@ -1,55 +1,55 @@
 ---
-title: Arbeiten mit verdächtigen Aktivitäten in Azure Advanced Threat Protection | Microsoft-Dokumentation
-description: Beschreibt, wie Sie von Azure ATP identifizierte verdächtige Aktivitäten überprüfen.
+title: Arbeiten mit Sicherheitswarnungen in Azure Advanced Threat Protection | Microsoft-Dokumentation
+description: Beschreibt das Überprüfen von Sicherheitswarnungen, die von Azure ATP ausgegeben werden
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 5/22/2018
-ms.topic: conceptual
+ms.date: 10/04/2018
+ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: a06004bd-9f77-4e8e-a0e5-4727d6651a0f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2a254ca9cc81ed48e92b68079f59a99742b296c3
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: 72ed08a941b5927599aa39b196634ffc21ac6395
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44166832"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783813"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
 
 
-# <a name="working-with-suspicious-activities"></a>Arbeiten mit verdächtigen Aktivitäten
+# <a name="working-with-security-alerts"></a>Arbeiten mit Sicherheitswarnungen
 In diesem Artikel werden die Grundlagen der Arbeit mit Azure Advanced Threat Protection erläutert.
 
-## Überprüfen verdächtiger Aktivitäten auf der Angriffszeitachse <a name="review-suspicious-activities-on-the-attack-time-line"></a>
-Nachdem Sie sich im Arbeitsbereichsportal für Azure ATP angemeldet haben, gelangen Sie automatisch zur **Zeitachse mit den offenen verdächtigen Aktivitäten**. Die verdächtigen Aktivitäten werden in chronologischer Reihenfolge aufgeführt, wobei sich die neuesten verdächtigen Aktivitäten oben auf der Zeitachse befinden.
-Zu jeder verdächtigen Aktivität stehen folgende Informationen zur Verfügung:
+## Überprüfen von Sicherheitswarnungen auf der Angriffszeitachse <a name="review-suspicious-activities-on-the-attack-time-line"></a>
+Nachdem Sie sich im Azure ATP-Portal angemeldet haben, gelangen Sie automatisch zur **Zeitachse für Sicherheitswarnungen**. Sicherheitswarnungen werden in chronologischer Reihenfolge aufgeführt, wobei sich die neueste Warnung oben auf der Zeitachse befindet.
+Jede Sicherheitswarnung enthält die folgenden Informationen:
 
 -   Die beteiligten Entitäten, einschließlich Benutzer, Computer, Server, Domänencontroller und Ressourcen
 
--   Uhrzeiten und Zeitrahmen der verdächtigen Aktivitäten
+-   Uhrzeiten und Zeitrahmen der verdächtigen Aktivitäten, die zur Auslösung der Sicherheitswarnung geführt haben.
 
--   Schweregrad der verdächtigen Aktivitäten: „Hoch“, „Mittel“ oder „Niedrig“
+-   Schweregrad der Warnung: hoch, mittel oder niedrig.
 
 -   Staus: „Offen“, „Aufgelöst“ oder „Unterdrückt“.
 
 -   Möglichkeit für Folgendes:
 
-    -   Teilen der verdächtigen Aktivität mit anderen Personen in Ihrer Organisation per E-Mail.
+    -   Teilen der Sicherheitswarnung mit anderen Personen in Ihrer Organisation per E-Mail.
 
-    -   Exportieren der verdächtigen Aktivität nach Excel.
+    -   Exportieren der Sicherheitswarnung nach Excel.
 
 > [!NOTE]
-> -   Wenn Sie mit der Maus auf einen Benutzer oder Computer zeigen, wird ein Miniprofil der Entität angezeigt. Dieses enthält zusätzliche Informationen zur Entität und die Anzahl von verdächtigen Aktivitäten, mit denen die Entität verknüpft ist.
+> -   Wenn Sie mit der Maus auf einen Benutzer oder Computer zeigen, wird ein Miniprofil der Entität angezeigt. Dieses enthält zusätzliche Informationen zur Entität und die Anzahl der Sicherheitswarnungen, mit denen die Entität verknüpft ist.
 > -   Wenn Sie auf eine Entität klicken, gelangen Sie zum Entitätsprofil des Benutzers oder Computers.
 
-![Abbildung der Zeitachse für verdächtige Aktivitäten von Azure ATP](media/atp-sa-timeline.png)
+![Abbildung der Zeitachse für Azure ATP-Sicherheitswarnungen](media/atp-sa-timeline.png)
 
 ## Erkennungen von Vorschauversionen<a name="preview-detections"></a>
 
@@ -70,8 +70,8 @@ Gehen Sie wie folgt vor, um die Erkennung von Vorschauversionen zu deaktivieren:
 ![Erkennungen von Vorschauversionen](./media/preview-detections.png) 
 
 
-## <a name="filter-suspicious-activities-list"></a>Filtern der Liste der verdächtigen Aktivitäten
-So filtern Sie die Liste der verdächtigen Aktivitäten
+## <a name="filter-security-alerts-list"></a>Filtern der Liste der Sicherheitswarnungen
+So filtern Sie die Liste der Sicherheitswarnungen:
 
 1.  Wählen Sie auf der linken Seite des Bildschirms im Bereich **Filtern nach** eine der folgenden Optionen aus: **Alle**, **Offen**, **Geschlossen** oder **Unterdrückt**.
 
@@ -81,39 +81,37 @@ So filtern Sie die Liste der verdächtigen Aktivitäten
 
 -   **Niedrig**
 
-    Weist auf verdächtige Aktivitäten hin, die zu Angriffen durch böswillige Benutzer oder Software führen können, um Zugriff auf Organisationsdaten zu erlangen.
+    Weist auf Aktivitäten hin, die zu Angriffen durch böswillige Benutzer oder Software führen können, um Zugriff auf Organisationsdaten zu erlangen.
 
 -   **Mittel**
 
-    Weist auf verdächtige Aktivitäten hin, die für bestimmte Identitäten das Risiko schwerwiegenderer Angriffe erhöhen und zu Identitätsdiebstahl oder Berechtigungsausweitung führen können.
+    Weist auf Aktivitäten hin, die für bestimmte Identitäten das Risiko schwerwiegenderer Angriffe erhöhen und zu Identitätsdiebstahl oder Berechtigungsausweitung führen können.
 
 -   **Hoch**
 
-    Weist auf verdächtige Aktivitäten hin, die zu Identitätsdiebstahl, Berechtigungsausweitung oder anderen Angriffen mit schwerwiegenden Auswirkungen führen können.
+    Weist auf Aktivitäten hin, die zu Identitätsdiebstahl, Berechtigungsausweitung oder anderen Angriffen mit schwerwiegenden Auswirkungen führen können.
 
 
+## <a name="managing-security-alerts"></a>Verwalten von Sicherheitswarnungen
+Sie können den Status einer Sicherheitswarnung ändern, indem Sie auf den aktuellen Status der Sicherheitswarnung klicken und eine der folgenden Optionen auswählen: **Offen**, **Unterdrückt**, **Aufgelöst** oder **Verworfen**.
+Klicken Sie dafür auf die drei Punkte in der oberen rechten Ecke einer bestimmten Warnung, um die Liste der verfügbaren Aktionen anzuzeigen.
 
+![Azure ATP-Aktionen für Sicherheitswarnungen](./media/atp-sa-actions.png)
 
-## <a name="managing-suspicious-activities"></a>Verwalten verdächtiger Aktivitäten
-Sie können den Status einer verdächtigen Aktivität ändern, indem Sie auf den aktuellen Status der verdächtigen Aktivität klicken und eine der folgenden Optionen auswählen: **Offen**, **Unterdrückt**, **Aufgelöst** oder **Verworfen**.
-Klicken Sie dafür auf die drei Punkte in der oberen rechten Ecke einer besonders verdächtigen Aktivität, um die Liste der verfügbaren Aktionen anzuzeigen.
+**Sicherheitswarnungsstatus**
 
-![Azure ATP-Aktionen für verdächtige Aktivitäten](./media/atp-sa-actions.png)
+-   **Offen**: Alle neuen Sicherheitswarnungen werden in dieser Liste angezeigt.
 
-**Status von verdächtigen Aktivitäten**
-
--   **Öffnen**: In dieser Liste werden alle neuen verdächtigen Aktivitäten angezeigt.
-
--   **Auflösen**: Wird verwendet, um verdächtige Aktivitäten nachzuverfolgen, die Sie identifiziert, untersucht oder entschärft haben.
+-   **Aufgelöst**: Wird verwendet, um Sicherheitswarnungen nachzuverfolgen, die Sie identifiziert, untersucht oder entschärft haben.
 
     > [!NOTE]
-    > Azure ATP kann geschlossene Aktivitäten wieder öffnen, wenn diese innerhalb eines kurzen Zeitraums erneut erkannt werden.
+    > Azure ATP kann geschlossene Warnungen wieder öffnen, wenn die gleiche Aktivität innerhalb eines kurzen Zeitraums erneut erkannt wird.
 
--   **Unterdrücken**: Das Unterdrücken einer Aktivität bedeutet, dass Sie sie gerade ignorieren möchten und nur wieder gewarnt werden möchten, wenn es eine neue Instanz gibt. Wenn es also eine ähnliche Warnung gibt, wird diese von Azure ATP nicht erneut geöffnet. Wenn die Warnung jedoch für sieben Tage angehalten wurde und anschließend erneut auftritt, werden Sie erneut gewarnt.
+-   **Unterdrücken**: Das Unterdrücken einer Warnung bedeutet, dass Sie sie im Moment ignorieren möchten und nur wieder gewarnt werden möchten, wenn es eine neue Instanz gibt. Wenn es also eine ähnliche Warnung gibt, wird diese von Azure ATP nicht erneut geöffnet. Wenn die Warnung jedoch für sieben Tage angehalten wurde und anschließend erneut auftritt, werden Sie erneut gewarnt.
 
-- **Verwerfen**: Wenn Sie eine Warnung verwerfen, wird sie aus dem System und aus der Datenbank gelöscht und kann von Ihnen NICHT mehr wiederhergestellt werden. Nachdem Sie auf „Verwerfen“ geklickt haben, können Sie alle verdächtigen Aktivitäten für den gleichen Typ löschen.
+- **Verwerfen**: Wenn Sie eine Warnung verwerfen, wird sie aus dem System und aus der Datenbank gelöscht und kann von Ihnen NICHT mehr wiederhergestellt werden. Nachdem Sie auf „Verwerfen“ geklickt haben, können Sie alle Sicherheitswarnungen für den gleichen Typ löschen.
 
-- **Ausschließen**: Die Möglichkeit, eine Entität davor zu bewahren, mehr bestimmte Warnungstypen auszugeben. Sie können z.B. Azure ATP darauf festlegen, eine bestimmte Entität (Benutzer oder Computer) auszuschließen, sodass diese keine Warnung für einen bestimmten Typ einer verdächtigen Aktivität ausgibt, wie etwa ein bestimmter Administrator, der Remote-Code oder eine Sicherheitsüberprüfung ausführt, die DNS-Reconnaissance durchführt. Zusätzlich zur Möglichkeit, Ausnahmen direkt zur verdächtigen Aktivität hinzuzufügen, da sie in der Zeitleiste erkannt wurde, können Sie auch auf die Seite „Konfiguration“ zu **Ausnahmen** wechseln. Für jede verdächtige Aktivität können Sie so manuell ausgeschlossene Entitäten oder Subnetze hinzufügen oder entfernen (z.B. für Pass-the-Ticket). 
+- **Ausschließen**: Die Möglichkeit, eine Entität davor zu bewahren, mehr bestimmte Warnungstypen auszugeben. Sie können z.B. Azure ATP darauf festlegen, eine bestimmte Entität (Benutzer oder Computer) auszuschließen, sodass diese keine Warnung für einen bestimmten Typ einer Aktivität ausgibt, wie etwa ein bestimmter Administrator, der Remote-Code oder eine Sicherheitsüberprüfung ausführt, die DNS-Reconnaissance durchführt. Zusätzlich zur Möglichkeit, Ausnahmen direkt zur Sicherheitswarnung hinzuzufügen, da sie in der Zeitleiste erkannt wurde, können Sie auch auf die Seite „Konfiguration“ zu **Ausnahmen** wechseln. Für jede Sicherheitswarnung können Sie so manuell ausgeschlossene Entitäten oder Subnetze hinzufügen oder entfernen (z.B. für Pass-the-Ticket). 
 
 > [!NOTE]
 > Die Seiten für die Konfiguration können nur von Azure ATP-Administratoren bearbeitet werden.
@@ -122,4 +120,4 @@ Klicken Sie dafür auf die drei Punkte in der oberen rechten Ecke einer besonder
 ## <a name="see-also"></a>Weitere Informationen
 
 - [Working with the Azure ATP workspace portal (Arbeiten mit dem Azure ATP-Arbeitsbereichsportal)](workspace-portal.md)
-- [Weitere Informationen finden Sie im ATP-Forum.](https://aka.ms/azureatpcommunity)
+- [Check out the Azure ATP forum! (Besuchen Sie das Azure ATP-Forum)](https://aka.ms/azureatpcommunity)

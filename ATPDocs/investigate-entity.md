@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/6/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0c0558dbe0b4eba849adb635a84bc934e406e56f
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: 72e26d9cdc539da168d1bc7c274971526eec61d1
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44166560"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783303"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -26,13 +26,13 @@ ms.locfileid: "44166560"
 
 # <a name="investigate-an-entity-with-azure-atp"></a>Untersuchen einer Entität mit Azure ATP
 
-In diesem Artikel wird der Prozess zum Untersuchen von Entitäten beschrieben, nachdem verdächtige Aktivitäten mit Azure Advanced Threat Protection (ATP) erkannt wurden. Nachdem eine verdächtige Aktivität in der Zeitleiste angezeigt wurde, können Sie die in der Aktivität betroffene Entität detailliert anzeigen und die folgenden Parameter und Details verwenden, um zu erfahren, was passiert ist und was Sie tun müssen, um das Risiko einzuschränken.
+In diesem Artikel wird der Prozess zum Untersuchen von Entitäten beschrieben, nachdem verdächtige Aktivitäten mit Azure Advanced Threat Protection (ATP) erkannt wurden. Nachdem eine Sicherheitswarnung in der Zeitleiste angezeigt wurde, können Sie die in der Warnung betroffene Entität detailliert anzeigen und die folgenden Parameter und Details verwenden, um zu erfahren, was passiert ist und was Sie tun müssen, um das Risiko einzuschränken.
 
 ## <a name="look-at-the-entity-profile"></a>Anzeigen des Entitätsprofils
 
 Das Entitätsprofil bietet eine umfassende Entitätsseite, die für eine detaillierte Untersuchung von Benutzern, Computern, Geräten und Ressourcen, auf die sie zugreifen können, sowie auf deren Verlauf, ausgerichtet ist. Die Profilseite nutzt den neuen logischen Aktivitätenübersetzer von Azure ATP, der eine Gruppe von Aktivitäten (für bis zu eine Minute zusammengefasst) überprüfen und diese in genau eine logische Aktivität gruppieren kann, um die tatsächlichen Aktivitäten der Benutzer zu verdeutlichen.
 
-Wenn Sie auf die Profilseite einer Entität zugreifen möchten, klicken Sie auf der Zeitachse der verdächtigen Aktivität auf den Namen der Entität, z.B. den Benutzernamen. Sie können auch eine Miniversion des Entitätsprofils auf der Seite der verdächtigen Aktivität anzeigen, indem Sie mit der Maus auf den Entitätsnamen zeigen.
+Wenn Sie auf die Profilseite einer Entität zugreifen möchten, klicken Sie auf der Zeitachse der Sicherheitswarnung auf den Namen der Entität, z.B. einen Benutzernamen. Sie können auch eine Miniversion des Entitätsprofils auf der Seite der Sicherheitswarnung anzeigen, indem Sie mit der Maus auf den Entitätsnamen zeigen.
 
 Über das Entitätsprofil können Sie Entitätsaktivitäten sowie Verzeichnisdaten und Lateral Movement-Pfade für die Entität anzeigen. Weitere Informationen finden Sie unter [Grundlegendes zu Entitätsprofilen](entity-profiles.md).
 
@@ -112,4 +112,4 @@ Bevor Sie mit Ihrer Untersuchung fortfahren, ist es wichtig, zu wissen, ob die E
 ## <a name="see-also"></a>Siehe auch
 
 - [Arbeiten mit verdächtigen Aktivitäten](working-with-suspicious-activities.md)
-- [Weitere Informationen finden Sie im ATP-Forum.](https://aka.ms/azureatpcommunity)
+- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)

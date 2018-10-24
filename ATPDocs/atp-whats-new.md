@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 9/16/2018
+ms.date: 10/07/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,36 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f9959f1b517890b725845f8dd01156f9a3e8198b
-ms.sourcegitcommit: 5ff50807f855db1051b977a64eb6e90487ea196c
+ms.openlocfilehash: dc008506e7b19a8d6eafd455a4414b1513608811
+ms.sourcegitcommit: c4978be196e0039c7a5d5887bec4cbc5c01d64f9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45750553"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848629"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
 # <a name="whats-new-in-azure-atp"></a>Neuerungen in Azure ATP 
+
+## <a name="azure-atp-release-249"></a>Azure ATP Release 2.49
+Veröffentlicht: 7. Oktober 2018
+-   **Neue Erkennungen: Verdächtige DNS-Kommunikation** (Vorschauversion)<br>Neue Erkennungen, die hinzugefügt wurden, und vor verdächtigen DNS-Kommunikationsangriffen schützen:
+
+    -   Diese Erkennung hilft dabei, Angriffe gegen das DNS-Protokoll zu erkennen: In den meisten Organisationen wird das DNS-Protokoll nicht überwacht und nur selten vor böswilligen Angriffen blockiert. Dadurch kann ein Angreifer auf einem kompromittierten Computer das DNS-Protokoll missbrauchen. Böswillige Kommunikation über DNS kann zur Datenexfiltration, Befehls- und Führungssystemeinschränkung und/oder zur Umgehung von Netzwerkeinschränkungen führen.
+
+- **Neue Funktionen** <br>Die Azure ATP-**Benutzerrolle** wurde mit den folgenden Funktionen verbessert:
+  - Der Status der Sicherheitswarnungen wurde geändert (erneut öffnen, schließen, ausschließen, unterdrücken)
+  - Geplante Berichte wurden festgelegt
+  - Entitätstags (vertraulich und Honeytoken) wurden festgelegt.
+  - Ausschluss von Erkennung
+  - Sprache ändern
+  - Benachrichtigung über E-Mail oder Syslog wurden festgelegt
+
+
+- Ein temporärer Anstieg von Sicherheitswarnungen des Typs **Reconnaissance mithilfe von Verzeichnisdienstabfragen**, die am 16.9.2018 aufgetreten sind, wurden identifiziert und gelöst. 
+
+- Diese Version enthält darüber hinaus Fehlerbehebungen und Verbesserungen für mehrere Probleme.
+
 
 ## <a name="azure-atp-release-248"></a>Azure ATP Release 2.48
 Veröffentlicht: 16. September 2018
@@ -286,8 +306,8 @@ Veröffentlicht: 11. März 2018
  -  Die Azure ATP-Sensorinfrastruktur wurde bezüglich der Leistung verbessert: Die aggregierte Datenverkehrsansicht ermöglicht Optimierungen der CPU- und Paketpipeline und verwendet Sockets zu Domänencontrollern erneut, um SSL-Sitzungen zum DC zu minimieren.
 
 ## <a name="see-also"></a>Weitere Informationen
+- [Was ist Azure Advanced Threat Protection?](what-is-atp.md)
+- [Häufig gestellte Fragen](atp-technical-faq.md)
 - [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](atp-prerequisites.md)
-- [Azure ATP capacity planning (Azure ATP-Kapazitätsplanung)](atp-capacity-planning.md)
-- [Konfigurieren der Ereignissammlung](configure-event-collection.md)
-- [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-forwarding.md#configuring-windows-event-forwarding)
-- [Weitere Informationen finden Sie im ATP-Forum.](https://aka.ms/azureatpcommunity)
+- [Azure ATP-Kapazitätsplanung](atp-capacity-planning.md) (configure-event-forwarding.md#configuring-windows-event-forwarding)
+- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)

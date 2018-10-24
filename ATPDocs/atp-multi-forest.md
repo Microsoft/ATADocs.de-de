@@ -1,11 +1,11 @@
 ---
 title: Azure Advanced Threat Protection-Unterstützung für mehrere Gesamtstrukturen | Microsoft-Dokumentation
-description: Erfahren Sie, wie Sie Unterstützung für mehrere Active Directory-Gesamtstrukturen in Azure ATP einrichten.
+description: Unterstützung für mehrere Active Directory-Gesamtstrukturen in Azure ATP
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/20/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,21 +13,19 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ad120cfe3e736935a557f66417794cd531fa5b2e
-ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
+ms.openlocfilehash: 40bd468226f3c8db17663d02aed561b77cc2a128
+ms.sourcegitcommit: bbbe808c08ce703a314c82b46aedaae79ab256a3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47454087"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848489"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
-# <a name="install-azure-atp---step-9"></a>Installieren von Azure ATP: Schritt 9
+# <a name="azure-advanced-threat-protection-multi-forest-support"></a>Azure Advanced Threat Protection-Unterstützung für mehrere Gesamtstrukturen
 
-> [!div class="step-by-step"]
-> [« Schritt 8 ](install-atp-step8-samr.md)
 
-## <a name="step-9--set-up-azure-advanced-threat-protection-multi-forest-support"></a>Schritt 9:  Einrichten der Azure Advanced Threat Protection-Unterstützung für mehrere Gesamtstrukturen
+## <a name="multi-forest-support-set-up"></a>Einrichten der Unterstützung für mehrere Gesamtstrukturen 
 
 Azure ATP kann Organisationen mit mehreren Gesamtstrukturen unterstützen, wodurch diese die Möglichkeit erhalten, Aktivitäten und Benutzerprofile in allen Gesamtstrukturen ganz einfach über eine zentrale Konsole zu überwachen. 
 
@@ -55,7 +53,7 @@ Wenn Gesamtstrukturen ohne installierte Azure ATP-Sensoren vorhanden sind, kann 
 -   Wenn eigenständige Azure ATP-Sensoren auf eigenständigen Computern und nicht direkt auf den Domänencontrollern installiert sind, stellen Sie sicher, dass die Kommunikation der Computer mit allen Domänencontrollern der Remotegesamtstrukturen über LDAP zulässig ist. 
 - Der Benutzer, den Sie in der Azure ATP-Konsole unter **Verzeichnisdienste** konfigurieren, muss in allen anderen Gesamtstrukturen vertrauenswürdig sein und mindestens über Leseberechtigungen verfügen, um LDAP-Abfragen der Domänencontroller auszuführen.
 
-- Damit Azure ATP mit den ATP-Sensoren und eigenständigen ATP-Sensoren kommunizieren kann, öffnen Sie die folgenden Ports auf jedem Computer mit installiertem ATP-Sensor:
+- Damit Azure ATP mit den Azure ATP-Sensoren und eigenständigen Azure ATP-Sensoren kommunizieren kann, öffnen Sie die folgenden Ports auf jedem Computer mit installiertem Azure ATP-Sensor:
 
  
   |Protokoll|Transport|Port|Zu/Von|Richtung|
@@ -76,19 +74,16 @@ Der Prozess des Zuordnens von Gesamtstrukturen durch Azure ATP hat folgende Ausw
 -   Sobald der Azure ATP-Sensor ausgeführt wird, fragt er die Active Directory-Gesamtstrukturen am Remotestandort ab und ruft eine Liste von Benutzern und Computerdaten für die Profilerstellung ab.
 -   Alle 5 Minuten fragt jeder Azure ATP-Sensor einen Domänencontroller aus jeder Domäne in jeder Gesamtstruktur ab, um alle Gesamtstrukturen im Netzwerk zuzuordnen.
 -   Jeder Azure ATP-Sensor ordnet die Gesamtstrukturen mithilfe des Objekts „trustedDomain“ in Active Directory zu, indem er sich anmeldet und den Vertrauenstyp überprüft.
--   Sie können auch Ad-hoc-Datenverkehr anzeigen, wenn der ATP-Sensor Aktivitäten zwischen Gesamtstrukturen erkennt. In diesem Fall senden die ATP-Sensoren eine LDAP-Abfrage an die entsprechenden Domänencontroller, um Entitätsinformationen abzurufen. 
+-   Sie können auch Ad-hoc-Datenverkehr anzeigen, wenn der Azure ATP-Sensor Aktivitäten zwischen Gesamtstrukturen erkennt. In diesem Fall senden die Azure ATP-Sensoren eine LDAP-Abfrage an die entsprechenden Domänencontroller, um Entitätsinformationen abzurufen. 
 
 ## <a name="known-limitations"></a>Bekannte Einschränkungen
 -   Interaktive Anmeldungen, die von Benutzern in einer Gesamtstruktur durchgeführt werden, um auf Ressourcen in einer anderen Gesamtstruktur zuzugreifen, werden nicht im Azure ATP-Dashboard angezeigt.
 
 
-> [!div class="step-by-step"]
-> [« Schritt 8 ](install-atp-step8-samr.md)
-
 
 ## <a name="see-also"></a>Weitere Informationen
-- [ATP-Tool zur Größenanpassung](http://aka.ms/aatpsizingtool)
-- [ATP-Architektur](atp-architecture.md)
-- [Install ATP (Installieren von ATP)](install-atp-step1.md)
-- [Weitere Informationen finden Sie im ATP-Forum.](https://aka.ms/azureatpcommunity)
+- [Azure ATP sizing tool (Azure ATP-Tool zur Größenanpassung)](http://aka.ms/aatpsizingtool)
+- [Azure ATP architecture (Azure ATP-Architektur)](atp-architecture.md)
+- [Install Azure ATP (Installieren von Azure ATP)](install-atp-step1.md)
+- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)
 

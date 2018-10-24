@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/3/2018
+ms.date: 10/4/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 34a9b1deb9c5d2d709e333e78e87ded09fff134a
-ms.sourcegitcommit: 04ed0b9faf72d82cd10bf84efd9dc5aa525be212
+ms.openlocfilehash: 07c5d67804eb4c74df678e8752a2516af5c52cc7
+ms.sourcegitcommit: bbbe808c08ce703a314c82b46aedaae79ab256a3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48245382"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848506"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -92,7 +92,7 @@ Alle Domänencontroller in der Umgebung sollten von einem ATP-Sensor oder einem 
 Netzwerkprotokolle mit verschlüsseltem Datenverkehr (z.B. LDAPS und IPsec) werden nicht verschlüsselt, sondern von den Sensoren analysiert.
 
 ### <a name="does-azure-atp-work-with-kerberos-armoring"></a>Funktioniert Azure ATP mit Kerberos Armoring?
-Die Aktivierung von Kerberos Armoring (auch als Flexible Authentication Secure Tunneling (FAST) bezeichnet) wird von ATP unterstützt. Einzige Ausnahme ist die Overpass-The-Hash-Erkennung, die nicht von Kerberos Armoring unterstützt wird.
+Die Aktivierung von Kerberos Armoring (auch als Flexible Authentication Secure Tunneling (FAST) bezeichnet) wird von Azure ATP unterstützt. Einzige Ausnahme ist die Overpass-The-Hash-Erkennung, die nicht von Kerberos Armoring unterstützt wird.
 
 ### <a name="how-do-i-monitor-a-virtual-domain-controller-using-azure-atp"></a>Wie kann ich einen virtuellen Domänencontroller mit Azure ATP überwachen?
 Die meisten virtuellen Domänencontroller können vom Azure ATP-Sensor abgedeckt werden. Um festzustellen, ob der Azure ATP-Sensor sich für Ihre Umgebung eignet, lesen Sie die Informationen unter [Azure ATP-Kapazitätsplanung](atp-capacity-planning.md).
@@ -107,7 +107,7 @@ Wenn ein virtueller Domänencontroller nicht durch den Azure ATP-Sensor abgedeck
 
 Für die Kommunikation Ihrer Domänencontroller mit dem Clouddienst müssen Sie in Ihrer Firewall und auf Ihrem Proxyserver Port 443 für „*.atp.azure.com“ freigeben. Informationen hierzu finden Sie unter [Configure your proxy or firewall to enable communication with Azure ATP sensors (Konfigurieren Ihres Proxyservers oder Ihrer Firewall zum Aktivieren der Kommunikation mit Azure ATP-Sensoren)](configure-proxy.md).
 
-### <a name="can-azure-atp-monitor-domain-controllers-virtualized-on-your-iaas-solution"></a>Kann Azure ATP in Ihrer IaaS-Lösung virtualisierte Domänencontroller überwachen?
+### <a name="can-azure-atp-monitor-domain-controllers-be-virtualized-on-your-iaas-solution"></a>Kann Azure ATP in Ihrer IaaS-Lösung virtualisierte Domänencontroller überwachen?
 Ja, Sie können mit dem Azure ATP-Sensor Domänencontroller in einer beliebigen IaaS-Lösung überwachen.
 
 ### <a name="can-azure-atp-support-multi-domain-and-multi-forest"></a>Kann Azure ATP mehrere Domänen und mehrere Gesamtstrukturen unterstützen?
@@ -142,7 +142,7 @@ Sie können verdächtige Aktivitäten in einem End-to-End-Test simulieren. Im fo
     -   Drücken Sie die EINGABETASTE.
     -   Geben Sie Folgendes ein: Is -d <FQDN>
     -   Abhängig von der Konfiguration Ihrer Umgebung können die Antworten von „Abfrage zurückgewiesen“ bis hin zu einer Liste von DNS-Einträgen reichen. 
-4. Zeigen Sie die Warnung im Zusammenhang mit der simulierten DNS-Reconnaissance in der Azure ATP-Konsole an. 
+4. Zeigen Sie die Warnung im Zusammenhang mit der simulierten DNS-Reconnaissance im Azure ATP-Portal an. 
 
 ## <a name="see-also"></a>Weitere Informationen
 - [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](atp-prerequisites.md)
@@ -150,4 +150,4 @@ Sie können verdächtige Aktivitäten in einem End-to-End-Test simulieren. Im fo
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
 - [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-forwarding.md#configuring-windows-event-forwarding)
 - [Problembehandlung](troubleshooting-atp-known-issues.md)
-- [Weitere Informationen finden Sie im ATP-Forum.](https://aka.ms/azureatpcommunity)
+- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)

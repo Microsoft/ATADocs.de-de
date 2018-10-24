@@ -2,10 +2,10 @@
 title: Festlegen der E-Mail-Benachrichtigungseinstellungen in Azure Advanced Threat Protection | Microsoft-Dokumentation
 description: Beschreibt, wie Azure ATP für den Versand von Benachrichtigungen (per E-Mail oder Azure ATP-Ereignisweiterleitung) bei verdächtigen Aktivitäten konfiguriert werden kann
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a2d29c9c-7ecb-4804-b74b-fde899b28648
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 399773b174f52cfc26888fcaa9923de4f258e897
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: 18f6d38f871539cf0701b697c9d0c5d9d96a27e4
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44166883"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783541"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -26,7 +26,7 @@ ms.locfileid: "44166883"
 
 # <a name="integrate-with-syslog"></a>Integration in Syslog
 
-Azure ATP kann Sie durch Senden der Benachrichtigung an den Syslog-Server benachrichtigen, wenn eine verdächtige Aktivität erkannt wird. Wenn Syslog-Benachrichtigungen aktiviert werden, lassen sich dafür folgende Einstellungen vornehmen.
+Azure ATP kann Sie durch Senden der Benachrichtigung an den Syslog-Server benachrichtigen und gibt Sicherheits- und Integritätswarnungen aus, wenn eine verdächtige Aktivität erkannt wird. Wenn Syslog-Benachrichtigungen aktiviert werden, lassen sich folgende Einstellungen vornehmen:
 
 1.  Vor dem Konfigurieren von Syslog-Benachrichtigungen sollten Sie gemeinsam mit dem zuständigen SIEM-Administrator folgende Angaben ermitteln:
 
@@ -38,7 +38,7 @@ Azure ATP kann Sie durch Senden der Benachrichtigung an den Syslog-Server benach
 
     -   Versandformat der Daten: RFC 3164 oder 5424
 
-2.  Geben Sie die URL zum Arbeitsbereichsportal ein.
+2.  Geben Sie die URL zum Arbeitsbereich ein.
 
 3.  Geben Sie Ihren Azure Active Directory-Benutzernamen und Ihr Kennwort ein, und klicken Sie auf **Anmelden**.
 
@@ -63,4 +63,4 @@ Azure ATP kann Sie durch Senden der Benachrichtigung an den Syslog-Server benach
 ## <a name="see-also"></a>Weitere Informationen
 
 - [Working with sensitive accounts (Arbeiten mit sensiblen Konten)](sensitive-accounts.md)
-- [Weitere Informationen finden Sie im ATP-Forum.](https://aka.ms/azureatpcommunity)
+- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)

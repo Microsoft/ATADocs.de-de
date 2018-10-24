@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/13/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a56845c619e93ed2fae0e10876a4d49a49e23e7d
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: e65133fdd09f821c633a3095ae419df01da98b16
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44166291"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783711"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -30,7 +30,7 @@ ms.locfileid: "44166291"
  
 Die Azure ATP-Bereitstellungsprotokolle befinden sich im temporären Verzeichnis des Benutzers, der das Produkt installiert hat. Sie sind im Standardinstallationsverzeichnis unter „C:\Benutzer\Administrator\AppData\Local\Temp“ (oder in dem „%temp%“ übergeordneten Verzeichnis) zu finden. Weitere Informationen finden Sie unter [Problembehandlung für den Azure Advanced Threat Protection-Sensor (ATP) mithilfe der ATP-Protokolle](troubleshooting-atp-using-logs.md).
 
-## <a name="proxy-authentication-problem-presents-as-licensing-error"></a>Proxyauthentifizierungsproblem wird als Lizenzierungsfehler dargestellt
+## <a name="proxy-authentication-problem-presents-as-a-licensing-error"></a>Proxyauthentifizierungsproblem wird als Lizenzierungsfehler dargestellt
 
 Während der Sensorinstallation erhalten Sie die folgende Fehlermeldung: **Der Sensor konnte aufgrund von Lizenzierungsproblemen nicht registriert werden**.
 
@@ -52,7 +52,7 @@ Stellen Sie sicher, dass der Sensor über den konfigurierten Proxy ohne Authenti
 
 Wenn Sie versuchen, den ATP-Sensor auf einem Computer zu installieren, der mit einem NIC-Teaming-Adapter konfiguriert ist, wird ein Installationsfehler gemeldet. Wenn Sie den ATP-Sensor auf einem Computer installieren möchten, der mit NIC-Teamvorgang konfiguriert ist, gehen Sie wie folgt vor:
 
-Wenn den Sensor noch nicht installiert haben:
+Wenn Sie den Sensor noch nicht installiert haben:
 
 1.  Laden Sie Npcap von [https://nmap.org/npcap/](https://nmap.org/npcap/) herunter.
 2.  Deinstallieren Sie WinPcap (falls installiert).
@@ -69,7 +69,7 @@ Wenn der Sensor bereits installiert ist:
 
 ## <a name="windows-defender-atp-integration-issue"></a>Problem mit der Windows Defender-ATP-Integration
 
-Mithilfe von Azure Advanced Threat Protection können Sie Azure ATP in Windows Defender ATP integrieren. 
+Mithilfe von Azure Advanced Threat Protection können Sie Azure ATP in Windows Defender ATP integrieren. Weitere Informationen finden Sie unter [Integrieren von Azure ATP in Windows Defender ATP](integrate-wd-atp.md). 
 
 ## <a name="vmware-virtual-machine-sensor-issue"></a>Problem mit dem Sensor des virtuellen VMware-Computers
 
@@ -88,4 +88,4 @@ Legen Sie die folgenden Einstellungen in der NIC-Konfiguration der VM auf **0 (n
 - [Azure ATP capacity planning (Azure ATP-Kapazitätsplanung)](atp-capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
 - [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-forwarding.md#configuring-windows-event-forwarding)
-- [Weitere Informationen finden Sie im ATP-Forum.](https://aka.ms/azureatpcommunity)
+- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)

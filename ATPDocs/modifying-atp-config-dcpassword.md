@@ -2,10 +2,10 @@
 title: Ändern der Azure Advanced Threat Protection-Konfiguration – Domänenverbindungskennwort | Microsoft-Dokumentation
 description: Beschreibt, wie das Domänenverbindungskennwort auf dem eigenständigen Azure ATP-Sensor geändert wird.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/14/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: e7f065fa-1ad1-4e87-bd80-99cc695efbf5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e5b3fd544fb52cd2979ab95d34918ffba3f56541
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: a175a23a087b11d481dbcf055bff4fe5577b4f8e
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44166186"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783116"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -33,12 +33,12 @@ Wenn Sie das Domänenverbindungskennwort ändern müssen, stellen Sie sicher, da
 
 Wenn Sie vermuten, dass dies der Fall ist, überprüfen Sie auf dem eigenständigen Azure ATP-Sensor die Datei „Microsoft.Tri.sensor-Errors.log“ auf folgende Fehler: `The supplied credential is invalid.`
 
-Führen Sie die folgenden Schritte zum Aktualisieren des Domänenverbindungskennworts im Azure ATP-Arbeitsbereichsportal aus:
+Führen Sie die folgenden Schritte zum Aktualisieren des Domänenverbindungskennworts im Azure ATP-Portal aus:
 
 > [!NOTE]
 > Dies ist der Benutzername und das Kennwort der lokalen Active Directory-Bereitstellung und nicht aus Azure AD.
 
-1.  Öffnen Sie das Azure ATP-Arbeitsbereichsportal, indem Sie die Arbeitsbereichs-URL öffnen.
+1.  Öffnen Sie das Azure ATP-Portal, indem Sie die Arbeitsbereichs-URL öffnen.
 
 2.  Wählen Sie auf der Symbolleiste die Einstellungsoption und dann **Konfiguration** aus.
 
@@ -57,9 +57,9 @@ Führen Sie die folgenden Schritte zum Aktualisieren des Domänenverbindungskenn
 
 6.  Nachdem Sie das Kennwort geändert haben, überprüfen Sie manuell, ob der eigenständige Azure ATP-Sensordienst auf den eigenständigen Azure ATP-Sensorservern ausgeführt wird.
 
-7. Wechseln Sie im Arbeitsbereichsportal unter **Konfigurationen** zur Seite **Sensor**, und prüfen Sie den Status des Sensors.
+7. Wechseln Sie im Azure ATP-Portal unter **Konfigurationen** zur Seite **Sensor**, und prüfen Sie den Status des Sensors.
 
 ## <a name="see-also"></a>Weitere Informationen
 
 - [Integration in Windows Defender ATP](integrate-wd-atp.md)
-- [Weitere Informationen finden Sie im ATP-Forum.](https://aka.ms/azureatpcommunity)
+- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)

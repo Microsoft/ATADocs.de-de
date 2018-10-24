@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 9/12/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 603d9e09-a07d-4357-862f-d5682c8bc3dd
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8a6481070abf1188507f31dbd01b26f7221b2e36
-ms.sourcegitcommit: a5823d0dfc48783ab990a99ca3f65b614fb49e75
+ms.openlocfilehash: e478fc1a2ae955d66d00b3d87bd5f782354c766d
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44697241"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783762"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -60,7 +60,7 @@ In der Regel werden Sensoren automatisch aktualisiert, wenn der Azure ATP-Cloudd
 Dadurch können Sie bestimmte Sensoren auswählen, für die das Update automatisch erfolgt, und die restlichen Sensoren später aktualisieren, wenn das erste Update erfolgreich ausgeführt werden konnte.
 
 > [!NOTE]
-> Wenn ein Fehler auftritt und ein Sensor nicht aktualisiert wird, erstellen Sie ein Supportticket.
+> Wenn ein Fehler auftritt und ein Sensor nicht aktualisiert wird, erstellen Sie ein Supportticket. Informationen zur weiteren Stärkung Ihres Proxys, damit er nur mit Ihrem Arbeitsbereich kommuniziert, finden Sie unter [Proxykonfiguration](configure-proxy.md)
 
 Gehen Sie wie folgt vor, um einen Sensor für ein verzögertes Update auszuwählen:
 
@@ -87,7 +87,7 @@ Die Azure ATP-Sensoren prüfen im Abstand weniger Minuten, ob sie bereits auf di
   7. Sensoren erhalten eine Freigabe vom Azure-Clouddienst. Sie können dies über die Seite **Updates** prüfen.
   8. Der nächste Sensor startet den Aktualisierungsprozess. 
 
-4. 24 Stunden nach der Aktualisierung des Azure ATP-Clouddiensts wird auch für die Sensoren, für die die Option *Delayed update* (Verzögertes Update) ausgewählt ist, der Updateprozess gestartet.
+4. 24 Stunden nach der Aktualisierung des Azure ATP-Clouddiensts wird auch für die Sensoren, für die die Option **Delayed update** (Verzögertes Update) ausgewählt ist, der Updateprozess gestartet.
 
 ![Sensorupdate](./media/sensor-update.png)
 
@@ -101,4 +101,4 @@ Falls ein Fehler auftritt und der Sensor den Updateprozess nicht abschließen ka
 
 - [Configure event forwarding (Konfigurieren der Ereignisweiterleitung)](configure-event-forwarding.md)
 - [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](atp-prerequisites.md)
-- [Weitere Informationen finden Sie im ATP-Forum.](https://aka.ms/azureatpcommunity)
+- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)
