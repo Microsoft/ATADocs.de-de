@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ca22fc6430556d49a6709be2f46c0c0b8746fa38
-ms.sourcegitcommit: 0c05308c832e4b03ea3945788de39feabfdb5671
+ms.openlocfilehash: 3edcde9466ade71afe22a735256f3cb84f88df17
+ms.sourcegitcommit: 58c75026e5ec4dcab3b0852a41f9f0a0ad6f22eb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48914501"
+ms.lasthandoff: 10/14/2018
+ms.locfileid: "49315862"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -99,9 +99,9 @@ Es gibt drei Arten von Erkennung:
 1.  Skeleton Key – Entfernen der Schadsoftware Weitere Informationen finden Sie in der [Skeleton Key Malware Analysis](https://www.virusbulletin.com/virusbulletin/2016/01/paper-digital-bian-lian-face-changing-skeleton-key-malware) (Analyse der Skeleton Key-Schadsoftware).
 
 2.  Golden Ticket: Befolgen Sie die Anweisungen zu verdächtigen Aktivitäten unter [Golden Ticket](#golden-ticket).   
-    Implementieren Sie ebenfalls die [Pass the hash recommendations (Empfehlungen zu Pass-the-Hash)](http://aka.ms/PtH), da für das Erstellen eines Golden Tickets Domänenadministratorrechte erforderlich sind.
+    Implementieren Sie ebenfalls die [Pass the hash recommendations (Empfehlungen zu Pass-the-Hash)](https://www.microsoft.com/download/details.aspx?id=36036), da für das Erstellen eines Golden Tickets Domänenadministratorrechte erforderlich sind.
 
-3.  Overpass-the-Hash: Wenn das beteiligte Konto nicht vertraulich ist, setzen Sie das Kennwort für dieses Konto zurück. Dies hindert den Angreifer daran, neue Kerberos-Tickets aus dem Kennworthash zu erstellen. Bestehende Tickets können jedoch weiterhin verwendet werden, bis sie ablaufen. Wenn es sich um ein vertrauliches Konto handelt, sollten Sie das KRBTGT-Konto wie bei verdächtigen Aktivitäten mit Golden Tickets zweimal zurücksetzen. Durch das zweimalige Zurücksetzen von KRBTGT werden alle Kerberos-Tickets in dieser Domäne ungültig. Daher sollten Sie diesen Schritt im Voraus planen. Weitere Informationen finden Sie im Leitfaden [KRBTGT Account Password Reset Scripts now available for customers (Skripts zum Zurücksetzen von Kennwörtern des KRBTGT-Kontos stehen Kunden jetzt zur Verfügung)](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Beachten Sie auch die Verwendung des [Reset the KRBTGT account password/keys tool (Tools zum Zurücksetzen des Kennworts/Schlüssels eines KRBTGT-Kontos)](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Da es sich dabei um eine Technik mit seitlicher Bewegung handelt, führen Sie die bewährten Methoden der [Pass the hash recommendations (Empfehlungen zu Pass-the-Hash)](http://aka.ms/PtH) aus.
+3.  Overpass-the-Hash: Wenn das beteiligte Konto nicht vertraulich ist, setzen Sie das Kennwort für dieses Konto zurück. Dies hindert den Angreifer daran, neue Kerberos-Tickets aus dem Kennworthash zu erstellen. Bestehende Tickets können jedoch weiterhin verwendet werden, bis sie ablaufen. Wenn es sich um ein vertrauliches Konto handelt, sollten Sie das KRBTGT-Konto wie bei verdächtigen Aktivitäten mit Golden Tickets zweimal zurücksetzen. Durch das zweimalige Zurücksetzen von KRBTGT werden alle Kerberos-Tickets in dieser Domäne ungültig. Daher sollten Sie diesen Schritt im Voraus planen. Weitere Informationen finden Sie im Leitfaden [KRBTGT Account Password Reset Scripts now available for customers (Skripts zum Zurücksetzen von Kennwörtern des KRBTGT-Kontos stehen Kunden jetzt zur Verfügung)](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Beachten Sie auch die Verwendung des [Reset the KRBTGT account password/keys tool (Tools zum Zurücksetzen des Kennworts/Schlüssels eines KRBTGT-Kontos)](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Da es sich dabei um eine Technik mit seitlicher Bewegung handelt, führen Sie die bewährten Methoden der [Pass the hash recommendations (Empfehlungen zu Pass-the-Hash)](https://www.microsoft.com/download/details.aspx?id=36036) aus.
 
 ## <a name="honeytoken-activity"></a>Honeytoken-Aktivität
 
@@ -140,7 +140,7 @@ Stammt der verwendete Hash von einem Computer, der dem Zielbenutzer gehört oder
 
 1. Wenn das beteiligte Konto nicht vertraulich ist, setzen Sie das Kennwort für dieses Konto zurück. Dies hindert den Angreifer daran, neue Kerberos-Tickets aus dem Kennworthash zu erstellen. Bestehende Tickets können jedoch weiterhin verwendet werden, bis sie ablaufen. 
 
-2. Wenn es sich um ein vertrauliches Konto handelt, sollten Sie das KRBTGT-Konto wie bei verdächtigen Aktivitäten mit Golden Tickets zweimal zurücksetzen. Durch das zweimalige Zurücksetzen von KRBTGT werden alle Kerberos-Tickets in dieser Domäne ungültig. Daher sollten Sie diesen Schritt im Voraus planen. Siehe [KRBTGT Account Password Reset Scripts now available for customers (Skripts zum Zurücksetzen von Kennwörtern des KRBTGT-Kontos stehen Kunden jetzt zur Verfügung)](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Beachten Sie auch die Verwendung des [Reset the KRBTGT account password/keys tool (Tools zum Zurücksetzen des Kennworts/Schlüssels eines KRBTGT-Kontos)](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Da es sich dabei um eine Technik mit seitlicher Bewegung handelt, führen Sie die bewährten Methoden der [Pass the hash recommendations (Empfehlungen zu Pass-the-Hash)](http://aka.ms/PtH) aus.
+2. Wenn es sich um ein vertrauliches Konto handelt, sollten Sie das KRBTGT-Konto wie bei verdächtigen Aktivitäten mit Golden Tickets zweimal zurücksetzen. Durch das zweimalige Zurücksetzen von KRBTGT werden alle Kerberos-Tickets in dieser Domäne ungültig. Daher sollten Sie diesen Schritt im Voraus planen. Siehe [KRBTGT Account Password Reset Scripts now available for customers (Skripts zum Zurücksetzen von Kennwörtern des KRBTGT-Kontos stehen Kunden jetzt zur Verfügung)](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Beachten Sie auch die Verwendung des [Reset the KRBTGT account password/keys tool (Tools zum Zurücksetzen des Kennworts/Schlüssels eines KRBTGT-Kontos)](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Da es sich dabei um eine Technik mit seitlicher Bewegung handelt, führen Sie die bewährten Methoden der [Pass the hash recommendations (Empfehlungen zu Pass-the-Hash)](https://www.microsoft.com/download/details.aspx?id=36036) aus.
 
 ## <a name="identity-theft-using-pass-the-ticket-attack"></a>Identitätsdiebstahl mithilfe eines Pass-the-Ticket-Angriffs
 
@@ -158,7 +158,7 @@ Pass-the-Ticket ist eine Technik mit seitlicher Bewegung, bei der die Angreifer 
 
 1. Wenn das beteiligte Konto nicht vertraulich ist, setzen Sie das Kennwort für dieses Konto zurück. Dies hindert den Angreifer daran, neue Kerberos-Tickets aus dem Kennworthash zu erstellen. Bestehende Tickets können jedoch weiterhin verwendet werden, bis sie ablaufen.  
 
-2. Wenn es sich um ein vertrauliches Konto handelt, sollten Sie das KRBTGT-Konto wie bei verdächtigen Aktivitäten mit Golden Tickets zweimal zurücksetzen. Durch das zweimalige Zurücksetzen von KRBTGT werden alle Kerberos-Tickets in dieser Domäne ungültig. Daher sollten Sie diesen Schritt im Voraus planen. Siehe [KRBTGT Account Password Reset Scripts now available for customers (Skripts zum Zurücksetzen von Kennwörtern des KRBTGT-Kontos stehen Kunden jetzt zur Verfügung)](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Beachten Sie auch die Verwendung des [Reset the KRBTGT account password/keys tool (Tools zum Zurücksetzen des Kennworts/Schlüssels eines KRBTGT-Kontos)](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Da es sich dabei um eine Technik mit seitlicher Bewegung handelt, führen Sie die bewährten Methoden der [Pass the hash recommendations (Empfehlungen zu Pass-the-Hash)](http://aka.ms/PtH) aus.
+2. Wenn es sich um ein vertrauliches Konto handelt, sollten Sie das KRBTGT-Konto wie bei verdächtigen Aktivitäten mit Golden Tickets zweimal zurücksetzen. Durch das zweimalige Zurücksetzen von KRBTGT werden alle Kerberos-Tickets in dieser Domäne ungültig. Daher sollten Sie diesen Schritt im Voraus planen. Siehe [KRBTGT Account Password Reset Scripts now available for customers (Skripts zum Zurücksetzen von Kennwörtern des KRBTGT-Kontos stehen Kunden jetzt zur Verfügung)](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Beachten Sie auch die Verwendung des [Reset the KRBTGT account password/keys tool (Tools zum Zurücksetzen des Kennworts/Schlüssels eines KRBTGT-Kontos)](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Da es sich dabei um eine Technik mit seitlicher Bewegung handelt, führen Sie die bewährten Methoden der [Pass the hash recommendations (Empfehlungen zu Pass-the-Hash)](https://www.microsoft.com/download/details.aspx?id=36036) aus.
 
 ## Kerberos Golden Ticket<a name="golden-ticket"></a>
 
@@ -195,7 +195,7 @@ Wenn die Windows Defender ATP-Integration aktiviert ist, klicken Sie auf das Win
 **Wartung**
 
 
-Ändern Sie das Kennwort für das Kerberos Ticket Granting Ticket (KRBTGT) zweimal gemäß den Anweisungen unter [KRBTGT Account Password Reset Scripts now available for customers (Skripts zum Zurücksetzen von Kennwörtern des KRBTGT-Kontos stehen Kunden jetzt zur Verfügung)](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) mithilfe des [Reset the KRBTGT account password/keys tool (Tools zum Zurücksetzen des Kennworts/Schlüssels eines KRBTGT-Kontos)](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Durch das zweimalige Zurücksetzen von KRBTGT werden alle Kerberos-Tickets in dieser Domäne ungültig. Daher sollten Sie diesen Schritt im Voraus planen. Implementieren Sie ebenfalls die [Pass the hash recommendations (Empfehlungen zu Pass-the-Hash)](http://aka.ms/PtH), da für das Erstellen eines Golden Tickets Domänenadministratorrechte erforderlich sind.
+Ändern Sie das Kennwort für das Kerberos Ticket Granting Ticket (KRBTGT) zweimal gemäß den Anweisungen unter [KRBTGT Account Password Reset Scripts now available for customers (Skripts zum Zurücksetzen von Kennwörtern des KRBTGT-Kontos stehen Kunden jetzt zur Verfügung)](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) mithilfe des [Reset the KRBTGT account password/keys tool (Tools zum Zurücksetzen des Kennworts/Schlüssels eines KRBTGT-Kontos)](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Durch das zweimalige Zurücksetzen von KRBTGT werden alle Kerberos-Tickets in dieser Domäne ungültig. Daher sollten Sie diesen Schritt im Voraus planen. Implementieren Sie ebenfalls die [Pass the hash recommendations (Empfehlungen zu Pass-the-Hash)](https://www.microsoft.com/download/details.aspx?id=36036), da für das Erstellen eines Golden Tickets Domänenadministratorrechte erforderlich sind.
 
 
 
@@ -217,7 +217,7 @@ In dieser Erkennung wird eine Warnung ausgelöst, wenn die DPAPI zum Abrufen des
 
 **Wartung**
 
-Ein Angreifer benötigt Domänenadministratorrechte zum Verwenden der DPAPI. Implementieren Sie [Pass the hash recommendations (Empfehlungen zu Pass-the-Hash)](http://aka.ms/PtH).
+Ein Angreifer benötigt Domänenadministratorrechte zum Verwenden der DPAPI. Implementieren Sie [Pass the hash recommendations (Empfehlungen zu Pass-the-Hash)](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## <a name="malicious-replication-of-directory-services"></a>Böswillige Replikation von Verzeichnisdiensten
 
@@ -442,9 +442,9 @@ In den meisten Organisationen wird das DNS-Protokoll nicht überwacht und nur se
 
 
 1.  In einigen legitimen Unternehmen wird DNS für die reguläre Kommunikation verwendet. Überprüfen Sie, ob die registrierte Abfragedomäne zu einer vertrauenswürdigen Quelle gehört, wie etwa Ihrem Virenschutzanbieter. Wenn die Domäne bekannt und vertrauenswürdig ist und DNS-Abfragen zulässig sind, kann die Warnung geschlossen werden und die Domäne für zukünftige Warnungen [ausgeschlossen](excluding-entities-from-detections.md) werden. 
-3.   Wenn die registrierte Abfragedomäne nicht vertrauenswürdig ist, identifizieren Sie den Prozess, der die Anforderung erstellt hat, auf dem Quellcomputer. Verwenden Sie zur Unterstützung bei dieser Aufgabe den [Prozessmonitor](https://docs.microsoft.com/en-us/sysinternals/downloads/procmon).
-4.  Bestimmen des Anfangs der verdächtigen Aktivität Wurden neue Programme (AV?) in der Organisation bereitgestellt oder installiert? Gibt es weitere Warnungen um die gleiche Uhrzeit?
-5.  Klicken Sie auf den Quellcomputer, um auf dessen Profilseite zuzugreifen. Überprüfen Sie, was ungefähr zum Zeitpunkt der DNS-Abfrage passiert ist. Suchen Sie nach ungewöhnlichen Aktivitäten, z.B.: Wer war angemeldet, und welche Ressourcen wurden verwendet. Wenn Sie die Windows Defender ATP-Integration bereits aktiviert haben, klicken Sie auf das Windows Defender ATP-Badge, ![Windows Defender ATP-Badge](./media/wd-badge.png) um den Computer weiter zu untersuchen. Mithilfe von Windows Defender ATP können Sie sehen, welche Prozesse und Warnungen ungefähr gleichzeitig mit der Warnung aufgetreten sind.
+2.   Wenn die registrierte Abfragedomäne nicht vertrauenswürdig ist, identifizieren Sie den Prozess, der die Anforderung erstellt hat, auf dem Quellcomputer. Verwenden Sie zur Unterstützung bei dieser Aufgabe den [Prozessmonitor](https://docs.microsoft.com/en-us/sysinternals/downloads/procmon).
+3.  Bestimmen des Anfangs der verdächtigen Aktivität Wurden neue Programme (AV?) in der Organisation bereitgestellt oder installiert? Gibt es weitere Warnungen um die gleiche Uhrzeit?
+4.  Klicken Sie auf den Quellcomputer, um auf dessen Profilseite zuzugreifen. Überprüfen Sie, was ungefähr zum Zeitpunkt der DNS-Abfrage passiert ist. Suchen Sie nach ungewöhnlichen Aktivitäten, z.B.: Wer war angemeldet, und welche Ressourcen wurden verwendet. Wenn Sie die Windows Defender ATP-Integration bereits aktiviert haben, klicken Sie auf das Windows Defender ATP-Badge, ![Windows Defender ATP-Badge](./media/wd-badge.png) um den Computer weiter zu untersuchen. Mithilfe von Windows Defender ATP können Sie sehen, welche Prozesse und Warnungen ungefähr gleichzeitig mit der Warnung aufgetreten sind.
 
 **Wartung** Wenn sich die registrierte Domäne nach Ihrer Untersuchung als nicht vertrauenswürdig erweist, empfehlen wir, die Zieldomäne zu blockieren, um zukünftig jede Kommunikation zu vermeiden. 
 
@@ -470,7 +470,7 @@ Bei dieser Erkennungsfunktion wird eine Warnung ausgelöst, wenn ein Computer im
    3. Wird auf dem Computer ein Windows Server-Betriebssystem (oder Windows/Linux) ausgeführt? Ein Computer, bei dem es sich nicht um einen Server handelt, darf keine Daten replizieren.
 Wenn die Windows Defender ATP-Integration aktiviert ist, klicken Sie auf das Windows Defender ATP-Badge ![Windows Defender ATP-Badge](./media/wd-badge.png), um den Computer genauer zu untersuchen. In Windows Defender ATP können Sie sehen, welche Prozesse und Warnungen ungefähr gleichzeitig mit der Warnung aufgetreten sind.
 
-4. Sehen Sie sich in der Ereignisanzeige [Active Directory-Ereignisse an, die im Protokoll der Verzeichnisdienste aufgezeichnet wurden](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)). Sie können das Protokoll verwenden, um Änderungen in Active Directory zu überwachen. Standardmäßig zeichnet Active Directory nur kritische Fehlerereignisse auf. Wenn diese Warnung aber wiederholt auftritt, aktivieren Sie diese Überwachung auf dem entsprechenden Domänencontroller, um eine weitere Untersuchung zu ermöglichen.
+4. Sehen Sie sich in der Ereignisanzeige [Active Directory-Ereignisse an, die im Protokoll der Verzeichnisdienste aufgezeichnet wurden](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)/). Sie können das Protokoll verwenden, um Änderungen in Active Directory zu überwachen. Standardmäßig zeichnet Active Directory nur kritische Fehlerereignisse auf. Wenn diese Warnung aber wiederholt auftritt, aktivieren Sie diese Überwachung auf dem entsprechenden Domänencontroller, um eine weitere Untersuchung zu ermöglichen.
 
 **Korrektur**
 
@@ -529,7 +529,7 @@ Bei dieser Erkennungsfunktion wird eine Warnung ausgelöst, wenn eine verdächti
    2.  Sollen die Benutzer Zugriff auf diese Ressourcen haben?
    3. Wird auf dem Computer ein Windows Server-Betriebssystem (oder Windows/Linux) ausgeführt? Ein Computer, bei dem es sich nicht um einen Server handelt, darf keine Daten replizieren.
 Wenn die Windows Defender ATP-Integration aktiviert ist, klicken Sie auf das Windows Defender ATP-Badge ![Windows Defender ATP-Badge](./media/wd-badge.png), um den Computer genauer zu untersuchen. In Windows Defender ATP können Sie sehen, welche Prozesse und Warnungen ungefähr gleichzeitig mit der Warnung aufgetreten sind.
-1. Sehen Sie sich in der Ereignisanzeige [Active Directory-Ereignisse an, die im Protokoll der Verzeichnisdienste aufgezeichnet wurden](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)). Sie können das Protokoll verwenden, um Änderungen in Active Directory zu überwachen. Standardmäßig zeichnet Active Directory nur kritische Fehlerereignisse auf. Wenn diese Warnung aber wiederholt auftritt, aktivieren Sie diese Überwachung auf dem entsprechenden Domänencontroller, um eine weitere Untersuchung zu ermöglichen.
+1. Sehen Sie sich in der Ereignisanzeige [Active Directory-Ereignisse an, die im Protokoll der Verzeichnisdienste aufgezeichnet wurden](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)/). Sie können das Protokoll verwenden, um Änderungen in Active Directory zu überwachen. Standardmäßig zeichnet Active Directory nur kritische Fehlerereignisse auf. Wenn diese Warnung aber wiederholt auftritt, aktivieren Sie diese Überwachung auf dem entsprechenden Domänencontroller, um eine weitere Untersuchung zu ermöglichen.
 
 **Wartung**
 

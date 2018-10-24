@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 4308f03e-b2a7-4e38-a750-540ff94faa81
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e6f3647ecaab82a32950fadd0a101385a2cc0051
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: acbab806e7f49052e0789927f452217c12efd992
+ms.sourcegitcommit: 8cb370eab974652451066570e435d8a4f304fa29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783048"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49326760"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -32,13 +32,13 @@ Legen Sie folgende Parameter fest, damit Benachrichtigungen an eine bestimmte E-
 
 1. Klicken Sie im Azure ATP-Portal in der Symbolleiste erst auf die Einstellungsoption und dann auf **Konfiguration**.
 
-![Symbol der Azure ATP-Konfigurationseinstellungen](media/atp-config-menu.png)
+ ![Symbol der Azure ATP-Konfigurationseinstellungen](media/atp-config-menu.png)
 
 2. Klicken Sie auf **Benachrichtigungen**.
 3. Geben Sie unter **E-Mail-Benachrichtigungen** an, wann Benachrichtigungen via E-Mail gesendet werden sollen: entweder für neue Warnungen (verdächtige Aktivitäten) oder neue Integritätsprobleme. 
  
  >  [!NOTE]
- >   E-Mail-Benachrichtigungen über verdächtige Aktivitäten werden nur beim Erstellen der verdächtigen Aktivität gesendet.
+ > E-Mail-Benachrichtigungen über verdächtige Aktivitäten werden nur beim Erstellen der verdächtigen Aktivität gesendet.
  
 4. Klicken Sie auf **Speichern**.
 

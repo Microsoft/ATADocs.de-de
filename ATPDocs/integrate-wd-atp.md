@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: f6f3ed75-d6bb-4966-a9a7-5339c4f3ebac
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a888cbb80bba74d920e236b04c353008c7b56daf
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: c0bda95fb789225cf7d05616974f9a333f3c8e4f
+ms.sourcegitcommit: 30d874808cfeafd46ee8fbbf34e0bbcb337f6544
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783660"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49089354"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -69,7 +69,7 @@ Zur Aktivierung dieses Features benötigen Sie Lizenzen für Azure ATP und Windo
 
  ![Aktivieren der Integration](./media/enable-integration.png)
 
-4. Gehen Sie im [Windows Defender ATP-Portal](https://beta.securitycenter.windows.com/preferences/advanced) auf **Einstellungen** > **Erweiterte Features**, und legen Sie **Azure ATP integration** (Azure ATP-Integration) auf **On** (Aktiviert) fest. 
+4. Gehen Sie im [Windows Defender ATP-Portal](https://securitycenter.windows.com/preferences/advanced) auf **Einstellungen** > **Erweiterte Features**, und legen Sie **Azure ATP integration** (Azure ATP-Integration) auf **On** (Aktiviert) fest. 
 
  ![Aktivieren der Windows Defender-ATP-Integration](./media/wd-atp-enable.png)
 
