@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 4308f03e-b2a7-4e38-a750-540ff94faa81
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: acbab806e7f49052e0789927f452217c12efd992
-ms.sourcegitcommit: 8cb370eab974652451066570e435d8a4f304fa29
+ms.openlocfilehash: 79368731bcfef923466d566f06fe775ebf1caeac
+ms.sourcegitcommit: e783df4c9d928fedf6dc3c65d58d9b530cdd2ff2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49326760"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49800037"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -37,7 +37,7 @@ Legen Sie folgende Parameter fest, damit Benachrichtigungen an eine bestimmte E-
 2. Klicken Sie auf **Benachrichtigungen**.
 3. Geben Sie unter **E-Mail-Benachrichtigungen** an, wann Benachrichtigungen via E-Mail gesendet werden sollen: entweder für neue Warnungen (verdächtige Aktivitäten) oder neue Integritätsprobleme. 
  
- >  [!NOTE]
+ > [!NOTE]
  > E-Mail-Benachrichtigungen über verdächtige Aktivitäten werden nur beim Erstellen der verdächtigen Aktivität gesendet.
  
 4. Klicken Sie auf **Speichern**.

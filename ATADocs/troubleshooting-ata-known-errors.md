@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: ddbcd8877ca36afe9e56e9bc6febee19ff9957ff
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 5069fdda7c27a54705a17da79dbb536d412c4113
+ms.sourcegitcommit: 59ed430fa0cd8ac34a70609026ec5fc2f5972f57
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133479"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "49480632"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -79,7 +79,7 @@ In diesem Abschnitt sind mögliche Fehler, die es in den Bereitstellungen von AT
 |Problem|Beschreibung|Lösung|
 |-------------|----------|---------|
 |Es wurde kein Datenverkehr vom Domänencontroller empfangen, doch es wurden Überwachungswarnungen beobachtet.|    Es wurde kein Datenverkehr von einem Domänencontroller empfangen, der Portspiegelung über ein ATA-Gateway verwendet.|Deaktivieren Sie diese Funktionen auf dem verwendeten NIC auf dem ATA-Gateway unter **Erweiterte Einstellungen**:<br></br>Empfang zusammengeführter Segmente (IPv4)<br></br>Empfang zusammengeführter Segmente (IPv6)|
-|Diese Überwachungswarnung wird angezeigt: **Ein Teil des Netzwerkdatenverkehrs wird nicht analysiert**.|Wenn Sie ein ATA-Gateway oder ein Lightweight-Gateway auf einem virtuellen VMware-Computer haben, erhalten Sie möglicherweise diese Warnung. Dies tritt aufgrund von Konfigurationskonflikten in VMware auf.|Legen Sie die folgenden Einstellungen in der NIC-Konfiguration der VM auf **0 (null)** oder **Deaktiviert** fest: TsoEnable, LargeSendOffload, TSO Offload, Giant TSO Offload|TLS 1.0 ist auf dem ATA-Gateway deaktiviert, .NET ist aber für die Verwendung von TLS 1.2 eingerichtet.|
+|Diese Überwachungswarnung wird angezeigt: **Ein Teil des Netzwerkdatenverkehrs wird nicht analysiert**.|Wenn Sie ein ATA-Gateway oder ein Lightweight-Gateway auf einem virtuellen VMware-Computer haben, erhalten Sie möglicherweise diese Warnung. Dies tritt aufgrund von Konfigurationskonflikten in VMware auf.|Legen Sie die folgenden Einstellungen in der NIC-Konfiguration der VM auf **0 (null)** oder **Deaktiviert** fest: TsoEnable, LargeSendOffload, TSO Offload, Giant TSO Offload|TLS 1.0 ist auf dem ATA-Gateway deaktiviert, .NET ist aber für die Verwendung von TLS 1.2 eingerichtet.|<!-- line contains 5 vertical lines -->
 
 
 

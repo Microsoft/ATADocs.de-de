@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: d7c95f8c-04f8-4946-9bae-c27ed362fcb0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6f65b3af56e683a385f7128a989170c8c4073b3e
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: b7ddaca0f0c5691c90873cef9af6cef13fa9650a
+ms.sourcegitcommit: e783df4c9d928fedf6dc3c65d58d9b530cdd2ff2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783864"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49800038"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -28,6 +28,7 @@ ms.locfileid: "48783864"
 
 > [!div class="step-by-step"]
 > [« Schritt 4](install-atp-step4.md)
+> [Schritt 6 »](install-atp-step6-vpn.md)
 
 
 
@@ -61,7 +62,7 @@ Führen Sie die folgenden Schritte nach der Installation des Azure ATP-Sensors a
    Es wird empfohlen, alle Azure ATP-Sensoren an Remotestandorten als Kandidaten für die Domänensynchronisierung zu deaktivieren.
    Wenn Ihr Domänencontroller schreibgeschützt ist, verwenden Sie ihn nicht als Kandidat für die Domänensynchronisierung. Weitere Informationen zur Azure ATP-Domänensynchronisierung finden Sie unter [Azure ATP-Architektur](atp-architecture.md#azure-atp-sensor-features).
   
-4. Klicken Sie auf **Speichern**.
+3. Klicken Sie auf **Speichern**.
 
 
 ## <a name="validate-installations"></a>Überprüfen von Installationen
@@ -80,6 +81,7 @@ Gehen Sie wie folgt vor, um zu überprüfen, ob der Azure ATP-Sensor erfolgreich
 
 > [!div class="step-by-step"]
 > [« Schritt 4](install-atp-step4.md)
+> [Schritt 6 »](install-atp-step6-vpn.md)
 
 
 

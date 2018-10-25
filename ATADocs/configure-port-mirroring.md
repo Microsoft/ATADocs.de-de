@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: cdaddca3-e26e-4137-b553-8ed3f389c460
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e9d5ea1dfce5a162c0bf4642f2159b13a5b0f169
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: b8b9f3b1eeb36e3a4af949d7165ce0a46225b858
+ms.sourcegitcommit: 59ed430fa0cd8ac34a70609026ec5fc2f5972f57
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46134142"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "49480649"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -64,9 +64,10 @@ Die Domänencontroller und ATA-Gateways können physisch oder virtuell vorhanden
 **Falls Sie mit Virtualisierungsclustern arbeiten:**
 
 -   Konfigurieren Sie für jeden Domänencontroller, der auf dem Virtualisierungscluster in einem virtuellen Computer mit dem ATA-Gateway ausgeführt wird, die Affinität zwischen dem Domänencontroller und dem ATA-Gateway. Auf diese Weise folgt das ATA-Gateway dem Domänencontroller, wenn dieser auf einen anderen Host verschoben wird. Dieser Ansatz funktioniert gut, solange nur wenige Domänencontroller vorhanden sind.
+
 > [!NOTE]
 > Wenn Ihre Umgebung V2V ((Virtual-to-Virtual) auf unterschiedlichen Hosts (RSPAN) unterstützt, müssen Sie sich zu Affinität keine Gedanken machen.
-> 
+
 -   Um zu gewährleisten, dass die ATA-Gateways ausreichende Kapazität für die eigenständige Überwachung aller Domänencontroller aufweisen, eignet sich folgende Option: Installieren Sie auf jedem Virtualisierungshost einen virtuellen Computer, und installieren Sie auf jeden Host ein ATA-Gateway. Konfigurieren Sie jedes ATA-Gateway so, dass es alle Domänencontroller überwacht, die auf dem betreffenden Cluster ausgeführt werden. Auf diese Weise wird jeder Host überwacht, auf dem Domänencontroller ausgeführt werden.
 
 Überprüfen Sie nach dem Konfigurieren der Portspiegelung deren ordnungsgemäße Funktion, bevor Sie die ATA-Gateways installieren.
