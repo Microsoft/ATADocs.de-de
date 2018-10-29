@@ -37,6 +37,7 @@
 ## [Azure ATP-Berichte](reports.md)
 ## [Grundlegendes zu Entitätenprofilen](entity-profiles.md)
 ## [Überwachte Aktivitäten](monitored-activities.md)
+### [Durchsuchen und Filtern überwachter Aktivitäten](atp-activities-search.md)
 ## [Verwalten von sensiblen Konten](sensitive-accounts.md)
 ## [Ausschließen von Entitäten von der Erkennung](excluding-entities-from-detections.md)
 ## [Ausschlüsse und Honeytoken-Konten](install-atp-step7.md)
