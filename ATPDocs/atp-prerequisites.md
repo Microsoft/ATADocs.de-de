@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/7/2018
+ms.date: 10/18/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e3cf97c4bd95a1fefc0aef29009f644cd5ef907d
-ms.sourcegitcommit: bbbe808c08ce703a314c82b46aedaae79ab256a3
+ms.openlocfilehash: f959176ddca045f421af416d5ce9dc3a777cc43a
+ms.sourcegitcommit: fdff488c79729035f89897c2ea0771a45b4c3ecf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848540"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49401911"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -46,7 +46,7 @@ Dieser Leitfaden zu Voraussetzungen wird in die folgenden Abschnitte unterteilt,
 [Eigenständiger Azure ATP-Sensor](#azure-atp-sensor-requirements): In diesem Abschnitt werden die Hardware- und Softwareanforderungen für den eigenständigen Azure ATP-Sensor beschrieben und Einstellungen genannt, die Sie auf Ihren eigenständigen Azure ATP-Sensorservern konfigurieren müssen.
 
 ## <a name="before-you-start"></a>Vorbereitung
-In diesem Abschnitt werden die Informationen aufgeführt, die Sie sammeln sollten, und Konten- und Netzwerk-Entitäten genannt, die vor der Installation von Azure ATP vorhanden sein sollten.
+In diesem Abschnitt werden die Informationen aufgeführt, die Sie sammeln sollten, sowie Konten und Netzwerkinformationen genannt, die vor der Azure ATP-Installation vorhanden sein sollten.
 
 - Sie können eine Lizenz für Enterprise Mobility + Security 5 (EMS E5) entweder direkt über das [Office 365-Portal](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) oder über das CSP-Lizenzierungsmodell (Cloud Solution Partner) erwerben.  
 
@@ -227,5 +227,5 @@ In der folgenden Tabelle sind die Ports aufgeführt, die für den Verwaltungsada
 - [Azure ATP sizing tool (Azure ATP-Tool zur Größenanpassung)](http://aka.ms/aatpsizingtool)
 - [Azure ATP architecture (Azure ATP-Architektur)](atp-architecture.md)
 - [Install Azure ATP (Installieren von Azure ATP)](install-atp-step1.md)
-- [Check out the Azure ATP forum! (Besuchen Sie das Azure ATP-Forum)](https://aka.ms/azureatpcommunity)
+- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)
 

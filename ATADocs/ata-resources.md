@@ -13,17 +13,17 @@ ms.technology: ''
 ms.assetid: 42a1a34f-ed6b-4538-befb-452168a30e8c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 48756cbde8b288116975c05567beeac76e83a717
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 069ee0f367c52de897486291f761bf0dde6016e0
+ms.sourcegitcommit: 8ecb76ddfbf48c361d3637d15bd48313a3e68685
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133768"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49634748"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
 # <a name="ata-readiness-roadmap"></a>Überblick über die ATA-Bereitschaft 
-Dieses Dokument bietet einen Überblick über die Bereitschaft, der Ihnen beim Einstieg mit Advanced Threat Analytics hilft.
+Dieser Artikel bietet einen Überblick über die Roadmap für die Bereitschaft, die Ihnen beim Einstieg mit Advanced Threat Analytics hilft.
 
 ## <a name="understanding-ata"></a>Grundlegendes zu ATA
 
@@ -38,9 +38,9 @@ Advanced Threat Analytics (ATA) ist eine lokale Plattform, mit deren Hilfe Sie I
 
 ## <a name="deployment-decisions"></a>Entscheidungen für die Bereitstellung
 
-ATA besteht aus ATA Center, das Sie auf einem Server installieren können, sowie aus ATA Gateways, die Sie auf separaten Computern oder mithilfe von Lightweight-Gateways direkt auf Ihren Domänencontrollern installieren können. Bevor Sie loslegen ist es wichtig, folgende Entscheidungen zur Bereitstellung zu treffen:
+ATA besteht aus ATA Center, das Sie auf einem Server installieren können, sowie aus ATA Gateways, die Sie auf separaten Computern oder mithilfe des Lightweight-Gateways direkt auf Ihren Domänencontrollern installieren können. Bevor Sie loslegen ist es wichtig, folgende Entscheidungen zur Bereitstellung zu treffen:
 
-|KONFIGURATION|ENTSCHEIDUNG|
+|Konfiguration | Entscheidung |
 |----|----|
 |Hardwaretyp|Physische, virtuelle, Azure-VM|
 |Arbeitsgruppe oder Domäne|Arbeitsgruppe, Domäne|
@@ -51,11 +51,13 @@ Wenn Sie physische Server verwenden, sollten Sie die Kapazität planen. Sie kön
 
 [ATA-Tool zur Größenanpassung](ata-capacity-planning.md): Das Tool zur Größenanpassung automatisiert die Auflistung der Menge an Datenverkehr, die von ATA benötigt wird. Es stellt automatisch Empfehlungen zu Unterstützbarkeit und Ressourcen für ATA Center und ATA-Lightweight-Gateways bereit.
 
+
 [ATA-Kapazitätsplanung](ata-capacity-planning.md)
+
 
 ## <a name="deploy-ata"></a>Bereitstellung von ATA
 
-Die folgenden Artikel enthalten Informationen zum Download und zur Installation von ATA Center, zur Verbindung zu Active Directory, beim Download des ATA-Gatewaypakets, zum Einrichten der Ereignissammlung und optional zur Integration in Ihr VPN und zur Einrichtung von Honeytokenkonten und -ausschlüssen.
+Diese Ressourcen unterstützen Sie beim Download und bei der Installation von ATA Center, bei der Verbindung zu Active Directory, beim Download des ATA Gatewaypakets, beim Einrichten der Ereignissammlung und optional bei der Integration in Ihr VPN sowie bei der Einrichtung von Honeytoken-Konten und -Ausschlüssen.
 
 [Herunterladen von ATA](http://aka.ms/ataeval): Wenn Sie sich vor der Bereitstellung von ATA noch nicht dazu entschieden haben, ATA käuflich zu erwerben, können Sie die Evaluierungsversion herunterladen. 
 
@@ -65,7 +67,7 @@ Die folgenden Artikel enthalten Informationen zum Download und zur Installation 
 
 ## <a name="ata-settings"></a>ATA-Einstellungen
 
-Die grundlegenden, erforderlichen Einstellungen in ATA werden als Teil des Installations-Assistenten konfiguriert. Es gibt jedoch eine Reihe anderer Einstellungen, die Sie zur Optimierung von ATA verwenden können, um die Erkennungen für Ihre Umgebung präziser durchzuführen, z.B. die SIEM-Integration oder Überwachungseinstellungen.
+Die grundlegenden, erforderlichen Einstellungen in ATA werden als Teil des Installations-Assistenten konfiguriert. Es gibt jedoch eine Reihe anderer Einstellungen, die Sie zur Optimierung von ATA verwenden können, um die Erkennungen für Ihre Umgebung präziser durchzuführen, z.B. die SIEM-Integration und Überwachungseinstellungen.
 
 [Überwachungseinstellungen](https://aka.ms/ataauditingblog): Überwachen Sie die Integrität Ihres Domänencontrollers vor und nach der ATA-Bereitstellung.
 

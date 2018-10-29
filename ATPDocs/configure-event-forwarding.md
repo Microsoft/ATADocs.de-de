@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3547519f-8d9c-40a9-8f0e-c7ba21081203
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 90de9f0f02fa1b87fd2d741349a1d81e089b6fb1
-ms.sourcegitcommit: bbbe808c08ce703a314c82b46aedaae79ab256a3
+ms.openlocfilehash: 931ea6e4c122ad159e16450546d241c67249b321
+ms.sourcegitcommit: 63ec9181f71edce6a950f5cc0d69428405436c48
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848523"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49963334"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -63,7 +63,7 @@ Sie müssen die Domänencontroller neu starten, nachdem Sie den **Netzwerkdienst
    
     1.  Wählen Sie **Aktiviert** aus.
     2.  Klicken Sie unter **Optionen** auf **Anzeigen**.
-    3.  Geben Sie unter **SubscriptionManagers** folgenden Wert ein, und klicken Sie auf **OK**: *Server=`http://<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10*` *(zum Beispiel: Server=`http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
+    3.  Geben Sie unter **SubscriptionManagers** folgenden Wert ein, und klicken Sie auf **OK**: *Server=`http://<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10` *(zum Beispiel: Server=`http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
     
     ![Configure target subscription image](media/wef%202%20config%20target%20sub%20manager.png)
     
@@ -72,22 +72,23 @@ Sie müssen die Domänencontroller neu starten, nachdem Sie den **Netzwerkdienst
 
 **Schritt 3: Führen Sie die folgenden Schritte für den eigenständigen Azure ATP-Sensor aus** 
 
-1.  Öffnen Sie eine Eingabeaufforderung mit erhöhten Rechten, und geben Sie *wecutil.qc* ein.
-2.  Öffnen Sie die **Ereignisanzeige**. 
-3.  Klicken Sie mit der rechten Maustaste auf **Abonnements**, und wählen Sie **Abonnement erstellen** aus. 
-
-   1.   Geben Sie einen Namen und eine Beschreibung für das Abonnement ein. 
-   2.   Bestätigen Sie für **Zielprotokoll**, dass **Weitergeleitete Ereignisse** aktiviert ist. Damit Azure ATP die Ereignisse lesen kann, muss das Zielprotokoll unter **Weitergeleitete Ereignisse** zu finden sein. 
-   3.   Wählen Sie **Quellcomputerinitiiert** aus, und klicken Sie auf **Computergruppen auswählen** aus.
-        1.  Klicken Sie auf **Domänencomputer hinzufügen**.
-        2.  Geben Sie den Namen des Domänencontrollers in das Feld **Namen des auszuwählenden Objekts eingeben** ein. Klicken Sie anschließend auf **Namen überprüfen**, und klicken Sie auf **OK**. 
-        3.  Klicken Sie auf **OK**.
+1. Öffnen Sie eine Eingabeaufforderung mit erhöhten Rechten, und geben Sie *wecutil.qc* ein.
+2. Öffnen Sie die **Ereignisanzeige**. 
+3. Klicken Sie mit der rechten Maustaste auf **Abonnements**, und wählen Sie **Abonnement erstellen** aus. 
+    
+    1. Geben Sie einen Namen und eine Beschreibung für das Abonnement ein. 
+    2. Bestätigen Sie für **Zielprotokoll**, dass **Weitergeleitete Ereignisse** aktiviert ist. Damit Azure ATP die Ereignisse lesen kann, muss das Zielprotokoll unter **Weitergeleitete Ereignisse** zu finden sein. 
+    3. Wählen Sie **Quellcomputerinitiiert** aus, und klicken Sie auf **Computergruppen auswählen** aus.
+        1. Klicken Sie auf **Domänencomputer hinzufügen**.
+        2. Geben Sie den Namen des Domänencontrollers in das Feld **Namen des auszuwählenden Objekts eingeben** ein. Klicken Sie anschließend auf **Namen überprüfen**, und klicken Sie auf **OK**. 
+        3. Klicken Sie auf **OK**.
         ![Event Viewer image](media/wef3%20event%20viewer.png)     
-   4.   Klicken Sie auf **Ereignisse auswählen**.
+    4. Klicken Sie auf **Ereignisse auswählen**.
         1. Klicken Sie auf **Per Protokoll** und wählen Sie **Sicherheit** aus.
-        2. Tippen Sie im Feld **Ereignis-IDs ein-/ausschließen** die Ereignisnummer ein, und klicken Sie auf **OK**. Geben Sie 4776 ein, wie im folgenden Beispiel: ![Abbildung von Abfragefilter](media/wef-4-query-filter.png)
-   5.   Klicken Sie mit der rechten Maustaste auf das erstellte Abonnement, und wählen Sie **Laufzeitstatus** aus, um festzustellen, ob es Probleme mit dem Status gibt. 
-   6.   Überprüfen Sie nach einigen Minuten, ob die festgelegten Ereignisse im eigenständigen Azure ATP-Sensor unter „Weitergeleitete Ereignisse“ angezeigt werden.
+        2. Tippen Sie im Feld **Ereignis-IDs ein-/ausschließen** die Ereignisnummer ein, und klicken Sie auf **OK**. Geben Sie wie im folgenden Beispiel 4776 ein:<br/>
+        ![Query filter image](media/wef-4-query-filter.png)
+   5. Klicken Sie mit der rechten Maustaste auf das erstellte Abonnement, und wählen Sie **Laufzeitstatus** aus, um festzustellen, ob es Probleme mit dem Status gibt. 
+   6. Überprüfen Sie nach einigen Minuten, ob die festgelegten Ereignisse im eigenständigen Azure ATP-Sensor unter „Weitergeleitete Ereignisse“ angezeigt werden.
 
 
 Weitere Informationen finden Sie unter [Einrichten von Computern zum Weiterleiten und Sammeln von Ereignissen](https://technet.microsoft.com/library/cc748890).

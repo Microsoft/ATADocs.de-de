@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 10/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 2d14d0e9-1b03-4bcc-ae97-8fd41526ffc5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 80038b04a95d09c25baf1e2b5d216796cb12c9f6
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: e11e0e75c8c7fd4a0be592ad45b961f7046ec5e2
+ms.sourcegitcommit: e783df4c9d928fedf6dc3c65d58d9b530cdd2ff2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783679"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49800065"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -38,9 +38,9 @@ Azure ATP gewährt Ihnen wertvolle Einblicke in Identitätskonfigurationen und s
 ## <a name="identify-suspicious-activities-and-advanced-attacks-across-the-attack-kill-chain"></a>Identifizieren verdächtiger Aktivitäten und erweiterter Angriffe über die Kill Chain 
 Angriffe werden in der Regel gegen eine beliebige zugängliche Entität gestartet, wie z.B. einen Benutzer mit geringfügigen Berechtigungen, und verschieben sich anschließend schnell seitwärts, bis der Angreifer Zugriff auf wertvolle Objekte erhält (z.B. sensible Konten, Domänenadministratoren und streng vertrauliche Daten). Azure ATP erkennt diese erweiterten Bedrohungen von Grund auf während der gesamten Kill Chain zur Angriffsabwehr: 
 ### <a name="reconnaissance"></a>Reconnaissance 
-Identifizieren nicht autorisierter Benutzer und Angreifer, um über eine Vielzahl von Methoden Informationen zu Benutzernamen, der Gruppenmitgliedschaft von Benutzern, Geräten zugewiesenen IP-Adressen, Ressourcen und mehr zu erlangen.  
+Identifizieren nicht autorisierter Benutzer und der Versuche von Angreifern, Informationen zu erhalten. Angreifer suchen nach Informationen zu Benutzernamen, der Gruppenmitgliedschaft von Benutzern, Geräten zugewiesenen IP-Adressen, Ressourcen und mehr, wobei sie eine Vielzahl von Methoden verwenden.  
 ### <a name="compromised-users"></a>Gefährdete Benutzer
-Identifizieren von Versuchen zur Gefährdung von Benutzeranmeldeinformationen über Angriffe durch Schlüsselsuche, fehlgeschlagene Authentifizierungen, Änderungen der Gruppenmitgliedschaft von Benutzern und weitere Methoden.  
+Identifizieren von Versuchen zur Gefährdung von Benutzeranmeldeinformationen über Brute-Force-Angriffe, fehlgeschlagene Authentifizierungen, Änderungen der Gruppenmitgliedschaft von Benutzern und weitere Methoden.  
 
 ### <a name="lateral-movements"></a>Seitliche Verschiebungen
 Erkennen von Versuchen zur seitlichen Verschiebung innerhalb des Netzwerks, um mithilfe von Methoden wie „Pass-the-Ticket“, „Pass-the-Hash“, „Overpass-the-Hash“ und mehr weitere Kontrolle über sensible Benutzer zu erlangen.  
@@ -49,24 +49,40 @@ Erkennen von Versuchen zur seitlichen Verschiebung innerhalb des Netzwerks, um m
 Hervorheben des Angreiferverhaltens bei Erreichen der Domänendominanz über die Ausführung von Remotecode auf dem Domänencontroller und Methoden wie „DC Shadow“, die böswillige Replikation des Domänencontrollers, Golden Ticket-Aktivitäten und mehr.   
 
 ## <a name="investigate-alerts-and-user-activities"></a>Untersuchen von Warnungen und Benutzeraktivitäten  
-Azure ATP soll die Anzahl allgemeiner Warnungen reduzieren, damit nur relevante und wichtige Sicherheitswarnungen in einer übersichtlichen Zeitleiste mit gegen die Organisation gerichteten Angriffen in Echtzeit bereitgestellt werden können. Dank der Azure ATP-Ansicht mit der Zeitachse zu Angriffen können Sie sich problemlos aufs Wesentliche konzentrieren und intelligente Analysen wirksam einsetzen. Sicherheitsexperten, die Azure ATP verwenden, können Bedrohungen ohne großen Aufwand untersuchen und gewinnen organisationsübergreifend Einblicke für Benutzer, Geräte und Netzwerkressourcen. Die nahtlose Integration in Windows Defender ATP bietet durch zusätzliche Erkennung und Schutz vor erweiterten dauerhaften Bedrohungen für das Betriebssystem eine weitere erweiterte Sicherheitsebene.  
+Azure ATP soll die Anzahl allgemeiner Warnungen reduzieren, damit nur relevante, wichtige Sicherheitswarnungen in einer übersichtlichen Zeitleiste mit gegen die Organisation gerichteten Angriffen in Echtzeit bereitgestellt werden können. Dank der Azure ATP-Ansicht mit der Zeitachse zu Angriffen können Sie sich problemlos aufs Wesentliche konzentrieren und intelligente Analysen wirksam einsetzen. Sicherheitsexperten, die Azure ATP verwenden, können Bedrohungen ohne großen Aufwand untersuchen und gewinnen organisationsübergreifend Einblicke für Benutzer, Geräte und Netzwerkressourcen. Die nahtlose Integration in Windows Defender ATP bietet durch zusätzliche Erkennung und Schutz vor erweiterten dauerhaften Bedrohungen für das Betriebssystem eine weitere erweiterte Sicherheitsebene.  
 
 ## <a name="additional-resources-for-azure-atp"></a>Zusätzliche Ressourcen für Azure ATP  
-Starten Sie eine kostenlose Testversion: [https://signup.microsoft.com/Signup?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7&ali=1](https://signup.microsoft.com/Signup?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7&ali=1 "Enterprise Mobility + Security E5")
+### <a name="start-a-free-trial"></a>Kostenlosen Test starten  
+[https://signup.microsoft.com/Signup?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7&ali=1](https://signup.microsoft.com/Signup?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7&ali=1 "Enterprise Mobility + Security E5")
  
-Folgen Sie Azure ATP in der Microsoft Tech Community  
+### <a name="follow-azure-atp-on-microsoft-tech-community"></a>Folgen Sie Azure ATP in der Microsoft Tech Community  
 [https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection "Azure ATP in Microsoft Tech Community")
  
-Werden Sie Teil der Azure ATP Yammer-Community[https://www.yammer.com/azureadvisors/#/threads/inGroup?type=in_group&feedId=9386893](https://www.yammer.com/azureadvisors/#/threads/inGroup?type=in_group&feedId=9386893 "Azure ATP Yammer-Community")
+### <a name="join-the-azure-atp-yammer-community"></a>Der Azure ATP Yammer-Community beitreten 
+[https://www.yammer.com/azureadvisors/#/threads/inGroup?type=in_group&feedId=9386893](https://www.yammer.com/azureadvisors/#/threads/inGroup?type=in_group&feedId=9386893 "Azure ATP Yammer-Community")
  
-Besuchen Sie die Azure ATP-Produktseite  
+### <a name="visit-the-azure-atp-product-page"></a>Besuchen Sie die Azure ATP-Produktseite  
 [https://azure.microsoft.com/en-us/features/azure-advanced-threat-protection/](https://azure.microsoft.com/en-us/features/azure-advanced-threat-protection/ "Azure ATP-Produktseite")
 
-Weitere Informationen zur Azure ATP-Architektur finden Sie unter [Azure ATP-Architektur](atp-architecture.md).
+### <a name="learn-more-about-azure-atp-architecture"></a>Weitere Informationen zur Azure ATP-Architektur
+ [Azure ATP-Architektur](atp-architecture.md)
  
+## <a name="microsoft-ignite"></a>Microsoft Ignite
+Bei der Microsoft Ignite 2018 gab es mehrere Sitzungen zum Schwerpunkt [Azure Advanced Threat Protection](https://myignite.techcommunity.microsoft.com/sessions?q=Azure%2520Advanced%2520Threat%2520Protection&t=%257B%2522from%2522%253A%25222018-09-23T08%253A00%253A00-04%253A00%2522%252C%2522to%2522%253A%25222018-09-28T19%253A00%253A00-04%253A00%2522%257D). Die Sitzungen wurden aufgezeichnet. Wenn Sie das Ereignis verpasst haben, sollten Sie hier nachsehen:
+
+### <a name="azure-atp"></a>Azure ATP 
+[BRK3117](https://myignite.techcommunity.microsoft.com/sessions/65780?source=sessions#ignite-html-anchor) – SecOp and incident response with Azure ATP (SecOp und Reaktion auf Incidents mit Azure ATP) – sehen Sie sich das [Video auf YouTube](https://www.youtube.com/watch?v=QXZIfH0wP3Q) an.
+
+### <a name="azure-atp-and-azure-ad-ip-active-directory-identity-protection"></a>Azure ATP und Azure AD IP (Active Directory Identity Protection)
+[BRK3237](https://myignite.techcommunity.microsoft.com/sessions/64523?source=sessions#ignite-html-anchor) – Securing your hybrid cloud environment with Azure AD Identity Protection and Azure ATP (Sichern Ihrer Hybrid Cloud-Umgebung mit Azure AD Identity Protection und Azure ATP) – sehen Sie sich das [Video auf YouTube](https://www.youtube.com/watch?v=X7CXaok6GbM) an.
+
+[BRK2157](https://myignite.techcommunity.microsoft.com/sessions/65776?source=sessions#ignite-html-anchor) – Accelerate deployment and adoption of Microsoft Information Protection solutions (Beschleunigen der Bereitstellung und der Einführung von Microsoft Information Protection-Lösungen) – sehen Sie sich das [Video auf YouTube](https://www.youtube.com/watch?v=Foh-XDVbPog) an.
+
+Eine Zusammenfassung der Azure ATP-Ankündigungen, die auf der Ignite 2018 erfolgten, finden Sie im Blogbeitrag [Azure Advanced Threat Protection Expands Integrations, Detections, and Forensic Capabilities](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Azure-Advanced-Threat-Protection-Expands-Integrations-Detections/ba-p/262409) (Azure Advanced Threat Protection erweitert Integrationen, Erkennungen und forensische Möglichkeiten).
+
 ## <a name="whats-next"></a>Wie geht es weiter? 
 
-Es wird empfohlen, Azure ATP in 3 Phasen bereitzustellen:  
+Es wird empfohlen, Azure ATP in drei Phasen bereitzustellen:  
 
 ### <a name="phase-1"></a>Phase 1
 
