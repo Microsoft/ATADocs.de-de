@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 512e7fa979a6fd5e140d65836b533b720a6dc03b
-ms.sourcegitcommit: 1b23381ca4551a902f6343428d98f44480077d30
+ms.openlocfilehash: 6e15f09ff03402e7aed499e032bac018999ab538
+ms.sourcegitcommit: 2916d6f8d6e6f754d7fb8a5d31b255a46aa35ecd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47403215"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50132604"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -63,13 +63,13 @@ Sie müssen die Domänencontroller neu starten, nachdem Sie den **Netzwerkdienst
     1.  Wählen Sie **Aktiviert** aus.
     2.  Klicken Sie unter **Optionen** auf **Anzeigen**.
     3.  Geben Sie unter **SubscriptionManagers** folgenden Wert ein, und klicken Sie auf **OK**: *Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10* 
-    
-        *(Beispiel: Server =http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC, Refresh = 10)*
- 
-    ![Configure target subscription image](media/wef%202%20config%20target%20sub%20manager.png)
-   
-    5.  Klicken Sie auf **OK**.
-    6.  Geben Sie von einer Eingabeaufforderung mit erhöhten Rechten aus *gpupdate /force* ein. 
+      
+         *(Beispiel: Server =http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC, Refresh = 10)*
+      
+         ![Configure target subscription image](media/wef%202%20config%20target%20sub%20manager.png)
+      
+    4.  Klicken Sie auf **OK**.
+    5.  Geben Sie von einer Eingabeaufforderung mit erhöhten Rechten aus *gpupdate /force* ein. 
 
 **Schritt 3: Führen Sie die folgenden Schritte auf dem ATA-Gateway aus.** 
 
