@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 41d685916c667a467edd307fac71933366019fea
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: a71491fc717aca3f9b418750b78657e83ac65ecf
+ms.sourcegitcommit: 1b914a85cfa33dc0c5005f9dc68e6ea08a0164ac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46134108"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411645"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -148,7 +148,6 @@ Wenn dem ATA-Lightweight-Gateway dadurch nicht mehr genügend Ressourcen zur Ver
 
 Die folgende Tabelle enthält ein Beispiel für einen Domänencontroller, der über genügend Rechenressourcen verfügt und ein größeres Kontingent als derzeit erforderlich bereitstellt und somit die Überwachung des gesamten Datenverkehrs ermöglicht:
 
-> [!div class="mx-tableFixed"]
 ||||||
 |-|-|-|-|-|
 |Active Directory (Lsass.exe)|ATA-Lightweight-Gateway (Microsoft.Tri.Gateway.exe)|Sonstiges (andere Prozesse) |ATA-Lightweight-Gateway-Kontingent|Nimmt Gateway Löschungen vor|
@@ -156,7 +155,6 @@ Die folgende Tabelle enthält ein Beispiel für einen Domänencontroller, der ü
 
 Wenn Active Directory mehr Rechenkapazität erfordert, wird das vom ATA-Lightweight-Gateway benötigte Kontingent reduziert. Im folgenden Beispiel benötigt das ATA-Lightweight-Gateway mehr als das zugewiesene Kontingent und löscht einen Teil des Datenverkehrs (der Datenverkehr wird nur teilweise überwacht):
 
-> [!div class="mx-tableFixed"]
 ||||||
 |-|-|-|-|-|
 |Active Directory (Lsass.exe)|ATA-Lightweight-Gateway (Microsoft.Tri.Gateway.exe)|Sonstiges (andere Prozesse) |ATA-Lightweight-Gateway-Kontingent|Nimmt Gateway Löschungen vor|

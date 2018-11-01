@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 97cce3de3a1cbe049523c54901ecbc9228aaee53
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 7a7bdd045a0964c4ed4ccc4ebe2315b3c3465be2
+ms.sourcegitcommit: c10a1c5d1e5408b5473a31485346915908688680
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783014"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50208101"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -69,10 +69,9 @@ Nachdem Sie überprüft haben, ob Ihr Netzwerk den Anforderungen des Sensors ent
 
 - Datenaufbewahrung: Zuvor gelöschte Arbeitsbereiche werden nicht auf der Benutzeroberfläche angezeigt. Weitere Informationen zur Datenaufbewahrung in Azure ATP finden Sie unter [Sicherheit und Datenschutz für Azure ATP](atp-privacy-compliance.md).
 
-
->[!div class="step-by-step"]
-[« Vor der Installation](atp-prerequisites.md)
-[Schritt 2 »](install-atp-step2.md)
+> [!div class="step-by-step"]
+> [« Vor der Installation](atp-prerequisites.md)
+> [Schritt 2 »](install-atp-step2.md)
 
 
 

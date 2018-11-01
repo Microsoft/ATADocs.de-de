@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0973554e0fba448bc48526d1499768b2a2c864b1
-ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
+ms.openlocfilehash: 1ce4673b6fa071ebd74bf1d15cbbaa88ec9c0872
+ms.sourcegitcommit: c10a1c5d1e5408b5473a31485346915908688680
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47453849"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50208118"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -59,7 +59,7 @@ Führen Sie die folgenden Schritte auf dem ATA-Gatewayserver aus.
     > [!NOTE] 
     > Wenn der Domänencontroller oder der dedizierte Server nicht den Mindestanforderungen der Hardware für die Installation entspricht, erhalten Sie eine Warnung. Dies verhindert nicht, dass Sie auf **Weiter** klicken können und mit der Installation fortfahren können. Dies ist möglicherweise die richtige Option für die Installation von ATA in einer Testumgebung für ein kleines Labor, in der Sie nicht so viel Platz für die Datenspeicherung benötigen. Für Produktionsumgebungen wird empfohlen, mit dem Handbuch zur [Kapazitätsplanung](ata-capacity-planning.md) von ATA zu arbeiten, um sicherzustellen, dass Domänencontroller oder dedizierte Server den nötigen Anforderungen entsprechen.
 
-4.  Geben Sie unter **Configure the Gateway** (Das Gateway konfigurieren) die folgenden Informationen basierend auf Ihrer Umgebung ein:
+5.  Geben Sie unter **Configure the Gateway** (Das Gateway konfigurieren) die folgenden Informationen basierend auf Ihrer Umgebung ein:
 
     ![Abbildung ATA-Gatewaykonfiguration](media/ata-gw-configure.png)
 
@@ -70,7 +70,7 @@ Führen Sie die folgenden Schritte auf dem ATA-Gatewayserver aus.
 
    - Installationspfad: Dies ist der Speicherort, an dem das ATA-Gateway installiert wird. Standardmäßig ist dies „%programfiles%\Microsoft Advanced Threat Analytics\Gateway“. Behalten Sie den Standardwert bei.
     
-5. Klicken Sie auf **Installieren**. Bei der Installation des ATA-Gateways werden die folgenden Komponenten installiert und konfiguriert:
+6. Klicken Sie auf **Installieren**. Bei der Installation des ATA-Gateways werden die folgenden Komponenten installiert und konfiguriert:
 
     -   KB 3047154 (nur für Windows Server 2012 R2)
 
@@ -82,7 +82,7 @@ Führen Sie die folgenden Schritte auf dem ATA-Gatewayserver aus.
     -   Microsoft Visual C++ 2013 Redistributable
     -   Benutzerdefinierter Systemmonitor-Datensammlungssatz
 
-6.  Nach Abschluss der Installation klicken Sie für das ATA-Gateway auf **Starten**, um den Browser zu öffnen und sich bei der ATA-Konsole anzumelden, bzw. klicken Sie für das ATA-Lightweight-Gateway auf **Fertig stellen**.
+7.  Nach Abschluss der Installation klicken Sie für das ATA-Gateway auf **Starten**, um den Browser zu öffnen und sich bei der ATA-Konsole anzumelden, bzw. klicken Sie für das ATA-Lightweight-Gateway auf **Fertig stellen**.
 
 
 > [!div class="step-by-step"]

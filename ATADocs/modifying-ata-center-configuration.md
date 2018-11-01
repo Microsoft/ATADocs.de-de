@@ -12,12 +12,12 @@ ms.service: ''
 ms.technology: ''
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 80f96966a1ba9e62b23311cc19ed8fc5a8210bba
-ms.sourcegitcommit: 56065ee43dac299203871cd6f025315520750b3b
+ms.openlocfilehash: b1b8b1fb9c1bf5a11c8a05daf3567f4a25c35c3f
+ms.sourcegitcommit: 2916d6f8d6e6f754d7fb8a5d31b255a46aa35ecd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47233863"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50132689"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -54,6 +54,7 @@ Die URL wird in den folgenden Szenarios verwendet:
 3. Warten Sie, bis die ATA-Gateways synchronisiert wurden. Sie verfügen jetzt über zwei mögliche URLs, über die auf die ATA-Konsole zugegriffen werden kann. Solange ein ATA-Gateway eine Verbindung über die ursprüngliche URL herstellen kann, wird die neue nicht verwendet.
 
 4. Klicken Sie, nachdem alle ATA-Gateways mit der aktualisierten Konfiguration synchronisiert wurden, auf der Konfigurationsseite des Centers auf die Schaltfläche **Aktivieren**, um die neue URL zu aktivieren. Bei der Aktivierung der neuen URL verwenden die ATA-Gateways nicht die neue URL für den Zugriff auf ATA Center. Nach dem Herstellen der Verbindung mit dem ATA Center-Dienst ruft das ATA-Gateway die neueste Konfiguration ab und verfügt nur noch über die neue URL für die ATA-Konsole. 
+
 5. 
  ![Aktivieren des Zertifikats](media/center-activation.png)
 
