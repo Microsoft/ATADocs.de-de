@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/14/2018
+ms.date: 10/21/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,23 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5e400f51281ea9d0dd17be50800f0d0a9d467986
-ms.sourcegitcommit: 7b138a310a6b31a6375d87a95c7866cb9f701a9e
+ms.openlocfilehash: bf620fd9eb3ee750f19a4fe69aa3efea16b9385a
+ms.sourcegitcommit: 59ed430fa0cd8ac34a70609026ec5fc2f5972f57
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2018
-ms.locfileid: "49315900"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "49480666"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
 # <a name="whats-new-in-azure-atp"></a>Neuerungen in Azure ATP 
+
+## <a name="azure-atp-release-251"></a>Azure ATP, Release 2.5.1
+Veröffentlicht: 21. Oktober 2018
+
+- Sie können die Integration von **WD-ATP** über den Bildschirm [Konfiguration](integrate-wd-atp.md#how-to-integrate-azure-atp-with-windows-defender-atp) im Azure ATP-Portal aktivieren oder deaktivieren. (Hierfür muss der Azure ATP-Benutzer ein globaler Administrator oder ein Sicherheitsadministrator im AAD-Mandanten sein.)
+
+- Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
 ## <a name="azure-atp-release-250"></a>Azure ATP Release 2.50
 Veröffentlicht: 14. Oktober 2018
@@ -33,7 +40,7 @@ Veröffentlicht: 14. Oktober 2018
 Veröffentlicht: 7. Oktober 2018
 -   **Neue Erkennungen: Verdächtige DNS-Kommunikation** (Vorschauversion)<br>Neue Erkennungen, die hinzugefügt wurden, und vor verdächtigen DNS-Kommunikationsangriffen schützen:
 
-    -   Diese Erkennung hilft dabei, Angriffe gegen das DNS-Protokoll zu erkennen: In den meisten Organisationen wird das DNS-Protokoll nicht überwacht und nur selten vor böswilligen Angriffen blockiert. Dadurch kann ein Angreifer auf einem kompromittierten Computer das DNS-Protokoll missbrauchen. Böswillige Kommunikation über DNS kann zur Datenexfiltration, Zugriff über Command-and-Control-Server und/oder zur Umgehung von Netzwerkeinschränkungen führen.
+    -   Diese Erkennung hilft dabei, Angriffe gegen das DNS-Protokoll zu erkennen: In den meisten Organisationen wird das DNS-Protokoll nicht überwacht und nur selten vor böswilligen Angriffen blockiert. Dadurch kann ein Angreifer auf einem kompromittierten Computer das DNS-Protokoll missbrauchen. Böswillige Kommunikation über DNS kann zur Datenexfiltration, Befehls- und Führungssystemeinschränkung und/oder zur Umgehung von Netzwerkeinschränkungen führen.
 
 - **Neue Funktionen** <br>Die Azure ATP-**Benutzerrolle** wurde mit den folgenden Funktionen verbessert:
   - Der Status der Sicherheitswarnungen wurde geändert (erneut öffnen, schließen, ausschließen, unterdrücken)
