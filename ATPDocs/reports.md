@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 10/28/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,23 +13,23 @@ ms.technology: ''
 ms.assetid: 2c2d6b1a-fc8c-4ff7-b07d-64ce6159f84d
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 367ad07bd1d0be80486bfc10c2b70546d360805c
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 9e35761c229e011cc1c48b705daa196e1e61ed58
+ms.sourcegitcommit: 3ab48f180aa0276f4e19cf7cd567581c7b4324cc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783184"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202370"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
 
 # <a name="azure-atp-reports"></a>Azure ATP-Berichte
 
-Über den Abschnitt der Azure ATP-Berichte im Azure ATP-Portal können Sie Berichte generieren, die Ihnen Informationen zum Systemstatus sowie zur Systemintegrität und einen Bericht über verdächtige Aktivitäten bereitstellen, die in Ihrer Umgebung ermittelt wurden.
+Über den Abschnitt "Azure ATP-Berichte" im Azure ATP-Portal können Sie Berichte, die Ihnen Systemstatusinformationen liefern, entweder planen oder sofort generieren und herunterladen. Mit dem Feature "Berichte" können Sie Berichte zur Systemintegrität und verdächtigen Aktivitäten erstellen, die in Ihrer Umgebung erkannt wurden.
 
 
 Um auf diese Berichtsseite zuzugreifen, klicken Sie auf das Berichtssymbol auf der Berichtsleiste: ![Berichtssymbol](./media/atp-report-icon.png).
-Die verfügbaren Berichte sind: 
+Folgende Berichte stehen zur Verfügung: 
 
 - **Zusammenfassungsbericht:** Der Zusammenfassungsbericht zeigt ein Dashboard des Status im System an. Sie können drei Registerkarten sehen: eine für eine **Zusammenfassung** dazu, was in Ihrem Netzwerk ermittelt wurde, eine mit dem Namen **Offene verdächtige Aktivitäten**, in der die verdächtigen Aktivitäten aufgelistet werden, auf die Sie achten müssen, und eine mit dem Namen **Offene Integritätsprobleme**, in der Integritätsprobleme mit Azure ATP aufgeführt sind, um die Sie sich kümmern sollten. Die aufgeführten verdächtigen Aktivitäten werden nach Typ unterteilt, so auch die Integritätsprobleme. 
 
@@ -55,7 +55,7 @@ So legen Sie einen geplanten Bericht fest:
    ![Planen von Berichten](./media/atp-sched-reports.png)
  
  > [!NOTE]
- > Die tägliche Berichte sind so konzipiert, dass sie kurz nach Mitternacht (UTC) gesendet werden.
+ > Tägliche Berichte sind standardmäßig so konzipiert, dass sie kurz nach Mitternacht (UTC) gesendet werden. Wählen Sie mit der Zeitauswahloption Ihre eigene Uhrzeit aus. 
 
 2. Klicken Sie neben dem ausgewählten Berichttyp auf **Zeitplan**, um die Häufigkeit und E-Mail-Adresse für die Lieferung der Berichte festzulegen. Klicken Sie anschließend auf das Pluszeichen neben den E-Mail-Adressen, um sie hinzuzufügen, und klicken Sie auf **Speichern**.
 

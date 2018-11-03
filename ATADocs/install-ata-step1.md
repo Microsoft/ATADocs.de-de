@@ -2,10 +2,10 @@
 title: Installieren von Advanced Threat Analytics – Schritt 1 | Microsoft-Dokumentation
 description: Im ersten Schritt beim Installieren von ATA wird ATA Center auf den ausgewählten Server heruntergeladen und dort installiert.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 10/31/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ea20c87fe7990542ad68de7ae6dfeefad062e378
-ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
+ms.openlocfilehash: 04a25e6f0a73e45b4358566f15f38c20d291a153
+ms.sourcegitcommit: 1b914a85cfa33dc0c5005f9dc68e6ea08a0164ac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47454155"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411628"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -28,7 +28,7 @@ ms.locfileid: "47454155"
 > [!div class="step-by-step"]
 > [Schritt 2 »](install-ata-step2.md)
 
-Diese Installationsschritte stellen Anweisungen zur Durchführung einer Neuinstallation von ATA 1.8 bereit. Informationen zum Aktualisieren einer vorhandenen früheren ATA-Bereitstellungsversion finden Sie im [ATA-Migrationshandbuch für Version 1.9](ata-update-1.9-migration-guide.md).
+Diese Installationsschritte stellen Anweisungen zur Durchführung einer Neuinstallation von ATA 1.9 bereit. Informationen zum Aktualisieren einer vorhandenen früheren ATA-Bereitstellungsversion finden Sie im [ATA-Migrationshandbuch für Version 1.9](ata-update-1.9-migration-guide.md).
 
 > [!IMPORTANT] 
 > Wenn Sie Windows 2012 R2 verwenden, installieren Sie vor ATA das Update KB2934520 auf dem ATA Center-Server und den ATA-Gatewayservern, da andernfalls bei der ATA-Installation dieses Update installiert wird und inmitten der ATA-Installation ein Neustart erforderlich ist.

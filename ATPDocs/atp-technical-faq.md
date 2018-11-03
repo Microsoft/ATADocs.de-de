@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/4/2018
+ms.date: 10/29/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,22 +13,22 @@ ms.technology: ''
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 13fbc33c1f6aa525382644a48418dceabbb9b652
-ms.sourcegitcommit: 58c75026e5ec4dcab3b0852a41f9f0a0ad6f22eb
+ms.openlocfilehash: f3336189338b16a58a4e8bf67490948a163e9d56
+ms.sourcegitcommit: c10a1c5d1e5408b5473a31485346915908688680
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2018
-ms.locfileid: "49315726"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50208152"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
 # <a name="azure-atp-frequently-asked-questions"></a>Häufig gestellte Fragen zu Azure ATP
 Dieser Artikel enthält eine Reihe häufig gestellter Fragen und Antworten zu Azure ATP, unterteilt in die folgenden Kategorien: 
-- [Was ist Azure ATP?](#What-is-Azure-ATP)
-- [Lizenzierung und Datenschutz](#Licensing-and-privacy)
-- [Bereitstellung](#Deployment)
-- [Vorgänge](#Operations)
-- [Problembehandlung](#Troubleshooting)
+- [Was ist Azure ATP?](#what-is-azure-atp)
+- [Lizenzierung und Datenschutz](#licensing-and-privacy)
+- [Bereitstellung](#deployment)
+- [Vorgänge](#operation)
+- [Problembehandlung](#troubleshooting)
 
 ## <a name="what-is-azure-atp"></a>Was ist Azure ATP?
 
@@ -60,7 +60,7 @@ Ja. Da Computerkonten (ebenso wie alle anderen Entitäten) zum Durchführen bös
 ## <a name="licensing-and-privacy"></a>Lizenzierung und Datenschutz 
 ### <a name="where-can-i-get-a-license-for-azure-advanced-threat-protection-atp"></a>Wo erhalte ich eine Lizenz für Azure Advanced Threat Protection (ATP)?
 
-Sie können eine Lizenz für Enterprise Mobility + Security 5 (EMS E5) entweder direkt über das [Office 365-Portal](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) oder über das CSP-Lizenzierungsmodell (Cloud Solution Partner) erwerben.  
+Azure ATP steht als Teil von Enterprise Mobility + Security 5-Suite (EMS E5) und als eine eigenständige Lizenz zur Verfügung. Sie können eine Lizenz entweder direkt über das [Office 365-Portal](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) oder über das CSP-Lizenzierungsmodell (Cloud Solution Partner) erwerben.
 
 ### <a name="is-this-going-to-be-a-part-of-azure-active-directory-or-on-premises-active-directory"></a>Wird das Produkt ein Bestandteil von Azure Active Directory oder von lokalem Active Directory sein?
 Diese Lösung ist derzeit ein eigenständiges Angebot. Sie ist kein Bestandteil von Azure Active Directory oder von lokalem Active Directory.
