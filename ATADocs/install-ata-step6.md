@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 366660a600292490c2f7df13b9d276b6accc4b93
-ms.sourcegitcommit: 2916d6f8d6e6f754d7fb8a5d31b255a46aa35ecd
+ms.openlocfilehash: 3ef2d163ae96e5bf8f893367095eacd9a44c3411
+ms.sourcegitcommit: 1a5880de35422d050fc1bc7a918dedc4180c45ad
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50132621"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51265678"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -46,6 +46,7 @@ Damit ATA Daten von einem Syslog-Server verwenden kann, müssen folgende Schritt
 
 > [!NOTE]
 > ATA lauscht nur auf IPv4, nicht auf IPv6. 
+
 -   Konfigurieren des SIEM-/Syslog-Servers zum Weiterleiten bestimmter Ereignisse an das ATA-Gateway.
 
 > [!IMPORTANT]
