@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 0d9d2a1d-6c76-4909-b6f9-58523df16d4f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9f5caf3ef7c0c986404cfe90a6f8cc40aa9462b4
-ms.sourcegitcommit: 30d874808cfeafd46ee8fbbf34e0bbcb337f6544
+ms.openlocfilehash: 1ddd369fe51117a120a3f5b8a688f22624d711c0
+ms.sourcegitcommit: 03b1949beaf2f78a3cdf9396356a96488ea2e127
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49089371"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50983105"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -55,7 +55,7 @@ Führen Sie auf Ihrem RRAS-Server die folgenden Schritte aus.
 
     ![RADIUS-Setup](./media/radius-setup.png)
 
-4.  Geben Sie im Fenster **RADIUS-Server hinzufügen** den **Servernamen** des nächsten eigenständigen Azure ATP-Sensors oder Azure ATP-Sensors ein. Stellen Sie unter **Port** sicher, dass die Standardeinstellung 1813 konfiguriert ist. Klicken Sie auf **Ändern**, und tippen Sie eine neue, geheime Zeichenfolge von alphanumerischen Zeichen an, die Sie sich merken können, da Sie sie im weiteren Verlauf Ihrer Azure ATP-Konfiguration eingeben müssen. Prüfen Sie das Feld **Send RADIUS Account On and Accounting Off messages** („RADIUS-Kontoführung aktiviert“- und „RADIUS-Kontoführung deaktiviert“-Nachrichten senden), und klicken Sie anschließend in allen geöffneten Dialogfeldern auf **OK**.
+4.  Geben Sie im Fenster **RADIUS-Server hinzufügen** den **Servernamen** des nächsten Azure ATP-Sensors (mit Netzwerkkonnektivität) ein. Um Hochverfügbarkeit sicherzustellen, können Sie zusätzliche Azure ATP-Sensoren als RADIUS-Server hinzufügen. Stellen Sie unter **Port** sicher, dass die Standardeinstellung 1813 konfiguriert ist. Klicken Sie auf **Ändern**, und tippen Sie eine neue, geheime Zeichenfolge von alphanumerischen Zeichen an, die Sie sich merken können, da Sie sie im weiteren Verlauf Ihrer Azure ATP-Konfiguration eingeben müssen. Prüfen Sie das Feld **Send RADIUS Account On and Accounting Off messages** („RADIUS-Kontoführung aktiviert“- und „RADIUS-Kontoführung deaktiviert“-Nachrichten senden), und klicken Sie anschließend in allen geöffneten Dialogfeldern auf **OK**.
  
      ![VPN-Setup](./media/vpn-set-accounting.png)
      

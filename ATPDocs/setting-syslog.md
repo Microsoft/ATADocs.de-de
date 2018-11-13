@@ -1,11 +1,11 @@
 ---
-title: Festlegen der E-Mail-Benachrichtigungseinstellungen in Azure Advanced Threat Protection | Microsoft-Dokumentation
+title: Festlegen von Syslog-Einstellungen in Azure Advanced Threat Protection | Microsoft-Dokumentation
 description: Beschreibt, wie Azure ATP für den Versand von Benachrichtigungen (per E-Mail oder Azure ATP-Ereignisweiterleitung) bei verdächtigen Aktivitäten konfiguriert werden kann
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 11/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a2d29c9c-7ecb-4804-b74b-fde899b28648
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 18f6d38f871539cf0701b697c9d0c5d9d96a27e4
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: ac01e5ae534fc5df5da70a8d1c47c11c1c455c98
+ms.sourcegitcommit: 03b1949beaf2f78a3cdf9396356a96488ea2e127
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783541"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50983088"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -58,6 +58,9 @@ Azure ATP kann Sie durch Senden der Benachrichtigung an den Syslog-Server benach
  ![Abbildung der Syslog-Servereinstellungen für Azure ATP](media/atp-syslog.png)
 
 6. Sie können auswählen, welche Ereignisse an Ihren Syslog-Server gesendet werden sollen. Geben Sie unter **Syslog-Benachrichtigungen** an, welche Benachrichtigungen an Ihren Syslog-Server gesendet werden sollen: neue Sicherheitswarnungen, aktualisierte Sicherheitswarnungen und neue Integritätsprobleme.
+
+> [!NOTE]
+> Wenn Sie eine Automatisierung oder Skripts für Azure ATP-SIEM-Protokoll erstellen möchten, sollten Sie zur Identifizierung des Warnungstyps das Feld **externalID** statt des Warnungsnamens verwenden. Warnungsnamen können nämlich gelegentlich geändert werden, während die **externalId** jeder Warnung dauerhaft ist. Weitere Informationen finden Sie unter [Azure ATP-SIEM-Protokollreferenz](cef-format-sa.md). 
 
 
 ## <a name="see-also"></a>Weitere Informationen

@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 47adb120cebe068f974d61891b843e276a0f52c0
-ms.sourcegitcommit: c10a1c5d1e5408b5473a31485346915908688680
+ms.openlocfilehash: daeb998f6e97bc4ebdf290d4430fec8fcef40313
+ms.sourcegitcommit: 03b1949beaf2f78a3cdf9396356a96488ea2e127
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50208169"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50983156"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -81,18 +81,18 @@ Es gibt drei Arten von Erkennung:
 
 1.  Skeleton Key: Sie können überprüfen, ob Ihre Domänencontroller von Skeleton Key betroffen sind, indem Sie [den vom Azure ATP-Team entwickelten Scanner](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73) verwenden. Wenn der Scanner Schadsoftware auf einem oder mehreren Ihrer Domänencontroller findet, ist dies ein richtig positives Ereignis.
 
-2.  Golden Ticket: Wechseln Sie im Excel-Arbeitsblatt zur Registerkarte mit der Netzwerkaktivität. Sie werden feststellen, dass das entsprechende heruntergestufte Feld **Request Ticket Encryption Type** ist und dass **Source Computer Supported Encryption Types** stärkere Verschlüsselungsmethoden enthält.
+2.  Golden Ticket: Öffnen Sie im Excel-Arbeitsblatt die Registerkarte „Netzwerkaktivität“. Das entsprechende heruntergestufte Feld ist **Request Ticket Encryption Type** und **Source Computer Supported Encryption Types** listet stärkere Verschlüsselungsmethoden auf.
 
-  ein. Überprüfen Sie die Ressource, auf die von diesen Tickets aus zugegriffen wird. Wenn auf eine Ressource von allen zugegriffen wird, stellen Sie sicher, dass es sich um eine gültige Ressource handelt, auf die zugegriffen werden soll. Überprüfen Sie zudem, ob die Zielressource starke Verschlüsselungsmethoden unterstützt. Sie können dies in Active Directory überprüfen, indem Sie das Attribut „msDS-SupportedEncryptionTypes“ des Ressourcendienstkontos überprüfen.
+  1. Überprüfen Sie die Ressource, auf die von diesen Tickets aus zugegriffen wird. Wenn auf eine Ressource von allen zugegriffen wird, stellen Sie sicher, dass es sich um eine gültige Ressource handelt, auf die zugegriffen werden soll. Überprüfen Sie zudem, ob die Zielressource starke Verschlüsselungsmethoden unterstützt. Sie können dies in Active Directory überprüfen, indem Sie das Attribut „msDS-SupportedEncryptionTypes“ des Ressourcendienstkontos überprüfen.
   
-  b. Überprüfen Sie den Quellcomputer und das Quellkonto. Wenn mehrere Quellcomputer und -konten vorhanden sind, überprüfen, ob diese eine Gemeinsamkeit aufweisen. Beispielsweise könnten alle Marketingmitarbeiter eine bestimmte App verwenden, die das Auslösen der Warnung verursacht. Es gibt Fälle, in denen eine benutzerdefinierte Anwendung, die selten genutzt wird, mit einem niedrigeren Verschlüsselungsverfahren authentifiziert wird. Überprüfen Sie, ob solche Apps auf dem Quellcomputer vorhanden sind. Falls ja, ist dies wahrscheinlich ein unbedenklich richtig positives Ereignis und kann unterdrückt werden.
+  2. Überprüfen Sie den Quellcomputer und das Quellkonto. Wenn mehrere Quellcomputer und -konten vorhanden sind, überprüfen, ob diese eine Gemeinsamkeit aufweisen. Beispielsweise könnten alle Marketingmitarbeiter eine bestimmte App verwenden, die das Auslösen der Warnung verursacht. Es gibt Fälle, in denen eine benutzerdefinierte Anwendung, die selten genutzt wird, mit einem niedrigeren Verschlüsselungsverfahren authentifiziert wird. Überprüfen Sie, ob solche Apps auf dem Quellcomputer vorhanden sind. Falls ja, ist dies wahrscheinlich ein unbedenklich richtig positives Ereignis und kann unterdrückt werden.
   
 
 
 3.  Overpass-the-Hash: Wechseln Sie im Excel-Arbeitsblatt zur Registerkarte mit der Netzwerkaktivität. Sie werden feststellen, dass das entsprechende heruntergestufte Feld **Encrypted Timestamp Encryption Type** ist und dass **Source Computer Supported Encryption Types** stärkere Verschlüsselungsmethoden enthält.
 
-  ein. Es gibt Fälle, in denen diese Warnung ausgelöst werden kann, wenn sich Benutzer mit Smartcards anmelden und die Smartcardkonfiguration kürzlich geändert wurde. Überprüfen Sie, ob solche Änderungen für die beteiligten Konten vorgenommen wurden. Falls ja, ist dies wahrscheinlich ein unbedenklich richtig positives Ereignis und kann unterdrückt werden.
-  b. Überprüfen Sie die Ressource, auf die von diesen Tickets aus zugegriffen wird. Wenn auf eine Ressource von allen zugegriffen wird, stellen Sie sicher, dass es sich um eine gültige Ressource handelt, auf die zugegriffen werden soll. Überprüfen Sie zudem, ob die Zielressource starke Verschlüsselungsmethoden unterstützt. Sie können dies in Active Directory überprüfen, indem Sie das Attribut „msDS-SupportedEncryptionTypes“ des Ressourcendienstkontos überprüfen.
+  1. Es gibt Fälle, in denen diese Warnung ausgelöst werden kann, wenn sich Benutzer mit Smartcards anmelden und die Smartcardkonfiguration kürzlich geändert wurde. Überprüfen Sie, ob solche Änderungen für die beteiligten Konten vorgenommen wurden. Falls ja, ist dies wahrscheinlich ein unbedenklich richtig positives Ereignis und kann unterdrückt werden.
+  2. Überprüfen Sie die Ressource, auf die von diesen Tickets aus zugegriffen wird. Wenn auf eine Ressource von allen zugegriffen wird, stellen Sie sicher, dass es sich um eine gültige Ressource handelt, auf die zugegriffen werden soll. Überprüfen Sie zudem, ob die Zielressource starke Verschlüsselungsmethoden unterstützt. Sie können dies in Active Directory überprüfen, indem Sie das Attribut „msDS-SupportedEncryptionTypes“ des Ressourcendienstkontos überprüfen.
 
 **Wartung**
 
@@ -110,7 +110,7 @@ Es gibt drei Arten von Erkennung:
 
 Honeytoken-Konten sind Köderkonten, die eingerichtet werden, um schädliche Aktivitäten, die versuchen, diese Konten zu verwenden, zu erkennen und zu verfolgen. Honeytoken-Konten sollten nicht verwendet werden, aber einen attraktiven Namen besitzen, um Angreifer anzulocken (z.B. SQL-Admin). Jede von diesen ausgehende Aktivität kann auf böswilliges Verhalten hinweisen.
 
-Weitere Informationen zu Honeytoken-Konten finden Sie unter [Installieren von Azure ATP – Schritt 7](install-atp-step7.md).
+Weitere Informationen zu Honeytokenkonten finden Sie unter [Konfigurieren von Erkennungsausschlüssen und Honeytokenkonten](install-atp-step7.md).
 
 **Untersuchung**
 
@@ -134,7 +134,7 @@ Pass-the-Hash ist eine Technik mit seitlicher Bewegung, bei der Angreifer den NT
 
 **Untersuchung**
 
-Stammt der verwendete Hash von einem Computer, der dem Zielbenutzer gehört oder regelmäßig von diesem verwendet wird? Falls ja, handelt es sich dabei um ein falsch positives Ereignis. Wenn nicht, handelt es sich dabei wahrscheinlich um ein richtig positives Ereignis.
+Stellen Sie fest, ob der verwendete Hash von einem Computer stammt, der dem Zielbenutzer gehört oder regelmäßig von diesem verwendet wird. Falls dies zutrifft, ist die Warnung falsch positiv, andernfalls ist sie wahrscheinlich richtig positiv.
 
 **Wartung**
 
@@ -179,7 +179,7 @@ In dieser Erkennung wird eine Warnung ausgelöst, wenn ein Kerberos Ticket Grant
 - **Nicht vorhandenes Konto – Neu** 
    1.   Untersuchen Sie die folgenden Fragen:
          - Ist der Benutzer ein bekannter und gültiger Domänenbenutzer? Falls ja, schließen Sie die Warnung (sie war falsch positiv).
-         - Wurde der Benutzer kürzlich hinzugefügt? Falls ja, schließen Sie die Warnung. Möglicherweise wurde die Änderung noch nicht synchronisiert.
+         - Wurde der Benutzer kürzlich hinzugefügt? Falls Ja, schließen Sie die Warnung. Möglicherweise wurde die Änderung noch nicht synchronisiert.
          - Wurde der Benutzer kürzlich aus AD gelöscht? Falls ja, schließen Sie die Warnung.
    2.   Wenn die Antwort auf die obigen Fragen „nein“ ist, gehen Sie von einem böswilligen Ereignis aus.
 
@@ -187,15 +187,15 @@ In dieser Erkennung wird eine Warnung ausgelöst, wenn ein Kerberos Ticket Grant
 
 2.  Sollen alle Benutzer, die am Computer angemeldet waren, angemeldet sein? Welche Berechtigungen haben sie? 
 
-3.  Sollen diese Benutzer Zugriff auf diese Ressourcen haben?<br>
-Wenn die Windows Defender ATP-Integration aktiviert ist, klicken Sie auf das Windows Defender ATP-Badge ![WD ATP](./media/wd-badge.png).
+3.  Sollen die angemeldeten Benutzer Zugriff auf diese Ressourcen haben?<br>
+Wenn Sie die Windows Defender ATP-Integration aktiviert haben, klicken Sie auf das Windows Defender ATP-Badge.
  
- 4. Um den Computer weiter zu untersuchen, überprüfen Sie in Windows Defender ATP, welche Prozesse und Warnungen ungefähr dann aufgetreten sind, als die Warnung ausgelöst wurde.
+ 4. Um den Computer weiter zu untersuchen, überprüfen Sie, welche Prozesse und Warnungen ungefähr dann aufgetreten sind, als die Warnung in Windows Defender ATP ausgelöst wurde.
 
 **Wartung**
 
 
-Ändern Sie das Kennwort für das Kerberos Ticket Granting Ticket (KRBTGT) zweimal gemäß den Anweisungen unter [KRBTGT Account Password Reset Scripts now available for customers (Skripts zum Zurücksetzen von Kennwörtern des KRBTGT-Kontos stehen Kunden jetzt zur Verfügung)](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) mithilfe des [Reset the KRBTGT account password/keys tool (Tool zum Zurücksetzen des Kennworts/Schlüssels eines KRBTGT-Kontos)](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Durch das zweimalige Zurücksetzen von KRBTGT werden alle Kerberos-Tickets in dieser Domäne ungültig. Daher sollten Sie diesen Schritt im Voraus planen. Implementieren Sie ebenfalls die [Pass the hash recommendations (Empfehlungen zu Pass-the-Hash)](https://www.microsoft.com/download/details.aspx?id=36036), da für das Erstellen eines Golden Tickets Domänenadministratorrechte erforderlich sind.
+Ändern Sie das Kennwort für das Kerberos Ticket Granting Ticket (KRBTGT) zweimal gemäß den Anweisungen unter [KRBTGT Account Password Reset Scripts now available for customers (Skripts zum Zurücksetzen von Kennwörtern des KRBTGT-Kontos stehen Kunden jetzt zur Verfügung)](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) mithilfe des [Reset the KRBTGT account password/keys tool (Tools zum Zurücksetzen des Kennworts/Schlüssels eines KRBTGT-Kontos)](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Durch das zweimalige Zurücksetzen von KRBTGT werden alle Kerberos-Tickets in dieser Domäne ungültig. Daher sollten Sie diesen Schritt im Voraus planen. Implementieren Sie ebenfalls die [Pass the hash recommendations (Empfehlungen zu Pass-the-Hash)](https://www.microsoft.com/download/details.aspx?id=36036), da für das Erstellen eines Golden Tickets Domänenadministratorrechte erforderlich sind.
 
 
 
@@ -256,7 +256,7 @@ Nutzen Sie  [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/201
 
 **Beschreibung**
 
-Durch bekannte Sicherheitslücken in älteren Versionen von Windows Server können Angreifer das Privileged Attribute Certificate (PAC) manipulieren. Dabei handelt es sich um ein Feld im Kerberos-Ticket, das die Autorisierungsdaten eines Benutzer enthält (in Active Directory ist dies die Gruppenmitgliedschaft) und Angreifern zusätzliche Berechtigungen erteilt.
+Über bekannte Sicherheitslücken in älteren Versionen von Windows Server können Angreifer das Privileged Attribute Certificate (PAC) manipulieren. PAC ist ein Feld im Kerberos-Ticket, das Benutzerdaten für die Autorisierung enthält (in Active Directory ist dies eine Gruppenmitgliedschaft), die Angreifern zusätzliche Berechtigungen gewähren.
 
 **Untersuchung**
 
@@ -409,25 +409,28 @@ Angreifer, die Administratoranmeldeinformationen kompromittiert haben oder einen
 > [!NOTE]
 > Warnungen vor versuchter Remote-Codeausführung werden nur von ATP-Sensoren unterstützt. 
 
-## <a name="suspicious-authentication-failures"></a>Verdächtige Authentifizierungsfehler
+## <a name="suspicious-authentication-failures--enhanced"></a>Verdächtige Authentifizierungsfehler (optimiert)
 
 **Beschreibung**
 
-Bei einem Brute-Force-Angriff versucht ein Angreifer, sich mit vielen verschiedenen Kennwörtern für verschiedene Konten anzumelden, bis ein korrektes Kennwort für mindestens ein Konto gefunden wird. Sobald eines gefunden wurde, kann sich der Angreifer mit diesem Konto anmelden.
+Bei einem Brute-Force-Angriff versucht der Angreifer, sich mit mehreren Kennwörtern bei verschiedene Konten zu authentifizieren, bis ein korrektes Kennwort gefunden wurde, oder der Angreifer verwendet ein Kennwort im Rahmen eines umfangreichen Kennwort-Spray-Angriffs, das bei mindestens einem Konto funktioniert. Sobald eines gefunden wurde, meldet sich der Angreifer mit dem authentifizierten Konto an.
 
-In dieser Erkennung wird eine Warnung ausgelöst, wenn viele Authentifizierungsfehler mit Kerberos oder der integrierten Windows-Authentifizierung auftreten. Dies kann entweder horizontal mit einem kleinen Satz von Kennwörtern für viele Benutzer oder vertikal mit einem großen Satz von Kennwörtern für wenige Benutzer geschehen. Auch eine beliebige Kombination dieser beiden Optionen ist möglich. Der Mindestzeitraum, bevor eine Warnung ausgelöst werden kann, beträgt eine Woche.
+Bei diesem Erkennungsvorgang wird eine Warnung ausgelöst, wenn viele Authentifizierungsfehler bei der Verwendung von Kerberos oder NTLM auftreten oder die Ausführung eines Kennwort-Spray-Angriffs erkannt wurde. Bei Kerberos oder NTLM kann dieser Angriff üblicherweise entweder horizontal mit einem kleinen Satz von Kennwörtern für viele Benutzer oder vertikal mit einem großen Satz von Kennwörtern für wenige Benutzer geschehen. Auch eine beliebige Kombination dieser beiden Optionen ist möglich. Bei einem Kennwort-Spray-Angriff testen Angreifer nach erfolgreichem Durchzählen einer Liste von gültigen Benutzern aus dem Domänencontroller EIN sorgfältig erstelltes Kennwort für ALLE bekannten Benutzerkonten (ein Kennwort für n Konten). Wenn beim ersten Kennwort-Spray-Angriff ein Fehler auftritt, wiederholen sie den Vorgang mit einem anderen sorgfältig erstellten Kennwort – normalerweise nach einer Wartezeit von 30 Minuten zwischen den Versuchen. Durch die Wartezeit verhindern Angreifer, dass meist zeitbasierte Schwellenwerte für die Kontosperre ausgelöst werden. Kennwort-Spray-Angriffe haben sich rasch zu einer beliebten Methode unter Angreifern und Pen-Testern entwickelt. Kennwort-Spray-Angriffe haben sich als effektiv erwiesen, um innerhalb einer Organisation einen Ankerpunkt zu finden und infolgedessen weitere Schwachstellen auszunutzen, um Berechtigungen auszuweiten. 
+
+**Lernphase** Der Mindestzeitraum, bevor eine Warnung dieses Typs ausgelöst werden kann, beträgt eine Woche.
 
 **Untersuchung**
 
-1.  Klicken Sie auf **Details herunterladen**, um die vollständigen Informationen in einem Excel-Arbeitsblatt anzuzeigen. Sie können die folgenden Informationen abrufen: 
+1.  Klicken Sie auf **Details herunterladen**, um die vollständigen Informationen in einem Excel-Arbeitsblatt anzuzeigen. Die folgenden Informationen sind verfügbar: 
    -    Liste der angegriffenen Konten
    -    Liste der erratenen Konten, bei denen Anmeldeversuche mit einer erfolgreichen Authentifizierung endeten
-   -    Wenn die Authentifizierungsversuche über NTLM ausgeführt wurden, sehen Sie die relevanten Ereignisaktivitäten 
-   -    Wenn die Authentifizierungsversuche über Kerberos ausgeführt wurden, sehen Sie die relevanten Netzwerkaktivitäten
+   -    Wenn die Authentifizierungsversuche über NTLM ausgeführt wurden, werden die relevanten Ereignisaktivitäten angezeigt. 
+   -    Wenn die Authentifizierungsversuche über Kerberos ausgeführt wurden, werden die relevanten Netzwerkaktivitäten angezeigt.
+   -  Wenn die Authentifizierungsversuche über einen Kennwort-Spray-Angriff ausgeführt wurden, werden die relevanten Netzwerkaktivitäten angezeigt.
 
 2.  Klicken Sie auf den Quellcomputer, um die entsprechende Profilseite aufzurufen. Überprüfen Sie, was ungefähr zum Zeitpunkt dieser Versuche passiert ist. Suchen Sie nach ungewöhnlichen Aktivitäten wie z.B.: Wer war angemeldet, auf welche Ressourcen wurde zugegriffen. Wenn Sie die Windows Defender ATP-Integration aktiviert haben, klicken Sie auf das Windows Defender ATP-Badge, ![Windows Defender ATP-Badge](./media/wd-badge.png) um den Computer weiter zu untersuchen. In Windows Defender ATP können Sie sehen, welche Prozesse und Warnungen ungefähr gleichzeitig mit der Warnung aufgetreten sind. 
 
-3.  Wenn die Authentifizierung mithilfe von NTLM durchgeführt wurde und Sie sehen, dass die Warnung mehrfach aufgetreten ist, aber keine ausreichenden Informationen zum Server verfügbar sind, auf den der Quellcomputer zugreifen wollte, sollten Sie **NTLM-Überwachung** auf den betroffenen Domänencontrollern aktivieren. Aktivieren Sie dazu Ereignis 8004. Dies ist das NTLM-Authentifizierungsereignis, das Informationen zum Quellcomputer, Benutzerkonto und **Server** enthält, auf die der Quellcomputer zugreifen wollte. Wenn Sie wissen, welcher Server die Authentifizierungsüberprüfung gesendet hat, sollten Sie den Server untersuchen, indem Sie seine Ereignisse, z.B. 4624, überprüfen, um den Authentifizierungsprozess besser nachvollziehen zu können. 
+3.  Wenn die Authentifizierung mithilfe von NTLM durchgeführt wurde und Sie sehen, dass die Warnung mehrfach aufgetreten ist, aber keine ausreichenden Informationen zum Server verfügbar sind, auf den der Quellcomputer zugreifen wollte, aktivieren Sie **NTLM-Überwachung** auf den betroffenen Domänencontrollern. Aktivieren Sie dazu Ereignis 8004. Dies ist das NTLM-Authentifizierungsereignis, das Informationen zum Quellcomputer, Benutzerkonto und **Server** enthält, auf die der Quellcomputer zugreifen wollte. Wenn Sie wissen, welcher Server die Authentifizierungsüberprüfung gesendet hat, untersuchen Sie den Server, indem Sie seine Ereignisse, z.B. 4624, überprüfen, um den Authentifizierungsprozess besser nachvollziehen zu können. 
 
 **Wartung**
 

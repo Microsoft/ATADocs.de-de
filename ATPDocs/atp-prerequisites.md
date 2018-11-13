@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f959176ddca045f421af416d5ce9dc3a777cc43a
-ms.sourcegitcommit: fdff488c79729035f89897c2ea0771a45b4c3ecf
+ms.openlocfilehash: 4b72d112a39b9fd7448ecfe2aa5c1808752d32a8
+ms.sourcegitcommit: 034d5cbd077a0dd18638d27aabbcf7b735993b08
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49401911"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50749002"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -114,7 +114,7 @@ Die Zeitsynchronisierung der Server und Domänencontroller, auf denen der Sensor
 ### <a name="network-adapters"></a>Netzwerkadapter
 
 Der Azure ATP-Sensor überwacht den lokalen Datenverkehr auf allen Netzwerkadaptern des Domänencontrollers. <br>
-Nach der Bereitstellung können Sie das Azure ATP-Arbeitsbereichsportal verwenden, wenn Sie die überwachten Netzwerkadapter ändern möchten.
+Nach der Bereitstellung können Sie das Azure ATP-Portal verwenden, wenn Sie die überwachten Netzwerkadapter ändern möchten.
 
 Der Sensor wird nicht in Domänencontrollern unter Windows 2008 R2 mit aktivierten Teamvorgängen für Broadcom-Netzwerkadapter unterstützt.
 

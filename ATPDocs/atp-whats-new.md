@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/28/2018
+ms.date: 11/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,19 +13,31 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 21bc112da963fe883f601258ff38062f0243a47d
-ms.sourcegitcommit: 3ab48f180aa0276f4e19cf7cd567581c7b4324cc
+ms.openlocfilehash: 3c453ad2fce37986811903693c27761c5ea79d40
+ms.sourcegitcommit: 03b1949beaf2f78a3cdf9396356a96488ea2e127
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202387"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50983139"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
 # <a name="whats-new-in-azure-atp"></a>Neuerungen in Azure ATP 
 
-### <a name="azure-atp-release-252"></a>Azure ATP, Release 2.5.2
-Veröffentlicht: 8. Oktober 2018
+
+## <a name="azure-atp-release-253"></a>Azure ATP Release 2.5.3
+Veröffentlicht am 4. November 2018
+
+- **Verbesserung an Sicherheitswarnungen: Verdächtiger Authentifizierungsfehler**<br>
+[Sicherheitswarnungen zu verdächtigen Authentifizierungsfehlern](suspicious-activity-guide.md) in Azure ATP umfassen nun die Überwachung für die Erkennung von Kennwort-Spray- oder Brute-Force-Angriffen.
+Bei einem typischen **Kennwort-Spray-Angriff** testen Angreifer nach erfolgreichem Durchzählen einer Liste von gültigen Benutzern aus dem Domänencontroller EIN sorgfältig erstelltes Kennwort für ALLE bekannten Benutzerkonten (ein Kennwort für n Konten). Wenn beim ersten Kennwort-Spray-Angriff ein Fehler auftritt, wiederholen sie den Vorgang mit einem anderen sorgfältig erstellten Kennwort – normalerweise nach einer Wartezeit von 30 Minuten zwischen den Versuchen. Durch die Wartezeit verhindern Angreifer, dass meist zeitbasierte Schwellenwerte für die Kontosperre ausgelöst werden. Kennwort-Spray-Angriffe haben sich rasch zu einer beliebten Methode unter Angreifern und Pen-Testern entwickelt. Kennwort-Spray-Angriffe haben sich als effektiv erwiesen, um innerhalb einer Organisation einen Ankerpunkt zu finden und infolgedessen weitere Schwachstellen auszunutzen, um Berechtigungen auszuweiten. 
+
+- **Featureverbesserung: Senden einer Syslog-Testnachricht**<br>   Ab sofort gibt es eine neue Möglichkeit, um eine Syslog-Testnachricht während des SIEM-Setupvorgangs zu senden. Weitere Informationen finden Sie unter [Integration in Syslog](setting-syslog.md). 
+
+- Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
+
+## <a name="azure-atp-release-252"></a>Azure ATP, Release 2.5.2
+Veröffentlicht: 28. Oktober 2018
 
 
 - **Verbesserung der Sicherheitswarnung: Versuchte Remotecodeausführung**<br>

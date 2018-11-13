@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/24/2018
+ms.date: 11/01/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,34 +13,39 @@ ms.technology: ''
 ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 143002db7b45868e5b78c7da1cdc77c569d3a3dd
-ms.sourcegitcommit: 63ec9181f71edce6a950f5cc0d69428405436c48
+ms.openlocfilehash: 574606cfd172b9885534095be5ebbc266b1c8004
+ms.sourcegitcommit: 034d5cbd077a0dd18638d27aabbcf7b735993b08
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49963317"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50748985"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
 
 # <a name="azure-atp-siem-log-reference"></a>Referenz zum Azure ATP-SIEM-Protokoll
 
-Azure ATP kann verdächtige Aktivitäten und die Überwachung von Warnereignissen an SIEM weiterleiten. Verdächtige Aktivitätsereignisse haben das CEF-Format. Dieser Verweisartikel bietet Beispiele verdächtiger Aktivitätsprotokolle, die an Ihren SIEM-Agent gesendet wurden.
+Azure ATP kann Ereignisse zu Sicherheitswarnungen und Warnungen zur Überwachung an SIEM weiterleiten. Warnungen und Ereignisse weisen das CEF-Format auf. Dieser Referenzartikel enthält Beispiele für die Protokolle, die an SIEM gesendet werden.
 
-## <a name="sample-azure-atp-suspicious-activities-in-cef-format"></a>Beispiel: verdächtige Azure ATP-Aktivitäten im CEF-Format
+## <a name="sample-azure-atp-security-alerts-in-cef-format"></a>Beispielsicherheitswarnungen von Azure ATP im CEF-Format
 Die folgenden Felder und deren Werte werden an Ihren SIEM-Agent weitergeleitet:
 
--   start – Startzeit der Warnung
--   suser – Konto (normalerweise das Benutzerkonto), das an der Warnung beteiligt ist
--   shost – Quellcomputer der Warnung
--   outcome – Wenn relevant, ein Erfolg oder Fehlschlagen der verdächtigen Aktivität in der Warnung  
--   msg – Beschreibung der Warnung
--   cnt – für Warnungen, die die Anzahl der Zeiten angeben, zu denen die Aktivität erfolgt ist (z.B. Brute Force mit einer Anzahl geschätzter Kennwörter)
--   app – in dieser Warnung verwendetes Protokoll
--   externalId – Ereignistyp-ID, die Azure ATP in das Ereignisprotokoll schreibt, das jedem Warnungstyp entspricht
--   cs#label & cs# – von CEF zugelassene Zeichenfolgen der Kunden, wobei cs#label der Name des neuen Felds und cs# der Wert ist, z.B.: cs1Label=url cs1=https://192.168.0.220/suspiciousActivity/5909ae198ca1ec04d05e65fa
+|Detail|Erläuterung|
+|---------|---------------|
+|start|Startzeit der Warnung|
+|suser|Konto (normalerweise das Benutzerkonto), das an der Warnung beteiligt ist|
+|shost|Konto (normalerweise das Benutzerkonto), das an der Warnung beteiligt ist|
+|outcome|Sofern relevant, ein Erfolg oder Fehler bei der verdächtigen Aktivität in der Warnung|
+|msg|Eine Beschreibung der Warnung|
+|cnt|Für Warnungen, die die Anzahl der Zeiten angeben, zu denen die Aktivität erfolgt ist (z.B. Brute Force mit einer Anzahl geschätzter Kennwörter)|
+|app |In dieser Warnung verwendetes Protokoll|
+|externalId|Ereignistyp-ID, die Azure ATP in das Ereignisprotokoll schreibt, das jedem Warnungstyp entspricht|
+|cs#label|Die für CEF zulässigen Kundenzeichenfolgen, wobei „cs#label“ der Name des neuen Felds ist |
+|cs#|Die für CEF zulässigen Kundenzeichenfolgen, wobei „cs#“ der Wert ist.|
+|
 
-    In diesem Beispiel ist cs1 ein Feld, das über eine URL für die Warnung verfügt.
+Beispiel: cs1Label=url cs1=https://192.168.0.220/suspiciousActivity/5909ae198ca1ec04d05e65fa
+<br> In diesem Beispiel ist das Feld „cs1“ die Warnungs-URL. 
 
 > [!NOTE]
 > Wenn Sie eine Automatisierung oder Skripts für Azure ATP-SIEM-Protokoll erstellen möchten, sollten Sie zur Identifizierung des Warnungstyps das Feld **externalID** statt des Warnungsnamens verwenden. Warnungsnamen können nämlich gelegentlich geändert werden, während die **externalId** jeder Warnung dauerhaft ist.  
