@@ -50,6 +50,7 @@
 ## [Azure ATP-Integritätscenter](atp-health-center.md)
 ## [Verwalten von Azure ATP-Integritätswarnungen](monitoring-alerts.md)
 ## [Behandeln häufiger Probleme](troubleshooting-atp-known-issues.md)
-### [Problembehandlung mithilfe von Protokollen](troubleshooting-atp-using-logs.md)
+## [Problembehandlung mithilfe von Protokollen](troubleshooting-atp-using-logs.md)
+## [Azure ATP: Häufige Probleme](known-issues.md)
 ## [Support und Informationen](atp-support.md)
 ## [Roadmap für die Azure ATP-Bereitschaft](atp-resources.md)
