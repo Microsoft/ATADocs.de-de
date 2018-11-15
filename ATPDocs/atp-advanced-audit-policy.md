@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ab1e8dd9-a6c2-4c68-89d5-343b8ec56142
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d2d7027a53d6bbc26d037ceeef4c5083865bb7e7
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: d812673ed387bcd6a14e6b316cb2224819c503e3
+ms.sourcegitcommit: 46b6a5088ed975bcfb36e7f9a3b5c00ecd5e185a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783099"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51645275"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -57,7 +57,7 @@ Advanced Security Audit Policy (Erweiterte Sicherheitsüberwachungsrichtlinien) 
     ![Sicherheitsgruppenverwaltung überwachen](media/atp-advanced-audit-policy-check-step-4.png)
 
 > [!NOTE]
-> - Wenn Sie sich für die Verwendung lokaler Richtlinien entscheiden, stellen Sie sicher, dass Sie darin die Überwachungsprotokolle **Kontoanmeldung** und **Kontoverwaltung** hinzufügen. Wenn Sie die erweiterte Überwachungsrichtlinie konfigurieren, stellen Sie sicher, dass Sie die [Überwachungsrichtlinien-Unterkategorie](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/audit-force-audit-policy-subcategory-settings-to-override) erzwingen.
+> Wenn Sie sich für die Verwendung lokaler Richtlinien entscheiden, stellen Sie sicher, dass Sie darin die Überwachungsprotokolle **Kontoanmeldung** und **Kontoverwaltung** hinzufügen. Wenn Sie die erweiterte Überwachungsrichtlinie konfigurieren, stellen Sie sicher, dass Sie die [Überwachungsrichtlinien-Unterkategorie](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/audit-force-audit-policy-subcategory-settings-to-override) erzwingen.
 
 7. Nachdem die neuen Ereignisse über GPO angewendet wurden, sind sie unter Ihren **Windows-Ereignisprotokollen** sichtbar.
 
