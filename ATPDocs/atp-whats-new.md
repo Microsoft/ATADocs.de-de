@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/04/2018
+ms.date: 11/12/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,20 +13,28 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3c453ad2fce37986811903693c27761c5ea79d40
-ms.sourcegitcommit: 03b1949beaf2f78a3cdf9396356a96488ea2e127
+ms.openlocfilehash: 2237834e867aa6bdacbc67fcc1244f07ac88711b
+ms.sourcegitcommit: 2afc1486b40431f442d51a53df06e289796de87e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50983139"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560744"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
 # <a name="whats-new-in-azure-atp"></a>Neuerungen in Azure ATP 
 
+## <a name="azure-atp-release-254"></a>Azure ATP, Release 2.5.4
+Veröffentlicht am 11. November 2018
+
+- **Featureverbesserung: Ausschlüsse der Standarddomäne zu verdächtiger Kommunikation über DNS-Warnung hinzugefügt**<br>   Es wurden drei beliebte Domänen zur Ausschlussliste der Standarddomäne hinzugefügt. Die Ausschlussliste bleibt vollständig anpassbar. Weitere Informationen finden Sie unter [Ausschließen von Entitäten von der Erkennung](excluding-entities-from-detections.md) 
+
+- **Verbesserungen bei der Dokumentation: Update des SIEM-Protokolls, Anleitungen für bekannte Probleme**<br>    Die externalId-Zuordnung sowie zusätzliche Erläuterungen wurden den Beschreibungen des SIEM-Protokolls hinzugefügt. Weitere Informationen finden Sie in der [Referenz zum SIEM-Protokoll](cef-format-sa.md). <br>Es wurde ein neuer Artikel zum Leitfaden für derzeit bekannte Probleme hinzugefügt. Weitere Informationen finden Sie unter: [Azure ATP Known Issues (Azure ATP: Bekannte Probleme)](known-issues.md).  
+
+- Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
 ## <a name="azure-atp-release-253"></a>Azure ATP Release 2.5.3
-Veröffentlicht am 4. November 2018
+Veröffentlicht: 4. November 2018
 
 - **Verbesserung an Sicherheitswarnungen: Verdächtiger Authentifizierungsfehler**<br>
 [Sicherheitswarnungen zu verdächtigen Authentifizierungsfehlern](suspicious-activity-guide.md) in Azure ATP umfassen nun die Überwachung für die Erkennung von Kennwort-Spray- oder Brute-Force-Angriffen.
@@ -71,20 +79,20 @@ Veröffentlicht: 14. Oktober 2018
 
 ## <a name="azure-atp-release-249"></a>Azure ATP Release 2.49
 Veröffentlicht: 7. Oktober 2018
--   **Neue Erkennungen: Verdächtige DNS-Kommunikation** (Vorschauversion)<br>Neue Erkennungen, die hinzugefügt wurden, und vor verdächtigen DNS-Kommunikationsangriffen schützen:
+-   **Neue Erkennungen: Verdächtige DNS-Kommunikation** (Vorschauversion)<br>Es wurde eine neue Erkennung hinzugefügt, um vor verdächtigen DNS-Kommunikationsangriffen zu schützen:
 
-    -   Diese Erkennung hilft dabei, Angriffe gegen das DNS-Protokoll zu erkennen: In den meisten Organisationen wird das DNS-Protokoll nicht überwacht und nur selten vor böswilligen Angriffen blockiert. Dadurch kann ein Angreifer auf einem kompromittierten Computer das DNS-Protokoll missbrauchen. Böswillige Kommunikation über DNS kann zur Datenexfiltration, Befehls- und Führungssystemeinschränkung und/oder zur Umgehung von Netzwerkeinschränkungen führen.
+    -   Diese Erkennung hilft dabei, Angriffe gegen das DNS-Protokoll zu erkennen: In den meisten Organisationen wird das DNS-Protokoll nicht überwacht und nur selten vor böswilligen Angriffen geschützt. Das gibt einem Angreifer auf einem kompromittierten Computer die Möglichkeit, das DNS-Protokoll zu missbrauchen. Böswillige Kommunikation über DNS kann zur Datenexfiltration, Zugriff über Command-and-Control-Server und/oder zur Umgehung von Netzwerkeinschränkungen führen.
 
 - **Neue Funktionen** <br>Die Azure ATP-**Benutzerrolle** wurde mit den folgenden Funktionen verbessert:
-  - Der Status der Sicherheitswarnungen wurde geändert (erneut öffnen, schließen, ausschließen, unterdrücken)
+  - Der Status der Sicherheitswarnungen kann geändert werden (erneut öffnen, schließen, ausschließen, unterdrücken)
   - Geplante Berichte wurden festgelegt
-  - Entitätstags (vertraulich und Honeytoken) wurden festgelegt.
+  - Entitätstags (vertraulich und Honeytoken) können festgelegt werden.
   - Ausschluss von Erkennung
   - Sprache ändern
   - Benachrichtigung über E-Mail oder Syslog wurden festgelegt
 
 
-- Ein temporärer Anstieg von Sicherheitswarnungen des Typs **Reconnaissance mithilfe von Verzeichnisdienstabfragen**, die am 16.9.2018 aufgetreten sind, wurden identifiziert und gelöst. 
+- Sicherheitswarnungen des Typs **Reconnaissance mithilfe von Verzeichnisdienstabfragen**, die am 16. September 2018 kurzzeitig vermehrt aufgetreten sind, wurden identifiziert und behoben. 
 
 - Diese Version enthält darüber hinaus Fehlerbehebungen und Verbesserungen für mehrere Probleme.
 

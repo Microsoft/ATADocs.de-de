@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 11/11/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,31 +13,37 @@ ms.technology: ''
 ms.assetid: cae3ed45-8fbc-4f25-ba24-3cc407c6ea93
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 432f55891440975e511ab5cd3e2972a1c7a33f37
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 0a27d87f758940e25b463d2514031c5c342a3114
+ms.sourcegitcommit: 2afc1486b40431f442d51a53df06e289796de87e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48782929"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560676"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
 
 
 # <a name="excluding-entities-from-detections"></a>Ausschließen von Entitäten von der Erkennung
-Dieser Artikel erläutert, wie Sie Entitäten ausschließen, sodass diese keine Warnungen auslösen. So können Sie unbedenkliche wahr-positive Ergebnisse minimieren und zugleich sicherstellen, dass wahr-positive Ergebnisse festgestellt werden. Um zu verhindern, dass Azure ATP Warnungen bei Aktivitäten ausgibt, die bei bestimmten Benutzern zu Ihrem ganz normalen Geschäftsalltag gehören, können Sie bestimmte Entitäten ausschließen, sodass diese keine Warnungen auslösen.
+In diesem Artikel wird erläutert, wie Entitäten ausgeschlossen werden, sodass sie keine Warnungen auslösen. Bestimmte Entitäten werden ausgeschlossen, um unbedenkliche richtig positive Ergebnisse zu reduzieren, während gleichzeitig sichergestellt wird, dass Sie die richtig positiven Ergebnisse ermitteln können. Um zu verhindern, dass Azure ATP störende Warnungen bei Aktivitäten ausgibt, die bei bestimmten Benutzern zu Ihrem ganz normalen Geschäftsalltag gehören, können Sie bestimmte Entitäten ausschließen, sodass diese keine Warnungen auslösen. Zusätzlich werden standardmäßig bestimmte beliebte Entitäten ausgeschlossen. 
 
-Beispiele: Ein Sicherheitsscanner führt eine DNS-Reconnaissance aus, oder ein Administrator führt remote Skripts auf dem Domänencontroller aus. Beides sind sanktionierte Aktivitäten, die im Rahmen des alltäglichen IT-Betriebs in Ihrer Organisation durchgeführt werden. Weitere Informationen zu Erkennungen in Azure ATP, die Ihnen dabei helfen, zu entscheiden, welche Entitäten ausgeschlossen werden sollen, finden Sie im [Handbuch zu verdächtigen Aktivitäten](suspicious-activity-guide.md).
+Beispiele: Ein Sicherheitsscanner führt eine DNS-Reconnaissance aus, oder ein Administrator führt Remoteskripts auf dem Domänencontroller aus. Beides sind sanktionierte Aktivitäten, die im Rahmen des alltäglichen IT-Betriebs in Ihrer Organisation durchgeführt werden und ausgeschlossen werden können. Weitere Informationen zu jeder Erkennung in Azure ATP, die Ihnen dabei helfen, zu entscheiden, welche Entitäten ausgeschlossen werden sollen, finden Sie im [Leitfaden für Sicherheitswarnungen](suspicious-activity-guide.md).
 
-So schließen Sie Entitäten aus, damit diese keine Warnungen in Azure ATP auslösen:
+## <a name="entities-excluded-by-default-from-raising-alerts"></a>Entitäten, die standardmäßig ausgeschlossen werden, sodass sie keine Warnungen auslösen können
+ Für bestimmte Warnungen (z.B. **verdächtige Kommunikation über DNS**) werden automatische Domänenausschlüsse durch Azure ATP basierend auf Kundenfeedback und Recherche hinzugefügt. 
+ 
+![Verdächtige Kommunikation über DNS: automatische Ausschlüsse](./media/dns-auto-exclusions.png) 
 
-Es gibt zwei Möglichkeiten, Entitäten ausschließen: in der verdächtigen Aktivität selbst oder über die Registerkarte **Ausschlüsse** auf der Seite **Konfiguration**.
+## <a name="exclude-entities-from-raising-alerts"></a>Ausschließen von Entitäten, damit diese keine Warnungen auslösen
 
-- **In der verdächtigen Aktivität**: Wenn Sie eine Warnung zu einer Aktivität eines Benutzers, eines Computers oder einer IP-Adresse erhalten, der bzw. die diese bestimmte Aktivität ausführen darf und dies möglicherweise häufig tut, klicken Sie in der Zeitachse mit verdächtigen Aktivitäten auf diese Entität, und wählen Sie **Schließen und ausschließen**. <br></br>Dadurch wird der Benutzer, der Computer oder die IP-Adresse der Ausschlussliste für diese verdächtige Aktivität hinzugefügt. Die verdächtige Aktivität wird geschlossen und in der **Zeitachse für verdächtige Aktivitäten** nicht mehr in der Liste der **offenen** Ereignisse aufgeführt.
+Es gibt zwei Möglichkeiten, Entitäten manuell auszuschließen: entweder direkt über die Sicherheitswarnung oder über die Registerkarte **Ausschlüsse** auf der Seite **Konfiguration**. 
+
+- **Von der Sicherheitswarnung:** Wenn Sie auf der Aktivitätszeitachse eine Warnung oder Aktivität für einen Benutzer, Computer oder eine IP-Adresse erhalten, der bzw. die die bestimmte Aktivität **ausführen darf** und dies häufig auch tut, führen Sie folgende Schritte aus:
+  - Klicken Sie mit der rechten Maustaste auf die drei Punkte am Ende der Zeile für die Sicherheitswarnung auf dieser Entität, und wählen Sie **Close and exclude** (Schließen und ausschließen) aus. Dadurch wird der Benutzer, der Computer oder die IP-Adresse der Ausschlussliste für diese Sicherheitswarnung hinzugefügt. Die Sicherheitswarnung wird daraufhin geschlossen, und die Warnung wird nicht länger in der Ereignisliste auf der **Warnungszeitachse** unter **Open** (Offen) aufgeführt.
 
     ![Ausschließen einer Entität](./media/exclude-in-sa.png)
 
-- **Auf der Konfigurationsseite**: Um Ausschlüsse zu überprüfen oder zu ändern, klicken Sie auf der Seite **Konfiguration** auf **Ausschlüsse**, und wählen Sie die verdächtige Aktivität aus, z.B. **DNS-Reconnaissance**.
+- **Auf der Konfigurationsseite**: Um Ausschlüsse zu überprüfen oder zu ändern, klicken Sie auf der Seite **Konfiguration** auf **Ausschlüsse**, und wählen Sie die Sicherheitswarnung aus, für die der Ausschluss angewendet werden soll, z.B. **DNS-Reconnaissance**.
 
     ![Konfiguration von Ausschlüssen](./media/exclusions.png)
 
@@ -45,7 +51,7 @@ So fügen Sie eine Entität aus der Konfiguration **Ausschlüsse** hinzu: Geben 
 
 Um eine Entität aus der Konfiguration der **Ausschlüsse** zu entfernen, klicken Sie auf das Minuszeichen neben dem Namen der Entität, und klicken Sie dann unten auf der Seite auf **Speichern**.
 
-Es wird empfohlen, Ausschlüsse erst zu Erkennungen hinzuzufügen, nachdem Sie Warnungen des entsprechenden Typs erhalten haben und entscheiden können, dass diese tatsächlich unbedenklich wahr positiv sind. 
+Es wird empfohlen, Ausschlüsse erst zu Erkennungen hinzuzufügen, nachdem Sie Warnungen des bestimmten Typs erhalten haben *und* entscheiden können, dass diese tatsächlich unbedenklich wahr positiv sind. 
 
 > [!NOTE]
 > Zu Ihrem Schutz bieten nicht alle Erkennungen die Möglichkeit, Ausschlüsse festzulegen. 
@@ -62,5 +68,6 @@ Wenn Sie die Möglichkeit haben, eine IP-Adresse oder einen Computer auszuschlie
 
 ## <a name="see-also"></a>Weitere Informationen
 
+- [Leitfaden zu Azure ATP-Sicherheitswarnungen](suspicious-activity-guide.md)
 - [Integration in Windows Defender ATP](integrate-wd-atp.md)
 - [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)
