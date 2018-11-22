@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: daeb998f6e97bc4ebdf290d4430fec8fcef40313
-ms.sourcegitcommit: 03b1949beaf2f78a3cdf9396356a96488ea2e127
+ms.openlocfilehash: 6c2123011f8a9af0db4b04ef1cf6cb139e7e63bb
+ms.sourcegitcommit: 65885bab8e31dd862a4f2ae9028fb31b288d7229
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50983156"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52157623"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -436,7 +436,7 @@ Bei diesem Erkennungsvorgang wird eine Warnung ausgelöst, wenn viele Authentifi
 
 [Komplexe bzw. lange Kennwörter](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) stellen die erste Sicherheitsstufe zum Schutz gegen Brute-Force-Angriffe dar.
 
-## <a name="suspicious-communication-over-dns---preview"></a>Verdächtige Kommunikation über DNS – Vorschau
+## <a name="suspicious-communication-over-dns"></a>Verdächtige Kommunikation über DNS 
 
 **Beschreibung**
 
