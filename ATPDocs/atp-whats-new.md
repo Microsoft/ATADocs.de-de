@@ -13,16 +13,24 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2237834e867aa6bdacbc67fcc1244f07ac88711b
-ms.sourcegitcommit: 2afc1486b40431f442d51a53df06e289796de87e
+ms.openlocfilehash: ca178eaa1b0ef1b631ebe2ab02f00fd5a9c26de5
+ms.sourcegitcommit: 65885bab8e31dd862a4f2ae9028fb31b288d7229
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560744"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52157589"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
 # <a name="whats-new-in-azure-atp"></a>Neuerungen in Azure ATP 
+
+## <a name="azure-atp-release-255"></a>Azure ATP, Version 2.5.5
+Veröffentlicht: 18. November 2018
+
+- **Sicherheitshinweis: Verdächtige Kommunikation über DNS – allgemeine Verfügbarkeit**<br>
+Der Azure ATP-Sicherheitshinweis [Verdächtige Kommunikation über DNS](suspicious-activity-guide.md#suspicious-communication-over-dns) ist jetzt allgemein verfügbar. <br> In den meisten Organisationen wird das DNS-Protokoll nicht überwacht und nur selten vor böswilligen Angriffen geschützt. Das gibt einem Angreifer auf einem kompromittierten Computer die Möglichkeit, das DNS-Protokoll zu missbrauchen. Böswillige Kommunikation über DNS kann zur Datenexfiltration, Zugriff über Command-and-Control-Server und/oder zur Umgehung von Netzwerkeinschränkungen führen.
+
+- Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
 ## <a name="azure-atp-release-254"></a>Azure ATP, Release 2.5.4
 Veröffentlicht am 11. November 2018
@@ -362,5 +370,5 @@ Veröffentlicht: 11. März 2018
 - [Was ist Azure Advanced Threat Protection?](what-is-atp.md)
 - [Häufig gestellte Fragen](atp-technical-faq.md)
 - [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](atp-prerequisites.md)
-- [Azure ATP-Kapazitätsplanung](atp-capacity-planning.md) (configure-event-forwarding.md#configuring-windows-event-forwarding)
+- [Azure ATP capacity planning (Azure ATP-Kapazitätsplanung)](atp-capacity-planning.md)
 - [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)
