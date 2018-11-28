@@ -44,7 +44,8 @@
 ## [Verwenden von Sicherheitswarnungen](working-with-suspicious-activities.md)
 # Azure ATP-Sicherheitswarnungen
 ## [Leitfaden für Sicherheitswarnungen](suspicious-activity-guide.md)
-## [Investigate lateral movement paths with Azure ATP (Untersuchen von Lateral Movement-Pfaden mit Azure ATP)](use-case-lateral-movement-path.md)
+## [Lateral Movement-Pfade](use-case-lateral-movement-path.md)
+### [Untersuchen von Lateral Movement-Pfaden](investigate-lateral-movement-path.md)
 ## [Untersuchen von Entitäten](investigate-entity.md)
 # Problembehandlung
 ## [Azure ATP-Integritätscenter](atp-health-center.md)
