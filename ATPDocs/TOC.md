@@ -8,7 +8,7 @@
 ## [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](atp-prerequisites.md)
 ## [Planen Ihrer Azure ATP-Kapazität](atp-capacity-planning.md)
 # Schnellstart
-## [Erstellen eines Arbeitsbereichs im Arbeitsbereich-Verwaltungsportal](install-atp-step1.md)
+## [Erstellen einer Azure ATP-Instanz](install-atp-step1.md)
 ## [Verbinden mit Active Directory](install-atp-step2.md)
 ### [Unterstützung der Azure ATP-Gesamtstruktur](atp-multi-forest.md)
 ## [Herunterladen des Azure ATP-Sensorpakets](install-atp-step3.md)
