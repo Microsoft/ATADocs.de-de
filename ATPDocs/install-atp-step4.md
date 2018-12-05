@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 11/28/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 51911e39-76c7-4dcd-bc0b-ec6235d0403f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 52ffbac6acd762d4cf2898c170d7a026d2a37826
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: fd2a2316f63b5324e7869878104bd663e48b2771
+ms.sourcegitcommit: e2a89030c31376c6798697a62b484f45ed54e679
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783728"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501108"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -33,7 +33,7 @@ ms.locfileid: "48783728"
 ## <a name="step-4-install-the-azure-atp-sensor"></a>Schritt 4: Installieren des Azure ATP-Sensors
 
 > [!IMPORTANT]
->Stellen Sie sicher, dass .NET Framework 4.7 auf dem Computer installiert ist. Wenn .NET Framework 4.7 nicht installiert ist, wird es vom Azure ATP-Sensorsetuppaket installiert, wodurch ein Neustart des Servers erforderlich ist.
+>Stellen Sie sicher, dass .NET Framework 4.7 auf dem Computer installiert ist. Wenn .NET Framework 4.7 nicht installiert ist, wird es vom Azure ATP-Sensorsetuppaket installiert, wodurch möglicherweise ein Neustart des Servers erforderlich ist.
 
 Führen Sie auf dem Domänencontroller folgende Schritte aus.
 

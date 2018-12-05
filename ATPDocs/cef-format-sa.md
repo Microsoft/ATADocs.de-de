@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/12/2018
+ms.date: 11/26/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 4d1a4d24e2102a019b9df627f2d00c1df981c3ae
-ms.sourcegitcommit: 4d8e7c690453d9b78e6e597c3f8562250d335ba5
+ms.openlocfilehash: fcad0fd1677a6e34a9d72b0e9660eb2e680ca22e
+ms.sourcegitcommit: e2a89030c31376c6798697a62b484f45ed54e679
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177384"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501134"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -34,7 +34,7 @@ Die folgenden Felder und deren Werte werden an Ihren SIEM-Agent weitergeleitet:
 |---------|---------------|
 |start|Startzeit der Warnung|
 |suser|Konto (normalerweise das Benutzerkonto), das an der Warnung beteiligt ist|
-|shost|Konto (normalerweise das Benutzerkonto), das an der Warnung beteiligt ist|
+|machine account|Konto (normalerweise das Benutzerkonto), das an der Warnung beteiligt ist|
 |outcome|Sofern relevant, ein Erfolg oder Fehler bei der verdächtigen Aktivität in der Warnung|
 |msg|Eine Beschreibung der Warnung|
 |cnt|Für Warnungen, die die Anzahl der Zeiten angeben, zu denen die Aktivität erfolgt ist (z.B. Brute Force mit einer Anzahl geschätzter Kennwörter)|
@@ -55,38 +55,38 @@ Die folgenden Felder und deren Werte werden an Ihren SIEM-Agent weitergeleitet:
 
 ## <a name="azure-atp-security-alert-unique-externalids"></a>Azure ATP-Sicherheitswarnung: Eindeutige externalIds
 
-|Sicherheitswarnungsname|Eindeutige externalId|
-|---------|---------|
-|Brute-Force-Angriff mithilfe einer einfachen LDAP-Bindung|2004|
-|Aktivität zur Herabstufung der Verschlüsselung: Skeleton Key|2011|
-|Aktivität zur Herabstufung der Verschlüsselung (potenzieller Overpass-the-Hash-Angriff)|2008|
-|Aktivität zur Herabstufung der Verschlüsselung (potenzieller Golden Ticket-Angriff)|2009|
-|Aktivität zur Herabstufung der Verschlüsselung (potenzieller Skeleton Key-Angriff)|2010|
-|Honeytoken-Aktivität|2014|
-|Identitätsdiebstahl mithilfe eines Pass-the-Hash-Angriffs|2017|
-|Identitätsdiebstahl mithilfe eines Pass-the-Ticket-Angriffs|2018|
-|Golden Ticket von Kerberos: Zeitanomalie|2022|
-|Kerberos Golden Ticket: nicht vorhandenes Konto|2027|
-|Böswillige Anforderung privater Informationen im Rahmen der Datensicherheit|2020|
-|Böswillige Replikation von Verzeichnisdiensten|2006|
-|Berechtigungsausweitung mithilfe von gefälschten Autorisierungsdaten|2013|
-|Reconnaissance mithilfe von Kontoenumeration|2003|
-|Reconnaissance über DNS|2007|
-|Reconnaissance mithilfe der SMB-Sitzungsenumeration|2012|
-|Reconnaissance mithilfe von Verzeichnisdienstabfragen|2021|
-|Versuchte Remote-Codeausführung|2019|
-|Verdächtige Authentifizierungsfehler|2023|
-|Verdächtige Replikationsanforderung von Domänencontroller (potenzieller DCShadow-Angriff)|2029|
-|Verdächtige Heraufstufung zu Domänencontrollern (potenzieller DcShadow-Angriff)|2028|
-|Verdächtige Kommunikation über DNS|2031|
-|Verdächtige Modifizierung von sensiblen Gruppen|2024|
-|Erstellen eines verdächtigen Diensts|2026|
-|Verdächtige VPN-Verbindung|2025|
-|Ungewöhnliche Protokollimplementierung (potenzieller WannaCry-Ransomwareangriff)*|2002|
-|Ungewöhnliche Protokollimplementierung (potenzielle Verwendung schädlicher Tools wie Hydra)*|2002|
-|Ungewöhnliche Protokollimplementierung (potenzielle Verwendung schädlicher Hackertools wie Metasploit)*|2002|
-|Ungewöhnliche Kerberos-Protokollimplementierung (potenzieller Overpass-the-Hash-Angriff)*|2002|
-|Warnungen von *ungewöhnlichen Protokollimplementierungen* haben derzeit die gleiche externalId. In einem zukünftigen Release soll jeder Warnungstyp eine eindeutige externalId erhalten.|****|
+> [!div class="mx-tableFixed"] 
+|Neuer Sicherheitswarnungsname|Alter Sicherheitswarnungsname|Eindeutige externalId|
+|---------|----------|---------|
+|Suspected Brute Force attack (LDAP) (Verdacht auf einen Brute-Force-Angriff (LDAP))|Brute-Force-Angriff mithilfe einer einfachen LDAP-Bindung|2004|
+|Suspected Skeleton Key attack (encryption downgrade) (Verdacht auf Skeleton-Key-Angriff (Herabstufung der Verschlüsselung))|Aktivität zur Herabstufung der Verschlüsselung: Skeleton Key|2011|
+|Suspected over-pass-the-hash attack (encryption downgrade) (Verdacht auf Over-Pass-the-Hash-Angriff (Herabstufung der Verschlüsselung))|Aktivität zur Herabstufung der Verschlüsselung (potenzieller Overpass-the-Hash-Angriff)|2008|
+|Suspected golden ticket usage (encryption downgrade) (Verdacht auf Verwendung eines Golden Ticket (Herabstufung der Verschlüsselung))|Aktivität zur Herabstufung der Verschlüsselung (potenzieller Golden Ticket-Angriff)|2009|
+|Suspected Skeleton Key attack (encryption downgrade) (Verdacht auf Skeleton-Key-Angriff (Herabstufung der Verschlüsselung))|Aktivität zur Herabstufung der Verschlüsselung (potenzieller Skeleton Key-Angriff)|2010|
+|Honeytoken-Aktivität|Honeytoken-Aktivität|2014|
+|Suspected identity theft (pass-the-hash) (Verdacht auf Identitätsdiebstahl (Pass-the-Hash))|Identitätsdiebstahl mithilfe eines Pass-the-Hash-Angriffs|2017|
+|Suspected identity theft (pass-the-ticket) (Verdacht auf Identitätsdiebstahl (Pass-the-Ticket))|Identitätsdiebstahl mithilfe eines Pass-the-Ticket-Angriffs|2018|
+|Suspected golden ticket usage (time anomaly) (Verdacht auf Verwendung eines Golden Ticket (Zeitanomalie)) |Golden Ticket von Kerberos: Zeitanomalie|2022|
+|Suspected golden ticket usage (nonexistent account) (Verdacht auf Verwendung eines Golden Ticket (nicht vorhandenes Konto))|Kerberos Golden Ticket: nicht vorhandenes Konto|2027|
+|Malicious request of Data Protection API master key (Böswillige Anforderung eines Masterschlüssels zur Datenschutz-API)|Böswillige Anforderung privater Informationen im Rahmen der Datensicherheit|2020|
+|Suspected DCSync attack (replication of directory services) (Verdacht auf einen DCSync-Angriff (Replikation von Verzeichnisdiensten))|Böswillige Replikation von Verzeichnisdiensten|2006|
+|Suspected Golden Ticket usage (forged authorization data) (Verdacht auf Verwendung eines Golden Ticket (gefälschte Autorisierungsdaten)) |Berechtigungsausweitung mithilfe von gefälschten Autorisierungsdaten|2013|
+|Reconnaissance mithilfe von Kontoenumeration|Reconnaissance mithilfe von Kontoenumeration|2003|
+|Network-mapping reconnaissance (DNS) (Reconnaissance über Netzwerkzuordnung (DNS))|Reconnaissance über DNS|2007|
+|User and IP address reconnaissance (SMB) (Reconnaissance über Benutzer und IP-Adressen (SMB)) |Reconnaissance mithilfe der SMB-Sitzungsenumeration|2012|
+|User and group membership reconnaissance (SAMR) (Reconnaissance über Benutzer und Gruppenmitgliedschaften (SAMR))|Reconnaissance mithilfe von Verzeichnisdienstabfragen|2021|
+|Versuchte Remote-Codeausführung|Versuchte Remote-Codeausführung|2019|
+|Suspected DCShadow attack (DC replication request) (Verdacht auf DCShadow-Angriff (DC-Replikationsanforderung))|Verdächtige Replikationsanforderung von Domänencontroller (potenzieller DCShadow-Angriff)|2029|
+|Suspected DCShadow attack (domain controller promotion) (Verdacht auf DCShadow-Angriff (Heraufstufung von Domänencontrollern))|Verdächtige Heraufstufung zu Domänencontrollern (potenzieller DcShadow-Angriff)|2028|
+|Verdächtige Kommunikation über DNS|Verdächtige Kommunikation über DNS|2031|
+|Verdächtige Modifizierung von sensiblen Gruppen|Verdächtige Modifizierung von sensiblen Gruppen|2024|
+|Erstellen eines verdächtigen Diensts|Erstellen eines verdächtigen Diensts|2026|
+|Verdächtige VPN-Verbindung|Verdächtige VPN-Verbindung|2025|
+|Suspected WannaCry ransomware attack (Verdacht auf einen WannaCry-Ransomangriff)|Ungewöhnliche Protokollimplementierung (potenzieller WannaCry-Ransomwareangriff)*|2002|
+|Suspected Brute Force attack (SMB) (Verdacht auf einen Brute-Force-Angriff (SMB))|Ungewöhnliche Protokollimplementierung (potenzielle Verwendung schädlicher Tools wie Hydra)*|2002|
+|Suspected use of Metasploit hacking framework (Verdacht auf Verwendung eines Hackerframeworks)|Ungewöhnliche Protokollimplementierung (potenzielle Verwendung schädlicher Hackertools wie Metasploit)*|2002|
+|Suspected overpass-the-hash attack (Kerberos) (Verdacht auf einen Overpass-the-Hash-Angriff (Kerberos))|Ungewöhnliche Kerberos-Protokollimplementierung (potenzieller Overpass-the-Hash-Angriff)*|2002|
+|Warnungen von *ungewöhnlichen Protokollimplementierungen* haben derzeit die gleiche externalId. In einem zukünftigen Release soll jeder Warnungstyp eine eindeutige externalId erhalten.||****|
 
 ## <a name="sample-logs"></a>Beispielprotokolle
 
@@ -176,7 +176,7 @@ Prioritäten:
 ### <a name="unusual-protocol-implementation---potential-use-of-malicious-tools-such-a-hydra"></a>Ungewöhnliche Protokollimplementierung (potenzielle Verwendung von schädlichen Tools wie Hydra)
 02-21-2018  16:21:22    Auth.Warning    192.168.0.220   1 2018-02-21T14:21:13.916050+00:00 CENTER CEF 6076 AbnormalProtocolSecurityAlert ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|AbnormalProtocolSecurityAlert|Unusual protocol implementation|5|start=2018-02-21T14:19:03.1981155Z app=Ntlm shost=CLIENT2 outcome=Success msg=There were attempts to authenticate from CLIENT2 against DC1 using an unusual protocol implementation. Kann auf den Einsatz von schädlichen Tools zum Ausführen eines Pass-the-Hash- oder Brute-Force-Angriffs hinweisen. externalId=2002 cs1Label=url cs1=https://contoso-corp.atp.azure.com/securityAlert/40fe98dd-aa42-4540-9d73-831486fdd1e4 cs2Label=trigger cs2=new
 
-### <a name="unusual-protocol-implementation--potential-use-of-malicious-tools-such-a-metasploit"></a>Ungewöhnliche Protokollimplementierung (potenzielle Verwendung von schädlichen Tools wie Metasploit)
+### <a name="unusual-protocol-implementation---potential-use-of-malicious-tools-such-a-metasploit"></a>Ungewöhnliche Protokollimplementierung (potenzielle Verwendung von schädlichen Tools wie Metasploit)
 10-29-2018  11:22:04    Auth.Warning    192.168.0.202   1 2018-10-29T09:22:00.460233+00:00 DC3 CEF 3908 AbnormalProtocolSecurityAlert ï»¿0|Microsoft|Azure ATP|2.52.5704.46184|AbnormalProtocolSecurityAlert|Unusual protocol implementation (potential use of Metasploit hacking tools)|5|start=2018-10-29T09:19:46.6092465Z app=Ntlm shost=CLIENT2 outcome=Success msg=There were attempts to authenticate from CLIENT2 against DC1 using an unusual protocol implementation. externalId=2002 cs1Label=url cs1=https://contoso-corp.atp.azure.com/securityAlert/573f10a1-6f8a-44b1-a5b1-212d40996363 cs2Label=trigger cs2=new
 
 ## <a name="see-also"></a>Weitere Informationen

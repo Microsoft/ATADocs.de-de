@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 7f96971f3d7d11f49c025ddf88c1ced5e4fc8cb6
-ms.sourcegitcommit: f86dc8ad3d1e75ba64b372d4d0ab5386e28f2e29
+ms.openlocfilehash: 93c49b71ea5fb67e57d505fb0b7c2e69314de4f9
+ms.sourcegitcommit: e2a89030c31376c6798697a62b484f45ed54e679
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51609672"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501118"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -56,7 +56,7 @@ Sie müssen die Domänencontroller neu starten, nachdem Sie den **Netzwerkdienst
 2.  Geben Sie an einer Eingabeaufforderung *gpedit.msc* ein.
 3.  Erweitern Sie **Computerkonfiguration > Administrative Vorlagen > Windows-Komponenten > Ereignisweiterleitung**.
 
-![Local policy group editor image](media/wef%201%20local%20group%20policy%20editor.png)
+  ![Local policy group editor image](media/wef%201%20local%20group%20policy%20editor.png)
 
 4.  Doppelklicken Sie auf **Ziel-Abonnement-Manager konfigurieren**.
    
@@ -64,7 +64,7 @@ Sie müssen die Domänencontroller neu starten, nachdem Sie den **Netzwerkdienst
     2.  Klicken Sie unter **Optionen** auf **Anzeigen**.
     3.  Geben Sie unter **SubscriptionManagers** folgenden Wert ein, und klicken Sie auf **OK**: *Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10* 
       
-         *(Beispiel: Server =http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC, Refresh = 10)*
+         *(Beispiel: Server=`http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)*
       
          ![Configure target subscription image](media/wef%202%20config%20target%20sub%20manager.png)
       
