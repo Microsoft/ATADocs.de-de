@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 93c49b71ea5fb67e57d505fb0b7c2e69314de4f9
-ms.sourcegitcommit: e2a89030c31376c6798697a62b484f45ed54e679
+ms.openlocfilehash: 8fffdfa2269139cee5b06b8824bfce35034ab9ba
+ms.sourcegitcommit: bdf5dc203ecec3e7542f2ed08852afeff4f20dcd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52501118"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52950355"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -62,6 +62,7 @@ Sie müssen die Domänencontroller neu starten, nachdem Sie den **Netzwerkdienst
    
     1.  Wählen Sie **Aktiviert** aus.
     2.  Klicken Sie unter **Optionen** auf **Anzeigen**.
+
     3.  Geben Sie unter **SubscriptionManagers** folgenden Wert ein, und klicken Sie auf **OK**: *Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10* 
       
          *(Beispiel: Server=`http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)*
