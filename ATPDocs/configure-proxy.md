@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 12/02/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a7dc9b6c9243377a613490e166fb7c0294ecde99
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: da38cef088dcd255c264792fd70bfebf1c42a34b
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783320"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744930"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -70,9 +70,9 @@ Wenn ein Proxy oder eine Firewall standardmäßig den gesamten Datenverkehr bloc
 |Asien|triprd1wcasse1sensorapi.atp.azure.com|
 
 
-Sie können auch die Firewall oder Proxyregeln für einen bestimmten selbst erstellten Arbeitsbereich aushärten, indem Sie eine Regel für die folgenden DNS-Einträge erstellen:
-- \<Name_Ihres_Arbeitsbereichs>.atp.azure.com: für die Konsolenkonnektivität. Beispielsweise „Contoso-corp.atp.azure.com“
-- \<Name_Ihres_Arbeitsbereichs>.sensorapi.atp.azure.com: für die Sensorkonnektivität. Beispielsweise „contoso-corpsensorapi.atp.azure.com“
+Sie können auch die Firewall oder Proxyregeln für eine bestimmte selbst erstellte Instanz aushärten, indem Sie eine Regel für die folgenden DNS-Einträge erstellen:
+- \<Name_der_Instanz>.atp.azure.com: für die Konsolenkonnektivität. Beispielsweise „Contoso-corp.atp.azure.com“
+- \<Name_der_Instanz>.sensorapi.atp.azure.com: für die Sensorkonnektivität. Beispielsweise „contoso-corpsensorapi.atp.azure.com“
 
  
 > [!NOTE]

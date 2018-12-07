@@ -2,33 +2,35 @@
 title: Verwalten von systemgenerierten Advanced Threat Analytics-Protokollen | Microsoft-Dokumentation
 description: Beschreibt die von ATA gesammelten Daten und enthält eine schrittweise Anleitung zum Deaktivieren der Datensammlung.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 6/26/2018
-ms.topic: conceptual
-ms.prod: advanced-threat-analytics
-ms.service: ''
+ms.date: 8/19/2018
+ms.topic: article
+ms.prod: ''
+ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0db1054f47d462251577a4d5251c07e8cd6283e8
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: a0b856ced72ad91a046f1116f96648baba7f7cba
+ms.sourcegitcommit: bdf5dc203ecec3e7542f2ed08852afeff4f20dcd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133408"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52950304"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
 
 
-# <a name="manage-system-generated-logs-note"></a>Verwalten von systemgenerierten Protokollen> [!NOTE]
+# <a name="manage-system-generated-logs"></a>Verwalten von systemgenerierten Protokollen> 
+
 
 [!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
 
-Advanced Threat Analytics (ATA) sammelt anonymisierte systemgenerierte Protokolldaten über ATA und überträgt die Daten über eine HTTPS-Verbindung an die Microsoft-Server.  Diese Daten werden von Microsoft zur Verbesserung von zukünftigen ATA-Versionen verwendet.
+ > [!NOTE]
+ > Advanced Threat Analytics (ATA) sammelt anonymisierte systemgenerierte Protokolldaten über ATA und überträgt die Daten über eine HTTPS-Verbindung an die Microsoft-Server. Diese Daten werden von Microsoft zur Verbesserung von zukünftigen ATA-Versionen verwendet.
 
 ## <a name="data-collected"></a>Gesammelte Daten
 Die gesammelten anonymisierten Daten enthalten folgende Parameter:

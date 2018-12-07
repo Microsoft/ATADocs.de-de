@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/14/2018
+ms.date: 12/02/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 1ad5e923-9bbd-4f56-839a-b11a9f387d4b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9202ba7c2519de0c7cd2eb3103578159dc437e83
-ms.sourcegitcommit: 58c75026e5ec4dcab3b0852a41f9f0a0ad6f22eb
+ms.openlocfilehash: 45858f80efb18060a845da47bfac3353946d18e0
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2018
-ms.locfileid: "49315743"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744403"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -44,7 +44,7 @@ Dazu führen Sie folgende Schritte aus:
    ![Honeytoken](media/honeytoken-sensitive.png)
 
 4. Klicken Sie auf **Ausschlüsse**. Geben Sie für jeden Bedrohungstyp ein Benutzerkonto oder eine IP-Adresse ein, das/die von der Erkennung ausgeschlossen werden soll. 
-5. Klicken Sie auf das *Plus*-Zeichen. Das Feld **Entität hinzufügen** (Benutzer oder Computer) kann durchsucht werden und wird automatisch mit Entitäten in Ihrem Netzwerk gefüllt. Weitere Informationen finden Sie unter [Excluding entities from detections (Ausschließen von Entitäten von Erkennungen)](excluding-entities-from-detections.md) und im [Handbuch zu verdächtigen Aktivitäten](suspicious-activity-guide.md).
+5. Klicken Sie auf das *Plus*-Zeichen. Das Feld **Entität hinzufügen** (Benutzer oder Computer) kann durchsucht werden und wird automatisch mit Entitäten in Ihrem Netzwerk gefüllt. Weitere Informationen finden Sie unter [Ausschließen von Entitäten von Erkennungen](excluding-entities-from-detections.md) und im [Handbuch zu Sicherheitswarnungen](suspicious-activity-guide.md).
 
    ![Ausschlüsse](media/exclusions.png)
 
@@ -53,9 +53,9 @@ Dazu führen Sie folgende Schritte aus:
 
 Damit haben Sie Azure Advanced Threat Protection erfolgreich bereitgestellt.
 
-Sie können nun die Angriffszeitleiste auf erkannte verdächtige Aktivitäten prüfen sowie nach Benutzern oder Computern suchen und deren Profile anzeigen.
+Sie können nun die Angriffszeitleiste auf erkannte Sicherheitswarnungen prüfen sowie nach Benutzern oder Computern suchen und deren Profile anzeigen.
 
-Azure ATP startet sofort die automatische Überprüfung auf verdächtige Aktivitäten. Einige Erkennungen wie Abnormal Group Modification (ungewöhnliche Gruppenänderungen) erfordern eine Lernphase und sind nicht unmittelbar nach der Azure ATP-Bereitstellung verfügbar.
+Azure ATP-Überprüfung wird sofort gestartet. Einige Erkennungen wie Abnormal Group Modification (ungewöhnliche Gruppenänderungen) erfordern eine Lernphase und sind nicht unmittelbar nach der Azure ATP-Bereitstellung verfügbar.
 
 
 ## <a name="see-also"></a>Weitere Informationen

@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 12/02/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,18 +13,18 @@ ms.technology: ''
 ms.assetid: d0551e91-3b21-47d5-ad9d-3362df6d47c0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: eed1509cb31885bccdfcc40505284dbdbdfc4cca
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 8cff5cbba1c9ed8d04764d9839a5cb2c66093c81
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783881"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744760"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
 # <a name="understanding-azure-atp-sensor-and-standalone-sensor-monitoring-alerts"></a>Grundlegende Informationen zu Überwachungswarnungen für Azure ATP-Sensor und selbstständige Azure ATP-Sensoren
 
-Das Azure ATP-Integritätscenter informiert Sie, wenn ein Problem im Zusammenhang mit Ihrem Azure ATP-Arbeitsbereich aufgetreten ist, indem es eine Überwachungswarnung ausgibt. Dieser Artikel beschreibt alle Überwachungswarnungen für jede Komponente und listet den Grund sowie die erforderlichen Schritte zur Lösung des Problems auf.
+Das Azure ATP-Integritätscenter informiert Sie, wenn ein Problem im Zusammenhang mit Ihrer Azure ATP-Instanzname aufgetreten ist, indem es eine Überwachungswarnung ausgibt. Dieser Artikel beschreibt alle Überwachungswarnungen für jede Komponente und listet den Grund sowie die erforderlichen Schritte zur Lösung des Problems auf.
 
 ## <a name="read-only-user-password-to-expire-shortly"></a>Kennwort für schreibgeschützten Benutzer läuft bald ab
 

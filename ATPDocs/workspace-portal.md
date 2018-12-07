@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 4ba46d60-3a74-480e-8f0f-9a082d62f343
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c4a437055c2fec0d242fe9de62ac9220ed2b66e6
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 3968973bf4ddbc66dc66789239382ad5c9056aae
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783796"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744879"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -40,7 +40,7 @@ Für eine erfolgreiche Anmeldung im Azure ATP-Portal müssen Sie sich mit einem 
 
 ## <a name="logging-into-the-azure-atp-portal"></a>Anmelden im Azure ATP-Portal
 
-1. Sie können sich beim Azure ATP-Portal anmelden, indem Sie sich entweder beim Portal unter [https://portal.atp.azure.com](https://portal.atp.azure.com) anmelden und den relevanten Arbeitsbereich auswählen, oder indem Sie die folgende Arbeitsbereichs-URL öffnen: [https://*workspacename*.atp.azure.com](https://*workspacename*.atp.azure.com).
+1. Sie können sich beim Azure ATP-Portal anmelden, indem Sie sich entweder beim Portal unter [https://portal.atp.azure.com](https://portal.atp.azure.com) anmelden und die relevante Instanz auswählen, oder indem Sie die folgende Instanz-URL öffnen:[https://*instanzname*.atp.azure.com](https://*instancename*.atp.azure.com).zure.com.
 
 
 2.  Azure ATP unterstützt die in die Windows-Authentifizierung integrierte einmalige Anmeldung: Wenn Sie sich schon auf Ihrem Computer angemeldet haben, verwendet Azure ATP dieses Token, um Sie im Azure ATP-Portal anzumelden. Sie können sich auch mit einer Smartcard anmelden. Ihre Berechtigungen in Azure ATP entsprechen Ihrer [Administratorrolle](atp-role-groups.md).
@@ -51,7 +51,7 @@ Für eine erfolgreiche Anmeldung im Azure ATP-Portal müssen Sie sich mit einem 
 
 ### <a name="attack-time-line"></a>Angriffszeitachse
 
-Die Angriffszeitachse ist die Standardstartseite, auf die Sie gelangen, wenn Sie sich im Azure ATP-Arbeitsbereichsportal anmelden. Standardmäßig werden alle offenen verdächtigen Aktivitäten auf der Angriffszeitachse angezeigt. Sie können die Angriffszeitachse filtern, um alle bzw. offene, verworfene oder unterdrückte verdächtige Aktivitäten anzuzeigen. Außerdem wird der Schweregrad angezeigt, der den einzelnen Aktivitäten zugewiesen wurde.
+Die Angriffszeitachse ist die Standardstartseite, auf die Sie gelangen, wenn Sie sich im Azure ATP-Portal anmelden. Standardmäßig werden alle offenen verdächtigen Aktivitäten auf der Angriffszeitachse angezeigt. Sie können die Angriffszeitachse filtern, um alle bzw. offene, verworfene oder unterdrückte verdächtige Aktivitäten anzuzeigen. Außerdem wird der Schweregrad angezeigt, der den einzelnen Aktivitäten zugewiesen wurde.
 
 ![Abbildung der Angriffszeitachse in Azure ATP](media/atp-sa-timeline.png)
 
@@ -77,7 +77,7 @@ Wenn Sie auf die Nummer klicken, können Sie auf die Seite mit den Suchergebniss
 
 ### <a name="health-center"></a>Integritätscenter
 
-Das Integritätscenter warnt Sie, wenn in Ihrem Azure ATP-Arbeitsbereich etwas nicht ordnungsgemäß funktioniert.
+Das Integritätscenter warnt Sie, wenn in Ihrem Azure ATP-Instanz etwas nicht ordnungsgemäß funktioniert.
 
 ![Abbildung zum Azure ATP-Integritätscenter](media/atp-health-issue.png)
 
@@ -91,7 +91,7 @@ Informationen zu sensiblen Gruppen in Azure ATP finden Sie unter [Arbeiten mit s
 
 ### <a name="mini-profile"></a>Miniprofil
 
-Wenn Sie an einer Stelle im Arbeitsbereich, an der eine einzelne Entität dargestellt wird (z.B. ein Benutzer oder ein Computer), mit der Maus auf eine Entität zeigen, wird automatisch ein Miniprofil geöffnet. Das Miniprofil enthält die folgenden Informationen (sofern verfügbar und relevant):
+Wenn Sie an einer Stelle im Azure ATP-Portal, an der eine einzelne Entität dargestellt wird (z.B. ein Benutzer oder ein Computer), mit der Maus auf eine Entität zeigen, wird automatisch ein Miniprofil geöffnet. Das Miniprofil enthält die folgenden Informationen (sofern verfügbar und relevant):
 
 ![Abbildung des Azure ATP-Miniprofils](media/atp-mini-profile.png)
 
@@ -114,5 +114,5 @@ Wenn Sie an einer Stelle im Arbeitsbereich, an der eine einzelne Entität darges
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Creating Azure ATP workspaces (Erstellen von Azure ATP-Arbeitsbereichen)](install-atp-step1.md)
+- [Erstellen von Azure ATP-Instanzen](install-atp-step1.md)
 - [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)

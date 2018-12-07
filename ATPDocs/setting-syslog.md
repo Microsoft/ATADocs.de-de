@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/04/2018
+ms.date: 12/02/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a2d29c9c-7ecb-4804-b74b-fde899b28648
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ac01e5ae534fc5df5da70a8d1c47c11c1c455c98
-ms.sourcegitcommit: 03b1949beaf2f78a3cdf9396356a96488ea2e127
+ms.openlocfilehash: 5d3eb4dbc714e7de4d586e686cd26ead83fceda8
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50983088"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744675"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -38,7 +38,7 @@ Azure ATP kann Sie durch Senden der Benachrichtigung an den Syslog-Server benach
 
     -   Versandformat der Daten: RFC 3164 oder 5424
 
-2.  Geben Sie die URL zum Arbeitsbereich ein.
+2.  Geben Sie die Instanz-URL ein.
 
 3.  Geben Sie Ihren Azure Active Directory-Benutzernamen und Ihr Kennwort ein, und klicken Sie auf **Anmelden**.
 

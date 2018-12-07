@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 12/02/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 72e26d9cdc539da168d1bc7c274971526eec61d1
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 379feeef63776e71375a789daf4c9608a863e37b
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783303"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744471"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -34,7 +34,7 @@ Das Entitätsprofil bietet eine umfassende Entitätsseite, die für eine detaill
 
 Wenn Sie auf die Profilseite einer Entität zugreifen möchten, klicken Sie auf der Zeitachse der Sicherheitswarnung auf den Namen der Entität, z.B. einen Benutzernamen. Sie können auch eine Miniversion des Entitätsprofils auf der Seite der Sicherheitswarnung anzeigen, indem Sie mit der Maus auf den Entitätsnamen zeigen.
 
-Über das Entitätsprofil können Sie Entitätsaktivitäten sowie Verzeichnisdaten und Lateral Movement-Pfade für die Entität anzeigen. Weitere Informationen finden Sie unter [Grundlegendes zu Entitätsprofilen](entity-profiles.md).
+Über das Entitätsprofil können Sie Entitätsaktivitäten sowie Verzeichnisdaten und [Lateral Movement-Pfade](use-case-lateral-movement-path.md) für die Entität anzeigen. Weitere Informationen zu Entitäten finden Sie unter [Grundlegendes zu Entitätsprofilen](entity-profiles.md).
 
 ## <a name="check-entity-tags"></a>Überprüfen von Entitätstags
 
@@ -111,5 +111,5 @@ Bevor Sie mit Ihrer Untersuchung fortfahren, ist es wichtig, zu wissen, ob die E
     
 ## <a name="see-also"></a>Siehe auch
 
-- [Arbeiten mit verdächtigen Aktivitäten](working-with-suspicious-activities.md)
+- [Arbeiten mit Sicherheitswarnungen](working-with-suspicious-activities.md)
 - [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)

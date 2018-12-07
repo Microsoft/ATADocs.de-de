@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/14/2018
+ms.date: 11/29/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 8ae459ac-9fca-4923-9a1a-dc10d5c50b29
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a5d6693aa44fd82d10654ebd40533100e8834627
-ms.sourcegitcommit: 58c75026e5ec4dcab3b0852a41f9f0a0ad6f22eb
+ms.openlocfilehash: 566b7ac598dcdd0d44d30c50c01846c42d0b643f
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2018
-ms.locfileid: "49315760"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744794"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -30,13 +30,13 @@ In den folgenden Ressourcen erhalten Sie allgemeine Informationen sowie Informat
 
 |Zweck|Vorgehensweise|
 |----|----|
-|Unsere beliebteste Dokumentation|Lesen Sie die fünf beliebtesten Seiten:<br>- [What is Azure Advanced Threat Protection? (Was ist Azure Advanced Threat Protection?)](what-is-atp.md)<br>- [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](atp-prerequisites.md)<br>- [Azure ATP architecture (Azure ATP-Architektur)](atp-architecture.md)<br>- [Azure ATP capacity planning (Azure ATP-Kapazitätsplanung)](atp-capacity-planning.md)<br>- [Creating a workspace (Erstellen eines Arbeitsbereichs)](install-atp-step1.md)|
-|Mit dem Produktteam und Ihren Kollegen in Kontakt treten|Besuchen Sie die [Tech Community](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) für Azure Advanced Threat Protection.|
-|Sehen Sie sich die Abonnementinformationen und eine Liste der unterstützten Features an.|Informationen dazu finden Sie in den [Abonnementinformationen](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) und der [Featureliste](https://www.microsoft.com/cloud-platform/azure-information-protection-features) auf der Azure Advanced Threat Protection-Website.|
+|Unsere beliebteste Dokumentation|Lesen Sie die fünf beliebtesten Seiten:<br>- [What is Azure Advanced Threat Protection? (Was ist Azure Advanced Threat Protection?)](what-is-atp.md)<br>- [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](atp-prerequisites.md)<br>- [Azure ATP architecture (Azure ATP-Architektur)](atp-architecture.md)<br>- [Azure ATP capacity planning (Azure ATP-Kapazitätsplanung)](atp-capacity-planning.md)<br>- [Erstellen einer Instanz](install-atp-step1.md)|
+|Mit dem Produktteam und Ihren Kollegen in Kontakt treten|Besuchen Sie die  [Tech Community](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection)  für Azure Advanced Threat Protection.|
+|Sehen Sie sich die Abonnementinformationen und eine Liste der unterstützten Features an.|Informationen dazu finden Sie in den  [Abonnementinformationen](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing)  und der  [Featureliste](https://www.microsoft.com/cloud-platform/azure-information-protection-features)  auf der Azure Advanced Threat Protection-Website.|
 
 ## <a name="information-about-new-releases-and-updates"></a>Informationen zu neuen Releases und Updates
 
-Das Azure Advanced Threat Protection-Produktteam veröffentlicht Ankündigungen zu neuen Releases und Updates im [Blog zu Enterprise Mobility + Security](https://cloudblogs.microsoft.com/enterprisemobility/author/microsoft-advanced-threat-analytics-team/).
+Das Azure Advanced Threat Protection-Produktteam veröffentlicht Ankündigungen zu neuen Releases und Updates im  [Blog zu Enterprise Mobility + Security](https://cloudblogs.microsoft.com/enterprisemobility/author/microsoft-advanced-threat-analytics-team/).
 Diese Blogposts ergänzen die Produktdokumentation und Supportinformationen.
 
 Informationen über die gerade veröffentlichten Features und Veränderungen in Azure ATP finden Sie unter [What‘s new in Azure Advanced Threat Protection (Neuerungen in Azure Advanced Threat Protection)](atp-whats-new.md).
@@ -47,7 +47,7 @@ In diesem Abschnitt finden Sie Informationen zu Support- und Problembehandlungso
 
 So kontaktieren Sie den Microsoft-Support:
 
-Wenn Sie über Premier Support verfügen, besuchen Sie das [Portal für Premier Support-Kunden](https://premier.microsoft.com/), um Incidents zu melden, nach Lösungen zu suchen und Hilfe anzufordern.
+Wenn Sie über Premier Support verfügen, besuchen Sie das  [Portal für Premier Support-Kunden](https://premier.microsoft.com/) , um Incidents zu melden, nach Lösungen zu suchen und Hilfe anzufordern.
 
 Andere Kunden können die Supportkanäle wie folgt verwenden:
 
@@ -66,7 +66,7 @@ Gehen Sie auf die Seite [**Systemstatus**](https://health.atp.azure.com/), um de
 
 #### <a name="on-demand-videos"></a>Videos auf Abruf
 
-- Microsoft Ignite 2018-Vorträge zu [Azure Advanced Threat Protection](https://myignite.techcommunity.microsoft.com/sessions?t=%257B%2522from%2522%253A%25222018-09-23T08%253A00%253A00-04%253A00%2522%252C%2522to%2522%253A%25222018-09-28T19%253A00%253A00-04%253A00%2522%257D&q=azure%2520advanced%2520threat%2520protection#ignite-html-anchor)
+- Microsoft Ignite 2018-Vorträge zu  [Azure Advanced Threat Protection](https://myignite.techcommunity.microsoft.com/sessions?t=%257B%2522from%2522%253A%25222018-09-23T08%253A00%253A00-04%253A00%2522%252C%2522to%2522%253A%25222018-09-28T19%253A00%253A00-04%253A00%2522%257D&q=azure%2520advanced%2520threat%2520protection#ignite-html-anchor).
 
 Problembehandlung:
 
@@ -76,8 +76,8 @@ Problembehandlung:
 
 - Unter [Integrate with Windows Defender ATP (Integration in Windows Defender ATP)](integrate-wd-atp.md) finden Sie Informationen zur Integration von Windows Defender ATP in Azure Advanced Threat Protection, wenn dieser Dienst in Ihrer Umgebung bereitgestellt wird.
 
-- Informationen zur Untersuchung einer Sicherheitswarnung finden Sie im [Leitfaden für Sicherheitswarnungen](suspicious-activity-guide.md).
+- Informationen zur Untersuchung einer Sicherheitswarnung finden Sie im  [Leitfaden für Sicherheitswarnungen](suspicious-activity-guide.md).
 
 ### <a name="community-resources"></a>Communityressourcen
 
-Wir empfehlen die [Yammer-Gruppe zu Azure Advanced Threat Protection](https://www.yammer.com/AskIPTeam). Diese Ressource ermöglicht es Ihnen, direkte Antworten vom Azure Advanced Threat Protection-Team zu erhalten und zusätzlich von gemeinsamen Erfahrungen und dem Wissen anderer Administratoren und Berater zu profitieren.
+Wir empfehlen die  [Yammer-Gruppe zu Azure Advanced Threat Protection](https://www.yammer.com/AskIPTeam). Diese Ressource ermöglicht es Ihnen, direkte Antworten vom Azure Advanced Threat Protection-Team zu erhalten und zusätzlich von gemeinsamen Erfahrungen und dem Wissen anderer Administratoren und Berater zu profitieren.

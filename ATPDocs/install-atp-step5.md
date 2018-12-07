@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: d7c95f8c-04f8-4946-9bae-c27ed362fcb0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b7ddaca0f0c5691c90873cef9af6cef13fa9650a
-ms.sourcegitcommit: e783df4c9d928fedf6dc3c65d58d9b530cdd2ff2
+ms.openlocfilehash: 2bdfd0fe41ed6dc5f489784c2095cefd2032d135
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49800038"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744351"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -75,7 +75,7 @@ Gehen Sie wie folgt vor, um zu überprüfen, ob der Azure ATP-Sensor erfolgreich
  >[!NOTE]
  > Es werden regelmäßig Versionsupdates für Azure ATP ausgeführt. Wenn Sie die neuste Version im Azure ATP-Portal überprüfen möchten, navigieren Sie zur **Konfiguration**, und klicken Sie dann auf **Info**. 
 
-3.  Rufen Sie die URL Ihres Arbeitsbereichs auf. Suchen Sie im Azure ATP-Portal über die Suchleiste nach einem bestimmten Objekt, z.B. einem Benutzer oder einer Gruppe in Ihrer Domäne.
+3.  Rufen Sie Ihre Azure ATP-Instanz auf. Suchen Sie im Azure ATP-Portal über die Suchleiste nach einem bestimmten Objekt, z.B. einem Benutzer oder einer Gruppe in Ihrer Domäne.
 
 
 

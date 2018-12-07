@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: feea1982-ba23-48be-a468-98d2586cf840
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: cab7dad8187c79ff1e5068594b972f58bb19040c
-ms.sourcegitcommit: 65885bab8e31dd862a4f2ae9028fb31b288d7229
+ms.openlocfilehash: 1d478957b33e65e0016600826718ae6efd4e0e43
+ms.sourcegitcommit: f4e1d3e28037afc7b9a22355808a04a8dc8b9605
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52157555"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52831441"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -27,12 +27,6 @@ ms.locfileid: "52157555"
 Azure ATP weist gelegentlich technische oder funktionelle Einschränkungen auf, die die Verwendung von Azure ATP-Diensten in Ihrer Organisation einschränken oder verändern können. Die aktuell bekannten Einschränkungen, die weder eine bekannte Problemumgehung noch den Status „In Bearbeitung“ ohne eine bestimmte Aktualisierungszeit aufweisen, sind im Folgenden beschrieben. 
 
 Informationen zur Umgehung bekannter Probleme bei Azure ATP finden Sie unter [Behandlung von bekannten Problemen bei Azure ATP](troubleshooting-atp-known-issues.md). Rufen Sie das [Azure ATP-Integritätscenter](atp-health-center.md) auf, um den Status Ihres Azure ATP-Mandanten zu überprüfen. 
-
-## <a name="remote-code-execution-attempts-using-remote-powershell-commands-or-scripts-are-not-detected-when-using-windows-server-2016"></a>Wenn Sie versuchen, mit Remote-PowerShell-Befehlen und -Skripts Code remote auszuführen, werden diese in Windows Server 2016 nicht erkannt.
-> [!div class="mx-tableFixed"]  
-|Problem|Status|
-|----|----|
-|Wenn Sie versuchen, mit Remote-PowerShell-Befehlen Code remote auszuführen, werden diese derzeit nicht auf Sensorcomputern unter Windows Server 2016 erkannt. Verwandte Erkennungen und daraus resultierende Warnungen sind nicht verfügbar.|Es wird derzeit an einer Lösung für dieses Problem gearbeitet, damit Windows Server 2016 von WinRM unterstützt wird.|
 
 ## <a name="ad-groups-with-more-than-1000-members-have-limited-detail-sync"></a>Eingeschränkte Detailsynchronisierung bei AD-Gruppen mit mehr als 1000 Mitgliedern
 > [!div class="mx-tableFixed"]  
@@ -45,6 +39,15 @@ Informationen zur Umgehung bekannter Probleme bei Azure ATP finden Sie unter [Be
 |Problem|Status|
 |----|----|
 |Azure ATP unterstützt keine Berichtsdownloads mit mehr als 100.000 Einträgen pro Bericht. Die Berichte werden unvollständig gerendert, wenn mehr als 100.000 Einträge enthalten sind.|Technische Einschränkungen. Keine bekannte Lösung.|
+
+# <a name="closed"></a>Geschlossen 
+
+Diese Gruppe von bekannten Problemen wird jetzt geschlossen. Überprüfen Sie zur Referenz die Versionsnummer für diesen Fix.   
+## <a name="remote-code-execution-attempts-using-remote-powershell-commands-or-scripts-are-not-detected-when-using-windows-server-2016---v257-december-2-2018"></a>Wenn Sie versuchen, mit Remote-PowerShell-Befehlen und -Skripts Code remote auszuführen, werden diese in Windows Server 2016 – v.2.57 nicht erkannt (2. Dezember 2018).
+> [!div class="mx-tableFixed"]  
+|Problem|Status|
+|----|----|
+|Wenn Sie versuchen, mit Remote-PowerShell-Befehlen Code remote auszuführen, werden diese derzeit nicht auf Sensorcomputern unter Windows Server 2016 erkannt. Verwandte Erkennungen und daraus resultierende Warnungen sind nicht verfügbar.|Es wird derzeit an einer Lösung für dieses Problem gearbeitet, damit Windows Server 2016 von WinRM unterstützt wird.|
 
 ## <a name="see-also"></a>Weitere Informationen
 

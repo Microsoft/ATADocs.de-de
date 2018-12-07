@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 12/02/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,18 +13,18 @@ ms.technology: ''
 ms.assetid: e7f065fa-1ad1-4e87-bd80-99cc695efbf5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a175a23a087b11d481dbcf055bff4fe5577b4f8e
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: a5b0befaa484a94cf307559296c887370228abb4
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783116"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744301"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
 
 
-# <a name="change-azure-atp-workspace-portal-configuration---domain-connectivity-password"></a>Ändern der Konfiguration für das Azure ATP-Arbeitsbereichsportal – Domänenverbindungskennwort
+# <a name="change-azure-atp-portal-configuration---domain-connectivity-password"></a>Ändern der Konfiguration für das Azure ATP-Portal – Domänenverbindungskennwort
 
 
 
@@ -38,7 +38,7 @@ Führen Sie die folgenden Schritte zum Aktualisieren des Domänenverbindungskenn
 > [!NOTE]
 > Dies ist der Benutzername und das Kennwort der lokalen Active Directory-Bereitstellung und nicht aus Azure AD.
 
-1.  Öffnen Sie das Azure ATP-Portal, indem Sie die Arbeitsbereichs-URL öffnen.
+1.  Öffnen Sie das Azure ATP-Portal, indem Sie die Portal-URL öffnen.
 
 2.  Wählen Sie auf der Symbolleiste die Einstellungsoption und dann **Konfiguration** aus.
 

@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/29/2018
+ms.date: 11/29/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f3336189338b16a58a4e8bf67490948a163e9d56
-ms.sourcegitcommit: c10a1c5d1e5408b5473a31485346915908688680
+ms.openlocfilehash: 0001be015d45809a0ca550287452cfc4c366778d
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50208152"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744777"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -34,7 +34,7 @@ Dieser Artikel enthält eine Reihe häufig gestellter Fragen und Antworten zu Az
 
 ### <a name="what-can-azure-atp-detect"></a>Was kann Azure ATP erkennen?
 
-Azure ATP erkennt bekannte Angriffe und Techniken, Sicherheitsprobleme und Risiken.
+Azure ATP erkennt bekannte Angriffe und Techniken, Sicherheitsprobleme und Risiken in Ihrem Netzwerk.
 Die vollständige Liste der Azure ATP-Erkennungen finden Sie unter [What detections does Azure ATP perform? (Welche Erkennungsvorgänge führt Azure ATP durch?)](suspicious-activity-guide.md).
 
 ### <a name="what-data-does-azure-atp-collect"></a>Welche Daten erfasst Azure ATP? 
@@ -63,7 +63,7 @@ Ja. Da Computerkonten (ebenso wie alle anderen Entitäten) zum Durchführen bös
 Azure ATP steht als Teil von Enterprise Mobility + Security 5-Suite (EMS E5) und als eine eigenständige Lizenz zur Verfügung. Sie können eine Lizenz entweder direkt über das [Office 365-Portal](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) oder über das CSP-Lizenzierungsmodell (Cloud Solution Partner) erwerben.
 
 ### <a name="is-this-going-to-be-a-part-of-azure-active-directory-or-on-premises-active-directory"></a>Wird das Produkt ein Bestandteil von Azure Active Directory oder von lokalem Active Directory sein?
-Diese Lösung ist derzeit ein eigenständiges Angebot. Sie ist kein Bestandteil von Azure Active Directory oder von lokalem Active Directory.
+Diese Azure ATP-Lösung ist derzeit ein eigenständiges Angebot. Sie ist kein Bestandteil von Azure Active Directory oder von lokalem Active Directory.
 
 ### <a name="is-my-data-isolated-from-other-customer-data"></a>Sind die Daten von anderen Kundendaten isoliert? 
 
@@ -71,7 +71,7 @@ Ja, Ihre Daten werden durch Zugriffsauthentifizierung und logischer Trennung bas
 
 ### <a name="do-i-have-the-flexibility-to-select-where-to-store-my-data"></a>Kann ich frei wählen, wo ich meine Daten speichern möchte? 
 
-Wenn Sie einen Azure ATP-Arbeitsbereich erstellen, können Sie Ihre Daten beispielsweise in Microsoft Azure-Rechenzentren speichern, z.B. in den USA oder in Europa. Nach der Konfiguration können Sie den Speicherort Ihrer Daten nicht mehr ändern. Microsoft überträgt keine Daten aus dem angegebenen Speicherort.                
+Nein. Wenn Ihre Azure-ATP-Instanz erstellt wird, wird sie automatisch im Länderrechenzentrum gespeichert, das dem geografischen Standort Ihres AAD-Mandanten am nächsten liegt. Azure ATP-Daten können nicht verschoben werden, sobald Ihre Azure ATP-Instanz in einem anderen Rechenzentrum erstellt wurde.                
 
 ### <a name="how-does-microsoft-prevent-malicious-insider-activities-and-abuse-of-high-privilege-roles"></a>Wie verhindert Microsoft schädliche Insideraktivitäten und den Missbrauch von privilegierten Rollen? 
 
@@ -107,14 +107,14 @@ Wenn ein virtueller Domänencontroller nicht durch den Azure ATP-Sensor abgedeck
 
 Für die Kommunikation Ihrer Domänencontroller mit dem Clouddienst müssen Sie in Ihrer Firewall und auf Ihrem Proxyserver Port 443 für „*.atp.azure.com“ freigeben. Informationen hierzu finden Sie unter [Configure your proxy or firewall to enable communication with Azure ATP sensors (Konfigurieren Ihres Proxyservers oder Ihrer Firewall zum Aktivieren der Kommunikation mit Azure ATP-Sensoren)](configure-proxy.md).
 
-### <a name="can-azure-atp-monitor-domain-controllers-be-virtualized-on-your-iaas-solution"></a>Kann Azure ATP in Ihrer IaaS-Lösung virtualisierte Domänencontroller überwachen?
+### <a name="can-azure-atp-monitored-domain-controllers-be-virtualized-on-your-iaas-solution"></a>Kann Azure ATP in Ihrer IaaS-Lösung virtualisierte Domänencontroller überwachen?
 Ja, Sie können mit dem Azure ATP-Sensor Domänencontroller in einer beliebigen IaaS-Lösung überwachen.
 
 ### <a name="can-azure-atp-support-multi-domain-and-multi-forest"></a>Kann Azure ATP mehrere Domänen und mehrere Gesamtstrukturen unterstützen?
 Azure Advanced Threat Protection unterstützt Umgebungen und mehrere Gesamtstrukturen. Dieses Feature befindet sich zurzeit in der Public Preview. Weitere Informationen und bekannte Einschränkungen finden Sie unter [Schritt 9: Einrichten der Azure Advanced Threat Protection-Unterstützung für mehrere Gesamtstrukturen](atp-multi-forest.md).
 
 ### <a name="can-you-see-the-overall-health-of-the-deployment"></a>Kann die Gesamtintegrität der Bereitstellung angezeigt werden?
-Ja, Sie können die Gesamtintegrität der Bereitstellung sowie spezifische Probleme im Zusammenhang mit der Konfiguration, Konnektivität usw. anzeigen und werden bei Eintreten eines Problems benachrichtigt.
+Ja, Sie können die Gesamtintegrität der Bereitstellung sowie spezifische Probleme im Zusammenhang mit der Konfiguration, Konnektivität usw. anzeigen und werden bei Eintreten eines Problems mit Zustandswarnungen zu Azure ATP benachrichtigt.
 
 ## <a name="operation"></a>Vorgang
 
@@ -124,7 +124,7 @@ Azure ATP kann so konfiguriert werden, dass bei Integritätswarnungen und Festst
 ### <a name="why-are-certain-accounts-considered-sensitive"></a>Warum gelten bestimmte Konten als sensible Konten?
 Dies ist der Fall, wenn ein Konto Mitglied bestimmter Gruppen ist, die als sensibel festgelegt sind (z.B. „Domänen-Admins“).
 
-Um nachzuvollziehen, warum ein Konto ein sensibles Konto ist, können Sie seine Gruppenmitgliedschaft überprüfen, um festzustellen, welchen sensiblen Gruppen es angehört (die Gruppe, der das Konto angehört, kann auch wegen einer anderen Gruppe eine sensible Gruppe sein. Daher sollten Sie immer die höchste sensible Gruppe überprüfen). Sie können auch [Konten manuell als vertraulich kennzeichnen](sensitive-accounts.md).
+Um nachzuvollziehen, warum ein Konto ein sensibles Konto ist, können Sie seine Gruppenmitgliedschaft überprüfen, um festzustellen, welchen sensiblen Gruppen es angehört (die Gruppe, der das Konto angehört, kann auch wegen einer anderen Gruppe eine sensible Gruppe sein. Daher sollten Sie immer die höchste sensible Gruppe überprüfen). Sie können auch manuell [Konten als vertraulich kennzeichnen](sensitive-accounts.md).
 
 ### <a name="do-you-have-to-write-your-own-rules-and-create-a-thresholdbaseline"></a>Müssen eigene Regeln geschrieben und ein Schwellenwert/eine Basislinie erstellt werden?
 Bei Azure Advanced Threat Protection besteht keine Notwendigkeit zum Erstellen von Regeln, Schwellenwerten oder Basislinien und der anschließenden Optimierung. Azure ATP analysiert das Verhalten von Benutzern, Geräten und Ressourcen – sowie deren Beziehungen untereinander – und kann verdächtige Aktivitäten sowie bekannte Angriffe schnell erkennen. Drei Wochen nach der Bereitstellung beginnt Azure ATP, verdächtige Verhaltensaktivitäten zu erkennen. Bekannte Angriffe und Sicherheitsprobleme werden hingegen sofort nach der Bereitstellung von Azure ATP erkannt.

@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/11/2018
+ms.date: 11/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 0d9d2a1d-6c76-4909-b6f9-58523df16d4f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1ddd369fe51117a120a3f5b8a688f22624d711c0
-ms.sourcegitcommit: 03b1949beaf2f78a3cdf9396356a96488ea2e127
+ms.openlocfilehash: 9fe9011f0fbdf29e80e1957c4e1535f497061aa2
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50983105"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744862"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -55,7 +55,7 @@ Führen Sie auf Ihrem RRAS-Server die folgenden Schritte aus.
 
     ![RADIUS-Setup](./media/radius-setup.png)
 
-4.  Geben Sie im Fenster **RADIUS-Server hinzufügen** den **Servernamen** des nächsten Azure ATP-Sensors (mit Netzwerkkonnektivität) ein. Um Hochverfügbarkeit sicherzustellen, können Sie zusätzliche Azure ATP-Sensoren als RADIUS-Server hinzufügen. Stellen Sie unter **Port** sicher, dass die Standardeinstellung 1813 konfiguriert ist. Klicken Sie auf **Ändern**, und tippen Sie eine neue, geheime Zeichenfolge von alphanumerischen Zeichen an, die Sie sich merken können, da Sie sie im weiteren Verlauf Ihrer Azure ATP-Konfiguration eingeben müssen. Prüfen Sie das Feld **Send RADIUS Account On and Accounting Off messages** („RADIUS-Kontoführung aktiviert“- und „RADIUS-Kontoführung deaktiviert“-Nachrichten senden), und klicken Sie anschließend in allen geöffneten Dialogfeldern auf **OK**.
+4.  Geben Sie im Fenster **RADIUS-Server hinzufügen** den **Servernamen** des nächsten Azure ATP-Sensors (mit Netzwerkkonnektivität) ein. Um Hochverfügbarkeit sicherzustellen, können Sie zusätzliche Azure ATP-Sensoren als RADIUS-Server hinzufügen. Stellen Sie unter **Port** sicher, dass die Standardeinstellung 1813 konfiguriert ist. Klicken Sie auf **Ändern**, und tippen Sie eine neue, geheime Zeichenfolge von alphanumerischen Zeichen ein. Notieren Sie die neue freigegebene geheime Zeichenfolge, da Sie sie später während der Azure ATP-Konfiguration eingeben müssen. Prüfen Sie das Feld **„RADIUS-Kontoführung aktiviert“- und „RADIUS-Kontoführung deaktiviert“-Nachrichten senden**, und klicken Sie anschließend in allen geöffneten Dialogfeldern auf **OK**.
  
      ![VPN-Setup](./media/vpn-set-accounting.png)
      
@@ -74,7 +74,7 @@ So konfigurieren Sie VPN-Daten in ATP:
   ![Konfigurieren von Azure ATP-VPN](./media/atp-vpn-radius.png)
 
 
-Nachdem Sie diese Option aktiviert haben, lauschen alle Azure ATP-Sensoren und die eigenständigen Sensoren an Port 1813 für RADIUS-Buchhaltungsereignisse. Damit ist die Einrichtung abgeschlossen. 
+Nachdem Sie diese Option aktiviert haben, lauschen alle Azure ATP-Sensoren an Port 1813 für RADIUS-Buchhaltungsereignisse. Damit ist die VPN-Einrichtung abgeschlossen. 
 
  Nachdem der Azure ATP-Sensor die VPN-Ereignisse empfangen und an den Azure ATP-Clouddienst zur Verarbeitung gesendet hat, übergibt das Entitätsprofil verschiedene VPN-Standorte, auf die zugegriffen wurde, und die Aktivitäten im Profil enthalten Standorte.
 

@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 603d9e09-a07d-4357-862f-d5682c8bc3dd
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e478fc1a2ae955d66d00b3d87bd5f782354c766d
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: a24210415929b69152377d34aeec1bdc8906d08c
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783762"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744437"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -60,11 +60,11 @@ In der Regel werden Sensoren automatisch aktualisiert, wenn der Azure ATP-Cloudd
 Dadurch können Sie bestimmte Sensoren auswählen, für die das Update automatisch erfolgt, und die restlichen Sensoren später aktualisieren, wenn das erste Update erfolgreich ausgeführt werden konnte.
 
 > [!NOTE]
-> Wenn ein Fehler auftritt und ein Sensor nicht aktualisiert wird, erstellen Sie ein Supportticket. Informationen zur weiteren Stärkung Ihres Proxys, damit er nur mit Ihrem Arbeitsbereich kommuniziert, finden Sie unter [Proxykonfiguration](configure-proxy.md)
+> Wenn ein Fehler auftritt und ein Sensor nicht aktualisiert wird, erstellen Sie ein Supportticket. Informationen zur weiteren Stärkung Ihres Proxys, damit er nur mit Ihrer Instanz kommuniziert, finden Sie unter [Proxykonfiguration](configure-proxy.md)
 
 Gehen Sie wie folgt vor, um einen Sensor für ein verzögertes Update auszuwählen:
 
-1. Klicken Sie im Azure ATP-Arbeitsbereichsportal zuerst auf das Symbol „Einstellungen“ und dann auf **Konfiguration**.
+1. Klicken Sie im Azure ATP-Portal zuerst auf das Symbol „Einstellungen“ und dann auf **Konfiguration**.
 2. Klicken Sie auf die Registerkarte **Updates**.
 3. Legen Sie in der Tabellenzeile neben jedem Sensor, für den Sie das Update später ausführen möchten, den Schieberegler **Delayed update** (Verzögertes Update) auf **An** fest.
 4. Klicken Sie auf **Speichern**.

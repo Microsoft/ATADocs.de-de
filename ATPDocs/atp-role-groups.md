@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/07/2018
+ms.date: 11/29/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7ae3f0adca3137664f0a89c15e8feee71d0cd915
-ms.sourcegitcommit: c4978be196e0039c7a5d5887bec4cbc5c01d64f9
+ms.openlocfilehash: 4481f8896791e98f76a6fb6f0b93796337b15ed1
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848612"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744330"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -38,17 +38,17 @@ Rollengruppen erlauben die Zugriffsverwaltung für Azure ATP. Sie können durch 
 
 ## <a name="accessing-the-azure-atp-portal"></a>Zugreifen auf das Azure ATP-Portal
 
-Nur Azure AD-Benutzer mit den Verzeichnisrollen „globaler Administrator“ oder „Sicherheitsadministrator“ können auf das Azure ATP-Portal (portal.atp.azure.com) zugreifen. Wenn Sie das Portal öffnen, können Sie Ihren Arbeitsbereich erstellen. Der Azure ATP-Dienst erstellt drei Sicherheitsgruppen in Ihrem Azure Active Directory-Mandanten: Administratoren, Benutzer, Viewer. 
+Nur Azure AD-Benutzer mit den Verzeichnisrollen „globaler Administrator“ oder „Sicherheitsadministrator“ können auf das Azure ATP-Portal (portal.atp.azure.com) zugreifen. Nachdem Sie das Portal mit der erforderlichen Rolle aufgerufen haben, können Sie Ihre Azure ATP-Instanz erstellen. Der Azure ATP-Dienst erstellt drei Sicherheitsgruppen in Ihrem Azure Active Directory-Mandanten: Administratoren, Benutzer, Viewer. 
 
 > [!NOTE]
-> Nur Benutzer, die zu der Azure ATP-Sicherheitsgruppe in Ihrem Azure Active Directory gehören sowie globale Administratoren und Sicherheitsadministratoren des Mandanten, können auf das Azure ATP-Portal zugreifen.
+> Nur Benutzer, die zu der Azure ATP-Sicherheitsgruppe in Ihrem Azure Active Directory gehören sowie globale und Sicherheitsadministratoren des Mandanten, können auf das Azure ATP-Portal zugreifen.
 
 
 ## <a name="types-of-azure-atp-security-groups"></a>Typen von Azure ATP-Sicherheitsgruppen 
 
-Azure ATP stellt drei Typen von Sicherheitsgruppen bereit: *Arbeitsbereichsname* von Azure ATP-Administratoren, *Arbeitsbereichsname* von Azure ATP-Benutzern und *Arbeitsbereichsname* von Azure ATP-Viewern. Die folgende Tabelle beschreibt den Zugriffstyp im Azure ATP-Portal, der für jede Rolle verfügbar ist. Je nachdem, welche Rolle Sie zuweisen, stehen verschiedene Anzeigen und Menüoptionen im Azure ATP-Portal für folgende Benutzer nicht zur Verfügung:
+Azure ATP stellt drei Typen von Sicherheitsgruppen bereit: *Instanzname* von Azure ATP-Administratoren, *Instanzname* von Azure ATP-Benutzern und *Instanzname* von Azure ATP-Viewern. Die folgende Tabelle beschreibt den Zugriffstyp im Azure ATP-Portal, der für jede Rolle verfügbar ist. Je nachdem, welche Rolle Sie zuweisen, stehen verschiedene Anzeigen und Menüoptionen im Azure ATP-Portal für folgende Benutzer nicht zur Verfügung:
 
-|Aktivität |Azure ATP-Administratoren für *Arbeitsbereichsname*|Azure ATP-Benutzer für *Arbeitsbereichsname*|Azure ATP-Viewers für *Arbeitsbereichsname*|
+|Aktivität |Azure ATP-Administratoren für *Instanzname*|Azure ATP-Benutzer für *Instanzname*|Azure ATP-Viewer für *Instanzname*|
 |----|----|----|----|
 |Anmeldung|Verfügbar|Verfügbar|Verfügbar|
 |Der Status der Sicherheitswarnungen wurde geändert (erneut öffnen, schließen, ausschließen, unterdrücken)|Verfügbar|Verfügbar|Nicht verfügbar|

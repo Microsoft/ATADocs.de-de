@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 11/29/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 34dc152c-6b7f-4128-93fe-aad56c282730
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 029077455f9b2800984065a10c3e221e62d7c606
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: b61e840efc1b2ee14c2d367d1492b57836e2d144
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783150"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744454"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -50,7 +50,7 @@ Diese Ressourcen unterstützen Sie beim Einrichten von Azure ATP, bei der Verbin
 
 ## <a name="azure-atp-settings"></a>Einstellungen für Azure ATP
 
-Diese grundlegenden Einstellungen, die in Azure ATP erforderlich sind, werden bei der Erstellung Ihres Arbeitsbereichs konfiguriert. Allerdings gibt es einige zusätzliche Einstellungen, die Sie in Azure ATP konfigurieren können, um die Erkennungen für Ihre Umgebung präziser durchzuführen, z.B. VPN-Integration, erforderliche Berechtigungen für SAM (Software Asset Management) sowie erweiterte Einstellungen für Überwachungsrichtlinien. 
+Diese grundlegenden Einstellungen, die in Azure ATP erforderlich sind, werden automatisch bei der Erstellung Ihrer Instanz konfiguriert. Es gibt einige zusätzliche konfigurierbare Einstellungen in Azure ATP, um die Erkennungen und Warnung für Ihre Umgebung präziser durchzuführen, z.B. VPN-Integration, erforderliche Berechtigungen für SAM (Software Asset Management) sowie erweiterte Einstellungen für Überwachungsrichtlinien. 
 
 - [VPN-Integration](install-atp-step6-vpn.md)
 - [Erforderliche Berechtigungen für SAM-R](install-atp-step8-samr.md)
@@ -58,9 +58,10 @@ Diese grundlegenden Einstellungen, die in Azure ATP erforderlich sind, werden be
 
 ## <a name="work-with-azure-atp"></a>Arbeiten mit Azure ATP
 
-Sobald Azure ATP einsatzbereit ist, können Sie Sicherheitswarnungen in der Aktivitätszeitachse des Azure ATP-Portals anzeigen. Die Zeitachse für Aktivitäten ist die standardmäßige Landing Page nach der Anmeldung beim Azure ATP-Portal. Standardmäßig werden alle offenen Sicherheitswarnungen auf der Angriffszeitachse angezeigt. Außerdem wird der Schweregrad angezeigt, der den einzelnen Warnungen zugewiesen wurde. Untersuchen Sie jede Warnung, indem Sie einen Drilldown zu den Entitäten (Computer, Geräte, Benutzer) ausführen, um deren Profilseiten mit weiteren Informationen zu öffnen. Mithilfe folgender Ressourcen können Sie mit den Sicherheitswarnungen von Azure ATP arbeiten: 
+Sobald Azure ATP einsatzbereit ist, können Sie Sicherheitswarnungen in der Aktivitätszeitachse des Azure ATP-Portals anzeigen. Die Zeitachse für Aktivitäten ist die standardmäßige Landing Page nach der Anmeldung beim Azure ATP-Portal. Standardmäßig werden alle offenen Sicherheitswarnungen auf der Angriffszeitachse angezeigt. Außerdem wird der Schweregrad angezeigt, der den einzelnen Warnungen zugewiesen wurde. Untersuchen Sie jede Warnung, indem Sie einen Drilldown zu den Entitäten (Computer, Geräte, Benutzer) ausführen, um deren Profilseiten mit weiteren Informationen zu öffnen. Lateral Movement-Pfade zeigen mögliche Bewegungen, die in Ihrem Netzwerk vorgenommen werden können, und gefährdete sensible Benutzer. Anhand der Graphs zur Erkennung des Lateral Movement-Pfads können Sie die Exposition erkennen und beheben. Mithilfe folgender Ressourcen können Sie mit den Sicherheitswarnungen von Azure ATP arbeiten: 
 
 - [ (Handbuch zu Sicherheitswarnungen bei Azure ATP):](suspicious-activity-guide.md) Erfahren Sie mehr über die Selektierung und die nächsten Schritte mit Azure ATP-Erkennungen.
+- [Azure ATP-Lateral Movement-Pfade](use-case-lateral-movement-path.md)
 - [Tag groups as sensitive (Kennzeichnen von Gruppen als vertraulich):](sensitive-accounts.md) Erhalten Sie Einblicke in die Offenlegung von Anmeldeinformationen bei vertraulichen Sicherheitsgruppen.
 
 ## <a name="security-best-practices"></a>Bewährte Methoden für die Sicherheit

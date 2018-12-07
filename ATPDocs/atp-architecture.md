@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6853a2a768fabde94c7aa613c9a6c0403f14e066
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: d41eac8700e334989594639880a0f85d5c725578
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783558"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744420"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -31,7 +31,7 @@ Architektur von Azure Advanced Threat Protection:
 
 ![Topologiediagramm der Azure ATP-Architektur](media/atp-architecture-topology.png)
 
-In diesem Abschnitt wird die Netzwerk- und Ereignisserfassung in Azure ATP erläutert. Des Weiteren wird auf die Funktionsweise der Hauptkomponenten eingegangen: das Azure ATP-Portal, der Azure ATP-Sensor und der Azure ATP-Clouddienst. 
+In diesem Abschnitt wird die Netzwerk- und Ereigniserfassung in Azure ATP erläutert. Des Weiteren wird auf die Funktionsweise der Hauptkomponenten eingegangen: das Azure ATP-Portal, der Azure ATP-Sensor und der Azure ATP-Clouddienst. 
 
 Wenn Sie den Azure ATP-Sensor direkt auf Ihrem Domänencontroller installieren, greift er direkt vom Domänencontroller auf die erforderlichen Ereignisprotokolle zu. Nach Analyse dieser Protokolle und des Netzwerkdatenverkehrs durch den Sensor sendet Azure ATP nur diese analysierten Informationen (nicht alle Protokolle) an den Azure ATP-Clouddienst (nur ein Teil der Protokolle wird gesendet). 
 
@@ -56,7 +56,7 @@ Im Azure ATP-Portal können Sie die folgenden Aktionen durchführen:
 - **Optional:** Sie können außerdem festlegen, dass Sie E-Mails und Ereignisse erhalten, wenn Sicherheitswarnungen oder Integritätsprobleme erkannt werden.
 
 > [!NOTE]
-> - Wenn innerhalb von 60 Tagen kein Sensor in Ihrem Arbeitsbereich installiert wird, kann es sein, dass der Arbeitsbereich gelöscht wird und Sie ihn erneut erstellen müssen.
+> - Wenn innerhalb von 60 Tagen kein Sensor in Ihrer Azure ATP-Instanz installiert wird, kann es sein, dass die Instanz gelöscht wird und Sie sie erneut erstellen müssen.
 
 ## <a name="azure-atp-sensor"></a>Azure ATP-Sensor
 Dies sind die Hauptfunktionen des Azure ATP-Sensors:
@@ -69,7 +69,7 @@ Dies sind die Hauptfunktionen des Azure ATP-Sensors:
 
  
 ## <a name="azure-atp-sensor-features"></a>Features des Azure ATP-Sensors
-Der Azure ATP-Sensor liest lokal Ereignisse, ohne dass zusätzliche Hardware erworben und verwaltet oder Konfigurationen vorgenommen werden müssen. Der Azure ATP-Sensor unterstützt zudem die Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW), die die Protokollinformationen für mehrere Erkennungen bereitstellt. Die Erkennung basierend auf der ETW umfasst sowohl verdächtige Replikationsanforderungen als auch die verdächtige Heraufstufung zu Domänencontrollern. Beide stellen potenzielle DCShadow-Angriffe dar.
+Der Azure ATP-Sensor liest lokal Ereignisse, ohne dass zusätzliche Hardware erworben und verwaltet oder Konfigurationen vorgenommen werden müssen. Der Azure ATP-Sensor unterstützt zudem die Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW), die die Protokollinformationen für mehrere Erkennungen bereitstellt. ETW-basierte Erkennungen beinhalten vermutete DCShadow-Angriffe, die mit Hilfe von Replikationsanforderungen für Domänencontroller und Heraufstufung des Domänencontrollers versucht wurden.
 - Kandidat für die Domänensynchronisierung
 
     Der Kandidat für den Domänensynchronizer ist für die proaktive Synchronisierung aller Entitäten aus einer bestimmten Active Directory-Domäne verantwortlich (ähnlich dem Mechanismus, der von den Domänencontrollern selbst für die Replikation verwendet wird). Aus der Liste der Kandidaten wird nach dem Zufallsprinzip ein Sensor für den Domänensynchronizer ausgewählt. 
@@ -89,7 +89,7 @@ Der Azure ATP-Sensor liest lokal Ereignisse, ohne dass zusätzliche Hardware erw
 
 -  Windows-Ereignisse
 
-    Um die Reichweite der Azure ATP-Erkennung von Pass-the-Hash-Angriffen, verdächtigen Authentifizierungsfehlern, Änderungen an sensiblen Gruppen, der Erstellung von verdächtigen Diensten und Angriffen mit Honeytoken-Aktivitätstypen zu verbessern, muss Azure ATP die Protokolle folgender Windows-Ereignisse analysieren: 4776,4732,4733,4728,4729,4756,4757 und 7045. Diese Ereignisse werden automatisch von Azure ATP-Sensoren mit den entsprechenden [erweiterten Überwachungsrichtlinieneinstellungen](atp-advanced-audit-policy.md) gelesen. 
+    Um die Reichweite der Azure ATP-Erkennung von Identitätsdiebstahl (Pass-the-Hash-Angriffen), verdächtigen Authentifizierungsfehlern, Änderungen an sensiblen Gruppen, der Erstellung von verdächtigen Diensten und Angriffen mit Honeytoken-Aktivitätstypen zu verbessern, muss Azure ATP die Protokolle folgender Windows-Ereignisse analysieren: 4776,4732,4733,4728,4729,4756,4757 und 7045. Diese Ereignisse werden automatisch von Azure ATP-Sensoren mit den entsprechenden [erweiterten Überwachungsrichtlinieneinstellungen](atp-advanced-audit-policy.md) gelesen. 
 
 ## <a name="see-also"></a>Weitere Informationen
 - [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](atp-prerequisites.md)

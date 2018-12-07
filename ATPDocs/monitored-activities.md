@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/18/2018
+ms.date: 12/02/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 37d1a032-65e7-4a89-be0b-c3f9cc2bacdb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5424c997de43ac186564b929ab50c7668333ed06
-ms.sourcegitcommit: 63ec9181f71edce6a950f5cc0d69428405436c48
+ms.openlocfilehash: afcad5dccda979bed54e7808bddb3c4190f5c3a8
+ms.sourcegitcommit: bdf5dc203ecec3e7542f2ed08852afeff4f20dcd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49963300"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52950338"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -75,14 +75,17 @@ Die von Azure ATP überwachten Informationen werden in Form von Aktivitäten ang
 
 |Überwachte Aktivität|Beschreibung|
 |---------------------|------------------|
+|Verzeichnisdienstreplikation  |Benutzer hat versucht, den Verzeichnisdienst zu replizieren.|
+|DNS-Abfrage  |Benutzer hat eine AXFR-Abfrage für den Domänencontroller ausgeführt.|
 |Wmi-Ausführung  |Benutzer hat versucht, eine WMI-Methode per Remotezugriff auszuführen.|
 |Erstellen eines Diensts   |Benutzer hat versucht, einen bestimmten Dienst per Remotezugriff auf einem Remotecomputer zu erstellen.|
 |SMB-Sitzungsenumeration   |Benutzer hat versucht, alle Benutzer mit offenen SMB-Sitzungen auf den Domänencontrollern aufzulisten.|
+|Kopieren von SMB-Dateien| Vom Benutzer mit SMB kopierte Dateien|
 |Aufgabenplanung  |Benutzer hat versucht, Aufgabe X per Remotezugriff auf einem Remotecomputer zu planen.|
 |SAMR-Abfrage   |Benutzer hat eine SAMR-Abfrage ausgeführt.|
 |Abrufen von privaten Daten  |Benutzer hat versucht, private Daten mithilfe des LSARPC-Protokolls abzufragen, oder diese Abfrage ist ihm gelungen.|
-|Verzeichnisdienstreplikation  |Benutzer hat versucht, den Verzeichnisdienst zu replizieren.|
-|DNS-Abfrage  |Benutzer hat eine AXFR-Abfrage für den Domänencontroller ausgeführt.|
+
+
 
 
 ## <a name="monitored-user-activities-login-operations"></a>Überwachte Benutzeraktivitäten: Anmeldevorgänge
@@ -106,7 +109,7 @@ Die von Azure ATP überwachten Informationen werden in Form von Aktivitäten ang
 
 
 ## <a name="see-also"></a>Weitere Informationen
-- [Verwalten von Sicherheitswarnungen](working-with-suspicious-activities.md)
+- [Verwenden von Sicherheitswarnungen](working-with-suspicious-activities.md)
 - [Leitfaden für Sicherheitswarnungen](suspicious-activity-guide.md)
 - [Untersuchen von Entitäten](investigate-entity.md)
 - [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)

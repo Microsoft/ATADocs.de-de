@@ -1,11 +1,11 @@
 ---
-title: Arbeiten mit Benutzerprofilen im Azure Advanced Threat Protection-Arbeitsbereichsportal | Microsoft-Dokumentation
-description: Informationen zum Untersuchen von Benutzern über die Anzeige „Benutzerprofile“ im Azure ATP-Arbeitsbereichsportal.
+title: Arbeiten mit Benutzerprofilen im Azure Advanced Threat Protection-Portal | Microsoft-Dokumentation
+description: Informationen zum Untersuchen von Benutzern über die Anzeige „Benutzerprofile“ im Azure ATP-Portal
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 12/02/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 17458706-79fb-4c23-aa42-66979164a45f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 357973698d9d53936c3fa308bc0021ae1cd98f60
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: a36afd4997a2f148bc5a31726aee22914a3607b4
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783507"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744369"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -59,7 +59,7 @@ Wenn Sie auf die Registerkarte „Lateral Movements-Pfade“ klicken, wird Ihnen
 
 Die Map enthält eine Liste, die Auskunft darüber gibt, wie viele Hops zwischen Computern oder Benutzern notwendig wären, damit ein Angreifer ein sensibles Konto gefährden kann. Wenn der Benutzer über ein sensibles Konto verfügt, können Sie zudem sehen, wie viele Ressourcen und Konten mit dem Konto direkt verbunden sind.
 
-Wenn für die vergangenen zwei Tage keine Aktivitäten ermittelt werden, wird zwar der Graph nicht mehr angezeigt, aber Sie können auf den [Bericht zu den Lateral Movement-Pfaden](reports.md) zugreifen, der Informationen zu den Lateral Movement-Pfaden der vergangenen 60 Tage aufweist. 
+Wenn in den letzten zwei Tagen für die Entität kein potenzieller Lateral Movement-Pfad festgestellt wurde, wird der Graph nicht angezeigt. Wählen Sie ein anderes Datum mit **Ansicht eines anderen Datums**, um frühere Graphs der Lateral Movement-Pfade anzuzeigen, die für diese Entität entdeckt wurden. Der [Lateral Movement-Pfad-Bericht](reports.md) ist immer verfügbar und enthält Informationen über die erkannten potenziellen Lateral Movement-Pfade und kann nach Zeit angepasst werden.  
 
 Weitere Informationen erhalten Sie unter [Lateral Movement-Pfade](use-case-lateral-movement-path.md). 
 
