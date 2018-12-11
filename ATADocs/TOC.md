@@ -3,6 +3,7 @@
 ## [Welche Bedrohungen erkennt ATA?](ata-threats.md)
 ## Neues in ATA?
 ### [Neues in ATA-Version 1.9](whats-new-version-1.9.md)
+#### [Migrationshandbuch zur Aktualisierung auf ATA 1.9.1](ata-update-1.9.1-migration-guide.md)
 #### [Migrationshandbuch zum Update auf ATA 1.9](ata-update-1.9-migration-guide.md)
 ### [Neues in ATA-Version 1.8](whats-new-version-1.8.md)
 #### [Migrationshandbuch zur Aktualisierung auf ATA 1.8](ata-update-1.8-migration-guide.md)
