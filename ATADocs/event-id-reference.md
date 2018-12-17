@@ -2,10 +2,10 @@
 title: Verweis auf ATA-Ereignis-IDs | Microsoft-Dokumentation
 description: Gibt eine Liste der ATA-Ereignis-IDs und deren Beschreibungen zurück.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 5d639e84-2e37-43a9-9667-49be6c4fa8b7
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 38610c6b8f94dbe1a31e218e064750bf2bde2c49
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 353395f782d29bb18e95c02ad56407a592d8c20b
+ms.sourcegitcommit: 2b15356612eb720f83235ff8cb08e4a6435206ea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133139"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53022423"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -89,7 +89,13 @@ Die Ereignisse finden Sie hier:
 
 2007 – Verdächtige Aktivität bei einer DNS-Reconnaissance 
 
-2008 – Verdächtige Aktivität bei Herabstufung der Verschlüsselung 
+2008 – Verdächtige Aktivität bei Herabstufung der Verschlüsselung (kein Untertyp)
+
+2009 – Verdächtige Aktivität bei Herabstufung der Verschlüsselung (Verdacht auf GoldenTicket)
+       
+2010 – Verdächtige Aktivität bei Herabstufung der Verschlüsselung (Verdacht auf Overpass-The-Hash)
+
+2011 – Verdächtige Aktivität bei Herabstufung der Verschlüsselung (Verdacht auf Skeleton-Key)
 
 2012 – Verdächtige Aktivität beim Auflisten der Sitzungen 
 
@@ -113,7 +119,11 @@ Die Ereignisse finden Sie hier:
 
 2023 – Verdächtige Brute Force-Aktivität 
 
-2024 – Verdächtige Aktivität bei Änderung einer ungewöhnlich sensiblen Gruppenmitgliedschaft  
+2024 – Verdächtige Aktivität durch ungewöhnliche Änderung der Mitgliedschaft einer vertraulichen Gruppe 
+
+2025 – Verdächtige Aktivität durch ungewöhnliches Verhalten im VPN
+
+2026 – Verdächtige Aktivität durch Erstellen eines schädlichen Diensts
 
 ## <a name="ata-auditing-events"></a>ATA-Überwachungsereignisse
 

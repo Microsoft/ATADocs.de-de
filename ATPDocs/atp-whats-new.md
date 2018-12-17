@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/26/2018
+ms.date: 12/09/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,27 +13,53 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e960e93470462acaf77c2033153af23725fe5e91
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: cde3c56d0b8ad029337e03602c805930002f8ed4
+ms.sourcegitcommit: d1c9c3e69b196f6086a8f100e527553cf0d95aac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744505"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125046"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
 # <a name="whats-new-in-azure-atp"></a>Neuerungen in Azure ATP 
 
+## <a name="azure-atp-release-258"></a>Azure ATP, Release 2.58
+
+Veröffentlicht am 9. Dezember 2018
+
+- **Erweiterung von Sicherheitswarnungen: Aufteilung der Warnung zu ungewöhnlichen Protokollimplementierungen**<br>
+Die Azure ATP-Serie von Sicherheitswarnungen zu ungewöhnlichen Protokollimplementierungen, die zuvor eine externalId (2002) gemeinsam genutzt haben, ist jetzt in vier verschiedene Warnungen aufgeteilt, die jeweils eindeutige externalId-Werte aufweisen. 
+
+### <a name="new-alert-externalids"></a>Neue externalIds für Warnungen
+> [!div class="mx-tableFixed"] 
+
+|Neuer Sicherheitswarnungsname|Alter Sicherheitswarnungsname|Eindeutige externalId|
+|---------|----------|---------|
+|Suspected Brute Force attack (SMB) (Verdacht auf einen Brute-Force-Angriff (SMB))|Ungewöhnliche Protokollimplementierung (potenzielle Verwendung schädlicher Tools wie Hydra)|2033
+|Suspected overpass-the-hash attack (Kerberos) (Verdacht auf einen Overpass-the-Hash-Angriff (Kerberos))|Ungewöhnliche Kerberos-Protokollimplementierung (potenzieller Overpass-the-Hash-Angriff)|2002|
+|Suspected use of Metasploit hacking framework (Verdacht auf Verwendung eines Hackerframeworks)|Ungewöhnliche Protokollimplementierung (potenzielle Verwendung schädlicher Hackertools wie Metasploit)|2034
+|Suspected WannaCry ransomware attack (Verdacht auf einen WannaCry-Ransomangriff)|Ungewöhnliche Protokollimplementierung (potenzieller WannaCry-Ransomwareangriff)|2035
+|
+
+- **Neue überwachte Aktivität: Dateikopie über SMB**<br>
+Das Kopieren von Dateien über SMB ist jetzt eine überwachte und filterbare Aktivität. Erfahren Sie mehr über [von Azure ATP überwachte Aktivitäten](monitored-activities.md) und über das [Filtern von und Suchen nach überwachten Aktivitäten](atp-activities-search.md) im Portal. 
+
+- **Imageerweiterung für lange Lateral Movement-Pfade**<br>
+Beim Anzeigen von langen Lateral Movement-Pfaden hebt Azure ATP jetzt nur die Knoten hervor, die mit einer ausgewählten Entität verbunden sind, anstatt die anderen Knoten unscharf darzustellen. Diese Änderung führt zu einer erheblichen Beschleunigung beim Rendern von langen Lateral Movement-Pfaden. 
+
+- Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
+
 ## <a name="azure-atp-release-257"></a>Azure ATP Release 2.57
 Veröffentlicht am 2. Dezember 2018
 
-- **Neue Sicherheitswarnung: Suspected Golden Ticket usage (ticket anomaly) (Verdacht auf Verwendung eines Golden Ticket (Ticketanomalie)) – (Vorschauversion)**<br>
-Die Sicherheitswarnung von Azure ATP [Verdacht auf Verwendung eines Golden Ticket (Ticketanomalie)](suspicious-activity-guide.md) ist jetzt als öffentliche Vorschauversion verfügbar. <br> Angreifer mit Domänenadministratorrechten können das KRBTGT-Konto beeinträchtigen. Angreifer können das KRBTGT-Konto verwenden, um ein Kerberos Ticket Granting Ticket (TGT) zu erstellen, das Autorisierung für jede beliebige Ressource bietet. 
+- **Neue Sicherheitswarnung: Verdacht auf Verwendung eines Golden Ticket – Ticketanomalie (Vorschau)**<br>
+Die Azure ATP-Sicherheitswarnung [Verdacht auf Verwendung eines Golden Ticket – Ticketanomalie](suspicious-activity-guide.md) ist jetzt in der öffentlichen Vorschau verfügbar. <br> Angreifer mit Domänenadministratorrechten können das KRBTGT-Konto beeinträchtigen. Angreifer können das KRBTGT-Konto verwenden, um ein Kerberos Ticket Granting Ticket (TGT) zu erstellen, das Autorisierung für jede beliebige Ressource bietet. 
 <br>Ein gefälschtes TGT wird als „Golden Ticket“ bezeichnet, da Angreifer damit dauerhafte Netzwerkpersistenz erlangen. Gefälschte Golden Tickets dieses Typs haben eindeutige Merkmale, die speziell durch diese neue Erkennung zu identifiziert werden. 
 
 
-- **Featureverbesserung: Automatisierte Erstellung von Azure ATP-Instanzen (Arbeitsbereich)** <br>
-Ab heute heißen Azure ATP-*Arbeitsbereiche* Azure ATP-*Instanzen*. Azure ATP unterstützt jetzt eine Azure ATP-Instanz pro Azure ATP-Konto. Instanzen für neue Kunden werden mithilfe des Assistenten für die Instanzenerstellung im [Azure ATP-Portal](https://portal.atp.azure.com) erstellt. Vorhandene Azure ATP-Arbeitsbereichen werden mit dem Update automatisch in Azure ATP-Instanzen konvertiert.  
+- **Featureerweiterung: Automatisierte Erstellung von Azure ATP-Instanzen (Arbeitsbereichen)** <br>
+Ab heute heißen Azure ATP-*Arbeitsbereiche* Azure ATP-*Instanzen*. Azure ATP unterstützt jetzt eine Azure ATP-Instanz pro Azure ATP-Konto. Instanzen für neue Kunden werden mithilfe des Assistenten für die Instanzenerstellung im [Azure ATP-Portal](https://portal.atp.azure.com) erstellt. Vorhandene Azure ATP-Arbeitsbereiche werden mit diesem Update automatisch in Azure ATP-Instanzen konvertiert.  
 
   - Vereinfachte Instanzerstellung für schnellere Bereitstellung und Schutz mit [Erstellung Ihrer Azure ATP-Instanz](install-atp-step1.md) 
   - Alle [Anforderungen an Datenschutz und Compliance](atp-privacy-compliance.md) bleiben unverändert. 
@@ -46,7 +72,7 @@ Ab heute heißen Azure ATP-*Arbeitsbereiche* Azure ATP-*Instanzen*. Azure ATP un
 Veröffentlicht: 25. November 2018
 
 
-- **Featureverbesserungen: Lateral Movement-Pfade (LMPs)** <br>
+- **Featureerweiterung: Lateral Movement-Pfade (LMPs)** <br>
 Zwei zusätzliche Funktionen wurden hinzugefügt, um die Fähigkeiten von Azure ATP Lateral Movement-Pfaden (LMP) zu verbessern:
 
   - Der LMP-Verlauf wird jetzt pro Entität gespeichert und erkannt, und bei der Verwendung von LMP-Berichten. 
@@ -54,7 +80,7 @@ Zwei zusätzliche Funktionen wurden hinzugefügt, um die Fähigkeiten von Azure 
 
   Weitere Informationen zur Verwendung und Untersuchung mit verbesserten LMPs finden Sie unter [Azure ATP Lateral Movement-Pfade](use-case-lateral-movement-path.md). 
 
-- **Verbesserungen der Dokumentation: Lateral Movement-Pfade, Namen für Sicherheitswarnungen**<br> Es wurden Ergänzungen und Aktualisierungen zu Azure ATP-Artikeln vorgenommen, die Beschreibungen und Funktionen des Lateral Movement-Pfads beschreiben, und es wurde eine Namenszuordnung von alten Namen von Sicherheitswarnungen zu den neuen Namen und externe IDs hinzugefügt. 
+- **Erweiterungen der Dokumentation: Lateral Movement-Pfade, Namen von Sicherheitswarnungen**<br> Es wurden Ergänzungen und Aktualisierungen zu Azure ATP-Artikeln vorgenommen, die Beschreibungen und Funktionen des Lateral Movement-Pfads beschreiben, und es wurde eine Namenszuordnung von alten Namen von Sicherheitswarnungen zu den neuen Namen und externe IDs hinzugefügt. 
   - Weitere Informationen finden Sie unter [Azure ATP Lateral Movement-Pfade](use-case-lateral-movement-path.md), [Untersuchen von Lateral Movement-Pfaden](investigate-lateral-movement-path.md) und [Leitfaden für Sicherheitswarnungen](suspicious-activity-guide.md).   
 
 - Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
@@ -62,7 +88,7 @@ Zwei zusätzliche Funktionen wurden hinzugefügt, um die Fähigkeiten von Azure 
 ## <a name="azure-atp-release-255"></a>Azure ATP Release 2.55
 Veröffentlicht: 18. November 2018
 
-- **Sicherheitshinweis: Verdächtige Kommunikation über DNS – allgemeine Verfügbarkeit**<br>
+- **Sicherheitswarnung: Verdächtige Kommunikation über DNS – allgemeine Verfügbarkeit**<br>
 Der Azure ATP-Sicherheitshinweis [Verdächtige Kommunikation über DNS](suspicious-activity-guide.md#suspicious-communication-over-dns) ist jetzt allgemein verfügbar. <br> In den meisten Organisationen wird das DNS-Protokoll nicht überwacht und nur selten vor böswilligen Angriffen geschützt. Das gibt einem Angreifer auf einem kompromittierten Computer die Möglichkeit, das DNS-Protokoll zu missbrauchen. Böswillige Kommunikation über DNS kann zur Datenexfiltration, Zugriff über Command-and-Control-Server und/oder zur Umgehung von Netzwerkeinschränkungen führen.
 
 - Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
@@ -70,20 +96,20 @@ Der Azure ATP-Sicherheitshinweis [Verdächtige Kommunikation über DNS](suspicio
 ## <a name="azure-atp-release-254"></a>Azure ATP Release 2.54
 Veröffentlicht am 11. November 2018
 
-- **Featureverbesserung: Ausschlüsse der Standarddomäne zu verdächtiger Kommunikation über DNS-Warnung hinzugefügt**<br>   Es wurden drei beliebte Domänen zur Ausschlussliste der Standarddomäne hinzugefügt. Die Ausschlussliste bleibt vollständig anpassbar. Weitere Informationen finden Sie unter [Ausschließen von Entitäten von der Erkennung](excluding-entities-from-detections.md) 
+- **Featureerweiterung: Standarddomänenausschlüsse zur Warnung aufgrund verdächtiger Kommunikation über DNS hinzugefügt**<br>   Es wurden drei beliebte Domänen zur Ausschlussliste der Standarddomäne hinzugefügt. Die Ausschlussliste bleibt vollständig anpassbar. Weitere Informationen finden Sie unter [Ausschließen von Entitäten von der Erkennung](excluding-entities-from-detections.md) 
 
-- **Verbesserungen bei der Dokumentation: Update des SIEM-Protokolls, Anleitungen für bekannte Probleme**<br>    Die externalId-Zuordnung sowie zusätzliche Erläuterungen wurden den Beschreibungen des SIEM-Protokolls hinzugefügt. Weitere Informationen finden Sie in der [Referenz zum SIEM-Protokoll](cef-format-sa.md). <br>Es wurde ein neuer Artikel zum Leitfaden für derzeit bekannte Probleme hinzugefügt. Weitere Informationen finden Sie unter: [Azure ATP Known Issues (Azure ATP: Bekannte Probleme)](known-issues.md).  
+- **Erweiterungen der Dokumentation: SIEM-Protokollaktualisierung, Leitfaden zu bekannten Problemen**<br>    Die externalId-Zuordnung sowie zusätzliche Erläuterungen wurden den Beschreibungen des SIEM-Protokolls hinzugefügt. Weitere Informationen finden Sie in der [Referenz zum SIEM-Protokoll](cef-format-sa.md). <br>Es wurde ein neuer Artikel zum Leitfaden für derzeit bekannte Probleme hinzugefügt. Weitere Informationen finden Sie unter: [Azure ATP Known Issues (Azure ATP: Bekannte Probleme)](known-issues.md).  
 
 - Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
 ## <a name="azure-atp-release-253"></a>Azure ATP Release 2.53
 Veröffentlicht: 4. November 2018
 
-- **Verbesserung an Sicherheitswarnungen: Verdächtiger Authentifizierungsfehler**<br>
+- **Erweiterung von Sicherheitswarnungen: Verdächtiger Authentifizierungsfehler**<br>
 [Sicherheitswarnungen zu verdächtigen Authentifizierungsfehlern](suspicious-activity-guide.md) in Azure ATP umfassen nun die Überwachung für die Erkennung von Kennwort-Spray- oder Brute-Force-Angriffen.
 Bei einem typischen **Kennwort-Spray-Angriff** testen Angreifer nach erfolgreichem Durchzählen einer Liste von gültigen Benutzern aus dem Domänencontroller EIN sorgfältig erstelltes Kennwort für ALLE bekannten Benutzerkonten (ein Kennwort für n Konten). Wenn beim ersten Kennwort-Spray-Angriff ein Fehler auftritt, wiederholen sie den Vorgang mit einem anderen sorgfältig erstellten Kennwort – normalerweise nach einer Wartezeit von 30 Minuten zwischen den Versuchen. Durch die Wartezeit verhindern Angreifer, dass meist zeitbasierte Schwellenwerte für die Kontosperre ausgelöst werden. Kennwort-Spray-Angriffe haben sich rasch zu einer beliebten Methode unter Angreifern und Pen-Testern entwickelt. Kennwort-Spray-Angriffe haben sich als effektiv erwiesen, um innerhalb einer Organisation einen Ankerpunkt zu finden und infolgedessen weitere Schwachstellen auszunutzen, um Berechtigungen auszuweiten. 
 
-- **Featureverbesserung: Senden einer Syslog-Testnachricht**<br>   Ab sofort gibt es eine neue Möglichkeit, um eine Syslog-Testnachricht während des SIEM-Setupvorgangs zu senden. Weitere Informationen finden Sie unter [Integration in Syslog](setting-syslog.md). 
+- **Featureerweiterung: Senden einer Syslog-Testnachricht**<br>   Ab sofort gibt es eine neue Möglichkeit, um eine Syslog-Testnachricht während des SIEM-Setupvorgangs zu senden. Weitere Informationen finden Sie unter [Integration in Syslog](setting-syslog.md). 
 
 - Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
@@ -91,13 +117,13 @@ Bei einem typischen **Kennwort-Spray-Angriff** testen Angreifer nach erfolgreich
 Veröffentlicht: 28. Oktober 2018
 
 
-- **Verbesserung der Sicherheitswarnung: Versuchte Remotecodeausführung**<br>
+- **Erweiterung von Sicherheitswarnungen: Versuchte Remotecodeausführung**<br>
 Die [Sicherheitswarnung zur versuchten Remotecodeausführung](suspicious-activity-guide.md) in Azure ATP umfasst jetzt die Überwachung auf verdächtige Versuche, PowerShell-Remotecode auf Ihren Domänencontrollern auszuführen. Remote-PowerShell ist eine gängige Methode zur Ausführung gültiger administrativer Befehle, wird aber häufig in böswilliger Absicht dazu verwendet, Skripts auf Remoteendpunkten auszuführen. 
 
 - **Featureerweiterung: Festlegen der Berichtszeitplanung**
 <br>Jetzt können Sie eine bestimmte Uhrzeit festlegen, um Ihre Azure ATP-Berichte über die Funktion [reports](reports.md#) zu planen. 
 
-- **Konfigurationszusatz: Rollenbasierte Zugriffssteuerung (RBAC) von Mandanten**
+- **Ergänzung der Konfiguration: Rollenbasierte Zugriffssteuerung für Mandanten (RBAC)**
 <br>Konfigurieren Sie die Sicherheitsrollen Ihres Mandanten im Azure Active Directory (AAD) Admin Center direkt über den neuen Administratorlink im Azure ATP-Portal. 
 
 - **Überarbeitete Struktur und Inhalte der Dokumentation**
@@ -122,7 +148,7 @@ Veröffentlicht: 14. Oktober 2018
 
 ## <a name="azure-atp-release-249"></a>Azure ATP Release 2.49
 Veröffentlicht: 7. Oktober 2018
--   **Neue Erkennungen: Verdächtige DNS-Kommunikation** (Vorschauversion)<br>Es wurde eine neue Erkennung hinzugefügt, um vor verdächtigen DNS-Kommunikationsangriffen zu schützen:
+-   **Neue Erkennungen: Verdächtige DNS-Kommunikation** (Vorschau)<br>Es wurde eine neue Erkennung hinzugefügt, um vor verdächtigen DNS-Kommunikationsangriffen zu schützen:
 
     -   Diese Erkennung hilft dabei, Angriffe gegen das DNS-Protokoll zu erkennen: In den meisten Organisationen wird das DNS-Protokoll nicht überwacht und nur selten vor böswilligen Angriffen geschützt. Das gibt einem Angreifer auf einem kompromittierten Computer die Möglichkeit, das DNS-Protokoll zu missbrauchen. Böswillige Kommunikation über DNS kann zur Datenexfiltration, Zugriff über Command-and-Control-Server und/oder zur Umgehung von Netzwerkeinschränkungen führen.
 
@@ -227,7 +253,7 @@ Veröffentlicht: 22. Juli 2018
   - Sie profitieren von besseren Überwachungswarnungen und -berichten für eine organisationsübergreifende Übersicht.
 
 
--   **Neue Erkennungsoptionen: DCShadow**<br>Zwei neue Erkennungsfunktionen helfen Ihnen beim Schutz vor DCShadow-Angriffen (Domain Controller Shadow):
+-   **Neue Erkennungen: DCShadow**<br>Zwei neue Erkennungsfunktionen helfen Ihnen beim Schutz vor DCShadow-Angriffen (Domain Controller Shadow):
 
     -   Verdächtige Hochstufung zu Domänencontrollern (potenzieller DCShadow-Angriff): Diese Funktion hilft bei der Erkennung von Angriffen, bei denen ein Computer die Identität eines Domänencontrollers annimmt und dann versucht, die Replikation zu verwenden, um Änderungen an andere Domänencontroller in Ihrer Domäne zu verteilen.
 
@@ -248,7 +274,7 @@ Veröffentlicht: 15. Juli 2018
 ## <a name="azure-atp-release-239"></a>Azure ATP Release 2.39
 
 Veröffentlicht: 5. Juli 2018
--   **Neue hinzugefügte Erkennung: Kerberos Golden Ticket – nichtvorhandenes Konto** (Vorschauversion)<br>Mit dieser neuen Erkennung können Sie Ihre Organisation vor Angriffen schützen, in denen ein Golden Ticket für ein Konto erstellt wird, das in Ihrer Domäne nicht existiert. Weitere Informationen finden Sie im [Azure Advanced Threat Protection-Handbuch zu verdächtigen Aktivitäten](suspicious-activity-guide.md#golden-ticket).
+-   **Neue Erkennung hinzugefügt: Kerberos Golden Ticket – nicht vorhandenes Konto** (Vorschau)<br>Mit dieser neuen Erkennung können Sie Ihre Organisation vor Angriffen schützen, in denen ein Golden Ticket für ein Konto erstellt wird, das in Ihrer Domäne nicht existiert. Weitere Informationen finden Sie im [Azure Advanced Threat Protection-Handbuch zu verdächtigen Aktivitäten](suspicious-activity-guide.md#golden-ticket).
 
 - Diese Version enthält Fehlerbehebungen und Verbesserungen für mehrere Probleme. 
 
@@ -299,7 +325,7 @@ Veröffentlicht: 3. Juni 2018
 
 Veröffentlicht: 27. Mai 2018
 
-- Feature der Vorschauversion: Azure ATP unterstützt jetzt neue Sprachen und 13 neue Gebietsschemas:
+- Vorschaufeature: Azure ATP unterstützt jetzt neue Sprachen und 13 neue Gebietsschemas:
     - Tschechisch
     - Ungarisch
     - Italienisch
@@ -364,7 +390,7 @@ Veröffentlicht: 8. April 2018
 
 Veröffentlicht: 25. März 2018
 
-- Wenn Azure ATP Sie über eine verdächtige Aktivität informiert, die Sie als gutartig positiv identifizieren (eine legitime Aktion, die keine verdächtige Aktivität ist), haben Sie die Möglichkeit, Computer und IP-Adressen für weitere Erkennungen auszuschließen. Hierzu zählen: Herabstufen der Verschlüsselung, LDAP-Brute-Force, gefälschte PAC, Brute-Force und Pass-the-Hash.
+- Wenn Azure ATP Sie über eine verdächtige Aktivität informiert, die Sie als unbedenklich positiv identifizieren (eine legitime Aktion, die keine verdächtige Aktivität ist), haben Sie die Möglichkeit, Computer und IP-Adressen von weiteren Erkennungen auszuschließen. Hierzu zählen: Herabstufen der Verschlüsselung, LDAP-Brute-Force, gefälschte PAC, Brute-Force und Pass-the-Hash.
 -   Die Leistung des Azure ATP-Sensors wurde verbessert.
 -   Eine neue Region für die Bereitstellung eines Arbeitsbereichs wurde hinzugefügt. Sie können ab sofort auch einen Arbeitsbereich in Asien bereitstellen. 
 

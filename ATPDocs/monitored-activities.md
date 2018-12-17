@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 37d1a032-65e7-4a89-be0b-c3f9cc2bacdb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: afcad5dccda979bed54e7808bddb3c4190f5c3a8
-ms.sourcegitcommit: bdf5dc203ecec3e7542f2ed08852afeff4f20dcd
+ms.openlocfilehash: f8bc815c3ffad4f75d84a69f2e6c30cc0707d8e3
+ms.sourcegitcommit: d1c9c3e69b196f6086a8f100e527553cf0d95aac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52950338"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125029"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -37,14 +37,10 @@ Die von Azure ATP überwachten Informationen werden in Form von Aktivitäten ang
 >- Von Azure ATP überwachte Aktivitäten werden auf der Profilseite sowohl für Benutzer als auch für Computer angezeigt. 
  
 
-## <a name="monitored-user-activities-user-account-ad-attribute-changes"></a>Überwachte Benutzeraktivitäten: AD-Attributänderungen beim Benutzerkonto
+## <a name="monitored-user-activities-user-account-ad-attribute-changes"></a>Überwachte Benutzeraktivitäten: Änderungen am AD-Attribut für Benutzerkonto
 
 |Überwachte Aktivität|Beschreibung|
 |---------------------|------------------|
-|Benutzer-E-Mail geändert|E-Mail-Attribut des Benutzers wurde geändert.|
-|Benutzer-Manager geändert|Manager-Attribut des Benutzers wurde geändert.|
-|Benutzer-Telefonnummer geändert|Telefonnummer-Attribut des Benutzers wurde geändert.|
-|Benutzertitel geändert |Title-Attribut des Benutzers wurde geändert.|
 |Kontostatus „Eingeschränkte Delegierung“ geändert |Der Kontostatus ist jetzt für Delegierung aktiviert oder deaktiviert.|
 |Konto-SPNs „Eingeschränkte Delegierung“ geändert | Die eingeschränkte Delegierung beschränkt die Dienste, für die der angegebene Server im Auftrag des Benutzers agieren kann.|
 |„Konto deaktiviert“ geändert |Gibt an, ob ein Konto aktiviert oder deaktiviert ist.|
@@ -56,11 +52,15 @@ Die von Azure ATP überwachten Informationen werden in Form von Aktivitäten ang
 |„Kontokennwort läuft nie ab“ geändert |Kennwort des Benutzer wurde geändert, sodass es nie abläuft.|
 |„Kein Kontokennwort erforderlich“ geändert |Benutzerkonto wurde geändert, sodass Anmeldung mit einem leeren Kennwort zulässig ist.|
 |„Smartcard für Konto erforderlich“ geändert  |Konto wurde geändert, sodass Benutzer aufgefordert werden, sich auf einem Gerät mit einer Smartcard anzumelden.|
-|Vom Konto unterstützte Verschlüsselungstypen geändert |Von Kerberos unterstützte Verschlüsselungstypen wurden geändert (Typen: Des, AES 129, AES 256).|
-|Gruppenmitgliedschaft geändert  |Benutzer wurde zu/aus einer Gruppe hinzugefügt/gelöscht, und zwar von einem anderen Benutzer oder ihm selbst.|
+|Vom Konto unterstützte Verschlüsselungstypen geändert |Von Kerberos unterstützte Verschlüsselungstypen wurden geändert (Typen: Des, AES 129, AES 256)|
 |UPN-Name von Konto geändert  |Der Benutzerprinzipalname wurde geändert.|
+|Gruppenmitgliedschaft geändert  |Benutzer wurde zu/aus einer Gruppe hinzugefügt/gelöscht, und zwar von einem anderen Benutzer oder ihm selbst.|
+|Benutzer-E-Mail geändert|E-Mail-Attribut des Benutzers wurde geändert.|
+|Benutzer-Manager geändert|Manager-Attribut des Benutzers wurde geändert.|
+|Benutzer-Telefonnummer geändert|Telefonnummer-Attribut des Benutzers wurde geändert.|
+|Benutzertitel geändert |Title-Attribut des Benutzers wurde geändert.|
 
-## <a name="monitored-user-activities-ad-security-principal-operations"></a>Überwachte Benutzeraktivitäten: Prinzipalvorgänge für AD-Sicherheit
+## <a name="monitored-user-activities-ad-security-principal-operations"></a>Überwachte Benutzeraktivitäten: Vorgänge für AD-Sicherheitsprinzipal
 
 |Überwachte Aktivität|Beschreibung|
 |---------------------|------------------|
@@ -77,16 +77,13 @@ Die von Azure ATP überwachten Informationen werden in Form von Aktivitäten ang
 |---------------------|------------------|
 |Verzeichnisdienstreplikation  |Benutzer hat versucht, den Verzeichnisdienst zu replizieren.|
 |DNS-Abfrage  |Benutzer hat eine AXFR-Abfrage für den Domänencontroller ausgeführt.|
-|Wmi-Ausführung  |Benutzer hat versucht, eine WMI-Methode per Remotezugriff auszuführen.|
+|Abrufen von privaten Daten  |Benutzer hat versucht, private Daten mithilfe des LSARPC-Protokolls abzufragen, oder diese Abfrage ist ihm gelungen.|
 |Erstellen eines Diensts   |Benutzer hat versucht, einen bestimmten Dienst per Remotezugriff auf einem Remotecomputer zu erstellen.|
 |SMB-Sitzungsenumeration   |Benutzer hat versucht, alle Benutzer mit offenen SMB-Sitzungen auf den Domänencontrollern aufzulisten.|
 |Kopieren von SMB-Dateien| Vom Benutzer mit SMB kopierte Dateien|
-|Aufgabenplanung  |Benutzer hat versucht, Aufgabe X per Remotezugriff auf einem Remotecomputer zu planen.|
 |SAMR-Abfrage   |Benutzer hat eine SAMR-Abfrage ausgeführt.|
-|Abrufen von privaten Daten  |Benutzer hat versucht, private Daten mithilfe des LSARPC-Protokolls abzufragen, oder diese Abfrage ist ihm gelungen.|
-
-
-
+|Aufgabenplanung  |Benutzer hat versucht, Aufgabe X per Remotezugriff auf einem Remotecomputer zu planen.|
+|Wmi-Ausführung  |Benutzer hat versucht, eine WMI-Methode per Remotezugriff auszuführen.|
 
 ## <a name="monitored-user-activities-login-operations"></a>Überwachte Benutzeraktivitäten: Anmeldevorgänge
 

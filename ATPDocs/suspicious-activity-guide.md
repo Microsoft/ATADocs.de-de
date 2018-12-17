@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/02/2018
+ms.date: 12/09/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a32d19e8e130f326859276dde60c794712da5a91
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: 8604e3cfead3b52fd9f0d1ed38bb7d806cf50f46
+ms.sourcegitcommit: d1c9c3e69b196f6086a8f100e527553cf0d95aac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744811"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125131"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -27,9 +27,9 @@ ms.locfileid: "52744811"
 
 Nach einer gründlichen Untersuchung können alle Azure ATP-Sicherheitswarnungen wie folgt klassifiziert werden:
 
--   **Richtig positiv**: Eine böswillige, von Azure ATP erkannte Aktion.
+-   **Richtig positiv**: Eine von Azure ATP erkannte schädliche Aktion.
 
--   **Unbedenklich richtig positiv**: Eine von Azure ATP erkannte Aktion, die tatsächlich durchgeführt wurde, aber nicht böswillig ist, wie z.B. ein Penetrationstest.
+-   **Unbedenklich richtig positiv**: Eine von Azure ATP erkannte Aktion, die tatsächlich durchgeführt wurde, aber nicht schädlich ist, wie z.B. ein Penetrationstest.
 
 -   **Falsch positiv**: Ein falscher Alarm, das heißt, die Aktivität wurde nicht ausgeführt.
 
@@ -65,18 +65,17 @@ In Version 2.56 wurden alle Sicherheitswarnungen für Azure ATP umbenannt. Die n
 |Verdächtige Modifizierung von sensiblen Gruppen|Verdächtige Modifizierung von sensiblen Gruppen|2024|
 |Erstellen eines verdächtigen Diensts|Erstellen eines verdächtigen Diensts|2026|
 |Verdächtige VPN-Verbindung|Verdächtige VPN-Verbindung|2025|
-|Suspected WannaCry ransomware attack (Verdacht auf einen WannaCry-Ransomangriff)|Ungewöhnliche Protokollimplementierung (potenzieller WannaCry-Ransomwareangriff)*|2002|
-|Suspected Brute Force attack (SMB) (Verdacht auf einen Brute-Force-Angriff (SMB))|Ungewöhnliche Protokollimplementierung (potenzielle Verwendung schädlicher Tools wie Hydra)*|2002|
-|Suspected use of Metasploit hacking framework (Verdacht auf Verwendung eines Hackerframeworks)|Ungewöhnliche Protokollimplementierung (potenzielle Verwendung schädlicher Hackertools wie Metasploit)*|2002|
-|Suspected overpass-the-hash attack (Kerberos) (Verdacht auf einen Overpass-the-Hash-Angriff (Kerberos))|Ungewöhnliche Kerberos-Protokollimplementierung (potenzieller Overpass-the-Hash-Angriff)*|2002|
-|* *Warnungen von ungewöhnlichen Protokollimplementierungen* haben derzeit die gleiche externalId. In einem zukünftigen Release soll jeder Warnungstyp eine eindeutige externalId erhalten.||****|
+|Suspected WannaCry ransomware attack (Verdacht auf einen WannaCry-Ransomangriff)|Ungewöhnliche Protokollimplementierung (potenzieller WannaCry-Ransomwareangriff)|2002|
+|Suspected Brute Force attack (SMB) (Verdacht auf einen Brute-Force-Angriff (SMB))|Ungewöhnliche Protokollimplementierung (potenzielle Verwendung schädlicher Tools wie Hydra)|2002|
+|Suspected use of Metasploit hacking framework (Verdacht auf Verwendung eines Hackerframeworks)|Ungewöhnliche Protokollimplementierung (potenzielle Verwendung schädlicher Hackertools wie Metasploit)|2002|
+|Suspected overpass-the-hash attack (Kerberos) (Verdacht auf einen Overpass-the-Hash-Angriff (Kerberos))|Ungewöhnliche Kerberos-Protokollimplementierung (potenzieller Overpass-the-Hash-Angriff)|2002|
 |User and group membership reconnaissance (SAMR) (Reconnaissance über Benutzer und Gruppenmitgliedschaften (SAMR))|Reconnaissance mithilfe von Verzeichnisdienstabfragen|2021|
 |User and IP address reconnaissance (SMB) (Reconnaissance über Benutzer und IP-Adressen (SMB)) |Reconnaissance mithilfe der SMB-Sitzungsenumeration|2012|
 
 
 ## <a name="account-enumeration-reconnaissance"></a>Reconnaissance mithilfe von Kontoenumeration
 <a name="reconnaissance-using-account-enumeration"></a>
-*Alter Name:* Reconnaissance mithilfe von Kontoenumeration
+*Vorheriger Name*: Reconnaissance mithilfe von Kontoenumeration
 
 **Beschreibung**
 
@@ -106,7 +105,7 @@ Wenn Sie eine dieser Fragen mit „ja“ beantworten können, **schließen Sie d
 ## <a name="honeytoken-activity"></a>Honeytoken-Aktivität
 <a name="honeytoken-activity"></a>
 
-*Alter Name:* Honeytokenaktivität
+*Vorheriger Name*: Honeytoken-Aktivität
 
 **Beschreibung**
 
@@ -131,7 +130,7 @@ Stellen Sie sicher, dass Honeytoken-Konten nur für den beabsichtigten Zweck ver
 ## <a name="malicious-request-of-data-protection-api-master-key"></a>Malicious request of Data Protection API master key (Böswillige Anforderung eines Masterschlüssels zur Datenschutz-API)
 <a name="malicious-data-protection-private-information-request"></a>
 
-*Alter Name:* Böswillige Anforderung privater Informationen im Rahmen der Datensicherheit
+*Vorheriger Name*: Böswillige Anforderung privater Informationen im Rahmen der Datensicherheit
 
 **Beschreibung**
 
@@ -152,7 +151,7 @@ Ein Angreifer benötigt Domänenadministratorrechte zum Verwenden der DPAPI. Imp
 
 ## <a name="suspected-brute-force-attack-ldap"></a>Suspected Brute Force attack (LDAP) (Verdacht auf einen Brute-Force-Angriff (LDAP)) 
 <a name="brute-force-attack-using-ldap-simple-bind"></a>
-*Alter Name:* Brute-Force-Angriff mithilfe einer einfachen LDAP-Bindung
+*Vorheriger Name*: Brute-Force-Angriff mithilfe einer einfachen LDAP-Bindung
 
 **Beschreibung**
 
@@ -178,7 +177,7 @@ In dieser Erkennung wird eine Warnung ausgelöst, wenn Azure ATP eine signifikan
 ## <a name="suspected-brute-force-attack-kerberos-ntlm"></a>Suspected Brute Force attack (Kerberos NTLM) (Verdacht auf einen Brute-Force-Angriff (Kerberos NTLM))
 <a name="suspicious-authentication-failures"></a>
 
-*Alter Name:* Verdächtige Authentifizierungsfehler
+*Vorheriger Name*: Verdächtige Authentifizierungsfehler
 
 **Beschreibung**
 
@@ -208,7 +207,7 @@ Bei diesem Erkennungsvorgang wird eine Warnung ausgelöst, wenn viele Authentifi
 ## <a name="suspected-dcshadow-attack-dc-promotion"></a>Suspected DCShadow attack (DC promotion) (Verdacht auf DCShadow-Angriff (Heraufstufung von DC))
 <a name="suspicious-domain-controller-promotion-potential-dcshadow-attack"></a>
 
-*Alter Name:* Verdächtige Heraufstufung zu Domänencontrollern (potenzieller DCShadow-Angriff)
+*Vorheriger Name*: Verdächtige Heraufstufung zu Domänencontrollern (potenzieller DcShadow-Angriff)
 
 **Beschreibung**
 
@@ -249,7 +248,7 @@ Nutzen Sie [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/
 ## <a name="suspected-dcshadow-attack-dc-replication-request"></a>Suspected DCShadow attack (DC replication request) (Verdacht auf DCShadow-Angriff (DC-Replikationsanforderung))
 <a name="suspicious-replication-request-potential-dcshadow-attack"></a>
 
-*Alter Name:* Verdächtige Replikationsanforderung (potenzieller DCShadow-Angriff) 
+*Vorheriger Name*: Verdächtige Replikationsanforderung (potenzieller DCShadow-Angriff) 
 
 **Beschreibung** 
 
@@ -282,7 +281,7 @@ Nutzen Sie zu diesem Zweck den [AD ACL Scanner](https://blogs.technet.microsoft.
 ## <a name="suspected-dcsync-attack-replication-of-directory-services"></a>Suspected DCSync attack (replication of directory services) (Verdacht auf einen DCSync-Angriff (Replikation von Verzeichnisdiensten))
 <a name="malicious-replication-of-directory-services"></a>
 
-*Alter Name:* Böswillige Replikation von Verzeichnisdiensten
+*Vorheriger Name*: Böswillige Replikation von Verzeichnisdiensten
 
 **Beschreibung**
 
@@ -316,9 +315,9 @@ Nutzen Sie  [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/201
 ## <a name="suspected-golden-ticket-usage-encryption-downgrade"></a>Verdacht auf Verwendung eines Golden Ticket (Herabstufung der Verschlüsselung)
 <a name="Encryption-downgrade-activity-potential-golden-ticket-attack"></a>
 
-*Alter Name:* Herabstufung der Verschlüsselung
+*Vorheriger Name*: Aktivität zur Herabstufung der Verschlüsselung
 
-**Beschreibung:** Die Herabstufung der Verschlüsselung ist eine Methode, die dazu dient, Kerberos zu schwächen, indem für die Verschlüsselungsstufe von unterschiedlichen Feldern des Protokolls, die mit der höchsten Verschlüsselungsstufe verschlüsselt werden, ein Downgrade durchgeführt wird. Ein abgeschwächtes verschlüsseltes Feld ist ein leichteres Ziel für versuchte Brute-Force-Angriffe offline. Verschiedene Angriffsmethoden nutzen schwache Kerberos-Verschlüsselungsverfahren. In dieser Erkennung lernt Azure ATP die Kerberos-Verschlüsselungsverfahren, die von Computern und Benutzern verwendet werden und benachrichtigt Sie, wenn ein schwächeres Verschlüsselungsverfahren verwendet wird, das: (1) unüblich für den Quellcomputer und/oder den Benutzer ist und (2) mit bekannten Angriffstechniken übereinstimmt. 
+**Beschreibung:** Die Herabstufung der Verschlüsselung ist eine Methode, die dazu dient, Kerberos zu schwächen, indem für die Verschlüsselungsstufe von unterschiedlichen Feldern des Protokolls, die mit der höchsten Verschlüsselungsstufe verschlüsselt werden, ein Downgrade durchgeführt wird. Ein abgeschwächtes verschlüsseltes Feld ist ein leichteres Ziel für versuchte Brute-Force-Angriffe offline. Verschiedene Angriffsmethoden nutzen schwache Kerberos-Verschlüsselungsverfahren. In dieser Erkennung lernt Azure ATP die Kerberos-Verschlüsselungstypen, die von Computern und Benutzern verwendet werden, und benachrichtigt Sie, wenn ein schwächeres Verschlüsselungsverfahren verwendet wird, das (1) unüblich für den Quellcomputer und/oder den Benutzer ist und (2) mit bekannten Angriffstechniken übereinstimmt. 
 
 Bei einer Golden Ticket-Warnung wurde die Verschlüsselungsmethode des TGT-Felds der TGS_REQ-Nachricht (Dienstanforderung) vom Quellcomputer im Vergleich zum zuvor gelernten Verhalten herabgestuft. Dies basiert nicht auf einer Zeitanomalie (wie bei der anderen Golden Ticket-Erkennung). Zusätzlich gab es keine Kerberos-Authentifizierungsanforderung, die der vorherigen von ATP erkannten Dienstanforderung zugeordnet ist.
 
@@ -341,7 +340,7 @@ Bei einer Golden Ticket-Warnung wurde die Verschlüsselungsmethode des TGT-Felds
 ## <a name="suspected-golden-ticket-usage-forged-authorization-data"></a>Suspected Golden Ticket usage (forged authorization data) (Verdacht auf Verwendung eines Golden Ticket (gefälschte Autorisierungsdaten))
 <a name="privilege-escalation-using-forged-authorization-data"></a>
 
-*Alter Name:* Berechtigungsausweitung mithilfe von gefälschten Autorisierungsdaten
+*Vorheriger Name*: Berechtigungsausweitung mithilfe von gefälschten Autorisierungsdaten
 
 **Beschreibung**
 
@@ -364,7 +363,7 @@ Stellen Sie sicher, dass alle Domänencontroller mit Betriebssystemen bis Window
 ## <a name="suspected-golden-ticket-usage-nonexistant-account"></a>Verdacht auf Verwendung eines Golden Ticket (nicht vorhandenes Konto)
 <a name="golden-ticket"></a>
 
-Alter Name: Kerberos Golden Ticket
+Vorheriger Name: Kerberos Golden Ticket
 
 **Beschreibung**
 
@@ -394,11 +393,11 @@ Wenn Sie die Windows Defender ATP-Integration aktiviert haben, klicken Sie auf d
 
 ## <a name="suspected-golden-ticket-usage-time-anomaly"></a>Suspected golden ticket usage (time anomaly) (Verdacht auf Verwendung eines Golden Ticket (Zeitanomalie))
 
-Alter Name: Kerberos Golden Ticket
+Vorheriger Name: Kerberos Golden Ticket
 
 **Beschreibung**
 
-Angreifer, die Domänenadministratorrechte erlangen, können das [KRBTGT-Konto](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT) beeinträchtigen. Wenn diese das KRBTGT-Konto verwenden, können Angreifer ein Kerberos Ticket Granting Ticket (TGT) erstellen, das die Autorisierung für jede beliebige Ressource erteilen und den Ablaufzeitpunkt des Tickets auf einen beliebigen Zeitpunkt festlegen kann. Ein gefälschtes TGT dieses Typs wird als „Golden Ticket“ bezeichnet, da Angreifer damit dauerhafte Netzwerkpersistenz erlangen. In dieser Erkennung wird eine Warnung ausgelöst, wenn ein Kerberos Ticket Granting Ticket länger als erlaubt verwendet wird. Die zulässige Dauer ist in der Sicherheitsrichtlinie [Maximum lifetime for user ticket](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx) (Max. Gültigkeitsdauer des Benutzertickets) angegeben.
+Angreifer, die Domänenadministratorrechte erlangen, können das [KRBTGT-Konto](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT) beeinträchtigen. Über das KRBTGT-Konto können Angreifer ein Kerberos Ticket Granting Ticket (TGT) erstellen, das die Autorisierung für jede beliebige Ressource erteilen und den Ablaufzeitpunkt des Tickets auf einen beliebigen Zeitpunkt festlegen kann. Ein gefälschtes TGT dieses Typs wird als „Golden Ticket“ bezeichnet, da Angreifer damit dauerhafte Netzwerkpersistenz erlangen. In dieser Erkennung wird eine Warnung ausgelöst, wenn ein Kerberos Ticket Granting Ticket länger als erlaubt verwendet wird. Die zulässige Dauer ist in der Sicherheitsrichtlinie [Maximum lifetime for user ticket](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx) (Max. Gültigkeitsdauer des Benutzertickets) angegeben.
 
 
 **Untersuchung**
@@ -420,7 +419,7 @@ Angreifer, die Domänenadministratorrechte erlangen, können das [KRBTGT-Konto](
 
 **Beschreibung**
 
-Angreifer mit Domänenadministratorrechten können das KRBTGT-Konto beeinträchtigen. Angreifer können das KRBTGT-Konto verwenden, um ein Kerberos Ticket Granting Ticket (TGT) zu erstellen, das Autorisierung für jede beliebige Ressource bietet. Ein gefälschtes TGT dieses Typs wird als „Golden Ticket“ bezeichnet, da Angreifer damit dauerhafte Netzwerkpersistenz erlangen. Gefälschte Golden Tickets dieses Typs haben eindeutige Merkmale, die speziell durch diese Erkennung zu identifiziert werden. 
+Angreifer mit Domänenadministratorrechten können das KRBTGT-Konto beeinträchtigen. Angreifer können das KRBTGT-Konto verwenden, um ein Kerberos Ticket Granting Ticket (TGT) zu erstellen, das Autorisierung für jede beliebige Ressource bietet. Ein gefälschtes TGT dieses Typs wird als „Golden Ticket“ bezeichnet, da Angreifer damit dauerhafte Netzwerkpersistenz erlangen. Gefälschte Golden Tickets dieses Typs weisen eindeutige Merkmale auf, für deren Identifikation diese Erkennung konzipiert ist. 
 
 **Untersuchung**
 1. Verbunddienste generieren möglicherweise Tickets, die diese Warnung auslösen. Werden auf dem Quellcomputer derartige Dienste gehostet? Wenn dies der Fall ist, schließen Sie die Sicherheitswarnung.
@@ -441,7 +440,7 @@ Angreifer mit Domänenadministratorrechten können das KRBTGT-Konto beeinträcht
 ## <a name="suspected-identity-theft-pass-the-hash"></a>Suspected identity theft (pass-the-hash) (Verdacht auf Identitätsdiebstahl (Pass-the-Hash)) 
 <a name="identity-theft-using-pass-the-hash-attack"></a>
 
-*Alter Name:* Identitätsdiebstahl mithilfe eines Pass-the-Hash-Angriffs
+*Vorheriger Name*: Identitätsdiebstahl mithilfe eines Pass-the-Hash-Angriffs
 
 **Beschreibung**
 
@@ -460,7 +459,7 @@ Stellen Sie fest, ob der verwendete Hash von einem Computer stammt, der dem Ziel
 ## <a name="suspected-identity-theft-pass-the-ticket"></a>Suspected identity theft (pass-the-ticket) (Verdacht auf Identitätsdiebstahl (Pass-the-Ticket)) 
 <a name="identity-theft-using-pass-the-ticket-attack"></a>
 
-*Alter Name:* Identitätsdiebstahl mithilfe eines Pass-the-Ticket-Angriffs
+*Vorheriger Name*: Identitätsdiebstahl mithilfe eines Pass-the-Ticket-Angriffs
 
 **Beschreibung**
 
@@ -481,11 +480,11 @@ Pass-the-Ticket ist eine Technik mit seitlicher Bewegung, bei der die Angreifer 
 ## <a name="suspected-over-pass-the-hash-attack-encryption-downgrade"></a>Suspected over-pass-the-hash attack (encryption downgrade) (Verdacht auf Over-Pass-the-Hash-Angriff (Herabstufung der Verschlüsselung)) 
 <a name="Encryption-downgrade-activity-potential-over-pass-the-hash"></a>
 
-*Alter Name:* Herabstufung der Verschlüsselung
+*Vorheriger Name*: Aktivität zur Herabstufung der Verschlüsselung
 
 **Beschreibung**
 
-Die Herabstufung der Verschlüsselung ist eine Methode, die dazu dient, Kerberos zu schwächen, indem für die Verschlüsselungsstufe von unterschiedlichen Feldern des Protokolls, die mit der höchsten Verschlüsselungsstufe verschlüsselt werden, ein Downgrade durchgeführt wird. Ein abgeschwächtes verschlüsseltes Feld ist ein leichteres Ziel für versuchte Brute-Force-Angriffe offline. Verschiedene Angriffsmethoden nutzen schwache Kerberos-Verschlüsselungsverfahren. In dieser Erkennung lernt Azure ATP die Kerberos-Verschlüsselungsverfahren, die von Computern und Benutzern verwendet werden und benachrichtigt Sie, wenn ein schwächeres Verschlüsselungsverfahren verwendet wird, das: (1) unüblich für den Quellcomputer und/oder den Benutzer ist und (2) mit bekannten Angriffstechniken übereinstimmt. 
+Die Herabstufung der Verschlüsselung ist eine Methode, die dazu dient, Kerberos zu schwächen, indem für die Verschlüsselungsstufe von unterschiedlichen Feldern des Protokolls, die mit der höchsten Verschlüsselungsstufe verschlüsselt werden, ein Downgrade durchgeführt wird. Ein abgeschwächtes verschlüsseltes Feld ist ein leichteres Ziel für versuchte Brute-Force-Angriffe offline. Verschiedene Angriffsmethoden nutzen schwache Kerberos-Verschlüsselungsverfahren. In dieser Erkennung lernt Azure ATP die Kerberos-Verschlüsselungstypen, die von Computern und Benutzern verwendet werden, und benachrichtigt Sie, wenn ein schwächeres Verschlüsselungsverfahren verwendet wird, das (1) unüblich für den Quellcomputer und/oder den Benutzer ist und (2) mit bekannten Angriffstechniken übereinstimmt. 
 
 Bei einem Overpass-the-Hash-Angriff kann ein Angreifer zusammen mit einer Kerberos-AS-Anforderung einen schwachen gestohlenen Hash zur Erstellung eines starken Tickets verwenden. In dieser Erkennung wurde der AS_REQ-Nachrichtenverschlüsselungstyp des Quellcomputers im Vergleich zum zuvor gelernten Verhalten heruntergestuft (der Computer hat also AES verwendet).
 
@@ -503,9 +502,9 @@ Bei einem Overpass-the-Hash-Angriff kann ein Angreifer zusammen mit einer Kerber
 ## <a name="suspected-skeleton-key-attack-encryption-downgrade"></a>Suspected Skeleton Key attack (encryption downgrade) (Verdacht auf Skeleton-Key-Angriff (Herabstufung der Verschlüsselung)) 
 <a name="encryption-downgrade-activity-potential-skeleton-key-attack"></a>
 
-*Alter Name:* Herabstufung der Verschlüsselung
+*Vorheriger Name*: Aktivität zur Herabstufung der Verschlüsselung
 
-**Beschreibung:** Die Herabstufung der Verschlüsselung ist eine Methode, die dazu dient, Kerberos zu schwächen, indem für die Verschlüsselungsstufe von unterschiedlichen Feldern des Protokolls, die mit der höchsten Verschlüsselungsstufe verschlüsselt werden, ein Downgrade durchgeführt wird. Ein abgeschwächtes verschlüsseltes Feld ist ein leichteres Ziel für versuchte Brute-Force-Angriffe offline. Verschiedene Angriffsmethoden nutzen schwache Kerberos-Verschlüsselungsverfahren. In dieser Erkennung lernt Azure ATP die Kerberos-Verschlüsselungsverfahren, die von Computern und Benutzern verwendet werden und benachrichtigt Sie, wenn ein schwächeres Verschlüsselungsverfahren verwendet wird, das: (1) unüblich für den Quellcomputer und/oder den Benutzer ist und (2) mit bekannten Angriffstechniken übereinstimmt. 
+**Beschreibung:** Die Herabstufung der Verschlüsselung ist eine Methode, die dazu dient, Kerberos zu schwächen, indem für die Verschlüsselungsstufe von unterschiedlichen Feldern des Protokolls, die mit der höchsten Verschlüsselungsstufe verschlüsselt werden, ein Downgrade durchgeführt wird. Ein abgeschwächtes verschlüsseltes Feld ist ein leichteres Ziel für versuchte Brute-Force-Angriffe offline. Verschiedene Angriffsmethoden nutzen schwache Kerberos-Verschlüsselungsverfahren. In dieser Erkennung lernt Azure ATP die Kerberos-Verschlüsselungstypen, die von Computern und Benutzern verwendet werden, und benachrichtigt Sie, wenn ein schwächeres Verschlüsselungsverfahren verwendet wird, das (1) unüblich für den Quellcomputer und/oder den Benutzer ist und (2) mit bekannten Angriffstechniken übereinstimmt. 
 
 Skeleton Key ist eine Schadsoftware, die auf einem Domänencontroller ausgeführt wird und mit der eine Authentifizierung bei der Domäne mit jedem Konto ohne das passende Kennwort möglich ist. Diese Schadsoftware verwendet häufig schwächere Verschlüsselungsalgorithmen, um einen Hashwert für das Kennwort des Benutzers auf dem Domänencontroller zu erstellen. In dieser Erkennung wurde die Verschlüsselungsmethode der KRB_ERR-Nachricht vom Domänencontroller an das Konto, von dem aus ein Ticket erstellt wird, im Vergleich zum zuvor gelernten Verhalten heruntergestuft.
 
@@ -544,7 +543,7 @@ Das Bearbeiten von Zonenübertragungen ist eine Aufgabe innerhalb einer Prüflis
 
 ## <a name="remote-code-execution-attempt"></a>Versuchte Remote-Codeausführung
 <a name="remote-code-execution-attempt"></a>
-*Alter Name:* Versuchte Remotecodeausführung
+*Vorheriger Name*: Versuchte Remote-Codeausführung
 
 **Beschreibung**
 
@@ -574,11 +573,11 @@ Angreifer, die Administratoranmeldeinformationen kompromittiert haben oder einen
 ## <a name="suspicious-communication-over-dns"></a>Verdächtige Kommunikation über DNS
 <a name="suspicious-communication-over-dns"></a>
 
-*Alter Name:* Verdächtige Kommunikation über DNS 
+*Vorheriger Name*: Verdächtige Kommunikation über DNS 
 
 **Beschreibung**
 
-In den meisten Organisationen wird das DNS-Protokoll nicht überwacht und nur selten wegen böswilliger Angriffe blockiert. Das gibt einem Angreifer auf einem kompromittierten Computer die Möglichkeit, das DNS-Protokoll zu missbrauchen. Böswillige Kommunikation über DNS kann zur Datenexfiltration, Zugriff über Command-and-Control-Server und/oder zur Umgehung von Netzwerkeinschränkungen führen.
+In den meisten Organisationen wird das DNS-Protokoll nicht überwacht und nur selten wegen böswilliger Angriffe blockiert. Das gibt einem Angreifer auf einem kompromittierten Computer die Möglichkeit, das DNS-Protokoll zu missbrauchen. Schädliche Kommunikation über DNS kann für Datenexfiltration, Command-and-Control-Zugriff und/oder zur Umgehung von Einschränkungen des Unternehmensnetzwerks verwendet werden.
 
 **Untersuchung**
 > [!NOTE]
@@ -597,7 +596,7 @@ Wenn sich die registrierte Domäne nach Ihrer Untersuchung als nicht vertrauensw
 ## <a name="suspicious-modification-of-sensitive-groups"></a>Verdächtige Modifizierung von sensiblen Gruppen
 <a name="suspicious-midification-of-sensitive-groups"></a>
 
-*Alter Name:* Verdächtige Modifizierung von sensiblen Gruppen
+*Vorheriger Name*: Verdächtige Modifizierung von sensiblen Gruppen
 
 **Beschreibung**
 
@@ -624,7 +623,7 @@ Richten Sie gegebenenfalls [Privileged Access Management for Active Directory (P
 ## <a name="suspicious-service-creation"></a>Erstellen eines verdächtigen Diensts
 <a name="suspicious-service-creation"></a>
 
-*Alter Name:* Verdächtige Diensterstellung
+*Vorheriger Name*: Erstellen eines verdächtigen Diensts
 
 **Beschreibung**
 
@@ -650,7 +649,7 @@ Ein verdächtiger Dienst wurde von Ihrer Organisation auf einem Domänencontroll
 ## <a name="suspicious-vpn-connection"></a>Verdächtige VPN-Verbindung
 <a name="suspicious-vpn-detection"></a>
 
-*Alter Name:* Verdächtige VPN-Verbindung 
+*Vorheriger Name*: Verdächtige VPN-Verbindung 
 
 **Beschreibung**
 
@@ -671,41 +670,152 @@ Es wird eine Warnung ausgelöst, wenn basierend auf den Machine-Learning-Algorit
 2.  Sie sollten für diesen Benutzer die Option blockieren, über VPN eine Verbindung herzustellen.
 
 
-## <a name="unusual-protocol-implementation"></a>Ungewöhnliche Protokollimplementierung
+## <a name="suspected-wannacry-ransomware-attack"></a>Suspected WannaCry ransomware attack (Verdacht auf einen WannaCry-Ransomangriff)
 <a name="unusual-protocol-implementation"></a>
 
-*Alter Name:* Ungewöhnliche Protokollimplementierung *Diese Gruppe von Sicherheitswarnungen wird umbenannt und erhält neue externalIds in einer zukünftigen Azure ATP-Version*.
+*Vorheriger Name*: Ungewöhnliche Protokollimplementierung (potenzieller WannaCry-Ransomwareangriff)
 
 **Beschreibung**
 
-Angreifer verwenden Tools, die verschiedene Protokolle (SMB, Kerberos, NTLM) auf nicht standardmäßige Arten implementieren. Während diese Art des Netzwerkdatenverkehrs von Windows ohne Warnungen akzeptiert wird, kann Azure ATP potenziell böswillige Absichten erkennen. Das Verhalten ist maßgeblich für Techniken wie Overpass-the-Hash, Brute Force und Exploits, die von erweiterter Ransomware, z.B. WannaCry, verwendet werden.
+Angreifer verwenden Tools, die verschiedene Protokolle auf nicht standardmäßige Arten implementieren. Während diese Art des Netzwerkdatenverkehrs von Windows ohne Warnungen akzeptiert wird, kann Azure ATP potenziell böswillige Absichten erkennen. Das Verhalten weist auf Techniken hin, die von erweiterter Ransomware, z.B. WannaCry, verwendet werden.
 
 **Untersuchung**
 
-Identifizieren Sie das ungewöhnliche Protokoll, und klicken Sie auf der Zeitachse der verdächtigen Aktivitäten auf die Sicherheitswarnung, um zu der jeweiligen Seite mit Details zu gelangen. Das Protokoll wird über dem Pfeil angezeigt: Kerberos oder NTLM.
+Überprüfen Sie die ungewöhnliche Aktivität in der Sicherheitswarnung in der Aktivitätszeitachse. Klicken Sie auf die Sicherheitswarnung, um die zugehörige Seite mit Details zu öffnen, und überprüfen Sie die möglicherweise betroffenen Entitäten sowie die Liste der Beweise. 
 
-- **Kerberos**: Dies wird häufig ausgelöst, wenn ein Hacking-Tool wie Mimikatz verwendet wurde, das möglicherweise einen Overpass-the-Hash-Angriff ausführt. Überprüfen Sie, ob auf dem Quellcomputer eine Anwendung ausgeführt wird, die im Widerspruch zur Kerberos-RFC ihren eigenen Kerberos-Stapel implementiert. Wenn dies der Fall ist, ist das Ereignis unbedenklich richtig positiv, und Sie können die Warnung **schließen**. Wenn die Warnung weiterhin ausgelöst wird und die Ergebnisse Ihrer vorherigen Überprüfung weiterhin zutreffen, können Sie die Warnung **Unterdrücken**.
+Ist das Ereignis *richtig positiv*, *unbedenklich richtig positiv* oder *falsch positiv*? 
 
-- **NTLM**: Es könnte sich um WannaCry oder Tools wie Metasploit, Medusa und Hydra handeln.  
+1. Überprüfen Sie, ob WannaCry auf dem Quellcomputer ausgeführt wird. 
 
-Um festzustellen, ob es sich dabei um einen WannaCry-Angriff handelt, führen Sie folgende Schritte aus:
+2. Wenn dies der Fall ist, ist diese Warnung richtig positiv. Um den Umfang der Sicherheitsverletzung zu ermitteln, führen Sie folgende Aktionen aus:
+      - Untersuchen Sie den Quellcomputer.
+      - Untersuchen Sie den betroffenen Computer. 
 
-1. Überprüfen Sie, ob auf dem Quellcomputer ein Angriffstool wie Metasploit, Medusa oder Hydra ausgeführt wird.
+2. Wenn auf dem Quellcomputer kein Angriffstool ausgeführt wird, implementieren Anwendungen zuweilen einen eigenen NTLM- oder SMB-Stapel. Überprüfen Sie, ob auf dem Quellcomputer eine Anwendung ausgeführt wird, die einen eigenen NTLM- oder SMB-Stapel implementiert.
 
-2. Wenn keine Angriffstools gefunden werden, überprüfen Sie, ob auf dem Quellcomputer eine Anwendung ausgeführt wird, die ihren eigenen NTLM- oder SMB-Stapel implementiert.
+      1. Wenn ein solcher Stapel auf dem Computer ausgeführt wird, dies aber nicht so sein sollte, korrigieren Sie die Anwendungskonfiguration. In diesem Fall handelt es sich um eine unbedenkliche Aktivität, und die Sicherheitswarnung kann geschlossen werden.
 
-3. Klicken Sie auf den Quellcomputer, um die entsprechende Profilseite aufzurufen. Überprüfen Sie, was ungefähr zum Zeitpunkt der Warnung passiert ist. Suchen Sie nach ungewöhnlichen Aktivitäten, z. B.: Wer war angemeldet, auf welche Ressourcen wurde zugegriffen. Wenn Sie die Windows Defender ATP-Integration aktiviert haben, klicken Sie auf das Windows Defender ATP-Badge, ![WD ATP](./media/wd-badge.png) um den Computer weiter zu untersuchen. In Windows Defender ATP können Sie sehen, welche Prozesse und Warnungen ungefähr gleichzeitig mit der Warnung aufgetreten sind.
+      2. Wenn auf dem Computer ein eigener Stapel ausgeführt wird und die Konfiguration richtig ist, kann die Sicherheitswarnung geschlossen und der Computer ausgeschlossen werden, da es sich wahrscheinlich um eine unbedenkliche Aktivität handelt.
+
+3. Klicken Sie auf den Quellcomputer, um die entsprechende Profilseite aufzurufen. Überprüfen Sie, was ungefähr zum Zeitpunkt der Warnung passiert ist. Suchen Sie nach ungewöhnlichen Aktivitäten, beispielsweise danach, welche Benutzer angemeldet waren und auf welche Ressourcen zugegriffen wurde. 
+
+4. Wenn Sie die Windows Defender ATP-Integration aktiviert haben, klicken Sie auf das Windows Defender ATP-Badge, ![WD ATP](./media/wd-badge.png) um den Computer weiter zu untersuchen. In Windows Defender ATP können Sie sehen, welche Prozesse und Warnungen ungefähr gleichzeitig mit der Warnung aufgetreten sind.
 
 
 **Wartung**
 
-Patchen Sie all Ihre Computer, und führen Sie insbesondere Sicherheitsupdates durch.
+1. Kontrollieren Sie den Quellcomputer. 
+      - [Entfernen von WannaCry](https://support.microsoft.com/help/890830/remove-specific-prevalent-malware-with-windows-malicious-software-remo)
+      - WanaKiwi kann für einige Ransomwares die Daten in deren Besitz entschlüsseln. Dies ist aber nur möglich, wenn der Benutzer den Computer nicht neu gestartet oder ausgeschaltet hat. Weitere Informationen finden Sie unter [Wanna Cry Ransomware (WannaCry-Ransomware)](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
+      - Suchen Sie nach Benutzern, die zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. 
+2. Patchen Sie alle Computer, und stellen Sie sicher, dass Sicherheitsupdates angewendet werden. 
+      - [Deaktivieren von SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
 
-1. [Deaktivieren von SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
+## <a name="suspected-use-of-metasploit-hacking-framework"></a>Suspected use of Metasploit hacking framework (Verdacht auf Verwendung eines Hackerframeworks)
 
-2. [Entfernen von WannaCry](https://support.microsoft.com/help/890830/remove-specific-prevalent-malware-with-windows-malicious-software-remo)
 
-3. WanaKiwi kann für einige Ransomwares die Daten in deren Besitz entschlüsseln. Dies ist aber nur möglich, wenn der Benutzer den Computer nicht neu gestartet oder ausgeschaltet hat. Weitere Informationen finden Sie unter [Wanna Cry Ransomware (WannaCry-Ransomware)](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
+*Vorheriger Name*: Ungewöhnliche Protokollimplementierung (potenzielle Verwendung schädlicher Hackertools wie Metasploit)
+
+**Beschreibung**
+
+Angreifer verwenden Tools, die verschiedene Protokolle (SMB, Kerberos, NTLM) auf nicht standardmäßige Arten implementieren. Während diese Art des Netzwerkdatenverkehrs von Windows ohne Warnungen akzeptiert wird, kann Azure ATP potenziell böswillige Absichten erkennen. Das Verhalten weist auf Techniken wie z.B. die Verwendung des Metasploit-Hackerframeworks hin. 
+
+**Untersuchung**
+
+Überprüfen Sie die ungewöhnliche Aktivität in der Sicherheitswarnung in der Aktivitätszeitachse. Klicken Sie auf die Sicherheitswarnung, um die zugehörige Seite mit Details zu öffnen, und überprüfen Sie die möglicherweise betroffenen Entitäten sowie die Liste der Beweise.
+
+Ist das Ereignis *richtig positiv*, *unbedenklich richtig positiv* oder *falsch positiv*? 
+
+1. Überprüfen Sie, ob auf dem Quellcomputer ein Angriffstool wie Metasploit oder Medusa ausgeführt wird. 
+
+2. Wenn dies der Fall ist, handelt es sich um ein richtig positives Ereignis. Um den Umfang der Sicherheitsverletzung zu ermitteln, führen Sie folgende Aktionen aus:
+      - Untersuchen Sie den Quellcomputer.
+      - Untersuchen Sie den betroffenen Computer. 
+
+3. Wenn auf dem Quellcomputer kein Angriffstool ausgeführt wird, implementieren Anwendungen zuweilen einen eigenen NTLM- oder SMB-Stapel. Überprüfen Sie, ob auf dem Quellcomputer eine Anwendung ausgeführt wird, die einen eigenen NTLM- oder SMB-Stapel implementiert.
+
+4. Wenn auf dem Computer ein eigener NTLM- oder SMB-Stapel ausgeführt wird, dies aber nicht so sein sollte, korrigieren Sie die Anwendungskonfiguration.
+      1. In diesem Fall handelt es sich um eine unbedenkliche Aktivität, und die Sicherheitswarnung kann geschlossen werden. 
+      2. Wenn auf dem Computer ein eigener Stapel ausgeführt wird und die Konfiguration richtig ist, kann die Sicherheitswarnung geschlossen und der Computer ausgeschlossen werden, da es sich wahrscheinlich um eine unbedenkliche Aktivität handelt.
+
+5. Klicken Sie auf den Quellcomputer, um die entsprechende Profilseite aufzurufen. Überprüfen Sie, was ungefähr zum Zeitpunkt der Warnung passiert ist. Suchen Sie nach ungewöhnlichen Aktivitäten, z. B.: Wer war angemeldet, auf welche Ressourcen wurde zugegriffen. Wenn Sie die Windows Defender ATP-Integration aktiviert haben, klicken Sie auf das Windows Defender ATP-Badge, ![WD ATP](./media/wd-badge.png) um den Computer weiter zu untersuchen. In Windows Defender ATP können Sie sehen, welche Prozesse und Warnungen ungefähr gleichzeitig mit der Warnung aufgetreten sind.
+
+
+**Wartung**
+
+1. Setzen Sie die Kennwörter der betroffenen Benutzer zurück, und aktivieren Sie die mehrstufige Authentifizierung.
+2. Kontrollieren Sie den Quellcomputer.
+   1. Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
+   2. Suchen Sie nach Benutzern, die zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind.
+   3. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie die mehrstufige Authentifizierung. 
+4. Setzen Sie die Kennwörter des Benutzers des Quellcomputers zurück, und aktivieren Sie die mehrstufige Authentifizierung. 
+5. [Deaktivieren von SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
+
+
+## <a name="suspected-overpass-the-hash-attack-kerberos"></a>Suspected overpass-the-hash attack (Kerberos) (Verdacht auf einen Overpass-the-Hash-Angriff (Kerberos))
+<a name="unusual-protocol-implementation"></a>
+
+*Vorheriger Name*: Ungewöhnliche Kerberos-Protokollimplementierung (potenzieller Overpass-the-Hash-Angriff) 
+
+**Beschreibung**
+
+Angreifer verwenden Tools, die verschiedene Protokolle wie Kerberos und SMB auf nicht standardmäßige Arten implementieren. Während diese Art des Netzwerkdatenverkehrs von Windows ohne Warnungen akzeptiert wird, kann Azure ATP potenziell böswillige Absichten erkennen. Das Verhalten ist maßgeblich für Techniken wie Overpass-the-Hash, Brute Force und Exploits, die von erweiterter Ransomware, z.B. WannaCry, verwendet werden.
+
+**Untersuchung**
+
+Überprüfen Sie die ungewöhnliche Aktivität in der Sicherheitswarnung in der Aktivitätszeitachse. Klicken Sie auf die Sicherheitswarnung, um die zugehörige Seite mit Details zu öffnen, und überprüfen Sie die möglicherweise betroffenen Entitäten sowie die Liste der Beweise.
+
+Ist das Ereignis *richtig positiv*, *unbedenklich richtig positiv* oder *falsch positiv*? 
+
+ 1. Zuweilen implementieren Anwendungen einen eigenen Kerberos-Stapel, der nicht der Kerberos-RFC-Dokumentation entspricht.
+   1. Überprüfen Sie, ob auf dem Quellcomputer ein eigener Kerberos-Stapel ausgeführt wird. 
+   2. Wenn auf dem Computer ein eigener Kerberos-Stapel ausgeführt wird, dies aber nicht so sein sollte, korrigieren Sie die Anwendungskonfiguration. In diesem Fall handelt es sich um eine unbedenkliche Aktivität, und die Sicherheitswarnung kann geschlossen werden. 
+   3. Wenn auf dem Computer ein eigener Kerberos-Stapel ausgeführt wird und die Konfiguration richtig ist, kann die Sicherheitswarnung geschlossen und der Computer ausgeschlossen werden, da es sich wahrscheinlich um eine unbedenkliche Aktivität handelt.
+
+ **Wartung**
+
+1. Setzen Sie die Kennwörter der betroffenen Benutzer zurück, und aktivieren Sie die mehrstufige Authentifizierung.
+2. Kontrollieren Sie den Quellcomputer. 
+   1. Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
+   2. Suchen Sie nach Benutzern, die zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. 
+   3. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie die mehrstufige Authentifizierung. 
+4. Setzen Sie die Kennwörter des Benutzers des Quellcomputers zurück, und aktivieren Sie die mehrstufige Authentifizierung. 
+
+## <a name="suspected-brute-force-attack-smb"></a>Suspected Brute Force attack (SMB) (Verdacht auf einen Brute-Force-Angriff (SMB))
+<a name="unusual-protocol-implementation-smb"></a>
+
+*Vorheriger Name*: Ungewöhnliche Protokollimplementierung (potenzielle Verwendung schädlicher Tools wie Hydra)
+
+**Beschreibung**
+
+Angreifer verwenden Tools, die verschiedene Protokolle wie SMB, Kerberos und NTLM auf nicht standardmäßige Arten implementieren. Während diese Art des Netzwerkdatenverkehrs von Windows ohne Warnungen akzeptiert wird, kann Azure ATP potenziell böswillige Absichten erkennen. Das Verhalten weist auf Brute-Force-Techniken hin. 
+
+**Untersuchung**
+
+Überprüfen Sie die ungewöhnliche Aktivität in der Sicherheitswarnung in der Aktivitätszeitachse. Klicken Sie auf die Sicherheitswarnung, um die zugehörige Seite mit Details zu öffnen, und überprüfen Sie die möglicherweise betroffenen Entitäten sowie die Liste der Beweise.
+
+Ist das Ereignis *richtig positiv*, *unbedenklich richtig positiv* oder *falsch positiv*? 
+
+1. Überprüfen Sie, ob auf dem Quellcomputer ein Angriffstool wie Hydra ausgeführt wird. 
+   1. Wenn dies der Fall ist, handelt es sich um ein richtig positives Ereignis. Um den Umfang der Sicherheitsverletzung zu ermitteln, führen Sie folgende Aktionen aus:
+      - Untersuchen Sie den Quellcomputer.
+      - Untersuchen Sie den betroffenen Computer. 
+
+2. Wenn auf dem Quellcomputer kein Angriffstool ausgeführt wird, implementieren Anwendungen zuweilen einen eigenen NTLM- oder SMB-Stapel. Überprüfen Sie, ob auf dem Quellcomputer eine Anwendung ausgeführt wird, die einen eigenen NTLM- oder SMB-Stapel implementiert.
+
+3. Klicken Sie auf den Quellcomputer, um die entsprechende Profilseite aufzurufen. Überprüfen Sie, was ungefähr zum Zeitpunkt der Warnung passiert ist. Suchen Sie nach ungewöhnlichen Aktivitäten, beispielsweise danach, welche Benutzer angemeldet waren und auf welche Ressourcen zugegriffen wurde. Wenn Sie die Windows Defender ATP-Integration aktiviert haben, klicken Sie auf das Windows Defender ATP-Badge, ![WD ATP](./media/wd-badge.png) um den Computer weiter zu untersuchen. In Windows Defender ATP können Sie sehen, welche Prozesse und Warnungen ungefähr gleichzeitig mit der Warnung aufgetreten sind.
+
+**Wartung**
+
+1. Setzen Sie die Kennwörter der angenommenen Benutzer zurück, und aktivieren Sie die mehrstufige Authentifizierung.
+2. Fügen Sie die angenommenen Benutzer zu einer Watchlist hinzu.
+3. Kontrollieren Sie den Quellcomputer.
+   1. Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
+   2. Suchen Sie nach Benutzern, die zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind.
+   3. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie die mehrstufige Authentifizierung. 
+4. Erzwingen Sie komplexe und lange Kennwörter in der Organisation. Komplexe und lange Kennwörter stellen die notwendige erste Sicherheitsstufe zum Schutz vor zukünftigen Brute-Force-Angriffen dar.
+5. [Deaktivieren von SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
+
 
 ## <a name="user-and-ip-address-reconnaissance-smb"></a>User and IP address reconnaissance (SMB) (Reconnaissance über Benutzer und IP-Adressen (SMB))
 <a name="reconnaissance-using-smb-session-enumeration"></a> Reconnaissance mithilfe der SMB-Sitzungsenumeration
@@ -723,7 +833,7 @@ In dieser Erkennung wird eine Warnung ausgelöst, wenn eine SMB-Sitzungsenumerat
 
  - Wird auf dem Quellcomputer eine Art Sicherheitsscanner ausgeführt? Falls ja, können Sie die verdächtige Aktivität **schließen und ausschließen**.
 
-2. Überprüfen Sie, welche beteiligten Benutzer die Vorgänge ausgeführt haben. Melden sich diese normalerweise auf dem Quellcomputer an, oder handelt es sich bei diesen um Administratoren, die solche Aktionen ausführen sollen?  
+2. Überprüfen Sie, welche beteiligten Benutzer den Vorgang ausgeführt haben. Melden sich diese normalerweise auf dem Quellcomputer an, oder handelt es sich bei diesen um Administratoren, die solche Aktionen ausführen sollen?  
 
 3. Falls dies zutrifft und die Warnung aktualisiert wird, **unterdrücken** Sie die verdächtige Aktivität.  
 
