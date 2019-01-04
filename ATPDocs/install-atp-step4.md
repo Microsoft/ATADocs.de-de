@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/28/2018
+ms.date: 12/16/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 51911e39-76c7-4dcd-bc0b-ec6235d0403f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: fd2a2316f63b5324e7869878104bd663e48b2771
-ms.sourcegitcommit: e2a89030c31376c6798697a62b484f45ed54e679
+ms.openlocfilehash: 5b5d588f11bb1c7a665cf4727cb996e5261b7237
+ms.sourcegitcommit: 281d8ea451b6ac726331d0032c344651b1a964b7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52501108"
+ms.lasthandoff: 12/16/2018
+ms.locfileid: "53450387"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -38,9 +38,9 @@ ms.locfileid: "52501108"
 Führen Sie auf dem Domänencontroller folgende Schritte aus.
 
 1. Stellen Sie sicher, dass der Computer mit dem relevanten Azure ATP-Clouddienst-Endpunkt verbunden ist:
-  - https://triprd1wceuw1sensorapi.atp.azure.com (für Europa)  
-  - https://triprd1wcuse1sensorapi.atp.azure.com (für die USA)
-  - https://triprd1wcasse1sensorapi.atp.azure.com (für Asien)
+  - [https://triprd1wceuw1sensorapi.atp.azure.com](https://triprd1wceuw1sensorapi.atp.azure.com) (für Europa)  
+  - [https://triprd1wcuse1sensorapi.atp.azure.com](https://triprd1wcuse1sensorapi.atp.azure.com) (für die USA)
+  - [https://triprd1wcasse1sensorapi.atp.azure.com](https://triprd1wcasse1sensorapi.atp.azure.com) (für Asien)
 
 2. Extrahieren Sie die Installationsdateien aus der ZIP-Datei. 
 > [!NOTE] 

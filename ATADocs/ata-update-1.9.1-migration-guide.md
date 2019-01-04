@@ -13,20 +13,19 @@ ms.technology: ''
 ms.assetid: 2946310a-8e4e-48fc-9450-fc9647efeb22
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: b645522c26f42b4864a68f3793cb9474e98d2149
-ms.sourcegitcommit: ec5dc294d9c6cd5693b13a7c5e7cf1bdd6fb47d7
+ms.openlocfilehash: 80d6b2744c3299bf92d0c4082085dbd872403cc0
+ms.sourcegitcommit: 9acf035f6f2ce32290e00d2e45385ae7993bb63a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179132"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53334986"
 ---
 # <a name="ata-version-191"></a>ATA Version 1.9.1
 
-## <a name="introduction"></a>Einführung
 
 Dieser Artikel beschreibt Probleme, die in Update 1 für Microsoft Advanced Threat Analytics (ATA), Version 1.9, behoben wurden. Die Buildnummer dieses Updates lautet 1.9.7412.
 
-## <a name="fixed-issues-included-in-this-update"></a>In diesem Update enthaltene behobene Probleme:
+## <a name="fixed-issues-included-in-this-update"></a>In diesem Update enthaltene behobene Probleme
 
 - Möglichkeit von Fehlern bei der Migration von ATA Version 1.8 auf Version 1.9 für große Datenbanken.
 - Wenn Sie die neueste Version des Microsoft Edge-Browsers verwenden und zwischen Benutzern wechseln, reagiert der Browser möglicherweise nicht mehr.
@@ -37,11 +36,11 @@ Dieser Artikel beschreibt Probleme, die in Update 1 für Microsoft Advanced Thre
 - Inkonsistente Exporte verdächtiger Aktivitäten nach Microsoft Excel. Gelegentliche Fehler bei der Fehlergenerierung.  
 
 
-## <a name="improvements-included-in-this-update"></a>In diesem Update enthaltene Verbesserungen: 
+## <a name="improvements-included-in-this-update"></a>In diesem Update enthaltene Verbesserungen
 - Änderungen erforderlich für die MAS-Zertifizierung (Microsoft Accessibility Standards).
 - Enthält zusätzliche Fehlerbehebungen in Bezug auf die Leistung und Sicherheit.
 
-## <a name="get-this-update"></a>Rufen Sie dieses Update ab:
+## <a name="get-this-update"></a>Rufen Sie dieses Update ab
 
 Updates für Microsoft Advanced Threat Analytics, Version 1.9, sind über Microsoft Update oder per manuellem Download verfügbar.
 
@@ -61,7 +60,7 @@ Nach dem Anwenden dieses Updates muss Ihr Computer möglicherweise neu gestartet
 Dieses Update ersetzt ATA Version 1.9 (1.9.7312).
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [ATA-Versionen](ata-versions.md)

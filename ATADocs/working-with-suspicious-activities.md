@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1557dff19375a5751eb655205dabadd684c655ba
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: cf847d04ea87beddc9e33a086f998abd51e680fb
+ms.sourcegitcommit: 8f9d6c517b91b9b389b604cd85f2482593b36fcf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133173"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53654908"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -37,7 +37,7 @@ Zu jeder verdächtigen Aktivität stehen folgende Informationen zur Verfügung:
 
 -   Schweregrad der verdächtigen Aktivitäten: „Hoch“, „Mittel“ oder „Niedrig“
 
--   Staus: „Offen“, „Aufgelöst“ oder „Unterdrückt“.
+-   Status: „Offen“, „Aufgelöst“ oder „Unterdrückt“.
 
 -   Möglichkeit für Folgendes:
 
@@ -73,8 +73,6 @@ So filtern Sie die Liste der verdächtigen Aktivitäten
     Weist auf verdächtige Aktivitäten hin, die zu Identitätsdiebstahl, Berechtigungsausweitung oder anderen Angriffen mit schwerwiegenden Auswirkungen führen können.
 
 
-
-
 ## <a name="remediating-suspicious-activities"></a>Beheben verdächtiger Aktivitäten
 Sie können den Status einer verdächtigen Aktivität ändern, indem Sie auf den aktuellen Status der verdächtigen Aktivität klicken und eine der folgenden Optionen auswählen: **Offen**, **Unterdrückt**, **Aufgelöst** oder **Verworfen**.
 Klicken Sie dafür auf die drei Punkte in der oberen rechten Ecke einer besonders verdächtigen Aktivität, um die Liste der verfügbaren Aktionen anzuzeigen.
@@ -83,7 +81,7 @@ Klicken Sie dafür auf die drei Punkte in der oberen rechten Ecke einer besonder
 
 **Status von verdächtigen Aktivitäten**
 
--   **Öffnen**: In dieser Liste werden alle neuen verdächtigen Aktivitäten angezeigt.
+-   **Offen**: In dieser Liste werden alle neuen verdächtigen Aktivitäten angezeigt.
 
 -   **Auflösen**: Wird verwendet, um verdächtige Aktivitäten nachzuverfolgen, die Sie identifiziert, untersucht oder entschärft haben.
 

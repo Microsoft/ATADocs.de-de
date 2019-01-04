@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/09/2018
+ms.date: 12/19/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8604e3cfead3b52fd9f0d1ed38bb7d806cf50f46
-ms.sourcegitcommit: d1c9c3e69b196f6086a8f100e527553cf0d95aac
+ms.openlocfilehash: 5e4c8ccc1af72a1951b1437f0d19468b7ca1382f
+ms.sourcegitcommit: d68a44b3230dc4c522d8d895eb3bc93feacae62e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125131"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53615306"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -37,7 +37,7 @@ Weitere Informationen zum Arbeiten mit Azure ATP-Sicherheitswarnungen finden Sie
 
 ## <a name="security-alert-name-mapping-and-unique-externalid"></a>Zuordnen von Sicherheitswarnungsnamen und eindeutige externalId
 
-In Version 2.56 wurden alle Sicherheitswarnungen für Azure ATP umbenannt. Die neuen Namen sind jetzt verständlicher. In der folgenden Tabelle sind die neuen und alten Namen sowie die eindeutigen externalIds nebeneinander aufgelistet. Microsoft empfiehlt die Verwendung von externalIds zur Warnung anstelle von Warnungsnamen für Skripts oder die Automatisierung, da nur externalIds dauerhaft für Sicherheitswarnungen verwendet und nicht geändert werden. 
+In Version 2.56 wurden alle Sicherheitswarnungen für Azure ATP umbenannt. Die neuen Namen sind jetzt verständlicher. In der folgenden Tabelle sind die neuen und alten Namen sowie die eindeutigen externalIds nebeneinander aufgelistet. Microsoft empfiehlt die Verwendung von externalIds zur Warnung anstelle von Warnungsnamen für Skripts oder die Automatisierung, da nur externalIds dauerhaft für Sicherheitswarnungen verwendet und nicht geändert werden.
 
 > [!div class="mx-tableFixed"] 
 
@@ -46,7 +46,7 @@ In Version 2.56 wurden alle Sicherheitswarnungen für Azure ATP umbenannt. Die n
 |Reconnaissance mithilfe von Kontoenumeration|Reconnaissance mithilfe von Kontoenumeration|2003|
 |Honeytoken-Aktivität|Honeytoken-Aktivität|2014|
 |Malicious request of Data Protection API master key (Böswillige Anforderung eines Masterschlüssels zur Datenschutz-API)|Böswillige Anforderung privater Informationen im Rahmen der Datensicherheit|2020|
-|Network-mapping reconnaissance (DNS) (Reconnaissance über Netzwerkzuordnung (DNS))|Reconnaissance über DNS|2007|
+|Network mapping reconnaissance (DNS) (Reconnaissance über Netzwerkzuordnung (DNS))|Reconnaissance über DNS|2007|
 |Versuchte Remote-Codeausführung|Versuchte Remote-Codeausführung|2019|
 |Suspected Brute Force attack (LDAP) (Verdacht auf einen Brute-Force-Angriff (LDAP))|Brute-Force-Angriff mithilfe einer einfachen LDAP-Bindung|2004|
 |Suspected DCShadow attack (domain controller promotion) (Verdacht auf DCShadow-Angriff (Heraufstufung von Domänencontrollern))|Verdächtige Heraufstufung zu Domänencontrollern (potenzieller DcShadow-Angriff)|2028|
@@ -55,26 +55,30 @@ In Version 2.56 wurden alle Sicherheitswarnungen für Azure ATP umbenannt. Die n
 |Verdacht auf Verwendung eines Golden Ticket (Herabstufung der Verschlüsselung)|Aktivität zur Herabstufung der Verschlüsselung (potenzieller Golden Ticket-Angriff)|2009|
 |Suspected Golden Ticket usage (forged authorization data) (Verdacht auf Verwendung eines Golden Ticket (gefälschte Autorisierungsdaten)) |Berechtigungsausweitung mithilfe von gefälschten Autorisierungsdaten|2013|
 |Suspected golden ticket usage (nonexistent account) (Verdacht auf Verwendung eines Golden Ticket (nicht vorhandenes Konto))|Kerberos Golden Ticket: nicht vorhandenes Konto|2027|
-|Verdacht auf Verwendung eines Golden Ticket (Ticketanomalie) |Kerberos Golden Ticket – Ticketanomalie|2022|
-|Verdacht auf Verwendung eines Golden Ticket (Zeitanomalie) – Vorschauversion| –|2032|
+|Suspected golden ticket usage (time anomaly) (Verdacht auf Verwendung eines Golden Ticket (Zeitanomalie)) |Kerberos Golden Ticket – Zeitanomalie|2022|
+|Verdacht auf Verwendung eines Golden Ticket (Ticketanomalie) – Vorschauversion|–|2032|
 |Suspected identity theft (pass-the-hash) (Verdacht auf Identitätsdiebstahl (Pass-the-Hash))|Identitätsdiebstahl mithilfe eines Pass-the-Hash-Angriffs|2017|
 |Suspected identity theft (pass-the-ticket) (Verdacht auf Identitätsdiebstahl (Pass-the-Ticket))|Identitätsdiebstahl mithilfe eines Pass-the-Ticket-Angriffs|2018|
+|Suspected Brute Force attack (SMB) (Verdacht auf einen Brute-Force-Angriff (SMB))|Ungewöhnliche Protokollimplementierung (potenzielle Verwendung schädlicher Tools wie Hydra)|2033|
+|Suspected Brute Force attack (Kerberos NTLM) (Verdacht auf einen Brute-Force-Angriff (Kerberos NTLM))|Verdächtige Authentifizierungsfehler|2023|
 |Suspected over-pass-the-hash attack (encryption downgrade) (Verdacht auf Over-Pass-the-Hash-Angriff (Herabstufung der Verschlüsselung))|Aktivität zur Herabstufung der Verschlüsselung (potenzieller Overpass-the-Hash-Angriff)|2008|
+|Suspected overpass-the-hash attack (Kerberos) (Verdacht auf einen Overpass-the-Hash-Angriff (Kerberos))|Ungewöhnliche Kerberos-Protokollimplementierung (potenzieller Overpass-the-Hash-Angriff)|2002|
+|Suspected use of Metasploit hacking framework (Verdacht auf Verwendung eines Hackerframeworks)|Ungewöhnliche Protokollimplementierung (potenzielle Verwendung schädlicher Hackertools wie Metasploit)|2034|
 |Suspected Skeleton Key attack (encryption downgrade) (Verdacht auf Skeleton-Key-Angriff (Herabstufung der Verschlüsselung))|Aktivität zur Herabstufung der Verschlüsselung (potenzieller Skeleton Key-Angriff)|2010|
+|Suspected WannaCry ransomware attack (Verdacht auf einen WannaCry-Ransomangriff)|Ungewöhnliche Protokollimplementierung (potenzieller WannaCry-Ransomwareangriff)|2035|
 |Verdächtige Kommunikation über DNS|Verdächtige Kommunikation über DNS|2031|
 |Verdächtige Modifizierung von sensiblen Gruppen|Verdächtige Modifizierung von sensiblen Gruppen|2024|
 |Erstellen eines verdächtigen Diensts|Erstellen eines verdächtigen Diensts|2026|
 |Verdächtige VPN-Verbindung|Verdächtige VPN-Verbindung|2025|
-|Suspected WannaCry ransomware attack (Verdacht auf einen WannaCry-Ransomangriff)|Ungewöhnliche Protokollimplementierung (potenzieller WannaCry-Ransomwareangriff)|2002|
-|Suspected Brute Force attack (SMB) (Verdacht auf einen Brute-Force-Angriff (SMB))|Ungewöhnliche Protokollimplementierung (potenzielle Verwendung schädlicher Tools wie Hydra)|2002|
-|Suspected use of Metasploit hacking framework (Verdacht auf Verwendung eines Hackerframeworks)|Ungewöhnliche Protokollimplementierung (potenzielle Verwendung schädlicher Hackertools wie Metasploit)|2002|
-|Suspected overpass-the-hash attack (Kerberos) (Verdacht auf einen Overpass-the-Hash-Angriff (Kerberos))|Ungewöhnliche Kerberos-Protokollimplementierung (potenzieller Overpass-the-Hash-Angriff)|2002|
 |User and group membership reconnaissance (SAMR) (Reconnaissance über Benutzer und Gruppenmitgliedschaften (SAMR))|Reconnaissance mithilfe von Verzeichnisdienstabfragen|2021|
 |User and IP address reconnaissance (SMB) (Reconnaissance über Benutzer und IP-Adressen (SMB)) |Reconnaissance mithilfe der SMB-Sitzungsenumeration|2012|
 
 
+
+
 ## <a name="account-enumeration-reconnaissance"></a>Reconnaissance mithilfe von Kontoenumeration
 <a name="reconnaissance-using-account-enumeration"></a>
+
 *Vorheriger Name*: Reconnaissance mithilfe von Kontoenumeration
 
 **Beschreibung**
@@ -141,9 +145,9 @@ In dieser Erkennung wird eine Warnung ausgelöst, wenn die DPAPI zum Abrufen des
 
 1. Wird auf dem Quellcomputer ein von der Organisation genehmigter Sicherheitsscanner für Active Directory ausgeführt?
 
-2. Falls dies zutrifft und von Ihnen so gewünscht ist, können Sie die verdächtige Aktivität **schließen und ausschließen**.
+2. Falls dies zutrifft und von Ihnen so gewünscht ist, können Sie die Warnung **schließen und ausschließen**.
 
-3. Falls dies zutrifft und von Ihnen nicht so gewünscht ist, **schließen** Sie die verdächtige Aktivität.
+3. Falls dies zutrifft und von Ihnen nicht so gewünscht ist, können Sie die Warnung **schließen**.
 
 **Wartung**
 
@@ -189,16 +193,16 @@ Bei diesem Erkennungsvorgang wird eine Warnung ausgelöst, wenn viele Authentifi
 
 **Untersuchung**
 
-1.  Klicken Sie auf **Details herunterladen**, um die vollständigen Informationen in einem Excel-Arbeitsblatt anzuzeigen. Die folgenden Informationen sind verfügbar: 
+1. Klicken Sie auf **Details herunterladen**, um die vollständigen Informationen in einem Excel-Arbeitsblatt anzuzeigen. Die folgenden Informationen sind verfügbar: 
    -    Liste der angegriffenen Konten
    -    Liste der erratenen Konten, bei denen Anmeldeversuche mit einer erfolgreichen Authentifizierung endeten
    -    Wenn die Authentifizierungsversuche über NTLM ausgeführt wurden, werden die relevanten Ereignisaktivitäten angezeigt. 
    -    Wenn die Authentifizierungsversuche über Kerberos ausgeführt wurden, werden die relevanten Netzwerkaktivitäten angezeigt.
    -  Wenn die Authentifizierungsversuche über einen Kennwort-Spray-Angriff ausgeführt wurden, werden die relevanten Netzwerkaktivitäten angezeigt.
 
-2.  Klicken Sie auf den Quellcomputer, um die entsprechende Profilseite aufzurufen. Überprüfen Sie, was ungefähr zum Zeitpunkt dieser Versuche passiert ist. Suchen Sie nach ungewöhnlichen Aktivitäten wie z.B.: Wer war angemeldet, auf welche Ressourcen wurde zugegriffen. Wenn Sie die Windows Defender ATP-Integration aktiviert haben, klicken Sie auf das Windows Defender ATP-Badge, ![Windows Defender ATP-Badge](./media/wd-badge.png) um den Computer weiter zu untersuchen. In Windows Defender ATP können Sie sehen, welche Prozesse und Warnungen ungefähr gleichzeitig mit der Warnung aufgetreten sind. 
+2. Klicken Sie auf den Quellcomputer, um die entsprechende Profilseite aufzurufen. Überprüfen Sie, was ungefähr zum Zeitpunkt dieser Versuche passiert ist. Suchen Sie nach ungewöhnlichen Aktivitäten wie z.B.: Wer war angemeldet, auf welche Ressourcen wurde zugegriffen. Wenn Sie die Windows Defender ATP-Integration aktiviert haben, klicken Sie auf das Windows Defender ATP-Badge, ![Windows Defender ATP-Badge](./media/wd-badge.png) um den Computer weiter zu untersuchen. In Windows Defender ATP können Sie sehen, welche Prozesse und Warnungen ungefähr gleichzeitig mit der Warnung aufgetreten sind. 
 
-3.  Wenn die Authentifizierung mithilfe von NTLM durchgeführt wurde und Sie sehen, dass die Warnung mehrfach aufgetreten ist, aber keine ausreichenden Informationen zum Server verfügbar sind, auf den der Quellcomputer zugreifen wollte, aktivieren Sie die **NTLM-Überwachung** für die betroffenen Domänencontroller. Aktivieren Sie dazu Ereignis 8004. Dies ist das NTLM-Authentifizierungsereignis, das Informationen zum Quellcomputer, Benutzerkonto und **Server enthält, auf die der Quellcomputer zugreifen wollte. Wenn Sie wissen, welcher Server die Authentifizierungsüberprüfung gesendet hat, untersuchen Sie den Server, indem Sie seine Ereignisse, z.B. 4624, überprüfen, um den Authentifizierungsprozess besser nachvollziehen zu können. 
+3. Wenn die Authentifizierung mithilfe von NTLM durchgeführt wurde und Sie sehen, dass die Warnung mehrfach aufgetreten ist, aber keine ausreichenden Informationen zum Server verfügbar sind, auf den der Quellcomputer zugreifen wollte, aktivieren Sie die **NTLM-Überwachung** für die betroffenen Domänencontroller. Aktivieren Sie dazu Ereignis 8004. Dies ist das NTLM-Authentifizierungsereignis, das Informationen zum Quellcomputer, Benutzerkonto und **Server enthält, auf die der Quellcomputer zugreifen wollte. Wenn Sie wissen, welcher Server die Authentifizierungsüberprüfung gesendet hat, untersuchen Sie den Server, indem Sie seine Ereignisse, z.B. 4624, überprüfen, um den Authentifizierungsprozess besser nachvollziehen zu können. 
 
 **Wartung**
 
@@ -319,7 +323,7 @@ Nutzen Sie  [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/201
 
 **Beschreibung:** Die Herabstufung der Verschlüsselung ist eine Methode, die dazu dient, Kerberos zu schwächen, indem für die Verschlüsselungsstufe von unterschiedlichen Feldern des Protokolls, die mit der höchsten Verschlüsselungsstufe verschlüsselt werden, ein Downgrade durchgeführt wird. Ein abgeschwächtes verschlüsseltes Feld ist ein leichteres Ziel für versuchte Brute-Force-Angriffe offline. Verschiedene Angriffsmethoden nutzen schwache Kerberos-Verschlüsselungsverfahren. In dieser Erkennung lernt Azure ATP die Kerberos-Verschlüsselungstypen, die von Computern und Benutzern verwendet werden, und benachrichtigt Sie, wenn ein schwächeres Verschlüsselungsverfahren verwendet wird, das (1) unüblich für den Quellcomputer und/oder den Benutzer ist und (2) mit bekannten Angriffstechniken übereinstimmt. 
 
-Bei einer Golden Ticket-Warnung wurde die Verschlüsselungsmethode des TGT-Felds der TGS_REQ-Nachricht (Dienstanforderung) vom Quellcomputer im Vergleich zum zuvor gelernten Verhalten herabgestuft. Dies basiert nicht auf einer Zeitanomalie (wie bei der anderen Golden Ticket-Erkennung). Zusätzlich gab es keine Kerberos-Authentifizierungsanforderung, die der vorherigen von ATP erkannten Dienstanforderung zugeordnet ist.
+Bei einer Golden Ticket-Warnung wurde die Verschlüsselungsmethode des TGT-Felds (Ticket Granting Ticket) der TGS_REQ-Nachricht (Dienstanforderung) vom Quellcomputer im Vergleich zum zuvor gelernten Verhalten heruntergestuft. Dies basiert nicht auf einer Zeitanomalie (wie bei der anderen Golden Ticket-Erkennung). Zusätzlich gab es keine Kerberos-Authentifizierungsanforderung, die der vorherigen von ATP erkannten Dienstanforderung zugeordnet ist.
 
 **Untersuchung**
 1. Einige Ressourcen unterstützten starke Verschlüsselungsmethoden nicht und lösen diese Warnung möglicherweise aus.
@@ -600,7 +604,7 @@ Wenn sich die registrierte Domäne nach Ihrer Untersuchung als nicht vertrauensw
 
 **Beschreibung**
 
-Angreifer fügen Benutzer zu sehr privilegierten Gruppen hinzu. Dadurch können Sie Zugriff auf weitere Ressourcen und Beständigkeit erhalten. Die Erkennung basiert auf dem Erfassen der Aktivitäten von Benutzern, die Gruppen ändern und den Warnungen, die bei nicht ordnungsgemäßen Ergänzungen zu einer sensiblen Gruppe angezeigt werden. Die Erfassung wird kontinuierlich von Azure ATP ausgeführt. Der Mindestzeitraum, bevor eine Warnung ausgelöst werden kann, beträgt einen Monat pro Domänencontroller.
+Angreifer fügen Benutzer in der Regel zu sehr privilegierten Gruppen hinzu. Dadurch können Sie Zugriff auf weitere Ressourcen und Beständigkeit erhalten. Die Erkennung basiert auf dem Erfassen der Aktivitäten von Benutzern, die Gruppen ändern und den Warnungen, die bei nicht ordnungsgemäßen Ergänzungen zu einer sensiblen Gruppe angezeigt werden. Die Erfassung wird kontinuierlich von Azure ATP ausgeführt. Der Mindestzeitraum, bevor eine Warnung ausgelöst werden kann, beträgt einen Monat pro Domänencontroller.
 
 Eine Definition von sensiblen Gruppen in Azure ATP finden Sie unter [Working with the sensitive accounts (Arbeiten mit sensiblen Konten)](sensitive-accounts.md).
 
@@ -706,7 +710,7 @@ Ist das Ereignis *richtig positiv*, *unbedenklich richtig positiv* oder *falsch 
 
 1. Kontrollieren Sie den Quellcomputer. 
       - [Entfernen von WannaCry](https://support.microsoft.com/help/890830/remove-specific-prevalent-malware-with-windows-malicious-software-remo)
-      - WanaKiwi kann für einige Ransomwares die Daten in deren Besitz entschlüsseln. Dies ist aber nur möglich, wenn der Benutzer den Computer nicht neu gestartet oder ausgeschaltet hat. Weitere Informationen finden Sie unter [Wanna Cry Ransomware (WannaCry-Ransomware)](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
+      - WanaKiwi kann für einige Ransomwares die Daten in deren Besitz entschlüsseln. Dies ist aber nur möglich, wenn der Benutzer den Computer nicht neu gestartet oder ausgeschaltet hat. Weitere Informationen finden Sie unter [WannaCry-Ransomware](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1).
       - Suchen Sie nach Benutzern, die zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. 
 2. Patchen Sie alle Computer, und stellen Sie sicher, dass Sicherheitsupdates angewendet werden. 
       - [Deaktivieren von SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
@@ -816,10 +820,70 @@ Ist das Ereignis *richtig positiv*, *unbedenklich richtig positiv* oder *falsch 
 4. Erzwingen Sie komplexe und lange Kennwörter in der Organisation. Komplexe und lange Kennwörter stellen die notwendige erste Sicherheitsstufe zum Schutz vor zukünftigen Brute-Force-Angriffen dar.
 5. [Deaktivieren von SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
 
+## <a name="suspected-brute-force-attack-kerberos-ntlm"></a>Suspected Brute Force attack (Kerberos NTLM) (Verdacht auf einen Brute-Force-Angriff (Kerberos NTLM))
+<a name="suspicious-authentication-failures"></a>
+
+*Vorheriger Name*: Verdächtige Authentifizierungsfehler
+
+**Beschreibung**: Bei einem Brute-Force-Angriff versucht ein Angreifer, sich mit vielen verschiedenen Kennwörtern für verschiedene Konten anzumelden, bis ein korrektes Kennwort für mindestens ein Konto gefunden wird. Sobald eines gefunden wurde, kann sich der Angreifer mit diesem Konto anmelden.
+
+Bei diesem Erkennungsvorgang wird eine Warnung ausgelöst, wenn viele Authentifizierungsfehler bei der Verwendung von Kerberos oder NTLM beobachtet werden. Dies kann entweder horizontal mit einem kleinen Satz von Kennwörtern für viele Benutzer oder vertikal mit einem großen Satz von Kennwörtern für wenige Benutzer geschehen. Auch eine beliebige Kombination dieser beiden Optionen ist möglich.
+
+**Zeitrahmen**: Die Mindestdauer, bevor diese bestimmte Warnung ausgelöst werden kann, beträgt mindestens eine Woche nach der Bereitstellung des Sensors.
+
+**Untersuchung**
+
+1. Klicken Sie auf die Warnung, um Folgendes anzuzeigen: 
+   - Liste der angegriffenen Konten
+   - Liste der erratenen Konten, bei denen Anmeldeversuche mit einer erfolgreichen Authentifizierung endeten
+   - Wenn die Authentifizierungsversuche über NTLM ausgeführt wurden, werden die relevanten Ereignisaktivitäten angezeigt.
+   - Wenn die Authentifizierungsversuche über Kerberos ausgeführt wurden, werden die relevanten Netzwerkaktivitäten angezeigt.
+2. Klicken Sie auf den Quellcomputer, um die entsprechende Profilseite aufzurufen. Überprüfen Sie, was ungefähr zum Zeitpunkt dieser Versuche passiert ist. Suchen Sie nach ungewöhnlichen Aktivitäten. Beispiel: Wer war angemeldet und auf welche Ressourcen wurde zugegriffen. Wenn die Windows Defender ATP-Integration aktiviert ist, klicken Sie auf das Windows Defender ATP-Badge, um den Computer genauer zu untersuchen. Mit Windows Defender ATP können Sie anzeigen, welche Prozesse und Warnungen ungefähr gleichzeitig mit der Warnung aufgetreten sind.
+
+3. Wenn die Authentifizierung mithilfe von NTLM durchgeführt wurde und Sie sehen, dass die Warnung mehrfach aufgetreten ist, aber keine ausreichenden Informationen zum Server verfügbar sind, auf den der Quellcomputer zugreifen wollte, aktivieren Sie die NTLM-Überwachung für die betroffenen Domänencontroller. Aktivieren Sie das NTLM-Überwachung auf den beteiligten Domänencontrollern, indem Sie das Ereignis 8004 aktivieren. Dies ist das NTLM-Authentifizierungsereignis, das Informationen zum Quellcomputer, Benutzerkonto und Server enthält, auf die der Quellcomputer zugreifen wollte. Wenn Sie wissen, welcher Server die Authentifizierungsüberprüfung gesendet hat, untersuchen Sie den Server, indem Sie Ereignisse wie das Ereignis 4624 überprüfen, um den Authentifizierungsprozess besser nachvollziehen zu können.
+<br>
+1. Klicken Sie auf **Details herunterladen**, um die Informationen in einem Excel-Arbeitsblatt anzuzeigen. 
+
+**Wartung**
+
+Komplexe bzw. lange Kennwörter stellen die erste Sicherheitsstufe zum Schutz gegen Brute-Force-Angriffe dar.
+
+## <a name="user-and-group-membership-reconnaissance-samr"></a>User and group membership reconnaissance (SAMR) (Reconnaissance über Benutzer und Gruppenmitgliedschaften (SAMR))
+
+*Vorheriger Name*: Reconnaissance mithilfe von Verzeichnisdienstabfragen <a name="reconnaissance-using-directory-service-queries"></a>
+
+**Beschreibung**: Die Reconnaissance mithilfe von Verzeichnisdienstabfragen wird von Angreifern verwendet, um die Verzeichnisstruktur und die Zielkonten mit hohen Berechtigungen für die weiteren Schritte eines Angriffs auszukundschaften. Das Protokoll Security Account Manager Remote (SAM-R) ist eine Methode, die zum Abfragen des Verzeichnisses verwendet wird, um diese Art der Zuordnung vorzunehmen.  
+In dieser Erkennung werden im ersten Monat nach der Bereitstellung von Azure ATP keine Warnungen ausgelöst (Lernphase). Während der Lernphase erfasst Azure ATP, welche SAM-R-Abfragen (Enumerationsabfragen und einzelne Abfragen von sensiblen Konten) von welchen Computern gestellt werden. 
+
+**Lernphase**: Vier Wochen pro Domänencontroller, beginnend mit der ersten Netzwerkaktivität von SAMR für den bestimmten DC. 
+
+Ist diese Warnung **richtig positiv**, **unbedenklich richtig positiv** oder **falsch positiv**? 
+
+1. Klicken Sie auf den Quellcomputer, um die entsprechende Profilseite aufzurufen.        - Soll der Quellcomputer derartige Aktivitäten generieren?  
+      - Wenn ja, können Sie die Sicherheitswarnung *schließen* und diesen Computer ausschließen, es handelt sich wahrscheinlich um eine unbedenklich richtig positive Aktivität. 
+2. Überprüfen Sie die Benutzer, die den Vorgang ausgeführt haben. 
+      - Melden sie sich normalerweise bei diesem Quellcomputer an oder sind sie Administratoren, die diese bestimmten Aktionen durchführen sollten?   
+      - Überprüfen Sie das Benutzerprofil und die damit verbundenen Benutzeraktivitäten. Erkennen Sie ihr normales Verhalten und suchen Sie nach zusätzlichen verdächtigen Aktivitäten mithilfe des Leitfadens zur Untersuchung von Benutzern. 
+      - Wenn ja, *schließen* Sie die Sicherheitswarnung als unbedenkliche Aktivität. 
+  
+**Ermitteln des Umfangs der Sicherheitsverletzung**
+
+1. Überprüfen Sie, welche Abfragen gestellt wurden (z. B. Unternehmensadministratoren oder Administratoren), und ermitteln Sie, ob diese erfolgreich waren. 
+2. Untersuchen Sie jeden verfügbar gemachten Benutzer anhand des Leitfadens zur Untersuchung von Benutzern. 
+3. Untersuchen Sie den Quellcomputer.  
+  
+**Empfohlene Abhilfemaßnahmen und Schritte zur Vorbeugung**
+
+1. Kontrollieren Sie den Quellcomputer. 
+2. Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es. 
+3. Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. 
+4. Setzen Sie das Kennwort des Quellbenutzers zurück, und aktivieren Sie MFA. 
+5. Netzwerkzugriff anwenden: Schränken Sie die Zahl der Clients ein, die Remoteaufrufe an die SAM-Gruppenrichtlinie durchführen dürfen.
 
 ## <a name="user-and-ip-address-reconnaissance-smb"></a>User and IP address reconnaissance (SMB) (Reconnaissance über Benutzer und IP-Adressen (SMB))
-<a name="reconnaissance-using-smb-session-enumeration"></a> Reconnaissance mithilfe der SMB-Sitzungsenumeration
+<a name="reconnaissance-using-smb-session-enumeration"></a>
 
+*Vorheriger Name*: Reconnaissance mithilfe der SMB-Sitzungsenumeration
 
 **Beschreibung**
 
@@ -835,9 +899,9 @@ In dieser Erkennung wird eine Warnung ausgelöst, wenn eine SMB-Sitzungsenumerat
 
 2. Überprüfen Sie, welche beteiligten Benutzer den Vorgang ausgeführt haben. Melden sich diese normalerweise auf dem Quellcomputer an, oder handelt es sich bei diesen um Administratoren, die solche Aktionen ausführen sollen?  
 
-3. Falls dies zutrifft und die Warnung aktualisiert wird, **unterdrücken** Sie die verdächtige Aktivität.  
+3. Falls dies zutrifft und die Warnung aktualisiert wird, **unterdrücken** Sie die Sicherheitswarnung.  
 
-4. Falls dies zutrifft, aber nicht weiterhin so gehandhabt werden soll, **schließen** Sie die verdächtige Aktivität.
+4. Falls dies zutrifft und von Ihnen nicht so gewünscht ist, können Sie die Sicherheitswarnung **schließen**.
 
 5. Wenn die Antwort auf alle obigen Fragen „nein“ ist, gehen Sie von einem böswilligen Ereignis aus.
 

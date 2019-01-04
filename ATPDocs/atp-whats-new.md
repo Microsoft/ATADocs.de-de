@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/09/2018
+ms.date: 12/21/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,25 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: cde3c56d0b8ad029337e03602c805930002f8ed4
-ms.sourcegitcommit: d1c9c3e69b196f6086a8f100e527553cf0d95aac
+ms.openlocfilehash: af08c371f19288043eba2377ea03d1a90bd2eaab
+ms.sourcegitcommit: 39822aa24bddb72eea55f484d9df290cce2e19d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125046"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53737048"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
-# <a name="whats-new-in-azure-atp"></a>Neuerungen in Azure ATP 
+# <a name="whats-new-in-azure-atp"></a>Neuerungen in Azure ATP
+
+## <a name="azure-atp-release-260"></a>Azure ATP, Release 2.60
+Die Veröffentlichung von Azure ATP Version 2.60 ist derzeit in der ersten Woche des Jahres 2019 geplant. Wenn während dieser Zeit kritische Probleme auftreten, die ein zwischenzeitliches Update erfordern, werden diese Updates nach Bedarf bereitgestellt.
+
+## <a name="azure-atp-release-259"></a>Azure ATP, Release 2.59
+Am 16. Dezember 2018 veröffentlicht
+
+- Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
+
 
 ## <a name="azure-atp-release-258"></a>Azure ATP, Release 2.58
 
@@ -32,6 +41,7 @@ Veröffentlicht am 9. Dezember 2018
 Die Azure ATP-Serie von Sicherheitswarnungen zu ungewöhnlichen Protokollimplementierungen, die zuvor eine externalId (2002) gemeinsam genutzt haben, ist jetzt in vier verschiedene Warnungen aufgeteilt, die jeweils eindeutige externalId-Werte aufweisen. 
 
 ### <a name="new-alert-externalids"></a>Neue externalIds für Warnungen
+
 > [!div class="mx-tableFixed"] 
 
 |Neuer Sicherheitswarnungsname|Alter Sicherheitswarnungsname|Eindeutige externalId|

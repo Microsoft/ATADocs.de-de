@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/06/2018
+ms.date: 12/20/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 5d639e84-2e37-43a9-9667-49be6c4fa8b7
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 353395f782d29bb18e95c02ad56407a592d8c20b
-ms.sourcegitcommit: 2b15356612eb720f83235ff8cb08e4a6435206ea
+ms.openlocfilehash: e21e2b984db3d58703cf6503817401f1bab0fda1
+ms.sourcegitcommit: c390d36d75f13607698c2a8d7ac757ecef4c748e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53022423"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53709913"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -33,114 +33,69 @@ Die Ereignisse finden Sie hier:
 
 ## <a name="ata-health-events"></a>ATA-Integritätsereignisse
 
-1001 – Integritätswarnung für den freien Speicherplatz des Datenträgers der ATA Center-Datenbank 
-
-1003 – Integritätswarnung bei ATA Center-Überladung 
-
-1004 – Integritätswarnung bei Ablauf des Zertifikats 
-
-1005 – Integritätswarnung bei Trennung der Verbindung zur Center-Datenbank 
-
-1006 – Integritätswarnung bei Ablauf des Kennworts für das Clientkonto bei den ATA-Gateway-Verzeichnisdiensten 
-
-1007 – Integritätswarnung, wenn der ATA-Gateway-Domänensynchronizer nicht zugewiesen ist 
-
-1008 – Integritätswarnung bei einem Fehler des Netzwerkdatenerfassungs-Adapters für ATA Gateway 
-
-1009 – Integritätswarnung beim Fehlen des Netzwerkdatenerfassungs-Adapter für ATA Gateway 
-
-1010 – Integritätswarnung für die Clientkonnektivität der ATA-Gateway-Verzeichnisdienste 
-
-1011 – Integritätswarnung bei Trennung der Verbindung zu ATA-Gateway 
-
-1012 – Integritätswarnung bei Überlastung der ATA-Gateway-Ereignisaktivitäten 
-
-1013 – Integritätswarnung bei Überlastung der ATA-Gateway-Netzwerkaktivitäten 
-
-1014 – Integritätswarnung bei einer Center-Nachricht 
-
-1015 – Integritätswarnung bei Center-Syslog 
-
-1016 – Integritätswarnung für veraltete ATA-Gateways 
-
-1017 – Integritätswarnung, wenn das Center keinen Datenverkehr empfängt 
-
-1018 – Integritätswarnung bei fehlerhaftem Start von ATA-Gateway 
-
-1019 – Integritätswarnung bei geringem Speicherplatz in ATA-Gateway 
-
-1020 – Integritätswarnung für den RADIUS-Ereignislistener in ATA-Gateway 
-
-1021 – Integritätswarnung für den Syslog-Ereignislistener in ATA-Gateway 
-
-1022 – Integritätswarnung bei einem Fehler der Auflösung der externen IP-Adresse in ATA Center 
+|Überwachen der Ereignis-ID| Überwachen des Warnungsnamens|
+|---------|---------------|
+|1001|Festplattenspeicher für Center nahezu vollständig belegt|
+|1003|Center überlastet|
+|1004|Zertifikat für Center läuft bald ab/Zertifikat für Center ist abgelaufen|
+|1005|MongoDB ist nicht verfügbar|
+|1006|Kennwort für schreibgeschützten Benutzer läuft bald ab/Kennwort für schreibgeschützten Benutzer abgelaufen|
+|1007|Domain synchronizer not assigned (Domänensynchronizer nicht zugewiesen)|
+|1008|Einige oder alle der Netzwerkadapter für die Erfassung auf einem Gateway sind nicht verfügbar|
+|1009|Ein Netzwerkdatenerfassungs-Adapter auf einem Gateway ist nicht mehr vorhanden|
+|1010|Einige Domänencontroller können von einem Gateway nicht erreicht werden/Alle Domänencontroller können von einem Gateway nicht erreicht werden|
+|1011|Gateway hat Kommunikation eingestellt|
+|1012|Einige weitergeleitete Ereignisse werden nicht analysiert|
+|1013|Ein Teil des Netzwerkdatenverkehrs wird nicht analysiert|
+|1014|Fehler beim Senden von E-Mail|
+|1015|Fehler bei der Verbindungsherstellung mit dem SIEM-Server unter Verwendung von Syslog.|
+|1016|Gatewayversion veraltet|
+|1017|Kein Datenverkehr vom Domänencontroller empfangen|
+|1018|Fehler beim Starten des Gatewaydiensts.|
+|1019|Lightweight-Gateway hat Arbeitsspeicherressourcenlimit erreicht|
+|1020|Gateway verarbeitet keine Radius-Ereignisse|
+|1021|Gateway verarbeitet keine Syslog-Ereignisse|
+|1022|Geolocation-Dienst ist nicht verfügbar|
  
-## <a name="ata-suspicious-activity-events"></a>Verdächtige ATA-Aktivitätsereignisse
+## <a name="ata-security-alert-events"></a>ATA-Sicherheitswarnungsereignisse
 
-2001 – Ungewöhnliches Verhalten im Zusammenhang mit einer verdächtigen Aktivität 
-
-2002 – Ungewöhnliches Verhalten im Zusammenhang mit einem verdächtigen Protokoll 
-
-2003 – Verdächtige Aktivität einer Kontoenumeration 
-
-2004 – Verdächtige Aktivität eines Brute Force-LDAPs 
-
-2006 – Verdächtige Aktivität bei einer Replikation von Verzeichnisdiensten 
-
-2007 – Verdächtige Aktivität bei einer DNS-Reconnaissance 
-
-2008 – Verdächtige Aktivität bei Herabstufung der Verschlüsselung (kein Untertyp)
-
-2009 – Verdächtige Aktivität bei Herabstufung der Verschlüsselung (Verdacht auf GoldenTicket)
-       
-2010 – Verdächtige Aktivität bei Herabstufung der Verschlüsselung (Verdacht auf Overpass-The-Hash)
-
-2011 – Verdächtige Aktivität bei Herabstufung der Verschlüsselung (Verdacht auf Skeleton-Key)
-
-2012 – Verdächtige Aktivität beim Auflisten der Sitzungen 
-
-2013 – Verdächtige Aktivität mit gefälschtem PAC 
-
-2014 – Verdächtige Aktivität einer Honeytoken-Aktivität 
-
-2016 – Verdächtige Aktivität bei einer umfangreichen Objektlöschung 
-
-2017 – Verdächtige Aktivität bei Pass-the-Hash 
-
-2018 – Verdächtige Aktivität bei Pass-the-Ticket 
-
-2019 – Verdächtige Aktivität bei der Remoteausführung 
-
-2020 – Verdächtige Aktivität beim Abrufen des Sicherungsschlüssels für den Datenschutz 
-
-2021 – Verdächtige Aktivität bei einer SAMR-Reconnaissance 
-
-2022 – Verdächtige Aktivität bei Golden Ticket 
-
-2023 – Verdächtige Brute Force-Aktivität 
-
-2024 – Verdächtige Aktivität durch ungewöhnliche Änderung der Mitgliedschaft einer vertraulichen Gruppe 
-
-2025 – Verdächtige Aktivität durch ungewöhnliches Verhalten im VPN
-
-2026 – Verdächtige Aktivität durch Erstellen eines schädlichen Diensts
+|Warnungsnamen|Ereignis-IDs der Warnungen|
+|---------|---------------|
+|2001|Verdacht des Identitätsdiebstahls auf Grundlage von ungewöhnlichem Verhalten|
+|2002|Ungewöhnliche Protokollimplementierung|
+|2003|Reconnaissance mithilfe von Kontoenumeration|
+|2004|Brute-Force-Angriff mithilfe einer einfachen LDAP-Bindung|
+|2006|Böswillige Replikation von Verzeichnisdiensten|
+|2007|Reconnaissance über DNS|
+|2008|Aktivität zur Herabstufung der Verschlüsselung|
+|2009|Aktivität zur Herabstufung der Verschlüsselung (potenzieller Golden Ticket-Angriff)|
+|2010|Aktivität zur Herabstufung der Verschlüsselung (potenzieller Overpass-the-Hash-Angriff)|
+|2011|Aktivität zur Herabstufung der Verschlüsselung (potenzieller Skeleton Key-Angriff)|
+|2012|Reconnaissance mithilfe der SMB-Sitzungsenumeration|
+|2013|Berechtigungsausweitung mithilfe von gefälschten Autorisierungsdaten|
+|2014|Honeytoken-Aktivität|
+|2016|Umfangreiche Objektlöschungen|
+|2017|Identitätsdiebstahl mithilfe eines Pass-the-Hash-Angriffs|
+|2018|Identitätsdiebstahl mithilfe eines Pass-the-Ticket-Angriffs|
+|2019|Erkannter Remoteausführungsversuch|
+|2020|Böswillige Anforderung privater Informationen im Rahmen der Datensicherheit|
+|2021|Reconnaissance mithilfe von Verzeichnisdienstabfragen|
+|2022|Golden Ticket-Aktivität von Kerberos|
+|2023|Verdächtige Authentifizierungsfehler|
+|2024|Ungewöhnliche Modifizierung von sensiblen Gruppen|
+|2026|Erstellen eines verdächtigen Diensts|
 
 ## <a name="ata-auditing-events"></a>ATA-Überwachungsereignisse
 
-3001 – Ändern zur ATA-Konfiguration 
-
-3002 – Hinzufügen von ATA-Gateway
-
-3003 – Löschen von ATA-Gateway
-
-3004 – Aktivieren der ATA-Lizenz
-
-3005 – Anmelden bei der ATA-Konsole
-
-3006 – Manuelle Änderung zum Status „Integritätsaktivität“ 
-
-3007 – Manuelle Änderung zum Status „verdächtige Aktivität“ 
-
+|Warnungsnamen|Ereignis-IDs der Warnungen|
+|---------|---------------|
+|3001|Änderung an der ATA-Konfiguration|
+|3002|Hinzufügen von ATA-Gateway|
+|3003|Löschen von ATA-Gateway|
+|3004|Aktivieren der ATA-Lizenz|
+|3005|Anmelden bei der ATA-Konsole|
+|3006|Manuelle Änderung zum Status „Integritätsaktivität“|
+|3007|Manuelle Änderung zum Status „verdächtige Aktivität“|
 
 ## <a name="see-also"></a>Weitere Informationen
 - [Voraussetzungen für ATA](ata-prerequisites.md)
