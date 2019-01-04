@@ -1,13 +1,11 @@
-# Verstehen und Kennenlernen
-## [Was ist Azure Advanced Threat Protection?](what-is-atp.md)
-## [Häufig gestellte Fragen](atp-technical-faq.md)
-## [Neuerungen in Azure ATP](atp-whats-new.md)
-## [Sicherheit und Datenschutz für Azure ATP](atp-privacy-compliance.md)
+
 # Übersicht
+## [Was ist Azure Advanced Threat Protection?](what-is-atp.md)
 ## [Azure ATP architecture (Azure ATP-Architektur)](atp-architecture.md)
+## [Neuerungen in Azure ATP](atp-whats-new.md)
 ## [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](atp-prerequisites.md)
+# Schnellstarts
 ## [Planen Ihrer Azure ATP-Kapazität](atp-capacity-planning.md)
-# Schnellstart
 ## [Erstellen einer Azure ATP-Instanz](install-atp-step1.md)
 ## [Verbinden mit Active Directory](install-atp-step2.md)
 ### [Unterstützung der Azure ATP-Gesamtstruktur](atp-multi-forest.md)
@@ -18,40 +16,43 @@
 ### [Proxykonfiguration](configure-proxy.md)
 ### [Überprüfung der erweiterten Überwachungsrichtlinie](atp-advanced-audit-policy.md)
 ### [Konfigurieren von Azure ATP für das Ausführen von Remoteaufrufen an SAM](install-atp-step8-samr.md)
-# Erweiterte Konfiguration
-## [Verzögertes Update für den Azure ATP-Sensor](sensor-update.md)
-## [Azure ATP-Benutzerrollen](atp-role-groups.md)
-## [Festlegen von Azure ATP-Benachrichtigungen](notifications.md)
 ## [Integration in Windows Defender ATP](integrate-wd-atp.md)
 ## [VPN-Integration](install-atp-step6-vpn.md)
 ## [Integration in Syslog](setting-syslog.md)
-### [Referenz zum SIEM-Protokoll](cef-format-sa.md)
+# Lernprogramme
+## [Leitfaden für Sicherheitswarnungen](suspicious-activity-guide.md)
+## [Untersuchen von Lateral Movement-Pfaden](investigate-lateral-movement-path.md)
+## [Untersuchen von Entitäten](investigate-entity.md)
+# Konzepte
+## [Azure ATP-Portal](workspace-portal.md)
+## [Überwachte Aktivitäten](monitored-activities.md)
+## [Grundlegendes zu Entitätenprofilen](entity-profiles.md)
+## [Lateral Movement-Pfade](use-case-lateral-movement-path.md)
+## [Berichte](reports.md)
+## [Benutzerrollen](atp-role-groups.md)
+# Schrittanleitungen
+## [Verwalten von Sicherheitswarnungen](working-with-suspicious-activities.md)
+## [Verwalten von sensiblen Konten](sensitive-accounts.md)
+## [Ausschließen von Entitäten von der Erkennung](excluding-entities-from-detections.md)
+## [Durchsuchen und Filtern überwachter Aktivitäten](atp-activities-search.md)
+## [Verwenden von Ausschlüssen und Honeytoken-Konten](install-atp-step7.md)
 ## [Ändern des Domänenverbindungskennworts](modifying-atp-config-dcpassword.md)
+## [Festlegen von Azure ATP-Benachrichtigungen](notifications.md)
+## [Arbeiten mit dem Azure ATP-Integritätscenter](atp-health-center.md)
+## [Verwalten von Azure ATP-Integritätswarnungen](monitoring-alerts.md)
+## [Verzögertes Update für den Azure ATP-Sensor](sensor-update.md)
+## [Behandeln häufiger Probleme](troubleshooting-atp-known-issues.md)
+## [Problembehandlung mithilfe von Protokollen](troubleshooting-atp-using-logs.md)
 ## Einrichten des eigenständigen Azure ATP-Sensors
 ### [Konfigurieren der Portspiegelung](configure-port-mirroring.md)
 ### [Überprüfen der Portspiegelung](validate-port-mirroring.md)
 ### [Konfigurieren der Ereignissammlung](configure-event-collection.md)
 ### [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-forwarding.md)
-# Verwenden und Untersuchen
-## [Azure ATP-Portal](workspace-portal.md)
-## [Azure ATP-Berichte](reports.md)
-## [Grundlegendes zu Entitätenprofilen](entity-profiles.md)
-## [Überwachte Aktivitäten](monitored-activities.md)
-### [Durchsuchen und Filtern überwachter Aktivitäten](atp-activities-search.md)
-## [Verwalten von sensiblen Konten](sensitive-accounts.md)
-## [Ausschließen von Entitäten von der Erkennung](excluding-entities-from-detections.md)
-## [Ausschlüsse und Honeytoken-Konten](install-atp-step7.md)
-## [Verwenden von Sicherheitswarnungen](working-with-suspicious-activities.md)
-# Azure ATP-Sicherheitswarnungen
-## [Leitfaden für Sicherheitswarnungen](suspicious-activity-guide.md)
-## [Lateral Movement-Pfade](use-case-lateral-movement-path.md)
-### [Untersuchen von Lateral Movement-Pfaden](investigate-lateral-movement-path.md)
-## [Untersuchen von Entitäten](investigate-entity.md)
-# Problembehandlung
-## [Azure ATP-Integritätscenter](atp-health-center.md)
-## [Verwalten von Azure ATP-Integritätswarnungen](monitoring-alerts.md)
-## [Behandeln häufiger Probleme](troubleshooting-atp-known-issues.md)
-## [Problembehandlung mithilfe von Protokollen](troubleshooting-atp-using-logs.md)
+# Referenz
+## [Referenz zum SIEM-Protokoll](cef-format-sa.md)
 ## [Azure ATP: Häufige Probleme](known-issues.md)
+# Ressourcen
 ## [Support und Informationen](atp-support.md)
+## [Häufig gestellte Fragen](atp-technical-faq.md)
 ## [Roadmap für die Azure ATP-Bereitschaft](atp-resources.md)
+## [Sicherheit und Datenschutz für Azure ATP](atp-privacy-compliance.md)
