@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/21/2018
+ms.date: 1/6/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,19 +13,21 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: af08c371f19288043eba2377ea03d1a90bd2eaab
-ms.sourcegitcommit: 39822aa24bddb72eea55f484d9df290cce2e19d9
+ms.openlocfilehash: f5ce0643c502b94bb6a09cc353b8e0eadb0d6737
+ms.sourcegitcommit: b33c1860baa39e9d6d287e33940d579d7a728463
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53737048"
+ms.lasthandoff: 01/06/2019
+ms.locfileid: "54058853"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
 # <a name="whats-new-in-azure-atp"></a>Neuerungen in Azure ATP
 
 ## <a name="azure-atp-release-260"></a>Azure ATP, Release 2.60
-Die Veröffentlichung von Azure ATP Version 2.60 ist derzeit in der ersten Woche des Jahres 2019 geplant. Wenn während dieser Zeit kritische Probleme auftreten, die ein zwischenzeitliches Update erfordern, werden diese Updates nach Bedarf bereitgestellt.
+Am 6. Januar 2019 veröffentlicht
+
+- Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
 ## <a name="azure-atp-release-259"></a>Azure ATP, Release 2.59
 Am 16. Dezember 2018 veröffentlicht
@@ -35,16 +37,16 @@ Am 16. Dezember 2018 veröffentlicht
 
 ## <a name="azure-atp-release-258"></a>Azure ATP, Release 2.58
 
-Veröffentlicht am 9. Dezember 2018
+Am 9. Dezember 2018 veröffentlicht
 
 - **Erweiterung von Sicherheitswarnungen: Aufteilung der Warnung zu ungewöhnlichen Protokollimplementierungen**<br>
-Die Azure ATP-Serie von Sicherheitswarnungen zu ungewöhnlichen Protokollimplementierungen, die zuvor eine externalId (2002) gemeinsam genutzt haben, ist jetzt in vier verschiedene Warnungen aufgeteilt, die jeweils eindeutige externalId-Werte aufweisen. 
+Die Azure ATP-Serie von Sicherheitswarnungen zu ungewöhnlichen Protokollimplementierungen, die zuvor eine externalId (2002) gemeinsam genutzt haben, ist jetzt in vier verschiedene Warnungen aufgeteilt, die jeweils eine eindeutige externe ID aufweisen. 
 
 ### <a name="new-alert-externalids"></a>Neue externalIds für Warnungen
 
 > [!div class="mx-tableFixed"] 
 
-|Neuer Sicherheitswarnungsname|Alter Sicherheitswarnungsname|Eindeutige externalId|
+|Neuer Sicherheitswarnungsname|Alter Sicherheitswarnungsname|Eindeutige externe ID|
 |---------|----------|---------|
 |Suspected Brute Force attack (SMB) (Verdacht auf einen Brute-Force-Angriff (SMB))|Ungewöhnliche Protokollimplementierung (potenzielle Verwendung schädlicher Tools wie Hydra)|2033
 |Suspected overpass-the-hash attack (Kerberos) (Verdacht auf einen Overpass-the-Hash-Angriff (Kerberos))|Ungewöhnliche Kerberos-Protokollimplementierung (potenzieller Overpass-the-Hash-Angriff)|2002|

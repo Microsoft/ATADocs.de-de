@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 1/1/2019
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,51 +13,64 @@ ms.technology: ''
 ms.assetid: a06004bd-9f77-4e8e-a0e5-4727d6651a0f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 59bc8cdb995b1f7473efb7c0e601aca50a9ccafe
-ms.sourcegitcommit: 58c75026e5ec4dcab3b0852a41f9f0a0ad6f22eb
+ms.openlocfilehash: 8ff32e742dc1ff1ce48077206b78d4badd10f74e
+ms.sourcegitcommit: 1ba4e327784c6267db5a708592c4d81ca23376ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2018
-ms.locfileid: "49315828"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53996824"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
 
 
 # <a name="working-with-security-alerts"></a>Arbeiten mit Sicherheitswarnungen
-In diesem Artikel werden die Grundlagen der Arbeit mit Azure Advanced Threat Protection erläutert.
+
+In diesem Artikel werden die Grundlagen der Arbeit mit Azure ATP-Sicherheitswarnungen erläutert.
 
 ## Überprüfen von Sicherheitswarnungen auf der Angriffszeitachse <a name="review-suspicious-activities-on-the-attack-time-line"></a>
-Nachdem Sie sich im Azure ATP-Portal angemeldet haben, gelangen Sie automatisch zur **Zeitachse für Sicherheitswarnungen**. Sicherheitswarnungen werden in chronologischer Reihenfolge aufgeführt, wobei sich die neueste Warnung oben auf der Zeitachse befindet.
+
+Nachdem Sie sich beim Azure ATP-Portal angemeldet haben, gelangen Sie automatisch zur **Zeitachse für Sicherheitswarnungen**. Sicherheitswarnungen werden in chronologischer Reihenfolge aufgeführt, wobei sich die neueste Warnung oben auf der Zeitachse befindet.
+
 Jede Sicherheitswarnung enthält die folgenden Informationen:
 
--   Die beteiligten Entitäten, einschließlich Benutzer, Computer, Server, Domänencontroller und Ressourcen
+- Die beteiligten Entitäten, einschließlich Benutzer, Computer, Server, Domänencontroller und Ressourcen
 
--   Uhrzeiten und Zeitrahmen der verdächtigen Aktivitäten, die zur Auslösung der Sicherheitswarnung geführt haben.
+- Uhrzeiten und Zeitrahmen der verdächtigen Aktivitäten, die zur Auslösung der Sicherheitswarnung geführt haben.
 
--   Schweregrad der Warnung: hoch, mittel oder niedrig.
+- Schweregrad der Warnung: Hoch, Mittel oder Niedrig.
 
--   Staus: „Offen“, „Aufgelöst“ oder „Unterdrückt“.
+- Status: „Offen“, „Aufgelöst“ oder „Unterdrückt“.
 
--   Möglichkeit für Folgendes:
+- Möglichkeiten:
 
-    -   Teilen der Sicherheitswarnung mit anderen Personen in Ihrer Organisation per E-Mail.
+    - Teilen der Sicherheitswarnung mit anderen Personen in Ihrer Organisation per E-Mail.
 
-    -   Exportieren der Sicherheitswarnung nach Excel.
+    - Herunterladen der Sicherheitswarnung im Excel-Format.
 
 > [!NOTE]
-> -   Wenn Sie mit der Maus auf einen Benutzer oder Computer zeigen, wird ein Miniprofil der Entität angezeigt. Dieses enthält zusätzliche Informationen zur Entität und die Anzahl der Sicherheitswarnungen, mit denen die Entität verknüpft ist.
-> -   Wenn Sie auf eine Entität klicken, gelangen Sie zum Entitätsprofil des Benutzers oder Computers.
+> - Wenn Sie mit der Maus auf einen Benutzer oder Computer zeigen, wird ein Miniprofil der Entität angezeigt. Dieses enthält zusätzliche Informationen zur Entität und die Anzahl der Sicherheitswarnungen, mit denen die Entität verknüpft ist.
+> - Wenn Sie auf eine Entität klicken, gelangen Sie zum Entitätsprofil des Benutzers oder Computers.
 
 ![Abbildung der Zeitachse für Azure ATP-Sicherheitswarnungen](media/atp-sa-timeline.png)
 
-## Erkennungen von Vorschauversionen<a name="preview-detections"></a>
+## <a name="security-alert-categories"></a>Kategorien der Sicherheitswarnungen
+
+Azure ATP-Sicherheitswarnungen werden in die folgenden Kategorien oder Phasen unterteilt, wie die Phasen in einer typischen „Kill Chain“ eines Cyberangriffs. 
+
+- Warnungen zu Reconnaissance
+- Warnungen zu kompromittierten Anmeldeinformationen
+- Lateral Movement-Warnungen
+- Warnungen zu Domänendominanz
+- Warnungen zu Exfiltration
+
+## Vorschau von Erkennungsfunktionen <a name="preview-detections"></a>
 
 Das Azure ATP-Forschungsteam arbeitet kontinuierlich daran, neue Erkennungen für neu entdeckte Angriffe zu implementieren. Da es sich bei Azure ATP um einen Clouddienst handelt, werden neue Erkennungen schnell veröffentlicht, damit Azure ATP-Kunden so schnell wie möglich von diesen profitieren können.
 
 Diese Erkennungen werden als Vorschauversionen markiert, damit Sie die neuen Erkennungen schneller ermitteln können und wissen, dass sie neu für das Produkt sind. Wenn Sie die Erkennungen von Vorschauversionen deaktivieren, werden diese nicht mehr in der Azure ATP-Konsole (und auch nicht auf der Zeitachse oder in den Entitätsprofilen) angezeigt, und es werden keine Warnungen mehr geöffnet.
 
-![Vorschauversion für VPN-Erkennungen](./media/preview-detection-vpn.png) 
+![Vorschauversion für VPN-Erkennungen](./media/preview-detection-vpn.png)
 
 Erkennungen von Vorschauversionen werden standardmäßig in Azure ATP aktiviert. 
 
@@ -73,26 +86,27 @@ Gehen Sie wie folgt vor, um die Erkennung von Vorschauversionen zu deaktivieren:
 ## <a name="filter-security-alerts-list"></a>Filtern der Liste der Sicherheitswarnungen
 So filtern Sie die Liste der Sicherheitswarnungen:
 
-1.  Wählen Sie auf der linken Seite des Bildschirms im Bereich **Filtern nach** eine der folgenden Optionen aus: **Alle**, **Offen**, **Geschlossen** oder **Unterdrückt**.
+1. Wählen Sie auf der linken Seite des Bildschirms im Bereich **Filtern nach** eine der folgenden Optionen aus: **Alle**, **Offen**, **Geschlossen** oder **Unterdrückt**.
 
-2.  Um die Liste weiter zu filtern, wählen Sie **Hoch**, **Mittel** oder **Niedrig** aus.
+2. Um die Liste weiter zu filtern, wählen Sie **Hoch**, **Mittel** oder **Niedrig** aus.
 
 **Schweregrad von verdächtigen Aktivitäten**
 
--   **Niedrig**
+- **Niedrig**
 
     Weist auf Aktivitäten hin, die zu Angriffen durch böswillige Benutzer oder Software führen können, um Zugriff auf Organisationsdaten zu erlangen.
 
--   **Mittel**
+- **Mittel**
 
     Weist auf Aktivitäten hin, die für bestimmte Identitäten das Risiko schwerwiegenderer Angriffe erhöhen und zu Identitätsdiebstahl oder Berechtigungsausweitung führen können.
 
--   **Hoch**
+- **Hoch**
 
     Weist auf Aktivitäten hin, die zu Identitätsdiebstahl, Berechtigungsausweitung oder anderen Angriffen mit schwerwiegenden Auswirkungen führen können.
 
 
 ## <a name="managing-security-alerts"></a>Verwalten von Sicherheitswarnungen
+
 Sie können den Status einer Sicherheitswarnung ändern, indem Sie auf den aktuellen Status der Sicherheitswarnung klicken und eine der folgenden Optionen auswählen: **Offen**, **Unterdrückt**, **Aufgelöst** oder **Verworfen**.
 Klicken Sie dafür auf die drei Punkte in der oberen rechten Ecke einer bestimmten Warnung, um die Liste der verfügbaren Aktionen anzuzeigen.
 
@@ -100,18 +114,18 @@ Klicken Sie dafür auf die drei Punkte in der oberen rechten Ecke einer bestimmt
 
 **Sicherheitswarnungsstatus**
 
--   **Offen**: Alle neuen Sicherheitswarnungen werden in dieser Liste angezeigt.
+- **Offen**: Alle neuen Sicherheitswarnungen werden in dieser Liste angezeigt.
 
--   **Aufgelöst**: Wird verwendet, um Sicherheitswarnungen nachzuverfolgen, die Sie identifiziert, untersucht oder entschärft haben.
+- **Auflösen**: Wird verwendet, um Sicherheitswarnungen nachzuverfolgen, die Sie identifiziert, untersucht oder entschärft haben.
 
     > [!NOTE]
     > Azure ATP kann geschlossene Warnungen wieder öffnen, wenn die gleiche Aktivität innerhalb eines kurzen Zeitraums erneut erkannt wird.
 
--   **Unterdrücken**: Das Unterdrücken einer Warnung bedeutet, dass Sie sie im Moment ignorieren möchten und nur wieder gewarnt werden möchten, wenn es eine neue Instanz gibt. Wenn es also eine ähnliche Warnung gibt, wird diese von Azure ATP nicht erneut geöffnet. Wenn die Warnung jedoch für sieben Tage angehalten wurde und anschließend erneut auftritt, werden Sie erneut gewarnt.
+- **Unterdrücken**: Durch das Unterdrücken einer Warnung wird diese für den Moment ignoriert. Sie erhalten erst dann wieder eine Warnung, wenn eine neue Instanz vorliegt. Wenn es also eine ähnliche Warnung gibt, wird diese von Azure ATP nicht erneut geöffnet. Wenn die Warnung jedoch für sieben Tage angehalten wurde und anschließend erneut auftritt, werden Sie erneut gewarnt.
 
 - **Verwerfen**: Wenn Sie eine Warnung verwerfen, wird sie aus dem System und aus der Datenbank gelöscht und kann von Ihnen NICHT mehr wiederhergestellt werden. Nachdem Sie auf „Verwerfen“ geklickt haben, können Sie alle Sicherheitswarnungen für den gleichen Typ löschen.
 
-- **Ausschließen**: Die Möglichkeit, eine Entität davor zu bewahren, mehr bestimmte Warnungstypen auszugeben. Sie können z.B. Azure ATP darauf festlegen, eine bestimmte Entität (Benutzer oder Computer) auszuschließen, sodass diese keine Warnung für einen bestimmten Typ einer Aktivität ausgibt, wie etwa ein bestimmter Administrator, der Remote-Code oder eine Sicherheitsüberprüfung ausführt, die DNS-Reconnaissance durchführt. Zusätzlich zur Möglichkeit, Ausnahmen direkt zur Sicherheitswarnung hinzuzufügen, da sie in der Zeitleiste erkannt wurde, können Sie auch auf die Seite „Konfiguration“ zu **Ausnahmen** wechseln. Für jede Sicherheitswarnung können Sie so manuell ausgeschlossene Entitäten oder Subnetze hinzufügen oder entfernen (z.B. für Pass-the-Ticket). 
+- **Ausschließen**: Die Möglichkeit, eine Entität davor zu bewahren, mehr bestimmte Warnungstypen auszugeben. Sie können z.B. Azure ATP darauf festlegen, eine bestimmte Entität (Benutzer oder Computer) auszuschließen, sodass diese keine Warnung für einen bestimmten Typ einer Aktivität ausgibt, wie etwa ein bestimmter Administrator, der Remote-Code oder eine Sicherheitsüberprüfung ausführt, die DNS-Reconnaissance durchführt. Zusätzlich zur Möglichkeit, Ausnahmen direkt zur Sicherheitswarnung hinzuzufügen, da sie in der Zeitleiste erkannt wurde, können Sie auch auf die Seite „Konfiguration“ zu **Ausnahmen** wechseln. Für jede Sicherheitswarnung können Sie so manuell ausgeschlossene Entitäten oder Subnetze hinzufügen oder entfernen (z.B. für Pass-the-Ticket).
 
 > [!NOTE]
 > Die Seiten für die Konfiguration können nur von Azure ATP-Administratoren bearbeitet werden.

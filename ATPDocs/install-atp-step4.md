@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 51911e39-76c7-4dcd-bc0b-ec6235d0403f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5b5d588f11bb1c7a665cf4727cb996e5261b7237
-ms.sourcegitcommit: 281d8ea451b6ac726331d0032c344651b1a964b7
+ms.openlocfilehash: fa65a796100c23f2b113410fd30f9adf22e79268
+ms.sourcegitcommit: fd6c8a28e6bf3a6031835aebd0b9278e495d3e0b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/16/2018
-ms.locfileid: "53450387"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54142419"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -33,20 +33,25 @@ ms.locfileid: "53450387"
 ## <a name="step-4-install-the-azure-atp-sensor"></a>Schritt 4: Installieren des Azure ATP-Sensors
 
 > [!IMPORTANT]
->Stellen Sie sicher, dass .NET Framework 4.7 auf dem Computer installiert ist. Wenn .NET Framework 4.7 nicht installiert ist, wird es vom Azure ATP-Sensorsetuppaket installiert, wodurch möglicherweise ein Neustart des Servers erforderlich ist.
+>Stellen Sie sicher, dass Microsoft .NET Framework 4.7 auf dem Computer installiert ist. Wenn .NET Framework 4.7 nicht installiert ist, wird es vom Azure ATP-Sensorsetuppaket installiert. Dadurch ist möglicherweise ein Neustart des Servers erforderlich.
 
 Führen Sie auf dem Domänencontroller folgende Schritte aus.
 
-1. Stellen Sie sicher, dass der Computer mit dem relevanten Azure ATP-Clouddienst-Endpunkt verbunden ist:
-  - [https://triprd1wceuw1sensorapi.atp.azure.com](https://triprd1wceuw1sensorapi.atp.azure.com) (für Europa)  
-  - [https://triprd1wcuse1sensorapi.atp.azure.com](https://triprd1wcuse1sensorapi.atp.azure.com) (für die USA)
-  - [https://triprd1wcasse1sensorapi.atp.azure.com](https://triprd1wcasse1sensorapi.atp.azure.com) (für Asien)
+1. Stellen Sie sicher, dass der Computer mit den relevanten Azure ATP-Clouddienst-Endpunkten verbunden ist:
+  - [https://triprd1wceuw1sensorapi.atp.azure.com](https://triprd1wceuw1sensorapi.atp.azure.com) 
+  - [https://triprd1wceun1sensorapi.atp.azure.com](https://triprd1wceun1sensorapi.atp.azure.com)
+<br>(für Europa)  
+  - [https://triprd1wcuse1sensorapi.atp.azure.com](https://triprd1wcuse1sensorapi.atp.azure.com)
+  - [https://triprd1wcusw1sensorapi.atp.azure.com](https://triprd1wcusw1sensorapi.atp.azure.com)
+  - [https://triprd1wcuswb1sensorapi.atp.azure.com](https://triprd1wcuswb1sensorapi.atp.azure.com)
+<br>(für die USA)
+  - [https://triprd1wcasse1sensorapi.atp.azure.com](https://triprd1wcasse1sensorapi.atp.azure.com)<br>(für Asien)
 
 2. Extrahieren Sie die Installationsdateien aus der ZIP-Datei. 
 > [!NOTE] 
 > Eine Installation direkt aus der ZIP-Datei verursacht einen Fehler.
 
-3.  Führen Sie **Azure ATP sensor setup.exe** aus, und befolgen Sie die Anweisungen des Setup-Assistenten.
+3. Führen Sie **Azure ATP sensor setup.exe** aus, und befolgen Sie die Anweisungen des Setup-Assistenten.
 
 4.  Wählen Sie auf der Seite **Willkommen** Ihre Sprache aus, und klicken Sie auf **Weiter**.
 

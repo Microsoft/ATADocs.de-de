@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/29/2018
+ms.date: 1/7/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 8ae459ac-9fca-4923-9a1a-dc10d5c50b29
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 566b7ac598dcdd0d44d30c50c01846c42d0b643f
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: 7d7be8cb236a58e6f0576d3b283fb8eff137ac96
+ms.sourcegitcommit: fd6c8a28e6bf3a6031835aebd0b9278e495d3e0b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744794"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54142402"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -60,7 +60,7 @@ Informationen zu weiteren Supportoptionen erhalten Sie von Ihrem Microsoft-Konta
 
 ### <a name="self-help"></a>Hilfe zur Selbsthilfe
 
-#### <a name="system-status-page"></a>Seite „Systemstatus“ 
+#### <a name="system-status-page"></a>Seite „Systemstatus“
 
 Gehen Sie auf die Seite [**Systemstatus**](https://health.atp.azure.com/), um den Systemstatus für Azure ATP abzurufen. Auf dieser Seite erhalten Sie Informationen dazu, ob das Azure ATP-Portal aktiv ist und funktioniert, ob Probleme bei Ermittlungsvorgängen auftreten oder ob der Sensor Datenverkehr an die Cloud senden kann. Sie können über die Menüleiste in Azure ATP auf den **Systemstatus** zugreifen.
 
@@ -80,4 +80,4 @@ Problembehandlung:
 
 ### <a name="community-resources"></a>Communityressourcen
 
-Wir empfehlen die  [Yammer-Gruppe zu Azure Advanced Threat Protection](https://www.yammer.com/AskIPTeam). Diese Ressource ermöglicht es Ihnen, direkte Antworten vom Azure Advanced Threat Protection-Team zu erhalten und zusätzlich von gemeinsamen Erfahrungen und dem Wissen anderer Administratoren und Berater zu profitieren.
+Wir empfehlen die  [Tech Community für Azure Advanced Threat Protection](https://aka.ms/azureatpcommunity). Diese Ressource ermöglicht es Ihnen, direkte Antworten vom Azure Advanced Threat Protection-Team zu erhalten und zusätzlich von gemeinsamen Erfahrungen und dem Wissen anderer Administratoren und Berater zu profitieren.

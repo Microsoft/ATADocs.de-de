@@ -5,41 +5,48 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/25/2018
-ms.topic: conceptual
+ms.date: 1/3/2019
+ms.topic: tutorial
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: 9295dc09-ecdb-44c0-906b-cba4c5c8f17c
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: bb460b699e0052f917ffcd6899d5cc1baa71182f
-ms.sourcegitcommit: eac0aa855270b550dfb4b8c61b9cf0953f1e5204
+ms.openlocfilehash: 4201ccc187b0f06522cc46aefb1518ff22012c86
+ms.sourcegitcommit: 1ba4e327784c6267db5a708592c4d81ca23376ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52298269"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53996909"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
-# <a name="using-azure-atp-lateral-movement-paths-lmps"></a>Verwenden von Azure ATP Lateral Movement-Pfaden (LMPs)
+# <a name="tutorial-use-lateral-movement-paths-lmps"></a>Tutorial: Verwendung von Lateral Movement-Pfaden (LMPs)
 
-Lateral Movement-Angriffe können auf unterschiedliche Weise durchgeführt werden. Einige der von Angreifern am häufigsten verwendeten Methoden sind der [Diebstahl von Anmeldeinformationen](suspicious-activity-guide.md#) und [Pass-the-Ticket](suspicious-activity-guide.md)-Angriffe. Bei beiden Methoden werden nicht sensible Konten von den Angreifern für Seitenangriffe genutzt, indem sie nicht sensible Computer ausnutzen, die Anmeldeinformationen gemeinsam mit Konten, Endpunktgruppen und Computern mit sensiblen Konten verwenden. 
+Lateral Movement-Angriffe können auf unterschiedliche Weise durchgeführt werden. Einige der von Angreifern am häufigsten verwendeten Methoden sind der [Diebstahl von Anmeldeinformationen](suspicious-activity-guide.md#) und [Pass-the-Ticket](suspicious-activity-guide.md)-Angriffe. Bei beiden Methoden werden nicht sensible Konten von den Angreifern für Seitenangriffe genutzt, indem sie nicht sensible Computer ausnutzen, die Anmeldeinformationen gemeinsam mit Konten, Endpunktgruppen und Computern mit sensiblen Konten verwenden.
 
-Verwenden Sie Azure ATP-LMPs, um potenzielle Lateral Movement-Pfade zu [untersuchen](#investigate) und zusammen mit Azure ATP-Sicherheitswarnungen ein besseres Verständnis davon zu bekommen, welche Aktionen in Ihrem Netzwerk wie durchgeführt wurden. Verwenden Sie den [Bericht über einen LMP zu einem sensiblen Konto](#discover-your-at-risk-sensitive-accounts), um alle sensiblen Konten mit potenziellen Lateral Movement-Pfaden in Ihrem Netzwerk nach Zeiträumen zu ermitteln.  
+In diesem Tutorial erfahren Sie, wie Azure ATP-LMPs verwendet werden können, um potenzielle Lateral Movement-Pfade zu [untersuchen](#investigate) und zusammen mit Azure ATP-Sicherheitswarnungen besser zu verstehen, welche Aktionen in Ihrem Netzwerk wie durchgeführt wurden. Zusätzlich verwenden Sie den [Bericht über LMPs zu einem sensiblen Konto](#discover-your-at-risk-sensitive-accounts), um alle sensiblen Konten mit potenziellen Lateral Movement-Pfaden in Ihrem Netzwerk nach Zeiträumen zu ermitteln.
+
+> [!div class="checklist"]
+> * Untersuchen von LMPs
+> * Ermitteln Ihrer gefährdeten sensiblen Konten
+> * Zugriff auf den **Bericht über Lateral Movement-Pfade zu sensiblen Konten**
+
 
 ## <a name="investigate"></a>Untersuchen
-Es gibt mehrere Möglichkeiten, LMPs zu verwenden und zu untersuchen. Suchen Sie im Azure ATP-Portal nach einer Entität, und untersuchen Sie sie dann über den Pfad oder die Aktivität. 
+
+Es gibt mehrere Möglichkeiten, LMPs zu verwenden und zu untersuchen. Suchen Sie im Azure ATP-Portal nach einer Entität, und untersuchen Sie sie dann über den Pfad oder die Aktivität.
 
 1. Suchen Sie über das Portal nach einem Benutzer oder Computer. Achten Sie darauf, ob ein Lateral Movement-Badge zu einem Entitätsprofil hinzugefügt wurde. Badges werden nur angezeigt, wenn eine Entität innerhalb der letzten 48 Stunden in einem potenziellen LMP erkannt wurde.  
 
-   ![Symbol „lateral“](./media/lateral-movement-icon.png) oder ![Symbol „Pfad“](./media/paths-icon.png). 
+   ![Symbol „lateral“](./media/lateral-movement-icon.png) oder ![Symbol „Pfad“](./media/paths-icon.png).
 
-2. Klicken Sie auf der sich öffnenden Benutzerprofilseite auf die Registerkarte **Lateral Movement-Pfade**. 
+2. Klicken Sie auf der sich öffnenden Benutzerprofilseite auf die Registerkarte **Lateral Movement-Pfade**.
 
    ![Registerkarte „Azure ATP Lateral Movement Path (LMP)“ (Azure ATP-Lateral Movement-Pfad (LMP))](./media/lateral-movement-path-tab.png)
 
-3. Das angezeigte Diagramm bietet eine Übersicht der möglichen Pfade zum sensiblen Benutzer in einem Zeitraum von 48 Stunden. Wenn in den letzten zwei Tagen keine Aktivität erkannt wurde, wird das Diagramm nicht angezeigt. Verwenden Sie die Option **Ein anderes Datum anzeigen**, um das Diagramm für die vorherigen Erkennungen von Lateral Movement-Pfaden für die Entität anzuzeigen. 
+3. Das angezeigte Diagramm bietet eine Übersicht der möglichen Pfade zum sensiblen Benutzer in einem Zeitraum von 48 Stunden. Wenn in den letzten zwei Tagen keine Aktivität erkannt wurde, wird das Diagramm nicht angezeigt. Verwenden Sie die Option **Ein anderes Datum anzeigen**, um das Diagramm für die vorherigen Erkennungen von Lateral Movement-Pfaden für die Entität anzuzeigen.
 
    ![LMP, Ein anderes Datum anzeigen](./media/atp-view-different-date.png)
 
@@ -59,13 +66,21 @@ Führen Sie die folgenden Schritte aus, um alle sensiblen Konten in Ihrem Netzwe
 
 3. Klicken Sie auf **Herunterladen**.
 
-4. Es wird eine Excel-Datei erstellt, die Details zu potenziellen Lateral Movement-Pfaden und der Anfälligkeit sensibler Konten für die ausgewählten Daten enthält. Die Registerkarte **Zusammenfassung** liefert Diagramme mit Informationen über die Anzahl sensibler Konten und Computer sowie Durchschnittswerte für gefährdeten Zugriff. Die Registerkarte **Details** enthält eine Liste der sensiblen Konten, die Sie genauer untersuchen sollten. 
+4. Es wird eine Excel-Datei erstellt, die Details zu potenziellen Lateral Movement-Pfaden und der Anfälligkeit sensibler Konten für die ausgewählten Daten enthält. Die Registerkarte **Zusammenfassung** liefert Diagramme mit Informationen über die Anzahl sensibler Konten und Computer sowie Durchschnittswerte für gefährdeten Zugriff. Die Registerkarte **Details** enthält eine Liste der sensiblen Konten, die Sie genauer untersuchen sollten.
 
-Der Bericht über Lateral Movement zu einem sensiblen Konto kann auch über das Feature „Geplante Berichte festlegen“ geplant werden. 
+## <a name="schedule-report"></a>Berichtszeitplan
 
-Beachten Sie, dass die tatsächlichen Pfade in dem herunterladbaren Bericht möglicherweise nicht mehr verfügbar sind, da sie möglicherweise bereits ermittelt und geändert oder behoben wurden. 
+Der Bericht über Lateral Movement zu einem sensiblen Konto kann auch über das Feature „Geplante Berichte festlegen“ geplant werden.
 
-Wählen Sie verschiedene verfügbare Datumsangaben in der Kalenderauswahl, um vergangene LMPs beim Erstellen eines Berichts zu überprüfen. 
+Beachten Sie, dass die tatsächlichen Pfade in dem herunterladbaren Bericht möglicherweise nicht mehr verfügbar sind, da sie möglicherweise bereits ermittelt und geändert oder behoben wurden.
+
+Wählen Sie verschiedene verfügbare Datumsangaben in der Kalenderauswahl, um vergangene LMPs beim Erstellen eines Berichts zu überprüfen.
+
+## <a name="next-steps"></a>Nächste Schritte
+
+In diesem Tutorial haben Sie erfahren, wie LMPs zum Untersuchen von verdächtigen Aktivitäten eingesetzt werden. Um mehr über die an LMPs beteiligten Entitäten zu erfahren, fahren Sie mit dem Tutorial zur Untersuchung von Entitäten fort.
+> [!div class="nextstepaction"]
+> [Untersuchen von Entitäten](investigate-entity.md)
 
 ## <a name="see-also"></a>Weitere Informationen
 

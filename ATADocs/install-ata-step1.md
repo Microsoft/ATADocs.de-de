@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/31/2018
+ms.date: 1/9/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 04a25e6f0a73e45b4358566f15f38c20d291a153
-ms.sourcegitcommit: 1b914a85cfa33dc0c5005f9dc68e6ea08a0164ac
+ms.openlocfilehash: b138f533b1ce804af08479a961a791c4069e5a27
+ms.sourcegitcommit: fd6c8a28e6bf3a6031835aebd0b9278e495d3e0b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411628"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54142436"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -94,9 +94,16 @@ Da Sie sich mit einer IP-Adresse bei der Website anmelden, wird eine Warnung im 
 
 ### <a name="set-anti-virus-exclusions"></a>Festlegen von Ausnahmen für die Antivirensoftware
 
-Nach der Installation von ATA Center sollten Sie das MongoDB-Datenbankverzeichnis als Ausnahme festlegen, damit dieses nicht fortlaufend von Ihrer Antivirenanwendung überprüft wird. Der Standardspeicherort in der Datenbank lautet **C:\Programme\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data**.
+Nach der Installation von ATA Center sollten Sie das MongoDB-Datenbankverzeichnis als Ausnahme festlegen, damit dieses nicht fortlaufend von Ihrer Antivirenanwendung überprüft wird. Der standardmäßige Speicherort in der Datenbank lautet folgendermaßen: **C:\Programme\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data**.
 
+Stellen Sie sicher, dass Sie außerdem diese Ordner von der Antivirusüberprüfung ausschließen:
 
+C:\Programme\Microsoft Advanced Threat Analytics\Center\ParentKerberosAsBloomFilters
+<br>C:\Programme\Microsoft Advanced Threat Analytics\Center\ParentKerberosTgsBloomFilters
+<br>C:\Programme\Microsoft Advanced Threat Analytics\Center\Backup
+<br>C:\Programme\Microsoft Advanced Threat Analytics\Center\Logs
+
+Wenn Sie ATA in einem anderen Verzeichnis installiert haben, stellen Sie sicher, dass Sie die Ordnerpfade entsprechend Ihrer Installation ändern. 
 
 > [!div class="step-by-step"]
 > [« Vor der Installation](configure-port-mirroring.md)
