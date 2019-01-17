@@ -13,16 +13,13 @@ ms.technology: ''
 ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 07f688f9afe82d47c5292670b8836d30022a0f97
-ms.sourcegitcommit: 1ba4e327784c6267db5a708592c4d81ca23376ba
+ms.openlocfilehash: d892b22e46efee6ab8315a20e39bd7b47a4c824b
+ms.sourcegitcommit: 6a0ac21f59e72db8615811da2c886f54cf3727f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53996807"
+ms.lasthandoff: 01/13/2019
+ms.locfileid: "54249945"
 ---
-*Gilt für: Azure Advanced Threat Protection*
-
-
 # <a name="tutorial-investigate-an-entity"></a>Tutorial: Untersuchen einer Entität
 
 In diesem Tutorial erfahren Sie, wie Sie mit verdächtigen Aktivitäten in Verbindung stehende Objekte untersuchen können, die von Azure Advanced Threat Protection (ATP) erkannt werden. Nachdem eine Sicherheitswarnung in der Zeitleiste angezeigt wurde, können Sie einen Drilldown für die von der Warnung betroffene Entität durchführen und anhand der folgenden Parameter und Details herausfinden, was passiert ist und welche Schritte zur Risikominderung erforderlich sind.
@@ -50,7 +47,7 @@ Azure ATP zieht Tags aus Active Directory, damit Sie eine einzelne Schnittstelle
 - Teilweise: Dieser Benutzer, Computer oder diese Gruppe wurde von der Domäne nicht synchronisiert und über einen globalen Katalog teilweise aufgelöst. Einige Attribute sind nicht verfügbar.
 - Nicht aufgelöst: Dieser Computer wurde nicht zu einer gültigen Entität in der Active Directory-Struktur aufgelöst. Es sind keine Verzeichnisinformationen verfügbar.
 - Gelöscht: Die Entität wurde aus Active Directory gelöscht.
-- Deaktiviert: Die Entität wurde in Active Directory deaktiviert.
+- Disabled: Die Entität wurde in Active Directory deaktiviert.
 - Gesperrt: Für die Entität wurde mehrmals ein falsches Kennwort eingegeben, und sie wurde gesperrt.
 - Abgelaufen: Die Entität ist in Active Directory abgelaufen.
 - Neu: Die Entität wurde vor weniger als 30 Tagen erstellt.
