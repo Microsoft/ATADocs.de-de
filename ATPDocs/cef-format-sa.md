@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/17/2018
+ms.date: 1/13/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 929b0db30632e737e6371d473639f1e22532f75f
-ms.sourcegitcommit: c3ee9495b9d4db985783dcabcc4fa77c7c8eaed4
+ms.openlocfilehash: 2cc450a50b35101b768d521d867850946e207dc5
+ms.sourcegitcommit: 6a0ac21f59e72db8615811da2c886f54cf3727f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53454545"
+ms.lasthandoff: 01/13/2019
+ms.locfileid: "54249996"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -32,7 +32,7 @@ Die folgenden Felder und deren Werte werden an Ihren SIEM-Agent weitergeleitet:
 
 |Detail|Erläuterung|
 |---------|---------------|
-|start|Startzeit der Warnung|
+|Start|Startzeit der Warnung|
 |suser|Konto (normalerweise das Benutzerkonto), das an der Warnung beteiligt ist|
 |machine account|Konto (normalerweise das Benutzerkonto), das an der Warnung beteiligt ist|
 |outcome|Sofern relevant, ein Erfolg oder Fehler bei der verdächtigen Aktivität in der Warnung|
@@ -57,14 +57,17 @@ Die folgenden Felder und deren Werte werden an Ihren SIEM-Agent weitergeleitet:
 
 > [!div class="mx-tableFixed"] 
 
-|Neuer Sicherheitswarnungsname|Alter Sicherheitswarnungsname|Eindeutige externalId|
+|Neuer Sicherheitswarnungsname|Alter Sicherheitswarnungsname|Eindeutige externe ID|
 |---------|----------|---------|
 |Reconnaissance mithilfe von Kontoenumeration|Reconnaissance mithilfe von Kontoenumeration|2003|
+|Datenexfiltration über den SMB| –| 2030|
 |Honeytoken-Aktivität|Honeytoken-Aktivität|2014|
 |Malicious request of Data Protection API master key (Böswillige Anforderung eines Masterschlüssels zur Datenschutz-API)|Böswillige Anforderung privater Informationen im Rahmen der Datensicherheit|2020|
-|Network-mapping reconnaissance (DNS) (Reconnaissance über Netzwerkzuordnung (DNS))|Reconnaissance über DNS|2007|
+|Network mapping reconnaissance (DNS) (Reconnaissance über Netzwerkzuordnung (DNS))|Reconnaissance über DNS|2007|
 |Versuchte Remote-Codeausführung|Versuchte Remote-Codeausführung|2019|
 |Suspected Brute Force attack (LDAP) (Verdacht auf einen Brute-Force-Angriff (LDAP))|Brute-Force-Angriff mithilfe einer einfachen LDAP-Bindung|2004|
+|Suspected Brute Force attack (Kerberos NTLM) (Verdacht auf einen Brute-Force-Angriff (Kerberos NTLM))|Verdächtige Authentifizierungsfehler|2023|
+|Suspected Brute Force attack (SMB) (Verdacht auf einen Brute-Force-Angriff (SMB))|Ungewöhnliche Protokollimplementierung (potenzielle Verwendung schädlicher Tools wie Hydra)|2033|
 |Suspected DCShadow attack (domain controller promotion) (Verdacht auf DCShadow-Angriff (Heraufstufung von Domänencontrollern))|Verdächtige Heraufstufung zu Domänencontrollern (potenzieller DcShadow-Angriff)|2028|
 |Verdacht auf DCShadow-Angriff (Replikationsanforderung an Domänencontroller)|Verdächtige Replikationsanforderung von Domänencontroller (potenzieller DCShadow-Angriff)|2029|
 |Suspected DCSync attack (replication of directory services) (Verdacht auf einen DCSync-Angriff (Replikation von Verzeichnisdiensten))|Böswillige Replikation von Verzeichnisdiensten|2006|
@@ -75,8 +78,6 @@ Die folgenden Felder und deren Werte werden an Ihren SIEM-Agent weitergeleitet:
 |Verdacht auf Verwendung eines Golden Ticket (Ticketanomalie) – Vorschauversion|–|2032|
 |Suspected identity theft (pass-the-hash) (Verdacht auf Identitätsdiebstahl (Pass-the-Hash))|Identitätsdiebstahl mithilfe eines Pass-the-Hash-Angriffs|2017|
 |Suspected identity theft (pass-the-ticket) (Verdacht auf Identitätsdiebstahl (Pass-the-Ticket))|Identitätsdiebstahl mithilfe eines Pass-the-Ticket-Angriffs|2018|
-|Suspected Brute Force attack (SMB) (Verdacht auf einen Brute-Force-Angriff (SMB))|Ungewöhnliche Protokollimplementierung (potenzielle Verwendung schädlicher Tools wie Hydra)|2033|
-|Suspected Brute Force attack (Kerberos NTLM) (Verdacht auf einen Brute-Force-Angriff (Kerberos NTLM))|Verdächtige Authentifizierungsfehler|2023|
 |Suspected over-pass-the-hash attack (encryption downgrade) (Verdacht auf Over-Pass-the-Hash-Angriff (Herabstufung der Verschlüsselung))|Aktivität zur Herabstufung der Verschlüsselung (potenzieller Overpass-the-Hash-Angriff)|2008|
 |Suspected overpass-the-hash attack (Kerberos) (Verdacht auf einen Overpass-the-Hash-Angriff (Kerberos))|Ungewöhnliche Kerberos-Protokollimplementierung (potenzieller Overpass-the-Hash-Angriff)|2002|
 |Suspected use of Metasploit hacking framework (Verdacht auf Verwendung eines Hackerframeworks)|Ungewöhnliche Protokollimplementierung (potenzielle Verwendung schädlicher Hackertools wie Metasploit)|2034|
@@ -101,6 +102,9 @@ Prioritäten:
 
 ### <a name="account-enumeration-reconnaissance"></a>Reconnaissance mithilfe von Kontoenumeration 
 02-21-2018  16:19:35    Auth.Warning    192.168.0.220   1 2018-02-21T14:19:27.540731+00:00 CENTER CEF 6076 AccountEnumerationSecurityAlert ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|AccountEnumerationSecurityAlert|Reconnaissance using account enumeration|5|start=2018-02-21T14:19:02.6045416Z app=Kerberos shost=CLIENT1 suser=LMaldonado msg=Suspicious account enumeration activity using the Kerberos protocol, originating from CLIENT1, was observed and successfully guessed Lamon Maldonado (Software Engineer). externalId=2003 cs1Label=url cs1=https\://contoso-corp.atp.azure.com/securityAlert/eb6a35da-ff7f-4ab5-a1b5-a07529a89e6d cs2Label=trigger cs2=new
+
+### <a name="data-exfiltration-over-smb"></a>Datenexfiltration über den SMB
+12-19-2018  14:17:46    Auth.Error     127.0.0.1      1 2018-12-19T12:17:34.645993+00:00 DC1 CEF 3288 SmbDataExfiltrationSecurityAlert ï»¿0|Microsoft|Azure ATP|2.60.0.0|SmbDataExfiltrationSecurityAlert|[PREVIEW] Data exfiltration over SMB|10|start=2018-12-19T12:14:12.4932821Z app=Smb shost=CLIENT1 msg=Eugene Jenkins (Software Engineer) on DC2 copied suspicious files to CLIENT1. externalId=2030 cs1Label=url cs1=https\://contoso-corp.atp.azure.com:13000/securityAlert/3ca2ec9d-2c67-44cc-a2d6-391716611bb6 cs2Label=trigger cs2=new
 
 ### <a name="honeytoken-activity"></a>Honeytoken-Aktivität
 02-21-2018  16:20:36    Auth.Warning  192.168.0.220 1 2018-02-21T14:20:34.106162+00:00 CENTER CEF 6076 HoneytokenActivitySecurityAlert ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|HoneytokenActivitySecurityAlert|Honeytoken activity|5|start=2018-02-21T14:20:26.6705617Z app=Kerberos suser=honey msg=Die folgenden Aktivitäten wurden vom Honeytoken ausgeführt:\r\nAnmeldung bei CLIENT2 über DC1 durchgeführt. externalId=2014 cs1Label=url cs1=https\://contoso-corp.atp.azure.com/securityAlert/9249fe9a-c883-46dd-a4da-2a1fca5f211c cs2Label=trigger cs2=new

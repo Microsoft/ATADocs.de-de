@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/9/2019
+ms.date: 1/10/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b138f533b1ce804af08479a961a791c4069e5a27
-ms.sourcegitcommit: fd6c8a28e6bf3a6031835aebd0b9278e495d3e0b
+ms.openlocfilehash: 00bce1b381b32e1fe3fe9a2bb2c11016b33699f7
+ms.sourcegitcommit: 6a0ac21f59e72db8615811da2c886f54cf3727f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54142436"
+ms.lasthandoff: 01/13/2019
+ms.locfileid: "54249928"
 ---
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -33,7 +33,7 @@ Diese Installationsschritte stellen Anweisungen zur Durchführung einer Neuinsta
 > [!IMPORTANT] 
 > Wenn Sie Windows 2012 R2 verwenden, installieren Sie vor ATA das Update KB2934520 auf dem ATA Center-Server und den ATA-Gatewayservern, da andernfalls bei der ATA-Installation dieses Update installiert wird und inmitten der ATA-Installation ein Neustart erforderlich ist.
 
-## <a name="step-1-download-and-install-the-ata-center"></a>Schritt 1: Herunterladen und Installieren von ATA Center
+## <a name="step-1-download-and-install-the-ata-center"></a>Schritt 1 Herunterladen und Installieren von ATA Center
 Nachdem Sie überprüft haben, ob der Server die Anforderungen erfüllt, können Sie mit der Installation von ATA Center fortfahren.
     
 > [!NOTE]
@@ -96,12 +96,17 @@ Da Sie sich mit einer IP-Adresse bei der Website anmelden, wird eine Warnung im 
 
 Nach der Installation von ATA Center sollten Sie das MongoDB-Datenbankverzeichnis als Ausnahme festlegen, damit dieses nicht fortlaufend von Ihrer Antivirenanwendung überprüft wird. Der standardmäßige Speicherort in der Datenbank lautet folgendermaßen: **C:\Programme\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data**.
 
-Stellen Sie sicher, dass Sie außerdem diese Ordner von der Antivirusüberprüfung ausschließen:
+Stellen Sie sicher, dass Sie auch die folgenden Ordner und Prozesse von der Antivirusprüfung ausschließen:
 
-C:\Programme\Microsoft Advanced Threat Analytics\Center\ParentKerberosAsBloomFilters
+**Ordner** unter C:\Programme\Microsoft Advanced Threat Analytics\Center\ParentKerberosAsBloomFilters
 <br>C:\Programme\Microsoft Advanced Threat Analytics\Center\ParentKerberosTgsBloomFilters
 <br>C:\Programme\Microsoft Advanced Threat Analytics\Center\Backup
 <br>C:\Programme\Microsoft Advanced Threat Analytics\Center\Logs
+
+**Prozesse**
+<br>„mongod.exe“
+<br>„Microsoft.Tri.Center.exe“
+
 
 Wenn Sie ATA in einem anderen Verzeichnis installiert haben, stellen Sie sicher, dass Sie die Ordnerpfade entsprechend Ihrer Installation ändern. 
 

@@ -1,11 +1,11 @@
 ---
 title: Aktualisieren Ihrer Azure ATP-Sensoren | Microsoft-Dokumentation
-description: Im Folgenden wird erläutert, wie Sie Azure ATP-Sensoren aktualisieren können.
+description: Im Folgenden wird erläutert, wie Sie Azure ATP-Sensoren aktualisieren oder verzögert aktualisieren können.
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 1/14/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 603d9e09-a07d-4357-862f-d5682c8bc3dd
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a24210415929b69152377d34aeec1bdc8906d08c
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: f2df8f8f59edff7ebda3f86aae26b899913d57f8
+ms.sourcegitcommit: e2daa0f93d97d552cfbf1577fbd05a547b63e95b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744437"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54314328"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -60,7 +60,7 @@ In der Regel werden Sensoren automatisch aktualisiert, wenn der Azure ATP-Cloudd
 Dadurch können Sie bestimmte Sensoren auswählen, für die das Update automatisch erfolgt, und die restlichen Sensoren später aktualisieren, wenn das erste Update erfolgreich ausgeführt werden konnte.
 
 > [!NOTE]
-> Wenn ein Fehler auftritt und ein Sensor nicht aktualisiert wird, erstellen Sie ein Supportticket. Informationen zur weiteren Stärkung Ihres Proxys, damit er nur mit Ihrer Instanz kommuniziert, finden Sie unter [Proxykonfiguration](configure-proxy.md)
+> Wenn ein Fehler auftritt und ein Sensor nicht aktualisiert wird, erstellen Sie ein Supportticket. Informationen zur weiteren Stärkung Ihres Proxys, damit er nur mit Ihrer Instanz kommuniziert, finden Sie unter [Proxykonfiguration](configure-proxy.md).
 
 Gehen Sie wie folgt vor, um einen Sensor für ein verzögertes Update auszuwählen:
 
@@ -92,7 +92,7 @@ Die Azure ATP-Sensoren prüfen im Abstand weniger Minuten, ob sie bereits auf di
 ![Sensorupdate](./media/sensor-update.png)
 
 
-Falls ein Fehler auftritt und der Sensor den Updateprozess nicht abschließen kann, wird eine betreffende Überwachungswarnung ausgelöst und als Benachrichtigung gesendet.
+Falls ein Fehler beim Update auftritt und der Sensor den Updateprozess nicht abschließen kann, wird eine entsprechende Überwachungswarnung ausgelöst und als Benachrichtigung gesendet.
 
 ![Sensor veraltet](./media/sensor-outdated.png)
 

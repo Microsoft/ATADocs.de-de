@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/6/2019
+ms.date: 1/13/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,19 +13,49 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f5ce0643c502b94bb6a09cc353b8e0eadb0d6737
-ms.sourcegitcommit: b33c1860baa39e9d6d287e33940d579d7a728463
+ms.openlocfilehash: 5248ab54c8fd8d03035e1f6451597c5e8cfc63b2
+ms.sourcegitcommit: 6a0ac21f59e72db8615811da2c886f54cf3727f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2019
-ms.locfileid: "54058853"
+ms.lasthandoff: 01/13/2019
+ms.locfileid: "54250030"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
 # <a name="whats-new-in-azure-atp"></a>Neuerungen in Azure ATP
 
+## <a name="azure-atp-release-261"></a>Azure ATP Release 2.61
+Veröffentlicht: 13. Januar 2019
+
+- **Neue Sicherheitswarnung: Data exfiltration over SMB (Datenexfiltration über SMB) (Vorschauversion)**<br>
+Die Azure ATP-Sicherheitswarnung [Data exfiltration over SMB](atp-exfiltration-alerts.md) (Datenexfiltration über SMB) ist nun in der öffentlichen Vorschauversion enthalten. <br> Angreifer mit Domänenadministratorrechten können das KRBTGT-Konto beeinträchtigen. Angreifer können das KRBTGT-Konto verwenden, um ein Kerberos Ticket Granting Ticket (TGT) zu erstellen, das die Autorisierung für jede beliebige Ressource erlaubt. 
+
+
+- **Featureerweiterung: Remote code execution attempt (Versuchte Remotecodeausführung)** Sicherheitswarnung <br> Eine neue Warnungsbeschreibung und ein zusätzlicher Beweis sind hinzugefügt worden, damit die Warnung einfacher zu verstehen ist, und um bessere Untersuchungsworkflows zu bieten. 
+
+
+- **Featureerweiterung: DNS query logical activities (Logische Aktivitäten zur DNS-Abfrage)** <br>Weitere Abfragetypen sind den [von Azure ATP überwachten Aktivitäten](monitored-activities.md) hinzugefügt worden. Darunter die folgenden: **TXT**, **MX**, **NS**, **SRV**, **ANY**, **DNSKEY**. 
+
+- **Featureerweiterung: Suspected Golden Ticket usage (ticket anomaly) (Verdacht auf Verwendung eines Golden Ticket (anomalie)) und Suspected Golden Ticket usage (nonexistent account) (Verdacht auf Verwendung eines Golden Ticket (nicht vorhandenes Ticket))** <br>
+Eine verbesserte Erkennungslogik wurde für beide Warnungen angewendet, um die Anzahl von FP-Warnungen zu reduzieren und genauere Ergebnisse zu liefern.
+
+- **Featureerweiterung: Dokumentation zu Azure ATP-Sicherheitswarnungen** <br>
+Die Dokumentation zu Azure ATP-Sicherheitswarnungen ist optimiert und erweitert worden, um bessere Warnungsbeschreibungen, genauere Klassifizierungen sowie Erklärungen zu Beweisen und Abhilfe- und Präventionsmaßnahmen einzuschließen. Lernen Sie über die folgenden Links das neuen Design der Dokumentation zu Sicherheitswarnungen kennen: 
+    - [Azure ATP-Sicherheitswarnungen](suspicious-activity-guide.md)
+    - [Verstehen von Sicherheitswarnungen](understanding-security-alerts.md)
+        - [Warnung zu Reconnaissancephase](atp-reconnaissance-alerts.md)
+        - [Warnungen zu Phase der kompromittierten Anmeldeinformationen](atp-compromised-credentials-alerts.md)
+        - [Lateral movement phase alerts (Warnung zur Lateral Movement-Phase)](atp-lateral-movement-alerts.md)
+        - [Warnungen zu Domänendominanzphase](atp-domain-dominance-alerts.md)
+        - [Warnungen zu Exfiltrationsphase](atp-exfiltration-alerts.md)
+    - [Untersuchen eines Computers](investigate-a-computer.md)
+    - [Untersuchen eines Benutzers](investigate-a-user.md)
+
+- Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
+
+
 ## <a name="azure-atp-release-260"></a>Azure ATP, Release 2.60
-Am 6. Januar 2019 veröffentlicht
+Veröffentlichung am 6. Januar 2019
 
 - Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
@@ -37,7 +67,7 @@ Am 16. Dezember 2018 veröffentlicht
 
 ## <a name="azure-atp-release-258"></a>Azure ATP, Release 2.58
 
-Am 9. Dezember 2018 veröffentlicht
+Veröffentlicht am 9. Dezember 2018
 
 - **Erweiterung von Sicherheitswarnungen: Aufteilung der Warnung zu ungewöhnlichen Protokollimplementierungen**<br>
 Die Azure ATP-Serie von Sicherheitswarnungen zu ungewöhnlichen Protokollimplementierungen, die zuvor eine externalId (2002) gemeinsam genutzt haben, ist jetzt in vier verschiedene Warnungen aufgeteilt, die jeweils eine eindeutige externe ID aufweisen. 
@@ -67,7 +97,7 @@ Veröffentlicht am 2. Dezember 2018
 
 - **Neue Sicherheitswarnung: Verdacht auf Verwendung eines Golden Ticket – Ticketanomalie (Vorschau)**<br>
 Die Azure ATP-Sicherheitswarnung [Verdacht auf Verwendung eines Golden Ticket – Ticketanomalie](suspicious-activity-guide.md) ist jetzt in der öffentlichen Vorschau verfügbar. <br> Angreifer mit Domänenadministratorrechten können das KRBTGT-Konto beeinträchtigen. Angreifer können das KRBTGT-Konto verwenden, um ein Kerberos Ticket Granting Ticket (TGT) zu erstellen, das Autorisierung für jede beliebige Ressource bietet. 
-<br>Ein gefälschtes TGT wird als „Golden Ticket“ bezeichnet, da Angreifer damit dauerhafte Netzwerkpersistenz erlangen. Gefälschte Golden Tickets dieses Typs haben eindeutige Merkmale, die speziell durch diese neue Erkennung zu identifiziert werden. 
+<br>Ein gefälschtes TGT wird als „Golden Ticket“ bezeichnet, da Angreifer damit dauerhafte Netzwerkpersistenz erlangen. Gefälschte Golden Tickets dieses Typs weisen eindeutige Merkmale auf, für deren Identifikation diese neue Erkennung konzipiert ist. 
 
 
 - **Featureerweiterung: Automatisierte Erstellung von Azure ATP-Instanzen (Arbeitsbereichen)** <br>
@@ -76,12 +106,12 @@ Ab heute heißen Azure ATP-*Arbeitsbereiche* Azure ATP-*Instanzen*. Azure ATP un
   - Vereinfachte Instanzerstellung für schnellere Bereitstellung und Schutz mit [Erstellung Ihrer Azure ATP-Instanz](install-atp-step1.md) 
   - Alle [Anforderungen an Datenschutz und Compliance](atp-privacy-compliance.md) bleiben unverändert. 
 
-  Weitere Informationen finden Sie unter [Erstellen einer Azure ATP-Instanz](install-atp-step1.md). 
+  Weitere Informationen zu Azure ATP-Instanzen finden Sie unter [Create your Azure ATP instance (Erstellen Ihrer Azure ATP-Instanz)](install-atp-step1.md). 
 
 - Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
 ## <a name="azure-atp-release-256"></a>Azure ATP Release 2.56
-Veröffentlicht: 25. November 2018
+Veröffentlicht am 25. November 2018
 
 
 - **Featureerweiterung: Lateral Movement-Pfade (LMPs)** <br>
@@ -101,7 +131,7 @@ Zwei zusätzliche Funktionen wurden hinzugefügt, um die Fähigkeiten von Azure 
 Veröffentlicht: 18. November 2018
 
 - **Sicherheitswarnung: Verdächtige Kommunikation über DNS – allgemeine Verfügbarkeit**<br>
-Der Azure ATP-Sicherheitshinweis [Verdächtige Kommunikation über DNS](suspicious-activity-guide.md#suspicious-communication-over-dns) ist jetzt allgemein verfügbar. <br> In den meisten Organisationen wird das DNS-Protokoll nicht überwacht und nur selten vor böswilligen Angriffen geschützt. Das gibt einem Angreifer auf einem kompromittierten Computer die Möglichkeit, das DNS-Protokoll zu missbrauchen. Böswillige Kommunikation über DNS kann zur Datenexfiltration, Zugriff über Command-and-Control-Server und/oder zur Umgehung von Netzwerkeinschränkungen führen.
+Der Azure ATP-Sicherheitshinweis [Verdächtige Kommunikation über DNS](suspicious-activity-guide.md) ist jetzt allgemein verfügbar. <br> In den meisten Organisationen wird das DNS-Protokoll nicht überwacht und nur selten vor böswilligen Angriffen geschützt. Das gibt einem Angreifer auf einem kompromittierten Computer die Möglichkeit, das DNS-Protokoll zu missbrauchen. Schädliche Kommunikation über DNS kann für Datenexfiltration, Command-and-Control-Zugriff und/oder zur Umgehung von Einschränkungen des Unternehmensnetzwerks verwendet werden.
 
 - Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
@@ -169,7 +199,7 @@ Veröffentlicht: 7. Oktober 2018
   - Geplante Berichte wurden festgelegt
   - Entitätstags (vertraulich und Honeytoken) können festgelegt werden.
   - Ausschluss von Erkennung
-  - Sprache ändern
+  - Ändern der Sprache
   - Benachrichtigung über E-Mail oder Syslog wurden festgelegt
 
 
@@ -286,7 +316,7 @@ Veröffentlicht: 15. Juli 2018
 ## <a name="azure-atp-release-239"></a>Azure ATP Release 2.39
 
 Veröffentlicht: 5. Juli 2018
--   **Neue Erkennung hinzugefügt: Kerberos Golden Ticket – nicht vorhandenes Konto** (Vorschau)<br>Mit dieser neuen Erkennung können Sie Ihre Organisation vor Angriffen schützen, in denen ein Golden Ticket für ein Konto erstellt wird, das in Ihrer Domäne nicht existiert. Weitere Informationen finden Sie im [Azure Advanced Threat Protection-Handbuch zu verdächtigen Aktivitäten](suspicious-activity-guide.md#golden-ticket).
+-   **Neue Erkennung hinzugefügt: Kerberos Golden Ticket – nicht vorhandenes Konto** (Vorschau)<br>Mit dieser neuen Erkennung können Sie Ihre Organisation vor Angriffen schützen, in denen ein Golden Ticket für ein Konto erstellt wird, das in Ihrer Domäne nicht existiert. Weitere Informationen finden Sie im [Azure Advanced Threat Protection-Handbuch zu verdächtigen Aktivitäten](suspicious-activity-guide.md).
 
 - Diese Version enthält Fehlerbehebungen und Verbesserungen für mehrere Probleme. 
 
@@ -299,7 +329,7 @@ Veröffentlicht: 1. Juli 2018
 
 ## <a name="azure-atp-release-237"></a>Azure ATP Release 2.37
 
-Veröffentlicht: 24. Juni 2018
+Veröffentlicht am 24. Juni 2018
 
 - Diese Version enthält Fehlerbehebungen und Verbesserungen für mehrere Probleme. 
 
@@ -316,7 +346,7 @@ Veröffentlicht am 10. Juni 2018
  
 - **Vorschauversionen neuer Erkennungen**<br></br>Ab jetzt nutzt Azure ATP seine Funktion als Clouddienst – für den neue Features in kürzeren Zyklen bereitgestellt werden können –und bietet Ihnen so schnell wie möglich neue Erkennungen. Diese neuen Erkennungen werden als „Vorschauversion“ markiert, wenn sie das erste Mal veröffentlicht werden. In der Regel wechselt eine neue Erkennung innerhalb weniger Wochen von der Vorschauversion zu einer allgemein verfügbaren Version. Es werden standardmäßig Vorschauversionen neuer Erkennungen angezeigt. Weitere Informationen zum Deaktivieren dieser Standardeinstellung finden Sie unter [Preview Detections (Vorschauversionen neuer Erkennungen)](working-with-suspicious-activities.md#preview-detections).
  
-- **Erkennung verdächtiger VPNs**<br></br>Mit dieser Vorschauversion wird eine Vorschauversion für eine Erkennung verdächtiger VPNs eingeführt. Azure ATP speichert Informationen zum VPN-Verhalten des Benutzers, einschließlich der Computer, auf denen die Benutzer angemeldet sind, und der Orte, von denen die Benutzer eine Verbindung herstellen. Sie erhalten eine Warnung, wenn nicht das erwartete Verhalten eintritt. Weitere Informationen finden Sie unter [Suspicious VPN detection (Erkennung verdächtiger VPNs)](suspicious-activity-guide.md#suspicious-vpn-detection).
+- **Erkennung verdächtiger VPNs**<br></br>Mit dieser Vorschauversion wird eine Vorschauversion für eine Erkennung verdächtiger VPNs eingeführt. Azure ATP speichert Informationen zum VPN-Verhalten des Benutzers, einschließlich der Computer, auf denen die Benutzer angemeldet sind, und der Orte, von denen die Benutzer eine Verbindung herstellen. Sie erhalten eine Warnung, wenn nicht das erwartete Verhalten eintritt. Weitere Informationen finden Sie unter [Suspicious VPN detection (Erkennung verdächtiger VPNs)](suspicious-activity-guide.md).
 
 - **Delayed update** (Verzögertes Update)<br></br>Sie haben jetzt die Möglichkeit auszuwählen, dass Azure ATP-Sensoren bei jedem Update von Azure ATP erst später aktualisiert werden. Sie können für jeden einzelnen Sensor die Option **Delayed update** (Verzögertes Update) auswählen, sodass das Update erst 24 Stunden nach dem Update des Azure ATP-Clouddiensts ausgeführt wird. Durch dieses Feature können Sie das Update für bestimmte Testsensoren ausprobieren und Ihre Produktionssensoren erst später aktualisieren. Wenn bei dem ersten Updatezyklus ein Problem auftritt, erstellen Sie ein Supportticket. Weitere Informationen finden Sie unter [Aktualisieren von Azure ATP-Sensoren](sensor-update.md).
 

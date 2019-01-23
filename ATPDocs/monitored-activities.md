@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/02/2018
+ms.date: 1/13/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 37d1a032-65e7-4a89-be0b-c3f9cc2bacdb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f8bc815c3ffad4f75d84a69f2e6c30cc0707d8e3
-ms.sourcegitcommit: d1c9c3e69b196f6086a8f100e527553cf0d95aac
+ms.openlocfilehash: 16951313f18be44a3c42a0f6b2281963d867c7b4
+ms.sourcegitcommit: 6a0ac21f59e72db8615811da2c886f54cf3727f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125029"
+ms.lasthandoff: 01/13/2019
+ms.locfileid: "54249894"
 ---
 *Gilt für: Azure Advanced Threat Protection*
 
@@ -76,7 +76,7 @@ Die von Azure ATP überwachten Informationen werden in Form von Aktivitäten ang
 |Überwachte Aktivität|Beschreibung|
 |---------------------|------------------|
 |Verzeichnisdienstreplikation  |Benutzer hat versucht, den Verzeichnisdienst zu replizieren.|
-|DNS-Abfrage  |Benutzer hat eine AXFR-Abfrage für den Domänencontroller ausgeführt.|
+|DNS-Abfrage  |Der Typ der Benutzerabfrage, die für den Domänencontroller ausgeführt wurde (**AXFR**,**TXT**, **MX**, **NS**, **SRV**, **ANY**, **DNSKEY**).|
 |Abrufen von privaten Daten  |Benutzer hat versucht, private Daten mithilfe des LSARPC-Protokolls abzufragen, oder diese Abfrage ist ihm gelungen.|
 |Erstellen eines Diensts   |Benutzer hat versucht, einen bestimmten Dienst per Remotezugriff auf einem Remotecomputer zu erstellen.|
 |SMB-Sitzungsenumeration   |Benutzer hat versucht, alle Benutzer mit offenen SMB-Sitzungen auf den Domänencontrollern aufzulisten.|
