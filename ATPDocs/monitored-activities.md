@@ -13,17 +13,13 @@ ms.technology: ''
 ms.assetid: 37d1a032-65e7-4a89-be0b-c3f9cc2bacdb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 16951313f18be44a3c42a0f6b2281963d867c7b4
-ms.sourcegitcommit: 6a0ac21f59e72db8615811da2c886f54cf3727f5
+ms.openlocfilehash: 0b12e2d40e8a2f5f1ed15adf357093035485e96c
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2019
-ms.locfileid: "54249894"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54459128"
 ---
-*Gilt für: Azure Advanced Threat Protection*
-
-
-
 # <a name="azure-atp-monitored-activities"></a>Von Azure ATP überwachte Aktivitäten
 
 Azure Advanced Threat Protection überwacht Informationen, die aus dem Active Directory, den Netzwerkaktivitäten und Ereignisaktivitäten Ihrer Organisation generiert wurden, um verdächtige Aktivitäten zu erkennen. Anhand der überwachten Aktivitätsinformationen kann Azure ATP Ihnen helfen, die Gültigkeit der einzelnen potenziellen Bedrohungen zu bestimmen sowie sie richtig zu selektieren und entsprechend zu reagieren. 

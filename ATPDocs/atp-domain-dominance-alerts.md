@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/15/2019
+ms.date: 1/20/2019
 ms.topic: tutorial
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 0b3a1db5-0d43-49af-b356-7094cc85f0a5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e2a8eb9ada18e14bbe88cdd6c0081c86e5733648
-ms.sourcegitcommit: e2daa0f93d97d552cfbf1577fbd05a547b63e95b
+ms.openlocfilehash: 929dfae084bbce8f831c55d042f7765ddfd64019
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54314413"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840846"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Tutorial: Warnungen zu Domänendominanz  
 
@@ -26,8 +26,8 @@ Cyberangriffe werden üblicherweise auf alle zugänglichen Entitäten wie etwa B
 
 1. [Reconnaissance](atp-reconnaissance-alerts.md)
 2. [Kompromittierte Anmeldeinformationen](atp-compromised-credentials-alerts.md)
-3. [Lateral Movement-Vorgänge](atp-lateral-movement-alerts.md)
-4. **Aneignung von Domänenadministratorrechten**
+3. [Seitliche Verschiebung](atp-lateral-movement-alerts.md)
+4. **Warnungen zu Domänendominanz**
 5. [Exfiltration](atp-exfiltration-alerts.md)
 
 Weitere Informationen zur Struktur und zu gängigen Komponenten der Azure ATP-Sicherheitswarnungen finden Sie unter [Understanding security alerts (Grundlegendes zu Sicherheitswarnungen)](understanding-security-alerts.md).
@@ -299,22 +299,23 @@ Bei einer Golden Ticket-Warnung wurde die Verschlüsselungsmethode des TGT-Felds
 **TP, B-TP oder FP**
 <br>Einige unbedenkliche Ressourcen unterstützen keine starken Verschlüsselungsverfahren und können diese Warnung auslösen. 
 
-2. Greifen Quellbenutzer auf gemeinsam verwendete Ressourcen zu? 
-    1. Beispielsweise können Sie überprüfen, ob alle Mitarbeiter des Marketingteams auf eine bestimmte Ressource zugreifen und dadurch eine Warnung auslösen.
-    2. Überprüfen Sie die Ressourcen, auf die mit diesen Tickets zugegriffen wurde. 
-        - Verwenden Sie dafür das *msDS-SupportedEncryptionTypes*-Attribut des Ressourcendienstkontos in Azure Active Directory.
-    3. Wenn nur auf eine Ressource zugegriffen wird, überprüfen Sie, ob die Benutzer tatsächlich auf diese zugreifen sollten.  
 
-    Wenn die Antwort auf eine der vorherigen Fragen **Ja** lautet, handelt es sich vermutlich um eine **B-TP**-Aktivität. Überprüfen Sie, ob von der Ressource ein starkes Verschlüsselungsverfahren unterstützt wird, implementieren Sie es nach Möglichkeit, und **schließen** Sie danach die Sicherheitswarnung.
+1. Greifen Quellbenutzer auf gemeinsam verwendete Ressourcen zu? 
+   1. Beispielsweise können Sie überprüfen, ob alle Mitarbeiter des Marketingteams auf eine bestimmte Ressource zugreifen und dadurch eine Warnung auslösen.
+   2. Überprüfen Sie die Ressourcen, auf die mit diesen Tickets zugegriffen wurde. 
+       - Verwenden Sie dafür das *msDS-SupportedEncryptionTypes*-Attribut des Ressourcendienstkontos in Azure Active Directory.
+   3. Wenn nur auf eine Ressource zugegriffen wird, überprüfen Sie, ob die Benutzer tatsächlich auf diese zugreifen sollten.  
+
+      Wenn die Antwort auf eine der vorherigen Fragen **Ja** lautet, handelt es sich vermutlich um eine **B-TP**-Aktivität. Überprüfen Sie, ob von der Ressource ein starkes Verschlüsselungsverfahren unterstützt wird, implementieren Sie es nach Möglichkeit, und **schließen** Sie danach die Sicherheitswarnung.
 
 Bei Anwendungen wird möglicherweise ein schwächeres Verschlüsselungsverfahren für die Authentifizierung verwendet. Einige dieser Anwendungen wie IIS und SQL Server melden sich im Auftrag von Benutzern an. 
 
 1. Lassen sich bei Quellbenutzern Gemeinsamkeiten feststellen?         
-    - Beispielsweise können Sie überprüfen, ob alle Vertriebsmitarbeiter eine bestimmte App nutzen und dadurch eine Warnung auslösen.
-    - Überprüfen Sie, ob Anwendungen dieses Typs auf dem Quellcomputer vorhanden sind. 
-    - Überprüfen Sie die Rollen der Computer. <br>Handelt es sich um Server, die diese Anwendungen nutzen? 
+   - Beispielsweise können Sie überprüfen, ob alle Vertriebsmitarbeiter eine bestimmte App nutzen und dadurch eine Warnung auslösen.
+   - Überprüfen Sie, ob Anwendungen dieses Typs auf dem Quellcomputer vorhanden sind. 
+   - Überprüfen Sie die Rollen der Computer. <br>Handelt es sich um Server, die diese Anwendungen nutzen? 
 
-    Wenn die Antwort auf eine der vorherigen Fragen **Ja** lautet, handelt es sich vermutlich um eine **B-TP**-Aktivität. Überprüfen Sie, ob von der Ressource ein starkes Verschlüsselungsverfahren unterstützt wird, implementieren Sie es nach Möglichkeit, und **schließen** Sie die Sicherheitswarnung.
+     Wenn die Antwort auf eine der vorherigen Fragen **Ja** lautet, handelt es sich vermutlich um eine **B-TP**-Aktivität. Überprüfen Sie, ob von der Ressource ein starkes Verschlüsselungsverfahren unterstützt wird, implementieren Sie es nach Möglichkeit, und **schließen** Sie die Sicherheitswarnung.
 
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
@@ -325,7 +326,7 @@ Bei Anwendungen wird möglicherweise ein schwächeres Verschlüsselungsverfahren
 **Empfohlene Abhilfemaßnahmen und Schritte zur Vorbeugung** 
 
 **Wartung**
-1. Setzen Sie das Kennwort des Quellbenutzers zurück, und aktivieren Sie die MFA. 
+1. Setzen Sie das Kennwort des Quellbenutzers zurück, und aktivieren Sie die mehrstufige Authentifizierung (MFA). 
 2. Kontrollieren Sie den Quellcomputer. 
     - Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
     - Suchen Sie nach Benutzern, die zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA.
@@ -420,9 +421,9 @@ Verbunddienste generieren möglicherweise Tickets, die diese Warnung auslösen.
     - Wenn Windows Defender ATP installiert ist, nutzen Sie **klist.exe purge**, um alle Tickets der angegebenen Anmeldesitzung zu löschen und zu verhindern, dass die Tickets in Zukunft verwendet werden.
 2. Isolieren Sie die Ressourcen, auf die über das Ticket zugegriffen wurde.
 3. Ändern Sie das Kennwort für das Kerberos Ticket Granting Ticket (KRBTGT) zweimal gemäß den Anweisungen unter [KRBTGT Account Password Reset Scripts now available for customers (Skripts zum Zurücksetzen von Kennwörtern des KRBTGT-Kontos stehen Kunden jetzt zur Verfügung)](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) mithilfe des [Reset the KRBTGT account password/keys tool (Tools zum Zurücksetzen des Kennworts/Schlüssels eines KRBTGT-Kontos)](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). 
-    - Durch zweimaliges Zurücksetzen von KRBTGT werden alle Kerberos-Tickets in dieser Domäne ungültig. Dies bedeutet, dass **alle** Dienste außer Kraft gesetzt werden und erst wieder funktionieren, wenn sie erneuert werden. In einigen Fällen muss der Dienst neu gestartet werden. 
+   - Durch zweimaliges Zurücksetzen von KRBTGT werden alle Kerberos-Tickets in dieser Domäne ungültig. Dies bedeutet, dass **alle** Dienste außer Kraft gesetzt werden und erst wieder funktionieren, wenn sie erneuert werden. In einigen Fällen muss der Dienst neu gestartet werden. 
 
-    **Planen Sie daher das zweimalige Zurücksetzen von KRBTGT genau. Das Zurücksetzen wirkt sich auf alle Computer, Server und Benutzer in der Umgebung aus.**
+     **Planen Sie daher das zweimalige Zurücksetzen von KRBTGT genau. Das Zurücksetzen wirkt sich auf alle Computer, Server und Benutzer in der Umgebung aus.**
 
 ## <a name="suspected-golden-ticket-usage-time-anomaly-external-id-2022"></a>Vermutete Golden Ticket-Verwendung (Zeitanomalie) (externe ID 2022) 
 
@@ -448,11 +449,11 @@ Wenn die Antwort auf die vorherigen Fragen **Ja** lautet, **schließen** Sie die
     - Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
     - Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA.
     - Wenn Windows Defender ATP installiert ist, nutzen Sie **klist.exe purge**, um alle Tickets der angegebenen Anmeldesitzung zu löschen und zu verhindern, dass die Tickets in Zukunft verwendet werden.
-3. Isolieren Sie die Ressourcen, auf die über das Ticket zugegriffen wurde.
-4. Ändern Sie das Kennwort für das Kerberos Ticket Granting Ticket (KRBTGT) zweimal gemäß den Anweisungen unter [KRBTGT Account Password Reset Scripts now available for customers (Skripts zum Zurücksetzen von Kennwörtern des KRBTGT-Kontos stehen Kunden jetzt zur Verfügung)](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) mithilfe des [Reset the KRBTGT account password/keys tool (Tools zum Zurücksetzen des Kennworts/Schlüssels eines KRBTGT-Kontos)](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). 
-    - Durch zweimaliges Zurücksetzen von KRBTGT werden alle Kerberos-Tickets in dieser Domäne ungültig. Dies bedeutet, dass **alle** Dienste außer Kraft gesetzt werden und erst wieder funktionieren, wenn sie erneuert werden. In einigen Fällen muss der Dienst neu gestartet werden. 
+2. Isolieren Sie die Ressourcen, auf die über das Ticket zugegriffen wurde.
+3. Ändern Sie das Kennwort für das Kerberos Ticket Granting Ticket (KRBTGT) zweimal gemäß den Anweisungen unter [KRBTGT Account Password Reset Scripts now available for customers (Skripts zum Zurücksetzen von Kennwörtern des KRBTGT-Kontos stehen Kunden jetzt zur Verfügung)](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) mithilfe des [Reset the KRBTGT account password/keys tool (Tools zum Zurücksetzen des Kennworts/Schlüssels eines KRBTGT-Kontos)](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). 
+   - Durch zweimaliges Zurücksetzen von KRBTGT werden alle Kerberos-Tickets in dieser Domäne ungültig. Dies bedeutet, dass **alle** Dienste außer Kraft gesetzt werden und erst wieder funktionieren, wenn sie erneuert werden. In einigen Fällen muss der Dienst neu gestartet werden. 
 
-    **Planen Sie daher das zweimalige Zurücksetzen von KRBTGT genau. Das Zurücksetzen wirkt sich auf alle Computer, Server und Benutzer in der Umgebung aus.**
+     **Planen Sie daher das zweimalige Zurücksetzen von KRBTGT genau. Das Zurücksetzen wirkt sich auf alle Computer, Server und Benutzer in der Umgebung aus.**
 
 ## <a name="suspected-skeleton-key-attack-encryption-downgrade-external-id-2010"></a>Vermuteter Skeleton Key-Angriff (Herabstufung der Verschlüsselung) (externe ID 2010) 
 

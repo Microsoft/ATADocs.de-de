@@ -13,16 +13,17 @@ ms.technology: ''
 ms.assetid: 42a1a34f-ed6b-4538-befb-452168a30e8c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 069ee0f367c52de897486291f761bf0dde6016e0
-ms.sourcegitcommit: 8ecb76ddfbf48c361d3637d15bd48313a3e68685
+ms.openlocfilehash: 92768392fffb2485a3043ca49fa0c7d494a26df7
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49634748"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840997"
 ---
+# <a name="ata-readiness-roadmap"></a>Überblick über die ATA-Bereitschaft 
+
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
-# <a name="ata-readiness-roadmap"></a>Überblick über die ATA-Bereitschaft 
 Dieser Artikel bietet einen Überblick über die Roadmap für die Bereitschaft, die Ihnen beim Einstieg mit Advanced Threat Analytics hilft.
 
 ## <a name="understanding-ata"></a>Grundlegendes zu ATA
@@ -77,13 +78,13 @@ Die grundlegenden, erforderlichen Einstellungen in ATA werden als Teil des Insta
 
 Sobald ATA einsatzbereit ist, können Sie verdächtige Aktivitäten anzeigen, die in der Angriffszeitleiste erkannt werden. Dies ist die Standardzielseite, auf die Sie gelangen, wenn Sie sich bei der ATA-Konsole anmelden. Standardmäßig werden alle offenen verdächtigen Aktivitäten auf der Angriffszeitachse angezeigt. Außerdem wird der Schweregrad angezeigt, der den einzelnen Aktivitäten zugewiesen wurde. Untersuchen Sie jede verdächtige Aktivität, indem Sie zu den Entitäten (Computer, Geräte, Benutzer) navigieren, um deren Profilseiten zu öffnen, die weitere Informationen bereitstellen. Mithilfe folgender Ressourcen können Sie mit den verdächtigen Aktivitäten von ATA arbeiten:
 
-[Verdächtige ATA-Aktivitäten – Playbook](http://aka.ms/ataplaybook): Dieser Artikel führt Sie durch die Angriffstechniken für den Diebstahl von Anmeldeinformationen durch jederzeit verfügbare Recherchetools aus dem Internet. Zu jedem Zeitpunkt des Angriffs sehen Sie, wie ATA Ihnen dabei hilft, weitere Einblicken in diese Bedrohungen zu erhalten.
+[Verdächtige ATA-Aktivitäten – Playbook](http://aka.ms/ataplaybook): Dieser Artikel führt Sie durch die Angriffstechniken für den Diebstahl von Anmeldeinformationen durch jederzeit verfügbare Recherchetools aus dem Internet. Zu jedem Zeitpunkt des Angriffs sehen Sie, wie ATA Ihnen dabei hilft, weitere Einblicken in diese Bedrohungen zu erhalten.
 
 [Handbuch zu verdächtigen ATA-Aktivitäten](suspicious-activity-guide.md)
 
 
 
-## <a name="security-best-practices"></a>Bewährte Methoden für die Sicherheit
+## <a name="security-best-practices"></a>Bewährte Sicherheitsmethoden
 
 [Bewährte Methoden für ATA](https://aka.ms/atasecbestpractices): Bewährte Methoden zum Sichern von ATA.
 

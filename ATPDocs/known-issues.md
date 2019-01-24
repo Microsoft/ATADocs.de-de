@@ -13,15 +13,13 @@ ms.technology: ''
 ms.assetid: feea1982-ba23-48be-a468-98d2586cf840
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 59da5e27433ba4ce38e05d4e723f763cf48ca23d
-ms.sourcegitcommit: c3ee9495b9d4db985783dcabcc4fa77c7c8eaed4
+ms.openlocfilehash: 03312ad3c1b5cd31e4823080af644ad9826d6996
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53454477"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840351"
 ---
-*Gilt für: Azure Advanced Threat Protection*
-
 # <a name="azure-atp-known-issues"></a>Azure ATP: Bekannte Probleme
 
 Azure ATP weist gelegentlich technische oder funktionelle Einschränkungen auf, die die Verwendung von Azure ATP-Diensten in Ihrer Organisation einschränken oder verändern können. Die aktuell bekannten Einschränkungen, die weder eine bekannte Problemumgehung noch den Status „In Bearbeitung“ ohne eine bestimmte Aktualisierungszeit aufweisen, sind im Folgenden beschrieben. 
@@ -37,24 +35,27 @@ Die Sicherheitswarnung für den *Verdacht auf einen Brute-Force-Angriff (LDAP)* 
 
 ## <a name="ad-groups-with-more-than-1000-members-have-limited-detail-sync"></a>Eingeschränkte Detailsynchronisierung bei AD-Gruppen mit mehr als 1000 Mitgliedern
 > [!div class="mx-tableFixed"]  
-|Problem|Status|
-|----|----|
-|Azure ATP unterstützt keine Detailsynchronisierung von Entitäten in AD-Gruppen mit mehr als 1000 Mitgliedern pro Gruppe. Beim Untersuchen von Entitäten in Gruppen mit mehr als 1000 Mitgliedern können bei manchen Entitäten Fehler beim Synchronisieren oder Anzeigen von Details auftreten.|Technische Einschränkungen. Keine bekannte Lösung.|
+> 
+> |Problem|Status|
+> |----|----|
+> |Azure ATP unterstützt keine Detailsynchronisierung von Entitäten in AD-Gruppen mit mehr als 1000 Mitgliedern pro Gruppe. Beim Untersuchen von Entitäten in Gruppen mit mehr als 1000 Mitgliedern können bei manchen Entitäten Fehler beim Synchronisieren oder Anzeigen von Details auftreten.|Technische Einschränkungen. Keine bekannte Lösung.|
 
 ## <a name="report-downloads-cannot-contain-more-than-100000-entries"></a>Keine Berichtsdownloads mit mehr als 100.000 Einträgen
 > [!div class="mx-tableFixed"]  
-|Problem|Status|
-|----|----|
-|Azure ATP unterstützt keine Berichtsdownloads mit mehr als 100.000 Einträgen pro Bericht. Die Berichte werden unvollständig gerendert, wenn mehr als 100.000 Einträge enthalten sind.|Technische Einschränkungen. Keine bekannte Lösung.|
+> 
+> |Problem|Status|
+> |----|----|
+> |Azure ATP unterstützt keine Berichtsdownloads mit mehr als 100.000 Einträgen pro Bericht. Die Berichte werden unvollständig gerendert, wenn mehr als 100.000 Einträge enthalten sind.|Technische Einschränkungen. Keine bekannte Lösung.|
 
 ## <a name="closed-issues"></a>Abgeschlossene Probleme
 
 Diese Gruppe von bekannten Problemen wird jetzt geschlossen. Überprüfen Sie zur Referenz die Versionsnummer für diesen Fix.   
 ### <a name="remote-code-execution-attempts-using-remote-powershell-commands-or-scripts-are-not-detected-when-using-windows-server-2016---v257-december-2-2018"></a>Wenn Sie versuchen, mit Remote-PowerShell-Befehlen und -Skripts Code remote auszuführen, werden diese in Windows Server 2016 – v.2.57 nicht erkannt (2. Dezember 2018).
 > [!div class="mx-tableFixed"]  
-|Problem|Status|
-|----|----|
-|Wenn Sie versuchen, mit Remote-PowerShell-Befehlen Code remote auszuführen, werden diese derzeit nicht auf Sensorcomputern unter Windows Server 2016 erkannt. Verwandte Erkennungen und daraus resultierende Warnungen sind nicht verfügbar.|Es wird derzeit an einer Lösung für dieses Problem gearbeitet, damit Windows Server 2016 von WinRM unterstützt wird.|
+> 
+> |Problem|Status|
+> |----|----|
+> |Wenn Sie versuchen, mit Remote-PowerShell-Befehlen Code remote auszuführen, werden diese derzeit nicht auf Sensorcomputern unter Windows Server 2016 erkannt. Verwandte Erkennungen und daraus resultierende Warnungen sind nicht verfügbar.|Es wird derzeit an einer Lösung für dieses Problem gearbeitet, damit Windows Server 2016 von WinRM unterstützt wird.|
 
 ## <a name="see-also"></a>Weitere Informationen
 

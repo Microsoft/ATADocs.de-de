@@ -13,24 +13,20 @@ ms.technology: ''
 ms.assetid: 95bb4ec1-841f-41b7-92fe-fbd144085724
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9e397d669ba4df7fe9f1ea6b497368b730abc938
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: dae89e22e7d5e331af3ec6d82455581396289486
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744896"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458970"
 ---
-*Gilt für: Azure Advanced Threat Protection*
-
-
-
 # <a name="install-azure-atp---step-3"></a>Installieren von Azure ATP: Schritt 3
 
 > [!div class="step-by-step"]
 > [« Schritt 2](install-atp-step2.md)
 > [Schritt 4 »](install-atp-step4.md)
 
-## <a name="step-3-download-the-azure-atp-sensor-setup-package"></a>Schritt 3: Herunterladen des Setuppakets für den Azure ATP-Sensor
+## <a name="step-3-download-the-azure-atp-sensor-setup-package"></a>Schritt 3 Herunterladen des Setuppakets für den Azure ATP-Sensor
 Nach dem Konfigurieren der Verbindungseinstellungen der Domäne können Sie das Setuppaket für den Azure ATP-Sensor herunterladen. Das Setuppaket für den Azure ATP-Sensor kann auf einem dedizierten Server oder einem Domänencontroller installiert werden. Wenn Sie die Installation direkt auf einem Domänencontroller durchführen, erfolgt die Installation als Azure ATP-Sensor. Wenn Sie auf einem dedizierten Server installieren und Portspiegelung verwenden, wird ein eigenständiger Azure ATP-Sensor installiert. Weitere Informationen zum Azure ATP-Sensor finden Sie unter [Azure ATP-Architektur](atp-architecture.md). 
 
 Klicken Sie in der Liste mit den Schritten am Anfang der Seite auf **Download**, um zur Seite **Sensor** zu gelangen.

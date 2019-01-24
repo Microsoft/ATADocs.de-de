@@ -13,17 +13,17 @@ ms.technology: ''
 ms.assetid: 601b48ba-a327-4aff-a1f9-2377a2bb7a42
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: f96bd9222a803a21efee5def935ecbe3244e0611
-ms.sourcegitcommit: c390d36d75f13607698c2a8d7ac757ecef4c748e
+ms.openlocfilehash: 357f3517a864114c0aaa83a074c0b061d21259c2
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53709930"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840935"
 ---
-*Gilt für: Advanced Threat Analytics Version 1.9*
-
-
 # <a name="ata-siem-log-reference"></a>Referenz zum ATA-SIEM-Protokoll
+
+
+*Gilt für: Advanced Threat Analytics Version 1.9*
 
 ATA kann Sicherheits- und Überwachungswarnungsereignisse an SIEM weiterleiten. Warnungen werden im CEF-Format weitergeleitet. Ein Beispiel zu jeder Art von Sicherheitswarnungsprotokoll, das an SIEM gesendet werden soll, finden Sie unten.
 
@@ -155,5 +155,5 @@ Prioritäten: 3 = Niedrig, 5 = Mittel 10 = Hoch
 - [Voraussetzungen für ATA](ata-prerequisites.md)
 - [ATA-Kapazitätsplanung](ata-capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
-- [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-collection.md#configuring-windows-event-forwarding)
+- [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-collection.md)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

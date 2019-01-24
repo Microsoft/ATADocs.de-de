@@ -13,18 +13,17 @@ ms.technology: ''
 ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 08cf7ea6b2d1c32c952a973e9781a24fc9e87230
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: f25cdcf03be079f17adaf16b43be62b29c904bc2
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133853"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54841065"
 ---
-*Gilt für: Advanced Threat Analytics Version 1.9*
-
-
-
 # <a name="working-with-the-ata-console"></a>Arbeiten mit der ATA-Konsole
+
+
+*Gilt für: Advanced Threat Analytics Version 1.9*
 
 Verwenden Sie die ATA-Konsole, um die von ATA erkannten verdächtigen Aktivitäten zu überwachen und darauf zu reagieren.
 
@@ -42,13 +41,13 @@ Sie müssen sich mit einem Benutzer anmelden, dem die richtige ATA-Rolle für de
 
     ![Symbol für den ATA-Server](media/ata-server-icon.png)
 
- >[!NOTE]
- > Sie können auch entweder in ATA Center oder auf dem ATA-Gateway einen Browser öffnen und zu der IP-Adresse navigieren, die Sie während der ATA Center-Installation für die ATA-Konsole konfiguriert haben.    
+   >[!NOTE]
+   > Sie können auch entweder in ATA Center oder auf dem ATA-Gateway einen Browser öffnen und zu der IP-Adresse navigieren, die Sie während der ATA Center-Installation für die ATA-Konsole konfiguriert haben.    
 
-2.  Wenn der Computer, auf dem ATA Center installiert ist, und der Computer, von dem aus Sie auf die ATA-Konsole zugreifen möchten, beide in eine Domäne eingebunden sind, unterstützt ATA das in der Windows-Authentifizierung integrierte einmalige Anmelden. Wenn Sie bereits bei Ihrem Computer angemeldet sind, verwendet ATA dieses Token, um Sie bei der ATA-Konsole anzumelden. Sie können sich auch mit einer Smartcard anmelden. Ihre Berechtigungen in ATA entsprechen Ihrer [Administratorrolle](ata-role-groups.md).
+2. Wenn der Computer, auf dem ATA Center installiert ist, und der Computer, von dem aus Sie auf die ATA-Konsole zugreifen möchten, beide in eine Domäne eingebunden sind, unterstützt ATA das in der Windows-Authentifizierung integrierte einmalige Anmelden. Wenn Sie bereits bei Ihrem Computer angemeldet sind, verwendet ATA dieses Token, um Sie bei der ATA-Konsole anzumelden. Sie können sich auch mit einer Smartcard anmelden. Ihre Berechtigungen in ATA entsprechen Ihrer [Administratorrolle](ata-role-groups.md).
 
- > [!NOTE]
- > Stellen Sie sicher, dass Sie sich bei dem Computer anmelden, von dem aus Sie auf die ATA-Konsole zugreifen möchten. Verwenden Sie hierzu Ihren ATA-Administratorbenutzernamen und das dazugehörige Kennwort. Alternativ können Sie Ihren Browser als ein anderer Benutzer ausführen oder sich von Windows abmelden und danach mit Ihrem ATA-Administratorbenutzerkonto anmelden. Damit die ATA-Konsole nach Anmeldeinformationen fragt, greifen Sie mithilfe einer IP-Adresse auf die Konsole zu. Sie werden aufgefordert, Anmeldeinformationen einzugeben.
+   > [!NOTE]
+   > Stellen Sie sicher, dass Sie sich bei dem Computer anmelden, von dem aus Sie auf die ATA-Konsole zugreifen möchten. Verwenden Sie hierzu Ihren ATA-Administratorbenutzernamen und das dazugehörige Kennwort. Alternativ können Sie Ihren Browser als ein anderer Benutzer ausführen oder sich von Windows abmelden und danach mit Ihrem ATA-Administratorbenutzerkonto anmelden. Damit die ATA-Konsole nach Anmeldeinformationen fragt, greifen Sie mithilfe einer IP-Adresse auf die Konsole zu. Sie werden aufgefordert, Anmeldeinformationen einzugeben.
 
 3. Stellen Sie bei der Anmeldung mit SSO sicher, dass der Standort der ATA-Konsole als lokale Intranetsite in Ihrem Browser definiert ist und dass Sie mit einem Kurznamen oder einem Localhost darauf zugreifen.
 

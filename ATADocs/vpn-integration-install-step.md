@@ -13,24 +13,22 @@ ms.technology: ''
 ms.assetid: e0aed853-ba52-46e1-9c55-b336271a68e7
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 8a651e177d37361ccbca178075fb2ac33a434a90
-ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
+ms.openlocfilehash: c45436c78af1f6d44073f88fb042ab9c9f1acfb0
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47453917"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840895"
 ---
-*Gilt für: Advanced Threat Analytics Version 1.9*
-
-
-
 # <a name="install-ata---step-7"></a>Installieren von ATA – Schritt 7
+
+*Gilt für: Advanced Threat Analytics Version 1.9*
 
 > [!div class="step-by-step"]
 > [« Schritt 5](install-ata-step5.md)
 > [Schritt 8 »](install-ata-step7.md)
 
-## <a name="step-7-integrate-vpn"></a>Schritt 7: Integrieren des VPN
+## <a name="step-7-integrate-vpn"></a>Schritt 7 Integrieren des VPN
 
 Die Version 1.8 von Microsoft Advanced Threat Analytics (ATA) kann Kontoführungsinformationen aus VPN-Lösungen erfassen. Nach der Konfiguration beinhaltet die Profilseite des Benutzers Informationen aus den VPN-Verbindungen, wie IP-Adressen und Standorte, aus denen die Verbindungen entstammen. Dadurch wird der Untersuchungsvorgang durch zusätzliche Informationen zur Benutzeraktivität ergänzt. Der Aufruf zum Auflösen einer externen IP-Adresse an einem Standort ist anonym. In diesem Aufruf wird kein persönlicher Bezeichner gesendet.
 
@@ -72,11 +70,11 @@ ATA sammelt VPN-Daten und erkennt, wann und wo Anmeldeinformationen über VPN ve
 
 So konfigurieren Sie VPN-Daten in ATA
 
-1.  Öffnen Sie in der ATA-Konsole die ATA-Konfigurationsseite, und gehen Sie auf **VPN**.
+1. Öffnen Sie in der ATA-Konsole die ATA-Konfigurationsseite, und gehen Sie auf **VPN**.
  
-  ![ATA-Konfigurationsmenü](./media/config-menu.png)
+   ![ATA-Konfigurationsmenü](./media/config-menu.png)
 
-2.  Aktivieren Sie die **RADIUS-Kontoführung**, und geben Sie das **gemeinsame Geheimnis** ein, das Sie zuvor auf Ihrem RRAS-VPN-Server konfiguriert haben. Klicken Sie dann auf **Save** (Speichern).
+2. Aktivieren Sie die **RADIUS-Kontoführung**, und geben Sie das **gemeinsame Geheimnis** ein, das Sie zuvor auf Ihrem RRAS-VPN-Server konfiguriert haben. Klicken Sie dann auf **Speichern**.
  
 
   ![Konfigurieren des ATA-VPN](./media/vpn.png)

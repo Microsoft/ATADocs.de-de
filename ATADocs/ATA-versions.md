@@ -12,16 +12,17 @@ ms.technology: ''
 ms.assetid: a8afbd91-c888-4dfc-94ab-72e38745163e
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0265f986c342f424075ecae1ea7a175260067ca1
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: b79cbeab25c0e75714bb69e8b0f3081a210a789e
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133802"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840742"
 ---
-*Gilt für: Advanced Threat Analytics Version 1.9*
-
 # <a name="support-for-microsoft-advanced-threat-analytics-ata-versions"></a>Support für Microsoft Advanced Threat Analytics-Versionen (ATA)
+
+
+*Gilt für: Advanced Threat Analytics Version 1.9*
 
 Microsoft plant mehrmals jährlich die Veröffentlichung von Updates für ATA. Jede Updateversion wird dabei ab dem Datum der allgemeinen Verfügbarkeit 12 Monate lang unterstützt. Technischer Support wird für die gesamten 12 Monate zur Verfügung gestellt. Unsere Supportstruktur ist jetzt dynamisch und folgt zwei unterschiedlichen Wartungsphasen, die von der Verfügbarkeit der neuesten Version abhängig sind.
 

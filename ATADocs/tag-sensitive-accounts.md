@@ -13,18 +13,17 @@ ms.technology: ''
 ms.assetid: 40a1c5c4-b8d6-477c-8ae5-562b37661624
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: cea6d666d3d969070541fc8dcc4fd59726ac8c38
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 8a7c5120f72a341fd4784b68fedb0231de6e98c4
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46134086"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840203"
 ---
-*Gilt für: Advanced Threat Analytics Version 1.9*
-
-
-
 # <a name="tag-sensitive-accounts"></a>Kennzeichnen von sensiblen Konten
+
+
+*Gilt für: Advanced Threat Analytics Version 1.9*
 
 Sie können Gruppen oder Konten manuell als sensibel markieren, um den Erkennungsvorgang zu verbessern. Achten Sie darauf, dass die Markierungen aktualisiert werden, weil für einige ATA-Erkennungsvorgänge, wie die Vorgänge zum Erkennen von Änderungen sensibler Gruppen und von Lateral Movement-Pfaden, die Information erforderlich ist, welche Gruppen und Konten als sensibel angesehen werden. In der Vergangenheit hat ATA automatisch Entitäten als *sensibel* festgelegt, wenn es sich um ein Mitglied einer bestimmten Liste von Gruppen gehandelt hat. Sie können manuell andere Benutzer und Gruppen als sensibel markieren, z.B. Vorstandsmitglieder, leitende Angestellte und Verkaufsleiter, damit ATA diese als sensibel erkennt.
 

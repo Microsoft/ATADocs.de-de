@@ -13,17 +13,13 @@ ms.technology: ''
 ms.assetid: 4ba46d60-3a74-480e-8f0f-9a082d62f343
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 525e6879c7b683d833f5e2f73fa229f6e7580e3a
-ms.sourcegitcommit: c3ee9495b9d4db985783dcabcc4fa77c7c8eaed4
+ms.openlocfilehash: 20aa3616fa4b178982dc7a68ea753f2dd70c03ab
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53454511"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840402"
 ---
-*Gilt für: Azure Advanced Threat Protection*
-
-
-
 # <a name="working-with-the-azure-atp-portal"></a>Arbeiten mit dem Azure ATP-Portal
 
 Verwenden Sie das Azure ATP-Portal, um die von ATP erkannten verdächtigen Aktivitäten zu überwachen und darauf zu reagieren.
@@ -43,10 +39,10 @@ Für eine erfolgreiche Anmeldung im Azure ATP-Portal müssen Sie sich mit einem 
 1. Sie können sich beim Azure ATP-Portal anmelden, indem Sie sich entweder beim Portal unter [https://portal.atp.azure.com](https://portal.atp.azure.com) anmelden und die relevante Instanz auswählen, oder indem Sie die folgende Instanz-URL öffnen:[https://*instanzname*.atp.azure.com](https://*instancename*.atp.azure.com).zure.com.
 
 
-2.  Azure ATP unterstützt die in die Windows-Authentifizierung integrierte einmalige Anmeldung: Wenn Sie sich schon auf Ihrem Computer angemeldet haben, verwendet Azure ATP dieses Token, um Sie im Azure ATP-Portal anzumelden. Sie können sich auch mit einer Smartcard anmelden. Ihre Berechtigungen in Azure ATP entsprechen Ihrer [Administratorrolle](atp-role-groups.md).
+2. Azure ATP unterstützt die in die Windows-Authentifizierung integrierte einmalige Anmeldung: Wenn Sie sich schon auf Ihrem Computer angemeldet haben, verwendet Azure ATP dieses Token, um Sie im Azure ATP-Portal anzumelden. Sie können sich auch mit einer Smartcard anmelden. Ihre Berechtigungen in Azure ATP entsprechen Ihrer [Administratorrolle](atp-role-groups.md).
 
- > [!NOTE]
- > Stellen Sie sicher, dass Sie sich auf dem Computer anmelden, von dem aus Sie auf das Azure ATP-Portal zugreifen möchten. Verwenden Sie hierzu Ihren Azure ATP-Administratorbenutzernamen und das entsprechende Kennwort. Alternativ können Sie Ihren Browser als ein anderer Benutzer ausführen oder sich von Windows abmelden und danach mit Ihrem Azure ATP-Administratorbenutzerkonto anmelden. 
+   > [!NOTE]
+   > Stellen Sie sicher, dass Sie sich auf dem Computer anmelden, von dem aus Sie auf das Azure ATP-Portal zugreifen möchten. Verwenden Sie hierzu Ihren Azure ATP-Administratorbenutzernamen und das entsprechende Kennwort. Alternativ können Sie Ihren Browser als ein anderer Benutzer ausführen oder sich von Windows abmelden und danach mit Ihrem Azure ATP-Administratorbenutzerkonto anmelden. 
 
 
 ### <a name="attack-time-line"></a>Angriffszeitachse
@@ -96,13 +92,13 @@ Wenn Sie an einer Stelle im Azure ATP-Portal, an der eine einzelne Entität darg
 ![Abbildung des Azure ATP-Miniprofils](media/atp-mini-profile.png)
 
 - Name
-- Titel
-- Abteilung
+- Anrede
+- Department
 - AD-Tags
 - E-Mail
 - Office
 - Telefonnummer
-- Domain
+- Domäne
 - SAM-Name
 - Erstellungsdatum: Datum, an dem die Entität in Active Directory erstellt wurde. Wenn sie erstellt wurde, bevor Azure ATP mit der Überwachung begonnen hat, wird diese nicht angezeigt.
 - Erste Aktivität: Das erste Mal, als Azure ATP eine Aktivität von dieser Entität wahrgenommen hat.

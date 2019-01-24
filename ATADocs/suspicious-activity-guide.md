@@ -13,17 +13,17 @@ ms.technology: ''
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 4e0102e8a19f5f5bd303c00c4ebdb6190bcc5eb3
-ms.sourcegitcommit: d68a44b3230dc4c522d8d895eb3bc93feacae62e
+ms.openlocfilehash: 033333fe332f879e5f5c34bdf487e7893db586e4
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53615289"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54841048"
 ---
-*Gilt für: Advanced Threat Analytics Version 1.9*
-
-
 # <a name="advanced-threat-analytics-suspicious-activity-guide"></a>Advanced Threat Analytics-Handbuch zu verdächtigen Aktivitäten
+
+
+*Gilt für: Advanced Threat Analytics Version 1.9*
 
 Wenn eine ordnungsgemäße Untersuchung befolgt wird, kann jede verdächtige Aktivität folgendermaßen klassifiziert werden:
 
@@ -349,11 +349,11 @@ In dieser Erkennung werden im ersten Monat nach der Bereitstellung von ATA keine
 
 5. Wenn Informationen über das beteiligte Konto vorhanden sind: Sollen solche Abfragen von diesem Konto gestellt werden, oder wird dieses Konto normalerweise auf dem Quellcomputer angemeldet?
 
- - Falls dies zutrifft und die Warnung aktualisiert wird, **unterdrücken** Sie die verdächtige Aktivität.
+   - Falls dies zutrifft und die Warnung aktualisiert wird, **unterdrücken** Sie die verdächtige Aktivität.
 
- - Falls dies zutrifft, aber nicht weiterhin so gehandhabt werden soll, **schließen** Sie die verdächtige Aktivität.
+   - Falls dies zutrifft, aber nicht weiterhin so gehandhabt werden soll, **schließen** Sie die verdächtige Aktivität.
 
- - Wenn die Antwort auf alle obigen Fragen „nein“ ist, gehen Sie von einem böswilligen Ereignis aus.
+   - Wenn die Antwort auf alle obigen Fragen „nein“ ist, gehen Sie von einem böswilligen Ereignis aus.
 
 6. Wenn es keine Informationen über das involvierte Konto gibt, können Sie zum Endpunkt navigieren und überprüfen, welches Konto zur Zeit der Warnung angemeldet war.
 
@@ -397,7 +397,7 @@ In dieser Erkennung wird eine Warnung ausgelöst, wenn eine SMB-Sitzungsenumerat
 
 1. Klicken Sie auf die Warnung, um auf die Seite „Details“ zu gelangen. Überprüfen Sie das Konto/die Konten, das/die den Vorgang ausgeführt haben und gegebenenfalls, welche Konten verfügbar gemacht wurden.
 
- - Wird auf dem Quellcomputer eine Art Sicherheitsscanner ausgeführt? Falls ja, können Sie die verdächtige Aktivität **schließen und ausschließen**.
+   - Wird auf dem Quellcomputer eine Art Sicherheitsscanner ausgeführt? Falls ja, können Sie die verdächtige Aktivität **schließen und ausschließen**.
 
 2. Überprüfen Sie, welche beteiligten Benutzer die Vorgänge ausgeführt haben. Melden sich diese normalerweise auf dem Quellcomputer an, oder handelt es sich bei diesen um Administratoren, die solche Aktionen ausführen sollen?  
 
@@ -420,10 +420,10 @@ Angreifer, die Administratoranmeldeinformationen kompromittiert haben oder einen
 **Untersuchung**
 
 1. Dies tritt häufig bei administrativen Arbeitsstationen, IT-Teammitgliedern und Dienstkonten auf, die administrative Aufgaben auf den Domänencontrollern ausführen. Wenn dies der Fall ist und die Warnung aktualisiert wird, weil die Aufgabe vom selben Administrator oder Computer ausgeführt wird, **unterdrücken** Sie die Warnung.
-2.  Ist der fragliche Computer berechtigt, diese Remoteausführung auf Ihrem Domänencontroller auszuführen?
-  - Ist das fragliche Konto berechtigt, diese Remoteausführung auf Ihrem Domänencontroller auszuführen?
-  - Wenn Sie beide Fragen bejahen können, **schließen** Sie die Warnung.
-3.  Wenn Sie beide Fragen verneinen können, sollte diese Aktivität als richtig positiv behandelt werden. Versuchen Sie, die Quelle des Versuchs zu ermitteln, indem Sie Computer- und Kontoprofile überprüfen. Klicken Sie auf den Quellcomputer oder das Konto, um die entsprechende Profilseite aufzurufen. Überprüfen Sie, was ungefähr zum Zeitpunkt dieser Versuche passiert ist. Suchen Sie nach ungewöhnlichen Aktivitäten wie z.B.: Wer war angemeldet, auf welche Ressourcen wurde zugegriffen.
+2. Ist der fragliche Computer berechtigt, diese Remoteausführung auf Ihrem Domänencontroller auszuführen?
+   - Ist das fragliche Konto berechtigt, diese Remoteausführung auf Ihrem Domänencontroller auszuführen?
+   - Wenn Sie beide Fragen bejahen können, **schließen** Sie die Warnung.
+3. Wenn Sie beide Fragen verneinen können, sollte diese Aktivität als richtig positiv behandelt werden. Versuchen Sie, die Quelle des Versuchs zu ermitteln, indem Sie Computer- und Kontoprofile überprüfen. Klicken Sie auf den Quellcomputer oder das Konto, um die entsprechende Profilseite aufzurufen. Überprüfen Sie, was ungefähr zum Zeitpunkt dieser Versuche passiert ist. Suchen Sie nach ungewöhnlichen Aktivitäten wie z.B.: Wer war angemeldet, auf welche Ressourcen wurde zugegriffen.
 
 
 **Wartung**
@@ -461,13 +461,13 @@ In dieser Erkennung wird eine Warnung ausgelöst, wenn viele Authentifizierungsf
 
 **Untersuchung**
 
-1.  Klicken Sie auf **Details herunterladen**, um die vollständigen Informationen in einem Excel-Arbeitsblatt anzuzeigen. Sie können die folgenden Informationen abrufen: 
-  - Liste der angegriffenen Konten
-  - Liste der erratenen Konten, bei denen Anmeldeversuche mit einer erfolgreichen Authentifizierung endeten
-  - Wenn die Authentifizierungsversuche über NTLM ausgeführt wurden, werden die relevanten Ereignisaktivitäten angezeigt. 
-  - Wenn die Authentifizierungsversuche über Kerberos ausgeführt wurden, werden die relevanten Netzwerkaktivitäten angezeigt.
-2.  Klicken Sie auf den Quellcomputer, um die entsprechende Profilseite aufzurufen. Überprüfen Sie, was zum Zeitpunkt der Versuche passiert ist. Suchen Sie nach ungewöhnlichen Aktivitäten, indem Sie beispielsweise überprüfen, wer angemeldet war und auf welche Ressourcen zugegriffen wurde. 
-3.  Wenn die Authentifizierung mithilfe von NTLM durchgeführt wurde und Sie sehen, dass die Warnung mehrfach aufgetreten ist, aber keine ausreichenden Informationen zum Server verfügbar sind, auf den der Quellcomputer zugreifen wollte, sollten Sie die **NTLM-Überwachung** auf dem betroffenen Domänencontroller aktivieren. Aktivieren Sie dazu Ereignis 8004. Dies ist das NTLM-Authentifizierungsereignis, das Informationen zum Quellcomputer, Benutzerkonto und **Server** enthält, auf die der Quellcomputer zugreifen wollte. Wenn Sie wissen, welcher Server die Authentifizierungsüberprüfung gesendet hat, sollten Sie den Server untersuchen, indem Sie seine Ereignisse, z.B. 4624, überprüfen, um den Authentifizierungsprozess besser nachvollziehen zu können. 
+1. Klicken Sie auf **Details herunterladen**, um die vollständigen Informationen in einem Excel-Arbeitsblatt anzuzeigen. Sie können die folgenden Informationen abrufen: 
+   - Liste der angegriffenen Konten
+   - Liste der erratenen Konten, bei denen Anmeldeversuche mit einer erfolgreichen Authentifizierung endeten
+   - Wenn die Authentifizierungsversuche über NTLM ausgeführt wurden, werden die relevanten Ereignisaktivitäten angezeigt. 
+   - Wenn die Authentifizierungsversuche über Kerberos ausgeführt wurden, werden die relevanten Netzwerkaktivitäten angezeigt.
+2. Klicken Sie auf den Quellcomputer, um die entsprechende Profilseite aufzurufen. Überprüfen Sie, was zum Zeitpunkt der Versuche passiert ist. Suchen Sie nach ungewöhnlichen Aktivitäten, indem Sie beispielsweise überprüfen, wer angemeldet war und auf welche Ressourcen zugegriffen wurde. 
+3. Wenn die Authentifizierung mithilfe von NTLM durchgeführt wurde und Sie sehen, dass die Warnung mehrfach aufgetreten ist, aber keine ausreichenden Informationen zum Server verfügbar sind, auf den der Quellcomputer zugreifen wollte, sollten Sie die **NTLM-Überwachung** auf dem betroffenen Domänencontroller aktivieren. Aktivieren Sie dazu Ereignis 8004. Dies ist das NTLM-Authentifizierungsereignis, das Informationen zum Quellcomputer, Benutzerkonto und **Server** enthält, auf die der Quellcomputer zugreifen wollte. Wenn Sie wissen, welcher Server die Authentifizierungsüberprüfung gesendet hat, sollten Sie den Server untersuchen, indem Sie seine Ereignisse, z.B. 4624, überprüfen, um den Authentifizierungsprozess besser nachvollziehen zu können. 
 
 
 **Wartung**
@@ -486,9 +486,9 @@ Angreifer versuchen, verdächtige Dienste auf Ihrem Netzwerk auszuführen. ATA l
 
 2. Erkennen Sie den Dienst auf dem Computer?
 
- - Darf das fragliche **Konto** diesen Dienst installieren?
+   - Darf das fragliche **Konto** diesen Dienst installieren?
 
- - Wenn die Antwort auf beide Fragen *ja* ist, **schließen** Sie die Warnung, oder fügen Sie sie der Ausschlussliste hinzu.
+   - Wenn die Antwort auf beide Fragen *ja* ist, **schließen** Sie die Warnung, oder fügen Sie sie der Ausschlussliste hinzu.
 
 3. Wenn die Antwort auf beide Fragen *nein* ist, sollte dieses Ereignis als richtig positiv behandelt werden.
 

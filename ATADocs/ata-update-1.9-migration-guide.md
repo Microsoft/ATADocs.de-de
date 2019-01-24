@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 2946310a-8e4e-48fc-9450-fc9647efeb22
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: cfcf40c0c5776a29e3aa680096930b50ac04396f
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 8afee7eb6c96407f562443b4bfc353630de4825b
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133292"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840470"
 ---
 # <a name="updating-ata-to-version-19"></a>Aktualisieren von ATA auf Version 1.9
 
@@ -42,36 +42,36 @@ In der Migrationsversion kann die Datei nur für die Aktualisierung von ATA 1.8 
     > [!IMPORTANT]
     > Aktualisieren Sie alle ATA-Gateways, damit ATA ordnungsgemäß funktioniert.
 
-### <a name="step-1-update-the-ata-center"></a>Schritt 1: Aktualisieren von ATA Center
+### <a name="step-1-update-the-ata-center"></a>Schritt 1: Aktualisieren von ATA Center
 
-1.  Sichern Sie die Datenbank (optional):
+1. Sichern Sie die Datenbank (optional):
 
-    -   Falls ATA Center als virtueller Computer ausgeführt wird und Sie einen Prüfpunkt erstellen möchten, fahren Sie den virtuellen Computer zunächst herunter.
+   -   Falls ATA Center als virtueller Computer ausgeführt wird und Sie einen Prüfpunkt erstellen möchten, fahren Sie den virtuellen Computer zunächst herunter.
 
-    -   Wenn das ATA-Center auf einem physischen Server läuft, finden Sie unter [Notfallwiederherstellung](disaster-recovery.md) weitere Informationen zum Sichern der Datenbank.
+   -   Wenn das ATA-Center auf einem physischen Server läuft, finden Sie unter [Notfallwiederherstellung](disaster-recovery.md) weitere Informationen zum Sichern der Datenbank.
 
-2.  Führen Sie die Installationsdatei **Microsoft ATA Center Setup.exe** aus, und befolgen Sie die Anweisungen auf dem Bildschirm, um das Update zu installieren.
+2. Führen Sie die Installationsdatei **Microsoft ATA Center Setup.exe** aus, und befolgen Sie die Anweisungen auf dem Bildschirm, um das Update zu installieren.
 
-    -  Wählen Sie auf der Seite **Willkommen** Ihre Sprache aus, und klicken Sie auf **Weiter**.
+   - Wählen Sie auf der Seite **Willkommen** Ihre Sprache aus, und klicken Sie auf **Weiter**.
 
-    -  Wenn Sie die automatischen Updates in Version 1.8 nicht aktiviert haben, werden Sie aufgefordert, für ATA die Verwendung von Microsoft Update für ATA einzurichten, um auf dem neuesten Stand zu bleiben.  Wählen Sie auf der Microsoft Update-Seite **Microsoft Update für die Suche nach Updates verwenden (empfohlen)** aus.
-    ![ATA-Aktualisierung](media/ata_ms_update.png)
+   - Wenn Sie die automatischen Updates in Version 1.8 nicht aktiviert haben, werden Sie aufgefordert, für ATA die Verwendung von Microsoft Update für ATA einzurichten, um auf dem neuesten Stand zu bleiben.  Wählen Sie auf der Microsoft Update-Seite **Microsoft Update für die Suche nach Updates verwenden (empfohlen)** aus.
+     ![ATA-Aktualisierung](media/ata_ms_update.png)
      
      Dadurch werden die Windows-Einstellungen angepasst und Updates für ATA aktiviert. 
     
-    -  Über die Anzeige **Partielle Datenmigration** erfahren Sie, dass zuvor erfasster Datenverkehr, Ereignisse, Entitäten und Ermittlungen von verknüpften Daten gelöscht wurden. Alle Erkennungen funktionieren sofort, mit Ausnahme von ungewöhnlichem Verhalten, ungewöhnlichen Änderungen von Gruppen, Reconnaissance mithilfe von Verzeichnisdiensten (SAM-R) und Erkennungen von Herunterstufungen der Verschlüsselung. Bei diesen Ausnahmen dauert es erfahrungsgemäß bis zu drei Wochen, um ein vollständiges Profil zu erstellen. 
+   - Über die Anzeige **Partielle Datenmigration** erfahren Sie, dass zuvor erfasster Datenverkehr, Ereignisse, Entitäten und Ermittlungen von verknüpften Daten gelöscht wurden. Alle Erkennungen funktionieren sofort, mit Ausnahme von ungewöhnlichem Verhalten, ungewöhnlichen Änderungen von Gruppen, Reconnaissance mithilfe von Verzeichnisdiensten (SAM-R) und Erkennungen von Herunterstufungen der Verschlüsselung. Bei diesen Ausnahmen dauert es erfahrungsgemäß bis zu drei Wochen, um ein vollständiges Profil zu erstellen. 
      
-      ![Partielle ATA-Migration](media/partial-migration.png)
+     ![Partielle ATA-Migration](media/partial-migration.png)
 
-    -  Klicken Sie auf **Aktualisieren**. Nachdem Sie auf „Aktualisieren“ geklickt haben, ist ATA bis zum Abschluss der Aktualisierung offline.
+   - Klicken Sie auf **Aktualisieren**. Nachdem Sie auf „Aktualisieren“ geklickt haben, ist ATA bis zum Abschluss der Aktualisierung offline.
 
-4.  Nachdem das Update von ATA Center erfolgreich abgeschlossen wurde, klicken Sie auf **Starten**, um das Fenster **Updates** in der ATA-Konsole für die ATA-Gateways zu öffnen.
+3. Nachdem das Update von ATA Center erfolgreich abgeschlossen wurde, klicken Sie auf **Starten**, um das Fenster **Updates** in der ATA-Konsole für die ATA-Gateways zu öffnen.
 
-     ![Update success screen](media/migration-center-success.png)
+    ![Update success screen](media/migration-center-success.png)
 
-5.  Wenn Sie das automatische Update für Ihre ATA-Gateways schon im Fenster **Updates** festgelegt haben, wird zu diesem Zeitpunkt ein Update durchgeführt. Klicken Sie andernfalls neben jedem ATA-Gateway auf **Aktualisieren**.
+4. Wenn Sie das automatische Update für Ihre ATA-Gateways schon im Fenster **Updates** festgelegt haben, wird zu diesem Zeitpunkt ein Update durchgeführt. Klicken Sie andernfalls neben jedem ATA-Gateway auf **Aktualisieren**.
   
-     ![Abbildung „Gateways aktualisieren“](media/migration-update-gw.png)
+    ![Abbildung „Gateways aktualisieren“](media/migration-update-gw.png)
 
   
 > [!IMPORTANT] 

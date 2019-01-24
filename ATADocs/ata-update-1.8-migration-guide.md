@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: e5a9718c-b22e-41f7-a614-f00fc4997682
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c0dd00f3d4aa2cbbfe7d4e830bc66901c60b5f52
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 2287fb0a71fc7c11ae271ce7236fb7c86e3d1a4f
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133377"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840264"
 ---
 # <a name="updating-ata-to-version-18"></a>Aktualisieren von ATA auf Version 1.8
 
@@ -42,36 +42,36 @@ In der Migrationsversion kann die Datei nur für die Aktualisierung von ATA 1.7 
     > [!IMPORTANT]
     > Aktualisieren Sie alle ATA-Gateways, damit ATA ordnungsgemäß funktioniert.
 
-### <a name="step-1-update-the-ata-center"></a>Schritt 1: Aktualisieren von ATA Center
+### <a name="step-1-update-the-ata-center"></a>Schritt 1: Aktualisieren von ATA Center
 
-1.  Sichern Sie die Datenbank (optional):
+1. Sichern Sie die Datenbank (optional):
 
-    -   Falls ATA Center als virtueller Computer ausgeführt wird und Sie einen Prüfpunkt erstellen möchten, fahren Sie den virtuellen Computer zunächst herunter.
+   -   Falls ATA Center als virtueller Computer ausgeführt wird und Sie einen Prüfpunkt erstellen möchten, fahren Sie den virtuellen Computer zunächst herunter.
 
-    -   Wenn das ATA-Center auf einem physischen Server läuft, finden Sie unter [Notfallwiederherstellung](disaster-recovery.md) weitere Informationen zum Sichern der Datenbank.
+   -   Wenn das ATA-Center auf einem physischen Server läuft, finden Sie unter [Notfallwiederherstellung](disaster-recovery.md) weitere Informationen zum Sichern der Datenbank.
 
-2.  Führen Sie die Installationsdatei **Microsoft ATA Center Setup.exe** aus, und befolgen Sie die Anweisungen auf dem Bildschirm, um das Update zu installieren.
+2. Führen Sie die Installationsdatei **Microsoft ATA Center Setup.exe** aus, und befolgen Sie die Anweisungen auf dem Bildschirm, um das Update zu installieren.
 
-    -  Wählen Sie auf der Seite **Willkommen** Ihre Sprache aus, und klicken Sie auf **Weiter**.
+   - Wählen Sie auf der Seite **Willkommen** Ihre Sprache aus, und klicken Sie auf **Weiter**.
 
-    -  Wenn Sie die automatischen Updates in Version 1.7 nicht aktiviert haben, werden Sie aufgefordert, ATA für die Verwendung von Microsoft Update für ATA festzulegen, um auf dem neuesten Stand zu bleiben.  Wählen Sie auf der Microsoft Update-Seite **Microsoft Update für die Suche nach Updates verwenden (empfohlen)** aus.
-    ![ATA-Aktualisierung](media/ata_ms_update.png)
+   - Wenn Sie die automatischen Updates in Version 1.7 nicht aktiviert haben, werden Sie aufgefordert, ATA für die Verwendung von Microsoft Update für ATA festzulegen, um auf dem neuesten Stand zu bleiben.  Wählen Sie auf der Microsoft Update-Seite **Microsoft Update für die Suche nach Updates verwenden (empfohlen)** aus.
+     ![ATA-Aktualisierung](media/ata_ms_update.png)
      
      Dadurch werden die Windows-Einstellungen angepasst und Updates für ATA aktiviert. 
     
-    -  Wählen Sie im Bildschirm **Datenmigration** aus, ob Sie alle Daten oder nur einen Teil davon migrieren möchten. Wenn Sie nur Teildaten migrieren möchten, funktionieren alle Erkennungen sofort, mit Ausnahme der Erkennung von ungewöhnlichem Verhalten, da es drei Wochen dauert, bis ein vollständiges Profil erstellt wurde.  
+   - Wählen Sie im Bildschirm **Datenmigration** aus, ob Sie alle Daten oder nur einen Teil davon migrieren möchten. Wenn Sie nur Teildaten migrieren möchten, funktionieren alle Erkennungen sofort, mit Ausnahme der Erkennung von ungewöhnlichem Verhalten, da es drei Wochen dauert, bis ein vollständiges Profil erstellt wurde.  
     
-    Für die Installation der **teilweisen** Migration der Daten wird deutlich weniger Zeit benötigt. Wenn Sie die Option **vollständige** Datenmigration auswählen, nimmt der Abschluss der Installation möglicherweise sehr viel Zeit in Anspruch. Achten Sie darauf, sich die geschätzte Dauer und den erforderlichen Speicherplatz anzuschauen. Diese sind beide auf der Seite **Datenmigration** aufgelistet. Diese Zahlen sind abhängig von der von Ihnen in vorherigen ATA-Versionen gespeicherten Menge an erfasstem Datenverkehr. Auf der Seite unten können Sie sich z.B. eine Datenmigration aus einer großen Datenbank ansehen:
+   Für die Installation der **teilweisen** Migration der Daten wird deutlich weniger Zeit benötigt. Wenn Sie die Option **vollständige** Datenmigration auswählen, nimmt der Abschluss der Installation möglicherweise sehr viel Zeit in Anspruch. Achten Sie darauf, sich die geschätzte Dauer und den erforderlichen Speicherplatz anzuschauen. Diese sind beide auf der Seite **Datenmigration** aufgelistet. Diese Zahlen sind abhängig von der von Ihnen in vorherigen ATA-Versionen gespeicherten Menge an erfasstem Datenverkehr. Auf der Seite unten können Sie sich z.B. eine Datenmigration aus einer großen Datenbank ansehen:
          
-    ![ATA-Datenmigration](media/migration-data-migration.png)
+   ![ATA-Datenmigration](media/migration-data-migration.png)
 
-    -  Klicken Sie auf **Aktualisieren**. Nachdem Sie auf „Aktualisieren“ geklickt haben, ist ATA bis zum Abschluss der Aktualisierung offline.
+   -  Klicken Sie auf **Aktualisieren**. Nachdem Sie auf „Aktualisieren“ geklickt haben, ist ATA bis zum Abschluss der Aktualisierung offline.
 
-4.  Nachdem das Update von ATA Center erfolgreich abgeschlossen wurde, klicken Sie auf **Starten**, um das Fenster **Updates** in der ATA-Konsole für die ATA-Gateways zu öffnen.
+3. Nachdem das Update von ATA Center erfolgreich abgeschlossen wurde, klicken Sie auf **Starten**, um das Fenster **Updates** in der ATA-Konsole für die ATA-Gateways zu öffnen.
 
-    ![Update success screen](media/migration-center-success.png)
+   ![Update success screen](media/migration-center-success.png)
 
-5.  Wenn Sie das automatische Update für Ihre ATA-Gateways schon im Fenster **Updates** festgelegt haben, wird zu diesem Zeitpunkt ein Update durchgeführt. Klicken Sie andernfalls neben jedem ATA-Gateway auf **Aktualisieren**.
+4. Wenn Sie das automatische Update für Ihre ATA-Gateways schon im Fenster **Updates** festgelegt haben, wird zu diesem Zeitpunkt ein Update durchgeführt. Klicken Sie andernfalls neben jedem ATA-Gateway auf **Aktualisieren**.
   
 ![Abbildung „Gateways aktualisieren“](media/migration-update-gw.png)
 

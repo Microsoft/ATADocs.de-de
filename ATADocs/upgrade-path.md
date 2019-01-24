@@ -13,16 +13,17 @@ ms.technology: ''
 ms.assetid: 88720401-1fb2-4353-ad39-32bc0088f0de
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 38600b4e537f583c106462bce26690c7bc14bfe8
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 318e14a4313b80aec92516829b70314008acb8c5
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133553"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840157"
 ---
+# <a name="recommended-upgrade-path-for-ata"></a>Empfohlener Upgradepfad für ATA
+
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
-# <a name="recommended-upgrade-path-for-ata"></a>Empfohlener Upgradepfad für ATA
 Dieser Artikel enthält Informationen über die verfügbaren Versionen von Advanced Threat Analytics und über das Aktualisieren von ATA abhängig von der Version, die bei Ihnen ausgeführt wird.
 
 
@@ -50,6 +51,6 @@ Dieser Artikel enthält Informationen über die verfügbaren Versionen von Advan
 - [Voraussetzungen für ATA](ata-prerequisites.md)
 - [ATA-Kapazitätsplanung](ata-capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
-- [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-collection.md#configuring-windows-event-forwarding)
+- [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-collection.md)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 

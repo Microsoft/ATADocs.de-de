@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: afd113d68a15d376e7665d66915a423e54bb170a
-ms.sourcegitcommit: e2daa0f93d97d552cfbf1577fbd05a547b63e95b
+ms.openlocfilehash: 6df7a945771fed8640eac773e46d2b886758d011
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54314362"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54841184"
 ---
 # <a name="tutorial-compromised-credential-alerts"></a>Tutorial: Warnungen zu kompromittierten Anmeldeinformationen  
 
@@ -90,10 +90,10 @@ Bei einem Kennwort-Spray-Angriff testen Angreifer nach erfolgreichem Durchzähle
 Überprüfen Sie auf jeden Fall, ob Anmeldeversuche mit einer erfolgreichen Authentifizierung beendet wurden.
 
 1. Wurde ein Anmeldeversuch erfolgreich beendet, überprüfen Sie, ob eines der  **Erratenen Konten**  normalerweise von diesem Quellcomputer verwendet wird.
-    - Besteht die Möglichkeit, dass bei diesen Konten wegen der Verwendung eines falschen Kennworts ein Fehler aufgetreten ist?  
-    - Überprüfen Sie zusammen mit dem Benutzer/den Benutzern, ob die Aktivität von ihm/ihnen generiert wurde (durch erfolgreiches Anmelden nach einigen fehlerhaften Anmeldeversuchen). 
+   - Besteht die Möglichkeit, dass bei diesen Konten wegen der Verwendung eines falschen Kennworts ein Fehler aufgetreten ist?  
+   - Überprüfen Sie zusammen mit dem Benutzer/den Benutzern, ob die Aktivität von ihm/ihnen generiert wurde (durch erfolgreiches Anmelden nach einigen fehlerhaften Anmeldeversuchen). 
 
-    Lautet die Antwort **Ja**, **Schließen** Sie die Sicherheitswarnung als B-TP-Aktivität.
+     Lautet die Antwort **Ja**, **Schließen** Sie die Sicherheitswarnung als B-TP-Aktivität.
 
 2. Wenn es keine **Erratenen Konten** gibt, überprüfen Sie, ob eines der **Angegriffenen Konten** normalerweise vom Quellcomputer verwendet wird.
     - Überprüfen Sie, ob auf dem Quellcomputer ein Skript mit falschen/veralteten Anmeldeinformationen ausgeführt wird.
@@ -132,15 +132,15 @@ In dieser Erkennung wird eine Warnung ausgelöst, wenn Azure ATP eine signifikan
 Überprüfen Sie auf jeden Fall, ob Anmeldeversuche mit einer erfolgreichen Authentifizierung beendet wurden.
 
 1. Wurde ein Anmeldeversuch erfolgreich beendet, überprüfen Sie, ob eines der  **Erratenen Konten**  normalerweise von diesem Quellcomputer verwendet wird.
-    - Besteht die Möglichkeit, dass bei diesen Konten wegen der Verwendung eines falschen Kennworts ein Fehler aufgetreten ist?  
-    - Überprüfen Sie zusammen mit dem Benutzer/den Benutzern, ob die Aktivität von ihm/ihnen generiert wurde (durch erfolgreiches Anmelden nach einigen fehlerhaften Anmeldeversuchen).
+   - Besteht die Möglichkeit, dass bei diesen Konten wegen der Verwendung eines falschen Kennworts ein Fehler aufgetreten ist?  
+   - Überprüfen Sie zusammen mit dem Benutzer/den Benutzern, ob die Aktivität von ihm/ihnen generiert wurde (durch erfolgreiches Anmelden nach einigen fehlerhaften Anmeldeversuchen).
 
-    Lautet die Antwort **Ja**, **Schließen** Sie die Sicherheitswarnung als B-TP-Aktivität.
+     Lautet die Antwort **Ja**, **Schließen** Sie die Sicherheitswarnung als B-TP-Aktivität.
 
 2. Wenn es keine **Erratenen Konten** gibt, überprüfen Sie, ob eines der **Angegriffenen Konten** normalerweise vom Quellcomputer verwendet wird.
-    - Überprüfen Sie, ob auf dem Quellcomputer ein Skript mit falschen/veralteten Anmeldeinformationen ausgeführt wird.
+   - Überprüfen Sie, ob auf dem Quellcomputer ein Skript mit falschen/veralteten Anmeldeinformationen ausgeführt wird.
 
-    Lautet die Antwort **Ja**, beenden und bearbeiten Sie das Skript, oder löschen Sie es. **Schließen** Sie die Sicherheitswarnung als B-TP-Aktivität.
+     Lautet die Antwort **Ja**, beenden und bearbeiten Sie das Skript, oder löschen Sie es. **Schließen** Sie die Sicherheitswarnung als B-TP-Aktivität.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -248,7 +248,7 @@ Anwendungen implementieren gelegentlich einen eigenen NTLM- oder SMB-Stapel.
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
 1. Untersuchen Sie den [Quellcomputer](investigate-a-computer.md).
-2. Wenn ein Quellbenutzer vorhanden ist, [untersuchen Sie den Benutzer](investigate-a-user.md).
+2. Wenn ein Quellbenutzer vorhanden ist, [untersuchen Sie diesen Benutzer](investigate-a-user.md).
 
 **Empfohlene Abhilfemaßnahmen und Schritte zur Vorbeugung**
 

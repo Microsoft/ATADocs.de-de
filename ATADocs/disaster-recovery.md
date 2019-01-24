@@ -13,18 +13,17 @@ ms.technology: ''
 ms.assetid: 7620e171-76d5-4e3f-8b03-871678217a3a
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 072abaef05432184653d260c43470e86a38d29db
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 09d471710a987db332a84f0e38a761a3b1e4ed16
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133575"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54839956"
 ---
+# <a name="ata-disaster-recovery"></a>ATA-Notfallwiederherstellung
+
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
-
-
-# <a name="ata-disaster-recovery"></a>ATA-Notfallwiederherstellung
 Dieser Artikel beschreibt, wie Sie ATA Center und Ihre ATA-Funktionalität schnell wiederherstellen können, wenn die ATA Center-Funktionalität verloren gegangen ist, die ATA-Gateways jedoch noch funktionieren. 
 
 >[!NOTE]
@@ -40,8 +39,8 @@ Dieser Artikel beschreibt, wie Sie ATA Center und Ihre ATA-Funktionalität schne
     3. Befolgen Sie die Anweisungen zum Exportieren des Zertifikats, und stellen Sie sicher, dass Sie auch den privaten Schlüssel exportieren.
     4. Sichern Sie die exportierte Zertifikatsdatei auf einem separaten Computer.
 
-  > [!NOTE] 
-  > Wenn der private Schlüssel nicht exportiert werden konnte, müssen Sie ein neues Zertifikat erstellen, es auf ATA bereitstellen, wie in [Ändern des Zertifikats für ATA Center](modifying-ata-center-configuration.md) beschrieben, und es dann exportieren. 
+   > [!NOTE] 
+   > Wenn der private Schlüssel nicht exportiert werden konnte, müssen Sie ein neues Zertifikat erstellen, es auf ATA bereitstellen, wie in [Ändern des Zertifikats für ATA Center](modifying-ata-center-configuration.md) beschrieben, und es dann exportieren. 
 
 ## <a name="recover-your-ata-center"></a>Wiederherstellen von ATA Center
 

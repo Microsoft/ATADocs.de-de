@@ -13,16 +13,17 @@ ms.technology: ''
 ms.assetid: 710f01bd-c878-4406-a7b2-ce13f98736ea
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0d247671c43e4c62f740eca263f2e0e680c7d319
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: b6aaaf1a93fe635f4e159f88e7d55a110bcef0d2
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133971"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840487"
 ---
-*Gilt für: Advanced Threat Analytics Version 1.9*
-
 # <a name="investigating-lateral-movement-paths-with-ata"></a>Untersuchen von Lateral Movement-Pfaden mit ATA
+
+
+*Gilt für: Advanced Threat Analytics Version 1.9*
 
 Selbst wenn Sie sich sehr darum bemühen, Ihre sensiblen Benutzer zu schützen, Ihre Administratoren über komplexe Kennwörter verfügen, die regelmäßig geändert werden, deren Computer festgeschrieben sind, und ihre Daten sicher gespeichert sind, können Angreifer immer noch Lateral Movement-Pfade nutzen, um auf sensible Konten zuzugreifen. Bei Angriffen über Lateral Movement-Pfade nutzen Angreifer Instanzen aus, wenn sich sensible Benutzer auf einem Computer anmelden, auf dem ein nicht sensibler Benutzer über lokale Berechtigungen verfügt. Dann können sich Angreifer lateral bewegen, auf den weniger sensiblen Benutzer zugreifen und sich auf dem Computer bewegen, um die Anmeldeinformationen des sensiblen Benutzers abzugreifen. 
 
@@ -40,11 +41,11 @@ Befolgen Sie diese Schritte, um zu ermitteln, welche sensiblen Konten in Ihrem N
 
 2. Wenn keine Lateral Movement-Pfade gefunden wurden, ist der Bericht unter **Lateral Movement-Pfade zu sensiblen Konten** abgeblendet. Wenn Lateral Movement-Pfade mit relevanten Daten gefunden wurden, wird aus den Daten des Berichts automatisch das frühste Datum ausgewählt. 
 
- ![Berichte](./media/reports.png)
+   ![Berichte](./media/reports.png)
 
 3. Klicken Sie auf **Herunterladen**.
 
-3. Die erstellte Excel-Datei gibt Ihnen Informationen über gefährdete sensible Konten. Die Registerkarte **Zusammenfassung** liefert Graphen mit Informationen über die Anzahl sensibler Konten und Computer, sowie Durchschnittswerte für gefährdete Ressourcen. Die Registerkarte **Details** enthält eine Liste von sensiblen Konten, um die Sie sich kümmern sollten. Beachten Sie, dass die Pfade in der Vergangenheit verfügbar waren. Es kann also durchaus sein, dass sie heute nicht mehr verfügbar sind.
+4. Die erstellte Excel-Datei gibt Ihnen Informationen über gefährdete sensible Konten. Die Registerkarte **Zusammenfassung** liefert Graphen mit Informationen über die Anzahl sensibler Konten und Computer, sowie Durchschnittswerte für gefährdete Ressourcen. Die Registerkarte **Details** enthält eine Liste von sensiblen Konten, um die Sie sich kümmern sollten. Beachten Sie, dass die Pfade in der Vergangenheit verfügbar waren. Es kann also durchaus sein, dass sie heute nicht mehr verfügbar sind.
 
 
 ## <a name="investigate"></a>Untersuchen
@@ -59,7 +60,7 @@ Da Sie nun wissen, welche sensiblen Konten gefährdet sind, können Sie sich ein
 
 4. Überprüfen Sie den Graphen, um weitere Informationen über die Offenlegung der Anmeldeinformationen Ihres sensiblen Benutzers zu erhalten. Beispielsweise können Sie in dieser Zuordnung über die grauen Pfeile **Angemeldet durch** anzeigen lassen, wo sich Samira mit ihren privilegierten Anmeldeinformationen angemeldet hat. In diesem Fall wurden Samiras sensible Anmeldeinformationen auf dem Computer „REDMOND-WA-DEV“ gespeichert. Überprüfen Sie anschließend, welche anderen Benutzer sich an welchen Computern angemeldet haben und die größte Offenlegung von Daten und das höchste Sicherheitsrisiko darstellten. Über den schwarzen Pfeil **Administrator auf** können Sie sich anzeigen lassen, wer Administratorrechte für die Ressource hat. In diesem Beispiel hat jeder in der Gruppe **Contoso All** Zugriff auf die Benutzeranmeldeinformationen dieser Ressource.  
 
- ![Lateral Movement-Pfade zum Benutzerprofil](media/user-profile-lateral-movement-paths.png)
+   ![Lateral Movement-Pfade zum Benutzerprofil](media/user-profile-lateral-movement-paths.png)
 
 
 ## <a name="preventative-best-practices"></a>Empfohlene präventive Methoden

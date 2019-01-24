@@ -12,19 +12,18 @@ ms.service: ''
 ms.technology: ''
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 7875c6b0f6be62277f80881edbefe36b910bb4c9
-ms.sourcegitcommit: eac0aa855270b550dfb4b8c61b9cf0953f1e5204
+ms.openlocfilehash: ffc46e3d74928cc071215da9bafd5989e4448a65
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52298135"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840555"
 ---
-*Gilt für: Advanced Threat Analytics Version 1.9*
-
-
-
 # <a name="modifying-the-ata-center-configuration"></a>Bearbeiten der ATA Center-Konfiguration
 
+
+
+*Gilt für: Advanced Threat Analytics Version 1.9*
 
 Nach der ersten Bereitstellung sollten Änderungen an ATA Center vorsichtig vorgenommen werden. Gehen Sie wie folgt vor, wenn Sie die URL der Konsole oder das Zertifikat ändern.
 
@@ -46,16 +45,16 @@ Die URL wird in den folgenden Szenarios verwendet:
 
 2. Geben Sie in den ATA-Einstellungen unter **Center** die neue URL ein. Momentan verwendet ATA Center noch immer die ursprüngliche URL. 
 
- ![Ändern der ATA-Konfiguration](media/change-center-config.png)
+   ![Ändern der ATA-Konfiguration](media/change-center-config.png)
 
-  > [!NOTE]
-  > Wenn Sie eine benutzerdefinierte IP-Adresse eingegeben haben, können Sie erst auf **Aktivieren** klicken, nachdem die IP-Adresse auf dem ATA Center-Server installiert wurde.
+   > [!NOTE]
+   > Wenn Sie eine benutzerdefinierte IP-Adresse eingegeben haben, können Sie erst auf **Aktivieren** klicken, nachdem die IP-Adresse auf dem ATA Center-Server installiert wurde.
     
 3. Warten Sie, bis die ATA-Gateways synchronisiert wurden. Sie verfügen jetzt über zwei mögliche URLs, über die auf die ATA-Konsole zugegriffen werden kann. Solange ein ATA-Gateway eine Verbindung über die ursprüngliche URL herstellen kann, wird die neue nicht verwendet.
 
 4. Klicken Sie, nachdem alle ATA-Gateways mit der aktualisierten Konfiguration synchronisiert wurden, auf der Konfigurationsseite des Centers auf die Schaltfläche **Aktivieren**, um die neue URL zu aktivieren. Bei der Aktivierung der neuen URL verwenden die ATA-Gateways nicht die neue URL für den Zugriff auf ATA Center. Nach dem Herstellen der Verbindung mit dem ATA Center-Dienst ruft das ATA-Gateway die neueste Konfiguration ab und verfügt nur noch über die neue URL für die ATA-Konsole. 
 
- ![Aktivieren des Zertifikats](media/center-activation.png)
+   ![Aktivieren des Zertifikats](media/center-activation.png)
 
 > [!NOTE]
 > -   Wenn ein ATA-Gateway während der Aktivierung der neuen URL offline geschaltet war und die aktualisierte Konfiguration nicht abrufen konnte, aktualisieren Sie die JSON-Konfigurationsdatei im ATA-Gateway manuell.
@@ -74,7 +73,7 @@ Ersetzen Sie das Zertifikat wie folgt:
 
 2. Wählen Sie in den ATA-Einstellungen unter **Center** dieses neu erstellte Zertifikat aus. Zu diesem Zeitpunkt ist der ATA Center-Dienst noch an das ursprüngliche Zertifikat gebunden. 
 
- ![Ändern der ATA-Konfiguration](media/change-center-config.png)
+   ![Ändern der ATA-Konfiguration](media/change-center-config.png)
 
 3. Warten Sie, bis die ATA-Gateways synchronisiert wurden. Sie verfügen jetzt über zwei potenzielle Zertifikate, die für die gegenseitige Authentifizierung gültig sind. Solange ein ATA-Gateway eine Verbindung über das ursprüngliche Zertifikat herstellen kann, wird das neue Zertifikat nicht verwendet.
 

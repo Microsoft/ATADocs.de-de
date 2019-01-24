@@ -13,17 +13,13 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1fc3930fc4b38b396bda2c3ff50795d835910439
-ms.sourcegitcommit: 1c657f269aaece71b2126df55a37f8c43851539a
+ms.openlocfilehash: 06e31d44afba18cb44d2df6cde167c9a8babc92b
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53335420"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840725"
 ---
-*Gilt für: Azure Advanced Threat Protection*
-
-
-
 # <a name="azure-atp-prerequisites"></a>Voraussetzungen für Azure ATP
 Dieser Artikel beschreibt die Voraussetzungen für eine erfolgreiche Bereitstellung von Azure ATP in Ihrer Umgebung.
 
@@ -45,7 +41,7 @@ Dieser Leitfaden zu Voraussetzungen wird in die folgenden Abschnitte unterteilt,
 
 [Eigenständiger Azure ATP-Sensor](#azure-atp-sensor-requirements): In diesem Abschnitt werden die Hardware- und Softwareanforderungen für den eigenständigen Azure ATP-Sensor beschrieben und Einstellungen genannt, die Sie auf Ihren eigenständigen Azure ATP-Sensorservern konfigurieren müssen.
 
-## <a name="before-you-start"></a>Vorbereitung
+## <a name="before-you-start"></a>Bevor Sie beginnen
 In diesem Abschnitt werden die Informationen aufgeführt, die Sie sammeln sollten, sowie Konten und Netzwerkinformationen genannt, die vor der Azure ATP-Installation vorhanden sein sollten.
 
 - Sie können eine Lizenz für Enterprise Mobility + Security 5 (EMS E5) entweder direkt über das [Office 365-Portal](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) oder über das CSP-Lizenzierungsmodell (Cloud Solution Partner) erwerben.  
@@ -61,7 +57,7 @@ In diesem Abschnitt werden die Informationen aufgeführt, die Sie sammeln sollte
 
 - Wenn Sie versuchen, den Azure ATP-Sensor auf einem Computer zu installieren, der mit einem NIC-Teaming-Adapter konfiguriert ist, wird ein Installationsfehler gemeldet. Wenn Sie den Azure ATP-Sensor auf einem Computer installieren möchten, der mit NIC-Teamvorgang konfiguriert ist, finden Sie weitere Informationen unter [Problem mit NIC-Teamvorgängen beim Azure ATP-Sensor](troubleshooting-atp-known-issues.md#nic-teaming).
 
--    Empfohlen: Der Benutzer sollte über den schreibgeschützten Zugriff auf den Container mit gelöschten Objekten verfügen. Dadurch kann Azure ATP Löschungen von Benutzern über Ihr Active Directory erkennen. Informationen zum Konfigurieren des schreibgeschützten Zugriffs auf den Container mit gelöschten Objekten finden Sie im Abschnitt **Changing permissions on a deleted object container** (Ändern von Berechtigungen für einen Container mit gelöschten Objekten) im Artikel [View or Set Permissions on a Directory Object](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) (Anzeigen und Festlegen von Berechtigungen für ein Verzeichnisobjekt).
+-    Empfehlung: Der Benutzer sollte über den schreibgeschützten Zugriff auf den Container mit gelöschten Objekten verfügen. Dadurch kann Azure ATP Löschungen von Benutzern über Ihr Active Directory erkennen. Informationen zum Konfigurieren des schreibgeschützten Zugriffs auf den Container mit gelöschten Objekten finden Sie im Abschnitt **Changing permissions on a deleted object container** (Ändern von Berechtigungen für einen Container mit gelöschten Objekten) im Artikel [View or Set Permissions on a Directory Object](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) (Anzeigen und Festlegen von Berechtigungen für ein Verzeichnisobjekt).
 
 -   Optional: Ein Benutzerkonto eines Benutzers ohne Netzwerkaktivitäten. Dieses Konto wird als Azure ATP-Honeytoken-Benutzer konfiguriert. Weitere Informationen finden Sie unter [Configure IP address exclusions and Honeytoken user (Konfigurieren von Ausschlüssen und Honeytoken-Benutzern)](install-atp-step7.md).
 
@@ -69,13 +65,13 @@ In diesem Abschnitt werden die Informationen aufgeführt, die Sie sammeln sollte
 
 ## <a name="azure-atp-portal-requirements"></a>Anforderungen an das Azure ATP-Portal
 Der Zugriff auf das Azure ATP-Portal erfolgt über einen Browser. Folgende Browser und Einstellungen werden unterstützt:
--   Microsoft Edge
--   Internet Explorer Version 10 oder höher
--   Google Chrome 4.0 und höher
--   Mindestauflösung der Bildschirmbreite: 1.700 Pixel
--   Firewall/Proxy freigeben – Um mit dem Azure ATP-Clouddienst zu kommunizieren, muss in Ihrer Firewall und auf Ihrem Proxyserver Port 443 für „*.atp.azure.com“ freigegeben sein.
+- Microsoft Edge
+- Internet Explorer Version 10 oder höher
+- Google Chrome 4.0 und höher
+- Mindestauflösung der Bildschirmbreite: 1.700 Pixel
+- Firewall/Proxy freigeben – Um mit dem Azure ATP-Clouddienst zu kommunizieren, muss in Ihrer Firewall und auf Ihrem Proxyserver Port 443 für „*.atp.azure.com“ freigegeben sein.
 
- ![Azure ATP-Architekturdiagramm](media/ATP-architecture-topology.png)
+  ![Azure ATP-Architekturdiagramm](media/ATP-architecture-topology.png)
 
 
 > [!NOTE]
@@ -121,17 +117,17 @@ Der Sensor wird nicht in Domänencontrollern unter Windows 2008 R2 mit aktiviert
 ### <a name="ports"></a>Ports
 In der folgenden Tabelle sind die Ports aufgeführt, die für den Azure ATP-Sensor mindestens konfiguriert werden müssen:
 
-|Protokoll|Transport|Port|Zu/Von|Richtung|
+|Protokoll|Transport|Port|Zu/Von|Direction|
 |------------|-------------|--------|-----------|-------------|
 |**Internetports**|||||
-|SSL (*.atp.azure.com)|TCP|443|Azure ATP-Clouddienst|Ausgehend|
+|SSL (*.atp.azure.com)|TCP|443|Azure ATP-Clouddienst|Outbound|
 |**Interne Ports**|||||
-|DNS|TCP und UDP|53|DNS-Server|Ausgehend|
-|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Alle Geräte im Netzwerk|Ausgehend|
+|Domain Name System|TCP und UDP|53|DNS-Server|Outbound|
+|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Alle Geräte im Netzwerk|Outbound|
 |NTLM über RPC|TCP|135|Alle Geräte im Netzwerk|Beide|
 |NetBIOS|UDP|137|Alle Geräte im Netzwerk|Beide|
-|Syslog (optional)|TCP/UDP|514, je nach Konfiguration|SIEM-Server|Eingehend|
-|RADIUS|UDP|1813|RADIUS|Eingehend|
+|Syslog (optional)|TCP/UDP|514, je nach Konfiguration|SIEM-Server|Inbound|
+|RADIUS|UDP|1813|RADIUS|Inbound|
 |TLS-zu-RDP-Port|TCP|3389|Alle Geräte im Netzwerk|Beide|
 
 ### <a name="windows-event-logs"></a>Windows-Ereignisprotokolle
@@ -199,23 +195,23 @@ Der eigenständige Azure ATP-Sensor erfordert mindestens einen Verwaltungsadapte
 ### <a name="ports"></a>Ports
 In der folgenden Tabelle sind die Ports aufgeführt, die für den Verwaltungsadapter des eigenständigen Azure ATP-Sensors mindestens konfiguriert werden müssen:
 
-|Protokoll|Transport|Port|Zu/Von|Richtung|
+|Protokoll|Transport|Port|Zu/Von|Direction|
 |------------|-------------|--------|-----------|-------------|
 |**Internetports**|||||
-|SSL (*.atp.azure.com)|TCP|443|Azure ATP-Clouddienst|Ausgehend|
+|SSL (*.atp.azure.com)|TCP|443|Azure ATP-Clouddienst|Outbound|
 |**Interne Ports**|||||
-|LDAP|TCP und UDP|389|Domänencontroller|Ausgehend|
-|Sicheres LDAP (LDAPS)|TCP|636|Domänencontroller|Ausgehend|
-|LDAP an globalen Katalog|TCP|3268|Domänencontroller|Ausgehend|
-|LDAPs an globalen Katalog|TCP|3269|Domänencontroller|Ausgehend|
-|Kerberos|TCP und UDP|88|Domänencontroller|Ausgehend|
-|Netlogon (SMB, CIFS, SAM-R)|TCP und UDP|445|Alle Geräte im Netzwerk|Ausgehend|
-|Windows-Zeitdienst|UDP|123|Domänencontroller|Ausgehend|
-|DNS|TCP und UDP|53|DNS-Server|Ausgehend|
+|LDAP|TCP und UDP|389|Domänencontroller|Outbound|
+|Sicheres LDAP (LDAPS)|TCP|636|Domänencontroller|Outbound|
+|LDAP an globalen Katalog|TCP|3268|Domänencontroller|Outbound|
+|LDAPs an globalen Katalog|TCP|3269|Domänencontroller|Outbound|
+|Kerberos|TCP und UDP|88|Domänencontroller|Outbound|
+|Netlogon (SMB, CIFS, SAM-R)|TCP und UDP|445|Alle Geräte im Netzwerk|Outbound|
+|Windows-Zeitdienst|UDP|123|Domänencontroller|Outbound|
+|DNS|TCP und UDP|53|DNS-Server|Outbound|
 |NTLM über RPC|TCP|135|Alle Geräte im Netzwerk|Beide|
 |NetBIOS|UDP|137|Alle Geräte im Netzwerk|Beide|
-|Syslog (optional)|TCP/UDP|514, je nach Konfiguration|SIEM-Server|Eingehend|
-|RADIUS|UDP|1813|RADIUS|Eingehend|
+|Syslog (optional)|TCP/UDP|514, je nach Konfiguration|SIEM-Server|Inbound|
+|RADIUS|UDP|1813|RADIUS|Inbound|
 |TLS zu RDP|TCP|3389|Alle Geräte im Netzwerk|Beide|
 
 > [!NOTE]

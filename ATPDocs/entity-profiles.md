@@ -13,17 +13,13 @@ ms.technology: ''
 ms.assetid: 17458706-79fb-4c23-aa42-66979164a45f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a36afd4997a2f148bc5a31726aee22914a3607b4
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: 8c80529c5111c909bd5e2b1b0ff17933e4f30b18
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744369"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458647"
 ---
-*Gilt für: Azure Advanced Threat Protection*
-
-
-
 # <a name="understanding-entity-profiles"></a>Grundlegendes zu Entitätsprofilen
 
 Über das Entitätsprofil erhalten Sie eine umfassende Entitätsseite, die für eine detaillierte Untersuchung von Benutzern, Computern, Geräten und Ressourcen, auf die sie zugreifen können, sowie auf deren Verlauf, ausgerichtet ist. Die Profilseite nutzt den neuen logischen Aktivitätenübersetzer von Azure ATP, der eine Gruppe von Aktivitäten (für bis zu eine Minute zusammengefasst) überprüfen und diese in genau eine logische Aktivität gruppieren kann, um die tatsächlichen Aktivitäten der Benutzer zu verdeutlichen.

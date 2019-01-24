@@ -13,15 +13,13 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0628b59457f7932757cde04be5472c5510ff0d9d
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: a742cb7c64211d47a53a15b3906283ce523a938c
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744913"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458987"
 ---
-*Gilt für: Azure Advanced Threat Protection*
-
 # <a name="azure-advanced-threat-protection-multi-forest-support"></a>Azure Advanced Threat Protection-Unterstützung für mehrere Gesamtstrukturen
 
 
@@ -56,15 +54,15 @@ Wenn Gesamtstrukturen ohne installierte Azure ATP-Sensoren vorhanden sind, kann 
 - Damit Azure ATP mit den Azure ATP-Sensoren und eigenständigen Azure ATP-Sensoren kommunizieren kann, öffnen Sie die folgenden Ports auf jedem Computer mit installiertem Azure ATP-Sensor:
 
  
-  |Protokoll|Transport|Port|Zu/Von|Richtung|
+  |Protokoll|Transport|Port|Zu/Von|Direction|
   |----|----|----|----|----|
   |**Internetports**||||
-  |SSL (*.atp.azure.com)|TCP|443|Azure ATP-Clouddienst|Ausgehend|
+  |SSL (*.atp.azure.com)|TCP|443|Azure ATP-Clouddienst|Outbound|
   |**Interne Ports**||||           
-  |LDAP|TCP und UDP|389|Domänencontroller|Ausgehend|
-  |Sicheres LDAP (LDAPS)|TCP|636|Domänencontroller|Ausgehend|
-  |LDAP an globalen Katalog|TCP|3268|Domänencontroller|Ausgehend|
-  |LDAPs an globalen Katalog|TCP|3269|Domänencontroller|Ausgehend|
+  |LDAP|TCP und UDP|389|Domänencontroller|Outbound|
+  |Sicheres LDAP (LDAPS)|TCP|636|Domänencontroller|Outbound|
+  |LDAP an globalen Katalog|TCP|3268|Domänencontroller|Outbound|
+  |LDAPs an globalen Katalog|TCP|3269|Domänencontroller|Outbound|
 
 
 ## <a name="multi-forest-support-network-traffic-impact"></a>Auswirkungen auf den Netzwerkdatenverkehr bei der Unterstützung mehrerer Gesamtstrukturen 

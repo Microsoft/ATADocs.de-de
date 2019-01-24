@@ -13,16 +13,13 @@ ms.technology: ''
 ms.assetid: ab1e8dd9-a6c2-4c68-89d5-343b8ec56142
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9d9294a22d1e3fd1847d42bd376e65fd114b04bf
-ms.sourcegitcommit: a2f6b52f66c89b9f2ca7410426b759a0b0de8d31
+ms.openlocfilehash: 8d7d8bc8ce6c1aefb95b5770a103859fed74efe1
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52981937"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458630"
 ---
-*Gilt für: Azure Advanced Threat Protection*
-
-
 # <a name="azure-atp-advanced-audit-policy-check"></a>Überprüfung der erweiterten Überwachungsrichtlinie von Azure ATP
 
 Die Azure ATP-Erkennung beruht auf bestimmten Windows-Ereignisprotokollen für Sichtbarkeit in bestimmten Szenarios, z.B. NTLM-Anmeldungen, Änderungen an Sicherheitsgruppen und ähnlichen Ereignissen. Damit die richtigen Ereignisse überprüft und im Windows-Ereignisprotokoll eingeschlossen werden, benötigen Ihre Domänencontroller die korrekten erweiterten Überwachungsrichtlinieneinstellungen. Falsche erweiterte Überwachungsrichtlinieneinstellungen führen dazu, dass wichtige Ereignisse nicht in Ihren Protokollen aufgeführt werden und so die Abdeckung durch Azure ATP unzureichend vorhanden ist.
@@ -64,5 +61,5 @@ Advanced Security Audit Policy (Erweiterte Sicherheitsüberwachungsrichtlinien) 
 ## <a name="see-also"></a>Weitere Informationen
 - [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](atp-prerequisites.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
-- [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-forwarding.md#configuring-windows-event-forwarding)
+- [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-forwarding.md)
 - [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)

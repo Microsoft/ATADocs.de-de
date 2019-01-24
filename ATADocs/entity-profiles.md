@@ -13,18 +13,17 @@ ms.technology: ''
 ms.assetid: 581a3257-32dc-453f-b84e-b9f99186f5d3
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a34d25e59183e496350216f5d3043430cd65bca6
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: bc5eda18d9b126fbde8e79c0b65aa04bdc42e90c
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133452"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54839815"
 ---
-*Gilt für: Advanced Threat Analytics Version 1.9*
-
-
-
 # <a name="investigating-entity-profiles"></a>Untersuchen von Entitätsprofilen
+
+
+*Gilt für: Advanced Threat Analytics Version 1.9*
 
 Über das Entitätsprofil erhalten Sie Zugriff auf ein Dashboard, das für eine detaillierte Untersuchung von Benutzern, Computern, Geräten und Ressourcen, auf die sie zugreifen können, sowie auf deren Verlauf, ausgerichtet ist. Die Profilseite nutzt den neuen logischen Aktivitätenübersetzer von ATA, der eine Gruppe von Aktivitäten (für bis zu eine Minute zusammengefasst) überprüfen und diese in genau eine logische Aktivität gruppieren kann, um die tatsächlichen Aktivitäten der Benutzer zu verdeutlichen.
 

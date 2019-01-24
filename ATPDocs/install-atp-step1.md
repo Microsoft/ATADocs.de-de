@@ -13,16 +13,13 @@ ms.technology: ''
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e027e57e3f23be61139217b532b3b4a721dc9cdd
-ms.sourcegitcommit: d1c9c3e69b196f6086a8f100e527553cf0d95aac
+ms.openlocfilehash: 4c178d4ed874ae3d826e97a154ae2e17bd52f48c
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125148"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840368"
 ---
-*Gilt für: Azure Advanced Threat Protection*
-
-
 # <a name="creating-your-azure-atp-instance-in-the-azure-atp-portal---step-1"></a>Erstellen Ihrer Azure ATP-Instanz im Azure ATP-Portal – Schritt 1
 
 > [!div class="step-by-step"]
@@ -35,7 +32,7 @@ In Azure ATP verfügen Sie über eine einzelne Instanz, die Ihnen die Verwaltung
 > [!NOTE]
 > Derzeit werden Azure ATP-Rechenzentren in Europa, Nordamerika/Mittelamerika/Karibik und Asien bereitgestellt. Ihre Instanz wird automatisch in dem Rechenzentrum erstellt, das Ihrem AAD geografisch am nächsten liegt. Nach der Erstellung können Azure ATP-Instanzen nicht verschoben werden. 
 
-## <a name="step-1-enter-the-azure-atp-portal"></a>Schritt 1: Öffnen Sie das Azure ATP-Portal
+## <a name="step-1-enter-the-azure-atp-portal"></a>Schritt 1 Öffnen Sie das Azure ATP-Portal
 
 Nachdem Sie überprüft haben, ob Ihr Netzwerk den Anforderungen des Sensors entspricht, können Sie mit der Erstellung der Azure ATP-Instanz fortfahren.
 
@@ -47,7 +44,7 @@ Nachdem Sie überprüft haben, ob Ihr Netzwerk den Anforderungen des Sensors ent
 
 2.  Melden Sie sich mit ihrem Azure Active Directory-Benutzerkonto an.
 
-## <a name="step-2-create-your-instance"></a>Schritt 2. Erstellen Ihrer Instanz
+## <a name="step-2-create-your-instance"></a>Schritt 2 Erstellen Ihrer Instanz
 
 1. Klicken Sie auf **Instanz erstellen**. 
 
@@ -67,9 +64,9 @@ Nachdem Sie überprüft haben, ob Ihr Netzwerk den Anforderungen des Sensors ent
 - Datenaufbewahrung – Zuvor gelöschte Azure ATP-Instanzen werden nicht auf der Benutzeroberfläche angezeigt. Weitere Informationen zur Datenaufbewahrung in Azure ATP finden Sie unter [Sicherheit und Datenschutz für Azure ATP](atp-privacy-compliance.md).
 
 
->[!div class="step-by-step"]
-[« Vor der Installation](atp-prerequisites.md)
-[Schritt 2 »](install-atp-step2.md)
+> [!div class="step-by-step"]
+> [« Vor der Installation](atp-prerequisites.md)
+> [Schritt 2 »](install-atp-step2.md)
 
 
 

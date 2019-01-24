@@ -13,16 +13,13 @@ ms.technology: ''
 ms.assetid: 0d9d2a1d-6c76-4909-b6f9-58523df16d4f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9fe9011f0fbdf29e80e1957c4e1535f497061aa2
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: 947f816d30dbc8e8de817eccf8213d25c026f833
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744862"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458784"
 ---
-*Gilt für: Azure Advanced Threat Protection*
-
-
 # <a name="integrate-vpn"></a>Integrieren des VPN
 
 Azure Advanced Threat Protection (ATP) kann Kontoinformationen aus VPN-Lösungen erfassen. Nach der Konfiguration beinhaltet die Profilseite des Benutzers Informationen aus den VPN-Verbindungen, wie IP-Adressen und Standorte, aus denen die Verbindungen entstammen. Dadurch wird der Untersuchungsvorgang um zusätzliche Informationen zur Benutzeraktivität und einen neuen Ermittlungsvorgang für ungewöhnliche VPN-Verbindungen ergänzt. Der Aufruf zum Auflösen einer externen IP-Adresse an einem Standort ist anonym. In diesem Aufruf wird kein persönlicher Bezeichner gesendet.
@@ -68,7 +65,7 @@ So konfigurieren Sie VPN-Daten in ATP:
 1.  Klicken Sie im Azure ATP-Portal auf das Konfigurationszahnrad und anschließend auf **VPN**.
  
 
-2.  Aktivieren Sie die **RADIUS-Kontoführung**, und geben Sie das **gemeinsame Geheimnis** ein, das Sie zuvor auf Ihrem RRAS-VPN-Server konfiguriert haben. Klicken Sie dann auf **Save** (Speichern).
+2.  Aktivieren Sie die **RADIUS-Kontoführung**, und geben Sie das **gemeinsame Geheimnis** ein, das Sie zuvor auf Ihrem RRAS-VPN-Server konfiguriert haben. Klicken Sie dann auf **Speichern**.
  
 
   ![Konfigurieren von Azure ATP-VPN](./media/atp-vpn-radius.png)

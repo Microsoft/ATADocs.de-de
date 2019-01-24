@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e61fb5c54dc17baf0005ea6137f7d21096e1c520
-ms.sourcegitcommit: e2daa0f93d97d552cfbf1577fbd05a547b63e95b
+ms.openlocfilehash: caf64977da89c88f3640430bf4aa68a76a51026e
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54314345"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54841150"
 ---
 # <a name="tutorial-reconnaissance-alerts"></a>Tutorial: Warnungen zu Reconnaissance  
 
@@ -26,7 +26,7 @@ Cyberangriffe werden üblicherweise auf alle zugänglichen Entitäten wie etwa B
 
 1. **Reconnaissance**
 2. [Kompromittierte Anmeldeinformationen](atp-compromised-credentials-alerts.md)
-3. [Lateral Movement-Vorgänge](atp-lateral-movement-alerts.md)
+3. [Seitliche Verschiebung](atp-lateral-movement-alerts.md)
 4. [Warnungen zu Domänendominanz](atp-domain-dominance-alerts.md)
 5. [Exfiltration](atp-exfiltration-alerts.md) 
 
@@ -62,28 +62,28 @@ Um festzustellen, ob es sich bei der Abfrage um den Typ **TP**, **B-TP** oder **
 1. Überprüfen Sie, ob der Quellcomputer diese Abfrage tatsächlich ausführen sollte. Beispiele für **B-TP** könnten in diesem Fall Microsoft Exchange-Server oder Systeme der Personalverwaltung sein.
 
 2. Überprüfen Sie die Kontodomänen.
-    - Werden zusätzliche Benutzer angezeigt, die zu einer anderen Domäne gehören? 
-    <br>Eine Fehlkonfigurationen der Server kann z. B. bei Exchange/Skype oder ADSF dazu führen, dass zusätzliche Benutzer vorhanden sind, die verschiedenen Domänen angehören.
-    - Sehen Sie sich die Konfiguration des problematischen Diensts an, um die Fehlkonfiguration zu beheben.
+   - Werden zusätzliche Benutzer angezeigt, die zu einer anderen Domäne gehören? 
+     <br>Eine Fehlkonfigurationen der Server kann z. B. bei Exchange/Skype oder ADSF dazu führen, dass zusätzliche Benutzer vorhanden sind, die verschiedenen Domänen angehören.
+   - Sehen Sie sich die Konfiguration des problematischen Diensts an, um die Fehlkonfiguration zu beheben.
 
-    Wenn Sie die obigen Fragen mit **Ja** beantwortet haben, handelt es sich um eine **B-TP**-Aktivität. *Schließen* Sie die Sicherheitswarnung.<br>
+     Wenn Sie die obigen Fragen mit **Ja** beantwortet haben, handelt es sich um eine **B-TP**-Aktivität. *Schließen* Sie die Sicherheitswarnung.<br>
 
 Betrachten Sie im nächsten Schritt den Quellcomputer: 
 
 1. Wird auf dem Quellcomputer ein Skript oder eine Anwendung ausgeführt, die dieses Verhalten verursachen könnten?  
-    - Ist das Skript schon älter und wird es mit alten Anmeldeinformationen ausgeführt? <br>Wenn ja, beenden und bearbeiten Sie das Skript, oder löschen Sie es. 
-    - Handelt es sich um ein Verwaltungs- oder Sicherheitsskript bzw. um eine entsprechende Anwendung, die tatsächlich in der Umgebung ausgeführt werden soll?
+   - Ist das Skript schon älter und wird es mit alten Anmeldeinformationen ausgeführt? <br>Wenn ja, beenden und bearbeiten Sie das Skript, oder löschen Sie es. 
+   - Handelt es sich um ein Verwaltungs- oder Sicherheitsskript bzw. um eine entsprechende Anwendung, die tatsächlich in der Umgebung ausgeführt werden soll?
  
-    Wenn Sie die vorherige Frage mit **Ja** beantwortet haben, *schließen* Sie die Sicherheitswarnung, und schließen Sie diesen Computer aus. Vermutlich handelt es sich um eine **B-TP**-Aktivität.
+     Wenn Sie die vorherige Frage mit **Ja** beantwortet haben, *schließen* Sie die Sicherheitswarnung, und schließen Sie diesen Computer aus. Vermutlich handelt es sich um eine **B-TP**-Aktivität.
 
 Betrachten Sie nun die Konten:<br>
 <br>Angreifer verwenden häufig ein Wörterbuch mit zufälligen Kontonamen, um vorhandene Kontonamen in einer Organisation zu finden.
 
 1. Kommen Ihnen die nicht vorhandenen Konten vertraut vor?  
-    - Wenn ja, sind diese Konten möglicherweise deaktiviert, oder sie gehören Mitarbeitern, die das Unternehmen verlassen haben.
-    - Überprüfen Sie, ob eine Anwendung oder ein Skript vorhanden ist, mit dem überprüft wird, welche Konten in Active Directory Domain Services noch vorhanden sind.
+   - Wenn ja, sind diese Konten möglicherweise deaktiviert, oder sie gehören Mitarbeitern, die das Unternehmen verlassen haben.
+   - Überprüfen Sie, ob eine Anwendung oder ein Skript vorhanden ist, mit dem überprüft wird, welche Konten in Active Directory Domain Services noch vorhanden sind.
 
-    Wenn Sie eine der vorherigen Fragen mit **Ja** beantwortet haben, *schließen* Sie die Sicherheitswarnung. Es handelt sich vermutlich um eine **B-TP**-Aktivität.
+     Wenn Sie eine der vorherigen Fragen mit **Ja** beantwortet haben, *schließen* Sie die Sicherheitswarnung. Es handelt sich vermutlich um eine **B-TP**-Aktivität.
 
 2. Wenn einer der Rateversuche mit einem vorhandenen Kontonamen übereinstimmt, kennt der Angreifer vorhandene Konten in Ihrer Umgebung und kann mit Brute-Force-Angriffen und gefundenen Benutzernamen versuchen, Zugriff auf Ihre Domäne zu erhalten. 
     - Überprüfen Sie die erratenen Kontonamen auf weitere verdächtige Aktivitäten. 
@@ -187,13 +187,13 @@ Vier Wochen pro Domänencontroller, beginnend mit der ersten Netzwerkaktivität 
 **TP, B-TP oder FP** 
 
 1. Klicken Sie auf den Quellcomputer, um die entsprechende Profilseite aufzurufen.        
-    - Sollen diese Aktivitäten tatsächlich vom Quellcomputer ausgeführt werden?
-      - Wenn ja, *schließen* Sie die Sicherheitswarnung als **B-TP**-Aktivität, und schließen Sie diesen Computer aus. 
-    - Überprüfen Sie die Benutzer, die den Vorgang ausgeführt haben.
-      - Melden sich diese normalerweise bei diesem Quellcomputer an, oder sind sie Administratoren, die diese Aktionen durchführen sollten?   
-      - Überprüfen Sie das Benutzerprofil und die damit verbundenen Benutzeraktivitäten. Analysieren Sie ihr normales Verhalten, und suchen Sie nach zusätzlichen verdächtigen Aktivitäten mithilfe des [Leitfadens zur Untersuchung von Benutzern](investigate-a-user.md). 
+   - Sollen diese Aktivitäten tatsächlich vom Quellcomputer ausgeführt werden?
+     - Wenn ja, *schließen* Sie die Sicherheitswarnung als **B-TP**-Aktivität, und schließen Sie diesen Computer aus. 
+   - Überprüfen Sie die Benutzer, die den Vorgang ausgeführt haben.
+     - Melden sich diese normalerweise bei diesem Quellcomputer an, oder sind sie Administratoren, die diese Aktionen durchführen sollten?   
+     - Überprüfen Sie das Benutzerprofil und die damit verbundenen Benutzeraktivitäten. Analysieren Sie ihr normales Verhalten, und suchen Sie nach zusätzlichen verdächtigen Aktivitäten mithilfe des [Leitfadens zur Untersuchung von Benutzern](investigate-a-user.md). 
     
-    Wenn Sie die vorherige Frage mit **Ja** beantwortet haben, *schließen* Sie die Sicherheitswarnung als **B-TP**-Aktivität. 
+     Wenn Sie die vorherige Frage mit **Ja** beantwortet haben, *schließen* Sie die Sicherheitswarnung als **B-TP**-Aktivität. 
   
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 

@@ -13,15 +13,13 @@ ms.technology: ''
 ms.assetid: de15c920-8904-4124-8bdc-03abd9f667cf
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 40faae88e209b8b737dbc7ef364f17a8b82a4d52
-ms.sourcegitcommit: eac0aa855270b550dfb4b8c61b9cf0953f1e5204
+ms.openlocfilehash: 88a7d5e23cc6b3f1202f522e40060e71f676397f
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52298111"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54459072"
 ---
-*Gilt für: Azure Advanced Threat Protection*
-
 # <a name="azure-atp-lateral-movement-paths-lmps"></a>Azure ATP-Lateral Movement-Pfade (LMPs) 
 
 Lateral Movement bedeutet, dass ein Angreifer nicht sensible Konten benutzt, um über Ihr Netzwerk hinweg Zugriff auf sensible Konten zu erhalten. Lateral Movement wird von Angreifern genutzt, um Zugriff auf sensible Konten und Computer in Ihrem Netzwerk zu erhalten, die gespeicherte Anmeldeinformationen für Konten, Gruppen und Computer gemeinsam nutzen. Sobald ein Angreifer erfolgreich Lateral Moves in Richtung Ihrer wichtigsten Ziele ausführt, kann er das nutzen und sich Zugriff auf Ihre Domänencontroller verschaffen. Lateral Movement-Angriffe werden mithilfe vieler unterschiedlicher Methoden durchgeführt, die im [Handbuch zu verdächtigen Aktivitäten](suspicious-activity-guide.md) beschrieben werden.

@@ -13,19 +13,19 @@ ms.technology: ''
 ms.assetid: d6c783b2-46c5-4211-b21a-d6b17f08d03d
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 12d1a3f10cc3b9d99a20a2562ae4f81425ec9578
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 9d043ac8c780505f6e3443c354e02b89d3040b4c
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133493"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54839973"
 ---
-*Gilt für: Advanced Threat Analytics Version 1.9*
-
-
 # <a name="working-with-ata-system-health-and-events"></a>Arbeiten mit der Systemintegrität und Ereignissen von ATA
 
+*Gilt für: Advanced Threat Analytics Version 1.9*
+
 ## <a name="ata-health-center"></a>ATA Health Center
+
 Mit ATA Health Center lässt sich die Leistung des ATA-Diensts überprüfen, und es werden Warnungen über Probleme angezeigt.
 
 ## <a name="working-with-the-ata-health-center"></a>Arbeiten mit dem ATA Health Center
@@ -38,7 +38,7 @@ Um den Gesamtzustand des Systems zu überprüfen, klicken Sie auf der Menüleist
 
 -   Sie können alle offenen Warnungen auf **Schließen**, **Unterdrücken** oder **Löschen** festlegen, indem Sie auf die drei Punkte in der Ecke einer Warnung klicken und die gewünschte Option auswählen.
 
--   **Öffnen**: In dieser Liste werden alle neuen verdächtigen Aktivitäten angezeigt.
+-   **Offen**: In dieser Liste werden alle neuen verdächtigen Aktivitäten angezeigt.
 
 -   **Auflösen**: Wird verwendet, um verdächtige Aktivitäten nachzuverfolgen, die Sie identifiziert, untersucht oder entschärft haben.
 

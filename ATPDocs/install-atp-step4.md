@@ -13,24 +13,20 @@ ms.technology: ''
 ms.assetid: 51911e39-76c7-4dcd-bc0b-ec6235d0403f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: fa65a796100c23f2b113410fd30f9adf22e79268
-ms.sourcegitcommit: fd6c8a28e6bf3a6031835aebd0b9278e495d3e0b
+ms.openlocfilehash: e5e1ee510ba52f541fb224754f82ebfddf553365
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54142419"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840513"
 ---
-*Gilt für: Azure Advanced Threat Protection*
-
-
-
 # <a name="install-azure-atp---step-4"></a>Installieren von Azure ATP – Schritt 4
 
 > [!div class="step-by-step"]
 > [« Schritt 3](install-atp-step3.md)
 > [Schritt 5 »](install-atp-step5.md)
 
-## <a name="step-4-install-the-azure-atp-sensor"></a>Schritt 4: Installieren des Azure ATP-Sensors
+## <a name="step-4-install-the-azure-atp-sensor"></a>Schritt 4 Installieren des Azure ATP-Sensors
 
 > [!IMPORTANT]
 >Stellen Sie sicher, dass Microsoft .NET Framework 4.7 auf dem Computer installiert ist. Wenn .NET Framework 4.7 nicht installiert ist, wird es vom Azure ATP-Sensorsetuppaket installiert. Dadurch ist möglicherweise ein Neustart des Servers erforderlich.
@@ -38,44 +34,44 @@ ms.locfileid: "54142419"
 Führen Sie auf dem Domänencontroller folgende Schritte aus.
 
 1. Stellen Sie sicher, dass der Computer mit den relevanten Azure ATP-Clouddienst-Endpunkten verbunden ist:
-  - [https://triprd1wceuw1sensorapi.atp.azure.com](https://triprd1wceuw1sensorapi.atp.azure.com) 
-  - [https://triprd1wceun1sensorapi.atp.azure.com](https://triprd1wceun1sensorapi.atp.azure.com)
-<br>(für Europa)  
-  - [https://triprd1wcuse1sensorapi.atp.azure.com](https://triprd1wcuse1sensorapi.atp.azure.com)
-  - [https://triprd1wcusw1sensorapi.atp.azure.com](https://triprd1wcusw1sensorapi.atp.azure.com)
-  - [https://triprd1wcuswb1sensorapi.atp.azure.com](https://triprd1wcuswb1sensorapi.atp.azure.com)
-<br>(für die USA)
-  - [https://triprd1wcasse1sensorapi.atp.azure.com](https://triprd1wcasse1sensorapi.atp.azure.com)<br>(für Asien)
+   - [https://triprd1wceuw1sensorapi.atp.azure.com](https://triprd1wceuw1sensorapi.atp.azure.com) 
+   - [https://triprd1wceun1sensorapi.atp.azure.com](https://triprd1wceun1sensorapi.atp.azure.com)
+   <br>(für Europa)  
+   - [https://triprd1wcuse1sensorapi.atp.azure.com](https://triprd1wcuse1sensorapi.atp.azure.com)
+   - [https://triprd1wcusw1sensorapi.atp.azure.com](https://triprd1wcusw1sensorapi.atp.azure.com)
+   - [https://triprd1wcuswb1sensorapi.atp.azure.com](https://triprd1wcuswb1sensorapi.atp.azure.com)
+   <br>(für die USA)
+   - [https://triprd1wcasse1sensorapi.atp.azure.com](https://triprd1wcasse1sensorapi.atp.azure.com)<br>(für Asien)
 
 2. Extrahieren Sie die Installationsdateien aus der ZIP-Datei. 
-> [!NOTE] 
-> Eine Installation direkt aus der ZIP-Datei verursacht einen Fehler.
+   > [!NOTE] 
+   > Eine Installation direkt aus der ZIP-Datei verursacht einen Fehler.
 
 3. Führen Sie **Azure ATP sensor setup.exe** aus, und befolgen Sie die Anweisungen des Setup-Assistenten.
 
-4.  Wählen Sie auf der Seite **Willkommen** Ihre Sprache aus, und klicken Sie auf **Weiter**.
+4. Wählen Sie auf der Seite **Willkommen** Ihre Sprache aus, und klicken Sie auf **Weiter**.
 
-     ![Sprache der Installation des eigenständigen Azure ATP-Sensors](media/sensor-install-language.png)
+    ![Sprache der Installation des eigenständigen Azure ATP-Sensors](media/sensor-install-language.png)
 
 
-5.  Der Installations-Assistent überprüft automatisch, ob der Server ein Domänencontroller oder ein dedizierter Server ist. Wenn es sich um einen Domänencontroller handelt, wird der Azure ATP-Sensor installiert. Wenn es sich um einen dedizierten Server handelt, wird der eigenständige Azure ATP-Sensor installiert. 
+5. Der Installations-Assistent überprüft automatisch, ob der Server ein Domänencontroller oder ein dedizierter Server ist. Wenn es sich um einen Domänencontroller handelt, wird der Azure ATP-Sensor installiert. Wenn es sich um einen dedizierten Server handelt, wird der eigenständige Azure ATP-Sensor installiert. 
     
-    Beispielsweise wird im Falle eines eigenständigen Azure ATP-Sensors der folgende Bildschirm angezeigt, um Sie darüber zu informieren, dass ein eigenständiger Azure ATP-Sensor auf Ihrem dedizierten Server installiert wird:
+   Beispielsweise wird im Falle eines eigenständigen Azure ATP-Sensors der folgende Bildschirm angezeigt, um Sie darüber zu informieren, dass ein eigenständiger Azure ATP-Sensor auf Ihrem dedizierten Server installiert wird:
     
-    ![Installation des eigenständigen Azure ATP-Sensors](media/sensor-install-deployment-type.png)
+   ![Installation des eigenständigen Azure ATP-Sensors](media/sensor-install-deployment-type.png)
 
-    Klicken Sie auf **Weiter**.
+   Klicken Sie auf **Weiter**.
 
-    > [!NOTE] 
-    > Wenn der Domänencontroller oder der dedizierte Server nicht den Mindestanforderungen der Hardware für die Installation entspricht, erhalten Sie eine Warnung. Dies verhindert nicht, dass Sie auf **Weiter** klicken können und mit der Installation fortfahren können. Dies ist möglicherweise die richtige Option für die Installation von Azure ATP in einer Testumgebung für ein kleines Labor, in der Sie nicht so viel Platz für die Datenspeicherung benötigen. Für Produktionsumgebungen wird dringend empfohlen, mit dem Handbuch zur [Kapazitätsplanung](atp-capacity-planning.md) von Azure ATP zu arbeiten, um sicherzustellen, dass Ihre Domänencontroller oder dedizierten Server den nötigen Anforderungen entsprechen.
+   > [!NOTE] 
+   > Wenn der Domänencontroller oder der dedizierte Server nicht den Mindestanforderungen der Hardware für die Installation entspricht, erhalten Sie eine Warnung. Dies verhindert nicht, dass Sie auf **Weiter** klicken können und mit der Installation fortfahren können. Dies ist möglicherweise die richtige Option für die Installation von Azure ATP in einer Testumgebung für ein kleines Labor, in der Sie nicht so viel Platz für die Datenspeicherung benötigen. Für Produktionsumgebungen wird dringend empfohlen, mit dem Handbuch zur [Kapazitätsplanung](atp-capacity-planning.md) von Azure ATP zu arbeiten, um sicherzustellen, dass Ihre Domänencontroller oder dedizierten Server den nötigen Anforderungen entsprechen.
 
-6.  Geben Sie basierend auf Ihrer Umgebung unter **Configure the sensor** (Sensor konfigurieren) den Installationspfad und den Zugriffsschlüssel ein, die Sie im vorherigen Schritt kopiert haben:
+6. Geben Sie basierend auf Ihrer Umgebung unter **Configure the sensor** (Sensor konfigurieren) den Installationspfad und den Zugriffsschlüssel ein, die Sie im vorherigen Schritt kopiert haben:
 
-    ![Bild: Konfiguration des eigenständigen Azure ATP-Sensors](media/sensor-install-config.png)
+   ![Bild: Konfiguration des eigenständigen Azure ATP-Sensors](media/sensor-install-config.png)
 
-      - Installationspfad: Dies ist der Speicherort, an dem der eigenständige Azure ATP-Sensor installiert wird. Bei der Standardeinstellung ist dies folgender Pfad: %programfiles%\Azure Advanced Threat Protection sensor. Behalten Sie den Standardwert bei.
+     - Installationspfad: Dies ist der Speicherort, an dem der eigenständige Azure ATP-Sensor installiert wird. Bei der Standardeinstellung ist dies folgender Pfad: %programfiles%\Azure Advanced Threat Protection sensor. Behalten Sie den Standardwert bei.
 
-      - Zugriffsschlüssel: Dieser wird vom Azure ATP-Portal im vorherigen Schritt abgerufen.
+     - Zugriffsschlüssel: Dieser wird vom Azure ATP-Portal im vorherigen Schritt abgerufen.
     
 7. Klicken Sie auf **Installieren**. Bei der Installation des Azure ATP-Sensors werden die folgenden Komponenten installiert und konfiguriert:
 
@@ -88,7 +84,7 @@ Führen Sie auf dem Domänencontroller folgende Schritte aus.
     -   Azure ATP-Sensordienst und Azure ATP-Sensorupdatedienst
     -   Microsoft Visual C++ 2013 Redistributable
 
-8.  Klicken Sie nach Abschluss der Installation auf **Starten**, um den Browser zu öffnen und sich beim Azure ATP-Portal anzumelden.
+8. Klicken Sie nach Abschluss der Installation auf **Starten**, um den Browser zu öffnen und sich beim Azure ATP-Portal anzumelden.
 
 
 > [!div class="step-by-step"]

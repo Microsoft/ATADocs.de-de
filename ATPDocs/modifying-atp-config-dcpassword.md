@@ -13,17 +13,13 @@ ms.technology: ''
 ms.assetid: e7f065fa-1ad1-4e87-bd80-99cc695efbf5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a5b0befaa484a94cf307559296c887370228abb4
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: 795677a2a8cc81335811cc800195588512241de7
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744301"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840507"
 ---
-*Gilt für: Azure Advanced Threat Protection*
-
-
-
 # <a name="change-azure-atp-portal-configuration---domain-connectivity-password"></a>Ändern der Konfiguration für das Azure ATP-Portal – Domänenverbindungskennwort
 
 
@@ -38,24 +34,24 @@ Führen Sie die folgenden Schritte zum Aktualisieren des Domänenverbindungskenn
 > [!NOTE]
 > Dies ist der Benutzername und das Kennwort der lokalen Active Directory-Bereitstellung und nicht aus Azure AD.
 
-1.  Öffnen Sie das Azure ATP-Portal, indem Sie die Portal-URL öffnen.
+1. Öffnen Sie das Azure ATP-Portal, indem Sie die Portal-URL öffnen.
 
-2.  Wählen Sie auf der Symbolleiste die Einstellungsoption und dann **Konfiguration** aus.
+2. Wählen Sie auf der Symbolleiste die Einstellungsoption und dann **Konfiguration** aus.
 
-    ![Symbol der Azure ATP-Konfigurationseinstellungen](media/atp-config-menu.png)
+   ![Symbol der Azure ATP-Konfigurationseinstellungen](media/atp-config-menu.png)
 
-3.  Wählen Sie **Verzeichnisdienste** aus.
+3. Wählen Sie **Verzeichnisdienste** aus.
 
-    ![Bild der Kennwortänderung für den eigenständigen Azure ATP-Sensor](media/directory-services.png)
+   ![Bild der Kennwortänderung für den eigenständigen Azure ATP-Sensor](media/directory-services.png)
 
-4.  Ändern Sie das Kennwort unter **Kennwort**.
+4. Ändern Sie das Kennwort unter **Kennwort**.
 
- > [!NOTE]
- > Geben Sie hier einen Active Directory-Benutzer sowie ein Kennwort ein, nicht für Azure Active Directory.
+   > [!NOTE]
+   > Geben Sie hier einen Active Directory-Benutzer sowie ein Kennwort ein, nicht für Azure Active Directory.
 
-5.  Klicken Sie auf **Speichern**.
+5. Klicken Sie auf **Speichern**.
 
-6.  Nachdem Sie das Kennwort geändert haben, überprüfen Sie manuell, ob der eigenständige Azure ATP-Sensordienst auf den eigenständigen Azure ATP-Sensorservern ausgeführt wird.
+6. Nachdem Sie das Kennwort geändert haben, überprüfen Sie manuell, ob der eigenständige Azure ATP-Sensordienst auf den eigenständigen Azure ATP-Sensorservern ausgeführt wird.
 
 7. Wechseln Sie im Azure ATP-Portal unter **Konfigurationen** zur Seite **Sensor**, und prüfen Sie den Status des Sensors.
 
