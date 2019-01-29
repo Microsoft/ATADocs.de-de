@@ -13,17 +13,17 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 4083975599985abe5540becb8a8ce580980f1f14
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 35577c9001d522f1c227731ab0953a0c8425724d
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46134057"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54841167"
 ---
+# <a name="ata-silent-installation"></a>Unbeaufsichtigte ATA-Installation
+
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
-
-# <a name="ata-silent-installation"></a>Unbeaufsichtigte ATA-Installation
 Dieser Artikel enthält Anweisungen zur unbeaufsichtigten Installation von ATA.
 
 ## <a name="prerequisites"></a>Voraussetzungen
@@ -47,29 +47,31 @@ Verwenden Sie zum Installieren von ATA Center den folgenden Befehl:
 
     "Microsoft ATA Center Setup.exe" [/quiet] [/Help] [--LicenseAccepted] [NetFrameworkCommandLineArguments="/q"] [InstallationPath="<InstallPath>"] [DatabaseDataPath= "<DBPath>"] [CenterIpAddress=<CenterIPAddress>] [CenterPort=<CenterPort>] [CenterCertificateThumbprint="<CertThumbprint>"] 
     [ConsoleIpAddress=<ConsoleIPAddress>] [ConsoleCertificateThumbprint="<CertThumbprint >"]
-    
+
 **Installationsoptionen**:
 
 > [!div class="mx-tableFixed"]
-|Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|Beschreibung|
-|-------------|----------|---------|---------|
-|Quiet|/quiet|Ja |Führt das Installationsprogramm ohne Benutzeroberfläche und Eingabeaufforderungen aus.|
-|Hilfe|/help|Nein|Stellt Hilfe und eine Kurzübersicht bereit. Zeigt die korrekte Verwendung des Installationsbefehl einschließlich einer Liste aller Optionen und Verhaltensweisen an.|
-|NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Ja |Legt die Parameter für die Installation von .Net Framework fest. Muss festgelegt werden, um die unbeaufsichtigte Installation von .Net Framework zu erzwingen.|
-|LicenseAccepted|--LicenseAccepted|Ja |Gibt an, dass die Lizenz gelesen und genehmigt wurde. Muss für die unbeaufsichtigte Installation festgelegt werden.|
+> 
+> |Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|Beschreibung|
+> |-------------|----------|---------|---------|
+> |Quiet|/quiet|Ja|Führt das Installationsprogramm ohne Benutzeroberfläche und Eingabeaufforderungen aus.|
+> |Hilfe|/help|Nein|Stellt Hilfe und eine Kurzübersicht bereit. Zeigt die korrekte Verwendung des Installationsbefehl einschließlich einer Liste aller Optionen und Verhaltensweisen an.|
+> |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Ja|Legt die Parameter für die Installation von .Net Framework fest. Muss festgelegt werden, um die unbeaufsichtigte Installation von .Net Framework zu erzwingen.|
+> |LicenseAccepted|--LicenseAccepted|Ja|Gibt an, dass die Lizenz gelesen und genehmigt wurde. Muss für die unbeaufsichtigte Installation festgelegt werden.|
 
 **Installationsparameter**:
 
 > [!div class="mx-tableFixed"]
-|Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|Beschreibung|
-|-------------|----------|---------|---------|
-|InstallationPath|InstallationPath=„<InstallPath>"|Nein|Legt den Pfad für die Installation der ATA-Binärdateien fest. Standardpfad: „C:\Programme\Microsoft Advanced Threat Analytics\Center“.|
-|DatabaseDataPath|DatabaseDataPath= „<DBPath>"|Nein|Legt den Pfad für den Datenordner der ATA-Datenbank fest. Standardpfad: „C:\Programme\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data“.|
-|CenterIpAddress|CenterIpAddress=<CenterIPAddress>|Ja|Legt die IP-Adresse des ATA Center-Diensts fest.|
-|CenterPort|CenterPort=<CenterPort>|Ja |Legt den Netzwerkport des ATA Center-Diensts fest.|
-|CenterCertificateThumbprint|CenterCertificateThumbprint=„<CertThumbprint>"|Nein|Legt den Zertifikatsfingerabdruck für den ATA Center-Dienst fest. Dieses Zertifikat schützt die Kommunikation zwischen ATA Center und dem ATA-Gateway. Wird keines festgelegt, wird bei der Installation ein selbstsigniertes Zertifikat generiert.|
-|ConsoleIpAddress|ConsoleIpAddress=<ConsoleIPAddress>|Ja |Legt die IP-Adresse der ATA-Konsole fest.|
-|ConsoleCertificateThumbprint|ConsoleCertificateThumbprint=„<CertThumbprint >“|Nein|Gibt den Zertifikatsfingerabdruck für die ATA-Konsole an. Anhand dieses Zertifikats wird die Identität der ATA-Konsolenwebsite geprüft. Falls keines angegeben wird, wird bei der Installation ein selbstsigniertes Zertifikat generiert.|
+> 
+> |             Name             |                      Syntax                      | Erforderlich für die unbeaufsichtigte Installation? |                                                                                                        Beschreibung                                                                                                         |
+> |------------------------------|--------------------------------------------------|------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+> |       InstallationPath       |         InstallationPath=„<InstallPath>"         |                 Nein                 |                                               Legt den Pfad für die Installation der ATA-Binärdateien fest. Standardpfad: C:\Programme\Microsoft Advanced Threat Analytics\Center                                                |
+> |       DatabaseDataPath       |           DatabaseDataPath= „<DBPath>"           |                 Nein                 |                                         Legt den Pfad für den Datenordner der ATA-Datenbank fest. Standardpfad: C:\Programme\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data                                         |
+> |       CenterIpAddress        |        CenterIpAddress=<CenterIPAddress>         |                Ja                 |                                                                                       Legt die IP-Adresse des ATA Center-Diensts fest.                                                                                        |
+> |          CenterPort          |             CenterPort=<CenterPort>              |                Ja                 |                                                                                      Legt den Netzwerkport des ATA Center-Diensts fest.                                                                                       |
+> | CenterCertificateThumbprint  |  CenterCertificateThumbprint=„<CertThumbprint>"  |                 Nein                 | Legt den Zertifikatsfingerabdruck für den ATA Center-Dienst fest. Dieses Zertifikat schützt die Kommunikation zwischen ATA Center und dem ATA-Gateway. Wird keines festgelegt, wird bei der Installation ein selbstsigniertes Zertifikat generiert. |
+> |       ConsoleIpAddress       |       ConsoleIpAddress=<ConsoleIPAddress>        |                Ja                 |                                                                                           Legt die IP-Adresse der ATA-Konsole fest.                                                                                           |
+> | ConsoleCertificateThumbprint | ConsoleCertificateThumbprint=„<CertThumbprint >“ |                 Nein                 |       Gibt den Zertifikatsfingerabdruck für die ATA-Konsole an. Anhand dieses Zertifikats wird die Identität der ATA-Konsolenwebsite geprüft. Falls keines angegeben wird, wird bei der Installation ein selbstsigniertes Zertifikat generiert.       |
 
 **Beispiele**: So installieren Sie ATA Center mit Standardinstallationspfaden und einer einzigen IP-Adresse:
 
@@ -93,11 +95,12 @@ Verwenden Sie zum Aktualisieren von ATA Center den folgenden Befehl:
 **Installationsoptionen**:
 
 > [!div class="mx-tableFixed"]
-|Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|Beschreibung|
-|-------------|----------|---------|---------|
-|Quiet|/quiet|Ja |Führt das Installationsprogramm ohne Benutzeroberfläche und Eingabeaufforderungen aus.|
-|Hilfe|/help|Nein|Stellt Hilfe und eine Kurzübersicht bereit. Zeigt die korrekte Verwendung des Installationsbefehl einschließlich einer Liste aller Optionen und Verhaltensweisen an.|
-|NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Ja |Legt die Parameter für die Installation von .Net Framework fest. Muss festgelegt werden, um die unbeaufsichtigte Installation von .Net Framework zu erzwingen.|
+> 
+> |Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|Beschreibung|
+> |-------------|----------|---------|---------|
+> |Quiet|/quiet|Ja|Führt das Installationsprogramm ohne Benutzeroberfläche und Eingabeaufforderungen aus.|
+> |Hilfe|/help|Nein|Stellt Hilfe und eine Kurzübersicht bereit. Zeigt die korrekte Verwendung des Installationsbefehl einschließlich einer Liste aller Optionen und Verhaltensweisen an.|
+> |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Ja|Legt die Parameter für die Installation von .Net Framework fest. Muss festgelegt werden, um die unbeaufsichtigte Installation von .Net Framework zu erzwingen.|
 
 
 Beim Aktualisieren von ATA erkennt das Installationsprogramm automatisch, dass ATA bereits auf dem Server installiert ist, und es ist keine Option für die Updateinstallation erforderlich.
@@ -116,18 +119,20 @@ Verwenden Sie den folgenden Befehl, um eine unbeaufsichtigte Deinstallation von 
 **Installationsoptionen**:
 
 > [!div class="mx-tableFixed"]
-|Name|Syntax|Erforderlich für die unbeaufsichtigte Deinstallation?|Beschreibung|
-|-------------|----------|---------|---------|
-|Quiet|/quiet|Ja |Führt das Deinstallationsprogramm ohne Benutzeroberfläche und Eingabeaufforderungen aus.|
-|Deinstallieren|/uninstall|Ja |Führt die unbeaufsichtigte Deinstallation von ATA Center vom Server aus.|
-|Hilfe|/help|Nein|Stellt Hilfe und eine Kurzübersicht bereit. Zeigt die korrekte Verwendung des Installationsbefehl einschließlich einer Liste aller Optionen und Verhaltensweisen an.|
+> 
+> |Name|Syntax|Erforderlich für die unbeaufsichtigte Deinstallation?|Beschreibung|
+> |-------------|----------|---------|---------|
+> |Quiet|/quiet|Ja|Führt das Deinstallationsprogramm ohne Benutzeroberfläche und Eingabeaufforderungen aus.|
+> |Deinstallieren|/uninstall|Ja|Führt die unbeaufsichtigte Deinstallation von ATA Center vom Server aus.|
+> |Hilfe|/help|Nein|Stellt Hilfe und eine Kurzübersicht bereit. Zeigt die korrekte Verwendung des Installationsbefehl einschließlich einer Liste aller Optionen und Verhaltensweisen an.|
 
 **Installationsparameter**:
 
 > [!div class="mx-tableFixed"]
-|Name|Syntax|Erforderlich für die unbeaufsichtigte Deinstallation?|Beschreibung|
-|-------------|----------|---------|---------|
-|DeleteExistingDatabaseData|DeleteExistingDatabaseData|Nein|Löscht alle Dateien in der vorhandenen Datenbank.|
+> 
+> |Name|Syntax|Erforderlich für die unbeaufsichtigte Deinstallation?|Beschreibung|
+> |-------------|----------|---------|---------|
+> |DeleteExistingDatabaseData|DeleteExistingDatabaseData|Nein|Löscht alle Dateien in der vorhandenen Datenbank.|
 
 **Beispiele**: So führen Sie eine unbeaufsichtigte Deinstallation von ATA Center vom Server aus und entfernen alle vorhandenen Datenbankdaten:
 
@@ -155,25 +160,27 @@ Verwenden Sie den folgenden Befehl für eine unbeaufsichtigte Installation des A
 **Installationsoptionen**:
 
 > [!div class="mx-tableFixed"]
-|Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|Beschreibung|
-|-------------|----------|---------|---------|
-|Quiet|/quiet|Ja |Führt das Installationsprogramm ohne Benutzeroberfläche und Eingabeaufforderungen aus.|
-|Hilfe|/help|Nein|Stellt Hilfe und eine Kurzübersicht bereit. Zeigt die korrekte Verwendung des Installationsbefehl einschließlich einer Liste aller Optionen und Verhaltensweisen an.|
-|NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Ja |Legt die Parameter für die Installation von .Net Framework fest. Muss festgelegt werden, um die unbeaufsichtigte Installation von .Net Framework zu erzwingen.|
+> 
+> |Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|Beschreibung|
+> |-------------|----------|---------|---------|
+> |Quiet|/quiet|Ja|Führt das Installationsprogramm ohne Benutzeroberfläche und Eingabeaufforderungen aus.|
+> |Hilfe|/help|Nein|Stellt Hilfe und eine Kurzübersicht bereit. Zeigt die korrekte Verwendung des Installationsbefehl einschließlich einer Liste aller Optionen und Verhaltensweisen an.|
+> |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Ja|Legt die Parameter für die Installation von .Net Framework fest. Muss festgelegt werden, um die unbeaufsichtigte Installation von .Net Framework zu erzwingen.|
 
 **Installationsparameter**:
 
 > [!div class="mx-tableFixed"]
-|Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|Beschreibung|
-|-------------|----------|---------|---------|
-|ConsoleAccountName|ConsoleAccountName=„<AccountName>“|Ja |Legt den Namen des Benutzerkontos (user@domain.com) fest, mit dem das ATA-Gateway mit ATA Center registriert wird.|
-|ConsoleAccountPassword|ConsoleAccountPassword=„<AccountPassword>"|Ja |Legt das Passwort für das Benutzerkonto (user@domain.com) fest, mit dem das ATA-Gateway mit ATA Center registriert wird.|
+> 
+> |          Name          |                   Syntax                   | Erforderlich für die unbeaufsichtigte Installation? |                                                      Beschreibung                                                       |
+> |------------------------|--------------------------------------------|------------------------------------|------------------------------------------------------------------------------------------------------------------------|
+> |   ConsoleAccountName   |     ConsoleAccountName=„<AccountName>“     |                Ja                 |   Legt den Namen des Benutzerkontos (user@domain.com) fest, mit dem das ATA-Gateway mit ATA Center registriert wird.    |
+> | ConsoleAccountPassword | ConsoleAccountPassword=„<AccountPassword>" |                Ja                 | Legt das Passwort für das Benutzerkonto (user@domain.com) fest, mit dem das ATA-Gateway mit ATA Center registriert wird. |
 
 **Beispiele**: Melden Sie sich für eine unbeaufsichtigte Installation des ATA-Gateways mit Ihren ATA-Administratoranmeldeinformationen bei dem in die Domäne eingebundenen Computer an, sodass Sie bei der Installation keine Anmeldeinformationen angeben müssen. Registrieren Sie es alternativ mit den angegebenen Anmeldeinformationen bei ATA Center:
 
     "Microsoft ATA Gateway Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" 
     ConsoleAccountName="user@contoso.com" ConsoleAccountPassword="userpwd"
-    
+
 
 ## <a name="update-the-ata-gateway"></a>Aktualisieren des ATA-Gateways
 
@@ -187,11 +194,12 @@ Verwenden Sie den folgenden Befehl für ein unbeaufsichtigtes Update des ATA-Gat
 **Installationsoptionen**:
 
 > [!div class="mx-tableFixed"]
-|Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|Beschreibung|
-|-------------|----------|---------|---------|
-|Quiet|/quiet|Ja |Führt das Installationsprogramm ohne Benutzeroberfläche und Eingabeaufforderungen aus.|
-|Hilfe|/help|Nein|Stellt Hilfe und eine Kurzübersicht bereit. Zeigt die korrekte Verwendung des Installationsbefehl einschließlich einer Liste aller Optionen und Verhaltensweisen an.|
-|NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Ja |Legt die Parameter für die Installation von .Net Framework fest. Muss festgelegt werden, um die unbeaufsichtigte Installation von .Net Framework zu erzwingen.|
+> 
+> |Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|Beschreibung|
+> |-------------|----------|---------|---------|
+> |Quiet|/quiet|Ja|Führt das Installationsprogramm ohne Benutzeroberfläche und Eingabeaufforderungen aus.|
+> |Hilfe|/help|Nein|Stellt Hilfe und eine Kurzübersicht bereit. Zeigt die korrekte Verwendung des Installationsbefehl einschließlich einer Liste aller Optionen und Verhaltensweisen an.|
+> |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Ja|Legt die Parameter für die Installation von .Net Framework fest. Muss festgelegt werden, um die unbeaufsichtigte Installation von .Net Framework zu erzwingen.|
 
 
 **Beispiele**: So führen Sie ein unbeaufsichtigtes Update des ATA-Gateways aus:
@@ -203,21 +211,22 @@ Verwenden Sie den folgenden Befehl für ein unbeaufsichtigtes Update des ATA-Gat
 Verwenden Sie den folgenden Befehl, um eine unbeaufsichtigte Deinstallation des ATA-Gateways auszuführen: **Syntax**:
 
     Microsoft ATA Gateway Setup.exe [/quiet] [/Uninstall] [/Help]
-    
+
 **Installationsoptionen**:
 
 > [!div class="mx-tableFixed"]
-|Name|Syntax|Erforderlich für die unbeaufsichtigte Deinstallation?|Beschreibung|
-|-------------|----------|---------|---------|
-|Quiet|/quiet|Ja |Führt das Deinstallationsprogramm ohne Benutzeroberfläche und Eingabeaufforderungen aus.|
-|Deinstallieren|/uninstall|Ja |Führt die unbeaufsichtigte Deinstallation des ATA-Gateways vom Server aus.|
-|Hilfe|/help|Nein|Stellt Hilfe und eine Kurzübersicht bereit. Zeigt die korrekte Verwendung des Installationsbefehl einschließlich einer Liste aller Optionen und Verhaltensweisen an.|
+> 
+> |Name|Syntax|Erforderlich für die unbeaufsichtigte Deinstallation?|Beschreibung|
+> |-------------|----------|---------|---------|
+> |Quiet|/quiet|Ja|Führt das Deinstallationsprogramm ohne Benutzeroberfläche und Eingabeaufforderungen aus.|
+> |Deinstallieren|/uninstall|Ja|Führt die unbeaufsichtigte Deinstallation des ATA-Gateways vom Server aus.|
+> |Hilfe|/help|Nein|Stellt Hilfe und eine Kurzübersicht bereit. Zeigt die korrekte Verwendung des Installationsbefehl einschließlich einer Liste aller Optionen und Verhaltensweisen an.|
 
 **Beispiele**: So führen Sie eine unbeaufsichtigte Deinstallation des ATA-Gateways aus:
 
 
     Microsoft ATA Gateway Setup.exe /quiet /uninstall
-    
+
 
 
 

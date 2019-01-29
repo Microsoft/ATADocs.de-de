@@ -13,30 +13,30 @@ ms.technology: ''
 ms.assetid: 38ea49b5-cd5e-43e5-bc39-5071f759633b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: eaa579a6b82bab27bba0ddb79b39f06bd495debc
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: ea63b6966cc933fcb0a4c748e5b4de511895c483
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133224"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840334"
 ---
-*Gilt für: Advanced Threat Analytics Version 1.9*
-
-
 # <a name="ata-reports"></a>ATA-Berichte
+
+
+*Gilt für: Advanced Threat Analytics Version 1.9*
 
 Der Abschnitt der ATA-Berichte in der Konsole erlaubt Ihnen, Berichte zu generieren, die Ihnen Informationen zum Systemstatus sowie zur Systemintegrität und einen Bericht über verdächtige Aktivitäten, die in Ihrer Umgebung ermittelt wurden, bereitzustellen.
 
 Um auf diese Berichtsseite zuzugreifen, klicken Sie auf das Berichtssymbol auf der Berichtsleiste: ![Berichtssymbol](./media/ata-report-icon.png).
 Die verfügbaren Berichte sind: 
 
-- **Zusammenfassungsbericht:** Der Zusammenfassungsbericht zeigt ein Dashboard des Status im System an. Sie können drei Registerkarten sehen: eine für eine **Zusammenfassung**, was in Ihrem Netzwerk ermittelt wurde, **Open suspicious activities** (Offene verdächtige Aktivitäten), die die verdächtigen Aktivitäten auflisten, auf die Sie achten müssen und **Open health issues** (Offene Integritätsprobleme), die Integritätsprobleme des ATA-Systems aufführen, um die Sie sich kümmern müssen. Die aufgeführten verdächtigen Aktivitäten werden nach Typ unterteilt, so auch die Integritätsprobleme. 
+- **Zusammenfassungsbericht**: Der Zusammenfassungsbericht zeigt ein Dashboard des Status im System an. Sie können drei Registerkarten sehen: eine für eine **Zusammenfassung**, was in Ihrem Netzwerk ermittelt wurde, **Open suspicious activities** (Offene verdächtige Aktivitäten), die die verdächtigen Aktivitäten auflisten, auf die Sie achten müssen und **Open health issues** (Offene Integritätsprobleme), die Integritätsprobleme des ATA-Systems aufführen, um die Sie sich kümmern müssen. Die aufgeführten verdächtigen Aktivitäten werden nach Typ unterteilt, so auch die Integritätsprobleme. 
 
 - **Änderungen an vertraulichen Gruppen**: Dieser Bericht führt jede Änderung an vertraulichen Gruppen (z.B. Administratoren) auf.
 
-- **Kennwörter in Klartext offengelegt:** Einige Dienste verwenden das nicht gesicherte LDAP-Protokoll, um Kontoanmeldeinformationen in Nur-Text zu versenden. Dies kann sogar bei sensiblen Konten geschehen. Angreifer, die Ihren Netzwerkdatenverkehr überwachen, können diese Anmeldeinformationen abfangen und diese zu böswilligen Zwecken verwenden. In diesem Bericht werden alle Quellcomputer und Kontokennwörter aufgeführt, die ATA als „als Klartext gesendet“ ermittelt hat. 
+- **Kennwörter in Klartext offengelegt:** Einige Dienste verwenden das nicht sichere LDAP-Protokoll, um Kontoanmeldeinformationen als Nur-Text zu versenden. Dies kann sogar bei sensiblen Konten geschehen. Angreifer, die Ihren Netzwerkdatenverkehr überwachen, können diese Anmeldeinformationen abfangen und diese zu böswilligen Zwecken verwenden. In diesem Bericht werden alle Quellcomputer und Kontokennwörter aufgeführt, die ATA als „als Klartext gesendet“ ermittelt hat. 
 
-- **Lateral Movement-Pfade zu sensiblen Konten:** In diesem Bericht werden die sensiblen Konten aufgeführt, die über Lateral Movement-Pfade zur Verfügung gestellt werden. Weitere Informationen erhalten Sie unter [Lateral Movement-Pfade](use-case-lateral-movement-path.md).
+- **Lateral Movement-Pfade zu sensiblen Konten**: In diesem Bericht werden die sensiblen Konten aufgeführt, die über Lateral Movement-Pfade zur Verfügung gestellt werden. Weitere Informationen erhalten Sie unter [Lateral Movement-Pfade](use-case-lateral-movement-path.md).
 
 Es gibt zwei Möglichkeiten, einen Bericht zu generieren: entweder bei Bedarf oder durch Planen eines Berichts, der in regelmäßigen Abständen an Ihre E-Mail-Adresse gesendet wird.
 
@@ -53,8 +53,8 @@ So legen Sie einen geplanten Bericht fest:
 
    ![Planen von Berichten](./media/ata-sched-reports.png)
 
-  > [!NOTE]
-  > Die tägliche Berichte sind so konzipiert, dass sie kurz nach Mitternacht (UTC) gesendet werden.
+   > [!NOTE]
+   > Die tägliche Berichte sind so konzipiert, dass sie kurz nach Mitternacht (UTC) gesendet werden.
 
 2. Klicken Sie neben dem ausgewählten Berichttyp auf **Zeitplan**, um die Häufigkeit und E-Mail-Adresse für die Lieferung der Berichte festzulegen. Klicken Sie anschließend auf das Pluszeichen neben den E-Mail-Adressen, um sie hinzuzufügen, und klicken Sie auf **Speichern**.
 
@@ -69,5 +69,5 @@ So legen Sie einen geplanten Bericht fest:
 - [Voraussetzungen für ATA](ata-prerequisites.md)
 - [ATA-Kapazitätsplanung](ata-capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
-- [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-collection.md#configuring-windows-event-forwarding)
+- [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-collection.md)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

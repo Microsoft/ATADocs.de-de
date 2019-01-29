@@ -13,19 +13,17 @@ ms.technology: ''
 ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ed4d112cda614053aa20a6a486cb29baa1fed58a
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 1e5818e4e37b7d22669721341f3f31a94cd78baa
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133632"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54841031"
 ---
-*Gilt für: Advanced Threat Analytics Version 1.9*
-
-
-
-
 # <a name="ata-role-groups"></a>ATA-Rollengruppen
+
+
+*Gilt für: Advanced Threat Analytics Version 1.9*
 
 Rollengruppen erlauben die Zugriffsverwaltung für ATA. Sie können durch Verwendung von Rollengruppen Aufgaben in Ihrem Sicherheitsteam aufteilen und nur so viel Zugriff gewähren, wie Benutzer für die Ausführung ihrer Arbeit benötigen. Dieser Artikel beschreibt die Zugriffsverwaltung und die Berechtigungen der einzelnen ATA-Rollengruppen und hilft Ihnen bei der Einrichtung und Ausführung von Rollengruppen in ATA.
 

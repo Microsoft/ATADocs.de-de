@@ -13,17 +13,13 @@ ms.technology: ''
 ms.assetid: 34dc152c-6b7f-4128-93fe-aad56c282730
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b61e840efc1b2ee14c2d367d1492b57836e2d144
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: a61434b7b9c15516c115dcbc9ae58e8cc9815111
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744454"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54459044"
 ---
-*Gilt für: Azure Advanced Threat Protection*
-
-
-
 # <a name="azure-atp-readiness-guide"></a>Handbuch für die Azure ATP-Bereitschaft
 
 Dieser Artikel stellt einen Überblick über die Bereitschaft bereit, der eine Liste der Ressourcen enthält, die Sie bei den ersten Schritten mit Azure Advanced Threat Protection unterstützt. 
@@ -64,7 +60,7 @@ Sobald Azure ATP einsatzbereit ist, können Sie Sicherheitswarnungen in der Akti
 - [Azure ATP-Lateral Movement-Pfade](use-case-lateral-movement-path.md)
 - [Tag groups as sensitive (Kennzeichnen von Gruppen als vertraulich):](sensitive-accounts.md) Erhalten Sie Einblicke in die Offenlegung von Anmeldeinformationen bei vertraulichen Sicherheitsgruppen.
 
-## <a name="security-best-practices"></a>Bewährte Methoden für die Sicherheit
+## <a name="security-best-practices"></a>Bewährte Sicherheitsmethoden
 
 - [Häufig gestellte Fragen zu Azure ATP:](atp-technical-faq.md) Dieser Artikel enthält einige häufig gestellter Fragen zu Azure ATP sowie Hintergrundwissen und Antworten. 
 
@@ -72,7 +68,7 @@ Sobald Azure ATP einsatzbereit ist, können Sie Sicherheitswarnungen in der Akti
 
 Blog: [Azure ATP-Blog](https://aka.ms/aatpblog)
 
-Öffentliche Community: [Tech Community für Azure ATP](https://aka.ms/AatpCom)
+Öffentliche Community: [Tech-Community für Azure ATP](https://aka.ms/AatpCom)
 
 Private Community: [Yammer-Gruppe für Azure ATP](https://www.yammer.com/azureadvisors/#/threads/inGroup?type=in_group&feedId=9386893&view=all)
 

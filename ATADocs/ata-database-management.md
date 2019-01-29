@@ -13,18 +13,17 @@ ms.technology: ''
 ms.assetid: 05e49e23-6e0a-4ec0-9a63-a2093173c8a1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1374b57a4633c45bce2d4ab88952197a7b8f168a
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 3dde0df4c0ddcf69a17b103d0a60bbb04ffe0d67
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46134022"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840419"
 ---
+# <a name="ata-database-management"></a>ATA-Datenbankverwaltung
+
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
-
-
-# <a name="ata-database-management"></a>ATA-Datenbankverwaltung
 Verwenden Sie diese Verfahren im Umgang mit MongoDB, wenn die ATA-Datenbank verschoben, gesichert oder wiederhergestellt werden soll.
 
 ## <a name="backing-up-the-ata-database"></a>Sichern der ATA-Datenbank
@@ -35,23 +34,23 @@ Informationen hierzu finden Sie in der [entsprechenden MongoDB-Dokumentation](ht
 
 ## <a name="moving-the-ata-database-to-another-drive"></a>Verschieben der ATA-Datenbank auf ein anderes Laufwerk
 
-1.  Halten Sie den Dienst **Microsoft Advanced Threat Analytics Center** an.
-> [!Important] 
-> Stellen Sie sicher, dass der ATA Center-Dienst beendet wurde, bevor Sie mit dem nächsten Schritt fortfahren.
+1. Halten Sie den Dienst **Microsoft Advanced Threat Analytics Center** an.
+   > [!Important] 
+   > Stellen Sie sicher, dass der ATA Center-Dienst beendet wurde, bevor Sie mit dem nächsten Schritt fortfahren.
 
-2.  Halten Sie den Dienst **MongoDB** an.
+2. Halten Sie den Dienst **MongoDB** an.
 
-3.  Öffnen Sie die MongoDB-Konfigurationsdatei, die standardmäßig unter „C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\mongod.cfg“ zu finden ist.
+3. Öffnen Sie die Mongo-Konfigurationsdatei, die sich standardmäßig im folgenden Pfad befindet: C:\Programme\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\mongod.cfg.
 
-    Finden Sie den `storage: dbPath`-Parameter.
+   Finden Sie den `storage: dbPath`-Parameter.
 
-4.  Verschieben Sie den im `dbPath`-Parameter aufgeführten Ordner an den neuen Speicherort.
+4. Verschieben Sie den im `dbPath`-Parameter aufgeführten Ordner an den neuen Speicherort.
 
-5.  Ändern Sie den `dbPath`-Parameter innerhalb der MongoDB-Konfiguration in den neuen Ordnerpfad der Datei, und speichern und schließen Sie die Datei.
+5. Ändern Sie den `dbPath`-Parameter innerhalb der MongoDB-Konfiguration in den neuen Ordnerpfad der Datei, und speichern und schließen Sie die Datei.
 
-    ![Ändern des MongoDB-Konfigurationsimages](media/ATA-mongoDB-moveDB.png)
+   ![Ändern des MongoDB-Konfigurationsimages](media/ATA-mongoDB-moveDB.png)
 
-6.  Starten Sie den Dienst **MongoDB**.
+6. Starten Sie den Dienst **MongoDB**.
 
 7. Starten Sie den Dienst **Microsoft Advanced Threat Analytics Center**.
 

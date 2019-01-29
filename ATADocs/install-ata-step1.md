@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/10/2019
+ms.date: 1/17/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service: ''
@@ -13,20 +13,20 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 00bce1b381b32e1fe3fe9a2bb2c11016b33699f7
-ms.sourcegitcommit: 6a0ac21f59e72db8615811da2c886f54cf3727f5
+ms.openlocfilehash: 78097c185d2dc8b834844e540929c9e57b52cffa
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2019
-ms.locfileid: "54249928"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840657"
 ---
-*Gilt für: Advanced Threat Analytics Version 1.9*
-
-
 # <a name="install-ata---step-1"></a>Installieren von ATA – Schritt 1
+
+*Gilt für: Advanced Threat Analytics Version 1.9*
 
 > [!div class="step-by-step"]
 > [Schritt 2 »](install-ata-step2.md)
+
 
 Diese Installationsschritte stellen Anweisungen zur Durchführung einer Neuinstallation von ATA 1.9 bereit. Informationen zum Aktualisieren einer vorhandenen früheren ATA-Bereitstellungsversion finden Sie im [ATA-Migrationshandbuch für Version 1.9](ata-update-1.9-migration-guide.md).
 
@@ -50,51 +50,51 @@ Führen Sie die folgenden Schritte auf dem ATA Center-Server aus.
 > [!NOTE]   
 > Stellen Sie sicher, dass Sie die Installationsdatei von einem lokalen Laufwerk und nicht von einer bereitgestellten ISO-Datei ausführen, um Probleme bei einem im Rahmen der Installation ggf. erforderlichen Neustart zu vermeiden.   
 
-4.  Wenn Microsoft .NET Framework nicht installiert ist, werden Sie beim Starten der Installation aufgefordert, .NET Framework zu installieren. Möglicherweise werden Sie nach der Installation von .NET Framework zu einem Neustart aufgefordert.
-5.  Wählen Sie auf der Seite **Willkommen** die Sprache für die ATA-Installationsbildschirme aus, und klicken Sie auf **Weiter**.
+4. Wenn Microsoft .NET Framework nicht installiert ist, werden Sie beim Starten der Installation aufgefordert, .NET Framework zu installieren. Möglicherweise werden Sie nach der Installation von .NET Framework zu einem Neustart aufgefordert.
+5. Wählen Sie auf der Seite **Willkommen** die Sprache für die ATA-Installationsbildschirme aus, und klicken Sie auf **Weiter**.
 
-6.  Lesen Sie die Microsoft-Software-Lizenzbedingungen, aktivieren Sie das Kontrollkästchen, wenn Sie den Bedingungen zustimmen, und klicken Sie anschließend auf **Weiter**.
+6. Lesen Sie die Microsoft-Software-Lizenzbedingungen, aktivieren Sie das entsprechende Kontrollkästchen, wenn Sie den Bedingungen zustimmen, und klicken Sie anschließend auf **Weiter**.
 
-7.  Sie sollten festlegen, dass ATA automatisch aktualisiert wird. Wenn Windows nicht für dieses automatische Update auf dem Computer konfiguriert ist, wird der Bildschirm **Verwenden Sie Microsoft Update, damit Ihr Computer sicher und auf dem aktuellen Stand bleibt** angezeigt. 
-    ![ATA-Aktualisierung](media/ata_ms_update.png)
+7. Es wird empfohlen, für ATA die automatische Aktualisierung festzulegen. Wenn auf Ihrem Computer für Windows nicht die automatische Aktualisierung festgelegt ist, wird der Bildschirm **Verwenden Sie Microsoft Update, damit Ihr Computer sicher und auf dem aktuellen Stand bleibt** angezeigt. 
+   ![ATA-Aktualisierung](media/ata_ms_update.png)
 
-8. Wählen Sie **Microsoft Update für die Suche nach Updates verwenden (empfohlen)**. Damit ändern Sie die Windows-Einstellungen so, dass Updates für andere Microsoft-Produkte (einschließlich ATA) möglich sind, wie hier zu sehen. 
+8. Wählen Sie **Microsoft Update für die Suche nach Updates verwenden (empfohlen)**. Damit ändern Sie die Windows-Einstellungen so, dass Updates für andere Microsoft-Produkte (einschließlich ATA) möglich sind. 
 
     ![Abbildung von Windows AutoUpdate](media/ata_installupdatesautomatically.png)
 
-8.  Geben Sie auf der Seite **Configure the Center (Konfigurieren von ATA Center)** basierend auf Ihrer Umgebung die folgenden Informationen ein:
+9. Geben Sie auf der Seite **Configure the Center (Konfigurieren von ATA Center)** basierend auf Ihrer Umgebung die folgenden Informationen ein:
 
-    |Feld|Beschreibung|Kommentare|
-    |---------|---------------|------------|
-    |Installationspfad|Dies ist der Speicherort, an dem ATA Center installiert wird. Standardmäßig ist dies „%programfiles%\Microsoft Advanced Threat Analytics\Center“.|Behalten Sie den Standardwert bei.|
-    |Datenbankdatenpfad|Dies ist der Speicherort, an dem sich die MongoDB-Datenbankdateien befinden. Standardmäßig ist dies „%programfiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data“.|Ändern Sie den Speicherort, sodass ausreichend Speicherplatz für Ihre Größenanpassung verfügbar ist. **Hinweis:** <ul><li>In Produktionsumgebungen sollten Sie ein Laufwerk verwenden, das der Kapazitätsplanung entsprechend über ausreichend Speicherplatz verfügt.</li><li>Für umfangreiche Bereitstellungen sollte sich die Datenbank auf einem separaten physischen Datenträger befinden.</li></ul>Informationen zur Größenanpassung finden Sie unter [ATA-Kapazitätsplanung](ata-capacity-planning.md).|
-    |SSL-Zertifikat für Center-Dienst|Dies ist das Zertifikat, das von der ATA-Konsole und vom ATA Center-Dienst verwendet wird.|Klicken Sie auf das Schlüsselsymbol, um ein installiertes Zertifikat auszuwählen oder bei der Bereitstellung in einer Testumgebung ein selbstsigniertes Zertifikat zu überprüfen. Sie haben die Option zum Erstellen eines selbstsignierten Zertifikats in der Benutzeroberfläche des ACS-Filters.|
+   |Feld|Beschreibung|Kommentare|
+   |---------|---------------|------------|
+   |Installationspfad|Dies ist der Speicherort, an dem ATA Center installiert wird. Standardmäßig ist dies „%programfiles%\Microsoft Advanced Threat Analytics\Center“.|Behalten Sie den Standardwert bei.|
+   |Datenbankdatenpfad|Dies ist der Speicherort, an dem sich die MongoDB-Datenbankdateien befinden. Standardmäßig ist dies „%programfiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data“.|Ändern Sie den Speicherort, sodass ausreichend Speicherplatz für Ihre Größenanpassung verfügbar ist. **Hinweis:** <ul><li>In Produktionsumgebungen sollten Sie ein Laufwerk verwenden, das der Kapazitätsplanung entsprechend über ausreichend Speicherplatz verfügt.</li><li>Für umfangreiche Bereitstellungen sollte sich die Datenbank auf einem separaten physischen Datenträger befinden.</li></ul>Informationen zur Größenanpassung finden Sie unter [ATA-Kapazitätsplanung](ata-capacity-planning.md).|
+   |SSL-Zertifikat für Center-Dienst|Dies ist das Zertifikat, das von der ATA-Konsole und vom ATA Center-Dienst verwendet wird.|Klicken Sie auf das Schlüsselsymbol, um ein installiertes Zertifikat auszuwählen, oder verwenden Sie das Kontrollkästchen, um ein selbstsigniertes Zertifikat zu erstellen.|
         
-    ![Abbildung ATA Center-Konfiguration](media/ATA-Center-Configuration.png)
+   ![Abbildung ATA Center-Konfiguration](media/ATA-Center-Configuration.png)
 
-10.  Klicken Sie auf **Installieren**, um ATA Center und die zugehörigen Komponenten zu installieren.
-    Bei der Installation von ATA Center werden die folgenden Komponenten installiert und konfiguriert:
+10. Klicken Sie auf **Installieren**, um ATA Center und die zugehörigen Komponenten zu installieren.
+   Bei der Installation von ATA Center werden die folgenden Komponenten installiert und konfiguriert:
 
-    -   ATA Center-Dienst
+   -   ATA Center-Dienst
 
-    -   MongoDB
+   -   MongoDB
 
-    -   Benutzerdefinierter Systemmonitor-Datensammlungssatz
+   -   Benutzerdefinierter Systemmonitor-Datensammlungssatz
 
-    -   Selbstsignierte Zertifikate (sofern bei der Installation ausgewählt)
+   -   Selbstsignierte Zertifikate (sofern bei der Installation ausgewählt)
 
-11.  Wenn die Installation abgeschlossen ist, klicken Sie auf **Start**, um die ATA-Konsole zu öffnen, und schließen Sie das Setup auf der Seite **Konfiguration**.
-An dieser Stelle werden Sie automatisch zur Seite mit den **allgemeinen Einstellungen** weitergeleitet, auf der Sie die Konfiguration und Bereitstellung der ATA-Gateways fortsetzen können.
-Da Sie sich mit einer IP-Adresse bei der Website anmelden, wird eine Warnung im Zusammenhang mit dem Zertifikat angezeigt. Das ist normal, und Sie können auf **Laden dieser Website fortsetzen** klicken.
+11. Wenn die Installation abgeschlossen ist, klicken Sie auf **Start**, um die ATA-Konsole zu öffnen und das Setup auf der Seite **Konfiguration** abzuschließen.
+   Die Einstellungsseite **Allgemein** wird automatisch geöffnet, damit Sie die Konfiguration und Bereitstellung der ATA-Gateways fortsetzen können.
+   Da Sie sich mit einer IP-Adresse bei der Website anmelden, wird eine Warnung im Zusammenhang mit dem Zertifikat angezeigt. Das ist normal, und Sie können auf **Laden dieser Website fortsetzen** klicken.
 
 ### <a name="validate-installation"></a>Überprüfen der Installation
 
-1.  Überprüfen Sie, ob der Dienst **Microsoft Advanced Threat Analytics-Gateway** ausgeführt wird.
-2.  Klicken Sie auf dem Desktop auf die Verknüpfung **Microsoft Advanced Threat Analytics**, um eine Verbindung mit der ATA-Konsole herzustellen. Melden Sie sich mit den gleichen Benutzeranmeldeinformationen an, die Sie auch zum Installieren von ATA Center verwendet haben.
+1.  Überprüfen Sie, ob der Dienst **Microsoft Advanced Threat Analytics Center** ausgeführt wird.
+2.  Klicken Sie auf dem Desktop auf die Verknüpfung **Microsoft Advanced Threat Analytics**, um eine Verbindung mit der ATA-Konsole herzustellen. Melden Sie sich mit den Benutzeranmeldeinformationen an, die Sie zum Installieren von ATA Center verwendet haben.
 
 ### <a name="set-anti-virus-exclusions"></a>Festlegen von Ausnahmen für die Antivirensoftware
 
-Nach der Installation von ATA Center sollten Sie das MongoDB-Datenbankverzeichnis als Ausnahme festlegen, damit dieses nicht fortlaufend von Ihrer Antivirenanwendung überprüft wird. Der standardmäßige Speicherort in der Datenbank lautet folgendermaßen: **C:\Programme\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data**.
+Legen Sie nach der Installation von ATA Center das MongoDB-Datenbankverzeichnis als Ausnahme fest, damit dieses nicht fortlaufend von Ihrer Antivirenanwendung überprüft wird. Der standardmäßige Speicherort in der Datenbank lautet folgendermaßen: **C:\Programme\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data**.
 
 Stellen Sie sicher, dass Sie auch die folgenden Ordner und Prozesse von der Antivirusprüfung ausschließen:
 

@@ -13,19 +13,17 @@ ms.technology: ''
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a71491fc717aca3f9b418750b78657e83ac65ecf
-ms.sourcegitcommit: 1b914a85cfa33dc0c5005f9dc68e6ea08a0164ac
+ms.openlocfilehash: 8b158f9656e2c47583cfcc8218a78091cf158221
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411645"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840691"
 ---
+# <a name="ata-architecture"></a>ATA-Architektur
+
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
-
-
-
-# <a name="ata-architecture"></a>ATA-Architektur
 Dieses Diagramm veranschaulicht die Architektur von Advanced Threat Analytics:
 
 ![Topologiediagramm der ATA-Architektur](media/ATA-architecture-topology.jpg)
@@ -53,9 +51,9 @@ Eine ATA-Bereitstellung kann aus einem einzigen ATA Center bestehen, das mit all
 Sie können ATA mit der folgenden Kombination von Gateways bereitstellen:
 
 -   **Ausschließliche Verwendung von ATA-Gateways** <br>
-Ihre ATA-Bereitstellung kann nur ATA-Gateways und keine ATA-Lightweight-Gateways enthalten: alle Domänencontroller müssen für die Portspiegelung auf ein ATA-Gateway konfiguriert sein, oder es müssen Netzwerk-TAPs vorhanden sein.
+Ihre ATA-Bereitstellung kann nur ATA-Gateways und keine ATA-Lightweight-Gateways enthalten: Alle Domänencontroller müssen für die Portspiegelung auf ein ATA-Gateway konfiguriert sein, oder es müssen Netzwerk-TAPs vorhanden sein.
 -   **Ausschließliche Verwendung von ATA-Lightweight-Gateways**<br>
-Ihre ATA-Bereitstellung kann nur ATA-Lightweight-Gateways enthalten: die ATA-Lightweight-Gateways werden auf jedem Domänencontroller bereitgestellt, und es sind keine zusätzlichen Server oder Konfigurationen für die Portspiegelung erforderlich.
+Ihre ATA-Bereitstellung kann nur ATA-Lightweight-Gateways enthalten: Die ATA-Lightweight-Gateways werden auf jedem Domänencontroller bereitgestellt, und es sind keine zusätzlichen Server oder Konfigurationen für die Portspiegelung erforderlich.
 -   **Verwendung von ATA-Gateways und ATA-Lightweight-Gateways**<br>
 Ihre ATA-Bereitstellung enthält sowohl ATA-Gateways als auch ATA-Lightweight-Gateways. Die ATA-Lightweight-Gateways werden auf einigen Ihrer Domänencontroller installiert (z.B. alle Domänencontroller am Standort Ihres Branchs). Gleichzeitig werden andere Domänencontroller von ATA-Gateways überwacht (z.B. die größeren Domänencontroller in Ihrem Hauptdatenzentrum).
 
@@ -158,7 +156,7 @@ Wenn Active Directory mehr Rechenkapazität erfordert, wird das vom ATA-Lightwei
 ||||||
 |-|-|-|-|-|
 |Active Directory (Lsass.exe)|ATA-Lightweight-Gateway (Microsoft.Tri.Gateway.exe)|Sonstiges (andere Prozesse) |ATA-Lightweight-Gateway-Kontingent|Nimmt Gateway Löschungen vor|
-|60%|15%|10%|15%|Ja |
+|60%|15%|10%|15%|Ja|
 
 
 ## <a name="your-network-components"></a>Ihre Netzwerkkomponenten
@@ -173,11 +171,11 @@ Die Domänencontroller und die ATA-Gateways können physisch oder virtuell sein.
 
 
 ### <a name="events"></a>Ereignisse
-Um die ATA-Erfassung von Pass-the-Hash, Brute Force, die Modifizierung von sensiblen Gruppen und Honey Token zu verbessern, benötigt ATA die folgenden Windows-Ereignisse: 4776, 4732, 4733, 4728, 4729, 4756 und 4757. Diese können entweder automatisch vom ATA-Lightweight-Gateway gelesen werden, oder, falls das ATA-Lightweight-Gateway nicht bereitgestellt wurde, an das ATA-Gateway weitergeleitet werden. Dazu gibt es zwei Möglichkeiten: zum einen das Konfigurieren des ATA-Gateways, sodass es auf SIEM-Ereignisse lauscht, oder das [Konfigurieren der Windows-Ereignisweiterleitung](#configuring-windows-event-forwarding).
+Um die ATA-Erfassung von Pass-the-Hash, Brute Force, die Änderung an sensiblen Gruppen und Honey Tokens zu verbessern, benötigt ATA die folgenden Windows-Ereignisse: 4776, 4732, 4733, 4728, 4729, 4756 und 4757. Diese können entweder automatisch vom ATA-Lightweight-Gateway gelesen werden, oder, falls das ATA-Lightweight-Gateway nicht bereitgestellt wurde, an das ATA-Gateway weitergeleitet werden. Dazu gibt es zwei Möglichkeiten: zum einen das Konfigurieren des ATA-Gateways, sodass es auf SIEM-Ereignisse lauscht, oder das [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-collection.md).
 
 -   Konfigurieren des ATA-Gateways zum Überwachen von SIEM-Ereignissen <br>Konfigurieren Sie SIEM zum Weiterleiten bestimmter Windows-Ereignisse an ATA. ATA unterstützt eine Reihe von SIEM-Anbietern. Weitere Informationen finden Sie unter [Konfigurieren der Ereignissammlung](configure-event-collection.md).
 
--   Konfigurieren der Windows-Ereignisweiterleitung<br>Eine andere Möglichkeit, wie ATA Ihre Ereignisse erhalten kann, besteht darin, die Domänencontroller so zu konfigurieren, dass die Windows-Ereignisse 4776, 4732, 4733, 4728, 4729, 4756 und 4757 an das ATA-Gateway weitergeleitet werden. Dies ist insbesondere dann nützlich, wenn Sie nicht über SIEM verfügen oder SIEM von ATA derzeit nicht unterstützt wird. Informationen darüber, wie Sie die Konfiguration der Windows-Ereignisweiterleitung in ATA abschließen, finden Sie unter [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-collection.md#configuring-windows-event-forwarding). Dies gilt nur für physische ATA-Gateways und nicht für das ATA-Lightweight-Gateway.
+-   Konfigurieren der Windows-Ereignisweiterleitung<br>Eine andere Möglichkeit, wie ATA Ihre Ereignisse erhalten kann, besteht darin, die Domänencontroller so zu konfigurieren, dass die Windows-Ereignisse 4776, 4732, 4733, 4728, 4729, 4756 und 4757 an das ATA-Gateway weitergeleitet werden. Dies ist insbesondere dann nützlich, wenn Sie nicht über SIEM verfügen oder SIEM von ATA derzeit nicht unterstützt wird. Informationen darüber, wie Sie die Konfiguration der Windows-Ereignisweiterleitung in ATA abschließen, finden Sie unter [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-collection.md). Dies gilt nur für physische ATA-Gateways und nicht für das ATA-Lightweight-Gateway.
 
 ## <a name="related-videos"></a>Verwandte Videos
 - [Auswählen des richtigen ATA-Gatewaytyps](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
@@ -188,6 +186,6 @@ Um die ATA-Erfassung von Pass-the-Hash, Brute Force, die Modifizierung von sensi
 - [Tool zur Bemessung von ATA-Gateways](http://aka.ms/atasizingtool)
 - [ATA-Kapazitätsplanung](ata-capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
-- [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-collection.md#configuring-windows-event-forwarding)
+- [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-collection.md)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 

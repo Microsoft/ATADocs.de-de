@@ -13,21 +13,16 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4481f8896791e98f76a6fb6f0b93796337b15ed1
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: bb577283303437db1e524f1e1f5a112be2bb8bcf
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744330"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458698"
 ---
-*Gilt für: Azure Advanced Threat Protection*
-
-
-
-
 # <a name="azure-atp-role-groups"></a>Azure ATP-Rollengruppen
 
-Azure ATP bietet eine rollenbasierte Sicherheit, um Daten gemäß den spezifischen Sicherheits- und Konformitätsanforderungen einer Organisation zu schützen. Azure ATP unterstützt drei separate Rollen: Administratoren, Benutzer und Betrachter. 
+Azure ATP bietet eine rollenbasierte Sicherheit, um Daten gemäß den spezifischen Sicherheits- und Konformitätsanforderungen einer Organisation zu schützen. Azure ATP unterstützt drei separate Rollen: Administratoren, Benutzer und Viewer. 
 
 [!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
 
@@ -46,7 +41,7 @@ Nur Azure AD-Benutzer mit den Verzeichnisrollen „globaler Administrator“ ode
 
 ## <a name="types-of-azure-atp-security-groups"></a>Typen von Azure ATP-Sicherheitsgruppen 
 
-Azure ATP stellt drei Typen von Sicherheitsgruppen bereit: *Instanzname* von Azure ATP-Administratoren, *Instanzname* von Azure ATP-Benutzern und *Instanzname* von Azure ATP-Viewern. Die folgende Tabelle beschreibt den Zugriffstyp im Azure ATP-Portal, der für jede Rolle verfügbar ist. Je nachdem, welche Rolle Sie zuweisen, stehen verschiedene Anzeigen und Menüoptionen im Azure ATP-Portal für folgende Benutzer nicht zur Verfügung:
+Azure ATP stellt drei Typen von Sicherheitsgruppen bereit: Azure ATP-(*Instanzname*)-Administratoren, Azure ATP-(*Instanzname*)-Benutzer und Azure ATP-(*Instanzname*)-Viewer. Die folgende Tabelle beschreibt den Zugriffstyp im Azure ATP-Portal, der für jede Rolle verfügbar ist. Je nachdem, welche Rolle Sie zuweisen, stehen verschiedene Anzeigen und Menüoptionen im Azure ATP-Portal für folgende Benutzer nicht zur Verfügung:
 
 |Aktivität |Azure ATP-Administratoren für *Instanzname*|Azure ATP-Benutzer für *Instanzname*|Azure ATP-Viewer für *Instanzname*|
 |----|----|----|----|

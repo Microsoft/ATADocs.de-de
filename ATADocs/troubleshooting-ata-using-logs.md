@@ -13,24 +13,23 @@ ms.technology: ''
 ms.assetid: b8ad5511-8893-4d1d-81ee-b9a86e378347
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: bded73777a62a3a0ed91a73abfe6cd9771985082
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 5e42694b9c3bc6da84344ba0e97cebc4c622290a
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46134040"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54839740"
 ---
+# <a name="troubleshooting-ata-using-the-ata-logs"></a>Behandeln von Problemen mit ATA mithilfe der ATA-Protokolle
+
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
-
-
-# <a name="troubleshooting-ata-using-the-ata-logs"></a>Behandeln von Problemen mit ATA mithilfe der ATA-Protokolle
 Die ATA-Protokolle geben Einblick in die Aktivitäten der einzelnen Komponenten von ATA zu einem bestimmten Zeitpunkt.
 
 ## <a name="ata-gateway-logs"></a>Protokolle des ATA-Gateways
 In diesem Abschnitt gilt jeder Verweis auf das ATA-Gateway ebenfalls für das ATA-Lightweight-Gateway. 
 
-Die Protokolle des ATA-Gateways befinden sich im Unterordner **Protokolle** im Installationsordner von ATA. Der Standardpfad lautet: **C:\Programme\Microsoft Advanced Threat Analytics\\**. Dieser ist im Standardinstallationsverzeichnis unter **C:\Programme\Microsoft Advanced Threat Analytics\Gateway\Logs** zu finden.
+Die Protokolle des ATA-Gateways befinden sich am Installationsspeicherort von ATA in einem Unterordner namens **Logs**. Der Standardpfad lautet: **C:\Programme\Microsoft Advanced Threat Analytics\\**. Beim Standardinstallationsspeicherort lautet der Pfad: **C:\Programme\Microsoft Advanced Threat Analytics\Gateway\Logs**.
 
 Für das ATA-Gateway sind folgende Protokolle verfügbar:
 
@@ -49,7 +48,7 @@ Für das ATA-Gateway sind folgende Protokolle verfügbar:
 > Die ersten drei Protokolldateien haben eine maximale Größe von 50 MB. Wenn diese Größe erreicht ist, wird eine neue Protokolldatei geöffnet und die vorherige Datei in „&lt;Ursprünglicher Dateiname&gt;-Archived-00000“ umbenannt. Die Zahl erhöht sich bei jeder Umbenennung der Datei. Wenn bereits mehr als 10 Dateien des gleichen Typs vorhanden sind, werden die ältesten gelöscht.
 
 ## <a name="ata-center-logs"></a>Protokolle von ATA Center
-Die Protokolle von ATA Center befinden sich im Unterordner **Logs**. Dieser ist im Standardinstallationsverzeichnis unter **C:\Programme\Microsoft Advanced Threat Analytics\Center\Logs** zu finden.
+Die Protokolle von ATA Center befinden sich im Unterordner **Logs**. Beim Standardinstallationsspeicherort lautet der Pfad: **C:\Programme\Microsoft Advanced Threat Analytics\Center\Logs**.
 > [!Note]
 > Die ATA-Konsolenprotokolle, die früher unter den IIS-Protokollen gespeichert wurden, befinden sich nun bei den ATA Center-Protokollen.
 
@@ -69,7 +68,7 @@ Für ATA Center sind folgende Protokolle verfügbar:
 
 
 ## <a name="ata-deployment-logs"></a>ATA-Bereitstellungsprotokolle
-Die ATA-Bereitstellungsprotokolle befinden sich im temporären Verzeichnis des Benutzers, der das Produkt installiert hat. Es ist im Standardinstallationsverzeichnis unter **C:\Benutzer\Administrator\AppData\Local\Temp** (oder in dem „%temp%“ übergeordneten Verzeichnis) zu finden.
+Die ATA-Bereitstellungsprotokolle befinden sich im temporären Verzeichnis des Benutzers, der das Produkt installiert hat. Beim Standardinstallationsspeicherort lautet der Pfad: **C:\Benutzer\Administrator\AppData\Local\Temp** (oder ein Verzeichnis über "% Temp%").
 
 Bereitstellungsprotokolle von ATA Center:
 
@@ -94,5 +93,5 @@ Bereitstellungsprotokolle für ATA-Gateway und ATA-Lightweight-Gateway:
 - [Voraussetzungen für ATA](ata-prerequisites.md)
 - [ATA-Kapazitätsplanung](ata-capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
-- [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-collection.md#configuring-windows-event-forwarding)
+- [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-collection.md)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

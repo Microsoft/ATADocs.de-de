@@ -13,21 +13,20 @@ ms.technology: ''
 ms.assetid: 1d27dba8-fb30-4cce-a68a-f0b1df02b977
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3abe18d7da00e5af0373d74db2dc2dc1f91a6fc9
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: b470bc1a7de358d5326539aaf91d71ef08cb1282
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133309"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54839931"
 ---
+# <a name="export-and-import-the-ata-configuration"></a>Exportieren und Importieren der ATA-Konfiguration
+
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
-
-
-# <a name="export-and-import-the-ata-configuration"></a>Exportieren und Importieren der ATA-Konfiguration
 Die Konfiguration von ATA ist in der Sammlung „SystemProfile“ in der Datenbank gespeichert.
-Diese Sammlung wird vom ATA Center-Dienst alle 4 Stunden in Dateien mit dem Namen **SystemProfile_*Zeitstempel*.json** gespeichert. Die 300 neuesten Versionen werden gespeichert.
-Diese Datei befindet sich im Unterordner **Backup**. Im ATA-Standardinstallationsverzeichnis ist die Datei unter *C:\Programme\Microsoft Advanced Threat Analytics\Center\Backup\SystemProfile_* Zeitstempel *.json* zu finden. 
+Diese Sammlung wird vom ATA Center-Dienst alle 4 Stunden in Dateien mit folgendem Namen gespeichert: **SystemProfile_*Zeitstempel*.json**. Die 300 neuesten Versionen werden gespeichert.
+Diese Datei befindet sich im Unterordner **Backup**. Beim ATA-Standardinstallationsspeicherort lautet der Pfad:  <em>C:\Programme\Microsoft Advanced Threat Analytics\Center\Backup\SystemProfile_</em>Zeitstempel<em>.json</em>. 
 
 **Hinweis**: Wenn Sie größere Änderungen an ATA vornehmen, wird empfohlen, eine Sicherung dieser Datei zu erstellen.
 

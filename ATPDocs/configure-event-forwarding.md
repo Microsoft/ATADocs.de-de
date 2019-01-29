@@ -13,17 +13,13 @@ ms.technology: ''
 ms.assetid: 3547519f-8d9c-40a9-8f0e-c7ba21081203
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c17fbe10bea696711bd3dc011893bdcd3dbc87f4
-ms.sourcegitcommit: eb144ce1331ec3404fd2f75025cdbe802a73890b
+ms.openlocfilehash: cad1cff6b9e46676a2f92b3304dbc55440bfa1d9
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52620845"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840436"
 ---
-*Gilt für: Azure Advanced Threat Protection*
-
-
-
 # <a name="configuring-windows-event-forwarding"></a>Konfigurieren der Windows-Ereignisweiterleitung
 
 > [!NOTE]
@@ -53,22 +49,22 @@ Sie müssen die Domänencontroller neu starten, nachdem Sie den **Netzwerkdienst
 > [!Note] 
 > Sie können eine Gruppenrichtlinie für diese Einstellungen erstellen und die Gruppenrichtlinie auf jeden Domänencontroller anwenden, der vom eigenständigen Azure ATP-Sensor überwacht wird. Über die folgenden Schritte ändern Sie die lokale Richtlinie des Domänencontrollers.     
 
-1.  Führen Sie den folgenden Befehl auf jedem Domänencontroller aus: *winrm quickconfig*
-2.  Geben Sie an einer Eingabeaufforderung *gpedit.msc* ein.
-3.  Erweitern Sie **Computerkonfiguration > Administrative Vorlagen > Windows-Komponenten > Ereignisweiterleitung**.
+1. Führen Sie den folgenden Befehl auf jedem Domänencontroller aus: *winrm quickconfig*
+2. Geben Sie an einer Eingabeaufforderung *gpedit.msc* ein.
+3. Erweitern Sie **Computerkonfiguration > Administrative Vorlagen > Windows-Komponenten > Ereignisweiterleitung**.
 
- ![Local policy group editor image](media/wef%201%20local%20group%20policy%20editor.png)
+   ![Local policy group editor image](media/wef%201%20local%20group%20policy%20editor.png)
 
-4.  Doppelklicken Sie auf **Ziel-Abonnement-Manager konfigurieren**.
+4. Doppelklicken Sie auf **Ziel-Abonnement-Manager konfigurieren**.
    
-    1.  Wählen Sie **Aktiviert** aus.
-    2.  Klicken Sie unter **Optionen** auf **Anzeigen**.
-    3.  Geben Sie unter **SubscriptionManagers** den folgenden Wert ein, und klicken Sie auf **OK**: Server= http\://\<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10` (For example: Server=http\://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
+   1.  Wählen Sie **Aktiviert**aus.
+   2.  Klicken Sie unter **Optionen** auf **Anzeigen**.
+   3.  Geben Sie unter **SubscriptionManagers** folgenden Wert ein, und klicken Sie auf **OK**: Server= http\://\<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10` (z. B.: Server=http\://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
     
-    ![Configure target subscription image](media/wef%202%20config%20target%20sub%20manager.png)
+   ![Configure target subscription image](media/wef%202%20config%20target%20sub%20manager.png)
     
-5.  Klicken Sie auf **OK**.
-6.  Geben Sie von einer Eingabeaufforderung mit erhöhten Rechten aus *gpupdate /force* ein. 
+5. Klicken Sie auf **OK**.
+6. Geben Sie von einer Eingabeaufforderung mit erhöhten Rechten aus *gpupdate /force* ein. 
 
 **Schritt 3: Führen Sie die folgenden Schritte für den eigenständigen Azure ATP-Sensor aus** 
 
@@ -91,7 +87,7 @@ Sie müssen die Domänencontroller neu starten, nachdem Sie den **Netzwerkdienst
     6. Überprüfen Sie nach einigen Minuten, ob die festgelegten Ereignisse im eigenständigen Azure ATP-Sensor unter „Weitergeleitete Ereignisse“ angezeigt werden.
 
 
-Weitere Informationen finden Sie unter [Einrichten von Computern zum Weiterleiten und Sammeln von Ereignissen](https://technet.microsoft.com/library/cc748890).
+Weitere Informationen finden Sie unter: [Einrichten von Computern zum Weiterleiten und Sammeln von Ereignissen](https://technet.microsoft.com/library/cc748890)
 
 ## <a name="see-also"></a>Weitere Informationen
 

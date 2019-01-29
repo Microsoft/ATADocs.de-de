@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 64424c6c2b2b0f627099ab479831f4b289eb9605
-ms.sourcegitcommit: 1ee052c4c6b04b290e2d5384c24b65a108b1f1f3
+ms.openlocfilehash: 3c707376635facd0fe9ba8e3c3f32f36f5a71c25
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54253383"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54839545"
 ---
 # <a name="tutorial-investigate-a-computer"></a>Tutorial: Untersuchen eines Computers
 
@@ -31,13 +31,12 @@ Klicken Sie auf den in der Warnung genannten Computer, den Sie untersuchen möch
 Überprüfen und untersuchen Sie das Computerprofil auf die folgenden Details und Aktivitäten:
 
 - Was ist zum Zeitpunkt der verdächtigen Aktivität geschehen?  
-    1. Welcher [Benutzer](investigate-a-user.md) war an dem Computer angemeldet?
-    2. Meldet sich dieser Benutzer normalerweise an der Quelle oder am Zielcomputer an, oder greift er darauf zu?
-    3. Auf welche Ressourcen ist zugegriffen worden? Durch welche Benutzer?
-            Wenn auf Ressourcen zugegriffen worden ist, hat es sich um wertvolle Ressourcen gehandelt?
-    4. Hätte der Benutzer Zugriff auf diese Ressourcen haben dürfen?
-    5. Hat der [Benutzer](investigate-a-user.md), der auf den Computer zugegriffen hat, weitere verdächtige Aktivitäten ausgeführt?
-
+  1. Welcher [Benutzer](investigate-a-user.md) war an dem Computer angemeldet?
+  2. Meldet sich dieser Benutzer normalerweise an der Quelle oder am Zielcomputer an, oder greift er darauf zu?
+  3. Auf welche Ressourcen ist zugegriffen worden? Durch welche Benutzer?
+      - Wenn auf Ressourcen zugegriffen worden ist, hat es sich um wertvolle Ressourcen gehandelt?
+  4. Hätte der Benutzer Zugriff auf diese Ressourcen haben dürfen?
+  5. Hat der [Benutzer](investigate-a-user.md), der auf den Computer zugegriffen hat, weitere verdächtige Aktivitäten ausgeführt?
 
 - Weitere zu untersuchende verdächtige Aktivitäten:
     1. Waren ungefähr gleichzeitig mit dieser Warnung noch weitere Warnungen in Azure ATP oder in anderen Sicherheitstools wie Windows Defender ATP, Azure Security Center und/oder Microsoft CAS geöffnet?

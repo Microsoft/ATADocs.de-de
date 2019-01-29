@@ -13,15 +13,13 @@ ms.technology: ''
 ms.assetid: f6f3ed75-d6bb-4966-a9a7-5339c4f3ebac
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 52445e15a4465f0fa4b399cf99ccf6620db7a572
-ms.sourcegitcommit: 59ed430fa0cd8ac34a70609026ec5fc2f5972f57
+ms.openlocfilehash: 2ff18759e23462a2b01a10f45729b5a282495347
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "49480683"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458818"
 ---
-*Gilt für: Azure Advanced Threat Protection*
-
 # <a name="integrate-azure-atp-with-windows-defender-atp"></a>Integrieren von Azure ATP in Windows Defender ATP
 
 Mithilfe von Azure Advanced Threat Protection können Sie Azure ATP in Windows Defender ATP integrieren, wodurch Sie eine noch umfangreichere Möglichkeit zum Schutz vor Bedrohungen erhalten. Während Azure ATP den Datenverkehr auf Ihren Domänencontrollern überwacht, überwacht Windows Defender ATP Ihre Endpunkte. Beide Dienste stellen gemeinsam eine Schnittstelle bereit, über die Sie Ihre Umgebung schützen können.
@@ -30,11 +28,11 @@ Wenn Sie Windows Defender ATP in Azure ATP integrieren, können Sie beide Dienst
 
 - Azure ATP-Sensoren und eigenständige Sensoren: Können sich auf Ihren Domänencontrollern direkt befinden oder eine Portspiegelung von Ihren Domänencontrollern auf ATP darstellen, um den Netzwerkdatenverkehr verschiedener Protokolle (wie Kerberos, DNS, RPC, NTLM) für die Authentifizierung, Autorisierung und das Sammeln von Informationen zu erfassen und zu analysieren. 
 
--   Verhaltenssensoren der Endpunkte: Diese Sensoren, die in Windows 10 eingebettet sind, sammeln und verarbeiten Signale zum Verhalten des Betriebssystems (z.B. Kommunikationen zum Prozess, zur Registrierung, zu den Dateien und zum Netzwerk) und senden diese Sensordaten an Ihre private, isolierte Cloudinstanz von Windows Defender ATP.
+-   Verhaltenssensoren der Endpunkte: Diese Sensoren, die in Windows 10 eingebettet sind, sammeln und verarbeiten Signale zum Verhalten des Betriebssystems (z. B. Kommunikation zum Prozess, zur Registrierung, zu den Dateien und zum Netzwerk) und senden diese Sensordaten an Ihre private, isolierte Cloudinstanz von Windows Defender ATP.
 
-- Analyse der Cloudsicherheit: Signale zum Verhalten verwenden Big Data, Machine Learning und eindeutige Microsoft-Ansichten des gesamten Windows-Ökosystems (z.B. das [Microsoft-Tool zum Entfernen bösartiger Software](https://www.microsoft.com/download/malicious-software-removal-tool-details.aspx)), Cloudprodukte des Unternehmens (wie Office 365) und Online Assets (wie die URL-Bewertung von Bing und SmartScreen). Diese Signale werden in Einblicke, Erkennungsvorgänge und empfohlene Antworten auf erweiterte Bedrohungen übersetzt.
+- Analyse der Cloudsicherheit: Signale zum Verhalten verwenden Big Data, Machine Learning und eindeutige Microsoft-Ansichten des gesamten Windows-Ökosystems (z. B. das [Microsoft-Tool zum Entfernen bösartiger Software](https://www.microsoft.com/download/malicious-software-removal-tool-details.aspx)), Cloudprodukte des Unternehmens (wie Office 365) und Online Assets (wie die URL-Bewertung von Bing und SmartScreen). Diese Signale werden in Einblicke, Erkennungsvorgänge und empfohlene Reaktionen auf komplexe Bedrohungen übersetzt.
 
-- Informationen zu Bedrohungen: Mithilfe von Informationen zu Bedrohungen kann Windows Defender ATP Angriffstools, Techniken und Prozeduren ermitteln sowie Warnungen generieren, wenn diese Aktivitäten in den erfassten Sensordaten gefunden werden. Die Informationen werden von Microsoft Hunters und Sicherheitsteams generiert und durch Informationen erweitert, die von Partnern bereitgestellt werden.
+- Informationen zu Bedrohungen: Mithilfe von Informationen zu Bedrohungen kann Windows Defender ATP Angriffstools, Techniken und Prozeduren ermitteln sowie Warnungen generieren, wenn diese Aktivitäten in den erfassten Sensordaten gefunden werden. Die Informationen werden von Microsoft Hunters und Sicherheitsteams generiert und durch Informationen zu Bedrohungen ergänzt, die von Partnern bereitgestellt werden.
 
 Die Azure ATP-Technologie erkennt verschiedene verdächtige Aktivitäten und konzentriert sich dabei auf die verschiedenen Phasen der Angriffskette von Cyberangriffen, so z.B.:
 

@@ -13,19 +13,16 @@ ms.technology: ''
 ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a0b856ced72ad91a046f1116f96648baba7f7cba
-ms.sourcegitcommit: bdf5dc203ecec3e7542f2ed08852afeff4f20dcd
+ms.openlocfilehash: 36ba5f6e79743065ba3579fa72aa752ad8a63534
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52950304"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54839599"
 ---
+# <a name="manage-system-generated-logs"></a>Verwalten von systemgenerierten Protokollen
+
 *Gilt für: Advanced Threat Analytics Version 1.9*
-
-
-
-# <a name="manage-system-generated-logs"></a>Verwalten von systemgenerierten Protokollen> 
-
 
 [!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
 
@@ -33,6 +30,7 @@ ms.locfileid: "52950304"
  > Advanced Threat Analytics (ATA) sammelt anonymisierte systemgenerierte Protokolldaten über ATA und überträgt die Daten über eine HTTPS-Verbindung an die Microsoft-Server. Diese Daten werden von Microsoft zur Verbesserung von zukünftigen ATA-Versionen verwendet.
 
 ## <a name="data-collected"></a>Gesammelte Daten
+
 Die gesammelten anonymisierten Daten enthalten folgende Parameter:
 
 -   Leistungsindikatoren von ATA Center und vom ATA-Gateway

@@ -13,17 +13,13 @@ ms.technology: ''
 ms.assetid: 9ec7eb4c-3cad-4543-bbf0-b951d8fc8ffe
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5ca24df927bc91383449926bdcd67a1c29585618
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: a9b69db461dc322010fcb8aa446a95151b7a276f
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783575"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840538"
 ---
-*Gilt für: Azure Advanced Threat Protection*
-
-
-
 # <a name="configure-port-mirroring"></a>Konfigurieren der Portspiegelung
 > [!NOTE] 
 > Dieser Artikel ist für Sie nur interessant, wenn Sie eigenständige Azure ATP-Sensoren anstelle von Azure ATP-Sensoren bereitstellen. Lesen Sie den Abschnitt [Choosing the right sensors for your deployment (Auswählen der richtigen Sensoren für die Bereitstellung)](atp-capacity-planning.md#choosing-the-right-sensor-type-for-your-deployment), um zu ermitteln, ob Sie Azure ATP-Sensoren verwenden müssen.
@@ -63,12 +59,12 @@ Die Domänencontroller und der eigenständige Azure ATP-Sensor können physisch 
 
 **Falls Sie mit Virtualisierungsclustern arbeiten:**
 
--   Konfigurieren Sie für jeden Domänencontroller, der auf dem Virtualisierungscluster in einem virtuellen Computer mit dem eigenständigen Azure ATP ausgeführt wird, die Affinität zwischen dem Domänencontroller und dem eigenständigen Azure ATP-Sensor. Auf diese Weise folgt der eigenständige Azure ATP-Sensor dem Domänencontroller, wenn dieser auf einen anderen Host im Cluster verschoben wird. Dieser Ansatz funktioniert gut, solange nur wenige Domänencontroller vorhanden sind.
+- Konfigurieren Sie für jeden Domänencontroller, der auf dem Virtualisierungscluster in einem virtuellen Computer mit dem eigenständigen Azure ATP ausgeführt wird, die Affinität zwischen dem Domänencontroller und dem eigenständigen Azure ATP-Sensor. Auf diese Weise folgt der eigenständige Azure ATP-Sensor dem Domänencontroller, wenn dieser auf einen anderen Host im Cluster verschoben wird. Dieser Ansatz funktioniert gut, solange nur wenige Domänencontroller vorhanden sind.
 
- > [!NOTE]
- > Wenn Ihre Umgebung V2V ((Virtual-to-Virtual) auf unterschiedlichen Hosts (RSPAN) unterstützt, müssen Sie sich zu Affinität keine Gedanken machen.
+  > [!NOTE]
+  > Wenn Ihre Umgebung V2V ((Virtual-to-Virtual) auf unterschiedlichen Hosts (RSPAN) unterstützt, müssen Sie sich zu Affinität keine Gedanken machen.
  
--   Um zu gewährleisten, dass der eigenständige Azure ATP-Sensor ausreichende Kapazität für die eigenständige Überwachung aller Domänencontroller aufweist, eignet sich folgende Option: Installieren Sie auf jedem Virtualisierungshost einen virtuellen Computer, und installieren Sie auf jedem Host einen eigenständigen Azure ATP-Sensor. Konfigurieren Sie jeden eigenständigen Azure ATP-Sensor so, dass er alle Domänencontroller überwacht, die auf dem betreffenden Cluster ausgeführt werden. Auf diese Weise wird jeder Host überwacht, auf dem Domänencontroller ausgeführt werden.
+- Um zu gewährleisten, dass der eigenständige Azure ATP-Sensor ausreichende Kapazität für die Überwachung aller Domänencontroller aufweisen, eignet sich folgende Option: Installieren Sie auf jedem Virtualisierungshost einen virtuellen Computer, und installieren Sie auf jedem Host einen eigenständigen Azure ATP-Sensor. Konfigurieren Sie jeden eigenständigen Azure ATP-Sensor so, dass er alle Domänencontroller überwacht, die auf dem betreffenden Cluster ausgeführt werden. Auf diese Weise wird jeder Host überwacht, auf dem Domänencontroller ausgeführt werden.
 
 Überprüfen Sie nach dem Konfigurieren der Portspiegelung deren ordnungsgemäße Funktion, bevor Sie den eigenständigen Azure ATP-Sensor installieren.
 

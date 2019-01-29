@@ -13,17 +13,17 @@ ms.technology: ''
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1aa60326ed3c26e29d2188acb5b766fe34b474ba
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: ab2b6fa569f0c639b63ceb0317ecf0ae7a53411d
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133122"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840912"
 ---
+# <a name="what-is-advanced-threat-analytics"></a>Was ist Advanced Threat Analytics?
+
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
-
-# <a name="what-is-advanced-threat-analytics"></a>Was ist Advanced Threat Analytics?
 Advanced Threat Analytics (ATA) ist eine lokale Plattform, mit deren Hilfe Sie Ihr Unternehmen vor verschiedenen hochentwickelten und gezielten Cyberangriffen und Insiderbedrohungen schützen können.
 
 ## <a name="how-ata-works"></a>So funktioniert ATA

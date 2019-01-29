@@ -13,16 +13,16 @@ ms.technology: ''
 ms.assetid: 7597ed25-87f5-472c-a496-d5f205c9c391
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7fae5fa320aab6a2ad6db4695b0087eab72344e8
-ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
+ms.openlocfilehash: 39d1e03eda182b797412e94ff5427bc74956113a
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47453951"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54841014"
 ---
-*Gilt für: Advanced Threat Analytics Version 1.9*
-
 # <a name="install-ata---step-9"></a>Installieren von ATA: Schritt 9
+
+*Gilt für: Advanced Threat Analytics Version 1.9*
 
 > [!div class="step-by-step"]
 > [« Schritt 8 ](install-ata-step7.md)
@@ -35,21 +35,21 @@ Wenn Sie sicherstellen möchten, dass Windows-Clients und -Server zulassen, dass
 
 1. Finden der Richtlinie:
 
- - Richtlinienname: Netzwerkzugriff – Schränken Sie die Zahl der Clients ein, die Remoteaufrufe an SAM durchführen dürfen.
- - Speicherort: Computerkonfiguration, Windows-Einstellungen, Sicherheitseinstellungen, lokale Richtlinien, Sicherheitsoptionen
+   - Richtlinienname: Netzwerkzugriff: Clients einschränken, die Remoteaufrufe an SAM durchführen dürfen
+   - Speicherort: Computerkonfiguration, Windows-Einstellungen, Sicherheitseinstellungen, lokale Richtlinien, Sicherheitsoptionen
   
-  ![Finden der Richtlinie](./media/samr-policy-location.png)
+   ![Finden der Richtlinie](./media/samr-policy-location.png)
 
 2. Fügen Sie den ATA-Dienst der Liste zulässiger Konten hinzu, die diese Aktion auf Ihren modernen Windows-Systemen durchführen können.
  
-  ![Hinzufügen des Diensts](./media/samr-add-service.png)
+   ![Hinzufügen des Diensts](./media/samr-add-service.png)
 
 3. Der **ATA-Dienst**, der bei der Installation erstellt wurde, weist nun die nötigen Berechtigungen auf, um SAM-R in der Umgebung auszuführen.
 
 > [!NOTE]
 > Stellen Sie vor der Erzwingung neuer Richtlinien sicher, dass Ihre Umgebung weiterhin geschützt ist, ohne dass die Anwendungskompatibilität beeinträchtigt wird, indem Sie den Überwachungsmodus aktivieren und Ihre vorgeschlagenen Änderungen im Überwachungsmodus überprüfen. 
 
- Weitere Informationen zu SAM-R und der Gruppenrichtlinie finden Sie unter [Netzwerkzugriff: Einschränken der Clients, die Remoteaufrufe an SAM durchführen dürfen](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
+ Weitere Informationen zu SAM-R und dieser Gruppenrichtlinie finden Sie unter [Netzwerkzugriff: Clients einschränken, die Remoteaufrufe an SAM ausführen dürfen](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
 
 > [!div class="step-by-step"]

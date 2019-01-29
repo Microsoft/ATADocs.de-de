@@ -12,17 +12,13 @@ ms.prod: ''
 ms.assetid: da0ee438-35f8-4097-b3a1-1354ad59eb32
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9485e3dd70708caf6e3ebbe60d9c006fac0b0163
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: 51ce0ca62d29c58475f8f426ee715515cf106193
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744726"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54459089"
 ---
-*Gilt für: Azure Advanced Threat Protection*
-
-
-
 # <a name="azure-atp-capacity-planning"></a>Azure ATP-Kapazitätsplanung
 In diesem Artikel erfahren Sie, wie viele Azure ATP-Sensoren und eigenständige Azure ATP-Sensoren Sie benötigen.
 

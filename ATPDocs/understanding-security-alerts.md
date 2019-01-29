@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 671747d5-faed-4352-a871-17b58fdc6574
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d8cbbba3f034dac7679d77a645545374bfad643c
-ms.sourcegitcommit: 6a0ac21f59e72db8615811da2c886f54cf3727f5
+ms.openlocfilehash: b40cdeb52f26e3fae32185c3168c5e3073bf5929
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2019
-ms.locfileid: "54250131"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840853"
 ---
 # <a name="tutorial-understanding-security-alerts"></a>Tutorial: Grundlegendes zu Sicherheitswarnungen
 
@@ -119,7 +119,7 @@ Die letzte Registerkarte jeder Warnung enthält die **Verwandten Entitäten**. V
  
 **Eindeutige JSON-Entität**
  
-Enthält die Daten, die Azure ATP aus Active Directory zu dem Konto erhalten hat. Dazu zählen alle Attribute wie *Distinguished Name*, *SID*, *LockoutTime und *PasswordExpiryTime*. Für Benutzerkonten sind Daten enthalten wie *Department*  (Abteilung), *Mail* (E-Mail) und *PhoneNumber* (Telefonnummer). Für Computerkonten sind Daten enthalten wie *OperatingSystem*, *IsDomainController und *DnsName*.
+Enthält die Daten, die Azure ATP aus Active Directory zu dem Konto erhalten hat. Dazu zählen alle Attribute wie *Distinguished Name*, *SID*, <em>LockoutTime und *PasswordExpiryTime</em>. Für Benutzerkonten sind Daten enthalten wie *Department*  (Abteilung), *Mail* (E-Mail) und *PhoneNumber* (Telefonnummer). Für Computerkonten sind Daten enthalten wie *OperatingSystem*, <em>IsDomainController und *DnsName</em>.
 
 **Eindeutiges JSON-Entitätsprofil**
 

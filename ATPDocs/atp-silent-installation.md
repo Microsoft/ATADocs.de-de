@@ -13,16 +13,13 @@ ms.technology: ''
 ms.assetid: 24eca4c6-c949-42ea-97b9-41ef0fb611f1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: fec3ccbf44b4637132d769e35c4c83f7a4b5e5f5
-ms.sourcegitcommit: bdf5dc203ecec3e7542f2ed08852afeff4f20dcd
+ms.openlocfilehash: 9bd886f4c8929af85a3f77e25052ff0fbc7a4c56
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52950321"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840674"
 ---
-*Gilt für: Azure Advanced Threat Protection*
-
-
 # <a name="azure-atp-switches-and-silent-installation"></a>Azure ATP-Switches und automatische Installation
 Dieser Artikel enthält Anleitungen und Informationen zu Azure ATP-Switches und der automatischen Installation.
 
@@ -54,7 +51,7 @@ Verwenden Sie den folgenden Befehl, um eine vollständig automatische Installati
 **Syntax**:
 
     Azure ATP sensor Setup.exe /AccessKey=<Access Key> /quiet NetFrameworkCommandLineArguments ="/q" 
-   
+
 
 > [!NOTE]
 > Kopieren Sie den Zugriffsschlüssel aus dem Azure ATP-Portal unter **Konfiguration** > **Sensor**.
@@ -63,24 +60,26 @@ Verwenden Sie den folgenden Befehl, um eine vollständig automatische Installati
 **Installationsoptionen**:
 
 > [!div class="mx-tableFixed"]
-|Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|Beschreibung|
-|-------------|----------|---------|---------|
-|Quiet|/quiet|Ja |Führt das Installationsprogramm ohne Benutzeroberfläche und Eingabeaufforderungen aus.|
-|Hilfe|/help|Nein|Stellt Hilfe und eine Kurzübersicht bereit. Zeigt die korrekte Verwendung des Installationsbefehl einschließlich einer Liste aller Optionen und Verhaltensweisen an.|
-|NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Ja |Legt die Parameter für die Installation von .Net Framework fest. Muss festgelegt werden, um die unbeaufsichtigte Installation von .Net Framework zu erzwingen.|
+> 
+> |Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|Beschreibung|
+> |-------------|----------|---------|---------|
+> |Quiet|/quiet|Ja|Führt das Installationsprogramm ohne Benutzeroberfläche und Eingabeaufforderungen aus.|
+> |Hilfe|/help|Nein|Stellt Hilfe und eine Kurzübersicht bereit. Zeigt die korrekte Verwendung des Installationsbefehl einschließlich einer Liste aller Optionen und Verhaltensweisen an.|
+> |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Ja|Legt die Parameter für die Installation von .Net Framework fest. Muss festgelegt werden, um die unbeaufsichtigte Installation von .Net Framework zu erzwingen.|
 
 **Installationsparameter**:
 
 > [!div class="mx-tableFixed"]
-|Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|Beschreibung|
-|-------------|----------|---------|---------|
-|AccessKey|AccessKey="\*\*"|Ja |Legt den Zugriffsschlüssel fest, mit dem der Azure ATP-Sensor bei der Azure ATP-Instanz registriert wird.|
+> 
+> |Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|Beschreibung|
+> |-------------|----------|---------|---------|
+> |AccessKey|AccessKey="\*\*"|Ja|Legt den Zugriffsschlüssel fest, mit dem der Azure ATP-Sensor bei der Azure ATP-Instanz registriert wird.|
 
 **Beispiele**: Verwenden Sie den folgenden Befehl für eine automatische Installation des Azure ATP-Sensors:
 
     "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" 
     AccessKey="3WlO0uKW7lY6Lk0+dfkfkJQ0qZV6aSq5WxLf71+fuBhggCl/BMs9JxfAwi7oy9vYGviazUS1EPpzte7z8s4grw==" 
-    
+
 
 ## <a name="update-the-azure-atp-sensor"></a>Aktualisieren des Azure ATP-Sensors
 
@@ -94,14 +93,15 @@ Verwenden Sie den folgenden Befehl, um den Azure ATP-Sensor automatisch zu aktua
 **Installationsoptionen**:
 
 > [!div class="mx-tableFixed"]
-|Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|Beschreibung|
-|-------------|----------|---------|---------|
-|Quiet|/quiet|Ja |Führt das Installationsprogramm ohne Benutzeroberfläche und Eingabeaufforderungen aus.|
-|Hilfe|/help|Nein|Stellt Hilfe und eine Kurzübersicht bereit. Zeigt die korrekte Verwendung des Installationsbefehl einschließlich einer Liste aller Optionen und Verhaltensweisen an.|
-|NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Ja |Legt die Parameter für die Installation von .Net Framework fest. Muss festgelegt werden, um die unbeaufsichtigte Installation von .Net Framework zu erzwingen.|
+> 
+> |Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|Beschreibung|
+> |-------------|----------|---------|---------|
+> |Quiet|/quiet|Ja|Führt das Installationsprogramm ohne Benutzeroberfläche und Eingabeaufforderungen aus.|
+> |Hilfe|/help|Nein|Stellt Hilfe und eine Kurzübersicht bereit. Zeigt die korrekte Verwendung des Installationsbefehl einschließlich einer Liste aller Optionen und Verhaltensweisen an.|
+> |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Ja|Legt die Parameter für die Installation von .Net Framework fest. Muss festgelegt werden, um die unbeaufsichtigte Installation von .Net Framework zu erzwingen.|
 
 
-**Beispiele**: So aktualisieren Sie den Azure ATP-Sensor automatisch:
+**Beispiele**: So aktualisieren Sie den Azure ATP-Sensor automatisch
 
     Azure ATP sensor Setup.exe /quiet NetFrameworkCommandLineArguments="/q"
 
@@ -110,21 +110,22 @@ Verwenden Sie den folgenden Befehl, um den Azure ATP-Sensor automatisch zu aktua
 Verwenden Sie den folgenden Befehl, um den Azure ATP-Sensor automatisch zu deinstallieren: **Syntax**:
 
     Azure ATP sensor Setup.exe [/quiet] [/Uninstall] [/Help]
-    
+
 **Installationsoptionen**:
 
 > [!div class="mx-tableFixed"]
-|Name|Syntax|Erforderlich für die unbeaufsichtigte Deinstallation?|Beschreibung|
-|-------------|----------|---------|---------|
-|Quiet|/quiet|Ja |Führt das Deinstallationsprogramm ohne Benutzeroberfläche und Eingabeaufforderungen aus.|
-|Deinstallieren|/uninstall|Ja |Führt die automatische Deinstallation von Azure ATP-Sensor vom Server aus.|
-|Hilfe|/help|Nein|Stellt Hilfe und eine Kurzübersicht bereit. Zeigt die korrekte Verwendung des Installationsbefehl einschließlich einer Liste aller Optionen und Verhaltensweisen an.|
+> 
+> |Name|Syntax|Erforderlich für die unbeaufsichtigte Deinstallation?|Beschreibung|
+> |-------------|----------|---------|---------|
+> |Quiet|/quiet|Ja|Führt das Deinstallationsprogramm ohne Benutzeroberfläche und Eingabeaufforderungen aus.|
+> |Deinstallieren|/uninstall|Ja|Führt die automatische Deinstallation von Azure ATP-Sensor vom Server aus.|
+> |Hilfe|/help|Nein|Stellt Hilfe und eine Kurzübersicht bereit. Zeigt die korrekte Verwendung des Installationsbefehl einschließlich einer Liste aller Optionen und Verhaltensweisen an.|
 
-**Beispiele**: So deinstallieren Sie den Azure ATP-Sensor automatisch vom Server aus:
+**Beispiele**: So deinstallieren Sie den Azure ATP-Sensor automatisch vom Server aus
 
 
     Azure ATP sensor Setup.exe /quiet /uninstall
-    
+
 
 
 

@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/13/2019
+ms.date: 1/20/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,25 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5248ab54c8fd8d03035e1f6451597c5e8cfc63b2
-ms.sourcegitcommit: 6a0ac21f59e72db8615811da2c886f54cf3727f5
+ms.openlocfilehash: 7bf903b1fde595e41c3b57d8163ed0f06f8e8ac8
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2019
-ms.locfileid: "54250030"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54459174"
 ---
-*Gilt für: Azure Advanced Threat Protection*
-
 # <a name="whats-new-in-azure-atp"></a>Neuerungen in Azure ATP
+
+## <a name="azure-atp-release-262"></a>Azure ATP Release 2.62
+Veröffentlicht am 20. Januar 2019
+
+- **Neue Sicherheitswarnung: Remotecodeausführung über DNS – (Vorschau)**<br>
+Die Azure ATP-Sicherheitswarnung [Remotecodeausführung über DNS](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036---preview) ist nun in der öffentlichen Vorschauversion verfügbar. <br> Bei dieser Erkennung wird eine Azure ATP-Sicherheitswarnung ausgelöst, wenn DNS-Abfragen an einen Domänencontroller im Netzwerk gerichtet werden, die im Verdacht stehen, die Sicherheitslücke [CVE-2018-8626](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8626) auszunutzen.
+
+- **Featureerweiterung: Um 72 Stunden verzögertes Sensorupdate** <br> Geänderte Option, damit nach jedem Update der Azure ATP-Version die Sensor-Updates auf ausgewählten Sensoren um 72 Stunden (anstelle der vorherigen 24-Stunden-Verzögerung) verzögert werden. Anweisungen zur Konfiguration finden Sie unter [Update für Azure ATP-Sensoren](sensor-update.md). 
+
+
+- Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
 ## <a name="azure-atp-release-261"></a>Azure ATP Release 2.61
 Veröffentlicht: 13. Januar 2019

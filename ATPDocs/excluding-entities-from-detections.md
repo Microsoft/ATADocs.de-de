@@ -13,17 +13,13 @@ ms.technology: ''
 ms.assetid: cae3ed45-8fbc-4f25-ba24-3cc407c6ea93
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0a27d87f758940e25b463d2514031c5c342a3114
-ms.sourcegitcommit: 2afc1486b40431f442d51a53df06e289796de87e
+ms.openlocfilehash: 8ca74bdf85cc48a1d2175b6f67e9e83fd6528f83
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560676"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458802"
 ---
-*Gilt für: Azure Advanced Threat Protection*
-
-
-
 # <a name="excluding-entities-from-detections"></a>Ausschließen von Entitäten von der Erkennung
 In diesem Artikel wird erläutert, wie Entitäten ausgeschlossen werden, sodass sie keine Warnungen auslösen. Bestimmte Entitäten werden ausgeschlossen, um unbedenkliche richtig positive Ergebnisse zu reduzieren, während gleichzeitig sichergestellt wird, dass Sie die richtig positiven Ergebnisse ermitteln können. Um zu verhindern, dass Azure ATP störende Warnungen bei Aktivitäten ausgibt, die bei bestimmten Benutzern zu Ihrem ganz normalen Geschäftsalltag gehören, können Sie bestimmte Entitäten ausschließen, sodass diese keine Warnungen auslösen. Zusätzlich werden standardmäßig bestimmte beliebte Entitäten ausgeschlossen. 
 
@@ -43,7 +39,7 @@ Es gibt zwei Möglichkeiten, Entitäten manuell auszuschließen: entweder direkt
 
     ![Ausschließen einer Entität](./media/exclude-in-sa.png)
 
-- **Auf der Konfigurationsseite**: Um Ausschlüsse zu überprüfen oder zu ändern, klicken Sie auf der Seite **Konfiguration** auf **Ausschlüsse**, und wählen Sie die Sicherheitswarnung aus, für die der Ausschluss angewendet werden soll, z.B. **DNS-Reconnaissance**.
+- **Auf der Konfigurationsseite**:  Um Ausschlüsse zu überprüfen oder zu ändern, klicken Sie auf der Seite **Konfiguration** auf **Ausschlüsse**, und wählen Sie die Sicherheitswarnung aus, für die der Ausschluss angewendet werden soll, z.B. **DNS-Reconnaissance**.
 
     ![Konfiguration von Ausschlüssen](./media/exclusions.png)
 

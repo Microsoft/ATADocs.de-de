@@ -13,17 +13,13 @@ ms.technology: ''
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: eaf798149c828b641ba037ffbb6854ca07c6732a
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 640ea2ab75d4388381f9789dcac5399fa1327d05
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783592"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840640"
 ---
-*Gilt für: Azure Advanced Threat Protection*
-
-
-
 # <a name="configure-event-collection"></a>Konfigurieren der Ereignissammlung
 
 Um die Erkennungsfunktionalität zu verbessern, benötigt Azure ATP die folgenden Windows-Ereignisse: 4776, 4732, 4733, 4728, 4729, 4756, 4757 und 7045. Diese können entweder automatisch vom Azure ATP-Sensor gelesen oder, falls dieser nicht bereitgestellt wurde, an den eigenständigen Azure ATP-Sensor weitergeleitet werden. Dazu gibt es zwei Möglichkeiten: die Konfiguration des eigenständigen Azure ATP-Sensors, sodass dieser auf SIEM-Ereignisse lauscht, oder die [Konfiguration der Windows-Ereignisweiterleitung](configure-event-forwarding.md).
@@ -36,12 +32,12 @@ Zusätzlich zum Sammeln und Analysieren des Netzwerkverkehrs zu und von den Dom�
 ## <a name="siemsyslog"></a>SIEM/Syslog
 Damit Azure ATP Daten von einem Syslog-Server verwenden kann, müssen folgende Schritte ausgeführt werden:
 
--   Konfigurieren Ihres Azure ATP-Sensors zum Lauschen auf und Übernehmen von Ereignissen, die vom SIEM-/Syslog-Server weitergeleitet werden.
+- Konfigurieren Ihres Azure ATP-Sensors zum Lauschen auf und Übernehmen von Ereignissen, die vom SIEM-/Syslog-Server weitergeleitet werden.
 
- > [!NOTE]
- > Azure ATP lauscht nur auf IPv4, nicht auf IPv6. 
+  > [!NOTE]
+  > Azure ATP lauscht nur auf IPv4, nicht auf IPv6. 
 
--   Konfigurieren des SIEM-/Syslog-Servers zum Weiterleiten bestimmter Ereignisse an den Azure ATP-Sensor.
+- Konfigurieren des SIEM-/Syslog-Servers zum Weiterleiten bestimmter Ereignisse an den Azure ATP-Sensor.
 
 > [!IMPORTANT]
 > -   Es sollten nicht alle Syslog-Daten an den Azure ATP-Sensor weitergeleitet werden.
@@ -127,13 +123,13 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|Der 
 
 Es wurde versucht, die Anmeldeinformationen für ein Konto zu überprüfen.
 
-Authentifizierungspaket: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0
+Authentifizierungspaket:              MICROSOFT_AUTHENTICATION_PACKAGE_V1_0
 
 Anmeldekonto: Administrator
 
 Quellarbeitsstation:       SIEM
 
-Fehlercode:         0x0
+Error Code:         0x0
 
 -   Der Syslog-Header ist optional.
 
@@ -160,7 +156,7 @@ Fehlercode:         0x0
 -   Die Reihenfolge der „Schlüssel = Wert“-Paare ist unerheblich.
 
 ## <a name="qradar"></a>QRadar
-QRadar ermöglicht Ereignissammlung über einen Agent. Wenn die Daten mithilfe eines Agents erfasst werden, werden Zeiten ohne Millisekunden-Daten erfasst. Da Azure ATP Millisekunden-Daten erfordert, muss QRadar so festgelegt werden, dass es die Windows-Ereignissammlung ohne Agents verwendet. Weitere Informationen finden Sie unter [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Agentless Windows Events Collection using the MSRPC Protocol (QRadar: Auflistung von Windows-Ereignissen ohne Agent mithilfe des MSRPC-Protokolls)").
+QRadar ermöglicht Ereignissammlung über einen Agent. Wenn die Daten mithilfe eines Agents erfasst werden, werden Zeiten ohne Millisekunden-Daten erfasst. Da Azure ATP Millisekunden-Daten erfordert, muss QRadar so festgelegt werden, dass es die Windows-Ereignissammlung ohne Agents verwendet. Weitere Informationen finden Sie unter [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Agentless Windows Events Collection using the MSRPC Protocol") (QRadar: Auflistung von Windows-Ereignissen ohne Agent mithilfe des MSRPC-Protokolls).
 
     <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
 

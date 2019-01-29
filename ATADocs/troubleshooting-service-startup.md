@@ -13,18 +13,16 @@ ms.technology: ''
 ms.assetid: 5a65285c-d1de-4025-9bb4-ef9c20b13cfa
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e3f59bc7c6873407d8764dc5ab64bfd7a52fdebe
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 21afd487fbf15b3fc1f5d618e0e6b98d50d07cae
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133343"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54839562"
 ---
-*Gilt für: Advanced Threat Analytics Version 1.9*
-
-
-
 # <a name="troubleshooting-service-startup"></a>Problembehandlung beim Starten eines Diensts
+
+*Gilt für: Advanced Threat Analytics Version 1.9*
 
 ## <a name="troubleshooting-ata-center-service-startup"></a>Problembehandlung beim Starten des ATA Center-Diensts
 
@@ -51,7 +49,7 @@ Wenn er gestartet werden kann, ist die Plattform wahrscheinlich in Ordnung. Ande
 **Symptom**
 
 Ihr ATA-Gateway startet nicht, und es wird folgende Fehlermeldung ausgegeben:<br></br>
-*System.Net.Http.HttpRequestException: Der Antwortstatuscode gibt keinen Erfolg an: 500 (Interner Serverfehler).*
+*System.Net.Http.HttpRequestException: Der Antwortstatuscode gibt keinen Erfolg an: 500 (Interner Serverfehler)*
 
 **Beschreibung**
 
@@ -69,5 +67,5 @@ Der Grund ist folgender: Im Rahmen des Installationsprozesses des Lightweight-Ga
 - [Voraussetzungen für ATA](ata-prerequisites.md)
 - [ATA-Kapazitätsplanung](ata-capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
-- [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-collection.md#configuring-windows-event-forwarding)
+- [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-collection.md)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

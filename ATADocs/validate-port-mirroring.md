@@ -13,18 +13,17 @@ ms.technology: ''
 ms.assetid: ebd41719-c91a-4fdd-bcab-2affa2a2cace
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d37fade3dd287be77bda16ebcd2cda204de265f6
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: d40c21dc761b624eea2412bdfc0778774f2840ca
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133785"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54839619"
 ---
+# <a name="validate-port-mirroring"></a>Überprüfen der Portspiegelung
+
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
-
-
-# <a name="validate-port-mirroring"></a>Überprüfen der Portspiegelung
 > [!NOTE] 
 > Dieser Artikel ist für Sie nur interessant, wenn Sie ATA-Gateways anstelle von ATA-Lightweight-Gateways bereitstellen. Lesen Sie [Auswählen des richtigen Gatewaytyps für die Bereitstellung](ata-capacity-planning.md#choosing-the-right-gateway-type-for-your-deployment), um zu ermitteln, ob Sie ATA-Gateways verwenden müssen.
  

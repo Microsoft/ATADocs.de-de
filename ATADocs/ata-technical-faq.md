@@ -13,16 +13,17 @@ ms.technology: ''
 ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e31f7552bed4d794ee24131557342105eb2ced43
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 2806bdd4c457628d9202e494ac1a064365cf61db
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133819"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840002"
 ---
+# <a name="ata-frequently-asked-questions"></a>Häufig gestellte Fragen zu ATA
+
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
-# <a name="ata-frequently-asked-questions"></a>Häufig gestellte Fragen zu ATA
 Dieser Artikel enthält eine Reihe häufig gestellter Fragen zu ATA sowie Hintergrundwissen und Antworten.
 
 
@@ -146,7 +147,7 @@ Zusätzlich zur Analyse des Active Directory-Datenverkehrs mit der DPI-Technolog
 Auch als SPAN (Switched Port Analyzer) bekannt, ist die Portspiegelung eine Methode zur Überwachung des Netzwerkverkehrs. Wenn die Portspiegelung aktiviert ist, sendet der Switch eine Kopie aller Netzwerkpakete von einem Port (oder einem gesamten VLAN) an einen anderen Port, an dem das Paket analysiert werden kann.
 
 ## <a name="does-ata-monitor-only-domain-joined-devices"></a>Überwacht ATA nur Geräte, die der Domäne angehören?
-Nein. ATA überwacht alle Geräte im Netzwerk und führt die Authentifizierung sowie Autorisierungsanfragen für Active Directory durch. Dies schließt Nicht-Windows-Geräte und mobile Geräte ein.
+Nein ATA überwacht alle Geräte im Netzwerk und führt die Authentifizierung sowie Autorisierungsanfragen für Active Directory durch. Dies schließt Nicht-Windows-Geräte und mobile Geräte ein.
 
 ## <a name="does-ata-monitor-computer-accounts-as-well-as-user-accounts"></a>Überwacht ATA sowohl Computerkonten als auch Benutzerkonten?
 Ja. Da Computerkonten (ebenso wie alle anderen Entitäten) zum Durchführen böswilliger Aktivitäten verwendet werden können, überwacht ATA das Verhalten aller Computerkonten und aller weiteren Entitäten in der Umgebung.
@@ -162,6 +163,6 @@ Ja, Sie können die Gesamtintegrität der Bereitstellung sowie spezifische Probl
 - [Voraussetzungen für ATA](ata-prerequisites.md)
 - [ATA-Kapazitätsplanung](ata-capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
-- [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-collection.md#configuring-windows-event-forwarding)
+- [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-collection.md)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 

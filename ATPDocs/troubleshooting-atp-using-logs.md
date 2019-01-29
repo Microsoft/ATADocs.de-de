@@ -13,22 +13,18 @@ ms.technology: ''
 ms.assetid: de796346-647d-48e1-970a-8f072e990f1e
 ms.reviewer: ''
 ms.suite: ''
-ms.openlocfilehash: 2cd1d7b070818044e74838178b0fab5838ab46ef
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: cc8008f79758f314321c59f170e9099610824e54
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783252"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458503"
 ---
-*Gilt für: Advanced Threat Protection*
-
-
-
 # <a name="troubleshooting-azure-advanced-threat-protection-atp-sensor-using-the-atp-logs"></a>Problembehandlung für den Azure Advanced Threat Protection-Sensor (ATP) mithilfe der ATP-Protokolle
 Die ATA-Protokolle geben Einblick in die Aktivitäten der einzelnen Komponenten des Azure ATP-Sensors zu einem bestimmten Zeitpunkt.
 
 
-Die Protokolle von Azure ATP befinden sich im Unterordner **Logs** im Installationsordner von ATP. Der Standardpfad lautet: **C:\Programme\Azure Advanced Threat Protection-Sensor\\**. Dieser ist im Standardinstallationsverzeichnis unter **C:\Programme\Azure Advanced Threat Protection-Sensor\Versionsnummer\Logs** zu finden.
+Die Azure ATP-Protokolle befinden sich am Installationsspeicherort von ATA in einem Unterordner namens **Logs**. Der Standardpfad lautet: **C:\Programme\Azure Advanced Threat Protection Sensor\\**. Beim Standardinstallationsspeicherort lautet der Pfad: **C:\Programme\Azure Advanced Threat Protection Sensor\Versionsnummer\Logs**.
 
 Der Azure ATP-Sensor verfügt über folgende Protokolle:
 
@@ -45,7 +41,7 @@ Der Azure ATP-Sensor verfügt über folgende Protokolle:
 > Die ersten drei Protokolldateien haben eine maximale Größe von 50 MB. Wenn diese Größe erreicht ist, wird eine neue Protokolldatei geöffnet und die vorherige Datei in „&lt;Ursprünglicher Dateiname&gt;-Archived-00000“ umbenannt. Die Zahl erhöht sich bei jeder Umbenennung der Datei. Wenn bereits mehr als 10 Dateien des gleichen Typs vorhanden sind, werden die ältesten gelöscht.
 
 ## <a name="azure-atp-deployment-logs"></a>Azure ATP-Bereitstellungsprotokolle
-Die Azure ATP-Bereitstellungsprotokolle befinden sich im temporären Verzeichnis des Benutzers, der das Produkt installiert hat. Es ist im Standardinstallationsverzeichnis unter **C:\Benutzer\Administrator\AppData\Local\Temp** (oder in dem „%temp%“ übergeordneten Verzeichnis) zu finden.
+Die Azure ATP-Bereitstellungsprotokolle befinden sich im temporären Verzeichnis des Benutzers, der das Produkt installiert hat. Beim Standardinstallationsspeicherort lautet der Pfad: **C:\Benutzer\Administrator\AppData\Local\Temp** (oder ein Verzeichnis über "% Temp%").
 
 Bereitstellungsprotokolle für den Azure ATP-Sensor:
 
@@ -62,5 +58,5 @@ Bereitstellungsprotokolle für den Azure ATP-Sensor:
 - [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](atp-prerequisites.md)
 - [Azure ATP capacity planning (Azure ATP-Kapazitätsplanung)](atp-capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
-- [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-forwarding.md#configuring-windows-event-forwarding)
+- [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-forwarding.md)
 - [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)

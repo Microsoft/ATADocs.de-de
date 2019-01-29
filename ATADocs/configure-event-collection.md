@@ -13,23 +13,21 @@ ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 8fffdfa2269139cee5b06b8824bfce35034ab9ba
-ms.sourcegitcommit: bdf5dc203ecec3e7542f2ed08852afeff4f20dcd
+ms.openlocfilehash: a6d8556298a2bf225bef45edf55acf2a75d13a53
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52950355"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840708"
 ---
-*Gilt für: Advanced Threat Analytics Version 1.9*
-
-
-
 # <a name="configuring-windows-event-forwarding"></a>Konfigurieren der Windows-Ereignisweiterleitung
+
+*Gilt für: Advanced Threat Analytics Version 1.9*
 
 > [!NOTE]
 > Für die ATA-Version 1.8 und höher ist die Konfiguration der Ereignissammlung nicht länger für ATA-Lightweight-Gateways erforderlich. Das ATA-Lightweight-Gateway liest jetzt Ereignisse lokal, ohne die Ereignisweiterleitung zu konfigurieren.
 
-Um die Erkennungsfunktionalität zu verbessern, benötigt ATA die folgenden Windows-Ereignisse:4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045. Diese können entweder automatisch vom ATA-Lightweight-Gateway gelesen oder, falls das ATA-Lightweight-Gateway nicht bereitgestellt wurde, an das ATA-Gateway weitergeleitet werden. Dazu gibt es zwei Möglichkeiten: Konfigurieren des ATA-Gateways, sodass es auf SIEM-Ereignisse lauscht, oder Konfigurieren der Windows-Ereignisweiterleitung.
+Um die Erkennungsfunktionalität zu verbessern, benötigt ATA die folgenden Windows-Ereignisse: 4776, 4732, 4733, 4728, 4729, 4756, 4757 und 7045. Diese können entweder automatisch vom ATA-Lightweight-Gateway gelesen oder, falls das ATA-Lightweight-Gateway nicht bereitgestellt wurde, an das ATA-Gateway weitergeleitet werden. Dazu gibt es zwei Möglichkeiten: Konfigurieren des ATA-Gateways, sodass es auf SIEM-Ereignisse lauscht, oder Konfigurieren der Windows-Ereignisweiterleitung.
 
 > [!NOTE]
 > Bei Verwendung von Server Core kann [wecutil](https://docs.microsoft.com/windows-server/administration/windows-commands/wecutil) zum Erstellen und Verwalten von Abonnements für Ereignisse verwendet werden, die von Remotecomputern weitergeleitet werden.
@@ -52,25 +50,25 @@ Sie müssen die Domänencontroller neu starten, nachdem Sie den **Netzwerkdienst
 > [!Note] 
 > Sie können eine Gruppenrichtlinie für diese Einstellungen erstellen und die Gruppenrichtlinie auf jeden Domänencontroller anwenden, der vom ATA-Gateway überwacht wird. Die folgenden Schritte ändern die lokale Richtlinie des Domänencontrollers.     
 
-1.  Führen Sie den folgenden Befehl auf jedem Domänencontroller aus: *winrm quickconfig*
-2.  Geben Sie an einer Eingabeaufforderung *gpedit.msc* ein.
-3.  Erweitern Sie **Computerkonfiguration > Administrative Vorlagen > Windows-Komponenten > Ereignisweiterleitung**.
+1. Führen Sie den folgenden Befehl auf jedem Domänencontroller aus: *winrm quickconfig*
+2. Geben Sie an einer Eingabeaufforderung *gpedit.msc* ein.
+3. Erweitern Sie **Computerkonfiguration > Administrative Vorlagen > Windows-Komponenten > Ereignisweiterleitung**.
 
-  ![Local policy group editor image](media/wef%201%20local%20group%20policy%20editor.png)
+   ![Local policy group editor image](media/wef%201%20local%20group%20policy%20editor.png)
 
-4.  Doppelklicken Sie auf **Ziel-Abonnement-Manager konfigurieren**.
+4. Doppelklicken Sie auf **Ziel-Abonnement-Manager konfigurieren**.
    
-    1.  Wählen Sie **Aktiviert** aus.
-    2.  Klicken Sie unter **Optionen** auf **Anzeigen**.
+   1.  Wählen Sie **Aktiviert**aus.
+   2.  Klicken Sie unter **Optionen** auf **Anzeigen**.
 
-    3.  Geben Sie unter **SubscriptionManagers** folgenden Wert ein, und klicken Sie auf **OK**: *Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10* 
+   3.  Geben Sie unter **SubscriptionManagers** folgenden Wert ein, und klicken Sie auf **OK**: *Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10* 
       
-         *(Beispiel: Server=`http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)*
+        *(zum Beispiel: Server = `http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)*
       
-         ![Configure target subscription image](media/wef%202%20config%20target%20sub%20manager.png)
+        ![Configure target subscription image](media/wef%202%20config%20target%20sub%20manager.png)
       
-    4.  Klicken Sie auf **OK**.
-    5.  Geben Sie von einer Eingabeaufforderung mit erhöhten Rechten aus *gpupdate /force* ein. 
+   4.  Klicken Sie auf **OK**.
+   5.  Geben Sie von einer Eingabeaufforderung mit erhöhten Rechten aus *gpupdate /force* ein. 
 
 **Schritt 3: Führen Sie die folgenden Schritte auf dem ATA-Gateway aus.** 
 
@@ -95,7 +93,7 @@ Sie müssen die Domänencontroller neu starten, nachdem Sie den **Netzwerkdienst
     6.  Überprüfen Sie nach einigen Minuten, ob die festgelegten Ereignisse im ATA-Gateway in „Weitergeleitete Ereignisse“ angezeigt wird.
 
 
-Weitere Informationen finden Sie unter [Einrichten von Computern zum Weiterleiten und Sammeln von Ereignissen](https://technet.microsoft.com/library/cc748890).
+Weitere Informationen finden Sie unter: [Einrichten von Computern zum Weiterleiten und Sammeln von Ereignissen](https://technet.microsoft.com/library/cc748890).
 
 ## <a name="see-also"></a>Weitere Informationen
 - [Installieren von ATA](install-ata-step1.md)

@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/15/2019
+ms.date: 1/20/2019
 ms.topic: tutorial
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 2257eb00-8614-4577-b6a1-5c65085371f2
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7816dba02c2fea07afc080c7aed5ede073c88fac
-ms.sourcegitcommit: e2daa0f93d97d552cfbf1577fbd05a547b63e95b
+ms.openlocfilehash: e564307a62361cd8b1c872818225a2e1e63585fb
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54314311"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840776"
 ---
 # <a name="tutorial-lateral-movement-alerts"></a>Tutorial: Lateral Movement-Warnungen  
 
@@ -26,7 +26,7 @@ Cyberangriffe werden üblicherweise auf alle zugänglichen Entitäten wie etwa B
 
 1. [Reconnaissance](atp-reconnaissance-alerts.md)
 2. [Kompromittierte Anmeldeinformationen](atp-compromised-credentials-alerts.md)
-3. **Lateral Movements**
+3. **Seitliche Verschiebung**
 4. [Warnungen zu Domänendominanz](atp-domain-dominance-alerts.md)
 5. [Exfiltration](atp-exfiltration-alerts.md)
 
@@ -35,10 +35,48 @@ Weitere Informationen zur Struktur und zu gängigen Komponenten der Azure ATP-Si
 Die folgenden Sicherheitswarnungen unterstützen Sie dabei, verdächtige Aktivitäten zu identifizieren und zu unterbinden, die von Azure ATP in Ihrem Netzwerk erkannt werden und auf **Lateral Movement** hindeuten. In diesem Tutorial erfahren Sie, wie die folgenden Angriffstypen klassifiziert, behoben und unterbunden werden:
 
 > [!div class="checklist"]
+> * Remotecodeausführung über DNS – Vorschau (externe ID 2036)
 > * Suspected identity theft (pass-the-hash) (Verdacht auf Identitätsdiebstahl (Pass-the-Hash)) (externalid 2017)
 > * Suspected identity theft (pass-the-ticket) (Verdacht auf Identitätsdiebstahl (Pass-the-Ticket)) (externalid 2018)
 > * Suspected over-pass-the-hash attack (encryption downgrade) (Verdacht auf Over-Pass-the-Hash-Angriff (Herabstufung der Verschlüsselung)) (externalid 2008)
 > * Suspected overpass-the-hash attack (Kerberos) (Verdacht auf einen Overpass-the-Hash-Angriff (Kerberos)) (externalid 2002)
+
+## <a name="remote-code-execution-over-dns-external-id-2036---preview"></a>Remotecodeausführung über DNS (externe ID 2036) – Vorschau
+
+**Beschreibung**
+
+Am 11.12.2018 hat Microsoft [CVE-2018-8626](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8626) veröffentlicht und gibt bekannt, dass bei Windows DNS-Servern (Domain Name System) ein neues Sicherheitsrisiko bei der Remotecodeausführung erkannt wurde. Bei diesem Sicherheitsrisiko können Server Anforderungen nicht mehr ordnungsgemäß verarbeiten. Ein Angreifer, der dieses Sicherheitsrisiko erfolgreich ausnutzt, kann im Kontext des lokalen Systemkontos beliebigen Code ausführen. Derzeit als DNS-Server konfigurierte Windows-Server sind von diesem Sicherheitsrisiko betroffen.
+
+Bei dieser Erkennung wird eine Azure ATP-Sicherheitswarnung ausgelöst, wenn DNS-Abfragen an einen Domänencontroller im Netzwerk gerichtet werden, die im Verdacht stehen, die Sicherheitslücke CVE-2018-8626 auszunutzen.
+
+**TP, B-TP oder FP**
+
+1. Sind Sie die Zielcomputer auf dem neuesten Stand und für CVE-2018-8626 gepatcht? 
+    - Wenn die Computer auf dem neuesten Stand und gepatcht sind, **schließen** Sie die Sicherheitswarnung als **FP**.
+2. Wurde ungefähr zum Zeitpunkt des Angriffs ein Dienst erstellt oder ein unbekannter Prozess ausgeführt?
+    - Wenn Sie keinen neuen Dienst oder einen unbekannten Prozess finden, **schließen** Sie die Sicherheitswarnung als **FP**. 
+3. Diese Art von Angriff kann den DNS-Dienst zum Absturz bringen, bevor die Codeausführung erfolgreich veranlasst wurde.
+    - Überprüfen Sie, ob der DNS-Dienst ungefähr zum Zeitpunkt des Angriffs mehrmals neu gestartet wurde.
+    - Wenn der DNS-Dienst neu gestartet wurde, handelte es sich wahrscheinlich um einen Versuch, CVE-2018-8626 auszunutzen. Betrachten Sie diese Warnung als **TP**, und führen Sie die unter **Ermitteln des Umfangs der Sicherheitsverletzung** beschriebenen Anweisungen aus. 
+
+**Ermitteln des Umfangs der Sicherheitsverletzung**
+
+- Untersuchen Sie die [Quell- und Zielcomputer](investigate-a-computer.md).
+
+**Empfohlene Abhilfemaßnahmen und Schritte zur Vorbeugung**
+
+**Wartung**
+
+1. Isolieren Sie die Domänencontroller. 
+    1. Unterbinden Sie die versuchte Remotecodeausführung.
+    2. Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der verdächtigen Aktivität ebenfalls angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. 
+2. Kontrollieren Sie den Quellcomputer.
+    1. Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
+    2. Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der verdächtigen Aktivität ebenfalls angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA.
+
+**Vorbeugung**
+
+- Stellen Sie sicher, dass alle DNS-Server in der Umgebung auf dem aktuellen Stand und für [CVE-2018-8626](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8626) gepatcht sind. 
 
 ## <a name="suspected-identity-theft-pass-the-hash-external-id-2017"></a>Suspected identity theft (pass-the-hash) (Verdacht auf Identitätsdiebstahl (Pass-the-Hash)) (externalid 2017)
 
@@ -59,7 +97,7 @@ Pass-the-Hash ist eine Technik mit seitlicher Bewegung, bei der Angreifer den NT
  
 **Empfohlene Abhilfemaßnahmen und Schritte zur Vorbeugung**
 
-1. Setzen Sie die Kennwörter des Quellbenutzers zurück, und aktivieren Sie die mehrstufige Authentifizierung (MFA).
+1. Setzen Sie das Kennwort des Quellbenutzers zurück, und aktivieren Sie die mehrstufige Authentifizierung (MFA).
 2. Isolieren Sie die Quell- und Zielcomputer.
 3. Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
 4. Finden Sie heraus, ob sich ungefähr gleichzeitig mit der Aktivität Benutzer angemeldet haben, da auch sie kompromittiert sein könnten. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA.
@@ -114,19 +152,19 @@ Bei einem Overpass-the-Hash-Angriff kann ein Angreifer zusammen mit einer Kerber
 
 **TP, B-TP oder FP?**
 1. Finden Sie heraus, ob die Smartcardkonfiguration kürzlich geändert worden ist. 
-    - Sind bei den beteiligten Konten kürzlich Smartcardkonfigurationen geändert worden?  
+   - Sind bei den beteiligten Konten kürzlich Smartcardkonfigurationen geändert worden?  
     
-    Wenn ja, **schließen** Sie die Sicherheitswarnung, da es sich um eine **B-TP**-Aktivität (unbedenklich richtig positiv) handelt. 
+     Wenn ja, **schließen** Sie die Sicherheitswarnung, da es sich um eine **B-TP**-Aktivität (unbedenklich richtig positiv) handelt. 
 
 Einige unbedenkliche Ressourcen unterstützen keine starken Verschlüsselungsverfahren und können diese Warnung auslösen. 
 
 2. Ist für alle Quellbenutzer etwas bestimmtes freigegeben? 
-    1. Beispielsweise können Sie überprüfen, ob alle Mitarbeiter des Marketingteams auf eine bestimmte Ressource zugreifen und dadurch eine Warnung auslösen.
-    2. Überprüfen Sie die Ressourcen, auf die mit diesen Tickets zugegriffen wurde. 
-        - Verwenden Sie dafür das *msDS-SupportedEncryptionTypes*-Attribut des Ressourcendienstkontos in Azure Active Directory.
-    3. Wenn es nur eine Ressource gibt, auf die zugegriffen worden ist, überprüfen Sie, ob es sich um eine für diese Benutzer gültige Ressource handelt, auf die sie zugreifen dürfen.   
+   1. Beispielsweise können Sie überprüfen, ob alle Mitarbeiter des Marketingteams auf eine bestimmte Ressource zugreifen und dadurch eine Warnung auslösen.
+   2. Überprüfen Sie die Ressourcen, auf die mit diesen Tickets zugegriffen wurde. 
+       - Verwenden Sie dafür das *msDS-SupportedEncryptionTypes*-Attribut des Ressourcendienstkontos in Azure Active Directory.
+   3. Wenn es nur eine Ressource gibt, auf die zugegriffen worden ist, überprüfen Sie, ob es sich um eine für diese Benutzer gültige Ressource handelt, auf die sie zugreifen dürfen.   
 
-    Wenn die Antwort auf eine der vorherigen Fragen **Ja** lautet, handelt es sich vermutlich um eine **B-TP**-Aktivität. Überprüfen Sie, ob von der Ressource ein starkes Verschlüsselungsverfahren unterstützt wird, implementieren Sie es nach Möglichkeit, und **schließen** Sie die Sicherheitswarnung.
+      Wenn die Antwort auf eine der vorherigen Fragen **Ja** lautet, handelt es sich vermutlich um eine **B-TP**-Aktivität. Überprüfen Sie, ob von der Ressource ein starkes Verschlüsselungsverfahren unterstützt wird, implementieren Sie es nach Möglichkeit, und **schließen** Sie die Sicherheitswarnung.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
