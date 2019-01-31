@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4c178d4ed874ae3d826e97a154ae2e17bd52f48c
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: df3e75970a797307991620e21629df589406cc40
+ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54840368"
+ms.lasthandoff: 01/27/2019
+ms.locfileid: "55085213"
 ---
 # <a name="creating-your-azure-atp-instance-in-the-azure-atp-portal---step-1"></a>Erstellen Ihrer Azure ATP-Instanz im Azure ATP-Portal – Schritt 1
 
@@ -32,7 +32,7 @@ In Azure ATP verfügen Sie über eine einzelne Instanz, die Ihnen die Verwaltung
 > [!NOTE]
 > Derzeit werden Azure ATP-Rechenzentren in Europa, Nordamerika/Mittelamerika/Karibik und Asien bereitgestellt. Ihre Instanz wird automatisch in dem Rechenzentrum erstellt, das Ihrem AAD geografisch am nächsten liegt. Nach der Erstellung können Azure ATP-Instanzen nicht verschoben werden. 
 
-## <a name="step-1-enter-the-azure-atp-portal"></a>Schritt 1 Öffnen Sie das Azure ATP-Portal
+## <a name="enter-the-azure-atp-portal"></a>Öffnen Sie das Azure ATP-Portal
 
 Nachdem Sie überprüft haben, ob Ihr Netzwerk den Anforderungen des Sensors entspricht, können Sie mit der Erstellung der Azure ATP-Instanz fortfahren.
 
@@ -44,7 +44,7 @@ Nachdem Sie überprüft haben, ob Ihr Netzwerk den Anforderungen des Sensors ent
 
 2.  Melden Sie sich mit ihrem Azure Active Directory-Benutzerkonto an.
 
-## <a name="step-2-create-your-instance"></a>Schritt 2 Erstellen Ihrer Instanz
+## <a name="create-your-instance"></a>Erstellen Ihrer Instanz
 
 1. Klicken Sie auf **Instanz erstellen**. 
 

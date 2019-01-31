@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 1/27/2019
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 10cbb1fcb30f40a41d17a9995e4e132c4afbf332
-ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
+ms.openlocfilehash: 6988b41b64dc3d8afef5f7af614f78b41501e2af
+ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54459004"
+ms.lasthandoff: 01/27/2019
+ms.locfileid: "55085315"
 ---
 # <a name="azure-atp-architecture"></a>Azure ATP-Architektur
 
@@ -67,26 +67,28 @@ Dies sind die Hauptfunktionen des Azure ATP-Sensors:
  
 ## <a name="azure-atp-sensor-features"></a>Features des Azure ATP-Sensors
 Der Azure ATP-Sensor liest lokal Ereignisse, ohne dass zusätzliche Hardware erworben und verwaltet oder Konfigurationen vorgenommen werden müssen. Der Azure ATP-Sensor unterstützt zudem die Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW), die die Protokollinformationen für mehrere Erkennungen bereitstellt. ETW-basierte Erkennungen beinhalten vermutete DCShadow-Angriffe, die mit Hilfe von Replikationsanforderungen für Domänencontroller und Heraufstufung des Domänencontrollers versucht wurden.
-- Kandidat für die Domänensynchronisierung
 
-    Der Kandidat für den Domänensynchronizer ist für die proaktive Synchronisierung aller Entitäten aus einer bestimmten Active Directory-Domäne verantwortlich (ähnlich dem Mechanismus, der von den Domänencontrollern selbst für die Replikation verwendet wird). Aus der Liste der Kandidaten wird nach dem Zufallsprinzip ein Sensor für den Domänensynchronizer ausgewählt. 
+### <a name="domain-synchronizer-candidate"></a>Kandidat für die Domänensynchronisierung
 
-    Wenn das Gateway für die Domänensynchronisierung mehr als 30 Minuten offline ist, wird stattdessen ein anderer Kandidaten ausgewählt. Wenn für eine bestimmte Domäne kein Domänensynchronizer verfügbar ist, synchronisiert Azure ATP Entitäten und deren Änderungen proaktiv. Azure ATP ruft jedoch neue Entitäten ab, sobald sie im überwachten Datenverkehr erkannt werden. 
+    The domain synchronizer candidate is responsible for synchronizing all entities from a specific Active Directory domain proactively (similar to the mechanism used by the domain controllers themselves for replication). One sensor is chosen randomly, from the list of candidates, to serve as the domain synchronizer. 
+
+    If the synchronizer is offline for more than 30 minutes, another candidate is chosen instead. If there is no domain synchronizer available for a specific domain, Azure ATP proactively synchronizes entities and their changes, however Azure ATP retrieves new entities as they are detected in the monitored traffic. 
     
-    Wenn kein Gateway für die Domänensynchronisierung verfügbar ist und Sie nach einer Entität suchen, der kein Datenverkehr zugeordnet ist, werden keine Suchergebnisse angezeigt.
+    If there is no domain synchronizer available, and you search for an entity that did not have any traffic related to it, no search results are displayed.
 
-    Azure ATP-Sensoren werden nicht standardmäßig als mögliche Synchronizer angesehen. Führen Sie die unter [Installieren von Azure ATP](install-atp-step5.md#step-5-configure-the-azure-atp-sensor-settings) beschriebenen Schritte durch, um einen Azure ATP-Sensor manuell als Domänensynchronizer einzurichten.
-- Ressourceneinschränkungen
+    By default, Azure ATP sensors are not synchronizer candidates. To manually set an Azure ATP sensor as a domain synchronizer candidate, follow the steps in the [Azure ATP installation workflow](install-atp-step5.md#configure-azure-atp-sensor-settings).
 
-    Der Azure ATP-Sensor enthält eine Überwachungskomponente, die die verfügbare Compute- und Arbeitsspeicherkapazität auf dem Domänencontroller auswertet, auf dem er ausgeführt wird. Der Überwachungsprozess wird alle 10 Sekunden ausgeführt, und die CPU- und Arbeitsspeicherauslastung des Azure ATP-Sensorprozesses wird dynamisch angepasst. Der Überwachungsprozess stellt sicher, dass der Domänencontroller immer mindestens 15 % der verfügbaren Compute- und Arbeitsspeicherressourcen verwenden kann.
+### <a name="resource-limitations"></a>Ressourceneinschränkungen
 
-    Unabhängig von laufenden Aktionen macht der Überwachungsprozess Ressourcen für den Domänencontroller verfügbar, um sicherzustellen, dass die Hauptfunktionen des Domänencontrollers immer erfüllt werden können.
+    The Azure ATP sensor includes a monitoring component that evaluates the available compute and memory capacity on the domain controller on which it is running. The monitoring process runs every 10 seconds and dynamically updates the CPU and memory utilization quota on the Azure ATP sensor process. The monitoring process makes sure the domain controller always has at least 15% of free compute and memory resources available.
 
-    Wenn dem Azure ATP-Sensor dadurch nicht mehr genügend Ressourcen zur Verfügung stehen, wird nur ein Teil des Datenverkehrs überwacht, und die Überwachungswarnung „Dropped port mirrored network traffic.“ (Netzwerkdatenverkehr aus Portspiegelung aufgegeben.) wird auf der Seite „Health“ (Integrität) im Azure ATP-Portal angezeigt.
+    No matter what occurs on the domain controller, the monitoring process continually frees up resources to make sure the domain controller's core functionality is never affected.
 
--  Windows-Ereignisse
+    If the monitoring process causes the Azure ATP sensor to run out of resources, only partial traffic is monitored and the monitoring alert "Dropped port mirrored network traffic" appears in the Azure ATP portal Health page.
 
-    Um die Reichweite der Azure ATP-Erkennung von Identitätsdiebstahl (Pass-the-Hash-Angriffen), verdächtigen Authentifizierungsfehlern, Änderungen an sensiblen Gruppen, der Erstellung von verdächtigen Diensten und Angriffen mit Honeytoken-Aktivitätstypen zu verbessern, muss Azure ATP die Protokolle folgender Windows-Ereignisse analysieren: 4776,4732,4733,4728,4729,4756,4757 und 7045. Diese Ereignisse werden automatisch von Azure ATP-Sensoren mit den entsprechenden [erweiterten Überwachungsrichtlinieneinstellungen](atp-advanced-audit-policy.md) gelesen. 
+### <a name="windows-events"></a>Windows-Ereignisse
+
+    To enhance Azure ATP detection coverage of suspected identity theft (pass-the-hash), suspicious authentication failures,modifications to sensitive groups, creation of suspicious services, and Honeytoken activity types of attack, Azure ATP needs to analyze the logs of the following Windows events: 4776,4732,4733,4728,4729,4756,4757, and 7045. These events are read automatically by Azure ATP sensors with correct [advanced audit policy settings](atp-advanced-audit-policy.md). 
 
 ## <a name="see-also"></a>Weitere Informationen
 - [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](atp-prerequisites.md)
