@@ -1,11 +1,11 @@
 ---
-title: Neuerungen in Azure ATP | Microsoft-Dokumentation
+title: Neuerungen in Azure Advanced Threat Protection (Azure ATP) | Microsoft-Dokumentation
 description: Beschreibt die neuesten Releases von Azure ATP und enthält Informationen zu den Neuerungen in den einzelnen Version.
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/20/2019
+ms.date: 1/27/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,19 +13,43 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7bf903b1fde595e41c3b57d8163ed0f06f8e8ac8
-ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
+ms.openlocfilehash: 9d1a0f992bcb0d21ed31d5cdc5ed3e034c6bee8d
+ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54459174"
+ms.lasthandoff: 01/27/2019
+ms.locfileid: "55085434"
 ---
 # <a name="whats-new-in-azure-atp"></a>Neuerungen in Azure ATP
+
+### <a name="azure-atp-release-263"></a>Azure ATP Release 2.63
+Veröffentlicht am 27. Januar 2019
+
+- **Neues Feature: Unterstützung nicht vertrauenswürdiger Gesamtstrukturen (Preview)**<br>
+Die Azure ATP-Unterstützung von Sensoren in nicht vertrauenswürdigen Gesamtstrukturen befindet sich nun in der Public Preview. Über die **Verzeichnisdienste**-Seite im Azure ATP-Portal können Sie zusätzliche Anmeldeinformationen konfigurieren, um Azure ATP-Sensoren zu ermöglichen, Verbindungen mit verschiedenen Active Directory-Gesamtstrukturen herzustellen und Informationen an den Azure ATP-Dienst zurückzugeben. Weitere Informationen finden Sie unter [Azure ATP für mehrere Gesamtstrukturen](atp-multi-forest.md). 
+
+- **Neues Feature: Abdeckung des Domänencontrollers**<br>
+Azure ATP stellt nun Abdeckungsinformationen für überwachte Azure ATP-Domänencontroller bereit.  
+Sie können die Anzahl der überwachten und nicht überwachten Domänencontroller, die Azure ATP in Ihrer Umgebung ermittelt hat, auf der Seite **Sensoren** im Azure ATP-Portal anzeigen. Laden Sie die Liste der überwachten Domänencontroller für weitere Analysen herunter, und erstellen Sie einen Aktionsplan. Weitere Informationen finden Sie in der Vorgehensweise zum [Überwachen von Domänencontrollern](atp-sensor-monitoring.md). 
+
+- **Featureerweiterung: Reconnaissance mithilfe von Kontoenumeration**<br>
+Die Ermittlung der Reconnaissance mithilfe der Azure ATP-Kontoenumeration ermittelt und löst Warnungen bei Enumerationsangriffen mit Kerberos und NTLM aus. Zuvor wurden nur Versuche mit Kerberos ermittelt. Weitere Informationen finden Sie unter [Azure ATP-Warnungen zur Reconnaissance](atp-reconnaissance-alerts.md#account-enumeration-reconnaissance-external-id-2003). 
+
+- **Featureerweiterung: Warnung für versuchte Remotecodeausführung**<br>
+    - Jegliche Aktivitäten bezüglich der Remoteausführung, z. B. Diensterstellung, WMI-Ausführung und die neue **PowerShell**-Ausführung, wurden zur Profilzeitachse von Zielcomputern hinzugefügt. Der Zielcomputer ist der Domänencontroller, auf dem der Befehl ausgeführt wurde. 
+    - Die **PowerShell**-Ausführung wurde zur Aktivitätsliste der Remotecodeausführungen hinzugefügt, die im Entitätsprofil auf der Zeitachse für Warnungen aufgeführt werden.
+    - Weitere Informationen finden Sie unter [Versuch der Remotecodeausführung](atp-domain-dominance-alerts.md#remote-code-execution-attempt-external-id-2019).  
+
+- **Windows Server 2019-LSASS-Problem und Azure ATP**<br>
+Gemäß des Kundenfeedbacks zur Nutzung von Azure ATP mit Domänencontrollern, auf denen Windows Server 2019 ausgeführt wird, enthält dieses Update weitere Logik zur Vermeidung des gemeldeten Verhaltens auf Windows Server 2019-Computern. Die vollständige Unterstützung von Azure ATP-Sensoren unter Windows Server 2019 ist für ein zukünftiges Azure ATP-Update geplant. Das Installieren und Ausführen von Azure ATP unter Windows Server 2019 wird derzeit **nicht** unterstützt. Weitere Informationen finden Sie unter [Voraussetzungen für den Azure ATP-Sensor](atp-prerequisites.md#azure-atp-sensor-requirements). 
+
+- Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
+
 
 ## <a name="azure-atp-release-262"></a>Azure ATP Release 2.62
 Veröffentlicht am 20. Januar 2019
 
-- **Neue Sicherheitswarnung: Remotecodeausführung über DNS – (Vorschau)**<br>
+- **Neue Sicherheitswarnung: Remotecodeausführung über DNS (Preview)**<br>
 Die Azure ATP-Sicherheitswarnung [Remotecodeausführung über DNS](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036---preview) ist nun in der öffentlichen Vorschauversion verfügbar. <br> Bei dieser Erkennung wird eine Azure ATP-Sicherheitswarnung ausgelöst, wenn DNS-Abfragen an einen Domänencontroller im Netzwerk gerichtet werden, die im Verdacht stehen, die Sicherheitslücke [CVE-2018-8626](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8626) auszunutzen.
 
 - **Featureerweiterung: Um 72 Stunden verzögertes Sensorupdate** <br> Geänderte Option, damit nach jedem Update der Azure ATP-Version die Sensor-Updates auf ausgewählten Sensoren um 72 Stunden (anstelle der vorherigen 24-Stunden-Verzögerung) verzögert werden. Anweisungen zur Konfiguration finden Sie unter [Update für Azure ATP-Sensoren](sensor-update.md). 
@@ -120,7 +144,7 @@ Ab heute heißen Azure ATP-*Arbeitsbereiche* Azure ATP-*Instanzen*. Azure ATP un
 - Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
 ## <a name="azure-atp-release-256"></a>Azure ATP Release 2.56
-Veröffentlicht am 25. November 2018
+Veröffentlicht: 25. November 2018
 
 
 - **Featureerweiterung: Lateral Movement-Pfade (LMPs)** <br>
@@ -208,7 +232,7 @@ Veröffentlicht: 7. Oktober 2018
   - Geplante Berichte wurden festgelegt
   - Entitätstags (vertraulich und Honeytoken) können festgelegt werden.
   - Ausschluss von Erkennung
-  - Ändern der Sprache
+  - Sprache ändern
   - Benachrichtigung über E-Mail oder Syslog wurden festgelegt
 
 
@@ -338,7 +362,7 @@ Veröffentlicht: 1. Juli 2018
 
 ## <a name="azure-atp-release-237"></a>Azure ATP Release 2.37
 
-Veröffentlicht am 24. Juni 2018
+Veröffentlicht: 24. Juni 2018
 
 - Diese Version enthält Fehlerbehebungen und Verbesserungen für mehrere Probleme. 
 

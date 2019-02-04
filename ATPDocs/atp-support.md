@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/7/2019
+ms.date: 1/27/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 8ae459ac-9fca-4923-9a1a-dc10d5c50b29
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6e9ffb02c515c34dfa2847c9b93f55c3fa38fa44
-ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
+ms.openlocfilehash: 8c294c20efeac4fae17df84c6a3d6d8d656c9554
+ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54459208"
+ms.lasthandoff: 01/27/2019
+ms.locfileid: "55085468"
 ---
 # <a name="azure-advanced-threat-protection-information-and-support"></a>Informationen zu und Unterstützung für Azure Advanced Threat Protection 
 
@@ -27,7 +27,7 @@ In den folgenden Ressourcen erhalten Sie allgemeine Informationen sowie Informat
 
 |Zweck|Vorgehensweise|
 |----|----|
-|Unsere beliebteste Dokumentation|Lesen Sie die fünf beliebtesten Seiten:<br>- [What is Azure Advanced Threat Protection? (Was ist Azure Advanced Threat Protection?)](what-is-atp.md)<br>- [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](atp-prerequisites.md)<br>- [Azure ATP architecture (Azure ATP-Architektur)](atp-architecture.md)<br>- [Azure ATP capacity planning (Azure ATP-Kapazitätsplanung)](atp-capacity-planning.md)<br>- [Erstellen einer Instanz](install-atp-step1.md)|
+|Unsere beliebteste Dokumentation|Lesen Sie die zehn beliebtesten Seiten:<br>- [What is Azure Advanced Threat Protection? (Was ist Azure Advanced Threat Protection?)](what-is-atp.md)<br>- [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](atp-prerequisites.md)<br>- [Azure ATP architecture (Azure ATP-Architektur)](atp-architecture.md)<br>- [Azure ATP capacity planning (Azure ATP-Kapazitätsplanung)](atp-capacity-planning.md)<br>-[Erstellen einer Instanz](install-atp-step1.md)<br>-[Grundlegendes zu Sicherheitswarnungen](understanding-security-alerts.md)<br>-[Azure ATP-Sicherheitswarnungen](suspicious-activity-guide.md)<br>-[Untersuchen eines Computers](investigate-a-computer.md)<br>-[Untersuchen eines Benutzers](investigate-a-user.md)<br>-[Verwendung von Lateral Movement-Pfaden](investigate-lateral-movement-path.md)
 |Mit dem Produktteam und Ihren Kollegen in Kontakt treten|Besuchen Sie die  [Tech Community](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection)  für Azure Advanced Threat Protection.|
 |Sehen Sie sich die Abonnementinformationen und eine Liste der unterstützten Features an.|Informationen dazu finden Sie in den  [Abonnementinformationen](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing)  und der  [Featureliste](https://www.microsoft.com/cloud-platform/azure-information-protection-features)  auf der Azure Advanced Threat Protection-Website.|
 
@@ -36,7 +36,7 @@ In den folgenden Ressourcen erhalten Sie allgemeine Informationen sowie Informat
 Das Azure Advanced Threat Protection-Produktteam veröffentlicht Ankündigungen zu neuen Releases und Updates im  [Blog zu Enterprise Mobility + Security](https://cloudblogs.microsoft.com/enterprisemobility/author/microsoft-advanced-threat-analytics-team/).
 Diese Blogposts ergänzen die Produktdokumentation und Supportinformationen.
 
-Informationen über die gerade veröffentlichten Features und Veränderungen in Azure ATP finden Sie unter [What‘s new in Azure Advanced Threat Protection (Neuerungen in Azure Advanced Threat Protection)](atp-whats-new.md).
+Informationen über die gerade veröffentlichten Features und aktuellen Veränderungen in Azure ATP finden Sie unter [Neuerungen in Azure Advanced Threat Protection](atp-whats-new.md).
 
 ## <a name="support-options-and-community-resources"></a>Supportoptionen und Communityressourcen
 

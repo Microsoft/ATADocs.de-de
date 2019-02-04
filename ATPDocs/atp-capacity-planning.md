@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 1/24/2019
 ms.topic: conceptual
 ms.service: azure-advanced-threat-protection
 ms.prod: ''
 ms.assetid: da0ee438-35f8-4097-b3a1-1354ad59eb32
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 51ce0ca62d29c58475f8f426ee715515cf106193
-ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
+ms.openlocfilehash: c53fb85570a053fa6414855b2ababa0b8e75cdee
+ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54459089"
+ms.lasthandoff: 01/27/2019
+ms.locfileid: "55085196"
 ---
 # <a name="azure-atp-capacity-planning"></a>Azure ATP-Kapazitätsplanung
 In diesem Artikel erfahren Sie, wie viele Azure ATP-Sensoren und eigenständige Azure ATP-Sensoren Sie benötigen.
@@ -55,7 +55,7 @@ Berücksichtigen Sie folgende Vorteile bei der Auswahl des Bereitstellungstyps d
 Berücksichtigen Sie folgende Fehler bei der Entscheidung, wie viele eigenständige Azure ATP-Sensoren bereitgestellt werden sollen.
 
 -   **Active Directory-Gesamtstrukturen und -Domänen**<br>
-    Azure ATP kann Datenverkehr aus mehreren Domänen innerhalb mehrerer Active Directory-Gesamtstrukturen für jede Instanz überwachen, die Sie erstellen. 
+    Azure ATP kann Datenverkehr aus mehreren Domänen innerhalb mehrerer Active Directory-Gesamtstrukturen für jede Azure ATP-Instanz überwachen, die Sie erstellen. 
 
 -   **Portspiegelung**<br>
     Die Durchführung der Portspiegelung erfordert möglicherweise die Bereitstellung mehrerer eigenständiger Azure ATP-Sensoren pro Rechenzentrum oder Filialstandort.

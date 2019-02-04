@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/29/2018
+ms.date: 1/24/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 34dc152c-6b7f-4128-93fe-aad56c282730
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a61434b7b9c15516c115dcbc9ae58e8cc9815111
-ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
+ms.openlocfilehash: cdcba87d16c357205becdeb5683e655f6ca801a0
+ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54459044"
+ms.lasthandoff: 01/27/2019
+ms.locfileid: "55085281"
 ---
 # <a name="azure-atp-readiness-guide"></a>Handbuch für die Azure ATP-Bereitschaft
 
@@ -26,7 +26,9 @@ Dieser Artikel stellt einen Überblick über die Bereitschaft bereit, der eine L
 
 ## <a name="understanding-azure-atp"></a>Grundlegendes zu Azure ATP
 
-Bei Azure Advanced Threat Protection (ATP) handelt es sich um einen Clouddienst, mit dem Sie Ihr Unternehmen vor verschiedenen hochentwickelten und gezielten Cyberangriffen und Bedrohungen von innen schützen können. Weitere Informationen zu Azure ATP: 
+Bei Azure Advanced Threat Protection (ATP) handelt es sich um einen Clouddienst, mit dem Sie Ihr Unternehmen vor verschiedenen hochentwickelten und gezielten Cyberangriffen und Bedrohungen von innen schützen können.
+ 
+Weitere Informationen zu Azure ATP: 
 - [Übersicht über Azure ATP](what-is-atp.md)
 - [Einführungsvideo zu Azure ATP (vollständig, 25 Minuten)](https://www.youtube.com/watch?v=EGY2m8yU_KE)
 - [Ausführliches Video zu Azure ATP (vollständig, 75 Minuten)](https://www.youtube.com/watch?v=QXZIfH0wP3Q)
@@ -41,12 +43,12 @@ Azure ATP besteht aus dem Clouddienst von Azure sowie aus integrierten Sensoren,
 
 Diese Ressourcen unterstützen Sie beim Einrichten von Azure ATP, bei der Verbindung zu Active Directory, beim Download des Sensorpakets, beim Einrichten der Ereignissammlung und optional bei der Integration in Ihr VPN und bei der Einrichtung von Honeytoken-Konten und -Ausschlüssen. 
 - [Testen Sie Azure ATP (Teil von EMS E5):](http://aka.ms/aatptrial) Die Testversion ist 90 Tage gültig.
-- [Azure ATP-Setup:](install-atp-step1.md) Stellen Sie Azure ATP in Ihrer Umgebung bereit, indem Sie diese Schritte ausführen.
+- [Azure ATP-Setup:](install-atp-step1.md) Führen Sie diese Schritte aus, um Azure ATP in Ihrer Umgebung bereitzustellen.
 - [Integrieren von Azure ATP in Windows Defender ATP](integrate-wd-atp.md)
 
 ## <a name="azure-atp-settings"></a>Einstellungen für Azure ATP
 
-Diese grundlegenden Einstellungen, die in Azure ATP erforderlich sind, werden automatisch bei der Erstellung Ihrer Instanz konfiguriert. Es gibt einige zusätzliche konfigurierbare Einstellungen in Azure ATP, um die Erkennungen und Warnung für Ihre Umgebung präziser durchzuführen, z.B. VPN-Integration, erforderliche Berechtigungen für SAM (Software Asset Management) sowie erweiterte Einstellungen für Überwachungsrichtlinien. 
+Beim Erstellen der Azure ATP werden die erforderlichen Grundeinstellungen automatisch konfiguriert. Es gibt einige zusätzliche konfigurierbare Einstellungen in Azure ATP, um die Erkennungen und Warnung für Ihre Umgebung präziser durchzuführen, z.B. VPN-Integration, erforderliche Berechtigungen für SAM (Software Asset Management) sowie erweiterte Einstellungen für Überwachungsrichtlinien. 
 
 - [VPN-Integration](install-atp-step6-vpn.md)
 - [Erforderliche Berechtigungen für SAM-R](install-atp-step8-samr.md)
@@ -54,13 +56,13 @@ Diese grundlegenden Einstellungen, die in Azure ATP erforderlich sind, werden au
 
 ## <a name="work-with-azure-atp"></a>Arbeiten mit Azure ATP
 
-Sobald Azure ATP einsatzbereit ist, können Sie Sicherheitswarnungen in der Aktivitätszeitachse des Azure ATP-Portals anzeigen. Die Zeitachse für Aktivitäten ist die standardmäßige Landing Page nach der Anmeldung beim Azure ATP-Portal. Standardmäßig werden alle offenen Sicherheitswarnungen auf der Angriffszeitachse angezeigt. Außerdem wird der Schweregrad angezeigt, der den einzelnen Warnungen zugewiesen wurde. Untersuchen Sie jede Warnung, indem Sie einen Drilldown zu den Entitäten (Computer, Geräte, Benutzer) ausführen, um deren Profilseiten mit weiteren Informationen zu öffnen. Lateral Movement-Pfade zeigen mögliche Bewegungen, die in Ihrem Netzwerk vorgenommen werden können, und gefährdete sensible Benutzer. Anhand der Graphs zur Erkennung des Lateral Movement-Pfads können Sie die Exposition erkennen und beheben. Mithilfe folgender Ressourcen können Sie mit den Sicherheitswarnungen von Azure ATP arbeiten: 
+Sobald Azure ATP einsatzbereit ist, können Sie Sicherheitswarnungen in der Aktivitätszeitachse des Azure ATP-Portals anzeigen. Die Zeitachse für Aktivitäten ist die standardmäßige Landing Page nach der Anmeldung beim Azure ATP-Portal. Standardmäßig werden alle offenen Sicherheitswarnungen auf der Aktivitätszeitachse angezeigt. Außerdem wird der Schweregrad angezeigt, der den einzelnen Warnungen zugewiesen wurde. Untersuchen Sie jede Warnung, indem Sie einen Drilldown zu den Entitäten (Computer, Geräte, Benutzer) ausführen, um deren Profilseiten mit weiteren Informationen zu öffnen. Lateral Movement-Pfade zeigen mögliche Bewegungen, die in Ihrem Netzwerk vorgenommen werden können, und gefährdete sensible Benutzer. Anhand der Graphs zur Erkennung des Lateral Movement-Pfads können Sie die Offenlegung erkennen und beheben. Mithilfe folgender Ressourcen können Sie mit den Sicherheitswarnungen von Azure ATP arbeiten: 
 
 - [ (Handbuch zu Sicherheitswarnungen bei Azure ATP):](suspicious-activity-guide.md) Erfahren Sie mehr über die Selektierung und die nächsten Schritte mit Azure ATP-Erkennungen.
 - [Azure ATP-Lateral Movement-Pfade](use-case-lateral-movement-path.md)
 - [Tag groups as sensitive (Kennzeichnen von Gruppen als vertraulich):](sensitive-accounts.md) Erhalten Sie Einblicke in die Offenlegung von Anmeldeinformationen bei vertraulichen Sicherheitsgruppen.
 
-## <a name="security-best-practices"></a>Bewährte Sicherheitsmethoden
+## <a name="security-best-practices"></a>Bewährte Methoden für die Sicherheit
 
 - [Häufig gestellte Fragen zu Azure ATP:](atp-technical-faq.md) Dieser Artikel enthält einige häufig gestellter Fragen zu Azure ATP sowie Hintergrundwissen und Antworten. 
 
