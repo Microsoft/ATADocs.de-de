@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/29/2018
+ms.date: 02/04/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4f551e27d6417f0fa1a65427998e8d1cb33dcf7c
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: 2e8405f46e404ef6d08ac2ce2517259ad20828b1
+ms.sourcegitcommit: 9236d279f5e01424b498ce23e9d84c407ebfcdf3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54840572"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689318"
 ---
 # <a name="azure-atp-frequently-asked-questions"></a>Häufig gestellte Fragen zu Azure ATP
 Dieser Artikel enthält eine Reihe häufig gestellter Fragen und Antworten zu Azure ATP, unterteilt in die folgenden Kategorien: 
@@ -50,7 +50,7 @@ Microsoft extrahiert Ihre Daten nicht zu Werbezwecken oder anderen Zwecken als d
 Zusätzlich zur Analyse des Active Directory-Datenverkehrs mit der DPI-Technologie (Deep Packet Inspection) kann Azure ATP auch relevante Windows-Ereignisse aus Ihrem Domänencontroller sammeln und Entitätenprofile auf Grundlage von Informationen aus Active Directory Domain Services erstellen. Azure ATP unterstützt auch die RADIUS-Kontoführung beim Empfangen von VPN-Protokollen von unterschiedlichen Lieferanten (Microsoft, Cisco, F5 und Checkpoint).
 
 ### <a name="does-azure-atp-monitor-only-domain-joined-devices"></a>Überwacht Azure ATP nur Geräte, die der Domäne angehören?
-Nein Azure ATP überwacht alle Geräte im Netzwerk und führt die Authentifizierung sowie Autorisierungsanfragen für Active Directory durch. Dies schließt Nicht-Windows-Geräte und mobile Geräte ein.
+Nein. Azure ATP überwacht alle Geräte im Netzwerk und führt die Authentifizierung sowie Autorisierungsanfragen für Active Directory durch. Dies schließt Nicht-Windows-Geräte und mobile Geräte ein.
 
 ### <a name="does-azure-atp-monitor-computer-accounts-as-well-as-user-accounts"></a>Überwacht Azure ATP sowohl Computerkonten als auch Benutzerkonten?
 Ja. Da Computerkonten (ebenso wie alle anderen Entitäten) zum Durchführen böswilliger Aktivitäten verwendet werden können, überwacht Azure ATP das Verhalten aller Computerkonten und aller weiteren Entitäten in der Umgebung.
@@ -69,7 +69,7 @@ Ja, Ihre Daten werden durch Zugriffsauthentifizierung und logischer Trennung bas
 
 ### <a name="do-i-have-the-flexibility-to-select-where-to-store-my-data"></a>Kann ich frei wählen, wo ich meine Daten speichern möchte? 
 
-Nein Wenn Ihre Azure-ATP-Instanz erstellt wird, wird sie automatisch im Länderrechenzentrum gespeichert, das dem geografischen Standort Ihres AAD-Mandanten am nächsten liegt. Azure ATP-Daten können nicht verschoben werden, sobald Ihre Azure ATP-Instanz in einem anderen Rechenzentrum erstellt wurde.                
+Nein. Wenn Ihre Azure-ATP-Instanz erstellt wird, wird sie automatisch im Länderrechenzentrum gespeichert, das dem geografischen Standort Ihres AAD-Mandanten am nächsten liegt. Azure ATP-Daten können nicht verschoben werden, sobald Ihre Azure ATP-Instanz in einem anderen Rechenzentrum erstellt wurde.                
 
 ### <a name="how-does-microsoft-prevent-malicious-insider-activities-and-abuse-of-high-privilege-roles"></a>Wie verhindert Microsoft schädliche Insideraktivitäten und den Missbrauch von privilegierten Rollen? 
 
@@ -131,16 +131,6 @@ Bei Azure Advanced Threat Protection besteht keine Notwendigkeit zum Erstellen v
 ### <a name="what-should-i-do-if-the-azure-atp-sensor-or-standalone-sensor-doesnt-start"></a>Wie soll ich vorgehen, wenn der Azure ATP-Sensor oder der eigenständige Sensor nicht gestartet wird?
 Sehen Sie sich den letzten Fehlereintrag im aktuellen [Fehlerprotokoll](troubleshooting-atp-using-logs.md) an (Installationsverzeichnis von Azure ATP unter dem Ordner „Logs“ (Protokolle)).
 
-### <a name="how-can-i-test-azure-atp"></a>Wie kann ich Azure ATP testen?
-Sie können verdächtige Aktivitäten in einem End-to-End-Test simulieren. Im folgenden Szenario wird die DNS-Reconnaissance simuliert:
-
-1. Vergewissern Sie sich, dass Azure ATP-Sensoren auf den Domänencontrollern (oder eigenständige Sensoren und die zugehörige Portspiegelung) installiert und konfiguriert sind.
-2. Rufen Sie die Befehlszeile auf.
-3. Führen Sie den folgenden Befehl aus: nslookup -<DC iP address>
-   - Drücken Sie die EINGABETASTE.
-   - Typ: Is -d <FQDN>
-   - Abhängig von der Konfiguration Ihrer Umgebung können die Antworten von „Abfrage zurückgewiesen“ bis hin zu einer Liste von DNS-Einträgen reichen. 
-4. Zeigen Sie die Warnung im Zusammenhang mit der simulierten DNS-Reconnaissance im Azure ATP-Portal an. 
 
 ## <a name="see-also"></a>Weitere Informationen
 - [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](atp-prerequisites.md)
