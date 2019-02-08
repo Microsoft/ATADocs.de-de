@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/13/2018
+ms.date: 02/04/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,13 +13,17 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 829c3685d06ec49182895b4786c89b8281e2de2f
-ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
+ms.openlocfilehash: 20281444e969cce2adb9e3458e040dd4c9d36fd3
+ms.sourcegitcommit: 9236d279f5e01424b498ce23e9d84c407ebfcdf3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/27/2019
-ms.locfileid: "55085383"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689369"
 ---
+*Gilt für: Azure Advanced Threat Protection*
+
+
+
 # <a name="azure-atp-prerequisites"></a>Voraussetzungen für Azure ATP
 Dieser Artikel beschreibt die Voraussetzungen für eine erfolgreiche Bereitstellung von Azure ATP in Ihrer Umgebung.
 
@@ -53,7 +57,7 @@ In diesem Abschnitt werden die Informationen aufgeführt, die Sie sammeln sollte
     > [!NOTE]
     > Wenn Sie benutzerdefinierte ACLs für verschiedene Organisationseinheiten (OU) in Ihrer Domäne festgelegt haben, stellen Sie sicher, dass der ausgewählte Benutzer Leseberechtigungen für diese Organisationseinheiten hat.
 
--   Wenn Sie Wireshark auf einem eigenständigen Azure ATP-Sensor ausführen, müssen Sie den Azure Advanced Threat Protection-Sensordienst neu starten, nachdem Sie das Erfassen mit Wireshark abgeschlossen haben. Wenn dies nicht der Fall ist, beendet der Sensor die Erfassung von Datenverkehr.
+-   Wenn Sie Wireshark für einen eigenständigen Azure ATP-Sensor ausführen, müssen Sie den Azure Advanced Threat Protection-Sensordienst neu starten, nachdem Sie die Wireshark-Erfassung beendet haben. Wenn Sie den Sensordienst nicht neu starten, beendet der Sensor die Erfassung des Datenverkehrs.
 
 - Wenn Sie versuchen, den Azure ATP-Sensor auf einem Computer zu installieren, der mit einem NIC-Teaming-Adapter konfiguriert ist, wird ein Installationsfehler gemeldet. Wenn Sie den Azure ATP-Sensor auf einem Computer installieren möchten, der mit NIC-Teamvorgang konfiguriert ist, finden Sie weitere Informationen unter [Problem mit NIC-Teamvorgängen beim Azure ATP-Sensor](troubleshooting-atp-known-issues.md#nic-teaming).
 
@@ -65,13 +69,13 @@ In diesem Abschnitt werden die Informationen aufgeführt, die Sie sammeln sollte
 
 ## <a name="azure-atp-portal-requirements"></a>Anforderungen an das Azure ATP-Portal
 Der Zugriff auf das Azure ATP-Portal erfolgt über einen Browser. Folgende Browser und Einstellungen werden unterstützt:
-- Microsoft Edge
-- Internet Explorer Version 10 oder höher
-- Google Chrome 4.0 und höher
-- Mindestauflösung der Bildschirmbreite: 1.700 Pixel
-- Firewall/Proxy freigeben – Um mit dem Azure ATP-Clouddienst zu kommunizieren, muss in Ihrer Firewall und auf Ihrem Proxyserver Port 443 für „*.atp.azure.com“ freigegeben sein.
+-   Microsoft Edge
+-   Internet Explorer Version 10 oder höher
+-   Google Chrome 4.0 und höher
+-   Mindestauflösung der Bildschirmbreite: 1.700 Pixel
+-   Firewall/Proxy freigeben – Um mit dem Azure ATP-Clouddienst zu kommunizieren, muss in Ihrer Firewall und auf Ihrem Proxyserver Port 443 für „*.atp.azure.com“ freigegeben sein.
 
-  ![Azure ATP-Architekturdiagramm](media/ATP-architecture-topology.png)
+ ![Azure ATP-Architekturdiagramm](media/ATP-architecture-topology.png)
 
 
 > [!NOTE]
@@ -79,6 +83,7 @@ Der Zugriff auf das Azure ATP-Portal erfolgt über einen Browser. Folgende Brows
 
 ## <a name="azure-atp-sensor-requirements"></a>Voraussetzungen für den Azure ATP-Sensor
 In diesem Abschnitt sind die Voraussetzungen für den Azure ATP-Sensor aufgeführt.
+
 ### <a name="general"></a>Allgemein
 Der Azure ATP-Sensor unterstützt die Installation auf einem Domänencontroller mit Windows Server 2008 R2 SP1 (ohne Server Core), Windows Server 2012, Windows Server 2012 R2 und Windows Server 2016 (mit Core, jedoch ohne Nano).
 
@@ -94,9 +99,9 @@ Während der Installation wird .NET Framework 4.7 installiert und erfordert mög
 
 ### <a name="server-specifications"></a>Serverspezifikationen
 
-Der Azure ATP-Sensor erfordert mindestens zwei Kerne und 6 GB RAM auf dem Domänencontroller.
+Der Azure ATP-Sensor erfordert mindestens 2 Kerne und 6 GB RAM auf dem Domänencontroller.
 Um eine optimale Leistung zu erzielen, legen Sie die **Energieoption** des Azure ATP-Sensors auf **Hohe Leistung** fest.
-Der Azure ATP-Sensor kann auf Domänencontrollern verschiedener Auslastungen und Größen bereitgestellt werden, abhängig vom Umfang des Datenverkehrs zwischen den Domänencontrollern und der installierten Ressourcen auf dem Domänencontroller.
+Der Azure ATP-Sensor kann auf Domänencontrollern verschiedener Auslastungen und Größen bereitgestellt werden, abhängig vom Umfang des Datenverkehrs zwischen den Domänencontrollern und der installierten Ressourcen.
 
 >[!NOTE] 
 > Bei Ausführung als virtueller Computer wird kein dynamischer Arbeitsspeicher und keine andere Speichererweiterungsfunktion unterstützt.
@@ -135,7 +140,7 @@ Die Azure ATP-Erkennung basiert auf bestimmten Windows-Ereignisprotokollen, die 
 
 
 > [!NOTE]
-> - Bei Verwendung des Verzeichnisdienst-Benutzerkontos fragt der Sensor mithilfe von SAM-R (Netzwerkanmeldung) Endpunkte in Ihrer Organisation für lokale Administratoren ab, um [den Graph des Lateral-Movement-Pfads](use-case-lateral-movement-path.md) zu erstellen. Weitere Informationen finden Sie unter [Erforderliche Berechtigung für SAM-R konfigurieren](install-atp-step8-samr.md).
+> - Bei Verwendung des Verzeichnisdienst-Benutzerkontos fragt der Sensor mithilfe von SAM-R (Netzwerkanmeldung) Endpunkte in Ihrer Organisation für lokale Administratoren ab, um [den Graph des Lateral Movement-Pfads](use-case-lateral-movement-path.md) zu erstellen. Weitere Informationen finden Sie unter [Erforderliche Berechtigung für SAM-R konfigurieren](install-atp-step8-samr.md).
 > - Die folgenden Ports müssen auf eingehenden Geräten im Netzwerk des eigenständigen Azure ATP-Sensors geöffnet sein:
 >   -   NTLM über RPC (TCP-Port 135) für Lösungszwecke
 >   -   NetBIOS (UDP-Port 137) für Lösungszwecke
@@ -143,6 +148,7 @@ Die Azure ATP-Erkennung basiert auf bestimmten Windows-Ereignisprotokollen, die 
 
 ## <a name="azure-atp-standalone-sensor-requirements"></a>Voraussetzungen für den eigenständigen Azure ATP-Sensor
 In diesem Abschnitt werden die Voraussetzungen für den eigenständigen Azure ATP-Sensor aufgeführt.
+
 ### <a name="general"></a>Allgemein
 Der eigenständige Azure ATP-Sensor unterstützt die Installation auf einem Server mit Windows Server 2012 R2 oder Windows Server 2016 (einschließlich Server Core).
 Der eigenständige Azure ATP-Sensor kann auf einem Server installiert werden, der Mitglied einer Domäne oder Arbeitsgruppe ist.
@@ -215,7 +221,7 @@ In der folgenden Tabelle sind die Ports aufgeführt, die für den Verwaltungsada
 |TLS zu RDP|TCP|3389|Alle Geräte im Netzwerk|Beide|
 
 > [!NOTE]
-> - Bei Verwendung des Verzeichnisdienst-Benutzerkontos fragt der Sensor mithilfe von SAM-R (Netzwerkanmeldung) Endpunkte in Ihrer Organisation für lokale Administratoren ab, um [den Graph des Lateral-Movement-Pfads](use-case-lateral-movement-path.md) zu erstellen. Weitere Informationen finden Sie unter [Erforderliche Berechtigung für SAM-R konfigurieren](install-atp-step8-samr.md).
+> - Bei Verwendung des Verzeichnisdienst-Benutzerkontos fragt der Sensor mithilfe von SAM-R (Netzwerkanmeldung) Endpunkte in Ihrer Organisation für lokale Administratoren ab, um [den Graph des Lateral Movement-Pfads](use-case-lateral-movement-path.md) zu erstellen. Weitere Informationen finden Sie unter [Erforderliche Berechtigung für SAM-R konfigurieren](install-atp-step8-samr.md).
 > - Die folgenden Ports müssen auf eingehenden Geräten im Netzwerk des eigenständigen Azure ATP-Sensors geöffnet sein:
 >   -   NTLM über RPC (TCP-Port 135) für Lösungszwecke
 >   -   NetBIOS (UDP-Port 137) für Lösungszwecke
@@ -224,8 +230,8 @@ In der folgenden Tabelle sind die Ports aufgeführt, die für den Verwaltungsada
 
 
 ## <a name="see-also"></a>Weitere Informationen
-- [Azure ATP sizing tool (Azure ATP-Tool zur Größenanpassung)](http://aka.ms/aatpsizingtool)
-- [Azure ATP architecture (Azure ATP-Architektur)](atp-architecture.md)
-- [Install Azure ATP (Installieren von Azure ATP)](install-atp-step1.md)
+- [Azure ATP-Tool zur Größenanpassung](http://aka.ms/aatpsizingtool)
+- [Azure ATP-Architektur](atp-architecture.md)
+- [Installieren von Azure ATP](install-atp-step1.md)
 - [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)
 

@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/20/2019
+ms.date: 02/03/2019
 ms.topic: tutorial
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 0b3a1db5-0d43-49af-b356-7094cc85f0a5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 929dfae084bbce8f831c55d042f7765ddfd64019
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: ae0d59748a4caaecd7c9f4e3cc1276c042a875c1
+ms.sourcegitcommit: 9236d279f5e01424b498ce23e9d84c407ebfcdf3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54840846"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689437"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Tutorial: Warnungen zu Domänendominanz  
 
@@ -30,7 +30,7 @@ Cyberangriffe werden üblicherweise auf alle zugänglichen Entitäten wie etwa B
 4. **Warnungen zu Domänendominanz**
 5. [Exfiltration](atp-exfiltration-alerts.md)
 
-Weitere Informationen zur Struktur und zu gängigen Komponenten der Azure ATP-Sicherheitswarnungen finden Sie unter [Understanding security alerts (Grundlegendes zu Sicherheitswarnungen)](understanding-security-alerts.md).
+Weitere Informationen zur Struktur und zu gängigen Komponenten der Azure ATP-Sicherheitswarnungen finden Sie unter [Grundlegendes zu Sicherheitswarnungen](understanding-security-alerts.md).
 
 Die folgenden Sicherheitswarnungen unterstützen Sie dabei, verdächtige Aktivitäten zu identifizieren und zu unterbinden, die von Azure ATP in Ihrem Netzwerk erkannt werden und auf eine **Aneignung von Domänenadministratorrechten** hindeuten. In diesem Tutorial machen Sie sich mit den folgenden Angriffstypen vertraut und erfahren, wie Sie diese klassifizieren, unterbinden und im Vorfeld verhindern:
 
@@ -43,7 +43,7 @@ Die folgenden Sicherheitswarnungen unterstützen Sie dabei, verdächtige Aktivit
 > * Vermutete Golden Ticket-Verwendung (Herabstufung der Verschlüsselung) (externe ID 2009)
 > * Vermutete Golden Ticket-Verwendung (gefälschte Autorisierungsdaten) (externe ID 2013)
 > * Vermutete Golden Ticket-Verwendung (nicht vorhandenes Konto) (externe ID 2027)
-> * Vermutete Golden Ticket-Verwendung (Ticketanomalie): Vorschau (externe ID 2032)
+> * Vermutete Golden Ticket-Verwendung (Ticketanomalie) (externe ID 2032)
 > * Vermutete Golden Ticket-Verwendung (Zeitanomalie) (externe ID 2022)
 > * Vermuteter Skeleton Key-Angriff (Herabstufung der Verschlüsselung) (externe ID)
 > * Verdächtige Änderung sensibler Gruppen (externe ID 2024)
@@ -399,7 +399,7 @@ Wenn die Antwort auf eine der vorherigen Fragen **Ja** lautet, **schließen** Si
     - Durch zweimaliges Zurücksetzen von KRBTGT werden alle Kerberos-Tickets in dieser Domäne ungültig. Dies bedeutet, dass **alle** Dienste außer Kraft gesetzt werden und erst wieder funktionieren, wenn sie erneuert werden. In einigen Fällen muss der Dienst neu gestartet werden. Planen Sie daher das zweimalige Zurücksetzen von KRBTGT genau, da hiervon alle Computer, Server und Benutzer in der Umgebung betroffen sind.
 
  
-## <a name="suspected-golden-ticket-usage-ticket-anomaly-external-id-2032--preview"></a>Vermutete Golden Ticket-Verwendung (Ticketanomalie) (externe ID 2032) – Vorschau 
+## <a name="suspected-golden-ticket-usage-ticket-anomaly-external-id-2032"></a>Vermutete Golden Ticket-Verwendung (Ticketanomalie) (externe ID 2032) 
 
 **Beschreibung:** Angreifer mit Domänenadministratorrechten können das KRBTGT-Konto kompromittieren. Indem diese das KRBTGT-Konto verwenden, können sie ein Kerberos Ticket Granting Ticket (TGT) erstellen, das die Autorisierung für jede Ressource erteilen und den Ablaufzeitpunkt des Tickets auf einen beliebigen Zeitpunkt festlegen kann. Dieses gefälschte TGT wird als „Golden Ticket“ bezeichnet und ermöglicht es Angreifern, dauerhaft die Kontrolle über das Netzwerk zu erhalten. Gefälschte Golden Tickets dieses Typs haben eindeutige Merkmale, die speziell durch diese Erkennung identifiziert werden.  
  

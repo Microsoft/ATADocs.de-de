@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/15/2019
+ms.date: 02/04/2019
 ms.topic: tutorial
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 016388807b2e5d027e3fc113c7e34ebaa546e9d5
-ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
+ms.openlocfilehash: c8e4d9fbc094e5bd1b58253b771cb5d693b7361c
+ms.sourcegitcommit: 9236d279f5e01424b498ce23e9d84c407ebfcdf3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/27/2019
-ms.locfileid: "55085349"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689301"
 ---
 # <a name="tutorial-reconnaissance-alerts"></a>Tutorial: Warnungen zu Reconnaissance  
 
@@ -26,11 +26,11 @@ Cyberangriffe werden üblicherweise auf alle zugänglichen Entitäten wie etwa B
 
 1. **Reconnaissance**
 2. [Kompromittierte Anmeldeinformationen](atp-compromised-credentials-alerts.md)
-3. [Seitliche Verschiebung](atp-lateral-movement-alerts.md)
+3. [Lateral Movement-Aktivitäten](atp-lateral-movement-alerts.md)
 4. [Warnungen zu Domänendominanz](atp-domain-dominance-alerts.md)
 5. [Exfiltration](atp-exfiltration-alerts.md) 
 
-Weitere Informationen zur Struktur und zu gängigen Komponenten der Azure ATP-Sicherheitswarnungen finden Sie unter [Understanding security alerts (Grundlegendes zu Sicherheitswarnungen)](understanding-security-alerts.md).
+Weitere Informationen zur Struktur und zu gängigen Komponenten der Azure ATP-Sicherheitswarnungen finden Sie unter [Grundlegendes zu Sicherheitswarnungen](understanding-security-alerts.md).
 
 Die folgenden Sicherheitswarnungen unterstützen Sie dabei, verdächtige Aktivitäten zu identifizieren und zu unterbinden, die von Azure ATP in Ihrem Netzwerk erkannt werden und auf **Reconnaissance** hindeuten.
 
@@ -115,9 +115,13 @@ Betrachten Sie nun die Konten:<br>
 
 Ihr DNS-Server enthält eine Struktur aller Computer, IP-Adressen und Dienste in Ihrem Netzwerk. Diese Informationen werden von Angreifern verwendet, um Ihre Netzwerkstruktur auszukundschaften und um interessante Zielcomputer zu bestimmten, die sie in den nächsten Schritten des Angriffs benötigen. 
  
-Es gibt mehrere Abfragetypen im DNS-Protokoll. Diese Azure ATP-Sicherheitswarnung erkennt die AXFR-Übertragungsanforderung, die von Nicht-DNS-Servern stammt.
+Es gibt mehrere Abfragetypen im DNS-Protokoll. Diese Azure ATP-Sicherheitswarnung erkennt AXFR-Übertragungsanforderungen, die von Nicht-DNS-Servern stammen.
 
-**TP, B-TP oder FP**
+**Lernphase**
+
+Für diese Warnung gilt eine Lernphase von 8 Tagen ab dem Start der Domänencontrollerüberwachung. 
+
+**TP, B-TP oder FP?**
 
 1. Überprüfen Sie, ob der Quellcomputer ein DNS-Server ist.
 

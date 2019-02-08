@@ -1,43 +1,50 @@
 ---
-title: Planen der Azure Advanced Threat Protection-Bereitstellung | Microsoft-Dokumentation
+title: 'Planen der Azure Advanced Threat Protection-Bereitstellung: Schnellstart | Microsoft-Dokumentation'
 description: Hilft bei der Planung Ihrer Bereitstellung und der Entscheidung, wie viele Azure ATP-Server für Ihr Netzwerk erforderlich sind.
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
 ms.date: 1/24/2019
-ms.topic: conceptual
+ms.topic: quickstart
 ms.service: azure-advanced-threat-protection
 ms.prod: ''
-ms.assetid: da0ee438-35f8-4097-b3a1-1354ad59eb32
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c53fb85570a053fa6414855b2ababa0b8e75cdee
-ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
+ms.openlocfilehash: c9930cff1341b0c721b4aaecae50ce00e99cb80f
+ms.sourcegitcommit: c16aab563149bbdfd99ae5b46e168cec700d3ae3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/27/2019
-ms.locfileid: "55085196"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55703332"
 ---
-# <a name="azure-atp-capacity-planning"></a>Azure ATP-Kapazitätsplanung
-In diesem Artikel erfahren Sie, wie viele Azure ATP-Sensoren und eigenständige Azure ATP-Sensoren Sie benötigen.
+# <a name="quickstart-plan-capacity-for-azure-atp"></a>Schnellstart: Planen der Kapazität für Azure ATP
 
-## <a name="using-the-sizing-tool"></a>Verwenden das Tools zur Größenanpassung
-Die empfohlene und einfachste Methode zum Ermitteln der Kapazität für die Azure ATP-Bereitstellung besteht in der Verwendung des [Azure ATP-Tools zur Größenanpassung](http://aka.ms/aatpsizingtool). Führen Sie das Azure ATP-Tool zur Größenanpassung aus, und verwenden Sie aus den Ergebnis der Excel-Datei die folgenden Felder zum Ermitteln des vom Sensor benötigten Speichers und der CPU:
+In diesem Schnellstart erfahren Sie, wie viele Azure ATP-Sensoren und eigenständige Sensoren Sie benötigen.
 
-> [!NOTE] 
-> Das Tool zur Größenanpassung verfügt über zwei Blätter: eins für Azure ATP und eins für ATA. Vergewissern Sie sich, dass Sie sich auf dem richtigen Blatt befinden.
+## <a name="prerequisites"></a>Voraussetzungen
 
-- Azure ATP-Sensor: Ordnen Sie das Feld **Busy Packets/sec** (Belegte Pakete pro Sek.) in der Azure ATP-Sensortabelle in der Ergebnisdatei abhängig vom gewählten [Sensortyp](#choosing-the-right-sensor-type-for-your-deployment) dem Feld **PAKETE PRO SEKUNDE** in der [Azure ATP-Sensortabelle](#azure-atp-standalone-sensor-sizing) oder der [Eigenständigen Azure ATP-Sensortabelle](#azure-atp-sensor-sizing) zu.
-
-
-![Beispiel für das Kapazitätsplanungstool](media/capacity-tool.png)
+- Laden Sie das [Tool zur Azure ATP-Größenanpassung](http://aka.ms/aatpsizingtool) herunter.
+- Lesen Sie den Artikel [Azure ATP-Architektur](atp-architecture.md).
+- Lesen Sie den Artikel [Voraussetzungen für Azure ATP](atp-prerequisites.md). 
 
 
-Wenn Sie das Azure ATP-Tool zur Größenanpassung nicht verwenden können, sammeln Sie die Informationen zum Leistungsindikator „Pakete pro Sek.“ manuell von allen Domänencontrollern über einen Zeitraum von 24 Stunden mit einem niedrigen Erfassungsintervall (etwa 5 Sekunden). Anschließend müssen Sie für jeden Domänencontroller den Tagesdurchschnitt und den Durchschnitt der Zeitspanne (15 Minuten) mit der höchsten Auslastung berechnen.
-Die folgenden Abschnitte enthalten Anweisungen dazu, wie Sie Informationen zum Pakete/Sek.-Leistungsindikator für einen Domänencontroller sammeln.
+## <a name="use-the-sizing-tool"></a>Verwenden des Tools zur Größenanpassung
+
+Die empfohlene und einfachste Methode zum Bestimmen der Kapazität für die Azure ATP-Bereitstellung besteht in der Verwendung des Tools zur Azure ATP-Größenanpassung. Mit diesem Tool können Sie manuell Informationen zum Datenverkehr erfassen. Weitere Informationen zur manuellen Methode finden Sie im Abschnitt [Datenverkehrsschätzung für Domänencontroller](#manual-sizing) am Ende dieses Artikels.
+
+1. Führen Sie das Tool zur Azure ATP-Größenanpassung (**TriSizingTool.exe**) aus der ZIP-Datei aus, die Sie heruntergeladen haben. 
+2. Öffnen Sie nach Abschluss der Toolausführung die Excel-Datei mit den Ergebnissen.
+3. Suchen Sie in der Excel-Datei nach dem Blatt **Azure ATP Summary** (Azure ATP-Zusammenfassung). Das zweite Blatt wird nicht benötigt, da es für die Azure ATA-Planung vorgesehen ist.
+   ![Beispiel für das Kapazitätsplanungstool](media/capacity-tool.png)
+
+4. Suchen Sie in der Excel-Ergebnisdatei in der Azure ATP-Sensortabelle nach dem Feld **Busy Packets/sec** (Aktive Pakete/s), und notieren Sie den Wert.
+5. Wählen Sie Ihren Sensortyp aus. Bestimmen Sie anhand der Informationen im Abschnitt [Auswählen des geeigneten Sensortyps](#choosing-the-right-sensor-type-for-your-deployment), welchen Sensor bzw. welche Sensoren Sie verwenden möchten. Berücksichtigen Sie bei der Auswahl des Sensortyps Ihren Wert für **Busy Packets/sec** (Aktive Pakete/s).
+6. Gleichen Sie Ihren Wert für **Busy Packets/sec** (Aktive Pakete/s) an den Wert im Feld **PACKETS PER SECOND** (PAKETE PRO SEKUNDE) im Abschnitt [Azure ATP-Sensortabelle](#sizing) in diesem Artikel an. Verwenden Sie die Felder, um die vom Sensor verwendeten Arbeitsspeicher- und CPU-Ressourcen zu bestimmen.
+
 
 ## Auswählen des richtigen Sensortyps für die Bereitstellung<a name="choosing-the-right-sensor-type-for-your-deployment"></a>
+
 In einer Azure ATP-Bereitstellung wird jede Kombination aus den Typen des Azure ATP-Sensors unterstützt:
 
 - Nur Azure ATP-Sensoren
@@ -49,26 +56,23 @@ Berücksichtigen Sie folgende Vorteile bei der Auswahl des Bereitstellungstyps d
 |Sensortyp|Vorteile|Kosten|Bereitstellungstopologie|Domänencontrollerverwendung|
 |----|----|----|----|-----|
 |Azure ATP-Sensor|Erfordert keinen dedizierten Server und keine Konfiguration der Portspiegelung.|Kleinschreibung|Auf dem Domänencontroller installiert.|Unterstützt bis zu 100.000 Pakete pro Sekunde.|
-|Eigenständiger Azure ATP-Sensor|Eine Out-of-Band-Bereitstellung erschwert es Angreifern, herauszufinden, ob Azure ATP vorhanden ist.|Höher|Neben dem Domänencontroller installiert (out-of-band).|Unterstützt bis zu 100.000 Pakete pro Sekunde.|
+|Eigenständiger Azure ATP-Sensor|Die Out-of-Band-Bereitstellung erschwert es Angreifern, herauszufinden, ob Azure ATP vorhanden ist.|Höher|Neben dem Domänencontroller installiert (out-of-band).|Unterstützt bis zu 100.000 Pakete pro Sekunde.|
 
 
-Berücksichtigen Sie folgende Fehler bei der Entscheidung, wie viele eigenständige Azure ATP-Sensoren bereitgestellt werden sollen.
+Berücksichtigen Sie die folgenden Punkte, wenn Sie entscheiden, wie viele eigenständige Azure ATP-Sensoren bereitgestellt werden sollen:
 
--   **Active Directory-Gesamtstrukturen und -Domänen**<br>
-    Azure ATP kann Datenverkehr aus mehreren Domänen innerhalb mehrerer Active Directory-Gesamtstrukturen für jede Azure ATP-Instanz überwachen, die Sie erstellen. 
+- **Active Directory-Gesamtstrukturen und -Domänen**: Azure ATP kann Datenverkehr aus mehreren Domänen innerhalb mehrerer Active Directory-Gesamtstrukturen für jede Azure ATP-Instanz überwachen, die Sie erstellen.
 
--   **Portspiegelung**<br>
-    Die Durchführung der Portspiegelung erfordert möglicherweise die Bereitstellung mehrerer eigenständiger Azure ATP-Sensoren pro Rechenzentrum oder Filialstandort.
+- **Portspiegelung**: Die Portspiegelung erfordert möglicherweise die Bereitstellung mehrerer eigenständiger Azure ATP-Sensoren pro Rechenzentrum oder Filialstandort.
 
--   **Kapazität**<br>
-    Ein eigenständiger Azure ATP-Sensor kann die Überwachung von mehreren Domänencontrollern unterstützen, abhängig vom Umfang des Datenverkehrs des überwachten Domänencontrollers. 
+- **Kapazität**: Ein eigenständiger Azure ATP-Sensor kann die Überwachung von mehreren Domänencontrollern unterstützen, abhängig vom Umfang des Datenverkehrs des überwachten Domänencontrollers.
+
+## <a name="sizing"></a> Größenanpassung des Azure ATP-Sensors und des eigenständigen Azure ATP-Sensors 
+
+Ein Azure ATP-Sensor kann die Überwachung eines Domänencontrollers basierend auf der Menge des vom Domänencontroller erzeugten Datenverkehrs unterstützen. Die folgende Tabelle enthält Schätzungen. Die tatsächlich vom Sensor analysierte Menge ist abhängig vom Umfang des Datenverkehrs und dessen Verteilung.
 
 
-## Größenanpassung des Azure ATP-Sensors und des eigenständigen Azure ATP-Sensors <a name="sizing"></a>
-
-Ein Azure ATP-Sensor kann die Überwachung eines Domänencontrollers basierend auf der Menge des vom Domänencontroller erzeugten Datenverkehrs unterstützen. Die folgende Tabelle ist eine Schätzung – die tatsächliche vom Sensor analysierte Menge ist abhängig vom Datenverkehr und dessen Verteilung. 
-> [!NOTE]
-> Die folgende CPU- und Arbeitsspeicherkapazität bezieht sich auf die Auslastung des Sensors selbst und nicht auf die Domänencontrollerkapazität.
+Die folgende CPU- und Arbeitsspeicherkapazität bezieht sich auf den **Verbrauch des Sensors selbst** und nicht auf die Domänencontrollerkapazität.
 
 |Pakete pro Sekunde*|CPU (Kerne)|Arbeitsspeicher (GB)|
 |----|----|-----|
@@ -80,16 +84,19 @@ Ein Azure ATP-Sensor kann die Überwachung eines Domänencontrollers basierend a
 |50.000 – 75.000 |3,50|9,50|
 |75.000 – 100.000|3,50 |9,50|
 
-> [!NOTE]
-> - Gesamtanzahl der vom Sensordienst verwendeten Kerne<br>Es wird empfohlen, nicht mit Hyperthreadingkernen zu arbeiten.
-> - Gesamtarbeitsspeicher, der vom Sensordienst verwendet wird
-> -   Wenn der Domänencontroller nicht über die für den Azure ATP-Sensor erforderlichen Ressourcen verfügt, wird die Leistung des Domänencontrollers zwar nicht beeinträchtigt, aber der Azure ATP-Sensor funktioniert möglicherweise nicht wie erwartet.
-> -   Bei Ausführung als virtueller Computer wird kein dynamischer Arbeitsspeicher und keine andere Speichererweiterungsfunktion unterstützt.
-> -   Um eine optimale Leistung zu erzielen, legen Sie die **Energieoption** des Azure ATP-Sensors auf **Hohe Leistung** fest.
-> -   Es werden mindestens 2 Kerne und 6 GB Speicherplatz benötigt (10 GB empfohlen), einschließlich des Speicherplatzes, der für die Azure ATP-Binärdateien und -Protokolle benötigt wird.
+Beachten Sie bei der Größenanpassung Folgendes: 
+
+- Gesamtanzahl der vom Sensordienst verwendeten Kerne<br>Es wird empfohlen, nicht mit Hyperthreadingkernen zu arbeiten.
+- Gesamtarbeitsspeicher, der vom Sensordienst verwendet wird
+- Wenn der Domänencontroller nicht über die für den Azure ATP-Sensor erforderlichen Ressourcen verfügt, wird die Leistung des Domänencontrollers zwar nicht beeinträchtigt, aber der Azure ATP-Sensor funktioniert möglicherweise nicht wie erwartet.
+- Bei einer Ausführung als VM werden dynamischer Arbeitsspeicher und andere Speichererweiterungsfeatures nicht unterstützt.
+- Um eine optimale Leistung zu erzielen, legen Sie die **Energieoption** des Azure ATP-Sensors auf **Hohe Leistung** fest.
+- Es sind mindestens 2 Kerne erforderlich. Es wird mindestens 6 GB Speicherplatz benötigt (10 GB empfohlen), einschließlich des Speicherplatzes, der für die Azure ATP-Binärdateien und -Protokolle benötigt wird.
 
 
-## <a name="domain-controller-traffic-estimation"></a>Abschätzung des Datenverkehrs für Domänencontroller
+## <a name="manual-sizing"></a> Datenverkehrsschätzung für Domänencontroller
+
+Wenn Sie das Azure ATP-Tool zur Größenanpassung nicht verwenden können, sammeln Sie die Informationen zum Leistungsindikator für die Paketanzahl pro Sekunde manuell von allen Domänencontrollern. Sammeln Sie hierbei Daten über einen Zeitraum von 24 Stunden mit einem niedrigen Erfassungsintervall (etwa 5 Sekunden). Anschließend müssen Sie für jeden Domänencontroller den Tagesdurchschnitt und den Durchschnitt für die Zeitspanne (15 Minuten) mit der höchsten Auslastung berechnen. Die folgenden Abschnitte enthalten Anweisungen dazu, wie Sie Informationen zum Pakete/Sek.-Leistungsindikator für einen Domänencontroller sammeln.
 
 Es gibt verschiedene Tools, die Sie verwenden können, um die durchschnittliche Anzahl der Pakete pro Sekunde eines Domänencontrollers zu ermitteln. Auch ohne den Einsatz solcher Werkzeuge können Sie diesen Leistungsindikator mit dem Systemmonitor ermitteln.
 
@@ -142,8 +149,14 @@ Um die Pakete pro Sekunde zu ermitteln, gehen Sie auf jedem Domänencontroller w
 
 
 
-## <a name="see-also"></a>Weitere Informationen
-- [Azure ATP sizing tool (Azure ATP-Tool zur Größenanpassung)](http://aka.ms/aatpsizingtool)
-- [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](atp-prerequisites.md)
-- [Azure ATP architecture (Azure ATP-Architektur)](atp-architecture.md)
-- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)
+## <a name="next-steps"></a>Nächste Schritte
+
+In diesem Schnellstart haben Sie erfahren, wie viele Azure ATP-Sensoren und eigenständige Sensoren Sie benötigen. Außerdem haben Sie die Größe für die Sensoren bestimmt. Fahren Sie mit dem nächsten Schnellstart fort, um eine Azure ATP-Instanz zu erstellen.
+
+> [!div class="nextstepaction"]
+> [Tutorials zu Azure Windows-VMs](install-atp-step1.md)
+
+
+## <a name="join-the-community"></a>Beitritt zur Community
+
+Haben Sie weitere Fragen, oder möchten Sie mit anderen über Azure ATP und damit verbundene Sicherheitsaspekte diskutieren? Treten Sie noch heute der [Azure ATP-Community](https://aka.ms/azureatpcommunity) bei!
