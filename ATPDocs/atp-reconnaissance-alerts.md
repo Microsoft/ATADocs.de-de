@@ -4,7 +4,7 @@ d|Description: This article explains the Azure ATP alerts issued when attacks ty
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/04/2019
 ms.topic: tutorial
 ms.prod: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c8e4d9fbc094e5bd1b58253b771cb5d693b7361c
-ms.sourcegitcommit: 9236d279f5e01424b498ce23e9d84c407ebfcdf3
+ms.openlocfilehash: 2d4d7f65f0b46624acc64b25fbd0241b876be421
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689301"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56077744"
 ---
 # <a name="tutorial-reconnaissance-alerts"></a>Tutorial: Warnungen zu Reconnaissance  
 
@@ -26,11 +26,11 @@ Cyberangriffe werden üblicherweise auf alle zugänglichen Entitäten wie etwa B
 
 1. **Reconnaissance**
 2. [Kompromittierte Anmeldeinformationen](atp-compromised-credentials-alerts.md)
-3. [Lateral Movement-Aktivitäten](atp-lateral-movement-alerts.md)
+3. [Seitliche Verschiebung](atp-lateral-movement-alerts.md)
 4. [Warnungen zu Domänendominanz](atp-domain-dominance-alerts.md)
 5. [Exfiltration](atp-exfiltration-alerts.md) 
 
-Weitere Informationen zur Struktur und zu gängigen Komponenten der Azure ATP-Sicherheitswarnungen finden Sie unter [Grundlegendes zu Sicherheitswarnungen](understanding-security-alerts.md).
+Weitere Informationen zur Struktur und zu gängigen Komponenten der Azure ATP-Sicherheitswarnungen finden Sie unter [Understanding security alerts (Grundlegendes zu Sicherheitswarnungen)](understanding-security-alerts.md).
 
 Die folgenden Sicherheitswarnungen unterstützen Sie dabei, verdächtige Aktivitäten zu identifizieren und zu unterbinden, die von Azure ATP in Ihrem Netzwerk erkannt werden und auf **Reconnaissance** hindeuten.
 

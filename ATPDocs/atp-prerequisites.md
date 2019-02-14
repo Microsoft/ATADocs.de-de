@@ -4,7 +4,7 @@ description: Beschreibt die Voraussetzungen für eine erfolgreiche Bereitstellun
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/04/2019
 ms.topic: conceptual
 ms.prod: ''
@@ -13,18 +13,15 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 20281444e969cce2adb9e3458e040dd4c9d36fd3
-ms.sourcegitcommit: 9236d279f5e01424b498ce23e9d84c407ebfcdf3
+ms.openlocfilehash: 71d3b67012c6c9fe0623c5fbb8e37777c547e188
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689369"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56077795"
 ---
-*Gilt für: Azure Advanced Threat Protection*
-
-
-
 # <a name="azure-atp-prerequisites"></a>Voraussetzungen für Azure ATP
+
 Dieser Artikel beschreibt die Voraussetzungen für eine erfolgreiche Bereitstellung von Azure ATP in Ihrer Umgebung.
 
 >[!NOTE]
@@ -140,7 +137,7 @@ Die Azure ATP-Erkennung basiert auf bestimmten Windows-Ereignisprotokollen, die 
 
 
 > [!NOTE]
-> - Bei Verwendung des Verzeichnisdienst-Benutzerkontos fragt der Sensor mithilfe von SAM-R (Netzwerkanmeldung) Endpunkte in Ihrer Organisation für lokale Administratoren ab, um [den Graph des Lateral Movement-Pfads](use-case-lateral-movement-path.md) zu erstellen. Weitere Informationen finden Sie unter [Erforderliche Berechtigung für SAM-R konfigurieren](install-atp-step8-samr.md).
+> - Bei Verwendung des Verzeichnisdienst-Benutzerkontos fragt der Sensor mithilfe von SAM-R (Netzwerkanmeldung) Endpunkte in Ihrer Organisation für lokale Administratoren ab, um [den Graph des Lateral-Movement-Pfads](use-case-lateral-movement-path.md) zu erstellen. Weitere Informationen finden Sie unter [Erforderliche Berechtigung für SAM-R konfigurieren](install-atp-step8-samr.md).
 > - Die folgenden Ports müssen auf eingehenden Geräten im Netzwerk des eigenständigen Azure ATP-Sensors geöffnet sein:
 >   -   NTLM über RPC (TCP-Port 135) für Lösungszwecke
 >   -   NetBIOS (UDP-Port 137) für Lösungszwecke
@@ -221,7 +218,7 @@ In der folgenden Tabelle sind die Ports aufgeführt, die für den Verwaltungsada
 |TLS zu RDP|TCP|3389|Alle Geräte im Netzwerk|Beide|
 
 > [!NOTE]
-> - Bei Verwendung des Verzeichnisdienst-Benutzerkontos fragt der Sensor mithilfe von SAM-R (Netzwerkanmeldung) Endpunkte in Ihrer Organisation für lokale Administratoren ab, um [den Graph des Lateral Movement-Pfads](use-case-lateral-movement-path.md) zu erstellen. Weitere Informationen finden Sie unter [Erforderliche Berechtigung für SAM-R konfigurieren](install-atp-step8-samr.md).
+> - Bei Verwendung des Verzeichnisdienst-Benutzerkontos fragt der Sensor mithilfe von SAM-R (Netzwerkanmeldung) Endpunkte in Ihrer Organisation für lokale Administratoren ab, um [den Graph des Lateral-Movement-Pfads](use-case-lateral-movement-path.md) zu erstellen. Weitere Informationen finden Sie unter [Erforderliche Berechtigung für SAM-R konfigurieren](install-atp-step8-samr.md).
 > - Die folgenden Ports müssen auf eingehenden Geräten im Netzwerk des eigenständigen Azure ATP-Sensors geöffnet sein:
 >   -   NTLM über RPC (TCP-Port 135) für Lösungszwecke
 >   -   NetBIOS (UDP-Port 137) für Lösungszwecke
@@ -230,8 +227,8 @@ In der folgenden Tabelle sind die Ports aufgeführt, die für den Verwaltungsada
 
 
 ## <a name="see-also"></a>Weitere Informationen
-- [Azure ATP-Tool zur Größenanpassung](http://aka.ms/aatpsizingtool)
-- [Azure ATP-Architektur](atp-architecture.md)
-- [Installieren von Azure ATP](install-atp-step1.md)
+- [Azure ATP sizing tool (Azure ATP-Tool zur Größenanpassung)](http://aka.ms/aatpsizingtool)
+- [Azure ATP architecture (Azure ATP-Architektur)](atp-architecture.md)
+- [Install Azure ATP (Installieren von Azure ATP)](install-atp-step1.md)
 - [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)
 

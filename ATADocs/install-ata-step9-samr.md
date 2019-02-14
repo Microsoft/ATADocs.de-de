@@ -4,7 +4,7 @@ description: Informationen zum Konfigurieren von SAM-R zum Erkennen eines Latera
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 7/30/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 7597ed25-87f5-472c-a496-d5f205c9c391
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 39d1e03eda182b797412e94ff5427bc74956113a
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: 3d3ba40433321d57524c1e7de300230d87197e99
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54841014"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56076775"
 ---
 # <a name="install-ata---step-9"></a>Installieren von ATA: Schritt 9
 
@@ -35,7 +35,7 @@ Wenn Sie sicherstellen möchten, dass Windows-Clients und -Server zulassen, dass
 
 1. Finden der Richtlinie:
 
-   - Richtlinienname: Netzwerkzugriff: Clients einschränken, die Remoteaufrufe an SAM durchführen dürfen
+   - Richtlinienname: Netzwerkzugriff: Clients einschränken, die Remoteaufrufe an SAM ausführen dürfen
    - Speicherort: Computerkonfiguration, Windows-Einstellungen, Sicherheitseinstellungen, lokale Richtlinien, Sicherheitsoptionen
   
    ![Finden der Richtlinie](./media/samr-policy-location.png)

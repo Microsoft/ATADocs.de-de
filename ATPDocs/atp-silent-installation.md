@@ -4,7 +4,7 @@ description: Hier wird die automatische Installation von Azure ATP beschrieben.
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/05/2018
 ms.topic: conceptual
 ms.prod: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 24eca4c6-c949-42ea-97b9-41ef0fb611f1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1710b5f2f96814f2dbe3229473b06c8a963fd380
-ms.sourcegitcommit: cc5017770583042ef8bf90c9c0ece020a0166b91
+ms.openlocfilehash: 76076a643b5edac6e2393b9c23045e89aee275a3
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55480980"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56077704"
 ---
 # <a name="azure-atp-switches-and-silent-installation"></a>Azure ATP-Switches und automatische Installation
 Dieser Artikel enthält Anleitungen und Informationen zu Azure ATP-Switches und der automatischen Installation.
@@ -42,7 +42,7 @@ Zur Nachverfolgung des Bereitstellungsfortschritts überwachen Sie die Protokoll
 ## <a name="azure-atp-sensor-silent-installation"></a>Automatische Installation des Azure ATP-Sensors
 
 > [!NOTE]
-> Bei der automatischen Bereitstellung des Azure ATP-Sensors über System Center Configuration Manager oder ein anderes System zur Softwarebereitstellung empfiehlt es sich, zwei Bereitstellungspakete zu erstellen:</br>– .NET Framework 4.7 einschließlich möglichem Neustart des Domänencontrollers</br>– Azure ATP-Sensor. </br>Erstellen Sie eine Abhängigkeit des Azure ATP-Sensorpakets von der .NET Framework-Paketbereitstellung. </br>Rufen Sie das [.NET Framework 4.7-Paket für die Offlinebereitstellung](https://support.microsoft.com/help/3186497/the-net-framework-4-7-offline-installer-for-windows) ab. 
+> Bei der automatischen Bereitstellung des Azure ATP-Sensors über System Center Configuration Manager oder ein anderes System zur Softwarebereitstellung empfiehlt es sich, zwei Bereitstellungspakete zu erstellen:</br>– Net Framework 4.7 einschließlich möglichem Neustart des Domänencontrollers</br>– Azure ATP-Sensor. </br>Erstellen Sie eine Abhängigkeit des Azure ATP-Sensorpakets von der .NET Framework-Paketbereitstellung. </br>Rufen Sie das [.NET Framework 4.7-Paket für die Offlinebereitstellung](https://support.microsoft.com/help/3186497/the-net-framework-4-7-offline-installer-for-windows) ab. 
 
 
 Verwenden Sie den folgenden Befehl, um eine vollständig automatische Installation des Azure ATP-Sensors auszuführen:
@@ -129,7 +129,7 @@ Verwenden Sie den folgenden Befehl, um den Azure ATP-Sensor automatisch zu deins
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Voraussetzungen für Azure ATP](atp-prerequisites.md)
+- [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](atp-prerequisites.md)
 - [Installieren des Azure ATP-Sensors](install-atp-step4.md)
 - [Konfigurieren des Azure ATP-Sensors](install-atp-step5.md)
 - [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)

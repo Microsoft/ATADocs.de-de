@@ -4,7 +4,7 @@ description: Beschreibt die Optionen zur Windows-Ereignisweiterleitung mit ATA
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
-manager: mbaldwin
+manager: barbkess
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a6d8556298a2bf225bef45edf55acf2a75d13a53
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: a1ef3c005c78d3825c9efbfc33346e06a687fe2b
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54840708"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56078237"
 ---
 # <a name="configuring-windows-event-forwarding"></a>Konfigurieren der Windows-Ereignisweiterleitung
 
@@ -58,7 +58,7 @@ Sie müssen die Domänencontroller neu starten, nachdem Sie den **Netzwerkdienst
 
 4. Doppelklicken Sie auf **Ziel-Abonnement-Manager konfigurieren**.
    
-   1.  Wählen Sie **Aktiviert**aus.
+   1.  Wählen Sie **Aktiviert** aus.
    2.  Klicken Sie unter **Optionen** auf **Anzeigen**.
 
    3.  Geben Sie unter **SubscriptionManagers** folgenden Wert ein, und klicken Sie auf **OK**: *Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10* 
@@ -70,7 +70,7 @@ Sie müssen die Domänencontroller neu starten, nachdem Sie den **Netzwerkdienst
    4.  Klicken Sie auf **OK**.
    5.  Geben Sie von einer Eingabeaufforderung mit erhöhten Rechten aus *gpupdate /force* ein. 
 
-**Schritt 3: Führen Sie die folgenden Schritte auf dem ATA-Gateway aus.** 
+**Schritt 3: Führen Sie die folgenden Schritte auf dem ATA-Gateway aus.** 
 
 1.  Öffnen Sie eine Eingabeaufforderung mit erhöhten Rechten, und geben Sie *wecutil.qc* ein.
 2.  Öffnen Sie die **Ereignisanzeige**. 
@@ -93,7 +93,7 @@ Sie müssen die Domänencontroller neu starten, nachdem Sie den **Netzwerkdienst
     6.  Überprüfen Sie nach einigen Minuten, ob die festgelegten Ereignisse im ATA-Gateway in „Weitergeleitete Ereignisse“ angezeigt wird.
 
 
-Weitere Informationen finden Sie unter: [Einrichten von Computern zum Weiterleiten und Sammeln von Ereignissen](https://technet.microsoft.com/library/cc748890).
+Weitere Informationen finden Sie in folgenden Quellen: [Einrichten von Computern zum Weiterleiten und Sammeln von Ereignissen](https://technet.microsoft.com/library/cc748890)
 
 ## <a name="see-also"></a>Weitere Informationen
 - [Installieren von ATA](install-ata-step1.md)

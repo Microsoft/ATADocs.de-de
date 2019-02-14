@@ -1,22 +1,17 @@
 ---
 title: 'Planen der Azure Advanced Threat Protection-Bereitstellung: Schnellstart | Microsoft-Dokumentation'
 description: Hilft bei der Planung Ihrer Bereitstellung und der Entscheidung, wie viele Azure ATP-Server für Ihr Netzwerk erforderlich sind.
-keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
 ms.date: 1/24/2019
 ms.topic: quickstart
 ms.service: azure-advanced-threat-protection
-ms.prod: ''
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: c9930cff1341b0c721b4aaecae50ce00e99cb80f
-ms.sourcegitcommit: c16aab563149bbdfd99ae5b46e168cec700d3ae3
+ms.openlocfilehash: d161b9655a5be09567fb50a837f7d2063d11ee11
+ms.sourcegitcommit: 96752da28f43896e7b8e5945947b32c4810bdff6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703332"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831513"
 ---
 # <a name="quickstart-plan-capacity-for-azure-atp"></a>Schnellstart: Planen der Kapazität für Azure ATP
 
@@ -154,7 +149,7 @@ Um die Pakete pro Sekunde zu ermitteln, gehen Sie auf jedem Domänencontroller w
 In diesem Schnellstart haben Sie erfahren, wie viele Azure ATP-Sensoren und eigenständige Sensoren Sie benötigen. Außerdem haben Sie die Größe für die Sensoren bestimmt. Fahren Sie mit dem nächsten Schnellstart fort, um eine Azure ATP-Instanz zu erstellen.
 
 > [!div class="nextstepaction"]
-> [Tutorials zu Azure Windows-VMs](install-atp-step1.md)
+> [Erstellen einer Azure ATP-Instanz](install-atp-step1.md)
 
 
 ## <a name="join-the-community"></a>Beitritt zur Community

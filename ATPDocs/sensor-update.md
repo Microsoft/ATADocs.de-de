@@ -4,7 +4,7 @@ description: Im Folgenden wird erläutert, wie Sie Azure ATP-Sensoren aktualisie
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 1/20/2019
 ms.topic: conceptual
 ms.prod: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 603d9e09-a07d-4357-862f-d5682c8bc3dd
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c7b131bffdca092d6355a7f8cb4d280c2388b8eb
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: 80715cbacea342cfe40b876eb517116d10184d1d
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54840810"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56078356"
 ---
 # <a name="update-azure-atp-sensors"></a>Aktualisieren von Azure ATP-Sensoren
 
@@ -26,16 +26,16 @@ Stets aktuelle Azure Advanced Threat Protection-Sensoren bieten den bestmöglich
 
 Der Azure ATP-Dienst wird in der Regel mehrmals pro Monat mit neuen Erkennungen, Features und Leistungsverbesserungen aktualisiert. In der Regel enthalten diese Updates auch ein entsprechendes Nebenversionsupdate für die Sensoren. Azure ATP-Sensoren und die entsprechenden Updates haben niemals Schreibberechtigungen für Ihre Domänencontroller. Sensorupdatepakete steuern nur die Azure ATP-Sensoren und die Erkennungsfunktionen der Sensoren. 
 
-### <a name="azure-atp-sensor-update-types"></a>Azure ATP-Sensor-Updatetypen   
+### <a name="azure-atp-sensor-update-types"></a>Updatetypen für den Azure ATP-Sensor   
 
 Azure ATP-Sensoren unterstützen zwei verschiedene Arten von Updates:
-- Nebenversionsupdates: 
+- Updates von Nebenversionen: 
     - Häufig 
     - Keine Installation von MSI und keine Änderungen der Registrierung erforderlich
     - Neu gestartet: Azure ATP-Sensordienste 
     - Nicht neu gestartet: Domänencontroller-Dienste und Server-Betriebssystem
 
-- Hauptversionsupdates:
+- Updates der Hauptversion:
     - Selten
     - Umfassen wichtige Änderungen 
     - Neu gestartet: Azure ATP-Sensordienste
@@ -87,7 +87,7 @@ Die Azure ATP-Sensoren prüfen im Abstand weniger Minuten, ob sie bereits auf di
       >Nebenversionupdates erfordern keine Installation von MSI und keine Änderungen an Registrierungswerten oder Systemdateien. Selbst ein anstehender Neustart wirkt sich nicht auf ein Sensorupdate aus. 
    6. Die Sensoren werden auf Basis der neuen aktualisierten Version ausgeführt.
    7. Der Sensor erhält eine Freigabe vom Azure-Clouddienst. Den Sensorstatus können Sie auf der Seite **Updates** überprüfen.
-   8. Der nächste Sensor startet den Updateprozess. 
+   8. Der nächste Sensor startet den Aktualisierungsprozess. 
 
 4. 72 Stunden nach der Aktualisierung des Azure ATP-Clouddiensts startet der Updateprozess für die Sensoren, für die ein **verzögertes Update** ausgewählt wurde. Dieser Updateprozess entspricht dabei dem Vorgang für automatisch aktualisierte Sensoren.
 

@@ -4,7 +4,7 @@ description: Informationen zum Anmelden im Azure ATP-Portal und zu dessen Kompon
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/02/2018
 ms.topic: conceptual
 ms.prod: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 4ba46d60-3a74-480e-8f0f-9a082d62f343
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 20aa3616fa4b178982dc7a68ea753f2dd70c03ab
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: a82cd4e56d019b90be0c0c352311a0212bddae8e
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54840402"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56078203"
 ---
 # <a name="working-with-the-azure-atp-portal"></a>Arbeiten mit dem Azure ATP-Portal
 
@@ -92,13 +92,13 @@ Wenn Sie an einer Stelle im Azure ATP-Portal, an der eine einzelne Entität darg
 ![Abbildung des Azure ATP-Miniprofils](media/atp-mini-profile.png)
 
 - Name
-- Anrede
+- Titel
 - Department
 - AD-Tags
 - E-Mail
 - Office
 - Telefonnummer
-- Domäne
+- Domain
 - SAM-Name
 - Erstellungsdatum: Datum, an dem die Entität in Active Directory erstellt wurde. Wenn sie erstellt wurde, bevor Azure ATP mit der Überwachung begonnen hat, wird diese nicht angezeigt.
 - Erste Aktivität: Das erste Mal, als Azure ATP eine Aktivität von dieser Entität wahrgenommen hat.

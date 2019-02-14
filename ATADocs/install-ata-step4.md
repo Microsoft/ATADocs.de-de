@@ -4,7 +4,7 @@ description: Im vierten Schritt beim Installieren von ATA installieren Sie das A
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
-manager: mbaldwin
+manager: barbkess
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 8c0139842094d42c2f7273e9f669267ca4fb092f
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: 3cd5f8dd7334d93277d29a63817a061fc6fdf820
+ms.sourcegitcommit: 143ee5c3bf381eaba7d0530c88722e959bc47a18
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54839372"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56227929"
 ---
 # <a name="install-ata---step-4"></a>Installieren von ATA – Schritt 4
 
@@ -28,7 +28,7 @@ ms.locfileid: "54839372"
 > [« Schritt 3](install-ata-step3.md)
 > [Schritt 5 »](install-ata-step5.md)
 
-## <a name="step-4-install-the-ata-gateway"></a>Schritt 4 Installieren des ATA-Gateways
+## <a name="step-4-install-the-ata-gateway"></a>Schritt 4: Installieren des ATA-Gateways
 
 Überprüfen Sie vor der Installation des ATA-Gateways auf dem dedizierten Server, ob die Portspiegelung ordnungsgemäß konfiguriert ist und ob das ATA-Gateway Datenverkehr zu und von den Domänencontrollern anzeigen kann. Weitere Informationen finden Sie unter [Überprüfen der Portspiegelung](validate-port-mirroring.md).
 
@@ -63,11 +63,11 @@ Führen Sie die folgenden Schritte auf dem ATA-Gatewayserver aus.
     
    > [!NOTE]
    > Wenn Sie das ATA-Gateway bereitstellen, müssen Sie keine Anmeldeinformationen angeben. Wenn die ATA-Gatewayinstallation Ihre Anmeldeinformationen nicht über einmaliges Anmelden abrufen kann (wenn sich ATA Center beispielsweise nicht in der Domäne befindet, da Sie dann über keine ATA-Administratoranmeldeinformationen verfügen), werden Sie aufgefordert, Anmeldeinformationen anzugeben, wie im folgenden Bildschirm: 
-    
-   ![Bereitstellen von Anmeldeinformationen für das ATA-Gateway](media/ata-install-credentials.png)
-    
-   - Installationspfad: Dies ist der Speicherort, an dem das ATA-Gateway installiert ist. Standardmäßig ist dies „%programfiles%\Microsoft Advanced Threat Analytics\Gateway“. Behalten Sie den Standardwert bei.
-    
+   
+    ![Bereitstellen von Anmeldeinformationen für das ATA-Gateway](media/ata-install-credentials.png)
+   
+    - Installationspfad: Dies ist der Speicherort, an dem das ATA-Gateway installiert ist. Standardmäßig ist dies „%programfiles%\Microsoft Advanced Threat Analytics\Gateway“. Behalten Sie den Standardwert bei.
+   
 6. Klicken Sie auf **Installieren**. Bei der Installation des ATA-Gateways werden die folgenden Komponenten installiert und konfiguriert:
     
     -   KB 3047154 (nur für Windows Server 2012 R2)

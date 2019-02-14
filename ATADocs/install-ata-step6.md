@@ -4,7 +4,7 @@ description: In diesem Schritt bei der ATA-Installation konfigurieren Sie Datenq
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
-manager: mbaldwin
+manager: barbkess
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d7c1a2cb171caf732ba4b49ddf50b7eaa2daaa1a
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: 8326d74c7255f946d05a04b6f6e973287434c24c
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54840197"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56077421"
 ---
 # <a name="install-ata---step-6"></a>Installieren von ATA – Schritt 6
 
@@ -28,7 +28,7 @@ ms.locfileid: "54840197"
 > [« Schritt 5](install-ata-step5.md)
 > [Schritt 7 »](vpn-integration-install-step.md)
 
-## <a name="step-6-configure-event-collection"></a>Schritt 6 Konfigurieren der Ereignissammlung
+## <a name="step-6-configure-event-collection"></a>Schritt 6: Konfigurieren der Ereignissammlung
 ### <a name="configure-event-collection"></a>Konfigurieren der Ereignissammlung
 
 Um die Erkennungsfunktionalität zu verbessern, benötigt ATA die folgenden Windows-Ereignisse: 4776, 4732, 4733, 4728, 4729, 4756, 4757 und 7045. Diese können entweder automatisch vom ATA-Lightweight-Gateway gelesen werden, oder, falls das ATA-Lightweight-Gateway nicht bereitgestellt wurde, an das ATA-Gateway weitergeleitet werden. Dazu gibt es zwei Möglichkeiten: zum einen das Konfigurieren des ATA-Gateways, sodass es auf SIEM-Ereignisse lauscht, oder das [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-collection.md). 
@@ -137,7 +137,7 @@ Anmeldekonto: Administrator
 
 Quellarbeitsstation:       SIEM
 
-Error Code:         0x0
+Fehlercode:         0x0
 
 -   Der Syslog-Header ist optional.
 

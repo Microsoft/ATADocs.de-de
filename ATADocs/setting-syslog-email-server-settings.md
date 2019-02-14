@@ -4,7 +4,7 @@ description: Beschreibt, wie ATA für den Versand von Benachrichtigungen (per E-
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
-manager: mbaldwin
+manager: barbkess
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: bff20bf7-8b53-49da-81e5-b818a1c3b24e
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: dad6dca2a22e27702f21f77c685d90749963cfac
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: 66bca9a6b8ec5f7059ca12123b81b434d66dcc3d
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54840594"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56076989"
 ---
 # <a name="provide-ata-with-your-email-server-settings"></a>Bereitstellen der Einstellungen Ihres E-Mail-Servers für ATA
 
@@ -37,7 +37,7 @@ ATA kann Benachrichtigungen senden, wenn eine verdächtige Aktivität erkannt wi
 4. Geben Sie im Bereich **Benachrichtigungen** unter **Mailserver** die folgenden Informationen ein:
 
 
-   |              Feld              |                                                                                                 Beschreibung                                                                                                  |               Value                |
+   |              Feld              |                                                                                                 Beschreibung                                                                                                  |               Wert                |
    |---------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------|
    | SMTP-Server-Endpunkt (erforderlich) |                                                            Geben Sie den vollqualifizierten Domänennamen des SMTP-Servers ein, und ändern Sie optional die Portnummer (standardmäßig 25).                                                            | Beispiel:<br />smtp.contoso.com |
    |               SSL               |                                              Schalten Sie auf SSL-Betrieb um, falls der SMTP-Server SSL erfordert. **Hinweis:** Wenn Sie SSL aktivieren, müssen Sie auch die Portnummer ändern.                                               |        Der Standardwert ist „deaktiviert“         |

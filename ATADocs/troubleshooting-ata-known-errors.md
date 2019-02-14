@@ -4,7 +4,7 @@ description: Beschreibt, wie sie bekannte Probleme in Advanced Threat Analytics 
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 7/25/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: a63c6800f41654981597dbe3e695b1a64679fd2a
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: bf014e43711d45b74d5bb5efa7a93d7c3e1532d7
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54840980"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56077727"
 ---
 # <a name="troubleshooting-ata-known-issues"></a>Behandlung von bekannten Problemen bei ATA
 
@@ -31,7 +31,7 @@ In diesem Abschnitt sind mögliche Fehler, die es in den Bereitstellungen von AT
 
 > [!div class="mx-tableFixed"]
 > 
-> |Error|Beschreibung|Lösung|
+> |Fehler|Beschreibung|Lösung|
 > |-------------|----------|---------|
 > |System.DirectoryServices.Protocols.LdapException: Lokaler Fehler.|Die ATA-Gateway konnte sich nicht beim Domänencontroller authentifizieren.|1. Vergewissern Sie sich, dass der DNS-Eintrag des Domänencontrollers im DNS-Server ordnungsgemäß konfiguriert ist. <br>2. Vergewissern Sie sich, dass die Zeit des ATA-Gateways mit der Zeit des Domänencontrollers synchronisiert ist.|
 > |System.IdentityModel.Tokens.SecurityTokenValidationException: Die Zertifikatkette kann nicht überprüft werden.|Das ATA-Gateway konnte das Zertifikat von ATA Center nicht überprüfen.|1. Vergewissern Sie sich, dass das Zertifikat der Stammzertifizierungsstelle im Zertifikatspeicher für vertrauenswürdige Zertifikate auf dem ATA-Gateway installiert ist. <br>2. Überprüfen Sie, ob die Zertifikatsperrliste (Certificate Revocation List, CRL) verfügbar ist und ob die Überprüfung auf Zertifikatssperrung ausgeführt werden kann.|
@@ -58,7 +58,7 @@ In diesem Abschnitt sind mögliche Fehler, die es in den Bereitstellungen von AT
 ## <a name="deployment-errors"></a>Bereitstellungsfehler
 > [!div class="mx-tableFixed"]
 > 
-> |Error|Beschreibung|Lösung|
+> |Fehler|Beschreibung|Lösung|
 > |-------------|----------|---------|
 > |Fehler bei der Installation von .NET Framework 4.6.1. Fehlernummer ist 0x800713ec.|Die erforderlichen Komponenten für .NET Framework 4.6.1 sind nicht auf dem Server installiert. |Stellen Sie vor der Installation von ATA sicher, dass die Windows-Updates [KB2919442](https://www.microsoft.com/download/details.aspx?id=42135) und [KB2919355](https://support.microsoft.com/kb/2919355) auf dem Server installiert sind.|
 > |System.Threading.Tasks.TaskCanceledException: Eine Aufgabe wurde abgebrochen.|Zeitüberschreitung während des Bereitstellungsvorgangs, da ATA Center nicht erreicht werden konnte.|1.    Überprüfen Sie Ihre Netzwerkverbindung zu ATA Center, indem Sie mithilfe der IP-Adresse dahin navigieren. <br></br>2.    Überprüfen Sie die Proxy- oder Firewallkonfiguration.|
@@ -70,7 +70,7 @@ In diesem Abschnitt sind mögliche Fehler, die es in den Bereitstellungen von AT
 ## <a name="ata-center-errors"></a>ATA Center-Fehler
 > [!div class="mx-tableFixed"]
 > 
-> |Error|Beschreibung|Lösung|
+> |Fehler|Beschreibung|Lösung|
 > |-------------|----------|---------|
 > |System.Security.Cryptography.CryptographicException: Zugriff verweigert:|ATA Center konnte das ausgestellte Zertifikat nicht für die Entschlüsselung verwenden. Dies liegt höchstwahrscheinlich daran, dass ein Zertifikat verwendet wurde, dessen KeySpec- bzw. KeyNumber-Wert auf „Signature“ (AT\_SIGNATURE) festgelegt wurde. Dies wird für die Entschlüsselung nicht unterstützt. Stattdessen sollte KeyExchange (AT\_KEYEXCHANGE) verwendet werden.|1.    Beenden Sie den ATA Center-Dienst. <br></br>2.     Löschen Sie das ATA Center-Zertifikat aus dem ATA Center-Zertifikatspeicher. (Stellen Sie vor dem Löschen sicher, dass Sie das Zertifikat mit dem privaten Schlüssel in einer PFX-Datei gesichert haben.) <br></br>3.    Öffnen Sie eine Eingabeaufforderung mit erhöhten Rechten, und führen Sie folgenden Befehl aus: certutil -importpfx "CenterCertificate.pfx" AT\_KEYEXCHANGE <br></br>4.     Starten Sie den ATA Center-Dienst. <br></br>5.     Überprüfen Sie, ob alles wie erwartet funktioniert.|
 

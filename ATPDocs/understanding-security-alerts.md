@@ -4,7 +4,7 @@ d|Description: This article explains how to use and understand Azure ATP securit
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 1/13/2019
 ms.topic: tutorial
 ms.prod: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 671747d5-faed-4352-a871-17b58fdc6574
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b40cdeb52f26e3fae32185c3168c5e3073bf5929
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: 1633361f68367dbc82e82e0b18da09227f82206a
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54840853"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56077829"
 ---
 # <a name="tutorial-understanding-security-alerts"></a>Tutorial: Grundlegendes zu Sicherheitswarnungen
 
@@ -84,7 +84,7 @@ Laden Sie den ausführlichen Excel-Warnungsbericht herunter, um detaillierte Inf
  
 Jeder Excel-Download zu Azure ATP-Sicherheitswarnungen enthält die folgenden Informationen:   
 - Zusammenfassung: Die erste Registerkarte enthält die wichtigsten Punkte der Warnung. 
-  - Anrede 
+  - Titel 
   - Beschreibung 
   - Startzeit (UTC) 
   - Endzeit (UTC) 
@@ -97,9 +97,9 @@ Jeder Excel-Download zu Azure ATP-Sicherheitswarnungen enthält die folgenden In
 - Die meisten Registerkarten enthalten für jede Entität die folgenden Daten: 
   - Name
   - Details 
-  - Type 
+  - Typ 
   - SAM-Name  
-  - Quellencomputer
+  - Quellcomputer
   - Quellbenutzer (sofern verfügbar)
   - Domänencontroller
   - Aufgerufene Ressource: Zeitpunkt, Computer, Name, Details, Typ, Dienst

@@ -4,7 +4,7 @@ description: Prozeduren zum Aktualisieren von ATA auf Version 1.6
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/23/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 0756ef64-3aef-4a69-8981-24fa8f285c6a
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b32e8db898df1cea25e3d8dbb61a7c2293128aeb
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 1d3e0cd545a932daae71fa4242abb43b4dc15bae
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133997"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56077693"
 ---
 # <a name="ata-update-to-16-migration-guide"></a>Migrationshandbuch zur Aktualisierung auf ATA 1.6
 Das Update auf ATA 1.6 bietet Verbesserungen in folgenden Bereichen:
@@ -62,7 +62,7 @@ In dieser Version wird die gleiche Installationsdatei („Microsoft ATA Center S
     > [!IMPORTANT]
     > Aktualisieren Sie alle ATA-Gateways, damit ATA ordnungsgemäß funktioniert.
 
-### <a name="step-1-update-the-ata-center"></a>Schritt 1: Aktualisieren von ATA Center
+### <a name="step-1-update-the-ata-center"></a>Schritt 1: Aktualisieren von ATA Center
 
 1.  Sichern Sie die Datenbank (optional):
 

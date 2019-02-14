@@ -4,7 +4,7 @@ description: Stellt eine Liste von Links zu ATA-Ressourcen, Videos, ersten Schri
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
-manager: mbaldwin
+manager: barbkess
 ms.date: 7/15/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 42a1a34f-ed6b-4538-befb-452168a30e8c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 92768392fffb2485a3043ca49fa0c7d494a26df7
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: b8fdc8fd65c2ada0f116ff67150939a06ab46fd2
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54840997"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56076690"
 ---
 # <a name="ata-readiness-roadmap"></a>Überblick über die ATA-Bereitschaft 
 
@@ -84,7 +84,7 @@ Sobald ATA einsatzbereit ist, können Sie verdächtige Aktivitäten anzeigen, di
 
 
 
-## <a name="security-best-practices"></a>Bewährte Sicherheitsmethoden
+## <a name="security-best-practices"></a>Bewährte Methoden für die Sicherheit
 
 [Bewährte Methoden für ATA](https://aka.ms/atasecbestpractices): Bewährte Methoden zum Sichern von ATA.
 

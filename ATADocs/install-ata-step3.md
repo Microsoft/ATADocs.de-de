@@ -4,7 +4,7 @@ description: Im dritten Schritt beim Installieren von ATA laden Sie das ATA-Gate
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
-manager: mbaldwin
+manager: barbkess
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 7fb024e6-297a-4ad9-b962-481bb75a0ba3
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b73a82b2dc301de0d464f9f0dc936cce17a2fb10
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: d0ea92d6acf087df58fb3554a972c784862daa43
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54841116"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56075738"
 ---
 # <a name="install-ata---step-3"></a>Installieren von ATA – Schritt 3
 
@@ -28,7 +28,7 @@ ms.locfileid: "54841116"
 > [« Schritt 2](install-ata-step2.md)
 > [Schritt 4 »](install-ata-step4.md)
 
-## <a name="step-3-download-the-ata-gateway-setup-package"></a>Schritt 3 Herunterladen des ATA-Gateway-Setuppakets
+## <a name="step-3-download-the-ata-gateway-setup-package"></a>Schritt 3: Herunterladen des ATA-Gateway-Setuppakets
 
 Nach dem Konfigurieren der Domänenverbindungseinstellungen können Sie das ATA-Gateway-Setuppaket herunterladen. Das ATA-Gateway kann auf einem dedizierten Server oder einem Domänencontroller installiert werden. Wenn Sie es auf einem Domänencontroller installieren, wird es als ATA-Lightweight-Gateway installiert. Weitere Informationen zum ATA-Lightweight-Gateway finden Sie unter [ATA-Architektur](ata-architecture.md). 
 

@@ -4,7 +4,7 @@ description: Beschreibt die Voraussetzungen für eine erfolgreiche Bereitstellun
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 9/27/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0abf415dd896d62e0308f4b236d92bcb327a0a5d
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: 008af6edacf27f5cc49f1a3e518f619a4829aae5
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54840878"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56078084"
 ---
 # <a name="ata-prerequisites"></a>ATA-Voraussetzungen
 
@@ -47,7 +47,7 @@ Das ATA-System arbeitet auf der Gesamtstrukturbegrenzung von Active Directory un
 
 ![ATA-Architekturdiagramm](media/ATA-architecture-topology.jpg)
 
-## <a name="before-you-start"></a>Bevor Sie beginnen
+## <a name="before-you-start"></a>Vorbereitung
 In diesem Abschnitt werden die Informationen aufgeführt, die Sie sammeln sollten, und Konten und Netzwerkentitäten genannt, die vor der ATA-Installation vorhanden sein sollten.
 
 
@@ -58,7 +58,7 @@ In diesem Abschnitt werden die Informationen aufgeführt, die Sie sammeln sollte
 
 -   Installieren Sie Microsoft Message Analyzer nicht auf einem ATA-Gateway oder einem Lightweight-Gateway. Der Treiber von Message Analyzer steht mit dem Treiber des ATA-Gateways und des Lightweight-Gateways in Konflikt. Wenn Sie Wireshark auf einem ATA-Gateway ausführen, müssen Sie den Dienst Microsoft Advanced Threat Analytics Gateway neu starten, nachdem Sie das Erfassen mit Wireshark abgeschlossen haben. Wenn dies nicht der Fall ist, beendet das Gateway die Erfassung von Datenverkehr. Das Ausführen von Wireshark auf einem ATA-Lightweight-Gateway besitzt keine Auswirkungen auf das ATA-Lightweight-Gateway.
 
--    Empfehlung: Der Benutzer sollte über den schreibgeschützten Zugriff auf den Container mit gelöschten Objekten verfügen. So kann ATA eine Massenlöschung von Objekten in der Domäne erkennen. Informationen zum Konfigurieren des schreibgeschützten Zugriffs auf den Container mit gelöschten Objekten finden Sie im Abschnitt **Changing permissions on a deleted object container** (Ändern von Berechtigungen für einen Container mit gelöschten Objekten) im Artikel [View or Set Permissions on a Directory Object](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) (Anzeigen und Festlegen von Berechtigungen für ein Verzeichnisobjekt).
+-    Empfohlen: Der Benutzer sollte über den schreibgeschützten Zugriff auf den Container mit gelöschten Objekten verfügen. So kann ATA eine Massenlöschung von Objekten in der Domäne erkennen. Informationen zum Konfigurieren des schreibgeschützten Zugriffs auf den Container mit gelöschten Objekten finden Sie im Abschnitt **Changing permissions on a deleted object container** (Ändern von Berechtigungen für einen Container mit gelöschten Objekten) im Artikel [View or Set Permissions on a Directory Object](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) (Anzeigen und Festlegen von Berechtigungen für ein Verzeichnisobjekt).
 
 -   Optional: Benutzerkonto eines Benutzers ohne Netzwerkaktivitäten. Dieses Konto kann als ATA-Honeytoken-Benutzer konfiguriert werden. Zum Konfigurieren eines Kontos als Honeytoken-Benutzer ist nur der Benutzername erforderlich. Weitere Informationen zum Konfigurieren von Honeytoken finden Sie unter [Konfigurieren von IP-Adressausschlüssen und Honeytoken-Benutzern](install-ata-step7.md).
 
@@ -111,17 +111,17 @@ In der folgenden Tabelle sind die Ports aufgelistet, die mindestens geöffnet we
 
 |Protokoll|Transport|Port|Zu/Von|Richtung|
 |------------|-------------|--------|-----------|-------------|
-|**SSL** (ATA-Kommunikation)|TCP|443|ATA-Gateway|Inbound|
-|**HTTP** (optional)|TCP|80|Unternehmensnetzwerk|Inbound|
-|**HTTPS**|TCP|443|Unternehmensnetzwerk und ATA-Gateway|Inbound|
+|**SSL** (ATA-Kommunikation)|TCP|443|ATA-Gateway|Eingehend|
+|**HTTP** (optional)|TCP|80|Unternehmensnetzwerk|Eingehend|
+|**HTTPS**|TCP|443|Unternehmensnetzwerk und ATA-Gateway|Eingehend|
 |**SMTP** (optional)|TCP|25|SMTP-Server|Ausgehend|
-|**SMTPS** (optional)|TCP|465|SMTP-Server|Outbound|
-|**Syslog** (optional)|TCP/UPS/TLS (konfigurierbar)|514 (Standard)|Syslog-Server|Outbound|
-|**LDAP**|TCP und UDP|389|Domänencontroller|Outbound|
-|**LDAPS** (optional)|TCP|636|Domänencontroller|Outbound|
-|**DNS**|TCP und UDP|53|DNS-Server|Outbound|
-|**Kerberos** (optional, wenn eine Domäne verknüpft ist)|TCP und UDP|88|Domänencontroller|Outbound|
-|**Windows Time** (optional, wenn eine Domäne verknüpft ist)|UDP|123|Domänencontroller|Outbound|
+|**SMTPS** (optional)|TCP|465|SMTP-Server|Ausgehend|
+|**Syslog** (optional)|TCP/UPS/TLS (konfigurierbar)|514 (Standard)|Syslog-Server|Ausgehend|
+|**LDAP**|TCP und UDP|389|Domänencontroller|Ausgehend|
+|**LDAPS** (optional)|TCP|636|Domänencontroller|Ausgehend|
+|**DNS**|TCP und UDP|53|DNS-Server|Ausgehend|
+|**Kerberos** (optional, wenn eine Domäne verknüpft ist)|TCP und UDP|88|Domänencontroller|Ausgehend|
+|**Windows Time** (optional, wenn eine Domäne verknüpft ist)|UDP|123|Domänencontroller|Ausgehend|
 
 > [!NOTE]
 > LDAP ist erforderlich, um die Anmeldeinformationen, die zwischen den ATA-Gateways und den Domänencontrollern verwendet werden sollen, zu testen. Bei dem Test zwischen ATA Center und einem Domänencontroller wird die Gültigkeit dieser Anmeldeinformationen überprüft. Danach verwendet ATA-Gateway LDAP im Rahmen seines normalen Auflösungsprozesses.
@@ -204,20 +204,20 @@ Das ATA-Gateway erfordert mindestens einen Verwaltungsadapter und mindestens ein
 ### <a name="ports"></a>Ports
 In der folgenden Tabelle sind die Ports aufgeführt, die für den Verwaltungsadapter des ATA-Gateways mindestens konfiguriert werden müssen:
 
-|Protokoll|Transport|Port|Zu/Von|Direction|
+|Protokoll|Transport|Port|Zu/Von|Richtung|
 |------------|-------------|--------|-----------|-------------|
-|LDAP|TCP und UDP|389|Domänencontroller|Outbound|
-|Sicheres LDAP (LDAPS)|TCP|636|Domänencontroller|Outbound|
-|LDAP an globalen Katalog|TCP|3268|Domänencontroller|Outbound|
-|LDAPs an globalen Katalog|TCP|3269|Domänencontroller|Outbound|
-|Kerberos|TCP und UDP|88|Domänencontroller|Outbound|
-|Netlogon (SMB, CIFS, SAM-R)|TCP und UDP|445|Alle Geräte im Netzwerk|Outbound|
-|Windows-Zeitdienst|UDP|123|Domänencontroller|Outbound|
-|DNS|TCP und UDP|53|DNS-Server|Outbound|
+|LDAP|TCP und UDP|389|Domänencontroller|Ausgehend|
+|Sicheres LDAP (LDAPS)|TCP|636|Domänencontroller|Ausgehend|
+|LDAP an globalen Katalog|TCP|3268|Domänencontroller|Ausgehend|
+|LDAPs an globalen Katalog|TCP|3269|Domänencontroller|Ausgehend|
+|Kerberos|TCP und UDP|88|Domänencontroller|Ausgehend|
+|Netlogon (SMB, CIFS, SAM-R)|TCP und UDP|445|Alle Geräte im Netzwerk|Ausgehend|
+|Windows-Zeitdienst|UDP|123|Domänencontroller|Ausgehend|
+|DNS|TCP und UDP|53|DNS-Server|Ausgehend|
 |NTLM über RPC|TCP|135|Alle Geräte im Netzwerk|Beide|
 |NetBIOS|UDP|137|Alle Geräte im Netzwerk|Beide|
-|SSL|TCP|443|ATA Center|Outbound|
-|Syslog (optional)|UDP|514|SIEM-Server|Inbound|
+|SSL|TCP|443|ATA Center|Ausgehend|
+|Syslog (optional)|UDP|514|SIEM-Server|Eingehend|
 
 
 > [!NOTE]
@@ -278,14 +278,14 @@ Nach der Bereitstellung können Sie die ATA-Konsole verwenden, wenn Sie die übe
 ### <a name="ports"></a>Ports
 In der folgenden Tabelle sind die Ports aufgeführt, die für das ATA-Lightweight-Gateway mindestens konfiguriert werden müssen.
 
-|Protokoll|Transport|Port|Zu/Von|Direction|
+|Protokoll|Transport|Port|Zu/Von|Richtung|
 |------------|-------------|--------|-----------|-------------|
-|Domain Name System|TCP und UDP|53|DNS-Server|Outbound|
+|DNS|TCP und UDP|53|DNS-Server|Ausgehend|
 |NTLM über RPC|TCP|135|Alle Geräte im Netzwerk|Beide|
 |NetBIOS|UDP|137|Alle Geräte im Netzwerk|Beide|
-|SSL|TCP|443|ATA Center|Outbound|
-|Syslog (optional)|UDP|514|SIEM-Server|Inbound|
-|Netlogon (SMB, CIFS, SAM-R)|TCP und UDP|445|Alle Geräte im Netzwerk|Outbound|
+|SSL|TCP|443|ATA Center|Ausgehend|
+|Syslog (optional)|UDP|514|SIEM-Server|Eingehend|
+|Netlogon (SMB, CIFS, SAM-R)|TCP und UDP|445|Alle Geräte im Netzwerk|Ausgehend|
 
 > [!NOTE]
 > Als Teil des vom ATA-Lightweight-Gateway durchgeführten Auflösungsprozesses müssen die folgenden eingehenden Ports für Geräte im Netzwerk geöffnet werden.

@@ -4,7 +4,7 @@ description: Dieser Artikel beschreibt, wie potenzielle Angriffe mit Lateral Mov
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 1/3/2019
 ms.topic: tutorial
 ms.prod: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 9295dc09-ecdb-44c0-906b-cba4c5c8f17c
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d108974a930aa8aad737e9348dc228f384858eb1
-ms.sourcegitcommit: 6a0ac21f59e72db8615811da2c886f54cf3727f5
+ms.openlocfilehash: e8b69c375acb237f545bd3dbdc237d7e7e0c6630
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2019
-ms.locfileid: "54249911"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56078152"
 ---
 # <a name="tutorial-use-lateral-movement-paths-lmps"></a>Tutorial: Verwendung von Lateral Movement-Pfaden (LMPs)
 
@@ -60,7 +60,7 @@ Führen Sie die folgenden Schritte aus, um alle sensiblen Konten in Ihrem Netzwe
 
 2. Wenn keine potenziellen Lateral Movement-Pfade gefunden wurden, ist der Bericht unter **Lateral Movement-Pfade zu sensiblen Konten** abgeblendet. Wenn potenzielle Lateral Movement-Pfade mit relevanten Daten gefunden wurden, wird aus den Daten des Berichts automatisch das früheste Datum ausgewählt. Der Bericht über Lateral Movement-Pfade enthält Daten für bis zu 60 Tage.
 
-   ![Berichte](./media/reports.png)
+   ![-Berichte](./media/reports.png)
 
 3. Klicken Sie auf **Herunterladen**.
 

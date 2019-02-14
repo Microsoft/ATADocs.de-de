@@ -4,7 +4,7 @@ description: Sammeln von Kontoführungsinformationen für Azure ATP durch Integr
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 11/04/2018
 ms.topic: conceptual
 ms.prod: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 0d9d2a1d-6c76-4909-b6f9-58523df16d4f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 947f816d30dbc8e8de817eccf8213d25c026f833
-ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
+ms.openlocfilehash: fffd42f5dc3de10713bf59ab7b43a8ef7cd6d3da
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54458784"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56077030"
 ---
 # <a name="integrate-vpn"></a>Integrieren des VPN
 
@@ -65,7 +65,7 @@ So konfigurieren Sie VPN-Daten in ATP:
 1.  Klicken Sie im Azure ATP-Portal auf das Konfigurationszahnrad und anschließend auf **VPN**.
  
 
-2.  Aktivieren Sie die **RADIUS-Kontoführung**, und geben Sie das **gemeinsame Geheimnis** ein, das Sie zuvor auf Ihrem RRAS-VPN-Server konfiguriert haben. Klicken Sie dann auf **Speichern**.
+2.  Aktivieren Sie die **RADIUS-Kontoführung**, und geben Sie das **gemeinsame Geheimnis** ein, das Sie zuvor auf Ihrem RRAS-VPN-Server konfiguriert haben. Klicken Sie dann auf **Save** (Speichern).
  
 
   ![Konfigurieren von Azure ATP-VPN](./media/atp-vpn-radius.png)

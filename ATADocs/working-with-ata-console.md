@@ -4,7 +4,7 @@ description: Beschreibt die Anmeldung bei der ATA-Konsole sowie die Komponenten 
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
-manager: mbaldwin
+manager: barbkess
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f25cdcf03be079f17adaf16b43be62b29c904bc2
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: 6bc3c0ef8860bf95718023234fd55f676a304b1b
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54841065"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56077540"
 ---
 # <a name="working-with-the-ata-console"></a>Arbeiten mit der ATA-Konsole
 

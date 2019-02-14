@@ -4,7 +4,7 @@ description: Im ersten Schritt beim Installieren von ATA wird ATA Center auf den
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 1/17/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 78097c185d2dc8b834844e540929c9e57b52cffa
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: a2f880c4e0df1647f99b0847a8eec71c6b8428bc
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54840657"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56077999"
 ---
 # <a name="install-ata---step-1"></a>Installieren von ATA – Schritt 1
 
@@ -33,7 +33,7 @@ Diese Installationsschritte stellen Anweisungen zur Durchführung einer Neuinsta
 > [!IMPORTANT] 
 > Wenn Sie Windows 2012 R2 verwenden, installieren Sie vor ATA das Update KB2934520 auf dem ATA Center-Server und den ATA-Gatewayservern, da andernfalls bei der ATA-Installation dieses Update installiert wird und inmitten der ATA-Installation ein Neustart erforderlich ist.
 
-## <a name="step-1-download-and-install-the-ata-center"></a>Schritt 1 Herunterladen und Installieren von ATA Center
+## <a name="step-1-download-and-install-the-ata-center"></a>Schritt 1: Herunterladen und Installieren von ATA Center
 Nachdem Sie überprüft haben, ob der Server die Anforderungen erfüllt, können Sie mit der Installation von ATA Center fortfahren.
     
 > [!NOTE]
