@@ -4,25 +4,28 @@ d|Description: This article explains how to use Azure ATP security alerts to inv
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
-ms.date: 1/14/2019
+ms.date: 02/07/2019
 ms.topic: tutorial
-ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: ''
-ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3c707376635facd0fe9ba8e3c3f32f36f5a71c25
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: 92364369e26356f514927d9dafc9a31c9468d663
+ms.sourcegitcommit: 1da2f5414d27d58ac01ad43cafdb6bed242ce7c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54839545"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55889889"
 ---
 # <a name="tutorial-investigate-a-computer"></a>Tutorial: Untersuchen eines Computers
 
-Ein Beweis für Warnungen in Azure ATP zeigt eindeutig an, wenn Computer von verdächtigen Aktivitäten betroffen sind, oder wenn es Anzeichen dafür gibt, dass ein Computer gefährdet ist. Verwenden Sie die Untersuchungsempfehlungen dazu, das Risiko für Ihre Organisation zu ermitteln, Abhilfemaßnahmen zu bestimmen und festzulegen, wie ähnliche Angriffe in der Zukunft am besten verhindert werden können.  
+Ein Beweis für Warnungen in Azure ATP zeigt eindeutig an, wenn Computer von verdächtigen Aktivitäten betroffen sind, oder wenn es Anzeichen dafür gibt, dass ein Computer gefährdet ist. In diesem Tutorial verwenden Sie die Untersuchungsempfehlungen dazu, das Risiko für Ihre Organisation zu ermitteln, Abhilfemaßnahmen zu bestimmen und festzulegen, wie ähnliche Angriffe in der Zukunft am besten verhindert werden können.  
+
+> [!div class="checklist"]
+> * Überprüfen Sie den Computer des angemeldeten Benutzers.
+> * Überprüfen Sie, ob der Benutzer normalerweise auf die entsprechenden Computer zugreift.
+> * Untersuchen Sie verdächtige Aktivitäten auf dem Computer.
+> * Ermitteln Sie, ob zur gleichen Zeit andere Warnungen aufgetreten sind.
+
 
 ## <a name="investigation-steps-for-suspicious-computers"></a>Untersuchungsschritte für verdächtige Computer
 
@@ -46,7 +49,7 @@ Klicken Sie auf den in der Warnung genannten Computer, den Sie untersuchen möch
 - Wenn die Windows Defender ATP-Integration aktiviert ist, klicken Sie auf das Windows Defender ATP-Badge, um den Computer genauer zu untersuchen. In Windows Defender ATP können Sie sehen, welche Prozesse und Warnungen ungefähr gleichzeitig mit der Warnung aufgetreten sind.
     1. Sind neue Programme bereitgestellt oder installiert worden?
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="next-steps"></a>Nächste Schritte
 
 - [Untersuchen eines Benutzers](investigate-a-user.md)
 - [Arbeiten mit Sicherheitswarnungen](working-with-suspicious-activities.md)

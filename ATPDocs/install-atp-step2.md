@@ -1,30 +1,27 @@
 ---
-title: Installieren von Azure Advanced Threat Protection | Microsoft-Dokumentation
+title: Schnellstart zum Herstellen einer Verbindung zwischen Azure ATP und Azure Active Directory | Microsoft-Dokumentation
 description: Im zweiten Schritt der Installation von Azure ATP konfigurieren Sie die Domänenverbindungseinstellungen in Ihrem Azure ATP-Clouddienst.
-keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
-ms.date: 12/30/2018
+ms.date: 02/05/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: ''
-ms.assetid: ae8a95f0-278c-4a12-ae69-14282364fba1
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: ada659d86088cb9f93eba4aca54dd2553e8fb69a
-ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
+ms.openlocfilehash: 404252e7fb9d71a067def9b28870d68736a493dd
+ms.sourcegitcommit: 96752da28f43896e7b8e5945947b32c4810bdff6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/27/2019
-ms.locfileid: "55085451"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831411"
 ---
-# <a name="install-azure-atp---step-2"></a>Installieren von Azure ATP: Schritt 2
+# <a name="quickstart-connect-to-your-active-directory-forest"></a>Schnellstart: Herstellen einer Verbindung mit einer Active Directory-Gesamtstruktur
 
-> [!div class="step-by-step"]
-> [« Schritt 1](install-atp-step1.md)
-> [Schritt 3 »](install-atp-step3.md)
+In diesem Schnellstart lernen Sie, wie Sie eine Verbindung zwischen Azure ATP und Azure Active Directory (Azure AD) herstellen können, um Daten zu Benutzern und Computern abrufen zu können. Wenn Sie eine Verbindung zwischen mehreren Gesamtstrukturen herstellen möchten, finden Sie weitere Informationen im Artikel [Azure Advanced Threat Protection-Unterstützung für mehrere Gesamtstrukturen](atp-multi-forest.md).
+
+## <a name="prerequisites"></a>Voraussetzungen
+
+- Eine [Azure ATP-Instanz](install-atp-step1.md)
+- Lesen Sie den Artikel [Voraussetzungen für Azure ATP](atp-prerequisites.md).
+- Ein **lokales** AD-Benutzerkonto und -Kennwort mit Lesezugriff auf alle Objekte in den überwachten Domänen.
 
 ## <a name="provide-a-username-and-password-to-connect-to-your-active-directory-forest"></a>Angeben eines Benutzernamens und eines Kennworts, um eine Verbindung mit Ihrer Active Directory-Gesamtstruktur herzustellen
 
@@ -32,28 +29,24 @@ Beim ersten Öffnen des Azure ATP-Portals wird die folgende Anzeige angezeigt:
 
 ![Azure ATP-Willkommensseite 1](media/directory-services.png)
 
-> [!IMPORTANT]
-> Die Benutzeranmeldeinformationen müssen an dieser Stelle einem Benutzerkonto im lokalen Active Directory zugeordnet sein. 
 
-
-1.  Geben Sie die folgenden Informationen ein, und klicken Sie anschließend auf **Speichern**.
+1. Geben Sie die folgenden Informationen ein, und klicken Sie anschließend auf **Speichern**.
 
     |Feld|Kommentare|
     |---------|------------|
-    |**Benutzername** (erforderlich)|Geben Sie den schreibgeschützten Active Directory-Benutzernamen ein. Beispiel: **ATPuser**. **Hinweis:** Verwenden Sie **nicht** das UPN-Format für Ihren Benutzernamen.|
+    |**Benutzername** (erforderlich)|Geben Sie den schreibgeschützten Active Directory-Benutzernamen ein. Beispiel: **ATPuser**.  Sie müssen ein **lokales** Azure AD-Benutzerkonto verwenden. Verwenden Sie **nicht** das UPN-Format für Ihren Benutzernamen.|
     |**Kennwort** (erforderlich)|Geben Sie das Kennwort für den schreibgeschützten Benutzer ein. Beispiel: **Pencil1**.|
-    |**Domäne** (erforderlich)|Geben Sie die Domäne für den schreibgeschützten Benutzer ein, z. B. **contoso.com**. **Hinweis:** Es ist wichtig, dass Sie den vollqualifizierten Domänennamen (FQDN) der Domäne eingeben, in der sich das Benutzerkonto befindet. Wenn sich das Konto des Benutzers beispielsweise in der Domäne „corp.contoso.com“ befindet, müssen Sie `corp.contoso.com` und nicht „contoso.com“ eingeben.|
+    |**Domäne** (erforderlich)|Geben Sie die Domäne für den schreibgeschützten Benutzer ein. Beispiel: **contoso.com**. Es ist wichtig, dass Sie den vollqualifizierten Domänennamen (FQDN) der Domäne eingeben, in der sich das Benutzerkonto befindet. Wenn sich das Konto des Benutzers beispielsweise in der Domäne „corp.contoso.com“ befindet, müssen Sie `corp.contoso.com` und nicht „contoso.com“ eingeben.|
 
 2. Klicken Sie im Azure ATP-Portal auf **Download sensor setup and install the first sensor** (Sensorsetup herunterladen und ersten Sensor installieren), um fortzufahren.
 
 
+## <a name="next-steps"></a>Nächste Schritte
+
 > [!div class="step-by-step"]
-> [« Schritt 1](install-atp-step1.md)
-> [Schritt 3 »](install-atp-step3.md)
+> [« Erstellen Ihrer Azure ATP-Instanz im Azure ATP-Portal – Schritt 1](install-atp-step1.md)
+> [Installieren von Azure ATP: Schritt 3 »](install-atp-step3.md)
 
+## <a name="join-the-community"></a>Beitritt zur Community
 
-## <a name="see-also"></a>Weitere Informationen
-- [Azure ATP sizing tool (Azure ATP-Tool zur Größenanpassung)](http://aka.ms/aatpsizingtool)
-- [Konfigurieren der Ereignissammlung](configure-event-collection.md)
-- [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](atp-prerequisites.md)
-- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)
+Haben Sie weitere Fragen, oder möchten Sie mit anderen über Azure ATP und damit verbundene Sicherheitsaspekte diskutieren? Treten Sie noch heute der [Azure ATP-Community](https://aka.ms/azureatpcommunity) bei!

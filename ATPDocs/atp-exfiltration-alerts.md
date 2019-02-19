@@ -4,8 +4,8 @@ d|Description: This article explains the Azure ATP alerts issued when attacks ty
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
-ms.date: 1/15/2019
+manager: barbkess
+ms.date: 02/11/2019
 ms.topic: tutorial
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 452d951c-5f49-4a21-ae10-9fb38c3de302
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 67ba3c285577b683bc820ab272a498443b02c493
-ms.sourcegitcommit: e2daa0f93d97d552cfbf1577fbd05a547b63e95b
+ms.openlocfilehash: 214e3e10979f3508fad5f2b674d5d39b08a5715f
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54314294"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56075840"
 ---
 # <a name="tutorial-exfiltration-alerts"></a>Tutorial: Warnungen zu Exfiltration  
 
@@ -36,7 +36,7 @@ Mit den folgenden Sicherheitswarnungen können Sie verdächtige Aktivitäten der
 
 > [!div class="checklist"]
 > * Verdächtige Kommunikation über DNS (externe ID 2031)
-> * Datenexfiltration über den SMB – Vorschauversion (externe ID 2030)
+> * Datenexfiltration über den SMB – (externe ID 2030)
 
 ## <a name="suspicious-communication-over-dns-external-id-2031"></a>Verdächtige Kommunikation über DNS (externe ID 2031) 
 
@@ -72,7 +72,7 @@ In einigen Unternehmen wird DNS auf legitime Weise für die reguläre Kommunikat
 > [!NOTE]
 > *Verdächtige Kommunikation über DNS*: Diese Sicherheitswarnungen listen die vermutete Domäne auf. Neue Domänen, oder Domänen, die erst vor Kurzem hinzugefügt wurden, Azure ATP aber noch nicht bekannt sind und nicht erkannt werden, von denen aber feststeht, dass sie Teil Ihrer Organisation sind, können geschlossen werden.
 
-## <a name="data-exfiltration-over-smb---preview-external-id-2030"></a>Datenexfiltration über den SMB – Vorschauversion (externe ID 2030)
+## <a name="data-exfiltration-over-smb-external-id-2030"></a>Datenexfiltration über den SMB – (externe ID 2030)
 
 **Beschreibung**: Domänencontroller enthalten Unternehmensdaten mit der höchsten Vertraulichkeit. Die meisten Angreifer versuchen vorrangig, auf den Domänencontroller zuzugreifen, um an die vertraulichsten Daten zu gelangen. Die Exfiltration der auf dem Domänencontroller gespeicherten Datei „Ntds.dit“ ermöglicht es einem Angreifer beispielsweise, ein Kerberos Ticket Granting Ticket (TGT) zu fälschen, das den Zugriff auf jede beliebige Ressource autorisiert. Mit einem gefälschten Kerberos-TGT kann der Angreifer den Ablaufzeitpunkt des Tickets auf einen beliebigen Zeitpunkt festlegen. Wenn verdächtige Datenübertragungen von den überwachten Domänencontrollern festgestellt werden, wird die Azure ATP-Warnung **Data exfiltration over SMB** (Datenexfiltration über den SMB) ausgelöst.
 

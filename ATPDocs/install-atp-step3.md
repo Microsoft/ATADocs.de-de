@@ -1,64 +1,57 @@
 ---
-title: Installieren von Azure Advanced Threat Protection | Microsoft-Dokumentation
+title: Schnellstart zum Herunterladen des Setuppakets für den Azure ATP-Sensor | Microsoft-Dokumentation
 description: Im dritten Schritt der Azure ATP-Installation erhalten Sie Hilfe zum Download des Setuppakets für den Azure ATP-Sensor.
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
-ms.date: 12/02/2018
+ms.date: 02/05/2019
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: 95bb4ec1-841f-41b7-92fe-fbd144085724
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: 4816fe56b8a28d349c970be5a304d025875de748
-ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
+ms.openlocfilehash: 8648e3bacadaa64570e127ce3728c33f87d3393c
+ms.sourcegitcommit: 96752da28f43896e7b8e5945947b32c4810bdff6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/27/2019
-ms.locfileid: "55085230"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831428"
 ---
-# <a name="install-azure-atp---step-3"></a>Installieren von Azure ATP: Schritt 3
+# <a name="quickstart-download-the-azure-atp-sensor-setup-package"></a>Schnellstart: Herunterladen des Setuppakets für den Azure ATP-Sensor
 
-> [!div class="step-by-step"]
-> [« Schritt 2](install-atp-step2.md)
-> [Schritt 4 »](install-atp-step4.md)
+In diesem Schnellstart laden Sie das Setuppaket für den Azure ATP-Sensor aus dem Portal herunter.
 
-## <a name="download-the-azure-atp-sensor-setup-package"></a>Herunterladen des Setuppakets für den Azure ATP-Sensor
-Nach dem Konfigurieren der Verbindungseinstellungen der Domäne können Sie das Setuppaket für den Azure ATP-Sensor herunterladen. Das Setuppaket für den Azure ATP-Sensor kann auf einem dedizierten Server oder einem Domänencontroller installiert werden. Wenn Sie die Installation direkt auf einem Domänencontroller durchführen, erfolgt die Installation als Azure ATP-Sensor. Wenn Sie auf einem dedizierten Server installieren und Portspiegelung verwenden, wird ein eigenständiger Azure ATP-Sensor installiert. Weitere Informationen zum Azure ATP-Sensor finden Sie unter [Azure ATP-Architektur](atp-architecture.md). 
+## <a name="prerequisites"></a>Voraussetzungen
+
+- Eine [Azure ATP](install-atp-step1.md)-Instanz, die mit [Active Directory verbunden ist](install-atp-step2.md).
+
+## <a name="download-the-setup-package"></a>Herunterladen des Setuppakets
+
+Nach dem Konfigurieren der Verbindungseinstellungen der Domäne können Sie das Setuppaket für den Azure ATP-Sensor herunterladen. Das Setuppaket für den Azure ATP-Sensor kann auf einem dedizierten Server oder einem Domänencontroller installiert werden. Wenn Sie die Installation direkt auf einem Domänencontroller durchführen, erfolgt die Installation als Azure ATP-Sensor. Wenn Sie sie auf einem dedizierten Server durchführen und die Portspiegelung verwenden, wird ein eigenständiger Azure ATP-Sensor installiert. Weitere Informationen zum Azure ATP-Sensor finden Sie unter [Azure ATP-Architektur](atp-architecture.md). 
 
 Klicken Sie in der Liste mit den Schritten am Anfang der Seite auf **Download**, um zur Seite **Sensor** zu gelangen.
 
 ![Azure ATP-Sensorkonfigurationseinstellungen](media/atp-sensor-config.png)
 
-> [!NOTE] 
-> Um den Sensorkonfigurationsbildschirm später zu erreichen, klicken Sie auf das **Symbol für Einstellungen** (in der oberen rechten Ecke), und wählen Sie **Konfiguration** aus. Klicken Sie anschließend unter **System** auf **Sensor**.  
+ Sie können den Sensorkonfigurationsbildschirm später aufrufen, indem Sie auf das **Symbol für Einstellungen** klicken (in der oberen rechten Ecke) und **Konfiguration** auswählen. Klicken Sie anschließend unter **System** auf **Sensor**.  
 
-1.  Klicken Sie auf **Sensor**.
-2.  Speichern Sie das Paket lokal.
-3.  Kopieren Sie den **Zugriffs** **schlüssel**. Der Azure ATP-Sensor benötigt den Zugriffsschlüssel, um eine Verbindung mit Ihrer Azure ATP-Instanz herzustellen. Der Zugriffsschlüssel ist ein Einmalkennwort für die Sensorbereitstellung. Danach wird die gesamte Kommunikation mittels Zertifikaten für die Authentifizierung und TLS-Verschlüsselung ausgeführt. Klicken Sie auf die Schaltfläche **Erneut generieren**, wenn Sie den neuen Zugriffsschlüssel erneut generieren müssen. Dies ist möglich und wirkt sich nicht auf zuvor bereitgestellte Sensoren aus, da der Zugriffsschlüssel nur für die erste Registrierung des Sensors verwendet wird.
-4.  Kopieren Sie das Paket auf den dedizierten Server oder Domänencontroller, auf dem der Azure ATP-Sensor installiert werden soll. Alternativ können Sie das Azure ATP-Portal vom dedizierten Server oder vom Domänencontroller aus öffnen und diesen Schritt überspringen.
+1. Klicken Sie auf **Sensor**.
+2. Speichern Sie das Paket lokal.
+3. Kopieren Sie den **Zugriffs** **schlüssel**. Der Azure ATP-Sensor benötigt den Zugriffsschlüssel, um eine Verbindung mit Ihrer Azure ATP-Instanz herzustellen. Der Zugriffsschlüssel ist ein Einmalkennwort für die Sensorbereitstellung. Danach wird die gesamte Kommunikation mittels Zertifikaten für die Authentifizierung und TLS-Verschlüsselung ausgeführt. Klicken Sie auf die Schaltfläche **Erneut generieren**, wenn Sie den neuen Zugriffsschlüssel erneut generieren müssen. Dieser Vorgang wirkt sich nicht auf zuvor bereitgestellte Sensoren aus, da der Zugriffsschlüssel nur für die erste Registrierung des Sensors verwendet wird.
+4. Kopieren Sie das Paket auf den dedizierten Server oder Domänencontroller, auf dem der Azure ATP-Sensor installiert werden soll. Alternativ können Sie das Azure ATP-Portal vom dedizierten Server oder vom Domänencontroller aus öffnen und diesen Schritt überspringen.
 
 Die ZIP-Datei enthält die folgenden Dateien:
 
--   Installieren des Azure ATP-Sensors
+- Installieren des Azure ATP-Sensors
 
--   Konfigurationseinstellungsdatei mit den erforderlichen Informationen für die Verbindung mit dem Azure ATP-Clouddienst
+- Konfigurationseinstellungsdatei mit den erforderlichen Informationen für die Verbindung mit dem Azure ATP-Clouddienst
 
+## <a name="next-steps"></a>Nächste Schritte
 
 > [!div class="step-by-step"]
-> [« Schritt 2](install-atp-step2.md)
-> [Schritt 4 »](install-atp-step4.md)
+> [« Installieren von Azure ATP: Schritt 2](install-atp-step2.md)
+> [Installieren von Azure ATP – Schritt 4 »](install-atp-step4.md)
 
+## <a name="join-the-community"></a>Beitritt zur Community
 
-## <a name="see-also"></a>Weitere Informationen
-
-- [Azure ATP sizing tool (Azure ATP-Tool zur Größenanpassung)](http://aka.ms/aatpsizingtool)
-
-- [Konfigurieren der Ereignissammlung](configure-event-collection.md)
-
-- [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](atp-prerequisites.md)
-
-- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)
+Haben Sie weitere Fragen, oder möchten Sie mit anderen über Azure ATP und damit verbundene Sicherheitsaspekte diskutieren? Treten Sie noch heute der [Azure ATP-Community](https://aka.ms/azureatpcommunity) bei!

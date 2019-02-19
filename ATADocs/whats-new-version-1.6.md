@@ -4,7 +4,7 @@ description: Listet Neuerungen sowie bekannte Probleme in ATA 1.6 auf.
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/23/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 27b139e5-12b9-4953-8f53-eb58e8ce0038
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 5fd3b7a0abb3c70e87634e28273fe5ce8b6d4d9a
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 7b615f3f6e0fd3a7402a0c87a5df118431d566f3
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133615"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56078033"
 ---
 # <a name="whats-new-in-ata-version-16"></a>Neuerungen in ATA 1.6
 Die vorliegenden Anmerkungen zu dieser Version enthalten Informationen zu bekannten Problemen in dieser Version von Advanced Threat Analytics.
@@ -100,11 +100,11 @@ In Bereitstellungen, in denen der Datenbankpfad manuell verschoben wird, verwend
 ### <a name="migration-failure-when-updating-from-ata-15"></a>Migrationsfehler, wenn von ATA 1.5 aktualisiert wird
 Beim Aktualisieren auf ATA 1.6 kann der Aktualisierungsvorgang mit dem folgenden Fehlercode fehlschlagen:
 
-![Fehler beim Update auf ATA 1.6](http://i.imgur.com/QrLSApr.png) Wird dieser Fehler angezeigt, überprüfen Sie das Bereitstellungsprotokoll **C:\Benutzer\<Benutzer>\AppData\Local\Temp**, und suchen Sie nach der folgenden Ausnahme:
+![Fehler beim Update auf ATA 1.6](http://i.imgur.com/QrLSApr.png) Wenn dieser Fehler angezeigt wird, sollten Sie das Bereitstellungsprotokoll aufrufen, das sich in folgendem Pfad befindet: **C:\Benutzer\<Benutzername>\AppData\Local\Temp** – suchen Sie dort nach folgender Ausnahme:
 
     System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> MongoDB.Driver.MongoWriteException: A write operation resulted in an error. E11000 duplicate key error index: ATA.UniqueEntityProfile.$_id_ dup key: { : "<guid>" } ---> MongoDB.Driver.MongoBulkWriteException`1: A bulk write operation resulted in one or more errors.  E11000 duplicate key error index: ATA.UniqueEntityProfile.$_id_ dup key: { : " <guid> " }
 
-Möglicherweise wird auch dieser Fehler angezeigt: System.ArgumentNullException: Der Wert darf nicht NULL sein.
+Darüber hinaus wird möglicherweise folgender Fehler angezeigt: System.ArgumentNullException: Der Wert darf nicht NULL sein.
     
 Wenn einer dieser Fehler angezeigt wird, führen Sie die folgenden Schritte zur Problemumgehung aus:
 
@@ -124,7 +124,7 @@ Wenn einer dieser Fehler angezeigt wird, führen Sie die folgenden Schritte zur 
 7.  Überprüfen Sie die Protokolle, um sich zu vergewissern, dass das Produkt ohne Fehler ausgeführt wird.
 8.  [Herunterladen](http://aka.ms/ataremoveduplicateprofiles "Laden Sie das Tool „RemoveDuplicateProfiles.exe“ herunter"), und kopieren Sie es in den Hauptinstallationspfad (%ProgramFiles%\Microsoft Advanced Threat Analytics\Center).
 9.  Führen Sie `RemoveDuplicateProfiles.exe` von einer Eingabeaufforderung mit erhöhten Rechten aus, und warten Sie, bis das Tool erfolgreich abgeschlossen wurde.
-10. Fahren Sie wie folgt fort: …\Microsoft Advanced Threat Analytics\Center\MongoDB\bin: **Mongo ATA**; geben Sie folgenden Befehl ein:
+10. Geben Sie unter …\Microsoft Advanced Threat Analytics\Center\MongoDB\bin im Verzeichnis **Mongo ATA** folgenden Befehl ein:
 
           db.SuspiciousActivities.remove({ "_t" : "RemoteExecutionSuspiciousActivity", "DetailsRecords" : { "$elemMatch" : { "ReturnCode" : null } } }, { "_id" : 1 });
 

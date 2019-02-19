@@ -4,7 +4,7 @@ description: Listet Neuerungen sowie bekannte Probleme in ATA 1.5 auf.
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/23/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a0d64aff-ca9e-4300-b3f8-eb3c8b8ae045
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 800d5d0ebf7eb044982c35e1f348b6c2faf14b07
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 987d73a4ad3fc970d6e4f03a19f9ef5f9a8fd59e
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133241"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56076656"
 ---
 # <a name="whats-new-in-ata-version-15"></a>Neuerungen in ATA 1.5
 Die vorliegenden Anmerkungen zu dieser Version enthalten Informationen zu bekannten Problemen in dieser Version von Advanced Threat Analytics.
@@ -48,7 +48,7 @@ Nach dem Update der ATA-Bereitstellung auf ATA 1.5 erhalten Sie beim Installier
 
 ![ATA-GW-Fehler](media/ata-install-error.png)
 
-<b>Problemumgehung:</b> Senden Sie eine E-Mail an <ataeval@microsoft.com>, um Schritte zur Problemumgehung anzufordern.
+<b>Problemumgehung</b>: Senden Sie eine E-Mail an <ataeval@microsoft.com>, um Schritte zur Problemumgehung anzufordern.
 ### <a name="deployment"></a>Bereitstellung
 Der angegebene Ordner für „Datenbankdatenpfad“ und „Datenbankjournalpfad“ muss leer sein (keine Dateien oder Unterordner).
 Wenn er nicht leer ist, wird die Bereitstellung nicht fortgesetzt.

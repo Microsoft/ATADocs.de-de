@@ -4,7 +4,7 @@ description: Listet Neuerungen sowie bekannte Probleme in ATA 1.8 auf.
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
-manager: mbaldwin
+manager: barbkess
 ms.date: 9/03/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 9592d413-df0e-4cec-8e03-be1ae00ba5dc
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: b8c9d879014934f681ae1dce3d7d3e0de3f0b2b0
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: c787db603f8a6dc0e531d5c27b4b582b2d86753c
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133889"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56077064"
 ---
 # <a name="whats-new-in-ata-version-18"></a>Neuerungen in ATA 1.8
 
@@ -86,23 +86,23 @@ Die vorliegenden Anmerkungen zu dieser Version enthalten Informationen zu Update
 
 ### <a name="ata-gateway-on-windows-server-core"></a>ATA-Gateway in Windows Server Core
 
-**Symptome**: Das Aktualisieren eines ATA-Gateway auf 1.8 in Windows Server 2012 R2 Core mit .Net Framework 4.7 schlägt möglicherweise mit dem Fehler: *Microsoft Advanced Threat Analytics Gateway has stopped working* (Microsoft Advanced Threat Analytics-Gateway wird nicht mehr ausgeführt) fehl. 
+**Symptome:** Das Upgrade eines ATA-Gateways auf Version 1.8 von Windows Server 2012 R2 Core mit .NET Framework 4.7 schlägt möglicherweise mit dieser Fehlermeldung fehl: *Das Microsoft Advanced Threat Analytics-Gateway funktioniert nicht mehr.* 
 
 ![Fehler von Gateway Core](./media/gateway-core-error.png)
 
 In Windows Server 2016 Core sehen Sie den Fehler möglicherweise nicht, aber der Vorgang schlägt fehl, wenn Sie versuchen, eine Installation durchzuführen, und die Ereignisse 1000 und 1001 (Prozessabsturz) werden im Anwendungsereignisprotokoll auf dem Server protokolliert.
 
-**Beschreibung**: Es liegt ein Problem mit .NET Framework 4.7 vor, sodass Anwendungen, die WPF-Technologie (z.B. ATA) verwenden, beim Laden fehlschlagen. Weitere Informationen finden Sie unter [KB 4034015](https://support.microsoft.com/help/4034015/wpf-window-can-t-be-loaded-after-you-install-the-net-framework-4-7-on). 
+**Beschreibung**: Es liegt ein Problem mit .NET Framework 4.7 vor, sodass Anwendungen, die WPF-Technologien (z.B. ATA) verwenden, beim Laden fehlschlagen. Weitere Informationen finden Sie unter [KB 4034015](https://support.microsoft.com/help/4034015/wpf-window-can-t-be-loaded-after-you-install-the-net-framework-4-7-on). 
 
-**Problemumgehung**: Deinstallieren Sie .NET 4.7 ([KB 3186497](https://support.microsoft.com/help/3186497/the-net-framework-4-7-offline-installer-for-windows)), um die .NET Version zu .NET 4.6.2 wiederherzustellen, und aktualisieren Sie anschließend das ATA-Gateway auf Version 1.8. Nach dem Upgrade von ATA können Sie .NET 4.7 neu installieren.  Es wird ein Update zur Behebung dieses Problems in einer zukünftigen Version vorhanden sein.
+**Problemumgehung**: Deinstallieren Sie .NET 4.7 ([KB 3186497](https://support.microsoft.com/help/3186497/the-net-framework-4-7-offline-installer-for-windows)), um die .NET-Version auf .NET 4.6.2 zurückzusetzen, und aktualisieren Sie anschließend das ATA-Gateway auf Version 1.8. Nach dem Upgrade von ATA können Sie .NET 4.7 neu installieren.  Es wird ein Update zur Behebung dieses Problems in einer zukünftigen Version vorhanden sein.
 
 ### <a name="lightweight-gateway-event-log-permissions"></a>Berechtigungen für das Ereignisprotokoll des Lightweight-Gateway
 
-**Symptome**: Beim Aktualisieren von ATA auf Version 1.8 können Apps oder Dienste, die vorher erteilte Zugriffsberechtigungen für das Sicherheitsereignisprotokoll hatten, die Berechtigungen verlieren. 
+**Symptome:** Beim Aktualisieren von ATA auf Version 1.8 können Apps oder Dienste, die vorher erteilte Zugriffsberechtigungen für das Sicherheitsereignisprotokoll hatten, die Berechtigungen verlieren. 
 
-**Beschreibung**: Um das Bereitstellen von ATA zu erleichtern, greift ATA 1.8 direkt auf Ihr Sicherheitsereignisprotokoll zu, ohne die Konfiguration der Windows-Ereignisweiterleitung zu benötigen. Zur gleichen Zeit wird ATA als lokaler Dienst mit geringen Berechtigungen ausgeführt, um eine höhere Sicherheit zu gewährleisten. Der ATA-Dienst erteilt sich selbst Berechtigungen für das Sicherheitsereignisprotokoll, damit ATA die Ereignisse lesen kann. In diesem Fall können bereits erteilte Berechtigungen für andere Dienste deaktiviert werden.
+**Beschreibung**: Um das Bereitstellen von ATA zu erleichtern, greift ATA 1.8 direkt auf Ihr Sicherheitsereignisprotokoll zu, ohne dass die Windows-Ereignisweiterleitung konfiguriert werden muss. Zur gleichen Zeit wird ATA als lokaler Dienst mit geringen Berechtigungen ausgeführt, um eine höhere Sicherheit zu gewährleisten. Der ATA-Dienst erteilt sich selbst Berechtigungen für das Sicherheitsereignisprotokoll, damit ATA die Ereignisse lesen kann. In diesem Fall können bereits erteilte Berechtigungen für andere Dienste deaktiviert werden.
 
-**Problemumgehung**: Führen Sie das folgende Windows PowerShell-Skript aus. Dies entfernt die falsch hinzugefügten Berechtigungen in der Registrierung von ATA und fügt sie über eine andere API hinzu. Dies kann Berechtigungen für andere Apps wiederherstellen. Wenn dies nicht der Fall ist, müssen sie manuell wiederhergestellt werden. Es wird ein Update zur Behebung dieses Problems in einer zukünftigen Version vorhanden sein. 
+**Problemumgehung**: Führen Sie das folgende Windows PowerShell-Skript aus: Dies entfernt die falsch hinzugefügten Berechtigungen in der Registrierung von ATA und fügt sie über eine andere API hinzu. Dies kann Berechtigungen für andere Apps wiederherstellen. Wenn dies nicht der Fall ist, müssen sie manuell wiederhergestellt werden. Es wird ein Update zur Behebung dieses Problems in einer zukünftigen Version vorhanden sein. 
 
        $ATADaclEntry = "(A;;0x1;;;S-1-5-80-1717699148-1527177629-2874996750-2971184233-2178472682)"
         try {
@@ -122,19 +122,19 @@ In Windows Server 2016 Core sehen Sie den Fehler möglicherweise nicht, aber der
 
 ### <a name="proxy-interference"></a>Störungen des Proxy
 
-**Symptome**: Nach dem Upgrade auf ATA 1.8 kann der ATA-Gatewaydienst möglicherweise nicht gestartet werden. Im ATA-Fehlerprotokoll wird möglicherweise die folgende Ausnahme angezeigt: *System.Net.Http.HttpRequestException: Fehler beim Senden der Anforderung.---> System.NET.WebException: Der Remoteserver hat einen Fehler zurückgegeben: (407) Proxyauthentifizierung erforderlich.*
+**Symptome:** Nach dem Upgrade auf ATA 1.8 kann der ATA-Gatewaydienst möglicherweise nicht gestartet werden. Im ATA-Fehlerprotokoll wird möglicherweise folgende Ausnahme angezeigt: *System.Net.Http.HttpRequestException: Beim Senden der Anforderung ist ein Fehler aufgetreten. ---> System.Net.WebException: Der Remoteserver hat einen Fehler zurückgegeben: (407) Proxyauthentifizierung erforderlich.*
 
 **Beschreibung**: Ab ATA 1.8 kommuniziert das ATA-Gateway mit ATA Center über das HTTP-Protokoll. Wenn der Computer, auf dem Sie das ATA-Gateway installiert haben, einen Proxyserver für die Verbindung mit ATA Center verwendet, kann dies die Kommunikation unterbrechen. 
 
-**Problemumgehung**: Deaktivieren Sie die Verwendung des Proxyservers auf dem Dienstkonto des ATA-Gateways. Es wird ein Update zur Behebung dieses Problems in einer zukünftigen Version vorhanden sein.
+**Problemumgehung**: Deaktivieren Sie Proxyserver auf dem Dienstkonto des ATA-Gateways. Es wird ein Update zur Behebung dieses Problems in einer zukünftigen Version vorhanden sein.
 
 ### <a name="report-settings-reset"></a>Zurücksetzen der Berichtseinstellungen
 
-**Symptome**: Alle Einstellungen, die an den geplanten Berichten vorgenommen wurden, werden gelöscht, wenn Sie auf Version 1.8 Update 1 aktualisieren.
+**Symptome:** Alle Einstellungen, die an den geplanten Berichten vorgenommen wurden, werden gelöscht, wenn Sie ein Update auf Version 1.8 Update 1 durchführen.
 
-**Beschreibung**: Das Aktualisieren von Version 1.8 Update 1 von Version 1.8 setzt die Einstellungen für geplante Berichte zurück.
+**Beschreibung**: Das Update auf Version 1.8 Update 1 von Version 1.8 setzt die Einstellungen für geplante Berichte zurück.
 
-**Problemumgehung**: Bevor Sie auf Version 1.8 Update 1 aktualisieren, erstellen Sie eine Kopie der Berichtseinstellungen, und geben Sie diese erneut ein. Dies kann auch über ein Skript erfolgen. Weitere Informationen dazu finden Sie unter [Exportieren und Importieren der Advanced Threat Analytics-Konfiguration](ata-configuration-file.md).
+**Problemumgehung**: Bevor Sie ein Update auf Version 1.8 Update 1 durchführen, sollten Sie eine Kopie der Berichtseinstellungen erstellen und diese erneut eingeben. Dieser Vorgang kann auch über ein Skript erfolgen. Weitere Informationen dazu finden Sie unter [Exportieren und Importieren der ATA-Konfiguration](ata-configuration-file.md).
 
 
 ## <a name="see-also"></a>Weitere Informationen

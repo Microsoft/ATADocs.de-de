@@ -4,25 +4,27 @@ d|Description: This article explains how to user Azure ATP security alerts to in
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
-ms.date: 1/14/2019
+ms.date: 02/07/2019
 ms.topic: tutorial
-ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: ''
-ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 126653dd2831e0e3dbd9c777d84d32b1c2e74bd9
-ms.sourcegitcommit: 1ee052c4c6b04b290e2d5384c24b65a108b1f1f3
+ms.openlocfilehash: 99ebcfeb4220e547be06e8161636b12c843f292c
+ms.sourcegitcommit: 1da2f5414d27d58ac01ad43cafdb6bed242ce7c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54253400"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55889872"
 ---
 # <a name="tutorial-investigate-a-user"></a>Tutorial: Untersuchen eines Benutzers
 
-Azure ATP-Beweise für Warnungen und Lateral Movement-Pfade zeigen klar an, wenn Benutzer verdächtige Aktivitäten durchgeführt haben oder Anzeichen dafür vorhanden sind, dass ihre Konten kompromittiert worden sind. Verwenden Sie die Untersuchungsempfehlungen dazu, das Risiko für Ihre Organisation zu ermitteln, Abhilfemaßnahmen zu bestimmen und festzulegen, wie ähnliche Angriffe in der Zukunft am besten verhindert werden können.  
+Azure ATP-Beweise für Warnungen und Lateral Movement-Pfade zeigen klar an, wenn Benutzer verdächtige Aktivitäten durchgeführt haben oder Anzeichen dafür vorhanden sind, dass ihre Konten kompromittiert worden sind. In diesem Tutorial verwenden Sie die Untersuchungsempfehlungen dazu, das Risiko für Ihre Organisation zu ermitteln, Abhilfemaßnahmen zu bestimmen und festzulegen, wie ähnliche Angriffe in der Zukunft am besten verhindert werden können.  
+
+> [!div class="checklist"]
+> * Sammeln Sie Informationen zum Benutzer.
+> * Untersuchen Sie vom Benutzer durchgeführte Aktivitäten.
+> * Untersuchen Sie die Ressourcen, auf die der Benutzer zugegriffen hat.
+> * Untersuchen Sie Lateral Movement-Pfade.
 
 ## <a name="recommended-investigation-steps-for-suspicious-users"></a>Empfohlene Untersuchungsschritte für verdächtige Benutzer
 

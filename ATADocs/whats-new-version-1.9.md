@@ -4,7 +4,7 @@ description: Listet Neuerungen sowie bekannte Probleme in ATA 1.9 auf.
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
-manager: mbaldwin
+manager: barbkess
 ms.date: 3/25/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 51de491c-49ba-4aff-aded-cc133a8ccf0b
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 423f79ffc29af84fcb45a7103a07b1ef0ee0c546
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 4a21dbf96ae7897c6ab45feb306f43986f84c5f2
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133360"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56077353"
 ---
 # <a name="whats-new-in-ata-version-19"></a>Neuerungen in ATA 1.9
 
@@ -28,7 +28,7 @@ Die vorliegenden Anmerkungen zu dieser Version enthalten Informationen zu Update
 
 ## <a name="new--updated-detections"></a>Neue und aktualisierte Erkennung
 
--  **Erstellung verdächtiger Dienste:** Angreifer versuchen, einen verdächtigen Dienst in Ihrem Netzwerk auszuführen. ATA gibt jetzt eine Warnung aus, wenn erkannt wird, dass jemand auf einem Domänencontroller einen neuen Dienst ausführt, der verdächtig erscheint. Dieser Erkennungsvorgang basiert nicht auf Netzwerkdatenverkehr, sondern auf Ereignissen. Weitere Informationen dazu finden Sie im [Advanced Threat Analytics-Leitfaden zu verdächtigen Aktivitäten](suspicious-activity-guide.md#suspicious-service-creation).
+-  **Erstellung von verdächtigen Diensten:** Angreifer versuchen, verdächtige Dienste auf Ihrem Netzwerk auszuführen. ATA gibt jetzt eine Warnung aus, wenn erkannt wird, dass jemand auf einem Domänencontroller einen neuen Dienst ausführt, der verdächtig erscheint. Dieser Erkennungsvorgang basiert nicht auf Netzwerkdatenverkehr, sondern auf Ereignissen. Weitere Informationen dazu finden Sie im [Advanced Threat Analytics-Leitfaden zu verdächtigen Aktivitäten](suspicious-activity-guide.md#suspicious-service-creation).
 
 
 ## <a name="new-reports-to-help-you-investigate"></a>Neue Berichte, um Sie bei der Untersuchung zu unterstützen 
