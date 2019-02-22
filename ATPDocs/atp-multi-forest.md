@@ -7,18 +7,19 @@ ms.author: mlottner
 manager: barbkess
 ms.date: 1/24/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a8dfd4852b5a6bf5414876547212a3c5b0a07034
-ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
+ms.openlocfilehash: e35cb4cc277253543bf24eaccfe67d9808b64af4
+ms.sourcegitcommit: 5d3607b3a2c9d1a35dd36287f4a5fc68fca67eb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56077302"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56334441"
 ---
 # <a name="azure-advanced-threat-protection-multi-forest-support"></a>Azure Advanced Threat Protection-Unterstützung für mehrere Gesamtstrukturen
 
@@ -43,6 +44,7 @@ Zum Erkennen von Aktivitäten, die mehrere Gesamtstrukturen umfassen, fragen Azu
 - Sie können Anmeldeinformationen für alle Gesamtstrukturen in Ihrer Umgebung zur Seite „Verzeichnisdienste“ hinzufügen. 
     - Für jede Gesamtstruktur mit bidirektionaler Vertrauensstellung ist ein Satz von Anmeldeinformationen (Benutzername und Kennwort) erforderlich. 
     - Für jede Gesamtstruktur mit Vertrauensstellung ohne Kerberos oder fehlender Vertrauensstellung sind zusätzliche Anmeldeinformationen erforderlich. 
+    - Es gilt ein Limit von 10 Gesamtstrukturen pro Azure ATP-Instanz. Wenden Sie sich an den Support, wenn Ihre Organisation über mehr als 10 Gesamtstrukturen verfügt. 
 
 ![Azure ATP-Willkommensseite 1](media/directory-services-add-no-trust-forests.png)
 

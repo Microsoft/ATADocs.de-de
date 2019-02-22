@@ -7,18 +7,19 @@ ms.author: mlottner
 manager: barbkess
 ms.date: 02/03/2019
 ms.topic: tutorial
+ms.collection: M365-security-compliance
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: 0b3a1db5-0d43-49af-b356-7094cc85f0a5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 04c0bebbb017441b7494535a7c970478e8de12f8
-ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
+ms.openlocfilehash: 4360441bc078fa9d0cc09a9be8874d3d9999fab7
+ms.sourcegitcommit: 5d3607b3a2c9d1a35dd36287f4a5fc68fca67eb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56077778"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56334509"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Tutorial: Warnungen zu Domänendominanz  
 
@@ -45,7 +46,7 @@ Die folgenden Sicherheitswarnungen unterstützen Sie dabei, verdächtige Aktivit
 > * Vermutete Golden Ticket-Verwendung (nicht vorhandenes Konto) (externe ID 2027)
 > * Vermutete Golden Ticket-Verwendung (Ticketanomalie) (externe ID 2032)
 > * Vermutete Golden Ticket-Verwendung (Zeitanomalie) (externe ID 2022)
-> * Vermuteter Skeleton Key-Angriff (Herabstufung der Verschlüsselung) (externe ID)
+> * Vermuteter Skeleton Key-Angriff (Herabstufung der Verschlüsselung) (externe ID 2010)
 > * Verdächtige Änderung sensibler Gruppen (externe ID 2024)
 > * Verdächtige Diensterstellung (externe ID 2026)
 
@@ -354,7 +355,7 @@ Beschreibung: Durch bekannte Sicherheitslücken in älteren Versionen von Window
 Einige Betriebssysteme und Anwendungen sind dafür bekannt, dass sie die Autorisierungsdaten ändern. Linux- und Unix-Dienste verfügen beispielsweise über einen eigenen Autorisierungsmechanismus, der die Warnung auslösen kann. 
 
 1. Wird auf dem Quellcomputer ein Betriebssystem oder eine Anwendung ausgeführt, die über einen eigenen Autorisierungsmechanismus verfügt?  
-    - Wenn auf dem Quellcomputer dieser Autorisierungsmechanismus ausgeführt wird, sollten Sie ein Upgrade des Betriebssystems durchführen oder die Anwendungskonfiguration beheben. **Schließen** die Warnung als **B-TP**-Aktivität. 
+    - Wenn auf dem Quellcomputer diese Art von Autorisierungsmechanismus ausgeführt wird, sollten Sie ein Upgrade des Betriebssystems erwägen oder die Anwendungskonfiguration beheben. **Schließen** die Warnung als **B-TP**-Aktivität. 
   
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 1. Untersuchen Sie den [Quellcomputer](investigate-a-computer.md). 

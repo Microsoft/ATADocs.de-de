@@ -5,22 +5,31 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 02/04/2019
+ms.date: 02/17/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c12cb4836e401fbfb788cc243bdc6d29622552bb
-ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
+ms.openlocfilehash: be11b073171a192e71656d731619797f077054ab
+ms.sourcegitcommit: 5d3607b3a2c9d1a35dd36287f4a5fc68fca67eb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56077931"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56334526"
 ---
 # <a name="whats-new-in-azure-atp"></a>Neuerungen in Azure ATP
+
+## <a name="azure-atp-release-266"></a>Azure ATP Release 2.66
+Veröffentlichung: 17. Februar 2019
+
+- **Featureerweiterung: Vermuteter DCSync-Angriff (Replikation der Verzeichnisdienste)**<br>
+Die Benutzerfreundlichkeit dieser Sicherheitswarnung wurde verbessert. Zu den Verbesserungen zählen u.a. eine überarbeitete Beschreibung, die Bereitstellung zusätzlicher Quellinformationen, neue Infografiken und mehr Nachweisinformationen. Erfahren Sie mehr über die Sicherheitswarnung [Vermuteter DCSync-Angriff (Replikation der Verzeichnisdienste)](atp-domain-dominance-alerts.md#suspected-dcsync-attack-replication-of-directory-services-external-id-2006). 
+
+- Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
 ## <a name="azure-atp-release-265"></a>Azure ATP, Release 2.65
 Veröffentlichung: 10. Februar 2019
@@ -29,10 +38,10 @@ Veröffentlichung: 10. Februar 2019
 Die Azure ATP-Sicherheitswarnung [Suspected NTLM relay attack (Exchange account) - preview](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview) (Vermuteter NTLM-Relaisangriff (Exchange-Konto) – Vorschauversion) ist jetzt als öffentliche Vorschauversion verfügbar. <br> Hierbei wird eine Azure ATP-Sicherheitswarnung ausgelöst, wenn ermittelt wird, dass die Anmeldeinformationen eines Exchange-Kontos von einer verdächtigen Quelle verwendet werden. Bei solchen Angriffen werden NTLM-Relaistechniken verwendet, um die Exchange-Berechtigungen eines Domänencontrollers zu erlangen. Sie werden deshalb als **PrivExchange** bezeichnet. Weitere Informationen zur **PrivExchange**-Technik erhalten Sie in der [Sicherheitsempfehlung ADV190007](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV190007) (Erstveröffentlichung: 31. Januar 2019) und im Blogbeitrag zur [Reaktion auf Warnungen in Azure ATP](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/How-to-win-the-latest-security-race-over-NTLM-relay/ba-p/334511).  
 
 - **Allgemeine Verfügbarkeit: Remotecodeausführung über DNS**<br>
-Diese Warnung ist jetzt allgemein verfügbar. Weitere Informationen und Features für Warnungen finden Sie unter [Remotecodeausführung über DNS](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036). 
+Diese Warnung ist jetzt allgemein verfügbar. Weitere Informationen und Warnungsfeatures finden Sie auf der Beschreibungsseite zur Warnung [Remotecodeausführung über DNS](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036). 
 
 - **Allgemeine Verfügbarkeit: Datenexfiltration über den SMB**<br>
-Diese Warnung ist jetzt allgemein verfügbar. Weitere Informationen und Features für Warnungen finden Sie unter [Datenexfiltration über den SMB](atp-exfiltration-alerts.md#data-exfiltration-over-smb-external-id-2030).
+Diese Warnung ist jetzt allgemein verfügbar. Weitere Informationen und Warnungsfeatures finden Sie auf der Beschreibungsseite zur Warnung [Datenexfiltration über SMB](atp-exfiltration-alerts.md#data-exfiltration-over-smb-external-id-2030).
 
 
 - Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
