@@ -13,7 +13,6 @@
 ## [Installieren des Azure ATP-Sensors](install-atp-step4.md)
 ## [Konfigurieren des Azure ATP-Sensors](install-atp-step5.md)
 # Lernprogramme
-## [Verstehen von Sicherheitswarnungen](understanding-security-alerts.md)
 ## [Warnungen zu Reconnaissance](atp-reconnaissance-alerts.md)
 ## [Warnungen zu kompromittierten Anmeldeinformationen](atp-compromised-credentials-alerts.md)
 ## [Lateral Movement-Warnungen](atp-lateral-movement-alerts.md)
@@ -59,6 +58,13 @@
 ### [Überprüfen der Portspiegelung](validate-port-mirroring.md)
 ### [Konfigurieren der Ereignissammlung](configure-event-collection.md)
 ### [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-forwarding.md)
+## [Verstehen von Sicherheitswarnungen](understanding-security-alerts.md)
+## Lab für Sicherheitswarnungen
+### [Übersicht über das Lab](atp-playbook-lab-overview.md)
+### [1. Lab-Setup](atp-playbook-setup-lab.md)
+### [2. Playbook zu Reconnaissance](atp-playbook-reconnaissance.md)
+### [3. Lateral Movement-Playbook](atp-playbook-lateral-movement.md)
+### [4. Playbook zu Domänendominanz](atp-playbook-domain-dominance.md)
 # Referenz
 ## [Referenz zum SIEM-Protokoll](cef-format-sa.md)
 ## [Azure ATP: Häufige Probleme](known-issues.md)
