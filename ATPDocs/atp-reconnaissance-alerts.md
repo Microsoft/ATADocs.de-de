@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 02/04/2019
+ms.date: 02/24/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 09649f57041ca53ae7cdd183e60584ff37be9c9f
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: 36f7d273273e11d57c681e75cc762e853a127616
+ms.sourcegitcommit: 5e954f2f0cc14e42d68d2575dd1c2ed9eaabe891
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264031"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56754411"
 ---
 # <a name="tutorial-reconnaissance-alerts"></a>Tutorial: Warnungen zu Reconnaissance  
 
@@ -40,8 +40,10 @@ In diesem Tutorial machen Sie sich mit den folgenden Angriffstypen vertraut und 
 > [!div class="checklist"]
 > * Reconnaissance über Kontoenumeration (externe ID 2003)
 > * Reconnaissance über Netzwerkzuordnungen (DNS) (externe ID 2007)
+> * Sicherheitsprinzipalreconnaissance (LDAP) (externe ID 2038) – Vorschauversion
 > * Reconnaissance über Benutzer und IP-Adressen (SMB) (externe ID 2012)
 > * Reconnaissance über Benutzer und Gruppenmitgliedschaften (SAMR) (externe ID 2021)
+> * 
 
 ## <a name="account-enumeration-reconnaissance-external-id-2003"></a>Reconnaissance über Kontoenumeration (externe ID 2003) 
 
@@ -109,14 +111,13 @@ Betrachten Sie nun die Konten:<br>
 
 ## <a name="network-mapping-reconnaissance-dns-external-id-2007"></a>Reconnaissance über Netzwerkzuordnungen (DNS) (externe ID 2007) 
 
-
 *Vorheriger Name*: Reconnaissance über DNS
 
 **Beschreibung**
 
 Ihr DNS-Server enthält eine Struktur aller Computer, IP-Adressen und Dienste in Ihrem Netzwerk. Diese Informationen werden von Angreifern verwendet, um Ihre Netzwerkstruktur auszukundschaften und um interessante Zielcomputer zu bestimmten, die sie in den nächsten Schritten des Angriffs benötigen. 
  
-Es gibt mehrere Abfragetypen im DNS-Protokoll. Diese Azure ATP-Sicherheitswarnung erkennt AXFR-Übertragungsanforderungen, die von Nicht-DNS-Servern stammen.
+Es gibt mehrere Abfragetypen im DNS-Protokoll. Diese Azure ATP-Sicherheitswarnung erkennt verdächtige Anforderungen, entweder AXFR-Anforderungen (Übertragung) von Nicht-DNS-Servern oder solche, die eine übermäßige Anzahl von Anforderungen verwenden.
 
 **Lernphase**
 
@@ -142,16 +143,43 @@ Sicherheitsscanner und zulässige Anwendungen können DNS-Abfragen erstellen.
 **Empfohlene Abhilfemaßnahmen und Schritte zur Vorbeugung**
 
 **Abhilfemaßnahmen:**
-1. Kontrollieren Sie den Quellcomputer. 
+- Kontrollieren Sie den Quellcomputer. 
     - Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
     - Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch kompromittiert sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA.
 
-**Vorbeugung:** Zukünftige Angriffe über AXFR-Abfragen vermeiden Sie, indem Sie Ihren internen DNS-Server sichern.
+**Vorbeugung:**<br>
+Zukünftige Angriffe über AXFR-Abfragen vermeiden Sie, indem Sie Ihren internen DNS-Server sichern.
 
-1. Dadurch verhindern Sie Reconnaissance über DNS. Deaktivieren Sie hierzu Zonenübertragungen, oder [schränken Sie diese auf bestimmte IP-Adressen ein](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)). Das Bearbeiten von Zonenübertragungen ist eine Aufgabe innerhalb einer Prüfliste, die für das [Sichern des DNS-Servers gegen interne und externe Angriffe](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)) gelten sollte.
+- Dadurch verhindern Sie Reconnaissance über DNS. Deaktivieren Sie hierzu Zonenübertragungen, oder [schränken Sie diese auf bestimmte IP-Adressen ein](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)). Das Bearbeiten von Zonenübertragungen ist eine Aufgabe innerhalb einer Prüfliste, die für das [Sichern des DNS-Servers gegen interne und externe Angriffe](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)) gelten sollte.
+
+## <a name="security-principal-reconnaissance-ldap-external-id-2038---preview"></a>Sicherheitsprinzipalreconnaissance (LDAP) (externe ID 2038) – Vorschauversion
+
+**Beschreibung** Mit Sicherheitsprinzipalreconnaissance erlangen Angreifer wichtige Informationen über die Domänenumgebung. Informationen, die sowohl Angreifern helfen, die Domänenstruktur zu erfassen, als auch privilegierte Konten für die Verwendung in späteren Schritten in ihrer Angriffsabwehrkette zu identifizieren. Lightweight Directory Access Protocol (LDAP) ist eine der sowohl für zulässige als auch böswillige Zwecke am häufigsten verwendeten Methoden zum Abfragen von Active Directory.  LDAP-fokussierte Sicherheitsprinzipalreconnaissance wird häufig als erste Phase eines Kerberoasting-Angriffs verwendet. Mit Kerberoasting-Angriffen wird eine Zielliste von Sicherheitsprinzipalnamen (Security Principal Names, SPNs) abgerufen, für die Angreifer dann versuchen, Ticket Granting Server-Tickets (TGS) zu erhalten.
+
+Damit Azure ATP berechtigte Benutzer präzise profilen und kennenlernen kann, werden in den ersten 10 Tagen nach der Azure ATP-Bereitstellung keine Warnungen dieses Typs ausgelöst. Sobald die anfängliche Azure ATP-Lernphase abgeschlossen ist, werden Warnungen auf Computern generiert, die mithilfe von zuvor nicht beobachteten Methoden verdächtige LDAP-Enumerationsabfragen durchführen, bzw. Abfragen, die auf sensible Gruppen zielen.  
+
+Die **Lernphase** dauert 10 Tage pro Computer, ab dem Tag, an dem das erste Ereignis auf dem Computer beobachtet wurde. 
+
+**TP, B-TP oder FP?**
+1.  Klicken Sie auf den Quellcomputer, und rufen Sie seine Profilseite auf. 
+    1. Wird von diesem Quellcomputer erwartet, dass er diese Aktivität generiert? 
+    2. Wenn diese Aktivität von diesem Computer erwartet wird, **schließen** Sie die Sicherheitswarnung, und schließen Sie diesen Computer als **B-TP**-Aktivität aus. 
+
+**Ermitteln des Umfangs der Sicherheitsverletzung**
+
+1.  Überprüfen Sie die Abfragen, die ausgeführt wurden (z.B. als Domänenadministratoren oder alle Benutzer in einer Domäne), und bestimmen Sie, ob die Abfragen erfolgreich ausgeführt wurden. Untersuchen Sie bei jeder gefährdeten Gruppe, ob die Gruppe oder der Gruppe angehörende Benutzer betreffende verdächtige Aktivitäten aufgetreten sind.
+2. Untersuchen Sie den [Quellcomputer](investigate-a-computer.md). 
+    - Überprüfen Sie mit den LDAP-Abfragen, ob bei einem der gefährdeten SPNs Ressourcenzugriffsaktivität aufgetreten ist.
+
+**Empfohlene Abhilfemaßnahmen und Schritte zur Vorbeugung**
+
+1.  Kontrollieren Sie den Quellcomputer.
+    1. Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
+    2. Führt der Computer ein Scantool aus, das eine Vielzahl von LDAP-Abfragen ausführt?
+    3. Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA.
+2.  Setzen Sie das Kennwort zurück, wenn der Zugriff auf eine SPN-Ressource erfolgte, die unter einem Benutzerkonto (kein Computerkonto) ausgeführt wird.
 
 ## <a name="user-and-ip-address-reconnaissance-smb-external-id-2012"></a>Reconnaissance über Benutzer und IP-Adressen (SMB) (externe ID 2012) 
-
 
 *Vorheriger Name*: Reconnaissance mithilfe der SMB-Sitzungsenumeration
 

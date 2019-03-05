@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 0b3a1db5-0d43-49af-b356-7094cc85f0a5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4360441bc078fa9d0cc09a9be8874d3d9999fab7
-ms.sourcegitcommit: 5d3607b3a2c9d1a35dd36287f4a5fc68fca67eb0
+ms.openlocfilehash: 1c3e4fbf435c22ec57a90653d7a1e8133d9acbf3
+ms.sourcegitcommit: 478878e685d1e4d52b5cd0429b9bf7304e5d8552
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56334509"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852696"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Tutorial: Warnungen zu Domänendominanz  
 
@@ -432,12 +432,12 @@ Vorheriger Name: Kerberos Golden Ticket
 
 **Beschreibung:** Angreifer mit Domänenadministratorrechten können das KRBTGT-Konto kompromittieren. Indem diese das KRBTGT-Konto verwenden, können sie ein Kerberos Ticket Granting Ticket (TGT) erstellen, das die Autorisierung für jede Ressource erteilen und den Ablaufzeitpunkt des Tickets auf einen beliebigen Zeitpunkt festlegen kann. Dieses gefälschte TGT wird als „Golden Ticket“ bezeichnet und ermöglicht es Angreifern, dauerhaft die Kontrolle über das Netzwerk zu erhalten. Diese Warnung wird ausgelöst, wenn ein Kerberos Ticket Granting Ticket länger als erlaubt verwendet wird. Die zulässige Dauer ist in der Sicherheitsrichtlinie für die maximale Gültigkeitsdauer des Benutzertickets angegeben. 
  
-**TP, B-TP oder FP**
-1. Wurden in den letzten Stunden an der Einstellung für die  **maximale Gültigkeitsdauer des Benutzertickets** innerhalb der Gruppenrichtlinie Änderungen vorgenommen, die sich auf den Alarm auswirken könnten?  
+**TP, B-TP oder FP?**
+1. Wurden in den letzten Stunden an der Einstellung **Maximale Gültigkeitsdauer für Benutzerticket** innerhalb der Gruppenrichtlinie Änderungen vorgenommen, die sich auf die Warnung auswirken könnten?  
 2. Ist der eigenständige Azure ATP-Sensor, der am Auslösen dieser Warnung beteiligt ist, ein virtueller Computer? 
     - Wenn der eigenständige Azure ATP-Sensor beteiligt ist, wurde dieser kürzlich aus einem gespeicherten Zustand wiederhergestellt und seine Ausführung fortgesetzt?  
 3. Gibt es ein Problem mit der Zeitsynchronisierung im Netzwerk, durch das nicht alle Computer synchronisiert werden? 
-    - Klicken Sie auf die Schaltfläche  **Details herunterladen**, um die Excel-Datei für den Sicherheitswarnungsbericht anzuzeigen und zugehörige Netzwerkaktivitäten aufzurufen. Überprüfen Sie, ob sich „StartTime“ und „DomainControllerStartTime“ unterscheiden.
+    - Klicken Sie auf die Schaltfläche **Details herunterladen**, um die Excel-Datei für den Sicherheitswarnungsbericht anzuzeigen und zugehörige Netzwerkaktivitäten aufzurufen. Überprüfen Sie, ob sich „StartTime“ und „DomainControllerStartTime“ unterscheiden.
 
 Wenn die Antwort auf die vorherigen Fragen **Ja** lautet, **schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität. 
  

@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 12/17/2018
+ms.date: 02/25/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,18 +14,25 @@ ms.technology: ''
 ms.assetid: feea1982-ba23-48be-a468-98d2586cf840
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1689d2d2bd4becd42812010dc8fd6e13f0483ef5
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: 916a7a2b8f9782b66867860cdb7575e0069a30d4
+ms.sourcegitcommit: 5e954f2f0cc14e42d68d2575dd1c2ed9eaabe891
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56263929"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56754360"
 ---
 # <a name="azure-atp-known-issues"></a>Azure ATP: Bekannte Probleme
 
 Azure ATP weist gelegentlich technische oder funktionelle Einschränkungen auf, die die Verwendung von Azure ATP-Diensten in Ihrer Organisation einschränken oder verändern können. Die aktuell bekannten Einschränkungen, die weder eine bekannte Problemumgehung noch den Status „In Bearbeitung“ ohne eine bestimmte Aktualisierungszeit aufweisen, sind im Folgenden beschrieben. 
 
 Informationen zur Umgehung bekannter Probleme bei Azure ATP finden Sie unter [Behandlung von bekannten Problemen bei Azure ATP](troubleshooting-atp-known-issues.md). Rufen Sie das [Azure ATP-Integritätscenter](atp-health-center.md) auf, um den Status Ihres Azure ATP-Mandanten zu überprüfen. 
+
+## <a name="dns-reconnaissance-alert"></a>DNS-Reconnaissancewarnung
+> [!div class="mx-tableFixed"] 
+
+|Problem|Status|
+|----|----|
+Das *DNS-Reconnaissance*-Sicherheitswarnungsproblem betrifft Kunden durch das Ausgeben von falsch positiven **DNS-Reconnaissancewarnungen** von einem einzelnen Computer. Wenn eine Spitze von **DNS-Reconnaissancewarnungen** auftritt, die von einem einzelnen Computer generiert werden, schließen oder löschen Sie diese Warnungen, bis Update 2.67 bereitgestellt und dieses Problem gelöst wird. | Update 2.67 löst dieses Problem.|
 
 ## <a name="suspected-brute-force-attack-ldap-security-alert-display"></a>Sicherheitswarnungsanzeige für Suspected Brute Force attack (LDAP) (Verdacht auf einen Brute-Force-Angriff (LDAP))
 > [!div class="mx-tableFixed"] 
