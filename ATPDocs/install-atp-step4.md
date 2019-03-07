@@ -3,18 +3,18 @@ title: 'Schnellstart: Installieren von Azure ATP-Sensoren | Microsoft-Dokumentat
 description: Im vierten Schritt der Azure ATP-Installation erhalten Sie Hilfe zur Installation des Azure ATP-Sensors.
 author: mlottner
 ms.author: mlottner
-ms.date: 02/06/2019
+ms.date: 03/03/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8a09346a4529a5368d3f8521a77d1fba274786c8
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: 99045c4d8982c34d3defa681417a3b3963c563ac
+ms.sourcegitcommit: 929f28783110c7e114ab36d4cccd50563f4030df
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56263714"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57253928"
 ---
 # <a name="quickstart-install-the-azure-atp-sensor"></a>Schnellstart: Installieren des Azure ATP-Sensors
 
@@ -80,7 +80,6 @@ Führen Sie auf dem Domänencontroller folgende Schritte aus.
     - Azure ATP-Sensordienst und Azure ATP-Sensorupdatedienst
     - Microsoft Visual C++ 2013 Redistributable
 
-8. Klicken Sie nach Abschluss der Installation auf **Starten**, um den Browser zu öffnen und sich beim Azure ATP-Portal anzumelden.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
