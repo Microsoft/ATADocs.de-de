@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 1/17/2019
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a2f880c4e0df1647f99b0847a8eec71c6b8428bc
-ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
+ms.openlocfilehash: dc1ee8c4c0610f1d6289319fadf92e2b7aae6072
+ms.sourcegitcommit: 8681c4ed6ede58ace737f31eeff9a680b8e4256d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56077999"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57007482"
 ---
 # <a name="install-ata---step-1"></a>Installieren von ATA – Schritt 1
 
@@ -71,6 +71,9 @@ Führen Sie die folgenden Schritte auf dem ATA Center-Server aus.
    |SSL-Zertifikat für Center-Dienst|Dies ist das Zertifikat, das von der ATA-Konsole und vom ATA Center-Dienst verwendet wird.|Klicken Sie auf das Schlüsselsymbol, um ein installiertes Zertifikat auszuwählen, oder verwenden Sie das Kontrollkästchen, um ein selbstsigniertes Zertifikat zu erstellen.|
         
    ![Abbildung ATA Center-Konfiguration](media/ATA-Center-Configuration.png)
+
+> [!NOTE]   
+> Stellen Sie sicher, dass Warnungen in Bezug auf den SSL-Zertifikatstatus für den Center-Dienst sowie Ablaufwarnungen überwacht werden. Wenn das Zertifikat abläuft, müssen Sie ATA vollständig neu bereitstellen. 
 
 10. Klicken Sie auf **Installieren**, um ATA Center und die zugehörigen Komponenten zu installieren.
    Bei der Installation von ATA Center werden die folgenden Komponenten installiert und konfiguriert:

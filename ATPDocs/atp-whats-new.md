@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 02/25/2019
+ms.date: 03/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,19 +14,33 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 27c0513a5a70e09b7c890eda42b14f5b7265e663
-ms.sourcegitcommit: 5e954f2f0cc14e42d68d2575dd1c2ed9eaabe891
+ms.openlocfilehash: 1edc9d7848721426e47cb82730b6de1db87e1874
+ms.sourcegitcommit: 929f28783110c7e114ab36d4cccd50563f4030df
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56754445"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57253996"
 ---
 # <a name="whats-new-in-azure-atp"></a>Neuerungen in Azure ATP
+
+## <a name="azure-atp-release-268"></a>Azure ATP Release 2.68
+Veröffentlicht: 3. März 2019
+
+- **Featureerweiterung: Suspected Brute Force attack (LDAP) alert** (Warnung bei Verdacht auf einen Brute-Force-Angriff (LDAP))<br>
+Die Benutzerfreundlichkeit dieser Sicherheitswarnung wurde erheblich verbessert. Zu den Verbesserungen zählen u.a. eine überarbeitete Beschreibung, die Bereitstellung zusätzlicher Quellinformationen, neue Infografiken und Details zu Rateversuchen, um eine schnellere Behebung zu erreichen. Erfahren Sie mehr zu Sicherheitswarnungen für [Suspected Brute Force attack (LDAP)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-ldap-external-id-2004) (Verdacht auf einen Brute-Force-Angriff (LDAP)) 
+
+- **Neues Dokumentationsfeature: Sicherheitswarnungsumgebung**<br>
+
+    Um die Leistungsfähigkeit von Azure ATP bei der Erkennung der tatsächlichen Bedrohungen für Ihre Arbeitsumgebung zu erklären, haben wir dieser Dokumentation eine neue **Sicherheitswarnungsumgebung** hinzugefügt. Die **Sicherheitswarnungsumgebung** hilft Ihnen, schnell ein Labor oder eine Testumgebung einzurichten, und erklärt die beste Verteidigung gegen gängige, realitätsnahe Bedrohungen und Angriffe.  
+
+    Das [Schritt-für-Schritt-Umgebung](atp-playbook-lab-overview.md) wurde entwickelt, um sicherzustellen, dass Sie nur wenig Zeit für den Aufbau aufwenden und mehr Zeit investieren können, sich über Ihre Bedrohungslage und die verfügbaren Azure ATP-Warnmeldungen und den Schutz zu informieren. Wir freuen uns auf Ihr Feedback.
+
+- Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
 ## <a name="azure-atp-release-267"></a>Azure ATP Release 2.67
 Veröffentlichung: 24. Februar 2019
 
-- **Neue Sicherheitswarnung: Sicherheitsprinzipalreconnaissance (LMP) – (Vorschauversion)**<br>
+- **Neue Sicherheitswarnung: Sicherheitsprinzipalreconnaissance (LDAP) – Vorschauversion**<br>
 
     [Sicherheitsprinzipalreconnaissance (LDAP) – Vorschauversion](atp-reconnaissance-alerts.md#security-principal-reconnaissance-ldap-external-id-2038---preview)-Sicherheitswarnung für Azure ATP ist jetzt als öffentliche Vorschauversion verfügbar. <br> In dieser Erkennung wird eine Azure ATP-Sicherheitswarnung ausgelöst, wenn Sicherheitsprinzipalreconnaissance von Angreifern verwendet wird, um wichtige Informationen über die Domänenumgebung zu erlangen. Diese Informationen helfen Angreifern, die Domänenstruktur zu erfassen, und identifizieren auch privilegierte Konten für die Verwendung in späteren Schritten in ihrer Angriffsabwehrkette. 
 

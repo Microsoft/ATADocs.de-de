@@ -3,18 +3,18 @@ title: 'Schnellstart: Konfigurieren von Azure ATP-Einstellungen | Microsoft-Doku
 description: Im fünften Schritt der Installation von Azure ATP konfigurieren Sie Einstellungen für Ihren eigenständigen Azure ATP-Sensor.
 author: mlottner
 ms.author: mlottner
-ms.date: 02/06/2018
+ms.date: 03/03/2018
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 381cf39f29edb36c704ce2de7f6c2aca31d4f19d
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: 9b51c781cee16d4f158cc0e0528d4f80683aabad
+ms.sourcegitcommit: 929f28783110c7e114ab36d4cccd50563f4030df
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56263348"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57253945"
 ---
 # <a name="quickstart-configure-azure-atp-sensor-settings"></a>Schnellstart: Konfigurieren der Einstellungen des Azure ATP-Sensors
 
@@ -27,14 +27,16 @@ In diesem Schnellstart konfigurieren Sie die Einstellungen für den Azure ATP-Se
 
 ## <a name="configure-sensor-settings"></a>Konfigurieren von Sensoreinstellungen
 
-Führen Sie die folgenden Schritte nach der Installation des Azure ATP-Sensors aus, um die Azure ATP-Sensor-Einstellungen zu konfigurieren.
+Gehen Sie nach der Installation des Azure ATP-Sensors folgendermaßen vor, um die Einstellungen des Azure ATP-Sensors zu konfigurieren.
 
-1.  Öffnen Sie die **Konfiguration** im Azure ATP-Portal, und wählen Sie **Sensoren** im Abschnitt **System** aus.
+1. Klicken Sie auf **Starten**, um Ihren Browser zu öffnen und sich beim Azure ATP-Portal anzumelden.
+
+2.  Öffnen Sie die **Konfiguration** im Azure ATP-Portal, und wählen Sie **Sensoren** im Abschnitt **System** aus.
    
     ![Abbildung der Konfiguration der Sensoreinstellungen](media/atp-sensor-config.png)
 
 
-2. Klicken Sie auf den Sensor, den Sie konfigurieren möchten, und geben Sie die folgenden Informationen ein:
+3. Klicken Sie auf den Sensor, den Sie konfigurieren möchten, und geben Sie die folgenden Informationen ein:
 
    ![Abbildung der Konfiguration der Sensoreinstellungen](media/atp-sensor-config-2.png)
 
@@ -64,7 +66,7 @@ Führen Sie die folgenden Schritte nach der Installation des Azure ATP-Sensors a
 
 
 ## <a name="validate-installations"></a>Überprüfen von Installationen
-Gehen Sie wie folgt vor, um zu überprüfen, ob der Azure ATP-Sensor erfolgreich bereitgestellt wurde:
+Überprüfen Sie folgendermaßen, ob der Azure ATP-Sensor erfolgreich bereitgestellt wurde:
 
 1. Überprüfen Sie, ob der Dienst mit dem Namen **Azure Advanced Threat Protection-Sensor** ausgeführt wird. Es kann einige Sekunden dauern, bis der Dienst nach dem Speichern der Einstellungen für den Azure ATP-Sensor gestartet wird.
 
@@ -74,6 +76,19 @@ Gehen Sie wie folgt vor, um zu überprüfen, ob der Azure ATP-Sensor erfolgreich
    > Es werden regelmäßig Versionsupdates für Azure ATP ausgeführt. Wenn Sie die neuste Version im Azure ATP-Portal überprüfen möchten, navigieren Sie zur **Konfiguration**, und klicken Sie dann auf **Info**. 
 
 3. Rufen Sie Ihre Azure ATP-Instanz auf. Suchen Sie im Azure ATP-Portal über die Suchleiste nach einem bestimmten Objekt, z.B. einem Benutzer oder einer Gruppe in Ihrer Domäne.
+
+4. Überprüfen Sie die ATP-Konnektivität für alle Domänengeräte anhand der folgenden Schritte:
+    1. Öffnen Sie eine Eingabeaufforderung.
+    2. Geben Sie Folgendes ein: ```nslookup```
+    3. Geben Sie **server** und anschließend den FQDN oder die IP-Adresse des Domänencontrollers ein, auf dem der ATP-Sensor installiert ist. Beispiel: ```server contosodc.contoso.azure```
+        - Stellen Sie sicher, dass Sie contosodc.contoso.azure und contoso.azure durch den FQDN Ihres Azure ATP-Sensors bzw. durch den Domänennamen ersetzen.
+    4. Geben Sie Folgendes ein: ```ls -d contoso.azure```
+    5. Wiederholen Sie die Schritte 3 und 4 für jeden Sensor, den Sie testen möchten.  
+    6. Öffnen Sie von der Azure ATP-Konsole aus das Entitätsprofil für den Computer, von dem aus Sie den Konnektivitätstest durchgeführt haben. 
+    7. Überprüfen Sie die zugehörige logische Aktivität, und bestätigen Sie die Konnektivität. 
+
+    > [!NOTE] 
+    >Wenn der zu testende Domänencontroller der erste bereitgestellte Sensor ist, warten Sie mindestens 15 Minuten, damit das Datenbank-Back-End die erste Bereitstellung der erforderlichen Microservices abschließen kann. Versuchen Sie erst anschließend, die zugehörige logische Aktivität für diesen Domänencontroller zu überprüfen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

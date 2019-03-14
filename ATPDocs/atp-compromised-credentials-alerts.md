@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 80cc0a73712d12f3d4f2722f8756c1b403f90c44
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: d20359547696f7fe3cafd75a638563d400f0ed82
+ms.sourcegitcommit: 0e77ed44ee73ac84923fa7379e555f5ed9602aca
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264014"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017301"
 ---
 # <a name="tutorial-compromised-credential-alerts"></a>Tutorial: Warnungen zu kompromittierten Anmeldeinformationen  
 
@@ -132,7 +132,7 @@ In dieser Erkennung wird eine Warnung ausgelöst, wenn Azure ATP eine signifikan
 
 Überprüfen Sie auf jeden Fall, ob Anmeldeversuche mit einer erfolgreichen Authentifizierung beendet wurden.
 
-1. Wurde ein Anmeldeversuch erfolgreich beendet, überprüfen Sie, ob eines der  **Erratenen Konten**  normalerweise von diesem Quellcomputer verwendet wird.
+1. Wurde ein Anmeldeversuch erfolgreich beendet, überprüfen Sie, ob eines der **Erratenen Konten** normalerweise von diesem Quellcomputer verwendet wird.
    - Besteht die Möglichkeit, dass bei diesen Konten wegen der Verwendung eines falschen Kennworts ein Fehler aufgetreten ist?  
    - Überprüfen Sie zusammen mit dem Benutzer/den Benutzern, ob die Aktivität von ihm/ihnen generiert wurde (durch erfolgreiches Anmelden nach einigen fehlerhaften Anmeldeversuchen).
 
