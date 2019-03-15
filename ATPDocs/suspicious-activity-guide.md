@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 01bce9f5a668685a8d3f88388d1f4c795b352e31
-ms.sourcegitcommit: 5e954f2f0cc14e42d68d2575dd1c2ed9eaabe891
+ms.openlocfilehash: 69223076650c6fb063b8c932b8d253c448c65d30
+ms.sourcegitcommit: aad7a417addae3f21f81ea2b7336c3d83659f592
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56754394"
+ms.lasthandoff: 03/10/2019
+ms.locfileid: "57725646"
 ---
 # <a name="azure-atp-security-alerts"></a>Azure ATP-Sicherheitswarnungen
 
@@ -40,41 +40,41 @@ In Version 2.56 wurden alle Sicherheitswarnungen für Azure ATP umbenannt. Die n
 
 > [!div class="mx-tableFixed"] 
 
-|Neuer Sicherheitswarnungsname|Alter Sicherheitswarnungsname|Eindeutige externe ID|
-|---------|----------|---------|
-|[Reconnaissance mithilfe von Kontoenumeration](atp-reconnaissance-alerts.md#account-enumeration-reconnaissance-external-id-2003)|Reconnaissance mithilfe von Kontoenumeration|2003|
-|[Data exfiltration over SMB (Datenexfiltration über den SMB)](atp-exfiltration-alerts.md#data-exfiltration-over-smb-external-id-2030)| N/V| 2030|
-|[Honeytoken-Aktivität](atp-compromised-credentials-alerts.md#honeytoken-activity-external-id-2014)|Honeytoken-Aktivität|2014|
-|[Malicious request of Data Protection API master key (Böswillige Anforderung eines Masterschlüssels zur Datenschutz-API)](atp-domain-dominance-alerts.md#malicious-request-of-data-protection-api-master-key-external-id-2020)|Böswillige Anforderung privater Informationen im Rahmen der Datensicherheit|2020|
-|[Network mapping reconnaissance (DNS) (Reconnaissance über Netzwerkzuordnung (DNS))](atp-reconnaissance-alerts.md#network-mapping-reconnaissance-dns-external-id-2007)|Reconnaissance über DNS|2007|
-|[Versuchte Remotecodeausführung](atp-domain-dominance-alerts.md#remote-code-execution-attempt-external-id-2019)|Versuchte Remote-Codeausführung|2019|
-|[Remotecodeausführung über DNS](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036)|N/V|2036|
-|[Sicherheitsprinzipalreconnaissance (LDAP) – Vorschauversion](atp-reconnaissance-alerts.md#security-principal-reconnaissance-ldap-external-id-2038---preview)|N/V|2038|
-|[Suspected Brute Force attack (LDAP) (Verdacht auf einen Brute-Force-Angriff (LDAP))](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-ldap-external-id-2004)|Brute-Force-Angriff mithilfe einer einfachen LDAP-Bindung|2004|
-|[Suspected Brute Force attack (Kerberos NTLM) (Verdacht auf einen Brute-Force-Angriff (Kerberos NTLM))](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-kerberos-ntlm-external-id-2023)|Verdächtige Authentifizierungsfehler|2023|
-|[Suspected Brute Force attack (SMB) (Verdacht auf einen Brute-Force-Angriff (SMB))](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-smb-external-id-2033)|Ungewöhnliche Protokollimplementierung (potenzielle Verwendung schädlicher Tools wie Hydra)|2033|
-|[Suspected DCShadow attack (domain controller promotion) (Verdacht auf DCShadow-Angriff (Heraufstufung von Domänencontrollern))](atp-domain-dominance-alerts.md#suspected-dcshadow-attack-domain-controller-promotion-external-id-2028)|Verdächtige Heraufstufung zu Domänencontrollern (potenzieller DcShadow-Angriff)|2028|
-|[Verdacht auf DCShadow-Angriff (Replikationsanforderung an Domänencontroller)](atp-domain-dominance-alerts.md#suspected-dcshadow-attack-domain-controller-replication-request-external-id-2029)|Verdächtige Replikationsanforderung von Domänencontroller (potenzieller DCShadow-Angriff)|2029|
-|[Suspected DCSync attack (replication of directory services) (Verdacht auf einen DCSync-Angriff (Replikation von Verzeichnisdiensten))](atp-domain-dominance-alerts.md#suspected-dcsync-attack-replication-of-directory-services-external-id-2006)|Böswillige Replikation von Verzeichnisdiensten|2006|
+|Neuer Sicherheitswarnungsname|Alter Sicherheitswarnungsname|Eindeutige externe ID|MITRE ATT&CK Matrix™ |
+|---------|----------|---------|---------|
+|[Reconnaissance mithilfe von Kontoenumeration](atp-reconnaissance-alerts.md#account-enumeration-reconnaissance-external-id-2003)|Reconnaissance mithilfe von Kontoenumeration|2003|Ermittlung|
+|[Data exfiltration over SMB (Datenexfiltration über den SMB)](atp-exfiltration-alerts.md#data-exfiltration-over-smb-external-id-2030)| N/V| 2030|Exfiltration,<br>Seitliche Verschiebung,<br>Befehl und Steuerelement|
+|[Honeytoken-Aktivität](atp-compromised-credentials-alerts.md#honeytoken-activity-external-id-2014)|Honeytoken-Aktivität|2014||
+|[Malicious request of Data Protection API master key (Böswillige Anforderung eines Masterschlüssels zur Datenschutz-API)](atp-domain-dominance-alerts.md#malicious-request-of-data-protection-api-master-key-external-id-2020)|Böswillige Anforderung privater Informationen im Rahmen der Datensicherheit|2020|Zugriff über Anmeldeinformationen|
+|[Network mapping reconnaissance (DNS) (Reconnaissance über Netzwerkzuordnung (DNS))](atp-reconnaissance-alerts.md#network-mapping-reconnaissance-dns-external-id-2007)|Reconnaissance über DNS|2007|Ermittlung|
+|[Versuchte Remotecodeausführung](atp-domain-dominance-alerts.md#remote-code-execution-attempt-external-id-2019)|Versuchte Remote-Codeausführung|2019|Ausführung,<br> Persistenz,<br> Ausweitung von Berechtigungen,<br> Umgehung der Verteidigung,<br> Seitliche Verschiebung|
+|[Remotecodeausführung über DNS](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036)|N/V|2036|Ausweitung von Berechtigungen,<br> Seitliche Verschiebung|
+|[Sicherheitsprinzipalreconnaissance (LDAP) – Vorschauversion](atp-reconnaissance-alerts.md#security-principal-reconnaissance-ldap-external-id-2038---preview)|N/V|2038|Zugriff über Anmeldeinformationen|
+|[Suspected Brute Force attack (Kerberos NTLM) (Verdacht auf einen Brute-Force-Angriff (Kerberos NTLM))](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-kerberos-ntlm-external-id-2023)|Verdächtige Authentifizierungsfehler|2023|Zugriff über Anmeldeinformationen|
+|[Suspected Brute Force attack (LDAP) (Verdacht auf einen Brute-Force-Angriff (LDAP))](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-ldap-external-id-2004)|Brute-Force-Angriff mithilfe einer einfachen LDAP-Bindung|2004|Zugriff über Anmeldeinformationen|
+|[Suspected Brute Force attack (SMB) (Verdacht auf einen Brute-Force-Angriff (SMB))](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-smb-external-id-2033)|Ungewöhnliche Protokollimplementierung (potenzielle Verwendung schädlicher Tools wie Hydra)|2033|Seitliche Verschiebung|
+|[Suspected DCShadow attack (domain controller promotion) (Verdacht auf DCShadow-Angriff (Heraufstufung von Domänencontrollern))](atp-domain-dominance-alerts.md#suspected-dcshadow-attack-domain-controller-promotion-external-id-2028)|Verdächtige Heraufstufung zu Domänencontrollern (potenzieller DcShadow-Angriff)|2028|Umgehung der Verteidigung|
+|[Verdacht auf DCShadow-Angriff (Replikationsanforderung an Domänencontroller)](atp-domain-dominance-alerts.md#suspected-dcshadow-attack-domain-controller-replication-request-external-id-2029)|Verdächtige Replikationsanforderung von Domänencontroller (potenzieller DCShadow-Angriff)|2029|Umgehung der Verteidigung|
+|[Suspected DCSync attack (replication of directory services) (Verdacht auf einen DCSync-Angriff (Replikation von Verzeichnisdiensten))](atp-domain-dominance-alerts.md#suspected-dcsync-attack-replication-of-directory-services-external-id-2006)|Böswillige Replikation von Verzeichnisdiensten|2006||
 |[Verdacht auf Verwendung eines Golden Ticket (Herabstufung der Verschlüsselung)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-encryption-downgrade-external-id-2009)|Aktivität zur Herabstufung der Verschlüsselung (potenzieller Golden Ticket-Angriff)|2009|
-|[Suspected Golden Ticket usage (forged authorization data) (Verdacht auf Verwendung eines Golden Ticket (gefälschte Autorisierungsdaten))](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-forged-authorization-data-external-id-2013) |Berechtigungsausweitung mithilfe von gefälschten Autorisierungsdaten|2013|
-|[Suspected golden ticket usage (nonexistent account) (Verdacht auf Verwendung eines Golden Ticket (nicht vorhandenes Konto))](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-nonexistent-account-external-id-2027)|Kerberos Golden Ticket: nicht vorhandenes Konto|2027|
-|[Vermutete Golden Ticket-Verwendung (Ticketanomalie)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-ticket-anomaly-external-id-2032)|N/V|2032|
-|[Suspected golden ticket usage (time anomaly) (Verdacht auf Verwendung eines Golden Ticket (Zeitanomalie))](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-time-anomaly-external-id-2022)|Kerberos Golden Ticket – Zeitanomalie|2022|
-|[Suspected identity theft (Pass-the-Hash) (Verdacht auf Identitätsdiebstahl (Pass-the-Hash))](atp-lateral-movement-alerts.md#suspected-identity-theft-pass-the-hash-external-id-2017)|Identitätsdiebstahl mithilfe eines Pass-the-Hash-Angriffs|2017|
-|[Suspected identity theft (Pass-the-Ticket) (Verdacht auf Identitätsdiebstahl (Pass-the-Ticket))](atp-lateral-movement-alerts.md#suspected-identity-theft-pass-the-ticket-external-id-2018)|Identitätsdiebstahl mithilfe eines Pass-the-Ticket-Angriffs|2018|
-|[Suspected over-pass-the-hash attack (encryption downgrade) (Verdacht auf Over-Pass-the-Hash-Angriff (Herabstufung der Verschlüsselung))](atp-lateral-movement-alerts.md#suspected-overpass-the-hash-attack-encryption-downgrade-external-id-2008)|Aktivität zur Herabstufung der Verschlüsselung (potenzieller Overpass-the-Hash-Angriff)|2008|
-|[Suspected overpass-the-hash attack (Kerberos) (Verdacht auf einen Overpass-the-Hash-Angriff (Kerberos))](atp-lateral-movement-alerts.md#suspected-overpass-the-hash-attack-kerberos-external-id-2002)|Ungewöhnliche Kerberos-Protokollimplementierung (potenzieller Overpass-the-Hash-Angriff)|2002|
-|[Suspected use of Metasploit hacking framework (Verdacht auf Verwendung eines Hackerframeworks)](atp-compromised-credentials-alerts.md#suspected-use-of-metasploit-hacking-framework-external-id-2034)|Ungewöhnliche Protokollimplementierung (potenzielle Verwendung schädlicher Hackertools wie Metasploit)|2034|
-|[Suspected Skeleton Key attack (encryption downgrade) (Verdacht auf Skeleton-Key-Angriff (Herabstufung der Verschlüsselung))](atp-domain-dominance-alerts.md#suspected-skeleton-key-attack-encryption-downgrade-external-id-2010)|Aktivität zur Herabstufung der Verschlüsselung (potenzieller Skeleton Key-Angriff)|2010|
-|[Suspected WannaCry ransomware attack (Verdacht auf einen WannaCry-Ransomangriff)](atp-compromised-credentials-alerts.md#suspected-wannacry-ransomware-attack-external-id-2035)|Ungewöhnliche Protokollimplementierung (potenzieller WannaCry-Ransomwareangriff)|2035|
-|[Suspected NTLM relay attack (Exchange account) - preview (Vermuteter NTLM-Relaisangriff (Exchange-Konto) – Vorschauversion)](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview)|N/V|2037|
-|[Verdächtige Kommunikation über DNS](atp-exfiltration-alerts.md#suspicious-communication-over-dns-external-id-2031)|Verdächtige Kommunikation über DNS|2031|
-|[Verdächtige Modifizierung von sensiblen Gruppen](atp-domain-dominance-alerts.md#suspicious-modification-of-sensitive-groups-external-id-2024)|Verdächtige Modifizierung von sensiblen Gruppen|2024|
-|[Erstellen eines verdächtigen Diensts](atp-domain-dominance-alerts.md#suspicious-service-creation-external-id-2026)|Erstellen eines verdächtigen Diensts|2026|
-|[Verdächtige VPN-Verbindung](atp-compromised-credentials-alerts.md#suspicious-vpn-connection-external-id-2025)|Verdächtige VPN-Verbindung|2025|
-|[User and group membership reconnaissance (SAMR) (Reconnaissance über Benutzer und Gruppenmitgliedschaften (SAMR))](atp-reconnaissance-alerts.md#user-and-group-membership-reconnaissance-samr-external-id-2021)|Reconnaissance mithilfe von Verzeichnisdienstabfragen|2021|
-|[User and IP address reconnaissance (SMB) (Reconnaissance über Benutzer und IP-Adressen (SMB))](atp-reconnaissance-alerts.md#user-and-ip-address-reconnaissance-smb-external-id-2012)|Reconnaissance mithilfe der SMB-Sitzungsenumeration|2012|
+|[Suspected Golden Ticket usage (forged authorization data) (Verdacht auf Verwendung eines Golden Ticket (gefälschte Autorisierungsdaten))](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-forged-authorization-data-external-id-2013) |Berechtigungsausweitung mithilfe von gefälschten Autorisierungsdaten|2013|Ausweitung von Berechtigungen,<br>Seitliche Verschiebung||
+|[Suspected golden ticket usage (nonexistent account) (Verdacht auf Verwendung eines Golden Ticket (nicht vorhandenes Konto))](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-nonexistent-account-external-id-2027)|Kerberos Golden Ticket: nicht vorhandenes Konto|2027||
+|[Vermutete Golden Ticket-Verwendung (Ticketanomalie)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-ticket-anomaly-external-id-2032)|N/V|2032||
+|[Suspected golden ticket usage (time anomaly) (Verdacht auf Verwendung eines Golden Ticket (Zeitanomalie))](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-time-anomaly-external-id-2022)|Kerberos Golden Ticket – Zeitanomalie|2022||
+|[Suspected identity theft (Pass-the-Hash) (Verdacht auf Identitätsdiebstahl (Pass-the-Hash))](atp-lateral-movement-alerts.md#suspected-identity-theft-pass-the-hash-external-id-2017)|Identitätsdiebstahl mithilfe eines Pass-the-Hash-Angriffs|2017|Seitliche Verschiebung|
+|[Suspected identity theft (Pass-the-Ticket) (Verdacht auf Identitätsdiebstahl (Pass-the-Ticket))](atp-lateral-movement-alerts.md#suspected-identity-theft-pass-the-ticket-external-id-2018)|Identitätsdiebstahl mithilfe eines Pass-the-Ticket-Angriffs|2018|Seitliche Verschiebung|
+|[Suspected over-pass-the-hash attack (encryption downgrade) (Verdacht auf Over-Pass-the-Hash-Angriff (Herabstufung der Verschlüsselung))](atp-lateral-movement-alerts.md#suspected-overpass-the-hash-attack-encryption-downgrade-external-id-2008)|Aktivität zur Herabstufung der Verschlüsselung (potenzieller Overpass-the-Hash-Angriff)|2008||
+|[Suspected overpass-the-hash attack (Kerberos) (Verdacht auf einen Overpass-the-Hash-Angriff (Kerberos))](atp-lateral-movement-alerts.md#suspected-overpass-the-hash-attack-kerberos-external-id-2002)|Ungewöhnliche Kerberos-Protokollimplementierung (potenzieller Overpass-the-Hash-Angriff)|2002|Seitliche Verschiebung|
+|[Suspected Skeleton Key attack (encryption downgrade) (Verdacht auf Skeleton-Key-Angriff (Herabstufung der Verschlüsselung))](atp-domain-dominance-alerts.md#suspected-skeleton-key-attack-encryption-downgrade-external-id-2010)|Aktivität zur Herabstufung der Verschlüsselung (potenzieller Skeleton Key-Angriff)|2010||
+|[Suspected use of Metasploit hacking framework (Verdacht auf Verwendung eines Hackerframeworks)](atp-compromised-credentials-alerts.md#suspected-use-of-metasploit-hacking-framework-external-id-2034)|Ungewöhnliche Protokollimplementierung (potenzielle Verwendung schädlicher Hackertools wie Metasploit)|2034|Seitliche Verschiebung|
+|[Suspected WannaCry ransomware attack (Verdacht auf einen WannaCry-Ransomangriff)](atp-compromised-credentials-alerts.md#suspected-wannacry-ransomware-attack-external-id-2035)|Ungewöhnliche Protokollimplementierung (potenzieller WannaCry-Ransomwareangriff)|2035||
+|[Suspected NTLM relay attack (Exchange account) - preview (Vermuteter NTLM-Relaisangriff (Exchange-Konto) – Vorschauversion)](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview)|N/V|2037||
+|[Verdächtige Kommunikation über DNS](atp-exfiltration-alerts.md#suspicious-communication-over-dns-external-id-2031)|Verdächtige Kommunikation über DNS|2031|Exfiltration|
+|[Verdächtige Modifizierung von sensiblen Gruppen](atp-domain-dominance-alerts.md#suspicious-modification-of-sensitive-groups-external-id-2024)|Verdächtige Modifizierung von sensiblen Gruppen|2024|Zugriff über Anmeldeinformationen,<br>Persistenz|
+|[Erstellen eines verdächtigen Diensts](atp-domain-dominance-alerts.md#suspicious-service-creation-external-id-2026)|Erstellen eines verdächtigen Diensts|2026|Ausführung,<br> Persistenz,<br> Ausweitung von Berechtigungen,<br> Umgehung der Verteidigung,<br>Seitliche Verschiebung|
+|[Verdächtige VPN-Verbindung](atp-compromised-credentials-alerts.md#suspicious-vpn-connection-external-id-2025)|Verdächtige VPN-Verbindung|2025|Persistenz,<br>Umgehung der Verteidigung|
+|[User and group membership reconnaissance (SAMR) (Reconnaissance über Benutzer und Gruppenmitgliedschaften (SAMR))](atp-reconnaissance-alerts.md#user-and-group-membership-reconnaissance-samr-external-id-2021)|Reconnaissance mithilfe von Verzeichnisdienstabfragen|2021|Ermittlung|
+|[User and IP address reconnaissance (SMB) (Reconnaissance über Benutzer und IP-Adressen (SMB))](atp-reconnaissance-alerts.md#user-and-ip-address-reconnaissance-smb-external-id-2012)|Reconnaissance mithilfe der SMB-Sitzungsenumeration|2012|Ermittlung|
 
 > [!NOTE]
 > Wenn Sie eine Sicherheitswarnung deaktivieren möchten, wenden Sie sich an den Support.

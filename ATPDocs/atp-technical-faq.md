@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 02/13/2019
+ms.date: 03/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: db9792192c1f56d13327d57747622e79c72a1c3e
-ms.sourcegitcommit: 5d3607b3a2c9d1a35dd36287f4a5fc68fca67eb0
+ms.openlocfilehash: 10db395065b7d5038aee662d52a5f6350f845a1a
+ms.sourcegitcommit: 76b818e4a95842e2175e0efb4db142704b66daa2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56334458"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562226"
 ---
 # <a name="azure-atp-frequently-asked-questions"></a>Häufig gestellte Fragen zu Azure ATP
 Dieser Artikel enthält eine Reihe häufig gestellter Fragen und Antworten zu Azure ATP, unterteilt in die folgenden Kategorien: 
@@ -59,7 +59,7 @@ Ja. Da Computerkonten (ebenso wie alle anderen Entitäten) zum Durchführen bös
 ## <a name="licensing-and-privacy"></a>Lizenzierung und Datenschutz 
 ### <a name="where-can-i-get-a-license-for-azure-advanced-threat-protection-atp"></a>Wo erhalte ich eine Lizenz für Azure Advanced Threat Protection (ATP)?
 
-Azure ATP steht als Teil von Enterprise Mobility + Security 5-Suite (EMS E5) und als eine eigenständige Lizenz zur Verfügung. Sie können eine Lizenz entweder direkt über das [Office 365-Portal](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) oder über das CSP-Lizenzierungsmodell (Cloud Solution Partner) erwerben.
+Azure ATP steht als Teil von Enterprise Mobility + Security 5-Suite (EMS E5) und als eine eigenständige Lizenz zur Verfügung. Sie können eine Lizenz entweder direkt über das [Microsoft 365-Portal](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) oder über das CSP-Lizenzierungsmodell (Cloud Solution Partner) erwerben.
 
 ### <a name="is-this-going-to-be-a-part-of-azure-active-directory-or-on-premises-active-directory"></a>Wird das Produkt ein Bestandteil von Azure Active Directory oder von lokalem Active Directory sein?
 Diese Azure ATP-Lösung ist derzeit ein eigenständiges Angebot. Sie ist kein Bestandteil von Azure Active Directory oder von lokalem Active Directory.

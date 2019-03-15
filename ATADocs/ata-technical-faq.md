@@ -2,10 +2,10 @@
 title: Häufig gestellte Fragen zu Advanced Threat Analytics | Microsoft-Dokumentation
 description: Liste häufig gestellter Fragen zu ATA und zugehörige Antworten
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: barbkess
-ms.date: 5/6/2018
+ms.date: 03/07/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b69d78bc5af42b8775c30f49838ba8c7754fe313
-ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
+ms.openlocfilehash: 3db8a52c87e45635d632ad5b2d2f1ba7a82d2706
+ms.sourcegitcommit: 76b818e4a95842e2175e0efb4db142704b66daa2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56077863"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562277"
 ---
 # <a name="ata-frequently-asked-questions"></a>Häufig gestellte Fragen zu ATA
 
@@ -31,7 +31,7 @@ Dieser Artikel enthält eine Reihe häufig gestellter Fragen zu ATA sowie Hinter
 
 Wenn Sie über ein aktives Enterprise Agreement verfügen, können Sie die Software aus dem Microsoft Volume Licensing Center (VLSC) herunterladen.
 
-Wenn Sie eine Lizenz für Enterprise Mobility + Security (EMS) direkt über das Office 365-Portal oder über das Cloud Solution Partner-Lizenzmodell (CSP) erworben haben, und Sie keinen Zugriff auf ATA über das Microsoft Volume Licensing Center (VLSC) verfügen, kontaktieren Sie den Microsoft-Kundendienst, um den Prozess zum Aktivieren von Advanced Threat Analytics (ATA) abzurufen.
+Wenn Sie eine Lizenz für Enterprise Mobility + Security (EMS) direkt über das Microsoft 365-Portal oder über das Cloud Solution Partner-Lizenzmodell (CSP) erworben haben und Sie über keinen Zugriff auf ATA über das Microsoft Volume Licensing Center (VLSC) verfügen, kontaktieren Sie den Microsoft-Kundendienst, um den Prozess zum Aktivieren von Advanced Threat Analytics (ATA) abzurufen.
 
 ## <a name="what-should-i-do-if-the-ata-gateway-wont-start"></a>Das ATA-Gateway startet nicht. Wie sollte ich vorgehen?
 Sehen Sie sich den letzten Fehlereintrag im aktuellen Fehlerprotokoll an (Installationsverzeichnis von ATA unter dem Ordner „Logs“).

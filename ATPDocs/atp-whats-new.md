@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 03/03/2019
+ms.date: 03/10/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,14 +14,27 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1edc9d7848721426e47cb82730b6de1db87e1874
-ms.sourcegitcommit: 929f28783110c7e114ab36d4cccd50563f4030df
+ms.openlocfilehash: 804f8855ae11b36c01ac52f30590dc36aa4160e1
+ms.sourcegitcommit: aad7a417addae3f21f81ea2b7336c3d83659f592
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57253996"
+ms.lasthandoff: 03/10/2019
+ms.locfileid: "57725670"
 ---
 # <a name="whats-new-in-azure-atp"></a>Neuerungen in Azure ATP
+
+## <a name="azure-atp-release-269"></a>Azure ATP Release 2.69
+Veröffentlicht: 10. März 2019
+
+- **Featureerweiterung: Vermuteter Identitätsdiebstahl (Pass-the-Ticket)**<br> Diese Warnung enthält nun neue Details zu Verbindungen, die mithilfe des Remotedesktopprotokolls (RDP) hergestellt wurden. Durch diese zusätzlichen Details lässt sich das bekannte Problem der B-TP-Warnungen (Benign true positive, unbedenklich richtig positiv) korrigieren, die durch die Verwendung von Remote Credential Guard bei RDP-Verbindungen verursacht werden. 
+
+- **Featureerweiterung: Remotecodeausführung über DNS-Warnung**<br> Diese Warnung enthält nun weitere Sicherheitsupdatestatus Ihres Domänencontrollers, und Sie werden darüber informiert, wenn Updates erforderlich sind.   
+
+- **Neues Dokumentationsfeature: Azure ATP-Sicherheitswarnungen mit MITRE ATT&CK Matrix™**<br>
+
+    Zur Erläuterung und einfacheren Zuordnung der Beziehung zwischen Azure ATP-Sicherheitswarnungen und der bekannten MITRE ATT&CK Matrix haben wir die relevanten MITRE-Methoden zur Liste der Azure ATP-Sicherheitswarnungen hinzugefügt. Durch diesen zusätzlichen Verweis lässt sich die vermutete Angriffsmethode leichter verstehen, die beim Auslösen einer Azure ATP-Sicherheitswarnung möglicherweise verwendet wird. Erfahren Sie mehr über den [Leitfaden zu Azure ATP-Sicherheitswarnungen](suspicious-activity-guide.md).  
+
+- Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
 ## <a name="azure-atp-release-268"></a>Azure ATP Release 2.68
 Veröffentlicht: 3. März 2019

@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 1/1/2019
+ms.date: 03/10/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: a06004bd-9f77-4e8e-a0e5-4727d6651a0f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f6782a5096349974a5810b5fe9f816f6762f5c4d
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: e37bc18c93d8dad04d0e51c1bdb07b2147bcd2bc
+ms.sourcegitcommit: aad7a417addae3f21f81ea2b7336c3d83659f592
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264083"
+ms.lasthandoff: 03/10/2019
+ms.locfileid: "57725595"
 ---
 # <a name="working-with-security-alerts"></a>Arbeiten mit Sicherheitswarnungen
 
@@ -47,7 +47,7 @@ Jede Sicherheitswarnung enthält die folgenden Informationen:
 
 > [!NOTE]
 > - Wenn Sie mit der Maus auf einen Benutzer oder Computer zeigen, wird ein Miniprofil der Entität angezeigt. Dieses enthält zusätzliche Informationen zur Entität und die Anzahl der Sicherheitswarnungen, mit denen die Entität verknüpft ist.
-> - Wenn Sie auf eine Entität klicken, gelangen Sie zum Entitätsprofil des Benutzers oder Computers.
+> - Durch Klicken auf eine Entität gelangen Sie zum Entitätsprofil des Benutzers oder Computers.
 
 ![Abbildung der Zeitachse für Azure ATP-Sicherheitswarnungen](media/atp-sa-timeline.png)
 
@@ -55,11 +55,11 @@ Jede Sicherheitswarnung enthält die folgenden Informationen:
 
 Azure ATP-Sicherheitswarnungen werden in die folgenden Kategorien oder Phasen unterteilt, wie die Phasen in einer typischen „Kill Chain“ eines Cyberangriffs. 
 
-- Warnungen zu Reconnaissance
-- Warnungen zu kompromittierten Anmeldeinformationen
-- Lateral Movement-Warnungen
-- Warnungen zu Domänendominanz
-- Warnungen zu Exfiltration
+- [Warnungen zu Reconnaissance](atp-reconnaissance-alerts.md)
+- [Warnungen zu kompromittierten Anmeldeinformationen](atp-compromised-credentials-alerts.md)
+- [Lateral Movement-Warnungen](atp-lateral-movement-alerts.md)
+- [Warnungen zu Domänendominanz](atp-domain-dominance-alerts.md)
+- [Warnungen zu Exfiltration](atp-exfiltration-alerts.md)
 
 ## Vorschau von Erkennungsfunktionen <a name="preview-detections"></a>
 
