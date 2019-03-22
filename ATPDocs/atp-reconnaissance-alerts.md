@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 02/24/2019
+ms.date: 03/17/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ee5daa580b37db15fde0e4b276e49f4688c7189b
-ms.sourcegitcommit: aad7a417addae3f21f81ea2b7336c3d83659f592
+ms.openlocfilehash: 8d61fb120179ee8e53aa42e50d2a0841197b8032
+ms.sourcegitcommit: 9252c74620abb99d8fa2b8d2cc2169018078bec9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2019
-ms.locfileid: "57725593"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58136864"
 ---
 # <a name="tutorial-reconnaissance-alerts"></a>Tutorial: Warnungen zu Reconnaissance  
 
@@ -143,24 +143,31 @@ Sicherheitsscanner und zulässige Anwendungen können DNS-Abfragen erstellen.
 **Empfohlene Abhilfemaßnahmen und Schritte zur Vorbeugung**
 
 **Abhilfemaßnahmen:**
+
 - Kontrollieren Sie den Quellcomputer. 
     - Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
     - Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch kompromittiert sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA.
 
 **Vorbeugung:**<br>
+
 Zukünftige Angriffe über AXFR-Abfragen vermeiden Sie, indem Sie Ihren internen DNS-Server sichern.
 
 - Dadurch verhindern Sie Reconnaissance über DNS. Deaktivieren Sie hierzu Zonenübertragungen, oder [schränken Sie diese auf bestimmte IP-Adressen ein](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)). Das Bearbeiten von Zonenübertragungen ist eine Aufgabe innerhalb einer Prüfliste, die für das [Sichern des DNS-Servers gegen interne und externe Angriffe](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)) gelten sollte.
 
 ## <a name="security-principal-reconnaissance-ldap-external-id-2038---preview"></a>Sicherheitsprinzipalreconnaissance (LDAP) (externe ID 2038) – Vorschauversion
 
-**Beschreibung** Mit Sicherheitsprinzipalreconnaissance erlangen Angreifer wichtige Informationen über die Domänenumgebung. Informationen, die sowohl Angreifern helfen, die Domänenstruktur zu erfassen, als auch privilegierte Konten für die Verwendung in späteren Schritten in ihrer Angriffsabwehrkette zu identifizieren. Lightweight Directory Access Protocol (LDAP) ist eine der sowohl für zulässige als auch böswillige Zwecke am häufigsten verwendeten Methoden zum Abfragen von Active Directory.  LDAP-fokussierte Sicherheitsprinzipalreconnaissance wird häufig als erste Phase eines Kerberoasting-Angriffs verwendet. Mit Kerberoasting-Angriffen wird eine Zielliste von Sicherheitsprinzipalnamen (Security Principal Names, SPNs) abgerufen, für die Angreifer dann versuchen, Ticket Granting Server-Tickets (TGS) zu erhalten.
+**Beschreibung**
+
+Mit Sicherheitsprinzipalreconnaissance erlangen Angreifer wichtige Informationen über die Domänenumgebung. Informationen, die sowohl Angreifern helfen, die Domänenstruktur zu erfassen, als auch privilegierte Konten für die Verwendung in späteren Schritten in ihrer Angriffsabwehrkette zu identifizieren. Lightweight Directory Access Protocol (LDAP) ist eine der sowohl für zulässige als auch böswillige Zwecke am häufigsten verwendeten Methoden zum Abfragen von Active Directory.  LDAP-fokussierte Sicherheitsprinzipalreconnaissance wird häufig als erste Phase eines Kerberoasting-Angriffs verwendet. Mit Kerberoasting-Angriffen wird eine Zielliste von Sicherheitsprinzipalnamen (Security Principal Names, SPNs) abgerufen, für die Angreifer dann versuchen, Ticket Granting Server-Tickets (TGS) zu erhalten.
 
 Damit Azure ATP berechtigte Benutzer präzise profilen und kennenlernen kann, werden in den ersten 10 Tagen nach der Azure ATP-Bereitstellung keine Warnungen dieses Typs ausgelöst. Sobald die anfängliche Azure ATP-Lernphase abgeschlossen ist, werden Warnungen auf Computern generiert, die mithilfe von zuvor nicht beobachteten Methoden verdächtige LDAP-Enumerationsabfragen durchführen, bzw. Abfragen, die auf sensible Gruppen zielen.  
 
-Die **Lernphase** dauert 10 Tage pro Computer, ab dem Tag, an dem das erste Ereignis auf dem Computer beobachtet wurde. 
+**Lernphase**
+
+10 Tage pro Computer, ab dem Tag, an dem das erste Ereignis auf dem Computer beobachtet wurde. 
 
 **TP, B-TP oder FP?**
+
 1.  Klicken Sie auf den Quellcomputer, und rufen Sie seine Profilseite auf. 
     1. Wird von diesem Quellcomputer erwartet, dass er diese Aktivität generiert? 
     2. Wenn diese Aktivität von diesem Computer erwartet wird, **schließen** Sie die Sicherheitswarnung, und schließen Sie diesen Computer als **B-TP**-Aktivität aus. 
@@ -214,7 +221,9 @@ Verwenden Sie das [Net Cease-Tool](https://gallery.technet.microsoft.com/Net-Cea
 
 *Vorheriger Name*: Reconnaissance mithilfe von Verzeichnisdienstabfragen 
 
-**Beschreibung:** Die Reconnaissance über Benutzer und Gruppenmitgliedschaften wird von Angreifern verwendet, um die Verzeichnisstruktur und Zielkonten mit weitreichenden Rechten für die weiteren Schritte eines Angriffs auszukundschaften. Das Protokoll Security Account Manager Remote (SAM-R) ist eine Methode, die zum Abfragen des Verzeichnisses verwendet wird, um diese Art der Zuordnung vorzunehmen.  
+**Beschreibung**
+ 
+Die Reconnaissance über Benutzer und Gruppenmitgliedschaften wird von Angreifern verwendet, um die Verzeichnisstruktur und Zielkonten mit weitreichenden Rechten für die weiteren Schritte eines Angriffs auszukundschaften. Das Protokoll Security Account Manager Remote (SAM-R) ist eine Methode, die zum Abfragen des Verzeichnisses verwendet wird, um diese Art der Zuordnung vorzunehmen.  
 In dieser Erkennung werden im ersten Monat nach der Bereitstellung von Azure ATP keine Warnungen ausgelöst (Lernphase). Während der Lernphase erfasst Azure ATP, welche SAM-R-Abfragen (Enumerationsabfragen und einzelne Abfragen von sensiblen Konten) von welchen Computern gestellt werden. 
 
 **Lernphase**

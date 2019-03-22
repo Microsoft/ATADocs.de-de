@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 12/02/2018
+ms.date: 03/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: bc4e207a636d6c6641ccb8c6ac4e1695d82ec0d6
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: 5490688653edddae020a8b63191a1c9a7b6e9f8a
+ms.sourcegitcommit: 9252c74620abb99d8fa2b8d2cc2169018078bec9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56263753"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58136806"
 ---
 # <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-azure-atp-sensor"></a>Konfigurieren von Endpunktproxy- und Internetkonnektivitätseinstellungen für Ihren Azure ATP-Sensor
 
@@ -58,18 +58,19 @@ Der statische Proxy kann über die Registrierung konfiguriert werden. Sie müsse
 
 ## <a name="enable-access-to-azure-atp-service-urls-in-the-proxy-server"></a>Aktivieren des Zugriffs auf Azure ATP-Dienst-URLs im Proxyserver
 
-Wenn ein Proxy oder eine Firewall standardmäßig den gesamten Datenverkehr blockiert und nur bestimmte Domänen zulässt oder wenn HTTPS-Scans (SSL-Prüfung) aktiviert sind, stellen Sie sicher, dass die folgenden URLs auf der Whitelist aufgeführt sind, um die Kommunikation mit dem Azure ATP-Dienst über Port 443 zuzulassen:
+Lassen Sie Datenverkehr für folgende URLs zu, um den Zugriff auf Azure ATP zu ermöglichen:
 
-|Dienstidentifizierung|.Atp.Azure.com-DNS-Eintrag|
+- \<Name_der_Instanz>.atp.azure.com: für die Konsolenkonnektivität. Beispielsweise „Contoso-corp.atp.azure.com“
+
+- \<Name_der_Instanz>.sensorapi.atp.azure.com: für die Sensorkonnektivität. Beispielsweise „contoso-corpsensorapi.atp.azure.com“
+
+Die vorherigen URLs werden automatisch der richtigen Dienstidentifizierung für Ihre Azure ATP-Instanz zugeordnet. Wenn Sie den Zugriff noch besser steuern möchten, lassen Sie Datenverkehr für die relevanten Endpunkte aus der folgenden Tabelle zu:
+
+|Dienstidentifizierung|*.atp.azure.com-DNS-Eintrag|
 |----|----|
 |USA |triprd1wcusw1sensorapi.atp.azure.com<br>triprd1wcuswb1sensorapi.atp.azure.com<br>triprd1wcuse1sensorapi.atp.azure.com|
 |Europa|triprd1wceun1sensorapi.atp.azure.com<br>triprd1wceuw1sensorapi.atp.azure.com|
 |Asien|triprd1wcasse1sensorapi.atp.azure.com|
-
-
-Sie können auch die Firewall oder Proxyregeln für eine bestimmte selbst erstellte Instanz aushärten, indem Sie eine Regel für die folgenden DNS-Einträge erstellen:
-- \<Name_der_Instanz>.atp.azure.com: für die Konsolenkonnektivität. Beispielsweise „Contoso-corp.atp.azure.com“
-- \<Name_der_Instanz>.sensorapi.atp.azure.com: für die Sensorkonnektivität. Beispielsweise „contoso-corpsensorapi.atp.azure.com“
 
  
 > [!NOTE]

@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 03/10/2019
+ms.date: 03/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,14 +14,31 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 804f8855ae11b36c01ac52f30590dc36aa4160e1
-ms.sourcegitcommit: aad7a417addae3f21f81ea2b7336c3d83659f592
+ms.openlocfilehash: 0da5dd11c8d342b6342c06631a73e8c5f119c42c
+ms.sourcegitcommit: 9252c74620abb99d8fa2b8d2cc2169018078bec9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2019
-ms.locfileid: "57725670"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "57981220"
 ---
 # <a name="whats-new-in-azure-atp"></a>Neuerungen in Azure ATP
+
+## <a name="azure-atp-release-270"></a>Azure ATP Release 2.70
+Veröffentlicht: 17. März 2019
+
+- **Featureerweiterung: Der Vertrauensgrad der Auflösung des Netzwerknamens (Network Name Resolution, NNR) wurde mehreren Warnungen hinzugefügt**<br> Die Auflösung des Netzwerknamens wird verwendet, um die Identität der Quellentität vermuteter Angriffe eindeutig zu bestimmen. Durch Hinzufügen des NNR-Vertrauensgrads zur Beweisliste für Sicherheitswarnungen von Azure ATP können Sie nun sofort auf den NNR-Vertrauensgrad, der in Zusammenhang mit den möglichen identifizierten Quellen steht, zugreifen, diesen nachvollziehen und entsprechende Korrekturen durchführen. 
+
+    Der Beweis für den NNR-Vertrauensgrad wurde den folgenden Warnungen hinzugefügt:
+  - [Network mapping reconnaissance (DNS) (Reconnaissance über Netzwerkzuordnung (DNS))](atp-reconnaissance-alerts.md#network-mapping-reconnaissance-dns-external-id-2007)
+  - [Suspected identity theft (Pass-the-Ticket) (Verdacht auf Identitätsdiebstahl (Pass-the-Ticket))](atp-lateral-movement-alerts.md#suspected-identity-theft-pass-the-ticket-external-id-2018) 
+
+  - [Suspected NTLM relay attack (Exchange account) - preview (Vermuteter NTLM-Relaisangriff (Exchange-Konto) – Vorschauversion)](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview)
+  - [Suspected DCSync attack (replication of directory services) (Verdacht auf einen DCSync-Angriff (Replikation von Verzeichnisdiensten))](atp-domain-dominance-alerts.md#suspected-dcsync-attack-replication-of-directory-services-external-id-2006)
+
+- **Zusätzliches Szenario zu Integritätswarnungen: Fehler beim Starten des Azure ATP-Sensordiensts**<br>Für Instanzen, bei denen der Azure ATP-Sensordienst aufgrund eines Problems mit dem Treiber für die Netzwerkerfassung nicht gestartet werden konnte, wird nun eine Warnung für die Sensorintegrität ausgelöst. Weitere Informationen zu Azure ATP-Protokollen und deren Verwendung finden Sie unter [Troubleshooting Azure ATP sensor with Azure ATP logs (Problembehandlung eines Azure ATP-Sensors mit Azure ATP-Protokollen)](troubleshooting-atp-using-logs.md). 
+
+  
+- Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
 ## <a name="azure-atp-release-269"></a>Azure ATP Release 2.69
 Veröffentlicht: 10. März 2019

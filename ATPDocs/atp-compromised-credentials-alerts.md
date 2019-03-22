@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d20359547696f7fe3cafd75a638563d400f0ed82
-ms.sourcegitcommit: 0e77ed44ee73ac84923fa7379e555f5ed9602aca
+ms.openlocfilehash: de426a06fb7d0893d56b82fcaa9599f523054774
+ms.sourcegitcommit: 9252c74620abb99d8fa2b8d2cc2169018078bec9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017301"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "57981203"
 ---
 # <a name="tutorial-compromised-credential-alerts"></a>Tutorial: Warnungen zu kompromittierten Anmeldeinformationen  
 
@@ -90,7 +90,7 @@ Bei einem Kennwort-Spray-Angriff testen Angreifer nach erfolgreichem Durchzähle
 
 Überprüfen Sie auf jeden Fall, ob Anmeldeversuche mit einer erfolgreichen Authentifizierung beendet wurden.
 
-1. Wurde ein Anmeldeversuch erfolgreich beendet, überprüfen Sie, ob eines der  **Erratenen Konten**  normalerweise von diesem Quellcomputer verwendet wird.
+1. Wurde ein Anmeldeversuch erfolgreich beendet, überprüfen Sie, ob eines der **erratenen Konten** normalerweise von diesem Quellcomputer verwendet wird.
    - Besteht die Möglichkeit, dass bei diesen Konten wegen der Verwendung eines falschen Kennworts ein Fehler aufgetreten ist?  
    - Überprüfen Sie zusammen mit dem Benutzer/den Benutzern, ob die Aktivität von ihm/ihnen generiert wurde (durch erfolgreiches Anmelden nach einigen fehlerhaften Anmeldeversuchen). 
 

@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 02/11/2019
+ms.date: 03/18/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 2257eb00-8614-4577-b6a1-5c65085371f2
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 58c8445fc47a7dfb45730c96b4c438f32d539ee5
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: 3e2dffff3d9c2c784709c323877ec74601781a05
+ms.sourcegitcommit: 9252c74620abb99d8fa2b8d2cc2169018078bec9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56263198"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58136863"
 ---
 # <a name="tutorial-lateral-movement-alerts"></a>Tutorial: Lateral Movement-Warnungen  
 
@@ -121,6 +121,12 @@ Das erfolgreiche Auflösen von IP-Adressen für Computer in der Organisation ist
 3. Werden eine oder mehrere Ziel-IP-Adressen vom Sensor nicht aufgelöst? Wenn eine Ziel-IP-Adresse nicht aufgelöst wird, kann dies bedeuten, dass die richtigen Ports zwischen dem Sensor und den Geräten nicht ordnungsgemäß geöffnet sind. 
 
     Wenn die Antwort auf eine der vorausgegangenen Fragen **Ja** lautet, überprüfen Sie, ob Quell- und Zielcomputer identisch sind. Sind sie identisch, handelt es sich um eine **FP**-Aktivität (falsch positiv), und es haben keine echten **Pass-the-Ticket**-Versuche stattgefunden. 
+
+Das Feature [Remote Credential Guard](https://docs.microsoft.com/windows/security/identity-protection/remote-credential-guard) der RDP-Verbindungen kann zu **B-TP**-Warnungen führen, wenn es mit Windows 10 auf Windows Server 2016 und höher verwendet wird. Überprüfen Sie mithilfe der Warnungsbeweisen, ob der Benutzer eine Remotedesktopverbindung vom Quellcomputer zum Zielcomputer hergestellt hat.
+
+1. Suchen Sie nach entsprechenden Beweisen.
+2. Wenn Sie Beweise gefunden haben, überprüfen Sie, ob die Verbindung mithilfe von Remote Credential Guard hergestellt wurde. 
+3. Wenn ja, **schließen** Sie die Sicherheitswarnung, da es sich um eine **B-TP**-Aktivität (unbedenklich richtig positiv) handelt. 
 
 Es gibt benutzerdefinierte Anwendungen, die Tickets im Auftrag des Benutzers weiterleiten. Diese Anwendungen verfügen über Delegierungsberechtigungen für Benutzertickets.
 
