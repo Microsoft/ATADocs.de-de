@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 03/17/2019
+ms.date: 03/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,14 +14,30 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0da5dd11c8d342b6342c06631a73e8c5f119c42c
-ms.sourcegitcommit: 9252c74620abb99d8fa2b8d2cc2169018078bec9
+ms.openlocfilehash: b39c51d725a652fe1e936437ad3d0bf0c7d86db7
+ms.sourcegitcommit: 6975497acaf298af393f96573e1790ab617fa5b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "57981220"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58406636"
 ---
 # <a name="whats-new-in-azure-atp"></a>Neuerungen in Azure ATP
+
+## <a name="azure-atp-release-271"></a>Azure ATP Release 2.71
+Veröffentlicht: 24. März 2019
+
+- **Featureerweiterung: Überwachungsbenachrichtigungen der Netzwerknamensauflösung (Network Name Resolution, NNR)**<br>
+Überwachungswarnungen wurden für Konfidenzniveaus hinzugefügt, die Azure ATP-Sicherheitswarnungen zugeordnet sind, die sich auf NNR beziehen. Jede Überwachungswarnung enthält umsetzbare und ausführliche Empfehlungen, wie Abhilfe bei niedriger NNR-Erfolgsquote geschaffen werden kann. 
+
+    Informationen dazu, wie Azure ATP NNR verwendet und warum dies für die Genauigkeit von Warnungen wichtig ist, finden Sie unter [Was ist Netzwerknamensauflösung](atp-nnr-policy.md). 
+
+- **Serverunterstützung: Es wurde Unterstützung für Server 2019 mithilfe von KB4487044 hinzugefügt**<br>
+Es wurde Unterstützung für die Verwendung von Windows Server-2019 mit dem Patchlevel KB4487044 hinzugefügt. Die Verwendung von Server 2019 ohne den Patch wird nicht unterstützt und kann aus diesem Update nicht gestartet werden. 
+
+- **Featureerweiterung: Benutzerbasierter Ausschluss von Warnungen**<br>
+Erweiterte Ausschlussoptionen ermöglichen jetzt den Ausschluss bestimmter Benutzer von bestimmten Warnungen. Ein solcher Ausschluss kann Situationen vermeiden helfen, in denen die Verwendung oder Konfiguration bestimmter Typen von interner Software wiederholt gutartige Sicherheitswarnungen auslöst.
+
+- Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
 ## <a name="azure-atp-release-270"></a>Azure ATP Release 2.70
 Veröffentlicht: 17. März 2019
@@ -31,12 +47,10 @@ Veröffentlicht: 17. März 2019
     Der Beweis für den NNR-Vertrauensgrad wurde den folgenden Warnungen hinzugefügt:
   - [Network mapping reconnaissance (DNS) (Reconnaissance über Netzwerkzuordnung (DNS))](atp-reconnaissance-alerts.md#network-mapping-reconnaissance-dns-external-id-2007)
   - [Suspected identity theft (Pass-the-Ticket) (Verdacht auf Identitätsdiebstahl (Pass-the-Ticket))](atp-lateral-movement-alerts.md#suspected-identity-theft-pass-the-ticket-external-id-2018) 
-
   - [Suspected NTLM relay attack (Exchange account) - preview (Vermuteter NTLM-Relaisangriff (Exchange-Konto) – Vorschauversion)](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview)
   - [Suspected DCSync attack (replication of directory services) (Verdacht auf einen DCSync-Angriff (Replikation von Verzeichnisdiensten))](atp-domain-dominance-alerts.md#suspected-dcsync-attack-replication-of-directory-services-external-id-2006)
 
 - **Zusätzliches Szenario zu Integritätswarnungen: Fehler beim Starten des Azure ATP-Sensordiensts**<br>Für Instanzen, bei denen der Azure ATP-Sensordienst aufgrund eines Problems mit dem Treiber für die Netzwerkerfassung nicht gestartet werden konnte, wird nun eine Warnung für die Sensorintegrität ausgelöst. Weitere Informationen zu Azure ATP-Protokollen und deren Verwendung finden Sie unter [Troubleshooting Azure ATP sensor with Azure ATP logs (Problembehandlung eines Azure ATP-Sensors mit Azure ATP-Protokollen)](troubleshooting-atp-using-logs.md). 
-
   
 - Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
