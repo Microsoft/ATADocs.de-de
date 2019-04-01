@@ -3,6 +3,7 @@
 ## [Welche Bedrohungen erkennt ATA?](ata-threats.md)
 ## Neues in ATA?
 ### [Neues in ATA-Version 1.9](whats-new-version-1.9.md)
+#### [Migrationshandbuch zur Aktualisierung auf ATA 1.9.2](ata-update-1.9.2-migration-guide.md)
 #### [Migrationshandbuch zur Aktualisierung auf ATA 1.9.1](ata-update-1.9.1-migration-guide.md)
 #### [Migrationshandbuch zum Update auf ATA 1.9](ata-update-1.9-migration-guide.md)
 ### [Neues in ATA-Version 1.8](whats-new-version-1.8.md)
@@ -52,7 +53,7 @@
 ## [Arbeiten mit verdächtigen Aktivitäten](working-with-suspicious-activities.md)
 ## [Arbeiten mit der ATA-Konsole](working-with-ata-console.md)
 ### [Entitätenprofile](entity-profiles.md)
-##[Verhindern von Lateral Movement-Pfaden](use-case-lateral-movement-path.md)
+## [Verhindern von Lateral Movement-Pfaden](use-case-lateral-movement-path.md)
 ## ATA Referenzinformationen
 ### [Referenz zum SIEM-Protokoll](cef-format-sa.md)
 ### [Ereignis-ID Referenz](event-id-reference.md)
