@@ -7,12 +7,12 @@ author: mlottner
 ms.author: mlottner
 ms.date: 02/28/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: 30b0fcb47ae735d4e9090a38f14f9658c64864f5
-ms.sourcegitcommit: 4711f0ff4331e0bcc84663f46054216b7db9f98e
+ms.openlocfilehash: 9ae630711b6ee7b7f84a233998d188e498af0a9e
+ms.sourcegitcommit: 38b68d96fbf04fe40e1f9a62a1af3d1d00e63614
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56988662"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58808273"
 ---
 # <a name="tutorial-setup-an-atp-security-alert-lab"></a>Tutorial: Setup einer ATP-Sicherheitswarnungsumgebung 
 
@@ -30,7 +30,7 @@ Inhalt des Tutorials:
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-1. [Ein Testumgebungs-Domänencontroller und zwei Testumgebungs-Arbeitsstationen](#Server-and-Computers).
+1. [Ein Testumgebungs-Domänencontroller und zwei Testumgebungs-Arbeitsstationen](#servers-and-computers).
    - Fahren Sie fort, und [aktualisieren Sie Active Directory (AD) mit Benutzern](#bkmk_hydrate).
 1. Eine [Azure ATP](install-atp-step1.md)-Instanz, die mit [AD verbunden ist](install-atp-step2.md).
 1. [Laden Sie die neueste Version des Azure ATP-Sensors](install-atp-step3.md) auf den Domänencontroller Ihrer Testumgebung herunter, und [installieren](install-atp-step4.md) Sie sie.

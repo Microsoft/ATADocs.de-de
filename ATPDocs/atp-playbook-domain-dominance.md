@@ -7,12 +7,12 @@ author: mlottner
 ms.author: mlottner
 ms.date: 02/28/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: 2bfbbc994ea4ec9aea57541f8f5a35590c397f84
-ms.sourcegitcommit: 8681c4ed6ede58ace737f31eeff9a680b8e4256d
+ms.openlocfilehash: b3ea5b1d2f33f9647fb9dea8927a80aeae76ee03
+ms.sourcegitcommit: 38b68d96fbf04fe40e1f9a62a1af3d1d00e63614
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57007465"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58808256"
 ---
 # <a name="tutorial-domain-dominance-playbook"></a>Tutorial: Playbook zu Domänendominanz
 
@@ -194,7 +194,7 @@ Azure ATP hat erfolgreich die verdächtige Vorauthentifizierungs-Verschlüsselun
 
 ### <a name="golden-ticket---existing-user"></a>Golden Ticket – vorhandener Benutzer
 
-Nach dem Diebstahl des „Golden Ticket“ („krbtgt“-Konto, erläutert [hier über böswillige Replikation](#Malicious-Replication)) kann ein Angreifer Tickets signieren, *als sei er der Domänencontroller*. **Mimikatz**, die Domänen-SID und das gestohlene „krbtgt“-Konto sind alle erforderlich, um diesen Angriff auszuführen. Wir können nicht nur Tickets für einen Benutzer generieren, sondern auch für Benutzer, die noch nicht vorhanden sind.
+Nach dem Diebstahl des „Golden Ticket“ („krbtgt“-Konto, erläutert [hier über böswillige Replikation](#malicious-replication)) kann ein Angreifer Tickets signieren, *als sei er der Domänencontroller*. **Mimikatz**, die Domänen-SID und das gestohlene „krbtgt“-Konto sind alle erforderlich, um diesen Angriff auszuführen. Wir können nicht nur Tickets für einen Benutzer generieren, sondern auch für Benutzer, die noch nicht vorhanden sind.
 
 1. Führen Sie als JeffL den folgenden Befehl auf **VictimPC** aus, um die Domänen-SID abzurufen:
 
