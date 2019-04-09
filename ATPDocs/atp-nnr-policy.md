@@ -5,34 +5,25 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 03/24/2019
+ms.date: 03/31/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: ''
 ms.assetid: 1ac873fc-b763-41d7-878e-7c08da421cb5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d3f6b3fda2dbfca0250069ba08d027b1b16d5659
-ms.sourcegitcommit: 6975497acaf298af393f96573e1790ab617fa5b4
+ms.openlocfilehash: 7dd41fea1a2a7f8c4a2e122ec75d8735fb49c37d
+ms.sourcegitcommit: db60935a92fe43fe149f6a4d3114fe0edaa1d331
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58406654"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58763949"
 ---
 # <a name="what-is-network-name-resolution"></a>Was ist Netzwerknamensauflösung?
 
 Die Netzwerknamensauflösung (Network Name Resolution, NNR) ist eine Hauptkomponente der Azure ATP-Funktionalität. Azure ATP erfasst Aktivitäten auf der Grundlage von Netzwerkdatenverkehr, Windows-Ereignissen und ETW – diese Aktivitäten enthalten normalerweise IP-Daten.  
 
 Durch die Verwendung von NNR ordnet Azure ATP reinen Aktivitäten (mit IP-Adressen) die entsprechenden, an der Aktivität beteiligten Computer zu. Auf Grundlage der reinen Aktivitäten erstellt Azure ATP ein Profil der Entitäten, wie etwa Computer, und generiert Sicherheitswarnungen für verdächtige Aktivitäten.
-
-NNR-Daten spielen beim Erkennen der folgenden Bedrohungen eine entscheidende Rolle:
-
-- Suspected identity theft (pass-the-ticket) (Verdacht auf Identitätsdiebstahl (Pass-the-Ticket))
-- Suspected DCSync attack (replication of directory services) (Verdacht auf einen DCSync-Angriff (Replikation von Verzeichnisdiensten))
-- Network mapping reconnaissance (DNS) (Reconnaissance über Netzwerkzuordnung (DNS))
-- Suspected NTLM relay attack (Exchange account) (Vermuteter NTLM-Relaisangriff (Exchange-Konto))
 
 Um IP-Adressen zu Computernamen aufzulösen, fragen ATP-Sensoren die IP-Adresse für den Computernamen „hinter“ der IP ab und verwenden dazu eine der folgenden Methoden:
 
@@ -45,6 +36,25 @@ Um IP-Adressen zu Computernamen aufzulösen, fragen ATP-Sensoren die IP-Adresse 
 >An keinem dieser Ports erfolgt eine Authentifizierung.
 
 Nach dem Abrufen des Computernamens sieht der Azure ATP-Sensor in Active Directory nach, ob ein zugehöriges Computerobjekt mit gleichem Computernamen vorhanden ist. Wenn der Sensor die Korrelation findet, ordnet er diese IP dem betreffenden Computerobjekt zu.
+
+NNR-Daten spielen beim Erkennen der folgenden Bedrohungen eine entscheidende Rolle:
+
+- Suspected identity theft (pass-the-ticket) (Verdacht auf Identitätsdiebstahl (Pass-the-Ticket))
+- Suspected DCSync attack (replication of directory services) (Verdacht auf einen DCSync-Angriff (Replikation von Verzeichnisdiensten))
+- Network mapping reconnaissance (DNS) (Reconnaissance über Netzwerkzuordnung (DNS))
+
+Um Ihre Fähigkeit zur Bestimmung, ob es sich bei einer Warnung um eine **richtig positives** oder **falsch positives**  Ergebnis handelt, zu verbessern, schließt Azure ATP den Grad der Zuverlässigkeit der Computernamensauflösung in den Nachweis jeder Sicherheitswarnung ein. 
+ 
+Wenn beispielsweise Computernamen mit **hoher Gewissheit** aufgelöst werden, erhöht dies die Zuverlässigkeit, dass es sich bei der resultierenden Sicherheitswarnung um eine **richtig positives** **Ergebnis** handelt. 
+
+Der Beweis umfasst die Uhrzeit, die IP-Adresse und den Computernamen, in den die IP-Adresse aufgelöst wurde. Wenn die Gewissheit der Auflösung **niedrig** ist, nutzen Sie diese Informationen, um zu untersuchen und zu bestätigen, welches Gerät zu diesem Zeitpunkt die tatsächliche Quelle der IP-Adresse war. Nachdem Sie das Gerät bestätigt haben, können Sie anschließend feststellen, ob es sich bei der Warnung um ein **falsch positives** **Ergebnis** handelt, ähnlich wie in den folgenden Beispielen:
+
+- Vermuteter Identitätsdiebstahl (Pass-the-Ticket): Die Warnung wurde für denselben Computer ausgelöst.
+- Vermuteter DCSync-Angriff (Replikation der Verzeichnisdienste): Die Warnung wurde vom Domänencontroller ausgelöst.
+- „Reconnaissance über Netzwerkzuordnung“ (DNS): Die Warnung wurde von einem DNS-Server ausgelöst
+
+    ![Beweissicherheit](media/nnr-high-certainty.png)
+
 
 ### <a name="prerequisites"></a>Voraussetzungen
 |Protokoll|  Transport|  Port|   Gerät| Richtung|
@@ -70,7 +80,7 @@ Jede Überwachungswarnung enthält spezifische Details zu Methode, Sensoren, der
     - Achten Sie darauf, dass Port 135 für eingehende Kommunikation von Azure ATP-Sensoren auf allen Computern in der Umgebung geöffnet ist.
     - Überprüfen Sie die gesamte Netzwerkkonfiguration (Firewalls), da diese die Kommunikation mit den relevanten Ports verhindern kann.
 
--NetBIOS:
+- NetBIOS:
     - Achten Sie darauf, dass Port 137 für eingehende Kommunikation von Azure ATP-Sensoren auf allen Computern in der Umgebung geöffnet ist.
     - Überprüfen Sie die gesamte Netzwerkkonfiguration (Firewalls), da diese die Kommunikation mit den relevanten Ports verhindern kann.
 - Reverse-DNS:

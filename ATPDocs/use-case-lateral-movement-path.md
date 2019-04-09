@@ -1,25 +1,23 @@
 ---
-title: Einführung in Lateral Movement-Pfade mit Azure ATP | Microsoft-Dokumentation
+title: Grundlegendes zu und Verwenden von Lateral-Movement-Pfaden mit Azure ATP | Microsoft-Dokumentation
 description: Dieser Artikel beschreibt die potenziellen Lateral Movement-Pfade (LMPs) von Azure Advanced Threat Protection (ATP).
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 11/25/2018
+ms.date: 03/31/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: ''
 ms.assetid: de15c920-8904-4124-8bdc-03abd9f667cf
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c115584dd4898e7453325125888667a1bb9a53d6
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: 4a24f542576a716ff7a9ffdcde542e6317d394c0
+ms.sourcegitcommit: db60935a92fe43fe149f6a4d3114fe0edaa1d331
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56263402"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58764017"
 ---
 # <a name="azure-atp-lateral-movement-paths-lmps"></a>Azure ATP-Lateral Movement-Pfade (LMPs) 
 
@@ -50,12 +48,11 @@ Ermitteln Sie, wann potenzielle LMPs identifiziert wurden und welche verwandten 
 ## <a name="lmp-discovery"></a>LMP-Ermittlung
 
 Auf der Registerkarte „Aktivitäten“ werden Warnungen angezeigt, wenn neue potenzieller LMP erkannt wurden:
-- Sensible Benutzer: Wenn ein neuer Pfad zu einem sensiblen Benutzer identifiziert wurde
+- Sensible Benutzer: Wenn ein neuer Pfad zu einem sensiblen Benutzer identifiziert wird
 
 ![Azure ATP: Lateral Movement-Pfad (LMP), Als sensibel identifiziert](./media/atp-lmp-activities.png)
 
-
-- Nicht sensible Benutzer und Computer: Wenn diese Entität in einem potenziellen LMP, der zu einem sensiblen Benutzer führt, identifiziert wurde.
+- Nicht sensible Benutzer und Computer: Wenn diese Entität in einem potenziellen LMP, der zu einem sensiblen Benutzer führt, identifiziert wird.
 
 ![Azure ATP: Lateral Movement-Pfad (LMP), Als nicht sensibel identifiziert](./media/atp-lateral-non-sensitive.png)
 

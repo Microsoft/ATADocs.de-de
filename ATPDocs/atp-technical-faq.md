@@ -8,18 +8,16 @@ manager: barbkess
 ms.date: 03/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: ''
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 10db395065b7d5038aee662d52a5f6350f845a1a
-ms.sourcegitcommit: 76b818e4a95842e2175e0efb4db142704b66daa2
+ms.openlocfilehash: 0e35654a5fdfd09a4b2fe7849f58bd1c26253a7e
+ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562226"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675063"
 ---
 # <a name="azure-atp-frequently-asked-questions"></a>Häufig gestellte Fragen zu Azure ATP
 Dieser Artikel enthält eine Reihe häufig gestellter Fragen und Antworten zu Azure ATP, unterteilt in die folgenden Kategorien: 
@@ -39,7 +37,7 @@ Die vollständige Liste der Azure ATP-Erkennungen finden Sie unter [What detecti
 ### <a name="what-data-does-azure-atp-collect"></a>Welche Daten erfasst Azure ATP? 
 Azure ATP sammelt und speichert Informationen von Ihren konfigurierten Servern (Domänencontroller, Mitgliedsserver usw.) in einer Datenbank, die für den Dienst für Nachverfolgungs- und Berichterstellungszwecke sowie für administrative Zwecke spezifisch sind. Gesammelte Informationen sind unter anderem Netzwerkdatenverkehr von und zu Domänencontrollern (z.B. Kerberos-Authentifizierung, NTLM-Authentifizierung, DNS-Abfragen), Sicherheitsprotokolle (z.B. Windows-Sicherheitsereignisse), Active Directory-Informationen (Struktur, Subnetze, Websites) sowie Entitätsinformationen (z.B. Namen, E-Mail-Adressen und Telefonnummern). 
 
-Microsoft verwendet diese Daten zu den folgenden Zwecken: 
+Microsoft verwendet diese Daten zu folgenden Zwecken: 
 
 -   Zum proaktiven Identifizieren von Angriffsindikatoren (Indicators of Attack, IOAs) in Ihrer Organisation 
 -   Zum Generieren von Warnungen, wenn ein möglicher Angriff erkannt wurde 

@@ -1,30 +1,29 @@
 ---
 title: Advanced Threat Analytics-Versionen | Microsoft-Dokumentation
 description: Erläutert die unterschiedlichen Supportoptionen für die Versionen von Microsoft Advanced Threat Analytics (ATA).
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: barbkess
-ms.date: 7/15/2018
+ms.date: 03/28/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
-ms.service: ''
 ms.technology: ''
 ms.assetid: a8afbd91-c888-4dfc-94ab-72e38745163e
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 7aa52107302dc3fafe568d020fa618007491302a
-ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
+ms.openlocfilehash: 5ac40a7a6d170dab23630283d31704eb18507e45
+ms.sourcegitcommit: a0d1ae7e221fd8bbaf81bf8ae4833ae77fb80ae8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56076758"
+ms.lasthandoff: 03/31/2019
+ms.locfileid: "58752235"
 ---
 # <a name="support-for-microsoft-advanced-threat-analytics-ata-versions"></a>Support für Microsoft Advanced Threat Analytics-Versionen (ATA)
 
 
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
-Microsoft plant mehrmals jährlich die Veröffentlichung von Updates für ATA. Jede Updateversion wird dabei ab dem Datum der allgemeinen Verfügbarkeit 12 Monate lang unterstützt. Technischer Support wird für die gesamten 12 Monate zur Verfügung gestellt. Unsere Supportstruktur ist jetzt dynamisch und folgt zwei unterschiedlichen Wartungsphasen, die von der Verfügbarkeit der neuesten Version abhängig sind.
+Microsoft veröffentlicht mehrmals jährlich Updates für ATA. Jede Updateversion wird dabei ab dem Datum der allgemeinen Verfügbarkeit 12 Monate unterstützt. Technischer Support wird für die gesamten 12 Monate zur Verfügung gestellt. Unsere Supportstruktur ist jetzt dynamisch und folgt zwei unterschiedlichen Wartungsphasen, die von der Verfügbarkeit der neuesten Version abhängig sind.
 
 -   Wartungsphase mit wichtigen Updates und Sicherheitsupdates: Wenn Sie die neueste Version von ATA ausführen, erhalten Sie Updates der Kategorien „Sicherheit“ und „Wichtig“.
 
@@ -48,6 +47,7 @@ Microsoft plant mehrmals jährlich die Veröffentlichung von Updates für ATA. J
 |1.8.1|1.8.6765|02. AUGUST 2017|02. AUGUST 2018|
 |1.9|1.9.7312|21. MÄRZ 2018|21. MÄRZ 2019|
 |1.9.1|1.9.7412|01-JUL-2018|01-JUL-2019|
+|1.9.2|1.9.7475|28-MÄR-2019|28-MÄR-2020|
 
 
 

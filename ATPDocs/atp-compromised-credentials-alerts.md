@@ -8,18 +8,16 @@ manager: barbkess
 ms.date: 1/15/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
-ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: ''
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: de426a06fb7d0893d56b82fcaa9599f523054774
-ms.sourcegitcommit: 9252c74620abb99d8fa2b8d2cc2169018078bec9
+ms.openlocfilehash: 23de55308ffe48f73b7db06a1a15790c14ecc8a0
+ms.sourcegitcommit: 38b68d96fbf04fe40e1f9a62a1af3d1d00e63614
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "57981203"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58808239"
 ---
 # <a name="tutorial-compromised-credential-alerts"></a>Tutorial: Warnungen zu kompromittierten Anmeldeinformationen  
 
@@ -169,7 +167,7 @@ Angreifer verwenden Tools, die verschiedene Protokolle wie SMB, Kerberos und NTL
 **TP, B-TP oder FP**
 
 1. Überprüfen Sie, ob auf dem Quellcomputer ein Angriffstool wie Hydra ausgeführt wird.
-   1. Wird auf dem Quellcomputer ein Angriffstool ausgeführt, stellt diese Warnung eine **TP**-Aktivität dar. Befolgen Sie die Anweisungen im Abschnitt [Ermitteln des Umfangs der Sicherheitsverletzung](#understand-the-scope-of-the-breach).
+   1. Wird auf dem Quellcomputer ein Angriffstool ausgeführt, stellt diese Warnung eine **TP**-Aktivität dar. Befolgen Sie die Anweisungen im Abschnitt **Ermitteln des Umfangs der Sicherheitsverletzung** oben.
 
 Anwendungen implementieren gelegentlich einen eigenen NTLM- oder SMB-Stapel.
 
@@ -204,7 +202,7 @@ Angreifer verwenden Tools, die verschiedene Protokolle auf nicht standardmäßig
 
 1. Überprüfen Sie, ob WannaCry auf dem Quellcomputer ausgeführt wird. 
 
-    - Wird WannaCry ausgeführt, stellt diese Warnung eine **TP**-Aktivität dar. Befolgen Sie die Anweisungen im Abschnitt [Ermitteln des Umfangs der Sicherheitsverletzung](#understand-the-scope-of-the-breach).
+    - Wird WannaCry ausgeführt, stellt diese Warnung eine **TP**-Aktivität dar. Befolgen Sie die Anweisungen im Abschnitt **Ermitteln des Umfangs der Sicherheitsverletzung** oben.
 
 Anwendungen implementieren gelegentlich einen eigenen NTLM- oder SMB-Stapel.
 
@@ -238,7 +236,7 @@ Angreifer verwenden Tools, die verschiedene Protokolle (SMB, Kerberos, NTLM) auf
 
 1. Überprüfen Sie, ob auf dem Quellcomputer ein Angriffstool wie Metasploit oder Medusa ausgeführt wird.
 
-2. Wenn dies der Fall ist, handelt es sich um ein richtig positives Ereignis. Befolgen Sie die Anweisungen im Abschnitt [Ermitteln des Umfangs der Sicherheitsverletzung](#understand-the-scope-of-the-breach).
+2. Wenn dies der Fall ist, handelt es sich um ein richtig positives Ereignis. Befolgen Sie die Anweisungen im Abschnitt **Ermitteln des Umfangs der Sicherheitsverletzung** oben.
 
 Anwendungen implementieren gelegentlich einen eigenen NTLM- oder SMB-Stapel.
 

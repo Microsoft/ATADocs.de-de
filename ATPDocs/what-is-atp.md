@@ -8,21 +8,19 @@ manager: barbkess
 ms.date: 1/3/2019
 ms.topic: article
 ms.collection: M365-security-compliance
-ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: ''
 ms.assetid: 2d14d0e9-1b03-4bcc-ae97-8fd41526ffc5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a2e1f7d180cce76dd495c13efaab7336348a57e1
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: 13ef41fd698945c2517318f8c68a61d807557e08
+ms.sourcegitcommit: db60935a92fe43fe149f6a4d3114fe0edaa1d331
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56263436"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58763983"
 ---
 # <a name="what-is-azure-advanced-threat-protection"></a>Was ist Azure Advanced Threat Protection?
-Azure Advanced Threat Protection (ATP) ist eine cloudbasierte Sicherheitslösung, mit der Sie komplexe Bedrohungen, gefährdete Identitäten und schädliche Insider-Aktionen gegen Ihre Organisation identifizieren und erkennen können und die Sie bei der Untersuchung dieser Bedrohungen unterstützt. Azure ATP bietet SecOp-Analysten und Sicherheitsexperten, die Probleme beim Erkennen erweiterter Angriffe in Hybridumgebungen haben, folgende Funktionen:  
+Azure Advanced Threat Protection (ATP) ist eine cloudbasierte Sicherheitslösung unter Einbeziehung von Signalen Ihres lokalen Active Directory, mit der Sie komplexe Bedrohungen, gefährdete Identitäten und schädliche Insider-Aktionen gegen Ihre Organisation identifizieren und erkennen können und die Sie bei der Untersuchung dieser Bedrohungen unterstützt. Azure ATP bietet SecOp-Analysten und Sicherheitsexperten, die Probleme beim Erkennen erweiterter Angriffe in Hybridumgebungen haben, folgende Funktionen:  
 - Überwachung von Benutzern, Entitätsverhalten und -aktivitäten mit lernbasierter Analyse  
 - Schutz von in Active Directory gespeicherten Benutzeridentitäten und Anmeldeinformationen  
 - Identifikation und Untersuchung verdächtiger Benutzeraktivitäten und erweiterter Angriffe in der gesamten Kill Chain 
