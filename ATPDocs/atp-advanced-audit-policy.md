@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 1/24/2019
+ms.date: 04/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: ab1e8dd9-a6c2-4c68-89d5-343b8ec56142
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d2dbd84cf771e86a5615a081b6e8500247ee2026
-ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
+ms.openlocfilehash: 4d3bac024e94f0aec2fb01f827fb5456527c5356
+ms.sourcegitcommit: 4072bb8accd439590412f1380694f19aeaaa7a28
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58674672"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59233325"
 ---
 # <a name="azure-atp-advanced-audit-policy-check"></a>Überprüfung der erweiterten Überwachungsrichtlinie von Azure ATP
 
@@ -25,7 +25,7 @@ Die Azure ATP-Erkennung beruht auf bestimmten Windows-Ereignisprotokollen für S
 
 Damit Sie den aktuellen Status jeder erweiterten Überwachungsrichtlinien Ihres Domänencontrollers überprüfen können, überprüft Azure ATP automatisch Ihre erweiterten Überwachungsrichtlinien und gibt Integritätswarnungen für Richtlinieneinstellungen aus, die geändert werden müssen. Jede Integritätswarnung stellt bestimmte Informationen über den Domänencontroller bereit, von der problematischen Richtlinie bis hin zu Wiederherstellungsvorschlägen.
 
-![Integritätswarnung der erweiterten Überwachungsrichtlinie](media/atp-health-alert-audit-policy.png)
+![Integritätswarnung der erweiterten Überwachungsrichtlinie](media/atp-health-alert-audit.png)
 
 
 Advanced Security Audit Policy (Erweiterte Sicherheitsüberwachungsrichtlinien) ist über das Gruppenrichtlinienobjekt **Standarddomänencontroller-Richtlinie** aktiviert. Diese Überprüfungsereignisse können in den Windows-Ereignissen des Domänencontrollers aufgezeichnet werden. 
@@ -54,6 +54,9 @@ Advanced Security Audit Policy (Erweiterte Sicherheitsüberwachungsrichtlinien) 
 
     > [!NOTE]
     > Wenn Sie sich für die Verwendung lokaler Richtlinien entscheiden, stellen Sie sicher, dass Sie darin die Überwachungsprotokolle **Kontoanmeldung** und **Kontoverwaltung** hinzufügen. Wenn Sie die erweiterte Überwachungsrichtlinie konfigurieren, stellen Sie sicher, dass Sie die [Überwachungsrichtlinien-Unterkategorie](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/audit-force-audit-policy-subcategory-settings-to-override) erzwingen.
+    
+    > [!NOTE] 
+    > Wenn Sie eine andere Richtlinie als die des Standarddomänencontrollers verwenden, um die erweiterten Überwachungsrichtlinieneinstellungen anzuwenden, kann die angezeigte Azure ATP-Integritätswarnung ignoriert werden. 
 
 7. Nachdem die neuen Ereignisse über GPO angewendet wurden, sind sie unter Ihren **Windows-Ereignisprotokollen** sichtbar.
 
