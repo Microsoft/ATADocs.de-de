@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 63d9c5c565c2f241ad7387f1cb64824ee825b025
-ms.sourcegitcommit: db60935a92fe43fe149f6a4d3114fe0edaa1d331
+ms.openlocfilehash: b4a5f7c74329d846caaa25a8b1181e0e516d2b08
+ms.sourcegitcommit: c4a0b3eff3e9c4de37e3ca53405ba47992c22b46
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58764034"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872884"
 ---
 # <a name="azure-atp-prerequisites"></a>Voraussetzungen für Azure ATP
 
@@ -85,7 +85,7 @@ In diesem Abschnitt sind die Voraussetzungen für den Azure ATP-Sensor aufgefüh
 ### <a name="general"></a>Allgemein
 
 > [!NOTE]
-> Wenn Sie Server 2019 einsetzen, achten Sie darauf, dass [KB4487044](https://support.microsoft.com/help/4487044/windows-10-update-kb4487044) oder ein KB installiert ist, der KB4487044 enthält, wie z.B. [KB4489899](https://support.microsoft.com/help/4489899/windows-10-update-kb4489899). Azure ATP-Sensoren, die bereits auf Servern mit Windows 2019 ohne dieses Update installiert sind, werden automatisch deaktiviert.
+> Achten Sie darauf, dass [KB4487044](https://support.microsoft.com/help/4487044/windows-10-update-kb4487044) installiert ist, wenn Sie Server 2019 verwenden. Azure ATP-Sensoren, die bereits auf Servern mit Windows 2019 ohne dieses Update installiert sind, werden automatisch deaktiviert.
  
 Der Azure ATP-Sensor unterstützt die Installation auf einem Domänencontroller mit Windows Server 2008 R2 SP1 (ausgenommen Server Core), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (einschließlich Windows Server Core, aber ausgenommen Windows Nano Server), Windows Server 2019 (einschließlich Windows Core, aber ausgenommen Windows Nano Server).
 
@@ -176,7 +176,6 @@ Weitere Informationen zu den Hardwareanforderungen des eigenständigen Azure ATP
 ### <a name="time-synchronization"></a>Zeitsynchronisierung
 
 Die Zeitsynchronisierung der Server und Domänencontroller, auf denen der Sensor installiert ist, muss in einem Bereich von fünf Minuten zueinander liegen.
-
 
 ### <a name="network-adapters"></a>Netzwerkadapter
 Der eigenständige Azure ATP-Sensor erfordert mindestens einen Verwaltungsadapter und mindestens einen Erfassungsadapter:

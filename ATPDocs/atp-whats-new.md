@@ -5,23 +5,30 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 03/31/2019
+ms.date: 04/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ec0a64b0b4467ae27642dd59281b150fc6953f64
-ms.sourcegitcommit: db60935a92fe43fe149f6a4d3114fe0edaa1d331
+ms.openlocfilehash: 5b2af0b89f2a6cef149a206d110d9f9455e9c43f
+ms.sourcegitcommit: a52e0332fc1df15d062c6ad7b7c3db977a509341
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58764068"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59289365"
 ---
 # <a name="whats-new-in-azure-atp"></a>Neuerungen in Azure ATP
 
+## <a name="azure-atp-release-273"></a>Azure ATP Release 2.73
+
+Wird am 10. April 2019 veröffentlicht
+
+- Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
+
 ## <a name="azure-atp-release-272"></a>Azure ATP Release 2.72
+
 Veröffentlicht: 31. März 2019
 
 - **Featureerweiterung: Durch Lateral-Movement-Pfad (LMP) eingeschränkte Tiefe**<br>
@@ -32,6 +39,7 @@ Lateral-Movement-Pfade (LMP) sind eine wichtige Methode für die Ermittlung von 
 - Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
 ## <a name="azure-atp-release-271"></a>Azure ATP Release 2.71
+
 Veröffentlicht: 24. März 2019
 
 - **Featureerweiterung: Überwachungsbenachrichtigungen der Netzwerknamensauflösung (Network Name Resolution, NNR)**<br>
@@ -361,7 +369,7 @@ Veröffentlicht: 7. Oktober 2018
   - Geplante Berichte wurden festgelegt
   - Entitätstags (vertraulich und Honeytoken) können festgelegt werden.
   - Ausschluss von Erkennung
-  - Sprache ändern
+  - Ändern der Sprache
   - Benachrichtigung über E-Mail oder Syslog wurden festgelegt
 
 

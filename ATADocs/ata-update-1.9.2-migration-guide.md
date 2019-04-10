@@ -5,27 +5,25 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 03/28/2019
+ms.date: 04/02/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
-ms.service: ''
-ms.technology: ''
 ms.assetid: 2946310a-8e4e-48fc-9450-fc9647efeb22
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: dca6ae80725fbbb933f3e665b5020647ce74de0f
-ms.sourcegitcommit: a0d1ae7e221fd8bbaf81bf8ae4833ae77fb80ae8
+ms.openlocfilehash: 65a3b7c07b421a141fd61aa1c1e93160aae6a46f
+ms.sourcegitcommit: c4a0b3eff3e9c4de37e3ca53405ba47992c22b46
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/31/2019
-ms.locfileid: "58752289"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872850"
 ---
 # <a name="ata-version-192"></a>ATA Version 1.9.2
 
 
 Wir freuen uns, die Verfügbarkeit von Microsoft Advanced Threat Analytics 1.9 Update 2 bekanntzugeben.
 
-Dieser Artikel beschreibt Probleme, die in Update 2 für Microsoft Advanced Threat Analytics (ATA), Version 1.9, behoben wurden. Die Buildnummer dieses Updates lautet 1.9.7475.
+Dieser Artikel beschreibt Probleme, die in Update 2 für Microsoft Advanced Threat Analytics (ATA), Version 1.9, behoben wurden. Die Buildnummer dieses Updates lautet 1.9.7478.
 
 ## <a name="improvements-included-in-this-update"></a>In diesem Update enthaltene Verbesserungen
 
