@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 72c5a0de163e53ed60fb3871e3a70cb691513806
-ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
+ms.openlocfilehash: 2b2d78f7f9f6191f13a9a187ce7e1e7f60dfcaf7
+ms.sourcegitcommit: 7a32dcb65edc38fb9b3d340763045b21ea92feee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675199"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59577261"
 ---
 # <a name="tutorial-reconnaissance-alerts"></a>Tutorial: Warnungen zu Reconnaissance  
 
@@ -178,11 +178,18 @@ Damit Azure ATP berechtigte Benutzer präzise profilen und kennenlernen kann, we
 
 **Empfohlene Abhilfemaßnahmen und Schritte zur Vorbeugung**
 
-1.  Kontrollieren Sie den Quellcomputer.
+1. Kontrollieren Sie den Quellcomputer.
     1. Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
     2. Führt der Computer ein Scantool aus, das eine Vielzahl von LDAP-Abfragen ausführt?
     3. Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA.
-2.  Setzen Sie das Kennwort zurück, wenn der Zugriff auf eine SPN-Ressource erfolgte, die unter einem Benutzerkonto (kein Computerkonto) ausgeführt wird.
+2. Setzen Sie das Kennwort zurück, wenn der Zugriff auf eine SPN-Ressource erfolgte, die unter einem Benutzerkonto (kein Computerkonto) ausgeführt wird.
+
+**Kerberoasting-spezifische vorgeschlagene Schritte zur Vorbeugung und Wiederherstellung**
+
+1. Erzwingen einer Kennwortzurücksetzung bei einem kompromittierten Konto  
+2. Die Verwendung von [langen und komplexen Kennwörtern für Benutzer Dienstprinzipalkonten](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/minimum-password-length) ist erforderlich.  
+3. [Ersetzen Sie das Benutzerkonto durch ein gruppenverwaltetes Dienstkonto (GMSA)](https://docs.microsoft.com/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview). 
+
 
 ## <a name="user-and-ip-address-reconnaissance-smb-external-id-2012"></a>Reconnaissance über Benutzer und IP-Adressen (SMB) (externe ID 2012) 
 
