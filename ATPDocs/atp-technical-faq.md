@@ -13,11 +13,11 @@ ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: 677dec4468fa272b55d5f9c20c3163fea5770f20
-ms.sourcegitcommit: 4072bb8accd439590412f1380694f19aeaaa7a28
+ms.sourcegitcommit: 7a32dcb65edc38fb9b3d340763045b21ea92feee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59233342"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59745805"
 ---
 # <a name="azure-atp-frequently-asked-questions"></a>Häufig gestellte Fragen zu Azure ATP
 Dieser Artikel enthält eine Reihe häufig gestellter Fragen und Antworten zu Azure ATP, unterteilt in die folgenden Kategorien: 
