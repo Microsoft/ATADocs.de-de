@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 03/31/2019
+ms.date: 04/18/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: edac28031e9faa3e5c23bbbd82ef4ce023f1f249
-ms.sourcegitcommit: db60935a92fe43fe149f6a4d3114fe0edaa1d331
+ms.openlocfilehash: b7769c953a27e3739db32c6db0bcbc0ef82679d4
+ms.sourcegitcommit: 8fa812fb4e898e40239febc6dc0fb0bdfcae3e55
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58764000"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59902106"
 ---
 # <a name="troubleshooting-ata-known-issues"></a>Behandlung von bekannten Problemen bei ATA
 
@@ -63,9 +63,8 @@ In diesem Abschnitt sind mögliche Fehler, die es in den Bereitstellungen von AT
 > |System.Threading.Tasks.TaskCanceledException: Eine Aufgabe wurde abgebrochen.|Zeitüberschreitung während des Bereitstellungsvorgangs, da ATA Center nicht erreicht werden konnte.|1.    Überprüfen Sie Ihre Netzwerkverbindung zu ATA Center, indem Sie mithilfe der IP-Adresse dahin navigieren. <br></br>2.    Überprüfen Sie die Proxy- oder Firewallkonfiguration.|
 > |System.Net.Http.HttpRequestException: Fehler beim Senden der Anforderung. ---> System.Net.WebException: Der Remoteserver hat einen Fehler zurückgegeben: (407) Proxyauthentifizierung erforderlich.|Zeitüberschreitung während des Bereitstellungsvorgangs, da ATA Center aufgrund einer Proxyfehlkonfiguration nicht erreicht werden konnte.|Deaktivieren Sie die Proxykonfiguration vor der Bereitstellung, aktivieren Sie dann die Proxykonfiguration erneut. Alternativ können Sie eine Ausnahme im Proxy konfigurieren.|
 > |System.Net.Sockets.SocketException: Eine vorhandene Verbindung wurde vom Remotehost geschlossen.||Verwenden Sie eine der folgenden Optionen: </br>TLS 1.0 auf dem ATA-Gateway aktivieren </br>Aktivieren Sie TLS 1.2 in .NET, indem Sie die Registrierungsschlüssel wie folgt für die Verwendung der Standardwerte des Betriebssystems für SSL und TLS einrichten:</br> `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br> `[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`|
-> |Fehler [\[]DeploymentModel[\]] Verwaltungsauthentifizierung mit Fehler [\[]CurrentlyLoggedOnUser=<domain>\<username>Status=FailedAuthentication Exception=[\]]|Der Bereitstellungsprozess für das ATA-Gateway oder das ATA-Lightweight-Gateway konnte in ATA Center nicht erfolgreich authentifiziert werden.|Öffnen Sie auf dem Computer, auf dem der fehlerhafte Bereitstellungsprozess ausgeführt wurde, einen Browser, und versuchen Sie, die ATA-Konsole zu erreichen. </br>Wenn dies nicht möglich ist, starten Sie die Problembehandlung, um zu ermitteln, warum der Browser sich nicht in ATA Center authentifizieren kann. </br>Überprüfen Sie Folgendes: </br>Proxykonfiguration</br>Netzwerkprobleme</br>Gruppenrichtlinieneinstellungen für die Authentifizierung auf diesem Computer, die sich von den Einstellungen in ATA Center unterscheiden|
-> | Fehler [\[]DeploymentModel[\]] Fehler bei der Verwaltungsauthentifizierung|Fehler bei Authentifizierung eines Zertifikats für ATA Center|Das Zertifikat für ATA Center erfordert für die Überprüfung eine Internetverbindung. Stellen Sie sicher, dass Ihr Gatewaydienst über die ordnungsgemäße Proxykonfiguration verfügt, um die Verbindung und Überprüfung zu ermöglichen.|
-
+> |Error [\\[]DeploymentModel[\\]] Failed management authentication     [\\[]CurrentlyLoggedOnUser=<domain>\\<username>Status=FailedAuthentication Exception=[\\]] (Fehler bei der Verwaltungsauthentifizierung)|Der Bereitstellungsprozess für das ATA-Gateway oder das ATA-Lightweight-Gateway konnte in ATA Center nicht erfolgreich authentifiziert werden.|Öffnen Sie auf dem Computer, auf dem der fehlerhafte Bereitstellungsprozess ausgeführt wurde, einen Browser, und versuchen Sie, die ATA-Konsole zu erreichen. </br>Wenn dies nicht möglich ist, starten Sie die Problembehandlung, um zu ermitteln, warum der Browser sich nicht in ATA Center authentifizieren kann. </br>Überprüfen Sie Folgendes: </br>Proxykonfiguration</br>Netzwerkprobleme</br>Gruppenrichtlinieneinstellungen für die Authentifizierung auf diesem Computer, die sich von den Einstellungen in ATA Center unterscheiden|
+> | Error [\\[]DeploymentModel[\\]] Failed management authentication (Fehler bei der Verwaltungsauthentifizierung)|Fehler bei der Validierung des Center-Zertifikats|Das Zertifikat für ATA Center erfordert möglicherweise für die Überprüfung eine Internetverbindung. Stellen Sie sicher, dass Ihr Gatewaydienst über die ordnungsgemäße Proxykonfiguration verfügt, um die Verbindung und Überprüfung zu ermöglichen.|
 
 
 ## <a name="ata-center-errors"></a>ATA Center-Fehler
@@ -73,7 +72,7 @@ In diesem Abschnitt sind mögliche Fehler, die es in den Bereitstellungen von AT
 > 
 > |Fehler|Beschreibung|Lösung|
 > |-------------|----------|---------|
-> |System.Security.Cryptography.CryptographicException: Zugriff verweigert:|ATA Center konnte das ausgestellte Zertifikat nicht für die Entschlüsselung verwenden. Dies liegt höchstwahrscheinlich daran, dass ein Zertifikat verwendet wurde, dessen KeySpec- bzw. KeyNumber-Wert auf „Signature“ (AT\_SIGNATURE) festgelegt wurde. Dies wird für die Entschlüsselung nicht unterstützt. Stattdessen sollte KeyExchange (AT\_KEYEXCHANGE) verwendet werden.|1.    Beenden Sie den ATA Center-Dienst. <br></br>2.     Löschen Sie das ATA Center-Zertifikat aus dem ATA Center-Zertifikatspeicher. (Stellen Sie vor dem Löschen sicher, dass Sie das Zertifikat mit dem privaten Schlüssel in einer PFX-Datei gesichert haben.) <br></br>3.    Öffnen Sie eine Eingabeaufforderung mit erhöhten Rechten, und führen Sie folgenden Befehl aus: certutil -importpfx "CenterCertificate.pfx" AT\_KEYEXCHANGE <br></br>4.     Starten Sie den ATA Center-Dienst. <br></br>5.     Überprüfen Sie, ob alles wie erwartet funktioniert.|
+> |System.Security.Cryptography.CryptographicException: Zugriff verweigert:|ATA Center konnte das ausgestellte Zertifikat nicht für die Entschlüsselung verwenden. Dies liegt höchstwahrscheinlich daran, dass ein Zertifikat verwendet wurde, dessen KeySpec- bzw. KeyNumber-Wert auf „Signature“ (AT\\_SIGNATURE) festgelegt wurde, statt KeyExchange (AT\\_KEYEXCHANGE) zu verwenden. Dies wird für die Entschlüsselung nicht unterstützt.|1.    Beenden Sie den ATA Center-Dienst. <br></br>2.     Löschen Sie das ATA Center-Zertifikat aus dem ATA Center-Zertifikatspeicher. (Stellen Sie vor dem Löschen sicher, dass Sie das Zertifikat mit dem privaten Schlüssel in einer PFX-Datei gesichert haben.) <br></br>3.    Öffnen Sie eine Eingabeaufforderung mit erhöhten Rechten, und führen Sie folgenden Befehl aus: certutil -importpfx "CenterCertificate.pfx" AT\\_KEYEXCHANGE <br></br>4.     Starten Sie den ATA Center-Dienst. <br></br>5.     Überprüfen Sie, ob alles wie erwartet funktioniert.|
 
 
 ## <a name="ata-gateway-and-lightweight-gateway-issues"></a>Probleme im ATA-Gateway und Lightweight-Gateway
@@ -84,6 +83,7 @@ In diesem Abschnitt sind mögliche Fehler, die es in den Bereitstellungen von AT
 > |-------------|----------|---------|
 > |Es wurde kein Datenverkehr vom Domänencontroller empfangen, doch es wurden Überwachungswarnungen beobachtet.|    Es wurde kein Datenverkehr von einem Domänencontroller empfangen, der Portspiegelung über ein ATA-Gateway verwendet.|Deaktivieren Sie diese Funktionen auf dem verwendeten NIC auf dem ATA-Gateway unter **Erweiterte Einstellungen**:<br></br>Empfang zusammengeführter Segmente (IPv4)<br></br>Empfang zusammengeführter Segmente (IPv6)|
 > |Die folgende Überwachungswarnung wird angezeigt: Ein Teil des Netzwerkdatenverkehrs wird nicht analysiert|Wenn Sie ein ATA-Gateway oder ein Lightweight-Gateway auf einem virtuellen VMware-Computer haben, erhalten Sie möglicherweise diese Warnung. Dies tritt aufgrund von Konfigurationskonflikten in VMware auf.|Legen Sie die folgenden Einstellungen in der NIC-Konfiguration der VM auf „0“ (null) oder „Deaktiviert“ fest: TsoEnable, LargeSendOffload, TSO Offload, Giant TSO Offload. TLS 1.0 ist im ATA-Gateway deaktiviert, aber .NET ist auf die Verwendung von TLS 1.2 eingestellt.|
+
 
 
 

@@ -12,15 +12,15 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 2d14d0e9-1b03-4bcc-ae97-8fd41526ffc5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 309e77b9595f425470194778f946e0f707b1a72e
-ms.sourcegitcommit: 4072bb8accd439590412f1380694f19aeaaa7a28
+ms.openlocfilehash: 2afa9c293271d04eb7c61883dcbb5777e4c0d510
+ms.sourcegitcommit: 279884f436bf0d10d906f4fac950d28f0ada8a45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59233138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60164694"
 ---
 # <a name="what-is-azure-advanced-threat-protection"></a>Was ist Azure Advanced Threat Protection?
-Azure Advanced Threat Protection (ATP) ist eine cloudbasierte Sicherheitslösung unter Einbeziehung von Signalen Ihres lokalen Active Directory, mit der Sie komplexe Bedrohungen, gefährdete Identitäten und schädliche Insider-Aktionen gegen Ihre Organisation identifizieren und erkennen können und die Sie bei der Untersuchung dieser Bedrohungen unterstützt. Azure ATP bietet SecOp-Analysten und Sicherheitsexperten, die Probleme beim Erkennen erweiterter Angriffe in Hybridumgebungen haben, folgende Funktionen:  
+Azure Advanced Threat Protection (ATP) ist eine cloudbasierte Sicherheitslösung, die Signale Ihres lokalen Active Directory nutzt, um komplexe Bedrohungen, gefährdete Identitäten und schädliche Insider-Aktionen gegen Ihre Organisation zu identifizieren und zu erkennen, und die Sie bei der Untersuchung dieser Bedrohungen unterstützt. Azure ATP bietet SecOp-Analysten und Sicherheitsexperten, die Probleme beim Erkennen erweiterter Angriffe in Hybridumgebungen haben, folgende Funktionen:  
 - Überwachung von Benutzern, Entitätsverhalten und -aktivitäten mit lernbasierter Analyse  
 - Schutz von in Active Directory gespeicherten Benutzeridentitäten und Anmeldeinformationen  
 - Identifikation und Untersuchung verdächtiger Benutzeraktivitäten und erweiterter Angriffe in der gesamten Kill Chain 
