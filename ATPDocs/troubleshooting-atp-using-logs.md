@@ -4,7 +4,7 @@ description: Beschreibt die Verwendung der Azure ATP-Protokolle zum Behandeln vo
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: barbkess
+manager: rkarlin
 ms.date: 10/04/2018
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: de796346-647d-48e1-970a-8f072e990f1e
 ms.reviewer: ''
 ms.suite: ''
-ms.openlocfilehash: 3db046f28e61c7462d84d1116162874eba103b29
-ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
+ms.openlocfilehash: 2590e877ba39fda2fee41d8e617690a2b8d4a892
+ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58674485"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65196571"
 ---
 # <a name="troubleshooting-azure-advanced-threat-protection-atp-sensor-using-the-atp-logs"></a>Problembehandlung für den Azure Advanced Threat Protection-Sensor (ATP) mithilfe der ATP-Protokolle
 Die ATA-Protokolle geben Einblick in die Aktivitäten der einzelnen Komponenten des Azure ATP-Sensors zu einem bestimmten Zeitpunkt.

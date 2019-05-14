@@ -4,19 +4,19 @@ description: Beschreibt, wie die IP-Adresse, der Port, die URL der Konsole oder 
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
-manager: barbkess
+manager: rkarlin
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: fe6f282fd0ee83da0d6ce0f3be3f376c7006f64a
-ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
+ms.openlocfilehash: 8a228463c422ac7f62d3fc18395aa0b61df0a731
+ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58674426"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65196018"
 ---
 # <a name="modifying-the-ata-center-configuration"></a>Bearbeiten der ATA Center-Konfiguration
 

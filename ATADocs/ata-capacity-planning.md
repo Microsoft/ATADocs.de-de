@@ -2,20 +2,21 @@
 title: Planen der Advanced Threat Analytics-Bereitstellung (ATA) | Microsoft-Dokumentation
 description: Hilft bei der Planung Ihrer Bereitstellung und der Entscheidung, wie viele ATA-Server für Ihr Netzwerk erforderlich sind.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: barbkess
-ms.date: 3/21/2018
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 05/12/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
+ms.assetid: 1b5b24ff-0df8-4660-b4f8-64d68cc72f65
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3679dfd71653c607fbb16bec6545640dcd015e95
-ms.sourcegitcommit: 62b631f64a639f5df04bf805755f26c69b40e8e4
+ms.openlocfilehash: 069f6b179ab48b2c19b06e1bbcc64f4336954574
+ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58639084"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65195836"
 ---
 # <a name="ata-capacity-planning"></a>ATA-Kapazitätsplanung
 
@@ -35,7 +36,7 @@ Die empfohlene und einfachste Methode zum Ermitteln der Kapazität für die ATA-
 - ATA-Gateway: Gleichen Sie das Feld **Busy Packets/sec** in der ATA-Gateway-Tabelle in der Ergebnisdatei mit dem Feld **PACKETS PER SECOND** in der [ATA Gateway-Tabelle](#ata-gateway-sizing) oder der [ATA-Lightweight-Gateway-Tabelle](#ata-lightweight-gateway-sizing) ab, je nach [ausgewähltem Gateway](#choosing-the-right-gateway-type-for-your-deployment).
 
 
-![Beispiel für das Kapazitätsplanungstool](media/capacity tool.png)
+![Beispiel für das Kapazitätsplanungstool](media/capacity-tool.png)
 
 
 > [!NOTE]

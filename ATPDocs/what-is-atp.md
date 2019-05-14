@@ -4,20 +4,20 @@ description: Hier wird erläutert, worum es sich bei Azure Advanced Threat Prote
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: barbkess
-ms.date: 04/07/2019
+manager: rkarlin
+ms.date: 05/07/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 2d14d0e9-1b03-4bcc-ae97-8fd41526ffc5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2afa9c293271d04eb7c61883dcbb5777e4c0d510
-ms.sourcegitcommit: 279884f436bf0d10d906f4fac950d28f0ada8a45
+ms.openlocfilehash: fe56aac6dae4b5f54134a3542c18495dbb44aacf
+ms.sourcegitcommit: fa9b880e52d4b615409cc247fc73993407df0ae5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60164694"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65226770"
 ---
 # <a name="what-is-azure-advanced-threat-protection"></a>Was ist Azure Advanced Threat Protection?
 Azure Advanced Threat Protection (ATP) ist eine cloudbasierte Sicherheitslösung, die Signale Ihres lokalen Active Directory nutzt, um komplexe Bedrohungen, gefährdete Identitäten und schädliche Insider-Aktionen gegen Ihre Organisation zu identifizieren und zu erkennen, und die Sie bei der Untersuchung dieser Bedrohungen unterstützt. Azure ATP bietet SecOp-Analysten und Sicherheitsexperten, die Probleme beim Erkennen erweiterter Angriffe in Hybridumgebungen haben, folgende Funktionen:  
