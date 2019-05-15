@@ -4,20 +4,20 @@ description: Beschreibt die Voraussetzungen für eine erfolgreiche Bereitstellun
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: barbkess
-ms.date: 03/31/2019
+manager: rkarlin
+ms.date: 05/01/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 40caca1ff6ac2648b3f7c3d4921cfb35a5f5ba39
-ms.sourcegitcommit: 279884f436bf0d10d906f4fac950d28f0ada8a45
+ms.openlocfilehash: 420c162e3dc5b7869b46453e3eeda67e1fdc692c
+ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60164711"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65195560"
 ---
 # <a name="azure-atp-prerequisites"></a>Voraussetzungen für Azure ATP
 
@@ -143,7 +143,7 @@ Die Azure ATP-Erkennung basiert auf bestimmten Windows-Ereignisprotokollen, die 
 
 > [!NOTE]
 > - Bei Verwendung des Verzeichnisdienst-Benutzerkontos fragt der Sensor mithilfe von SAM-R (Netzwerkanmeldung) Endpunkte in Ihrer Organisation für lokale Administratoren ab, um [den Graph des Lateral-Movement-Pfads](use-case-lateral-movement-path.md) zu erstellen. Weitere Informationen finden Sie unter [Erforderliche Berechtigung für SAM-R konfigurieren](install-atp-step8-samr.md).
-> - Die folgenden Ports müssen auf eingehenden Geräten im Netzwerk des eigenständigen Azure ATP-Sensors geöffnet sein:
+> - Die folgenden Ports müssen auf eingehenden Geräten im Netzwerk des Azure ATP-Sensors freigegeben sein:
 >   -   NTLM über RPC (TCP-Port 135) für Lösungszwecke
 >   -   NetBIOS (UDP-Port 137) für Lösungszwecke
 >   -   RDP (TCP-Port 3389), nur das erste Paket von *Client hello* zu Auflösungszwecken<br> Beachten Sie, dass auf keinem Port eine Authentifizierung durchgeführt wird.

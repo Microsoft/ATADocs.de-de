@@ -4,22 +4,38 @@ description: Beschreibt die neuesten Releases von Azure ATP und enthält Informa
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: barbkess
-ms.date: 04/14/2019
+manager: rkarlin
+ms.date: 05/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 426f89a61d2cdcd5b52d12e8c7a9c2cfede69940
-ms.sourcegitcommit: 7a32dcb65edc38fb9b3d340763045b21ea92feee
+ms.openlocfilehash: 86c76a14403e7539156c7f882a30d022842a5771
+ms.sourcegitcommit: fa9b880e52d4b615409cc247fc73993407df0ae5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59577279"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65226784"
 ---
 # <a name="whats-new-in-azure-atp"></a>Neuerungen in Azure ATP
+
+## <a name="azure-atp-release-276"></a>Azure ATP Release 2.76
+
+Veröffentlicht: 6. Mai 2019
+
+- Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
+
+## <a name="azure-atp-release-275"></a>Azure ATP Release 2.75
+
+Veröffentlicht: 28. April 2019
+
+- **Featureerweiterung: Sensible Entitäten**<br> Ab dieser Version (2.75) werden die von Azure ATP als Exchange-Server identifizierte Computer nun automatisch als **Sensibel** gekennzeichnet.  
+
+    Entitäten, die automatisch als **Sensibel** gekennzeichnet werden, da sie als Exchange-Server fungieren, führen diese Klassifizierung als Grund für die Kennzeichnung auf. 
+
+- Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
 ## <a name="azure-atp-release-274"></a>Azure ATP Release 2.74
 

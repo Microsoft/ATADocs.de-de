@@ -4,26 +4,26 @@ description: Informationen zum Kennzeichnen von sensiblen Konten mit Azure Advan
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: barbkess
-ms.date: 10/04/2018
+manager: rkarlin
+ms.date: 04/29/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d7f0d0d677692aeb7406824f5bd18e493934a195
-ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
+ms.openlocfilehash: 2342a10f932664568065d2ef906d863a875c8096
+ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58673711"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65196440"
 ---
 # <a name="working-with-sensitive-accounts"></a>Arbeiten mit sensiblen Konten
 
-## <a name="sensitive-groups"></a>Sensible Gruppen
+## <a name="sensitive-entites"></a>Sensible Entitäten
 
-In der folgenden Liste werden die Gruppen aufgeführt, die von Azure ATP als „Sensibel“ eingestuft werden. Jede Entität, die Mitglied dieser Gruppen ist, wird als sensibel angesehen:
+In der folgenden Liste werden die Gruppen aufgeführt, die von Azure ATP als **Sensibel** eingestuft werden. Jede Entität, die Mitglied einer dieser Gruppen ist, wird als sensibel angesehen:
 
 - Administratoren
 - Hauptbenutzer
@@ -41,6 +41,7 @@ In der folgenden Liste werden die Gruppen aufgeführt, die von Azure ATP als „
 - Schreibgeschützte Domänencontroller der Organisation 
 - Schema-Admins 
 - Organisations-Admins
+- Microsoft Exchange Server
 
   > [!NOTE]
   > Bis September 2018 wurden auch Remotedesktopbenutzer von Azure ATP automatisch als sensibel erkannt. Remotedesktopentitäten oder -gruppen, die nach diesem Datum hinzugefügt wurden, werden nicht mehr automatisch als sensibel erkannt, während Remotedesktopentitäten oder -gruppen, die vor diesem Datum hinzugefügt wurden, möglicherweise als sensibel markiert bleiben. Diese „Sensibel“-Einstellung kann nun manuell geändert werden.  

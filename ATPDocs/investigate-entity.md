@@ -4,7 +4,7 @@ description: Dieser Artikel beschreibt, wie verdächtige Aktivitäten, die von B
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: barbkess
+manager: rkarlin
 ms.date: 1/3/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 96b5d42d27fc0e78ac9cf0a23028c57a12def047
-ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
+ms.openlocfilehash: 4868282aaf5dc45c5f25740e26d6c3c7f0403952
+ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58674349"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65193548"
 ---
 # <a name="tutorial-investigate-an-entity"></a>Tutorial: Untersuchen einer Entität
 
@@ -46,7 +46,7 @@ Azure ATP zieht Tags aus Active Directory, damit Sie eine einzelne Schnittstelle
 - Teilweise: Dieser Benutzer, Computer oder diese Gruppe wurde von der Domäne nicht synchronisiert und über einen globalen Katalog teilweise aufgelöst. Einige Attribute sind nicht verfügbar.
 - Nicht aufgelöst: Dieser Computer wurde nicht zu einer gültigen Entität in der Active Directory-Struktur aufgelöst. Es sind keine Verzeichnisinformationen verfügbar.
 - Gelöscht: Die Entität wurde aus Active Directory gelöscht.
-- Disabled: Die Entität wurde in Active Directory deaktiviert.
+- Deaktiviert: Die Entität wurde in Active Directory deaktiviert.
 - Gesperrt: Für die Entität wurde mehrmals ein falsches Kennwort eingegeben, und sie wurde gesperrt.
 - Abgelaufen: Die Entität ist in Active Directory abgelaufen.
 - Neu: Die Entität wurde vor weniger als 30 Tagen erstellt.
