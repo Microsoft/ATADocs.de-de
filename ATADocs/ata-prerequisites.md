@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 9/27/2018
+ms.date: 05/12/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ec1e15804aed63209b1cd675c902fc91dab376bd
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: 153f53715bc33b735bb7cf2796dcb1f983d67915
+ms.sourcegitcommit: 5d93b0e59080c2d872672bf77a1a40c548c1016d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65196701"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65760328"
 ---
 # <a name="ata-prerequisites"></a>ATA-Voraussetzungen
 
@@ -67,7 +67,7 @@ In diesem Abschnitt werden die Informationen aufgeführt, die Sie sammeln sollte
 ## <a name="ata-center-requirements"></a>Voraussetzungen für ATA Center
 In diesem Abschnitt werden die Voraussetzungen für ATA Center aufgeführt.
 ### <a name="general"></a>Allgemein
-ATA Center unterstützt die Installation auf einem Server mit Windows Server 2012 R2 oder Windows Server 2016. 
+ATA Center unterstützt die Installation auf einem Server mit Windows Server 2012 R2, Windows Server 2016 und Windows Server 2019. 
 
  > [!NOTE]
  > ATA Center unterstützt Windows Server Core nicht.
@@ -152,7 +152,7 @@ Sie können beispielsweise den **Standardwebserver** oder **Computervorlagen** v
 ## <a name="ata-gateway-requirements"></a>Voraussetzungen für das ATA-Gateway
 In diesem Abschnitt sind die Voraussetzungen für das ATA-Gateway aufgeführt.
 ### <a name="general"></a>Allgemein
-Das ATA-Gateway unterstützt die Installation auf einem Server mit Windows Server 2012 R2 oder Windows Server 2016 (einschließlich Server Core).
+Das ATA-Gateway unterstützt die Installation auf einem Server mit Windows Server 2012 R2, Windows Server 2016 oder Windows Server 2019 (einschließlich Server Core).
 Das ATA-Gateway kann auf einem Server installiert werden, der Mitglied einer Domäne oder Arbeitsgruppe ist.
 Das ATA-Gateway kann zur Überwachung von Domänencontrollern mit der Domänenfunktionsebene Windows 2003 und höher verwendet werden.
 
@@ -232,7 +232,7 @@ In der folgenden Tabelle sind die Ports aufgeführt, die für den Verwaltungsada
 ## <a name="ata-lightweight-gateway-requirements"></a>ATA-Lightweight-Gateway-Anforderungen
 In diesem Abschnitt sind die Voraussetzungen für das ATA-Lightweight-Gateway aufgeführt.
 ### <a name="general"></a>Allgemein
-Das ATA-Lightweight-Gateway unterstützt die Installation auf einem Domänencontroller mit Windows Server 2008 R2 SP1 (ohne Server Core), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (mit Core, jedoch ohne Nano).
+Das ATA-Lightweight-Gateway unterstützt die Installation auf einem Domänencontroller mit Windows Server 2008 R2 SP1 (ohne Server Core), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 und Windows Server 2019 (mit Core, jedoch ohne Nano).
 
 Beim Domänencontroller kann es sich um einen schreibgeschützten Domänencontroller (Read Only Domain Controller, RODC) handeln.
 

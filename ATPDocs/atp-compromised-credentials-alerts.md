@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/15/2019
+ms.date: 05/20/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: aa4f9c18e0695092ddbaa9ef8505b403e206cb8c
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: a977ff49c385ababfd753d05caf3518825e9def9
+ms.sourcegitcommit: 122974e5bec49a1d613a38debc37d91ff838b05f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65196861"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65933635"
 ---
 # <a name="tutorial-compromised-credential-alerts"></a>Tutorial: Warnungen zu kompromittierten Anmeldeinformationen  
 
@@ -103,10 +103,13 @@ Bei einem Kennwort-Spray-Angriff testen Angreifer nach erfolgreichem Durchzähle
 1. Untersuchen Sie den Quellcomputer.  
 2. Überprüfen Sie auf der Seite für Warnungen, ob und gegebenenfalls welche Benutzer erfolgreich erraten wurden.
     - Überprüfen Sie für jeden erfolgreich erratenen Benutzer [dessen Profil](investigate-a-user.md), um weitere Informationen zu erhalten.
-3. Tritt eine Warnung mehrfach auf, und wurde die Authentifizierung mithilfe von NTLM durchgeführt, sind manchmal nicht genügend Informationen zu dem Server verfügbar, auf den der Quellcomputer zugreifen wollte.
-    1. Aktivieren Sie die NTLM-Überwachung für die betroffenen Domänencontroller, um diese Informationen zu erhalten.  
-    2. Aktivieren Sie dazu Ereignis 8004 (das NTLM-Authentifizierungsereignis, das Informationen zum Quellcomputer, Benutzerkonto und Server enthält, auf die der Quellcomputer zugreifen wollte).
-    3. Wenn Sie wissen, welcher Server die Authentifizierungsüberprüfung gesendet hat, untersuchen Sie den Server, indem Sie Ereignisse wie das Ereignis 4624 überprüfen, um den Authentifizierungsprozess besser nachvollziehen zu können.
+1. Wenn die Authentifizierung mithilfe von NTLM erfolgt ist, sind in einigen Szenarios möglicherweise nicht genügend Informationen zum Server verfügbar, auf die der Quellcomputer zugreifen wollte. Azure ATP erfasst die auf Windows-Ereignis 4776 basierenden Daten des Quellcomputers, die den Namen des Quellcomputers enthalten.
+
+    Stellen Sie sicher, dass die NTLM-Überwachung für die relevanten Domänencontroller aktiviert sind, um den Namen des Quellcomputers abzurufen.
+    
+    Aktivieren Sie dazu das Windows-Ereignis 8004 (NTLM-Authentifizierungsereignis, das Informationen zum Quellcomputer, Benutzerkonto und Server enthält, auf die der Quellcomputer zugreifen wollte).
+    
+    Wenn Sie wissen, welcher Server die Authentifizierungsüberprüfung gesendet hat, untersuchen Sie den Server, indem Sie Ereignisse wie das Windows-Ereignis 4624 überprüfen, um den Authentifizierungsprozess besser nachvollziehen zu können. Überprüfen Sie, ob dieser Server mithilfe von offenen Ports eine Verbindung mit dem Internet herstellt. Verwendet der Server beispielsweise RDP für die Verbindung mit dem Internet?
 
 **Empfohlene Abhilfemaßnahmen und Schritte zur Vorbeugung**
 
@@ -124,6 +127,7 @@ Bei einem Kennwort-Spray-Angriff testen Angreifer nach erfolgreichem Durchzähle
 **Beschreibung**
 
 Bei einem Brute-Force-Angriff versucht der Angreifer, sich mit vielen verschiedenen Kennwörtern für verschiedene Konten anzumelden, bis ein korrektes Kennwort für mindestens ein Konto gefunden wird. Sobald eines gefunden wurde, kann sich der Angreifer mit diesem Konto anmelden.  
+
 In dieser Erkennung wird eine Warnung ausgelöst, wenn Azure ATP eine signifikante Anzahl von Authentifizierungen mit einfacher Bindung erkennt. Diese Warnung erkennt Brute-Force-Angriffe, die entweder *horizontal* mit wenigen Kennwörtern für viele Benutzer oder *vertikal* mit einer Vielzahl von Kennwörtern für wenige Benutzer ausgeführt werden. Auch eine beliebige Kombination dieser beiden Optionen ist möglich.
 
 **TP, B-TP oder FP**

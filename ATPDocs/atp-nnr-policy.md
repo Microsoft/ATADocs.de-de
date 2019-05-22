@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/31/2019
+ms.date: 05/19/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 1ac873fc-b763-41d7-878e-7c08da421cb5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1489f1b24065a153734bdd46975576d469b57f24
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: 0c497d55142eb13867e904917aca890bc157ad63
+ms.sourcegitcommit: 122974e5bec49a1d613a38debc37d91ff838b05f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65196942"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65933706"
 ---
 # <a name="what-is-network-name-resolution"></a>Was ist Netzwerknamensauflösung?
 
@@ -25,7 +25,7 @@ Die Netzwerknamensauflösung (Network Name Resolution, NNR) ist eine Hauptkompon
 
 Durch die Verwendung von NNR ordnet Azure ATP reinen Aktivitäten (mit IP-Adressen) die entsprechenden, an der Aktivität beteiligten Computer zu. Auf Grundlage der reinen Aktivitäten erstellt Azure ATP ein Profil der Entitäten, wie etwa Computer, und generiert Sicherheitswarnungen für verdächtige Aktivitäten.
 
-Um IP-Adressen zu Computernamen aufzulösen, fragen ATP-Sensoren die IP-Adresse für den Computernamen „hinter“ der IP ab und verwenden dazu eine der folgenden Methoden:
+Wenn IP-Adressen zu Computernamen aufgelöst werden sollen, fragen Azure ATP-Sensoren die IP-Adresse für den Computernamen „hinter“ der IP ab und verwenden dazu eine der folgenden Methoden:
 
 1. NTLM über RPC (TCP-Port 135)
 2. NetBIOS (UDP-Port 137)
@@ -77,11 +77,11 @@ Jede Überwachungswarnung enthält spezifische Details zu Methode, Sensoren, der
 ### <a name="configuration-recommendations"></a>Konfigurationsempfehlungen
 
 - RPC-über-NTLM:
-    - Achten Sie darauf, dass Port 135 für eingehende Kommunikation von Azure ATP-Sensoren auf allen Computern in der Umgebung geöffnet ist.
+    - Achten Sie darauf, dass TCP-Port 135 für eingehende Kommunikation von Azure ATP-Sensoren auf allen Computern in der Umgebung geöffnet ist.
     - Überprüfen Sie die gesamte Netzwerkkonfiguration (Firewalls), da diese die Kommunikation mit den relevanten Ports verhindern kann.
 
 - NetBIOS:
-    - Achten Sie darauf, dass Port 137 für eingehende Kommunikation von Azure ATP-Sensoren auf allen Computern in der Umgebung geöffnet ist.
+    - Achten Sie darauf, dass UDP-Port 137 für eingehende Kommunikation von Azure ATP-Sensoren auf allen Computern in der Umgebung geöffnet ist.
     - Überprüfen Sie die gesamte Netzwerkkonfiguration (Firewalls), da diese die Kommunikation mit den relevanten Ports verhindern kann.
 - Reverse-DNS:
     - Achten Sie darauf, dass der Sensor den DNS-Server erreichen kann und dass Reverse-Lookup-Zonen aktiviert sind.

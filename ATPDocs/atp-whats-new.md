@@ -5,21 +5,44 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/07/2019
+ms.date: 05/20/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
-ms.reviewer: itargoet
+ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 86c76a14403e7539156c7f882a30d022842a5771
-ms.sourcegitcommit: fa9b880e52d4b615409cc247fc73993407df0ae5
+ms.openlocfilehash: 8f9426a51f0bd709685c365a39d2f4aad1dbf8cb
+ms.sourcegitcommit: 122974e5bec49a1d613a38debc37d91ff838b05f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65226784"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65933659"
 ---
 # <a name="whats-new-in-azure-atp"></a>Neuerungen in Azure ATP
+
+## <a name="azure-atp-release-278"></a>Azure ATP Release 2.78
+
+Veröffentlicht: 19. Mai 2019
+
+- **Featureerweiterung: Sensible Entitäten**<br> Manuelles Kennzeichnen von Exchange-Servern als „sensibel“
+
+    Sie können Entitäten jetzt manuell als Exchange-Server während der Konfiguration kennzeichnen.
+
+    So kennzeichnen Sie eine Entität als Exchange-Server:
+    1. Greifen Sie im Azure ATP-Portal auf das Menü **Konfiguration** zu.
+    2. Wählen Sie unter **Erkennung** zunächst die Option **Entitätstags** und anschließend **sensibel** aus.
+    3. Wählen Sie **Exchange-Server** aus, und fügen Sie dann die Entität hinzu, die Sie kennzeichnen möchten.
+
+    Nach dem Kennzeichnen eines Computers als Exchange-Server wird dieser als „sensibel“ gekennzeichnet und zeigt an, dass er als Exchange-Server gekennzeichnet wurde.  Die Kennzeichnung „sensibel“ wird im Entitätsprofil des Computers angezeigt, und der Computer wird in allen Erkennungen berücksichtigt, die auf vertraulichen Konten und Lateral Movement-Pfaden basieren.
+
+- Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
+
+## <a name="azure-atp-release-277"></a>Azure ATP Release 2.77
+
+Veröffentlicht: 12. Mai 2019
+
+- Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
 ## <a name="azure-atp-release-276"></a>Azure ATP Release 2.76
 
