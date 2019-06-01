@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 04/18/2019
+ms.date: 05/29/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 9a788e76c4cc7d15d43d90b023927d9e76c422b9
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.openlocfilehash: e6a286b4468476cd0b2ac9a350c018e4c04a265e
+ms.sourcegitcommit: b021f8dfc54e59de429f93cc5fc0d733d92b00b8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65195765"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403599"
 ---
 # <a name="troubleshooting-ata-known-issues"></a>Behandlung von bekannten Problemen bei ATA
 
@@ -46,7 +46,7 @@ In diesem Abschnitt sind mögliche Fehler, die es in den Bereitstellungen von AT
 > |System.InvalidOperationException: Die Instanz „Microsoft.Tri.Gateway“ existiert nicht in der angegebenen Kategorie.|Die PIDs wurden für Prozessnamen im ATA-Gateway aktiviert.|Verwenden Sie [KB281884](https://support.microsoft.com/kb/281884), um die PIDs in den Prozessnamen zu deaktivieren.|
 > |System.InvalidOperationException: Die Kategorie ist nicht vorhanden.|Möglicherweise wurden die Leistungsindikatoren in der Registrierung deaktiviert.|Verwenden Sie [KB2554336](https://support.microsoft.com/kb/2554336), um die Leistungsindikatoren neu zu erstellen.|
 > |System.ApplicationException: Die ETW-Sitzung „MMA-ETW-Livecapture-a4f595bd-f567-49a7-b963-20fa4e370329“ kann nicht gestartet werden.|In der HOSTS-Datei existiert ein Hosteintrag, der auf den Kurznamen des Computers verweist.|Entfernen Sie den Hosteintrag aus „C:\Windows\System32\drivers\etc\HOSTS“, oder ändern Sie ihn in einen eindeutigen Domänennamen um.|
-> |System.IO.IOException: Fehler bei der Authentifizierung, da die Gegenseite den Transportstream geschlossen hat.|TLS 1.0 ist auf dem ATA-Gateway deaktiviert, .NET ist aber für die Verwendung von TLS 1.2 eingerichtet.|Verwenden Sie eine der folgenden Optionen: </br> TLS 1.0 auf dem ATA-Gateway aktivieren </br>Aktivieren Sie TLS 1.2 in .NET, indem Sie die Registrierungsschlüssel wie folgt für die Verwendung der Standardwerte des Betriebssystems für SSL und TLS einrichten: </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001 `</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`|
+> |System.IO.IOException: Fehler bei der Authentifizierung, da die Gegenseite den Transportstream geschlossen wurde, oder einen sicheren SSL/TLS-Kanal nicht erstellt werden konnte|TLS 1.0 ist auf dem ATA-Gateway deaktiviert, .NET ist aber für die Verwendung von TLS 1.2 eingerichtet.|Verwenden Sie eine der folgenden Optionen: </br> TLS 1.0 auf dem ATA-Gateway aktivieren </br>Aktivieren Sie TLS 1.2 in .NET, indem Sie die Registrierungsschlüssel wie folgt für die Verwendung der Standardwerte des Betriebssystems für SSL und TLS einrichten: </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001 `</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`|
 > |System.TypeLoadException: Der Typ „Microsoft.Opn.Runtime.Values.BinaryValueBufferManager“ konnte nicht aus der Assembly „Microsoft.Opn.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35“ geladen werden.|Das ATA-Gateway konnte erforderliche Analysedateien nicht laden.|Überprüfen Sie, ob die Microsoft-Nachrichtenanalyse aktuell installiert ist. Die Nachrichtenanalyse wird nicht für die Installation mit dem ATA-Gateway bzw. Lightweight-Gateway unterstützt. Deinstallieren Sie die Nachrichtenanalyse und starten Sie den Gatewaydienst neu.|
 > |System.Net.WebException: Der Remoteserver hat einen Fehler zurückgegeben: (407) Proxyauthentifizierung erforderlich|Die Kommunikation des ATA-Gateways mit dem ATA Center wurde durch einen Proxyserver unterbrochen.|Deaktivieren Sie den Proxy auf dem Computer des ATA-Gateways. <br></br>Beachten Sie, dass Proxyeinstellungen pro Konto gelten können.|
 > |System.IO.DirectoryNotFoundException: Das System kann den angegebenen Pfad nicht finden. (Ausnahme von HRESULT: 0x80070003)|Mindestens einer der erforderlichen Dienste zur Ausführung von ATA konnte nicht gestartet werden.|Starten Sie die folgenden Dienste: <br></br>Leistungsprotokolle und -warnungen (PLA), Taskplaner (Zeitplan).|
@@ -89,7 +89,7 @@ In diesem Abschnitt sind mögliche Fehler, die es in den Bereitstellungen von AT
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 - [Voraussetzungen für ATA](ata-prerequisites.md)
 - [ATA-Kapazitätsplanung](ata-capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
