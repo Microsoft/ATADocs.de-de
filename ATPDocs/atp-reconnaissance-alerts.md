@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/20/2019
+ms.date: 05/30/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 95b34c65c0f13c58034e29acb662c77d65253c70
-ms.sourcegitcommit: 122974e5bec49a1d613a38debc37d91ff838b05f
+ms.openlocfilehash: 848922f0fb7d31a72d3dc2f8371a39be3b125ad0
+ms.sourcegitcommit: b021f8dfc54e59de429f93cc5fc0d733d92b00b8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65933685"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403586"
 ---
 # <a name="tutorial-reconnaissance-alerts"></a>Tutorial: Warnungen zu Reconnaissance  
 
@@ -38,7 +38,7 @@ In diesem Tutorial machen Sie sich mit den folgenden Angriffstypen vertraut und 
 > [!div class="checklist"]
 > * Reconnaissance über Kontoenumeration (externe ID 2003)
 > * Reconnaissance über Netzwerkzuordnungen (DNS) (externe ID 2007)
-> * Sicherheitsprinzipalreconnaissance (LDAP) (externe ID 2038) – Vorschauversion
+> * Sicherheitsprinzipalreconnaissance (LDAP) (externe ID 2038)
 > * Reconnaissance über Benutzer und IP-Adressen (SMB) (externe ID 2012)
 > * Reconnaissance über Benutzer und Gruppenmitgliedschaften (SAMR) (externe ID 2021)
  
@@ -54,7 +54,7 @@ Bei Reconnaissancemaßnahmen über Kontoenumerationen verwendet ein Angreifer ei
 
 **Kerberos**: Der Angreifer führt Kerberos-Anforderungen mit diesen Namen durch, um einen gültigen Benutzernamen in der Domäne aufzuspüren. Wenn dadurch ein Benutzername bestimmt wird, erhält der Angreifer die Kerberos-Fehlermeldung **Preauthentication required** (Vorauthentifizierung erforderlich) statt der Meldung **Security principal unknown** (Unbekannter Sicherheitsprinzipal).
 
-**NTLM**: Der Angreifer führt NLTM-Authentifizierungsanforderungen mit diesem Wörterbuch mit Namen durch, um einen gültigen Benutzernamen in der Domäne aufzuspüren. Wenn dadurch ein Benutzername bestimmt wird, erhält der Angreifer die NTLM-Fehlermeldung **WrongPassword (0xc000006a)** statt der Meldung **NoSuchUser (0xc0000064)**.
+**NTLM**: Der Angreifer führt NLTM-Authentifizierungsanforderungen mit diesem Wörterbuch mit Namen durch, um einen gültigen Benutzernamen in der Domäne aufzuspüren. Wenn dadurch ein Benutzername bestimmt wird, erhält der Angreifer die NTLM-Fehlermeldung **WrongPassword (0xc000006a)** statt der Meldung **NoSuchUser (0xc0000064)** .
 
 Bei Erkennung dieser Warnung ermittelt Azure ATP den Ursprung des Kontoenumerationsangriffs, die Gesamtzahl der Versuche zum Erraten des Namens und die Anzahl der gefundenen Übereinstimmungen. Wenn es zu viele unbekannte Benutzer gibt, erkennt Azure ATP dies als verdächtige Aktivität.
 
@@ -98,15 +98,14 @@ Betrachten Sie nun die Konten:<br>
 
 1. Untersuchen Sie den Quellcomputer.
 1. Wenn bei einem Rateversuch eine Übereinstimmung mit einem vorhandenen Kontonamen gefunden wird, kennt der Angreifer vorhandene Konten in Ihrer Umgebung und kann mit den gefundenen Benutzernamen Brute-Force-Angriffe ausführen, um Zugriff auf Ihre Domäne zu erhalten. Untersuchen Sie vorhandene Konten mithilfe des [Leitfadens für die Untersuchung von Benutzern](investigate-a-user.md).
-1. Wenn die Authentifizierung mithilfe von NTLM erfolgt ist, sind in einigen Szenarios möglicherweise nicht genügend Informationen zum Server verfügbar, auf die der Quellcomputer zugreifen wollte. Azure ATP erfasst die auf Windows-Ereignis 4776 basierenden Daten des Quellcomputers, die den Namen des Quellcomputers enthalten.
+    > [!NOTE]
+    > Wenn die Authentifizierung mithilfe von NTLM erfolgt ist, sind in einigen Szenarios möglicherweise nicht genügend Informationen zum Server verfügbar, auf die der Quellcomputer zugreifen wollte. Azure ATP erfasst die auf Windows-Ereignis 4776 basierenden Daten des Quellcomputers, die den computerdefinierten Namen des Quellcomputers enthalten.
+    > Wenn Sie Windows-Ereignis 4776 verwenden, um diese Informationen zu erfassen, wird das Quellfeld für diese Informationen gelegentlich von dem Gerät oder der Software überschrieben, und zeigt nur „Arbeitsstation“ oder „MSTSC“ an. Wenn Sie häufig Geräte verwenden, die als „Arbeitsstation“ oder „MSTSC“ angezeigt werden, vergewissern Sie sich, dass die NTLM-Überwachung auf den entsprechenden Domänencontrollern aktiviert ist, um den richtigen Quellcomputernamen zu erhalten.    
+    > Aktivieren Sie dazu das Windows-Ereignis 8004 (NTLM-Authentifizierungsereignis, das Informationen zum Quellcomputer, Benutzerkonto und Server enthält, auf die der Quellcomputer zugreifen wollte).
 
-    Stellen Sie sicher, dass die NTLM-Überwachung für die relevanten Domänencontroller aktiviert sind, um den Namen des Quellcomputers abzurufen.
+1. Wenn Sie wissen, welcher Server die Authentifizierungsüberprüfung gesendet hat, untersuchen Sie den Server, indem Sie Ereignisse wie das Windows-Ereignis 4624 überprüfen, um den Authentifizierungsprozess besser nachvollziehen zu können. 
 
-    Aktivieren Sie dazu das Windows-Ereignis 8004 (NTLM-Authentifizierungsereignis, das Informationen zum Quellcomputer, Benutzerkonto und Server enthält, auf die der Quellcomputer zugreifen wollte).
-
-    Wenn Sie wissen, welcher Server die Authentifizierungsüberprüfung gesendet hat, untersuchen Sie den Server, indem Sie Ereignisse wie das Windows-Ereignis 4624 überprüfen, um den Authentifizierungsprozess besser nachvollziehen zu können. 
-
-    Überprüfen Sie, ob dieser Server mithilfe von offenen Ports eine Verbindung mit dem Internet herstellt. Verwendet der Server beispielsweise RDP für die Verbindung mit dem Internet? 
+1. Überprüfen Sie, ob dieser Server mithilfe von offenen Ports eine Verbindung mit dem Internet herstellt. Verwendet der Server beispielsweise RDP für die Verbindung mit dem Internet? 
 
 ### <a name="suggested-remediation-and-steps-for-prevention"></a>Empfohlene Abhilfemaßnahmen und Schritte zur Vorbeugung
 
@@ -161,7 +160,7 @@ Zukünftige Angriffe über AXFR-Abfragen vermeiden Sie, indem Sie Ihren internen
 
 - Dadurch verhindern Sie Reconnaissance über DNS. Deaktivieren Sie hierzu Zonenübertragungen, oder [schränken Sie diese auf bestimmte IP-Adressen ein](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)). Das Bearbeiten von Zonenübertragungen ist eine Aufgabe innerhalb einer Prüfliste, die für das [Sichern des DNS-Servers gegen interne und externe Angriffe](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)) gelten sollte.
 
-## <a name="security-principal-reconnaissance-ldap-external-id-2038---preview"></a>Sicherheitsprinzipalreconnaissance (LDAP) (externe ID 2038) – Vorschauversion
+## <a name="security-principal-reconnaissance-ldap-external-id-2038"></a>Sicherheitsprinzipalreconnaissance (LDAP) (externe ID 2038)
 
 **Beschreibung**
 

@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 04/07/2019
+ms.date: 05/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c844aa445378643200997d4389a3bee1aae45099
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: 297df34b92ebbe1be93667d54eedd51a605e5bf1
+ms.sourcegitcommit: b021f8dfc54e59de429f93cc5fc0d733d92b00b8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65195520"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403517"
 ---
 # <a name="azure-atp-frequently-asked-questions"></a>Häufig gestellte Fragen zu Azure ATP
 Dieser Artikel enthält eine Reihe häufig gestellter Fragen und Antworten zu Azure ATP, unterteilt in die folgenden Kategorien: 
@@ -90,7 +90,7 @@ Darüber hinaus führt Microsoft Hintergrundüberprüfungen von bestimmten Betri
 Alle Domänencontroller in der Umgebung sollten von einem ATP-Sensor oder einem eigenständigen Sensor abgedeckt sein. Weitere Informationen finden Sie unter [Azure ATP sensor Sizing (Größeneinstellung zum Azure ATP-Sensor)](atp-capacity-planning.md#sizing). 
 
 ### <a name="does-azure-atp-work-with-encrypted-traffic"></a>Funktioniert Azure ATP mit verschlüsseltem Datenverkehr?
-Netzwerkprotokolle mit verschlüsseltem Datenverkehr (z.B. LDAPS und IPsec) werden nicht verschlüsselt, sondern von den Sensoren analysiert.
+Netzwerkprotokolle mit verschlüsseltem Datenverkehr (z.B. AtSvc und WMI) werden nicht verschlüsselt, sondern von den Sensoren analysiert.
 
 ### <a name="does-azure-atp-work-with-kerberos-armoring"></a>Funktioniert Azure ATP mit Kerberos Armoring?
 Die Aktivierung von Kerberos Armoring (auch als Flexible Authentication Secure Tunneling, FAST, bezeichnet) wird von Azure ATP unterstützt. Einzige Ausnahme ist die Overpass-The-Hash-Erkennung, die nicht von Kerberos Armoring unterstützt wird.
@@ -142,7 +142,7 @@ Azure ATP generiert Datenverkehr von Domänencontrollern zu Computern in der Org
     - RDP (TCP-Port 3389)
     - Abfragen des DNS-Servers mittels Reverse-DNS-Lookup der IP-Adresse (UDP 53)
     
-    Nach Empfang des Computernamens führen Azure ATP-Sensoren eine Gegenprüfung der Details in Active Directory durch, um zu ermitteln, ob es ein zugehöriges Computerobjekt mit demselben Computernamen gibt. Wenn eine Übereinstimmung gefunden wird, erfolgt eine Zuordnung zwischen der IP-Adresse und dem übereinstimmenden Computerobjekt.
+    Nach Abruf des Computernamens führen Azure ATP-Sensoren eine Gegenprüfung der Details in Active Directory durch, um zu ermitteln, ob es ein zugehöriges Computerobjekt mit demselben Computernamen gibt. Wenn eine Übereinstimmung gefunden wird, erfolgt eine Zuordnung zwischen der IP-Adresse und dem übereinstimmenden Computerobjekt.
 2. **Lateral-Movement-Pfad (LMP)**<br>
     Um potenzielle LMPs zu sensiblen Benutzern erstellen zu können, benötigt Azure ATP Informationen zu den lokalen Administratoren auf Computern. In diesem Szenario verwendet der Azure ATP-Sensor SAM-R (TCP 445) zum Abfragen der im Netzwerkverkehr identifizierten IP-Adresse, um die lokalen Administratoren des Computers zu ermitteln. Weitere Informationen zu Azure ATP und SAM-R finden Sie unter [Konfigurieren von für SAM-R erforderliche Berechtigungen](install-atp-step8-samr.md). 
 

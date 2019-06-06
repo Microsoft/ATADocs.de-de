@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/20/2019
+ms.date: 05/30/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a977ff49c385ababfd753d05caf3518825e9def9
-ms.sourcegitcommit: 122974e5bec49a1d613a38debc37d91ff838b05f
+ms.openlocfilehash: 6e55ebfaeac540d15a8539ee2c5b1450ee0c3f10
+ms.sourcegitcommit: b021f8dfc54e59de429f93cc5fc0d733d92b00b8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65933635"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403551"
 ---
 # <a name="tutorial-compromised-credential-alerts"></a>Tutorial: Warnungen zu kompromittierten Anmeldeinformationen  
 
@@ -63,6 +63,11 @@ Weitere Informationen zu Honeytokenkonten finden Sie unter [Konfigurieren von Au
 1. Untersuchen Sie den [Quellbenutzer](investigate-a-user.md).
 2. Untersuchen Sie den [Quellcomputer](investigate-a-computer.md).
 
+> [!NOTE]
+    > Wenn die Authentifizierung mithilfe von NTLM erfolgt ist, sind in einigen Szenarios möglicherweise nicht genügend Informationen zum Server verfügbar, auf die der Quellcomputer zugreifen wollte. Azure ATP erfasst die auf Windows-Ereignis 4776 basierenden Daten des Quellcomputers, die den computerdefinierten Namen des Quellcomputers enthalten.
+    > Wenn Sie Windows-Ereignis 4776 verwenden, um diese Informationen zu erfassen, wird das Quellfeld für diese Informationen gelegentlich von dem Gerät oder der Software überschrieben, und zeigt nur „Arbeitsstation“ oder „MSTSC“ an. Wenn Sie häufig Geräte verwenden, die als „Arbeitsstation“ oder „MSTSC“ angezeigt werden, vergewissern Sie sich, dass die NTLM-Überwachung auf den entsprechenden Domänencontrollern aktiviert ist, um den richtigen Quellcomputernamen zu erhalten.    
+    > Aktivieren Sie dazu das Windows-Ereignis 8004 (NTLM-Authentifizierungsereignis, das Informationen zum Quellcomputer, Benutzerkonto und Server enthält, auf die der Quellcomputer zugreifen wollte).
+
 **Empfohlene Abhilfemaßnahmen und Schritte zur Vorbeugung**
 
 1. Kontrollieren Sie den Quellcomputer.
@@ -101,15 +106,17 @@ Bei einem Kennwort-Spray-Angriff testen Angreifer nach erfolgreichem Durchzähle
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
 1. Untersuchen Sie den Quellcomputer.  
-2. Überprüfen Sie auf der Seite für Warnungen, ob und gegebenenfalls welche Benutzer erfolgreich erraten wurden.
+1. Überprüfen Sie auf der Seite für Warnungen, ob und gegebenenfalls welche Benutzer erfolgreich erraten wurden.
     - Überprüfen Sie für jeden erfolgreich erratenen Benutzer [dessen Profil](investigate-a-user.md), um weitere Informationen zu erhalten.
-1. Wenn die Authentifizierung mithilfe von NTLM erfolgt ist, sind in einigen Szenarios möglicherweise nicht genügend Informationen zum Server verfügbar, auf die der Quellcomputer zugreifen wollte. Azure ATP erfasst die auf Windows-Ereignis 4776 basierenden Daten des Quellcomputers, die den Namen des Quellcomputers enthalten.
 
-    Stellen Sie sicher, dass die NTLM-Überwachung für die relevanten Domänencontroller aktiviert sind, um den Namen des Quellcomputers abzurufen.
+    > [!NOTE]
+    > Wenn die Authentifizierung mithilfe von NTLM erfolgt ist, sind in einigen Szenarios möglicherweise nicht genügend Informationen zum Server verfügbar, auf die der Quellcomputer zugreifen wollte. Azure ATP erfasst die auf Windows-Ereignis 4776 basierenden Daten des Quellcomputers, die den computerdefinierten Namen des Quellcomputers enthalten.
+    > Wenn Sie Windows-Ereignis 4776 verwenden, um diese Informationen zu erfassen, wird das Quellfeld für diese Informationen gelegentlich von dem Gerät oder der Software überschrieben, und zeigt nur „Arbeitsstation“ oder „MSTSC“ an. Wenn Sie häufig Geräte verwenden, die als „Arbeitsstation“ oder „MSTSC“ angezeigt werden, vergewissern Sie sich, dass die NTLM-Überwachung auf den entsprechenden Domänencontrollern aktiviert ist, um den richtigen Quellcomputernamen zu erhalten.    
+    > Aktivieren Sie dazu das Windows-Ereignis 8004 (NTLM-Authentifizierungsereignis, das Informationen zum Quellcomputer, Benutzerkonto und Server enthält, auf die der Quellcomputer zugreifen wollte).
     
-    Aktivieren Sie dazu das Windows-Ereignis 8004 (NTLM-Authentifizierungsereignis, das Informationen zum Quellcomputer, Benutzerkonto und Server enthält, auf die der Quellcomputer zugreifen wollte).
-    
-    Wenn Sie wissen, welcher Server die Authentifizierungsüberprüfung gesendet hat, untersuchen Sie den Server, indem Sie Ereignisse wie das Windows-Ereignis 4624 überprüfen, um den Authentifizierungsprozess besser nachvollziehen zu können. Überprüfen Sie, ob dieser Server mithilfe von offenen Ports eine Verbindung mit dem Internet herstellt. Verwendet der Server beispielsweise RDP für die Verbindung mit dem Internet?
+1. Wenn Sie wissen, welcher Server die Authentifizierungsüberprüfung gesendet hat, untersuchen Sie den Server, indem Sie Ereignisse wie das Windows-Ereignis 4624 überprüfen, um den Authentifizierungsprozess besser nachvollziehen zu können. 
+1. Überprüfen Sie, ob dieser Server mithilfe von offenen Ports eine Verbindung mit dem Internet herstellt. 
+    Verwendet der Server beispielsweise RDP für die Verbindung mit dem Internet?
 
 **Empfohlene Abhilfemaßnahmen und Schritte zur Vorbeugung**
 

@@ -5,21 +5,30 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/20/2019
+ms.date: 05/27/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 8f9426a51f0bd709685c365a39d2f4aad1dbf8cb
-ms.sourcegitcommit: 122974e5bec49a1d613a38debc37d91ff838b05f
+ms.openlocfilehash: 63a1dfa60d96e7f34cb406b0ccbc5a3584fbbb5b
+ms.sourcegitcommit: 07abbd941d91299475df2af469ee5a9a99e07e0f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65933659"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66264931"
 ---
 # <a name="whats-new-in-azure-atp"></a>Neuerungen in Azure ATP
+
+## <a name="azure-atp-release-279"></a>Azure ATP Release 2.79
+Veröffentlicht: 26. Mai 2019
+
+- **Allgemeine Verfügbarkeit: Sicherheitsprinzipalreconnaissance (LDAP) (externe ID 2038)**
+
+    Diese Warnung ist jetzt allgemein verfügbar. Weitere Informationen zu Warnung, Warnfeatures und empfohlenen Abhilfemaßnahmen und Schritten zur Vorbeugung finden Sie unter in der [Sicherheitsprinzipalreconnaissance (LDAP) – Warnungsbeschreibung](atp-reconnaissance-alerts.md#security-principal-reconnaissance-ldap-external-id-2038)
+
+- Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
 ## <a name="azure-atp-release-278"></a>Azure ATP Release 2.78
 
@@ -147,12 +156,12 @@ Veröffentlichung: 24. Februar 2019
 
 - **Neue Sicherheitswarnung: Sicherheitsprinzipalreconnaissance (LDAP) – Vorschauversion**<br>
 
-    [Sicherheitsprinzipalreconnaissance (LDAP) – Vorschauversion](atp-reconnaissance-alerts.md#security-principal-reconnaissance-ldap-external-id-2038---preview)-Sicherheitswarnung für Azure ATP ist jetzt als öffentliche Vorschauversion verfügbar. <br> In dieser Erkennung wird eine Azure ATP-Sicherheitswarnung ausgelöst, wenn Sicherheitsprinzipalreconnaissance von Angreifern verwendet wird, um wichtige Informationen über die Domänenumgebung zu erlangen. Diese Informationen helfen Angreifern, die Domänenstruktur zu erfassen, und identifizieren auch privilegierte Konten für die Verwendung in späteren Schritten in ihrer Angriffsabwehrkette. 
+    [Sicherheitsprinzipalreconnaissance (LDAP) – Vorschauversion](atp-reconnaissance-alerts.md#security-principal-reconnaissance-ldap-external-id-2038)-Sicherheitswarnung für Azure ATP ist jetzt als öffentliche Vorschauversion verfügbar. <br> In dieser Erkennung wird eine Azure ATP-Sicherheitswarnung ausgelöst, wenn Sicherheitsprinzipalreconnaissance von Angreifern verwendet wird, um wichtige Informationen über die Domänenumgebung zu erlangen. Diese Informationen helfen Angreifern, die Domänenstruktur zu erfassen, und identifizieren auch privilegierte Konten für die Verwendung in späteren Schritten in ihrer Angriffsabwehrkette. 
 
     Lightweight Directory Access Protocol (LDAP) ist eine der sowohl für zulässige als auch böswillige Zwecke am häufigsten verwendeten Methoden zum Abfragen von Active Directory. LDAP-fokussierte Sicherheitsprinzipalreconnaissance wird häufig als erste Phase eines Kerberoasting-Angriffs verwendet. Mit Kerberoasting-Angriffen wird eine Zielliste von Sicherheitsprinzipalnamen (Security Principal Names, SPNs) abgerufen, für die Angreifer dann versuchen, Ticket Granting Server-Tickets (TGS) zu erhalten.
 
-- **Featureerweiterung: Reconnaissance über Kontoauflistung (NTLM)**  <br> 
-    Verbesserte **Reconnaissance über Kontoauflistung (NTLM)**-Warnung, die zusätzliche Analysen und verbesserte Erkennungslogik zum Reduzieren von **B-TP**- und **FP**-Warnungsergebnissen verwendet. 
+- **Featureerweiterung: Reconnaissance über Kontoauflistung (NTLM)** <br> 
+    Verbesserte **Reconnaissance über Kontoauflistung (NTLM)** -Warnung, die zusätzliche Analysen und verbesserte Erkennungslogik zum Reduzieren von **B-TP**- und **FP**-Warnungsergebnissen verwendet. 
  
 - **Featureerweiterung: „Reconnaissance über Netzwerkzuordnung“-Warnung (DNS)** <br>
     Neue Typen von Erkennungen wurden „Reconnaissance über Netzwerkzuordnung“-Warnungen (DNS) hinzugefügt. Außer verdächtigen AXFR-Anfragen erkennt Azure ATP jetzt verdächtige Typen von Anforderungen von Nicht-DNS-Servern, die eine übermäßige Anzahl von Anforderungen verwenden.

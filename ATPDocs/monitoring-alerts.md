@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 04/07/2019
+ms.date: 05/29/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: d0551e91-3b21-47d5-ad9d-3362df6d47c0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: bee49565645f463496c82f01d46e0aded6502b55
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: 46778e0dcafca7fcff8b7f7611a50ca0e23140d8
+ms.sourcegitcommit: b021f8dfc54e59de429f93cc5fc0d733d92b00b8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65196497"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403572"
 ---
 # <a name="understanding-azure-atp-sensor-and-standalone-sensor-monitoring-alerts"></a>Grundlegende Informationen zu Überwachungswarnungen für Azure ATP-Sensor und selbstständige Azure ATP-Sensoren
 
@@ -33,7 +33,7 @@ Das Azure ATP-Integritätscenter informiert Sie, wenn ein Problem im Zusammenhan
 
 |Warnung|Beschreibung|Lösung|Schweregrad|
 |----|----|----|----|
-|The Azure ATP sensor is currently offline due to connectivity issues to all the configured domain controllers. (Der Azure ATP-Sensor ist derzeit aufgrund von Verbindungsproblemen mit allen konfigurierten Domänencontrollern offline.)|Dadurch wird die Fähigkeit des Azure ATP-Sensors beeinträchtigt, verdächtige Aktivitäten im Zusammenhang mit den von diesem Azure ATP-Sensor überwachten Domänencontrollern zu ermitteln.| Stellen Sie sicher, dass die Domänencontroller ausgeführt werden und der Azure ATP-Sensor LDAP-Verbindungen mit ihnen öffnen kann.|Mittel|
+|The Azure ATP sensor is currently offline due to connectivity issues to all the configured domain controllers. (Der Azure ATP-Sensor ist derzeit aufgrund von Verbindungsproblemen mit allen konfigurierten Domänencontrollern offline.)|Dadurch wird die Fähigkeit des Azure ATP-Sensors beeinträchtigt, verdächtige Aktivitäten im Zusammenhang mit den von diesem Azure ATP-Sensor überwachten Domänencontrollern zu ermitteln.| Stellen Sie sicher, dass die Domänencontroller ausgeführt werden und der Azure ATP-Sensor LDAP-Verbindungen mit ihnen öffnen kann. Stellen Sie außerdem sicher, dass Sie unter **Einstellungen**, für jede bereitgestellte Gesamtstruktur ein Verzeichnisdienstkonto konfigurieren.|Mittel|
 
 ## <a name="allsome-of-the-capture-network-adapters-on-a-sensor-are-not-available"></a>Alle bzw. einige der Netzwerkdatenerfassungs-Adapter auf einem Sensor sind nicht verfügbar.
 
