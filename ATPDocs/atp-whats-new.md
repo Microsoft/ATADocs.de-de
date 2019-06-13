@@ -5,21 +5,30 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/27/2019
+ms.date: 06/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 63a1dfa60d96e7f34cb406b0ccbc5a3584fbbb5b
-ms.sourcegitcommit: 07abbd941d91299475df2af469ee5a9a99e07e0f
+ms.openlocfilehash: b781b91196dad4556462d425cb5778bd0f3da26c
+ms.sourcegitcommit: 37b572e0e9e4bb874c7965f66de0ee8b6fbe5416
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66264931"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500675"
 ---
 # <a name="whats-new-in-azure-atp"></a>Neuerungen in Azure ATP
+
+## <a name="azure-atp-release-280"></a>Azure ATP Release 2.80
+
+Veröffentlicht: 2. Juni 2019
+
+- **Featureerweiterung: Warnung zu verdächtiger VPN-Verbindung**<br>
+   Diese Warnung enthält jetzt verbesserte Nachweise und Texte, um die Benutzerfreundlichkeit zu erhöhen. Weitere Informationen zu Warnungsfeatures sowie empfohlene Schritte für Abhilfemaßnahmen und Vorbeugung finden Sie in der [Warnungsbeschreibung „Verdächtige VPN-Verbindung“](atp-compromised-credentials-alerts.md#suspicious-vpn-connection-external-id-2025).
+
+- Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
 ## <a name="azure-atp-release-279"></a>Azure ATP Release 2.79
 Veröffentlicht: 26. Mai 2019
