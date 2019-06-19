@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/19/2019
+ms.date: 06/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 1ac873fc-b763-41d7-878e-7c08da421cb5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0c497d55142eb13867e904917aca890bc157ad63
-ms.sourcegitcommit: 122974e5bec49a1d613a38debc37d91ff838b05f
+ms.openlocfilehash: 0bf34a64f1140b0d2e3358196d23589de629588d
+ms.sourcegitcommit: 139e8dd63c06a5d9c9a3c348958e4f7fd74041b8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65933706"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67155837"
 ---
 # <a name="what-is-network-name-resolution"></a>Was ist Netzwerknamensauflösung?
 
@@ -35,7 +35,11 @@ Wenn IP-Adressen zu Computernamen aufgelöst werden sollen, fragen Azure ATP-Sen
 > [!NOTE]
 >An keinem dieser Ports erfolgt eine Authentifizierung.
 
-Nach dem Abrufen des Computernamens sieht der Azure ATP-Sensor in Active Directory nach, ob ein zugehöriges Computerobjekt mit gleichem Computernamen vorhanden ist. Wenn der Sensor die Korrelation findet, ordnet er diese IP dem betreffenden Computerobjekt zu.
+In Fällen, in denen kein Name abgerufen wird, wird ein **nicht aufgelöstes Computerprofil nach IP-Adresse** mit der IP-Adresse und der relevanten erkannten Aktivität erstellt.
+
+Nach dem Abrufen des Computernamens sieht der Azure ATP-Sensor in Active Directory nach, ob ein zugehöriges Computerobjekt mit gleichem Computernamen vorhanden ist. Wenn der Sensor die Korrelation findet, ordnet er diese IP dem betreffenden Computerobjekt zu. In Fällen, in denen kein Computerobjekt dieses Namens gefunden wird, wird ein **nicht aufgelöstes Computerprofil nach Name** mit diesem Namen und der relevanten erkannten Aktivität erstellt. 
+
+![Nicht aufgelöstes Computerprofil](media/unresolved-computer-profile.png)
 
 NNR-Daten spielen beim Erkennen der folgenden Bedrohungen eine entscheidende Rolle:
 

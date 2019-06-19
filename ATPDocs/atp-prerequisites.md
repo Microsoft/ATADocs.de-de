@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/01/2019
+ms.date: 06/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 420c162e3dc5b7869b46453e3eeda67e1fdc692c
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: 515ab93de375f6ac286cb11e6394e868e095cf48
+ms.sourcegitcommit: 3e0a19e496bc7713bb227c501ca4dd7da223aac8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65195560"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66830400"
 ---
 # <a name="azure-atp-prerequisites"></a>Voraussetzungen für Azure ATP
 
@@ -29,7 +29,7 @@ Dieser Artikel beschreibt die Voraussetzungen für eine erfolgreiche Bereitstell
 
 Azure ATP besteht aus dem Azure ATP-Clouddienst, der sich aus dem Azure ATP-Portal, dem Azure ATP-Sensor und/oder dem eigenständigen Azure ATP-Sensor zusammensetzt. Weitere Informationen zu den einzelnen Azure ATP-Komponenten finden Sie unter [Azure ATP-Architektur](atp-architecture.md).
 
-Azure ATP schützt Ihre lokalen Active Directory-Benutzer und/oder Benutzer, die mit Ihrer Azure Active Directory-Instanz synchronisiert werden. Hinweise zum Schutz einer Umgebung, die nur aus AAD-Benutzern besteht, finden Sie unter [AAD-Identitätsschutz] (https://docs.microsoft.com/azure/active-directory/identity-protection/overview). 
+Azure ATP schützt Ihre lokalen Active Directory-Benutzer und/oder Benutzer, die mit Ihrer Azure Active Directory-Instanz synchronisiert werden. Hinweise zum Schutz einer Umgebung, die nur aus AAD-Benutzern besteht, finden Sie unter [AAD Identity Protection](https://docs.microsoft.com/azure/active-directory/identity-protection/overview). 
 
 Zum Erstellen Ihrer Azure ATP-Instanz benötigen Sie einen AAD-Mandanten mit mindestens einem globalen Administrator bzw. einem Sicherheitsadministrator. Jede Azure ATP-Instanz unterstützt mehrere Active Directory-Gesamtstrukturbegrenzungen und die Gesamtstrukturfunktionsebene (Forest Functional Level, FFL) von Windows 2003 und höher. 
 

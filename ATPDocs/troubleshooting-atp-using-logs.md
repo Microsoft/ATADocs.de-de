@@ -12,18 +12,18 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: de796346-647d-48e1-970a-8f072e990f1e
 ms.reviewer: ''
 ms.suite: ''
-ms.openlocfilehash: 2590e877ba39fda2fee41d8e617690a2b8d4a892
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: e461aa7302ee515f33e2ad69f0f2c0c9f83ceaf8
+ms.sourcegitcommit: 139e8dd63c06a5d9c9a3c348958e4f7fd74041b8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65196571"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67155895"
 ---
 # <a name="troubleshooting-azure-advanced-threat-protection-atp-sensor-using-the-atp-logs"></a>Problembehandlung für den Azure Advanced Threat Protection-Sensor (ATP) mithilfe der ATP-Protokolle
 Die ATA-Protokolle geben Einblick in die Aktivitäten der einzelnen Komponenten des Azure ATP-Sensors zu einem bestimmten Zeitpunkt.
 
 
-Die Azure ATP-Protokolle befinden sich am Installationsspeicherort von ATA in einem Unterordner namens **Logs**. Der Standardpfad lautet: **C:\Programme\Azure Advanced Threat Protection Sensor\\**. Beim Standardinstallationsspeicherort lautet der Pfad: **C:\Programme\Azure Advanced Threat Protection Sensor\Versionsnummer\Logs**.
+Die Azure ATP-Protokolle befinden sich am Installationsspeicherort von ATA in einem Unterordner namens **Logs**. Der Standardpfad lautet: **C:\Programme\Azure Advanced Threat Protection Sensor\\** . Beim Standardinstallationsspeicherort lautet der Pfad: **C:\Programme\Azure Advanced Threat Protection Sensor\Versionsnummer\Logs**.
 
 Der Azure ATP-Sensor verfügt über folgende Protokolle:
 
@@ -43,6 +43,8 @@ Der Azure ATP-Sensor verfügt über folgende Protokolle:
 Die Azure ATP-Bereitstellungsprotokolle befinden sich im temporären Verzeichnis des Benutzers, der das Produkt installiert hat. Beim Standardinstallationsspeicherort lautet der Pfad: **C:\Benutzer\Administrator\AppData\Local\Temp** (oder ein Verzeichnis über "% Temp%").
 
 Bereitstellungsprotokolle für den Azure ATP-Sensor:
+
+-  **Azure Advanced Threat Protection Microsoft.Tri.Sensor.Deployment.Deployer_YYYYMMDDHHMMSS.log**: Diese Protokolldatei enthält den gesamten Prozess der Sensorbereitstellung und befindet sich in dem oben erwähnten temporären Ordner oder unter „C:\Windows\Temp“. 
 
 -   **Azure Advanced Threat Protection Sensor_YYYYMMDDHHMMSS.log**: In diesem Protokoll sind die Schritte im Verfahren zur Bereitstellung des Azure ATP-Sensors aufgeführt. Sein Hauptverwendungszweck besteht im Nachverfolgen des Verfahrens zum Bereitstellen des Azure ATP-Sensors.
 
