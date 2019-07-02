@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 515ab93de375f6ac286cb11e6394e868e095cf48
-ms.sourcegitcommit: 3e0a19e496bc7713bb227c501ca4dd7da223aac8
+ms.openlocfilehash: 7fc42aaf16e269b2d61f6a321e6a4e4af4f5b8ca
+ms.sourcegitcommit: 3b59121a37328f80389c993f2e31622e6f1a9f13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66830400"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486384"
 ---
 # <a name="azure-atp-prerequisites"></a>Voraussetzungen für Azure ATP
 
@@ -146,7 +146,7 @@ Die Azure ATP-Erkennung basiert auf bestimmten Windows-Ereignisprotokollen, die 
 > - Die folgenden Ports müssen auf eingehenden Geräten im Netzwerk des Azure ATP-Sensors freigegeben sein:
 >   -   NTLM über RPC (TCP-Port 135) für Lösungszwecke
 >   -   NetBIOS (UDP-Port 137) für Lösungszwecke
->   -   RDP (TCP-Port 3389), nur das erste Paket von *Client hello* zu Auflösungszwecken<br> Beachten Sie, dass auf keinem Port eine Authentifizierung durchgeführt wird.
+<br> Beachten Sie, dass auf keinem Port eine Authentifizierung durchgeführt wird.
 
 ## <a name="azure-atp-standalone-sensor-requirements"></a>Voraussetzungen für den eigenständigen Azure ATP-Sensor
 In diesem Abschnitt werden die Voraussetzungen für den eigenständigen Azure ATP-Sensor aufgeführt.
@@ -219,14 +219,14 @@ In der folgenden Tabelle sind die Ports aufgeführt, die für den Verwaltungsada
 |NetBIOS|UDP|137|Alle Geräte im Netzwerk|Beide|
 |Syslog (optional)|TCP/UDP|514, je nach Konfiguration|SIEM-Server|Eingehend|
 |RADIUS|UDP|1813|RADIUS|Eingehend|
-|TLS zu RDP|TCP|3389|Alle Geräte im Netzwerk|Beide|
+|
 
 > [!NOTE]
 > - Bei Verwendung des Verzeichnisdienst-Benutzerkontos fragt der Sensor mithilfe von SAM-R (Netzwerkanmeldung) Endpunkte in Ihrer Organisation für lokale Administratoren ab, um [den Graph des Lateral-Movement-Pfads](use-case-lateral-movement-path.md) zu erstellen. Weitere Informationen finden Sie unter [Erforderliche Berechtigung für SAM-R konfigurieren](install-atp-step8-samr.md).
 > - Die folgenden Ports müssen auf eingehenden Geräten im Netzwerk des eigenständigen Azure ATP-Sensors geöffnet sein:
 >   -   NTLM über RPC (TCP-Port 135) für Lösungszwecke
 >   -   NetBIOS (UDP-Port 137) für Lösungszwecke
->   -   RDP (TCP-Port 3389), nur das erste Paket von *Client hello* zu Auflösungszwecken<br> Beachten Sie, dass auf keinem Port eine Authentifizierung durchgeführt wird.
+<br> Beachten Sie, dass auf keinem Port eine Authentifizierung durchgeführt wird.
 
 
 
