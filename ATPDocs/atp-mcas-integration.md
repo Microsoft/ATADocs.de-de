@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 06/18/2019
+ms.date: 06/25/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 5169dffc-75c4-4eb0-b997-b5359cecda97
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1e64ccfd3f559f59b0091e49a51e2016ef3f8745
-ms.sourcegitcommit: 87756e27894570997b7039d128f223de0664639f
+ms.openlocfilehash: edce75d46470c007a05c61d5ea1e0ea52033b8b2
+ms.sourcegitcommit: 0bb9a524508cc6bfd3d9f579fc51b33309fc66b8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67193495"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67396619"
 ---
 # <a name="using-azure-atp-with-microsoft-cloud-app-security"></a>Verwenden von Azure ATP mit Microsoft Cloud App Security 
 
@@ -54,7 +54,7 @@ Zur Nutzung aller Features der Benutzeruntersuchung über die gesamte Hybridumge
 >[!NOTE]
 >Wenn Sie kein Abonnement für Cloud App Security besitzen, können Sie das Cloud App Security-Portal verwenden, um Azure ATP-Warnungen zu untersuchen und Details zu Benutzern und ihren Aktivitäten in der lokalen verwalteten Umgebung anzuzeigen. Sie erhalten jedoch keine entsprechenden Erkenntnisse aus Ihren Cloudanwendungen.
 
-Informationen zur schnellen Einrichtung und Nutzung von Azure ATP in Cloud App Security finden Sie unter [Azure ATP-Integration](https://docs.microsoft.com/cloud-app-security/aatp-integration/enable-azure-advanced-threat-protection).  
+Informationen zur schnellen Einrichtung und Nutzung von Azure ATP in Cloud App Security finden Sie unter [Azure ATP-Integration](https://docs.microsoft.com/cloud-app-security/aatp-integration).  
  
 ## <a name="azure-atp-in-cloud-app-security"></a>Azure ATP in Cloud App Security 
 
