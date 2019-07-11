@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 06/18/2019
+ms.date: 07/01/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 397e5a77-2bc7-454c-9fe5-649ebaab16b3
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2ad66219c1eb6dcfcec99d0bf995b71bb2d81577
-ms.sourcegitcommit: 87756e27894570997b7039d128f223de0664639f
+ms.openlocfilehash: 1508cb558f16adf54f80cec0c13631059dbf45bf
+ms.sourcegitcommit: f60835d655e68ffaa8ed8c43bd9fa20233d7e495
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67193485"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506520"
 ---
 # <a name="use-activity-filters-and-create-action-policies-with-azure-atp-in-microsoft-cloud-app-security"></a>Verwenden von Aktivitätsfiltern und Erstellen von Aktionsrichtlinien mit Azure ATP in Microsoft Cloud App Security 
 
@@ -25,7 +25,7 @@ Dieser Artikel bietet grundlegende Informationen dazu, wie Aktionsrichtlinien f�
 
 Weitere Informationen zum Abschließen der Integration finden Sie unter [Integration von Azure ATP in Cloud App Security](https://docs.microsoft.com/cloud-app-security/aatp-integration/enable-azure-advanced-threat-protection).  
 
-Die Verwendung von Azure ATP mit Microsoft Cloud App Security bietet Aktivitätsanalysen und -warnungen basierend auf User and Entity Behavior Analytics (UEBA). Hierbei werden die Verhaltensweisen mit dem höchsten Risiko in Ihrem Unternehmen ermittelt. Zudem werden eine umfassende Bewertung der Priorität bei Untersuchungen sowie eine aktive Filterung und anpassbare Aktivitätsrichtlinien bereitgestellt. 
+Die Verwendung von Azure ATP mit Microsoft Cloud App Security bietet Aktivitätsanalysen und -warnungen basierend auf „User and Entity Behavior Analytics“ (UEBA). Hierbei werden die Verhaltensweisen mit dem höchsten Risiko in Ihrem Unternehmen ermittelt. Zudem werden eine umfassende Bewertung der Priorität bei Untersuchungen sowie eine aktive Filterung und anpassbare Aktivitätsrichtlinien bereitgestellt. 
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -51,18 +51,20 @@ So greifen Sie auf Azure ATP-Aktivitäten von Benutzern zu:
 
 ## <a name="create-activity-policies-in-cloud-app-security"></a>Erstellen von Aktivitätsrichtlinien in Cloud App Security
 
-Nach dem Filtern von Aktivitäten und dem Identifizieren der zu implementierenden Aktivitätsrichtlinien oder der Nichtkonformität in Ihrer Organisation verwenden Sie die Option **Aktivitätsrichtlinie erstellen** im Filtermenü, um sofort eine neue benutzerdefinierte Richtlinie für einen Benutzer, ein Gerät oder einen Mandanten zu erstellen. 
+Nach dem Filtern von Aktivitäten und dem Identifizieren der zu implementierenden Aktivitätsrichtlinien oder der Nichtkonformität in Ihrer Organisation verwenden Sie die Option **Neue Aktivitätsrichtlinie erstellen** im Filtermenü, um sofort eine neue benutzerdefinierte Richtlinie für einen Benutzer, ein Gerät oder einen Mandanten zu erstellen. 
 
 So erstellen Sie eine neue Aktivitätsrichtlinie:
 
-1. Klicken Sie auf einer beliebigen Seite des Aktivitätsprotokolls auf die Schaltfläche **Neue Richtlinie aus Suche**.  
-    ![Erstellen einer neuen Aktivitätsrichtlinie](media/atp-mcas-activity-log.png)
+1. Wenden Sie von jeder **Aktivitätsprotokoll**-Seite aus einen Filter an (z. B. APP, Benutzername, Aktivitätstyp usw.). 
+    - Wählen Sie die Option **Active Directory Domain Services** im APP-Filter aus, um aus Azure ATP heraus nach Aktivitäten zu filtern. 
+    ![Erstellen einer neuen Aktivitätsrichtlinie](media/atp-mcas-create-new-policy.png)
+1. Klicken Sie auf die Schaltfläche **Neue Richtlinie aus Suche**.    
 1. Fügen Sie einen **Richtliniennamen** hinzu. 
     ![Erstellen einer neuen Aktivitätsrichtlinie, Schritt 2](media/atp-mcas-create-policy.png)
 1. Fügen Sie eine **Beschreibung** für die Richtlinie hinzu.  
-1. Weisen Sie den Schweregrad der Richtlinie zu.
-1. Wählen Sie eine Kategorie für die Richtlinie aus.
-1. Wählen Sie die Filter aus, die für die Richtlinie erstellt werden sollen.
+1. Weisen Sie den **Schweregrad** der Richtlinie zu.
+1. Wählen Sie eine **Kategorie** für die Richtlinie aus.
+1. Wählen Sie die Filter aus, die für die Richtlinie erstellt und dieser hinzugefügt werden sollen, oder ändern Sie sie.
 1. Verfeinern Sie die Filter, oder fügen Sie neue hinzu. 
 1. Speichern Sie die neue Richtlinie, und wenden Sie sie an.  
 

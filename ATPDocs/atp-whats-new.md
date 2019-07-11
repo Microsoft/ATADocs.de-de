@@ -5,21 +5,49 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 06/18/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 1fed88a774b1ffa88b52879a44de6697b1b615f6
-ms.sourcegitcommit: 87756e27894570997b7039d128f223de0664639f
+ms.openlocfilehash: d6fb2a51a47c97c52a3665c55522094fd5a856f1
+ms.sourcegitcommit: 52bc20dfa1f64ff3e8c16eb5edea2813d54ba308
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67192784"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67562191"
 ---
 # <a name="whats-new-in-azure-atp"></a>Neuerungen in Azure ATP
+
+## <a name="azure-atp-release-284"></a>Azure ATP Release 2.84
+
+Veröffentlicht: 1. Juli 2019
+
+- **Unterstützung für neuen Standort: Azure UK-Rechenzentrum**<br>
+    Azure ATP-Instanzen werden jetzt im Azure UK-Rechenzentrum unterstützt. Weitere Informationen zum Erstellen von Azure ATP-Instanzen und den entsprechenden Rechenzentrumsstandorten finden Sie unter [Step 1 of Azure ATP installation (Azure ATP-Installation – Schritt 1)](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step10).
+
+- **Featureerweiterung: Neuer Name und neue Features für die Warnungen bei verdächtigen Hinzufügungen zu sensiblen Gruppen (externe ID 2024)**<br> 
+    Die Warnung **Suspicious additions to sensitive groups (Verdächtige Hinzufügungen zu sensiblen Gruppen)** lautete ursprünglich **Suspicious modifications to sensitive groups (Verdächtige Änderungen an sensiblen Gruppen)** . Die externe ID der Warnung (ID 2024) hat sich nicht geändert. Durch die beschreibende Namensänderung wird der Zweck der Warnung bei Ergänzungen zu Ihren **sensiblen** Gruppen genauer wiedergespiegelt. Die verbesserte Warnung enthält auch neue Beweise und verbesserte Beschreibungen. Weitere Informationen finden Sie unter [Suspicious additions to sensitive groups (Verdächtige Hinzufügungen zu sensiblen Gruppen)](https://docs.microsoft.com/azure-advanced-threat-protection/atp-domain-dominance-alerts#suspicious-additions-to-sensitive-groups-external-id-2024).  
+
+- **Neues Dokumentationsfeature: Anleitung zum Verschieben von Advanced Threat Analytics zu Azure ATP**<br>
+    In diesem neuen Artikel finden Sie Informationen zu Voraussetzungen, Tipps zur Planung sowie Konfigurations- und Überprüfungsschritte für das Verschieben von ATA zum Azure ATP-Dienst. Weitere Informationen finden Sie unter [Verschieben von ATA zu Azure ATP](https://docs.microsoft.com/azure-advanced-threat-protection/ata-atp-move-overview).   
+
+- Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
+
+## <a name="azure-atp-release-283"></a>Azure ATP Release 2.83
+
+Veröffentlicht: 23. Juni 2019
+
+- **Featureerweiterung: Warnung aufgrund verdächtiger Diensterstellung (externe ID 2026)**<br> 
+    Diese Warnung enthält jetzt eine verbesserte Warnungsseite mit zusätzlichen Beweisen und einer neue Beschreibung. Weitere Informationen finden Sie unter [Suspicious service creation security alert (Warnung aufgrund verdächtiger Diensterstellung)](https://docs.microsoft.com/azure-advanced-threat-protection/atp-domain-dominance-alerts#suspicious-service-creation-external-id-2026).
+
+-  **Unterstützung für die Benennung von Instanzen: Unterstützung wurde für Domänenpräfixe hinzugefügt, die nur aus Ziffern bestehen**<br>
+    Die Erstellung von Azure ATP-Instanzen unter Verwendung von Domänenanfangspräfixen, die nur aus Ziffern bestehen, wird jetzt unterstützt. Anfangspräfixe für Domänen, die nur Ziffern enthalten, wie z. B. 123456.contoso.com, können durch die Unterstützung verwendet werden. 
+
+- Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
+
 
 ## <a name="azure-atp-release-282"></a>Azure ATP Release 2.82
 

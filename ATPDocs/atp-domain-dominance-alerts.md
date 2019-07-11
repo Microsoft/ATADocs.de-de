@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 0b3a1db5-0d43-49af-b356-7094cc85f0a5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ec1d2bc0de905a32181749e435d0f88afe5a80fc
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: a415e880f669d4f02cd2cd319f49137ba26da1d7
+ms.sourcegitcommit: 52bc20dfa1f64ff3e8c16eb5edea2813d54ba308
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65195528"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67562153"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Tutorial: Warnungen zu Domänendominanz  
 
@@ -45,7 +45,7 @@ Die folgenden Sicherheitswarnungen unterstützen Sie dabei, verdächtige Aktivit
 > * Vermutete Golden Ticket-Verwendung (Ticketanomalie) (externe ID 2032)
 > * Vermutete Golden Ticket-Verwendung (Zeitanomalie) (externe ID 2022)
 > * Vermuteter Skeleton Key-Angriff (Herabstufung der Verschlüsselung) (externe ID 2010)
-> * Verdächtige Änderung sensibler Gruppen (externe ID 2024)
+> * Verdächtige Hinzufügungen sensibler Gruppen (externe ID 2024)
 > * Verdächtige Diensterstellung (externe ID 2026)
 
 ## <a name="malicious-request-of-data-protection-api-master-key-external-id-2020"></a>Böswillige Anforderung des Datenschutz-API-Hauptschlüssels (externe ID 2020) 
@@ -474,7 +474,7 @@ Skeleton Key ist eine Schadsoftware, die auf einem Domänencontroller ausgeführ
     - Entfernen Sie die Schadsoftware. Weitere Informationen finden Sie in der [Skeleton Key Malware Analysis](https://www.virusbulletin.com/virusbulletin/2016/01/paper-digital-bian-lian-face-changing-skeleton-key-malware) (Analyse der Skeleton Key-Schadsoftware).
     - Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der verdächtigen Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA.
 
-## <a name="suspicious-modification-of-sensitive-groups-external-id-2024"></a>Verdächtige Änderung sensibler Gruppen (externe ID 2024)
+## <a name="suspicious-additions-to-sensitive-groups-external-id-2024"></a>Verdächtige Hinzufügungen sensibler Gruppen (externe ID 2024)
 
 **Beschreibung:** Angreifer fügen Gruppen mit weitreichenden Rechten Benutzer hinzu. Dadurch erhalten Angreifer Zugriff auf weitere Ressourcen und dauerhafte Kontrolle. Diese Erkennung basiert auf dem Erfassen der Aktivitäten von Benutzern, die Gruppen ändern, und den Warnungen, die angezeigt werden, wenn einer sensiblen Gruppe unerwartet ein Benutzer hinzugefügt wird. Azure ATP erfasst kontinuierlich Benutzeraktivitäten.  
  

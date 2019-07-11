@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e72e3e03d52f41eae1fe9823feae6dffd181b31f
-ms.sourcegitcommit: 07abbd941d91299475df2af469ee5a9a99e07e0f
+ms.openlocfilehash: 7d8550113e1ea7cce6cb7ca1c6e497a9fc8e3708
+ms.sourcegitcommit: 52bc20dfa1f64ff3e8c16eb5edea2813d54ba308
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66264936"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67562167"
 ---
 # <a name="azure-atp-security-alerts"></a>Azure ATP-Sicherheitswarnungen
 
@@ -69,7 +69,7 @@ In Version 2.56 wurden alle Sicherheitswarnungen für Azure ATP umbenannt. Die n
 |[Suspected NTLM relay attack (Exchange account) - preview (Vermuteter NTLM-Relaisangriff (Exchange-Konto) – Vorschauversion)](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview)|N/V|2037|Mittel oder Niedrig, wenn mithilfe von signiertem NTLMv2-Protokoll beobachtet|Ausweitung von Berechtigungen, <br> Seitliche Verschiebung|
 |[Suspected WannaCry ransomware attack (Verdacht auf einen WannaCry-Ransomangriff)](atp-compromised-credentials-alerts.md#suspected-wannacry-ransomware-attack-external-id-2035)|Ungewöhnliche Protokollimplementierung (potenzieller WannaCry-Ransomwareangriff)|2035|Mittel|Seitliche Verschiebung|
 |[Verdächtige Kommunikation über DNS](atp-exfiltration-alerts.md#suspicious-communication-over-dns-external-id-2031)|Verdächtige Kommunikation über DNS|2031|Mittel|Exfiltration|
-|[Verdächtige Modifizierung von sensiblen Gruppen](atp-domain-dominance-alerts.md#suspicious-modification-of-sensitive-groups-external-id-2024)|Verdächtige Modifizierung von sensiblen Gruppen|2024|Mittel|Zugriff über Anmeldeinformationen,<br>Persistenz|
+|[Verdächtige Ergänzungen zu sensiblen Gruppen](atp-domain-dominance-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024)|Verdächtige Ergänzungen zu sensiblen Gruppen|2024|Mittel|Zugriff über Anmeldeinformationen,<br>Persistenz|
 |[Erstellen eines verdächtigen Diensts](atp-domain-dominance-alerts.md#suspicious-service-creation-external-id-2026)|Erstellen eines verdächtigen Diensts|2026|Mittel|Ausführung,<br> Persistenz,<br> Ausweitung von Berechtigungen,<br> Umgehung der Verteidigung,<br>Seitliche Verschiebung|
 |[Verdächtige VPN-Verbindung](atp-compromised-credentials-alerts.md#suspicious-vpn-connection-external-id-2025)|Verdächtige VPN-Verbindung|2025|Mittel|Persistenz,<br>Umgehung der Verteidigung|
 |[User and group membership reconnaissance (SAMR) (Reconnaissance über Benutzer und Gruppenmitgliedschaften (SAMR))](atp-reconnaissance-alerts.md#user-and-group-membership-reconnaissance-samr-external-id-2021)|Reconnaissance mithilfe von Verzeichnisdienstabfragen|2021|Mittel|Ermittlung|

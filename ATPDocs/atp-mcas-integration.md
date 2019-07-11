@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 06/25/2019
+ms.date: 07/01/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 5169dffc-75c4-4eb0-b997-b5359cecda97
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: edce75d46470c007a05c61d5ea1e0ea52033b8b2
-ms.sourcegitcommit: 0bb9a524508cc6bfd3d9f579fc51b33309fc66b8
+ms.openlocfilehash: b66b2f0a087bbaacc09eda54958824da693209b3
+ms.sourcegitcommit: f60835d655e68ffaa8ed8c43bd9fa20233d7e495
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67396619"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506505"
 ---
 # <a name="using-azure-atp-with-microsoft-cloud-app-security"></a>Verwenden von Azure ATP mit Microsoft Cloud App Security 
 
@@ -45,6 +45,8 @@ Durch die Integration in Azure ATP bietet das Cloud App Security-Portal Warnunge
 
 Sie können weiterhin Azure ATP im Azure ATP-Portal nutzen oder über das Microsoft Cloud App Security-Portal auf Azure ATP-Warnungen und -Identitätsbewertungen zugreifen. In beiden Workflows werden Einrichtungs- und Konfigurationsaufgaben für Azure ATP weiterhin im Azure ATP-Portal ausgeführt. 
 
+ 
+
 ## <a name="prerequisites"></a>Voraussetzungen
 
 Zur Nutzung aller Features der Benutzeruntersuchung über die gesamte Hybridumgebung hinweg benötigen Sie Folgendes:
@@ -64,8 +66,14 @@ Greifen Sie in Cloud App Security-Warnungen, -Aktivitäten und -Benutzerseiten a
 
 ## <a name="alerts"></a>Warnungen
 
-Azure ATP-Warnungen werden in der Cloud App Security-Warteschlange **Warnungen** angezeigt. Zusätzliche Filteroptionen stehen nur beim Anzeigen von Warnungen über Cloud App Security zur Verfügung. Azure ATP-Warnungen werden mithilfe des Anwendungsfilters in Azure ATP gefiltert. 
+Azure ATP-Warnungen werden in der Cloud App Security-Warteschlange **Warnungen** angezeigt. Zusätzliche Filteroptionen stehen nur beim Anzeigen von Warnungen über Cloud App Security zur Verfügung. Azure ATP-Warnungen werden mithilfe des Anwendungsfilters in **Active Directory Domain Services** gefiltert. 
 
+## <a name="alert-management"></a>Alert Management
+Wenn Sie Azure ATP mit Cloud App Security verwenden, werden Warnungen, die in dem einen Dienst geschlossen werden, nicht automatisch in dem anderen Dienst geschlossen. Legen Sie fest, in welchem Dienst Warnungen verwaltet und behoben werden sollen, um doppelten Aufwand zu vermeiden. 
+
+## <a name="siem-notification"></a>SIEM-Benachrichtigungen
+
+Wenn Sie beide Dienste (Azure ATP und Cloud App Security) so konfiguriert haben, dass Warnungsbenachrichtigungen an SIEM gesendet werden, nachdem die Azure ATP-Integration in Cloud App Security aktiviert wurde, erhalten Sie doppelte SIEM-Benachrichtigungen für dieselbe Warnung. Von jedem Dienst wird eine Warnung mit unterschiedlicher Warnungs-ID ausgegeben. Entscheiden Sie, in welchem Dienst Sie Warnungen verwalten möchten, und legen Sie anschließend fest, dass vom anderen Dienst keine SIEM-Benachrichtigungen mehr versendet werden. So vermeiden Sie Duplizierungen und Verwirrung.  
 
 ## <a name="activities"></a>Aktivitäten
 
