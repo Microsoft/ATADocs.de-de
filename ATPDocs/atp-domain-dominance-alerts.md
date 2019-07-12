@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 02/03/2019
+ms.date: 07/07/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 0b3a1db5-0d43-49af-b356-7094cc85f0a5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a415e880f669d4f02cd2cd319f49137ba26da1d7
-ms.sourcegitcommit: 52bc20dfa1f64ff3e8c16eb5edea2813d54ba308
+ms.openlocfilehash: f53d4930ed6fc4492f6360b3aab12e9c3655b390
+ms.sourcegitcommit: 09275d3400534200fa6ea572e89e440b3cc58360
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/04/2019
-ms.locfileid: "67562153"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67786398"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Tutorial: Warnungen zu Domänendominanz  
 
@@ -478,14 +478,14 @@ Skeleton Key ist eine Schadsoftware, die auf einem Domänencontroller ausgeführ
 
 **Beschreibung:** Angreifer fügen Gruppen mit weitreichenden Rechten Benutzer hinzu. Dadurch erhalten Angreifer Zugriff auf weitere Ressourcen und dauerhafte Kontrolle. Diese Erkennung basiert auf dem Erfassen der Aktivitäten von Benutzern, die Gruppen ändern, und den Warnungen, die angezeigt werden, wenn einer sensiblen Gruppe unerwartet ein Benutzer hinzugefügt wird. Azure ATP erfasst kontinuierlich Benutzeraktivitäten.  
  
-Eine Definition von sensiblen Gruppen in Azure ATP finden Sie unter „Working with the sensitive accounts“ (Arbeiten mit sensiblen Konten).
+Eine Definition von sensiblen Gruppen in Azure ATP finden Sie unter [Working with the sensitive accounts (Arbeiten mit sensiblen Konten)](sensitive-accounts.md).
  
-Die Erkennung basiert auf Ereignissen, die auf Domänencontrollern überwacht werden. Stellen Sie sicher, dass Ihre Domänencontroller die erforderlichen Ereignisse überwachen.
+Die Erkennung basiert auf Ereignissen, die auf Domänencontrollern überwacht werden. Stellen Sie sicher, dass Ihre Domänencontroller die [erforderlichen Ereignisse überwachen](atp-advanced-audit-policy.md).
  
 **Lernphase**
-<br>Vier Wochen pro DC, beginnend mit dem ersten Ereignis.
+<br>Vier Wochen pro Domänencontroller, beginnend mit dem ersten Ereignis.
  
-**TP, B-TP oder FP**
+**TP, B-TP oder FP?**
 <br>Zulässige Änderungen an Gruppen, die nur selten auftreten und vom System noch nicht als unbedenklich eingestuft wurden, können einen Alarm auslösen. Diese Warnungen werden als **B-TP**-Aktivität klassifiziert. 
 1. Ist das Ändern der Gruppe zulässig? 
     - Wenn das Ändern der Gruppe zulässig ist, **schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität.

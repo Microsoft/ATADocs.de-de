@@ -5,21 +5,36 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/03/2019
+ms.date: 07/10/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: d6fb2a51a47c97c52a3665c55522094fd5a856f1
-ms.sourcegitcommit: 52bc20dfa1f64ff3e8c16eb5edea2813d54ba308
+ms.openlocfilehash: 84443d57cb1333e870c33cf01879188eb52bd707
+ms.sourcegitcommit: 09275d3400534200fa6ea572e89e440b3cc58360
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/04/2019
-ms.locfileid: "67562191"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67786427"
 ---
 # <a name="whats-new-in-azure-atp"></a>Neuerungen in Azure ATP
+
+## <a name="azure-atp-release-285"></a>Azure ATP Release 2.85
+
+Veröffentlicht: 7. Juli 2019
+
+- **Neue Features in der öffentlichen Vorschau: Bewertungen des Sicherheitsstatus der Azure ATP-Identität**<br>
+    Azure ATP mit dem Microsoft Cloud App Security-Portal stellt in der **öffentlichen Vorschau** sechs neue Bewertungsberichte vor, mit der Sie den Sicherheitsstatus Ihrer Organisation bewerten, untersuchen, korrigieren und verbessern können. Erfahren Sie mehr über die [Aktivierung](https://docs.microsoft.com/cloud-app-security/aatp-integration) und die [ersten Schritte](atp-mcas-integration.md) mit den Bewertungen des Sicherheitsstatus der Azure ATP-Identität in Cloud App Security, und [nutzen](atp-ispm-overview.md) Sie diese neuen Bewertungen:
+    - [Entitäten im Ruhezustand](atp-mcas-ispm-dormant-entities.md)
+    - [Klartext](atp-mcas-ispm-clear-text.md)
+    - [Verwendung schwacher Verschlüsselungen](atp-mcas-ispm-weak-cipher.md)
+    - [Uneingeschränkte Kerberos-Delegierung](atp-mcas-ispm-unconstrained-kerberos.md)
+    - [Druckspooler](atp-mcas-ispm-print-spooler.md)
+    - [Legacyprotokolle](atp-mcas-ispm-legacy-protocols.md)
+
+- Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
 ## <a name="azure-atp-release-284"></a>Azure ATP Release 2.84
 
@@ -29,7 +44,7 @@ Veröffentlicht: 1. Juli 2019
     Azure ATP-Instanzen werden jetzt im Azure UK-Rechenzentrum unterstützt. Weitere Informationen zum Erstellen von Azure ATP-Instanzen und den entsprechenden Rechenzentrumsstandorten finden Sie unter [Step 1 of Azure ATP installation (Azure ATP-Installation – Schritt 1)](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step10).
 
 - **Featureerweiterung: Neuer Name und neue Features für die Warnungen bei verdächtigen Hinzufügungen zu sensiblen Gruppen (externe ID 2024)**<br> 
-    Die Warnung **Suspicious additions to sensitive groups (Verdächtige Hinzufügungen zu sensiblen Gruppen)** lautete ursprünglich **Suspicious modifications to sensitive groups (Verdächtige Änderungen an sensiblen Gruppen)** . Die externe ID der Warnung (ID 2024) hat sich nicht geändert. Durch die beschreibende Namensänderung wird der Zweck der Warnung bei Ergänzungen zu Ihren **sensiblen** Gruppen genauer wiedergespiegelt. Die verbesserte Warnung enthält auch neue Beweise und verbesserte Beschreibungen. Weitere Informationen finden Sie unter [Suspicious additions to sensitive groups (Verdächtige Hinzufügungen zu sensiblen Gruppen)](https://docs.microsoft.com/azure-advanced-threat-protection/atp-domain-dominance-alerts#suspicious-additions-to-sensitive-groups-external-id-2024).  
+    Die Warnung „Verdächtige Hinzufügungen zu sensiblen Gruppen“ hieß bisher **Verdächtige Änderung sensibler Gruppen**. Die externe ID der Warnung (ID 2024) hat sich nicht geändert. Durch die beschreibende Namensänderung wird der Zweck der Warnung bei Ergänzungen zu Ihren **sensiblen** Gruppen genauer wiedergespiegelt. Die verbesserte Warnung enthält auch neue Beweise und verbesserte Beschreibungen. Weitere Informationen finden Sie unter [Suspicious additions to sensitive groups (Verdächtige Hinzufügungen zu sensiblen Gruppen)](https://docs.microsoft.com/azure-advanced-threat-protection/atp-domain-dominance-alerts#suspicious-additions-to-sensitive-groups-external-id-2024).  
 
 - **Neues Dokumentationsfeature: Anleitung zum Verschieben von Advanced Threat Analytics zu Azure ATP**<br>
     In diesem neuen Artikel finden Sie Informationen zu Voraussetzungen, Tipps zur Planung sowie Konfigurations- und Überprüfungsschritte für das Verschieben von ATA zum Azure ATP-Dienst. Weitere Informationen finden Sie unter [Verschieben von ATA zu Azure ATP](https://docs.microsoft.com/azure-advanced-threat-protection/ata-atp-move-overview).   
