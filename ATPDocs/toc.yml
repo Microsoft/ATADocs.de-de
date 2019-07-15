@@ -73,20 +73,22 @@
           href: atp-mcas-integration.md
         - name: Filteraktivitäten und Festlegen von Richtlinien
           href: atp-activities-filtering-mcas.md
-        - name: Bewertungen des Sicherheitsstatus der Azure ATP-Identität
-          href: atp-ispm-overview.md
-        - name: Bewertung der Anfälligkeit von Anmeldeinformationen in Klartext
-          href: atp-mcas-ispm-clear-text.md
-        - name: Bewertung der Entfernung ruhender Entitäten aus sensiblen Gruppen
-          href: atp-mcas-ispm-dormant-entities.md
-        - name: Bewertung für die Verhinderung der Kommunikation von Legacyprotokollen
-          href: atp-mcas-ispm-legacy-protocols.md
-        - name: Bewertung der Deaktivierung des Druckspoolerdiensts auf Domänencontrollern
-          href: atp-mcas-ispm-print-spooler.md
-        - name: Bewertung der Verhinderung von schwachen Ciphernutzung
-          href: atp-mcas-ispm-weak-cipher.md
-        - name: Bewertung der zwanglosen Kerberos-Delegierung
-          href: atp-mcas-ispm-unconstrained-kerberos.md
+        - name: Bewertungen des Identitätssicherheitsstatus von Azure ATP
+          items:
+            - name: Grundlegendes zum Identitätssicherheitsstatus
+              href: atp-isp-overview.md
+            - name: Bewertung der Anfälligkeit von Anmeldeinformationen in Klartext
+              href: atp-cas-isp-clear-text.md
+            - name: Bewertung der Entfernung ruhender Entitäten aus sensiblen Gruppen
+              href: atp-cas-isp-dormant-entities.md
+            - name: Bewertung für die Verhinderung der Kommunikation von Legacyprotokollen
+              href: atp-cas-isp-legacy-protocols.md
+            - name: Bewertung der Deaktivierung des Druckspoolerdiensts auf Domänencontrollern
+              href: atp-cas-isp-print-spooler.md
+            - name: Bewertung der Verhinderung von schwachen Ciphernutzung
+              href: atp-cas-isp-weak-cipher.md
+            - name: Bewertung der zwanglosen Kerberos-Delegierung
+              href: atp-cas-isp-unconstrained-kerberos.md
     - name: Lab für Sicherheitswarnungen
       items:
         - name: Übersicht über das Lab
