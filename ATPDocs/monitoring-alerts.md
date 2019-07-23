@@ -5,29 +5,23 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/29/2019
+ms.date: 07/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: d0551e91-3b21-47d5-ad9d-3362df6d47c0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 46778e0dcafca7fcff8b7f7611a50ca0e23140d8
-ms.sourcegitcommit: b021f8dfc54e59de429f93cc5fc0d733d92b00b8
+ms.openlocfilehash: 65279895689e230a3a28871a61f4cffe36d6042c
+ms.sourcegitcommit: b7b3d4a401faaa3edb4bd669a1a003a6d21a4322
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66403572"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68298751"
 ---
 # <a name="understanding-azure-atp-sensor-and-standalone-sensor-monitoring-alerts"></a>Grundlegende Informationen zu Überwachungswarnungen für Azure ATP-Sensor und selbstständige Azure ATP-Sensoren
 
 Das Azure ATP-Integritätscenter informiert Sie, wenn ein Problem im Zusammenhang mit Ihrer Azure ATP-Instanzname aufgetreten ist, indem es eine Überwachungswarnung ausgibt. Dieser Artikel beschreibt alle Überwachungswarnungen für jede Komponente und listet den Grund sowie die erforderlichen Schritte zur Lösung des Problems auf.
-
-## <a name="domain-synchronizer-not-assigned"></a>Domain synchronizer not assigned (Domänensynchronizer nicht zugewiesen)
-
-|Warnung|Beschreibung|Lösung|Schweregrad|
-|----|----|----|----|
-|No domain synchronizer is assigned to any Azure ATP sensor. (Es sind keine Domänensynchronizer einem Azure ATP-Sensor zugewiesen.) This may happen if there is no Azure ATP sensor configured as domain synchronizer candidate. (Das kann passieren, wenn kein Azure ATP-Sensor als Kandidat für die Domänensynchronisierung konfiguriert ist.)|Wenn die Domäne nicht synchronisiert ist, können Änderungen an Entitäten dazu führen, dass Entitätsinformationen in Azure ATP veraltet sind oder fehlen. Die Erkennung wird jedoch nicht beeinträchtigt.|Stellen Sie sicher, dass zumindest ein Azure ATP-Sensor als [Domänensynchronizer](install-atp-step5.md) festgelegt ist.|Niedrig|
 
 ## <a name="all-domain-controllers-are-unreachable-by-a-sensor"></a>Keiner der Domänencontroller ist über einen Sensor erreichbar
 
