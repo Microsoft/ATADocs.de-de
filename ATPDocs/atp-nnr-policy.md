@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 06/17/2019
+ms.date: 07/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 1ac873fc-b763-41d7-878e-7c08da421cb5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0bf34a64f1140b0d2e3358196d23589de629588d
-ms.sourcegitcommit: 139e8dd63c06a5d9c9a3c348958e4f7fd74041b8
+ms.openlocfilehash: 0161c0f63e652bd62ee8ccf4a6677f2ec0d90f4d
+ms.sourcegitcommit: b7b3d4a401faaa3edb4bd669a1a003a6d21a4322
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67155837"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68298945"
 ---
 # <a name="what-is-network-name-resolution"></a>Was ist Netzwerknamensauflösung?
 
@@ -35,11 +35,12 @@ Wenn IP-Adressen zu Computernamen aufgelöst werden sollen, fragen Azure ATP-Sen
 > [!NOTE]
 >An keinem dieser Ports erfolgt eine Authentifizierung.
 
+Azure ATP wertet das Betriebssystem des Geräts basierend auf dem Netzwerkdatenverkehr aus und legt es fest. Nach dem Abrufen des Computernamens überprüft der Azure ATP-Sensor in Active Directory Domain Services, ob ein zugehöriges Computerobjekt mit gleichem Computernamen vorhanden ist und verwendet TCP-Fingerabdrücke. Mithilfe von TCP-Fingerabdrücken können nicht registrierte und Nicht-Windows-Geräte identifiziert werden, sodass der Untersuchungsprozess vereinfacht wird. Wenn der Azure ATP-Sensor die Korrelation findet, ordnet er die IP dem betreffenden Computerobjekt zu. 
+
 In Fällen, in denen kein Name abgerufen wird, wird ein **nicht aufgelöstes Computerprofil nach IP-Adresse** mit der IP-Adresse und der relevanten erkannten Aktivität erstellt.
 
-Nach dem Abrufen des Computernamens sieht der Azure ATP-Sensor in Active Directory nach, ob ein zugehöriges Computerobjekt mit gleichem Computernamen vorhanden ist. Wenn der Sensor die Korrelation findet, ordnet er diese IP dem betreffenden Computerobjekt zu. In Fällen, in denen kein Computerobjekt dieses Namens gefunden wird, wird ein **nicht aufgelöstes Computerprofil nach Name** mit diesem Namen und der relevanten erkannten Aktivität erstellt. 
-
 ![Nicht aufgelöstes Computerprofil](media/unresolved-computer-profile.png)
+
 
 NNR-Daten spielen beim Erkennen der folgenden Bedrohungen eine entscheidende Rolle:
 

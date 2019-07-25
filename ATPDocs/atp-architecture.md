@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/27/2019
+ms.date: 07/17/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c80fe761b9e54b2031e6385bcc32d845ccf52872
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: 38a1790194d739ac31c66df60cf0d9c2911344c7
+ms.sourcegitcommit: b7b3d4a401faaa3edb4bd669a1a003a6d21a4322
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65197195"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68298887"
 ---
 # <a name="azure-atp-architecture"></a>Azure ATP-Architektur
 
@@ -68,16 +68,12 @@ Dies sind die Hauptfunktionen des Azure ATP-Sensors:
 
 Der Azure ATP-Sensor liest lokal Ereignisse, ohne dass zusätzliche Hardware erworben und verwaltet oder Konfigurationen vorgenommen werden müssen. Der Azure ATP-Sensor unterstützt zudem die Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW), die die Protokollinformationen für mehrere Erkennungen bereitstellt. ETW-basierte Erkennungen beinhalten vermutete DCShadow-Angriffe, die mithilfe von Replikationsanforderungen für Domänencontroller und der Heraufstufung des Domänencontrollers versucht wurden.
 
-### <a name="domain-synchronizer-candidate"></a>Kandidat für die Domänensynchronisierung
+### <a name="domain-synchronizer-process"></a>Domänensynchronisierungsprozess
 
-Der Kandidat für den Domänensynchronizer ist für die proaktive Synchronisierung aller Entitäten aus einer bestimmten Active Directory-Domäne verantwortlich (ähnlich dem Mechanismus, der von den Domänencontrollern selbst für die Replikation verwendet wird). Aus der Liste der Kandidaten wird nach dem Zufallsprinzip ein Sensor für den Domänensynchronizer ausgewählt. 
+Der Prozess für die Domänensynchronisierung ist für die proaktive Synchronisierung aller Entitäten aus einer bestimmten Active Directory-Domäne verantwortlich (ähnlich dem Mechanismus, der von den Domänencontrollern selbst für die Replikation verwendet wird). Ein Sensor wird automatisch nach dem Zufallsprinzip aus allen berechtigten Sensoren ausgewählt, die als Domänensynchronizer fungieren. 
 
-Wenn das Gateway für die Domänensynchronisierung mehr als 30 Minuten offline ist, wird stattdessen ein anderer Kandidaten ausgewählt. Wenn für eine bestimmte Domäne kein Domänensynchronizer verfügbar ist, synchronisiert Azure ATP Entitäten und deren Änderungen proaktiv. Azure ATP ruft jedoch neue Entitäten ab, sobald sie im überwachten Datenverkehr erkannt werden.
+Wenn das Gateway für den Domänensynchronizer mehr als 30 Minuten offline ist, wird stattdessen ein anderer Sensor automatisch ausgewählt. 
     
-Wenn kein Domänensynchronizer verfügbar ist und Sie nach einer Entität suchen, der kein Datenverkehr zugeordnet ist, werden keine Suchergebnisse angezeigt.
-
-Azure ATP-Sensoren werden nicht standardmäßig als mögliche Synchronizer angesehen. Führen Sie die unter [Installieren von Azure ATP](install-atp-step5.md) beschriebenen Schritte durch, um einen Azure ATP-Sensor manuell als Domänensynchronizer einzurichten.
-
 ### <a name="resource-limitations"></a>Ressourceneinschränkungen
 
 Der Azure ATP-Sensor enthält eine Überwachungskomponente, die die verfügbare Compute- und Arbeitsspeicherkapazität auf dem Domänencontroller auswertet, auf dem er ausgeführt wird. Der Überwachungsprozess wird alle 10 Sekunden ausgeführt, und die CPU- und Arbeitsspeicherauslastung des Azure ATP-Sensorprozesses wird dynamisch angepasst. Der Überwachungsprozess stellt sicher, dass der Domänencontroller immer mindestens 15 % der verfügbaren Compute- und Arbeitsspeicherressourcen verwenden kann.

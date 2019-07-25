@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 12/05/2018
+ms.date: 07/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 24eca4c6-c949-42ea-97b9-41ef0fb611f1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a15129852315fa958b8f5bed810c9f69e185e73e
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: d60a2ecf2302e6db39baccbc394bf8db14fa87f6
+ms.sourcegitcommit: b7b3d4a401faaa3edb4bd669a1a003a6d21a4322
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65195480"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68298811"
 ---
 # <a name="azure-atp-switches-and-silent-installation"></a>Azure ATP-Switches und automatische Installation
 Dieser Artikel enthält Anleitungen und Informationen zu Azure ATP-Switches und der automatischen Installation.
@@ -77,6 +77,20 @@ Verwenden Sie den folgenden Befehl, um eine vollständig automatische Installati
 
     "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="mmAOkLYCzfH8L/zUIsH24BIJBevlAWu7wUcSfIkRJufpuEojaDHYdjrNs0P3zpD+/bObKfLS0puD7biT5KDf3g=="
 
+## <a name="proxy-authentication"></a>Proxy-Authentifizierung
+
+Verwenden Sie die folgenden Befehle, um die Proxyauthentifizierung abzuschließen:
+
+**Syntax**:
+
+
+> [!div class="mx-tableFixed"]
+> 
+> |Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|Beschreibung|
+> |-------------|----------|---------|---------|
+> |ProxyUrl|/quiet|Ja|Gibt die ProxyUrl und die Portnummer für den Azure ATP Sensor an.|
+> |ProxyUserName|/help|Nein|Wenn Ihr Proxydienst eine Authentifizierung erfordert, geben Sie einen Benutzernamen im Format „DOMÄNE\Benutzer“ an.|
+> |ProxyUserPassword|NetFrameworkCommandLineArguments="/q"|Ja|Gibt das Kennwort für den Proxybenutzernamen an. *Anmeldeinformationen werden verschlüsselt und lokal vom Azure ATP-Sensor gespeichert.|
 
 ## <a name="update-the-azure-atp-sensor"></a>Aktualisieren des Azure ATP-Sensors
 

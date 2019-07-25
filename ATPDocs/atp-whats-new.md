@@ -12,14 +12,31 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 5315d7778413b9da0f642fb2c34db8fbe0a52ab4
-ms.sourcegitcommit: 68118b00d039db56f69ed7c0b96cf85f9b7a8065
+ms.openlocfilehash: b445d44aa64e2b4d0811029d4eed7e87046c52d0
+ms.sourcegitcommit: b7b3d4a401faaa3edb4bd669a1a003a6d21a4322
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67880466"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68298876"
 ---
 # <a name="whats-new-in-azure-atp"></a>Neuerungen in Azure ATP
+
+## <a name="azure-atp-release-286"></a>Azure ATP Release 2.86 
+
+Veröffentlicht: 14. Juli 2019
+
+- **Neue Sicherheitswarnung: Vermutete Manipulation der NTLM-Authentifizierung (Externe ID 2039) (Vorschauversion)**<br>
+Die neue Azure ATP-Sicherheitswarnung für die [vermutete Manipulation der NTLM-Authentifizierung](atp-lateral-movement-alerts.md#suspected-ntlm-authentication-tampering-external-id-2039---preview) befindet sich jetzt in der Vorschauphase. <br> Bei dieser Erkennung wird eine Azure ATP-Sicherheitswarnung ausgelöst, wenn vermutet wird, dass ein Man-in-the-Middle-Angriff die Überprüfung der Nachrichtenintegrität (MIC, Message Integrity Check) durch NTLM umgeht. Dieses Sicherheitsrisiko wird im Microsoft Security Response Center unter [CVE-2019-040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040) näher erläutert. Bei diesen Angriffen wird versucht, die NTLM-Sicherheitsfeatures herabzustufen und eine erfolgreiche Authentifizierung durchzuführen. Das Ziel besteht in einem Angriff mit Lateral-Movement-Pfaden. 
+
+- **Featureerweiterung: TCP-Fingerabdruck**<br> Bisher hat Azure ATP Entitätsinformationen zum Betriebssystem des Geräts bereitgestellt, die auf den verfügbaren Attributen in Active Directory Domain Services basieren. Wenn die Betriebssysteminformationen zuvor nicht in Active Directory Domain Services verfügbar waren, waren sie auch nicht auf den Azure ATP-Entitätsseiten verfügbar. Ab dieser Version bietet Azure ATP diese Informationen mithilfe von TCP-Fingerabdrücken für Geräte, zu denen die Informationen nicht in Active Directory Domain Services vorliegen oder die dort nicht registriert sind. 
+ 
+    Durch das Hinzufügen von TCP-Fingerabdruckdaten können nicht registrierte und Nicht-Windows-Geräte identifiziert werden, sodass der Untersuchungsprozess gleichzeitig vereinfacht wird. Weitere Informationen zur Netzwerknamensauflösung in Azure ATP finden Sie unter [Was ist Netzwerknamensauflösung?](atp-nnr-policy.md).  
+
+- **Neues Feature: Authentifizierter Proxy (Vorschauversion)**<br> Azure ATP unterstützt nun authentifizierte Proxys. Geben Sie die Proxy-URL über die Befehlszeile des Sensors ein, und geben Sie den Benutzernamen und das Kennwort an, um Proxys zu verwenden, für die eine Authentifizierung erforderlich ist. Weitere Informationen zur Verwendung authentifizierter Proxys finden Sie unter [Azure ATP-Switches und automatische Installation](https://docs.microsoft.com/azure-advanced-threat-protection/atp-silent-installation#proxy-authetication).
+
+- **Featureerweiterung: automatisierter Domänensynchronisierungsprozess**<br> Der Prozess zum Festlegen und Markieren von Domänencontrollern als Kandidaten für Domänensynchronizer während des Setups und der folgenden Konfiguration ist nun vollständig automatisiert. Die Umschaltoption für die manuelle Auswahl von Domänencontroller als Kandidaten für Domänensynchronizer wurde entfernt. 
+
+- Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
 ## <a name="azure-atp-release-285"></a>Azure ATP Release 2.85
 

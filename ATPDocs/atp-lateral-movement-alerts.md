@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/18/2019
+ms.date: 07/17/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 2257eb00-8614-4577-b6a1-5c65085371f2
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3b58433239fb2f7f3d2f55c87ddf73ea38840176
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: 7e791dafcd8c3e05a7e05d5d50e82fae05aa5c89
+ms.sourcegitcommit: c1368baac1fa4e54eb9eb4e34a7b471e56b22ac2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65196831"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68299374"
 ---
 # <a name="tutorial-lateral-movement-alerts"></a>Tutorial: Lateral Movement-Warnungen  
 
@@ -37,6 +37,7 @@ Die folgenden Sicherheitswarnungen unterstützen Sie dabei, verdächtige Aktivit
 > * Remotecodeausführung über DNS (externe ID 2036)
 > * Suspected identity theft (pass-the-hash) (Verdacht auf Identitätsdiebstahl (Pass-the-Hash)) (externalid 2017)
 > * Suspected identity theft (pass-the-ticket) (Verdacht auf Identitätsdiebstahl (Pass-the-Ticket)) (externalid 2018)
+> * Vermutete Manipulation der NTLM-Authentifizierung (Externe ID 2039): Vorschauversion
 > * Vermuteter NTLM-Relaisangriff (Exchange-Konto) (externe ID 2037) – Vorschauversion
 > * Suspected over-pass-the-hash attack (encryption downgrade) (Verdacht auf Over-Pass-the-Hash-Angriff (Herabstufung der Verschlüsselung)) (externalid 2008)
 > * Suspected overpass-the-hash attack (Kerberos) (Verdacht auf einen Overpass-the-Hash-Angriff (Kerberos)) (externalid 2002)
@@ -145,6 +146,32 @@ Es gibt benutzerdefinierte Anwendungen, die Tickets im Auftrag des Benutzers wei
 3. Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
 4. Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA.
 5. Wenn Windows Defender ATP installiert ist, nutzen Sie **klist.exe purge**, um alle Tickets der angegebenen Anmeldesitzung endgültig zu löschen und zu verhindern, dass die Tickets in Zukunft verwendet werden.
+
+## <a name="suspected-ntlm-authentication-tampering-external-id-2039---preview"></a>Vermutete Manipulation der NTLM-Authentifizierung (Externe ID 2039): Vorschauversion
+
+Im Juni 2019 hat Microsoft das [Sicherheitsrisiko CVE-2019-1040](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1040) veröffentlicht und die Ermittlung einer neuen Manipulationsrisikos in Microsoft Windows angekündigt, wenn ein Man-in-the-Middle-Angriff die NTLM-MIC (Message Integrity Check) erfolgreich umgehen kann.
+
+Böswillige Akteure, die dieses Sicherheitsrisiko erfolgreich ausnutzen, können NTLM-Sicherheitsfeatures herabstufen und erfolgreich authentifizierte Sitzungen im Namen anderer Konten erstellen. Nicht gepatchte Windows-Server sind durch dieses Sicherheitsrisiko gefährdet.
+ 
+Bei dieser Erkennung wird eine Azure ATP-Sicherheitswarnung ausgelöst, wenn NTLM-Authentifizierungsanforderungen an einen Domänencontroller im Netzwerk gerichtet werden, die im Verdacht stehen, die Sicherheitslücke [CVE-2019-1040](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1040) auszunutzen.
+
+**TP, B-TP oder FP?**
+
+1.  Handelt es sich bei den beteiligten Computern, einschließlich Domänencontroller, um aktuelle und für [CVE-2019-1040](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1040) gepatchte Computer? Wenn die Computer aktuell und gepatcht sind, wird erwartet, dass die Authentifizierung fehlschlägt. Wenn die Authentifizierung fehlgeschlagen ist, **schließen** Sie die Sicherheitswarnung als fehlgeschlagenen Versuch.
+ 
+**Ermitteln des Umfangs der Sicherheitsverletzung**
+1.  Untersuchen Sie die [Quellcomputer](investigate-a-computer.md).
+2.  Untersuchen Sie das [Quellkonto](investigate-a-user.md).
+
+**Empfohlene Abhilfemaßnahmen und Schritte zur Vorbeugung**
+
+**Wartung**
+1.  Isolieren Sie die Quellcomputer.
+2.  Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
+3.  Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA.
+4.  Erzwingen Sie die Verwendung der versiegelten NTLMv2-Authentifizierung in der Domäne, indem Sie die Gruppenrichtlinie **Netzwerksicherheit: LAN Manager-Authentifizierungsebene** verwenden. Weitere Informationen zum Festlegen von Gruppenrichtlinien für Domänencontroller finden Sie unter [Network security: LAN Manager authentication level (Netzwerksicherheit: LAN Manager-Authentifizierungsebene)](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level).
+ 
+**Vorbeugung:** Stellen Sie sicher, dass alle Geräte in der Umgebung auf dem aktuellen Stand und für [CVE-2019-1040](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1040) gepatcht sind.
 
 ## <a name="suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview"></a>Vermuteter NTLM-Relaisangriff (Exchange-Konto) (externe ID 2037) – Vorschauversion
 

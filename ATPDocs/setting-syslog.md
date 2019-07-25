@@ -5,23 +5,30 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 12/02/2018
+ms.date: 07/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: a2d29c9c-7ecb-4804-b74b-fde899b28648
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7a17f5156f7060028e10a66907776f23a9709442
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: d87950cae8918338468258df77e14a503d7db8df
+ms.sourcegitcommit: b7b3d4a401faaa3edb4bd669a1a003a6d21a4322
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65196434"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68298795"
 ---
 # <a name="integrate-with-syslog"></a>Integration in Syslog
 
 Azure ATP kann Sie durch Senden der Benachrichtigung an den Syslog-Server benachrichtigen und gibt Sicherheits- und Integritätswarnungen aus, wenn eine verdächtige Aktivität erkannt wird. Wenn Syslog-Benachrichtigungen aktiviert werden, lassen sich folgende Einstellungen vornehmen:
+
+   |Feld|Beschreibung|
+   |---------|---------------|
+   |Sensor|Klicken Sie auf einen ausgewählten Sensor, der für das Aggregieren aller Syslog-Ereignisse und die anschließende Weiterleitung von diesen an Ihren SIEM-Server verantwortlich sein soll.|
+   |Dienstendpunkt|Geben Sie den vollqualifizierten Domänennamen des Syslog-Servers ein, und ändern Sie optional die Portnummer (standardmäßig 514).|
+   |Transport|Kann UDP, TCP oder TLS (sicheres Syslog) sein|
+   |Format|Dies ist das von Azure ATP verwendete Format für das Senden der Ereignisse an den SIEM-Server: RFC 5424 oder RFC 3164.|
 
 1. Vor dem Konfigurieren von Syslog-Benachrichtigungen sollten Sie gemeinsam mit dem zuständigen SIEM-Administrator folgende Angaben ermitteln:
 
@@ -33,26 +40,24 @@ Azure ATP kann Sie durch Senden der Benachrichtigung an den Syslog-Server benach
 
    -   Versandformat der Daten: RFC 3164 oder 5424
 
-2. Geben Sie die Instanz-URL ein.
+1. Öffnen Sie das Azure ATP-Portal. 
+2. Klicken Sie auf **Einstellungen**.
+3. Wählen Sie im Untermenü **Benachrichtigungen und Berichte** die Option **Benachrichtigung** aus. 
+1. Klicken Sie unter **Syslog-Dienst** auf **Konfigurieren**.
+1. Wählen Sie den **Sensor** aus. 
+1. Geben Sie die URL des **Dienstendpunkts** ein.
+1. Wählen Sie das **Transportprotokoll** (TCP oder UDP) aus. 
+1. Wählen Sie das Format (RFC 3164 oder RFC 5424) aus. 
+1. Wählen Sie **Send text Syslog message** (Syslog-Textnachricht senden) aus, und überprüfen Sie, ob die Nachricht von Ihrer Syslog-Infrastrukturlösung empfangen wird. 
+1. Klicken Sie auf **Speichern**. 
 
-3. Geben Sie Ihren Azure Active Directory-Benutzernamen und Ihr Kennwort ein, und klicken Sie auf **Anmelden**.
+So überprüfen oder ändern Sie die Syslog-Einstellungen:  
 
-4. Wählen Sie auf der Symbolleiste die Einstellungsoption und dann **Konfiguration** aus.
-
-   ![Symbol der Azure ATP-Konfigurationseinstellungen](media/ATP-config-menu.png)
-
-5. Klicken Sie zunächst auf **Benachrichtigungen** und dann unter **Syslog-Benachrichtigungen** auf **Konfigurieren**:
-
-   |Feld|Beschreibung|
-   |---------|---------------|
-   |Sensor|Klicken Sie auf einen ausgewählten Sensor, der für das Aggregieren aller Syslog-Ereignisse und die anschließende Weiterleitung von diesen an Ihren SIEM-Server verantwortlich sein soll.|
-   |Dienstendpunkt|Geben Sie den vollqualifizierten Domänennamen des Syslog-Servers ein, und ändern Sie optional die Portnummer (standardmäßig 514).|
-   |Transport|Kann UDP, TCP oder TLS (sicheres Syslog) sein|
-   |Format|Dies ist das von Azure ATP verwendete Format für das Senden der Ereignisse an den SIEM-Server: RFC 5424 oder RFC 3164.|
+3. Klicken Sie zunächst auf **Benachrichtigungen** und dann unter **Syslog-Benachrichtigungen** auf **Konfigurieren**:
 
    ![Abbildung der Syslog-Servereinstellungen für Azure ATP](media/atp-syslog.png)
 
-6. Sie können auswählen, welche Ereignisse an Ihren Syslog-Server gesendet werden sollen. Geben Sie unter **Syslog-Benachrichtigungen** an, welche Benachrichtigungen an Ihren Syslog-Server gesendet werden sollen: neue Sicherheitswarnungen, aktualisierte Sicherheitswarnungen und neue Integritätsprobleme.
+4. Sie können auswählen, welche Ereignisse an Ihren Syslog-Server gesendet werden sollen. Geben Sie unter **Syslog-Benachrichtigungen** an, welche Benachrichtigungen an Ihren Syslog-Server gesendet werden sollen: neue Sicherheitswarnungen, aktualisierte Sicherheitswarnungen und neue Integritätsprobleme.
 
 > [!NOTE]
 > Wenn Sie eine Automatisierung oder Skripts für Azure ATP-SIEM-Protokoll erstellen möchten, sollten Sie zur Identifizierung des Warnungstyps das Feld **externalID** statt des Warnungsnamens verwenden. Warnungsnamen können nämlich gelegentlich geändert werden, während die **externalId** jeder Warnung dauerhaft ist. Weitere Informationen finden Sie unter [Azure ATP-SIEM-Protokollreferenz](cef-format-sa.md). 
