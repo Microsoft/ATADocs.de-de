@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/12/2019
+ms.date: 07/29/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 153f53715bc33b735bb7cf2796dcb1f983d67915
-ms.sourcegitcommit: 5d93b0e59080c2d872672bf77a1a40c548c1016d
-ms.translationtype: HT
+ms.openlocfilehash: 9d1dfcf20a45dde213db7db2d43ff973ebfcbe11
+ms.sourcegitcommit: dd8c94db68e85752c20bba3446b678cd1edcd932
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65760328"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68604385"
 ---
 # <a name="ata-prerequisites"></a>ATA-Voraussetzungen
 
@@ -34,7 +34,7 @@ ATA besteht aus ATA Center, dem ATA-Gateway und/oder dem ATA-Lightweight-Gateway
 Das ATA-System arbeitet auf der Gesamtstrukturbegrenzung von Active Directory und unterstützt die Gesamtstruktur-Funktionsebene (Forest Functional Level; FFL) von Windows 2003 und höher.
 
 
-[Bevor Sie beginnen:](#before-you-start) In diesem Abschnitt werden die Informationen aufgeführt, die Sie sammeln sollten, und Konten und Netzwerkentitäten genannt, die vor der ATA-Installation vorhanden sein sollten.
+[Bevor Sie beginnen](#before-you-start): In diesem Abschnitt werden die Informationen aufgeführt, die Sie sammeln sollten, und Konten und Netzwerkentitäten genannt, die vor der ATA-Installation vorhanden sein sollten.
 
 [ATA Center](#ata-center-requirements): In diesem Abschnitt werden die Hardware- und Softwarevoraussetzungen für ATA Center sowie die Einstellungen aufgeführt, die Sie für den ATA Center-Server konfigurieren müssen.
 
@@ -81,7 +81,14 @@ Dies können Sie überprüfen, indem Sie das folgende Windows PowerShell-Cmdlet 
 Die Installation von ATA Center als virtueller Computer wird unterstützt. 
 
 > [!NOTE] 
-> Bei Ausführung als virtueller Computer wird kein dynamischer Arbeitsspeicher und keine andere Speichererweiterungsfunktion unterstützt.
+> Wenn das Center als virtueller Computer (VM) ausgeführt wird, ist es erforderlich, dass der gesamte Arbeitsspeicher dem virtuellen Computer ständig zugeordnet wird. 
+
+|Virtueller Computer unter|Beschreibung|
+|------------|-------------|
+|Hyper-V|Stellen Sie sicher, dass die Option **dynamischer Arbeitsspeicher aktivieren** für die VM nicht aktiviert ist.|
+|VMware|Stellen Sie sicher, dass die Menge des konfigurierten Speichers und der reservierte Arbeitsspeicher identisch sind, oder aktivieren Sie die folgende Option in der VM-Einstellung – **alle Gast Arbeitsspeicher reservieren (alle gesperrt**).|
+|Anderer Virtualisierungshost|Informationen dazu, wie Sie sicherstellen, dass der Arbeitsspeicher der VM jederzeit vollständig zugeordnet ist, finden Sie in der vom Hersteller bereitgestellten Dokumentation. |
+|
 
 Wenn Sie ATA Center als virtuellen Computer ausführen, fahren Sie vor dem Erstellen eines neuen Prüfpunkts den Server herunter, um eine mögliche Beschädigung der Datenbank zu verhindern.
 
@@ -311,7 +318,7 @@ Der Zugriff auf die ATA-Konsole erfolgt über einen Browser. Folgende Browser un
 - [Auswählen des richtigen ATA-Gatewaytyps](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 - [Tool zur Bemessung von ATA-Gateways](http://aka.ms/atasizingtool)
 - [ATA-Architektur](ata-architecture.md)
 - [Installieren von ATA](install-ata-step1.md)
