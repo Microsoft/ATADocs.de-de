@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 24eca4c6-c949-42ea-97b9-41ef0fb611f1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d60a2ecf2302e6db39baccbc394bf8db14fa87f6
-ms.sourcegitcommit: b7b3d4a401faaa3edb4bd669a1a003a6d21a4322
+ms.openlocfilehash: 6fca63fb488aef6fb26f4f501c4f6af896e223bd
+ms.sourcegitcommit: 4662ad41addf92727367874d909937fa331fb866
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68298811"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485057"
 ---
 # <a name="azure-atp-switches-and-silent-installation"></a>Azure ATP-Switches und automatische Installation
 Dieser Artikel enthält Anleitungen und Informationen zu Azure ATP-Switches und der automatischen Installation.
@@ -88,9 +88,9 @@ Verwenden Sie die folgenden Befehle, um die Proxyauthentifizierung abzuschließe
 > 
 > |Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|Beschreibung|
 > |-------------|----------|---------|---------|
-> |ProxyUrl|/quiet|Ja|Gibt die ProxyUrl und die Portnummer für den Azure ATP Sensor an.|
-> |ProxyUserName|/help|Nein|Wenn Ihr Proxydienst eine Authentifizierung erfordert, geben Sie einen Benutzernamen im Format „DOMÄNE\Benutzer“ an.|
-> |ProxyUserPassword|NetFrameworkCommandLineArguments="/q"|Ja|Gibt das Kennwort für den Proxybenutzernamen an. *Anmeldeinformationen werden verschlüsselt und lokal vom Azure ATP-Sensor gespeichert.|
+> |ProxyUrl|ProxyUrl="https\://proxy.contoso.com:8080"|Nein|Gibt die ProxyUrl und die Portnummer für den Azure ATP Sensor an.|
+> |ProxyUserName|ProxyUserName="Contoso\ProxyUser"|Nein|Wenn Ihr Proxydienst eine Authentifizierung erfordert, geben Sie einen Benutzernamen im Format „DOMÄNE\Benutzer“ an.|
+> |ProxyUserPassword|ProxyUserPassword="P@ssw0rd"|Nein|Gibt das Kennwort für den Proxybenutzernamen an. *Anmeldeinformationen werden verschlüsselt und lokal vom Azure ATP-Sensor gespeichert.|
 
 ## <a name="update-the-azure-atp-sensor"></a>Aktualisieren des Azure ATP-Sensors
 

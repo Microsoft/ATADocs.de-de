@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/17/2019
+ms.date: 07/25/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 2257eb00-8614-4577-b6a1-5c65085371f2
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7e791dafcd8c3e05a7e05d5d50e82fae05aa5c89
-ms.sourcegitcommit: c1368baac1fa4e54eb9eb4e34a7b471e56b22ac2
+ms.openlocfilehash: cf6d57113fc3457d7aeb097e77b7668fa012b546
+ms.sourcegitcommit: 4662ad41addf92727367874d909937fa331fb866
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299374"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485004"
 ---
 # <a name="tutorial-lateral-movement-alerts"></a>Tutorial: Lateral Movement-Warnungen  
 
@@ -38,7 +38,7 @@ Die folgenden Sicherheitswarnungen unterstützen Sie dabei, verdächtige Aktivit
 > * Suspected identity theft (pass-the-hash) (Verdacht auf Identitätsdiebstahl (Pass-the-Hash)) (externalid 2017)
 > * Suspected identity theft (pass-the-ticket) (Verdacht auf Identitätsdiebstahl (Pass-the-Ticket)) (externalid 2018)
 > * Vermutete Manipulation der NTLM-Authentifizierung (Externe ID 2039): Vorschauversion
-> * Vermuteter NTLM-Relaisangriff (Exchange-Konto) (externe ID 2037) – Vorschauversion
+> * Vermuteter NTLM-Relaisangriff (Exchange-Konto) (externe ID 2037)
 > * Suspected over-pass-the-hash attack (encryption downgrade) (Verdacht auf Over-Pass-the-Hash-Angriff (Herabstufung der Verschlüsselung)) (externalid 2008)
 > * Suspected overpass-the-hash attack (Kerberos) (Verdacht auf einen Overpass-the-Hash-Angriff (Kerberos)) (externalid 2002)
 
@@ -173,7 +173,7 @@ Bei dieser Erkennung wird eine Azure ATP-Sicherheitswarnung ausgelöst, wenn NTL
  
 **Vorbeugung:** Stellen Sie sicher, dass alle Geräte in der Umgebung auf dem aktuellen Stand und für [CVE-2019-1040](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1040) gepatcht sind.
 
-## <a name="suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview"></a>Vermuteter NTLM-Relaisangriff (Exchange-Konto) (externe ID 2037) – Vorschauversion
+## <a name="suspected-ntlm-relay-attack-exchange-account-external-id-2037"></a>Vermuteter NTLM-Relaisangriff (Exchange-Konto) (externe ID 2037)
 
 **Beschreibung**
 

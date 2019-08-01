@@ -5,24 +5,23 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/17/2019
+ms.date: 07/25/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7598c10724295312b19a2ccb0fbdd57328edd9a4
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: 347f46b51267762760783fdc44b689e213ba29d8
+ms.sourcegitcommit: 4662ad41addf92727367874d909937fa331fb866
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65196743"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485037"
 ---
 # <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-azure-atp-sensor"></a>Konfigurieren von Endpunktproxy- und Internetkonnektivitätseinstellungen für Ihren Azure ATP-Sensor
 
 Jeder Azure Advanced Threat Protection-Sensor (ATP) erfordert Internetkonnektivität mit dem Azure ATP-Clouddienst, damit er erfolgreich verwendet werden kann. In einigen Organisationen sind die Domänencontroller nicht direkt mit dem Internet verbunden, sondern über eine Webproxyverbindung. Für jeden Azure ATP-Sensor ist es erforderlich, dass Sie die Microsoft WinINET-Proxykonfiguration (Windows-Internet) verwenden, um Sensordaten zu melden und mit Azure ATP zu kommunizieren. Wenn Sie WinHTTP für die Proxykonfiguration verwenden, müssen Sie dennoch WinINET-Browserproxyeinstellungen für die Kommunikation zwischen dem Sensor und dem Azure ATP-Clouddienst konfigurieren.
-
 
 Wenn Sie den Proxy konfigurieren, müssen Sie wissen, dass der eingebettete Azure ATP-Sensordienst im Systemkontext mit dem Konto **LocalService** ausgeführt wird, und der Azure ATP-Sensorupdatedienst wird im Systemkontext mit dem Konto **LocalSystem** ausgeführt. 
 
@@ -31,7 +30,9 @@ Wenn Sie den Proxy konfigurieren, müssen Sie wissen, dass der eingebettete Azur
 
 ## <a name="configure-the-proxy"></a>Konfigurieren des Proxys 
 
-Konfigurieren Sie den Proxyserver manuell mithilfe eines registrierungsbasierten statischen Proxys, damit der Azure ATP-Sensor Diagnosedaten melden und mit dem Azure ATP-Clouddienst kommunizieren kann, wenn ein Computer keine Verbindung mit dem Internet herstellen darf.
+Sie können Ihre Proxyeinstellungen während der Sensorinstallation konfigurieren, indem Sie die unter [Proxy-Authentifizierung](https://docs.microsoft.com/azure-advanced-threat-protection/atp-silent-installation#proxy-authentication) definierten Parameter verwenden.
+
+Sie können den Proxyserver auch manuell mithilfe eines registrierungsbasierten statischen Proxys konfigurieren, damit der Azure ATP-Sensor Diagnosedaten melden und mit dem Azure ATP-Clouddienst kommunizieren kann, wenn ein Computer keine Verbindung mit dem Internet herstellen darf.
 
 > [!NOTE]
 > Die Änderungen an der Registrierung sollten nur auf „LocalService“ und „LocalSystem“ angewendet werden.
