@@ -5,18 +5,18 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/28/2019
+ms.date: 08/05/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.assetid: 1b5b24ff-0df8-4660-b4f8-64d68cc72f65
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c77f855066f8385925dc9039c6532f1981ac0dfe
-ms.sourcegitcommit: dd8c94db68e85752c20bba3446b678cd1edcd932
+ms.openlocfilehash: 3f5e493993acfb6bbb440691f11053d46bf5e1ba
+ms.sourcegitcommit: 8df26fb312472b8df1da70e581517223d26de8c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68604374"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68781815"
 ---
 # <a name="ata-capacity-planning"></a>ATA-Kapazitätsplanung
 
@@ -73,7 +73,7 @@ Für die Analyse des Benutzerverhaltens benötigt das ATA Center die Daten von m
 > - Es ist möglich, ATA Center auf jedem IaaS-Anbieter bereitzustellen, solange die Leistungsanforderungen erfüllt werden, die in diesem Artikel beschrieben sind.
 > - Die Speicherlatenz für Lese- und Schreibvorgänge sollte unter 10 ms betragen.
 > - Das Verhältnis zwischen Schreib- und Lesevorgängen beträgt unterhalb von 100.000 Paketen pro Sekunde etwa 1:3 und oberhalb dieser Grenze etwa 1:6.
-> - Bei Ausführung als virtueller Computer wird kein dynamischer Arbeitsspeicher und keine andere Speichererweiterungsfunktion unterstützt. Weitere Informationen zum Ausführen von ATA Center als virtuellen Computer finden Sie unter [Anforderungen für ATA Center](https://docs.microsoft.com/advanced-threat-analytics/ata-prerequisites#ata-center-requirements) .
+> - Wenn das Center als virtueller Computer (VM) ausgeführt wird, ist es erforderlich, dass der gesamte Arbeitsspeicher dem virtuellen Computer ständig zugeordnet wird. Weitere Informationen zum Ausführen von ATA Center als virtuellen Computer finden Sie unter [Anforderungen für ATA Center](https://docs.microsoft.com/advanced-threat-analytics/ata-prerequisites#dynamic-memory) .
 > - Um eine optimale Leistung zu erzielen, legen Sie die **Energieoption** von ATA Center auf **Hohe Leistung** fest.<br>
 > - Wenn Sie auf einem physischen Server arbeiten, erfordert die ATA-Datenbank, dass Sie den nicht einheitlichen Speicherzugriff (Non-Uniform Memory Access, NUMA) im BIOS **deaktivieren**. Das System bezieht sich möglicherweise als Knotenüberlappung auf NUMA. In diesem Fall müssen Sie die Knotenüberlappung **aktivieren**, um NUMA zu deaktivieren. Weitere Informationen finden Sie in der BIOS-Dokumentation. Dies ist nicht relevant, wenn ATA Center auf einem virtuellen Server ausgeführt wird.
 
@@ -125,7 +125,7 @@ Ein ATA-Lightweight-Gateway kann die Überwachung eines Domänencontrollers basi
 
 > [!NOTE]   
 > -   Wenn der Domänencontroller nicht über die für das ATA-Lightweight-Gateway erforderlichen Ressourcen verfügt, wird die Leistung des Domänencontrollers zwar nicht beeinträchtigt, aber das ATA-Lightweight-Gateway funktioniert möglicherweise nicht wie erwartet.
-> -   Bei Ausführung als virtueller Computer wird kein dynamischer Arbeitsspeicher und keine andere Speichererweiterungsfunktion unterstützt. Weitere Informationen zum Ausführen von ATA Center als virtuellen Computer finden Sie unter [Anforderungen für ATA Center](https://docs.microsoft.com/advanced-threat-analytics/ata-prerequisites#ata-center-requirements) .
+> -   Wenn das Center als virtueller Computer (VM) ausgeführt wird, ist es erforderlich, dass der gesamte Arbeitsspeicher dem virtuellen Computer ständig zugeordnet wird. Weitere Informationen zum Ausführen von ATA Center als virtuellen Computer finden Sie unter [Anforderungen für ATA Center](https://docs.microsoft.com/advanced-threat-analytics/ata-prerequisites#dynamic-memory).)
 > -   Um eine optimale Leistung zu erzielen, legen Sie die **Energieoption** des ATA-Lightweight-Gateways auf **Hohe Leistung** fest.
 > -   Es sind mindestens 5 GB Speicherplatz erforderlich, und 10 GB werden empfohlen, einschließlich des Speicherplatzes, der für die ATA-Binärdateien, [ATA-Protokolle](troubleshooting-ata-using-logs.md) und [Leistungsprotokolle](troubleshooting-ata-using-perf-counters.md) benötigt wird.
 
@@ -161,7 +161,7 @@ Berücksichtigen Sie folgende Fehler bei der Entscheidung, wie viele ATA-Gateway
 &#42;&#42;Hyperthreading muss deaktiviert sein.
 
 > [!NOTE] 
-> -   Dynamischer Arbeitsspeicher wird nicht unterstützt.
+> -   Wenn das Center als virtueller Computer (VM) ausgeführt wird, ist es erforderlich, dass der gesamte Arbeitsspeicher dem virtuellen Computer ständig zugeordnet wird. Weitere Informationen zum Ausführen von ATA Center als virtuellen Computer finden Sie unter [Anforderungen für ATA Center](https://docs.microsoft.com/advanced-threat-analytics/ata-prerequisites#dynamic-memory) .
 > -   Um eine optimale Leistung zu erzielen, legen Sie die **Energieoption** des ATA-Gateways auf **Hohe Leistung** fest.
 > -   Es sind mindestens 5 GB Speicherplatz erforderlich, und 10 GB werden empfohlen, einschließlich des Speicherplatzes, der für die ATA-Binärdateien, [ATA-Protokolle](troubleshooting-ata-using-logs.md) und [Leistungsprotokolle](troubleshooting-ata-using-perf-counters.md) benötigt wird.
 

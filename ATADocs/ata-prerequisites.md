@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/29/2019
+ms.date: 08/05/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 9d1dfcf20a45dde213db7db2d43ff973ebfcbe11
-ms.sourcegitcommit: dd8c94db68e85752c20bba3446b678cd1edcd932
+ms.openlocfilehash: 3f0076091ced915776ea54578a58ea3a3fa5856f
+ms.sourcegitcommit: 8df26fb312472b8df1da70e581517223d26de8c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68604385"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68781846"
 ---
 # <a name="ata-prerequisites"></a>ATA-Voraussetzungen
 
@@ -66,6 +66,7 @@ In diesem Abschnitt werden die Informationen aufgeführt, die Sie sammeln sollte
 
 ## <a name="ata-center-requirements"></a>Voraussetzungen für ATA Center
 In diesem Abschnitt werden die Voraussetzungen für ATA Center aufgeführt.
+
 ### <a name="general"></a>Allgemein
 ATA Center unterstützt die Installation auf einem Server mit Windows Server 2012 R2, Windows Server 2016 und Windows Server 2019. 
 
@@ -80,8 +81,10 @@ Dies können Sie überprüfen, indem Sie das folgende Windows PowerShell-Cmdlet 
 
 Die Installation von ATA Center als virtueller Computer wird unterstützt. 
 
+### <a name="dynamic-memory"></a>Dynamischer Arbeitsspeicher
+
 > [!NOTE] 
-> Wenn das Center als virtueller Computer (VM) ausgeführt wird, ist es erforderlich, dass der gesamte Arbeitsspeicher dem virtuellen Computer ständig zugeordnet wird. 
+> Wenn das Center als virtueller Computer (VM) ausgeführt wird, ist es erforderlich, dass der gesamte Arbeitsspeicher dem virtuellen Computer ständig zugeordnet wird.
 
 |Virtueller Computer unter|Beschreibung|
 |------------|-------------|
@@ -177,8 +180,7 @@ Informationen zur Verwendung von virtuellen Computern mit dem ATA-Gateway finden
 Um eine optimale Leistung zu erzielen, legen Sie die **Energieoption** des ATA-Gateways auf **Hohe Leistung** fest.<br>
 Ein ATA-Gateway kann die Überwachung von mehreren Domänencontrollern unterstützen, abhängig vom Umfang des Netzwerkverkehrs zu und von den Domänencontrollern.
 
-> [!NOTE] 
-> Bei Ausführung als virtueller Computer wird kein dynamischer Arbeitsspeicher und keine andere Speichererweiterungsfunktion unterstützt.
+Weitere Informationen zum dynamischen Arbeitsspeicher oder zu anderen Features für die Arbeitsspeicher-über Auslastung finden Sie unter [dynamischer Arbeitsspeicher](#dynamic-memory).
 
 Weitere Informationen zu den Hardwareanforderungen des ATA-Gateways finden Sie unter [ATA-Kapazitätsplanung](ata-capacity-planning.md).
 
@@ -264,8 +266,7 @@ Das ATA-Lightweight-Gateway erfordert mindestens 2 Kerne und 6 GB RAM auf dem Do
 Um eine optimale Leistung zu erzielen, legen Sie die **Energieoption** des ATA-Lightweight-Gateways auf **Hohe Leistung** fest.
 Das ATA-Lightweight-Gateway kann auf den Domänencontrollern verschiedener Auslastungen und Größen bereitgestellt werden, abhängig vom Umfang des Netzwerkverkehrs zwischen den Domänencontrollern und der auf dem Domänencontroller installierten Ressourcen.
 
-> [!NOTE] 
-> Bei Ausführung als virtueller Computer wird kein dynamischer Arbeitsspeicher und keine andere Speichererweiterungsfunktion unterstützt.
+Weitere Informationen zum dynamischen Arbeitsspeicher oder zu anderen Features für die Arbeitsspeicher-über Auslastung finden Sie unter [dynamischer Arbeitsspeicher](#dynamic-memory).
 
 Weitere Informationen zu den Hardwareanforderungen des ATA-Lightweight-Gateways finden Sie unter [ATA-Kapazitätsplanung](ata-capacity-planning.md).
 
