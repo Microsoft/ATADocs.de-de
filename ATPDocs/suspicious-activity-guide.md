@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/25/2019
+ms.date: 08/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2ac458831e47db99c0b61d56cd390c5d01ed8ca1
-ms.sourcegitcommit: dd8c94db68e85752c20bba3446b678cd1edcd932
+ms.openlocfilehash: 371a1227552d1d7dd8635e0a41492c69e66fe87c
+ms.sourcegitcommit: 8df26fb312472b8df1da70e581517223d26de8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68604349"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68781930"
 ---
 # <a name="azure-atp-security-alerts"></a>Azure ATP-Sicherheitswarnungen
 
@@ -62,7 +62,7 @@ In Version 2.56 wurden alle Sicherheitswarnungen für Azure ATP umbenannt. Die n
 |[Suspected golden ticket usage (time anomaly) (Verdacht auf Verwendung eines Golden Ticket (Zeitanomalie))](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-time-anomaly-external-id-2022)|Kerberos Golden Ticket – Zeitanomalie|2022|Hoch|Ausweitung von Berechtigungen,<br> Seitliche Verschiebung,<br>Persistenz|
 |[Suspected identity theft (Pass-the-Hash) (Verdacht auf Identitätsdiebstahl (Pass-the-Hash))](atp-lateral-movement-alerts.md#suspected-identity-theft-pass-the-hash-external-id-2017)|Identitätsdiebstahl mithilfe eines Pass-the-Hash-Angriffs|2017|Hoch|Seitliche Verschiebung|
 |[Suspected identity theft (Pass-the-Ticket) (Verdacht auf Identitätsdiebstahl (Pass-the-Ticket))](atp-lateral-movement-alerts.md#suspected-identity-theft-pass-the-ticket-external-id-2018)|Identitätsdiebstahl mithilfe eines Pass-the-Ticket-Angriffs|2018|Hoch oder Mittel|Seitliche Verschiebung|
-|[Suspected NTLM authentication tampering – preview (Vermutete Manipulation der NTLM-Authentifizierung (Vorschauversion))](atp-lateral-movement-alerts.md#suspected-ntlm-authentication-tampering-external-id-2039---preview)|N/V|2039|Mittel|Ausweitung von Berechtigungen, <br>Seitliche Verschiebung|
+|[Suspected NTLM authentication tampering (Vermutete Manipulation der NTLM-Authentifizierung)](atp-lateral-movement-alerts.md#suspected-ntlm-authentication-tampering-external-id-2039)|N/V|2039|Mittel|Ausweitung von Berechtigungen, <br>Seitliche Verschiebung|
 |[Vermuteter NTLM-Relaisangriff](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037)|N/V|2037|Mittel oder Niedrig, wenn mithilfe von signiertem NTLMv2-Protokoll beobachtet|Ausweitung von Berechtigungen, <br> Seitliche Verschiebung|
 |[Suspected over-pass-the-hash attack (encryption downgrade) (Verdacht auf Over-Pass-the-Hash-Angriff (Herabstufung der Verschlüsselung))](atp-lateral-movement-alerts.md#suspected-overpass-the-hash-attack-encryption-downgrade-external-id-2008)|Aktivität zur Herabstufung der Verschlüsselung (potenzieller Overpass-the-Hash-Angriff)|2008|Mittel|Seitliche Verschiebung|
 |[Suspected overpass-the-hash attack (Kerberos) (Verdacht auf einen Overpass-the-Hash-Angriff (Kerberos))](atp-lateral-movement-alerts.md#suspected-overpass-the-hash-attack-kerberos-external-id-2002)|Ungewöhnliche Kerberos-Protokollimplementierung (potenzieller Overpass-the-Hash-Angriff)|2002|Mittel|Seitliche Verschiebung|

@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/25/2019
+ms.date: 08/05/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 2257eb00-8614-4577-b6a1-5c65085371f2
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: cf6d57113fc3457d7aeb097e77b7668fa012b546
-ms.sourcegitcommit: 4662ad41addf92727367874d909937fa331fb866
+ms.openlocfilehash: dd78f2d18010b043dc58bfb6fac24429a36ba2f1
+ms.sourcegitcommit: 8df26fb312472b8df1da70e581517223d26de8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485004"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68781842"
 ---
 # <a name="tutorial-lateral-movement-alerts"></a>Tutorial: Lateral Movement-Warnungen  
 
@@ -37,7 +37,7 @@ Die folgenden Sicherheitswarnungen unterstützen Sie dabei, verdächtige Aktivit
 > * Remotecodeausführung über DNS (externe ID 2036)
 > * Suspected identity theft (pass-the-hash) (Verdacht auf Identitätsdiebstahl (Pass-the-Hash)) (externalid 2017)
 > * Suspected identity theft (pass-the-ticket) (Verdacht auf Identitätsdiebstahl (Pass-the-Ticket)) (externalid 2018)
-> * Vermutete Manipulation der NTLM-Authentifizierung (Externe ID 2039): Vorschauversion
+> * Suspected NTLM authentication tampering (external ID 2039) (Vermutete Manipulation der NTLM-Authentifizierung [Externe ID 2039]) 
 > * Vermuteter NTLM-Relaisangriff (Exchange-Konto) (externe ID 2037)
 > * Suspected over-pass-the-hash attack (encryption downgrade) (Verdacht auf Over-Pass-the-Hash-Angriff (Herabstufung der Verschlüsselung)) (externalid 2008)
 > * Suspected overpass-the-hash attack (Kerberos) (Verdacht auf einen Overpass-the-Hash-Angriff (Kerberos)) (externalid 2002)
@@ -147,7 +147,7 @@ Es gibt benutzerdefinierte Anwendungen, die Tickets im Auftrag des Benutzers wei
 4. Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA.
 5. Wenn Windows Defender ATP installiert ist, nutzen Sie **klist.exe purge**, um alle Tickets der angegebenen Anmeldesitzung endgültig zu löschen und zu verhindern, dass die Tickets in Zukunft verwendet werden.
 
-## <a name="suspected-ntlm-authentication-tampering-external-id-2039---preview"></a>Vermutete Manipulation der NTLM-Authentifizierung (Externe ID 2039): Vorschauversion
+## <a name="suspected-ntlm-authentication-tampering-external-id-2039"></a>Suspected NTLM authentication tampering (external ID 2039) (Vermutete Manipulation der NTLM-Authentifizierung [Externe ID 2039])
 
 Im Juni 2019 hat Microsoft das [Sicherheitsrisiko CVE-2019-1040](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1040) veröffentlicht und die Ermittlung einer neuen Manipulationsrisikos in Microsoft Windows angekündigt, wenn ein Man-in-the-Middle-Angriff die NTLM-MIC (Message Integrity Check) erfolgreich umgehen kann.
 
