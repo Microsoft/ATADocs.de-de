@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 7/30/2018
+ms.date: 08/08/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 7597ed25-87f5-472c-a496-d5f205c9c391
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 623e5b3623238ec8a1e12c1154a76e0aeb6b57bb
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.openlocfilehash: bd47ebbe059014015b180ad568e4c519ba1b95b7
+ms.sourcegitcommit: db35bae8354fa35644e9334bfc37b9ffbafdaacc
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65195891"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68862578"
 ---
 # <a name="install-ata---step-9"></a>Installieren von ATA: Schritt 9
 
@@ -25,6 +25,9 @@ ms.locfileid: "65195891"
 
 > [!div class="step-by-step"]
 > [« Schritt 8 ](install-ata-step7.md)
+
+> [!NOTE]
+> Bevor Sie eine neue Richtlinie erzwingen, stellen Sie immer sicher, dass Ihre Umgebung sicher bleibt, ohne die Anwendungs Kompatibilität zu beeinträchtigen, indem Sie zunächst die vorgeschlagenen Änderungen im Überwachungsmodus aktivieren und überprüfen. 
 
 ## <a name="step-9-configure-sam-r-required-permissions"></a>Schritt 9: Konfigurieren von für SAM-R erforderliche Berechtigungen
 
@@ -45,16 +48,13 @@ Wenn Sie sicherstellen möchten, dass Windows-Clients und -Server zulassen, dass
 
 3. Der **ATA-Dienst**, der bei der Installation erstellt wurde, weist nun die nötigen Berechtigungen auf, um SAM-R in der Umgebung auszuführen.
 
-> [!NOTE]
-> Stellen Sie vor der Erzwingung neuer Richtlinien sicher, dass Ihre Umgebung weiterhin geschützt ist, ohne dass die Anwendungskompatibilität beeinträchtigt wird, indem Sie den Überwachungsmodus aktivieren und Ihre vorgeschlagenen Änderungen im Überwachungsmodus überprüfen. 
-
  Weitere Informationen zu SAM-R und dieser Gruppenrichtlinie finden Sie unter [Netzwerkzugriff: Clients einschränken, die Remoteaufrufe an SAM ausführen dürfen](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
 
 > [!div class="step-by-step"]
 > [« Schritt 8 ](install-ata-step7.md)
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 - [Handbuch für die ATA POC-Bereitstellung](http://aka.ms/atapoc)
 - [Tool zur Bemessung von ATA-Gateways](http://aka.ms/atasizingtool)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

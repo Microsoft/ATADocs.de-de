@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 08/05/2019
+ms.date: 08/07/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3f0076091ced915776ea54578a58ea3a3fa5856f
-ms.sourcegitcommit: 8df26fb312472b8df1da70e581517223d26de8c2
+ms.openlocfilehash: 139ea7e4eaecadeaf3fd57fb8ed7afe1dd8ea096
+ms.sourcegitcommit: db35bae8354fa35644e9334bfc37b9ffbafdaacc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68781846"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68862568"
 ---
 # <a name="ata-prerequisites"></a>ATA-Voraussetzungen
 
@@ -89,7 +89,7 @@ Die Installation von ATA Center als virtueller Computer wird unterstützt.
 |Virtueller Computer unter|Beschreibung|
 |------------|-------------|
 |Hyper-V|Stellen Sie sicher, dass die Option **dynamischer Arbeitsspeicher aktivieren** für die VM nicht aktiviert ist.|
-|VMware|Stellen Sie sicher, dass die Menge des konfigurierten Speichers und der reservierte Arbeitsspeicher identisch sind, oder aktivieren Sie die folgende Option in der VM-Einstellung – **alle Gast Arbeitsspeicher reservieren (alle gesperrt**).|
+|VMware|Stellen Sie sicher, dass die Menge des konfigurierten Speichers und der reservierte Arbeitsspeicher identisch sind, oder wählen Sie die folgende Option in der VM-Einstellung – **alle Gast Arbeitsspeicher reservieren (alle gesperrt)** .|
 |Anderer Virtualisierungshost|Informationen dazu, wie Sie sicherstellen, dass der Arbeitsspeicher der VM jederzeit vollständig zugeordnet ist, finden Sie in der vom Hersteller bereitgestellten Dokumentation. |
 |
 
@@ -180,7 +180,7 @@ Informationen zur Verwendung von virtuellen Computern mit dem ATA-Gateway finden
 Um eine optimale Leistung zu erzielen, legen Sie die **Energieoption** des ATA-Gateways auf **Hohe Leistung** fest.<br>
 Ein ATA-Gateway kann die Überwachung von mehreren Domänencontrollern unterstützen, abhängig vom Umfang des Netzwerkverkehrs zu und von den Domänencontrollern.
 
-Weitere Informationen zum dynamischen Arbeitsspeicher oder zu anderen Features für die Arbeitsspeicher-über Auslastung finden Sie unter [dynamischer Arbeitsspeicher](#dynamic-memory).
+Weitere Informationen zum dynamischen Arbeitsspeicher oder zu anderen Speicherverwaltungsfunktionen für virtuelle Computer finden Sie unter [dynamischer Arbeitsspeicher](#dynamic-memory).
 
 Weitere Informationen zu den Hardwareanforderungen des ATA-Gateways finden Sie unter [ATA-Kapazitätsplanung](ata-capacity-planning.md).
 
@@ -266,7 +266,7 @@ Das ATA-Lightweight-Gateway erfordert mindestens 2 Kerne und 6 GB RAM auf dem Do
 Um eine optimale Leistung zu erzielen, legen Sie die **Energieoption** des ATA-Lightweight-Gateways auf **Hohe Leistung** fest.
 Das ATA-Lightweight-Gateway kann auf den Domänencontrollern verschiedener Auslastungen und Größen bereitgestellt werden, abhängig vom Umfang des Netzwerkverkehrs zwischen den Domänencontrollern und der auf dem Domänencontroller installierten Ressourcen.
 
-Weitere Informationen zum dynamischen Arbeitsspeicher oder zu anderen Features für die Arbeitsspeicher-über Auslastung finden Sie unter [dynamischer Arbeitsspeicher](#dynamic-memory).
+Weitere Informationen zum dynamischen Arbeitsspeicher oder zu anderen Speicherverwaltungsfunktionen für virtuelle Computer finden Sie unter [dynamischer Arbeitsspeicher](#dynamic-memory).
 
 Weitere Informationen zu den Hardwareanforderungen des ATA-Lightweight-Gateways finden Sie unter [ATA-Kapazitätsplanung](ata-capacity-planning.md).
 
