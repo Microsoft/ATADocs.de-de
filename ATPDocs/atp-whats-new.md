@@ -1,31 +1,41 @@
 ---
 title: Neuerungen in Azure Advanced Threat Protection (Azure ATP) | Microsoft-Dokumentation
-description: Beschreibt die neuesten Releases von Azure ATP und enthält Informationen zu den Neuerungen in den einzelnen Version.
+description: Dieser Artikel wird häufig aktualisiert, um Sie über die Neuerungen in der neuesten Version von Azure Advanced Threat Protection (Azure ATP) auf dem Laufenden zu halten.
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 08/05/2019
+ms.date: 08/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 23feedf3b48c3b21f594d764321f0e241e8408cb
-ms.sourcegitcommit: 8df26fb312472b8df1da70e581517223d26de8c2
+ms.openlocfilehash: b190258096e7e3ea0d42c52931f02c148a725f21
+ms.sourcegitcommit: e185d6cf13ef0c40206a5d1980e3953ef8834a48
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68781903"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68951233"
 ---
-# <a name="whats-new-in-azure-atp"></a>Neuerungen in Azure ATP
+# <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Neuerungen in Azure Advanced Threat Protection (Azure ATP)
+
+Dieser Artikel wird häufig aktualisiert, um Sie über die Neuerungen in der neuesten Version von Azure ATP auf dem Laufenden zu halten.
+
+RSS-Feed: Sie können Benachrichtigungen erhalten, wenn diese Seite aktualisiert wird, indem Sie folgende URL kopieren und in Ihren Feedreader einfügen: `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
+
+Veröffentlicht: 11. August 2019
+
+## <a name="azure-atp-release-290"></a>Azure ATP Release 2.90
+
+- Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
 Veröffentlicht: 4. August 2019
 
 ## <a name="azure-atp-release-289"></a>Azure ATP Release 2.89
 
-- **Verbesserung der Erkennungsmethode**<br>Um eine übermäßige Generierung von NTLM-Datenverkehr bei der Erstellung präziser LMP-Bewertungen (Lateral Movement Path) zu vermeiden, wurde Verbesserungen an der Azure ATP-Sensorlogik vorgenommen, um weniger auf die NTLM-Nutzung angewiesen zu sein und Kerberos stärker zu nutzen.  
+- **Verbesserung der Sensormethode**<br>Um eine übermäßige Generierung von NTLM-Datenverkehr bei der Erstellung präziser LMP-Bewertungen (Lateral Movement Path) zu vermeiden, wurden Verbesserungen an den Azure ATP-Sensormethode vorgenommen, um weniger auf die NTLM-Nutzung angewiesen zu sein und Kerberos stärker zu nutzen.  
 
 - **Erweiterung von Warnungen: Suspected Golden Ticket usage (nonexistent account)** (Verdacht auf Verwendung eines Golden Ticket (nicht vorhandenes Konto))<br>SAM-Namensänderungen wurden zu den unterstützenden Beweisarten hinzugefügt, die in dieser Art von Warnungen aufgeführt sind. Weitere Informationen zur Warnung, einschließlich Informationen zum Vermeidung dieser Art von Aktivitäten und zur Behebung des Fehlers finden Sie in [Suspected Golden Ticket usage (nonexistent account)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-nonexistent-account-external-id-2027) (Verdacht auf Verwendung eines Golden Ticket [nicht vorhandenes Konto]).
 
