@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 08/07/2019
+ms.date: 08/20/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 139ea7e4eaecadeaf3fd57fb8ed7afe1dd8ea096
-ms.sourcegitcommit: db35bae8354fa35644e9334bfc37b9ffbafdaacc
+ms.openlocfilehash: e08668199056c59093caa202123cf01a4ed303cc
+ms.sourcegitcommit: 2aab3c4244db694616ec02a9b8ae2e266d6fdddc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68862568"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69629349"
 ---
 # <a name="ata-prerequisites"></a>ATA-Voraussetzungen
 
@@ -102,6 +102,7 @@ Wenn Sie auf einem physischen Server arbeiten, erfordert die ATA-Datenbank, dass
 Um eine optimale Leistung zu erzielen, legen Sie die **Energieoption** von ATA Center auf **Hohe Leistung** fest.<br>
 Die erforderlichen Serverspezifikationen hängen von der Anzahl der überwachten Domänencontroller und der Auslastung der einzelnen Domänencontroller ab. Weitere Informationen finden Sie unter [ATA-Kapazitätsplanung](ata-capacity-planning.md).
 
+Für Windows-Betriebssysteme 2008R2 und 2012 wird das Gateway im Modus für [mehrere Prozessor Gruppen](https://docs.microsoft.com/windows/win32/procthread/processor-groups) nicht unterstützt. Weitere Informationen zum Modus für mehrere Prozessor Gruppen finden Sie unter [Problem](troubleshooting-ata-known-errors.md##multi-processor-group-mode)Behandlung. 
 
 ### <a name="time-synchronization"></a>Zeitsynchronisierung
 

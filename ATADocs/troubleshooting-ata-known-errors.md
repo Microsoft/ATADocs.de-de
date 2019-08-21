@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/29/2019
+ms.date: 08/20/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: e6a286b4468476cd0b2ac9a350c018e4c04a265e
-ms.sourcegitcommit: b021f8dfc54e59de429f93cc5fc0d733d92b00b8
+ms.openlocfilehash: d20aecfd55dd5b348c459373cb69c37bba91d458
+ms.sourcegitcommit: 2aab3c4244db694616ec02a9b8ae2e266d6fdddc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66403599"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69629274"
 ---
 # <a name="troubleshooting-ata-known-issues"></a>Behandlung von bekannten Problemen bei ATA
 
@@ -30,7 +30,7 @@ In diesem Abschnitt sind mögliche Fehler, die es in den Bereitstellungen von AT
 
 > [!div class="mx-tableFixed"]
 > 
-> |Fehler|Beschreibung|Lösung|
+> |Fehler|Beschreibung|Auflösung|
 > |-------------|----------|---------|
 > |System.DirectoryServices.Protocols.LdapException: Lokaler Fehler.|Die ATA-Gateway konnte sich nicht beim Domänencontroller authentifizieren.|1. Vergewissern Sie sich, dass der DNS-Eintrag des Domänencontrollers im DNS-Server ordnungsgemäß konfiguriert ist. <br>2. Vergewissern Sie sich, dass die Zeit des ATA-Gateways mit der Zeit des Domänencontrollers synchronisiert ist.|
 > |System.IdentityModel.Tokens.SecurityTokenValidationException: Die Zertifikatkette kann nicht überprüft werden.|Das ATA-Gateway konnte das Zertifikat von ATA Center nicht überprüfen.|1. Vergewissern Sie sich, dass das Zertifikat der Stammzertifizierungsstelle im Zertifikatspeicher für vertrauenswürdige Zertifikate auf dem ATA-Gateway installiert ist. <br>2. Überprüfen Sie, ob die Zertifikatsperrliste (Certificate Revocation List, CRL) verfügbar ist und ob die Überprüfung auf Zertifikatssperrung ausgeführt werden kann.|
@@ -46,7 +46,7 @@ In diesem Abschnitt sind mögliche Fehler, die es in den Bereitstellungen von AT
 > |System.InvalidOperationException: Die Instanz „Microsoft.Tri.Gateway“ existiert nicht in der angegebenen Kategorie.|Die PIDs wurden für Prozessnamen im ATA-Gateway aktiviert.|Verwenden Sie [KB281884](https://support.microsoft.com/kb/281884), um die PIDs in den Prozessnamen zu deaktivieren.|
 > |System.InvalidOperationException: Die Kategorie ist nicht vorhanden.|Möglicherweise wurden die Leistungsindikatoren in der Registrierung deaktiviert.|Verwenden Sie [KB2554336](https://support.microsoft.com/kb/2554336), um die Leistungsindikatoren neu zu erstellen.|
 > |System.ApplicationException: Die ETW-Sitzung „MMA-ETW-Livecapture-a4f595bd-f567-49a7-b963-20fa4e370329“ kann nicht gestartet werden.|In der HOSTS-Datei existiert ein Hosteintrag, der auf den Kurznamen des Computers verweist.|Entfernen Sie den Hosteintrag aus „C:\Windows\System32\drivers\etc\HOSTS“, oder ändern Sie ihn in einen eindeutigen Domänennamen um.|
-> |System.IO.IOException: Fehler bei der Authentifizierung, da die Gegenseite den Transportstream geschlossen wurde, oder einen sicheren SSL/TLS-Kanal nicht erstellt werden konnte|TLS 1.0 ist auf dem ATA-Gateway deaktiviert, .NET ist aber für die Verwendung von TLS 1.2 eingerichtet.|Verwenden Sie eine der folgenden Optionen: </br> TLS 1.0 auf dem ATA-Gateway aktivieren </br>Aktivieren Sie TLS 1.2 in .NET, indem Sie die Registrierungsschlüssel wie folgt für die Verwendung der Standardwerte des Betriebssystems für SSL und TLS einrichten: </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001 `</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`|
+> |System.IO.IOException: Die Authentifizierung ist fehlgeschlagen, weil die Remote Seite den Transportstream geschlossen hat oder keinen sicheren SSL/TLS-Kanal erstellen konnte.|TLS 1.0 ist auf dem ATA-Gateway deaktiviert, .NET ist aber für die Verwendung von TLS 1.2 eingerichtet.|Verwenden Sie eine der folgenden Optionen: </br> TLS 1.0 auf dem ATA-Gateway aktivieren </br>Aktivieren Sie TLS 1.2 in .NET, indem Sie die Registrierungsschlüssel wie folgt für die Verwendung der Standardwerte des Betriebssystems für SSL und TLS einrichten: </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001 `</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`|
 > |System.TypeLoadException: Der Typ „Microsoft.Opn.Runtime.Values.BinaryValueBufferManager“ konnte nicht aus der Assembly „Microsoft.Opn.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35“ geladen werden.|Das ATA-Gateway konnte erforderliche Analysedateien nicht laden.|Überprüfen Sie, ob die Microsoft-Nachrichtenanalyse aktuell installiert ist. Die Nachrichtenanalyse wird nicht für die Installation mit dem ATA-Gateway bzw. Lightweight-Gateway unterstützt. Deinstallieren Sie die Nachrichtenanalyse und starten Sie den Gatewaydienst neu.|
 > |System.Net.WebException: Der Remoteserver hat einen Fehler zurückgegeben: (407) Proxyauthentifizierung erforderlich|Die Kommunikation des ATA-Gateways mit dem ATA Center wurde durch einen Proxyserver unterbrochen.|Deaktivieren Sie den Proxy auf dem Computer des ATA-Gateways. <br></br>Beachten Sie, dass Proxyeinstellungen pro Konto gelten können.|
 > |System.IO.DirectoryNotFoundException: Das System kann den angegebenen Pfad nicht finden. (Ausnahme von HRESULT: 0x80070003)|Mindestens einer der erforderlichen Dienste zur Ausführung von ATA konnte nicht gestartet werden.|Starten Sie die folgenden Dienste: <br></br>Leistungsprotokolle und -warnungen (PLA), Taskplaner (Zeitplan).|
@@ -57,7 +57,7 @@ In diesem Abschnitt sind mögliche Fehler, die es in den Bereitstellungen von AT
 ## <a name="deployment-errors"></a>Bereitstellungsfehler
 > [!div class="mx-tableFixed"]
 > 
-> |Fehler|Beschreibung|Lösung|
+> |Fehler|Beschreibung|Auflösung|
 > |-------------|----------|---------|
 > |Fehler bei der Installation von .NET Framework 4.6.1. Fehlernummer ist 0x800713ec.|Die erforderlichen Komponenten für .NET Framework 4.6.1 sind nicht auf dem Server installiert. |Stellen Sie vor der Installation von ATA sicher, dass die Windows-Updates [KB2919442](https://www.microsoft.com/download/details.aspx?id=42135) und [KB2919355](https://support.microsoft.com/kb/2919355) auf dem Server installiert sind.|
 > |System.Threading.Tasks.TaskCanceledException: Eine Aufgabe wurde abgebrochen.|Zeitüberschreitung während des Bereitstellungsvorgangs, da ATA Center nicht erreicht werden konnte.|1.    Überprüfen Sie Ihre Netzwerkverbindung zu ATA Center, indem Sie mithilfe der IP-Adresse dahin navigieren. <br></br>2.    Überprüfen Sie die Proxy- oder Firewallkonfiguration.|
@@ -70,7 +70,7 @@ In diesem Abschnitt sind mögliche Fehler, die es in den Bereitstellungen von AT
 ## <a name="ata-center-errors"></a>ATA Center-Fehler
 > [!div class="mx-tableFixed"]
 > 
-> |Fehler|Beschreibung|Lösung|
+> |Fehler|Beschreibung|Auflösung|
 > |-------------|----------|---------|
 > |System.Security.Cryptography.CryptographicException: Zugriff verweigert:|ATA Center konnte das ausgestellte Zertifikat nicht für die Entschlüsselung verwenden. Dies liegt höchstwahrscheinlich daran, dass ein Zertifikat verwendet wurde, dessen KeySpec- bzw. KeyNumber-Wert auf „Signature“ (AT\\_SIGNATURE) festgelegt wurde, statt KeyExchange (AT\\_KEYEXCHANGE) zu verwenden. Dies wird für die Entschlüsselung nicht unterstützt.|1.    Beenden Sie den ATA Center-Dienst. <br></br>2.     Löschen Sie das ATA Center-Zertifikat aus dem ATA Center-Zertifikatspeicher. (Stellen Sie vor dem Löschen sicher, dass Sie das Zertifikat mit dem privaten Schlüssel in einer PFX-Datei gesichert haben.) <br></br>3.    Öffnen Sie eine Eingabeaufforderung mit erhöhten Rechten, und führen Sie folgenden Befehl aus: certutil -importpfx "CenterCertificate.pfx" AT\\_KEYEXCHANGE <br></br>4.     Starten Sie den ATA Center-Dienst. <br></br>5.     Überprüfen Sie, ob alles wie erwartet funktioniert.|
 
@@ -79,12 +79,18 @@ In diesem Abschnitt sind mögliche Fehler, die es in den Bereitstellungen von AT
 
 > [!div class="mx-tableFixed"]
 > 
-> |Problem|Beschreibung|Lösung|
+> |Problem|Beschreibung|Auflösung|
 > |-------------|----------|---------|
 > |Es wurde kein Datenverkehr vom Domänencontroller empfangen, doch es wurden Überwachungswarnungen beobachtet.|    Es wurde kein Datenverkehr von einem Domänencontroller empfangen, der Portspiegelung über ein ATA-Gateway verwendet.|Deaktivieren Sie diese Funktionen auf dem verwendeten NIC auf dem ATA-Gateway unter **Erweiterte Einstellungen**:<br></br>Empfang zusammengeführter Segmente (IPv4)<br></br>Empfang zusammengeführter Segmente (IPv6)|
 > |Die folgende Überwachungswarnung wird angezeigt: Ein Teil des Netzwerkdatenverkehrs wird nicht analysiert|Wenn Sie ein ATA-Gateway oder ein Lightweight-Gateway auf einem virtuellen VMware-Computer haben, erhalten Sie möglicherweise diese Warnung. Dies tritt aufgrund von Konfigurationskonflikten in VMware auf.|Legen Sie die folgenden Einstellungen in der NIC-Konfiguration der VM auf „0“ (null) oder „Deaktiviert“ fest: TsoEnable, LargeSendOffload, TSO Offload, Giant TSO Offload. TLS 1.0 ist im ATA-Gateway deaktiviert, aber .NET ist auf die Verwendung von TLS 1.2 eingestellt.|
 
+## <a name="multi-processor-group-mode"></a>Modus für mehrere Prozessor Gruppen 
+Für Windows-Betriebssysteme 2008R2 und 2012 wird das ATA-Gateway im Modus für mehrere Prozessor Gruppen nicht unterstützt.
 
+Mögliche Problem Umgehungen:
+- Wenn Hyperthreading aktiviert ist, schalten Sie es aus. Dadurch kann die Anzahl logischer Kerne verringert werden, um zu vermeiden, dass im Modus für **mehrere Prozessor Gruppen** ausgeführt werden muss. 
+
+- Wenn Ihr Computer über weniger als 64 logische Kerne verfügt und auf einem HP-Host ausgeführt wird, können Sie die BIOS-Einstellung der **NUMA-Gruppengrößen Optimierung** von der Standard Einstellung in " **flach**" ändern. 
 
 
 
