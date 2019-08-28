@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/25/2019
+ms.date: 08/20/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 347f46b51267762760783fdc44b689e213ba29d8
-ms.sourcegitcommit: 4662ad41addf92727367874d909937fa331fb866
+ms.openlocfilehash: ba1c8ac59dcf762103cd4d0e7a5a54c2b02e1e9a
+ms.sourcegitcommit: 2aab3c4244db694616ec02a9b8ae2e266d6fdddc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485037"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69629294"
 ---
 # <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-azure-atp-sensor"></a>Konfigurieren von Endpunktproxy- und Internetkonnektivitätseinstellungen für Ihren Azure ATP-Sensor
 
@@ -73,7 +73,8 @@ Die vorherigen URLs werden automatisch der richtigen Dienstidentifizierung für 
 
  
 > [!NOTE]
-> Wenn Sie eine SSL-Überprüfung des Azure ATP-Netzwerkdatenverkehrs durchführen (zwischen dem Sensor und dem Azure ATP-Dienst), muss die SSL-Überprüfung die gegenseitige Überprüfung unterstützen.
+> Um ein Maximum an Sicherheit und Datenschutz zu gewährleisten, verwendet Azure ATP eine zertifikatbasierte gegenseitige Authentifizierung zwischen jedem Azure ATP-Sensor und dem Azure ATP-Cloud-Back-End. Wenn in Ihrer Umgebung eine SSL-Überprüfung verwendet wird, stellen Sie sicher, dass diese Überprüfung für die gegenseitige Authentifizierung konfiguriert ist, sodass der Authentifizierungsprozess nicht beeinträchtigt wird.
+
 
 
 ## <a name="see-also"></a>Weitere Informationen

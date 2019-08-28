@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 639dc38eeb9f4944cdd011074463953a13a49966
-ms.sourcegitcommit: e185d6cf13ef0c40206a5d1980e3953ef8834a48
+ms.openlocfilehash: b78b7f39b7d5c94e2709e080677344919dd422cf
+ms.sourcegitcommit: 2aab3c4244db694616ec02a9b8ae2e266d6fdddc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "65196669"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69629314"
 ---
 # <a name="troubleshooting-azure-atp-known-issues"></a>Behandlung von bekannten Problemen bei Azure ATP 
 
@@ -62,6 +62,14 @@ Wenn der Sensor bereits installiert ist:
 3.  Deinstallieren Sie WinPcap.
 4.  Installieren Sie Npcap mit den folgenden Optionen: loopback_support=no & winpcap_mode=yes
 5.  Installieren Sie das Sensorpaket erneut.
+
+## <a name="multi-processor-group-mode"></a>Modus „Mehrere Prozessorgruppen“ 
+Unter den Windows-Betriebssystemen 2008 R2 und 2012 werden Azure ATP-Sensoren im Modus „Mehrere Prozessorgruppen“ nicht unterstützt.
+
+Mögliche Problemumgehungen:
+- Wenn Hyperthreading aktiviert ist, deaktivieren Sie es. Dadurch kann die Anzahl logischer Kerne möglicherweise weit genug reduziert werden, sodass eine Ausführung im Modus **Mehrere Prozessorgruppen** nicht notwendig ist. 
+
+- Wenn Ihr Computer weniger als 64 logische Kerne aufweist und auf einem HP-Host ausgeführt wird, können Sie möglicherweise die BIOS-Einstellung **NUMA Group Size Optimization** vom Standardwert **Clustered** in **Flat** ändern. 
 
 ## <a name="windows-defender-atp-integration-issue"></a>Problem mit der Windows Defender-ATP-Integration
 
