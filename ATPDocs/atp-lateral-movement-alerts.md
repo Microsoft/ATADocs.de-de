@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 08/05/2019
+ms.date: 08/26/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 2257eb00-8614-4577-b6a1-5c65085371f2
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: dd78f2d18010b043dc58bfb6fac24429a36ba2f1
-ms.sourcegitcommit: 8df26fb312472b8df1da70e581517223d26de8c2
+ms.openlocfilehash: a20c26d45f8cc0ddda05b103e03fa16f9de569b8
+ms.sourcegitcommit: 033ac9277effa00c4423caf6f2a3febd796ca3db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68781842"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70052448"
 ---
 # <a name="tutorial-lateral-movement-alerts"></a>Tutorial: Lateral Movement-Warnungen  
 
@@ -177,7 +177,7 @@ Bei dieser Erkennung wird eine Azure ATP-Sicherheitswarnung ausgelöst, wenn NTL
 
 **Beschreibung**
 
-Ein Exchange-Server kann dafür konfiguriert werden, die NTLM-Authentifizierung mit dem Konto für den Exchange-Server auf einem HTTP-Remoteserver auszulösen, der von einem Angreifer betrieben wird. Dieser Server wartet darauf, dass die Kommunikation des Exchange-Servers die eigene Authentifizierung auf einen anderen Server oder über LDAP auf Active Directory überträgt, um die Authentifizierungsinformationen abzurufen.
+Ein Exchange-Server kann so konfiguriert werden, dass die NTLM-Authentifizierung mit dem Exchange-Server-Konto bei einem HTTP-Remoteserver ausgelöst wird, der von einem Angreifer betrieben wird. Dieser Server wartet darauf, dass die Kommunikation des Exchange-Servers die eigene vertrauliche Authentifizierung auf einen anderen Server oder über LDAP auf Active Directory überträgt, und greift dann die Authentifizierungsinformationen ab.
 
 Sobald der Relaisserver die NTLM-Authentifizierung empfängt, wird eine Abfrage durchgeführt, die vom Zielserver erstellt wurde. Der Client antwortet auf dieser Abfrage und verhindert so, dass der Angreifer antworten kann. Auf diese Weise kann der NTLM-Vorgang mit dem Zieldomänencontroller fortgesetzt werden. 
 

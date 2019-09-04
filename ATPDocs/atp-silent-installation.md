@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/17/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 24eca4c6-c949-42ea-97b9-41ef0fb611f1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6fca63fb488aef6fb26f4f501c4f6af896e223bd
-ms.sourcegitcommit: 4662ad41addf92727367874d909937fa331fb866
+ms.openlocfilehash: d45d08cc2a059fa231194f7aa334d4f557996ba4
+ms.sourcegitcommit: f7c75bc5715c5bda0b3110364e2aebddddce8a13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485057"
+ms.lasthandoff: 09/01/2019
+ms.locfileid: "70209188"
 ---
 # <a name="azure-atp-switches-and-silent-installation"></a>Azure ATP-Switches und automatische Installation
 Dieser Artikel enthält Anleitungen und Informationen zu Azure ATP-Switches und der automatischen Installation.
@@ -46,10 +46,16 @@ Zur Nachverfolgung des Bereitstellungsfortschritts überwachen Sie die Protokoll
 
 Verwenden Sie den folgenden Befehl, um eine vollständig automatische Installation des Azure ATP-Sensors auszuführen:
 
-
-**Syntax**:
+**cmd.exe-Syntax**:
 
     "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
+
+**PowerShell-Syntax**:
+
+    ./"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
+
+> [!NOTE]
+> Beim Verwenden der PowerShell-Syntax führt das Auslassen des Präfixes **./** zu einem Fehler, der eine automatische Installation verhindert.
 
 > [!NOTE]
 > Kopieren Sie den Zugriffsschlüssel, der im Azure ATP-Portal auf der Seite **Sensor** im Abschnitt **Konfiguration** angezeigt wird.

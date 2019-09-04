@@ -5,14 +5,14 @@ ms.service: azure-advanced-threat-protection
 ms.topic: tutorial
 author: mlottner
 ms.author: mlottner
-ms.date: 03/03/2019
+ms.date: 09/01/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: 20e91bc710dc184fa710cf7fd59cb9bd9d625d20
-ms.sourcegitcommit: 929f28783110c7e114ab36d4cccd50563f4030df
+ms.openlocfilehash: 11312f033261dd74f13dc0b3b9c093617e2c281c
+ms.sourcegitcommit: f7c75bc5715c5bda0b3110364e2aebddddce8a13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57253962"
+ms.lasthandoff: 09/01/2019
+ms.locfileid: "70209243"
 ---
 # <a name="tutorial-reconnaissance-playbook"></a>Tutorial: Playbook zu Reconnaissance
 
@@ -46,6 +46,8 @@ Testverfahren für Reconnaissanceangriffe:
 
 Zuerst wird ein Angreifer u.a. versuchen, eine Kopie aller DNS-Informationen zu erhalten. Bei erfolgreicher Ausführung erhält der Angreifer umfangreiche Informationen über Ihre Umgebung, die möglicherweise ähnliche Informationen zu Ihren sonstigen Umgebungen oder Netzwerken umfassen.
 
+Azure ATP unterdrückt Aktivitäten zur Netzwerkzuordnungs-Reconnaissance in Ihrer **Zeitachse für verdächtige Aktivitäten**, bis eine Lernphase von acht Tagen abgeschlossen ist. In der Lernphase lernt Azure ATP, was in Ihrem Netzwerk normal und ungewöhnlich ist. Nach der achttägigen Lernphase lösen ungewöhnliche Ereignisse der Netzwerkzuordnungs-Reconnaissance die entsprechende Sicherheitswarnung aus. 
+
 ### <a name="run-nslookup-from-victimpc"></a>Ausführen von nslookup auf VictimPC
 
 Um die DNS-Reconnaissance zu testen, verwenden wir das native Befehlszeilentool *nslookup*, um eine DNS-Zonenübertragung zu initiieren. DNS-Server mit der richtigen Konfiguration verweigern Abfragen dieses Typs und gestatten den Versuch der Zonenübertragung nicht.  
@@ -72,18 +74,18 @@ ls -d contoso.azure
 
  ![nslookup-Befehlsversuch zum Kopieren des DNS-Serversfehlers](media/playbook-recon-nslookup.png)
 
-Wenn **ContsoDC** Ihr erster bereitgestellter Sensor ist, warten Sie 15 Minuten, bis das Datenbank-Back-End das Bereitstellen der erforderlichen Microservices beendet hat.
+Wenn **ContosoDC** Ihr erster bereitgestellter Sensor ist, warten Sie 15 Minuten, bis das Datenbank-Back-End die Bereitstellung der erforderlichen Microservices beendet hat.
 
 ### <a name="network-mapping-reconnaissance-dns-detected-in-azure-atp"></a>Reconnaissance über Netzwerkzuordnung (DNS) in Azure ATP erkannt
 
-Das Abrufen der Sichtbarkeit dieses Versuchstyps (fehlerhaft oder erfolgreich) ist entscheidend für den Domänenbedrohungsschutz. Da wir gerade die Umgebung installiert haben, müssen wir die Aktivität auf der Zeitachse logischer Aktivitäten beobachten. 
+Das Abrufen der Sichtbarkeit dieses Versuchstyps (fehlerhaft oder erfolgreich) ist entscheidend für den Domänenbedrohungsschutz. Nachdem Sie die Umgebung installiert haben, müssen Sie zur Zeitachse **Logische Aktivitäten** wechseln, um die erkannte Aktivität anzuzeigen. 
 
 Geben Sie in der Azure ATP-Suche **VictimPC** ein, und klicken Sie dann darauf, um die Zeitachse anzuzeigen.
 
 ![DNS-Reconnaissance von AATP erkannt, Übersicht](media/playbook-recon-nslookupdetection1.png)
 
 Suchen Sie nach der Aktivität „AXFR query“. Azure ATP erkennt diese Art von Reconnaissance gegen Ihr DNS. 
-  - Klicken Sie bei einer großen Anzahl von Aktivitäten auf **Filtern nach**, und deaktivieren Sie alle Typen außer „DNS-Abfrage“.
+  - Wenn viele Aktivitäten vorhanden sind, klicken Sie auf **Filtern nach**, und deaktivieren Sie alle Typen außer **DNS-Abfrage**.
 
 ![Detaillierte Ansicht der DNS-Reconnaissanceerkennung in AATP](media/playbook-recon-nslookupdetection2.png)
 

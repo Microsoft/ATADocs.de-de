@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/07/2019
+ms.date: 08/26/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 0b3a1db5-0d43-49af-b356-7094cc85f0a5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f53d4930ed6fc4492f6360b3aab12e9c3655b390
-ms.sourcegitcommit: 09275d3400534200fa6ea572e89e440b3cc58360
+ms.openlocfilehash: 1bfed94e29200a52eba6de8758e1241b14084264
+ms.sourcegitcommit: 033ac9277effa00c4423caf6f2a3febd796ca3db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67786398"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70052391"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Tutorial: Warnungen zu Domänendominanz  
 
@@ -339,11 +339,11 @@ Bei Anwendungen wird möglicherweise ein schwächeres Verschlüsselungsverfahren
 
 ## <a name="suspected-golden-ticket-usage-forged-authorization-data-external-id-2013"></a>Vermutete Golden Ticket-Verwendung (gefälschte Autorisierungsdaten) (externe ID 2013)
 
-*Vorheriger Name*: Berechtigungsausweitung mithilfe von gefälschten Autorisierungsdaten
+Vorheriger Name: Berechtigungsausweitung mithilfe von gefälschten Autorisierungsdaten
 
-Beschreibung: Durch bekannte Sicherheitslücken in älteren Versionen von Windows Server können Angreifer das Privileged Attribute Certificate (PAC) manipulieren. Dabei handelt es sich um ein Feld im Kerberos-Ticket, das die Autorisierungsdaten eines Benutzer enthält (in Active Directory Domain Services ist dies die Gruppenmitgliedschaft) und Angreifern zusätzliche Rechte erteilt. 
+**Beschreibung**: Durch bekannte Sicherheitslücken in älteren Versionen von Windows Server können Angreifer das Privileged Attribute Certificate (PAC) manipulieren. Dabei handelt es sich um ein Feld im Kerberos-Ticket, das die Autorisierungsdaten eines Benutzer enthält (in Active Directory Domain Services ist dies die Gruppenmitgliedschaft) und Angreifern zusätzliche Rechte erteilt. 
  
-**TP, B-TP oder FP**
+**TP, B-TP oder FP?**
 <br>Bei Computern mit dem Sicherheitspatch MS14-068 (für Domänencontroller) oder MS11-013 (für Server) schlagen Angriffsversuche fehl und führen zu einem Kerberos-Fehler. 
 
 1. Überprüfen Sie, auf welche Ressourcen in der Beweisliste der Sicherheitswarnung zugegriffen wurde, und stellen Sie fest, ob die Versuche erfolgreich waren oder fehlschlugen.  
