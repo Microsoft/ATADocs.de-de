@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 8/26/2018
+ms.date: 09/08/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e774ad3775fa01ae79c2eb1a82e3111cd2cb214f
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.openlocfilehash: 9579108bd0bb2fa91e2e196ab90284f396025db1
+ms.sourcegitcommit: e4f108aec3cbfd88562217e36195b5d1250a1bbd
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65196598"
+ms.lasthandoff: 09/08/2019
+ms.locfileid: "70803109"
 ---
 # <a name="ata-architecture"></a>ATA-Architektur
 
@@ -57,8 +57,6 @@ Ihre ATA-Bereitstellung kann nur ATA-Lightweight-Gateways enthalten: Die ATA-Lig
 Ihre ATA-Bereitstellung enthält sowohl ATA-Gateways als auch ATA-Lightweight-Gateways. Die ATA-Lightweight-Gateways werden auf einigen Ihrer Domänencontroller installiert (z.B. alle Domänencontroller am Standort Ihres Branchs). Gleichzeitig werden andere Domänencontroller von ATA-Gateways überwacht (z.B. die größeren Domänencontroller in Ihrem Hauptdatenzentrum).
 
 In allen diesen Szenarios senden alle Gateways ihre Daten an ATA Center.
-
-
 
 
 ## <a name="ata-center"></a>ATA Center
@@ -132,10 +130,10 @@ Die folgenden Funktionen funktionieren für ATA-Gateways und ATA-Lightweight-Gat
 
 -   **Kandidat für die Domänensynchronisierung**<br>
 Das Gateway für die Domänensynchronisierung ist für die proaktive Synchronisierung aller Entitäten aus einer bestimmten Active Directory-Domäne verantwortlich (ähnlich dem Mechanismus, der von den Domänencontrollern selbst für die Replikation verwendet wird). Aus der Liste der Kandidaten wird nach dem Zufallsprinzip ein Gateway für die Domänensynchronisierung ausgewählt. <br><br>
-Wenn das Gateway für die Domänensynchronisierung mehr als 30 Minuten offline ist, wird stattdessen ein anderer Kandidaten ausgewählt. Wenn für eine bestimmte Domäne kein Gateway für die Domänensynchronisierung verfügbar ist, kann ATA Entitäten und ihre Änderungen nicht proaktiv synchronisieren. ATA ruft jedoch reaktiv neue Entitäten ab, sobald sie im überwachten Datenverkehr erkannt werden. 
-<br>Wenn kein Gateway für die Domänensynchronisierung verfügbar ist und Sie nach einer Entität suchen, der kein Datenverkehr zugeordnet ist, werden keine Suchergebnisse angezeigt.<br><br>
-Standardmäßig sind alle ATA-Gateways Kandidaten für die Domänensynchronisierung.<br><br>
-Da alle ATA-Lightweight-Gateways eher in Filialen und auf kleinen Domänencontrollern bereitgestellt werden, sind sie standardmäßig keine Kandidaten für die Domänensynchronisierung.
+Wenn das Gateway für die Domänensynchronisierung mehr als 30 Minuten offline ist, wird stattdessen ein anderer Kandidaten ausgewählt. Wenn für eine bestimmte Domäne kein Kandidat für den domänensynchronizer verfügbar ist, synchronisiert ATA proaktiv Entitäten und Ihre Änderungen, ATA ruft jedoch reaktiv neue Entitäten ab, sobald Sie im überwachten Datenverkehr erkannt werden. 
+<br>Wenn kein Domänen Synchronisierungs Modul verfügbar ist, werden bei der Suche nach einer Entität ohne zugeordneten Datenverkehr keine Ergebnisse angezeigt.<br><br>
+Standardmäßig handelt es sich bei allen ATA-Gateways um Domänen Synchronisierungs Kandidaten.<br><br>
+Da alle ATA-Lightweight-Gateways eher in Filialen und auf kleinen Domänencontrollern bereitgestellt werden, sind sie standardmäßig keine Kandidaten für die Domänensynchronisierung. <br><br>In einer Umgebung mit nur Lightweight-Gateways empfiehlt es sich, zwei der Gateways als Synchronisierungs Kandidaten zuzuweisen, wobei ein Lightweight-Gateway der standardmäßige Synchronisierungs Kandidat ist und einer der Sicherungen für den Fall, dass der Standardwert für mehr als 30 offline ist. Minuten. 
 
 
 -   **Ressourceneinschränkungen**<br>
@@ -180,7 +178,7 @@ Um die ATA-Erfassung von Pass-the-Hash, Brute Force, die Änderung an sensiblen 
 - [Auswählen des richtigen ATA-Gatewaytyps](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 - [Voraussetzungen für ATA](ata-prerequisites.md)
 - [Tool zur Bemessung von ATA-Gateways](http://aka.ms/atasizingtool)
 - [ATA-Kapazitätsplanung](ata-capacity-planning.md)

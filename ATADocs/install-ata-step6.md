@@ -2,22 +2,22 @@
 title: Installieren von Advanced Threat Analytics – Schritt 6 | Microsoft-Dokumentation
 description: In diesem Schritt bei der ATA-Installation konfigurieren Sie Datenquellen.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: rkarlin
-ms.date: 3/21/2018
+ms.date: 09/08/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: bd6cc7021a024755a931fd9a56db27c0825d10a4
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.openlocfilehash: ccea2b41e99e4d3ab19efc703f337115740c2e0d
+ms.sourcegitcommit: e4f108aec3cbfd88562217e36195b5d1250a1bbd
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65195946"
+ms.lasthandoff: 09/08/2019
+ms.locfileid: "70803176"
 ---
 # <a name="install-ata---step-6"></a>Installieren von ATA – Schritt 6
 
@@ -30,10 +30,10 @@ ms.locfileid: "65195946"
 ## <a name="step-6-configure-event-collection"></a>Schritt 6: Konfigurieren der Ereignissammlung
 ### <a name="configure-event-collection"></a>Konfigurieren der Ereignissammlung
 
-Um die Erkennungsfunktionalität zu verbessern, benötigt ATA die folgenden Windows-Ereignisse: 4776, 4732, 4733, 4728, 4729, 4756, 4757 und 7045. Diese können entweder automatisch vom ATA-Lightweight-Gateway gelesen werden, oder, falls das ATA-Lightweight-Gateway nicht bereitgestellt wurde, an das ATA-Gateway weitergeleitet werden. Dazu gibt es zwei Möglichkeiten: zum einen das Konfigurieren des ATA-Gateways, sodass es auf SIEM-Ereignisse lauscht, oder das [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-collection.md). 
+Um die Erkennungsfunktionalität zu verbessern, benötigt ATA die folgenden Windows-Ereignisse: 4776, 4732, 4733, 4728, 4729, 4756, 4757 und 7045. Diese Windows-Ereignisse werden entweder automatisch vom ATA-Lightweight-Gateway gelesen, oder für den Fall, dass das ATA-Lightweight-Gateway nicht bereitgestellt wird, können Sie auf eine von zwei Arten an das ATA-Gateway weitergeleitet werden, entweder durch Konfigurieren des ATA-Gateways zum lauschen auf Siem-Ereignisse oder durch [ Konfigurieren der Windows-Ereignis Weiterleitung](configure-event-collection.md).  
 
 > [!NOTE]
-> Für die ATA-Version 1.8 und höher ist die Konfiguration der Ereignissammlung nicht länger für ATA-Lightweight-Gateways erforderlich. Das ATA-Lightweight-Gateway kann jetzt Ereignisse lokal lesen, ohne die Ereignisweiterleitung zu konfigurieren.
+> Für ATA-Versionen 1,8 und höher ist die Konfiguration der Windows-Ereignis Sammlung für ATA-Lightweight-Gateways nicht mehr erforderlich. Das ATA-Lightweight-Gateway liest jetzt Ereignisse lokal, ohne die Ereignisweiterleitung zu konfigurieren.
 
 Zusätzlich zum Sammeln und Analysieren des Netzwerkverkehrs zu und von den Domänencontrollern kann ATA Windows-Ereignisse heranziehen, um Erkennungen weiter zu verbessern. Das Ereignis 4776 für NTLM wird verwendet, um verschiedene Erkennungen zu verbessern, und die Ereignisse 4732, 4733, 4728, 4729, 4756 und 4757 dienen zur Verbesserung der Erkennung sensibler Gruppenänderungen. Dies kann aus SIEM heraus empfangen werden oder indem Sie die Windows-Ereignisweiterleitung von Ihrem Domänencontroller aus einrichten. Die gesammelten Ereignisse versorgen ATA mit zusätzlichen Informationen, die nicht über den Netzwerkverkehr des Domänencontrollers verfügbar sind.
 
@@ -197,7 +197,7 @@ Stellen Sie sicher, dass „\t“ zwischen Schlüssel=Wert-Paaren steht.
 - [Auswählen des richtigen ATA-Gatewaytyps](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 - [Handbuch für die ATA POC-Bereitstellung](http://aka.ms/atapoc)
 - [Tool zur Bemessung von ATA-Gateways](http://aka.ms/atasizingtool)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
