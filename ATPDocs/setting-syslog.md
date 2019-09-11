@@ -12,16 +12,16 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: a2d29c9c-7ecb-4804-b74b-fde899b28648
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d87950cae8918338468258df77e14a503d7db8df
-ms.sourcegitcommit: b7b3d4a401faaa3edb4bd669a1a003a6d21a4322
+ms.openlocfilehash: 0d2befa95ca0bc8fd87cb5fa2dc6563646892945
+ms.sourcegitcommit: e4f108aec3cbfd88562217e36195b5d1250a1bbd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68298795"
+ms.lasthandoff: 09/08/2019
+ms.locfileid: "70803214"
 ---
 # <a name="integrate-with-syslog"></a>Integration in Syslog
 
-Azure ATP kann Sie durch Senden der Benachrichtigung an den Syslog-Server benachrichtigen und gibt Sicherheits- und Integritätswarnungen aus, wenn eine verdächtige Aktivität erkannt wird. Wenn Syslog-Benachrichtigungen aktiviert werden, lassen sich folgende Einstellungen vornehmen:
+Azure ATP kann Sie durch Senden der Benachrichtigungen vom ausgewählten Sensor an den Syslog-Server benachrichtigen und gibt Sicherheits- und Integritätswarnungen aus, wenn eine verdächtige Aktivität erkannt wird. Wenn Syslog-Benachrichtigungen aktiviert werden, lassen sich folgende Einstellungen vornehmen:
 
    |Feld|Beschreibung|
    |---------|---------------|
