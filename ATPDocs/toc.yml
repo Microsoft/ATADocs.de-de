@@ -13,8 +13,6 @@
 - name: Schnellstarts
   expanded: true
   items:
-    - name: Planen Ihrer Azure ATP-Kapazität
-      href: atp-capacity-planning.md
     - name: Erstellen einer Azure ATP-Instanz
       href: install-atp-step1.md
     - name: Verbinden mit Active Directory
@@ -23,8 +21,6 @@
       href: install-atp-step3.md
     - name: Installieren des Azure ATP-Sensors
       href: install-atp-step4.md
-    - name: Konfigurieren des Azure ATP-Sensors
-      href: install-atp-step5.md
 - name: Lernprogramme
   items:
     - name: Warnungen zu Reconnaissance
@@ -87,7 +83,7 @@
               href: atp-cas-isp-print-spooler.md
             - name: Bewertung der Verhinderung von schwachen Ciphernutzung
               href: atp-cas-isp-weak-cipher.md
-            - name: Bewertung der zwanglosen Kerberos-Delegierung
+            - name: Bewertung der Verhinderung einer ungesicherten Kerberos-Delegierung
               href: atp-cas-isp-unconstrained-kerberos.md
     - name: Lab für Sicherheitswarnungen
       items:
@@ -103,6 +99,8 @@
           href: atp-playbook-domain-dominance.md
     - name: Grundlegendes zu Sicherheitswarnungen
       href: understanding-security-alerts.md
+    - name: Planen Ihrer Azure ATP-Kapazität
+      href: atp-capacity-planning.md
     - name: Verwalten von Sicherheitswarnungen
       href: working-with-suspicious-activities.md
     - name: Ausschließen von Entitäten von der Erkennung
@@ -141,6 +139,8 @@
       href: ATP-silent-installation.md
     - name: Konfigurieren von Azure ATP-Sensoren
       items:
+        - name: Konfigurieren des Azure ATP-Sensors
+          href: install-atp-step5.md
         - name: Proxykonfiguration
           href: configure-proxy.md
         - name: Überprüfung der erweiterten Überwachungsrichtlinie
