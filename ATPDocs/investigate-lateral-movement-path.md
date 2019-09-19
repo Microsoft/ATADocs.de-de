@@ -5,21 +5,24 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/3/2019
+ms.date: 09/15/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 9295dc09-ecdb-44c0-906b-cba4c5c8f17c
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e11362c25d0d61925101db2f3f7f896f233931ca
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: 3428a95fd77252bf7384c8e733842134bc8141d2
+ms.sourcegitcommit: 939c098dd02a1f4191c528d10d69d059a62042b2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65196752"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "71004731"
 ---
 # <a name="tutorial-use-lateral-movement-paths-lmps"></a>Tutorial: Verwendung von Lateral Movement-Pfaden (LMPs)
+
+> [!NOTE]
+> Die auf dieser Seite erläuterten Azure ATP-Features sind auch über das neue [Portal](https://portal.cloudappsecurity.com) zugänglich.
 
 Lateral Movement-Angriffe können auf unterschiedliche Weise durchgeführt werden. Einige der von Angreifern am häufigsten verwendeten Methoden sind der [Diebstahl von Anmeldeinformationen](suspicious-activity-guide.md#) und [Pass-the-Ticket](suspicious-activity-guide.md)-Angriffe. Bei beiden Methoden werden nicht sensible Konten von den Angreifern für Seitenangriffe genutzt, indem sie nicht sensible Computer ausnutzen, die Anmeldeinformationen gemeinsam mit Konten, Endpunktgruppen und Computern mit sensiblen Konten verwenden.
 

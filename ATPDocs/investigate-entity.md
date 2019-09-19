@@ -5,21 +5,24 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/3/2019
+ms.date: 09/15/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4868282aaf5dc45c5f25740e26d6c3c7f0403952
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: 6144f9f35e8ee3b7cec4b7522fe03a6a3e8673b0
+ms.sourcegitcommit: 939c098dd02a1f4191c528d10d69d059a62042b2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65193548"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "71004749"
 ---
 # <a name="tutorial-investigate-an-entity"></a>Tutorial: Untersuchen einer Entität
+
+> [!NOTE]
+> Die auf dieser Seite erläuterten Azure ATP-Features sind auch über das neue [Portal](https://portal.cloudappsecurity.com) zugänglich.
 
 In diesem Tutorial erfahren Sie, wie Sie mit verdächtigen Aktivitäten in Verbindung stehende Objekte untersuchen können, die von Azure Advanced Threat Protection (ATP) erkannt werden. Nachdem eine Sicherheitswarnung in der Zeitleiste angezeigt wurde, können Sie einen Drilldown für die von der Warnung betroffene Entität durchführen und anhand der folgenden Parameter und Details herausfinden, was passiert ist und welche Schritte zur Risikominderung erforderlich sind.
 

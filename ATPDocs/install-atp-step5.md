@@ -1,24 +1,24 @@
 ---
-title: 'Schnellstart: Konfigurieren von Azure ATP-Einstellungen | Microsoft-Dokumentation'
+title: 'Konzept: Konfigurieren der Einstellungen des Azure ATP-Sensors | Microsoft-Dokumentation'
 description: Im fünften Schritt der Installation von Azure ATP konfigurieren Sie Einstellungen für Ihren eigenständigen Azure ATP-Sensor.
 author: mlottner
 ms.author: mlottner
-ms.date: 07/17/2019
-ms.topic: quickstart
+ms.date: 09/15/2019
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1c9f8d0928e7439afe9eb0745c07fad2c515169a
-ms.sourcegitcommit: b7b3d4a401faaa3edb4bd669a1a003a6d21a4322
+ms.openlocfilehash: 8e39e37aa42aea40de024f53dd892da398984f5b
+ms.sourcegitcommit: 939c098dd02a1f4191c528d10d69d059a62042b2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68298919"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "71004852"
 ---
-# <a name="quickstart-configure-azure-atp-sensor-settings"></a>Schnellstart: Konfigurieren der Einstellungen des Azure ATP-Sensors
+# <a name="configure-azure-atp-sensor-settings"></a>Konfigurieren der Einstellungen des Azure ATP-Sensors
 
-In diesem Schnellstart konfigurieren Sie die Einstellungen für den Azure ATP-Sensor, damit Daten angezeigt werden. Sie müssen zusätzliche Konfigurations- und Integrationsschritte vornehmen, um die Funktionen von Azure ATP nutzen zu können.  
+In diesem Artikel erfahren Sie, wie Sie die Einstellungen des Azure ATP-Sensors ordnungsgemäß konfigurieren, damit Sie Daten anzeigen können. Sie müssen zusätzliche Konfigurations- und Integrationsschritte vornehmen, um die vollständigen Funktionen von Azure ATP nutzen zu können.  
 
 ## <a name="prerequisites"></a>Voraussetzungen
 

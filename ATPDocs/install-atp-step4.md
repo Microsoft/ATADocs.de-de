@@ -9,12 +9,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 99045c4d8982c34d3defa681417a3b3963c563ac
-ms.sourcegitcommit: 929f28783110c7e114ab36d4cccd50563f4030df
+ms.openlocfilehash: f3af1034b73d1fc058a966c5d90eaf24dd282140
+ms.sourcegitcommit: 939c098dd02a1f4191c528d10d69d059a62042b2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57253928"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "71004875"
 ---
 # <a name="quickstart-install-the-azure-atp-sensor"></a>Schnellstart: Installieren des Azure ATP-Sensors
 
@@ -83,9 +83,8 @@ Führen Sie auf dem Domänencontroller folgende Schritte aus.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-> [!div class="step-by-step"]
-> [« Installieren von Azure ATP: Schritt 3](install-atp-step3.md)
-> [Installieren von Azure ATP: Schritt 5 »](install-atp-step5.md)
+Der Azure ATP-Sensor ist so konzipiert, dass er nur minimale Auswirkung auf Ihre Domänencontrollerressourcen und Netzwerkaktivitäten hat. Informationen zum Erstellen einer Leistungsbewertung finden Sie unter [Planen der Kapazität für Ihre Azure ATP-Lösung](install-atp-step5.md).
+
 
 ## <a name="join-the-community"></a>Beitritt zur Community
 

@@ -5,21 +5,24 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 10/28/2018
+ms.date: 09/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: a546703b-d5a9-404d-9e87-125523bb8421
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3dd62357e9d86422facd8423654dfaf915214bba
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: 975aa8562b1ae7e8a830d31da7905c428f08f31e
+ms.sourcegitcommit: 939c098dd02a1f4191c528d10d69d059a62042b2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65197161"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "71004707"
 ---
 # <a name="azure-atp-monitored-activities-search-and-filter"></a>Durchsuchen und Filtern von überwachten Azure ATP-Aktivitäten 
+
+> [!NOTE]
+> Die auf dieser Seite erläuterten Azure ATP-Features sind auch über das neue [Portal](https://portal.cloudappsecurity.com) zugänglich.
 
 Die von Azure ATP in Ihrem Netzwerk erkannten Aktivitäten können während Ihrer Recherche und Untersuchung in Sicherheitswarnungen für einfaches Drilldown und Organisation durchsucht und gefiltert werden.  
 

@@ -4,20 +4,23 @@ d|Description: This article explains how to use Azure ATP security alerts to inv
 keywords: ''
 author: mlottner
 ms.author: mlottner
-ms.date: 02/07/2019
+ms.date: 09/15/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 547fcb9173d8e51687124bac3f555a4eedc3634d
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: 91fc13a9d85e8d3653965530a9f0f35debaa728f
+ms.sourcegitcommit: 939c098dd02a1f4191c528d10d69d059a62042b2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56263504"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "71004786"
 ---
 # <a name="tutorial-investigate-a-computer"></a>Tutorial: Untersuchen eines Computers
+
+> [!NOTE]
+> Die auf dieser Seite erläuterten Azure ATP-Features sind auch über das neue [Portal](https://portal.cloudappsecurity.com) zugänglich.
 
 Ein Beweis für Warnungen in Azure ATP zeigt eindeutig an, wenn Computer von verdächtigen Aktivitäten betroffen sind, oder wenn es Anzeichen dafür gibt, dass ein Computer gefährdet ist. In diesem Tutorial verwenden Sie die Untersuchungsempfehlungen dazu, das Risiko für Ihre Organisation zu ermitteln, Abhilfemaßnahmen zu bestimmen und festzulegen, wie ähnliche Angriffe in der Zukunft am besten verhindert werden können.  
 
