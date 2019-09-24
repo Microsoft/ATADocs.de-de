@@ -12,19 +12,19 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: cc82212b-7d25-4ec7-828d-2475ff40d685
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 784f381ef8209bef885bb2e8944a60a23d21ec8c
-ms.sourcegitcommit: 475df3e87d8476ff13e48ebc7a722f46f29dab70
+ms.openlocfilehash: 97ea6d080d2aae84bcf0675da853f503fd10b314
+ms.sourcegitcommit: 15f882cf45776877fdaca8367a7a0fe7f06a7917
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71007409"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71185524"
 ---
 # <a name="security-assessment-weak-cipher-usage---preview"></a>Sicherheitsbewertung: Verwendung schwacher Verschlüsselungen – Vorschau
 
 
 ## <a name="what-are-weak-ciphers"></a>Was bedeutet schwache Verschlüsselung? 
 
-Kryptografie basiert auf Verschlüsselungen zum Verschlüsseln unserer Daten. RC4 (Rivest Cipher 4, auch bekannt als ARC4 oder ARCFOUR, was Alleged RC4 bedeutet) ist ein Beispiel dafür.   Obwohl RC4 aus Gründen der Einfachheit und Geschwindigkeit bemerkenswert ist, wurden seit der ursprünglichen Version von RC4 mehrere Schwachstellen erkannt, die das System unsicher machen. RC4 ist besonders anfällig, wenn der Anfang des Ausgabeschlüsselstroms nicht verworfen wird, oder wenn nicht zufällige oder verwandte Schlüssel verwendet werden. 
+Kryptografie basiert auf Verschlüsselungen zum Verschlüsseln unserer Daten. RC4 (Rivest Cipher 4, auch bekannt als ARC4 oder ARCFOUR, was Alleged RC4 bedeutet) ist ein Beispiel dafür. Obwohl RC4 aus Gründen der Einfachheit und Geschwindigkeit bemerkenswert ist, wurden seit der ursprünglichen Version von RC4 mehrere Schwachstellen erkannt, die das System unsicher machen. RC4 ist besonders anfällig, wenn der Anfang des Ausgabeschlüsselstroms nicht verworfen wird, oder wenn nicht zufällige oder verwandte Schlüssel verwendet werden. 
 
 ## <a name="how-do-i-use-this-security-assessment-to-improve-my-organizational-security-posture"></a>Wie wird diese Sicherheitsbewertung verwendet, um den Sicherheitsstatus meiner Organisation zu verbessern? 
 

@@ -12,16 +12,16 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 1ac873fc-b763-41d7-878e-7c08da421cb5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0161c0f63e652bd62ee8ccf4a6677f2ec0d90f4d
-ms.sourcegitcommit: b7b3d4a401faaa3edb4bd669a1a003a6d21a4322
+ms.openlocfilehash: 9cef9a1eb7035f1db61ab6c3c0b90d4e73278d36
+ms.sourcegitcommit: 15f882cf45776877fdaca8367a7a0fe7f06a7917
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68298945"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71185648"
 ---
 # <a name="what-is-network-name-resolution"></a>Was ist Netzwerknamensauflösung?
 
-Die Netzwerknamensauflösung (Network Name Resolution, NNR) ist eine Hauptkomponente der Azure ATP-Funktionalität. Azure ATP erfasst Aktivitäten auf der Grundlage von Netzwerkdatenverkehr, Windows-Ereignissen und ETW – diese Aktivitäten enthalten normalerweise IP-Daten.  
+Die Netzwerknamensauflösung (Network Name Resolution, NNR) ist eine Hauptkomponente der Azure ATP-Funktionalität. Azure ATP erfasst Aktivitäten auf der Grundlage von Netzwerkdatenverkehr, Windows-Ereignissen und ETW – diese Aktivitäten enthalten normalerweise IP-Daten. 
 
 Durch die Verwendung von NNR ordnet Azure ATP reinen Aktivitäten (mit IP-Adressen) die entsprechenden, an der Aktivität beteiligten Computer zu. Auf Grundlage der reinen Aktivitäten erstellt Azure ATP ein Profil der Entitäten, wie etwa Computer, und generiert Sicherheitswarnungen für verdächtige Aktivitäten.
 

@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 08/20/2019
+ms.date: 09/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ba1c8ac59dcf762103cd4d0e7a5a54c2b02e1e9a
-ms.sourcegitcommit: 2aab3c4244db694616ec02a9b8ae2e266d6fdddc
+ms.openlocfilehash: 27630e93db4e103454e6d0fec7756824988ec4a2
+ms.sourcegitcommit: 15f882cf45776877fdaca8367a7a0fe7f06a7917
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69629294"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71185501"
 ---
 # <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-azure-atp-sensor"></a>Konfigurieren von Endpunktproxy- und Internetkonnektivitätseinstellungen für Ihren Azure ATP-Sensor
 
@@ -31,6 +31,21 @@ Wenn Sie den Proxy konfigurieren, müssen Sie wissen, dass der eingebettete Azur
 ## <a name="configure-the-proxy"></a>Konfigurieren des Proxys 
 
 Sie können Ihre Proxyeinstellungen während der Sensorinstallation konfigurieren, indem Sie die unter [Proxy-Authentifizierung](https://docs.microsoft.com/azure-advanced-threat-protection/atp-silent-installation#proxy-authentication) definierten Parameter verwenden.
+
+### <a name="proxy-authentication"></a>Proxy-Authentifizierung
+
+Verwenden Sie die folgenden Befehle, um die Proxyauthentifizierung abzuschließen:
+
+**Syntax**:
+
+
+> [!div class="mx-tableFixed"]
+> 
+> |Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|Beschreibung|
+> |-------------|----------|---------|---------|
+> |ProxyUrl|ProxyUrl="https\://proxy.contoso.com:8080"|Nein|Gibt die ProxyUrl und die Portnummer für den Azure ATP Sensor an.|
+> |ProxyUserName|ProxyUserName="Contoso\ProxyUser"|Nein|Wenn Ihr Proxydienst eine Authentifizierung erfordert, geben Sie einen Benutzernamen im Format „DOMÄNE\Benutzer“ an.|
+> |ProxyUserPassword|ProxyUserPassword="P@ssw0rd"|Nein|Gibt das Kennwort für den Proxybenutzernamen an. *Anmeldeinformationen werden verschlüsselt und lokal vom Azure ATP-Sensor gespeichert.|
 
 Sie können den Proxyserver auch manuell mithilfe eines registrierungsbasierten statischen Proxys konfigurieren, damit der Azure ATP-Sensor Diagnosedaten melden und mit dem Azure ATP-Clouddienst kommunizieren kann, wenn ein Computer keine Verbindung mit dem Internet herstellen darf.
 
