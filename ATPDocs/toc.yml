@@ -73,17 +73,17 @@
           items:
             - name: Grundlegendes zum Identitätssicherheitsstatus
               href: atp-isp-overview.md
-            - name: Bewertung der Anfälligkeit von Anmeldeinformationen in Klartext
+            - name: Verfügbarmachen von Anmeldeinformationen in Klartext (Bewertung)
               href: atp-cas-isp-clear-text.md
-            - name: Bewertung der Entfernung ruhender Entitäten aus sensiblen Gruppen
+            - name: Ruhende Entitäten in sensiblen Gruppen (Bewertung)
               href: atp-cas-isp-dormant-entities.md
-            - name: Bewertung für die Verhinderung der Kommunikation von Legacyprotokollen
+            - name: Verwendung von Legacyprotokollen (Bewertung)
               href: atp-cas-isp-legacy-protocols.md
-            - name: Bewertung der Deaktivierung des Druckspoolerdiensts auf Domänencontrollern
+            - name: Domänencontroller mit verfügbarem Druckspoolerdienst (Bewertung)
               href: atp-cas-isp-print-spooler.md
-            - name: Bewertung der Verhinderung von schwachen Ciphernutzung
+            - name: Verwendung von schwacher Verschlüsselung (Bewertung)
               href: atp-cas-isp-weak-cipher.md
-            - name: Bewertung der Verhinderung einer ungesicherten Kerberos-Delegierung
+            - name: Ungesicherte Kerberos-Delegierung (Bewertung)
               href: atp-cas-isp-unconstrained-kerberos.md
     - name: Lab für Sicherheitswarnungen
       items:
