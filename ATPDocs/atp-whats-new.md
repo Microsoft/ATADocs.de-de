@@ -5,25 +5,37 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 09/08/2019
+ms.date: 09/22/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 56c517930f4001e9a6e8f4476210fe89b380aa3f
-ms.sourcegitcommit: 939c098dd02a1f4191c528d10d69d059a62042b2
+ms.openlocfilehash: 77d33b429cc728ef24341b53bb20974368a35235
+ms.sourcegitcommit: 15f882cf45776877fdaca8367a7a0fe7f06a7917
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2019
-ms.locfileid: "71004686"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71185585"
 ---
 # <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Neuerungen in Azure Advanced Threat Protection (Azure ATP)
 
 Dieser Artikel wird häufig aktualisiert, um Sie über die Neuerungen in der neuesten Version von Azure ATP auf dem Laufenden zu halten.
 
 RSS-Feed: Sie können Benachrichtigungen erhalten, wenn diese Seite aktualisiert wird, indem Sie folgende URL kopieren und in Ihren Feedreader einfügen: `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
+
+Veröffentlicht: 22. September 2019
+## <a name="azure-atp-release-296"></a>Azure ATP Release 2.96
+
+- **Erweiterte NTLM-Authentifizierungsdaten mithilfe des Windows-Ereignisses 8004**<br>
+
+Azure ATP-Sensoren sind nun in der Lage, automatisch die NTLM-Authentifizierungsaktivitäten zu lesen und mit den von Ihnen verwendeten Serverdaten anzureichern, wenn die NTLM-Überwachung aktiviert ist und Windows-Ereignis 8004 auftritt. Azure ATP analysiert Windows-Ereignis 8004 für NTLM-Authentifizierungen, um die für Azure ATP-Bedrohungsanalysen und -Warnungen verwendeten NTLM-Authentifizierungsdaten anzureichern. Diese erweiterte Funktion bietet Ressourcenzugriffsaktivität über NTLM-Daten sowie erweiterte Aktivitäten in Verbindung mit nicht gelungenen Anmeldungen, und bezieht dabei den Zielcomputer ein, auf den der Benutzer vergeblich zuzugreifen versuchte.
+
+Erfahren Sie mehr über NTLM-Authentifizierungsaktivitäten [unter Verwendung von Windows-Ereignis 8004](configure-event-collection.md##ntlm-authentication-using-windows-event-8004).
+
+- Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
+
 
 Veröffentlicht: 15. September 2019
 ## <a name="azure-atp-release-295"></a>Azure ATP Release 2.95

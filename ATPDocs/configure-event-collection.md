@@ -5,28 +5,39 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/25/2019
+ms.date: 09/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3ac34f82800b2d09243169d99812b27eef41b2b5
-ms.sourcegitcommit: dd8c94db68e85752c20bba3446b678cd1edcd932
+ms.openlocfilehash: 8416c2d6e3b12d15f52a0f27381d845fdb268cdd
+ms.sourcegitcommit: 15f882cf45776877fdaca8367a7a0fe7f06a7917
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68604394"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71185525"
 ---
 # <a name="configure-event-collection"></a>Konfigurieren der Ereignissammlung
 
-Um die Erkennungsfunktionalität zu verbessern, benötigt Azure ATP die folgenden Windows-Ereignisse: 4776, 4732, 4733, 4728, 4729, 4756, 4757 und 7045. Diese können entweder automatisch vom Azure ATP-Sensor gelesen oder, falls dieser nicht bereitgestellt wurde, an den eigenständigen Azure ATP-Sensor weitergeleitet werden. Dazu gibt es zwei Möglichkeiten: die Konfiguration des eigenständigen Azure ATP-Sensors, sodass dieser auf SIEM-Ereignisse lauscht, oder die [Konfiguration der Windows-Ereignisweiterleitung](configure-event-forwarding.md).
+Um die Erkennungsfunktionalität zu verbessern, benötigt Azure ATP die folgenden Windows-Ereignisse: 4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045 und 8004. Diese Ereignisse können entweder automatisch vom Azure ATP-Sensor gelesen oder, falls dieser nicht bereitgestellt wurde, an den eigenständigen Azure ATP-Sensor weitergeleitet werden. Dazu gibt es zwei Möglichkeiten: die Konfiguration des eigenständigen Azure ATP-Sensors, sodass dieser auf SIEM-Ereignisse lauscht, oder die [Konfiguration der Windows-Ereignisweiterleitung](configure-event-forwarding.md).
 
 > [!NOTE]
 > Es ist wichtig, das Azure ATP-Überwachungsskript vor der Konfiguration der Ereignissammlung auszuführen, um sicherzustellen, dass die Domänencontroller ordnungsgemäß für die Aufzeichnung der benötigten Ereignisse konfiguriert sind. 
 
-Zusätzlich zum Sammeln und Analysieren des Netzwerkverkehrs zu und von den Domänencontrollern kann Azure ATP Windows-Ereignisse heranziehen, um Erkennungen weiter zu verbessern. Das Ereignis 4776 für NTLM wird verwendet, um verschiedene Erkennungen zu verbessern, und die Ereignisse 4732, 4733, 4728, 4729, 4756, 4757 und 7045 dienen zur Verbesserung der Erkennung sensibler Gruppenänderungen und zur Diensterstellung. Dies kann aus SIEM heraus empfangen werden oder indem Sie die Windows-Ereignisweiterleitung von Ihrem Domänencontroller aus einrichten. Die gesammelten Ereignisse versorgen Azure ATP mit zusätzlichen Informationen, die nicht über den Datenverkehr des Domänencontrollers verfügbar sind.
+Zusätzlich zum Sammeln und Analysieren des Netzwerkverkehrs zu und von den Domänencontrollern kann Azure ATP Windows-Ereignisse heranziehen, um Erkennungen weiter zu verbessern. Azure ATP verwendet die Windows-Ereignisse 4776 und 8004 für NTLM, um verschiedene Erkennungen zu verbessern, und die Ereignisse 4732, 4733, 4728, 4729, 4756, 4757 und 7045 dienen zur Verbesserung der Erkennung sensibler Gruppenänderungen und zur Diensterstellung. Dies kann aus dem SIEM-Agent heraus erfolgen oder indem Sie die Windows-Ereignisweiterleitung von Ihrem Domänencontroller aus einrichten. Die gesammelten Ereignisse versorgen Azure ATP mit zusätzlichen Informationen, die nicht über den Datenverkehr des Domänencontrollers verfügbar sind.
+
+## <a name="ntlm-authentication-using-windows-event-8004"></a>NTLM-Authentifizierung mithilfe des Windows-Ereignisses 8004
+
+So konfigurieren Sie die Windows-Ereignis 8004-Sammlung:
+1. Navigieren Sie zu: Computerkonfiguration\Richtlinien\Windows-Einstellungen\Sicherheitseinstellungen\Lokale Richtlinien\Sicherheitsoptionen
+2. Legen Sie die **Domänengruppenrichtlinie** wie folgt fest:
+   - Netzwerksicherheit: Beschränken von NTLM: Ausgehender NTLM-Datenverkehr zu Remoteservern = **Alle überwachen**
+   - Netzwerksicherheit: Beschränken von NTLM: NTLM-Authentifizierung in dieser Domäne überwachen = **Alle aktivieren**
+   - Netzwerksicherheit: Beschränken von NTLM: Eingehenden NTLM-Datenverkehr überwachen = **Überwachung für alle Konten aktivieren**
+
+Wenn das Windows-Ereignis 8004 von Azure ATP Sensor analysiert wird, werden Azure ATP-NTLM-Authentifizierungsaktivitäten mit den Daten erweitert, auf die auf dem Server zugegriffen wird.
 
 ## <a name="siemsyslog"></a>SIEM/Syslog
 Damit Azure ATP Daten von einem Syslog-Server verwenden kann, müssen folgende Schritte ausgeführt werden:

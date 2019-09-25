@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 09/01/2019
+ms.date: 09/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d4b54dfc9f64f296925889147c72db6c23819c20
-ms.sourcegitcommit: 298a0ce02c2f22faa5b03acf909aa0dd73f38993
+ms.openlocfilehash: edc59ab0d8ec813b4f957e6391e37da18ba4dbb0
+ms.sourcegitcommit: 15f882cf45776877fdaca8367a7a0fe7f06a7917
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70210932"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71185631"
 ---
 # <a name="azure-atp-prerequisites"></a>Voraussetzungen für Azure ATP
 
@@ -63,7 +63,7 @@ In diesem Abschnitt werden die Informationen aufgeführt, die Sie sammeln sollte
 
 - Optionales **Honeytoken**: Ein Benutzerkonto eines Benutzers ohne Netzwerkaktivitäten. Dieses Konto wird als Azure ATP-Honeytoken-Benutzer konfiguriert. Weitere Informationen zu Verwendung von Honeytokens finden Sie unter [Konfigurieren von Ausschlüssen und Honeytoken-Benutzern](install-atp-step7.md).
 
-- Optional: Wenn Sie den eigenständigen Sensor bereitstellen, ist die Weiterleitung der Windows-Ereignisse 4776, 4732, 4733, 4728, 4729, 4756, 4757 und 7045 an Azure ATP erforderlich, um in Azure ATP die Erkennung von Pass-the-Hash- und Brute Force-Angriffen, Änderungen an sensiblen Gruppen, Honeytoken und der Erstellung eines schädlichen Diensts zu verbessern. Der Azure ATP-Sensor empfängt diese Ereignisse automatisch. Im eigenständigen Azure ATP-Sensor können diese Ereignisse von SIEM empfangen oder durch Festlegen der Windows-Ereignisweiterleitung von Ihrem Domänencontroller aus abgerufen werden. Die gesammelten Ereignisse versorgen Azure ATP mit zusätzlichen Informationen, die nicht über den Datenverkehr des Domänencontrollers verfügbar sind.
+- Optional: Wenn Sie den eigenständigen Sensor bereitstellen, ist die Weiterleitung der Windows-Ereignisse 4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045 und 8004 an Azure ATP erforderlich, um in Azure ATP authentifizierungsbasierte Erkennungen, Ergänzungen sensibler Gruppen und Erkennungen der Erstellung verdächtiger Dienste zu verbessern.  Der Azure ATP-Sensor empfängt diese Ereignisse automatisch. Im eigenständigen Azure ATP-Sensor können diese Ereignisse von SIEM empfangen oder durch Festlegen der Windows-Ereignisweiterleitung von Ihrem Domänencontroller aus abgerufen werden. Die gesammelten Ereignisse versorgen Azure ATP mit zusätzlichen Informationen, die nicht über den Datenverkehr des Domänencontrollers verfügbar sind.
 
 ## <a name="azure-atp-portal-requirements"></a>Anforderungen an das Azure ATP-Portal
 Der Zugriff auf das Azure ATP-Portal erfolgt über einen Browser. Folgende Browser und Einstellungen werden unterstützt:
@@ -148,7 +148,7 @@ In der folgenden Tabelle sind die Ports aufgeführt, die für den Azure ATP-Sens
 |
 
 ### <a name="windows-event-logs"></a>Windows-Ereignisprotokolle
-Die Azure ATP-Erkennung basiert auf bestimmten Windows-Ereignisprotokollen, die der Sensor vom Domänencontroller aus analysieren kann. Damit die richtigen Ereignisse überprüft und im Windows-Ereignisprotokoll eingeschlossen werden, benötigen Ihre Domänencontroller die korrekten erweiterten Überwachungsrichtlinieneinstellungen. Weitere Informationen finden Sie unter [Überprüfung der erweiterten Überwachungsrichtlinie](atp-advanced-audit-policy.md).
+Die Azure ATP-Erkennung basiert auf den folgenden bestimmten Windows-Ereignisprotokollen, die der Sensor von Ihren Domänencontrollern aus analysiert: 4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045 und 8004. Damit die richtigen Ereignisse überprüft und im Windows-Ereignisprotokoll eingeschlossen werden, benötigen Ihre Domänencontroller die korrekten erweiterten Überwachungsrichtlinieneinstellungen. Weitere Informationen zum Festlegen der richtigen Richtlinien finden Sie unter [Überprüfung der erweiterten Überwachungsrichtlinie von Azure ATP](atp-advanced-audit-policy.md). Um [sicherzustellen, dass das Windows-Ereignis 8004 überwacht wird](configure-event-collection.md##ntlm-authentication-using-windows-event-8004), wie es der Dienst erfordert, überprüfen Sie die [NTLM-Überwachungseinstellungen](https://blogs.technet.microsoft.com/askds/2009/10/08/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7/).  
 
 
 > [!NOTE]

@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 02/13/2019
+ms.date: 09/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 92decce8-b3ae-4d32-8407-a95314a66863
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6b3c8e978f16893d70c44c0fd3d04ce381c1bb5d
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: 6970908b95fe31ecd24b4cdc1005180e39495913
+ms.sourcegitcommit: 15f882cf45776877fdaca8367a7a0fe7f06a7917
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65196767"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71185604"
 ---
 # <a name="monitoring-your-domain-controller-coverage"></a>Überwachen der Domänencontrollerabdeckung
 
@@ -33,7 +33,7 @@ Azure ATP überwacht Ihre Umgebung kontinuierlich auf nicht überwachte Domänen
 
 1. Öffnen Sie den Bereich **Konfiguration** im Azure ATP-Portal, und wählen Sie **Sensoren** im Abschnitt **System** aus, um den Status der erkannten, überwachten und nicht überwachten Domänencontroller zu überprüfen.
    
-     ![Überwachen des Status von Azure ATP-Sensoren](media/atp-sensors-status-monitoring.png)
+    ![Überwachen des Status von Azure ATP-Sensoren](media/atp-sensors-status-monitoring.png)
 
 2. Ihre derzeit überwachten und nicht überwachten Domänencontroller werden oben auf der Anzeige angezeigt. Klicken Sie auf **Details herunterladen**, um die Überwachungsstatusinformationen zu Ihren Domänencontrollern herunterzuladen. 
 
@@ -49,6 +49,15 @@ Die heruntergeladene Excel-Datei zur Abdeckung der Domänencontroller stellt fol
 |Betriebssystemversion| Version des ermittelten Betriebssystems|
 |IP-Adresse|Ermittelte IP-Adresse| 
 
+### <a name="search-domain-controllers"></a>Durchsuchen von Domänencontrollern
+
+Die Verwaltung ihrer Flotte von Sensoren und Domänencontrollern kann eine Herausforderung darstellen. Um das Auffinden und Identifizieren zu vereinfachen, können Domänencontroller mithilfe der Suchfunktion in der Liste der Azure ATP-Sensoren durchsucht werden. 
+
+1. Wechseln Sie zum Durchsuchen Ihrer Domänencontroller zum Bereich **Konfiguration** des Azure ATP-Portals, und wählen Sie im Abschnitt **System** die Option **Sensoren** aus.
+1. Wählen Sie in der Domänencontroller-Tabellenliste in der Spalte **Domänencontroller** die Filteroption aus. 
+1. Geben Sie den Namen ein, den Sie suchen möchten. Platzhalter werden im Suchfeld derzeit nicht unterstützt. 
+
+    ![Domänencontrollersuche in Azure ATP](media/search-sensor.png)
 
 > [!NOTE]
 > Die Konfigurationsseiten des Azure ATP-Portals können nur von Azure ATP-Administratoren bearbeitet werden.

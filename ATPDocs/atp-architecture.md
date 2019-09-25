@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/17/2019
+ms.date: 09/23/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 38a1790194d739ac31c66df60cf0d9c2911344c7
-ms.sourcegitcommit: b7b3d4a401faaa3edb4bd669a1a003a6d21a4322
+ms.openlocfilehash: d1b0d9a5db7fe94170cedf274a36ec036c4910c4
+ms.sourcegitcommit: 15f882cf45776877fdaca8367a7a0fe7f06a7917
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68298887"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71185663"
 ---
 # <a name="azure-atp-architecture"></a>Azure ATP-Architektur
 
@@ -84,7 +84,7 @@ Wenn dem Azure ATP-Sensor dadurch nicht mehr genügend Ressourcen zur Verfügung
 
 ### <a name="windows-events"></a>Windows-Ereignisse
 
-Um die Reichweite der Azure ATP-Erkennung von Identitätsdiebstahl (Pass-the-Hash-Angriffen), verdächtigen Authentifizierungsfehlern, Änderungen an sensiblen Gruppen, der Erstellung von verdächtigen Diensten und Angriffen mit Honeytoken-Aktivitätstypen zu verbessern, muss Azure ATP die Protokolle folgender Windows-Ereignisse analysieren: 4776,4732,4733,4728,4729,4756,4757 und 7045. Diese Ereignisse werden automatisch von Azure ATP-Sensoren mit den entsprechenden [erweiterten Überwachungsrichtlinieneinstellungen](atp-advanced-audit-policy.md) gelesen. 
+Um die Reichweite der Azure ATP-Erkennung bezogen auf NTLM-Authentifizierungen, Änderungen an sensiblen Gruppen und der Erstellung von verdächtigen Diensten zu verbessern, muss Azure ATP die Protokolle folgender Windows-Ereignisse analysieren: 4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045 und 8004. Diese Ereignisse werden automatisch von Azure ATP-Sensoren mit den entsprechenden [erweiterten Überwachungsrichtlinieneinstellungen](atp-advanced-audit-policy.md) gelesen. Um [sicherzustellen, dass das Windows-Ereignis 8004 überwacht wird](configure-event-collection.md##ntlm-authentication-using-windows-event-8004), wie es der Dienst erfordert, überprüfen Sie die [NTLM-Überwachungseinstellungen](https://blogs.technet.microsoft.com/askds/2009/10/08/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7/).
 
 ## <a name="next-steps"></a>Nächste Schritte
 

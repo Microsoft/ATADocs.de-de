@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 1a7d9525-8923-4dae-af51-02a68aa61644
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: fd2b795d7bb7973e24a5457237ff98a4bd1315f5
-ms.sourcegitcommit: 939c098dd02a1f4191c528d10d69d059a62042b2
+ms.openlocfilehash: da5a9429e802f3597942abc5e21e6c5ae6fed0fb
+ms.sourcegitcommit: 15f882cf45776877fdaca8367a7a0fe7f06a7917
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2019
-ms.locfileid: "71005015"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71185547"
 ---
 # <a name="security-assessment-domain-controllers-with-print-spooler-service-available---preview"></a>Sicherheitsbewertung: Domänencontroller mit verfügbarem Druckspoolerdienst – Vorschau
 
@@ -25,7 +25,7 @@ ms.locfileid: "71005015"
  
 ## <a name="what-is-the-print-spooler-service"></a>Was ist der Dienst **Druckspooler**? 
 
-Der Druckspooler ist ein Softwaredienst, der Druckprozesse verwaltet. Der Spooler akzeptiert Druckaufträge von Computern und stellt sicher, dass Druckerressourcen verfügbar sind. Der Spooler plant auch die Reihenfolge, in der Druckaufträge an die Druckwarteschlange gesendet werden. In den Anfangszeiten der PCs mussten Benutzer warten, bis Dateien gedruckt waren, bevor sie andere Aktionen ausführen konnten. Dank moderner Druckspooler beeinträchtigt der Druck heute die Benutzerproduktivität nur noch minimal.
+Der Druckspooler ist ein Softwaredienst, der Druckprozesse verwaltet. Der Spooler akzeptiert Druckaufträge von Computern und stellt sicher, dass Druckerressourcen verfügbar sind. Der Spooler plant auch die Reihenfolge, in der Druckaufträge an die Druckwarteschlange gesendet werden. In den Anfangszeiten der PCs mussten Benutzer warten, bis Dateien gedruckt waren, bevor sie andere Aktionen ausführen konnten. Dank moderner Druckspooler beeinträchtigt der Druck heute die gesamte Benutzerproduktivität nur noch minimal.
 
 ## <a name="what-risks-does-the-print-spooler-service-on-domain-controllers-introduce"></a>Welche Risiken entstehen durch den Dienst **Druckspooler** auf Domänencontrollern? 
 
@@ -35,6 +35,9 @@ Aufgrund der Möglichkeit, dass diese Informationen offengelegt werden, müssen 
 
 Diese Sicherheitsbewertung konzentriert sich zwar auf Domänencontroller, aber potenziell ist jeder Server der Gefahr eines Angriffs dieser Art ausgesetzt.
 
+   > [!NOTE]
+   > Untersuchen Sie unbedingt die Einstellungen, Konfigurationen und Abhängigkeiten des **Druckspoolers**, bevor Sie diesen Dienst deaktivieren und aktive Druckworkflows verhindern.
+
 ## <a name="how-do-i-use-this-security-assessment"></a>Wie wird diese Sicherheitsbewertung verwendet? 
 1. Verwenden Sie die Berichtstabelle, um zu ermitteln, auf welchem Ihrer Domänencontroller der Dienst **Druckspooler** aktiviert ist.   
     <br>![Sicherheitsbewertung: Deaktivierung des Druckspoolerdiensts](media/atp-cas-isp-print-spooler-2.png)
@@ -42,7 +45,7 @@ Diese Sicherheitsbewertung konzentriert sich zwar auf Domänencontroller, aber p
 
 ## <a name="remediation"></a>Wartung
 
-Beheben Sie dieses Problem, indem Sie den Druckspoolerdienst auf allen Servern deaktivieren, die diesen nicht benötigen, und stellen Sie sicher, dass keine Konten mit uneingeschränkter Delegierung konfiguriert sind.
+Beheben Sie dieses Problem, indem Sie den Druckspoolerdienst auf allen Servern deaktivieren, für die er nicht erforderlich ist.
   
 
 ## <a name="next-steps"></a>Nächste Schritte
