@@ -137,14 +137,16 @@
       href: setting-syslog.md
     - name: Unbeaufsichtigte Installation
       href: ATP-silent-installation.md
-    - name: Konfigurieren von Azure ATP-Sensoren
+    - name: Konfigurieren des Azure ATP-Sensors
       items:
         - name: Konfigurieren des Azure ATP-Sensors
           href: install-atp-step5.md
-        - name: Proxykonfiguration
-          href: configure-proxy.md
         - name: Überprüfung der erweiterten Überwachungsrichtlinie
           href: atp-advanced-audit-policy.md
+        - name: Konfigurieren der Windows-Ereignissammlung
+          href: configure-windows-event-collection.md
+        - name: Proxykonfiguration
+          href: configure-proxy.md
         - name: Konfigurieren von Azure ATP für das Ausführen von Remoteaufrufen an SAM
           href: install-atp-step8-samr.md
     - name: Einrichten des eigenständigen Azure ATP-Sensors
