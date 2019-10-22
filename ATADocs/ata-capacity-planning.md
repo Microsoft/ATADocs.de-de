@@ -5,24 +5,24 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 08/05/2019
+ms.date: 10/16/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.assetid: 1b5b24ff-0df8-4660-b4f8-64d68cc72f65
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3f5e493993acfb6bbb440691f11053d46bf5e1ba
-ms.sourcegitcommit: 8df26fb312472b8df1da70e581517223d26de8c2
+ms.openlocfilehash: 99d02aeb30cac449c4e9ac19c3824e8ebd97d0d5
+ms.sourcegitcommit: dd8db49bc54acc5483a3fa889379230d144b0623
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68781815"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690220"
 ---
 # <a name="ata-capacity-planning"></a>ATA-Kapazitätsplanung
 
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
-Anhand dieses Artikels können Sie ermitteln, wie viele ATA-Server zur Überwachung Ihres Netzwerks benötigt werden. Zudem können Sie herausfinden, wie viele ATA-Gateways und/oder ATA-Lightweight-Gateways erforderlich sind, sowie die Serverkapazität für ATA Center und die ATA-Gateways ermitteln.
+Anhand dieses Artikels können Sie ermitteln, wie viele ATA-Server zur Überwachung Ihres Netzwerks benötigt werden. Es hilft Ihnen zu schätzen, wie viele ATA-Gateways und/oder ATA-Lightweight-Gateways Sie benötigen und welche Serverkapazität für ATA Center und ATA-Gateways erforderlich ist.
 
 > [!NOTE] 
 > ATA Center kann auf jedem IaaS-Anbieter bereitgestellt werden, solange die Leistungsanforderungen erfüllt werden, die in diesem Artikel beschrieben sind.
@@ -33,7 +33,7 @@ Die empfohlene und einfachste Methode zum Ermitteln der Kapazität für die ATA-
 - ATA Center-CPU und -Arbeitsspeicher: Gleichen Sie das Feld **Busy Packets/sec** in der ATA Center-Tabelle in der Ergebnisdatei mit dem Feld **PACKETS PER SECOND** in der [ATA Center-Tabelle](#ata-center-sizing) ab.
 
 - ATA Center-Speicher: Gleichen Sie das Feld **Avg Packets/sec** in der ATA Center-Tabelle in der Ergebnisdatei mit dem Feld **PACKETS PER SECOND** in der [ATA Center-Tabelle](#ata-center-sizing) ab.
-- ATA-Gateway: Gleichen Sie das Feld **Busy Packets/sec** in der ATA-Gateway-Tabelle in der Ergebnisdatei mit dem Feld **PACKETS PER SECOND** in der [ATA Gateway-Tabelle](#ata-gateway-sizing) oder der [ATA-Lightweight-Gateway-Tabelle](#ata-lightweight-gateway-sizing) ab, je nach [ausgewähltem Gateway](#choosing-the-right-gateway-type-for-your-deployment).
+- ATA-Gateway: Gleichen Sie das Feld **Busy Packets/sec** in der ATA-Gateway-Tabelle in der Ergebnisdatei mit dem Feld **PACKETS PER SECOND** in der [ATA Gateway-Tabelle](#ata-gateway-sizing) oder der [ATA Lightweight Gateway-Tabelle](#ata-lightweight-gateway-sizing) ab, je nach [ausgewähltem Gateway](#choosing-the-right-gateway-type-for-your-deployment).
 
 
 ![Beispiel für das Kapazitätsplanungstool](media/capacity-tool.png)
@@ -43,8 +43,8 @@ Die empfohlene und einfachste Methode zum Ermitteln der Kapazität für die ATA-
 > Da sich Umgebungen unterscheiden und besondere und unerwartete Eigenschaften beim Datenverkehr aufweisen, kann es sein, dass Sie, nachdem Sie ATA zum ersten Mal bereitgestellt haben und das Tool zum Anpassen der Größe ausführen, die Kapazität Ihrer Bereitstellung anpassen und optimieren müssen.
 
 
-Wenn Sie das ATA-Tool zur Größenanpassung aus irgendeinem Grund nicht verwenden können, sammeln Sie die Informationen zum Pakete/Sek.-Leistungsindikator manuell von allen Domänencontrollern über einen Zeitraum von 24 Stunden mit einem niedrigen Erfassungsintervall (etwa 5 Sekunden). Anschließend müssen Sie für jeden Domänencontroller den Tagesdurchschnitt und den Durchschnitt der Zeitspanne (15 Minuten) mit der höchsten Auslastung berechnen.
-Die folgenden Abschnitte enthalten Anweisungen dazu, wie Sie Informationen zum Pakete/Sek.-Leistungsindikator für einen Domänencontroller sammeln.
+Wenn Sie das ATA-Tool zur Größenanpassung aus irgendeinem Grund nicht verwenden können, sammeln Sie die Informationen zum Pakete/Sek.-Leistungsindikator manuell von allen Domänencontrollern über einen Zeitraum von 24 Stunden mit einem niedrigen Erfassungsintervall (etwa 5 Sekunden). Berechnen Sie dann für jeden Domänen Controller den täglichen Durchschnitt und den am stärksten ausgelasteten Zeitraum (15 Minuten).
+In den folgenden Abschnitten finden Sie Anweisungen zum Erfassen des Zählers/Sek. für einen Domänen Controller.
 
 
 > [!NOTE]
@@ -59,8 +59,8 @@ Für die Analyse des Benutzerverhaltens benötigt das ATA Center die Daten von m
 |---------------------------|-------------------------|-------------------|---------------------------------|-----------------------------------|-----------------------------------|
 |1,000|2|32|0.3|9|30 (100)
 |40.000|4|48|12|360|500 (750)
-|200,000|8|64|60|1\.800|1\.000 (1.500)
-|400,000|12|96|120|3,600|2\.000 (2.500)
+|200.000|8|64|60|1\.800|1\.000 (1.500)
+|400.000|12|96|120|3,600|2\.000 (2.500)
 |750,000|24|112|225|6,750|2,500 (3,000)
 |1,000,000|40|128|300|9\.000|4,000 (5,000)
 
@@ -68,7 +68,8 @@ Für die Analyse des Benutzerverhaltens benötigt das ATA Center die Daten von m
 
 &#42;&#42;Durchschnittliche Werte (Spitzenwerte)
 > [!NOTE]
-> - ATA Center kann insgesamt maximal 1 Million Pakete pro Sekunde von allen überwachten Domänencontrollern verarbeiten. In einigen Umgebungen kann dasselbe ATA Center den gesamten Datenverkehr, der mehr als 1 Million Pakete beträgt, verarbeiten. Wenden Sie sich an askcesec@microsoft.com, um Unterstützung bei Umgebungen wie diesen zu erhalten.
+> - ATA Center kann auf allen überwachten Domänen Controllern aggregierte maximal 1 Mio. Pakete pro Sekunde verarbeiten. In einigen Umgebungen kann dasselbe ATA Center den gesamten Datenverkehr über 1 Mio. verarbeiten, und einige Umgebungen überschreiten möglicherweise die ATA-Kapazität. Kontaktieren Sie uns unter azureatpfeedback@microsoft.com, um Unterstützung beim Planen und schätzen von großen Umgebungen zu erhalten.
+
 > - Wenn der freie Speicherplatz auf 20 % oder 200 GB fällt, wird die älteste Sammlung gelöscht. Wenn es nicht möglich ist, die Datensammlung erfolgreich auf diesen Wert zu senken, wird eine Warnung ausgelöst.  ATA funktioniert weiterhin, bis der Grenzwert von 5 % oder 50 GB erreicht ist.  Dann füllt ATA die Datenbank nicht weiter mit Daten auf, und eine Warnung wird ausgelöst.
 > - Es ist möglich, ATA Center auf jedem IaaS-Anbieter bereitzustellen, solange die Leistungsanforderungen erfüllt werden, die in diesem Artikel beschrieben sind.
 > - Die Speicherlatenz für Lese- und Schreibvorgänge sollte unter 10 ms betragen.
@@ -171,7 +172,7 @@ Berücksichtigen Sie folgende Fehler bei der Entscheidung, wie viele ATA-Gateway
 - [Auswählen des richtigen ATA-Gatewaytyps](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 - [Tool zur Bemessung von ATA-Gateways](http://aka.ms/atasizingtool)
 - [Voraussetzungen für ATA](ata-prerequisites.md)
 - [ATA-Architektur](ata-architecture.md)
