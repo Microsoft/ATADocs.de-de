@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 12/02/2018
+ms.date: 10/22/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 1ad5e923-9bbd-4f56-839a-b11a9f387d4b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0fdf6b312c51949a1a104336518cc55f924020aa
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: 2177a4c5e7281bd87f87009307b675b9d649c295
+ms.sourcegitcommit: 17bea648092fedaad08384442d237e766c472a70
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65197150"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72776629"
 ---
 # <a name="configure-detection-exclusions-and-honeytoken-accounts"></a>Konfigurieren von Ausschlüssen von Erkennungen und Honeytokenkonten
 
@@ -35,7 +35,7 @@ Dazu führen Sie folgende Schritte aus:
 
 2.  Klicken Sie unter **Erkennung** auf **Entitätstag**.
 
-3. Geben Sie unter **Honeytokenkonten** den Kontonamen des Honeytokens ein, und klicken Sie auf das **+**-Zeichen. Das Honeytoken-Kontenfeld kann gesucht werden und zeigt automatisch Entitäten in Ihrem Netzwerk an. Klicken Sie auf **Speichern**.
+3. Geben Sie unter **Honeytokenkonten** den Kontonamen des Honeytokens ein, und klicken Sie auf das **+** -Zeichen. Das Honeytoken-Kontenfeld kann gesucht werden und zeigt automatisch Entitäten in Ihrem Netzwerk an. Klicken Sie auf **Speichern**.
 
    ![Honeytoken](media/honeytoken-sensitive.png)
 
@@ -49,9 +49,9 @@ Dazu führen Sie folgende Schritte aus:
 
 Damit haben Sie Azure Advanced Threat Protection erfolgreich bereitgestellt.
 
-Sie können nun die Angriffszeitleiste auf erkannte Sicherheitswarnungen prüfen sowie nach Benutzern oder Computern suchen und deren Profile anzeigen.
+Sie können nun die Angriffszeitleiste auf Sicherheitswarnungen prüfen, die aus erkannten Aktivitäten generiert wurden, sowie nach Benutzern oder Computern suchen und deren Profile anzeigen.
 
-Azure ATP-Überprüfung wird sofort gestartet. Einige Erkennungen wie Abnormal Group Modification (ungewöhnliche Gruppenänderungen) erfordern eine Lernphase und sind nicht unmittelbar nach der Azure ATP-Bereitstellung verfügbar.
+Azure ATP-Überprüfung wird sofort gestartet. Einige Erkennungen – z. B. [Verdächtige Hinzufügungen zu vertraulichen Gruppen](atp-domain-dominance-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024) erfordern einen Lernzeitraum und sind nicht sofort nach der Bereitstellung von Azure ATP verfügbar. Der Lernzeitraum für jede Warnung wird im detaillierten [Leitfaden für Sicherheitswarnungen](suspicious-activity-guide.md) aufgeführt. 
 
 
 ## <a name="see-also"></a>Weitere Informationen

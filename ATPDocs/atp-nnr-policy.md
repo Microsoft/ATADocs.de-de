@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/17/2019
+ms.date: 10/22/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 1ac873fc-b763-41d7-878e-7c08da421cb5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9cef9a1eb7035f1db61ab6c3c0b90d4e73278d36
-ms.sourcegitcommit: 15f882cf45776877fdaca8367a7a0fe7f06a7917
+ms.openlocfilehash: cb9275c90afda7a5ec98cf238205232b2bcfb66f
+ms.sourcegitcommit: 17bea648092fedaad08384442d237e766c472a70
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71185648"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72776609"
 ---
 # <a name="what-is-network-name-resolution"></a>Was ist Netzwerknamensauflösung?
 
@@ -27,13 +27,13 @@ Durch die Verwendung von NNR ordnet Azure ATP reinen Aktivitäten (mit IP-Adress
 
 Wenn IP-Adressen zu Computernamen aufgelöst werden sollen, fragen Azure ATP-Sensoren die IP-Adresse für den Computernamen „hinter“ der IP ab und verwenden dazu eine der folgenden Methoden:
 
-1. NTLM über RPC (TCP-Port 135)
-2. NetBIOS (UDP-Port 137)
-3. RDP (TCP-Port 3389): nur das erste Paket von **ClientHello**
-4. Abfragen des DNS-Servers mittels Reverse-DNS-Lookup der IP-Adresse (UDP 53)
+- NTLM über RPC (TCP-Port 135)
+- NetBIOS (UDP-Port 137)
+- RDP (TCP-Port 3389): nur das erste Paket von **ClientHello**
+- Abfragen des DNS-Servers mittels Reverse-DNS-Lookup der IP-Adresse (UDP 53)
 
 > [!NOTE]
->An keinem dieser Ports erfolgt eine Authentifizierung.
+> An keinem dieser Ports erfolgt eine Authentifizierung.
 
 Azure ATP wertet das Betriebssystem des Geräts basierend auf dem Netzwerkdatenverkehr aus und legt es fest. Nach dem Abrufen des Computernamens überprüft der Azure ATP-Sensor in Active Directory Domain Services, ob ein zugehöriges Computerobjekt mit gleichem Computernamen vorhanden ist und verwendet TCP-Fingerabdrücke. Mithilfe von TCP-Fingerabdrücken können nicht registrierte und Nicht-Windows-Geräte identifiziert werden, sodass der Untersuchungsprozess vereinfacht wird. Wenn der Azure ATP-Sensor die Korrelation findet, ordnet er die IP dem betreffenden Computerobjekt zu. 
 
@@ -61,6 +61,7 @@ Der Beweis umfasst die Uhrzeit, die IP-Adresse und den Computernamen, in den die
     ![Beweissicherheit](media/nnr-high-certainty.png)
 
 
+
 ### <a name="prerequisites"></a>Voraussetzungen
 |Protokoll|  Transport|  Port|   Gerät| Richtung|
 |--------|--------|------|-------|------|
@@ -74,9 +75,13 @@ Das Öffnen von Port 3389 **ist keine Voraussetzung**, es stellt lediglich eine 
 
 Um sicherzustellen, dass Azure ATP optimal funktioniert und die Umgebung ordnungsgemäß konfiguriert ist, überprüft Azure ATP den Auflösungsstatus jedes Sensors und gibt pro Methode eine Überwachungswarnung heraus, sodass eine Liste der Azure ATP-Sensoren mit geringer Erfolgsquote bei der aktiven Namensauflösung für die einzelnen Methoden bereitgestellt wird.
 
+> [!NOTE]
+> Wenn Sie eine optionale NNR-Methode in Azure ATP deaktivieren müssen, um die Anforderungen Ihrer Umgebung zu erfüllen, eröffnen Sie ein Supportticket. 
+
 Jede Überwachungswarnung enthält spezifische Details zu Methode, Sensoren, der problematischen Richtlinie sowie Konfigurationsempfehlungen.
 
 ![Warnung bei geringer Erfolgsquote der Netzwerknamensauflösung (NNR)](media/atp-nnr-success-rate.png)
+
 
 
 ### <a name="configuration-recommendations"></a>Konfigurationsempfehlungen
