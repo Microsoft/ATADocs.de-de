@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 08/11/2019
+ms.date: 10/31/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 224e629a-0e82-458c-bb03-b67070a9241d
 ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: af8481be19535903ca1e992a62a813acb473fcf0
-ms.sourcegitcommit: e185d6cf13ef0c40206a5d1980e3953ef8834a48
+ms.openlocfilehash: 67a6525645cf04e4bd14f0a398d1ac9dd224d558
+ms.sourcegitcommit: 65f9249e3e49d80d872c82bf663389d04945e534
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68951258"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73462380"
 ---
 # <a name="azure-atp-data-security-and-privacy"></a>Sicherheit und Datenschutz für Azure ATP
 
@@ -53,3 +53,6 @@ Azure ATP implementiert die Überwachung von Änderungen an personenbezogenen Da
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - Informationen zur Vertrauensstellung und Konformität von Azure ATP finden Sie im [Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) und auf der Website zur [DSGVO-Konformität von Microsoft 365 Enterprise](https://docs.microsoft.com/microsoft-365/compliance/compliance-solutions-overview).
+
+## <a name="security-and-privacy-for-azure-atp-us-government-gcc-high-customers"></a>Sicherheit und Datenschutz für Azure ATP GCC High-Kunden der US-Regierung 
+Weitere Informationen zu Azure ATP-Kompatibilitätsstandards und zum Speicherort der Kundendaten für GCC High-Kunden der US-Regierung finden Sie unter [Beschreibung des Diensts Enterprise Mobility + Security für die US-Regierung](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-govt-service-description). 

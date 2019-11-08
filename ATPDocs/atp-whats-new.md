@@ -5,25 +5,44 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 09/22/2019
+ms.date: 10/29/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: d322c9b0352319e8511414e042d340acbbccd371
-ms.sourcegitcommit: 4b89831dc3f17e594c0c824f94f6d2debb07c516
+ms.openlocfilehash: 049f01e0cb4de7a2b308d293a4d36e0891a8e815
+ms.sourcegitcommit: 65f9249e3e49d80d872c82bf663389d04945e534
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71997551"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73462334"
 ---
 # <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Neuerungen in Azure Advanced Threat Protection (Azure ATP)
 
 Dieser Artikel wird häufig aktualisiert, um Sie über die Neuerungen in der neuesten Version von Azure ATP auf dem Laufenden zu halten.
 
-RSS-Feed: Sie können Benachrichtigungen erhalten, wenn diese Seite aktualisiert wird, indem Sie folgende URL kopieren und in Ihren Feedreader einfügen: `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
+RSS-Feed: Lassen Sie sich benachrichtigen, wenn diese Seite aktualisiert wird, indem Sie die folgende URL kopieren und in Ihren Feedreader einfügen: <br>`https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
+
+
+Veröffentlicht: 3. November 2019
+## <a name="azure-atp-release-299"></a>Azure ATP Release 2.99
+
+- **Featureerweiterung:  Benachrichtigung in der Benutzeroberfläche über die Verfügbarkeit des Cloud App Security-Portals wurde dem Azure ATP-Portal hinzugefügt** <br> 
+    Um sicherzustellen, dass alle Benutzer über die Verfügbarkeit der erweiterten Features informiert sind, die über das Cloud App Security-Portal verfügbar sind, wurde die Benachrichtigung für das Portal aus der vorhandenen Azure ATP-Warnungszeitachse hinzugefügt. 
+
+- Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
+
+
+Veröffentlicht: 27. Oktober 2019
+## <a name="azure-atp-release-298"></a>Azure ATP Release 2.98
+
+- **Featureerweiterung: Warnung wg. Verdacht auf einen Brute-Force-Angriff** <br> 
+    Die Warnung bei [Verdacht auf einen Brute-Force-Angriff (SMB)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-smb-external-id-2033) wurde mithilfe zusätzlicher Analysen verbessert, und die Erkennungslogik zum Reduzieren **unbedenklicher richtig positiver (B-TP)** und **falsch positiver (FP)** Warnungsergebnisse wurde verbessert. 
+
+- Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
+
 
 Veröffentlicht: 6. Oktober 2019
 ## <a name="azure-atp-release-297"></a>Azure ATP-Release 2.97
