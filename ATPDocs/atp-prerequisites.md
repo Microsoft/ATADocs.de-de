@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 09/23/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 763f27e9fb3e134f97b716306c747ecce7edf411
-ms.sourcegitcommit: 0a98c0c151be2a81a3bb9ff1301d35a3091079ea
+ms.openlocfilehash: 7c1dfa8cfda0bb6fb39770a58a7cc1b54dbc2298
+ms.sourcegitcommit: ef68a774d2756719bce8747e65f8bde2b9afdd5d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71217665"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73618449"
 ---
 # <a name="azure-atp-prerequisites"></a>Voraussetzungen für Azure ATP
 
@@ -140,6 +140,7 @@ In der folgenden Tabelle sind die Ports aufgeführt, die für den Azure ATP-Sens
 |------------|-------------|--------|-----------|-------------|
 |**Internetports**|||||
 |SSL (*.atp.azure.com)|TCP|443|Azure ATP-Clouddienst|Ausgehend|
+|SSL(localhost)|TCP|444|localhost|Beide|
 |**Interne Ports**|||||
 |DNS|TCP und UDP|53|DNS-Server|Ausgehend|
 |Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Alle Geräte im Netzwerk|Ausgehend|
@@ -230,7 +231,7 @@ In der folgenden Tabelle sind die Ports aufgeführt, die für den Verwaltungsada
 
 
 ## <a name="see-also"></a>Weitere Informationen
-- [Azure ATP sizing tool (Azure ATP-Tool zur Größenanpassung)](http://aka.ms/aatpsizingtool)
+- [Azure ATP sizing tool (Azure ATP-Tool zur Größenanpassung)](https://aka.ms/aatpsizingtool)
 - [Azure ATP architecture (Azure ATP-Architektur)](atp-architecture.md)
 - [Install Azure ATP (Installieren von Azure ATP)](install-atp-step1.md)
 - [Netzwerknamensauflösung](atp-nnr-policy.md)

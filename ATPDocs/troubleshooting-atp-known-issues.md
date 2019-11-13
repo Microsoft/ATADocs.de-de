@@ -5,22 +5,31 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 10/07/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 049d125e8d9cd458f2116c61770893d4b2d596e8
-ms.sourcegitcommit: 4b89831dc3f17e594c0c824f94f6d2debb07c516
+ms.openlocfilehash: d764d466e0981c673874386d7b28019f48d79827
+ms.sourcegitcommit: ef68a774d2756719bce8747e65f8bde2b9afdd5d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71997578"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73618425"
 ---
 # <a name="troubleshooting-azure-atp-known-issues"></a>Behandlung von bekannten Problemen bei Azure ATP 
 
+
+## <a name="sensor-failure-communication-error"></a>Kommunikationsfehler durch Sensorfehler
+Sie erhalten folgenden Sensorfehler: 
+
+System.Net.Http.HttpRequestException: Fehler beim Senden der Anforderung. ---> System.Net.WebException: Es konnte keine Verbindung mit dem Remoteserver hergestellt werden ---> System.Net.Sockets.SocketException: Fehler beim Herstellen der Verbindung, weil die Gegenstelle nach einer bestimmten Zeitspanne nicht ordnungsgemäß reagiert hat, oder die hergestellte Verbindung konnte nicht aufrechterhalten werden, weil der verbundene Host nicht reagiert hat...
+
+**Lösung:**
+
+Stellen Sie sicher, dass die Kommunikation für Localhost an TCP-Port 444 nicht blockiert ist. Weitere Informationen zu den Voraussetzungen für Azure ATP finden Sie unter [Ports](atp-prerequisites.md#ports).
 
 ## <a name="deployment-log-location"></a>Speicherort des Bereitstellungsprotokolls
  
