@@ -5,19 +5,19 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: rkarlin
-ms.date: 3/21/2018
+ms.date: 11/07/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: e0aed853-ba52-46e1-9c55-b336271a68e7
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f98dfb3f5688f143a490a8ab7abb7eea7d8da5d9
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.openlocfilehash: d582d45007cc288844c26c03d90195e4b741025a
+ms.sourcegitcommit: 814af2addf833d40d10f7594275a132f888eea9b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65197028"
+ms.lasthandoff: 11/17/2019
+ms.locfileid: "74153118"
 ---
 # <a name="install-ata---step-7"></a>Installieren von ATA – Schritt 7
 
@@ -29,13 +29,16 @@ ms.locfileid: "65197028"
 
 ## <a name="step-7-integrate-vpn"></a>Schritt 7: Integrieren des VPN
 
-Die Version 1.8 von Microsoft Advanced Threat Analytics (ATA) kann Kontoführungsinformationen aus VPN-Lösungen erfassen. Nach der Konfiguration beinhaltet die Profilseite des Benutzers Informationen aus den VPN-Verbindungen, wie IP-Adressen und Standorte, aus denen die Verbindungen entstammen. Dadurch wird der Untersuchungsvorgang durch zusätzliche Informationen zur Benutzeraktivität ergänzt. Der Aufruf zum Auflösen einer externen IP-Adresse an einem Standort ist anonym. In diesem Aufruf wird kein persönlicher Bezeichner gesendet.
+Microsoft Advanced Threat Analytics (ATA) Version 1,8 und höher können Buchhaltungsinformationen aus VPN-Lösungen erfassen. Nach der Konfiguration beinhaltet die Profilseite des Benutzers Informationen aus den VPN-Verbindungen, wie IP-Adressen und Standorte, aus denen die Verbindungen entstammen. Dadurch wird der Untersuchungsvorgang durch zusätzliche Informationen zur Benutzeraktivität ergänzt. Der Aufruf zum Auflösen einer externen IP-Adresse an einem Standort ist anonym. In diesem Aufruf wird kein persönlicher Bezeichner gesendet.
 
 ATA arbeitet mit Ihrer VPN-Lösung zusammen, indem es RADIUS-Buchhaltungsereignisse abhört, die an die ATA-Gateways weitergeleitet werden. Dieser Mechanismus basiert auf einer standardmäßigen RADIUS-Kontoführung ([RFC 2866](https://tools.ietf.org/html/rfc2866)). Die folgenden VPN-Anbieter werden unterstützt:
 
 -   Microsoft
 -   F5
 -   Cisco ASA
+
+> [!IMPORTANT]
+> Ab September 2019 unterstützt der Advanced Threat Analytics-VPN-Standort Dienst, der für die Ermittlung von VPN-Speicherorten zuständig ist, jetzt exklusiv TLS 1,2. Stellen Sie sicher, dass ATA Center für die Unterstützung von TLS 1,2 konfiguriert ist, da die Versionen 1,1 und 1,0 nicht mehr unterstützt werden.   
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -73,7 +76,7 @@ So konfigurieren Sie VPN-Daten in ATA
  
    ![ATA-Konfigurationsmenü](./media/config-menu.png)
 
-2. Aktivieren Sie die **RADIUS-Kontoführung**, und geben Sie das **gemeinsame Geheimnis** ein, das Sie zuvor auf Ihrem RRAS-VPN-Server konfiguriert haben. Klicken Sie dann auf **Save** (Speichern).
+2. Aktivieren Sie die **RADIUS-Kontoführung**, und geben Sie das **gemeinsame Geheimnis** ein, das Sie zuvor auf Ihrem RRAS-VPN-Server konfiguriert haben. Klicken Sie dann auf **Speichern**.
  
 
   ![Konfigurieren des ATA-VPN](./media/vpn.png)
@@ -101,9 +104,9 @@ Nachdem das ATA-Gateway die VPN-Ereignisse empfängt und zur Verarbeitung an das
 - [Auswählen des richtigen ATA-Gatewaytyps](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
-## <a name="see-also"></a>Weitere Informationen
-- [Handbuch für die ATA POC-Bereitstellung](http://aka.ms/atapoc)
-- [Tool zur Bemessung von ATA-Gateways](http://aka.ms/aatpsizingtool)
+## <a name="see-also"></a>Weitere Informationen:
+- [Handbuch für die ATA POC-Bereitstellung](https://aka.ms/atapoc)
+- [Tool zur Bemessung von ATA-Gateways](https://aka.ms/aatpsizingtool)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
 - [Voraussetzungen für ATA](ata-prerequisites.md)
