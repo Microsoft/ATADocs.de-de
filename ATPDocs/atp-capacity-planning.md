@@ -7,12 +7,12 @@ ms.date: 11/05/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.openlocfilehash: 0d149b74724ecddcce88bc932626d6bd395d4202
-ms.sourcegitcommit: ef68a774d2756719bce8747e65f8bde2b9afdd5d
+ms.openlocfilehash: b9fa681e61d7e723ca3c942e406ed61c837cfe44
+ms.sourcegitcommit: 814af2addf833d40d10f7594275a132f888eea9b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73618492"
+ms.lasthandoff: 11/17/2019
+ms.locfileid: "74153132"
 ---
 # <a name="quickstart-plan-capacity-for-azure-atp"></a>Schnellstart: Planen der Kapazität für Azure ATP
 
@@ -77,8 +77,9 @@ Die folgende CPU- und Arbeitsspeicherkapazität bezieht sich auf den **Verbrauch
 |10.000 – 20.000|2,00|9,00|
 |20.000 – 50.000|3,50|9,50|
 |50.000 – 75.000 |3,50|9,50|
-|75.000 – 100.000|3,50 |9,50|
+|75.000 – 100.000|3,50|9,50|
 |
+
 ** Dies umfasst physische Kerne, keine Hyperthreadingkerne. 
 
 Beachten Sie bei der Größenanpassung Folgendes: 
