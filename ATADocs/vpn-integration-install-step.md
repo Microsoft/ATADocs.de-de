@@ -27,7 +27,7 @@ ms.locfileid: "74153118"
 > [« Schritt 5](install-ata-step5.md)
 > [Schritt 8 »](install-ata-step7.md)
 
-## <a name="step-7-integrate-vpn"></a>Schritt 7: Integrieren des VPN
+## <a name="step-7-integrate-vpn"></a>Schritt 7 Integrieren des VPN
 
 Microsoft Advanced Threat Analytics (ATA) Version 1,8 und höher können Buchhaltungsinformationen aus VPN-Lösungen erfassen. Nach der Konfiguration beinhaltet die Profilseite des Benutzers Informationen aus den VPN-Verbindungen, wie IP-Adressen und Standorte, aus denen die Verbindungen entstammen. Dadurch wird der Untersuchungsvorgang durch zusätzliche Informationen zur Benutzeraktivität ergänzt. Der Aufruf zum Auflösen einer externen IP-Adresse an einem Standort ist anonym. In diesem Aufruf wird kein persönlicher Bezeichner gesendet.
 
@@ -104,7 +104,7 @@ Nachdem das ATA-Gateway die VPN-Ereignisse empfängt und zur Verarbeitung an das
 - [Auswählen des richtigen ATA-Gatewaytyps](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 - [Handbuch für die ATA POC-Bereitstellung](https://aka.ms/atapoc)
 - [Tool zur Bemessung von ATA-Gateways](https://aka.ms/aatpsizingtool)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

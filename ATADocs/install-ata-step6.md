@@ -27,10 +27,10 @@ ms.locfileid: "70803176"
 > [« Schritt 5](install-ata-step5.md)
 > [Schritt 7 »](vpn-integration-install-step.md)
 
-## <a name="step-6-configure-event-collection"></a>Schritt 6: Konfigurieren der Ereignissammlung
+## <a name="step-6-configure-event-collection"></a>Schritt 6 Konfigurieren der Ereignissammlung
 ### <a name="configure-event-collection"></a>Konfigurieren der Ereignissammlung
 
-Um die Erkennungsfunktionalität zu verbessern, benötigt ATA die folgenden Windows-Ereignisse: 4776, 4732, 4733, 4728, 4729, 4756, 4757 und 7045. Diese Windows-Ereignisse werden entweder automatisch vom ATA-Lightweight-Gateway gelesen, oder für den Fall, dass das ATA-Lightweight-Gateway nicht bereitgestellt wird, können Sie auf eine von zwei Arten an das ATA-Gateway weitergeleitet werden, entweder durch Konfigurieren des ATA-Gateways zum lauschen auf Siem-Ereignisse oder durch [ Konfigurieren der Windows-Ereignis Weiterleitung](configure-event-collection.md).  
+Um die Erkennungsfunktionalität zu verbessern, benötigt ATA die folgenden Windows-Ereignisse: 4776, 4732, 4733, 4728, 4729, 4756, 4757 und 7045. Diese Windows-Ereignisse werden entweder automatisch vom ATA-Lightweight-Gateway gelesen, oder für den Fall, dass das ATA-Lightweight-Gateway nicht bereitgestellt wird, können Sie auf eine von zwei Arten an das ATA-Gateway weitergeleitet werden, entweder durch Konfigurieren des ATA-Gateways zum lauschen auf Siem-Ereignisse oder durch [Konfigurieren der Windows-Ereignis weiter](configure-event-collection.md)  
 
 > [!NOTE]
 > Für ATA-Versionen 1,8 und höher ist die Konfiguration der Windows-Ereignis Sammlung für ATA-Lightweight-Gateways nicht mehr erforderlich. Das ATA-Lightweight-Gateway liest jetzt Ereignisse lokal, ohne die Ereignisweiterleitung zu konfigurieren.
@@ -55,7 +55,7 @@ Weitere Informationen über das Konfigurieren der Weiterleitung bestimmter Ereig
 > [!NOTE]
 >Wenn Sie keinen SIEM-/Syslog-Server verwenden, können Sie Ihre Windows-Domänencontroller zum Weiterleiten von Windows-Ereignis-ID 4776 konfigurieren, damit diese von ATA gesammelt und konfiguriert wird. Windows-Ereignis-ID 4776 enthält Daten über NTLM-Authentifizierungen.
 
-#### <a name="configuring-the-ata-gateway-to-listen-for-siem-events"></a>Konfigurieren des ATA-Gateways zum Überwachen von SIEM-Ereignissen
+#### <a name="configuring-the-ata-gateway-to-listen-for-siem-events"></a>Konfigurieren des ATA-Gateways zum Abhören von SIEM-Ereignissen
 
 1.  Klicken Sie in der ATA-Konfiguration unter **Datenquellen** auf **SIEM**, aktivieren Sie **Syslog**, und klicken Sie auf **Speichern**.
 
@@ -130,7 +130,7 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|Der 
 
 Es wurde versucht, die Anmeldeinformationen für ein Konto zu überprüfen.
 
-Authentifizierungspaket:              MICROSOFT_AUTHENTICATION_PACKAGE_V1_0
+Authentifizierungspaket: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0
 
 Anmeldekonto: Administrator
 
@@ -163,7 +163,7 @@ Fehlercode:         0x0
 -   Die Reihenfolge der „Schlüssel = Wert“-Paare ist unerheblich.
 
 #### <a name="qradar"></a>QRadar
-QRadar ermöglicht Ereignissammlung über einen Agent. Wenn die Daten mithilfe eines Agents erfasst werden, werden Zeiten ohne Millisekunden-Daten erfasst. Da ATA Millisekunden-Daten erfordert, muss QRadar so festgelegt werden, dass es die Windows-Ereignissammlung ohne Agents verwendet. Weitere Informationen finden Sie unter [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Agentless Windows Events Collection using the MSRPC Protocol") (QRadar: Auflistung von Windows-Ereignissen ohne Agent mithilfe des MSRPC-Protokolls).
+QRadar ermöglicht Ereignissammlung über einen Agent. Wenn die Daten mithilfe eines Agents erfasst werden, werden Zeiten ohne Millisekunden-Daten erfasst. Da ATA Millisekunden-Daten erfordert, muss QRadar so festgelegt werden, dass es die Windows-Ereignissammlung ohne Agents verwendet. Weitere Informationen finden Sie unter [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Agentless Windows Events Collection using the MSRPC Protocol (QRadar: Auflistung von Windows-Ereignissen ohne Agent mithilfe des MSRPC-Protokolls)").
 
     <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
 
