@@ -12,14 +12,14 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 6597b8c7-f83e-43c6-8149-fb4a914a845b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 55783934a609577bf34fe1034903f2d5e6f97fc5
-ms.sourcegitcommit: 475df3e87d8476ff13e48ebc7a722f46f29dab70
+ms.openlocfilehash: 1cf8a66b80c43570e018a4d09dcfd81657934f98
+ms.sourcegitcommit: be4525a93601d9356a4e487398262a2ffaf8c202
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71007499"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74206296"
 ---
-# <a name="security-assessment-legacy-protocols-usage---preview"></a>Sicherheitsbewertung: Verwendung von Legacyprotokollen – Vorschau
+# <a name="security-assessment-legacy-protocols-usage"></a>Sicherheitsbewertung: Verwendung von Legacyprotokollen 
  
 ## <a name="what-are-legacy-protocols"></a>Was sind Legacyprotokolle?
 

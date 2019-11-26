@@ -12,14 +12,14 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 7eea354b-7a50-40d9-bfa7-dcccaef23179
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1343d0359750744890fdb3e15b5f49adfd2459d1
-ms.sourcegitcommit: 475df3e87d8476ff13e48ebc7a722f46f29dab70
+ms.openlocfilehash: 949f99c2ab19a5765a69c21121a274257c20efb6
+ms.sourcegitcommit: be4525a93601d9356a4e487398262a2ffaf8c202
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71007443"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74206313"
 ---
-# <a name="security-assessment-unsecure-kerberos-delegation---preview"></a>Sicherheitsbewertung: Unsichere Kerberos-Delegierungen – Vorschau
+# <a name="security-assessment-unsecure-kerberos-delegation"></a>Sicherheitsbewertung: Unsichere Kerberos-Delegierung
 
 
 ## <a name="what-is-kerberos-delegation"></a>Was ist die Kerberos-Delegierung? 

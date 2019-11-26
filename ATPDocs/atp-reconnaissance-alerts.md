@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 442bad8e2dc7c587e665a233083859e86185d3e7
-ms.sourcegitcommit: e25979884395e7143492d604b7d195649aff410c
+ms.openlocfilehash: b19abab8774f79d18b9d82b4048625dd72b3af43
+ms.sourcegitcommit: be4525a93601d9356a4e487398262a2ffaf8c202
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73046926"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74206232"
 ---
 # <a name="tutorial-reconnaissance-alerts"></a>Tutorial: Warnungen zu Reconnaissance  
 
@@ -99,9 +99,9 @@ Betrachten Sie nun die Konten:<br>
 1. Untersuchen Sie den Quellcomputer.
 1. Wenn bei einem Rateversuch eine Übereinstimmung mit einem vorhandenen Kontonamen gefunden wird, kennt der Angreifer vorhandene Konten in Ihrer Umgebung und kann mit den gefundenen Benutzernamen Brute-Force-Angriffe ausführen, um Zugriff auf Ihre Domäne zu erhalten. Untersuchen Sie vorhandene Konten mithilfe des [Leitfadens für die Untersuchung von Benutzern](investigate-a-user.md).
     > [!NOTE]
-    > Wenn die Authentifizierung mithilfe von NTLM erfolgt ist, sind in einigen Szenarios möglicherweise nicht genügend Informationen zum Server verfügbar, auf die der Quellcomputer zugreifen wollte. Azure ATP erfasst die auf Windows-Ereignis 4776 basierenden Daten des Quellcomputers, die den computerdefinierten Namen des Quellcomputers enthalten.
-    > Wenn Sie Windows-Ereignis 4776 verwenden, um diese Informationen zu erfassen, wird das Quellfeld für diese Informationen gelegentlich von dem Gerät oder der Software überschrieben, und zeigt nur „Arbeitsstation“ oder „MSTSC“ an. Wenn Sie häufig Geräte verwenden, die als „Arbeitsstation“ oder „MSTSC“ angezeigt werden, vergewissern Sie sich, dass die NTLM-Überwachung auf den entsprechenden Domänencontrollern aktiviert ist, um den richtigen Quellcomputernamen zu erhalten.    
-    > Aktivieren Sie dazu das Windows-Ereignis 8004 (NTLM-Authentifizierungsereignis, das Informationen zum Quellcomputer, Benutzerkonto und Server enthält, auf die der Quellcomputer zugreifen wollte).
+    > Überprüfen Sie die Beweise, um das verwendete Authentifizierungsprotokoll zu ermitteln. Wenn die NTLM-Authentifizierung verwendet wurde, aktivieren Sie die NTLM-Überwachung des Windows-Ereignisses 8004 auf dem Domänencontroller, um den Ressourcenserver zu ermitteln, auf den die Benutzer zugreifen wollten.<br>
+    > Windows-Ereignis 8004 ist das NTLM-Authentifizierungsereignis, das Informationen zum Quellcomputer, Benutzerkonto und Server enthält, auf die das Quellbenutzerkonto zugreifen wollte. <br>
+    > Azure ATP erfasst die auf Windows-Ereignis 4776 basierenden Daten des Quellcomputers, die den computerdefinierten Namen des Quellcomputers enthalten. Wenn Sie Windows-Ereignis 4776 verwenden, um diese Informationen zu erfassen, wird das Quellfeld der Informationen gelegentlich von dem Gerät oder der Software überschrieben, und es wird nur „Arbeitsstation“ oder „MSTSC“ als Informationsquelle angezeigt. Darüber hinaus ist der Quellcomputer möglicherweise nicht tatsächlich in Ihrem Netzwerk vorhanden. Dies ist möglich, da Angreifer in der Regel offene, über das Internet zugängliche Server außerhalb des Netzwerks zum Ziel haben und dies dann zum Auflisten Ihrer Benutzer verwenden. Wenn Sie häufig Geräte verwenden, die als „Arbeitsstation“ oder „MSTSC“ angezeigt werden, vergewissern Sie sich, dass die NTLM-Überwachung auf den Domänencontrollern aktiviert ist, um den Namen des Ressourcenservers zu erhalten, auf den zugegriffen wurde. Sie sollten diesen Server ebenfalls untersuchen und überprüfen, ob er zum Internet geöffnet ist, und ihn ggf. schließen.
 
 1. Wenn Sie wissen, welcher Server die Authentifizierungsüberprüfung gesendet hat, untersuchen Sie den Server, indem Sie Ereignisse wie das Windows-Ereignis 4624 überprüfen, um den Authentifizierungsprozess besser nachvollziehen zu können. 
 
@@ -111,9 +111,9 @@ Betrachten Sie nun die Konten:<br>
 
 1. Isolieren Sie den [Quellcomputer](investigate-a-computer.md). 
     1. Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
-    2. Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch kompromittiert sind. 
-    3. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA.
-2. Erzwingen Sie [komplexe und lange Kennwörter](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) in der Organisation. Komplexe und lange Kennwörter stellen die erste Sicherheitsstufe zum Schutz vor Brute-Force-Angriffen dar. Diese sind nach der Enumeration normalerweise der nächste Schritt in der Kill Chain des Cyberangriffs. 
+    1. Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch kompromittiert sind. 
+    1. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA.
+1. Erzwingen Sie [komplexe und lange Kennwörter](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) in der Organisation. Komplexe und lange Kennwörter stellen die erste Sicherheitsstufe zum Schutz vor Brute-Force-Angriffen dar. Diese sind nach der Enumeration normalerweise der nächste Schritt in der Kill Chain des Cyberangriffs. 
 
 ## <a name="network-mapping-reconnaissance-dns-external-id-2007"></a>Reconnaissance über Netzwerkzuordnungen (DNS) (externe ID 2007) 
 
