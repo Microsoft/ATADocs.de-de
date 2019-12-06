@@ -7,12 +7,12 @@ ms.date: 11/05/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.openlocfilehash: b9fa681e61d7e723ca3c942e406ed61c837cfe44
-ms.sourcegitcommit: 814af2addf833d40d10f7594275a132f888eea9b
+ms.openlocfilehash: b07800cfc3b2df6fdb290fff27a9e807be15056f
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74153132"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74540887"
 ---
 # <a name="quickstart-plan-capacity-for-azure-atp"></a>Schnellstart: Planen der Kapazität für Azure ATP
 
@@ -31,7 +31,7 @@ Die empfohlene und einfachste Methode zum Bestimmen der Kapazität für die Azur
 
 1. Führen Sie das Tool zur Azure ATP-Größenanpassung (**TriSizingTool.exe**) aus der ZIP-Datei aus, die Sie heruntergeladen haben. 
 2. Öffnen Sie nach Abschluss der Toolausführung die Excel-Datei mit den Ergebnissen.
-3. Suchen Sie in der Excel-Datei nach dem Blatt **Azure ATP Summary** (Azure ATP-Zusammenfassung). Das zweite Blatt wird nicht benötigt, da es für die Azure ATA-Planung vorgesehen ist.
+3. Suchen Sie in der Excel-Datei nach dem Blatt **Azure ATP Summary** (Azure ATP-Zusammenfassung). Das zweite Blatt wird nicht benötigt, da es für die ATA-Planung vorgesehen ist.
    ![Beispiel für das Kapazitätsplanungstool](media/capacity-tool.png)
 
 4. Suchen Sie in der Excel-Ergebnisdatei in der Azure ATP-Sensortabelle nach dem Feld **Busy Packets/sec** (Aktive Pakete/s), und notieren Sie den Wert.
