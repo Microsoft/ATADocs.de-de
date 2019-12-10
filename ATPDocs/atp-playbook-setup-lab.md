@@ -8,10 +8,10 @@ ms.author: mlottner
 ms.date: 02/28/2019
 ms.reviewer: itargoet
 ms.openlocfilehash: 9ae630711b6ee7b7f84a233998d188e498af0a9e
-ms.sourcegitcommit: 7a32dcb65edc38fb9b3d340763045b21ea92feee
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "59745590"
 ---
 # <a name="tutorial-setup-an-atp-security-alert-lab"></a>Tutorial: Setup einer ATP-Sicherheitswarnungsumgebung 
@@ -110,7 +110,7 @@ New-ADUser -Name AatpService -DisplayName "Azure ATP/ATA Service" -PasswordNever
 
 Damit der Azure ATP-Dienst ordnungsgemäß die SAM-R-Enumeration ausführen und Lateral-Movement-Pfade erstellen kann, müssen Sie die SAM-Richtlinie bearbeiten.
 
-1. Sie finden Ihre SAM-Richtlinie unter: **Richtlinien \> Windows-Einstellungen \> Sicherheitseinstellungen \> Lokale Richtlinien \>Sicherheitsoptionen\> „Netzwerkzugriff: Clients einschränken, die Remoteaufrufe an SAM ausführen dürfen“**.
+1. Sie finden Ihre SAM-Richtlinie unter: **Richtlinien \> Windows-Einstellungen \> Sicherheitseinstellungen \> Lokale Richtlinien \>Sicherheitsoptionen\> „Netzwerkzugriff: Clients einschränken, die Remoteaufrufe an SAM ausführen dürfen“** .
 
     ![Ändern Sie die Gruppenrichtlinie, damit Azure ATP Lateral-Movement-Pfad-Funktionen nutzen kann.](media/playbook-labsetup-localgrouppolicies3.png)
 
@@ -128,7 +128,7 @@ Wenn Sie die „Helpdesk“-Sicherheitsgruppe als **sensible Gruppe** hinzufüge
 
     ![Azure ATP-Entitätstags](media/entity-tags.png)
 
-3. Geben Sie im Abschnitt **Sensibel** den Namen „Helpdesk“ für **Sensible Gruppen** ein, und klicken Sie anschließend auf das Zeichen **+**, um diese hinzuzufügen.
+3. Geben Sie im Abschnitt **Sensibel** den Namen „Helpdesk“ für **Sensible Gruppen** ein, und klicken Sie anschließend auf das Zeichen **+** , um diese hinzuzufügen.
 
     ![Markieren Sie den „Helpdesk“ als sensible Azure ATP-Gruppe, um Lateral-Movement-Diagramme und Berichte für diese privilegierte Gruppe zu aktivieren.](media/playbook-labsetup-helpdesksensitivegroup.png)
 

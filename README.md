@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: cf6a0565ce99147538ef4b0417193b4f414663c9
-ms.sourcegitcommit: 65f4bcd439ae3adb00522f54006f481b60da5373
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "64909636"
 ---
 ## <a name="microsoft-open-source-code-of-conduct"></a>Microsoft Open Source-Verhaltensregeln
@@ -13,4 +13,4 @@ Weitere Informationen finden Sie in den [häufig gestellten Fragen zu Verhaltens
 
 # <a name="docsmicrosoftcom-github-repository"></a>Docs.microsoft.com Github-Repository
 
-Sie haben eines der GitHub-Repositorys gefunden, das die Quelle für die auf [https://docs.microsoft.com](https://docs.microsoft.com/.) veröffentlichten Inhalte birgt. Dort sind alle technischen Ressourcen der Microsoft Cloud und Enterprise Division angesiedelt.
+Sie haben eines der GitHub-Repositorys gefunden, das die Quelle für die auf [https://docs.microsoft.com](https://docs.microsoft.com/.) veröffentlichten Inhalte birgt. Dort sind alle technischen Ressourcen der Microsoft Cloud und Enterprise Division angesiedelt. 

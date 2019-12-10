@@ -13,10 +13,10 @@ ms.assetid: 671747d5-faed-4352-a871-17b58fdc6574
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: f215639ea72d0c767f32bd9628e1c404da23aaa0
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65196393"
 ---
 # <a name="tutorial-understanding-security-alerts"></a>Tutorial: Grundlegendes zu Sicherheitswarnungen
@@ -51,9 +51,9 @@ Nach einer gründlichen Untersuchung können alle Azure ATP-Sicherheitswarnungen
 
 - **Richtig positiv (True Positive, TP):** Eine von Azure ATP erkannte schädliche Aktion.
 
-- **Unschädlich richtig positiv (Benign True Positive, B-TP)**: Eine von Azure ATP erkannte Aktion, die tatsächlich durchgeführt wurde, aber nicht böswillig ist, wie z.B. ein Penetrationstest oder eine bekannte Aktivität, die von einer genehmigten Anwendung generiert wurde.
+- **Unschädlich richtig positiv (Benign True Positive, B-TP)** : Eine von Azure ATP erkannte Aktion, die tatsächlich durchgeführt wurde, aber nicht böswillig ist, wie z.B. ein Penetrationstest oder eine bekannte Aktivität, die von einer genehmigten Anwendung generiert wurde.
 
-- **Falsch positiv (False Positive, FP)**: Ein falscher Alarm, das heißt, die Aktivität wurde nicht ausgeführt.
+- **Falsch positiv (False Positive, FP)** : Ein falscher Alarm, das heißt, die Aktivität wurde nicht ausgeführt.
 
 ### <a name="is-the-security-alert-a-tp-b-tp-or-fp"></a>Unterscheidung der Sicherheitswarnung in TP, B-TP oder FP
 

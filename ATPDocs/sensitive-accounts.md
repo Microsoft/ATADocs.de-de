@@ -13,10 +13,10 @@ ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: 2342a10f932664568065d2ef906d863a875c8096
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65196440"
 ---
 # <a name="working-with-sensitive-accounts"></a>Arbeiten mit sensiblen Konten
@@ -56,7 +56,7 @@ Neben den obenstehend aufgelisteten Gruppen können Sie auch manuell Gruppen ode
 
     ![Azure ATP-Entitätstags](media/entity-tags.png)
 
-3.  Geben Sie im Abschnitt **Sensibel** die Namen der **sensiblen Konten** und **sensiblen Gruppen** ein, und klicken Sie anschließend auf das Zeichen **+**, um diese hinzuzufügen.
+3.  Geben Sie im Abschnitt **Sensibel** die Namen der **sensiblen Konten** und **sensiblen Gruppen** ein, und klicken Sie anschließend auf das Zeichen **+** , um diese hinzuzufügen.
 
     ![Beispiel: sensibles Azure ATP-Konto](media/sensitive-account-sample.png)
 
