@@ -13,10 +13,10 @@ ms.assetid: a0d64aff-ca9e-4300-b3f8-eb3c8b8ae045
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: c0658b0d9320116bf8a752ce360994946300947a
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65195750"
 ---
 # <a name="whats-new-in-ata-version-15"></a>Neuerungen in ATA 1.5
@@ -47,7 +47,7 @@ Nach dem Update der ATA-Bereitstellung auf ATA 1.5 erhalten Sie beim Installier
 
 ![ATA-GW-Fehler](media/ata-install-error.png)
 
-<b>Problemumgehung</b>: Senden Sie eine E-Mail an <ataeval@microsoft.com>, um Schritte zur Problemumgehung anzufordern.
+<b>Problemumgehung:</b> Senden Sie eine E-Mail an <ataeval@microsoft.com>, um Schritte zur Problemumgehung anzufordern.
 ### <a name="deployment"></a>Bereitstellung
 Der angegebene Ordner für „Datenbankdatenpfad“ und „Datenbankjournalpfad“ muss leer sein (keine Dateien oder Unterordner).
 Wenn er nicht leer ist, wird die Bereitstellung nicht fortgesetzt.
@@ -59,12 +59,12 @@ Stellen Sie beim Installieren des ATA-Gateways sicher, dass Sie die Dateien aus 
 Nachdem die Konfiguration für ein ATA-Gateway festgelegt wurde, wird beim ersten Starten des ATA-Gateways die Bezeichnung „Nicht synchronisiert“ angezeigt, bis der Dienst vollständig gestartet wurde. Dies kann beim ersten Starten des Diensts bis zu 10 Minuten dauern.
 
 ### <a name="network-capture-software"></a>Software zur Netzwerkerfassung
-Auf dem ATA-Gateway ist der [Microsoft-Netzwerkmonitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865) die einzige unterstützte Software zur Netzwerkerfassung, die installiert werden kann. Installieren Sie nicht Microsoft Message Analyzer oder eine andere Software zur Netzwerkerfassung. Die Installation anderer Software führt dazu, dass das ATA-Gateway nicht mehr ordnungsgemäß funktioniert.
+Auf dem ATA-Gateway ist die einzige unterstützte Software zur Netzwerkerfassung, die Sie installieren können, [Microsoft Netzwerkmonitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865). Installieren Sie nicht Microsoft Message Analyzer oder eine andere Software zur Netzwerkerfassung. Die Installation anderer Software führt dazu, dass das ATA-Gateway nicht mehr ordnungsgemäß funktioniert.
 
 ### <a name="kb-on-virtualization-host"></a>KB auf Virtualisierungshost
 Installieren Sie KB3047154 nicht auf einem Virtualisierungshost. Dies kann dazu führen, dass die Portspiegelung nicht mehr ordnungsgemäß ausgeführt wird.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 [Aktualisieren von ATA auf Version 1.5 – Migrationsleitfaden](ata-update-1.5-migration-guide.md)
 

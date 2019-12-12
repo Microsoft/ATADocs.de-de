@@ -13,10 +13,10 @@ ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 25ccbe5c1cd37a46e88335fc1e293b0e426ced4e
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65196097"
 ---
 # <a name="install-ata---step-1"></a>Installieren von ATA – Schritt 1
@@ -32,7 +32,7 @@ Diese Installationsschritte stellen Anweisungen zur Durchführung einer Neuinsta
 > [!IMPORTANT] 
 > Wenn Sie Windows 2012 R2 verwenden, installieren Sie vor ATA das Update KB2934520 auf dem ATA Center-Server und den ATA-Gatewayservern, da andernfalls bei der ATA-Installation dieses Update installiert wird und inmitten der ATA-Installation ein Neustart erforderlich ist.
 
-## <a name="step-1-download-and-install-the-ata-center"></a>Schritt 1: Herunterladen und Installieren von ATA Center
+## <a name="step-1-download-and-install-the-ata-center"></a>Schritt 1 Herunterladen und Installieren von ATA Center
 Nachdem Sie überprüft haben, ob der Server die Anforderungen erfüllt, können Sie mit der Installation von ATA Center fortfahren.
     
 > [!NOTE]
@@ -57,13 +57,13 @@ Führen Sie die folgenden Schritte auf dem ATA Center-Server aus.
 7. Es wird empfohlen, für ATA die automatische Aktualisierung festzulegen. Wenn auf Ihrem Computer für Windows nicht die automatische Aktualisierung festgelegt ist, wird der Bildschirm **Verwenden Sie Microsoft Update, damit Ihr Computer sicher und auf dem aktuellen Stand bleibt** angezeigt. 
    ![ATA-Aktualisierung](media/ata_ms_update.png)
 
-8. Wählen Sie **Microsoft Update für die Suche nach Updates verwenden (empfohlen)**. Damit ändern Sie die Windows-Einstellungen so, dass Updates für andere Microsoft-Produkte (einschließlich ATA) möglich sind. 
+8. Wählen Sie **Microsoft Update für die Suche nach Updates verwenden (empfohlen)** . Damit ändern Sie die Windows-Einstellungen so, dass Updates für andere Microsoft-Produkte (einschließlich ATA) möglich sind. 
 
     ![Abbildung von Windows AutoUpdate](media/ata_installupdatesautomatically.png)
 
 9. Geben Sie auf der Seite **Configure the Center (Konfigurieren von ATA Center)** basierend auf Ihrer Umgebung die folgenden Informationen ein:
 
-   |Feld|Beschreibung|Kommentare|
+   |Feld|Description|Kommentare|
    |---------|---------------|------------|
    |Installationspfad|Dies ist der Speicherort, an dem ATA Center installiert wird. Standardmäßig ist dies „%programfiles%\Microsoft Advanced Threat Analytics\Center“.|Behalten Sie den Standardwert bei.|
    |Datenbankdatenpfad|Dies ist der Speicherort, an dem sich die MongoDB-Datenbankdateien befinden. Standardmäßig ist dies „%programfiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data“.|Ändern Sie den Speicherort, sodass ausreichend Speicherplatz für Ihre Größenanpassung verfügbar ist. **Hinweis:** <ul><li>In Produktionsumgebungen sollten Sie ein Laufwerk verwenden, das der Kapazitätsplanung entsprechend über ausreichend Speicherplatz verfügt.</li><li>Für umfangreiche Bereitstellungen sollte sich die Datenbank auf einem separaten physischen Datenträger befinden.</li></ul>Informationen zur Größenanpassung finden Sie unter [ATA-Kapazitätsplanung](ata-capacity-planning.md).|
@@ -96,7 +96,7 @@ Führen Sie die folgenden Schritte auf dem ATA Center-Server aus.
 
 ### <a name="set-anti-virus-exclusions"></a>Festlegen von Ausnahmen für die Antivirensoftware
 
-Legen Sie nach der Installation von ATA Center das MongoDB-Datenbankverzeichnis als Ausnahme fest, damit dieses nicht fortlaufend von Ihrer Antivirenanwendung überprüft wird. Der standardmäßige Speicherort in der Datenbank lautet folgendermaßen: **C:\Programme\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data**.
+Legen Sie nach der Installation von ATA Center das MongoDB-Datenbankverzeichnis als Ausnahme fest, damit dieses nicht fortlaufend von Ihrer Antivirenanwendung überprüft wird. Der Standardspeicherort in der Datenbank lautet **C:\Programme\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data**.
 
 Stellen Sie sicher, dass Sie auch die folgenden Ordner und Prozesse von der Antivirusprüfung ausschließen:
 
@@ -121,7 +121,7 @@ Wenn Sie ATA in einem anderen Verzeichnis installiert haben, stellen Sie sicher,
 - [Übersicht über die ATA-Bereitstellung](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 - [Handbuch für die ATA POC-Bereitstellung](http://aka.ms/atapoc)
 - [Tool zur Bemessung von ATA-Gateways](http://aka.ms/atasizingtool)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

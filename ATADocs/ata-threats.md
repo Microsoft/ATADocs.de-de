@@ -13,10 +13,10 @@ ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: f656ab40b55ab0abb226cac9f3a6818e5cadee89
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65196510"
 ---
 # <a name="what-threats-does-ata-look-for"></a>Nach welchen Bedrohungen sucht ATA?
@@ -41,5 +41,5 @@ Weitere Informationen finden Sie unter [Arbeiten mit verdächtigen Aktivitäten]
 -   Erste Schritte bei der Bereitstellung von ATA: [Installieren von ATA](install-ata-step1.md)
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

@@ -13,10 +13,10 @@ ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 11d7ace698d7f2f1df376af0e26afeb6b9e1f960
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65195787"
 ---
 # <a name="working-with-suspicious-activities"></a>Arbeiten mit verdächtigen Aktivitäten
@@ -35,7 +35,7 @@ Zu jeder verdächtigen Aktivität stehen folgende Informationen zur Verfügung:
 
 -   Schweregrad der verdächtigen Aktivitäten: „Hoch“, „Mittel“ oder „Niedrig“
 
--   Status: „Offen“, „Aufgelöst“ oder „Unterdrückt“.
+-   Staus: „Offen“, „Aufgelöst“ oder „Unterdrückt“.
 
 -   Möglichkeit für Folgendes:
 
@@ -79,7 +79,7 @@ Klicken Sie dafür auf die drei Punkte in der oberen rechten Ecke einer besonder
 
 **Status von verdächtigen Aktivitäten**
 
-- **Offen**: In dieser Liste werden alle neuen verdächtigen Aktivitäten angezeigt.
+- **Öffnen**: In dieser Liste werden alle neuen verdächtigen Aktivitäten angezeigt.
 
 - **Auflösen**: Wird verwendet, um verdächtige Aktivitäten nachzuverfolgen, die Sie identifiziert, untersucht oder entschärft haben.
 
@@ -99,7 +99,7 @@ Klicken Sie dafür auf die drei Punkte in der oberen rechten Ecke einer besonder
 - [Joining the security community](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community) (Der Sicherheitscommunity beitreten)
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 - [Verdächtige ATA-Aktivitäten – Playbook](http://aka.ms/ataplaybook)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Ändern der ATA-Konfiguration](modifying-ata-center-configuration.md)

@@ -13,10 +13,10 @@ ms.assetid: be9ee613-4eb3-40f1-8973-e7f0a707ff57
 ms.reviewer: ''
 ms.suite: ems
 ms.openlocfilehash: 0570ac2574dfca2fbc22a332228d52fcd429652d
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65195951"
 ---
 # <a name="whats-new-in-ata-version-17"></a>Neues in ATA Version 1.7
@@ -27,7 +27,7 @@ Das Update auf ATA 1.7 bietet Verbesserungen in folgenden Bereichen:
 
 -   Neue und aktualisierte Erkennung
 
--   Rollenbasierte Zugriffssteuerung
+-   Rollenbasierte Zugriffsteuerung
 
 -   Unterstützung für Windows Server 2016 und Windows Server 2016 Core
 
@@ -63,15 +63,15 @@ Das Update auf ATA 1.7 bietet Verbesserungen in folgenden Bereichen:
 In dieser Version bestehen die folgenden bekannten Probleme.
 
 ### <a name="gateway-automatic-update-may-fail"></a>Die automatische Aktualisierung des Gateways kann fehlschlagen.
-**Symptome**: Das ATA-Gateway kann in einer Umgebung mit langsamen WAN-Verbindungen das Update-Timeout (100 Sekunden) erreichen. Updates können daraufhin nicht erfolgreich abgeschlossen werden.
+**Symptome:** Das ATA-Gateway kann in einer Umgebung mit langsamen WAN-Verbindungen das Update-Timeout (100 Sekunden) erreichen. Updates können daraufhin nicht erfolgreich abgeschlossen werden.
 In der ATA-Konsole zeigt das ATA-Gateway über längere Zeit den Status „Wird aktualisiert (Paket wird heruntergeladen)“ an und schlägt schließlich fehl.
-**Problemumgehung**: Laden Sie das neueste ATA-Gateway-Paket aus der ATA-Konsole herunter, und aktualisieren das ATA-Gateway manuell, um dieses Problem zu umgehen.
+**Problemumgehung:** Laden Sie das neueste ATA-Gateway-Paket aus der ATA-Konsole herunter, und aktualisieren das ATA-Gateway manuell, um dieses Problem zu umgehen.
 
 > [!IMPORTANT]
 >  Die automatische Erneuerung der von ATA verwendeten Zertifikate wird nicht unterstützt. Die Verwendung dieser Zertifikate kann dazu führen, dass ATA bei einer automatischen Erneuerung der Zertifikate nicht mehr funktioniert. 
 
 ### <a name="no-browser-support-for-jis-encoding"></a>Keine Browserunterstützung für JIS-Codierung
-**Symptome**: Die ATA-Konsole funktioniert in Browsern mit JIS-Codierung möglicherweise nicht erwartungsgemäß. **Problemumgehung:** Ändern Sie die Codierung des Browsers zu Unicode UTF-8.
+**Symptome:** Die ATA-Konsole funktioniert in Browsern mit JIS-Codierung möglicherweise nicht erwartungsgemäß. **Problemumgehung:** Ändern Sie die Codierung des Browsers zu Unicode UTF-8.
  
 ### <a name="dropped-port-mirror-traffic-when-using-vmware"></a>„Netzwerkdatenverkehr aus Portspiegelung gelöscht“ bei Verwendung von VMware
 
@@ -89,7 +89,7 @@ Deaktivieren Sie ebenso IPv4 Giant TSO Offload. Weitere Informationen finden Sie
 
 Beim Aktualisieren von ATA 1.7 auf ATA 1.7 Update 1 funktionieren sowohl der automatische ATA-Gatewayaktualisierungsprozess als auch die manuelle Installation des Gateways mithilfe des Gatewaypakets möglicherweise nicht wie erwartet.
 Dieses Problem tritt auf, wenn das vom ATA-Center verwendete Zertifikat vor der Aktualisierung von ATA geändert wurde.
-Um das Problem zu überprüfen, prüfen Sie das Protokoll **Microsoft.Tri.Gateway.Updater.log** auf dem ATA-Gateway, und suchen Sie nach folgenden Ausnahmen: **System.Net.Http.HttpRequestException: Beim Senden der Anforderung ist ein Fehler aufgetreten. ---> System.Net.WebException: Die zugrunde liegende Verbindung wurde geschlossen: Unerwarteter Fehler beim Senden. ---> System.IdentityModel.Tokens.SecurityTokenValidationException: Fehler bei der Überprüfung des Zertifikatfingerabdrucks**
+Um das Problem zu überprüfen, prüfen Sie das **Microsoft.Tri.Gateway.Updater.log** auf dem ATA-Gateway, und suchen Sie nach folgenden Ausnahmen: **System.Net.Http.HttpRequestException: Beim Senden der Anforderung ist ein Fehler aufgetreten. ---> System.Net.WebException: Die zugrunde liegende Verbindung wurde geschlossen: Unerwarteter Fehler beim Senden. ---> System.IdentityModel.Tokens.SecurityTokenValidationException: Fehler bei der Überprüfung des Zertifikatfingerabdrucks**
 
 ![Fehler bei der Aktualisierung des ATA-Gateways](media/17update_gatewaybug.png)
 
@@ -102,7 +102,7 @@ Um das Problem zu beheben, wechseln Sie nach dem Ändern des Zertifikats an eine
 3. db.SystemProfile.update({_t:"ServiceSystemProfile"},{$set:{"Configuration.ManagementClientConfiguration.ServerCertificateThumbprint":CenterThumbprint}}, {multi: true})
 
 ### <a name="export-suspicious-activity-details-to-excel-may-fail"></a>Beim Export von Details über verdächtige Aktivität nach Excel tritt möglicherweise ein Fehler auf
-Beim Versuch, Details über verdächtige Aktivitäten in eine Excel-Datei zu exportieren, schlägt der Vorgang möglicherweise mit folgendem Fehler fehl: *Error [BsonClassMapSerializer`1] System.FormatException: An error occurred while deserializing the Activity property of class Microsoft.Tri.Common.Data.NetworkActivities.SuspiciousActivityActivity: Element 'ResourceIdentifier' does not match any field or property of class Microsoft.Tri.Common.Data.EventActivities.NtlmEvent. ---> System.FormatException: Element 'ResourceIdentifier' does not match any field or property of class Microsoft.Tri.Common.Data.EventActivities.NtlmEvent.*
+Beim Versuch, Details über verdächtige Aktivität in eine Excel-Datei zu exportieren, tritt möglicherweise der folgende Fehler auf: *Error [BsonClassMapSerializer`1] System.FormatException: An error occurred while deserializing the Activity property of class Microsoft.Tri.Common.Data.NetworkActivities.SuspiciousActivityActivity: Element 'ResourceIdentifier' does not match any field or property of class Microsoft.Tri.Common.Data.EventActivities.NtlmEvent. ---> System.FormatException: Element 'ResourceIdentifier' does not match any field or property of class Microsoft.Tri.Common.Data.EventActivities.NtlmEvent.*
 
 Um dieses Problem zu beheben, wechseln Sie an einer Eingabeaufforderung mit erhöhten Rechten zum Speicherort **%ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**, und führen Sie folgende Befehle aus:
 1.  `Mongo.exe ATA` (ATA muss in Großbuchstaben angegeben werden)
@@ -114,7 +114,7 @@ Um dieses Problem zu beheben, wechseln Sie an einer Eingabeaufforderung mit erh�
 - Wenn der ATA Center-Dienst nicht verfügbar ist, können Sie nicht auf die ATA-Konsole zugreifen.
 - Kurzfristige Lease-Subnetze sind aufgrund von Änderungen in der ATA NNR nicht mehr erforderlich.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 [Aktualisieren von ATA auf Version 1.7 – Migrationshandbuch](ata-update-1.7-migration-guide.md)

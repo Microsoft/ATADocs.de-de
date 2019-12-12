@@ -13,10 +13,10 @@ ms.assetid: 1b2d185c-62cd-45f0-b0dd-687b51317f32
 ms.reviewer: ophirp
 ms.suite: ems
 ms.openlocfilehash: 27f51d2b649f1a2bc3e1b6f2a36498fd73c0d77a
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65196195"
 ---
 # <a name="ata-data-security-and-privacy"></a>Sicherheit und Datenschutz für ATA
@@ -35,7 +35,7 @@ Verwenden Sie die Suchleiste im ATA Center, um die identifizierbaren personenbez
 
 Personenbezogene Daten zu Benutzern und Entitäten in ATA stammen aus dem Objekt des Benutzers im AD Ihrer Organisation. Aus diesem Grund werden alle Änderungen am Benutzerprofil AD in ATA übernommen. 
 
-## <a name="deleting-personal-data"></a>Löschen von personenbezogenen Daten 
+## <a name="deleting-personal-data"></a>Löschen von persönlichen Daten 
 
 Obwohl Daten in ATA repliziert sind und immer aus Active Directory aktualisiert werden, werden die Entitätsdaten in ATA zu Sicherheitszwecken beibehalten, wenn eine Entität in AD gelöscht wird. 
 
@@ -49,7 +49,7 @@ Verwenden Sie ATA-GDPR-Datenbankskripts, um Entitäten und Aktivitätsdaten von 
 
 ### <a name="delete-entities"></a>Löschen von Einträgen
 
-Diese Aktion löscht eine Entität endgültig aus der ATA-Datenbank. Wenn Sie diesen Befehl ausführen möchten, stellen Sie den Befehlsnamen `deleteAccount` und `SamName`, `UpnName` oder `GUID` für den Computer oder Benutzernamen bereit, die Sie löschen möchten. Beispiel: 
+Diese Aktion löscht eine Entität endgültig aus der ATA-Datenbank. Wenn Sie diesen Befehl ausführen möchten, stellen Sie den Befehlsnamen `deleteAccount` und `SamName`, `UpnName` oder `GUID` für den Computer oder Benutzernamen bereit, die Sie löschen möchten. Beispiele: 
 
 `"C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\mongo.exe" ATA --eval "var params='deleteAccount,admin1@contoso.com';" GDPR.js`
 
@@ -61,13 +61,13 @@ Diese Aktion löscht die Aktivitäten einer Entität endgültig aus der ATA-Date
 
 Geben Sie zum Ausführen dieses Befehls den Befehlsnamen `deleteOldData` und die Anzahl der Tage für die Daten an, die Sie in der Datenbank aufbewahren möchten. 
 
-Beispiel: 
+Beispiele: 
 
 `"C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\mongo.exe" ATA --eval "var params='deleteOldData,30';" GDPR.js`
 
 Dieses Skript entfernt die Daten aller Entitätsaktivitäten und Sicherheitswarnungen aus der Datenbank, die älter als 30 Tage sind. Es werden nur die Daten der letzten 30 Tage aufbewahrt.
 
-## <a name="exporting-personal-data"></a>Exportieren von personenbezogenen Daten 
+## <a name="exporting-personal-data"></a>Exportieren von persönlichen Daten 
 
 Da die entitätsbezogenen Daten in ATA aus AD stammen, wird nur eine Teilmenge der Daten in der ATA-Datenbank gespeichert. Aus diesem Grund sollten Sie die entitätsbezogenen Daten aus AD exportieren. 
 

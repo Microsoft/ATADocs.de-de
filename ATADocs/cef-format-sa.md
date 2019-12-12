@@ -13,10 +13,10 @@ ms.assetid: 601b48ba-a327-4aff-a1f9-2377a2bb7a42
 ms.reviewer: ort
 ms.suite: ems
 ms.openlocfilehash: 4630e1df24c370bc15bc2872ca8b1087f5cf42fa
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65197011"
 ---
 # <a name="ata-siem-log-reference"></a>Referenz zum ATA-SIEM-Protokoll
@@ -73,7 +73,7 @@ In diesem Beispiel ist cs1 ein Feld, das über eine URL für die Warnung verfüg
 
 ## <a name="sample-logs"></a>Beispielprotokolle
 
-Prioritäten: 3 = Niedrig, 5 = Mittel 10 = Hoch
+Prioritäten: 3 = niedrig, 5 = mittel 10 = hoch
 
 ### <a name="abnormal-modification-of-sensitive-groups"></a>Ungewöhnliche Modifizierung von sensiblen Gruppen
 1 2018-12-12T16:53:22.925757+00:00 CENTER ATA 4688 AbnormalSensitiveGroupMembership CEF:0|Microsoft|ATA|1.9.0.0|AbnormalSensitiveGroupMembershipChangeSuspiciousActivity|Ungewöhnliche Modifizierung von sensiblen Gruppen|5|start=2018-12-12T18:52:58.0000000Z app=GroupMembershipChangeEvent suser=krbtgt msg=krbtgt weist ungewöhnlich geänderte sensible Gruppenmitgliedschaften auf. externalId=2024 cs1Label=url cs1=https\://192.168.0.220/suspiciousActivity/5c113d028ca1ec1250ca0491
@@ -150,7 +150,7 @@ Prioritäten: 3 = Niedrig, 5 = Mittel 10 = Hoch
 > Alle Überwachungswarnungen werden mit der obenstehenden Vorlage gesendet.
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 - [Voraussetzungen für ATA](ata-prerequisites.md)
 - [ATA-Kapazitätsplanung](ata-capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)

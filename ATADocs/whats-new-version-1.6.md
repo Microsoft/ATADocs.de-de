@@ -13,10 +13,10 @@ ms.assetid: 27b139e5-12b9-4953-8f53-eb58e8ce0038
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 3ef4f8061970c1d69b9f25479d762bb4c423a4fd
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65196974"
 ---
 # <a name="whats-new-in-ata-version-16"></a>Neuerungen in ATA 1.6
@@ -99,11 +99,11 @@ In Bereitstellungen, in denen der Datenbankpfad manuell verschoben wird, verwend
 ### <a name="migration-failure-when-updating-from-ata-15"></a>Migrationsfehler, wenn von ATA 1.5 aktualisiert wird
 Beim Aktualisieren auf ATA 1.6 kann der Aktualisierungsvorgang mit dem folgenden Fehlercode fehlschlagen:
 
-![Fehler beim Update auf ATA 1.6](http://i.imgur.com/QrLSApr.png) Wenn dieser Fehler angezeigt wird, sollten Sie das Bereitstellungsprotokoll aufrufen, das sich in folgendem Pfad befindet: **C:\Benutzer\<Benutzername>\AppData\Local\Temp** – suchen Sie dort nach folgender Ausnahme:
+![Fehler beim Update auf ATA 1.6](http://i.imgur.com/QrLSApr.png) Wird dieser Fehler angezeigt, überprüfen Sie das Bereitstellungsprotokoll **C:\Benutzer\<Benutzer>\AppData\Local\Temp**, und suchen Sie nach der folgenden Ausnahme:
 
     System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> MongoDB.Driver.MongoWriteException: A write operation resulted in an error. E11000 duplicate key error index: ATA.UniqueEntityProfile.$_id_ dup key: { : "<guid>" } ---> MongoDB.Driver.MongoBulkWriteException`1: A bulk write operation resulted in one or more errors.  E11000 duplicate key error index: ATA.UniqueEntityProfile.$_id_ dup key: { : " <guid> " }
 
-Darüber hinaus wird möglicherweise folgender Fehler angezeigt: System.ArgumentNullException: Der Wert darf nicht NULL sein.
+Möglicherweise wird auch dieser Fehler angezeigt: System.ArgumentNullException: Der Wert darf nicht NULL sein.
     
 Wenn einer dieser Fehler angezeigt wird, führen Sie die folgenden Schritte zur Problemumgehung aus:
 
@@ -121,9 +121,9 @@ Wenn einer dieser Fehler angezeigt wird, führen Sie die folgenden Schritte zur 
     1.  MongoDB
     2.  Microsoft Advanced Threat Analytics Center
 7.  Überprüfen Sie die Protokolle, um sich zu vergewissern, dass das Produkt ohne Fehler ausgeführt wird.
-8.  [Herunterladen](http://aka.ms/ataremoveduplicateprofiles "Laden Sie das Tool „RemoveDuplicateProfiles.exe“ herunter"), und kopieren Sie es in den Hauptinstallationspfad (%ProgramFiles%\Microsoft Advanced Threat Analytics\Center).
+8.  [Laden](http://aka.ms/ataremoveduplicateprofiles "Herunterladen") Sie das Tool "removeduplicateprofiles. exe" herunter, und kopieren Sie es in den Haupt Installationspfad (%ProgramFiles%\Microsoft Advanced Threat analytics\center).
 9.  Führen Sie `RemoveDuplicateProfiles.exe` von einer Eingabeaufforderung mit erhöhten Rechten aus, und warten Sie, bis das Tool erfolgreich abgeschlossen wurde.
-10. Geben Sie unter …\Microsoft Advanced Threat Analytics\Center\MongoDB\bin im Verzeichnis **Mongo ATA** folgenden Befehl ein:
+10. Fahren Sie wie folgt fort: …\Microsoft Advanced Threat Analytics\Center\MongoDB\bin: **Mongo ATA**; geben Sie folgenden Befehl ein:
 
           db.SuspiciousActivities.remove({ "_t" : "RemoteExecutionSuspiciousActivity", "DetailsRecords" : { "$elemMatch" : { "ReturnCode" : null } } }, { "_id" : 1 });
 
@@ -141,7 +141,7 @@ Diese Version von ATA umfasst eine verbesserte Erkennungs-Engine, das eine genau
 Für die neue und verbesserte Erkennungs-Engine wird Inline-Erkennungstechnologie genutzt, die eine Erkennung ohne Auswertung früherer Netzwerkaktivitäten ermöglicht, um die Leistung von ATA Center erheblich zu erhöhen. Dies bedeutet auch, dass es nicht erforderlich ist, frühere Netzwerkaktivitäten während des Aktualisierungsvorgangs zu migrieren.
 Im ATA-Aktualisierungsvorgang werden die Daten für den Fall, dass Sie diese für zukünftige Untersuchungen benötigen, als JSON-Datei in `<Center Installation Path>\Migration` exportiert.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 [Aktualisieren von ATA auf Version 1.6 – Migrationsleitfaden](ata-update-1.6-migration-guide.md)

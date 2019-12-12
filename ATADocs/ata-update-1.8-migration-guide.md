@@ -13,10 +13,10 @@ ms.assetid: e5a9718c-b22e-41f7-a614-f00fc4997682
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: d35961d0ec70402fe27d0d418fd583d60b960464
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65196132"
 ---
 # <a name="updating-ata-to-version-18"></a>Aktualisieren von ATA auf Version 1.8
@@ -41,7 +41,7 @@ In der Migrationsversion kann die Datei nur für die Aktualisierung von ATA 1.7 
     > [!IMPORTANT]
     > Aktualisieren Sie alle ATA-Gateways, damit ATA ordnungsgemäß funktioniert.
 
-### <a name="step-1-update-the-ata-center"></a>Schritt 1: Aktualisieren von ATA Center
+### <a name="step-1-update-the-ata-center"></a>Schritt 1: Aktualisieren von ATA Center
 
 1. Sichern Sie die Datenbank (optional):
 
@@ -79,9 +79,9 @@ In der Migrationsversion kann die Datei nur für die Aktualisierung von ATA 1.7 
 > Aktualisieren Sie alle ATA-Gateways, damit ATA ordnungsgemäß funktioniert.
  
 > [!NOTE] 
-> Wechseln Sie zum Installieren neuer ATA-Gateways zum Bildschirm **Gateways**, klicken Sie auf **Gatewaysetup herunterladen**, um das ATA 1.8-Gateway-Installationspaket zu erhalten, und folgen Sie den Anweisungen zum Installieren eines neuen Gateways in [Schritt 4. Installieren des ATA-Gateways](install-ata-step4.md).
+> Wechseln Sie zum Installieren neuer ATA-Gateways zum Bildschirm **Gateways** , klicken Sie auf **gatewaysetup herunterladen** , um das ATA 1,8-gatewayinstallationspaket zu erhalten, und befolgen Sie die Anweisungen für die neue Gatewayinstallation [gemäß der Beschreibung Installieren Sie das ATA-Gateway](install-ata-step4.md).
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

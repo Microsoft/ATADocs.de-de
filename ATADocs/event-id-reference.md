@@ -13,10 +13,10 @@ ms.assetid: 5d639e84-2e37-43a9-9667-49be6c4fa8b7
 ms.reviewer: arzinger
 ms.suite: ems
 ms.openlocfilehash: a54c68f333cfc3eb47d47c66f1ded701fb855a80
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65196284"
 ---
 # <a name="ata-event-id-reference"></a>Verweis auf ATA-Ereignis-IDs
@@ -96,7 +96,7 @@ Die Ereignisse finden Sie hier:
 |3006|Manuelle Änderung zum Status „Integritätsaktivität“|
 |3007|Manuelle Änderung zum Status „verdächtige Aktivität“|
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 - [Voraussetzungen für ATA](ata-prerequisites.md)
 - [ATA-Kapazitätsplanung](ata-capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)

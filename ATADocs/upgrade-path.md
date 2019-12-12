@@ -13,10 +13,10 @@ ms.assetid: 88720401-1fb2-4353-ad39-32bc0088f0de
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 7168e8a073473bacd659e662d71ac7984ac2a45c
-ms.sourcegitcommit: 07abbd941d91299475df2af469ee5a9a99e07e0f
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "66264967"
 ---
 # <a name="recommended-upgrade-path-for-ata"></a>Empfohlener Upgradepfad für ATA
@@ -43,11 +43,11 @@ Dieser Artikel enthält Informationen über die verfügbaren Versionen von Advan
 
 ## <a name="upgrade-paths"></a>Upgradepfade
 
-Finden Sie in das Diagramm Upgradepfad, um zu bestimmen, der richtigen Upgradepfad für Ihre aktuelle Installation. 
+Überprüfen Sie das Upgradepfad-Diagramm, um den korrekten Upgradepfad für die aktuelle Installation zu ermitteln. 
 
-![Upgradepfad für ATA-version](./media/upgrade-path-ata.png)
+![Upgradepfad für ATA-Version](./media/upgrade-path-ata.png)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 - [Voraussetzungen für ATA](ata-prerequisites.md)
 - [ATA-Kapazitätsplanung](ata-capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)

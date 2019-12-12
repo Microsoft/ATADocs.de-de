@@ -13,10 +13,10 @@ ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 96087f0124825f1b6feb641085317ee89ac3e6ee
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65196617"
 ---
 # <a name="ata-frequently-asked-questions"></a>Häufig gestellte Fragen zu ATA
@@ -116,7 +116,7 @@ Die vollständige Liste der ATA-Erkennungen finden Sie unter [Welche Bedrohungen
 Wir empfehlen ein schnelles Speichermedium (Datenträger mit 7200 U/min werden nicht empfohlen) mit Datenträgerzugriff mit niedriger Latenz (weniger als 10 ms). Die RAID-Konfiguration sollte hohe Schreiblasten unterstützen (RAID-5/6 und zugehörige Ableitungen werden nicht empfohlen).
 
 ## <a name="how-many-nics-does-the-ata-gateway-require"></a>Wie viele Netzwerkkarten sind für das ATA-Gateway erforderlich?
-Für das ATA-Gateway sind mindestens zwei Netzwerkkarten erforderlich:<br>1. Eine Netzwerkkarte für die Verbindung mit dem internen Netzwerk und ATA Center.<br>2. Eine Netzwerkschnittstelle zum Erfassen des Netzwerkdatenverkehrs des Domänencontrollers über Portspiegelung.<br>* Dies gilt nicht für das ATA-Lightweight-Gateway, das systemintern alle Netzwerkadapter verwendet, die der Domänencontroller verwendet.
+Für das ATA-Gateway sind mindestens zwei Netzwerkkarten erforderlich:<br>1. eine NIC zum Herstellen einer Verbindung mit dem internen Netzwerk und ATA Center<br>2. eine NIC, die zum Erfassen des Domänen Controller-Netzwerk Datenverkehrs über Port Spiegelung verwendet wird.<br>* Dies gilt nicht für das ATA-Lightweight-Gateway, das systemintern alle Netzwerkadapter verwendet, die der Domänencontroller verwendet.
 
 ## <a name="what-kind-of-integration-does-ata-have-with-siems"></a>Welche Art der Integration weist ATA mit SIEMs auf?
 ATA weist eine bidirektionale Integration mit SIEMs auf:
@@ -146,7 +146,7 @@ Zusätzlich zur Analyse des Active Directory-Datenverkehrs mit der DPI-Technolog
 Auch als SPAN (Switched Port Analyzer) bekannt, ist die Portspiegelung eine Methode zur Überwachung des Netzwerkverkehrs. Wenn die Portspiegelung aktiviert ist, sendet der Switch eine Kopie aller Netzwerkpakete von einem Port (oder einem gesamten VLAN) an einen anderen Port, an dem das Paket analysiert werden kann.
 
 ## <a name="does-ata-monitor-only-domain-joined-devices"></a>Überwacht ATA nur Geräte, die der Domäne angehören?
-Nein. ATA überwacht alle Geräte im Netzwerk und führt die Authentifizierung sowie Autorisierungsanfragen für Active Directory durch. Dies schließt Nicht-Windows-Geräte und mobile Geräte ein.
+Nein ATA überwacht alle Geräte im Netzwerk und führt die Authentifizierung sowie Autorisierungsanfragen für Active Directory durch. Dies schließt Nicht-Windows-Geräte und mobile Geräte ein.
 
 ## <a name="does-ata-monitor-computer-accounts-as-well-as-user-accounts"></a>Überwacht ATA sowohl Computerkonten als auch Benutzerkonten?
 Ja. Da Computerkonten (ebenso wie alle anderen Entitäten) zum Durchführen böswilliger Aktivitäten verwendet werden können, überwacht ATA das Verhalten aller Computerkonten und aller weiteren Entitäten in der Umgebung.
@@ -158,7 +158,7 @@ Microsoft Advanced Threat Analytics unterstützt-Umgebungen mit mehreren Domäne
 Ja, Sie können die Gesamtintegrität der Bereitstellung sowie spezifische Probleme im Zusammenhang mit der Konfiguration, Konnektivität usw. anzeigen und werden bei Eintreten eines Problems benachrichtigt.
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 - [Voraussetzungen für ATA](ata-prerequisites.md)
 - [ATA-Kapazitätsplanung](ata-capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)

@@ -13,10 +13,10 @@ ms.assetid: bff20bf7-8b53-49da-81e5-b818a1c3b24e
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 2f60b7450c430793c9c14139f9cf268908a5dbc4
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65195676"
 ---
 # <a name="provide-ata-with-your-email-server-settings"></a>Bereitstellen der Einstellungen Ihres E-Mail-Servers für ATA
@@ -36,12 +36,12 @@ ATA kann Benachrichtigungen senden, wenn eine verdächtige Aktivität erkannt wi
 4. Geben Sie im Bereich **Benachrichtigungen** unter **Mailserver** die folgenden Informationen ein:
 
 
-   |              Feld              |                                                                                                 Beschreibung                                                                                                  |               Wert                |
+   |              Feld              |                                                                                                 Description                                                                                                  |               Value                |
    |---------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------|
-   | SMTP-Server-Endpunkt (erforderlich) |                                                            Geben Sie den vollqualifizierten Domänennamen des SMTP-Servers ein, und ändern Sie optional die Portnummer (standardmäßig 25).                                                            | Beispiel:<br />smtp.contoso.com |
+   | SMTP-Server-Endpunkt (erforderlich) |                                                            Geben Sie den vollqualifizierten Domänennamen des SMTP-Servers ein, und ändern Sie optional die Portnummer (standardmäßig 25).                                                            | Beispiele:<br />smtp.contoso.com |
    |               SSL               |                                              Schalten Sie auf SSL-Betrieb um, falls der SMTP-Server SSL erfordert. **Hinweis:** Wenn Sie SSL aktivieren, müssen Sie auch die Portnummer ändern.                                               |        Der Standardwert ist „deaktiviert“         |
-   |         Authentifizierung          | Aktivieren Sie diese Option, falls der Proxyserver eine Authentifizierung erfordert. **Hinweis:** Wenn Authentifizierung aktiviert ist, müssen Sie einen Benutzernamen und ein Kennwort für ein E-Mail-Konto eingeben, das für den Aufbau einer Verbindung mit dem SMTP-Server berechtigt ist. |        Der Standardwert ist „deaktiviert“         |
-   |      Senden von (erforderlich)       |                                                                        Geben Sie die E-Mail-Adresse ein, die als Absender der E-Mail eingetragen wird.                                                                         | Beispiel:<br />ATA@contoso.com  |
+   |         Authentication          | Aktivieren Sie diese Option, falls der Proxyserver eine Authentifizierung erfordert. **Hinweis:** Wenn Authentifizierung aktiviert ist, müssen ein Benutzername und ein Kennwort für ein E-Mail-Konto eingegeben werden, das für den Aufbau einer Verbindung mit dem SMTP-Server berechtigt ist. |        Der Standardwert ist „deaktiviert“         |
+   |      Senden von (erforderlich)       |                                                                        Geben Sie die E-Mail-Adresse ein, die als Absender der E-Mail eingetragen wird.                                                                         | Beispiele:<br />ATA@contoso.com  |
 
    ![Bild mit den ATA-E-Mail-Servereinstellungen](media/ata-email-server.png)
 
@@ -54,7 +54,7 @@ ATA kann Sie durch Senden der Benachrichtigung an den Syslog-Server benachrichti
 
    -   Port, der vom SIEM-Server abgehört wird
 
-   -   Transporttyp: UDP, TCP oder TLS (sicheres Syslog)
+   -   Transportprotokoll: UDP, TCP oder TLS (sicheres Syslog)
 
    -   Versandformat der Daten: RFC 3164 oder 5424
 
@@ -68,7 +68,7 @@ ATA kann Sie durch Senden der Benachrichtigung an den Syslog-Server benachrichti
 
 5. Wählen Sie im Bereich „Benachrichtigungen“ **Syslog-Server** aus, und geben Sie die folgende Informationen ein:
 
-   |Feld|Beschreibung|
+   |Feld|Description|
    |---------|---------------|
    |Syslog-Server-Endpunkt|Geben Sie den vollqualifizierten Domänennamen des Syslog-Servers ein, und ändern Sie optional die Portnummer (standardmäßig 514).|
    |Transport|Kann UDP, TCP oder TLS (sicheres Syslog) sein|
@@ -78,5 +78,5 @@ ATA kann Sie durch Senden der Benachrichtigung an den Syslog-Server benachrichti
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

@@ -13,10 +13,10 @@ ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 213f098fe878afda763eebce6080909b63c3cf91
-ms.sourcegitcommit: ef68a774d2756719bce8747e65f8bde2b9afdd5d
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73618458"
 ---
 # <a name="ata-prerequisites"></a>Voraussetzungen für ATA
@@ -86,11 +86,11 @@ Die Installation von ATA Center als virtueller Computer wird unterstützt.
 > [!NOTE] 
 > Wenn das Center als virtueller Computer (VM) ausgeführt wird, ist es erforderlich, dass der gesamte Arbeitsspeicher dem virtuellen Computer ständig zugeordnet wird.
 
-|Virtueller Computer unter|Description|
+|VM-Host|Description|
 |------------|-------------|
-|Hyper-V|Stellen Sie sicher, dass die Option **dynamischer Arbeitsspeicher aktivieren** für die VM nicht aktiviert ist.|
-|VMWare|Stellen Sie sicher, dass die Menge des konfigurierten Speichers und der reservierte Arbeitsspeicher identisch sind, oder wählen Sie die folgende Option in der VM-Einstellung – **alle Gast Arbeitsspeicher reservieren (alle gesperrt)** .|
-|Anderer Virtualisierungshost|Informationen dazu, wie Sie sicherstellen, dass der Arbeitsspeicher der VM jederzeit vollständig zugeordnet ist, finden Sie in der vom Hersteller bereitgestellten Dokumentation. |
+|Hyper-V|Stellen Sie sicher, dass **Dynamischen Arbeitsspeicher aktivieren** für den virtuellen Computer nicht aktiviert ist.|
+|VMWare|Stellen Sie sicher, dass die konfigurierte und die reservierte Arbeitsspeichermenge gleich sind, oder wählen Sie in den VM-Einstellungen die folgende Option aus: **Gesamten Gastarbeitsspeicher reservieren (alle gesperrt)** .|
+|Anderer Virtualisierungshost|Informieren Sie sich in der Dokumentation des Herstellers, wie Sie sicherstellen, dass der Arbeitsspeicher zu jedem Zeitpunkt vollständig dem virtuellen Computer zugewiesen ist. |
 |
 
 Wenn Sie ATA Center als virtuellen Computer ausführen, fahren Sie vor dem Erstellen eines neuen Prüfpunkts den Server herunter, um eine mögliche Beschädigung der Datenbank zu verhindern.

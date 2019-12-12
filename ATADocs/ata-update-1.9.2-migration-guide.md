@@ -12,10 +12,10 @@ ms.assetid: 2946310a-8e4e-48fc-9450-fc9647efeb22
 ms.reviewer: ort
 ms.suite: ems
 ms.openlocfilehash: 22420ea90bc922684a4e99ad303bba831f3a45e7
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65196081"
 ---
 # <a name="ata-version-192"></a>ATA Version 1.9.2
@@ -45,7 +45,7 @@ Dieses Update umfasst auch Verbesserungen der Leistung und Stabilität sowie Kor
 
 ## <a name="get-this-update"></a>Rufen Sie dieses Update ab
 
-Zum Abrufen des eigenständigen Pakets für dieses Update besuchen Sie die Microsoft Download Center-Website: [Laden Sie das ATA 1.9.2-Paket jetzt herunter](https://www.microsoft.com/en-us/download/details.aspx?id=56725).
+Um das eigenständige Paket für dieses Update zu erhalten, besuchen Sie die Microsoft Download Center-Website: [Laden Sie das ATA 1.9.2-Paket jetzt herunter](https://www.microsoft.com/en-us/download/details.aspx?id=56725).
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
@@ -64,7 +64,7 @@ Nach dem Anwenden dieses Updates muss Ihr Computer möglicherweise neu gestartet
 Dieses Update ersetzt ATA Version 1.9.1 (1.9.7412).
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [ATA-Versionen](ata-versions.md)

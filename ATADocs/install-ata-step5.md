@@ -13,10 +13,10 @@ ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: c0f15942dd3888d092d8236b78261de1645e5dc0
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65195758"
 ---
 # <a name="install-ata---step-5"></a>Installieren von ATA – Schritt 5
@@ -28,7 +28,7 @@ ms.locfileid: "65195758"
 > [Schritt 6 »](install-ata-step6.md)
 
 
-## <a name="step-5-configure-the-ata-gateway-settings"></a>Schritt 5: Konfigurieren der Einstellungen des ATA-Gateways
+## <a name="step-5-configure-the-ata-gateway-settings"></a>Schritt 5 Konfigurieren der Einstellungen des ATA-Gateways
 
 Führen Sie nach der Installation des ATA-Gateways die folgenden Schritte aus, um die Einstellungen für das ATA-Gateway zu konfigurieren.
 
@@ -41,8 +41,8 @@ Führen Sie nach der Installation des ATA-Gateways die folgenden Schritte aus, u
 
    ![Abbildung – Konfigurieren der Gatewayeinstellungen](media/ATA-Gateways-config-2.png)
 
-   - **Beschreibung**: Geben Sie eine Beschreibung für den ATA-Gateway ein (optional).
-   - **Domänencontroller mit Portspiegelung (FQDN)** (erforderlich für das ATA-Gateway; kann für das ATA-Lightweight-Gateway nicht geändert werden): Geben Sie den vollqualifizierten Domänennamen (FQDN) des Domänencontrollers ein, und klicken Sie auf das Pluszeichen, um ihn der Liste hinzuzufügen, z. B. **dc01.contoso.com**.
+   - **Beschreibung:** : Geben Sie eine Beschreibung für das ATA-Gateway ein (optional).
+   - **Domänencontroller mit Portspiegelung (FQDN)** (benötigt für das ATA-Gateway; kann nicht für das ATA-Lightweight-Gateway geändert werden): Geben Sie den vollqualifizierten Domänennamen (FQDN) Ihres Domänencontrollers ein, und klicken Sie auf das Pluszeichen, um ihn der Liste hinzuzufügen. z. B. **dc01.contoso.com**.
 
    Die folgenden Informationen gelten für die Server, die Sie in der Liste **Domänencontroller** eingeben.  
 
@@ -94,7 +94,7 @@ Gehen Sie wie folgt vor, um zu überprüfen, ob das ATA-Gateway erfolgreich bere
 - [Auswählen des richtigen ATA-Gatewaytyps](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 - [Handbuch für die ATA POC-Bereitstellung](http://aka.ms/atapoc)
 - [Tool zur Bemessung von ATA-Gateways](http://aka.ms/atasizingtool)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

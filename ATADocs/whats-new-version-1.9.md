@@ -13,10 +13,10 @@ ms.assetid: 51de491c-49ba-4aff-aded-cc133a8ccf0b
 ms.reviewer: ''
 ms.suite: ems
 ms.openlocfilehash: b10c2814fcac064d50bce292e86397ea5a0da21e
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65196059"
 ---
 # <a name="whats-new-in-ata-version-19"></a>Neuerungen in ATA 1.9
@@ -27,7 +27,7 @@ Die vorliegenden Anmerkungen zu dieser Version enthalten Informationen zu Update
 
 ## <a name="new--updated-detections"></a>Neue und aktualisierte Erkennung
 
--  **Erstellung von verdächtigen Diensten:** Angreifer versuchen, verdächtige Dienste auf Ihrem Netzwerk auszuführen. ATA gibt jetzt eine Warnung aus, wenn erkannt wird, dass jemand auf einem Domänencontroller einen neuen Dienst ausführt, der verdächtig erscheint. Dieser Erkennungsvorgang basiert nicht auf Netzwerkdatenverkehr, sondern auf Ereignissen. Weitere Informationen dazu finden Sie im [Advanced Threat Analytics-Leitfaden zu verdächtigen Aktivitäten](suspicious-activity-guide.md#suspicious-service-creation).
+-  **Erstellung verdächtiger Dienste:** Angreifer versuchen, einen verdächtigen Dienst in Ihrem Netzwerk auszuführen. ATA gibt jetzt eine Warnung aus, wenn erkannt wird, dass jemand auf einem Domänencontroller einen neuen Dienst ausführt, der verdächtig erscheint. Dieser Erkennungsvorgang basiert nicht auf Netzwerkdatenverkehr, sondern auf Ereignissen. Weitere Informationen dazu finden Sie im [Advanced Threat Analytics-Leitfaden zu verdächtigen Aktivitäten](suspicious-activity-guide.md#suspicious-service-creation).
 
 
 ## <a name="new-reports-to-help-you-investigate"></a>Neue Berichte, um Sie bei der Untersuchung zu unterstützen 
@@ -60,7 +60,7 @@ Die vorliegenden Anmerkungen zu dieser Version enthalten Informationen zu Update
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 [Aktualisieren von ATA auf Version 1.9: Migrationshandbuch](ata-update-1.9-migration-guide.md)
