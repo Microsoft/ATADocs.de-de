@@ -13,10 +13,10 @@ ms.assetid: 2d14d0e9-1b03-4bcc-ae97-8fd41526ffc5
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: 1148e4644ac49da31f2ba62e7bb972f3f9cfbbdf
-ms.sourcegitcommit: 4662ad41addf92727367874d909937fa331fb866
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68484958"
 ---
 # <a name="what-is-azure-advanced-threat-protection"></a>Was ist Azure Advanced Threat Protection?
@@ -56,13 +56,13 @@ Azure ATP soll die Anzahl allgemeiner Warnungen reduzieren, damit nur relevante,
 [https://signup.microsoft.com/Signup?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7&ali=1](https://signup.microsoft.com/Signup?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7&ali=1 "Enterprise Mobility + Security E5")
  
 ### <a name="follow-azure-atp-on-microsoft-tech-community"></a>Folgen Sie Azure ATP in der Microsoft Tech Community  
-[https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection "Azure ATP in Microsoft Tech Community")
+[https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection "Azure ATP on Microsoft Tech Community")
  
 ### <a name="join-the-azure-atp-yammer-community"></a>Der Azure ATP Yammer-Community beitreten 
-[https://www.yammer.com/azureadvisors/#/threads/inGroup?type=in_group&feedId=9386893](https://www.yammer.com/azureadvisors/#/threads/inGroup?type=in_group&feedId=9386893 "Azure ATP Yammer-Community")
+[https://www.yammer.com/azureadvisors/#/threads/inGroup?type=in_group&feedId=9386893](https://www.yammer.com/azureadvisors/#/threads/inGroup?type=in_group&feedId=9386893 "Azure ATP Yammer community")
  
 ### <a name="visit-the-azure-atp-product-page"></a>Besuchen Sie die Azure ATP-Produktseite  
-[https://azure.microsoft.com/features/azure-advanced-threat-protection/](https://azure.microsoft.com/features/azure-advanced-threat-protection/ "Azure ATP-Produktseite")
+[https://azure.microsoft.com/features/azure-advanced-threat-protection/](https://azure.microsoft.com/features/azure-advanced-threat-protection/ "Azure ATP product page")
 
 ### <a name="learn-more-about-azure-atp-architecture"></a>Weitere Informationen zur Azure ATP-Architektur
  [Azure ATP-Architektur](atp-architecture.md)
