@@ -12,19 +12,19 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: e734e382-c4b1-43ca-9a8d-96c91daf2578
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f54c60f97c9489934f0ac0a40b3b27780e6a60d9
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 0a5c01f665b167bb9eabc5a9e0a67b99bb6d56fa
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72690247"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75543126"
 ---
 # <a name="advanced-threat-analytics-ata-to-azure-advanced-threat-protection-azure-atp"></a>Advanced Threat Analytics (ATA) zu Azure Advanced Threat Protection (Azure ATP) 
 
 
 Folgen Sie dieser Anleitung, um eine vorhandene ATA-Installation zum Azure Advanced Threat Protection-Dienst zu verschieben. In der Anleitung sind sowohl Voraussetzungen und Anforderungen für Azure ATP beschrieben als auch Informationen zur Planung und Durchführung des Verschiebevorgangs enthalten. Zusätzlich finden Sie darin Überprüfungsschritte und Tipps zur Nutzung der neuesten Sicherheitslösungen und Schutzmöglichkeiten vor Bedrohungen mit Azure ATP nach der Installation. 
 
-Weitere Informationen zu den Unterschieden zwischen ATA und Azure ATP finden Sie in den [Häufig gestellten Fragen zu Azure ATP] (https://docs.microsoft.com/en-us/azure-advanced-threat-protection/atp-technical-faq#what-is-azure-atp).
+Weitere Informationen zu den Unterschieden zwischen ATA und Azure ATP finden Sie in den [Häufig gestellten Fragen zu Azure ATP] (https://docs.microsoft.com/azure-advanced-threat-protection/atp-technical-faq#what-is-azure-atp).
 
 In dieser Anleitung lernen Sie Folgendes: 
 
@@ -88,7 +88,7 @@ Schließen Sie den Verschiebevorgang zu Azure ATP in zwei einfachen Schritten ab
      - [Rufen Sie Ihren Zugriffsschlüssel für Azure ATP ab.](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step3#download-the-setup-package)
      - [Installieren Sie Azure ATP-Sensoren auf Ihren Domänencontrollern.](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step4) 
 
-### <a name="step-2-configure-and-validate-azure-atp-instance"></a>Schritt 2: Konfigurieren und Überprüfen der Azure ATP-Instanz  
+### <a name="step-2-configure-and-validate-azure-atp-instance"></a>Schritt 2: Konfigurieren und Überprüfen der Azure ATP-Instanz  
 
 - [Konfigurieren Sie den Sensor](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step5)
 
