@@ -11,12 +11,12 @@ ms.prod: advanced-threat-analytics
 ms.assetid: 1b5b24ff-0df8-4660-b4f8-64d68cc72f65
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 99d02aeb30cac449c4e9ac19c3824e8ebd97d0d5
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 4725be4c0254225d6ca92e11d62c283948ccfc46
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72690220"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75543052"
 ---
 # <a name="ata-capacity-planning"></a>ATA-Kapazitätsplanung
 
@@ -28,7 +28,7 @@ Anhand dieses Artikels können Sie ermitteln, wie viele ATA-Server zur Überwach
 > ATA Center kann auf jedem IaaS-Anbieter bereitgestellt werden, solange die Leistungsanforderungen erfüllt werden, die in diesem Artikel beschrieben sind.
 
 ## <a name="using-the-sizing-tool"></a>Verwenden das Tools zur Größenanpassung
-Die empfohlene und einfachste Methode zum Ermitteln der Kapazität für die ATA-Bereitstellung besteht in der Verwendung des [ATA-Tools zur Größenanpassung](http://aka.ms/atasizingtool). Führen Sie das ATA-Tool zur Größenanpassung aus, und verwenden Sie aus den Excel-Dateiergebnissen heraus die folgenden Felder zum Ermitteln der benötigten ATA-Kapazität:
+Die empfohlene und einfachste Methode zum Ermitteln der Kapazität für die ATA-Bereitstellung besteht in der Verwendung des [ATA-Tools zur Größenanpassung](https://aka.ms/atasizingtool). Führen Sie das ATA-Tool zur Größenanpassung aus, und verwenden Sie aus den Excel-Dateiergebnissen heraus die folgenden Felder zum Ermitteln der benötigten ATA-Kapazität:
 
 - ATA Center-CPU und -Arbeitsspeicher: Gleichen Sie das Feld **Busy Packets/sec** in der ATA Center-Tabelle in der Ergebnisdatei mit dem Feld **PACKETS PER SECOND** in der [ATA Center-Tabelle](#ata-center-sizing) ab.
 
@@ -116,7 +116,7 @@ Ein ATA-Lightweight-Gateway kann die Überwachung eines Domänencontrollers basi
 |---------------------------|-------------------------|---------------|
 |1,000|2|6|
 |5,000|6|16|
-    |10.000|10|24|
+    |10,000|10|24|
 
 &#42;Gesamtanzahl der Pakete pro Sekunde auf dem von dem betreffenden ATA-Lightweight-Gateway überwachten Domänencontroller.
 
@@ -151,7 +151,7 @@ Berücksichtigen Sie folgende Fehler bei der Entscheidung, wie viele ATA-Gateway
 |---------------------------|-------------------------|---------------|
 |1,000|1|6|
 |5,000|2|10|
-|10.000|3|12|
+|10,000|3|12|
 |20.000|6|24|
 |50.000|16|48|
 
@@ -173,7 +173,7 @@ Berücksichtigen Sie folgende Fehler bei der Entscheidung, wie viele ATA-Gateway
 
 
 ## <a name="see-also"></a>Weitere Informationen:
-- [Tool zur Bemessung von ATA-Gateways](http://aka.ms/atasizingtool)
+- [Tool zur Bemessung von ATA-Gateways](https://aka.ms/atasizingtool)
 - [Voraussetzungen für ATA](ata-prerequisites.md)
 - [ATA-Architektur](ata-architecture.md)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

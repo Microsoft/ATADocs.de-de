@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 55279f066b093e975d33d9d392530dc1a3238112
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 83234808b39c8c2e92ca4268c2ad64474f3462be
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65195719"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75543887"
 ---
 # <a name="install-ata---step-4"></a>Installieren von ATA – Schritt 4
 
@@ -27,13 +27,13 @@ ms.locfileid: "65195719"
 > [« Schritt 3](install-ata-step3.md)
 > [Schritt 5 »](install-ata-step5.md)
 
-## <a name="step-4-install-the-ata-gateway"></a>Schritt 4 Installieren des ATA-Gateways
+## <a name="step-4-install-the-ata-gateway"></a>Schritt 4 Installieren des ATA-Gateways
 
 Überprüfen Sie vor der Installation des ATA-Gateways auf dem dedizierten Server, ob die Portspiegelung ordnungsgemäß konfiguriert ist und ob das ATA-Gateway Datenverkehr zu und von den Domänencontrollern anzeigen kann. Weitere Informationen finden Sie unter [Überprüfen der Portspiegelung](validate-port-mirroring.md).
 
 
 > [!IMPORTANT]
-> Stellen Sie sicher, dass [KB2919355](http://support.microsoft.com/kb/2919355/) installiert wurde.  Führen Sie das folgende PowerShell-Cmdlet aus, um zu überprüfen, ob der Hotfix installiert ist:
+> Stellen Sie sicher, dass [KB2919355](https://support.microsoft.com/kb/2919355/) installiert wurde.  Führen Sie das folgende PowerShell-Cmdlet aus, um zu überprüfen, ob der Hotfix installiert ist:
 >
 > `Get-HotFix -Id kb2919355`
 
@@ -92,8 +92,8 @@ Führen Sie die folgenden Schritte auf dem ATA-Gatewayserver aus.
 - [Auswählen des richtigen ATA-Gatewaytyps](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 ## <a name="see-also"></a>Weitere Informationen:
-- [Handbuch für die ATA POC-Bereitstellung](http://aka.ms/atapoc)
-- [Tool zur Bemessung von ATA-Gateways](http://aka.ms/atasizingtool)
+- [Handbuch für die ATA POC-Bereitstellung](https://aka.ms/atapoc)
+- [Tool zur Bemessung von ATA-Gateways](https://aka.ms/atasizingtool)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
 - [Voraussetzungen für ATA](ata-prerequisites.md)

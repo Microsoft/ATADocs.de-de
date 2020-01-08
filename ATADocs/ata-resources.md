@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 42a1a34f-ed6b-4538-befb-452168a30e8c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f83b0e7576a1edbf3e973889cf06d5bc325ae519
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: e3b83699fdafd8fd34cea3a4407422e27118d9a0
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65196203"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75543006"
 ---
 # <a name="ata-readiness-roadmap"></a>Überblick über die ATA-Bereitschaft 
 
@@ -59,9 +59,9 @@ Wenn Sie physische Server verwenden, sollten Sie die Kapazität planen. Sie kön
 
 Diese Ressourcen unterstützen Sie beim Download und bei der Installation von ATA Center, bei der Verbindung zu Active Directory, beim Download des ATA Gatewaypakets, beim Einrichten der Ereignissammlung und optional bei der Integration in Ihr VPN sowie bei der Einrichtung von Honeytoken-Konten und -Ausschlüssen.
 
-[Herunterladen von ATA](http://aka.ms/ataeval): Wenn Sie sich vor der Bereitstellung von ATA noch nicht dazu entschieden haben, ATA käuflich zu erwerben, können Sie die Evaluierungsversion herunterladen. 
+[Herunterladen von ATA](https://aka.ms/ataeval): Wenn Sie sich vor der Bereitstellung von ATA noch nicht dazu entschieden haben, ATA käuflich zu erwerben, können Sie die Evaluierungsversion herunterladen. 
 
-[ATA POC-Playbook](http://aka.ms/atapoc): Anleitung für alle Schritte für eine erfolgreiche ATA POC-Bereitstellung.
+[ATA POC-Playbook](https://aka.ms/atapoc): Anleitung für alle Schritte für eine erfolgreiche ATA POC-Bereitstellung.
 
 [Video zur ATA-Bereitstellung](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes): Dieses Video bietet eine Übersicht über die Schritte für die ATA-Bereitstellung in weniger als zehn Minuten.
 
@@ -77,7 +77,7 @@ Die grundlegenden, erforderlichen Einstellungen in ATA werden als Teil des Insta
 
 Sobald ATA einsatzbereit ist, können Sie verdächtige Aktivitäten anzeigen, die in der Angriffszeitleiste erkannt werden. Dies ist die Standardzielseite, auf die Sie gelangen, wenn Sie sich bei der ATA-Konsole anmelden. Standardmäßig werden alle offenen verdächtigen Aktivitäten auf der Angriffszeitachse angezeigt. Außerdem wird der Schweregrad angezeigt, der den einzelnen Aktivitäten zugewiesen wurde. Untersuchen Sie jede verdächtige Aktivität, indem Sie zu den Entitäten (Computer, Geräte, Benutzer) navigieren, um deren Profilseiten zu öffnen, die weitere Informationen bereitstellen. Mithilfe folgender Ressourcen können Sie mit den verdächtigen Aktivitäten von ATA arbeiten:
 
-[Verdächtige ATA-Aktivitäten – Playbook](http://aka.ms/ataplaybook): Dieser Artikel führt Sie durch die Angriffstechniken für den Diebstahl von Anmeldeinformationen durch jederzeit verfügbare Recherchetools aus dem Internet. An jedem Punkt des Angriffs können Sie sehen, wie ATA Ihnen hilft, Einblick in diese Bedrohungen zu erhalten.
+[Verdächtige ATA-Aktivitäten – Playbook](https://aka.ms/ataplaybook): Dieser Artikel führt Sie durch die Angriffstechniken für den Diebstahl von Anmeldeinformationen durch jederzeit verfügbare Recherchetools aus dem Internet. An jedem Punkt des Angriffs können Sie sehen, wie ATA Ihnen hilft, Einblick in diese Bedrohungen zu erhalten.
 
 [Handbuch zu verdächtigen ATA-Aktivitäten](suspicious-activity-guide.md)
 

@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 7597ed25-87f5-472c-a496-d5f205c9c391
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5d266de0344a699ed3c3934246311f21b1b00c09
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 0d46ad26af75f56a2f85de863c4689307cda6493
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "70803200"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75543807"
 ---
 # <a name="install-ata---step-9"></a>Installieren von ATA: Schritt 9
 
@@ -55,8 +55,8 @@ Wenn Sie sicherstellen möchten, dass Windows-Clients und -Server zulassen, dass
 > [« Schritt 8 ](install-ata-step7.md)
 
 ## <a name="see-also"></a>Weitere Informationen:
-- [Handbuch für die ATA POC-Bereitstellung](http://aka.ms/atapoc)
-- [Tool zur Bemessung von ATA-Gateways](http://aka.ms/atasizingtool)
+- [Handbuch für die ATA POC-Bereitstellung](https://aka.ms/atapoc)
+- [Tool zur Bemessung von ATA-Gateways](https://aka.ms/atasizingtool)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
 - [Voraussetzungen für ATA](ata-prerequisites.md)

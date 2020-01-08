@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 8eefcd45-7a4b-4074-ac5b-1ffc48e6654a
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 10c2cc0858ba2403fc16721437f39cdd6dd2cc7c
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 8ef9bda4c3b1c3922744a4b292ee135b913e9306
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65196157"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75543232"
 ---
 # <a name="ata-update-to-17-migration-guide"></a>Migrationshandbuch zur Aktualisierung auf ATA 1.7
 Das Update auf ATA 1.7 bietet Verbesserungen in folgenden Bereichen:
@@ -39,7 +39,7 @@ Wenn ATA Version 1.6 bereits bereitgestellt wird, zeigt die vorliegende Anleitun
 
 So aktualisieren Sie auf ATA, Version 1.7:
 
-1.  [Herunterladen von Update 1.7](http://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics)<br>
+1.  [Herunterladen von Update 1.7](https://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics)<br>
 In dieser Version wird die gleiche Installationsdatei („Microsoft ATA Center Setup.exe“) für die Installation einer neuen Bereitstellung von ATA und zum Aktualisieren von vorhandener Bereitstellungen verwendet.
 
 2.  Aktualisieren von ATA Center

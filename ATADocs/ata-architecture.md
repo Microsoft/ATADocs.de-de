@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 9579108bd0bb2fa91e2e196ab90284f396025db1
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: f953a163be460184c7b585e71cd973bbdcc71e6f
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "70803109"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75543024"
 ---
 # <a name="ata-architecture"></a>ATA-Architektur
 
@@ -153,7 +153,7 @@ Wenn Active Directory mehr Rechenkapazität erfordert, wird das vom ATA-Lightwei
 ||||||
 |-|-|-|-|-|
 |Active Directory (Lsass.exe)|ATA-Lightweight-Gateway (Microsoft.Tri.Gateway.exe)|Sonstiges (andere Prozesse) |ATA-Lightweight-Gateway-Kontingent|Nimmt Gateway Löschungen vor|
-|60%|15%|10%|15%|Ja|
+|60%|15%|10%|15%|Yes|
 
 
 ## <a name="your-network-components"></a>Ihre Netzwerkkomponenten
@@ -164,7 +164,7 @@ Wenn Sie ATA-Gateways verwenden, müssen Sie für die Domänencontroller, die ü
 
 In diesem Fall wird nur ein kleiner Prozentsatz dieses Datenverkehrs komprimiert und zur Analyse an ATA Center gesendet, während durch die Portspiegelung sämtlicher Netzwerkverkehr der Domänencontroller an das ATA-Gateway gesendet wird.
 
-Die Domänencontroller und die ATA-Gateways können physisch oder virtuell sein. Weitere Informationen finden Sie unter [Portspiegelung](configure-port-mirroring.md).
+Die Domänencontroller und die ATA-Gateways können physisch oder virtuell sein. Weitere Informationen finden Sie unter [Konfigurieren der Portspiegelung](configure-port-mirroring.md).
 
 
 ### <a name="events"></a>Ereignisse
@@ -180,7 +180,7 @@ Um die ATA-Erfassung von Pass-the-Hash, Brute Force, die Modifizierung von sensi
 
 ## <a name="see-also"></a>Weitere Informationen:
 - [Voraussetzungen für ATA](ata-prerequisites.md)
-- [Tool zur Bemessung von ATA-Gateways](http://aka.ms/atasizingtool)
+- [Tool zur Bemessung von ATA-Gateways](https://aka.ms/atasizingtool)
 - [ATA-Kapazitätsplanung](ata-capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
 - [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-collection.md)

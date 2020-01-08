@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 213f098fe878afda763eebce6080909b63c3cf91
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: e84bbb84859d316d4900d0f09e71142627df1ae8
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73618458"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75543169"
 ---
 # <a name="ata-prerequisites"></a>Voraussetzungen für ATA
 
@@ -29,7 +29,7 @@ In diesem Artikel werden die Voraussetzungen für eine erfolgreiche Bereitstellu
 > Informationen zum Planen von Ressourcen und Kapazitäten finden Sie unter [ATA-Kapazitätsplanung](ata-capacity-planning.md).
 
 
-ATA besteht aus ATA Center, dem ATA-Gateway und/oder dem ATA-Lightweight-Gateway. Weitere Informationen zu den ATA-Komponenten finden Sie unter [ATA-Architektur](ata-architecture.md).
+ATA besteht aus ATA Center, dem ATA-Gateway und/oder dem ATA-Lightweight-Gateway. Weitere Informationen zu ATA-Komponenten finden Sie unter [ATA-Architektur](ata-architecture.md).
 
 Das ATA-System arbeitet auf der Gesamtstrukturbegrenzung von Active Directory und unterstützt die Gesamtstruktur-Funktionsebene (Forest Functional Level; FFL) von Windows 2003 und höher.
 
@@ -93,7 +93,7 @@ Die Installation von ATA Center als virtueller Computer wird unterstützt.
 |Anderer Virtualisierungshost|Informieren Sie sich in der Dokumentation des Herstellers, wie Sie sicherstellen, dass der Arbeitsspeicher zu jedem Zeitpunkt vollständig dem virtuellen Computer zugewiesen ist. |
 |
 
-Wenn Sie ATA Center als virtuellen Computer ausführen, fahren Sie vor dem Erstellen eines neuen Prüfpunkts den Server herunter, um eine mögliche Beschädigung der Datenbank zu verhindern.
+Wenn Sie ATA Center als virtuellen Computer ausführen, fahren Sie vor dem Erstellen eines neuen Prüfpunkts den Server herunter, um eine potenzielle Beschädigung der Datenbank zu verhindern.
 
 ### <a name="server-specifications"></a>Serverspezifikationen
 
@@ -102,7 +102,7 @@ Wenn Sie auf einem physischen Server arbeiten, erfordert die ATA-Datenbank, dass
 Um eine optimale Leistung zu erzielen, legen Sie die **Energieoption** von ATA Center auf **Hohe Leistung** fest.<br>
 Die erforderlichen Serverspezifikationen hängen von der Anzahl der überwachten Domänencontroller und der Auslastung der einzelnen Domänencontroller ab. Weitere Informationen finden Sie unter [ATA-Kapazitätsplanung](ata-capacity-planning.md).
 
-Für Windows-Betriebssysteme 2008R2 und 2012 wird das Gateway im Modus für [mehrere Prozessor Gruppen](https://docs.microsoft.com/windows/win32/procthread/processor-groups) nicht unterstützt. Weitere Informationen über den Modus „Mehrere Prozessorgruppen“ finden Sie unter [Problembehandlung](troubleshooting-ata-known-errors.md##multi-processor-group-mode). 
+Für Windows-Betriebssysteme 2008R2 und 2012 wird das Gateway im Modus für [mehrere Prozessor Gruppen](https://docs.microsoft.com/windows/win32/procthread/processor-groups) nicht unterstützt. Weitere Informationen über den Modus „Mehrere Prozessorgruppen“ finden Sie unter [Problembehandlung](troubleshooting-ata-known-errors.md#multi-processor-group-mode). 
 
 ### <a name="time-synchronization"></a>Zeitsynchronisierung
 
@@ -119,11 +119,11 @@ Sie benötigen Folgendes:
 ### <a name="ports"></a>Ports
 In der folgenden Tabelle sind die Ports aufgelistet, die mindestens geöffnet werden müssen, damit ATA Center ordnungsgemäß funktioniert.
 
-|Protokoll|Transport|Port|Zu/Von|Direction|
+|Protokoll|Transport|Port|Zu/Von|Richtung|
 |------------|-------------|--------|-----------|-------------|
-|**SSL** (ATA-Kommunikation)|TCP|443|ATA-Gateway|Inbound|
-|**HTTP** (optional)|TCP|80|Unternehmensnetzwerk|Inbound|
-|**HTTPS**|TCP|443|Unternehmensnetzwerk und ATA-Gateway|Inbound|
+|**SSL** (ATA-Kommunikation)|TCP|443|ATA-Gateway|Eingehende Verbindungen|
+|**HTTP** (optional)|TCP|80|Unternehmensnetzwerk|Eingehende Verbindungen|
+|**HTTPS**|TCP|443|Unternehmensnetzwerk und ATA-Gateway|Eingehende Verbindungen|
 |**SMTP** (optional)|TCP|25|SMTP-Server|Outbound|
 |**SMTPS** (optional)|TCP|465|SMTP-Server|Outbound|
 |**Syslog** (optional)|TCP/UPS/TLS (konfigurierbar)|514 (Standard)|Syslog-Server|Outbound|
@@ -215,7 +215,7 @@ Das ATA-Gateway erfordert mindestens einen Verwaltungsadapter und mindestens ein
 ### <a name="ports"></a>Ports
 In der folgenden Tabelle sind die Ports aufgeführt, die für den Verwaltungsadapter des ATA-Gateways mindestens konfiguriert werden müssen:
 
-|Protokoll|Transport|Port|Zu/Von|Direction|
+|Protokoll|Transport|Port|Zu/Von|Richtung|
 |------------|-------------|--------|-----------|-------------|
 |LDAP|TCP und UDP|389|Domänencontroller|Outbound|
 |Sicheres LDAP (LDAPS)|TCP|636|Domänencontroller|Outbound|
@@ -228,7 +228,7 @@ In der folgenden Tabelle sind die Ports aufgeführt, die für den Verwaltungsada
 |NTLM über RPC|TCP|135|Alle Geräte im Netzwerk|Both|
 |NetBIOS|UDP|137|Alle Geräte im Netzwerk|Both|
 |SSL|TCP|443|ATA Center|Outbound|
-|Syslog (optional)|UDP|514|SIEM-Server|Inbound|
+|Syslog (optional)|UDP|514|SIEM-Server|Eingehende Verbindungen|
 
 
 > [!NOTE]
@@ -288,13 +288,13 @@ Nach der Bereitstellung können Sie die ATA-Konsole verwenden, wenn Sie die übe
 ### <a name="ports"></a>Ports
 In der folgenden Tabelle sind die Ports aufgeführt, die für das ATA-Lightweight-Gateway mindestens konfiguriert werden müssen.
 
-|Protokoll|Transport|Port|Zu/Von|Direction|
+|Protokoll|Transport|Port|Zu/Von|Richtung|
 |------------|-------------|--------|-----------|-------------|
 |Domain Name System|TCP und UDP|53|DNS-Server|Outbound|
 |NTLM über RPC|TCP|135|Alle Geräte im Netzwerk|Both|
 |NetBIOS|UDP|137|Alle Geräte im Netzwerk|Both|
 |SSL|TCP|443|ATA Center|Outbound|
-|Syslog (optional)|UDP|514|SIEM-Server|Inbound|
+|Syslog (optional)|UDP|514|SIEM-Server|Eingehende Verbindungen|
 |Netlogon (SMB, CIFS, SAM-R)|TCP und UDP|445|Alle Geräte im Netzwerk|Outbound|
 
 > [!NOTE]

@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 2946310a-8e4e-48fc-9450-fc9647efeb22
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 82a801785c85258da936bcaee55c4bedc83fb37d
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: b970f5e8472c58fa87a078d8b8612a4dbc86e388
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65196368"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75543786"
 ---
 # <a name="updating-ata-to-version-19"></a>Aktualisieren von ATA auf Version 1.9
 
@@ -31,7 +31,7 @@ Wenn Sie bereits über ATA Version 1.8 verfügen, zeigt die vorliegende Anleitun
 
 So aktualisieren Sie auf ATA 1.9:
 
-1.  [Laden Sie die Updateversion von ATA 1.9 aus dem Download Center](https://www.microsoft.com/download/details.aspx?id=56725) oder die vollständige Version aus dem [Evaluation Center](http://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics) herunter.<br>
+1.  [Laden Sie die Updateversion von ATA 1.9 aus dem Download Center](https://www.microsoft.com/download/details.aspx?id=56725) oder die vollständige Version aus dem [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics) herunter.<br>
 In der Migrationsversion kann die Datei nur für die Aktualisierung von ATA 1.8 verwendet werden. In der Version aus dem Evaluationszentrum wird die gleiche Installationsdatei („Microsoft ATA Center Setup.exe“) für die Installation einer neuen Bereitstellung von ATA und zum Aktualisieren von vorhandener Bereitstellungen verwendet.
 
 2.  Aktualisieren von ATA Center
