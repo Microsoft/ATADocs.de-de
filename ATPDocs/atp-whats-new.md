@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 12/15/2019
+ms.date: 12/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 000ece8a9963af12b1de7f2a3b68641bf6640876
-ms.sourcegitcommit: 44ce78c9d7f156dd0c0798823bba53e092f5abdf
+ms.openlocfilehash: 744c11a0887716cccc7f999a660340a3595977f9
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/16/2019
-ms.locfileid: "75034100"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544248"
 ---
 # <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Neuerungen in Azure Advanced Threat Protection (Azure ATP)
 
@@ -27,14 +27,29 @@ Ausführliche Informationen zu früheren Azure ATP-Versionen bis (und einschlie�
 
 RSS-Feed: Lassen Sie sich benachrichtigen, wenn diese Seite aktualisiert wird, indem Sie die folgende URL kopieren und in Ihren Feedreader einfügen: <br>`https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
 
+Veröffentlicht am 23. Dezember 2019
+## <a name="azure-atp-release-2104"></a>Azure ATP-Release 2.104
+
+
+- **Ablauf von Sensorversionen beseitigt**<br>
+    Azure ATP-Sensorbereitstellungs- und -Sensorinstallationspakete laufen nicht mehr nach einer Reihe von Versionen ab und werden nur einmal automatisch aktualisiert. Das Ergebnis dieses Features ist, dass bereits heruntergeladene Sensorinstallationspakete auch dann installiert werden können, wenn sie älter sind als unsere maximale Anzahl abgelaufener Versionen.
+
+- **Kompromittierung bestätigen**<br>
+    Sie können jetzt die Kompromittierung bestimmter Office 365-Benutzer bestätigen und deren Risikostufe auf **hoch**festlegen. Dieser Workflow bietet Ihren Sicherheitsbetriebsteams eine andere Reaktionsfunktion, um die Schwellenwerte für die Zeit bis zum Auflösen von Sicherheitsvorfällen zu reduzieren. Erfahren Sie mehr über das [Bestätigen von Kompromittierungen](https://docs.microsoft.com/cloud-app-security/tutorial-ueba?branch=pr-en-us-1204#phase-4-protect-your-organization) mithilfe von Azure ATP und Cloud App Security. 
+
+- **Banner zu neuen Funktionen**<br>
+    Auf Azure ATP-Portalseiten, auf denen eine neue Funktion im Cloud App Security-Portal verfügbar ist, werden neue Banner mit Beschreibungen und Zugriffslinks zu den verfügbaren Funktionen angezeigt.
+
+- Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
+
 Veröffentlicht am 15. Dezember 2019
 ## <a name="azure-atp-release-2103"></a>Azure ATP Release 2.103
 
 - Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
 Veröffentlicht am 08. Dezember 2019
-## <a name="azure-atp-release-2102"></a>Azure ATP Release 2.102
 
+## <a name="azure-atp-release-2102"></a>Azure ATP Release 2.102
 - Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
 Veröffentlicht am 24. November 2019
@@ -79,7 +94,7 @@ Veröffentlicht: 22. September 2019
 
 Azure ATP-Sensoren sind nun in der Lage, automatisch die NTLM-Authentifizierungsaktivitäten zu lesen und mit den von Ihnen verwendeten Serverdaten anzureichern, wenn die NTLM-Überwachung aktiviert ist und Windows-Ereignis 8004 auftritt. Azure ATP analysiert Windows-Ereignis 8004 für NTLM-Authentifizierungen, um die für Azure ATP-Bedrohungsanalysen und -Warnungen verwendeten NTLM-Authentifizierungsdaten anzureichern. Diese erweiterte Funktion bietet Ressourcenzugriffsaktivität über NTLM-Daten sowie erweiterte Aktivitäten in Verbindung mit nicht gelungenen Anmeldungen, und bezieht dabei den Zielcomputer ein, auf den der Benutzer vergeblich zuzugreifen versuchte.
 
-Erfahren Sie mehr über NTLM-Authentifizierungsaktivitäten [unter Verwendung von Windows-Ereignis 8004](configure-windows-event-collection.md##ntlm-authentication-using-windows-event-8004).
+Erfahren Sie mehr über NTLM-Authentifizierungsaktivitäten [unter Verwendung von Windows-Ereignis 8004](configure-windows-event-collection.md#ntlm-authentication-using-windows-event-8004).
 
 - Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
@@ -484,7 +499,7 @@ Die Dokumentation zu Azure ATP-Sicherheitswarnungen ist optimiert und erweitert 
 
 
 ## <a name="azure-atp-release-260"></a>Azure ATP, Release 2.60
-Veröffentlichung am 6. Januar 2019
+Veröffentlicht am 6. Januar 2019
 
 - Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
@@ -496,7 +511,7 @@ Am 16. Dezember 2018 veröffentlicht
 
 ## <a name="azure-atp-release-258"></a>Azure ATP, Release 2.58
 
-Veröffentlicht am 9. Dezember 2018
+Veröffentlicht am 9. Dezember 2018
 
 - **Erweiterung von Sicherheitswarnungen: Aufteilung der Warnung zu ungewöhnlichen Protokollimplementierungen**<br>
 Die Azure ATP-Serie von Sicherheitswarnungen zu ungewöhnlichen Protokollimplementierungen, die zuvor eine externalId (2002) gemeinsam genutzt haben, ist jetzt in vier verschiedene Warnungen aufgeteilt, die jeweils eine eindeutige externe ID aufweisen. 

@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e2e3b35373bdfaaa0d13c1c175deea12bf24a34d
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: a615574ba0f74af8a01806bfffa44f343bba1151
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65195460"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75543571"
 ---
 # <a name="azure-atp-role-groups"></a>Azure ATP-Rollengruppen
 
@@ -69,7 +69,7 @@ Wenn Benutzer versuchen, auf eine Seite zuzugreifen, die nicht für deren Rollen
 Azure ATP verwendet Azure AD-Sicherheitsgruppen als eine Basis für Rollengruppen. Die Rollengruppen können über [https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/All%20groups](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/All%20groups) verwaltet werden. Nur Azure AD-Benutzer können zu Sicherheitsgruppen hinzugefügt bzw. aus ihnen entfernt werden. 
 
 ## <a name="see-also"></a>Weitere Informationen
-- [ATP-Tool zur Größenanpassung](http://aka.ms/aatpsizingtool)
+- [ATP-Tool zur Größenanpassung](https://aka.ms/aatpsizingtool)
 - [ATP-Architektur](atp-architecture.md)
 - [Install Azure ATP (Installieren von Azure ATP)](install-atp-step1.md)
 - [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)

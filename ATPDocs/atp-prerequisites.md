@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7c1dfa8cfda0bb6fb39770a58a7cc1b54dbc2298
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: ffafa24c4c20f52947b4f2d0317ea81f51789010
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73618449"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544360"
 ---
 # <a name="azure-atp-prerequisites"></a>Voraussetzungen für Azure ATP
 
@@ -115,7 +115,7 @@ Um eine optimale Leistung zu erzielen, legen Sie die **Energieoption** des Azure
 
 Der Azure ATP-Sensor kann auf Domänencontrollern verschiedener Auslastungen und Größen bereitgestellt werden, abhängig vom Umfang des Datenverkehrs zwischen den Domänencontrollern und der installierten Ressourcen.
 
-Unter den Windows-Betriebssystemen 2008 R2 und 2012 werden Azure ATP-Sensoren im Modus [Mehrere Prozessorgruppen](https://docs.microsoft.com/windows/win32/procthread/processor-groups) nicht unterstützt. Weitere Informationen über den Modus „Mehrere Prozessorgruppen“ finden Sie unter [Problembehandlung](troubleshooting-atp-known-issues.md##multi-processor-group-mode). 
+Unter den Windows-Betriebssystemen 2008 R2 und 2012 werden Azure ATP-Sensoren im Modus [Mehrere Prozessorgruppen](https://docs.microsoft.com/windows/win32/procthread/processor-groups) nicht unterstützt. Weitere Informationen über den Modus „Mehrere Prozessorgruppen“ finden Sie unter [Problembehandlung](troubleshooting-atp-known-issues.md#multi-processor-group-mode). 
 
 >[!NOTE] 
 > Bei Ausführung als virtueller Computer wird kein dynamischer Arbeitsspeicher und keine andere Speichererweiterungsfunktion unterstützt.
@@ -144,12 +144,12 @@ In der folgenden Tabelle sind die Ports aufgeführt, die für den Azure ATP-Sens
 |**Interne Ports**|||||
 |DNS|TCP und UDP|53|DNS-Server|Ausgehend|
 |Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Alle Geräte im Netzwerk|Ausgehend|
-|Syslog (optional)|TCP/UDP|514, je nach Konfiguration|SIEM-Server|Eingehend|
-|RADIUS|UDP|1813|RADIUS|Eingehend|
+|Syslog (optional)|TCP/UDP|514, je nach Konfiguration|SIEM-Server|Eingehende Verbindungen|
+|RADIUS|UDP|1813|RADIUS|Eingehende Verbindungen|
 |
 
 ### <a name="windows-event-logs"></a>Windows-Ereignisprotokolle
-Die Azure ATP-Erkennung basiert auf den folgenden bestimmten Windows-Ereignisprotokollen, die der Sensor von Ihren Domänencontrollern aus analysiert: 4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045 und 8004. Damit die richtigen Ereignisse überprüft und im Windows-Ereignisprotokoll eingeschlossen werden, benötigen Ihre Domänencontroller die korrekten erweiterten Überwachungsrichtlinieneinstellungen. Weitere Informationen zum Festlegen der richtigen Richtlinien finden Sie unter [Überprüfung der erweiterten Überwachungsrichtlinie von Azure ATP](atp-advanced-audit-policy.md). Um [sicherzustellen, dass das Windows-Ereignis 8004 überwacht wird](configure-windows-event-collection.md##ntlm-authentication-using-windows-event-8004), wie es der Dienst erfordert, überprüfen Sie die [NTLM-Überwachungseinstellungen](https://blogs.technet.microsoft.com/askds/2009/10/08/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7/).  
+Die Azure ATP-Erkennung basiert auf den folgenden bestimmten Windows-Ereignisprotokollen, die der Sensor von Ihren Domänencontrollern aus analysiert: 4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045 und 8004. Damit die richtigen Ereignisse überprüft und im Windows-Ereignisprotokoll eingeschlossen werden, benötigen Ihre Domänencontroller die korrekten erweiterten Überwachungsrichtlinieneinstellungen. Weitere Informationen zum Festlegen der richtigen Richtlinien finden Sie unter [Überprüfung der erweiterten Überwachungsrichtlinie von Azure ATP](atp-advanced-audit-policy.md). Um [sicherzustellen, dass das Windows-Ereignis 8004 überwacht wird](configure-windows-event-collection.md#ntlm-authentication-using-windows-event-8004), wie es der Dienst erfordert, überprüfen Sie die [NTLM-Überwachungseinstellungen](https://blogs.technet.microsoft.com/askds/2009/10/08/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7/).  
 
 
 > [!NOTE]
@@ -222,8 +222,8 @@ In der folgenden Tabelle sind die Ports aufgeführt, die für den Verwaltungsada
 |Netlogon (SMB, CIFS, SAM-R)|TCP und UDP|445|Alle Geräte im Netzwerk|Ausgehend|
 |Windows-Zeitdienst|UDP|123|Domänencontroller|Ausgehend|
 |DNS|TCP und UDP|53|DNS-Server|Ausgehend|
-|Syslog (optional)|TCP/UDP|514, je nach Konfiguration|SIEM-Server|Eingehend|
-|RADIUS|UDP|1813|RADIUS|Eingehend|
+|Syslog (optional)|TCP/UDP|514, je nach Konfiguration|SIEM-Server|Eingehende Verbindungen|
+|RADIUS|UDP|1813|RADIUS|Eingehende Verbindungen|
 |
 
 > [!NOTE]

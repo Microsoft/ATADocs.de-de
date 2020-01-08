@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/20/2019
+ms.date: 12/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 603d9e09-a07d-4357-862f-d5682c8bc3dd
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 408c46d620f7b7f5da21d9dcfaf17097660dcc4c
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 6c8edd2b48fbc10347bd77df06ae1f7c4ecacb52
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65196377"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544009"
 ---
 # <a name="update-azure-atp-sensors"></a>Aktualisieren von Azure ATP-Sensoren
 
@@ -43,10 +43,6 @@ Azure ATP-Sensoren unterstützen zwei verschiedene Arten von Updates:
 > [!NOTE]
 >- Steuern den automatischen Neustart der Sensoren (bei Updates der **Hauptversion**) auf der Konfigurationsseite im Azure ATP-Portal. 
 > - Ein Azure ATP-Sensor reserviert auf dem Domänencontroller, auf dem er installiert ist, immer mindestens 15 % des verfügbaren Arbeitsspeichers und der CPU-Ressourcen. Wenn der Azure ATP-Dienst zu viel Speicherplatz beansprucht, wird er automatisch angehalten und vom Azure ATP-Sensor-Aktualisierungsdienst neu gestartet.
-
-### <a name="update-requirement"></a>Updateanforderungen
-
-Wenn Sie mehr als ein Versionsupdate nicht installieren und Ihre Sensoren nicht aktualisieren, können diese nicht mehr mit dem Azure ATP-Clouddienst kommunizieren. Dadurch ist der Azure ATP-Dienst möglicherweise nicht mehr verfügbar und bietet keinen Schutz für Ihr Unternehmen.  
 
 ## <a name="delayed-sensor-update"></a>Verzögertes Sensorupdate
 

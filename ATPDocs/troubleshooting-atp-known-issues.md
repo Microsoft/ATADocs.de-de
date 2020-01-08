@@ -5,24 +5,25 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 11/05/2019
+ms.date: 12/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d764d466e0981c673874386d7b28019f48d79827
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 9ff42bce05809c442d519871f90ae911fb400670
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73618425"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75543963"
 ---
 # <a name="troubleshooting-azure-atp-known-issues"></a>Behandlung von bekannten Problemen bei Azure ATP 
 
 
 ## <a name="sensor-failure-communication-error"></a>Kommunikationsfehler durch Sensorfehler
+
 Sie erhalten folgenden Sensorfehler: 
 
 System.Net.Http.HttpRequestException: Fehler beim Senden der Anforderung. ---> System.Net.WebException: Es konnte keine Verbindung mit dem Remoteserver hergestellt werden ---> System.Net.Sockets.SocketException: Fehler beim Herstellen der Verbindung, weil die Gegenstelle nach einer bestimmten Zeitspanne nicht ordnungsgemäß reagiert hat, oder die hergestellte Verbindung konnte nicht aufrechterhalten werden, weil der verbundene Host nicht reagiert hat...
@@ -67,20 +68,24 @@ Sie versuchen, während der automatischen Sensorinstallation PowerShell zu verwe
 
 Wenn Sie versuchen, den ATP-Sensor auf einem Computer zu installieren, der mit einem NIC-Teaming-Adapter konfiguriert ist, wird ein Installationsfehler gemeldet. Wenn Sie den ATP-Sensor auf einem Computer installieren möchten, der mit NIC-Teamvorgang konfiguriert ist, gehen Sie wie folgt vor:
 
+1.  Laden Sie die neueste Version des Npcap-Installers herunter: [https://nmap.org/npcap/](https://nmap.org/npcap/).
+    - Alternativ dazu können Sie die OEM-Version des Npcap-Treibers (der die automatische Installation unterstützt) vom Supportteam anfordern.
+    - Kopien von Npcap werden nicht auf die Lizenzierungseinschränkung von fünf Kopien, fünf Computern oder fünf Benutzern angerechnet, wenn sie ausschließlich in Verbindung mit Azure ATP installiert und verwendet werden. Weitere Informationen finden Sie unter [NPCAP-Lizenzierung](https://github.com/nmap/npcap/blob/master/LICENSE). 
+
 Wenn Sie den Sensor noch nicht installiert haben:
 
-1.  Laden Sie Npcap von [https://nmap.org/npcap/](https://nmap.org/npcap/) herunter.
-2.  Deinstallieren Sie WinPcap (falls installiert).
-3.  Installieren Sie Npcap mit den folgenden Optionen: loopback_support=no & winpcap_mode=yes
-4.  Installieren Sie das Sensorpaket.
+1.  Deinstallieren Sie WinPcap (falls installiert).
+1.  Installieren Sie Npcap mit den folgenden Optionen: loopback_support=no & winpcap_mode=yes.
+    - Wenn Sie den GUI-Installer verwenden, deaktivieren Sie die **Loopbackunterstützung**, und aktivieren Sie den **WinPcap**-Modus.
+1.  Installieren Sie das Sensorpaket.
 
 Wenn der Sensor bereits installiert ist:
 
-1.  Laden Sie Npcap von [https://nmap.org/npcap/](https://nmap.org/npcap/) herunter.
-2.  Deinstallieren Sie den Sensor.
-3.  Deinstallieren Sie WinPcap.
-4.  Installieren Sie Npcap mit den folgenden Optionen: loopback_support=no & winpcap_mode=yes
-5.  Installieren Sie das Sensorpaket erneut.
+1.  Deinstallieren Sie den Sensor.
+1.  Deinstallieren Sie WinPcap.
+1.  Installieren Sie Npcap mit den folgenden Optionen: loopback_support=no & winpcap_mode=yes
+    - Wenn Sie den GUI-Installer verwenden, deaktivieren Sie die **Loopbackunterstützung**, und aktivieren Sie den **WinPcap**-Modus.
+1.  Installieren Sie das Sensorpaket erneut.
 
 ## <a name="multi-processor-group-mode"></a>Modus „Mehrere Prozessorgruppen“ 
 Unter den Windows-Betriebssystemen 2008 R2 und 2012 werden Azure ATP-Sensoren im Modus „Mehrere Prozessorgruppen“ nicht unterstützt.
@@ -96,13 +101,26 @@ Mithilfe von Azure Advanced Threat Protection können Sie Azure ATP in Windows D
 
 ## <a name="vmware-virtual-machine-sensor-issue"></a>Problem mit dem Sensor des virtuellen VMware-Computers
 
-Wenn Sie einen Azure-ATP-Sensor auf virtuellen VMware-Computern verwenden, erhalten Sie möglicherweise die Überwachungswarnung **Ein Teil des Netzwerkdatenverkehrs wird nicht analysiert**. Dies tritt aufgrund von Konfigurationskonflikten in VMware auf.
+Wenn Sie einen Azure-ATP-Sensor auf virtuellen VMware-Computern verwenden, erhalten Sie möglicherweise die Überwachungswarnung **Ein Teil des Netzwerkdatenverkehrs wird nicht analysiert**. Als Ursache kommt ein Konfigurationskonflikt in VMware infrage.
 
-So beheben Sie das Problem
+So beheben Sie dieses Problem:
 
 Legen Sie die folgenden Einstellungen in der NIC-Konfiguration des virtuellen Computers auf **Deaktiviert** fest: **IPv4-TSO-Offload**.
 
  ![VMware-Sensorproblem](./media/vm-sensor-issue.png)
+
+Verwenden Sie den folgenden Befehl, um zu überprüfen, ob die Abladung großer Sendungen (Large Send Offload, LSO) aktiviert oder deaktiviert ist:
+
+`Get-NetAdapterAdvancedProperty | Where-Object DisplayName -Match "^Large*"`
+
+![LSO-Status überprüfen](./media/missing-network-traffic-health-alert.png)
+
+Wenn LSO aktiviert ist, verwenden Sie den folgenden Befehl zur Deaktivierung:
+
+`Disable-NetAdapterLso -Name {name of adapter}` 
+
+![LSO-Status deaktivieren](./media/disable-lso-vmware.png)
+
 
 ## <a name="see-also"></a>Weitere Informationen
 - [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](atp-prerequisites.md)

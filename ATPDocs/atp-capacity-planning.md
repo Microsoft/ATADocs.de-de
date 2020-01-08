@@ -3,16 +3,16 @@ title: 'Planen der Azure Advanced Threat Protection-Bereitstellung: Schnellstart
 description: Hilft bei der Planung Ihrer Bereitstellung und der Entscheidung, wie viele Azure ATP-Server für Ihr Netzwerk erforderlich sind.
 author: mlottner
 ms.author: mlottner
-ms.date: 11/05/2019
+ms.date: 12/26/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.openlocfilehash: b07800cfc3b2df6fdb290fff27a9e807be15056f
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 5edb88ebc9db10abec7e8064be4af37f66111afc
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74540887"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75543912"
 ---
 # <a name="quickstart-plan-capacity-for-azure-atp"></a>Schnellstart: Planen der Kapazität für Azure ATP
 
@@ -102,8 +102,6 @@ Beachten Sie bei der Größenanpassung Folgendes:
 |VMWare|Stellen Sie sicher, dass die konfigurierte und die reservierte Arbeitsspeichermenge gleich sind, oder wählen Sie in den VM-Einstellungen die folgende Option aus: **Gesamten Gastarbeitsspeicher reservieren (alle gesperrt)** .|
 |Anderer Virtualisierungshost|Informieren Sie sich in der Dokumentation des Herstellers, wie Sie sicherstellen, dass der Arbeitsspeicher zu jedem Zeitpunkt vollständig dem virtuellen Computer zugewiesen ist. |
 |
-
-Fahren Sie bei Ausführung als virtueller Computer den Server herunter, bevor ein neuer Prüfpunkt erstellt wird, um eine mögliche Beschädigung der Datenbank zu verhindern.
 
 ## <a name="manual-sizing"></a> Datenverkehrsschätzung für Domänencontroller
 

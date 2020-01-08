@@ -12,18 +12,18 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 27630e93db4e103454e6d0fec7756824988ec4a2
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: f0c38f179411565685f3bc2e35d23ac21ce0ef47
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71185501"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544167"
 ---
 # <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-azure-atp-sensor"></a>Konfigurieren von Endpunktproxy- und Internetkonnektivitätseinstellungen für Ihren Azure ATP-Sensor
 
 Jeder Azure Advanced Threat Protection-Sensor (ATP) erfordert Internetkonnektivität mit dem Azure ATP-Clouddienst, damit er erfolgreich verwendet werden kann. In einigen Organisationen sind die Domänencontroller nicht direkt mit dem Internet verbunden, sondern über eine Webproxyverbindung. Für jeden Azure ATP-Sensor ist es erforderlich, dass Sie die Microsoft WinINET-Proxykonfiguration (Windows-Internet) verwenden, um Sensordaten zu melden und mit Azure ATP zu kommunizieren. Wenn Sie WinHTTP für die Proxykonfiguration verwenden, müssen Sie dennoch WinINET-Browserproxyeinstellungen für die Kommunikation zwischen dem Sensor und dem Azure ATP-Clouddienst konfigurieren.
 
-Wenn Sie den Proxy konfigurieren, müssen Sie wissen, dass der eingebettete Azure ATP-Sensordienst im Systemkontext mit dem Konto **LocalService** ausgeführt wird, und der Azure ATP-Sensorupdatedienst wird im Systemkontext mit dem Konto **LocalSystem** ausgeführt. 
+Beachten Sie bei der Proxykonfiguration, dass der eingebettete Azure ATP-Sensordienst mit dem Konto **LocalService** und der Azure ATP-Sensorupdatedienst mit dem Konto **LocalSystem** im Systemkontext ausgeführt wird. 
 
 > [!NOTE]
 > Wenn Sie in Ihrer Netzwerktopologie einen transparenten Proxy oder WPAD verwenden, müssen Sie WinINET nicht für den Proxy konfigurieren.

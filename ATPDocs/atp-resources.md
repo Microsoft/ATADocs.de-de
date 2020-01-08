@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 34dc152c-6b7f-4128-93fe-aad56c282730
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 205fb58cbb06e6a219aa39b92275761ad9d1304d
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 2249505a80eca230e9b5b54689414c445f169afc
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65196783"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544354"
 ---
 # <a name="azure-atp-readiness-guide"></a>Handbuch für die Azure ATP-Bereitschaft
 
@@ -35,13 +35,13 @@ Weitere Informationen zu Azure ATP:
 ## <a name="deployment-decisions"></a>Entscheidungen für die Bereitstellung
 
 Azure ATP besteht aus dem Clouddienst von Azure sowie aus integrierten Sensoren, die auf einem Domänencontroller oder auf eigenständigen Sensoren auf dedizierten Servern installiert werden können. Bevor Sie Azure ATP einrichten, sollten Sie den Typ der Sensoren auswählen, der am besten zu Ihrer Bereitstellung und Ihren Anforderungen passen. In Azure ATP integrierte Sensoren (bzw. Azure ATP-Sensoren) zeichnen sich durch eine höhere Sicherheit, niedrige Betriebskosten und eine einfachere Bereitstellung als eigenständige Azure ATP-Sensoren aus. Eigenständige Azure ATP-Sensoren erfordern physische Hardware, zusätzliche Konfigurationsschritte und umfangreichere Betriebskosten. <br>Beim Einsatz physischer Server ist die Kapazitätsplanung von entscheidender Bedeutung. Sie können das Tool zur Größenanpassung zum Zuweisen von Speicherplatz für Ihre Sensoren verwenden: 
-- [Azure ATP-Tool zur Größenanpassung](http://aka.ms/aatpsizingtool): Das Tool zur Größenanpassung automatisiert die Auflistung der Menge an Datenverkehr, den Azure ATP überwacht. Es stellt automatisch Empfehlungen zur Unterstützbarkeit und Ressourcen für Sensoren bereit. 
+- [Azure ATP-Tool zur Größenanpassung](https://aka.ms/aatpsizingtool): Das Tool zur Größenanpassung automatisiert die Auflistung der Menge an Datenverkehr, den Azure ATP überwacht. Es stellt automatisch Empfehlungen zur Unterstützbarkeit und Ressourcen für Sensoren bereit. 
 - [Handbuch zur ATP-Kapazitätsplanung](atp-capacity-planning.md)
 
 ## <a name="deploy-azure-atp"></a>Bereitstellen von Azure ATP
 
 Diese Ressourcen unterstützen Sie beim Einrichten von Azure ATP, bei der Verbindung zu Active Directory, beim Download des Sensorpakets, beim Einrichten der Ereignissammlung und optional bei der Integration in Ihr VPN und bei der Einrichtung von Honeytoken-Konten und -Ausschlüssen. 
-- [Testen Sie Azure ATP (Teil von EMS E5):](http://aka.ms/aatptrial) Die Testversion ist 90 Tage gültig.
+- [Testen Sie Azure ATP (Teil von EMS E5):](https://aka.ms/aatptrial) Die Testversion ist 90 Tage gültig.
 - [Azure ATP-Setup:](install-atp-step1.md) Führen Sie diese Schritte aus, um Azure ATP in Ihrer Umgebung bereitzustellen.
 - [Integrieren von Azure ATP in Windows Defender ATP](integrate-wd-atp.md)
 
@@ -61,7 +61,7 @@ Sobald Azure ATP einsatzbereit ist, können Sie Sicherheitswarnungen in der Akti
 - [Azure ATP-Lateral Movement-Pfade](use-case-lateral-movement-path.md)
 - [Tag groups as sensitive (Kennzeichnen von Gruppen als vertraulich):](sensitive-accounts.md) Erhalten Sie Einblicke in die Offenlegung von Anmeldeinformationen bei vertraulichen Sicherheitsgruppen.
 
-## <a name="security-best-practices"></a>Bewährte Methoden für die Sicherheit
+## <a name="security-best-practices"></a>Bewährte Sicherheitsmethoden
 
 - [Häufig gestellte Fragen zu Azure ATP:](atp-technical-faq.md) Dieser Artikel enthält einige häufig gestellter Fragen zu Azure ATP sowie Hintergrundwissen und Antworten. 
 

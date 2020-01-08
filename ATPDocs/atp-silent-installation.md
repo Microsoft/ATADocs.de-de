@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 08/28/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 24eca4c6-c949-42ea-97b9-41ef0fb611f1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d45d08cc2a059fa231194f7aa334d4f557996ba4
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 5ade84a193e198a88f3cb41411746146595a4203
+ms.sourcegitcommit: a7e3fdd7bf0f1d8f269cdbfe3931c937a436392b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "70209188"
+ms.lasthandoff: 01/05/2020
+ms.locfileid: "75663940"
 ---
 # <a name="azure-atp-switches-and-silent-installation"></a>Azure ATP-Switches und automatische Installation
 Dieser Artikel enthält Anleitungen und Informationen zu Azure ATP-Switches und der automatischen Installation.
@@ -77,6 +77,7 @@ Verwenden Sie den folgenden Befehl, um eine vollständig automatische Installati
 > 
 > |Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|Beschreibung|
 > |-------------|----------|---------|---------|
+> |InstallationPath|InstallationPath=""|Nein|Legt den Pfad für die Installation der Binärdateien des AATP-Sensors fest. Standardpfad: %programfiles%\Azure Advanced Threat Protection sensor
 > |AccessKey|AccessKey="\*\*"|Ja|Legt den Zugriffsschlüssel fest, mit dem der Azure ATP-Sensor bei der Azure ATP-Instanz registriert wird.|
 
 **Beispiele**: Verwenden Sie den folgenden Befehl für eine automatische Installation des Azure ATP-Sensors:

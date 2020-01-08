@@ -7,12 +7,12 @@ author: mlottner
 ms.author: mlottner
 ms.date: 02/28/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: b3ea5b1d2f33f9647fb9dea8927a80aeae76ee03
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 800b72e0bb06a95e10a0c52885d78ebe276e00b7
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "59745591"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75543826"
 ---
 # <a name="tutorial-domain-dominance-playbook"></a>Tutorial: Playbook zu Domänendominanz
 
@@ -239,7 +239,7 @@ Azure ATP verwendet mehrere Methoden, um vermutete Angriffe dieses Typs zu erken
 ![Golden Ticket wird erkannt](media/playbook-dominance-golden_detected.png)
 
 > [!Important]
->Erinnerung. Solange das von einem Angreifer gestohlene KRBTGT in einer Umgebung gültig ist, bleiben die damit generierten Tickets auch gültig. In diesem Fall erreicht der Angreifer permanente Domänendominanz, bis [KRBTGT zweimal zurückgesetzt wird](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/manage/ad-forest-recovery-resetting-the-krbtgt-password).
+>Erinnerung. Solange das von einem Angreifer gestohlene KRBTGT in einer Umgebung gültig ist, bleiben die damit generierten Tickets auch gültig. In diesem Fall erreicht der Angreifer permanente Domänendominanz, bis [KRBTGT zweimal zurückgesetzt wird](https://docs.microsoft.com/windows-server/identity/ad-ds/manage/ad-forest-recovery-resetting-the-krbtgt-password).
 
 ## <a name="next-steps"></a>Nächste Schritte
 
