@@ -13,16 +13,16 @@
       }
     ],
     "resource": [
-        {
-          "files": [
-          "**/images/**", 
+      {
+        "files": [
+          "**/images/**",
           "**/*.png",
           "**/*.jpg",
           "**/*.gif",
           "**/*.bmp",
           "**/*.html",
           "**/*.css"
-          ],
+        ],
         "exclude": [
           "**/obj/**",
           "_themes/**"
@@ -33,12 +33,18 @@
     "template": "docs.html",
     "globalMetadata": {
       "layout": "Conceptual",
-      "breadcrumb_path": "/enterprise-mobility-security/toc.json"
+      "breadcrumb_path": "/enterprise-mobility-security/toc.json",
+      "disable_contribution_on_translation_quality": [
+        "MT",
+        "MTE75",
+        "MTE95",
+        "Blank"
+      ]
     },
-    "render": { 
+    "render": {
       "theme": "hyde",
-      "dest": "_output" 
+      "dest": "_output"
     },
-   "basepath": "/ATA/Understand" 
+    "basepath": "/ATA/Understand"
   }
- }
+}
