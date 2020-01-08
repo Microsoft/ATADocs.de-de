@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: cbea47f9-34c1-42b6-ae9e-6a472b49e1a5
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e35ab552dfbe8adf17e408cda8c94178d08c1f93
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 0515c9467889f7c83a52030b47a217b7bfb11732
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65196988"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544212"
 ---
 # <a name="what39s-new-in-ata-version-14"></a>Neuerungen in ATA 1.4
 Die vorliegenden Anmerkungen zu dieser Version enthalten Informationen zu bekannten Problemen in Version 1.4 von Advanced Threat Analytics.
@@ -58,7 +58,7 @@ Die vorliegenden Anmerkungen zu dieser Version enthalten Informationen zu bekann
 In dieser Version bestehen die folgenden bekannten Probleme.
 
 ### <a name="network-capture-software"></a>Software zur Netzwerkerfassung
-Auf dem ATA-Gateway ist die einzige unterstützte Software zur Netzwerkerfassung, die Sie installieren können, [Microsoft Netzwerkmonitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865). Installieren Sie nicht Microsoft Message Analyzer oder eine andere Software zur Netzwerkerfassung. Die Installation anderer Software führt dazu, dass das ATA-Gateway nicht mehr ordnungsgemäß funktioniert.
+Auf dem ATA-Gateway ist der [Microsoft-Netzwerkmonitor 3.4](https://www.microsoft.com/download/details.aspx?id=4865) die einzige unterstützte Software zur Netzwerkerfassung, die installiert werden kann. Installieren Sie nicht Microsoft Message Analyzer oder eine andere Software zur Netzwerkerfassung. Die Installation anderer Software führt dazu, dass das ATA-Gateway nicht mehr ordnungsgemäß funktioniert.
 
 ### <a name="installation-from-zip-file"></a>Installation über ZIP-Datei
 Stellen Sie beim Installieren des ATA-Gateways sicher, dass Sie die Dateien aus der ZIP-Datei in ein lokales Verzeichnis extrahieren und von dort aus installieren. Installieren Sie das ATA-Gateway nicht direkt aus der ZIP-Datei, da dann ein Fehler bei der Installation auftritt.

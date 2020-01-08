@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: ebd41719-c91a-4fdd-bcab-2affa2a2cace
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 233fe317294be1e407995cdd48fe9eda2157d08c
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 576dd0d74a279f566b7755faff7d5ad49e3ca0e6
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65195662"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544195"
 ---
 # <a name="validate-port-mirroring"></a>Überprüfen der Portspiegelung
 
@@ -191,7 +191,7 @@ Beispiel, wie das Skript ausgeführt wird:
     
     
 ## <a name="validate-port-mirroring-using-net-mon"></a>Überprüfen von Portspiegelung mit Netzwerkmonitor (Network Monitor)
-1.  Installieren Sie den [Microsoft-Netzwerkmonitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865) auf dem ATA-Gateway, das Sie überprüfen möchten.
+1.  Installieren Sie den [Microsoft-Netzwerkmonitor 3.4](https://www.microsoft.com/download/details.aspx?id=4865) auf dem ATA-Gateway, das Sie überprüfen möchten.
 
     > [!IMPORTANT]
     > Installieren Sie auf dem ATA-Gateway nicht Microsoft Message Analyzer oder ein andere Software zur Erfassung des Datenverkehrs.

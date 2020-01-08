@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ccea2b41e99e4d3ab19efc703f337115740c2e0d
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 3038b5064b3d8f611e970796d2962d50f604f64d
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "70803176"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544039"
 ---
 # <a name="install-ata---step-6"></a>Installieren von ATA – Schritt 6
 
@@ -198,8 +198,8 @@ Stellen Sie sicher, dass „\t“ zwischen Schlüssel=Wert-Paaren steht.
 
 
 ## <a name="see-also"></a>Weitere Informationen:
-- [Handbuch für die ATA POC-Bereitstellung](http://aka.ms/atapoc)
-- [Tool zur Bemessung von ATA-Gateways](http://aka.ms/atasizingtool)
+- [Handbuch für die ATA POC-Bereitstellung](https://aka.ms/atapoc)
+- [Tool zur Bemessung von ATA-Gateways](https://aka.ms/atasizingtool)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
 - [Voraussetzungen für ATA](ata-prerequisites.md)

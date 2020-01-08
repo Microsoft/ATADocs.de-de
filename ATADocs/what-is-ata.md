@@ -1,5 +1,5 @@
 ---
-title: Was ist Microsoft Advanced Threat Analytics (ATA)? | Microsoft-Dokumentation
+title: Was ist Microsoft Advanced Threat Analytics (ATA)? | Microsoft Docs
 description: Hier wird erläutert, was Microsoft Advanced Threat Analytics (ATA) ist und welche Arten von verdächtigen Aktivitäten erkannt werden können
 keywords: ''
 author: mlottner
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 67e265c4785e5b2b3cc6fe267e72953e8817020f
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: a17b6e5788f4250b824519ebd9b979936a46b999
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65195982"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544230"
 ---
 # <a name="what-is-advanced-threat-analytics"></a>Was ist Advanced Threat Analytics?
 
@@ -114,5 +114,5 @@ Sie können die verdächtigen Aktivitäten dieses Typs im ATA-Dashboard anzeigen
 
 
 ## <a name="see-also"></a>Weitere Informationen:
-[Verdächtige ATA-Aktivitäten – Playbook](http://aka.ms/ataplaybook)
+[Verdächtige ATA-Aktivitäten – Playbook](https://aka.ms/ataplaybook)
 [Besuchen Sie das ATA-Forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
