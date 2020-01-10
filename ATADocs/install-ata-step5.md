@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c0f15942dd3888d092d8236b78261de1645e5dc0
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 0be6430a82752f51ed2660bb4053bb396b90e8b5
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65195758"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544035"
 ---
 # <a name="install-ata---step-5"></a>Installieren von ATA – Schritt 5
 
@@ -28,7 +28,7 @@ ms.locfileid: "65195758"
 > [Schritt 6 »](install-ata-step6.md)
 
 
-## <a name="step-5-configure-the-ata-gateway-settings"></a>Schritt 5 Konfigurieren der Einstellungen des ATA-Gateways
+## <a name="step-5-configure-the-ata-gateway-settings"></a>Schritt 5: Konfigurieren der Einstellungen des ATA-Gateways
 
 Führen Sie nach der Installation des ATA-Gateways die folgenden Schritte aus, um die Einstellungen für das ATA-Gateway zu konfigurieren.
 
@@ -95,8 +95,8 @@ Gehen Sie wie folgt vor, um zu überprüfen, ob das ATA-Gateway erfolgreich bere
 
 
 ## <a name="see-also"></a>Weitere Informationen:
-- [Handbuch für die ATA POC-Bereitstellung](http://aka.ms/atapoc)
-- [Tool zur Bemessung von ATA-Gateways](http://aka.ms/atasizingtool)
+- [Handbuch für die ATA POC-Bereitstellung](https://aka.ms/atapoc)
+- [Tool zur Bemessung von ATA-Gateways](https://aka.ms/atasizingtool)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
 - [Voraussetzungen für ATA](ata-prerequisites.md)
