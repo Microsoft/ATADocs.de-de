@@ -2,8 +2,8 @@
 title: Referenz zum ATA-SIEM-Protokoll | Microsoft-Dokumentation
 description: Stellt Beispiele über Sicherheitswarnungsprotokolle bereit, die von ATA an SIEM gesendet werden.
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 12/20/2018
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 601b48ba-a327-4aff-a1f9-2377a2bb7a42
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 4630e1df24c370bc15bc2872ca8b1087f5cf42fa
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: f11f304c4c157980711e5859cd0c391b2b5c93bf
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65197011"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75907681"
 ---
 # <a name="ata-siem-log-reference"></a>Referenz zum ATA-SIEM-Protokoll
 

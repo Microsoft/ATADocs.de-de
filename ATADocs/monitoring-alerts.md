@@ -2,8 +2,8 @@
 title: Verstehen von ATA-Überwachungswarnungen | Microsoft-Dokumentation
 description: Beschreibt die Verwendung der ATA-Protokolle zum Behandeln von Problemen.
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 02/20/2019
 ms.topic: conceptual
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: b04fb8a4-b366-4b55-9d4c-6f054fa58a90
 ms.reviewer: elofek
 ms.suite: ems
-ms.openlocfilehash: 319d6d4eb24a6d3b373c6c4cb5c534ee98e9bd55
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 2185c5e01631a33b8dcc0848c97f9f9ed7bf7878
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65195817"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75908040"
 ---
 # <a name="understanding-ata-monitoring-alerts"></a>Grundlegendes zu ATA-Überwachungswarnungen
 

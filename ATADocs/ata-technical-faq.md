@@ -2,8 +2,8 @@
 title: Häufig gestellte Fragen zu Advanced Threat Analytics | Microsoft-Dokumentation
 description: Liste häufig gestellter Fragen zu ATA und zugehörige Antworten
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 03/07/2019
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 96087f0124825f1b6feb641085317ee89ac3e6ee
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 9c8a16cbd49f653425b27fe50d18d7de155dab12
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65196617"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75905712"
 ---
 # <a name="ata-frequently-asked-questions"></a>Häufig gestellte Fragen zu ATA
 
@@ -149,7 +149,7 @@ Auch als SPAN (Switched Port Analyzer) bekannt, ist die Portspiegelung eine Meth
 Nein ATA überwacht alle Geräte im Netzwerk und führt die Authentifizierung sowie Autorisierungsanfragen für Active Directory durch. Dies schließt Nicht-Windows-Geräte und mobile Geräte ein.
 
 ## <a name="does-ata-monitor-computer-accounts-as-well-as-user-accounts"></a>Überwacht ATA sowohl Computerkonten als auch Benutzerkonten?
-Ja. Da Computerkonten (ebenso wie alle anderen Entitäten) zum Durchführen böswilliger Aktivitäten verwendet werden können, überwacht ATA das Verhalten aller Computerkonten und aller weiteren Entitäten in der Umgebung.
+Ja Da Computerkonten (ebenso wie alle anderen Entitäten) zum Durchführen böswilliger Aktivitäten verwendet werden können, überwacht ATA das Verhalten aller Computerkonten und aller weiteren Entitäten in der Umgebung.
 
 ## <a name="can-ata-support-multi-domain-and-multi-forest"></a>Kann ATA kann mehrere Domänen und mehrere Gesamtstrukturen unterstützen?
 Microsoft Advanced Threat Analytics unterstützt-Umgebungen mit mehreren Domänen innerhalb der gleichen Gesamtstrukturbegrenzung. Mehrere Gesamtstrukturen erfordern eine ATA-Bereitstellung für jede Gesamtstruktur.

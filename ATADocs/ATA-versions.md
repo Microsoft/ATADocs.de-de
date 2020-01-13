@@ -1,8 +1,8 @@
 ---
 title: Advanced Threat Analytics-Versionen | Microsoft-Dokumentation
 description: Erläutert die unterschiedlichen Supportoptionen für die Versionen von Microsoft Advanced Threat Analytics (ATA).
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 05/12/2019
 ms.topic: conceptual
@@ -11,12 +11,12 @@ ms.technology: ''
 ms.assetid: a8afbd91-c888-4dfc-94ab-72e38745163e
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 7ff497426d55dd9610082198257d3b393676385f
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: c0895d58852e5cecf4a14fd3b5100b06617ac408
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65613421"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75905150"
 ---
 # <a name="support-for-microsoft-advanced-threat-analytics-ata-versions"></a>Support für Microsoft Advanced Threat Analytics-Versionen (ATA)
 
@@ -37,7 +37,7 @@ Microsoft veröffentlicht mehrmals jährlich Updates für ATA. Jede Updateversio
 |VERSION|BUILDNUMMER|VERFÜGBARKEITSDATUM|SUPPORTENDDATUM|
 |----|----|----|----|
 |1.4|1.4.2457|31. AUGUST 2015|30. AUGUST 2016|
-|1.5|1.5.2946|17. DEZEMBER 2015|16. DEZEMBER 2016|
+|1,5|1.5.2946|17. DEZEMBER 2015|16. DEZEMBER 2016|
 |1.6|1.6.4103|05. MAI 2016|04. MAI 2017|
 |1.6.1|1.6.4317|15. JUNI 2016|14. JUNI 2017|
 |1.7|1.7.5402|31. AUGUST 2016|30. AUGUST 2017|

@@ -2,8 +2,8 @@
 title: Problembehandlung bei Advanced Threat Analytics mithilfe der Leistungsindikatoren | Microsoft-Dokumentation
 description: Beschreibt die Verwendung von Leistungsindikatoren zum Behandeln von Problemen mit ATA
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 9/25/2018
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: df162a62-f273-4465-9887-94271f5000d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 7d7dedf5e6f24c322cd81ed8a3ecb23f96bdc43c
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 495813678b18b71af45240e18c40fdab5a5154a3
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65195973"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75908222"
 ---
 # <a name="troubleshooting-ata-using-the-performance-counters"></a>Problembehandlung bei ATA mithilfe der Leistungsindikatoren
 
