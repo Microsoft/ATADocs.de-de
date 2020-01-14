@@ -2,8 +2,8 @@
 title: Azure Advanced Threat Protection-Netzwerknamensauflösung | Microsoft-Dokumentation
 description: Dieser Artikel stellt eine Übersicht der erweiterten Funktionen und Einsatzweisen der Netzwerknamensauflösung von Azure ATP dar.
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 10/22/2019
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 1ac873fc-b763-41d7-878e-7c08da421cb5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: cb9275c90afda7a5ec98cf238205232b2bcfb66f
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 260100f37e32067e20a224046e1efa200e0284d3
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72776609"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75908385"
 ---
 # <a name="what-is-network-name-resolution"></a>Was ist Netzwerknamensauflösung?
 
@@ -65,8 +65,8 @@ Der Beweis umfasst die Uhrzeit, die IP-Adresse und den Computernamen, in den die
 ### <a name="prerequisites"></a>Voraussetzungen
 |Protokoll|  Transport|  Port|   Gerät| Richtung|
 |--------|--------|------|-------|------|
-|NTLM über RPC| TCP |135|   Alle Geräte im Netzwerk| Eingehend|
-|NetBIOS|   UDP|    137|    Alle Geräte im Netzwerk| Eingehend|
+|NTLM über RPC| TCP |135|   Alle Geräte im Netzwerk| Eingehende Verbindungen|
+|NetBIOS|   UDP|    137|    Alle Geräte im Netzwerk| Eingehende Verbindungen|
 |DNS|   UDP|    53| Domänencontroller| Ausgehend|
 |
 

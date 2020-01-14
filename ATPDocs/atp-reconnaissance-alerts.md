@@ -2,8 +2,8 @@
 title: Sicherheitswarnungen zur Reconnaissancephase in Azure ATP | Microsoft-Dokumentation
 d|Description: This article explains the Azure ATP alerts issued when attacks typically part of reconnaissance phase efforts are detected against your organization.
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 05/30/2019
 ms.topic: tutorial
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b19abab8774f79d18b9d82b4048625dd72b3af43
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 4962d32c4e0becf72a4932ea758f1f08075e7b3f
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74206232"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75908440"
 ---
 # <a name="tutorial-reconnaissance-alerts"></a>Tutorial: Warnungen zu Reconnaissance  
 
@@ -58,7 +58,7 @@ Bei Reconnaissancemaßnahmen über Kontoenumerationen verwendet ein Angreifer ei
 
 Bei Erkennung dieser Warnung ermittelt Azure ATP den Ursprung des Kontoenumerationsangriffs, die Gesamtzahl der Versuche zum Erraten des Namens und die Anzahl der gefundenen Übereinstimmungen. Wenn es zu viele unbekannte Benutzer gibt, erkennt Azure ATP dies als verdächtige Aktivität.
 
-**TP, B-TP oder FP**
+**TP, B-TP oder FP?**
 
 Einige Server und Anwendungen fragen Domänencontroller ab, um festzustellen, ob Konten in zulässigen Verwendungsszenarios zum Einsatz kommen.
 
@@ -211,7 +211,7 @@ Eine Enumeration mithilfe des SMB-Protokolls (Server Message Block) ermöglicht 
 
 In dieser Erkennung wird eine Warnung ausgelöst, wenn eine SMB-Sitzungsenumeration auf einem Domänencontroller ausgeführt wird. 
 
-**TP, B-TP oder FP**
+**TP, B-TP oder FP?**
 
 Sicherheitsscanner und Anwendungen können möglicherweise zulässige Abfragen an Domänencontroller senden, um offene SMB-Sitzungen zu ermitteln.
 
@@ -245,7 +245,7 @@ In dieser Erkennung werden im ersten Monat nach der Bereitstellung von Azure ATP
 
 Vier Wochen pro Domänencontroller, beginnend mit der ersten Netzwerkaktivität von SAMR für den festgelegten DC.
 
-**TP, B-TP oder FP** 
+**TP, B-TP oder FP?** 
 
 1. Klicken Sie auf den Quellcomputer, um die entsprechende Profilseite aufzurufen.        
    - Sollen diese Aktivitäten tatsächlich vom Quellcomputer ausgeführt werden?

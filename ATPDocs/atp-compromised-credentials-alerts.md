@@ -2,8 +2,8 @@
 title: Azure ATP-Sicherheitswarnungen zur Phase „Kompromittierte Anmeldeinformationen“| Microsoft-Dokumentation
 d|Description: This article explains the Azure ATP alerts issued when attacks typical of the compromised credentials phase are detected against your organization.
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 11/19/2019
 ms.topic: tutorial
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e45be0e076f326910bf70becb4a109a020edf6a4
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: cc3f8ba536a251d07647e13ba776123eb7366bf5
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74206274"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75905624"
 ---
 # <a name="tutorial-compromised-credential-alerts"></a>Tutorial: Warnungen zu kompromittierten Anmeldeinformationen  
 
@@ -52,7 +52,7 @@ Honeytoken-Konten sind Köderkonten, die eingerichtet werden, um schädliche Akt
 
 Weitere Informationen zu Honeytokenkonten finden Sie unter [Konfigurieren von Ausschlüssen von Erkennungen und Honeytokenkonten](install-atp-step7.md).
 
-**TP, B-TP oder FP**
+**TP, B-TP oder FP?**
 
 1. Überprüfen Sie, ob der Besitzer des Quellcomputers das Honeytokenkonto für die Authentifizierung verwendet hat. Verwenden Sie dazu die auf der Seite zu verdächtigen Aktivitäten beschriebene Methode (z.B. Kerberos, LDAP, NTLM).
 
@@ -89,7 +89,7 @@ Bei einem Kennwort-Spray-Angriff testen Angreifer nach erfolgreichem Durchzähle
 **Lernphase**
  <br>1 Woche
 
-**TP, B-TP oder FP**
+**TP, B-TP oder FP?**
 
 Überprüfen Sie auf jeden Fall, ob Anmeldeversuche mit einer erfolgreichen Authentifizierung beendet wurden.
 
@@ -136,7 +136,7 @@ Bei einem Brute-Force-Angriff versucht der Angreifer, sich mit vielen verschiede
 
 In dieser Erkennung wird eine Warnung ausgelöst, wenn Azure ATP eine signifikante Anzahl von Authentifizierungen mit einfacher Bindung erkennt. Diese Warnung erkennt Brute-Force-Angriffe, die entweder *horizontal* mit wenigen Kennwörtern für viele Benutzer oder *vertikal* mit einer Vielzahl von Kennwörtern für wenige Benutzer ausgeführt werden. Auch eine beliebige Kombination dieser beiden Optionen ist möglich.
 
-**TP, B-TP oder FP**
+**TP, B-TP oder FP?**
 
 Überprüfen Sie auf jeden Fall, ob Anmeldeversuche mit einer erfolgreichen Authentifizierung beendet wurden.
 
@@ -174,7 +174,7 @@ In dieser Erkennung wird eine Warnung ausgelöst, wenn Azure ATP eine signifikan
 
 Angreifer verwenden Tools, die verschiedene Protokolle wie SMB, Kerberos und NTLM auf nicht standardmäßige Arten implementieren. Während diese Art des Netzwerkdatenverkehrs von Windows ohne Warnungen akzeptiert wird, kann Azure ATP potenziell böswillige Absichten erkennen. Das Verhalten weist auf Brute-Force-Techniken hin.
 
-**TP, B-TP oder FP**
+**TP, B-TP oder FP?**
 
 1. Überprüfen Sie, ob auf dem Quellcomputer ein Angriffstool wie Hydra ausgeführt wird.
    1. Wird auf dem Quellcomputer ein Angriffstool ausgeführt, stellt diese Warnung eine **TP**-Aktivität dar. Befolgen Sie die Anweisungen im Abschnitt **Ermitteln des Umfangs der Sicherheitsverletzung** oben.
@@ -208,7 +208,7 @@ Anwendungen implementieren gelegentlich einen eigenen NTLM- oder SMB-Stapel.
 
 Angreifer verwenden Tools, die verschiedene Protokolle auf nicht standardmäßige Arten implementieren. Während diese Art des Netzwerkdatenverkehrs von Windows ohne Warnungen akzeptiert wird, kann Azure ATP potenziell böswillige Absichten erkennen. Das Verhalten weist auf Techniken hin, die von erweiterter Ransomware, z.B. WannaCry, verwendet werden.
 
-**TP, B-TP oder FP**
+**TP, B-TP oder FP?**
 
 1. Überprüfen Sie, ob WannaCry auf dem Quellcomputer ausgeführt wird. 
 
@@ -284,7 +284,7 @@ Es wird eine Warnung ausgelöst, wenn basierend auf einem Machine-Learning-Algor
 
 30 Tage ab der ersten VPN-Verbindung und mindestens fünf VPN-Verbindungen während der letzten 30 Tage pro Benutzer.
 
-**TP, B-TP oder FP**
+**TP, B-TP oder FP?**
 
 1. Soll der verdächtige Benutzer diese Vorgänge ausführen?
     1. Hat der Benutzer vor Kurzem seinen Standort geändert?

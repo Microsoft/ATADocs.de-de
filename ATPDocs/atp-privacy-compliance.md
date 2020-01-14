@@ -2,8 +2,8 @@
 title: Richtlinie zu personenbezogenen Daten von Azure Advanced Threat Protection | Microsoft-Dokumentation
 description: Dieser Artikel stellt Links zu Informationen bereit, wie Sie private Informationen und personenbezogene Daten aus Azure ATP löschen.
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 10/31/2019
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 224e629a-0e82-458c-bb03-b67070a9241d
 ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: 67a6525645cf04e4bd14f0a398d1ac9dd224d558
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 13035874f4d40376c93dbc39020277716fe37d1d
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73462380"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75908105"
 ---
 # <a name="azure-atp-data-security-and-privacy"></a>Sicherheit und Datenschutz für Azure ATP
 

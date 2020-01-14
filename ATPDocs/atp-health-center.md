@@ -2,8 +2,8 @@
 title: Überwachen von Systemintegrität und Ereignissen von Azure Advanced Threat Protection| Microsoft-Dokumentation
 description: Überprüfen Sie mit dem Azure ATP-Integritätscenter, wie der Azure ATP-Dienst funktioniert, erhalten Sie Warnungen über mögliche Probleme, und zeigen Sie Systemereignisse in der Ereignisanzeige an.
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 1/3/2019
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 1b7e72c3-a538-443f-981c-398ffafa5ab8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b1ad4963e3863cd89a78834e8fc98cec3490b1b0
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 9fbcdbd6434ed1fcaa91719547d1926adc0cbd51
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65195597"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75908293"
 ---
 # <a name="work-with-azure-atp-health-and-events"></a>Arbeiten mit Azure ATP-Integrität und -Ereignissen
 
@@ -47,7 +47,7 @@ Um den Gesamtzustand Ihrer Azure ATP-Instanz zu überprüfen, klicken Sie in der
 
 -   **Erneut öffnen**: Eine geschlossene oder unterdrückte Warnung kann erneut geöffnet werden, sodass sie auf der Zeitachse als **Offen** angezeigt wird.
 
--   **Verwerfen**: Sie können Sicherheitswarnungen auch über die Zeitachse für verdächtige Aktivitäten löschen. Wenn Sie allerdings eine Warnung löschen, wird diese vollständig aus der Instanz gelöscht, und Sie können diese nicht wiederherstellen. Nachdem Sie auf „Verwerfen“ geklickt haben, können Sie alle Sicherheitswarnungen für den gleichen Typ löschen.
+-   **Löschen** Sie können Sicherheitswarnungen auch über die Zeitachse für verdächtige Aktivitäten löschen. Wenn Sie allerdings eine Warnung löschen, wird diese vollständig aus der Instanz gelöscht, und Sie können diese nicht wiederherstellen. Nachdem Sie auf „Verwerfen“ geklickt haben, können Sie alle Sicherheitswarnungen für den gleichen Typ löschen.
 
 
 

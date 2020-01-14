@@ -2,8 +2,8 @@
 title: Azure Advanced Threat Protection-Bewertungen des Identitätssicherheitsstatus | Microsoft-Dokumentation
 description: Dieser Artikel bietet eine Übersicht über die Berichte von Azure ATP zur Bewertung des Identitätssicherheitsstatus.
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 09/16/2019
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 71b15bd9-3183-4e24-b18a-705023ccc313
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: cb562e8d9dc21d8fa5fcce70ea2020be22796621
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 7109196ef5c3e5d330d0d0b82f9e8bd753fe70fc
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71007504"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75907644"
 ---
 # <a name="azure-atps-identity-security-posture-assessments"></a>Azure ATP-Bewertungen des Identitätssicherheitsstatus
  
@@ -32,7 +32,7 @@ Auch wenn Ihr Unternehmen kontinuierlich viel Zeit und Arbeit in den erhöhten S
 
 ## <a name="how-do-i-get-started"></a>Wie fange ich an? 
 
-### <a name="access"></a>Zugriff
+### <a name="access"></a>Access
 
 Azure ATP-Sicherheitsbewertungen stehen über das Microsoft Cloud App Security-Portal zur Verfügung. Aktivieren Sie vorher die Azure ATP-Integration. Informationen zur Integration von Azure ATP in Cloud App Security finden Sie unter [Azure ATP-Integration](https://docs.microsoft.com/cloud-app-security/aatp-integration). 
 

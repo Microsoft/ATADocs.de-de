@@ -2,8 +2,8 @@
 title: Grundlegende Informationen zum Azure Advanced Threat Protection-Portal | Microsoft-Dokumentation
 description: Informationen zum Anmelden im Azure ATP-Portal und zu dessen Komponenten
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 11/05/2019
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 4ba46d60-3a74-480e-8f0f-9a082d62f343
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8cc8dccbaedbe0b87d60c041eb8001ef82cf2904
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 5829d8564a65bbeba7f755e1e5cd1ad90c3da5ae
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73618477"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75905811"
 ---
 # <a name="working-with-the-azure-atp-portal"></a>Arbeiten mit dem Azure ATP-Portal
 
@@ -55,7 +55,7 @@ Die Angriffszeitachse ist die Standard-Landing Page, auf die Sie gelangen, wenn 
 
 Weitere Informationen finden Sie unter [Arbeiten mit Sicherheitswarnungen](working-with-suspicious-activities.md).
 
-### <a name="whats-new"></a>Neuheiten
+### <a name="whats-new"></a>Neuerungen
 
 Nach der Veröffentlichung einer neuen Version von Azure ATP wird das Fenster **Neuigkeiten** in der oberen rechten Ecke angezeigt, und Sie erhalten Informationen darüber, was in der neusten Version hinzugefügt wurde. Außerdem erhalten Sie einen Link zum Download der Version.
 
