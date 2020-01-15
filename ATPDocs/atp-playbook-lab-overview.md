@@ -3,22 +3,22 @@ title: 'Tutorialübersicht: Azure ATP-Sicherheitswarnungsumgebung | Microsoft-Do
 description: Diese Tutorialübersicht beschreibt die vier Teile der Azure ATP-Sicherheitswarnungsumgebung zur Simulation von Bedrohungen für die Erkennung durch Azure ATP.
 ms.service: azure-advanced-threat-protection
 ms.topic: tutorial
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 ms.date: 02/28/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: 116f4648026d8f291a1576bb0cbd4bf392ff8a9a
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 644b934622c20fa1be640120fe9c04ea6a89e08c
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "57007448"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75908494"
 ---
 # <a name="tutorial-overview-atp-security-alert-lab"></a>Übersicht über das Tutorial: Lab für ATP-Sicherheitswarnungen
 
 Das Tutorial zur Azure ATP-Sicherheitswarnungsumgebung soll die Funktionen von **Azure ATP** zum Identifizieren und Erkennen verdächtiger Aktivitäten und potenzieller Angriffe auf Ihr Netzwerk veranschaulichen. Dieses vierteilige Tutorial erklärt, wie Sie eine Arbeitsumgebung installieren und konfigurieren, um *diskrete* Erkennungen durch Azure ATP zu testen. Die Testumgebung konzentriert sich auf *signaturbasierte* Funktionen von Azure ATP. Die Testumgebung enthält keine erweiterten Verhaltenserkennungen auf Machine Learning-, Benutzer- oder Entitätsbasis, da diese Erkennungen eine Lernphase mit echtem Netzwerkverkehr von bis zu 30 Tagen erfordern.
 
-## <a name="lab-setup"></a>Setup der Übungsumgebung
+## <a name="lab-setup"></a>Einrichten des Labs
 
 Dieses erste Tutorial dieser vierteiligen Reihe führt Sie durch die Erstellung einer Testumgebung für diskrete Erkennungen durch Azure ATP. Das Tutorial enthält Informationen über Computer, Benutzer und Tools, die zum Einrichten der Testumgebung und zum Abschluss der Playbooks benötigt werden. Die Anleitung geht davon aus, dass Sie einen Domänencontroller und Arbeitsstationen für die Verwendung in der Testumgebung sowie andere administrative Aufgaben sicher einrichten können. Je mehr Ihre Testumgebung dem vorgeschlagenen Testumgebungssetup entspricht, desto einfacher können Sie die Azure ATP-Testverfahren befolgen. Wenn Ihre Testumgebung eingerichtet ist, verwenden Sie zum Testen die Playbooks für Azure ATP-Sicherheitswarnungen.
 

@@ -2,8 +2,8 @@
 title: Untersuchen von Benutzern und Computern mit Azure ATP | Microsoft-Dokumentation
 description: Dieser Artikel beschreibt, wie verdächtige Aktivitäten, die von Benutzern ausgeführt werden, sowie Entitäten, Computer oder Geräte mithilfe von Azure Advanced Threat Protection (ATP) untersucht werden können.
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 09/15/2019
 ms.topic: tutorial
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6144f9f35e8ee3b7cec4b7522fe03a6a3e8673b0
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: e4102f40c2440357798fa3d079d51380da0b2cde
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71004749"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75906298"
 ---
 # <a name="tutorial-investigate-an-entity"></a>Tutorial: Untersuchen einer Entität
 
@@ -85,7 +85,7 @@ Azure ATP importiert Benutzer- und Gruppeninformationen von Azure Active Directo
 -   Hauptbenutzer
 -   Konten-Operatoren
 -   Server-Operatoren
--   Druck-Operatoren
+-   Druckoperatoren
 -   Sicherungsoperatoren
 -   Replikatoren
 -   Remotedesktopbenutzer 
@@ -113,7 +113,7 @@ Weitere Informationen finden Sie unter [Untersuchen von Angriffen mit Lateral Mo
 
 Bevor Sie mit Ihrer Untersuchung fortfahren, ist es wichtig, zu wissen, ob die Entität ein Honeytoken ist. Sie können Konten und Entitäten als Honeytoken in Azure ATP markieren. Wenn Sie das Entitäts- oder Miniprofil eines Kontos oder einer Entität öffnen, das bzw. die Sie als Honeytoken markiert haben, wird der Honeytokenbadge angezeigt. Der Honeytokenbadge warnt bei der Überprüfung, dass die unter Überprüfung stehende Aktivität von einem Konto ausgeführt wurde, das Sie als Honeytoken markiert haben.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [Arbeiten mit Sicherheitswarnungen](working-with-suspicious-activities.md)
 - [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)

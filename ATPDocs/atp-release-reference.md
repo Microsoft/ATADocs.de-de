@@ -2,8 +2,8 @@
 title: Referenz zu älteren Versionen von Azure Advanced Threat Protection (Azure ATP) | Microsoft-Dokumentation
 description: Dieser Artikel ist eine Referenz zu vorherigen Versionsupdates für Azure Advanced Threat Protection (Azure ATP).
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 11/17/2019
 ms.topic: reference
@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 12e05c54b4237aa04d285d342c960e536a248cdc
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 9b7c4e8e6619df992f0336d3b67ca0cdfc7c750b
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74153140"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75908539"
 ---
 # <a name="release-reference-of-azure-advanced-threat-protection-azure-atp"></a>Versionsreferenz zu Azure Advanced Threat Protection (Azure ATP) 
 
@@ -121,7 +121,7 @@ Veröffentlicht: 16. September 2018
 
 
 ## <a name="azure-atp-release-247"></a>Azure ATP Release 2.47
-Veröffentlicht: 2. September 2018
+Veröffentlicht: 2. September 2018
 
 - **Überprüfung der erweiterten Überwachungsrichtlinie von Azure ATP**
  
@@ -167,7 +167,7 @@ Veröffentlicht: 12. August 2018
 
 ## <a name="azure-atp-release-243"></a>Azure ATP Release 2.43
 
-Veröffentlicht: 5. August 2018
+Veröffentlicht: 5. August 2018
 
 - Diese Version enthält Fehlerbehebungen und Verbesserungen für mehrere Probleme.
 
@@ -238,7 +238,7 @@ Veröffentlicht: 17. Juni 2018
 
 ## <a name="azure-atp-release-235"></a>Azure ATP Release 2.35
 
-Veröffentlicht am 10. Juni 2018
+Veröffentlicht: 10. Juni 2018
  
 - **Vorschauversionen neuer Erkennungen**<br></br>Ab jetzt nutzt Azure ATP seine Funktion als Clouddienst – für den neue Features in kürzeren Zyklen bereitgestellt werden können –und bietet Ihnen so schnell wie möglich neue Erkennungen. Diese neuen Erkennungen werden als „Vorschauversion“ markiert, wenn sie das erste Mal veröffentlicht werden. In der Regel wechselt eine neue Erkennung innerhalb weniger Wochen von der Vorschauversion zu einer allgemein verfügbaren Version. Es werden standardmäßig Vorschauversionen neuer Erkennungen angezeigt. Weitere Informationen zum Deaktivieren dieser Standardeinstellung finden Sie unter [Preview Detections (Vorschauversionen neuer Erkennungen)](working-with-suspicious-activities.md#preview-detections).
  

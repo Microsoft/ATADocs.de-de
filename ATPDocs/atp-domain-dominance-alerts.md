@@ -2,8 +2,8 @@
 title: Sicherheitswarnungen zur Aneignung von Domänenadministratorrechten in Azure ATP | Microsoft-Dokumentation
 d|Description: This article explains the Azure ATP alerts issued when attacks typically part of domain dominance phase efforts are detected against your organization.
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 08/26/2019
 ms.topic: tutorial
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 0b3a1db5-0d43-49af-b356-7094cc85f0a5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1bfed94e29200a52eba6de8758e1241b14084264
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 6d8ebe9c02da763a3e84c8c8fd0730987f871eba
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "70052391"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75908476"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Tutorial: Warnungen zu Domänendominanz  
 
@@ -73,7 +73,7 @@ Diese Aktivitäten werden möglicherweise von erweiterten Sicherheitsscannern f�
 
 **Empfohlene Abhilfemaßnahmen und Schritte zur Vorbeugung**
 
-1. Setzen Sie das Kennwort des Quellbenutzers zurück, und aktivieren Sie die MFA.
+1. Setzen Sie das Kennwort des Quellbenutzers zurück, und aktivieren Sie die mehrstufige Authentifizierung (MFA).
 2. Kontrollieren Sie den Quellcomputer. 
     - Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
     - Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch kompromittiert sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA.
@@ -88,7 +88,7 @@ Diese Aktivitäten werden möglicherweise von erweiterten Sicherheitsscannern f�
 
 Angreifer, die Administratoranmeldeinformationen kompromittiert haben oder einen Zero-Day-Exploit verwenden, können Remotebefehle auf Ihrem Domänencontroller ausführen. Damit können sie Beständigkeit erhalten, Informationen sammeln, oder DOS-Attacken (Denial of Service) ausführen usw. Azure ATP erkennt PSexec- und PowerShell-Verbindungen sowie WMI-Remoteverbindungen.
 
-**TP, B-TP oder FP**
+**TP, B-TP oder FP?**
 
 Zulässige administrative Aufgaben auf Domänencontrollern können von Arbeitsstationen für Administratoren, IT-Teammitgliedern und Dienstkonten durchgeführt werden.
 
@@ -138,7 +138,7 @@ Bei einem DCShadow-Angriff werden RPC und LDAP für folgende Vorgänge verwendet
 
 Bei dieser Azure ATP-Erkennung wird eine Sicherheitswarnung ausgelöst, wenn ein Computer im Netzwerk versucht, sich als nicht autorisierter Domänencontroller zu registrieren.
 
-**TP, B-TP oder FP**
+**TP, B-TP oder FP?**
 
 Wenn der Quellcomputer ein Domänencontroller ist, wird Azure ATP möglicherweise aufgrund fehlender Entscheidungssicherheit an der Identifikation gehindert.  
 
@@ -190,7 +190,7 @@ Server und Anwendungen wie Azure AD Connect oder Geräte zur Leistungsüberwachu
 Bei der Active Directory-Replikation werden Änderungen, die auf einem Domänencontroller durchgeführt wurden, mit anderen Domänencontrollern synchronisiert. Wenn Angreifer über die erforderlichen Berechtigungen verfügen, können sie ihren Computerkonten Rechte gewähren, die es ihnen ermöglichen, die Identität eines Domänencontrollers anzunehmen. Angreifer versuchen, eine schädliche Replikationsanforderung zu initiieren, die es ihnen ermöglicht, Active Directory Domain Services-Objekte auf einem echten Domänencontroller zu ändern und so dauerhaft die Kontrolle über die Domäne zu erhalten.
 Bei dieser Erkennungsfunktion wird eine Warnung ausgelöst, wenn eine verdächtige Replikationsanforderung für einen echten Domänencontroller generiert wird, der durch Azure ATP geschützt ist. Dieses Verhalten weist auf Techniken hin, die bei DCShadow-Angriffen verwendet werden.
 
-**TP, B-TP oder FP** 
+**TP, B-TP oder FP?** 
 
 Wenn der Quellcomputer ein Domänencontroller ist, wird Azure ATP möglicherweise aufgrund fehlender Entscheidungssicherheit an der Identifikation gehindert. 
 
@@ -247,7 +247,7 @@ In dieser Erkennung wird eine Warnung ausgelöst, wenn eine Replikationsanforder
 > [!NOTE]
 > Falls Sie Domänencontroller haben, auf denen keine Azure ATP-Sensoren installiert sind, werden diese nicht von Azure ATP abgedeckt. Wenn Sie einen neuen Domänencontroller auf einem nicht registrierten oder ungeschützten Domänencontroller bereitstellen, wird dieser möglicherweise nicht unmittelbar von Azure ATP als Domänencontroller erkannt. Es wird dringend empfohlen, den Azure ATP-Sensor für eine vollständige Abdeckung auf jedem Domänencontroller zu installieren.
 
-**TP, B-TP oder FP**
+**TP, B-TP oder FP?**
 
 Wenn der Quellcomputer ein Domänencontroller ist, wird Azure ATP möglicherweise aufgrund fehlender Entscheidungssicherheit an der Identifikation gehindert.   
 
@@ -295,7 +295,7 @@ Server und Anwendungen wie Azure AD Connect oder Geräte zur Leistungsüberwachu
 
 Bei einer Golden Ticket-Warnung wurde die Verschlüsselungsmethode des TGT-Felds der TGS_REQ-Nachricht (Dienstanforderung) vom Quellcomputer im Vergleich zum zuvor gelernten Verhalten als herabgestuft erkannt. Dies basiert nicht auf einer Zeitanomalie (wie bei der anderen Golden Ticket-Erkennung). Zusätzlich wurde bei dieser Warnung der vorherigen von Azure ATP erkannten Dienstanforderung keine Kerberos-Authentifizierungsanforderung zugeordnet.
  
-**TP, B-TP oder FP**
+**TP, B-TP oder FP?**
 <br>Einige unbedenkliche Ressourcen unterstützen keine starken Verschlüsselungsverfahren und können diese Warnung auslösen. 
 
 
@@ -361,7 +361,7 @@ Einige Betriebssysteme und Anwendungen sind dafür bekannt, dass sie die Autoris
 3. Überprüfen Sie, auf welche Ressourcen erfolgreich zugegriffen wurde, und [untersuchen](investigate-a-computer.md) Sie diese.   
  
 **Empfohlene Abhilfemaßnahmen und Schritte zur Vorbeugung** 
-1. Setzen Sie das Kennwort des Quellbenutzers zurück, und aktivieren Sie die MFA. 
+1. Setzen Sie das Kennwort des Quellbenutzers zurück, und aktivieren Sie die mehrstufige Authentifizierung (MFA). 
 2. Kontrollieren Sie den Quellcomputer. 
     - Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es. 
     - Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. 
@@ -377,7 +377,7 @@ Vorheriger Name: Kerberos Golden Ticket
  
 Angreifer mit Domänenadministratorrechten können das KRBTGT-Konto beeinträchtigen. Indem diese das KRBTGT-Konto verwenden, können sie ein Kerberos Ticket Granting Ticket (TGT) erstellen, das die Autorisierung für jede Ressource erteilen und den Ablaufzeitpunkt des Tickets auf einen beliebigen Zeitpunkt festlegen kann. Dieses gefälschte TGT wird als „Golden Ticket“ bezeichnet und ermöglicht es Angreifern, dauerhaft die Kontrolle über das Netzwerk zu erhalten. Bei dieser Erkennung wird durch ein nicht vorhandenes Konto eine Warnung ausgelöst. 
  
-**TP, B-TP oder FP**
+**TP, B-TP oder FP?**
 <br>Die Synchronisierung von Änderungen in Active Directory Domain Services kann etwas Zeit in Anspruch nehmen.
 1. Ist der Benutzer ein bekannter und gültiger Domänenbenutzer?  
 2. Wurde der Benutzer kürzlich hinzugefügt?  
@@ -402,7 +402,7 @@ Wenn die Antwort auf eine der vorherigen Fragen **Ja** lautet, **schließen** Si
 
 **Beschreibung:** Angreifer mit Domänenadministratorrechten können das KRBTGT-Konto kompromittieren. Indem diese das KRBTGT-Konto verwenden, können sie ein Kerberos Ticket Granting Ticket (TGT) erstellen, das die Autorisierung für jede Ressource erteilen und den Ablaufzeitpunkt des Tickets auf einen beliebigen Zeitpunkt festlegen kann. Dieses gefälschte TGT wird als „Golden Ticket“ bezeichnet und ermöglicht es Angreifern, dauerhaft die Kontrolle über das Netzwerk zu erhalten. Gefälschte Golden Tickets dieses Typs haben eindeutige Merkmale, die speziell durch diese Erkennung identifiziert werden.  
  
-**TP, B-TP oder FP** 
+**TP, B-TP oder FP?** 
 
 Verbunddienste generieren möglicherweise Tickets, die diese Warnung auslösen. 
 1. Werden auf dem Quellcomputer Verbunddienste gehostet, die derartige Tickets erstellen?  
@@ -447,7 +447,7 @@ Wenn die Antwort auf die vorherigen Fragen **Ja** lautet, **schließen** Sie die
 1. Kontrollieren Sie den Quellcomputer. 
     - Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
     - Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA.
-    - Wenn Windows Defender ATP installiert ist, nutzen Sie **klist.exe purge**, um alle Tickets der angegebenen Anmeldesitzung zu löschen und zu verhindern, dass die Tickets in Zukunft verwendet werden.
+    - Wenn Windows Defender ATP installiert ist, nutzen Sie **klist.exe purge**, um alle Tickets der angegebenen Anmeldesitzung endgültig zu löschen und zu verhindern, dass die Tickets in Zukunft verwendet werden.
 2. Isolieren Sie die Ressourcen, auf die über das Ticket zugegriffen wurde.
 3. Ändern Sie das Kennwort für das Kerberos Ticket Granting Ticket (KRBTGT) zweimal gemäß den Anweisungen unter [KRBTGT Account Password Reset Scripts now available for customers (Skripts zum Zurücksetzen von Kennwörtern des KRBTGT-Kontos stehen Kunden jetzt zur Verfügung)](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) mithilfe des [Reset the KRBTGT account password/keys tool (Tools zum Zurücksetzen des Kennworts/Schlüssels eines KRBTGT-Kontos)](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). 
    - Durch zweimaliges Zurücksetzen von KRBTGT werden alle Kerberos-Tickets in dieser Domäne ungültig. Dies bedeutet, dass **alle** Dienste außer Kraft gesetzt werden und erst wieder funktionieren, wenn sie erneuert werden. In einigen Fällen muss der Dienst neu gestartet werden. 
@@ -501,7 +501,7 @@ Die Erkennung basiert auf Ereignissen, die auf Domänencontrollern überwacht we
 
 **Abhilfemaßnahmen:**
 
-1. Setzen Sie das Kennwort des Quellbenutzers zurück, und aktivieren Sie die MFA. 
+1. Setzen Sie das Kennwort des Quellbenutzers zurück, und aktivieren Sie die mehrstufige Authentifizierung (MFA). 
     - Suchen Sie nach dem Computer, auf dem der Benutzer aktiv war. 
     - Überprüfen Sie, bei welchen Computern der Benutzer ungefähr zum Zeitpunkt der Aktivität angemeldet war. Überprüfen Sie, ob diese Computer kompromittiert sind. 
     - Wenn die Benutzer kompromittiert sind, setzen Sie ihre Kennwörter zurück, und aktivieren Sie die MFA. 
@@ -517,7 +517,7 @@ Die Erkennung basiert auf Ereignissen, die auf Domänencontrollern überwacht we
 
 **Beschreibung:** Ein verdächtiger Dienst wurde auf einem Domänencontroller in Ihrer Organisation erstellt. Diese Warnung basiert auf Ereignis 7045, um die verdächtige Aktivität zu identifizieren.  
  
-**TP, B-TP oder FP**
+**TP, B-TP oder FP?**
 <br>Einige zulässige administrative Aufgaben auf Domänencontrollern können von Arbeitsstationen für Administratoren, IT-Teammitgliedern und Dienstkonten durchgeführt werden. 
 
 1. Sollen diese Dienste tatsächlich auf dem Domänencontroller vom Quellbenutzer oder -computer ausgeführt werden?  

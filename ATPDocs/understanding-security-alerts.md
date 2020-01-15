@@ -2,8 +2,8 @@
 title: Tutorial zu Azure ATP-Sicherheitswarnungen | Microsoft-Dokumentation
 d|Description: This article explains how to use and understand Azure ATP security alerts.
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 1/13/2019
 ms.topic: tutorial
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 671747d5-faed-4352-a871-17b58fdc6574
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f215639ea72d0c767f32bd9628e1c404da23aaa0
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: baefea19a50cec6a6d14835ac3cb8754671ec85c
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65196393"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75907496"
 ---
 # <a name="tutorial-understanding-security-alerts"></a>Tutorial: Grundlegendes zu Sicherheitswarnungen
 
@@ -63,7 +63,7 @@ Stellen Sie sich bei jeder Sicherheitswarnung die folgenden Fragen, um die Klass
 2. Wurde die Warnung durch dieselben Computer- oder Benutzertypen ausgelöst?
    Handelt es sich z.B. um Server mit derselben Rolle oder denselben Benutzern aus derselben Gruppe/Abteilung? Handelte es sich um ähnliche Computer oder Benutzer, können Sie diese eventuell ausschließen, um weitere FP-Warnungen künftig zu vermeiden.
 
-Hinweis: Eine zunehmende Anzahl von Warnungen des exakt selben Typs verringert in der Regel die Verdächtigkeits-/Wichtigkeitsstufe der Warnung. Überprüfen Sie bei wiederholten Warnungen die Konfiguration, und verschaffen Sie sich mithilfe der Details und Definitionen der Sicherheitswarnungen einen Überblick über die genaue Ursache des wiederholten Auftretens. 
+Anmerkung: Eine zunehmende Anzahl von Warnungen des exakt selben Typs verringert in der Regel die Verdächtigkeits-/Wichtigkeitsstufe der Warnung. Überprüfen Sie bei wiederholten Warnungen die Konfiguration, und verschaffen Sie sich mithilfe der Details und Definitionen der Sicherheitswarnungen einen Überblick über die genaue Ursache des wiederholten Auftretens. 
 
 ## <a name="security-alert-categories"></a>Kategorien der Sicherheitswarnungen
 
