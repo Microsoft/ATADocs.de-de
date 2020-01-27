@@ -4,33 +4,27 @@ description: Erläutert die unterschiedlichen Supportoptionen für die Versionen
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 05/12/2019
+ms.date: 01/26/2020
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: a8afbd91-c888-4dfc-94ab-72e38745163e
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c0895d58852e5cecf4a14fd3b5100b06617ac408
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: d72e42512026049f5cd88c82f81b27eb0f4f7bdb
+ms.sourcegitcommit: f1a11982e2ee806d2a29420901f9ddac64d7dd51
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75905150"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76762944"
 ---
 # <a name="support-for-microsoft-advanced-threat-analytics-ata-versions"></a>Support für Microsoft Advanced Threat Analytics-Versionen (ATA)
 
-
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
-Microsoft veröffentlicht mehrmals jährlich Updates für ATA. Jede Updateversion wird dabei ab dem Datum der allgemeinen Verfügbarkeit 12 Monate unterstützt. Technischer Support wird für die gesamten 12 Monate zur Verfügung gestellt. Unsere Supportstruktur ist jetzt dynamisch und folgt zwei unterschiedlichen Wartungsphasen, die von der Verfügbarkeit der neuesten Version abhängig sind.
+Der Microsoft ATA-Support wird von der Microsoft Lifecycle-Richtlinie für [ATA 1. x](https://support.microsoft.com/lifecycle/search?alpha=Advanced%20Threat%20Analytics%201.X)definiert, wobei der Mainstream-Support am 12. Januar 2021 endet.
 
--   Wartungsphase mit wichtigen Updates und Sicherheitsupdates: Wenn Sie die neueste Version von ATA ausführen, erhalten Sie Updates der Kategorien „Sicherheit“ und „Wichtig“.
-
--   Wartungsphase nur mit Sicherheitsupdates: Nach Veröffentlichung einer neuen ATA-Version wird der Support für ältere Versionen für den verbleibenden Zeitraum des 12-monatigen Produktlebenszyklus auf Sicherheitsupdates beschränkt (wie im folgenden Beispiel zum Versionswartungssupport dargestellt).
- 
-> [!Note]
-> Die neueste ATA-Version befindet sich immer in der Wartungsphase für Sicherheitsupdates und wichtige Updates. Das bedeutet, dass im Fall eines Codefehlers, der ein kritisches Update erfordert, die neueste Current Branch-Version installiert sein muss, damit Sie einen Fix zur Behebung des Fehlers erhalten. Bei allen anderen unterstützten Versionen haben Sie lediglich Anspruch auf Sicherheitsupdates. Nach Ablauf des 12-monatigen Lebenszyklus der aktuellen Version endet jeglicher Support. Dann müssen Kunden auf eine unterstützte Version aktualisieren.
+ATA wird mehrmals im Jahr aktualisiert, wobei jede Update Version für 12 Monate ab dem Veröffentlichungsdatum der allgemeinen Verfügbarkeit (General Availability, GA) und 6 Monate nach der Verfügbarkeit eines neueren Updates unterstützt wird.
 
 ## <a name="version-history"></a>Versionsverlauf
 
@@ -47,9 +41,8 @@ Microsoft veröffentlicht mehrmals jährlich Updates für ATA. Jede Updateversio
 |1.8.1|1.8.6765|02. AUGUST 2017|02. AUGUST 2018|
 |1.9|1.9.7312|21. MÄRZ 2018|21. MÄRZ 2019|
 |1.9.1|1.9.7412|01-JUL-2018|01-JUL-2019|
-|1.9.2|1.9.7478|28-MÄR-2019|28-MÄR-2020|
-
-
+|1.9.2|1.9.7478|28-MÄR-2019||
 
 ## <a name="see-also"></a>Weitere Informationen:
+
 [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
