@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 09/15/2019
+ms.date: 01/26/2020
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: a06004bd-9f77-4e8e-a0e5-4727d6651a0f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a1463d3aa397c42069ada0e540fd6e0eb9f846c9
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: 6d8a18b7e2268945dcfd254afb5580a180ad0204
+ms.sourcegitcommit: 409680586343ab7fdd46da96f343305d22eb8936
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75907321"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76818242"
 ---
 # <a name="working-with-security-alerts"></a>Arbeiten mit Sicherheitswarnungen
 
@@ -47,6 +47,7 @@ Jede Sicherheitswarnung enthält die folgenden Informationen:
     - Herunterladen der Sicherheitswarnung im Excel-Format.
 
 > [!NOTE]
+>
 > - Wenn Sie mit der Maus auf einen Benutzer oder Computer zeigen, wird ein Miniprofil der Entität angezeigt. Dieses enthält zusätzliche Informationen zur Entität und die Anzahl der Sicherheitswarnungen, mit denen die Entität verknüpft ist.
 > - Durch Klicken auf eine Entität gelangen Sie zum Entitätsprofil des Benutzers oder Computers.
 
@@ -54,7 +55,7 @@ Jede Sicherheitswarnung enthält die folgenden Informationen:
 
 ## <a name="security-alert-categories"></a>Kategorien der Sicherheitswarnungen
 
-Azure ATP-Sicherheitswarnungen werden in die folgenden Kategorien oder Phasen unterteilt, wie die Phasen in einer typischen „Kill Chain“ eines Cyberangriffs. 
+Azure ATP-Sicherheitswarnungen werden in die folgenden Kategorien oder Phasen unterteilt, wie die Phasen in einer typischen „Kill Chain“ eines Cyberangriffs.
 
 - [Warnungen zu Reconnaissance](atp-reconnaissance-alerts.md)
 - [Warnungen zu kompromittierten Anmeldeinformationen](atp-compromised-credentials-alerts.md)
@@ -70,18 +71,18 @@ Diese Erkennungen werden als Vorschauversionen markiert, damit Sie die neuen Erk
 
 ![Vorschauversion für VPN-Erkennungen](./media/preview-detection-vpn.png)
 
-Erkennungen von Vorschauversionen werden standardmäßig in Azure ATP aktiviert. 
+Erkennungen von Vorschauversionen werden standardmäßig in Azure ATP aktiviert.
 
 Gehen Sie wie folgt vor, um die Erkennung von Vorschauversionen zu deaktivieren:
 
 1. Klicken Sie in der Azure ATP-Konsole auf das Zahnradsymbol für Einstellungen.
 2. Klicken Sie im Menü auf der linken Seite unter „Vorschauversion“ auf **Erkennungen**.
 3. Verwenden Sie den Schieberegler, um die Erkennungen für Vorschauversionen zu (de)aktivieren.
- 
-![Erkennungen von Vorschauversionen](./media/preview-detections.png) 
 
+![Erkennungen von Vorschauversionen](./media/preview-detections.png)
 
 ## <a name="filter-security-alerts-list"></a>Filtern der Liste der Sicherheitswarnungen
+
 So filtern Sie die Liste der Sicherheitswarnungen:
 
 1. Wählen Sie auf der linken Seite des Bildschirms im Bereich **Filtern nach** eine der folgenden Optionen aus: **Alle**, **Offen**, **Geschlossen** oder **Unterdrückt**.
@@ -102,7 +103,6 @@ So filtern Sie die Liste der Sicherheitswarnungen:
 
     Weist auf Aktivitäten hin, die zu Identitätsdiebstahl, Berechtigungsausweitung oder anderen Angriffen mit schwerwiegenden Auswirkungen führen können.
 
-
 ## <a name="managing-security-alerts"></a>Verwalten von Sicherheitswarnungen
 
 Sie können den Status einer Sicherheitswarnung ändern, indem Sie auf den aktuellen Status der Sicherheitswarnung klicken und eine der folgenden Optionen auswählen: **Offen**, **Unterdrückt**, **Aufgelöst** oder **Verworfen**.
@@ -116,18 +116,14 @@ Klicken Sie dafür auf die drei Punkte in der oberen rechten Ecke einer bestimmt
 
 - **Auflösen**: Wird verwendet, um Sicherheitswarnungen nachzuverfolgen, die Sie identifiziert, untersucht oder entschärft haben.
 
-    > [!NOTE]
-    > Azure ATP kann geschlossene Warnungen wieder öffnen, wenn die gleiche Aktivität innerhalb eines kurzen Zeitraums erneut erkannt wird.
+- **Unterdrücken**: Durch das Unterdrücken einer Warnung wird diese für den Moment ignoriert. Sie erhalten erst dann wieder eine Warnung, wenn eine neue Instanz vorliegt. Wenn es also eine ähnliche Warnung gibt, wird diese von Azure ATP nicht erneut geöffnet. Wenn die Warnung jedoch für sieben Tage angehalten wurde und anschließend erneut auftritt, wird eine neue Warnung geöffnet.
 
-- **Unterdrücken**: Durch das Unterdrücken einer Warnung wird diese für den Moment ignoriert. Sie erhalten erst dann wieder eine Warnung, wenn eine neue Instanz vorliegt. Wenn es also eine ähnliche Warnung gibt, wird diese von Azure ATP nicht erneut geöffnet. Wenn die Warnung jedoch für sieben Tage angehalten wurde und anschließend erneut auftritt, werden Sie erneut gewarnt.
-
-- **Verwerfen**: Wenn Sie eine Warnung verwerfen, wird sie aus dem System und aus der Datenbank gelöscht und kann von Ihnen NICHT mehr wiederhergestellt werden. Nachdem Sie auf „Verwerfen“ geklickt haben, können Sie alle Sicherheitswarnungen für den gleichen Typ löschen.
+- **Löschen** Wenn Sie eine Warnung verwerfen, wird sie aus dem System und aus der Datenbank gelöscht und kann von Ihnen NICHT mehr wiederhergestellt werden. Nachdem Sie auf „Verwerfen“ geklickt haben, können Sie alle Sicherheitswarnungen für den gleichen Typ löschen.
 
 - **Ausschließen**: Die Möglichkeit, eine Entität davor zu bewahren, mehr bestimmte Warnungstypen auszugeben. Sie können z.B. Azure ATP darauf festlegen, eine bestimmte Entität (Benutzer oder Computer) auszuschließen, sodass diese keine Warnung für einen bestimmten Typ einer Aktivität ausgibt, wie etwa ein bestimmter Administrator, der Remote-Code oder eine Sicherheitsüberprüfung ausführt, die DNS-Reconnaissance durchführt. Zusätzlich zur Möglichkeit, Ausnahmen direkt zur Sicherheitswarnung hinzuzufügen, da sie in der Zeitleiste erkannt wurde, können Sie auch auf die Seite „Konfiguration“ zu **Ausnahmen** wechseln. Für jede Sicherheitswarnung können Sie so manuell ausgeschlossene Entitäten oder Subnetze hinzufügen oder entfernen (z.B. für Pass-the-Ticket).
 
 > [!NOTE]
 > Die Seiten für die Konfiguration können nur von Azure ATP-Administratoren bearbeitet werden.
-
 
 ## <a name="see-also"></a>Weitere Informationen
 

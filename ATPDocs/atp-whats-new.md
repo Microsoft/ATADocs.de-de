@@ -5,18 +5,18 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 01/19/2020
+ms.date: 01/26/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 1019591a3ad775a2cd3e54df99aa84ae55ac7e53
-ms.sourcegitcommit: 450295f4ee87db835c9921d2595ae9d291f727c5
+ms.openlocfilehash: ef493165f939bd037e12361d7eec403ad397b0fc
+ms.sourcegitcommit: 409680586343ab7fdd46da96f343305d22eb8936
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/20/2020
-ms.locfileid: "76281762"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76818225"
 ---
 # <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Neuerungen in Azure Advanced Threat Protection (Azure ATP)
 
@@ -26,14 +26,15 @@ Ausführliche Informationen zu früheren Azure ATP-Versionen bis (und einschlie�
 
 RSS-Feed: Lassen Sie sich benachrichtigen, wenn diese Seite aktualisiert wird, indem Sie die folgende URL kopieren und in Ihren Feedreader einfügen: `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
 
-<!-- Rollback
-## Azure ATP release 2.107
+## <a name="azure-atp-release-2107"></a>Azure ATP, Release 2.107
 
-Released Jan 26, 2020
+Veröffentlicht: 26. Januar 2020
 
-- **New monitored activity: SID history change**  
-SID history change is now a monitored and filterable activity. Learn more about which [activities Azure ATP monitors](monitored-activities.md), and how to [filter and search monitored activities](atp-activities-search.md) in the portal.
--->
+- **Neue überwachte Aktivität: SID-Verlaufsänderung**  
+    Die SID-Verlaufsänderung ist jetzt eine überwachte und filterbare Aktivität. Erfahren Sie mehr über [von Azure ATP überwachte Aktivitäten](monitored-activities.md) und über das [Filtern von und Suchen nach überwachten Aktivitäten](atp-activities-search.md) im Portal.
+
+- **Featureerweiterung: Geschlossene oder unterdrückte Warnungen werden nicht mehr erneut geöffnet.**  
+    Nachdem eine Warnung im Azure ATP-Portal geschlossen oder unterdrückt wurde, wird eine neue Warnung geöffnet, wenn die gleiche Aktivität innerhalb eines kurzen Zeitraums noch mal erkannt wird. Zuvor wurde in diesem Fall dieselbe Warnung wieder geöffnet.
 
 ## <a name="azure-atp-release-2106"></a>Azure ATP Release 2.106
 
