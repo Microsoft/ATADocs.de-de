@@ -5,26 +5,25 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 12/26/2019
+ms.date: 02/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ae8953e02b86d1e8e6b6c31122e971f866178f9d
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: d84102528e3423ed149cdc64c010a7f190a40f68
+ms.sourcegitcommit: 20cf564885aa01985524c9c995ae5ba282606fac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75907596"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77045131"
 ---
-# <a name="troubleshooting-azure-atp-known-issues"></a>Behandlung von bekannten Problemen bei Azure ATP 
-
+# <a name="troubleshooting-azure-atp-known-issues"></a>Behandlung von bekannten Problemen bei Azure ATP
 
 ## <a name="sensor-failure-communication-error"></a>Kommunikationsfehler durch Sensorfehler
 
-Sie erhalten folgenden Sensorfehler: 
+Sie erhalten folgenden Sensorfehler:
 
 System.Net.Http.HttpRequestException: Fehler beim Senden der Anforderung. ---> System.Net.WebException: Es konnte keine Verbindung mit dem Remoteserver hergestellt werden ---> System.Net.Sockets.SocketException: Fehler beim Herstellen der Verbindung, weil die Gegenstelle nach einer bestimmten Zeitspanne nicht ordnungsgemäß reagiert hat, oder die hergestellte Verbindung konnte nicht aufrechterhalten werden, weil der verbundene Host nicht reagiert hat...
 
@@ -33,7 +32,7 @@ System.Net.Http.HttpRequestException: Fehler beim Senden der Anforderung. ---> S
 Stellen Sie sicher, dass die Kommunikation für Localhost an TCP-Port 444 nicht blockiert ist. Weitere Informationen zu den Voraussetzungen für Azure ATP finden Sie unter [Ports](atp-prerequisites.md#ports).
 
 ## <a name="deployment-log-location"></a>Speicherort des Bereitstellungsprotokolls
- 
+
 Die Azure ATP-Bereitstellungsprotokolle befinden sich im temporären Verzeichnis des Benutzers, der das Produkt installiert hat. Beim Standardinstallationsspeicherort lautet der Pfad: C:\Benutzer\Administrator\AppData\Local\Temp (oder ein Verzeichnis über „%temp%“). Weitere Informationen finden Sie unter [Problembehandlung für den Azure Advanced Threat Protection-Sensor (ATP) mithilfe der ATP-Protokolle](troubleshooting-atp-using-logs.md).
 
 ## <a name="proxy-authentication-problem-presents-as-a-licensing-error"></a>Proxyauthentifizierungsproblem wird als Lizenzierungsfehler dargestellt
@@ -45,22 +44,21 @@ Bereitstellungsprotokolleinträge: [1C 60: 1AA8] [2018-03-24T23:59:13] i000: 201
 
 **Ursache**:
 
-In einigen Fällen, bei Kommunikation über einen Proxy, könnte dieser während der Authentifizierung dem Azure ATP-Sensor mit Fehler 401 oder 403 anstelle des Fehlers 407 antworten. Der Azure ATP-Sensor interpretiert Fehler 401 oder 403 als Lizenzierungsproblem und nicht als Proxyauthentifizierungsproblem. 
+In einigen Fällen, bei Kommunikation über einen Proxy, könnte dieser während der Authentifizierung dem Azure ATP-Sensor mit Fehler 401 oder 403 anstelle des Fehlers 407 antworten. Der Azure ATP-Sensor interpretiert Fehler 401 oder 403 als Lizenzierungsproblem und nicht als Proxyauthentifizierungsproblem.
 
 **Lösung:**
 
 Stellen Sie sicher, dass der Sensor über den konfigurierten Proxy ohne Authentifizierung zu „*. atp.azure.com“ navigieren kann. Weitere Informationen finden Sie unter [Konfigurieren von Endpunktproxy- und Internetkonnektivitätseinstellungen für Ihren Azure ATP-Sensor](configure-proxy.md).
 
-## <a name="silent-installation-error-when-attempting-to-use-powershell"></a>Fehler bei der automatischen Installation beim Versuch, PowerShell zu verwenden  
+## <a name="silent-installation-error-when-attempting-to-use-powershell"></a>Fehler bei der automatischen Installation beim Versuch, PowerShell zu verwenden
 
-Sie versuchen, während der automatischen Sensorinstallation PowerShell zu verwenden, und erhalten folgenden Fehler: 
-
+Sie versuchen, während der automatischen Sensorinstallation PowerShell zu verwenden, und erhalten folgenden Fehler:
 
     "Azure ATP sensor Setup.exe" "/quiet" NetFrameworkCommandLineArguments="/q" Acce ...           Unexpected token '"/quiet"' in expression or statement."
 
-**Ursache**: Dieser Fehler wird dadurch verursacht, dass beim Verwenden von PowerShell das für die Installation erforderliche Präfix „./“ nicht einbezogen wurde. 
+**Ursache**: Dieser Fehler wird dadurch verursacht, dass beim Verwenden von PowerShell das für die Installation erforderliche Präfix „./“ nicht einbezogen wurde.
 
-**Lösung:** Verwenden Sie den vollständigen Befehl für eine erfolgreiche Installation. 
+**Lösung:** Verwenden Sie den vollständigen Befehl für eine erfolgreiche Installation.
 
     ./"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
 
@@ -68,36 +66,36 @@ Sie versuchen, während der automatischen Sensorinstallation PowerShell zu verwe
 
 Wenn Sie versuchen, den ATP-Sensor auf einem Computer zu installieren, der mit einem NIC-Teaming-Adapter konfiguriert ist, wird ein Installationsfehler gemeldet. Wenn Sie den ATP-Sensor auf einem Computer installieren möchten, der mit NIC-Teamvorgang konfiguriert ist, gehen Sie wie folgt vor:
 
-1.  Laden Sie die neueste Version des Npcap-Installers herunter: [https://nmap.org/npcap/](https://nmap.org/npcap/).
+1. Laden Sie das Installationsprogramm für die Npcap-Version 0.9984 von [https://nmap.org/npcap/](https://nmap.org/npcap/dist/npcap-0.9984.exe) herunter.
     - Alternativ dazu können Sie die OEM-Version des Npcap-Treibers (der die automatische Installation unterstützt) vom Supportteam anfordern.
-    - Kopien von Npcap werden nicht auf die Lizenzierungseinschränkung von fünf Kopien, fünf Computern oder fünf Benutzern angerechnet, wenn sie ausschließlich in Verbindung mit Azure ATP installiert und verwendet werden. Weitere Informationen finden Sie unter [NPCAP-Lizenzierung](https://github.com/nmap/npcap/blob/master/LICENSE). 
+    - Kopien von Npcap werden nicht auf die Lizenzierungseinschränkung von fünf Kopien, fünf Computern oder fünf Benutzern angerechnet, wenn sie ausschließlich in Verbindung mit Azure ATP installiert und verwendet werden. Weitere Informationen finden Sie unter [NPCAP-Lizenzierung](https://github.com/nmap/npcap/blob/master/LICENSE).
 
 Wenn Sie den Sensor noch nicht installiert haben:
 
-1.  Deinstallieren Sie WinPcap (falls installiert).
-1.  Installieren Sie Npcap mit den folgenden Optionen: loopback_support=no & winpcap_mode=yes.
+1. Deinstallieren Sie WinPcap (falls installiert).
+1. Installieren Sie Npcap mit den folgenden Optionen: loopback_support=no & winpcap_mode=yes.
     - Wenn Sie den GUI-Installer verwenden, deaktivieren Sie die **Loopbackunterstützung**, und aktivieren Sie den **WinPcap**-Modus.
-1.  Installieren Sie das Sensorpaket.
+1. Installieren Sie das Sensorpaket.
 
 Wenn der Sensor bereits installiert ist:
 
-1.  Deinstallieren Sie den Sensor.
-1.  Deinstallieren Sie WinPcap.
-1.  Installieren Sie Npcap mit den folgenden Optionen: loopback_support=no & winpcap_mode=yes
+1. Deinstallieren Sie den Sensor.
+1. Deinstallieren Sie WinPcap.
+1. Installieren Sie Npcap mit den folgenden Optionen: loopback_support=no & winpcap_mode=yes
     - Wenn Sie den GUI-Installer verwenden, deaktivieren Sie die **Loopbackunterstützung**, und aktivieren Sie den **WinPcap**-Modus.
-1.  Installieren Sie das Sensorpaket erneut.
+1. Installieren Sie das Sensorpaket erneut.
 
-## <a name="multi-processor-group-mode"></a>Modus „Mehrere Prozessorgruppen“ 
+## <a name="multi-processor-group-mode"></a>Modus „Mehrere Prozessorgruppen“
 Unter den Windows-Betriebssystemen 2008 R2 und 2012 werden Azure ATP-Sensoren im Modus „Mehrere Prozessorgruppen“ nicht unterstützt.
 
 Mögliche Problemumgehungen:
-- Wenn Hyperthreading aktiviert ist, deaktivieren Sie es. Dadurch kann die Anzahl logischer Kerne möglicherweise weit genug reduziert werden, sodass eine Ausführung im Modus **Mehrere Prozessorgruppen** nicht notwendig ist. 
+- Wenn Hyperthreading aktiviert ist, deaktivieren Sie es. Dadurch kann die Anzahl logischer Kerne möglicherweise weit genug reduziert werden, sodass eine Ausführung im Modus **Mehrere Prozessorgruppen** nicht notwendig ist.
 
-- Wenn Ihr Computer weniger als 64 logische Kerne aufweist und auf einem HP-Host ausgeführt wird, können Sie möglicherweise die BIOS-Einstellung **NUMA Group Size Optimization** vom Standardwert **Clustered** in **Flat** ändern. 
+- Wenn Ihr Computer weniger als 64 logische Kerne aufweist und auf einem HP-Host ausgeführt wird, können Sie möglicherweise die BIOS-Einstellung **NUMA Group Size Optimization** vom Standardwert **Clustered** in **Flat** ändern.
 
 ## <a name="windows-defender-atp-integration-issue"></a>Problem mit der Windows Defender-ATP-Integration
 
-Mithilfe von Azure Advanced Threat Protection können Sie Azure ATP in Windows Defender ATP integrieren. Weitere Informationen finden Sie unter [Integrieren von Azure ATP in Windows Defender ATP](integrate-wd-atp.md). 
+Mithilfe von Azure Advanced Threat Protection können Sie Azure ATP in Windows Defender ATP integrieren. Weitere Informationen finden Sie unter [Integrieren von Azure ATP in Windows Defender ATP](integrate-wd-atp.md).
 
 ## <a name="vmware-virtual-machine-sensor-issue"></a>Problem mit dem Sensor des virtuellen VMware-Computers
 
@@ -117,7 +115,7 @@ Verwenden Sie den folgenden Befehl, um zu überprüfen, ob die Abladung großer 
 
 Wenn LSO aktiviert ist, verwenden Sie den folgenden Befehl zur Deaktivierung:
 
-`Disable-NetAdapterLso -Name {name of adapter}` 
+`Disable-NetAdapterLso -Name {name of adapter}`
 
 ![LSO-Status deaktivieren](./media/disable-lso-vmware.png)
 
