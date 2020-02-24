@@ -23,7 +23,7 @@
       href: install-atp-step3.md
     - name: Installieren des Azure ATP-Sensors
       href: install-atp-step4.md
-- name: Lernprogramme
+- name: Tutorials
   items:
     - name: Warnungen zu Reconnaissance
       href: atp-reconnaissance-alerts.md
@@ -63,7 +63,7 @@
       href: atp-role-groups.md
     - name: Unterstützung der Azure ATP-Gesamtstruktur
       href: atp-multi-forest.md
-- name: Schrittanleitungen
+- name: Anleitungen
   items:
     - name: Azure ATP mit Microsoft Cloud App Security
       items:
@@ -77,16 +77,18 @@
               href: atp-isp-overview.md
             - name: Verfügbarmachen von Anmeldeinformationen in Klartext (Bewertung)
               href: atp-cas-isp-clear-text.md
-            - name: Ruhende Entitäten in sensiblen Gruppen (Bewertung)
-              href: atp-cas-isp-dormant-entities.md
             - name: Verwendung von Legacyprotokollen (Bewertung)
               href: atp-cas-isp-legacy-protocols.md
-            - name: Domänencontroller mit verfügbarem Druckspoolerdienst (Bewertung)
-              href: atp-cas-isp-print-spooler.md
             - name: Verwendung von schwacher Verschlüsselung (Bewertung)
               href: atp-cas-isp-weak-cipher.md
             - name: Ungesicherte Kerberos-Delegierung (Bewertung)
               href: atp-cas-isp-unconstrained-kerberos.md
+            - name: Domänencontroller mit verfügbarem Druckspoolerdienst (Bewertung)
+              href: atp-cas-isp-print-spooler.md
+            - name: Ruhende Entitäten in sensiblen Gruppen (Bewertung)
+              href: atp-cas-isp-dormant-entities.md
+            - name: Nicht überwachte Domänencontroller
+              href: atp-cas-isp-unmonitored-domain-controller.md
     - name: Lab für Sicherheitswarnungen
       items:
         - name: Übersicht über das Lab
@@ -165,7 +167,7 @@
       items:
         - name: Advanced Threat Analytics (ATA) zu Azure ATP
           href: ata-atp-move-overview.md
-- name: Referenz
+- name: Reference
   items:
     - name: Referenz zum SIEM-Protokoll
       href: cef-format-sa.md

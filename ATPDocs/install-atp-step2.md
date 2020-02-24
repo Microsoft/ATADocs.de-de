@@ -3,16 +3,16 @@ title: Schnellstart zum Herstellen einer Verbindung zwischen Azure ATP und Azure
 description: Im zweiten Schritt der Installation von Azure ATP konfigurieren Sie die Domänenverbindungseinstellungen in Ihrem Azure ATP-Clouddienst.
 author: shsagir
 ms.author: shsagir
-ms.date: 02/05/2019
+ms.date: 01/15/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.openlocfilehash: 76096f506714d8a876cac49fee04b7451da392e9
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: 397dcd16313aba5ae2513633905f2f91d02ae0fa
+ms.sourcegitcommit: e281d63e3406e02325645234ad0a4880056b2351
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75906605"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77259407"
 ---
 # <a name="quickstart-connect-to-your-active-directory-forest"></a>Schnellstart: Herstellen einer Verbindung mit einer Active Directory-Gesamtstruktur
 
@@ -22,7 +22,20 @@ In diesem Schnellstart lernen Sie, wie Sie eine Verbindung zwischen Azure ATP un
 
 - Eine [Azure ATP-Instanz](install-atp-step1.md)
 - Lesen Sie den Artikel [Voraussetzungen für Azure ATP](atp-prerequisites.md).
-- Ein **lokales** AD-Benutzerkonto und -Kennwort mit Lesezugriff auf alle Objekte in den überwachten Domänen.
+- Mindestens eines der folgenden Verzeichnisdienstkonten mit Lesezugriff auf alle Objekte in den überwachten Domänen:
+  - Ein **standardmäßiges** AD-Benutzerkonto und -Kennwort; erforderlich für Sensoren, die unter Windows Server 2008 R2 SP1 ausgeführt werden.
+  - Ein von der **Gruppe verwaltetes Dienstkonto**; erfordert Windows Server 2012 oder höher.  
+  Alle Sensoren benötigen Zugriffsberechtigungen zum Abrufen des Kennworts des gruppenverwalteten Dienstkontos. Weitere Informationen zum Erstellen von gruppenverwalteten Dienstkonten finden Sie im Abschnitt [Einrichten eines gruppenverwalteten Dienstkontos](#how-to-set-up-a-gmsa-account).
+
+    > [!NOTE]
+    >
+    > - Für Sensorcomputer unter Windows Server 2012 und höher wird empfohlen, ein **gruppenverwaltetes Dienstkonto** für verbesserte Sicherheit und automatische Kennwortverwaltung zu verwenden.
+    > - Wenn Sie über mehrere Sensoren verfügen, teilweise unter Windows Server 2008 oder unter Windows Server 2012 und höher, müssen Sie zusätzlich zum empfohlenen **gruppenverwalteten Dienstkonto** auch mindestens ein AD-**Standardbenutzerkonto** verwenden.
+
+### <a name="how-to-set-up-a-gmsa-account"></a>Einrichten eines gruppenverwalteten Dienstkontos
+
+1. Erstellen Sie ein [gruppenverwaltetes Dienstkonto](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts#BKMK_CreateGMSA).
+1. Erstellen Sie eine neue [Sicherheitsgruppe mit allen Ihren Domänencontrollern mit Sensoren (unter Windows Server 2012 und höher)](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts#BKMK_AddMemberHosts) mit Zugriffsberechtigungen zum Abrufen des Kennworts des gruppenverwalteten Dienstkontos. (Empfohlen)
 
 ## <a name="provide-a-username-and-password-to-connect-to-your-active-directory-forest"></a>Angeben eines Benutzernamens und eines Kennworts, um eine Verbindung mit Ihrer Active Directory-Gesamtstruktur herzustellen
 
@@ -30,17 +43,16 @@ Beim ersten Öffnen des Azure ATP-Portals wird die folgende Anzeige angezeigt:
 
 ![Azure ATP-Willkommensseite 1](media/directory-services.png)
 
-
 1. Geben Sie die folgenden Informationen ein, und klicken Sie anschließend auf **Speichern**.
 
     |Feld|Kommentare|
-    |---------|------------|
-    |**Benutzername** (erforderlich)|Geben Sie den schreibgeschützten Active Directory-Benutzernamen ein. Beispiel: **ATPuser**.  Sie müssen ein **lokales** Azure AD-Benutzerkonto verwenden. Verwenden Sie **nicht** das UPN-Format für Ihren Benutzernamen.|
-    |**Kennwort** (erforderlich)|Geben Sie das Kennwort für den schreibgeschützten Benutzer ein. Beispiel: **Pencil1**.|
+    |---|---|
+    |**Benutzername** (erforderlich)|Geben Sie den Namen des AD-Benutzers mit Leseberechtigung ein. Beispiel: **ATPuser**. Sie müssen ein AD-**Standardbenutzerkonto** oder ein gruppenverwaltetes Dienstkonto verwenden. Verwenden Sie **nicht** das UPN-Format für Ihren Benutzernamen.|
+    |**Kennwort** (bei AD-Standardbenutzerkonten erforderlich)|Geben Sie bei AD-Benutzerkonten das Kennwort für den Benutzer mit Leseberechtigung ein. Beispiel: **Pencil1**.|
+    |**Gruppenverwaltetes Dienstkonto** (bei gruppenverwalteten Dienstkonten erforderlich)|Wählen Sie bei gruppenverwalteten Dienstkonten das **gruppenverwaltete Dienstkonto** aus.|
     |**Domäne** (erforderlich)|Geben Sie die Domäne für den schreibgeschützten Benutzer ein. Beispiel: **contoso.com**. Es ist wichtig, dass Sie den vollqualifizierten Domänennamen (FQDN) der Domäne eingeben, in der sich das Benutzerkonto befindet. Wenn sich das Konto des Benutzers beispielsweise in der Domäne „corp.contoso.com“ befindet, müssen Sie `corp.contoso.com` und nicht „contoso.com“ eingeben.|
 
 2. Klicken Sie im Azure ATP-Portal auf **Download sensor setup and install the first sensor** (Sensorsetup herunterladen und ersten Sensor installieren), um fortzufahren.
-
 
 ## <a name="next-steps"></a>Nächste Schritte
 

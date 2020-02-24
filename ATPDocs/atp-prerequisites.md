@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 50a14aeb6b91fc94c71f6be69bf66db13528c9f1
-ms.sourcegitcommit: 1a0cc214568bf12041d11e037dfe56a8d9e707c2
+ms.openlocfilehash: eb6484eeaa9bd5ed4e04f90a5a8dc1ed4327b8b5
+ms.sourcegitcommit: e281d63e3406e02325645234ad0a4880056b2351
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "76706238"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77259438"
 ---
 # <a name="azure-atp-prerequisites"></a>Voraussetzungen für Azure ATP
 
@@ -50,10 +50,24 @@ In diesem Abschnitt werden die Informationen aufgeführt, die Sie sammeln sollte
 
 - Überprüfen Sie, ob die Domänencontroller, auf denen Sie Azure ATP-Sensoren installieren möchten, über das Internet mit dem Azure ATP-Clouddienst verbunden sind. Der Azure ATP-Sensor unterstützt die Verwendung eines Proxys. Weitere Informationen zur Proxykonfiguration finden Sie unter [Konfigurieren eines Proxys für Azure ATP](configure-proxy.md).
 
-- Ein **lokales** AD-Benutzerkonto und -Kennwort mit Lesezugriff auf alle Objekte in den überwachten Domänen.
+- Mindestens eines der folgenden Verzeichnisdienstkonten mit Lesezugriff auf alle Objekte in den überwachten Domänen:
+  - Ein **standardmäßiges** AD-Benutzerkonto und -Kennwort; erforderlich für Sensoren, die unter Windows Server 2008 R2 SP1 ausgeführt werden.
+  - Ein von der **Gruppe verwaltetes Dienstkonto**; erfordert Windows Server 2012 oder höher.  
+  Alle Sensoren benötigen Zugriffsberechtigungen zum Abrufen des Kennworts des gruppenverwalteten Dienstkontos.  
+  Weitere Informationen zu gruppenverwalteten Dienstkonten finden Sie unter [Erste Schritte mit gruppenverwalteten Dienstkonten](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts#BKMK_CreateGMSA).
+
+    In der folgenden Tabelle ist aufgeführt, welche AD-Benutzerkonten mit welchen Serverversionen verwendet werden können:
+
+    |Kontotyp|Windows Server 2008 R2 SP1|Windows Server 2012 oder höher|
+    |---|---|---|
+    |**Standardbenutzerkonto** von AD|Ja|Ja|
+    |**gruppenverwaltetes Dienstkonto**|Nein|Ja|
 
     > [!NOTE]
-    > Wenn Sie benutzerdefinierte ACLs für verschiedene Organisationseinheiten (OU) in Ihrer Domäne festgelegt haben, stellen Sie sicher, dass der ausgewählte Benutzer Leseberechtigungen für diese Organisationseinheiten hat.
+    >
+    > - Für Sensorcomputer unter Windows Server 2012 und höher wird empfohlen, ein **gruppenverwaltetes Dienstkonto** für verbesserte Sicherheit und automatische Kennwortverwaltung zu verwenden.
+    > - Wenn Sie über mehrere Sensoren verfügen, teilweise unter Windows Server 2008 oder unter Windows Server 2012 und höher, müssen Sie zusätzlich zum empfohlenen **gruppenverwalteten Dienstkonto** auch mindestens ein AD-**Standardbenutzerkonto** verwenden.
+    > - Wenn Sie benutzerdefinierte ACLs für verschiedene Organisationseinheiten (OU) in Ihrer Domäne festgelegt haben, stellen Sie sicher, dass der ausgewählte Benutzer Leseberechtigungen für diese Organisationseinheiten hat.
 
 - Wenn Sie Wireshark für einen eigenständigen Azure ATP-Sensor ausführen, müssen Sie den Azure Advanced Threat Protection-Sensordienst neu starten, nachdem Sie die Wireshark-Erfassung beendet haben. Wenn Sie den Sensordienst nicht neu starten, beendet der Sensor die Erfassung des Datenverkehrs.
 
@@ -69,9 +83,10 @@ In diesem Abschnitt werden die Informationen aufgeführt, die Sie sammeln sollte
 
 Der Zugriff auf das Azure ATP-Portal erfolgt über einen Browser. Folgende Browser und Einstellungen werden unterstützt:
 
-- Microsoft Edge
-- Internet Explorer Version 10 oder höher
-- Google Chrome 4.0 und höher
+- Ein Browser, der TLS 1.2 unterstützt, z. B.:
+  - Microsoft Edge
+  - Internet Explorer Version 11 oder höher
+  - Google Chrome 30.0 und höher
 - Mindestauflösung der Bildschirmbreite: 1.700 Pixel
 - Firewall/Proxy geöffnet: Um mit dem Azure ATP-Clouddienst zu kommunizieren, muss in Ihrer Firewall und auf Ihrem Proxyserver Port 443 für „*.atp.azure.com“ geöffnet sein.
 

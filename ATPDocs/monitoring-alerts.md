@@ -1,27 +1,27 @@
 ---
-title: Grundlegende Informationen zu Überwachungswarnungen in Azure ATP | Microsoft-Dokumentation
+title: Grundlegendes zu Azure ATP-Integritätswarnungen
 description: Beschreibt die Verwendung der Azure ATP-Protokolle zum Behandeln von Problemen.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 12/24/2019
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: d0551e91-3b21-47d5-ad9d-3362df6d47c0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 22380f67b4a3f913bd80ded72f06db9ce57e0a11
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: 9f800d1ec6003b5d69ba9ee1cc7482fb6511300d
+ms.sourcegitcommit: e281d63e3406e02325645234ad0a4880056b2351
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75907836"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77259383"
 ---
-# <a name="understanding-azure-atp-sensor-and-standalone-sensor-monitoring-alerts"></a>Grundlegende Informationen zu Überwachungswarnungen für Azure ATP-Sensor und selbstständige Azure ATP-Sensoren
+# <a name="understanding-azure-atp-sensor-and-standalone-sensor-health-alerts"></a>Grundlegende Informationen zu Integritätswarnungen für Azure ATP-Sensoren und eigenständige Sensoren
 
-Das Azure ATP-Integritätscenter informiert Sie, wenn ein Problem im Zusammenhang mit Ihrer Azure ATP-Instanzname aufgetreten ist, indem es eine Überwachungswarnung ausgibt. Dieser Artikel beschreibt alle Überwachungswarnungen für jede Komponente und listet den Grund sowie die erforderlichen Schritte zur Lösung des Problems auf.
+Das Azure ATP-Integritätscenter informiert Sie, wenn ein Problem im Zusammenhang mit Ihrer Azure ATP-Instanz aufgetreten ist, indem es eine Integritätswarnung ausgibt. In diesem Artikel werden alle Integritätswarnungen für die einzelnen Komponenten beschrieben und die Ursachen und Schritte zur Behebung des jeweiligen Problems genannt.
 
 ## <a name="all-domain-controllers-are-unreachable-by-a-sensor"></a>Keiner der Domänencontroller ist über einen Sensor erreichbar
 
@@ -34,6 +34,12 @@ Das Azure ATP-Integritätscenter informiert Sie, wenn ein Problem im Zusammenhan
 |Warnung|Beschreibung|Lösung|Schweregrad|
 |----|----|----|----|
 |All/Some of the selected capture network adapters on the Azure ATP sensor are disabled or disconnected. (Alle bzw. einige der ausgewählten Netzwerkdatenerfassungs-Adapter auf dem Azure ATP-Sensor sind deaktiviert oder nicht verbunden.)|Der Netzwerkdatenverkehr für einige bzw. alle Domänencontroller wird nicht länger vom Azure ATP-Sensor erfasst. Dadurch wird die Fähigkeit beeinträchtigt, verdächtige Aktivitäten zu ermitteln, die im Zusammenhang mit diesen Domänencontrollern stehen.|Stellen Sie sicher, dass diese ausgewählten Netzwerkdatenerfassungs-Adapter auf dem Azure ATP-Sensor aktiviert und verbunden sind.|Mittel|
+
+## <a name="directory-services-user-credentials-are-incorrect"></a>Anmeldeinformationen für Verzeichnisdienste nicht korrekt
+
+|Warnung|Beschreibung|Lösung|Schweregrad|
+|----|----|----|----|
+|Die Anmeldeinformationen für das Verzeichnisdienstbenutzerkonto sind nicht korrekt.|Dies beeinträchtigt die Fähigkeit der Sensoren, Aktivitäten durch LDAP-Abfragen an Domänencontroller zu entdecken.|– Bei AD-**Standardkonten:** Überprüfen Sie, ob der Benutzername, das Kennwort und die Domäne auf der **Verzeichnisdienste**-Konfigurationsseite korrekt sind.<br>– Bei **gruppenverwalteten Dienstkonten:** Überprüfen Sie, ob der Benutzername und die Domäne auf der **Verzeichnisdienste**-Konfigurationsseite korrekt sind. Überprüfen Sie außerdem die anderen auf der Seite [Schnellstart: Herstellen einer Verbindung mit einer Active Directory-Gesamtstruktur](install-atp-step2.md#prerequisites) beschriebenen Voraussetzungen für **gruppenverwaltete Dienstkonten**.|Mittel|
 
 ## <a name="no-traffic-received-from-domain-controller"></a>Kein Datenverkehr vom Domänencontroller empfangen
 

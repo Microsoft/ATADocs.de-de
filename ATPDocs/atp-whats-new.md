@@ -5,18 +5,18 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 01/26/2020
+ms.date: 02/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: ef493165f939bd037e12361d7eec403ad397b0fc
-ms.sourcegitcommit: 409680586343ab7fdd46da96f343305d22eb8936
+ms.openlocfilehash: 50bbf3fda8b0e91a94cd917b4bf4174ccd31e9ca
+ms.sourcegitcommit: 173b9fc26592efec2113c6ee585b04311ddfdbf1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76818225"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77421995"
 ---
 # <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Neuerungen in Azure Advanced Threat Protection (Azure ATP)
 
@@ -26,15 +26,38 @@ Ausführliche Informationen zu früheren Azure ATP-Versionen bis (und einschlie�
 
 RSS-Feed: Lassen Sie sich benachrichtigen, wenn diese Seite aktualisiert wird, indem Sie die folgende URL kopieren und in Ihren Feedreader einfügen: `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
 
+## <a name="azure-atp-release-2109"></a>Azure ATP, Release 2.109
+
+Veröffentlicht: 16. Februar 2020
+
+- **Featureerweiterung: Sensible Entitäten**  
+Ab dieser Version (2.109) werden die von Azure ATP als Zertifizierungsstelle, DHCP- oder DNS-Server identifizierten Computer nun automatisch als **Sensibel** gekennzeichnet.
+
+## <a name="azure-atp-release-2108"></a>Azure ATP, Release 2.108
+
+Veröffentlicht: 9. Februar 2020
+
+- **Neues Feature: Unterstützung für gruppenverwaltete Dienstkonten**  
+Azure ATP unterstützt jetzt die Verwendung von gruppenverwalteten Dienstkonten für verbesserte Sicherheit beim Verbinden von Azure ATP-Sensoren mit Ihren Azure Active Directory-Gesamtstrukturen (AD-Gesamtstrukturen). Weitere Informationen zur Verwendung von gruppenverwalteten Dienstkonten bei Azure ATP-Sensoren finden Sie unter [Schnellstart: Herstellen einer Verbindung mit einer Active Directory-Gesamtstruktur](install-atp-step2.md#prerequisites).
+
+- **Featureerweiterung: geplanter Bericht mit zu vielen Daten**  
+Wenn ein geplanter Bericht zu viele Daten umfasst, werden Sie nun durch den folgenden Hinweis in der E-Mail darüber informiert: There was too much data during the specified period to generate a report. (Für den angegebenen Zeitraum stehen zu viele Daten zur Verfügung, um einen Bericht zu generieren.) Dieser Hinweis ersetzt das bisherige Verhalten, bei dem dieser Umstand erst nach dem Klicken auf den Link zum Bericht ersichtlich war.
+
+- **Featureerweiterung: aktualisierte Logik der Domänencontrollerabdeckung**  
+Die Logik des Berichts zur Domänencontrollerabdeckung wurde so aktualisiert, dass nun zusätzliche Informationen aus Azure AD einbezogen werden, wodurch die Genauigkeit der Übersicht über Domänencontroller ohne Sensoren verbessert wird. Diese neue Logik sollte sich auch positiv auf die entsprechende Microsoft-Sicherheitsbewertung auswirken.
+
 ## <a name="azure-atp-release-2107"></a>Azure ATP, Release 2.107
 
-Veröffentlicht: 26. Januar 2020
+Veröffentlicht: 3. Februar 2020
 
 - **Neue überwachte Aktivität: SID-Verlaufsänderung**  
-    Die SID-Verlaufsänderung ist jetzt eine überwachte und filterbare Aktivität. Erfahren Sie mehr über [von Azure ATP überwachte Aktivitäten](monitored-activities.md) und über das [Filtern von und Suchen nach überwachten Aktivitäten](atp-activities-search.md) im Portal.
+Die SID-Verlaufsänderung ist jetzt eine überwachte und filterbare Aktivität. Erfahren Sie mehr über [von Azure ATP überwachte Aktivitäten](monitored-activities.md) und über das [Filtern von und Suchen nach überwachten Aktivitäten](atp-activities-search.md) im Portal.
 
 - **Featureerweiterung: Geschlossene oder unterdrückte Warnungen werden nicht mehr erneut geöffnet.**  
-    Nachdem eine Warnung im Azure ATP-Portal geschlossen oder unterdrückt wurde, wird eine neue Warnung geöffnet, wenn die gleiche Aktivität innerhalb eines kurzen Zeitraums noch mal erkannt wird. Zuvor wurde in diesem Fall dieselbe Warnung wieder geöffnet.
+Nachdem eine Warnung im Azure ATP-Portal geschlossen oder unterdrückt wurde, wird eine neue Warnung geöffnet, wenn die gleiche Aktivität innerhalb eines kurzen Zeitraums noch mal erkannt wird. Zuvor wurde in diesem Fall dieselbe Warnung wieder geöffnet.
+
+- **TLS 1.2 erforderlich für Zugriff auf das Portal und Sensoren**  
+TLS 1.2 ist nun erforderlich, um Azure ATP-Sensoren zu verwenden und den Clouddienst zu nutzen. Mit Browsern, die TLS 1.2 nicht unterstützen, kann nicht mehr auf das Azure ATP-Portal zugegriffen werden.
 
 ## <a name="azure-atp-release-2106"></a>Azure ATP Release 2.106
 
@@ -53,13 +76,13 @@ Veröffentlicht: 12. Januar 2020
 Veröffentlicht am 23. Dezember 2019
 
 - **Ablauf von Sensorversionen beseitigt**  
-    Azure ATP-Sensorbereitstellungs- und -Sensorinstallationspakete laufen nicht mehr nach einer Reihe von Versionen ab und werden nur einmal automatisch aktualisiert. Das Ergebnis dieses Features ist, dass bereits heruntergeladene Sensorinstallationspakete auch dann installiert werden können, wenn sie älter sind als unsere maximale Anzahl abgelaufener Versionen.
+Azure ATP-Sensorbereitstellungs- und -Sensorinstallationspakete laufen nicht mehr nach einer Reihe von Versionen ab und werden nur einmal automatisch aktualisiert. Das Ergebnis dieses Features ist, dass bereits heruntergeladene Sensorinstallationspakete auch dann installiert werden können, wenn sie älter sind als unsere maximale Anzahl abgelaufener Versionen.
 
 - **Kompromittierung bestätigen**  
-    Sie können jetzt die Kompromittierung bestimmter Office 365-Benutzer bestätigen und deren Risikostufe auf **hoch**festlegen. Dieser Workflow bietet Ihren Sicherheitsbetriebsteams eine andere Reaktionsfunktion, um die Schwellenwerte für die Zeit bis zum Auflösen von Sicherheitsvorfällen zu reduzieren. Erfahren Sie mehr über das [Bestätigen von Kompromittierungen](https://docs.microsoft.com/cloud-app-security/tutorial-ueba?branch=pr-en-us-1204#phase-4-protect-your-organization) mithilfe von Azure ATP und Cloud App Security.
+Sie können jetzt die Kompromittierung bestimmter Office 365-Benutzer bestätigen und deren Risikostufe auf **hoch**festlegen. Dieser Workflow bietet Ihren Sicherheitsbetriebsteams eine andere Reaktionsfunktion, um die Schwellenwerte für die Zeit bis zum Auflösen von Sicherheitsvorfällen zu reduzieren. Erfahren Sie mehr über das [Bestätigen von Kompromittierungen](https://docs.microsoft.com/cloud-app-security/tutorial-ueba?branch=pr-en-us-1204#phase-4-protect-your-organization) mithilfe von Azure ATP und Cloud App Security.
 
 - **Banner zu neuen Funktionen**  
-    Auf Azure ATP-Portalseiten, auf denen eine neue Funktion im Cloud App Security-Portal verfügbar ist, werden neue Banner mit Beschreibungen und Zugriffslinks zu den verfügbaren Funktionen angezeigt.
+Auf Azure ATP-Portalseiten, auf denen eine neue Funktion im Cloud App Security-Portal verfügbar ist, werden neue Banner mit Beschreibungen und Zugriffslinks zu den verfügbaren Funktionen angezeigt.
 
 - Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
@@ -92,7 +115,7 @@ Veröffentlicht: 17. November 2019
 Veröffentlicht: 3. November 2019
 
 - **Featureerweiterung:  Benachrichtigung in der Benutzeroberfläche über die Verfügbarkeit des Cloud App Security-Portals wurde dem Azure ATP-Portal hinzugefügt**  
-    Um sicherzustellen, dass alle Benutzer über die Verfügbarkeit der erweiterten Features informiert sind, die über das Cloud App Security-Portal verfügbar sind, wurde die Benachrichtigung für das Portal aus der vorhandenen Azure ATP-Warnungszeitachse hinzugefügt.
+Um sicherzustellen, dass alle Benutzer über die Verfügbarkeit der erweiterten Features informiert sind, die über das Cloud App Security-Portal verfügbar sind, wurde die Benachrichtigung für das Portal aus der vorhandenen Azure ATP-Warnungszeitachse hinzugefügt.
 
 - Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
@@ -101,7 +124,7 @@ Veröffentlicht: 3. November 2019
 Veröffentlicht: 27. Oktober 2019
 
 - **Featureerweiterung: Warnung wg. Verdacht auf einen Brute-Force-Angriff**  
-    Die Warnung bei [Verdacht auf einen Brute-Force-Angriff (SMB)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-smb-external-id-2033) wurde mithilfe zusätzlicher Analysen verbessert, und die Erkennungslogik zum Reduzieren **unbedenklicher richtig positiver (B-TP)** und **falsch positiver (FP)** Warnungsergebnisse wurde verbessert.
+Die Warnung bei [Verdacht auf einen Brute-Force-Angriff (SMB)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-smb-external-id-2033) wurde mithilfe zusätzlicher Analysen verbessert, und die Erkennungslogik zum Reduzieren **unbedenklicher richtig positiver (B-TP)** und **falsch positiver (FP)** Warnungsergebnisse wurde verbessert.
 
 - Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
