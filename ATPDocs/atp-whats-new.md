@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 50bbf3fda8b0e91a94cd917b4bf4174ccd31e9ca
-ms.sourcegitcommit: 173b9fc26592efec2113c6ee585b04311ddfdbf1
+ms.openlocfilehash: 3787274ba5fc75ffebdf670f3fdb58b7497a4485
+ms.sourcegitcommit: 55adde8edff43f3df2402149335c16d43f45e1a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77421995"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77567916"
 ---
 # <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Neuerungen in Azure Advanced Threat Protection (Azure ATP)
 
@@ -25,6 +25,13 @@ Dieser Artikel wird häufig aktualisiert, um Sie über die Neuerungen in der akt
 Ausführliche Informationen zu früheren Azure ATP-Versionen bis (und einschließlich von) Version 2.55 finden Sie in der [Azure ATP-Versionsreferenz](atp-release-reference.md).
 
 RSS-Feed: Lassen Sie sich benachrichtigen, wenn diese Seite aktualisiert wird, indem Sie die folgende URL kopieren und in Ihren Feedreader einfügen: `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
+
+## <a name="azure-atp-release-2110"></a>Azure ATP-Release 2.110
+
+Veröffentlicht: 23. Februar 2020
+
+- **Neue Sicherheitsbewertung: Nicht überwachte Domänencontroller**  
+Die Azure ATP-Sicherheitsbewertungen beinhalten nun einen Bericht zu nicht überwachten Domänencontrollern (Server ohne Sensor), um Sie bei der Verwaltung einer umfassenden Sicherheit Ihrer Umgebung zu unterstützen. Weitere Informationen finden Sie unter [Nicht überwachte Domänencontroller](atp-cas-isp-unmonitored-domain-controller.md).
 
 ## <a name="azure-atp-release-2109"></a>Azure ATP, Release 2.109
 
@@ -245,7 +252,7 @@ Veröffentlicht: 1. Juli 2019
 Azure ATP-Instanzen werden jetzt im Azure UK-Rechenzentrum unterstützt. Weitere Informationen zum Erstellen von Azure ATP-Instanzen und den entsprechenden Rechenzentrumsstandorten finden Sie unter [Step 1 of Azure ATP installation (Azure ATP-Installation – Schritt 1)](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step10).
 
 - **Featureerweiterung: Neuer Name und neue Features für die Warnungen bei verdächtigen Hinzufügungen zu sensiblen Gruppen (externe ID 2024)**  
-Die Warnung **Suspicious additions to sensitive groups (Verdächtige Hinzufügungen zu sensiblen Gruppen)** lautete ursprünglich **Suspicious modifications to sensitive groups (Verdächtige Änderungen an sensiblen Gruppen)** . Die externe ID der Warnung (ID 2024) hat sich nicht geändert. Durch die beschreibende Namensänderung wird der Zweck der Warnung bei Ergänzungen zu Ihren **sensiblen** Gruppen genauer wiedergespiegelt. Die verbesserte Warnung enthält auch neue Beweise und verbesserte Beschreibungen. Weitere Informationen finden Sie unter [Suspicious additions to sensitive groups (Verdächtige Hinzufügungen zu sensiblen Gruppen)](https://docs.microsoft.com/azure-advanced-threat-protection/atp-domain-dominance-alerts#suspicious-additions-to-sensitive-groups-external-id-2024).  
+Die Warnung **Suspicious additions to sensitive groups (Verdächtige Hinzufügungen zu sensiblen Gruppen)** lautete ursprünglich **Suspicious modifications to sensitive groups (Verdächtige Änderungen an sensiblen Gruppen)**. Die externe ID der Warnung (ID 2024) hat sich nicht geändert. Durch die beschreibende Namensänderung wird der Zweck der Warnung bei Ergänzungen zu Ihren **sensiblen** Gruppen genauer wiedergespiegelt. Die verbesserte Warnung enthält auch neue Beweise und verbesserte Beschreibungen. Weitere Informationen finden Sie unter [Suspicious additions to sensitive groups (Verdächtige Hinzufügungen zu sensiblen Gruppen)](https://docs.microsoft.com/azure-advanced-threat-protection/atp-domain-dominance-alerts#suspicious-additions-to-sensitive-groups-external-id-2024).  
 
 - **Neues Dokumentationsfeature: Anleitung zum Verschieben von Advanced Threat Analytics zu Azure ATP**  
 In diesem neuen Artikel finden Sie Informationen zu Voraussetzungen, Tipps zur Planung sowie Konfigurations- und Überprüfungsschritte für das Verschieben von ATA zum Azure ATP-Dienst. Weitere Informationen finden Sie unter [Verschieben von ATA zu Azure ATP](https://docs.microsoft.com/azure-advanced-threat-protection/ata-atp-move-overview).
@@ -437,8 +444,8 @@ Veröffentlichung: 24. Februar 2019
 
     Lightweight Directory Access Protocol (LDAP) ist eine der sowohl für zulässige als auch böswillige Zwecke am häufigsten verwendeten Methoden zum Abfragen von Active Directory. LDAP-fokussierte Sicherheitsprinzipalreconnaissance wird häufig als erste Phase eines Kerberoasting-Angriffs verwendet. Mit Kerberoasting-Angriffen wird eine Zielliste von Sicherheitsprinzipalnamen (Security Principal Names, SPNs) abgerufen, für die Angreifer dann versuchen, Ticket Granting Server-Tickets (TGS) zu erhalten.
 
-- **Featureerweiterung: Reconnaissance über Kontoauflistung (NTLM)**  
-Verbesserte **Reconnaissance über Kontoauflistung (NTLM)** -Warnung, die zusätzliche Analysen und verbesserte Erkennungslogik zum Reduzieren von **B-TP**- und **FP**-Warnungsergebnissen verwendet.
+- **Featureerweiterung: Reconnaissance über Kontoauflistung (NTLM) **  
+Verbesserte **Reconnaissance über Kontoauflistung (NTLM)**-Warnung, die zusätzliche Analysen und verbesserte Erkennungslogik zum Reduzieren von **B-TP**- und **FP**-Warnungsergebnissen verwendet.
 
 - **Featureerweiterung: „Reconnaissance über Netzwerkzuordnung“-Warnung (DNS)**  
 Neue Typen von Erkennungen wurden „Reconnaissance über Netzwerkzuordnung“-Warnungen (DNS) hinzugefügt. Außer verdächtigen AXFR-Anfragen erkennt Azure ATP jetzt verdächtige Typen von Anforderungen von Nicht-DNS-Servern, die eine übermäßige Anzahl von Anforderungen verwenden.
@@ -536,7 +543,8 @@ Veröffentlicht: 13. Januar 2019
 - **Neue Sicherheitswarnung: Data exfiltration over SMB (Datenexfiltration über SMB) (Vorschauversion)**  
 Die Azure ATP-Sicherheitswarnung [Data exfiltration over SMB](atp-exfiltration-alerts.md) (Datenexfiltration über SMB) ist nun in der öffentlichen Vorschauversion enthalten. Angreifer mit Domänenadministratorrechten können das KRBTGT-Konto beeinträchtigen. Angreifer können das KRBTGT-Konto verwenden, um ein Kerberos Ticket Granting Ticket (TGT) zu erstellen, das die Autorisierung für jede beliebige Ressource erlaubt.
 
-- **Featureerweiterung: Sicherheitswarnung bei versuchter Remotecodeausführung** Eine neue Warnungsbeschreibung und zusätzliche Beweise wurden hinzugefügt, damit die Warnung einfacher zu verstehen ist und um bessere Untersuchungsworkflows zu ermöglichen.
+- **Featureerweiterung: Remote code execution attempt (Versuchte Remotecodeausführung)** Sicherheitswarnung  
+Eine neue Warnungsbeschreibung und ein zusätzlicher Beweis sind hinzugefügt worden, damit die Warnung einfacher zu verstehen ist, und um bessere Untersuchungsworkflows zu bieten.
 
 - **Featureerweiterung: DNS query logical activities (Logische Aktivitäten zur DNS-Abfrage)**  
 Weitere Abfragetypen sind den [von Azure ATP überwachten Aktivitäten](monitored-activities.md) hinzugefügt worden. Darunter die folgenden: **TXT**, **MX**, **NS**, **SRV**, **ANY**, **DNSKEY**.
