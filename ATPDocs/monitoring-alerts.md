@@ -5,21 +5,21 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 02/13/2020
+ms.date: 02/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: d0551e91-3b21-47d5-ad9d-3362df6d47c0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9f800d1ec6003b5d69ba9ee1cc7482fb6511300d
-ms.sourcegitcommit: e281d63e3406e02325645234ad0a4880056b2351
+ms.openlocfilehash: 48dad2ec51850e67a69c5dec4dfb14abec5c8237
+ms.sourcegitcommit: 4381148c0487b473e23fe9b425b133c42acde881
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77259383"
+ms.lasthandoff: 03/01/2020
+ms.locfileid: "78208069"
 ---
-# <a name="understanding-azure-atp-sensor-and-standalone-sensor-health-alerts"></a>Grundlegende Informationen zu Integritätswarnungen für Azure ATP-Sensoren und eigenständige Sensoren
+# <a name="understanding-azure-atp-sensor-health-alerts"></a>Grundlegendes zu Integritätswarnungen für Azure ATP-Sensoren
 
 Das Azure ATP-Integritätscenter informiert Sie, wenn ein Problem im Zusammenhang mit Ihrer Azure ATP-Instanz aufgetreten ist, indem es eine Integritätswarnung ausgibt. In diesem Artikel werden alle Integritätswarnungen für die einzelnen Komponenten beschrieben und die Ursachen und Schritte zur Behebung des jeweiligen Problems genannt.
 
@@ -40,6 +40,12 @@ Das Azure ATP-Integritätscenter informiert Sie, wenn ein Problem im Zusammenhan
 |Warnung|Beschreibung|Lösung|Schweregrad|
 |----|----|----|----|
 |Die Anmeldeinformationen für das Verzeichnisdienstbenutzerkonto sind nicht korrekt.|Dies beeinträchtigt die Fähigkeit der Sensoren, Aktivitäten durch LDAP-Abfragen an Domänencontroller zu entdecken.|– Bei AD-**Standardkonten:** Überprüfen Sie, ob der Benutzername, das Kennwort und die Domäne auf der **Verzeichnisdienste**-Konfigurationsseite korrekt sind.<br>– Bei **gruppenverwalteten Dienstkonten:** Überprüfen Sie, ob der Benutzername und die Domäne auf der **Verzeichnisdienste**-Konfigurationsseite korrekt sind. Überprüfen Sie außerdem die anderen auf der Seite [Schnellstart: Herstellen einer Verbindung mit einer Active Directory-Gesamtstruktur](install-atp-step2.md#prerequisites) beschriebenen Voraussetzungen für **gruppenverwaltete Dienstkonten**.|Mittel|
+
+## <a name="low-success-rate-of-active-name-resolution"></a>Niedrige Erfolgsrate bei aktiver Namensauflösung
+
+|Warnung|Beschreibung|Lösung|Schweregrad|
+|----|----|----|----|
+|Die aufgelisteten Azure ATP-Sensoren können die IP-Adressen in mehr als 90 % der Fälle nicht mehr anhand der folgenden Methoden auflösen:<br />– NTLM über RPC<br />– NetBIOS<br />– Reverse-DNS|Dies wirkt sich auf die Azure ATP-Erkennungsfunktionen aus und kann zu einer erhöhten Anzahl falsch positiver Warnungen führen.|– Für NTLM über RPC: Achten Sie darauf, dass Port 135 für eingehende Kommunikation von Azure ATP-Sensoren auf allen Computern in der Umgebung geöffnet ist.<br />– Für Reverse-DNS: Achten Sie darauf, dass die Sensoren den DNS-Server erreichen können und dass Reverse-Lookup-Zonen aktiviert sind.<br />– Für NetBIOS: Achten Sie darauf, dass Port 137 für eingehende Kommunikation von Azure ATP-Sensoren auf allen Computern in der Umgebung geöffnet ist.<br />Stellen Sie außerdem sicher, dass die Netzwerkkonfiguration (beispielsweise Firewalls) nicht die Kommunikation mit den relevanten Ports verhindert.|Niedrig|
 
 ## <a name="no-traffic-received-from-domain-controller"></a>Kein Datenverkehr vom Domänencontroller empfangen
 
@@ -102,11 +108,10 @@ Das Azure ATP-Integritätscenter informiert Sie, wenn ein Problem im Zusammenhan
 |The Azure ATP sensor is receiving more network traffic than it can process. (Der Azure ATP-Sensor empfängt mehr Netzwerkdatenverkehr als er verarbeiten kann.)|Ein Teil des Netzwerkdatenverkehrs wird nicht analysiert, was die Fähigkeit zum Erkennen verdächtiger Aktivitäten beeinflussen kann. Diese stammen von Domänencontrollern, die von diesem Azure ATP-Sensor überwacht werden.|Erwägen Sie es, je nach Bedarf, [zusätzliche Prozessoren und Arbeitsspeicher hinzuzufügen](atp-capacity-planning.md). Wenn es sich um einen eigenständigen Azure ATP-Sensor handelt, reduzieren Sie die Anzahl der überwachten Domänencontroller.<br></br>Dies kann auch vorkommen, wenn Sie Domänencontroller auf virtuellen VMware-Computer verwenden. Um zu vermeiden, dass diese Warnung ausgegeben wird, können Sie überprüfen, ob auf dem virtuellen Computer die folgenden Einstellungen auf „0“ oder „deaktiviert“ festgelegt sind:<br></br>- TsoEnable<br></br>- LargeSendOffload(IPv4)<br></br>- IPv4 TSO Offload<br></br>Deaktivieren Sie ebenso IPv4 Giant TSO Offload. Weitere Informationen finden Sie in der VMware-Dokumentation.|Mittel|
 
 ## <a name="windows-events-missing-from-domain-controller-audit-policy"></a>Windows-Ereignisse fehlen in der Überwachungsrichtlinie für den Domänencontroller
+
 |Warnung|Beschreibung|Lösung|Schweregrad|
 |----|----|----|----|
 | (Windows events missing from domain controller audit policy) Windows-Ereignisse fehlen in der Überwachungsrichtlinie für den Domänencontroller|Damit die richtigen Ereignisse überprüft und im Windows-Ereignisprotokoll eingeschlossen werden, benötigen Ihre Domänencontroller die korrekten erweiterten Überwachungsrichtlinieneinstellungen. Falsche erweiterte Überwachungsrichtlinieneinstellungen führen dazu, dass wichtige Ereignisse nicht in Ihren Protokollen aufgeführt werden und so die Abdeckung durch Azure ATP unzureichend vorhanden ist.|Überprüfen Sie Ihre [erweiterte Überwachungsrichtlinie](atp-advanced-audit-policy.md), und ändern Sie sie nach Bedarf. | Mittel|
-
-
 
 ## <a name="see-also"></a>Weitere Informationen
 

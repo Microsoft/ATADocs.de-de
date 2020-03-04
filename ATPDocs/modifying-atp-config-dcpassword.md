@@ -5,28 +5,27 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 12/02/2018
+ms.date: 02/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: e7f065fa-1ad1-4e87-bd80-99cc695efbf5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c482ce154817418ad3843e6329a8660cc75f1b98
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: f18a2a1a4a3cd7b9e5dec5dacdce3c88ffe296a8
+ms.sourcegitcommit: c625acd3e44a3ba9619638f84264b3b271383e3a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75907870"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77590589"
 ---
 # <a name="change-azure-atp-portal-configuration---domain-connectivity-password"></a>Ändern der Konfiguration für das Azure ATP-Portal – Domänenverbindungskennwort
 
-
-
 ## <a name="change-the-domain-connectivity-password"></a>Ändern des Domänenverbindungskennworts
+
 Wenn Sie das Domänenverbindungskennwort ändern müssen, stellen Sie sicher, dass das eingegebene Kennwort korrekt ist. Wenn dies nicht der Fall ist, wird der Azure ATP-Sensordienst für alle bereitgestellten Sensoren angehalten.
 
-Wenn Sie vermuten, dass dies der Fall ist, überprüfen Sie auf dem eigenständigen Azure ATP-Sensor die Datei „Microsoft.Tri.sensor-Errors.log“ auf folgende Fehler: `The supplied credential is invalid.`
+Wenn Sie vermuten, dass dies der Fall ist, überprüfen Sie die Datei „Microsoft.Tri.sensor-Errors.log“ auf folgende Fehler: `The supplied credential is invalid.`
 
 Führen Sie die folgenden Schritte zum Aktualisieren des Domänenverbindungskennworts im Azure ATP-Portal aus:
 
@@ -35,24 +34,22 @@ Führen Sie die folgenden Schritte zum Aktualisieren des Domänenverbindungskenn
 
 1. Öffnen Sie das Azure ATP-Portal, indem Sie die Portal-URL öffnen.
 
-2. Wählen Sie auf der Symbolleiste die Einstellungsoption und dann **Konfiguration** aus.
+1. Wählen Sie auf der Symbolleiste die Einstellungsoption und dann **Konfiguration** aus.
 
-   ![Symbol der Azure ATP-Konfigurationseinstellungen](media/atp-config-menu.png)
+    ![Symbol der Azure ATP-Konfigurationseinstellungen](media/atp-config-menu.png)
 
-3. Wählen Sie **Verzeichnisdienste** aus.
+1. Wählen Sie **Verzeichnisdienste** aus.
 
-   ![Bild der Kennwortänderung für den eigenständigen Azure ATP-Sensor](media/directory-services.png)
+    ![Bild der Kennwortänderung für den eigenständigen Azure ATP-Sensor](media/directory-services.png)
 
-4. Ändern Sie das Kennwort unter **Kennwort**.
+1. Ändern Sie das Kennwort unter **Kennwort**.
 
-   > [!NOTE]
-   > Geben Sie hier einen Active Directory-Benutzer sowie ein Kennwort ein, nicht für Azure Active Directory.
+    > [!NOTE]
+    > Geben Sie hier einen Active Directory-Benutzer sowie ein Kennwort ein, nicht für Azure Active Directory.
 
-5. Klicken Sie auf **Speichern**.
+1. Klicken Sie auf **Speichern**.
 
-6. Nachdem Sie das Kennwort geändert haben, überprüfen Sie manuell, ob der eigenständige Azure ATP-Sensordienst auf den eigenständigen Azure ATP-Sensorservern ausgeführt wird.
-
-7. Wechseln Sie im Azure ATP-Portal unter **Konfigurationen** zur Seite **Sensor**, und prüfen Sie den Status des Sensors.
+1. Wechseln Sie im Azure ATP-Portal unter **Konfigurationen** zur Seite **Sensor**, und prüfen Sie den Status des Sensors.
 
 ## <a name="see-also"></a>Weitere Informationen
 

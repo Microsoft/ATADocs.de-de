@@ -5,86 +5,87 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 11/29/2018
+ms.date: 02/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 3547519f-8d9c-40a9-8f0e-c7ba21081203
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9ff768c4a6d52f37ee7a134bb079bc6ec51ee552
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: 09b1f056ef40b663b55bf97e982a562503f5bf6d
+ms.sourcegitcommit: c625acd3e44a3ba9619638f84264b3b271383e3a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75906984"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77590691"
 ---
 # <a name="configuring-windows-event-forwarding"></a>Konfigurieren der Windows-Ereignisweiterleitung
 
 > [!NOTE]
 > Der Azure ATP-Sensor kann jetzt automatisch Ereignisse lokal lesen, ohne die Ereignisweiterleitung zu konfigurieren.
 
-
-Um die Erkennungsfunktionalität zu verbessern, benötigt Azure ATP die folgenden Windows-Ereignisse: 4776, 4732, 4733, 4728, 4729, 4756, 4757 und 7045. Diese können entweder automatisch vom Azure ATP-Sensor gelesen oder, falls dieser nicht bereitgestellt wurde, an den eigenständigen Azure ATP-Sensor weitergeleitet werden. Dazu gibt es zwei Möglichkeiten: die Konfiguration des eigenständigen Azure ATP-Sensors, sodass dieser auf SIEM-Ereignisse lauscht, oder die Konfiguration der Windows-Ereignisweiterleitung.
+Um die Erkennungsfunktionalität zu verbessern, benötigt Azure ATP die folgenden Windows-Ereignisse: 4776, 4732, 4733, 4728, 4729, 4756, 4757 und 7041. Diese können entweder automatisch vom Azure ATP-Sensor gelesen oder, falls dieser nicht bereitgestellt wurde, an den eigenständigen Azure ATP-Sensor weitergeleitet werden. Dazu gibt es zwei Möglichkeiten: die Konfiguration des eigenständigen Azure ATP-Sensors, sodass dieser auf SIEM-Ereignisse lauscht, oder die Konfiguration der Windows-Ereignisweiterleitung.
 
 > [!NOTE]
-> Überprüfen Sie, ob der Domänencontroller ordnungsgemäß konfiguriert wurde, um die erforderlichen Ereignisse zu erfassen.
+>
+> - Eigenständige Azure ATP-Sensoren unterstützen nicht alle Datenquellentypen, sodass einige Ereignisse nicht erkannt werden. Zur vollständigen Abdeckung Ihrer Umgebung empfiehlt es sich, den Azure ATP-Sensor bereitzustellen.
+> - Überprüfen Sie, ob der Domänencontroller ordnungsgemäß konfiguriert wurde, um die erforderlichen Ereignisse zu erfassen.
 
-### <a name="wef-configuration-for-azure-atp-standalone-sensors-with-port-mirroring"></a>WEF-Konfiguration mit Portspiegelung für den eigenständigen Azure ATP-Sensor
+## <a name="wef-configuration-for-azure-atp-standalone-sensors-with-port-mirroring"></a>WEF-Konfiguration mit Portspiegelung für den eigenständigen Azure ATP-Sensor
 
-Nachdem Sie die Portspiegelung von den Domänencontrollern zum eigenständigen Azure ATP-Sensor konfiguriert haben, befolgen Sie die folgenden Anweisungen, um die Windows-Ereignisweiterleitung mithilfe der quellinitiierten Konfiguration zu konfigurieren. Dies ist eine Möglichkeit, die Windows-Ereignisweiterleitung zu konfigurieren. 
+Nachdem Sie die Portspiegelung von den Domänencontrollern zum eigenständigen Azure ATP-Sensor konfiguriert haben, befolgen Sie die folgenden Anweisungen, um die Windows-Ereignisweiterleitung mithilfe der quellinitiierten Konfiguration zu konfigurieren. Dies ist eine Möglichkeit, die Windows-Ereignisweiterleitung zu konfigurieren.
 
-**Schritt 1: Fügen Sie das Netzwerkdienstkonto zur Domäne „Ereignisprotokolllesergruppe“ hinzu.** 
+**Schritt 1: Fügen Sie das Netzwerkdienstkonto zur Domäne „Ereignisprotokolllesergruppe“ hinzu.**
 
 In diesem Szenario wird davon ausgegangen, dass der eigenständige Azure ATP-Sensor Mitglied der Domäne ist.
 
-1.  Öffnen Sie „Active Directory-Benutzer und -Computer“, navigieren Sie zum Ordner **BuiltIn**, und doppelklicken Sie auf **Ereignisprotokollleser**. 
-2.  Wählen Sie **Mitglieder** aus.
-3.  Wenn **Netzwerkdienst** nicht aufgelistet ist, klicken Sie auf **Hinzufügen**, und geben Sie **Netzwerkdienst** in das Feld **Geben Sie die zu verwendenden Objektnamen ein** ein. Klicken Sie anschließend auf **Namen überprüfen**, und klicken Sie zweimal auf **OK**. 
+1. Öffnen Sie „Active Directory-Benutzer und -Computer“, navigieren Sie zum Ordner **BuiltIn**, und doppelklicken Sie auf **Ereignisprotokollleser**.
+1. Wählen Sie **Mitglieder** aus.
+1. Wenn **Netzwerkdienst** nicht aufgelistet ist, klicken Sie auf **Hinzufügen**, und geben Sie **Netzwerkdienst** in das Feld **Geben Sie die zu verwendenden Objektnamen ein** ein. Klicken Sie anschließend auf **Namen überprüfen**, und klicken Sie zweimal auf **OK**.
 
 Sie müssen die Domänencontroller neu starten, nachdem Sie den **Netzwerkdienst** der **Ereignisprotokollleser**-Gruppe hinzugefügt haben, damit die Änderungen in Kraft treten können.
 
-**Schritt 2: Erstellen Sie eine Richtlinie auf den Domänencontrollern, um die Einstellung „Ziel-Abonnement-Manager konfigurieren“ festzulegen.** 
-> [!Note] 
-> Sie können eine Gruppenrichtlinie für diese Einstellungen erstellen und die Gruppenrichtlinie auf jeden Domänencontroller anwenden, der vom eigenständigen Azure ATP-Sensor überwacht wird. Über die folgenden Schritte ändern Sie die lokale Richtlinie des Domänencontrollers.     
+**Schritt 2: Erstellen Sie eine Richtlinie auf den Domänencontrollern, um die Einstellung „Ziel-Abonnement-Manager konfigurieren“ festzulegen.**
+
+> [!Note]
+> Sie können eine Gruppenrichtlinie für diese Einstellungen erstellen und die Gruppenrichtlinie auf jeden Domänencontroller anwenden, der vom eigenständigen Azure ATP-Sensor überwacht wird. Über die folgenden Schritte ändern Sie die lokale Richtlinie des Domänencontrollers.
 
 1. Führen Sie den folgenden Befehl auf jedem Domänencontroller aus: *winrm quickconfig*
-2. Geben Sie an einer Eingabeaufforderung *gpedit.msc* ein.
-3. Erweitern Sie **Computerkonfiguration > Administrative Vorlagen > Windows-Komponenten > Ereignisweiterleitung**.
+1. Geben Sie an einer Eingabeaufforderung *gpedit.msc* ein.
+1. Erweitern Sie **Computerkonfiguration > Administrative Vorlagen > Windows-Komponenten > Ereignisweiterleitung**.
 
    ![Local policy group editor image](media/wef%201%20local%20group%20policy%20editor.png)
 
-4. Doppelklicken Sie auf **Ziel-Abonnement-Manager konfigurieren**.
-   
-   1.  Wählen Sie **Aktiviert** aus.
-   2.  Klicken Sie unter **Optionen** auf **Anzeigen**.
-   3.  Geben Sie unter **SubscriptionManagers** folgenden Wert ein, und klicken Sie auf **OK**: Server= http\://\<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10` (z. B.: Server=http\://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
-    
-   ![Configure target subscription image](media/wef%202%20config%20target%20sub%20manager.png)
-    
-5. Klicken Sie auf **OK**.
-6. Geben Sie von einer Eingabeaufforderung mit erhöhten Rechten aus *gpupdate /force* ein. 
+1. Doppelklicken Sie auf **Ziel-Abonnement-Manager konfigurieren**.
 
-**Schritt 3: Führen Sie die folgenden Schritte für den eigenständigen Azure ATP-Sensor aus** 
+    1. Wählen Sie **Aktiviert** aus.
+    1. Klicken Sie unter **Optionen** auf **Anzeigen**.
+    1. Geben Sie unter **SubscriptionManagers** folgenden Wert ein, und klicken Sie auf **OK**:  Server= http\://\<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10` (z. B.: Server=http\://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
+
+    ![Configure target subscription image](media/wef%202%20config%20target%20sub%20manager.png)
+
+1. Klicken Sie auf **OK**.
+1. Geben Sie von einer Eingabeaufforderung mit erhöhten Rechten aus *gpupdate /force* ein.
+
+**Schritt 3: Führen Sie die folgenden Schritte für den eigenständigen Azure ATP-Sensor aus**
 
 1. Öffnen Sie eine Eingabeaufforderung mit erhöhten Rechten, und geben Sie *wecutil.qc* ein.
-2. Öffnen Sie die **Ereignisanzeige**. 
-3. Klicken Sie mit der rechten Maustaste auf **Abonnements**, und wählen Sie **Abonnement erstellen** aus. 
-    
-    1. Geben Sie einen Namen und eine Beschreibung für das Abonnement ein. 
-    2. Bestätigen Sie für **Zielprotokoll**, dass **Weitergeleitete Ereignisse** aktiviert ist. Damit Azure ATP die Ereignisse lesen kann, muss das Zielprotokoll unter **Weitergeleitete Ereignisse** zu finden sein. 
-    3. Wählen Sie **Quellcomputerinitiiert** aus, und klicken Sie auf **Computergruppen auswählen** aus.
-        1. Klicken Sie auf **Domänencomputer hinzufügen**.
-        2. Geben Sie den Namen des Domänencontrollers in das Feld **Namen des auszuwählenden Objekts eingeben** ein. Klicken Sie anschließend auf **Namen überprüfen**, und klicken Sie auf **OK**. 
-        3. Klicken Sie auf **OK**.
-        ![Event Viewer image](media/wef3%20event%20viewer.png)     
-    4. Klicken Sie auf **Ereignisse auswählen**.
-        1. Klicken Sie auf **Per Protokoll** und wählen Sie **Sicherheit** aus.
-        2. Tippen Sie im Feld **Ereignis-IDs ein-/ausschließen** die Ereignisnummer ein, und klicken Sie auf **OK**. Geben Sie wie im folgenden Beispiel 4776 ein:<br/>
-        ![Query filter image](media/wef-4-query-filter.png)
-    5. Klicken Sie mit der rechten Maustaste auf das erstellte Abonnement, und wählen Sie **Laufzeitstatus** aus, um festzustellen, ob es Probleme mit dem Status gibt. 
-    6. Überprüfen Sie nach einigen Minuten, ob die festgelegten Ereignisse im eigenständigen Azure ATP-Sensor unter „Weitergeleitete Ereignisse“ angezeigt werden.
+1. Öffnen Sie die **Ereignisanzeige**.
+1. Klicken Sie mit der rechten Maustaste auf **Abonnements**, und wählen Sie **Abonnement erstellen** aus.
 
+    1. Geben Sie einen Namen und eine Beschreibung für das Abonnement ein.
+    1. Bestätigen Sie für **Zielprotokoll**, dass **Weitergeleitete Ereignisse** aktiviert ist. Damit Azure ATP die Ereignisse lesen kann, muss das Zielprotokoll unter **Weitergeleitete Ereignisse** zu finden sein.
+    1. Wählen Sie **Quellcomputerinitiiert** aus, und klicken Sie auf **Computergruppen auswählen** aus.
+        1. Klicken Sie auf **Domänencomputer hinzufügen**.
+        1. Geben Sie den Namen des Domänencontrollers in das Feld **Namen des auszuwählenden Objekts eingeben** ein. Klicken Sie anschließend auf **Namen überprüfen**, und klicken Sie auf **OK**.
+        1. Klicken Sie auf **OK**.
+        ![Event Viewer image](media/wef3%20event%20viewer.png)
+    1. Klicken Sie auf **Ereignisse auswählen**.
+        1. Klicken Sie auf **Per Protokoll** und wählen Sie **Sicherheit** aus.
+        1. Tippen Sie im Feld **Ereignis-IDs ein-/ausschließen** die Ereignisnummer ein, und klicken Sie auf **OK**. Geben Sie wie im folgenden Beispiel 4776 ein:<br/>
+        ![Query filter image](media/wef-4-query-filter.png)
+    1. Klicken Sie mit der rechten Maustaste auf das erstellte Abonnement, und wählen Sie **Laufzeitstatus** aus, um festzustellen, ob es Probleme mit dem Status gibt.
+    1. Überprüfen Sie nach einigen Minuten, ob die festgelegten Ereignisse im eigenständigen Azure ATP-Sensor unter „Weitergeleitete Ereignisse“ angezeigt werden.
 
 Weitere Informationen finden Sie in folgenden Quellen: [Einrichten von Computern zum Weiterleiten und Sammeln von Ereignissen](https://technet.microsoft.com/library/cc748890)
 
