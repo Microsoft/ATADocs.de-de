@@ -13,11 +13,11 @@ ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: 39fbd3f42cfccd60a007b8640421a8af1c178243
-ms.sourcegitcommit: 8bb80eaef3c2a1085834b98839564c5d37334f56
+ms.sourcegitcommit: c8b1e584ef42559a40afd62dac1b5ca9056c5602
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76515679"
+ms.lasthandoff: 03/08/2020
+ms.locfileid: "78926528"
 ---
 # <a name="azure-atp-security-alerts"></a>Azure ATP-Sicherheitswarnungen
 
@@ -40,7 +40,7 @@ Weitere Informationen zur Struktur und zu gängigen Komponenten der Azure ATP-Si
 
 In der folgenden Tabelle wird die Zuordnung zwischen den Warnungsnamen, den entsprechenden eindeutigen externen IDs und ihren Microsoft Cloud App Security-Warnungs-IDs aufgelistet. Für Skripts oder die Automatisierung empfiehlt Microsoft die Verwendung von externen IDs zur Warnung anstelle von Warnungsnamen, da nur externe IDs dauerhaft für Sicherheitswarnungen verwendet und nicht geändert werden.
 
-# <a name="external-idstabexternal"></a>[Externe IDs](#tab/external)
+# <a name="external-ids"></a>[Externe IDs](#tab/external)
 
 > [!div class="mx-tdBreakAll"]
 > |Neuer Sicherheitswarnungsname|Eindeutige externe ID|Schweregrad|MITRE ATT&CK Matrix™|
@@ -80,7 +80,7 @@ In der folgenden Tabelle wird die Zuordnung zwischen den Warnungsnamen, den ents
 > |[User and group membership reconnaissance (SAMR) (Reconnaissance über Benutzer und Gruppenmitgliedschaften (SAMR))](atp-reconnaissance-alerts.md#user-and-group-membership-reconnaissance-samr-external-id-2021)|2021|Mittel|Ermittlung|
 > |[Reconnaissance über Benutzer und IP-Adressen (SMB)](atp-reconnaissance-alerts.md#user-and-ip-address-reconnaissance-smb-external-id-2012)|2012|Mittel|Ermittlung|
 
-# <a name="cloud-app-security-idstabcloud-app-security"></a>[Cloud App Security-API](#tab/cloud-app-security)
+# <a name="cloud-app-security-ids"></a>[Cloud App Security-API](#tab/cloud-app-security)
 
 > [!div class="mx-tdBreakAll"]
 > |Neuer Sicherheitswarnungsname|Cloud App Security-Warnungs-ID|
