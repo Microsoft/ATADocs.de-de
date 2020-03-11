@@ -5,18 +5,18 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 02/16/2020
+ms.date: 03/01/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 3787274ba5fc75ffebdf670f3fdb58b7497a4485
-ms.sourcegitcommit: 55adde8edff43f3df2402149335c16d43f45e1a9
+ms.openlocfilehash: de73b8e121b185b01be8ad83fc7c8606c03cb2c6
+ms.sourcegitcommit: 40179a7206773a40de96caffe6c5f3fbcb4a1c27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/24/2020
-ms.locfileid: "77567916"
+ms.lasthandoff: 03/09/2020
+ms.locfileid: "78938889"
 ---
 # <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Neuerungen in Azure Advanced Threat Protection (Azure ATP)
 
@@ -25,6 +25,12 @@ Dieser Artikel wird häufig aktualisiert, um Sie über die Neuerungen in der akt
 Ausführliche Informationen zu früheren Azure ATP-Versionen bis (und einschließlich von) Version 2.55 finden Sie in der [Azure ATP-Versionsreferenz](atp-release-reference.md).
 
 RSS-Feed: Lassen Sie sich benachrichtigen, wenn diese Seite aktualisiert wird, indem Sie die folgende URL kopieren und in Ihren Feedreader einfügen: `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
+
+## <a name="azure-atp-release-2111"></a>Azure ATP-Release 2.111
+
+Veröffentlicht: 1. März 2020
+
+- Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
 ## <a name="azure-atp-release-2110"></a>Azure ATP-Release 2.110
 
@@ -168,13 +174,13 @@ Veröffentlicht: 8. September 2019
 
 Veröffentlicht: 1. September 2019
 
-- Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
+-   Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
 ## <a name="azure-atp-release-292"></a>Azure ATP Release 2.92
 
 Veröffentlicht: 25. August 2019
 
-- Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
+-   Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
 ## <a name="azure-atp-release-291"></a>Azure ATP Release 2.91
 
@@ -415,7 +421,7 @@ Veröffentlicht: 10. März 2019
 - **Featureerweiterung: Remotecodeausführung über DNS-Warnung**  
 Diese Warnung enthält nun weitere Sicherheitsupdatestatus Ihres Domänencontrollers, und Sie werden darüber informiert, wenn Updates erforderlich sind.
 
-- **Neues Dokumentationsfeature: Azure ATP-Sicherheitswarnungen mit MITRE ATT&CK Matrix™**  
+- **Neues Dokumentationsfeature: Azure ATP-Sicherheitswarnungen mit MITRE ATT&CK Matrix&trade;**  
 Zur Erläuterung und einfacheren Zuordnung der Beziehung zwischen Azure ATP-Sicherheitswarnungen und der bekannten MITRE ATT&CK Matrix haben wir die relevanten MITRE-Methoden zur Liste der Azure ATP-Sicherheitswarnungen hinzugefügt. Durch diesen zusätzlichen Verweis lässt sich die vermutete Angriffsmethode leichter verstehen, die beim Auslösen einer Azure ATP-Sicherheitswarnung möglicherweise verwendet wird. Erfahren Sie mehr über den [Leitfaden zu Azure ATP-Sicherheitswarnungen](suspicious-activity-guide.md).  
 
 - Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
