@@ -12,11 +12,11 @@ ms.assetid: 1b5b24ff-0df8-4660-b4f8-64d68cc72f65
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 0ec953c4311c12a44686cbbf4f4394492f74dd7f
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.sourcegitcommit: 05f23a0add8d24ae92176e13c2a4ae8ada1844da
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75905484"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79319153"
 ---
 # <a name="ata-capacity-planning"></a>ATA-Kapazitätsplanung
 
@@ -57,8 +57,8 @@ Für die Analyse des Benutzerverhaltens benötigt das ATA Center die Daten von m
 
 |Pakete pro Sekunde von allen Domänencontrollern|CPU (Kerne&#42;)|Arbeitsspeicher (GB)|Datenbankspeicher pro Tag (GB)|Datenbankspeicher pro Monat (GB)|IOPS&#42;&#42;|
 |---------------------------|-------------------------|-------------------|---------------------------------|-----------------------------------|-----------------------------------|
-|1,000|2|32|0.3|9|30 (100)
-|40.000|4|48|12|360|500 (750)
+|1\.000|2|32|0.3|9|30 (100)
+|40,000|4|48|12|360|500 (750)
 |200.000|8|64|60|1\.800|1\.000 (1.500)
 |400.000|12|96|120|3,600|2\.000 (2.500)
 |750,000|24|112|225|6,750|2,500 (3,000)
@@ -88,10 +88,10 @@ In einer ATA-Umgebung wird jede Kombination der ATA-Gatewaytypen unterstützt:
 
 Berücksichtigen Sie folgende Vorteile bei der Entscheidung für den Bereitstellungstyp für das Gateway:
 
-|Gatewaytyp|Vorteile|Kosten|Bereitstellungstopologie|Domänencontrollerverwendung|
+|Gatewaytyp|Vorteile|Cost|Bereitstellungstopologie|Domänencontrollerverwendung|
 |----|----|----|----|-----|
 |ATA-Gateway|Eine Out-of-Band-Bereitstellung erschwert es Angreifern, herauszufinden, ob ATA vorhanden ist.|Höher|Neben dem Domänencontroller installiert (out-of-band).|Unterstützt bis zu 50.000 Pakete pro Sekunde.|
-|ATA-Lightweight-Gateway|Erfordert keinen dedizierten Server und keine Konfiguration der Portspiegelung.|Kleinschreibung|Auf dem Domänencontroller installiert.|Unterstützt bis zu 10.000 Pakete pro Sekunde.|
+|ATA-Lightweight-Gateway|Erfordert keinen dedizierten Server und keine Konfiguration der Portspiegelung.|KLEIN|Auf dem Domänencontroller installiert.|Unterstützt bis zu 10.000 Pakete pro Sekunde.|
 
 Es folgen Beispiele für Szenarien, in denen Domänencontroller durch das ATA-Lightweight-Gateway abgedeckt werden sollten:
 
@@ -114,9 +114,9 @@ Ein ATA-Lightweight-Gateway kann die Überwachung eines Domänencontrollers basi
 
 |Pakete pro Sekunde&#42;|CPU (Kerne&#42;&#42;)|Arbeitsspeicher (GB)&#42;&#42;&#42;|
 |---------------------------|-------------------------|---------------|
-|1,000|2|6|
+|1\.000|2|6|
 |5,000|6|16|
-    |10,000|10|24|
+    |10.000|10|24|
 
 &#42;Gesamtanzahl der Pakete pro Sekunde auf dem von dem betreffenden ATA-Lightweight-Gateway überwachten Domänencontroller.
 
@@ -149,9 +149,9 @@ Berücksichtigen Sie folgende Fehler bei der Entscheidung, wie viele ATA-Gateway
 
 |Pakete pro Sekunde&#42;|CPU (Kerne&#42;&#42;)|Arbeitsspeicher (GB)|
 |---------------------------|-------------------------|---------------|
-|1,000|1|6|
+|1\.000|1|6|
 |5,000|2|10|
-|10,000|3|12|
+|10.000|3|12|
 |20.000|6|24|
 |50.000|16|48|
 

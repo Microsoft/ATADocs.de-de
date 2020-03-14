@@ -13,11 +13,11 @@ ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 3908cc6ad907111fc7f6e32fd562ce0d6298dea7
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.sourcegitcommit: 05f23a0add8d24ae92176e13c2a4ae8ada1844da
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65197124"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79319193"
 ---
 # <a name="working-with-the-ata-console"></a>Arbeiten mit der ATA-Konsole
 
@@ -76,7 +76,7 @@ Wenn eine neue verdächtige Aktivität erkannt wird, öffnet sich auf der rechte
 
 ![Abbildung der ATA-Benachrichtigungsleiste](media/notification-bar-1.7.png)
 
-### <a name="whats-new"></a>Neues
+### <a name="whats-new"></a>Neuheiten
 
 Nach der Veröffentlichung einer neuen Version von ATA wird das Fenster **Neuigkeiten** in der oberen rechten Ecke angezeigt. Darüber erhalten Sie Informationen dazu, was in der neusten Version hinzugefügt wurde. Außerdem erhalten Sie einen Link zum Download der Version.
 
@@ -110,7 +110,7 @@ Die folgende Liste von Gruppen werden von ATA als **sensibel** eingestuft. Jede 
 - Gruppenrichtlinienersteller-Besitzer 
 - Schreibgeschützter Domänencontroller 
 - Administratoren  
-- Powerusers  
+- Hauptbenutzer  
 - Konten-Operatoren  
 - Server-Operatoren   
 - Druck-Operatoren
