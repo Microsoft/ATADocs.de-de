@@ -1,5 +1,5 @@
 ---
-title: Arbeiten mit verdächtigen Aktivitäten in Advanced Threat Analytics | Microsoft-Dokumentation
+title: Arbeiten mit verdächtigen Aktivitäten in Advanced Threat Analytics
 description: Beschreibt, wie Sie von ATA identifizierte verdächtige Aktivitäten überprüfen.
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 2ee7687feac6e8b703a2e17b3b60418e96dcee71
-ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
+ms.openlocfilehash: 377f7243a26821f07852805ce73f8d5860023dbd
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544335"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79414402"
 ---
 # <a name="working-with-suspicious-activities"></a>Arbeiten mit verdächtigen Aktivitäten
 
@@ -58,7 +58,7 @@ So filtern Sie die Liste der verdächtigen Aktivitäten
 
 **Schweregrad von verdächtigen Aktivitäten**
 
--   **Low**
+-   **Niedrig**
 
     Weist auf verdächtige Aktivitäten hin, die zu Angriffen durch böswillige Benutzer oder Software führen können, um Zugriff auf Organisationsdaten zu erlangen.
 
@@ -96,7 +96,7 @@ Klicken Sie dafür auf die drei Punkte in der oberen rechten Ecke einer besonder
 
 
 ## <a name="related-videos"></a>Verwandte Videos
-- [Joining the security community](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community) (Der Sicherheitscommunity beitreten)
+- [Beitritt zur Sicherheits Community](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
 
 
 ## <a name="see-also"></a>Weitere Informationen:

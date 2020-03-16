@@ -1,5 +1,5 @@
 ---
-title: Verwalten von systemgenerierten Advanced Threat Analytics-Protokollen | Microsoft-Dokumentation
+title: Verwalten der vom System generierten Advanced Threat Analytics-Protokolle
 description: Beschreibt die von ATA gesammelten Daten und enthält eine schrittweise Anleitung zum Deaktivieren der Datensammlung.
 keywords: ''
 author: shsagir
@@ -11,12 +11,12 @@ ms.prod: advanced-threat-analytics
 ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ea4dcdeaedf4ba0a8b907acdc727a428a72aaa02
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: eef3aa45b9563a4fea09e5cebc0f4ece7c39d734
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75908001"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79413960"
 ---
 # <a name="manage-system-generated-logs"></a>Verwalten von systemgenerierten Protokollen
 

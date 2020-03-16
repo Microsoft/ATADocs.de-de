@@ -1,5 +1,5 @@
 ---
-title: Installieren von Advanced Threat Analytics – Schritt 4 | Microsoft-Dokumentation
+title: 'Installieren von Advanced Threat Analytics: Schritt 4'
 description: Im vierten Schritt beim Installieren von ATA installieren Sie das ATA-Gateway.
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 83234808b39c8c2e92ca4268c2ad64474f3462be
-ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
+ms.openlocfilehash: 6c36bc1778c267e01ea98a916d17370a62d905d2
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75543887"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79410628"
 ---
 # <a name="install-ata---step-4"></a>Installieren von ATA – Schritt 4
 
@@ -27,7 +27,7 @@ ms.locfileid: "75543887"
 > [« Schritt 3](install-ata-step3.md)
 > [Schritt 5 »](install-ata-step5.md)
 
-## <a name="step-4-install-the-ata-gateway"></a>Schritt 4 Installieren des ATA-Gateways
+## <a name="step-4-install-the-ata-gateway"></a>Schritt 4: Installieren des ATA-Gateways
 
 Überprüfen Sie vor der Installation des ATA-Gateways auf dem dedizierten Server, ob die Portspiegelung ordnungsgemäß konfiguriert ist und ob das ATA-Gateway Datenverkehr zu und von den Domänencontrollern anzeigen kann. Weitere Informationen finden Sie unter [Überprüfen der Portspiegelung](validate-port-mirroring.md).
 

@@ -1,5 +1,5 @@
 ---
-title: Migrationsleitfaden zur Aktualisierung auf Advanced Threat Analytics 1.9 | Microsoft-Dokumentation
+title: Migrations Handbuch zu Advanced Threat Analytics Update to 1,9
 description: Methoden zum Aktualisieren von ATA auf Version 1.9
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 2946310a-8e4e-48fc-9450-fc9647efeb22
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b970f5e8472c58fa87a078d8b8612a4dbc86e388
-ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
+ms.openlocfilehash: 69229a4c5f34a273d5c5a8854d7f209b9462b48f
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75543786"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79413195"
 ---
 # <a name="updating-ata-to-version-19"></a>Aktualisieren von ATA auf Version 1.9
 
@@ -62,7 +62,7 @@ In der Migrationsversion kann die Datei nur für die Aktualisierung von ATA 1.8 
      
      ![Partielle ATA-Migration](media/partial-migration.png)
 
-   - Klicken Sie auf **Aktualisieren**. Nachdem Sie auf „Aktualisieren“ geklickt haben, ist ATA bis zum Abschluss der Aktualisierung offline.
+   - Klicken Sie auf **Update**. Nachdem Sie auf „Aktualisieren“ geklickt haben, ist ATA bis zum Abschluss der Aktualisierung offline.
 
 3. Nachdem das Update von ATA Center erfolgreich abgeschlossen wurde, klicken Sie auf **Starten**, um das Fenster **Updates** in der ATA-Konsole für die ATA-Gateways zu öffnen.
 

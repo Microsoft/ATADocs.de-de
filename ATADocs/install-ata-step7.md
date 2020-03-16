@@ -1,5 +1,5 @@
 ---
-title: Installieren von Advanced Threat Analytics – Schritt 8 | Microsoft-Dokumentation
+title: Installieren von Advanced Threat Analytics (Schritt 8)
 description: Im letzten Schritt der Installation von ATA konfigurieren Sie den Honeytoken-Benutzer.
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ef51590c3d4e2bf07f839e4dc6a60e2f84d19a50
-ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
+ms.openlocfilehash: 367d40e57590ace725700de947f3c1fd31b9db5e
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75543043"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79411206"
 ---
 # <a name="install-ata---step-8"></a>Installieren von ATA – Schritt 8
 
@@ -27,7 +27,7 @@ ms.locfileid: "75543043"
 > [« Schritt 7](vpn-integration-install-step.md)
 > [Schritt 9 »](install-ata-step9-samr.md)
 
-## <a name="step-8-configure-ip-address-exclusions-and-honeytoken-user"></a>Schritt 8: Konfigurieren von IP-Adressausschlüssen und Honeytoken-Benutzern
+## <a name="step-8-configure-ip-address-exclusions-and-honeytoken-user"></a>Schritt 8. Konfigurieren von IP-Adressausschlüssen und Honeytoken-Benutzern
 
 ATA ermöglicht den Ausschluss bestimmter IP-Adressen oder Benutzer aus einer Reihe von Erkennungen. 
 

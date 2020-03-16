@@ -1,5 +1,5 @@
 ---
-title: Festlegen von Advanced Threat Analytics-Benachrichtigungen | Microsoft-Dokumentation
+title: Einrichten von Advanced Threat Analytics-Benachrichtigungen
 description: Beschreibt, wie ATA-Warnungen festgelegt werden, damit Sie bei verdächtigen Aktivitäten benachrichtigt werden.
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 14cb7513-5dc8-49cb-b3e0-94f469c443dd
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 7dbc98d61319c40a3d3691ace28e1300bce72b73
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 2c1ae942edbd904715b1ebb76f3b3ecd0720bc05
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65197071"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79412872"
 ---
 # <a name="set-ata-notifications"></a>Festlegen von ATA-Benachrichtigungen
 

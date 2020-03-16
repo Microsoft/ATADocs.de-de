@@ -1,5 +1,5 @@
 ---
-title: Behandeln von Problemen mit Advanced Threat Analytics mithilfe der Datenbank | Microsoft-Dokumentation
+title: Problembehandlung bei Advanced Threat Analytics mithilfe der Datenbank
 description: Beschreibt die Verwendung der ATA-Datenbank zum Behandeln von Problemen.
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 377a3c81-5c1d-486f-8942-85249aacf560
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: fd929ff7c2a11997997b2c5107e66f9e8a1d2038
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 1efc5aee15527212a6f2eb53c147fe8fa1d62ea3
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65195812"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79414215"
 ---
 # <a name="troubleshooting-ata-using-the-ata-database"></a>Behandeln von Problemen mit ATA mithilfe der ATA-Datenbank
 
@@ -35,7 +35,7 @@ Die Datenbank lässt sich standardmäßig und am einfachsten über die Mongo-She
 
 > [!div class="mx-tableFixed"]
 > 
-> |So wird es gemacht|Syntax|Anmerkungen|
+> |Vorgehensweise...|Syntax|Hinweise|
 > |-------------|----------|---------|
 > |Suchen nach Sammlungen in der Datenbank.|`show collections`|Hilfreich als End-to-End-Test, um zu überprüfen, ob Datenverkehr in die Datenbank geschrieben und das Ereignis 4776 von ATA empfangen wird.|
 > |Abrufen der Details eines Benutzers, eines Computers oder einer Gruppe (UniqueEntity), z. B. eine Benutzer-ID.|`db.UniqueEntity.find({CompleteSearchNames: "<name of entity in lower case>"})`||

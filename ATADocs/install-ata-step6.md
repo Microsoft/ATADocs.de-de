@@ -1,5 +1,5 @@
 ---
-title: Installieren von Advanced Threat Analytics – Schritt 6 | Microsoft-Dokumentation
+title: Installieren von Advanced Threat Analytics (Schritt 6)
 description: In diesem Schritt bei der ATA-Installation konfigurieren Sie Datenquellen.
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d95dc3755e5aaeadd979b9c71cbc09a9a01637b9
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: de80ecf737d387f6917dc9c8ec5035045ddc5ad6
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75907934"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79413926"
 ---
 # <a name="install-ata---step-6"></a>Installieren von ATA – Schritt 6
 
@@ -27,7 +27,7 @@ ms.locfileid: "75907934"
 > [« Schritt 5](install-ata-step5.md)
 > [Schritt 7 »](vpn-integration-install-step.md)
 
-## <a name="step-6-configure-event-collection"></a>Schritt 6 Konfigurieren der Ereignissammlung
+## <a name="step-6-configure-event-collection"></a>Schritt 6: Konfigurieren der Ereignisauflistung
 ### <a name="configure-event-collection"></a>Konfigurieren der Ereignissammlung
 
 Um die Erkennungsfunktionalität zu verbessern, benötigt ATA die folgenden Windows-Ereignisse: 4776, 4732, 4733, 4728, 4729, 4756, 4757 und 7045. Diese Windows-Ereignisse werden entweder automatisch vom ATA-Lightweight-Gateway gelesen, oder für den Fall, dass das ATA-Lightweight-Gateway nicht bereitgestellt wird, können Sie auf eine von zwei Arten an das ATA-Gateway weitergeleitet werden, entweder durch Konfigurieren des ATA-Gateways zum lauschen auf Siem-Ereignisse oder durch [Konfigurieren der Windows-Ereignis weiter](configure-event-collection.md)  
@@ -55,7 +55,7 @@ Weitere Informationen über das Konfigurieren der Weiterleitung bestimmter Ereig
 > [!NOTE]
 >Wenn Sie keinen SIEM-/Syslog-Server verwenden, können Sie Ihre Windows-Domänencontroller zum Weiterleiten von Windows-Ereignis-ID 4776 konfigurieren, damit diese von ATA gesammelt und konfiguriert wird. Windows-Ereignis-ID 4776 enthält Daten über NTLM-Authentifizierungen.
 
-#### <a name="configuring-the-ata-gateway-to-listen-for-siem-events"></a>Konfigurieren des ATA-Gateways zum Überwachen von SIEM-Ereignissen
+#### <a name="configuring-the-ata-gateway-to-listen-for-siem-events"></a>Konfigurieren des ATA-Gateways zum Abhören von SIEM-Ereignissen
 
 1.  Klicken Sie in der ATA-Konfiguration unter **Datenquellen** auf **SIEM**, aktivieren Sie **Syslog**, und klicken Sie auf **Speichern**.
 

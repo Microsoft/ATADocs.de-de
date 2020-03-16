@@ -1,5 +1,5 @@
 ---
-title: Notfallwiederherstellung für Advanced Threat Analytics | Microsoft-Dokumentation
+title: Notfall Wiederherstellung für Advanced Threat Analytics
 description: Beschreibt, wie Sie die ATA-Funktionalität nach einem Notfall schnell wiederherstellen können
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 7620e171-76d5-4e3f-8b03-871678217a3a
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 69efa57478c6534d96ae4ce1e347cddc0c46896e
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: 5bf0654f951466f6cb33e9c71c522fbf582179c9
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75907690"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79413297"
 ---
 # <a name="ata-disaster-recovery"></a>ATA-Notfallwiederherstellung
 
@@ -51,7 +51,7 @@ Dieser Artikel beschreibt, wie Sie ATA Center und Ihre ATA-Funktionalität schne
 5. Importieren Sie die gesicherte ATA Center-Konfiguration:
     1. Entfernen Sie das Systemprofildokument von ATA Center aus MongoDB: 
         1. Gehen Sie unter **C:\Programme\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**. 
-        2. Führen Sie `mongo.exe ATA` aus. 
+        2. Ausführen von `mongo.exe ATA` 
         3. Führen Sie zum Entfernen des Standardsystemprofils diesen Befehl aus: `db.SystemProfile.remove({})`
         4. Verlassen Sie die Mongo-Shell, und kehren Sie zur Eingabeaufforderung zurück, indem Sie `exit` eingeben.
     2. Führen Sie den folgenden Befehl `mongoimport.exe --db ATA --collection SystemProfile --file "<SystemProfile.json backup file>" --upsert` mithilfe der Sicherungsdatei aus Schritt 1 aus.</br>

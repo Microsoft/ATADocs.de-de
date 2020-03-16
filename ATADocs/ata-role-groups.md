@@ -1,5 +1,5 @@
 ---
-title: Advanced Threat Analytics-Rollengruppen für die Zugangsverwaltung | Microsoft-Dokumentation
+title: Advanced Threat Analytics-Rollen Gruppen für die Zugriffs Verwaltung
 description: Führt Sie durch die Arbeit mit ATA-Rollengruppen.
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3f4a3bed481fcd9ca789057f0b45fc25a30d01ad
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 050260b65b14ca425f536fdfc0c936c0fce885df
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65196223"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79412294"
 ---
 # <a name="ata-role-groups"></a>ATA-Rollengruppen
 
@@ -35,7 +35,7 @@ ATA führt drei Typen von Rollengruppen ein: ATA-Administratoren, ATA-Benutzer u
 
 |Aktivität |Microsoft Advanced Threat Analytics-Administratoren|Microsoft Advanced Threat Analytics-Benutzer|Microsoft Advanced Threat Analytics-Viewer|
 |----|----|----|----|
-|Anmeldung|Verfügbar|Verfügbar|Verfügbar|
+|Anmelden|Verfügbar|Verfügbar|Verfügbar|
 |Bereitstellen von Eingaben für verdächtige Aktivitäten|Verfügbar|Verfügbar|Nicht verfügbar|
 |Ändern des Status von verdächtigen Aktivitäten|Verfügbar|Verfügbar|Nicht verfügbar|
 |Freigeben/Exportieren von verdächtiger Aktivität über E-Mail/Abruflink|Verfügbar|Verfügbar|Nicht verfügbar|

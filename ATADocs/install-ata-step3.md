@@ -1,5 +1,5 @@
 ---
-title: Installieren von Advanced Threat Analytics – Schritt 3 | Microsoft-Dokumentation
+title: Installieren von Advanced Threat Analytics (Schritt 3)
 description: Im dritten Schritt beim Installieren von ATA laden Sie das ATA-Gateway-Setuppaket herunter.
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 7fb024e6-297a-4ad9-b962-481bb75a0ba3
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 5d9ebf49493ec474ec1093aef66786d38db0cd57
-ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
+ms.openlocfilehash: eebbac33dbc339ec3558ab7458197cf8bdf92b3a
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75543864"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79410496"
 ---
 # <a name="install-ata---step-3"></a>Installieren von ATA – Schritt 3
 
@@ -27,7 +27,7 @@ ms.locfileid: "75543864"
 > [« Schritt 2](install-ata-step2.md)
 > [Schritt 4 »](install-ata-step4.md)
 
-## <a name="step-3-download-the-ata-gateway-setup-package"></a>Schritt 3 Herunterladen des ATA-Gateway-Setuppakets
+## <a name="step-3-download-the-ata-gateway-setup-package"></a>Schritt 3: Herunterladen des ATA-Gateway-Setuppakets
 
 Nach dem Konfigurieren der Domänenverbindungseinstellungen können Sie das ATA-Gateway-Setuppaket herunterladen. Das ATA-Gateway kann auf einem dedizierten Server oder einem Domänencontroller installiert werden. Wenn Sie es auf einem Domänencontroller installieren, wird es als ATA-Lightweight-Gateway installiert. Weitere Informationen zum ATA-Lightweight-Gateway finden Sie unter [ATA-Architektur](ata-architecture.md). 
 

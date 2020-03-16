@@ -1,5 +1,5 @@
 ---
-title: Markieren von sensiblen Konten mit ATA | Microsoft-Dokumentation
+title: Kennzeichnen von sensiblen Konten mit ATA
 description: Informationen zum Markieren von sensiblen Konten mit Advanced Threat Analytics (ATA)
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 40a1c5c4-b8d6-477c-8ae5-562b37661624
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 39ad944d4517cbfe73cc7ac95f0cf7ceb6a3f213
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 4897bee445099b21dabac7ffbbbf3e607254b237
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65196048"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79414164"
 ---
 # <a name="tag-sensitive-accounts"></a>Kennzeichnen von sensiblen Konten
 
@@ -46,10 +46,10 @@ Sie können Gruppen oder Konten manuell als sensibel markieren, um den Erkennung
 Die Gruppen in der folgenden Liste werden von ATA als „Sensibel“ eingestuft. Jede Entität, die Mitglied dieser Gruppen ist, wird als sensibel angesehen:
 
 -   Administratoren
--   Powerusers
+-   Hauptbenutzer
 -   Konten-Operatoren
 -   Server-Operatoren
--   Druck-Operatoren
+-   Druckoperatoren
 -   Sicherungsoperatoren
 -   Replikatoren
 -   Remotedesktopbenutzer 
@@ -63,5 +63,5 @@ Die Gruppen in der folgenden Liste werden von ATA als „Sensibel“ eingestuft.
 -   Schema-Admins 
 -   Organisations-Admins
      
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

@@ -1,5 +1,5 @@
 ---
-title: Migrationshandbuch zur Aktualisierung auf Advanced Threat Analytics 1.5 | Microsoft-Dokumentation
+title: Migrations Handbuch zu Advanced Threat Analytics Update to 1,5
 description: Prozeduren zum Aktualisieren von ATA auf Version 1.5
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d71cfd283d89f6b1d1413f4d9832fb4302504622
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: a008a345eb2c3a214f0f4f2352328ad60472e3ec
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65196171"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79412719"
 ---
 # <a name="ata-update-to-15-migration-guide"></a>Migrationshandbuch zur Aktualisierung auf ATA 1.5
 Das Update auf ATA 1.5 bietet Verbesserungen in folgenden Bereichen:
@@ -80,7 +80,7 @@ So aktualisieren Sie auf ATA, Version 1.5:
 
         -   Wenn Sie die **vollständige** Migration ausführen, ist gemäß den diesbezüglichen Berechnungen auf der Upgradeseite zusätzlicher Speicherplatz erforderlich, und die Migration kann je nach Netzwerkdatenverkehr länger dauern. Bei der vollständigen Migration werden alle zuvor gesammelten Daten und Verhaltensprofile beibehalten, sodass kein zusätzlicher Zeitaufwand durch das Neulernen von Verhaltensprofilen durch ATA entsteht, und Verhaltensanomalien können direkt nach der Aktualisierung erkannt werden.
 
-3.  Klicken Sie auf **Aktualisieren**. Nachdem Sie auf „Aktualisieren“ geklickt haben, ist ATA bis zum Abschluss der Aktualisierung offline.
+3.  Klicken Sie auf **Update**. Nachdem Sie auf „Aktualisieren“ geklickt haben, ist ATA bis zum Abschluss der Aktualisierung offline.
 
 4.  Nach der Aktualisierung von ATA Center melden die ATA-Gateways, dass sie veraltet sind.
 
@@ -89,7 +89,7 @@ So aktualisieren Sie auf ATA, Version 1.5:
 > [!IMPORTANT]
 > - Aktualisieren Sie alle ATA-Gateways, damit ATA ordnungsgemäß funktioniert.
 
-### <a name="step-2-download-the-ata-gateway-setup-package"></a>Schritt 2 Herunterladen des ATA-Gateway-Setuppakets
+### <a name="step-2-download-the-ata-gateway-setup-package"></a>Schritt 2: Herunterladen des ATA-Gateway-Setuppakets
 Nach dem Konfigurieren der Domänenverbindungseinstellungen können Sie das ATA-Gateway-Setuppaket herunterladen.
 
 So laden Sie das ATA-Gateway-Paket herunter

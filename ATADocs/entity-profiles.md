@@ -1,5 +1,5 @@
 ---
-title: Arbeiten mit Entitätenprofilen in der Advanced Threat Analytics-Konsole | Microsoft-Dokumentation
+title: Arbeiten mit Entitäts Profilen in der Advanced Threat Analytics-Konsole
 description: Informationen zum Untersuchen von Entitäten über die Anzeige „Benutzerprofile“ in der ATA-Konsole
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 581a3257-32dc-453f-b84e-b9f99186f5d3
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1f8f2c507ea45ddb422868f8b86a973c8454509e
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: de4916e94593dd823c7cf754874c7d5c3eed7135
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65195854"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79412345"
 ---
 # <a name="investigating-entity-profiles"></a>Untersuchen von Entitätsprofilen
 
@@ -49,11 +49,11 @@ Im oberen Bereich können Sie Kacheln für die Zusammenfassung anzeigen, in dene
 
 Für Computer wird Folgendes angezeigt:
 - Die Anzahl der offenen verdächtigen Aktivitäten für den Computer
-- Die Anzahl der auf dem Computer angemeldeten Benutzer
+-  Die Anzahl der auf dem Computer angemeldeten Benutzer
 - Die Anzahl der Ressourcen, auf die von diesem Computer aus zugegriffen wurde
-- Die Anzahl der Standorte, von denen über den Computer auf das VPN-Netzwerk zugegriffen wurde
+-  Die Anzahl der Standorte, von denen über den Computer auf das VPN-Netzwerk zugegriffen wurde
 - Eine Liste der vom Computer verwendeten IP-Adressen
-
+  
   ![Computer mit Entitätsmenü](media/entity-computer.png)
 
 Wenn Sie die Schaltfläche **Filter by** (Filtern nach) oberhalb der Aktivitätszeitachse verwenden, können Sie die Aktivitäten nach Aktivitätstyp filtern. Außerdem können Sie auch einen bestimmten (störenden) Aktivitätstyp herausfiltern. Dies erweist sich für die Untersuchung als sehr nützlich, wenn Sie die Grundlagen der Funktionsweise einer Entität im Netzwerk nachvollziehen möchten. Sie können auch ein bestimmtes Datum auswählen und die Aktivitäten als „Nach Excel gefiltert“ exportieren. In der exportierten Datei ist dann eine Seite mit Änderungen der Verzeichnisdienste (Dinge, die sich in Active Directory für das Konto geändert haben) und eine separate Seite mit den Aktivitäten enthalten. 
@@ -77,3 +77,4 @@ Die Map enthält eine Liste, die Auskunft darüber gibt, wie viele Hops zwischen
 
 ## <a name="see-also"></a>Weitere Informationen:
 [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+      

@@ -1,5 +1,5 @@
 ---
-title: Installieren von Advanced Threat Analytics – Schritt 2 | Microsoft-Dokumentation
+title: Installieren von Advanced Threat Analytics (Schritt 2)
 description: Im zweiten Schritt beim Installieren von ATA konfigurieren Sie die Domänenverbindungseinstellungen auf dem ATA Center-Server.
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: e1c5ff41-d989-46cb-aa38-5a3938f03c0f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 68ad769851926eed137108ff65663666cbf4fad0
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: ff20bf7da1586090d2728015f08cf94d432df38f
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75907901"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79410458"
 ---
 # <a name="install-ata---step-2"></a>Installieren von ATA – Schritt 2
 
@@ -27,7 +27,7 @@ ms.locfileid: "75907901"
 > [« Schritt 1](install-ata-step1.md)
 > [Schritt 3 »](install-ata-step3.md)
 
-## <a name="step-2-provide-a-username-and-password-to-connect-to-your-active-directory-forest"></a>Schritt 2 Geben Sie einen Benutzernamen und ein Kennwort an, um eine Verbindung mit Ihrer Active Directory-Gesamtstruktur herzustellen
+## <a name="step-2-provide-a-username-and-password-to-connect-to-your-active-directory-forest"></a>Schritt 2: Geben Sie einen Benutzernamen und ein Kennwort an, um eine Verbindung mit Ihrer Active Directory-Gesamtstruktur herzustellen
 
 Beim ersten Öffnen der ATA-Konsole wird der folgende Bildschirm angezeigt:
 
@@ -35,7 +35,7 @@ Beim ersten Öffnen der ATA-Konsole wird der folgende Bildschirm angezeigt:
 
 1.  Geben Sie die folgenden Informationen ein, und klicken Sie anschließend auf **Speichern**.
 
-    |Feld|Kommentare|
+    |Field|Comments|
     |---------|------------|
     |**Benutzername** (erforderlich)|Geben Sie den schreibgeschützten Benutzernamen ein, z.B. **ATAuser**. **Hinweis:** Verwenden Sie **nicht** das UPN-Format für Ihren Benutzernamen.|
     |**Kennwort** (erforderlich)|Geben Sie das Kennwort für den schreibgeschützten Benutzer ein, z. B. **Pencil1**.|

@@ -1,5 +1,5 @@
 ---
-title: Festlegen der E-Mail-Benachrichtigungseinstellungen in Advanced Threat Analytics | Microsoft-Dokumentation
+title: Festlegen von e-Mail-Benachrichtigungen in Advanced Threat Analytics
 description: Beschreibt, wie ATA für den Versand von Benachrichtigungen (per E-Mail oder ATA-Ereignisweiterleitung) bei verdächtigen Aktivitäten konfiguriert werden kann
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: bff20bf7-8b53-49da-81e5-b818a1c3b24e
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 2f60b7450c430793c9c14139f9cf268908a5dbc4
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: a8769213bbc130299da99c852112af20ecad3267
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65195676"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79412209"
 ---
 # <a name="provide-ata-with-your-email-server-settings"></a>Bereitstellen der Einstellungen Ihres E-Mail-Servers für ATA
 
@@ -36,12 +36,12 @@ ATA kann Benachrichtigungen senden, wenn eine verdächtige Aktivität erkannt wi
 4. Geben Sie im Bereich **Benachrichtigungen** unter **Mailserver** die folgenden Informationen ein:
 
 
-   |              Feld              |                                                                                                 Description                                                                                                  |               Value                |
+   |              Field              |                                                                                                 Beschreibung                                                                                                  |               Wert                |
    |---------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------|
-   | SMTP-Server-Endpunkt (erforderlich) |                                                            Geben Sie den vollqualifizierten Domänennamen des SMTP-Servers ein, und ändern Sie optional die Portnummer (standardmäßig 25).                                                            | Beispiele:<br />smtp.contoso.com |
+   | SMTP-Server-Endpunkt (erforderlich) |                                                            Geben Sie den vollqualifizierten Domänennamen des SMTP-Servers ein, und ändern Sie optional die Portnummer (standardmäßig 25).                                                            | Beispiel:<br />smtp.contoso.com |
    |               SSL               |                                              Schalten Sie auf SSL-Betrieb um, falls der SMTP-Server SSL erfordert. **Hinweis:** Wenn Sie SSL aktivieren, müssen Sie auch die Portnummer ändern.                                               |        Der Standardwert ist „deaktiviert“         |
-   |         Authentication          | Aktivieren Sie diese Option, falls der Proxyserver eine Authentifizierung erfordert. **Hinweis:** Wenn Authentifizierung aktiviert ist, müssen ein Benutzername und ein Kennwort für ein E-Mail-Konto eingegeben werden, das für den Aufbau einer Verbindung mit dem SMTP-Server berechtigt ist. |        Der Standardwert ist „deaktiviert“         |
-   |      Senden von (erforderlich)       |                                                                        Geben Sie die E-Mail-Adresse ein, die als Absender der E-Mail eingetragen wird.                                                                         | Beispiele:<br />ATA@contoso.com  |
+   |         Authentifizierung          | Aktivieren Sie diese Option, falls der Proxyserver eine Authentifizierung erfordert. **Hinweis:** Wenn Authentifizierung aktiviert ist, müssen ein Benutzername und ein Kennwort für ein E-Mail-Konto eingegeben werden, das für den Aufbau einer Verbindung mit dem SMTP-Server berechtigt ist. |        Der Standardwert ist „deaktiviert“         |
+   |      Senden von (erforderlich)       |                                                                        Geben Sie die E-Mail-Adresse ein, die als Absender der E-Mail eingetragen wird.                                                                         | Beispiel:<br />ATA@contoso.com  |
 
    ![Bild mit den ATA-E-Mail-Servereinstellungen](media/ata-email-server.png)
 
@@ -68,7 +68,7 @@ ATA kann Sie durch Senden der Benachrichtigung an den Syslog-Server benachrichti
 
 5. Wählen Sie im Bereich „Benachrichtigungen“ **Syslog-Server** aus, und geben Sie die folgende Informationen ein:
 
-   |Feld|Description|
+   |Field|Beschreibung|
    |---------|---------------|
    |Syslog-Server-Endpunkt|Geben Sie den vollqualifizierten Domänennamen des Syslog-Servers ein, und ändern Sie optional die Portnummer (standardmäßig 514).|
    |Transport|Kann UDP, TCP oder TLS (sicheres Syslog) sein|

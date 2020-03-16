@@ -1,5 +1,5 @@
 ---
-title: Installieren von Advanced Threat Analytics – Schritt 5 | Microsoft-Dokumentation
+title: 'Installieren von Advanced Threat Analytics: Schritt 5'
 description: Im fünften Schritt beim Installieren von ATA konfigurieren Sie die Einstellungen für das ATA-Gateway.
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0be6430a82752f51ed2660bb4053bb396b90e8b5
-ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
+ms.openlocfilehash: 2b784d34e505e39b9333bb0642de8a7bd061f6a1
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544035"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79413943"
 ---
 # <a name="install-ata---step-5"></a>Installieren von ATA – Schritt 5
 

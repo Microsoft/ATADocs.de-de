@@ -1,5 +1,5 @@
 ---
-title: Migrationsleitfaden zur Aktualisierung auf Advanced Threat Analytics 1.9.1 | Microsoft-Dokumentation
+title: Advanced Threat Analytics-Update für 1.9.1 Migration Guide
 description: Verfahren zum Aktualisieren von ATA auf Version 1.9.1
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 2946310a-8e4e-48fc-9450-fc9647efeb22
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 86566cbb893fc92f87fbd085e5087714d647f646
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: fdaf1e8e8a96e0f96098235d818f738528a7ab0e
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75907260"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79412311"
 ---
 # <a name="ata-version-191"></a>ATA Version 1.9.1
 
@@ -49,17 +49,17 @@ Dieses Update ist über Microsoft Update verfügbar. Weitere Informationen zur V
 ### <a name="manual-download"></a>Manueller Download
 Um das eigenständige Paket für dieses Update zu erhalten, besuchen Sie die Microsoft Download Center-Website: [Laden Sie das ATA 1,9-Paket jetzt herunter](https://www.microsoft.com/en-us/download/details.aspx?id=56725).
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>Erforderliche Komponenten
 Um dieses Update zu installieren, muss ATA Version 1.9 (1.9.7312), Update 1 für ATA Version 1.8 (1.8.6765) oder ATA Version 1.8 (1.8.6645) installiert sein.
 
-### <a name="restart-requirement"></a>Neustartanforderungen
+### <a name="restart-requirement"></a>Neustart Anforderung
 Nach dem Anwenden dieses Updates muss Ihr Computer möglicherweise neu gestartet werden.
 
 ### <a name="update-replacement-information"></a>Informationen zur Ersetzung durch dieses Update
 Dieses Update ersetzt ATA Version 1.9 (1.9.7312).
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [ATA-Versionen](ata-versions.md)

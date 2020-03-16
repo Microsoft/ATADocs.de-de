@@ -1,5 +1,5 @@
 ---
-title: Welche Bedrohungen werden von Advanced Threat Analytics erkannt? | Microsoft-Dokumentation
+title: Welche Bedrohungen werden von Advanced Threat Analytics erkannt?
 description: Listet die Bedrohungen auf, die Advanced Threat Analytics erkennt
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f656ab40b55ab0abb226cac9f3a6818e5cadee89
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 4529401696dd07dffb04871c4da4214c3a2aa3c5
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65196510"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79412532"
 ---
 # <a name="what-threats-does-ata-look-for"></a>Nach welchen Bedrohungen sucht ATA?
 

@@ -1,5 +1,5 @@
 ---
-title: Empfohlener Upgradepfad für Advanced Threat Analytics | Microsoft-Dokumentation
+title: Empfohlener Upgradepfad für Advanced Threat Analytics
 description: Enthält Anweisungen zum Aktualisieren Ihrer Version von Advanced Threat Analytics (ATA).
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 88720401-1fb2-4353-ad39-32bc0088f0de
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 591394f08412737528d05d6984560b792072f9ae
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: 6225e2482a6b5caf109660a3ccb71e3fd52423f4
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75908137"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79414317"
 ---
 # <a name="recommended-upgrade-path-for-ata"></a>Empfohlener Upgradepfad für ATA
 
@@ -28,16 +28,16 @@ Dieser Artikel enthält Informationen über die verfügbaren Versionen von Advan
 
 ## <a name="ata-versions"></a>ATA-Versionen
 
-|-Version|Build #|
+|Version|Build #|
 |----|----|
-|1.6|1.6.4103|
+|1,6|1.6.4103|
 |1.6 Update 1|1.6.4317|
-|1.7|1.7.5402| 
+|1,7|1.7.5402| 
 |1.7 Update 1|1.7.5647|
 |1.7 Update 2|1.7.5757|
 |1,8|1.8.6645|
 |1.8 Update 1|1.8.6765|
-|1.9|1.9.7312|
+|1,9|1.9.7312|
 |1.9 Update 1|1.9.7412|
 |1.9 Update 2|1.9.7478|
 

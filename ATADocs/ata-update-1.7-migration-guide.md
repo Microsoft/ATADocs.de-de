@@ -1,5 +1,5 @@
 ---
-title: Migrationshandbuch zur Aktualisierung auf Advanced Threat Analytics 1.7 | Microsoft-Dokumentation
+title: Migrations Handbuch zu Advanced Threat Analytics Update to 1,7
 description: Prozeduren zum Aktualisieren von ATA auf Version 1.7
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 8eefcd45-7a4b-4074-ac5b-1ffc48e6654a
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 8ef9bda4c3b1c3922744a4b292ee135b913e9306
-ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
+ms.openlocfilehash: a317af53040b13d212364b8114fdde64be6abf10
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75543232"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79412702"
 ---
 # <a name="ata-update-to-17-migration-guide"></a>Migrationshandbuch zur Aktualisierung auf ATA 1.7
 Das Update auf ATA 1.7 bietet Verbesserungen in folgenden Bereichen:
@@ -69,7 +69,7 @@ In dieser Version wird die gleiche Installationsdatei („Microsoft ATA Center S
     
     ![ATA-Datenmigration](media/migration-data-migration17.png)
 
-    -  Klicken Sie auf **Aktualisieren**. Nachdem Sie auf „Aktualisieren“ geklickt haben, ist ATA bis zum Abschluss der Aktualisierung offline.
+    -  Klicken Sie auf **Update**. Nachdem Sie auf „Aktualisieren“ geklickt haben, ist ATA bis zum Abschluss der Aktualisierung offline.
 
 4.  Nachdem das Update von ATA Center erfolgreich abgeschlossen wurde, klicken Sie auf **Starten**, um das Fenster **Updates** in der ATA-Konsole für die ATA-Gateways zu öffnen.
     ![Update erfolgreich](media/migration-center-success17.png)

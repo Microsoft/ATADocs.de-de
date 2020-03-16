@@ -1,5 +1,5 @@
 ---
-title: Was ist Microsoft Advanced Threat Analytics (ATA)? | Microsoft Docs
+title: Was ist Microsoft Advanced Threat Analytics (ATA)?
 description: Hier wird erläutert, was Microsoft Advanced Threat Analytics (ATA) ist und welche Arten von verdächtigen Aktivitäten erkannt werden können
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: bb6af26ba5e77ab66009ae3330f36a30e9d9d880
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: b88ca23b2d01d08357b3decb1e8e91c07848f5d8
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75908306"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79410595"
 ---
 # <a name="what-is-advanced-threat-analytics"></a>Was ist Advanced Threat Analytics?
 
@@ -76,7 +76,7 @@ ATA erkennt diese verdächtigen Aktivitäten und zeigt Informationen dazu in der
 -   Nicht normale Anmeldungen
 -   Unbekannte Gefahren
 -   Kennwortfreigabe
--   Seitliche Verschiebung
+-   "Seitwärtsbewegung"
 -   Modifizierung von sensiblen Gruppen
 
 
@@ -109,7 +109,7 @@ Sie können die verdächtigen Aktivitäten dieses Typs im ATA-Dashboard anzeigen
 -   Erste Schritte bei der Bereitstellung von ATA: [Installieren von ATA](install-ata-step1.md)
 
 ## <a name="related-videos"></a>Verwandte Videos
-- [Joining the security community](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community) (Der Sicherheitscommunity beitreten)
+- [Beitritt zur Sicherheits Community](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
 - [Übersicht über die ATA-Bereitstellung](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
 
 

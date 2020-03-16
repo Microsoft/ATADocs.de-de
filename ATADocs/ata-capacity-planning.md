@@ -1,5 +1,5 @@
 ---
-title: Planen der Advanced Threat Analytics-Bereitstellung (ATA) | Microsoft-Dokumentation
+title: Planen der Advanced Threat Analytics-Bereitstellung
 description: Hilft bei der Planung Ihrer Bereitstellung und der Entscheidung, wie viele ATA-Server für Ihr Netzwerk erforderlich sind.
 keywords: ''
 author: shsagir
@@ -11,12 +11,12 @@ ms.prod: advanced-threat-analytics
 ms.assetid: 1b5b24ff-0df8-4660-b4f8-64d68cc72f65
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0ec953c4311c12a44686cbbf4f4394492f74dd7f
-ms.sourcegitcommit: 05f23a0add8d24ae92176e13c2a4ae8ada1844da
+ms.openlocfilehash: 0d05fed57a09ebca981b19d7f447a000172cbe7b
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79319153"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79411767"
 ---
 # <a name="ata-capacity-planning"></a>ATA-Kapazitätsplanung
 

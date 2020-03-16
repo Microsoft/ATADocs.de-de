@@ -1,5 +1,5 @@
 ---
-title: Untersuchen von Angriffen mit lateral Movement-Pfaden mit ATA | Microsoft-Dokumentation
+title: Untersuchen von Angriffen mit lateral Movement-Pfaden mit ATA
 description: Dieser Artikel beschreibt, wie Angriffe mit Lateral Movement-Pfaden mit Azure Advanced Threat Analytics (ATA) erkannt werden können.
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 710f01bd-c878-4406-a7b2-ce13f98736ea
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 53c81575202bbccc9eacf5bb26c5fa624fb7e667
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: 4c937a99da6bd26d58fc112eb1c154b59d8d53a1
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75908242"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79412039"
 ---
 # <a name="investigate-lateral-movement-paths-with-ata"></a>Untersuchen von Lateral Movement-Pfaden mit ATA
 
@@ -40,7 +40,7 @@ Führen Sie die folgenden Schritte aus, um zu ermitteln, welche sensiblen Konten
 
 2. Wenn keine lateral Movement-Pfade gefunden werden, ist der Bericht unter **lateral Movement-Pfade zu sensiblen Konten**ausgegraut. Wenn lateral Movement-Pfade vorhanden sind, wählen die Datumsangaben des Berichts automatisch das erste Datum aus, wenn relevante Daten vorhanden sind. 
 
-   ![-Berichte](./media/reports.png)
+   ![Berichte](./media/reports.png)
 
 3. Klicken Sie auf **Herunterladen**.
 
@@ -51,7 +51,7 @@ Führen Sie die folgenden Schritte aus, um zu ermitteln, welche sensiblen Konten
 
 Da Sie nun wissen, welche sensiblen Konten gefährdet sind, können Sie sich eingehend mit ATA beschäftigen und mehr darüber erfahren, wie man präventive Maßnahmen ergreift.
 
-1. Suchen Sie in der ATA-Konsole nach dem Lateral Movement-Badge, das dem Entitätsprofil hinzugefügt wird, wenn sich die Entität in einem Lateral Movement-Pfad befindet. ![Symbol „lateral“](./media/lateral-movement-icon.png) auf der Registerkarte ![Symbol „Pfad“](./media/paths-icon.png). Dieses Badge ist verfügbar, wenn innerhalb der letzten zwei Tage ein Lateral Movement-Pfad aufgetreten ist.
+1. Suchen Sie in der ATA-Konsole nach dem Lateral Movement-Badge, das dem Entitätsprofil hinzugefügt wird, wenn sich die Entität in einem Lateral Movement-Pfad befindet. ![Symbol „lateral“](./media/lateral-movement-icon.png) oder ![Symbol „Pfad“](./media/paths-icon.png). Dieses Badge ist verfügbar, wenn innerhalb der letzten zwei Tage ein Lateral Movement-Pfad aufgetreten ist.
 
 2. Klicken Sie auf der sich öffnenden Benutzerprofilseite auf die Registerkarte **Lateral Movement-Pfade**.
 
@@ -79,6 +79,6 @@ Da Sie nun wissen, welche sensiblen Konten gefährdet sind, können Sie sich ein
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 - [Arbeiten mit verdächtigen Aktivitäten](working-with-suspicious-activities.md)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

@@ -1,5 +1,5 @@
 ---
-title: Exportieren und Importieren der Advanced Threat Analytics-Konfiguration | Microsoft-Dokumentation
+title: Exportieren und Importieren der Advanced Threat Analytics-Konfiguration
 description: Erfahren Sie, wie Sie die ATA-Konfiguration exportieren und importieren.
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 1d27dba8-fb30-4cce-a68a-f0b1df02b977
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 522c4e197a52c6ccbd40d7ab1e8dea1764bce275
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: f9e6c68fa0adcfa44707a42f7cd798ad7d3d8345
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75905423"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79411478"
 ---
 # <a name="export-and-import-the-ata-configuration"></a>Exportieren und Importieren der ATA-Konfiguration
 
@@ -25,7 +25,7 @@ ms.locfileid: "75905423"
 
 Die Konfiguration von ATA ist in der Sammlung „SystemProfile“ in der Datenbank gespeichert.
 Diese Sammlung wird vom ATA Center-Dienst alle 4 Stunden in Dateien mit dem Namen **SystemProfile_*Zeitstempel*.json** gespeichert. Die 300 neuesten Versionen werden gespeichert.
-Diese Datei befindet sich in einem Unterordner namens " **Backup**". Im ATA-Standardinstallationsverzeichnis ist die Datei unter <em>C:\Programme\Microsoft Advanced Threat Analytics\Center\Backup\SystemProfile_</em>Zeitstempel<em>.json</em> zu finden. 
+Diese Datei befindet sich im Unterordner **Backup**. Im ATA-Standardinstallationsverzeichnis ist die Datei unter <em>C:\Programme\Microsoft Advanced Threat Analytics\Center\Backup\SystemProfile_</em>Zeitstempel<em>.json</em> zu finden. 
 
 **Hinweis**: Wenn Sie größere Änderungen an ATA vornehmen, wird empfohlen, eine Sicherung dieser Datei zu erstellen.
 

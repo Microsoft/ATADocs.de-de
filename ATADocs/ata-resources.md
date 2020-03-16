@@ -1,5 +1,5 @@
 ---
-title: Ressourcen für Advanced Threat Analytics und Roadmap für die Bereitschaft | Microsoft-Dokumentation
+title: Roadmap für Advanced Threat Analytics-Ressourcen und-Bereitschaft
 description: Stellt eine Liste von Links zu ATA-Ressourcen, Videos, ersten Schritten sowie zur Bereitstellung und zum Überblick für die Bereitschaft bereit.
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 42a1a34f-ed6b-4538-befb-452168a30e8c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e3b83699fdafd8fd34cea3a4407422e27118d9a0
-ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
+ms.openlocfilehash: 7ebf92ba3d6977dd9aad79d8e87818c5f84795b9
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75543006"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79412056"
 ---
 # <a name="ata-readiness-roadmap"></a>Überblick über die ATA-Bereitschaft 
 
@@ -83,13 +83,13 @@ Sobald ATA einsatzbereit ist, können Sie verdächtige Aktivitäten anzeigen, di
 
 
 
-## <a name="security-best-practices"></a>Bewährte Methoden für die Sicherheit
+## <a name="security-best-practices"></a>Bewährte Sicherheitsmethoden
 
 [Bewährte Methoden für ATA](https://aka.ms/atasecbestpractices): Bewährte Methoden zum Sichern von ATA.
 
 [Häufig gestellte Fragen zu ATA](ata-technical-faq.md): Dieser Artikel enthält eine Reihe häufig gestellter Fragen zu ATA sowie Hintergrundwissen und Antworten.
 
-## <a name="additional-resources"></a>Zusätzliche Ressourcen
+## <a name="additional-resources"></a>Weitere Ressourcen
 
 [Seite zu Microsoft Security Channel 9](https://channel9.msdn.com/Shows/Microsoft-Security/)
 

@@ -1,5 +1,5 @@
 ---
-title: Installieren von Advanced Threat Analytics – Schritt 7 | Microsoft-Dokumentation
+title: Installieren von Advanced Threat Analytics (Schritt 7)
 description: In diesem Schritt bei der ATA-Installation integrieren Sie Ihr VPN.
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: e0aed853-ba52-46e1-9c55-b336271a68e7
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d582d45007cc288844c26c03d90195e4b741025a
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: d8ebc54fc2c82bbe99b79f1c736f17e15629fc6a
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74153118"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79410424"
 ---
 # <a name="install-ata---step-7"></a>Installieren von ATA – Schritt 7
 
@@ -27,7 +27,7 @@ ms.locfileid: "74153118"
 > [« Schritt 5](install-ata-step5.md)
 > [Schritt 8 »](install-ata-step7.md)
 
-## <a name="step-7-integrate-vpn"></a>Schritt 7: Integrieren des VPN
+## <a name="step-7-integrate-vpn"></a>Schritt 7. Integrieren des VPN
 
 Microsoft Advanced Threat Analytics (ATA) Version 1,8 und höher können Buchhaltungsinformationen aus VPN-Lösungen erfassen. Nach der Konfiguration beinhaltet die Profilseite des Benutzers Informationen aus den VPN-Verbindungen, wie IP-Adressen und Standorte, aus denen die Verbindungen entstammen. Dadurch wird der Untersuchungsvorgang durch zusätzliche Informationen zur Benutzeraktivität ergänzt. Der Aufruf zum Auflösen einer externen IP-Adresse an einem Standort ist anonym. In diesem Aufruf wird kein persönlicher Bezeichner gesendet.
 
@@ -40,7 +40,7 @@ ATA arbeitet mit Ihrer VPN-Lösung zusammen, indem es RADIUS-Buchhaltungsereigni
 > [!IMPORTANT]
 > Ab September 2019 unterstützt der Advanced Threat Analytics-VPN-Standort Dienst, der für die Ermittlung von VPN-Speicherorten zuständig ist, jetzt exklusiv TLS 1,2. Stellen Sie sicher, dass ATA Center für die Unterstützung von TLS 1,2 konfiguriert ist, da die Versionen 1,1 und 1,0 nicht mehr unterstützt werden.   
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Stellen Sie für die Aktivierung der VPN-Integration sicher, dass die folgenden Parameter festgelegt werden:
 
@@ -76,7 +76,7 @@ So konfigurieren Sie VPN-Daten in ATA
  
    ![ATA-Konfigurationsmenü](./media/config-menu.png)
 
-2. Aktivieren Sie die **RADIUS-Kontoführung**, und geben Sie das **gemeinsame Geheimnis** ein, das Sie zuvor auf Ihrem RRAS-VPN-Server konfiguriert haben. Klicken Sie dann auf **Speichern**.
+2. Aktivieren Sie die **RADIUS-Kontoführung**, und geben Sie das **gemeinsame Geheimnis** ein, das Sie zuvor auf Ihrem RRAS-VPN-Server konfiguriert haben. Klicken Sie dann auf **Save** (Speichern).
  
 
   ![Konfigurieren des ATA-VPN](./media/vpn.png)
