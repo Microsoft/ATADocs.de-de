@@ -1,5 +1,5 @@
 ---
-title: Azure Advanced Threat Protection-Architektur | Microsoft-Dokumentation
+title: Architektur von Azure Advanced Threat Protection
 description: Beschreibt die Architektur von Azure Advance Threat Analytics (ATP)
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4100fb806bc7d13b7608b2036b15133809ed7d34
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: 0d737adb2c4d03fbeedb2277573f40d4a29b5de9
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75907715"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79413280"
 ---
 # <a name="azure-atp-architecture"></a>Azure ATP-Architektur
 
