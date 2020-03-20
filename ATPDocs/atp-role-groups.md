@@ -1,5 +1,5 @@
 ---
-title: Azure Advanced Threat Protection-Rollengruppen für die Zugriffsverwaltung | Microsoft-Dokumentation
+title: Azure Advanced Threat Protection-Rollengruppen für die Zugriffsverwaltung
 description: 'Exemplarische Vorgehensweise: Arbeit mit Azure ATP-Rollengruppen.'
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e3d80c4f69c7281680fef95a6695d30f2ae25492
-ms.sourcegitcommit: efd013d4e2b97c7d82b2d112a43d011a4a60bb0f
+ms.openlocfilehash: ea04be4c3a069822009a0602dab425123821e3e4
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77673476"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79413229"
 ---
 # <a name="azure-atp-role-groups"></a>Azure ATP-Rollengruppen
 

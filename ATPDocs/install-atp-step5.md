@@ -1,5 +1,5 @@
 ---
-title: 'Konzept: Konfigurieren der Einstellungen des Azure ATP-Sensors | Microsoft-Dokumentation'
+title: 'Konzepte: Konfigurieren der Einstellungen des Azure ATP-Sensors'
 description: Im fünften Schritt der Installation von Azure ATP konfigurieren Sie Einstellungen für Ihren eigenständigen Azure ATP-Sensor.
 author: shsagir
 ms.author: shsagir
@@ -9,12 +9,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b50dc7247e17831c3b083090787b85c228c13a77
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: ffa60672b7d649e6a78ac2afa33405328ac40b95
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75907766"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79413688"
 ---
 # <a name="configure-azure-atp-sensor-settings"></a>Konfigurieren der Einstellungen des Azure ATP-Sensors
 

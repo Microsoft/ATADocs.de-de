@@ -1,5 +1,5 @@
 ---
-title: 'Tutorialübersicht: Azure ATP-Sicherheitswarnungsumgebung | Microsoft-Dokumentation'
+title: 'Übersicht über Lab-Tutorials: Azure ATP-Sicherheitswarnungsumgebung'
 description: Diese Tutorialübersicht beschreibt die vier Teile der Azure ATP-Sicherheitswarnungsumgebung zur Simulation von Bedrohungen für die Erkennung durch Azure ATP.
 ms.service: azure-advanced-threat-protection
 ms.topic: tutorial
@@ -7,12 +7,12 @@ author: shsagir
 ms.author: shsagir
 ms.date: 02/28/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: 644b934622c20fa1be640120fe9c04ea6a89e08c
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: 5c99bda8a3cf6fae515725192e8a43a7ccbf6993
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75908494"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79414147"
 ---
 # <a name="tutorial-overview-atp-security-alert-lab"></a>Übersicht über das Tutorial: Lab für ATP-Sicherheitswarnungen
 

@@ -1,5 +1,5 @@
 ---
-title: Aktivitätsfilterung und Richtlinien für Azure Advanced Threat Protection in Microsoft Cloud App Security | Microsoft-Dokumentation
+title: Aktivitätsfilterung und Richtlinien für Azure Advanced Threat Protection in Microsoft Cloud App Security
 description: Übersicht über die Aktivitätsfilterung und Richtlinien für Azure Advanced Threat Protection in Microsoft Cloud App Security.
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 397e5a77-2bc7-454c-9fe5-649ebaab16b3
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 97d13dc5780e9cf24955644a9e0493a8434f62cd
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: bffad5454cbc1f9216333f44af9a7cfd39ce5433
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75908063"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79414470"
 ---
 # <a name="use-activity-filters-and-create-action-policies-with-azure-atp-in-microsoft-cloud-app-security"></a>Verwenden von Aktivitätsfiltern und Erstellen von Aktionsrichtlinien mit Azure ATP in Microsoft Cloud App Security 
 

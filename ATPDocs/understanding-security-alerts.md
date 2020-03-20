@@ -1,5 +1,5 @@
 ---
-title: Tutorial zu Azure ATP-Sicherheitswarnungen | Microsoft-Dokumentation
+title: Tutorial zu Azure ATP-Sicherheitswarnungen
 d|Description: This article explains how to use and understand Azure ATP security alerts.
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 671747d5-faed-4352-a871-17b58fdc6574
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: baefea19a50cec6a6d14835ac3cb8754671ec85c
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: 863211852883cc2db2192abd1dffbe87ab3d52f9
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75907496"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79414623"
 ---
 # <a name="tutorial-understanding-security-alerts"></a>Tutorial: Grundlegendes zu Sicherheitswarnungen
 

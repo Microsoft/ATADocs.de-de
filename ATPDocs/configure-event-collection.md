@@ -1,27 +1,27 @@
 ---
-title: Installieren von Azure Advanced Threat Protection | Microsoft-Dokumentation
+title: Installieren von Azure Advanced Threat Protection
 description: In diesem Schritt bei der ATP-Installation konfigurieren Sie Datenquellen.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 02/19/2020
+ms.date: 03/15/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: baa8f733496b9883e010af2eca0672920f94f48f
-ms.sourcegitcommit: c625acd3e44a3ba9619638f84264b3b271383e3a
+ms.openlocfilehash: 4e62f333ff64291cd2858b528897afc80c4f1f44
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77590674"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79411511"
 ---
 # <a name="configure-event-collection"></a>Konfigurieren der Ereignissammlung
 
-Um die Erkennungsfunktionalität zu verbessern, benötigt Azure ATP die folgenden Windows-Ereignisse: 4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045 und 8004. Diese Ereignisse können entweder automatisch vom Azure ATP-Sensor gelesen oder, falls dieser nicht bereitgestellt wurde, an den eigenständigen Azure ATP-Sensor weitergeleitet werden. Dazu gibt es zwei Möglichkeiten: die Konfiguration des eigenständigen Azure ATP-Sensors, sodass dieser auf SIEM-Ereignisse lauscht, oder die [Konfiguration der Windows-Ereignisweiterleitung](configure-event-forwarding.md).
+Um die Erkennungsfunktionalität zu verbessern, benötigt Azure ATP die folgenden Windows-Ereignisse: 4726, 4728, 4729, 4730, 4732, 4733, 4743, 4753, 4756, 4757, 4758, 4763, 4776, 7045 und 8004. Diese Ereignisse können entweder automatisch vom Azure ATP-Sensor gelesen oder, falls dieser nicht bereitgestellt wurde, an den eigenständigen Azure ATP-Sensor weitergeleitet werden. Dazu gibt es zwei Möglichkeiten: die Konfiguration des eigenständigen Azure ATP-Sensors, sodass dieser auf SIEM-Ereignisse lauscht, oder die [Konfiguration der Windows-Ereignisweiterleitung](configure-event-forwarding.md).
 
 > [!NOTE]
 >
@@ -36,9 +36,9 @@ So konfigurieren Sie die Windows-Ereignis 8004-Sammlung:
 
 1. Navigieren Sie zu: Computerkonfiguration\Richtlinien\Windows-Einstellungen\Sicherheitseinstellungen\Lokale Richtlinien\Sicherheitsoptionen
 2. Legen Sie die **Domänengruppenrichtlinie** wie folgt fest:
-   - Netzwerksicherheit: Beschränken von NTLM: Ausgehender NTLM-Datenverkehr zu Remoteservern = **Alle überwachen**
-   - Netzwerksicherheit: Beschränken von NTLM: NTLM-Authentifizierung in dieser Domäne überwachen = **Alle aktivieren**
-   - Netzwerksicherheit: Beschränken von NTLM: Eingehenden NTLM-Datenverkehr überwachen = **Überwachung für alle Konten aktivieren**
+    - Netzwerksicherheit: Beschränken von NTLM: Ausgehender NTLM-Datenverkehr zu Remoteservern = **Alle überwachen**
+    - Netzwerksicherheit: Beschränken von NTLM: NTLM-Authentifizierung in dieser Domäne überwachen = **Alle aktivieren**
+    - Netzwerksicherheit: Beschränken von NTLM: Eingehenden NTLM-Datenverkehr überwachen = **Überwachung für alle Konten aktivieren**
 
 Wenn das Windows-Ereignis 8004 von Azure ATP Sensor analysiert wird, werden Azure ATP-NTLM-Authentifizierungsaktivitäten mit den Daten erweitert, auf die auf dem Server zugegriffen wird.
 
@@ -46,17 +46,18 @@ Wenn das Windows-Ereignis 8004 von Azure ATP Sensor analysiert wird, werden Azu
 
 Eigenständige Azure ATP-Sensoren sind standardmäßig so konfiguriert, dass sie Syslog-Daten empfangen. Damit eigenständige Azure ATP-Sensoren diese Daten nutzen können, müssen Sie die Syslog-Daten an den Sensor weiterleiten.
 
-  > [!NOTE]
-  > Azure ATP lauscht nur auf IPv4, nicht auf IPv6.
+> [!NOTE]
+> Azure ATP lauscht nur auf IPv4, nicht auf IPv6.
 
 > [!IMPORTANT]
+>
 > - Es sollten nicht alle Syslog-Daten an den Azure ATP-Sensor weitergeleitet werden.
 > - Azure ATP unterstützt UDP-Datenverkehr vom SIEM-/Syslog-Server.
 
 Weitere Informationen über das Konfigurieren der Weiterleitung bestimmter Ereignisse an einen anderen Server finden Sie in der Produktdokumentation des SIEM-/Syslog-Servers.
 
 > [!NOTE]
->Wenn Sie keinen SIEM-/Syslog-Server verwenden, können Sie Ihre Windows-Domänencontroller zum Weiterleiten von allen erforderlichen Ereignissen konfigurieren, damit diese von Azure ATP gesammelt und konfiguriert wird.
+> Wenn Sie keinen SIEM-/Syslog-Server verwenden, können Sie Ihre Windows-Domänencontroller zum Weiterleiten von allen erforderlichen Ereignissen konfigurieren, damit diese von Azure ATP gesammelt und konfiguriert wird.
 
 ## <a name="configuring-the-azure-atp-sensor-to-listen-for-siem-events"></a>Konfigurieren des Azure ATP-Sensors zum Lauschen auf SIEM-Ereignisse
 
@@ -71,27 +72,16 @@ Azure ATP unterstützt SIEM-Ereignisse in den folgenden Formaten:
 - Der Syslog-Header ist optional.
 
 - Das Trennzeichen „\n“ ist zwischen allen Feldern erforderlich.
-
 - Die Felder sind der Reihenfolge nach:
-
     1. RsaSA-Konstante (muss vorhanden sein).
-
-    1. Zeitstempel des tatsächlichen Ereignisses (darauf achten, dass dies nicht der Zeitstempel der Ankunft beim SIEM oder des Sendens an ATP ist). Vorzugsweise auf die Millisekunde genau, dies ist wichtig.
-
-    1. Die Windows-Ereignis-ID
-
-    1. Der Name des Windows-Ereignisanbieters
-
-    1. Der Name des Windows-Ereignisprotokolls
-
-    1. Name des Computers, der das Ereignis empfängt (in diesem Fall der DC)
-
-    1. Name des authentifizierenden Benutzers
-
-    1. Name des Quellhostnamens
-
-    1. Ergebniscode des NTLM
-
+    2. Der Zeitstempel des tatsächlichen Ereignisses (dies darf nicht der Zeitstempel des Eingangs beim SIEM-System oder des Sendens an ATP sein). Vorzugsweise auf die Millisekunde genau, dies ist wichtig.
+    3. Die Windows-Ereignis-ID
+    4. Der Name des Windows-Ereignisanbieters
+    5. Der Name des Windows-Ereignisprotokolls
+    6. Name des Computers, der das Ereignis empfängt (in diesem Fall der DC)
+    7. Name des authentifizierenden Benutzers
+    8. Name des Quellhostnamens
+    9. Ergebniscode des NTLM
 - Die Reihenfolge ist wichtig, und es sollten keine weiteren Angaben in die Nachricht eingeschlossen werden.
 
 ### <a name="hp-arcsight"></a>HP Arcsight
@@ -101,30 +91,19 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|Der 
 - Muss der Protokolldefinition entsprechen.
 
 - Kein Syslog-Header.
-
 - Der Headerteil (der Teil, der durch einen senkrechten Strich abgetrennt ist) muss vorhanden sein (wie im Protokoll angegeben).
-
 - Die folgenden Schlüssel im Teil _Erweiterung_ müssen im Ereignis vorhanden sein:
-
-    - externalId = Windows-Ereignis-ID
-
-    - rt= Zeitstempel des tatsächlichen Ereignisses (darauf achten, dass dies nicht der Zeitstempel der Ankunft beim SIEM oder des Sendens an ATP ist). Vorzugsweise auf die Millisekunde genau, dies ist wichtig.
-
-    - cat = Name des Windows-Ereignisprotokolls
-
-    - shost = Name des Quellhostnamens
-
-    - dhost = Name des Computers, der das Ereignis empfängt (in diesem Fall der DC)
-
-    - duser = Name des authentifizierenden Benutzers
-
+  - externalId = Windows-Ereignis-ID
+  - rt = der Zeitstempel des tatsächlichen Ereignisses (dies darf nicht der Zeitstempel des Eingangs beim SIEM-System oder des Sendens an ATP sein). Vorzugsweise auf die Millisekunde genau, dies ist wichtig.
+  - cat = Name des Windows-Ereignisprotokolls
+  - shost = Name des Quellhostnamens
+  - dhost = Name des Computers, der das Ereignis empfängt (in diesem Fall der DC)
+  - duser = Name des authentifizierenden Benutzers
 - Die Reihenfolge ist für den Teil _Erweiterung_ unerheblich
 
 - Für die folgenden beiden Felder müssen ein benutzerdefinierter Schlüssel und ein keyLabel vorhanden sein:
-
-    - „EventSource“
-
-    - „Ursache oder Fehlercode“ = Ergebniscode des NTLM
+  - „EventSource“
+  - „Ursache oder Fehlercode“ = Ergebniscode des NTLM
 
 ### <a name="splunk"></a>Splunk
 
@@ -132,36 +111,26 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|Der 
 
 Es wurde versucht, die Anmeldeinformationen für ein Konto zu überprüfen.
 
-Authentifizierungspaket:              MICROSOFT_AUTHENTICATION_PACKAGE_V1_0
+Authentifizierungspaket: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0
 
 Anmeldekonto: Administrator
 
-Quellarbeitsstation:       SIEM
+Quellarbeitsstation: SIEM
 
-Fehlercode:         0x0
+Fehlercode: 0x0
 
 - Der Syslog-Header ist optional.
 
 - Zwischen allen erforderlichen Feldern befindet sich das Trennzeichen „\r\n“.
-
 - Die Felder weisen das Format „Schlüssel = Wert“ auf.
-
 - Die folgenden Schlüssel müssen vorhanden sein und einen Wert aufweisen:
-
-    - EventCode = Windows-Ereignis-ID
-
-    - Logfile = Name des Windows-Ereignisprotokolls
-
-    - SourceName = Name des Windows-Ereignisanbieters
-
-    - TimeGenerated = Zeitstempel des tatsächlichen Ereignisses (dies darf nicht der Zeitstempel der Ankunft bei der SIEM oder des Sendens an ATP sein). Als Format muss „yyyyMMddHHmmss.FFFFFF“ verwendet werden, vorzugsweise mit einer Genauigkeit im Millisekundenbereich, dies ist wichtig.
-
-    - ComputerName = Name des Quellhostnamens
-
-    - Message = ursprünglicher Ereignistext aus dem Windows-Ereignis
-
+  - EventCode = Windows-Ereignis-ID
+  - Logfile = Name des Windows-Ereignisprotokolls
+  - SourceName = Name des Windows-Ereignisanbieters
+  - TimeGenerated = der Zeitstempel des tatsächlichen Ereignisses (dies darf nicht der Zeitstempel des Eingangs beim SIEM-System oder des Sendens an ATP sein). Als Format muss „yyyyMMddHHmmss.FFFFFF“ verwendet werden, vorzugsweise mit einer Genauigkeit im Millisekundenbereich, dies ist wichtig.
+  - ComputerName = Name des Quellhostnamens
+  - Message = ursprünglicher Ereignistext aus dem Windows-Ereignis
 - Der Schlüssel „Message“ und dessen Wert müssen als letzte Elemente auftreten.
-
 - Die Reihenfolge der „Schlüssel = Wert“-Paare ist unerheblich.
 
 ### <a name="qradar"></a>QRadar
@@ -178,7 +147,7 @@ Die erforderlichen Felder sind:
 - Der vollqualifizierte Domänenname des DCs
 - Die Windows-Ereignis-ID
 
-„TimeGenerated“ ist der Zeitstempel des tatsächlichen Ereignisses (dies darf nicht der Zeitstempel der Ankunft bei der SIEM oder des Sendens an ATP sein). Als Format muss „yyyyMMddHHmmss.FFFFFF“ verwendet werden, vorzugsweise mit einer Genauigkeit im Millisekundenbereich, dies ist wichtig.
+„TimeGenerated“ ist der Zeitstempel des tatsächlichen Ereignisses (dies darf nicht der Zeitstempel des Eingangs beim SIEM-System oder des Sendens an ATP sein). Als Format muss „yyyyMMddHHmmss.FFFFFF“ verwendet werden, vorzugsweise mit einer Genauigkeit im Millisekundenbereich, dies ist wichtig.
 
 „Message“ ist der ursprüngliche Ereignistext aus dem Windows-Ereignis
 

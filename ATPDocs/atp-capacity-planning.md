@@ -1,5 +1,5 @@
 ---
-title: 'Planen der Azure Advanced Threat Protection-Bereitstellung: Schnellstart | Microsoft-Dokumentation'
+title: 'Schnellstart: Planen der Azure Advanced Threat Protection-Bereitstellung'
 description: Hilft bei der Planung Ihrer Bereitstellung und der Entscheidung, wie viele Azure ATP-Server für Ihr Netzwerk erforderlich sind.
 author: shsagir
 ms.author: shsagir
@@ -7,12 +7,12 @@ ms.date: 02/19/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.openlocfilehash: dafaeda31b59f8779958a9566fe748e8c86bb3fd
-ms.sourcegitcommit: c625acd3e44a3ba9619638f84264b3b271383e3a
+ms.openlocfilehash: e13dc696046ca095438297ad0aeb82e7f98a58d2
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77590640"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79414487"
 ---
 # <a name="quickstart-plan-capacity-for-azure-atp"></a>Schnellstart: Planen der Kapazität für Azure ATP
 
@@ -36,7 +36,7 @@ Die empfohlene und einfachste Methode zum Bestimmen der Kapazität für die Azur
 1. Suchen Sie in der Excel-Ergebnisdatei in der Azure ATP-Sensortabelle nach dem Feld **Busy Packets/sec** (Aktive Pakete/s), und notieren Sie den Wert.
 1. Gleichen Sie Ihren Wert für **Busy Packets/sec** (Aktive Pakete/s) an den Wert im Feld **PACKETS PER SECOND** (PAKETE PRO SEKUNDE) im Abschnitt [Azure ATP-Sensortabelle](#sizing) in diesem Artikel an. Verwenden Sie die Felder, um die vom Sensor verwendeten Arbeitsspeicher- und CPU-Ressourcen zu bestimmen.
 
-## <a name="sizing"></a> Dimensionierung von Azure ATP-Sensoren
+## <a name="azure-atp-sensor-sizing"></a><a name="sizing"></a> Dimensionierung von Azure ATP-Sensoren
 
 Ein Azure ATP-Sensor kann die Überwachung eines Domänencontrollers basierend auf der Menge des vom Domänencontroller erzeugten Datenverkehrs unterstützen. Die folgende Tabelle enthält Schätzungen. Die tatsächlich vom Sensor analysierte Menge ist abhängig vom Umfang des Datenverkehrs und dessen Verteilung.
 
@@ -74,7 +74,7 @@ Beachten Sie bei der Größenanpassung Folgendes:
 |VMWare|Stellen Sie sicher, dass die konfigurierte und die reservierte Arbeitsspeichermenge gleich sind, oder wählen Sie in den VM-Einstellungen die folgende Option aus: **Gesamten Gastarbeitsspeicher reservieren (alle gesperrt)** .|
 |Anderer Virtualisierungshost|Informieren Sie sich in der Dokumentation des Herstellers, wie Sie sicherstellen, dass der Arbeitsspeicher zu jedem Zeitpunkt vollständig dem virtuellen Computer zugewiesen ist. |
 
-## <a name="manual-sizing"></a> Datenverkehrsschätzung für Domänencontroller
+## <a name="domain-controller-traffic-estimation"></a><a name="manual-sizing"></a> Datenverkehrsschätzung für Domänencontroller
 
 Wenn Sie das Azure ATP-Tool zur Größenanpassung nicht verwenden können, sammeln Sie die Informationen zum Leistungsindikator für die Paketanzahl pro Sekunde manuell von allen Domänencontrollern. Sammeln Sie hierbei Daten über einen Zeitraum von 24 Stunden mit einem niedrigen Erfassungsintervall (etwa 5 Sekunden). Anschließend müssen Sie für jeden Domänencontroller den Tagesdurchschnitt und den Durchschnitt für die Zeitspanne (15 Minuten) mit der höchsten Auslastung berechnen. Die folgenden Abschnitte enthalten Anweisungen dazu, wie Sie Informationen zum Pakete/Sek.-Leistungsindikator für einen Domänencontroller sammeln.
 

@@ -1,5 +1,5 @@
 ---
-title: Überprüfung der erweiterten Überwachungsrichtlinie von Azure Advanced Threat Protection | Microsoft-Dokumentation
+title: Überprüfung der erweiterten Überwachungsrichtlinie von Azure Advanced Threat Protection
 description: Dieser Artikel bietet eine Übersicht der erweiterten Überwachungsrichtlinie von Azure ATP.
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: ab1e8dd9-a6c2-4c68-89d5-343b8ec56142
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9f22034e3e8bb3e69836290a0cb11d79577a5bde
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: a322b72aae6ead6e8fd5a08c731e3dd7c8ee7d10
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75908207"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79413892"
 ---
 # <a name="azure-atp-advanced-audit-policy-check"></a>Überprüfung der erweiterten Überwachungsrichtlinie von Azure ATP
 

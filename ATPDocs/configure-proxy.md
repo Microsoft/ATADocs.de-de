@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren Ihres Proxy oder der Firewall zum Aktivieren der Azure ATP-Kommunikation mit dem Sensor | Microsoft-Dokumentation
+title: Konfigurieren des Proxys oder der Firewall zum Aktivieren der Azure ATP-Kommunikation mit dem Sensor
 description: Beschreibt, wie Sie Ihre Firewall oder den Proxyserver so einrichten, um die Kommunikation zwischen dem Azure ATP-Clouddienst und den Azure ATP-Sensoren zuzulassen.
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 88d6c9fddc0a9e8db8d63a64618b7ab9c14a092f
-ms.sourcegitcommit: 1a0cc214568bf12041d11e037dfe56a8d9e707c2
+ms.openlocfilehash: a1e8065f5a1898301439c160c2a877cabe750928
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "76706221"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79413824"
 ---
 # <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-azure-atp-sensor"></a>Konfigurieren von Endpunktproxy- und Internetkonnektivitätseinstellungen für Ihren Azure ATP-Sensor
 

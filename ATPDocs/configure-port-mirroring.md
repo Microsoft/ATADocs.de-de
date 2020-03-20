@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren der Portspiegelung in Azure Advanced Threat Protection | Microsoft-Dokumentation
+title: Konfigurieren der Portspiegelung bei der Bereitstellung von Azure Advanced Threat Protection
 description: Beschreibt Optionen für die Portspiegelung und deren Konfiguration für Azure ATP
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 9ec7eb4c-3cad-4543-bbf0-b951d8fc8ffe
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d6c5cf1619a88e55db2968977d4fd3ee0aebc8e3
-ms.sourcegitcommit: c625acd3e44a3ba9619638f84264b3b271383e3a
+ms.openlocfilehash: 70c122d4983d4b5b32899d13ff81b81d38d65af8
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77590657"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79413841"
 ---
 # <a name="configure-port-mirroring"></a>Konfigurieren der Portspiegelung
 

@@ -1,5 +1,5 @@
 ---
-title: Von Azure ATP überwachte Domänenaktivitäten | Microsoft-Dokumentation
+title: Von Azure ATP überwachte Domänenaktivitäten
 description: Beschreibt jeden Aktivitätstyp, der von Azure Advanced Threat Protection überwacht wird.
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 37d1a032-65e7-4a89-be0b-c3f9cc2bacdb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: cce0cfab66410b1e13f20a9837b7c55472f4cb3d
-ms.sourcegitcommit: 450295f4ee87db835c9921d2595ae9d291f727c5
+ms.openlocfilehash: bd669b3b0bcf1f505e69a65eecdb671b9f66845b
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/20/2020
-ms.locfileid: "76281745"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79414674"
 ---
 # <a name="azure-atp-monitored-activities"></a>Von Azure ATP überwachte Aktivitäten
 

@@ -1,5 +1,5 @@
 ---
-title: Festlegen von Syslog-Einstellungen in Azure Advanced Threat Protection | Microsoft-Dokumentation
+title: Festlegen von Syslog-Einstellungen in Azure Advanced Threat Protection
 description: Beschreibt, wie Azure ATP für den Versand von Benachrichtigungen (per E-Mail oder Azure ATP-Ereignisweiterleitung) bei verdächtigen Aktivitäten konfiguriert werden kann
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: a2d29c9c-7ecb-4804-b74b-fde899b28648
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8e67b1c0c7b645982f6d8afc1ac0abdae51d4a43
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: a6b1cfb304787fbed3d02968221e1eeada605712
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75906047"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79410934"
 ---
 # <a name="integrate-with-syslog"></a>Integration in Syslog
 

@@ -1,5 +1,5 @@
 ---
-title: Grundlegende Informationen zum Azure Advanced Threat Protection-Portal | Microsoft-Dokumentation
+title: Grundlegende Informationen zum Azure Advanced Threat Protection-Portal
 description: Informationen zum Anmelden im Azure ATP-Portal und zu dessen Komponenten
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 4ba46d60-3a74-480e-8f0f-9a082d62f343
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5829d8564a65bbeba7f755e1e5cd1ad90c3da5ae
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: c0b15763991dd3eb26773615f0938a89a535dc45
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75905811"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79410731"
 ---
 # <a name="working-with-the-azure-atp-portal"></a>Arbeiten mit dem Azure ATP-Portal
 
@@ -63,7 +63,7 @@ Nach der Veröffentlichung einer neuen Version von Azure ATP wird das Fenster **
 
 Sie können basierend auf Status und Schweregrad filtern, welche verdächtigen Aktivitäten auf der Angriffszeitachse oder auf der Registerkarte für verdächtige Aktivitäten des Entitätsprofils angezeigt werden.
 
-### Suchleiste <a name="search-bar"></a>
+### <a name="search-bar"></a>Suchleiste <a name="search-bar"></a>
 
 Im obersten Menü finden Sie eine Suchleiste. Sie können nach einem bestimmten Benutzer, Computer oder nach Gruppen in Azure ATP suchen. Beginnen Sie als Versuch einfach mit der Eingabe. Unten in der Suchleiste wird die Anzahl der gefundenen Suchergebnisse angezeigt. 
 

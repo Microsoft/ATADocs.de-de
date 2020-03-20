@@ -1,5 +1,5 @@
 ---
-title: Grundlegendes zu und Verwenden von Lateral-Movement-Pfaden mit Azure ATP | Microsoft-Dokumentation
+title: Grundlegendes zu und Verwenden von Lateral Movement-Pfaden mit Azure ATP
 description: Dieser Artikel beschreibt die potenziellen Lateral Movement-Pfade (LMPs) von Azure Advanced Threat Protection (ATP).
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: de15c920-8904-4124-8bdc-03abd9f667cf
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0bc0272b51c0a8982d1c5134c68fba561d54db9b
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: 864af389320fb8e90f232e933de54821930ff679
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75905926"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79410985"
 ---
 # <a name="azure-atp-lateral-movement-paths-lmps"></a>Azure ATP-Lateral Movement-Pfade (LMPs) 
 

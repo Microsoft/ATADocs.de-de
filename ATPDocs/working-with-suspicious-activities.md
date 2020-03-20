@@ -1,5 +1,5 @@
 ---
-title: Arbeiten mit Sicherheitswarnungen in Azure Advanced Threat Protection | Microsoft-Dokumentation
+title: Arbeiten mit Sicherheitswarnungen in Azure Advanced Threat Protection
 description: Beschreibt das Überprüfen von Sicherheitswarnungen, die von Azure ATP ausgegeben werden
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: a06004bd-9f77-4e8e-a0e5-4727d6651a0f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6d8a18b7e2268945dcfd254afb5580a180ad0204
-ms.sourcegitcommit: c8b1e584ef42559a40afd62dac1b5ca9056c5602
+ms.openlocfilehash: 98ea2a517f5cc223086ca448c8b532dd29257d78
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2020
-ms.locfileid: "78926548"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79410561"
 ---
 # <a name="working-with-security-alerts"></a>Arbeiten mit Sicherheitswarnungen
 
@@ -26,7 +26,7 @@ ms.locfileid: "78926548"
 
 In diesem Artikel werden die Grundlagen der Arbeit mit Azure ATP-Sicherheitswarnungen erläutert.
 
-## Überprüfen von Sicherheitswarnungen auf der Angriffszeitachse <a name="review-suspicious-activities-on-the-attack-time-line"></a>
+## <a name="review-security-alerts-on-the-attack-timeline"></a>Überprüfen von Sicherheitswarnungen auf der Angriffszeitachse <a name="review-suspicious-activities-on-the-attack-time-line"></a>
 
 Nachdem Sie sich beim Azure ATP-Portal angemeldet haben, gelangen Sie automatisch zur **Zeitachse für Sicherheitswarnungen**. Sicherheitswarnungen werden in chronologischer Reihenfolge aufgeführt, wobei sich die neueste Warnung oben auf der Zeitachse befindet.
 
@@ -63,7 +63,7 @@ Azure ATP-Sicherheitswarnungen werden in die folgenden Kategorien oder Phasen un
 - [Warnungen zu Domänendominanz](atp-domain-dominance-alerts.md)
 - [Warnungen zu Exfiltration](atp-exfiltration-alerts.md)
 
-## Vorschau von Erkennungsfunktionen <a name="preview-detections"></a>
+## <a name="preview-detections"></a>Vorschau von Erkennungsfunktionen <a name="preview-detections"></a>
 
 Das Azure ATP-Forschungsteam arbeitet kontinuierlich daran, neue Erkennungen für neu entdeckte Angriffe zu implementieren. Da es sich bei Azure ATP um einen Clouddienst handelt, werden neue Erkennungen schnell veröffentlicht, damit Azure ATP-Kunden so schnell wie möglich von diesen profitieren können.
 

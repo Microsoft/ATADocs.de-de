@@ -1,5 +1,5 @@
 ---
-title: Tutorial zum Setup einer Testumgebung für Azure ATP-Sicherheitswarnungen | Microsoft-Dokumentation
+title: Tutorial zum Setup eines Labs für Azure ATP-Sicherheitswarnungen
 description: In diesem Tutorial richten Sie eine Azure ATP-Testumgebung zum Simulieren von Bedrohungen für die Erkennung durch Azure ATP ein.
 ms.service: azure-advanced-threat-protection
 ms.topic: tutorial
@@ -7,12 +7,12 @@ author: shsagir
 ms.author: shsagir
 ms.date: 02/28/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: 8c3238c07c05bf307c91753e6d69b35b376a3c21
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: 4a846962645d978fc7419650781624e7c5f4bf0b
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75908512"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79414521"
 ---
 # <a name="tutorial-setup-an-atp-security-alert-lab"></a>Tutorial: Setup einer ATP-Sicherheitswarnungsumgebung 
 
@@ -73,7 +73,7 @@ Es gibt eine „Helpdesk“-Sicherheitsgruppe (SG), der Ron HelpDesk angehört. 
 
 Um die Basistestumgebung zu konfigurieren, fügen wir Active Directory Benutzer und Gruppen hinzu, bearbeiten eine SAM-Richtlinie und eine sensible Gruppe in Azure ATP.
 
-### <a name="bkmk_hydrate"></a> Aktualisieren von Active Directory-Benutzern auf ContosoDC
+### <a name="hydrate-active-directory-users-on-contosodc"></a><a name="bkmk_hydrate"></a> Aktualisieren von Active Directory-Benutzern auf ContosoDC
 
 Um die Testumgebung zu vereinfachen, haben wir den Vorgang so automatisiert, dass fiktive Benutzer und Gruppen in Active Directory erstellt werden. Dieses Skript wird als Voraussetzung für dieses Tutorial ausgeführt. Sie können das Skript verwenden oder ändern, um die Active Directory-Umgebung ihrer Testumgebung zu aktualisieren. Wenn Sie kein Skript verwenden möchten, können Sie dies manuell tun.
 
@@ -166,7 +166,7 @@ Add-LocalGroupMember -Group "Administrators" -Member "Contoso\Helpdesk"
 
 ![„Helpdesk“ und JeffL sollten in der lokalen Administratorengruppe für VictimPC sein.](media/playbook-labsetup-localgrouppolicies2.png)
 
-### <a name="helpdesk-simulation"></a> Simulieren von Helpdesksupport auf VictimPC
+### <a name="simulate-helpdesk-support-on-victimpc"></a><a name="helpdesk-simulation"></a> Simulieren von Helpdesksupport auf VictimPC
 
 Um ein funktionierendes und verwaltetes Netzwerk zu simulieren, erstellen Sie auf **VictimPC** eine geplante Aufgabe zur Ausführung des Prozesses „cmd.exe“ als **RonHD**.
 

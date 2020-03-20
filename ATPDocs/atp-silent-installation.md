@@ -1,5 +1,5 @@
 ---
-title: Automatisches Installieren von Azure Advanced Threat Protection | Microsoft-Dokumentation
+title: Automatisches Installieren von Azure Advanced Threat Protection
 description: Hier wird die automatische Installation von Azure ATP beschrieben.
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 24eca4c6-c949-42ea-97b9-41ef0fb611f1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5e7ea2d8f33cbd1c262c52f39e17c9d686344dff
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: cfa2ed34b63dc513af6370064a31c7ef68a97fef
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75908024"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79410441"
 ---
 # <a name="azure-atp-switches-and-silent-installation"></a>Azure ATP-Switches und automatische Installation
 Dieser Artikel enthält Anleitungen und Informationen zu Azure ATP-Switches und der automatischen Installation.

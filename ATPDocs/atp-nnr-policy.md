@@ -1,5 +1,5 @@
 ---
-title: Azure Advanced Threat Protection-Netzwerknamensauflösung | Microsoft-Dokumentation
+title: Azure Advanced Threat Protection-Netzwerknamensauflösung
 description: Dieser Artikel stellt eine Übersicht der erweiterten Funktionen und Einsatzweisen der Netzwerknamensauflösung von Azure ATP dar.
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 1ac873fc-b763-41d7-878e-7c08da421cb5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 260100f37e32067e20a224046e1efa200e0284d3
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: f05b713e9e5ea72d43f9e48a32d06d40e8347da5
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75908385"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79412005"
 ---
 # <a name="what-is-network-name-resolution"></a>Was ist Netzwerknamensauflösung?
 

@@ -1,5 +1,5 @@
 ---
-title: Behandlung von bekannten Problemen bei Azure ATP | Microsoft-Dokumentation
+title: Behandlung von bekannten Problemen bei Azure ATP
 description: Beschreibt, wie Sie häufige Fehler in Azure ATP beheben können.
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 671920475245e99c788a733e2d445947649c7def
-ms.sourcegitcommit: c8b1e584ef42559a40afd62dac1b5ca9056c5602
+ms.openlocfilehash: 61415f1a5f74a216dd0c505b6e92419601e08941
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2020
-ms.locfileid: "78926554"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79414640"
 ---
 # <a name="troubleshooting-azure-atp-known-issues"></a>Behandlung von bekannten Problemen bei Azure ATP
 
@@ -68,7 +68,7 @@ Sie versuchen, während der automatischen Sensorinstallation PowerShell zu verwe
 ./"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
 ```
 
-## Problem mit NIC-Teamvorgängen beim Azure ATP-Sensor <a name="nic-teaming"></a>
+## <a name="azure-atp-sensor-nic-teaming-issue"></a>Problem mit NIC-Teamvorgängen beim Azure ATP-Sensor <a name="nic-teaming"></a>
 
 Wenn Sie versuchen, den ATP-Sensor auf einem Computer zu installieren, der mit einem NIC-Teaming-Adapter konfiguriert ist, wird ein Installationsfehler gemeldet. Wenn Sie den ATP-Sensor auf einem Computer installieren möchten, der mit NIC-Teamvorgang konfiguriert ist, gehen Sie wie folgt vor:
 

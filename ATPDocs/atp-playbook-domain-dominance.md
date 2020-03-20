@@ -1,5 +1,5 @@
 ---
-title: Azure ATP-Playbook zu Domänendominanz | Microsoft-Dokumentation
+title: Playbook zur Azure ATP-Domänendominanz
 description: Das Azure ATP-Domänendominanzplaybook beschreibt, wie Sie Domänendominanzangriffe für die Erkennung durch Azure ATP simulieren
 ms.service: azure-advanced-threat-protection
 ms.topic: tutorial
@@ -7,12 +7,12 @@ author: shsagir
 ms.author: shsagir
 ms.date: 02/28/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: 5eb15b0eeda7fec50c898550a683ef1cdbccfdb7
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: b5903123e992f7540dd660da605a1568bf76ef91
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75908358"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79414589"
 ---
 # <a name="tutorial-domain-dominance-playbook"></a>Tutorial: Playbook zu Domänendominanz
 
