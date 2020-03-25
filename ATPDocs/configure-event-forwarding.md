@@ -5,26 +5,26 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 02/19/2020
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 3547519f-8d9c-40a9-8f0e-c7ba21081203
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: be65a11aa6ace79ec4f2e3cffdc8a196c87fa764
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 6ec95a6c9522710f31fc7e55c58a664f5b590914
+ms.sourcegitcommit: 722b9eeec7bf12793d40e31166445160f02461f1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414028"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79510894"
 ---
 # <a name="configuring-windows-event-forwarding"></a>Konfigurieren der Windows-Ereignisweiterleitung
 
 > [!NOTE]
 > Der Azure ATP-Sensor kann jetzt automatisch Ereignisse lokal lesen, ohne die Ereignisweiterleitung zu konfigurieren.
 
-Um die Erkennungsfunktionalität zu verbessern, benötigt Azure ATP die folgenden Windows-Ereignisse: 4776, 4732, 4733, 4728, 4729, 4756, 4757 und 7041. Diese können entweder automatisch vom Azure ATP-Sensor gelesen oder, falls dieser nicht bereitgestellt wurde, an den eigenständigen Azure ATP-Sensor weitergeleitet werden. Dazu gibt es zwei Möglichkeiten: die Konfiguration des eigenständigen Azure ATP-Sensors, sodass dieser auf SIEM-Ereignisse lauscht, oder die Konfiguration der Windows-Ereignisweiterleitung.
+Um die Erkennungsfunktionalität zu verbessern, benötigt Azure ATP die folgenden Windows-Ereignisse: 4726, 4728, 4729, 4730, 4732, 4733, 4743, 4753, 4756, 4757, 4758, 4763, 4776 und 7041. Diese können entweder automatisch vom Azure ATP-Sensor gelesen oder, falls dieser nicht bereitgestellt wurde, an den eigenständigen Azure ATP-Sensor weitergeleitet werden. Dazu gibt es zwei Möglichkeiten: die Konfiguration des eigenständigen Azure ATP-Sensors, sodass dieser auf SIEM-Ereignisse lauscht, oder die Konfiguration der Windows-Ereignisweiterleitung.
 
 > [!NOTE]
 >

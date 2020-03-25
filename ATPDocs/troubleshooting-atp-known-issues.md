@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 02/18/2020
+ms.date: 03/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 61415f1a5f74a216dd0c505b6e92419601e08941
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: c40efc27e1740ef6e7b0aa9a98784631072f2c3b
+ms.sourcegitcommit: 93baa30e7f9f3b0e6a3ffcd2b9a25bc349798781
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414640"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79504236"
 ---
 # <a name="troubleshooting-azure-atp-known-issues"></a>Behandlung von bekannten Problemen bei Azure ATP
 
@@ -147,6 +147,18 @@ Der Sensor konnte das angegebene gruppenverwaltete Dienstkonto nicht aus dem Azu
 **Lösung:**
 
 Stellen Sie sicher, dass die Anmeldeinformationen des gruppenverwalteten Dienstkontos korrekt sind und dem Sensor die erforderlichen Berechtigungen zum Abrufen der Anmeldeinformationen des Kontos erteilt wurden.
+
+## <a name="report-downloads-cannot-contain-more-than-300000-entries"></a>Berichtsdownloads dürfen nicht mehr als 300.000 Einträge enthalten
+
+Azure ATP unterstützt keine Berichtsdownloads mit mehr als 300.000 Einträgen pro Bericht. Die Berichte werden unvollständig gerendert, wenn mehr als 300.000 Einträge enthalten sind.
+
+**Ursache**:
+
+Dies ist eine technisch bedingte Begrenzung.
+
+**Lösung:**
+
+Keine bekannte Lösung.
 
 ## <a name="see-also"></a>Weitere Informationen
 

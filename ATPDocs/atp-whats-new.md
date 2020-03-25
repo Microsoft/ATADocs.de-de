@@ -5,18 +5,18 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 03/01/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 0b0805a634466d1ef8e53c187ef674edc529eda4
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 3529bee9f7ebaf13b541109375845fedcac2bfa8
+ms.sourcegitcommit: 7b80b2eff4331f8e1e1403e4b5c751f406915624
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79412685"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "79989836"
 ---
 # <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Neuerungen in Azure Advanced Threat Protection (Azure ATP)
 
@@ -25,6 +25,24 @@ Dieser Artikel wird häufig aktualisiert, um Sie über die Neuerungen in der akt
 Ausführliche Informationen zu früheren Azure ATP-Versionen bis (und einschließlich von) Version 2.55 finden Sie in der [Azure ATP-Versionsreferenz](atp-release-reference.md).
 
 RSS-Feed: Lassen Sie sich benachrichtigen, wenn diese Seite aktualisiert wird, indem Sie die folgende URL kopieren und in Ihren Feedreader einfügen: `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
+
+## <a name="azure-atp-release-2112"></a>Azure ATP-Release 2.112
+
+Veröffentlicht: 15. März 2020
+
+- **Neue Azure ATP-Instanzen werden automatisch in Microsoft Cloud App Security integriert**  
+Beim Erstellen einer Azure ATP-Instanz (früher als Arbeitsbereich bezeichnet) ist die Integration in Microsoft Cloud App Security standardmäßig aktiviert. Weitere Informationen zur Integration finden Sie unter [Verwenden von Azure ATP mit Microsoft Cloud App Security](atp-mcas-integration.md).
+
+- **Neue überwachte Aktivitäten**  
+Folgende Aktivitätsmonitore sind jetzt verfügbar:
+  - Interaktive Anmeldung mit Zertifikat
+  - Fehler bei Anmeldung mit Zertifikat
+  - Delegierter Ressourcenzugriff
+
+    Erfahren Sie mehr über [von Azure ATP überwachte Aktivitäten](monitored-activities.md) und über das [Filtern von und Suchen nach überwachten Aktivitäten](atp-activities-search.md) im Portal.
+
+- **Featureerweiterung: Erweiterte Ressourcenzugriffsaktivität**  
+Ab dieser Version bietet Azure ATP Informationen zu Ressourcenzugriffsaktivitäten, die zeigen, ob die Ressource in Bezug auf eine uneingeschränkte Delegierung vertrauenswürdig ist. Diese Ressourcenkonfiguration ist unsicher und birgt das Risiko, dass Angreifer die Anwendung für ihre Zwecke ausnutzen. Weitere Informationen zu diesem Risiko finden Sie unter [Sicherheitsbewertung: Unsichere Kerberos-Delegierung](atp-cas-isp-unconstrained-kerberos.md).
 
 ## <a name="azure-atp-release-2111"></a>Azure ATP-Release 2.111
 
@@ -258,7 +276,7 @@ Veröffentlicht: 1. Juli 2019
 Azure ATP-Instanzen werden jetzt im Azure UK-Rechenzentrum unterstützt. Weitere Informationen zum Erstellen von Azure ATP-Instanzen und den entsprechenden Rechenzentrumsstandorten finden Sie unter [Step 1 of Azure ATP installation (Azure ATP-Installation – Schritt 1)](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step10).
 
 - **Featureerweiterung: Neuer Name und neue Features für die Warnungen bei verdächtigen Hinzufügungen zu sensiblen Gruppen (externe ID 2024)**  
-Die Warnung **Suspicious additions to sensitive groups (Verdächtige Hinzufügungen zu sensiblen Gruppen)** lautete ursprünglich **Suspicious modifications to sensitive groups (Verdächtige Änderungen an sensiblen Gruppen)** . Die externe ID der Warnung (ID 2024) hat sich nicht geändert. Durch die beschreibende Namensänderung wird der Zweck der Warnung bei Ergänzungen zu Ihren **sensiblen** Gruppen genauer wiedergespiegelt. Die verbesserte Warnung enthält auch neue Beweise und verbesserte Beschreibungen. Weitere Informationen finden Sie unter [Suspicious additions to sensitive groups (Verdächtige Hinzufügungen zu sensiblen Gruppen)](https://docs.microsoft.com/azure-advanced-threat-protection/atp-domain-dominance-alerts#suspicious-additions-to-sensitive-groups-external-id-2024).  
+Die Warnung **Suspicious additions to sensitive groups (Verdächtige Hinzufügungen zu sensiblen Gruppen)** lautete ursprünglich **Suspicious modifications to sensitive groups (Verdächtige Änderungen an sensiblen Gruppen)**. Die externe ID der Warnung (ID 2024) hat sich nicht geändert. Durch die beschreibende Namensänderung wird der Zweck der Warnung bei Ergänzungen zu Ihren **sensiblen** Gruppen genauer wiedergespiegelt. Die verbesserte Warnung enthält auch neue Beweise und verbesserte Beschreibungen. Weitere Informationen finden Sie unter [Suspicious additions to sensitive groups (Verdächtige Hinzufügungen zu sensiblen Gruppen)](https://docs.microsoft.com/azure-advanced-threat-protection/atp-domain-dominance-alerts#suspicious-additions-to-sensitive-groups-external-id-2024).  
 
 - **Neues Dokumentationsfeature: Anleitung zum Verschieben von Advanced Threat Analytics zu Azure ATP**  
 In diesem neuen Artikel finden Sie Informationen zu Voraussetzungen, Tipps zur Planung sowie Konfigurations- und Überprüfungsschritte für das Verschieben von ATA zum Azure ATP-Dienst. Weitere Informationen finden Sie unter [Verschieben von ATA zu Azure ATP](https://docs.microsoft.com/azure-advanced-threat-protection/ata-atp-move-overview).
@@ -451,7 +469,7 @@ Veröffentlichung: 24. Februar 2019
     Lightweight Directory Access Protocol (LDAP) ist eine der sowohl für zulässige als auch böswillige Zwecke am häufigsten verwendeten Methoden zum Abfragen von Active Directory. LDAP-fokussierte Sicherheitsprinzipalreconnaissance wird häufig als erste Phase eines Kerberoasting-Angriffs verwendet. Mit Kerberoasting-Angriffen wird eine Zielliste von Sicherheitsprinzipalnamen (Security Principal Names, SPNs) abgerufen, für die Angreifer dann versuchen, Ticket Granting Server-Tickets (TGS) zu erhalten.
 
 - **Featureerweiterung: Reconnaissance über Kontoauflistung (NTLM)**  
-Verbesserte **Reconnaissance über Kontoauflistung (NTLM)** -Warnung, die zusätzliche Analysen und verbesserte Erkennungslogik zum Reduzieren von **B-TP**- und **FP**-Warnungsergebnissen verwendet.
+Verbesserte **Reconnaissance über Kontoauflistung (NTLM)**-Warnung, die zusätzliche Analysen und verbesserte Erkennungslogik zum Reduzieren von **B-TP**- und **FP**-Warnungsergebnissen verwendet.
 
 - **Featureerweiterung: „Reconnaissance über Netzwerkzuordnung“-Warnung (DNS)**  
 Neue Typen von Erkennungen wurden „Reconnaissance über Netzwerkzuordnung“-Warnungen (DNS) hinzugefügt. Außer verdächtigen AXFR-Anfragen erkennt Azure ATP jetzt verdächtige Typen von Anforderungen von Nicht-DNS-Servern, die eine übermäßige Anzahl von Anforderungen verwenden.

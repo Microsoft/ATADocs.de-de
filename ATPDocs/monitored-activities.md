@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 01/19/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 37d1a032-65e7-4a89-be0b-c3f9cc2bacdb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: bd669b3b0bcf1f505e69a65eecdb671b9f66845b
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: cc0b9ed79a26c1f77cb7d0a15866bb81744dbfe9
+ms.sourcegitcommit: 7b80b2eff4331f8e1e1403e4b5c751f406915624
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414674"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "79989849"
 ---
 # <a name="azure-atp-monitored-activities"></a>Von Azure ATP überwachte Aktivitäten
 
@@ -92,12 +92,15 @@ Die von Azure ATP überwachten Informationen werden in Form von Aktivitäten ang
 |Anmeldetyp|Überwachte Aktivität|Beschreibung|
 |---------------------|---------------------|------------------|
 |Anmeldetyp 2|Überprüfen der Anmeldeinformationen|Authentifizierungsereignis beim Domänenkonto mit den Authentifizierungsmethoden NTLM und Kerberos.|
-|Anmeldetyp 2|Interaktive Anmeldung|Benutzer hat durch Eingabe eines Benutzernamens und Kennworts Zugriff auf das Netzwerk erlangt (Authentifizierungsmethode Kerberos).|
+|Anmeldetyp 2|Interaktive Anmeldung|Benutzer hat durch Eingabe eines Benutzernamens und Kennworts Zugriff auf das Netzwerk erlangt (Authentifizierungsmethode Kerberos oder NTLM).|
+|Anmeldetyp 2|Interaktive Anmeldung mit Zertifikat|Benutzer hat durch Verwendung eines Zertifikats Zugriff auf das Netzwerk erlangt.|
 |Anmeldetyp 2|VPN-Verbindung|Benutzer hat sich über VPN verbunden – Authentifizierung mithilfe des RADIUS-Protokolls.|
-|Anmeldetyp 3|Ressourcenzugriff|Benutzer hat mit Kerberos-Authentifizierung auf eine Ressource zugegriffen.|
+|Anmeldetyp 3|Ressourcenzugriff|Benutzer hat mit Kerberos- oder NTLM-Authentifizierung auf eine Ressource zugegriffen.|
+|Anmeldetyp 3|Delegierter Ressourcenzugriff|Benutzer hat mit Kerberos-Delegierung auf eine Ressource zugegriffen.|
 |Anmeldetyp 8|LDAP ClearText|Benutzer hat sich über LDAP mit einem Klartextkennwort authentifiziert (einfache Authentifizierung).|
 |Anmeldetyp 10|Remotedesktop|Benutzer hat eine RDP-Sitzung mit einem Remotecomputer über Kerberos-Authentifizierung durchgeführt.|
 |---|Anmeldung fehlgeschlagen|Authentifizierungsversuch des Domänenkontos (über NTLM und Kerberos) aufgrund von Folgendem fehlgeschlagen: Konto war deaktiviert/abgelaufen/gesperrt/verwendete ein nicht vertrauenswürdiges Zertifikat oder aber ungültige Anmeldezeiten/altes Kennwort/abgelaufenes Kennwort/falsches Kennwort.|
+|---|Fehler bei Anmeldung mit Zertifikat|Fehlerhafter Authentifizierungsversuch des Domänenkontos (über Kerberos) aufgrund einer der folgenden Ursachen: Konto war deaktiviert/abgelaufen/gesperrt/verwendete ein nicht vertrauenswürdiges Zertifikat oder ungültige Anmeldezeiten/altes Kennwort/abgelaufenes Kennwort/falsches Kennwort.|
 
 ## <a name="monitored-machine-activities-machine-account"></a>Überwachte Computeraktivitäten: Computerkonto
 

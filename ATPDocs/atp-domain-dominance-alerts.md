@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 0b3a1db5-0d43-49af-b356-7094cc85f0a5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ff893c87c1bff5c1cdc6ace9fe4beae1ddb2c6fe
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 33278c6207a21bb5155458d0a3cba61412bd5053
+ms.sourcegitcommit: 93baa30e7f9f3b0e6a3ffcd2b9a25bc349798781
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414419"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79504198"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Tutorial: Warnungen zu Domänendominanz
 
@@ -64,8 +64,8 @@ Diese Aktivitäten werden möglicherweise von erweiterten Sicherheitsscannern f�
 
 1. Überprüfen Sie, ob auf dem Quellcomputer ein von der Organisation genehmigter erweiterter Sicherheitsscanner für Active Directory Domain Services ausgeführt wird.
 
-    - Wenn die Antwort **Ja** lautet und der Scanner nicht ausgeführt werden sollte, beheben Sie die Anwendungskonfiguration. Die Warnung ist eine **B-TP**-Aktivität und kann **geschlossen** werden.
-    - Wenn die Antwort **Ja** lautet und der Scanner immer ausgeführt werden sollte, **schließen** Sie die Warnung, und schließen Sie diesen Computer aus. Es handelt sich wahrscheinlich um eine **B-TP**-Aktivität.
+    * Wenn die Antwort **Ja** lautet und der Scanner nicht ausgeführt werden sollte, beheben Sie die Anwendungskonfiguration. Die Warnung ist eine **B-TP**-Aktivität und kann **geschlossen** werden.
+    * Wenn die Antwort **Ja** lautet und der Scanner immer ausgeführt werden sollte, **schließen** Sie die Warnung, und schließen Sie diesen Computer aus. Es handelt sich wahrscheinlich um eine **B-TP**-Aktivität.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -76,10 +76,10 @@ Diese Aktivitäten werden möglicherweise von erweiterten Sicherheitsscannern f�
 
 1. Setzen Sie das Kennwort des Quellbenutzers zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
 2. Kontrollieren Sie den Quellcomputer.
-    - Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
-    - Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch kompromittiert sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
+    * Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
+    * Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch kompromittiert sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
 3. Der gestohlene private Schlüssel wird nie geändert. Dies bedeutet, dass der Akteur mit dem gestohlenen Schlüssel jederzeit geschützte Daten in der Zieldomäne entschlüsseln kann. Eine methodische Vorgehensweise zum Ändern des privaten Schlüssels gibt es nicht.
-    - Verwenden Sie stattdessen den aktuellen privaten Schlüssel, erstellen Sie einen Schlüssel, und verschlüsseln Sie jeden Domänenhauptschlüssel noch einmal mit dem neuen privaten Schlüssel, um einen Schlüssel zu erstellen.
+    * Verwenden Sie stattdessen den aktuellen privaten Schlüssel, erstellen Sie einen Schlüssel, und verschlüsseln Sie jeden Domänenhauptschlüssel noch einmal mit dem neuen privaten Schlüssel, um einen Schlüssel zu erstellen.
 
 ## <a name="remote-code-execution-attempt-external-id-2019"></a>Versuch der Remotecodeausführung (externe ID 2019)
 
@@ -94,8 +94,8 @@ Angreifer, die Administratoranmeldeinformationen kompromittiert haben oder einen
 Zulässige administrative Aufgaben auf Domänencontrollern können von Arbeitsstationen für Administratoren, IT-Teammitgliedern und Dienstkonten durchgeführt werden.
 
 1. Überprüfen Sie, ob diese Befehle tatsächlich vom Quellcomputer oder Benutzer auf Ihrem Domänencontroller ausgeführt werden sollen.
-    - Wenn der Quellcomputer oder Benutzer diese Befehle ausführen darf, **schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität.
-    - Wenn der Quellcomputer oder Benutzer diese Befehle jetzt und in Zukunft auf Ihrem lokalen Domänencontroller ausführen darf, handelt es sich um eine **B-TP**-Aktivität. **Schließen** Sie die Sicherheitswarnung, und schließen Sie den Computer aus.
+    * Wenn der Quellcomputer oder Benutzer diese Befehle ausführen darf, **schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität.
+    * Wenn der Quellcomputer oder Benutzer diese Befehle jetzt und in Zukunft auf Ihrem lokalen Domänencontroller ausführen darf, handelt es sich um eine **B-TP**-Aktivität. **Schließen** Sie die Sicherheitswarnung, und schließen Sie den Computer aus.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -108,11 +108,11 @@ Zulässige administrative Aufgaben auf Domänencontrollern können von Arbeitsst
 
 1. Setzen Sie das Kennwort der Quellbenutzer zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
 2. Isolieren Sie die Domänencontroller durch folgende Maßnahmen:
-    - Unterbinden Sie die versuchte Remotecodeausführung.
-    - Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der verdächtigen Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
+    * Unterbinden Sie die versuchte Remotecodeausführung.
+    * Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der verdächtigen Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
 3. Kontrollieren Sie den Quellcomputer.
-    - Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
-    - Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der verdächtigen Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
+    * Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
+    * Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der verdächtigen Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
 
 **Vorbeugung**
 
@@ -153,9 +153,9 @@ Server und Anwendungen wie Azure AD Connect oder Geräte zur Leistungsüberwachu
 
 1. Überprüfen Sie, ob diese Aktivitäten tatsächlich vom Quellcomputer ausgeführt werden sollen.
 
-    - Wenn die Antwort **Ja** lautet, diese Aktivität aber in Zukunft nicht mehr vom Quellcomputer ausgeführt werden soll, beheben Sie die Konfiguration des Servers oder der Anwendung. **Schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität.
+    * Wenn die Antwort **Ja** lautet, diese Aktivität aber in Zukunft nicht mehr vom Quellcomputer ausgeführt werden soll, beheben Sie die Konfiguration des Servers oder der Anwendung. **Schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität.
 
-    - Wenn die Antwort **Ja** lautet und diese Aktivität in der Zukunft weiterhin vom Quellcomputer ausgeführt werden soll, **schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität, und schließen Sie den Computer aus, um zusätzliche B-TP-Warnungen zu vermeiden.
+    * Wenn die Antwort **Ja** lautet und diese Aktivität in der Zukunft weiterhin vom Quellcomputer ausgeführt werden soll, **schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität, und schließen Sie den Computer aus, um zusätzliche B-TP-Warnungen zu vermeiden.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -167,8 +167,8 @@ Server und Anwendungen wie Azure AD Connect oder Geräte zur Leistungsüberwachu
 **Abhilfemaßnahmen:**
 
 1. Kontrollieren Sie den Quellcomputer.
-    - Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
-    - Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch kompromittiert sind.  
+    * Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
+    * Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch kompromittiert sind.  
     Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
 
 **Vorbeugung:**
@@ -206,9 +206,9 @@ Server und Anwendungen wie Azure AD Connect oder Geräte zur Leistungsüberwachu
 
 1. Sollten diese Aktivitäten tatsächlich vom Quellcomputer ausgeführt werden?
 
-    - Wenn die Antwort **Ja** lautet, diese Aktivität aber in Zukunft nicht mehr vom Quellcomputer ausgeführt werden soll, beheben Sie die Konfiguration des Servers oder der Anwendung. **Schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität.
+    * Wenn die Antwort **Ja** lautet, diese Aktivität aber in Zukunft nicht mehr vom Quellcomputer ausgeführt werden soll, beheben Sie die Konfiguration des Servers oder der Anwendung. **Schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität.
 
-    - Wenn die Antwort **Ja** lautet und diese Aktivität in der Zukunft weiterhin vom Quellcomputer ausgeführt werden soll, **schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität, und schließen Sie den Computer aus, um zusätzliche **B-TP**-Warnungen zu vermeiden.
+    * Wenn die Antwort **Ja** lautet und diese Aktivität in der Zukunft weiterhin vom Quellcomputer ausgeführt werden soll, **schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität, und schließen Sie den Computer aus, um zusätzliche **B-TP**-Warnungen zu vermeiden.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -219,8 +219,8 @@ Server und Anwendungen wie Azure AD Connect oder Geräte zur Leistungsüberwachu
 **Abhilfemaßnahmen:**
 
 1. Kontrollieren Sie den Quellcomputer.
-    - Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
-    - Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch kompromittiert sind.
+    * Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
+    * Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch kompromittiert sind.
     Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
 2. Korrigieren Sie die Daten, die auf den Domänencontrollern repliziert wurden.
 
@@ -263,9 +263,9 @@ Server und Anwendungen wie Azure AD Connect oder Geräte zur Leistungsüberwachu
 
 1. Sollten diese Aktivitäten tatsächlich vom Quellcomputer ausgeführt werden?
 
-    - Wenn die Antwort **Ja** lautet, diese Aktivitäten aber in Zukunft nicht mehr vom Quellcomputer ausgeführt werden sollen, beheben Sie die Konfiguration des Servers oder der Anwendung. **Schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität.
+    * Wenn die Antwort **Ja** lautet, diese Aktivitäten aber in Zukunft nicht mehr vom Quellcomputer ausgeführt werden sollen, beheben Sie die Konfiguration des Servers oder der Anwendung. **Schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität.
 
-    - Wenn die Antwort **Ja** lautet und diese Aktivität in der Zukunft weiterhin vom Quellcomputer ausgeführt werden soll, **schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität, und schließen Sie den Computer aus, um zusätzliche B-TP-Warnungen zu vermeiden.
+    * Wenn die Antwort **Ja** lautet und diese Aktivität in der Zukunft weiterhin vom Quellcomputer ausgeführt werden soll, **schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität, und schließen Sie den Computer aus, um zusätzliche B-TP-Warnungen zu vermeiden.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -277,8 +277,8 @@ Server und Anwendungen wie Azure AD Connect oder Geräte zur Leistungsüberwachu
 
 1. Setzen Sie das Kennwort der Quellbenutzer zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
 2. Kontrollieren Sie den Quellcomputer.
-    - Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
-    - Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch kompromittiert sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
+    * Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
+    * Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch kompromittiert sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
 
 **Vorbeugung:**
 
@@ -300,12 +300,12 @@ Bei einer Golden Ticket-Warnung wurde die Verschlüsselungsmethode des TGT-Felds
 
 **TP, B-TP oder FP?**
 
-Einige unbedenkliche Ressourcen unterstützen keine starken Verschlüsselungsverfahren und können diese Warnung auslösen.
+Einige zulässige Ressourcen unterstützen keine starken Verschlüsselungsverfahren und können diese Warnung auslösen.
 
 1. Greifen Quellbenutzer auf gemeinsam verwendete Ressourcen zu?
    1. Beispielsweise können Sie überprüfen, ob alle Mitarbeiter des Marketingteams auf eine bestimmte Ressource zugreifen und dadurch eine Warnung auslösen.
    2. Überprüfen Sie die Ressourcen, auf die mit diesen Tickets zugegriffen wurde.
-      - Verwenden Sie dafür das *msDS-SupportedEncryptionTypes*-Attribut des Ressourcendienstkontos in Azure Active Directory.
+      * Verwenden Sie dafür das *msDS-SupportedEncryptionTypes*-Attribut des Ressourcendienstkontos in Azure Active Directory.
    3. Wenn nur auf eine Ressource zugegriffen wird, überprüfen Sie, ob die Benutzer tatsächlich auf diese zugreifen sollten.
 
       Wenn die Antwort auf eine der vorherigen Fragen **Ja** lautet, handelt es sich vermutlich um eine **B-TP**-Aktivität. Überprüfen Sie, ob von der Ressource ein starkes Verschlüsselungsverfahren unterstützt wird, implementieren Sie es nach Möglichkeit, und **schließen** Sie die Sicherheitswarnung.
@@ -313,9 +313,9 @@ Einige unbedenkliche Ressourcen unterstützen keine starken Verschlüsselungsver
 Bei Anwendungen wird möglicherweise ein schwächeres Verschlüsselungsverfahren für die Authentifizierung verwendet. Einige dieser Anwendungen wie IIS und SQL Server melden sich im Auftrag von Benutzern an.
 
 1. Lassen sich bei Quellbenutzern Gemeinsamkeiten feststellen?
-    - Beispielsweise können Sie überprüfen, ob alle Vertriebsmitarbeiter eine bestimmte App nutzen und dadurch eine Warnung auslösen.
-    - Überprüfen Sie, ob Anwendungen dieses Typs auf dem Quellcomputer vorhanden sind.
-    - Überprüfen Sie die Rollen der Computer.  
+    * Beispielsweise können Sie überprüfen, ob alle Vertriebsmitarbeiter eine bestimmte App nutzen und dadurch eine Warnung auslösen.
+    * Überprüfen Sie, ob Anwendungen dieses Typs auf dem Quellcomputer vorhanden sind.
+    * Überprüfen Sie die Rollen der Computer.  
     Handelt es sich um Server, die diese Anwendungen nutzen?
 
      Wenn die Antwort auf eine der vorherigen Fragen **Ja** lautet, handelt es sich vermutlich um eine **B-TP**-Aktivität. Überprüfen Sie, ob von der Ressource ein starkes Verschlüsselungsverfahren unterstützt wird, implementieren Sie es nach Möglichkeit, und **schließen** Sie die Sicherheitswarnung.
@@ -331,13 +331,13 @@ Bei Anwendungen wird möglicherweise ein schwächeres Verschlüsselungsverfahren
 
 1. Setzen Sie das Kennwort des Quellbenutzers zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
 2. Kontrollieren Sie den Quellcomputer.
-    - Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
-    - Suchen Sie nach Benutzern, die zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
-    - Wenn Windows Defender ATP installiert ist, nutzen Sie **klist.exe purge**, um alle Tickets der angegebenen Anmeldesitzung endgültig zu löschen und zu verhindern, dass die Tickets in Zukunft verwendet werden.
+    * Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
+    * Suchen Sie nach Benutzern, die zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
+    * Wenn Windows Defender ATP installiert ist, nutzen Sie **klist.exe purge**, um alle Tickets der angegebenen Anmeldesitzung endgültig zu löschen und zu verhindern, dass die Tickets in Zukunft verwendet werden.
 2. Isolieren Sie die Ressourcen, auf die über das Ticket zugegriffen wurde.
 3. Ändern Sie das Kennwort für das Kerberos Ticket Granting Ticket (KRBTGT) zweimal gemäß den Anweisungen unter [KRBTGT Account Password Reset Scripts now available for customers (Skripts zum Zurücksetzen von Kennwörtern des KRBTGT-Kontos stehen Kunden jetzt zur Verfügung)](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) mithilfe des [Reset the KRBTGT account password/keys tool (Tools zum Zurücksetzen des Kennworts/Schlüssels eines KRBTGT-Kontos)](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).
-    - Durch zweimaliges Zurücksetzen von KRBTGT werden alle Kerberos-Tickets in dieser Domäne ungültig. Dies bedeutet, dass **alle** Dienste außer Kraft gesetzt werden und erst wieder funktionieren, wenn sie erneuert werden. In einigen Fällen muss der Dienst neu gestartet werden.
-    - **Planen Sie daher das zweimalige Zurücksetzen von KRBTGT genau. Das zweimalige Zurücksetzen von KRBTGT wirkt sich auf alle Computer, Server und Benutzer in der Umgebung aus.**
+    * Durch zweimaliges Zurücksetzen von KRBTGT werden alle Kerberos-Tickets in dieser Domäne ungültig. Dies bedeutet, dass **alle** Dienste außer Kraft gesetzt werden und erst wieder funktionieren, wenn sie erneuert werden. In einigen Fällen muss der Dienst neu gestartet werden.
+    * **Planen Sie daher das zweimalige Zurücksetzen von KRBTGT genau. Das zweimalige Zurücksetzen von KRBTGT wirkt sich auf alle Computer, Server und Benutzer in der Umgebung aus.**
 
 4. Stellen Sie sicher, dass auf allen Domänencontrollern mit Betriebssystemen bis Windows Server 2012 R2 das Sicherheitsupdate [KB3011780](https://www.microsoft.com/download/details.aspx?id=44978) und auf allen Mitgliedsservern und Domänencontrollern bis 2012 R2 das aktuelle Sicherheitsupdate [KB2496930](https://support.microsoft.com/help/2496930/ms11-013-vulnerabilities-in-kerberos-could-allow-elevation-of-privileg) installiert ist. Weitere Informationen finden Sie unter  [Silver PAC](https://technet.microsoft.com/library/security/ms11-013.aspx)  und  [Gefälschte PAC-Datei](https://technet.microsoft.com/library/security/ms14-068.aspx).
 
@@ -355,12 +355,12 @@ Bei Computern mit dem Sicherheitspatch MS14-068 (für Domänencontroller) oder M
 
 1. Überprüfen Sie, auf welche Ressourcen in der Beweisliste der Sicherheitswarnung zugegriffen wurde, und stellen Sie fest, ob die Versuche erfolgreich waren oder fehlschlugen.
 2. Überprüfen Sie, ob wie oben beschrieben auf den Computern, auf die zugegriffen wurde, Sicherheitspatches installiert wurden.
-    - Wenn die Computer gepatcht wurden, **schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität.
+    * Wenn die Computer gepatcht wurden, **schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität.
 
 Einige Betriebssysteme und Anwendungen sind dafür bekannt, dass sie die Autorisierungsdaten ändern. Linux- und Unix-Dienste verfügen beispielsweise über einen eigenen Autorisierungsmechanismus, der die Warnung auslösen kann.
 
 1. Wird auf dem Quellcomputer ein Betriebssystem oder eine Anwendung ausgeführt, die über einen eigenen Autorisierungsmechanismus verfügt?
-    - Wenn auf dem Quellcomputer diese Art von Autorisierungsmechanismus ausgeführt wird, sollten Sie ein Upgrade des Betriebssystems erwägen oder die Anwendungskonfiguration beheben. **Schließen** die Warnung als **B-TP**-Aktivität.
+    * Wenn auf dem Quellcomputer diese Art von Autorisierungsmechanismus ausgeführt wird, sollten Sie ein Upgrade des Betriebssystems erwägen oder die Anwendungskonfiguration beheben. **Schließen** die Warnung als **B-TP**-Aktivität.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -372,10 +372,10 @@ Einige Betriebssysteme und Anwendungen sind dafür bekannt, dass sie die Autoris
 
 1. Setzen Sie das Kennwort des Quellbenutzers zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
 2. Kontrollieren Sie den Quellcomputer.
-    - Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
-    - Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
+    * Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
+    * Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
 3. Ändern Sie das Kennwort für das Kerberos Ticket Granting Ticket (KRBTGT) zweimal gemäß den Anweisungen unter [KRBTGT Account Password Reset Scripts now available for customers (Skripts zum Zurücksetzen von Kennwörtern des KRBTGT-Kontos stehen Kunden jetzt zur Verfügung)](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) mithilfe des [Reset the KRBTGT account password/keys tool (Tools zum Zurücksetzen des Kennworts/Schlüssels eines KRBTGT-Kontos)](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).
-    - Durch zweimaliges Zurücksetzen von KRBTGT werden alle Kerberos-Tickets in dieser Domäne ungültig. Dies bedeutet, dass **alle** Dienste außer Kraft gesetzt werden und erst wieder funktionieren, wenn sie erneuert werden. In einigen Fällen muss der Dienst neu gestartet werden. Planen Sie daher das zweimalige Zurücksetzen von KRBTGT genau, da hiervon alle Computer, Server und Benutzer in der Umgebung betroffen sind.
+    * Durch zweimaliges Zurücksetzen von KRBTGT werden alle Kerberos-Tickets in dieser Domäne ungültig. Dies bedeutet, dass **alle** Dienste außer Kraft gesetzt werden und erst wieder funktionieren, wenn sie erneuert werden. In einigen Fällen muss der Dienst neu gestartet werden. Planen Sie daher das zweimalige Zurücksetzen von KRBTGT genau, da hiervon alle Computer, Server und Benutzer in der Umgebung betroffen sind.
 4. Stellen Sie sicher, dass auf allen Domänencontrollern mit Betriebssystemen bis Windows Server 2012 R2 das Sicherheitsupdate [KB3011780](https://www.microsoft.com/download/details.aspx?id=44978) und auf allen Mitgliedsservern und Domänencontrollern bis 2012 R2 das aktuelle Sicherheitsupdate [KB2496930](https://support.microsoft.com/help/2496930/ms11-013-vulnerabilities-in-kerberos-could-allow-elevation-of-privileg) installiert ist. Weitere Informationen finden Sie unter  [Silver PAC](https://technet.microsoft.com/library/security/ms11-013.aspx)  und  [Gefälschte PAC-Datei](https://technet.microsoft.com/library/security/ms14-068.aspx).
 
 ## <a name="suspected-golden-ticket-usage-nonexistent-account-external-id-2027"></a>Vermutete Golden Ticket-Verwendung (nicht vorhandenes Konto) (externe ID 2027)
@@ -393,7 +393,7 @@ Die Synchronisierung von Änderungen in Active Directory Domain Services kann et
 2. Wurde der Benutzer kürzlich hinzugefügt?
 3. Wurde der Benutzer kürzlich aus Active Directory Domain Services gelöscht?
 
-Wenn die Antwort auf eine der vorherigen Fragen **Ja** lautet, **schließen** Sie die Warnung als **B-TP**-Aktivität.
+Wenn die Antwort auf alle vorherigen Fragen **Ja** lautet, **schließen** Sie die Warnung als **B-TP**-Aktivität.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -402,12 +402,12 @@ Wenn die Antwort auf eine der vorherigen Fragen **Ja** lautet, **schließen** Si
 **Empfohlene Abhilfemaßnahmen und Schritte zur Vorbeugung**
 
 1. Isolieren Sie die Quellcomputer.
-    - Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
-    - Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
-    - Wenn Windows Defender ATP installiert ist, nutzen Sie **klist.exe purge**, um alle Tickets der angegebenen Anmeldesitzung endgültig zu löschen und zu verhindern, dass die Tickets in Zukunft verwendet werden.
+    * Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
+    * Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
+    * Wenn Windows Defender ATP installiert ist, nutzen Sie **klist.exe purge**, um alle Tickets der angegebenen Anmeldesitzung endgültig zu löschen und zu verhindern, dass die Tickets in Zukunft verwendet werden.
 2. Isolieren Sie die Ressourcen, auf die über das Ticket zugegriffen wurde.
 3. Ändern Sie das Kennwort für das Kerberos Ticket Granting Ticket (KRBTGT) zweimal gemäß den Anweisungen unter [KRBTGT Account Password Reset Scripts now available for customers (Skripts zum Zurücksetzen von Kennwörtern des KRBTGT-Kontos stehen Kunden jetzt zur Verfügung)](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) mithilfe des [Reset the KRBTGT account password/keys tool (Tools zum Zurücksetzen des Kennworts/Schlüssels eines KRBTGT-Kontos)](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).
-    - Durch zweimaliges Zurücksetzen von KRBTGT werden alle Kerberos-Tickets in dieser Domäne ungültig. Dies bedeutet, dass **alle** Dienste außer Kraft gesetzt werden und erst wieder funktionieren, wenn sie erneuert werden. In einigen Fällen muss der Dienst neu gestartet werden. Planen Sie daher das zweimalige Zurücksetzen von KRBTGT genau, da hiervon alle Computer, Server und Benutzer in der Umgebung betroffen sind.
+    * Durch zweimaliges Zurücksetzen von KRBTGT werden alle Kerberos-Tickets in dieser Domäne ungültig. Dies bedeutet, dass **alle** Dienste außer Kraft gesetzt werden und erst wieder funktionieren, wenn sie erneuert werden. In einigen Fällen muss der Dienst neu gestartet werden. Planen Sie daher das zweimalige Zurücksetzen von KRBTGT genau, da hiervon alle Computer, Server und Benutzer in der Umgebung betroffen sind.
 
 ## <a name="suspected-golden-ticket-usage-ticket-anomaly-external-id-2032"></a>Vermutete Golden Ticket-Verwendung (Ticketanomalie) (externe ID 2032)
 
@@ -419,7 +419,7 @@ Angreifer mit Domänenadministratorrechten können das KRBTGT-Konto beeinträcht
 
 Verbunddienste generieren möglicherweise Tickets, die diese Warnung auslösen.
 1. Werden auf dem Quellcomputer Verbunddienste gehostet, die derartige Tickets erstellen?
-    - Wenn ja, schließen Sie die Sicherheitswarnung als **B-TP**-Aktivität.
+    * Wenn ja, schließen Sie die Sicherheitswarnung als **B-TP**-Aktivität.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -429,12 +429,12 @@ Verbunddienste generieren möglicherweise Tickets, die diese Warnung auslösen.
 **Empfohlene Abhilfemaßnahmen und Schritte zur Vorbeugung**
 
 1. Isolieren Sie die Quellcomputer.
-    - Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
-    - Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
-    - Wenn Windows Defender ATP installiert ist, nutzen Sie **klist.exe purge**, um alle Tickets der angegebenen Anmeldesitzung endgültig zu löschen und zu verhindern, dass die Tickets in Zukunft verwendet werden.
+    * Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
+    * Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
+    * Wenn Windows Defender ATP installiert ist, nutzen Sie **klist.exe purge**, um alle Tickets der angegebenen Anmeldesitzung endgültig zu löschen und zu verhindern, dass die Tickets in Zukunft verwendet werden.
 2. Isolieren Sie die Ressourcen, auf die über das Ticket zugegriffen wurde.
 3. Ändern Sie das Kennwort für das Kerberos Ticket Granting Ticket (KRBTGT) zweimal gemäß den Anweisungen unter [KRBTGT Account Password Reset Scripts now available for customers (Skripts zum Zurücksetzen von Kennwörtern des KRBTGT-Kontos stehen Kunden jetzt zur Verfügung)](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) mithilfe des [Reset the KRBTGT account password/keys tool (Tools zum Zurücksetzen des Kennworts/Schlüssels eines KRBTGT-Kontos)](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).
-    - Durch zweimaliges Zurücksetzen von KRBTGT werden alle Kerberos-Tickets in dieser Domäne ungültig. Dies bedeutet, dass **alle** Dienste außer Kraft gesetzt werden und erst wieder funktionieren, wenn sie erneuert werden. In einigen Fällen muss der Dienst neu gestartet werden.
+    * Durch zweimaliges Zurücksetzen von KRBTGT werden alle Kerberos-Tickets in dieser Domäne ungültig. Dies bedeutet, dass **alle** Dienste außer Kraft gesetzt werden und erst wieder funktionieren, wenn sie erneuert werden. In einigen Fällen muss der Dienst neu gestartet werden.
 
     **Planen Sie daher das zweimalige Zurücksetzen von KRBTGT genau. Das Zurücksetzen wirkt sich auf alle Computer, Server und Benutzer in der Umgebung aus.**
 
@@ -450,9 +450,9 @@ Angreifer mit Domänenadministratorrechten können das KRBTGT-Konto beeinträcht
 
 1. Wurden in den letzten Stunden an der Einstellung **Maximale Gültigkeitsdauer für Benutzerticket** innerhalb der Gruppenrichtlinie Änderungen vorgenommen, die sich auf die Warnung auswirken könnten?
 2. Ist der eigenständige Azure ATP-Sensor, der am Auslösen dieser Warnung beteiligt ist, ein virtueller Computer?
-    - Wenn der eigenständige Azure ATP-Sensor beteiligt ist, wurde dieser kürzlich aus einem gespeicherten Zustand wiederhergestellt und seine Ausführung fortgesetzt?
+    * Wenn der eigenständige Azure ATP-Sensor beteiligt ist, wurde dieser kürzlich aus einem gespeicherten Zustand wiederhergestellt und seine Ausführung fortgesetzt?
 3. Gibt es ein Problem mit der Zeitsynchronisierung im Netzwerk, durch das nicht alle Computer synchronisiert werden?
-    - Klicken Sie auf die Schaltfläche **Details herunterladen**, um die Excel-Datei für den Sicherheitswarnungsbericht anzuzeigen und zugehörige Netzwerkaktivitäten aufzurufen. Überprüfen Sie, ob sich „StartTime“ und „DomainControllerStartTime“ unterscheiden.
+    * Klicken Sie auf die Schaltfläche **Details herunterladen**, um die Excel-Datei für den Sicherheitswarnungsbericht anzuzeigen und zugehörige Netzwerkaktivitäten aufzurufen. Überprüfen Sie, ob sich „StartTime“ und „DomainControllerStartTime“ unterscheiden.
 
 Wenn die Antwort auf die vorherigen Fragen **Ja** lautet, **schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität.
 
@@ -464,12 +464,12 @@ Wenn die Antwort auf die vorherigen Fragen **Ja** lautet, **schließen** Sie die
 **Empfohlene Abhilfemaßnahmen und Schritte zur Vorbeugung**
 
 1. Kontrollieren Sie den Quellcomputer.
-    - Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
-    - Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
-    - Wenn Windows Defender ATP installiert ist, nutzen Sie **klist.exe purge**, um alle Tickets der angegebenen Anmeldesitzung endgültig zu löschen und zu verhindern, dass die Tickets in Zukunft verwendet werden.
+    * Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
+    * Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
+    * Wenn Windows Defender ATP installiert ist, nutzen Sie **klist.exe purge**, um alle Tickets der angegebenen Anmeldesitzung endgültig zu löschen und zu verhindern, dass die Tickets in Zukunft verwendet werden.
 2. Isolieren Sie die Ressourcen, auf die über das Ticket zugegriffen wurde.
 3. Ändern Sie das Kennwort für das Kerberos Ticket Granting Ticket (KRBTGT) zweimal gemäß den Anweisungen unter [KRBTGT Account Password Reset Scripts now available for customers (Skripts zum Zurücksetzen von Kennwörtern des KRBTGT-Kontos stehen Kunden jetzt zur Verfügung)](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) mithilfe des [Reset the KRBTGT account password/keys tool (Tools zum Zurücksetzen des Kennworts/Schlüssels eines KRBTGT-Kontos)](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).
-    - Durch zweimaliges Zurücksetzen von KRBTGT werden alle Kerberos-Tickets in dieser Domäne ungültig. Dies bedeutet, dass **alle** Dienste außer Kraft gesetzt werden und erst wieder funktionieren, wenn sie erneuert werden. In einigen Fällen muss der Dienst neu gestartet werden.
+    * Durch zweimaliges Zurücksetzen von KRBTGT werden alle Kerberos-Tickets in dieser Domäne ungültig. Dies bedeutet, dass **alle** Dienste außer Kraft gesetzt werden und erst wieder funktionieren, wenn sie erneuert werden. In einigen Fällen muss der Dienst neu gestartet werden.
 
     **Planen Sie daher das zweimalige Zurücksetzen von KRBTGT genau. Das Zurücksetzen wirkt sich auf alle Computer, Server und Benutzer in der Umgebung aus.**
 
@@ -493,8 +493,8 @@ Skeleton Key ist eine Schadsoftware, die auf einem Domänencontroller ausgeführ
 
 1. Setzen Sie die Kennwörter der kompromittierten Benutzer zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
 2. Isolieren Sie den Domänencontroller.
-    - Entfernen Sie die Schadsoftware. Weitere Informationen finden Sie in der [Skeleton Key Malware Analysis](https://www.virusbulletin.com/virusbulletin/2016/01/paper-digital-bian-lian-face-changing-skeleton-key-malware) (Analyse der Skeleton Key-Schadsoftware).
-    - Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der verdächtigen Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
+    * Entfernen Sie die Schadsoftware. Weitere Informationen finden Sie in der [Skeleton Key Malware Analysis](https://www.virusbulletin.com/virusbulletin/2016/01/paper-digital-bian-lian-face-changing-skeleton-key-malware) (Analyse der Skeleton Key-Schadsoftware).
+    * Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der verdächtigen Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
 
 ## <a name="suspicious-additions-to-sensitive-groups-external-id-2024"></a>Verdächtige Hinzufügungen sensibler Gruppen (externe ID 2024)
 
@@ -514,14 +514,14 @@ Vier Wochen pro Domänencontroller, beginnend mit dem ersten Ereignis.
 
 Zulässige Änderungen an Gruppen, die nur selten auftreten und vom System noch nicht als unbedenklich eingestuft wurden, können einen Alarm auslösen. Diese Warnungen werden als **B-TP**-Aktivität klassifiziert.
 1. Ist das Ändern der Gruppe zulässig?
-    - Wenn das Ändern der Gruppe zulässig ist, **schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität.
+    * Wenn das Ändern der Gruppe zulässig ist, **schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
 1. Untersuchen Sie die Benutzer, die Gruppen hinzugefügt wurden.
-    - Konzentrieren Sie sich auf ihre Aktivitäten, nachdem sie den sensiblen Gruppen hinzugefügt wurden.
+    * Konzentrieren Sie sich auf ihre Aktivitäten, nachdem sie den sensiblen Gruppen hinzugefügt wurden.
 2. Untersuchen Sie den Quellbenutzer.
-    - Laden Sie den Bericht **Sensitive Group Modification** (Änderungen an sensiblen Gruppen) herunter, um festzustellen, welche Änderungen von wem im gleichen Zeitraum vorgenommen wurden.
+    * Laden Sie den Bericht **Sensitive Group Modification** (Änderungen an sensiblen Gruppen) herunter, um festzustellen, welche Änderungen von wem im gleichen Zeitraum vorgenommen wurden.
 3. Untersuchen Sie die Computer, bei denen Benutzer ungefähr zum Zeitpunkt der Aktivität angemeldet waren.
 
 **Empfohlene Abhilfemaßnahmen und Schritte zur Vorbeugung**
@@ -529,9 +529,9 @@ Zulässige Änderungen an Gruppen, die nur selten auftreten und vom System noch 
 **Abhilfemaßnahmen:**
 
 1. Setzen Sie das Kennwort des Quellbenutzers zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
-    - Suchen Sie nach dem Computer, auf dem der Benutzer aktiv war.
-    - Überprüfen Sie, bei welchen Computern der Benutzer ungefähr zum Zeitpunkt der Aktivität angemeldet war. Überprüfen Sie, ob diese Computer kompromittiert sind.
-    - Wenn die Benutzer kompromittiert wurden, setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
+    * Suchen Sie nach dem Computer, auf dem der Benutzer aktiv war.
+    * Überprüfen Sie, bei welchen Computern der Benutzer ungefähr zum Zeitpunkt der Aktivität angemeldet war. Überprüfen Sie, ob diese Computer kompromittiert sind.
+    * Wenn die Benutzer kompromittiert wurden, setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
 
 **Vorbeugung:**
 
@@ -551,8 +551,8 @@ Ein verdächtiger Dienst wurde von Ihrer Organisation auf einem Domänencontroll
 Einige zulässige administrative Aufgaben auf Domänencontrollern können von Arbeitsstationen für Administratoren, IT-Teammitgliedern und Dienstkonten durchgeführt werden.
 
 1. Sollen diese Dienste tatsächlich auf dem Domänencontroller vom Quellbenutzer oder -computer ausgeführt werden?
-    - Wenn das aktuell der Fall ist, jedoch in Zukunft nicht mehr so sein sollte, **schließen** Sie die Warnung als **B-TP**-Aktivität.
-    - Wenn das aktuell der Fall ist und auch in Zukunft so bleiben sollte, **schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität, und schließen Sie diesen Computer aus.
+    * Wenn das aktuell der Fall ist, jedoch in Zukunft nicht mehr so sein sollte, **schließen** Sie die Warnung als **B-TP**-Aktivität.
+    * Wenn das aktuell der Fall ist und auch in Zukunft so bleiben sollte, **schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität, und schließen Sie diesen Computer aus.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -565,10 +565,10 @@ Einige zulässige administrative Aufgaben auf Domänencontrollern können von Ar
 
 1. Setzen Sie das Kennwort des Quellbenutzers zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
 2. Isolieren Sie die Domänencontroller.
-    - Korrigieren Sie den verdächtigen Dienst.
-    - Suchen Sie nach Benutzern, die zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
+    * Korrigieren Sie den verdächtigen Dienst.
+    * Suchen Sie nach Benutzern, die zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
 3. Suchen Sie nach dem Computer, auf dem der Benutzer aktiv war.
-    - Überprüfen Sie die Computer, bei denen der Benutzer ungefähr zum Zeitpunkt der Aktivität angemeldet war. Überprüfen Sie außerdem, ob diese Computer ebenfalls kompromittiert wurden.
+    * Überprüfen Sie die Computer, bei denen der Benutzer ungefähr zum Zeitpunkt der Aktivität angemeldet war. Überprüfen Sie außerdem, ob diese Computer ebenfalls kompromittiert wurden.
 
 **Vorbeugung:**
 
@@ -581,11 +581,11 @@ Einige zulässige administrative Aufgaben auf Domänencontrollern können von Ar
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Untersuchen eines Computers](investigate-a-computer.md)
-- [Arbeiten mit Sicherheitswarnungen](working-with-suspicious-activities.md)
-- [Arbeiten mit Lateral Movement-Pfaden](use-case-lateral-movement-path.md)
-- [Warnungen zu Reconnaissance](atp-reconnaissance-alerts.md)
-- [Warnungen zu kompromittierten Anmeldeinformationen](atp-compromised-credentials-alerts.md)
-- [Lateral Movement-Warnungen](atp-lateral-movement-alerts.md)
-- [Warnungen zu Exfiltration](atp-exfiltration-alerts.md)
-- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)
+* [Untersuchen eines Computers](investigate-a-computer.md)
+* [Arbeiten mit Sicherheitswarnungen](working-with-suspicious-activities.md)
+* [Arbeiten mit Lateral Movement-Pfaden](use-case-lateral-movement-path.md)
+* [Warnungen zu Reconnaissance](atp-reconnaissance-alerts.md)
+* [Warnungen zu kompromittierten Anmeldeinformationen](atp-compromised-credentials-alerts.md)
+* [Lateral Movement-Warnungen](atp-lateral-movement-alerts.md)
+* [Warnungen zu Exfiltration](atp-exfiltration-alerts.md)
+* [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)

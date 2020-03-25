@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 03/15/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4e62f333ff64291cd2858b528897afc80c4f1f44
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: a1cb324f7641a175ad47e01f4fa87efe5764334f
+ms.sourcegitcommit: e9545edce873d75f856155858487f61942032a9e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79411511"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79546210"
 ---
 # <a name="configure-event-collection"></a>Konfigurieren der Ereignissammlung
 
@@ -28,7 +28,7 @@ Um die Erkennungsfunktionalität zu verbessern, benötigt Azure ATP die folgende
 > - Eigenständige Azure ATP-Sensoren unterstützen nicht alle Datenquellentypen, sodass einige Ereignisse nicht erkannt werden. Zur vollständigen Abdeckung Ihrer Umgebung empfiehlt es sich, den Azure ATP-Sensor bereitzustellen.
 > - Es ist wichtig, das Azure ATP-Überwachungsskript vor der Konfiguration der Ereignissammlung auszuführen, um sicherzustellen, dass die Domänencontroller ordnungsgemäß für die Aufzeichnung der benötigten Ereignisse konfiguriert sind.
 
-Zusätzlich zum Sammeln und Analysieren des Netzwerkverkehrs zu und von den Domänencontrollern kann Azure ATP Windows-Ereignisse heranziehen, um Erkennungen weiter zu verbessern. Azure ATP verwendet die Windows-Ereignisse 4776 und 8004 für NTLM, um verschiedene Erkennungen zu verbessern. Die Ereignisse 4732, 4733, 4728, 4729, 4756, 4757, 7045 und 8004 dienen dazu, die Erkennung von Änderungen an vertraulichen Gruppen und die Diensterstellung zu verbessern. Dies kann aus dem SIEM-Agent heraus erfolgen oder indem Sie die Windows-Ereignisweiterleitung von Ihrem Domänencontroller aus einrichten. Die gesammelten Ereignisse versorgen Azure ATP mit zusätzlichen Informationen, die nicht über den Datenverkehr des Domänencontrollers verfügbar sind.
+Zusätzlich zum Sammeln und Analysieren des Netzwerkverkehrs zu und von den Domänencontrollern kann Azure ATP Windows-Ereignisse heranziehen, um Erkennungen weiter zu verbessern. Azure ATP verwendet die Windows-Ereignisse 4776 und 8004 für NTLM, um verschiedene Erkennungen zu verbessern. Die Ereignisse 4726, 4728, 4729, 4730, 4732, 4733, 4743, 4753, 4756, 4757, 4758, 4763, 4776, 7045 und 8004 dienen dazu, die Erkennung von Änderungen an vertraulichen Gruppen und die Diensterstellung zu verbessern. Dies kann aus dem SIEM-Agent heraus erfolgen oder indem Sie die Windows-Ereignisweiterleitung von Ihrem Domänencontroller aus einrichten. Die gesammelten Ereignisse versorgen Azure ATP mit zusätzlichen Informationen, die nicht über den Datenverkehr des Domänencontrollers verfügbar sind.
 
 ## <a name="ntlm-authentication-using-windows-event-8004"></a>NTLM-Authentifizierung mithilfe des Windows-Ereignisses 8004
 
