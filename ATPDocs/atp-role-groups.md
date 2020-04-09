@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ea04be4c3a069822009a0602dab425123821e3e4
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 1d325797ee7bce5dd5dca8b5c14987c73a4eab72
+ms.sourcegitcommit: bf5f58317121f1fb0fffc83d8b419cdd7ef27d9a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79413229"
+ms.lasthandoff: 04/05/2020
+ms.locfileid: "80669327"
 ---
 # <a name="azure-atp-role-groups"></a>Azure ATP-Rollengruppen
 
@@ -43,7 +43,7 @@ Azure ATP stellt drei Typen von Sicherheitsgruppen bereit: Azure ATP-(*Instanzna
 
 |Aktivität |Azure ATP-Administratoren für *Instanzname*|Azure ATP-Benutzer für *Instanzname*|Azure ATP-Viewer für *Instanzname*|
 |----|----|----|----|
-|Ändern des Status der Überwachung von Warnungen|Verfügbar|Nicht verfügbar|Nicht verfügbar|
+|Ändern des Status von Integritätswarnungen|Verfügbar|Nicht verfügbar|Nicht verfügbar|
 |Der Status der Sicherheitswarnungen wurde geändert (erneut öffnen, schließen, ausschließen, unterdrücken)|Verfügbar|Verfügbar|Nicht verfügbar|
 |Instanz löschen|Verfügbar|Nicht verfügbar|Nicht verfügbar|
 |Herunterladen eines Berichts|Verfügbar|Verfügbar|Verfügbar|

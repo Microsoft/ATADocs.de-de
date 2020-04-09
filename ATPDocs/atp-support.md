@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 8ae459ac-9fca-4923-9a1a-dc10d5c50b29
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6193d8db3bb457be44508589f7ba89764d525e85
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 81405d38badbd9fedda1ff54a9e0b09368689b83
+ms.sourcegitcommit: bf5f58317121f1fb0fffc83d8b419cdd7ef27d9a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414572"
+ms.lasthandoff: 04/05/2020
+ms.locfileid: "80669502"
 ---
 # <a name="azure-advanced-threat-protection-information-and-support"></a>Informationen zu und Unterstützung für Azure Advanced Threat Protection 
 
@@ -50,7 +50,7 @@ Andere Kunden können die Supportkanäle wie folgt verwenden:
 | Kanäle|Anweisungen|
 |------|-----|
 |Verwenden des Azure-Portals|1. Wählen Sie **Neue Supportanfrage** unter **Hilfe und Support** im Azure-Portal aus. <br>2. Wählen Sie auf dem Blatt **Grundeinstellungen** **Technical** (Technisch) als **Fehlertyp** und unter „Sicherheit und Identität“ **Azure Advanced Threat Protection** als **Dienst**. <br>3. Stellen Sie sicher, dass eine der folgenden Optionen ausgewählt ist:<br>– Abonnement mit technischem Support Diese Option wird angezeigt, wenn Sie ein kostenpflichtiges Abonnement oder eine Testversion von Azure haben.<br>– Technischer Support Diese Option wird angezeigt, wenn Sie kein Abonnement für Azure haben.|
-|Verwenden Sie das Azure Advanced Threat Protection-Portal.| 1. Klicken Sie auf das „?“- Symbol in der oberen Navigationsleiste des Azure Advanced Threat Protection-Portals.<br>2. Suchen Sie nach Azure Advanced Threat Protection.<br>3. Öffnen Sie ein Ticket.<br>– Klicken Sie auf „Support“.<br>4. Öffnen Sie ein Ticket. Wenn Sie sich erfolgreich beim Azure Advanced Threat Protection-Portal angemeldet haben, können Sie das [Portal für Onlinesupport](https://support.microsoft.com/assistedsupportproducts) aufrufen. |
+|Verwenden Sie das Azure Advanced Threat Protection-Portal.| 1. Klicken Sie auf das „?“-Symbol in der oberen Navigationsleiste des Azure Advanced Threat Protection-Portals.<br>2. Suchen Sie nach Azure Advanced Threat Protection.<br>3. Öffnen Sie ein Ticket.<br>– Wählen Sie „Support“ aus.<br>4. Öffnen Sie ein Ticket. Wenn Sie sich erfolgreich beim Azure Advanced Threat Protection-Portal angemeldet haben, können Sie das [Portal für Onlinesupport](https://support.microsoft.com/assistedsupportproducts) aufrufen. |
 
 Informationen zu weiteren Supportoptionen erhalten Sie von Ihrem Microsoft-Kontakt.
 
@@ -70,7 +70,7 @@ Problembehandlung:
 
 - Informationen über die Voraussetzungen für Azure Advanced Threat Protection finden Sie unter [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](atp-prerequisites.md).
 
-- Unter [Integrate with Windows Defender ATP (Integration in Windows Defender ATP)](integrate-wd-atp.md) finden Sie Informationen zur Integration von Windows Defender ATP in Azure Advanced Threat Protection, wenn dieser Dienst in Ihrer Umgebung bereitgestellt wird.
+- Unter [Integration in Microsoft Defender ATP](integrate-wd-atp.md) finden Sie Informationen zur Integration von Microsoft Defender ATP in Azure Advanced Threat Protection, wenn dieser Dienst in Ihrer Umgebung bereitgestellt wird.
 
 - Informationen zur Untersuchung einer Sicherheitswarnung finden Sie im  [Leitfaden für Sicherheitswarnungen](suspicious-activity-guide.md).
 

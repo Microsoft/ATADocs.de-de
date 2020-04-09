@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 34dc152c-6b7f-4128-93fe-aad56c282730
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7d4d14b8f2710879833b8aca5310f939c784f2b3
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: a4d4d9cf6bcd0fb6c8f321ab2388ed5a455c36f5
+ms.sourcegitcommit: bf5f58317121f1fb0fffc83d8b419cdd7ef27d9a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79411742"
+ms.lasthandoff: 04/05/2020
+ms.locfileid: "80669661"
 ---
 # <a name="azure-atp-readiness-guide"></a>Handbuch für die Azure ATP-Bereitschaft
 
@@ -46,7 +46,7 @@ Diese Ressourcen unterstützen Sie beim Einrichten von Azure ATP, bei der Verbin
 
 - [Testen Sie Azure ATP (Teil von EMS E5):](https://aka.ms/aatptrial) Die Testversion ist 90 Tage gültig.
 - [Azure ATP-Setup:](install-atp-step1.md) Führen Sie diese Schritte aus, um Azure ATP in Ihrer Umgebung bereitzustellen.
-- [Integrieren von Azure ATP in Windows Defender ATP](integrate-wd-atp.md)
+- [Integration von Azure ATP in Microsoft Defender ATP](integrate-wd-atp.md)
 
 ## <a name="azure-atp-settings"></a>Einstellungen für Azure ATP
 

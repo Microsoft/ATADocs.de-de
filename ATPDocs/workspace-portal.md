@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 4ba46d60-3a74-480e-8f0f-9a082d62f343
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c0b15763991dd3eb26773615f0938a89a535dc45
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 5d6bd4b4c8bcceff9d06d98f2fe8125fe1f3d769
+ms.sourcegitcommit: bf5f58317121f1fb0fffc83d8b419cdd7ef27d9a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79410731"
+ms.lasthandoff: 04/05/2020
+ms.locfileid: "80669741"
 ---
 # <a name="working-with-the-azure-atp-portal"></a>Arbeiten mit dem Azure ATP-Portal
 
@@ -106,7 +106,7 @@ Wenn Sie an einer Stelle im Azure ATP-Portal, an der eine einzelne Entität darg
 - Erste Aktivität: Das erste Mal, als Azure ATP eine Aktivität von dieser Entität wahrgenommen hat.
 - Letzte Aktivität: Das letzte Mal, als Azure ATP eine Aktivität von dieser Entität wahrgenommen hat.
 - SA-Badge: Wird angezeigt, wenn dieser Entität verdächtige Aktivitäten zugeordnet werden.
-- Windows Defender ATP-Badge: Wird angezeigt, wenn dieser Entität verdächtige Aktivitäten in Windows Defender ATP zugeordnet werden.
+- Microsoft Defender ATP-Badge: Wird angezeigt, wenn dieser Entität verdächtige Aktivitäten in Windows Defender ATP zugeordnet werden.
 - Badge für Lateral Movement-Pfade: Wird angezeigt, wenn innerhalb der letzten beiden Tage Lateral Movement-Pfade für diese Entität ermittelt wurden.
 
 

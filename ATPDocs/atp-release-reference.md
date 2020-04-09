@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: efc6412bebeb839c577a3e65aac0d9386927a0a3
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 347af29a8748446345455442741e8c7eb599ac5b
+ms.sourcegitcommit: bf5f58317121f1fb0fffc83d8b419cdd7ef27d9a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414181"
+ms.lasthandoff: 04/05/2020
+ms.locfileid: "80669766"
 ---
 # <a name="release-reference-of-azure-advanced-threat-protection-azure-atp"></a>Versionsreferenz zu Azure Advanced Threat Protection (Azure ATP) 
 
@@ -34,9 +34,9 @@ Der Azure ATP-Sicherheitshinweis [Verdächtige Kommunikation über DNS](suspicio
 ## <a name="azure-atp-release-254"></a>Azure ATP Release 2.54
 Veröffentlicht am 11. November 2018
 
-- **Featureerweiterung: Standarddomänenausschlüsse zur Warnung aufgrund verdächtiger Kommunikation über DNS hinzugefügt**<br>   Es wurden drei beliebte Domänen zur Ausschlussliste der Standarddomäne hinzugefügt. Die Ausschlussliste bleibt vollständig anpassbar. Weitere Informationen finden Sie unter [Ausschließen von Entitäten von der Erkennung](excluding-entities-from-detections.md) 
+- **Featureerweiterung: Standarddomänenausschlüsse zur Warnung aufgrund verdächtiger Kommunikation über DNS hinzugefügt**<br> Es wurden drei beliebte Domänen zur Ausschlussliste der Standarddomäne hinzugefügt. Die Ausschlussliste bleibt vollständig anpassbar. Weitere Informationen finden Sie unter [Ausschließen von Entitäten von der Erkennung](excluding-entities-from-detections.md) 
 
-- **Erweiterungen der Dokumentation: SIEM-Protokollaktualisierung, Leitfaden zu bekannten Problemen**<br>    Die externalId-Zuordnung sowie zusätzliche Erläuterungen wurden den Beschreibungen des SIEM-Protokolls hinzugefügt. Weitere Informationen finden Sie in der [Referenz zum SIEM-Protokoll](cef-format-sa.md). <br>Es wurde ein neuer Artikel zum Leitfaden für derzeit bekannte Probleme hinzugefügt. Weitere Informationen finden Sie unter: [Azure ATP Known Issues (Azure ATP: Bekannte Probleme)](known-issues.md).  
+- **Erweiterungen der Dokumentation: SIEM-Protokollaktualisierung, Leitfaden zu bekannten Problemen**<br> Die externalId-Zuordnung sowie zusätzliche Erläuterungen wurden den Beschreibungen des SIEM-Protokolls hinzugefügt. Weitere Informationen finden Sie in der [Referenz zum SIEM-Protokoll](cef-format-sa.md). <br>Es wurde ein neuer Artikel zum Leitfaden für derzeit bekannte Probleme hinzugefügt. Weitere Informationen finden Sie unter: [Azure ATP Known Issues (Azure ATP: Bekannte Probleme)](known-issues.md).  
 
 - Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
@@ -47,7 +47,7 @@ Veröffentlicht: 4. November 2018
 [Sicherheitswarnungen zu verdächtigen Authentifizierungsfehlern](suspicious-activity-guide.md) in Azure ATP umfassen nun die Überwachung für die Erkennung von Kennwort-Spray- oder Brute-Force-Angriffen.
 Bei einem typischen **Kennwort-Spray-Angriff** testen Angreifer nach erfolgreichem Durchzählen einer Liste von gültigen Benutzern aus dem Domänencontroller EIN sorgfältig erstelltes Kennwort für ALLE bekannten Benutzerkonten (ein Kennwort für n Konten). Wenn beim ersten Kennwort-Spray-Angriff ein Fehler auftritt, wiederholen sie den Vorgang mit einem anderen sorgfältig erstellten Kennwort – normalerweise nach einer Wartezeit von 30 Minuten zwischen den Versuchen. Durch die Wartezeit verhindern Angreifer, dass meist zeitbasierte Schwellenwerte für die Kontosperre ausgelöst werden. Kennwort-Spray-Angriffe haben sich rasch zu einer beliebten Methode unter Angreifern und Pen-Testern entwickelt. Kennwort-Spray-Angriffe haben sich als effektiv erwiesen, um innerhalb einer Organisation einen Ankerpunkt zu finden und infolgedessen weitere Schwachstellen auszunutzen, um Berechtigungen auszuweiten. 
 
-- **Featureerweiterung: Senden einer Syslog-Testnachricht**<br>   Ab sofort gibt es eine neue Möglichkeit, um eine Syslog-Testnachricht während des SIEM-Setupvorgangs zu senden. Weitere Informationen finden Sie unter [Integration in Syslog](setting-syslog.md). 
+- **Featureerweiterung: Senden einer Syslog-Testnachricht**<br> Ab sofort gibt es eine neue Möglichkeit, um eine Syslog-Testnachricht während des SIEM-Setupvorgangs zu senden. Weitere Informationen finden Sie unter [Integration in Syslog](setting-syslog.md). 
 
 - Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
@@ -75,7 +75,7 @@ Die [Sicherheitswarnung zur versuchten Remotecodeausführung](suspicious-activit
 ## <a name="azure-atp-release-251"></a>Azure ATP Release 2.51
 Veröffentlicht: 21. Oktober 2018
 
-- Sie können die Integration von **WD-ATP** über den Bildschirm [Konfiguration](integrate-wd-atp.md#how-to-integrate-azure-atp-with-windows-defender-atp) im Azure ATP-Portal aktivieren oder deaktivieren. (Hierfür muss der Azure ATP-Benutzer ein globaler Administrator oder ein Sicherheitsadministrator im AAD-Mandanten sein.)
+- Sie können die Integration von **WD-ATP** über den Bildschirm [Konfiguration](integrate-wd-atp.md#how-to-integrate-azure-atp-with-microsoft-defender-atp) im Azure ATP-Portal aktivieren oder deaktivieren. (Hierfür muss der Azure ATP-Benutzer ein globaler Administrator oder ein Sicherheitsadministrator im AAD-Mandanten sein.)
 
 - Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
@@ -86,9 +86,9 @@ Veröffentlicht: 14. Oktober 2018
 
 ## <a name="azure-atp-release-249"></a>Azure ATP Release 2.49
 Veröffentlicht: 7. Oktober 2018
--   **Neue Erkennungen: Verdächtige DNS-Kommunikation** (Vorschau)<br>Es wurde eine neue Erkennung hinzugefügt, um vor verdächtigen DNS-Kommunikationsangriffen zu schützen:
+- **Neue Erkennungen: Verdächtige DNS-Kommunikation** (Vorschau)<br>Es wurde eine neue Erkennung hinzugefügt, um vor verdächtigen DNS-Kommunikationsangriffen zu schützen:
 
-    -   Diese Erkennung hilft dabei, Angriffe gegen das DNS-Protokoll zu erkennen: In den meisten Organisationen wird das DNS-Protokoll nicht überwacht und nur selten vor böswilligen Angriffen geschützt. Das gibt einem Angreifer auf einem kompromittierten Computer die Möglichkeit, das DNS-Protokoll zu missbrauchen. Böswillige Kommunikation über DNS kann zur Datenexfiltration, Zugriff über Command-and-Control-Server und/oder zur Umgehung von Netzwerkeinschränkungen führen.
+    - Diese Erkennung hilft dabei, Angriffe gegen das DNS-Protokoll zu erkennen: In den meisten Organisationen wird das DNS-Protokoll nicht überwacht und nur selten vor böswilligen Angriffen geschützt. Das gibt einem Angreifer auf einem kompromittierten Computer die Möglichkeit, das DNS-Protokoll zu missbrauchen. Böswillige Kommunikation über DNS kann zur Datenexfiltration, Zugriff über Command-and-Control-Server und/oder zur Umgehung von Netzwerkeinschränkungen führen.
 
 - **Neue Funktionen** <br>Die Azure ATP-**Benutzerrolle** wurde mit den folgenden Funktionen verbessert:
   - Der Status der Sicherheitswarnungen kann geändert werden (erneut öffnen, schließen, ausschließen, unterdrücken)
@@ -188,16 +188,16 @@ Veröffentlicht: 22. Juli 2018
 
   - Sie können Aktivitäten, die von Benutzern in mehreren Gesamtstrukturen ausgeführt werden, in einer zentralen Konsole im Blick behalten und untersuchen.
   - Durch erweiterte Active Directory-Integration und -Kontoauflösung lassen sich falsch positive Ergebnisse besser erkennen und reduzieren.
-  - Sie profitieren von besseren Überwachungswarnungen und -berichten für eine organisationsübergreifende Übersicht.
+  - Sie profitieren von besseren Integritätswarnungen und -berichten für eine organisationsübergreifende Übersicht.
 
 
--   **Neue Erkennungen: DCShadow**<br>Zwei neue Erkennungsfunktionen helfen Ihnen beim Schutz vor DCShadow-Angriffen (Domain Controller Shadow):
+- **Neue Erkennungen: DCShadow**<br>Zwei neue Erkennungsfunktionen helfen Ihnen beim Schutz vor DCShadow-Angriffen (Domain Controller Shadow):
 
-    -   Verdächtige Hochstufung zu Domänencontrollern (potenzieller DCShadow-Angriff): Diese Funktion hilft bei der Erkennung von Angriffen, bei denen ein Computer die Identität eines Domänencontrollers annimmt und dann versucht, die Replikation zu verwenden, um Änderungen an andere Domänencontroller in Ihrer Domäne zu verteilen.
+    - Verdächtige Hochstufung zu Domänencontrollern (potenzieller DCShadow-Angriff): Diese Funktion hilft bei der Erkennung von Angriffen, bei denen ein Computer die Identität eines Domänencontrollers annimmt und dann versucht, die Replikation zu verwenden, um Änderungen an andere Domänencontroller in Ihrer Domäne zu verteilen.
 
-    -   Verdächtige Replikationsanforderung (potenzieller DCShadow-Angriff): Diese Funktion hilft beim Schutz vor Angriffen, bei denen versucht wird, Computer, die keine Domänencontroller sind, zu Domänencontrollern hochzustufen, um Verzeichnisobjekte zu ändern.
+    - Verdächtige Replikationsanforderung (potenzieller DCShadow-Angriff): Diese Funktion hilft beim Schutz vor Angriffen, bei denen versucht wird, Computer, die keine Domänencontroller sind, zu Domänencontrollern hochzustufen, um Verzeichnisobjekte zu ändern.
 
--   **Verbesserte Informationen zu Verschlüsselungsdowngrades**<br>Die Erkennung von Verschlüsselungsdowngrades bietet jetzt mehr Informationen zum Typ des erkannten Angriffs: Overpass-the-Hash, Golden Ticket und Skeleton Key. Darüber hinaus wurden diese Warnungen aggregiert, um die Untersuchung zu vereinfachen.
+- **Verbesserte Informationen zu Verschlüsselungsdowngrades**<br>Die Erkennung von Verschlüsselungsdowngrades bietet jetzt mehr Informationen zum Typ des erkannten Angriffs: Overpass-the-Hash, Golden Ticket und Skeleton Key. Darüber hinaus wurden diese Warnungen aggregiert, um die Untersuchung zu vereinfachen.
 - Diese Version enthält Fehlerbehebungen und Verbesserungen für mehrere Probleme. 
 
 
@@ -212,7 +212,7 @@ Veröffentlicht: 15. Juli 2018
 ## <a name="azure-atp-release-239"></a>Azure ATP Release 2.39
 
 Veröffentlicht: 5. Juli 2018
--   **Neue Erkennung hinzugefügt: Kerberos Golden Ticket – nicht vorhandenes Konto** (Vorschau)<br>Mit dieser neuen Erkennung können Sie Ihre Organisation vor Angriffen schützen, in denen ein Golden Ticket für ein Konto erstellt wird, das in Ihrer Domäne nicht existiert. Weitere Informationen finden Sie im [Azure Advanced Threat Protection-Handbuch zu verdächtigen Aktivitäten](suspicious-activity-guide.md).
+- **Neue Erkennung hinzugefügt: Kerberos Golden Ticket – nicht vorhandenes Konto** (Vorschau)<br>Mit dieser neuen Erkennung können Sie Ihre Organisation vor Angriffen schützen, in denen ein Golden Ticket für ein Konto erstellt wird, das in Ihrer Domäne nicht existiert. Weitere Informationen finden Sie im [Azure Advanced Threat Protection-Handbuch zu verdächtigen Aktivitäten](suspicious-activity-guide.md).
 
 - Diese Version enthält Fehlerbehebungen und Verbesserungen für mehrere Probleme. 
 
@@ -248,7 +248,7 @@ Veröffentlicht: 10. Juni 2018
 
 - **Aktualisierte Erkennung für ungewöhnliche Protokollimplementierungen**<br></br>Mithilfe der Erkennung für ungewöhnliche Protokollimplementierungen können jetzt mehr Informationen bereitgestellt werden. Sie können jetzt sehen, welches potenzielle Angriffstool Azure ATP verdächtigt, auf Ihrem Netzwerk zu arbeiten. Weitere Informationen finden Sie im [Leitfaden zu verdächtigen Aktivitäten](suspicious-activity-guide.md).
  
-- **Warnung bei veralteten Sensoren**<br></br>Azure ATP umfasst eine neue Überwachungswarnung, über die Sie informiert werden, wenn es bereits drei neue Versionen eines Sensors gibt und noch kein Update ausgeführt wurde. Wenn Ihnen diese Warnung angezeigt wird, sollten Sie den Sensor aktualisieren oder prüfen, warum der Sensor nicht automatisch aktualisiert wird. Wenn die Warnung wiederholt auftritt, deinstallieren Sie den Sensor und installieren Sie ihn erneut.
+- **Warnung bei veralteten Sensoren**<br></br>Azure ATP umfasst eine neue Integritätswarnung, über die Sie informiert werden, wenn es bereits drei neue Versionen eines Sensors gibt und noch kein Update ausgeführt wurde. Wenn Ihnen diese Warnung angezeigt wird, sollten Sie den Sensor aktualisieren oder prüfen, warum der Sensor nicht automatisch aktualisiert wird. Wenn die Warnung wiederholt auftritt, deinstallieren Sie den Sensor und installieren Sie ihn erneut.
 
 - Diese Version enthält Fehlerbehebungen und Verbesserungen für mehrere Probleme. 
 
@@ -297,7 +297,7 @@ Veröffentlicht: 6.Mai 2018
 Veröffentlicht: 29. April 2018
  
 - Verdächtige Aktivitäten zur Herabstufung der Verschlüsselung enthalten jetzt einen Beweisabschnitt, der die von Azure ATP erkannten Symptome beschreibt, auf denen der Verdacht basiert, dass eine Aktivität zur Herabstufung der Verschlüsselung stattgefunden hat. 
--   Azure ATP verwendet jetzt den Azure Email Orchestrator für alle von Azure ATP gesendeten E-Mail-Nachrichten einschließlich verdächtiger Aktivitäten, Überwachungswarnungen und Berichte. Sie werden feststellen, dass diese E-Mail-Benachrichtigungen jetzt im Interesse der Benutzerfreundlichkeit ein konsistentes Format aufweisen, und Excel-Dateien werden mit der E-Mail verknüpft, die von der Konsole heruntergeladen werden können.
+- Azure ATP verwendet jetzt den Azure Email Orchestrator für alle von Azure ATP gesendeten E-Mail-Nachrichten einschließlich verdächtiger Aktivitäten, Integritätswarnungen und Berichte. Sie werden feststellen, dass diese E-Mail-Benachrichtigungen jetzt im Interesse der Benutzerfreundlichkeit ein konsistentes Format aufweisen, und Excel-Dateien werden mit der E-Mail verknüpft, die von der Konsole heruntergeladen werden können.
  
  
 ## <a name="azure-atp-release-229"></a>Azure ATP-Version 2.29
@@ -311,7 +311,7 @@ Veröffentlicht: 22. April 2018
 
 Veröffentlicht: 15. April 2018
  
--   Benutzer, die Mitglieder der Rollengruppen für Azure ATP-Benutzer und anzeigende Azure ATP-Benutzer sind, sind jetzt berechtigt, Überwachungswarnungen anzuzeigen.
+- Benutzer, die Mitglieder der Rollengruppen für Azure ATP-Benutzer und anzeigende Azure ATP-Benutzer sind, sind jetzt berechtigt, Integritätswarnungen anzuzeigen.
 - Diese Version enthält Fehlerbehebungen und Verbesserungen für mehrere Probleme. 
 
 
@@ -329,8 +329,8 @@ Veröffentlicht: 8. April 2018
 Veröffentlicht: 25. März 2018
 
 - Wenn Azure ATP Sie über eine verdächtige Aktivität informiert, die Sie als unbedenklich positiv identifizieren (eine legitime Aktion, die keine verdächtige Aktivität ist), haben Sie die Möglichkeit, Computer und IP-Adressen von weiteren Erkennungen auszuschließen. Hierzu zählen: Herabstufen der Verschlüsselung, LDAP-Brute-Force, gefälschte PAC, Brute-Force und Pass-the-Hash.
--   Die Leistung des Azure ATP-Sensors wurde verbessert.
--   Eine neue Region für die Bereitstellung eines Arbeitsbereichs wurde hinzugefügt. Sie können ab sofort auch einen Arbeitsbereich in Asien bereitstellen. 
+- Die Leistung des Azure ATP-Sensors wurde verbessert.
+- Eine neue Region für die Bereitstellung eines Arbeitsbereichs wurde hinzugefügt. Sie können ab sofort auch einen Arbeitsbereich in Asien bereitstellen. 
 
 
 ## <a name="azure-atp-release-225"></a>Azure ATP Version 2.25
@@ -360,7 +360,7 @@ Veröffentlicht: 11. März 2018
 - Sie können jetzt einfach über den in einer Warnung über verdächtige Aktivität enthaltenen Link auf die Dokumentation zugreifen, um [Schritte, die Sie durchführen können](suspicious-activity-guide.md) anzuzeigen. 
 
 **Leistungsverbesserungen**
- -  Die Azure ATP-Sensorinfrastruktur wurde bezüglich der Leistung verbessert: Die aggregierte Datenverkehrsansicht ermöglicht Optimierungen der CPU- und Paketpipeline und verwendet Sockets zu Domänencontrollern erneut, um SSL-Sitzungen zum DC zu minimieren.
+ - Die Azure ATP-Sensorinfrastruktur wurde bezüglich der Leistung verbessert: Die aggregierte Datenverkehrsansicht ermöglicht Optimierungen der CPU- und Paketpipeline und verwendet Sockets zu Domänencontrollern erneut, um SSL-Sitzungen zum DC zu minimieren.
 
 ## <a name="see-also"></a>Weitere Informationen
 - [Was ist Azure Advanced Threat Protection?](what-is-atp.md)

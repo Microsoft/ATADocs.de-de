@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 3529bee9f7ebaf13b541109375845fedcac2bfa8
-ms.sourcegitcommit: 7b80b2eff4331f8e1e1403e4b5c751f406915624
+ms.openlocfilehash: f56f4a10a956cab92aa18c5f7dcdd208d0e4d8b3
+ms.sourcegitcommit: bf5f58317121f1fb0fffc83d8b419cdd7ef27d9a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "79989836"
+ms.lasthandoff: 04/05/2020
+ms.locfileid: "80669645"
 ---
 # <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Neuerungen in Azure Advanced Threat Protection (Azure ATP)
 
@@ -276,7 +276,7 @@ Veröffentlicht: 1. Juli 2019
 Azure ATP-Instanzen werden jetzt im Azure UK-Rechenzentrum unterstützt. Weitere Informationen zum Erstellen von Azure ATP-Instanzen und den entsprechenden Rechenzentrumsstandorten finden Sie unter [Step 1 of Azure ATP installation (Azure ATP-Installation – Schritt 1)](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step10).
 
 - **Featureerweiterung: Neuer Name und neue Features für die Warnungen bei verdächtigen Hinzufügungen zu sensiblen Gruppen (externe ID 2024)**  
-Die Warnung **Suspicious additions to sensitive groups (Verdächtige Hinzufügungen zu sensiblen Gruppen)** lautete ursprünglich **Suspicious modifications to sensitive groups (Verdächtige Änderungen an sensiblen Gruppen)**. Die externe ID der Warnung (ID 2024) hat sich nicht geändert. Durch die beschreibende Namensänderung wird der Zweck der Warnung bei Ergänzungen zu Ihren **sensiblen** Gruppen genauer wiedergespiegelt. Die verbesserte Warnung enthält auch neue Beweise und verbesserte Beschreibungen. Weitere Informationen finden Sie unter [Suspicious additions to sensitive groups (Verdächtige Hinzufügungen zu sensiblen Gruppen)](https://docs.microsoft.com/azure-advanced-threat-protection/atp-domain-dominance-alerts#suspicious-additions-to-sensitive-groups-external-id-2024).  
+Die Warnung **Suspicious additions to sensitive groups (Verdächtige Hinzufügungen zu sensiblen Gruppen)** lautete ursprünglich **Suspicious modifications to sensitive groups (Verdächtige Änderungen an sensiblen Gruppen)** . Die externe ID der Warnung (ID 2024) hat sich nicht geändert. Durch die beschreibende Namensänderung wird der Zweck der Warnung bei Ergänzungen zu Ihren **sensiblen** Gruppen genauer wiedergespiegelt. Die verbesserte Warnung enthält auch neue Beweise und verbesserte Beschreibungen. Weitere Informationen finden Sie unter [Suspicious additions to sensitive groups (Verdächtige Hinzufügungen zu sensiblen Gruppen)](https://docs.microsoft.com/azure-advanced-threat-protection/atp-domain-dominance-alerts#suspicious-additions-to-sensitive-groups-external-id-2024).  
 
 - **Neues Dokumentationsfeature: Anleitung zum Verschieben von Advanced Threat Analytics zu Azure ATP**  
 In diesem neuen Artikel finden Sie Informationen zu Voraussetzungen, Tipps zur Planung sowie Konfigurations- und Überprüfungsschritte für das Verschieben von ATA zum Azure ATP-Dienst. Weitere Informationen finden Sie unter [Verschieben von ATA zu Azure ATP](https://docs.microsoft.com/azure-advanced-threat-protection/ata-atp-move-overview).
@@ -400,8 +400,8 @@ Lateral-Movement-Pfade (LMP) sind eine wichtige Methode für die Ermittlung von 
 
 Veröffentlicht: 24. März 2019
 
-- **Featureerweiterung: Überwachungsbenachrichtigungen der Netzwerknamensauflösung (Network Name Resolution, NNR)**  
-Überwachungswarnungen wurden für Konfidenzniveaus hinzugefügt, die Azure ATP-Sicherheitswarnungen zugeordnet sind, die sich auf NNR beziehen. Jede Überwachungswarnung enthält umsetzbare und ausführliche Empfehlungen, wie Abhilfe bei niedriger NNR-Erfolgsquote geschaffen werden kann.
+- **Featureerweiterung: Integritätswarnungen der Netzwerknamensauflösung (Network Name Resolution, NNR)**  
+Integritätswarnungen wurden für Konfidenzniveaus hinzugefügt, die Azure ATP-Sicherheitswarnungen zugeordnet sind, die sich auf NNR beziehen. Jede Integritätswarnung enthält umsetzbare und ausführliche Empfehlungen, wie Abhilfe bei niedriger NNR-Erfolgsquote geschaffen werden kann.
 
     Informationen dazu, wie Azure ATP NNR verwendet und warum dies für die Genauigkeit von Warnungen wichtig ist, finden Sie unter [Was ist Netzwerknamensauflösung](atp-nnr-policy.md).
 
@@ -469,7 +469,7 @@ Veröffentlichung: 24. Februar 2019
     Lightweight Directory Access Protocol (LDAP) ist eine der sowohl für zulässige als auch böswillige Zwecke am häufigsten verwendeten Methoden zum Abfragen von Active Directory. LDAP-fokussierte Sicherheitsprinzipalreconnaissance wird häufig als erste Phase eines Kerberoasting-Angriffs verwendet. Mit Kerberoasting-Angriffen wird eine Zielliste von Sicherheitsprinzipalnamen (Security Principal Names, SPNs) abgerufen, für die Angreifer dann versuchen, Ticket Granting Server-Tickets (TGS) zu erhalten.
 
 - **Featureerweiterung: Reconnaissance über Kontoauflistung (NTLM)**  
-Verbesserte **Reconnaissance über Kontoauflistung (NTLM)**-Warnung, die zusätzliche Analysen und verbesserte Erkennungslogik zum Reduzieren von **B-TP**- und **FP**-Warnungsergebnissen verwendet.
+Verbesserte **Reconnaissance über Kontoauflistung (NTLM)** -Warnung, die zusätzliche Analysen und verbesserte Erkennungslogik zum Reduzieren von **B-TP**- und **FP**-Warnungsergebnissen verwendet.
 
 - **Featureerweiterung: „Reconnaissance über Netzwerkzuordnung“-Warnung (DNS)**  
 Neue Typen von Erkennungen wurden „Reconnaissance über Netzwerkzuordnung“-Warnungen (DNS) hinzugefügt. Außer verdächtigen AXFR-Anfragen erkennt Azure ATP jetzt verdächtige Typen von Anforderungen von Nicht-DNS-Servern, die eine übermäßige Anzahl von Anforderungen verwenden.

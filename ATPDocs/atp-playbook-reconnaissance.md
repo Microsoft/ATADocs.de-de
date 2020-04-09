@@ -7,12 +7,12 @@ author: shsagir
 ms.author: shsagir
 ms.date: 09/01/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: 50aeef3f54285b24de308269f41be54aeb379067
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: e3a7f4553635ec2af2aec6bda10802f776b7e543
+ms.sourcegitcommit: bf5f58317121f1fb0fffc83d8b419cdd7ef27d9a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79411920"
+ms.lasthandoff: 04/05/2020
+ms.locfileid: "80669622"
 ---
 # <a name="tutorial-reconnaissance-playbook"></a>Tutorial: Playbook zu Reconnaissance
 
@@ -157,7 +157,7 @@ Wir können sehen, wann JeffL sich bei VictimPC mithilfe des Kerberos-Protokolls
 
 ![Die Zeitachse logischer Aktivitäten von JeffL](media/playbook-recon-dsenumeration-jeffvlogicalactivity.png)
 
-Viele Aktivitäten werden in der Zeitachse logischer Aktivitäten protokolliert, sodass ihr eine wichtige Funktion bei der DFIR-Ausführung (Digital Forensics and Incident Response) zukommt. Sie können auch Aktivitäten sehen, wenn die anfängliche Erkennung nicht durch Azure ATP, sondern Windows Defender ATP, Office 365 und andere erfolgte.
+Viele Aktivitäten werden in der Zeitachse logischer Aktivitäten protokolliert, sodass ihr eine wichtige Funktion bei der DFIR-Ausführung (Digital Forensics and Incident Response) zukommt. Sie können auch Aktivitäten sehen, wenn die anfängliche Erkennung nicht durch Azure ATP, sondern Microsoft Defender ATP, Office 365 und andere erfolgte.
 
 Bei einem Blick auf die **ContosoDC-Seite** sehen wir auch die Computer, bei denen JeffL angemeldet ist.
 

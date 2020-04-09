@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c40efc27e1740ef6e7b0aa9a98784631072f2c3b
-ms.sourcegitcommit: 93baa30e7f9f3b0e6a3ffcd2b9a25bc349798781
+ms.openlocfilehash: bb738a45889bbb2c509f6cf2b2d7e47f0782bd7a
+ms.sourcegitcommit: bf5f58317121f1fb0fffc83d8b419cdd7ef27d9a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79504236"
+ms.lasthandoff: 04/05/2020
+ms.locfileid: "80669725"
 ---
 # <a name="troubleshooting-azure-atp-known-issues"></a>Behandlung von bekannten Problemen bei Azure ATP
 
@@ -101,13 +101,13 @@ Mögliche Problemumgehungen:
 
 - Wenn Ihr Computer weniger als 64 logische Kerne aufweist und auf einem HP-Host ausgeführt wird, können Sie möglicherweise die BIOS-Einstellung **NUMA Group Size Optimization** vom Standardwert **Clustered** in **Flat** ändern.
 
-## <a name="windows-defender-atp-integration-issue"></a>Problem mit der Windows Defender-ATP-Integration
+## <a name="microsoft-defender-atp-integration-issue"></a>Problem bei der Microsoft Defender ATP-Integration
 
-Mithilfe von Azure Advanced Threat Protection können Sie Azure ATP in Windows Defender ATP integrieren. Weitere Informationen finden Sie unter [Integrieren von Azure ATP in Windows Defender ATP](integrate-wd-atp.md).
+Mithilfe von Azure Advanced Threat Protection können Sie Azure ATP in Microsoft Defender ATP integrieren. Weitere Informationen finden Sie unter [Integration von Azure ATP in Microsoft Defender ATP](integrate-wd-atp.md).
 
 ## <a name="vmware-virtual-machine-sensor-issue"></a>Problem mit dem Sensor des virtuellen VMware-Computers
 
-Wenn Sie einen Azure-ATP-Sensor auf virtuellen VMware-Computern verwenden, erhalten Sie möglicherweise die Überwachungswarnung **Ein Teil des Netzwerkdatenverkehrs wird nicht analysiert**. Als Ursache kommt ein Konfigurationskonflikt in VMware infrage.
+Wenn Sie einen Azure-ATP-Sensor auf virtuellen VMware-Computern verwenden, erhalten Sie möglicherweise die Integritätswarnung **Ein Teil des Netzwerkdatenverkehrs wird nicht analysiert**. Als Ursache kommt ein Konfigurationskonflikt in VMware infrage.
 
 So beheben Sie dieses Problem:
 
@@ -129,7 +129,7 @@ Wenn LSO aktiviert ist, verwenden Sie den folgenden Befehl zur Deaktivierung:
 
 ## <a name="sensor-failed-to-retrieve-group-managed-service-account-gmsa-credentials"></a>Fehler beim Abrufen der Anmeldeinformationen für das gruppenverwaltete Dienstkonto durch den Sensor
 
-Wenn Sie bei der Überwachung die folgende Benachrichtigung erhalten: **Anmeldeinformationen für Verzeichnisdienste nicht korrekt**
+Wenn Sie die folgende Integritätswarnung erhalten: **Anmeldeinformationen für Verzeichnisdienste nicht korrekt**
 
 **Sensorprotokolleinträge:**
 

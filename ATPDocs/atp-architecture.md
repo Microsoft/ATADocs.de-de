@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0d737adb2c4d03fbeedb2277573f40d4a29b5de9
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: a6ae76dcee7b6a54f7721c77277387ac4f2e7fbb
+ms.sourcegitcommit: 8d5cd330564eeaf4bc9560db7814c85e71e0fb60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79413280"
+ms.lasthandoff: 04/05/2020
+ms.locfileid: "80666234"
 ---
 # <a name="azure-atp-architecture"></a>Azure ATP-Architektur
 
@@ -34,7 +34,7 @@ Wenn Sie den Azure ATP-Sensor direkt auf Ihrem Domänencontroller installieren, 
 ## <a name="azure-atp-components"></a>Azure ATP-Komponenten
 Azure ATP umfasst die folgenden Komponenten:
 
--   **Azure ATP-Portal** <br>
+-    **Azure ATP-Portal** <br>
 Über das Azure ATP-Portal können Sie Ihre Azure ATP-Instanz erstellen. Im Portal haben Sie zudem Zugriff auf die von Azure ATP-Sensoren erfassten Daten. Damit können Sie Bedrohungen in Ihrer Netzwerkumgebung überwachen, verwalten und untersuchen.  
 -   **Azure ATP-Sensor**<br>
 Azure ATP-Sensoren werden direkt auf Ihren Domänencontrollern installiert. Der Sensor überwacht den Datenverkehr des Domänencontrollers direkt, ohne dass ein dedizierter Server oder die Konfiguration der Portspiegelung erforderlich ist.
@@ -80,7 +80,7 @@ Der Azure ATP-Sensor enthält eine Überwachungskomponente, die die verfügbare 
 
 Unabhängig von laufenden Aktionen macht der Überwachungsprozess Ressourcen für den Domänencontroller verfügbar, um sicherzustellen, dass die Hauptfunktionen des Domänencontrollers immer erfüllt werden können.
 
-Wenn dem Azure ATP-Sensor dadurch nicht mehr genügend Ressourcen zur Verfügung stehen, wird nur ein Teil des Datenverkehrs überwacht, und die Überwachungswarnung „Dropped port mirrored network traffic.“ (Netzwerkdatenverkehr aus Portspiegelung aufgegeben.) wird auf der Seite „Health“ (Integrität) im Azure ATP-Portal angezeigt.
+Wenn dem Azure ATP-Sensor dadurch nicht mehr genügend Ressourcen zur Verfügung stehen, wird nur ein Teil des Datenverkehrs überwacht, und die Integritätswarnung „Netzwerkdatenverkehr aus Portspiegelung aufgegeben“ wird auf der Seite „Integrität“ im Azure ATP-Portal angezeigt.
 
 ### <a name="windows-events"></a>Windows-Ereignisse
 

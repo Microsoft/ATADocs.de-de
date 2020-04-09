@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c1dd60e8855848493fdc9c349983a911896452fc
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 038b31aa221f2807a149998e657065289a82c4a3
+ms.sourcegitcommit: bf5f58317121f1fb0fffc83d8b419cdd7ef27d9a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79413433"
+ms.lasthandoff: 04/05/2020
+ms.locfileid: "80669495"
 ---
 # <a name="tutorial-investigate-a-computer"></a>Tutorial: Untersuchen eines Computers
 
@@ -46,11 +46,11 @@ Klicken Sie auf den in der Warnung genannten Computer, den Sie untersuchen möch
   5. Hat der [Benutzer](investigate-a-user.md), der auf den Computer zugegriffen hat, weitere verdächtige Aktivitäten ausgeführt?
 
 - Weitere zu untersuchende verdächtige Aktivitäten:
-    1. Waren ungefähr gleichzeitig mit dieser Warnung noch weitere Warnungen in Azure ATP oder in anderen Sicherheitstools wie Windows Defender ATP, Azure Security Center und/oder Microsoft CAS geöffnet?
+    1. Waren ungefähr gleichzeitig mit dieser Warnung noch weitere Warnungen in Azure ATP oder in anderen Sicherheitstools wie Microsoft Defender ATP, Azure Security Center und/oder Microsoft CAS geöffnet?
     2. Hat es Anmeldefehler gegeben?
 
 
-- Wenn die Windows Defender ATP-Integration aktiviert ist, klicken Sie auf das Windows Defender ATP-Badge, um den Computer genauer zu untersuchen. In Windows Defender ATP können Sie sehen, welche Prozesse und Warnungen ungefähr gleichzeitig mit der Warnung aufgetreten sind.
+- Wenn die Microsoft Defender ATP-Integration aktiviert ist, klicken Sie auf das Microsoft Defender ATP-Badge, um den Computer genauer zu untersuchen. In Microsoft Defender ATP können Sie sehen, welche Prozesse und Warnungen ungefähr gleichzeitig mit der Warnung aufgetreten sind.
     1. Sind neue Programme bereitgestellt oder installiert worden?
 
 ## <a name="next-steps"></a>Nächste Schritte
