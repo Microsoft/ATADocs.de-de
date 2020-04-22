@@ -12,10 +12,10 @@ ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
 ms.openlocfilehash: 347af29a8748446345455442741e8c7eb599ac5b
-ms.sourcegitcommit: bf5f58317121f1fb0fffc83d8b419cdd7ef27d9a
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80669766"
 ---
 # <a name="release-reference-of-azure-advanced-threat-protection-azure-atp"></a>Versionsreferenz zu Azure Advanced Threat Protection (Azure ATP) 
@@ -26,28 +26,28 @@ Dieser Artikel ist eine Referenz zu allen Azure ATP-Versionen bis (und einschlie
 ## <a name="azure-atp-release-255"></a>Azure ATP Release 2.55
 Veröffentlicht: 18. November 2018
 
-- **Sicherheitswarnung: Verdächtige Kommunikation über DNS – allgemeine Verfügbarkeit**<br>
-Der Azure ATP-Sicherheitshinweis [Verdächtige Kommunikation über DNS](suspicious-activity-guide.md) ist jetzt allgemein verfügbar. <br> In den meisten Organisationen wird das DNS-Protokoll nicht überwacht und nur selten vor böswilligen Angriffen geschützt. Das gibt einem Angreifer auf einem kompromittierten Computer die Möglichkeit, das DNS-Protokoll zu missbrauchen. Schädliche Kommunikation über DNS kann für Datenexfiltration, Command-and-Control-Zugriff und/oder zur Umgehung von Einschränkungen des Unternehmensnetzwerks verwendet werden.
+- **Sicherheitshinweis: Verdächtige Kommunikation über DNS – allgemeine Verfügbarkeit**<br>
+Der Azure ATP-Sicherheitshinweis [Verdächtige Kommunikation über DNS](suspicious-activity-guide.md) ist jetzt allgemein verfügbar. <br> In den meisten Organisationen wird das DNS-Protokoll nicht überwacht und nur selten vor böswilligen Angriffen geschützt. Dadurch kann ein Angreifer auf einem kompromittierten Computer das DNS-Protokoll missbrauchen. Schädliche Kommunikation über DNS kann für Datenexfiltration, Command-and-Control-Zugriff und/oder zur Umgehung von Einschränkungen des Unternehmensnetzwerks verwendet werden.
 
 - Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
 ## <a name="azure-atp-release-254"></a>Azure ATP Release 2.54
 Veröffentlicht am 11. November 2018
 
-- **Featureerweiterung: Standarddomänenausschlüsse zur Warnung aufgrund verdächtiger Kommunikation über DNS hinzugefügt**<br> Es wurden drei beliebte Domänen zur Ausschlussliste der Standarddomäne hinzugefügt. Die Ausschlussliste bleibt vollständig anpassbar. Weitere Informationen finden Sie unter [Ausschließen von Entitäten von der Erkennung](excluding-entities-from-detections.md) 
+- **Featureverbesserung: Ausschlüsse der Standarddomäne zu verdächtiger Kommunikation über DNS-Warnung hinzugefügt**<br> Es wurden drei beliebte Domänen zur Ausschlussliste der Standarddomäne hinzugefügt. Die Ausschlussliste bleibt vollständig anpassbar. Weitere Informationen finden Sie unter [Ausschließen von Entitäten von der Erkennung](excluding-entities-from-detections.md) 
 
-- **Erweiterungen der Dokumentation: SIEM-Protokollaktualisierung, Leitfaden zu bekannten Problemen**<br> Die externalId-Zuordnung sowie zusätzliche Erläuterungen wurden den Beschreibungen des SIEM-Protokolls hinzugefügt. Weitere Informationen finden Sie in der [Referenz zum SIEM-Protokoll](cef-format-sa.md). <br>Es wurde ein neuer Artikel zum Leitfaden für derzeit bekannte Probleme hinzugefügt. Weitere Informationen finden Sie unter: [Azure ATP Known Issues (Azure ATP: Bekannte Probleme)](known-issues.md).  
+- **Verbesserungen bei der Dokumentation: Update des SIEM-Protokolls, Anleitungen für bekannte Probleme**<br> Die externalId-Zuordnung sowie zusätzliche Erläuterungen wurden den Beschreibungen des SIEM-Protokolls hinzugefügt. Weitere Informationen finden Sie in der [Referenz zum SIEM-Protokoll](cef-format-sa.md). <br>Es wurde ein neuer Artikel zum Leitfaden für derzeit bekannte Probleme hinzugefügt. Weitere Informationen finden Sie unter: [Azure ATP Known Issues (Azure ATP: Bekannte Probleme)](known-issues.md).  
 
 - Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
 ## <a name="azure-atp-release-253"></a>Azure ATP Release 2.53
 Veröffentlicht: 4. November 2018
 
-- **Erweiterung von Sicherheitswarnungen: Verdächtiger Authentifizierungsfehler**<br>
+- **Verbesserung an Sicherheitswarnungen: Verdächtiger Authentifizierungsfehler**<br>
 [Sicherheitswarnungen zu verdächtigen Authentifizierungsfehlern](suspicious-activity-guide.md) in Azure ATP umfassen nun die Überwachung für die Erkennung von Kennwort-Spray- oder Brute-Force-Angriffen.
 Bei einem typischen **Kennwort-Spray-Angriff** testen Angreifer nach erfolgreichem Durchzählen einer Liste von gültigen Benutzern aus dem Domänencontroller EIN sorgfältig erstelltes Kennwort für ALLE bekannten Benutzerkonten (ein Kennwort für n Konten). Wenn beim ersten Kennwort-Spray-Angriff ein Fehler auftritt, wiederholen sie den Vorgang mit einem anderen sorgfältig erstellten Kennwort – normalerweise nach einer Wartezeit von 30 Minuten zwischen den Versuchen. Durch die Wartezeit verhindern Angreifer, dass meist zeitbasierte Schwellenwerte für die Kontosperre ausgelöst werden. Kennwort-Spray-Angriffe haben sich rasch zu einer beliebten Methode unter Angreifern und Pen-Testern entwickelt. Kennwort-Spray-Angriffe haben sich als effektiv erwiesen, um innerhalb einer Organisation einen Ankerpunkt zu finden und infolgedessen weitere Schwachstellen auszunutzen, um Berechtigungen auszuweiten. 
 
-- **Featureerweiterung: Senden einer Syslog-Testnachricht**<br> Ab sofort gibt es eine neue Möglichkeit, um eine Syslog-Testnachricht während des SIEM-Setupvorgangs zu senden. Weitere Informationen finden Sie unter [Integration in Syslog](setting-syslog.md). 
+- **Featureverbesserung: Senden einer Syslog-Testnachricht**<br> Ab sofort gibt es eine neue Möglichkeit, um eine Syslog-Testnachricht während des SIEM-Setupvorgangs zu senden. Weitere Informationen finden Sie unter [Integration in Syslog](setting-syslog.md). 
 
 - Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
@@ -55,13 +55,13 @@ Bei einem typischen **Kennwort-Spray-Angriff** testen Angreifer nach erfolgreich
 Veröffentlicht: 28. Oktober 2018
 
 
-- **Erweiterung von Sicherheitswarnungen: Versuchte Remotecodeausführung**<br>
+- **Verbesserung der Sicherheitswarnung: Versuchte Remotecodeausführung**<br>
 Die [Sicherheitswarnung zur versuchten Remotecodeausführung](suspicious-activity-guide.md) in Azure ATP umfasst jetzt die Überwachung auf verdächtige Versuche, PowerShell-Remotecode auf Ihren Domänencontrollern auszuführen. Remote-PowerShell ist eine gängige Methode zur Ausführung gültiger administrativer Befehle, wird aber häufig in böswilliger Absicht dazu verwendet, Skripts auf Remoteendpunkten auszuführen. 
 
 - **Featureerweiterung: Festlegen der Berichtszeitplanung**
 <br>Jetzt können Sie eine bestimmte Uhrzeit festlegen, um Ihre Azure ATP-Berichte über die Funktion [reports](reports.md#) zu planen. 
 
-- **Ergänzung der Konfiguration: Rollenbasierte Zugriffssteuerung für Mandanten (RBAC)**
+- **Konfigurationszusatz: Rollenbasierte Zugriffssteuerung (RBAC) von Mandanten**
 <br>Konfigurieren Sie die Sicherheitsrollen Ihres Mandanten im Azure Active Directory (AAD) Admin Center direkt über den neuen Administratorlink im Azure ATP-Portal. 
 
 - **Überarbeitete Struktur und Inhalte der Dokumentation**
@@ -86,7 +86,7 @@ Veröffentlicht: 14. Oktober 2018
 
 ## <a name="azure-atp-release-249"></a>Azure ATP Release 2.49
 Veröffentlicht: 7. Oktober 2018
-- **Neue Erkennungen: Verdächtige DNS-Kommunikation** (Vorschau)<br>Es wurde eine neue Erkennung hinzugefügt, um vor verdächtigen DNS-Kommunikationsangriffen zu schützen:
+- **Neue Erkennungen: Verdächtige DNS-Kommunikation** (Vorschauversion)<br>Es wurde eine neue Erkennung hinzugefügt, um vor verdächtigen DNS-Kommunikationsangriffen zu schützen:
 
     - Diese Erkennung hilft dabei, Angriffe gegen das DNS-Protokoll zu erkennen: In den meisten Organisationen wird das DNS-Protokoll nicht überwacht und nur selten vor böswilligen Angriffen geschützt. Das gibt einem Angreifer auf einem kompromittierten Computer die Möglichkeit, das DNS-Protokoll zu missbrauchen. Böswillige Kommunikation über DNS kann zur Datenexfiltration, Zugriff über Command-and-Control-Server und/oder zur Umgehung von Netzwerkeinschränkungen führen.
 
@@ -191,7 +191,7 @@ Veröffentlicht: 22. Juli 2018
   - Sie profitieren von besseren Integritätswarnungen und -berichten für eine organisationsübergreifende Übersicht.
 
 
-- **Neue Erkennungen: DCShadow**<br>Zwei neue Erkennungsfunktionen helfen Ihnen beim Schutz vor DCShadow-Angriffen (Domain Controller Shadow):
+- **Neue Erkennungsoptionen: DCShadow**<br>Zwei neue Erkennungsfunktionen helfen Ihnen beim Schutz vor DCShadow-Angriffen (Domain Controller Shadow):
 
     - Verdächtige Hochstufung zu Domänencontrollern (potenzieller DCShadow-Angriff): Diese Funktion hilft bei der Erkennung von Angriffen, bei denen ein Computer die Identität eines Domänencontrollers annimmt und dann versucht, die Replikation zu verwenden, um Änderungen an andere Domänencontroller in Ihrer Domäne zu verteilen.
 
@@ -212,7 +212,7 @@ Veröffentlicht: 15. Juli 2018
 ## <a name="azure-atp-release-239"></a>Azure ATP Release 2.39
 
 Veröffentlicht: 5. Juli 2018
-- **Neue Erkennung hinzugefügt: Kerberos Golden Ticket – nicht vorhandenes Konto** (Vorschau)<br>Mit dieser neuen Erkennung können Sie Ihre Organisation vor Angriffen schützen, in denen ein Golden Ticket für ein Konto erstellt wird, das in Ihrer Domäne nicht existiert. Weitere Informationen finden Sie im [Azure Advanced Threat Protection-Handbuch zu verdächtigen Aktivitäten](suspicious-activity-guide.md).
+- **Neue hinzugefügte Erkennung: Kerberos Golden Ticket – nichtvorhandenes Konto** (Vorschauversion)<br>Mit dieser neuen Erkennung können Sie Ihre Organisation vor Angriffen schützen, in denen ein Golden Ticket für ein Konto erstellt wird, das in Ihrer Domäne nicht existiert. Weitere Informationen finden Sie im [Azure Advanced Threat Protection-Handbuch zu verdächtigen Aktivitäten](suspicious-activity-guide.md).
 
 - Diese Version enthält Fehlerbehebungen und Verbesserungen für mehrere Probleme. 
 
@@ -263,7 +263,7 @@ Veröffentlicht: 3. Juni 2018
 
 Veröffentlicht: 27. Mai 2018
 
-- Vorschaufeature: Azure ATP unterstützt jetzt neue Sprachen und 13 neue Gebietsschemas:
+- Feature der Vorschauversion: Azure ATP unterstützt jetzt neue Sprachen und 13 neue Gebietsschemas:
     - Tschechisch
     - Ungarisch
     - Italienisch
@@ -328,7 +328,7 @@ Veröffentlicht: 8. April 2018
 
 Veröffentlicht: 25. März 2018
 
-- Wenn Azure ATP Sie über eine verdächtige Aktivität informiert, die Sie als unbedenklich positiv identifizieren (eine legitime Aktion, die keine verdächtige Aktivität ist), haben Sie die Möglichkeit, Computer und IP-Adressen von weiteren Erkennungen auszuschließen. Hierzu zählen: Herabstufen der Verschlüsselung, LDAP-Brute-Force, gefälschte PAC, Brute-Force und Pass-the-Hash.
+- Wenn Azure ATP Sie über eine verdächtige Aktivität informiert, die Sie als gutartig positiv identifizieren (eine legitime Aktion, die keine verdächtige Aktivität ist), haben Sie die Möglichkeit, Computer und IP-Adressen für weitere Erkennungen auszuschließen. Hierzu zählen: Herabstufen der Verschlüsselung, LDAP-Brute-Force, gefälschte PAC, Brute-Force und Pass-the-Hash.
 - Die Leistung des Azure ATP-Sensors wurde verbessert.
 - Eine neue Region für die Bereitstellung eines Arbeitsbereichs wurde hinzugefügt. Sie können ab sofort auch einen Arbeitsbereich in Asien bereitstellen. 
 
@@ -362,9 +362,9 @@ Veröffentlicht: 11. März 2018
 **Leistungsverbesserungen**
  - Die Azure ATP-Sensorinfrastruktur wurde bezüglich der Leistung verbessert: Die aggregierte Datenverkehrsansicht ermöglicht Optimierungen der CPU- und Paketpipeline und verwendet Sockets zu Domänencontrollern erneut, um SSL-Sitzungen zum DC zu minimieren.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 - [Was ist Azure Advanced Threat Protection?](what-is-atp.md)
 - [Häufig gestellte Fragen](atp-technical-faq.md)
-- [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](atp-prerequisites.md)
+- [Voraussetzungen für Azure ATP](atp-prerequisites.md)
 - [Azure ATP capacity planning (Azure ATP-Kapazitätsplanung)](atp-capacity-planning.md)
 - [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)

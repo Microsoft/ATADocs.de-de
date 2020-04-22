@@ -13,10 +13,10 @@ ms.assetid: 37d1a032-65e7-4a89-be0b-c3f9cc2bacdb
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: cc0b9ed79a26c1f77cb7d0a15866bb81744dbfe9
-ms.sourcegitcommit: 7b80b2eff4331f8e1e1403e4b5c751f406915624
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79989849"
 ---
 # <a name="azure-atp-monitored-activities"></a>Von Azure ATP überwachte Aktivitäten
@@ -35,9 +35,9 @@ Die von Azure ATP überwachten Informationen werden in Form von Aktivitäten ang
 > - Dieser Artikel ist für alle Azure ATP-Sensortypen relevant.
 > - Von Azure ATP überwachte Aktivitäten werden auf der Profilseite sowohl für Benutzer als auch für Computer angezeigt.
 
-## <a name="monitored-user-activities-user-account-ad-attribute-changes"></a>Überwachte Benutzeraktivitäten: Änderungen am AD-Attribut für Benutzerkonto
+## <a name="monitored-user-activities-user-account-ad-attribute-changes"></a>Überwachte Benutzeraktivitäten: AD-Attributänderungen beim Benutzerkonto
 
-|Überwachte Aktivität|Beschreibung|
+|Überwachte Aktivität|Description|
 |---------------------|------------------|
 |Kontostatus „Eingeschränkte Delegierung“ geändert|Der Kontostatus ist jetzt für Delegierung aktiviert oder deaktiviert.|
 |SPNs für eingeschränkte Kontodelegierung geändert|Die eingeschränkte Delegierung beschränkt die Dienste, für die der angegebene Server im Auftrag des Benutzers agieren kann.|
@@ -50,7 +50,7 @@ Die von Azure ATP überwachten Informationen werden in Form von Aktivitäten ang
 |„Kontokennwort läuft nie ab“ geändert|Kennwort des Benutzer wurde geändert, sodass es nie abläuft.|
 |„Kein Kontokennwort erforderlich“ geändert|Benutzerkonto wurde geändert, sodass Anmeldung mit einem leeren Kennwort zulässig ist.|
 |„Smartcard für Konto erforderlich“ geändert|Konto wurde geändert, sodass Benutzer aufgefordert werden, sich auf einem Gerät mit einer Smartcard anzumelden.|
-|Vom Konto unterstützte Verschlüsselungstypen geändert|Von Kerberos unterstützte Verschlüsselungstypen wurden geändert (Typen: Des, AES 129, AES 256)|
+|Vom Konto unterstützte Verschlüsselungstypen geändert|Von Kerberos unterstützte Verschlüsselungstypen wurden geändert (Typen: Des, AES 129, AES 256).|
 |UPN-Name von Konto geändert|Der Benutzerprinzipalname wurde geändert.|
 |Gruppenmitgliedschaft geändert|Benutzer wurde zu/aus einer Gruppe hinzugefügt/gelöscht, und zwar von einem anderen Benutzer oder ihm selbst.|
 |Benutzer-E-Mail geändert|E-Mail-Attribut des Benutzers wurde geändert.|
@@ -62,9 +62,9 @@ Die von Azure ATP überwachten Informationen werden in Form von Aktivitäten ang
 |SID-History Changed|Account's SID-History attribute was changed.|
 -->
 
-## <a name="monitored-user-activities-ad-security-principal-operations"></a>Überwachte Benutzeraktivitäten: Vorgänge für AD-Sicherheitsprinzipal
+## <a name="monitored-user-activities-ad-security-principal-operations"></a>Überwachte Benutzeraktivitäten: Prinzipalvorgänge für AD-Sicherheit
 
-|Überwachte Aktivität|Beschreibung|
+|Überwachte Aktivität|Description|
 |---------------------|------------------|
 |Sicherheitsprinzipal erstellt|Konto wurde erstellt (Benutzer- und Computerkonto).|
 |„Sicherheitsprinzipal gelöscht“ geändert|Konto wurde gelöscht/wiederhergestellt (Benutzer- und Computerkonto).|
@@ -75,7 +75,7 @@ Die von Azure ATP überwachten Informationen werden in Form von Aktivitäten ang
 
 ## <a name="monitored-user-activities-domain-controller-based-user-operations"></a>Überwachte Benutzeraktivitäten: Domänencontroller-basierte Benutzervorgänge
 
-|Überwachte Aktivität|Beschreibung|
+|Überwachte Aktivität|Description|
 |---------------------|------------------|
 |Verzeichnisdienstreplikation|Benutzer hat versucht, den Verzeichnisdienst zu replizieren.|
 |DNS-Abfrage|Der Typ der Benutzerabfrage, die für den Domänencontroller ausgeführt wurde (**AXFR**,**TXT**, **MX**, **NS**, **SRV**, **ANY**, **DNSKEY**).|
@@ -89,7 +89,7 @@ Die von Azure ATP überwachten Informationen werden in Form von Aktivitäten ang
 
 ## <a name="monitored-user-activities-login-operations"></a>Überwachte Benutzeraktivitäten: Anmeldevorgänge
 
-|Anmeldetyp|Überwachte Aktivität|Beschreibung|
+|Anmeldetyp|Überwachte Aktivität|Description|
 |---------------------|---------------------|------------------|
 |Anmeldetyp 2|Überprüfen der Anmeldeinformationen|Authentifizierungsereignis beim Domänenkonto mit den Authentifizierungsmethoden NTLM und Kerberos.|
 |Anmeldetyp 2|Interaktive Anmeldung|Benutzer hat durch Eingabe eines Benutzernamens und Kennworts Zugriff auf das Netzwerk erlangt (Authentifizierungsmethode Kerberos oder NTLM).|
@@ -104,11 +104,11 @@ Die von Azure ATP überwachten Informationen werden in Form von Aktivitäten ang
 
 ## <a name="monitored-machine-activities-machine-account"></a>Überwachte Computeraktivitäten: Computerkonto
 
-|Überwachte Aktivität|Beschreibung|
+|Überwachte Aktivität|Description|
 |---------------------|------------------|
 |Betriebssystem des Computers geändert|Änderung beim Betriebssystem des Computers.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 - [Verwenden von Sicherheitswarnungen](working-with-suspicious-activities.md)
 - [Leitfaden für Sicherheitswarnungen](suspicious-activity-guide.md)

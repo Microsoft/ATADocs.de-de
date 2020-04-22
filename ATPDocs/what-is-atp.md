@@ -13,10 +13,10 @@ ms.assetid: 2d14d0e9-1b03-4bcc-ae97-8fd41526ffc5
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: a421fdb784bd0e180921048951f73c94382ea733
-ms.sourcegitcommit: efbed67e0e1f2b55e20a4a00d9de7580592b5989
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80669961"
 ---
 # <a name="what-is-azure-advanced-threat-protection"></a>Was ist Azure Advanced Threat Protection?
@@ -120,7 +120,7 @@ Es wird empfohlen, Azure ATP in drei Phasen bereitzustellen:
 
 1. Integrieren Sie Azure ATP-Warnungen in Ihre SecOp-Workflows.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 - [Häufig gestellte Fragen zu Azure ATP](atp-technical-faq.md)
 - [Arbeiten mit Sicherheitswarnungen](working-with-suspicious-activities.md)

@@ -13,10 +13,10 @@ ms.assetid: 1ac873fc-b763-41d7-878e-7c08da421cb5
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: 35d3e630e8f8ff4752badc5e2dad09aec8058671
-ms.sourcegitcommit: 8d5cd330564eeaf4bc9560db7814c85e71e0fb60
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80666204"
 ---
 # <a name="what-is-network-name-resolution"></a>Was ist Netzwerknamensauflösung?
@@ -65,7 +65,7 @@ Nachdem Sie das Gerät bestätigt haben, können Sie anschließend feststellen, 
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
-|Protokoll|Transport|Port|Gerät|Richtung|
+|Protokoll|Transport|Port|Device|Richtung|
 |--------|--------|------|-------|------|
 |NTLM über RPC*|TCP|135|Alle Geräte im Netzwerk|Eingehende Verbindungen|
 |NetBIOS*|UDP|137|Alle Geräte im Netzwerk|Eingehende Verbindungen|
@@ -98,8 +98,8 @@ Jede Integritätswarnung enthält spezifische Details zu Methode, Sensoren, der 
 - Reverse-DNS:
   - Achten Sie darauf, dass der Sensor den DNS-Server erreichen kann und dass Reverse-Lookup-Zonen aktiviert sind.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
-- [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](atp-prerequisites.md)
+- [Voraussetzungen für Azure ATP](atp-prerequisites.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
 - [Weitere Informationen finden Sie im ATP-Forum.](https://aka.ms/azureatpcommunity)

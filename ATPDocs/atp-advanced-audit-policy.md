@@ -13,10 +13,10 @@ ms.assetid: ab1e8dd9-a6c2-4c68-89d5-343b8ec56142
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: a322b72aae6ead6e8fd5a08c731e3dd7c8ee7d10
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79413892"
 ---
 # <a name="azure-atp-advanced-audit-policy-check"></a>Überprüfung der erweiterten Überwachungsrichtlinie von Azure ATP
@@ -60,8 +60,8 @@ Advanced Security Audit Policy (Erweiterte Sicherheitsüberwachungsrichtlinien) 
 
 7. Nachdem die neuen Ereignisse über GPO angewendet wurden, sind sie unter Ihren **Windows-Ereignisprotokollen** sichtbar.
 
-## <a name="see-also"></a>Weitere Informationen
-- [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](atp-prerequisites.md)
+## <a name="see-also"></a>Weitere Informationen:
+- [Voraussetzungen für Azure ATP](atp-prerequisites.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
 - [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-forwarding.md)
 - [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)

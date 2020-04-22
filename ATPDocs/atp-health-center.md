@@ -13,10 +13,10 @@ ms.assetid: 1b7e72c3-a538-443f-981c-398ffafa5ab8
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: 743d2f6c147542ff2b57383e93c75474ea9524b9
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79414538"
 ---
 # <a name="work-with-azure-atp-health-and-events"></a>Arbeiten mit Azure ATP-Integrität und -Ereignissen
@@ -36,7 +36,7 @@ Um den Gesamtzustand Ihrer Azure ATP-Instanz zu überprüfen, klicken Sie in der
 
 -   Sie können alle offenen Probleme auf **Schließen** oder **Unterdrücken** festlegen, indem Sie auf die drei Punkte in der Ecke einer Warnung klicken und die gewünschte Option anklicken.
 
--   **Offen**: In dieser Liste werden alle neuen verdächtigen Aktivitäten angezeigt.
+-   **Öffnen**: In dieser Liste werden alle neuen verdächtigen Aktivitäten angezeigt.
 
 -   **Auflösen**: Wird verwendet, um verdächtige Aktivitäten nachzuverfolgen, die Sie identifiziert, untersucht oder entschärft haben.
 
@@ -45,9 +45,9 @@ Um den Gesamtzustand Ihrer Azure ATP-Instanz zu überprüfen, klicken Sie in der
     
 -   **Unterdrücken**: Das Unterdrücken einer Aktivität bedeutet, dass Sie sie gerade ignorieren möchten und nur wieder gewarnt werden möchten, wenn es eine neue Instanz gibt. Wenn eine ähnliche Warnung ausgelöst wird, wird diese von Azure ATP nicht erneut geöffnet. Wenn die Warnung jedoch für sieben Tage angehalten wurde und anschließend erneut auftritt, werden Sie erneut gewarnt.
 
--   **Erneut öffnen**: Eine geschlossene oder unterdrückte Warnung kann erneut geöffnet werden, sodass sie auf der Zeitachse als **Offen** angezeigt wird.
+-   **Erneut öffnen**: Eine geschlossener oder unterdrückter Alarm kann erneut geöffnet werden, sodass es auf der Zeitachse als **Offen** angezeigt wird.
 
--   **Löschen** Sie können Sicherheitswarnungen auch über die Zeitachse für verdächtige Aktivitäten löschen. Wenn Sie allerdings eine Warnung löschen, wird diese vollständig aus der Instanz gelöscht, und Sie können diese nicht wiederherstellen. Nachdem Sie auf „Verwerfen“ geklickt haben, können Sie alle Sicherheitswarnungen für den gleichen Typ löschen.
+-   **Löschen:** Sie können Sicherheitswarnungen auch über die Zeitachse für verdächtige Aktivitäten löschen. Wenn Sie allerdings eine Warnung löschen, wird diese vollständig aus der Instanz gelöscht, und Sie können diese nicht wiederherstellen. Nachdem Sie auf „Verwerfen“ geklickt haben, können Sie alle Sicherheitswarnungen für den gleichen Typ löschen.
 
 
 
@@ -58,7 +58,7 @@ Um den Gesamtzustand Ihrer Azure ATP-Instanz zu überprüfen, klicken Sie in der
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 - [Arbeiten mit verdächtigen Aktivitäten](working-with-suspicious-activities.md)
 - [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)

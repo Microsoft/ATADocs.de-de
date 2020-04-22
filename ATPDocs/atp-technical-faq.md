@@ -13,10 +13,10 @@ ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: 64d23884189d68e69805133c8411e1ff0e8f95e8
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79414045"
 ---
 # <a name="azure-atp-frequently-asked-questions"></a>Häufig gestellte Fragen zu Azure ATP
@@ -26,7 +26,7 @@ Dieser Artikel enthält eine Reihe häufig gestellter Fragen und Antworten zu Az
 - [Was ist Azure ATP?](#what-is-azure-atp)
 - [Lizenzierung und Datenschutz](#licensing-and-privacy)
 - [Bereitstellung](#deployment)
-- [Vorgänge](#operation)
+- [Operatives Geschäft](#operation)
 - [Problembehandlung](#troubleshooting)
 
 ## <a name="what-is-azure-atp"></a>Was ist Azure ATP?
@@ -62,7 +62,7 @@ Nein. Azure ATP überwacht alle Geräte im Netzwerk und führt die Authentifizie
 
 ### <a name="does-azure-atp-monitor-computer-accounts-as-well-as-user-accounts"></a>Überwacht Azure ATP sowohl Computerkonten als auch Benutzerkonten?
 
-Ja. Da Computerkonten (ebenso wie alle anderen Entitäten) zum Durchführen böswilliger Aktivitäten verwendet werden können, überwacht Azure ATP das Verhalten aller Computerkonten und aller weiteren Entitäten in der Umgebung.
+Ja Da Computerkonten (ebenso wie alle anderen Entitäten) zum Durchführen böswilliger Aktivitäten verwendet werden können, überwacht Azure ATP das Verhalten aller Computerkonten und aller weiteren Entitäten in der Umgebung.
 
 ### <a name="what-is-the-difference-between-advanced-threat-analytics-ata-and-azure-atp"></a>Worin besteht der Unterschied zwischen Advanced Threat Analytics (ATA) und Azure ATP?
 
@@ -166,7 +166,7 @@ Azure ATP kann so konfiguriert werden, dass bei Integritätswarnungen und Festst
 
 ### <a name="why-are-certain-accounts-considered-sensitive"></a>Warum gelten bestimmte Konten als sensible Konten?
 
-Dies ist der Fall, wenn ein Konto Mitglied bestimmter Gruppen ist, die als sensibel festgelegt sind (z. B. „Domänen-Admins“).
+Dies ist der Fall, wenn ein Konto Mitglied bestimmter Gruppen ist, die als sensibel festgelegt sind (z.B. „Domänen-Admins“).
 
 Um nachzuvollziehen, warum ein Konto ein sensibles Konto ist, können Sie seine Gruppenmitgliedschaft überprüfen, um festzustellen, welchen sensiblen Gruppen es angehört (die Gruppe, der das Konto angehört, kann auch wegen einer anderen Gruppe eine sensible Gruppe sein. Daher sollten Sie immer die höchste sensible Gruppe überprüfen). Sie können auch manuell [Konten als vertraulich kennzeichnen](sensitive-accounts.md).
 
@@ -194,7 +194,7 @@ Um potenzielle LMPs zu sensiblen Benutzern erstellen zu können, benötigt Azure
 3. **Abfragen von Active Directory über LDAP** für Entitätsdaten  
 Azure ATP-Sensoren fragen den Domänencontroller aus der Domäne ab, zu der die Entität gehört. Es kann derselbe Sensor oder ein anderer Domänencontroller aus dieser Domäne sein.
 
-|Protokoll|Dienst|Port|Quelle| Richtung|
+|Protokoll|Service|Port|Quelle| Richtung|
 |---------|---------|---------|---------|--------|
 |LDAP|TCP und UDP|389|Domänencontroller|Ausgehend|
 |Sicheres LDAP (LDAPS)|TCP|636|Domänencontroller|Ausgehend|
@@ -211,9 +211,9 @@ Azure ATP erfasst Aktivitäten über viele verschiedene Protokolle. In einigen F
 
 Sehen Sie sich den letzten Fehlereintrag im aktuellen [Fehlerprotokoll](troubleshooting-atp-using-logs.md) an (Installationsverzeichnis von Azure ATP unter dem Ordner „Logs“ (Protokolle)).
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
-- [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](atp-prerequisites.md)
+- [Voraussetzungen für Azure ATP](atp-prerequisites.md)
 - [Azure ATP capacity planning (Azure ATP-Kapazitätsplanung)](atp-capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
 - [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-forwarding.md)

@@ -13,10 +13,10 @@ ms.assetid: a546703b-d5a9-404d-9e87-125523bb8421
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: 39e9d4c6656d2e55389720ab86690cfcd705423f
-ms.sourcegitcommit: bf5f58317121f1fb0fffc83d8b419cdd7ef27d9a
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80669543"
 ---
 # <a name="azure-atp-monitored-activities-search-and-filter"></a>Durchsuchen und Filtern von überwachten Azure ATP-Aktivitäten 
@@ -38,7 +38,7 @@ So filtern Sie Warnungen und Aktivitäten:
  5. Wenn Sie die Entitätszeitachse zurücksetzen möchten, um alle Warnungen und Aktivitäten anzuzeigen, klicken Sie auf **Zurücksetzen**, oder schließen Sie den Filter. 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 - [Untersuchen von Entitäten](investigate-entity.md)
 - [Integritätswarnungen](health-alerts.md)
 - [Arbeiten mit Sicherheitswarnungen](working-with-suspicious-activities.md)

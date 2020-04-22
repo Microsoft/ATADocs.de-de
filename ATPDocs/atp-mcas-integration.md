@@ -12,10 +12,10 @@ ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: e8705fe48bf7ff32a59e33808d66de474d1b306d
-ms.sourcegitcommit: a7e3fdd7bf0f1d8f269cdbfe3931c937a436392b
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "75663872"
 ---
 # <a name="using-azure-atp-with-microsoft-cloud-app-security"></a>Verwenden von Azure ATP mit Microsoft Cloud App Security
@@ -65,7 +65,7 @@ Lesen Sie die [Schnellstartanleitung für Cloud App Security](https://docs.micro
 
 Greifen Sie in Cloud App Security-Warnungen, -Aktivitäten und -Benutzerseiten auf Ihre Azure ATP-Daten und neue Hybridfeatures zu.
 
-## <a name="alerts"></a>Warnungen
+## <a name="alerts"></a>Alerts
 
 Azure ATP-Warnungen werden in der Cloud App Security-Warteschlange **Warnungen** angezeigt. Zusätzliche Filteroptionen stehen nur beim Anzeigen von Warnungen über Cloud App Security zur Verfügung. Azure ATP-Warnungen werden mithilfe des Anwendungsfilters in **Active Directory Domain Services** gefiltert.
 
@@ -89,7 +89,7 @@ So greifen Sie auf die Benutzerseite eines Systembenutzers zu:
 1. Öffnen Sie im Hauptmenü die Option **Warnungen**.
 1. Wählen Sie mithilfe des Felds **Benutzername** die Warnungswarteschlange für einen bestimmten Benutzer aus, und filtern Sie diese.
 
- oder
+ oder das
 
 1. Wählen Sie im Menü **Untersuchen** die Option **Aktivitätsprotokoll** aus.
 1. Filtern Sie die Warteschlange des Aktivitätsprotokolls nach Benutzer.

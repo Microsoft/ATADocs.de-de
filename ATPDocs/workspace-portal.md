@@ -13,10 +13,10 @@ ms.assetid: 4ba46d60-3a74-480e-8f0f-9a082d62f343
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: 5d6bd4b4c8bcceff9d06d98f2fe8125fe1f3d769
-ms.sourcegitcommit: bf5f58317121f1fb0fffc83d8b419cdd7ef27d9a
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80669741"
 ---
 # <a name="working-with-the-azure-atp-portal"></a>Arbeiten mit dem Azure ATP-Portal
@@ -55,7 +55,7 @@ Die Angriffszeitachse ist die Standard-Landing Page, auf die Sie gelangen, wenn 
 
 Weitere Informationen finden Sie unter [Arbeiten mit Sicherheitswarnungen](working-with-suspicious-activities.md).
 
-### <a name="whats-new"></a>Neuerungen
+### <a name="whats-new"></a>Neuheiten
 
 Nach der Veröffentlichung einer neuen Version von Azure ATP wird das Fenster **Neuigkeiten** in der oberen rechten Ecke angezeigt, und Sie erhalten Informationen darüber, was in der neusten Version hinzugefügt wurde. Außerdem erhalten Sie einen Link zum Download der Version.
 
@@ -71,7 +71,7 @@ Im obersten Menü finden Sie eine Suchleiste. Sie können nach einem bestimmten 
 
 Wenn Sie auf die Nummer klicken, können Sie auf die Seite mit den Suchergebnissen zugreifen, auf der Sie die Ergebnisse nach Entitätstyp für weitere Untersuchungen filtern können.
 
-!["search results" (Ergebnisse durchsuchen)](media/search-results.png)
+![Suchergebnisse](media/search-results.png)
 
 ### <a name="health-center"></a>Integritätscenter
 
@@ -110,7 +110,7 @@ Wenn Sie an einer Stelle im Azure ATP-Portal, an der eine einzelne Entität darg
 - Badge für Lateral Movement-Pfade: Wird angezeigt, wenn innerhalb der letzten beiden Tage Lateral Movement-Pfade für diese Entität ermittelt wurden.
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 - [Erstellen von Azure ATP-Instanzen](install-atp-step1.md)
 - [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)

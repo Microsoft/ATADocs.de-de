@@ -13,10 +13,10 @@ ms.assetid: a2d29c9c-7ecb-4804-b74b-fde899b28648
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: a6b1cfb304787fbed3d02968221e1eeada605712
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79410934"
 ---
 # <a name="integrate-with-syslog"></a>Integration in Syslog
@@ -29,7 +29,7 @@ Azure ATP kann Sie durch Senden der Benachrichtigungen an den Syslog-Server bena
 
 Wenn Syslog-Benachrichtigungen aktiviert werden, lassen sich folgende Einstellungen vornehmen:
 
-   |Feld|Beschreibung|
+   |Feld|Description|
    |---------|---------------|
    |Sensor|Klicken Sie auf einen ausgewählten Sensor, der für das Aggregieren aller Syslog-Ereignisse und die anschließende Weiterleitung von diesen an Ihren SIEM-Server verantwortlich sein soll.|
    |Dienstendpunkt|Geben Sie den vollqualifizierten Domänennamen des Syslog-Servers ein, und ändern Sie optional die Portnummer (standardmäßig 514).|
@@ -42,7 +42,7 @@ Wenn Syslog-Benachrichtigungen aktiviert werden, lassen sich folgende Einstellun
 
    -   Port, der vom SIEM-Server abgehört wird
 
-   -   Transporttyp: UDP, TCP oder TLS (sicheres Syslog)
+   -   Transportprotokoll: UDP, TCP oder TLS (sicheres Syslog)
 
    -   Versandformat der Daten: RFC 3164 oder 5424
 
@@ -69,7 +69,7 @@ So überprüfen oder ändern Sie die Syslog-Einstellungen:
 > Wenn Sie eine Automatisierung oder Skripts für Azure ATP-SIEM-Protokoll erstellen möchten, sollten Sie zur Identifizierung des Warnungstyps das Feld **externalID** statt des Warnungsnamens verwenden. Warnungsnamen können nämlich gelegentlich geändert werden, während die **externalId** jeder Warnung dauerhaft ist. Weitere Informationen finden Sie unter [Azure ATP-SIEM-Protokollreferenz](cef-format-sa.md). 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
-- [Working with sensitive accounts (Arbeiten mit sensiblen Konten)](sensitive-accounts.md)
+- [Arbeiten mit vertrauliche Konten](sensitive-accounts.md)
 - [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)

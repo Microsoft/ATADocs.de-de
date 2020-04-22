@@ -13,10 +13,10 @@ ms.assetid: 34dc152c-6b7f-4128-93fe-aad56c282730
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: a4d4d9cf6bcd0fb6c8f321ab2388ed5a455c36f5
-ms.sourcegitcommit: bf5f58317121f1fb0fffc83d8b419cdd7ef27d9a
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80669661"
 ---
 # <a name="azure-atp-readiness-guide"></a>Handbuch für die Azure ATP-Bereitschaft
@@ -72,13 +72,13 @@ Sobald Azure ATP einsatzbereit ist, können Sie Sicherheitswarnungen in der Akti
 
 Blog: [Azure ATP-Blog](https://aka.ms/aatpblog)
 
-Öffentliche Community: [Tech-Community für Azure ATP](https://aka.ms/AatpCom)
+Öffentliche Community: [Tech Community für Azure ATP](https://aka.ms/AatpCom)
 
 Private Community: [Yammer-Gruppe für Azure ATP](https://www.yammer.com/azureadvisors/#/threads/inGroup?type=in_group&feedId=9386893&view=all)
 
 Channel 9: [Seite zu Microsoft Security Channel 9](https://channel9.msdn.com/Shows/Microsoft-Security/)
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
-- [Working with sensitive accounts (Arbeiten mit sensiblen Konten)](sensitive-accounts.md)
+- [Arbeiten mit vertrauliche Konten](sensitive-accounts.md)
 - [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)

@@ -13,10 +13,10 @@ ms.assetid: cae3ed45-8fbc-4f25-ba24-3cc407c6ea93
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: bc777fde6cdf12abb45b9608091166e3cf03ee2c
-ms.sourcegitcommit: bf5f58317121f1fb0fffc83d8b419cdd7ef27d9a
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80669568"
 ---
 # <a name="excluding-entities-from-detections"></a>Ausschließen von Entitäten von der Erkennung
@@ -38,7 +38,7 @@ Es gibt zwei Möglichkeiten, Entitäten manuell auszuschließen: entweder direkt
 
     ![Ausschließen einer Entität](./media/exclude-in-sa.png)
 
-- **Auf der Konfigurationsseite**:  Um Ausschlüsse zu überprüfen oder zu ändern, klicken Sie auf der Seite **Konfiguration** auf **Ausschlüsse**, und wählen Sie die Sicherheitswarnung aus, für die der Ausschluss angewendet werden soll, z.B. **DNS-Reconnaissance**.
+- **Auf der Konfigurationsseite**: Um Ausschlüsse zu überprüfen oder zu ändern, klicken Sie auf der Seite **Konfiguration** auf **Ausschlüsse**, und wählen Sie die Sicherheitswarnung aus, für die der Ausschluss angewendet werden soll, z.B. **DNS-Reconnaissance**.
 
     ![Konfiguration von Ausschlüssen](./media/exclusions.png)
 
@@ -61,7 +61,7 @@ Wenn Sie die Möglichkeit haben, eine IP-Adresse oder einen Computer auszuschlie
 > Die Seiten für die Konfiguration können nur von Azure ATP-Administratoren bearbeitet werden.
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 - [Leitfaden zu Azure ATP-Sicherheitswarnungen](suspicious-activity-guide.md)
 - [Integrieren mit Microsoft Defender ATP](integrate-wd-atp.md)
