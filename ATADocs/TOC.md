@@ -66,5 +66,5 @@
 ## [Problembehandlung mithilfe von Leistungsindikatoren](troubleshooting-ata-using-perf-counters.md)
 ## [Problembehandlung mithilfe der Datenbank](troubleshooting-ata-using-ata-database.md)
 ## [Problembehandlung von Problemen beim Starten eines Diensts](troubleshooting-service-startup.md)
-## [Notfallwiederherstellun](disaster-recovery.md)
+## [Notfallwiederherstellung](disaster-recovery.md)
 # [Überblick über die ATA-Bereitschaft](ata-resources.md)
