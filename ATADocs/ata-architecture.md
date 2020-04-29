@@ -167,7 +167,7 @@ In diesem Fall wird nur ein kleiner Prozentsatz dieses Datenverkehrs komprimiert
 Die Domänencontroller und die ATA-Gateways können physisch oder virtuell sein. Weitere Informationen finden Sie unter [Portspiegelung](configure-port-mirroring.md).
 
 
-### <a name="events"></a>Ereignisse
+### <a name="events"></a>Events
 Um die ATA-Erfassung von Pass-the-Hash, Brute Force, die Modifizierung von sensiblen Gruppen und Honey Token zu verbessern, benötigt ATA die folgenden Windows-Ereignisse: 4776, 4732, 4733, 4728, 4729, 4756 und 4757. Diese können entweder automatisch vom ATA-Lightweight-Gateway gelesen werden, oder für den Fall, dass das ATA-Lightweight-Gateway nicht bereitgestellt wird, kann es auf zwei Arten an das ATA-Gateway weitergeleitet werden: durch Konfigurieren des ATA-Gateways zum lauschen auf Siem-Ereignisse oder durch [Konfigurieren der Windows-Ereignis Weiterleitung](configure-event-collection.md).
 
 -   Konfigurieren des ATA-Gateways zum Überwachen von SIEM-Ereignissen <br>Konfigurieren Sie SIEM zum Weiterleiten bestimmter Windows-Ereignisse an ATA. ATA unterstützt eine Reihe von SIEM-Anbietern. Weitere Informationen finden Sie unter [Konfigurieren der Ereignissammlung](configure-event-collection.md).
