@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 5d639e84-2e37-43a9-9667-49be6c4fa8b7
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: a5e417911afdc64a7e0693dc354eedeed517b316
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: fb9d2f56cb2280fc060ff4ddcf6ac2cd233baa27
+ms.sourcegitcommit: 8c0222dc8333b5aa47430c5daee9bc7f1d82df31
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75907737"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81524734"
 ---
 # <a name="ata-event-id-reference"></a>Verweis auf ATA-Ereignis-IDs
 
@@ -32,7 +32,7 @@ Die Ereignisse finden Sie hier:
 
 ## <a name="ata-health-events"></a>ATA-Integritätsereignisse
 
-|Überwachen der Ereignis-ID| Überwachen des Warnungsnamens|
+|Ereignis-ID|Warnungsname|
 |---------|---------------|
 |1001|Festplattenspeicher für Center nahezu vollständig belegt|
 |1003|Center überlastet|
@@ -58,7 +58,7 @@ Die Ereignisse finden Sie hier:
  
 ## <a name="ata-security-alert-events"></a>ATA-Sicherheitswarnungsereignisse
 
-|Warnungsnamen|Ereignis-IDs der Warnungen|
+|Ereignis-ID|Warnungsname|
 |---------|---------------|
 |2001|Verdacht des Identitätsdiebstahls auf Grundlage von ungewöhnlichem Verhalten|
 |2002|Ungewöhnliche Protokollimplementierung|
@@ -86,7 +86,7 @@ Die Ereignisse finden Sie hier:
 
 ## <a name="ata-auditing-events"></a>ATA-Überwachungsereignisse
 
-|Warnungsnamen|Ereignis-IDs der Warnungen|
+|Ereignis-ID|Warnungsname|
 |---------|---------------|
 |3001|Änderung an der ATA-Konfiguration|
 |3002|Hinzufügen von ATA-Gateway|
@@ -96,7 +96,7 @@ Die Ereignisse finden Sie hier:
 |3006|Manuelle Änderung zum Status „Integritätsaktivität“|
 |3007|Manuelle Änderung zum Status „verdächtige Aktivität“|
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 - [Voraussetzungen für ATA](ata-prerequisites.md)
 - [ATA-Kapazitätsplanung](ata-capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)

@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 9592d413-df0e-4cec-8e03-be1ae00ba5dc
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: f13c603b25a58b81b8786734b0c11bf3f8da8f9c
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: dfc1266fd3687b6134ca79f083b2777083723798
+ms.sourcegitcommit: 8c0222dc8333b5aa47430c5daee9bc7f1d82df31
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414283"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81524700"
 ---
 # <a name="whats-new-in-ata-version-18"></a>Neuerungen in ATA 1.8
 
@@ -63,7 +63,7 @@ Die vorliegenden Anmerkungen zu dieser Version enthalten Informationen zu Update
 
 -   Die Leistung von ATA Center wurde verbessert. In ATA 1.8 kann ATA Center per als 1 Mio. Pakete in der Sekunde behandeln.
 -   Das ATA-Lightweight-Gateway kann jetzt Ereignisse lokal lesen, ohne die Ereignisweiterleitung zu konfigurieren.
--   Sie können jetzt E-Mails für Überwachungsbenachrichtigungen und verdächtige Aktivitäten getrennt konfigurieren.
+-   Sie können e-Mails nun separat für Integritäts Warnungen und verdächtige Aktivitäten konfigurieren.
 
 ## <a name="security-improvements"></a>Sicherheitsverbesserungen
 
@@ -136,7 +136,7 @@ In Windows Server 2016 Core sehen Sie den Fehler möglicherweise nicht, aber der
 **Problemumgehung**: Bevor Sie auf Version 1.8 Update 1 aktualisieren, erstellen Sie eine Kopie der Berichtseinstellungen, und geben Sie diese erneut ein. Dies kann auch über ein Skript erfolgen. Weitere Informationen dazu finden Sie unter [Exportieren und Importieren der Advanced Threat Analytics-Konfiguration](ata-configuration-file.md).
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 [Aktualisieren von ATA auf Version 1.8: Migrationshandbuch](ata-update-1.8-migration-guide.md)

@@ -12,19 +12,19 @@ ms.technology: ''
 ms.assetid: 601b48ba-a327-4aff-a1f9-2377a2bb7a42
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: f11f304c4c157980711e5859cd0c391b2b5c93bf
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: 12885e07707e458009025a551248af5ec68849d0
+ms.sourcegitcommit: 8c0222dc8333b5aa47430c5daee9bc7f1d82df31
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75907681"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81524836"
 ---
 # <a name="ata-siem-log-reference"></a>Referenz zum ATA-SIEM-Protokoll
 
 
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
-ATA kann Sicherheits- und Überwachungswarnungsereignisse an SIEM weiterleiten. Warnungen werden im CEF-Format weitergeleitet. Ein Beispiel zu jeder Art von Sicherheitswarnungsprotokoll, das an SIEM gesendet werden soll, finden Sie unten.
+ATA kann Sicherheits-und Integritäts Warn Ereignisse an Siem weiterleiten. Warnungen werden im CEF-Format weitergeleitet. Ein Beispiel zu jeder Art von Sicherheitswarnungsprotokoll, das an SIEM gesendet werden soll, finden Sie unten.
 
 ## <a name="sample-ata-security-alerts-in-cef-format"></a>Beispielsicherheitswarnungen von ATA im CEF-Format
 Die folgenden Felder und deren Werte werden an Ihren SIEM-Agent weitergeleitet:
@@ -138,7 +138,7 @@ Prioritäten: 3 = niedrig, 5 = mittel 10 = hoch
 ### <a name="suspicious-service-creation"></a>Erstellen eines verdächtigen Diensts
 12-12-2018  19:53:49    Auth.Warning    192.168.0.222   1 2018-12-12T17:53:49.913034+00:00 CENTER ATA 4688 MaliciousServiceCreationSuspicio ‹¯¨CEF:0|Microsoft|ATA|1.9.0.0|MaliciousServiceCreationSuspiciousActivity|Erstellen eines verdächtigen Diensts|5|start=2018-12-12T19:53:49.0000000Z app=ServiceInstalledEvent shost=W2012R2-000000-Server msg=triservice hat FakeService erstellt, um potenziell schädliche Befehle auf W2012R2-000000-Server auszuführen. externalId=2026 cs1Label=url cs1=https\://192.168.0.220/suspiciousActivity/5c114b2d8ca1ec1250caf577
 
-## <a name="monitoring-alerts"></a>Überwachen von Warnungen
+## <a name="health-alerts"></a>Integritätswarnungen
 
 ### <a name="gatewaydisconnectedmonitoringalert"></a>GatewayDisconnectedMonitoringAlert
 1 2018-12-12T16:52:41.520759+00:00 CENTER ATA 4688 GatewayDisconnectedMonitoringAle CEF:0|Microsoft|ATA|1.9.0.0|GatewayDisconnectedMonitoringAlert|GatewayDisconnectedMonitoringAlert|5|externalId=1011 cs1Label=url cs1=https\://192.168.0.220/monitoring msg=Es gab seit 5 Minuten keine Kommunikation vom Gateway CENTER. Letzte Kommunikation erfolgte am 12/12/2018 4:47:03 PM UTC.
@@ -147,10 +147,10 @@ Prioritäten: 3 = niedrig, 5 = mittel 10 = hoch
 1 2018-12-12T15:36:59.701097+00:00 CENTER ATA 1372 GatewayStartFailureMonitoringAle CEF:0|Microsoft|ATA|1.9.0.0|GatewayStartFailureMonitoringAlert|GatewayStartFailureMonitoringAlert|5|externalId=1018 cs1Label=url cs1=https\://192.168.0.220/monitoring msg=Der Gatewaydienst auf DC1 konnte nicht gestartet werden. Letzte beobachtete Ausführung am 12/12/2018 3:04:12 PM UTC.
 
 > [!NOTE]
-> Alle Überwachungswarnungen werden mit der obenstehenden Vorlage gesendet.
+> Alle Integritäts Warnungen werden mit der gleichen Vorlage wie oben gesendet.
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 - [Voraussetzungen für ATA](ata-prerequisites.md)
 - [ATA-Kapazitätsplanung](ata-capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)

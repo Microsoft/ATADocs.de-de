@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 6febcd07bfdea534f53d4b1479860c467c4455ae
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: b47f32a99d7257daed2f942346ac87dca4fccdcb
+ms.sourcegitcommit: 8c0222dc8333b5aa47430c5daee9bc7f1d82df31
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79411529"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81524751"
 ---
 # <a name="ata-architecture"></a>ATA-Architektur
 
@@ -51,7 +51,7 @@ Sie können ATA mit der folgenden Kombination von Gateways bereitstellen:
 
 -   **Ausschließliche Verwendung von ATA-Gateways** <br>
 Ihre ATA-Bereitstellung kann nur ATA-Gateways und keine ATA-Lightweight-Gateways enthalten: alle Domänencontroller müssen für die Portspiegelung auf ein ATA-Gateway konfiguriert sein, oder es müssen Netzwerk-TAPs vorhanden sein.
--   **Ausschließliche Verwendung von ATA-Lightweight-Gateways**<br>
+-   **Ausschließlich ATA-Lightweight-Gateways**<br>
 Ihre ATA-Bereitstellung kann nur ATA-Lightweight-Gateways enthalten: die ATA-Lightweight-Gateways werden auf jedem Domänencontroller bereitgestellt, und es sind keine zusätzlichen Server oder Konfigurationen für die Portspiegelung erforderlich.
 -   **Verwendung von ATA-Gateways und ATA-Lightweight-Gateways**<br>
 Ihre ATA-Bereitstellung enthält sowohl ATA-Gateways als auch ATA-Lightweight-Gateways. Die ATA-Lightweight-Gateways werden auf einigen Ihrer Domänencontroller installiert (z.B. alle Domänencontroller am Standort Ihres Branchs). Gleichzeitig werden andere Domänencontroller von ATA-Gateways überwacht (z.B. die größeren Domänencontroller in Ihrem Hauptdatenzentrum).
@@ -85,7 +85,7 @@ ATA Center empfängt analysierten Datenverkehr von dem ATA-Gateway und dem ATA-L
 |Entityprofilerstellung|Erstellt Profile für alle eindeutigen Entitäten gemäß dem Datenverkehr und den Ereignissen. ATA aktualisiert zum Beispiel die Liste der angemeldeten Computer für jedes Benutzerprofil.|
 |Center-Datenbank|Verwaltet das Schreiben der Netzwerkaktivitäten und Ereignisse in die Datenbank. |
 |Datenbank|ATA verwendet MongoDB zum Speichern aller Daten im System:<br /><br />-   Netzwerkaktivitäten<br />-   Ereignisaktivitäten<br />-   Eindeutige Entitäten<br />-   Verdächtige Aktivitäten<br />-   ATA-Konfiguration|
-|Detektoren|Die Detektoren verwenden Machine Learning-Algorithmen und deterministische Regeln, um verdächtige Aktivitäten und ungewöhnliches Benutzerverhalten im Netzwerk zu suchen.|
+|Erkennungsmodule|Die Detektoren verwenden Machine Learning-Algorithmen und deterministische Regeln, um verdächtige Aktivitäten und ungewöhnliches Benutzerverhalten im Netzwerk zu suchen.|
 |ATA-Konsole|Die ATA-Konsole wird zum Konfigurieren von ATA und zum Überwachen verdächtiger Aktivitäten verwendet, die ATA in Ihrem Netzwerk erkennt. Die ATA-Konsole ist nicht vom ATA Center-Dienst abhängig und wird selbst dann ausgeführt, wenn der Dienst beendet wurde, solange die Kommunikation mit der Datenbank möglich ist.|
 
 Berücksichtigen Sie Folgendes bei der Entscheidung, wie viele ATA Center Sie in Ihrem Netzwerk bereitstellen möchten:
@@ -133,27 +133,27 @@ Das Gateway für die Domänensynchronisierung ist für die proaktive Synchronisi
 Wenn das Gateway für die Domänensynchronisierung mehr als 30 Minuten offline ist, wird stattdessen ein anderer Kandidaten ausgewählt. Wenn für eine bestimmte Domäne kein Kandidat für den domänensynchronizer verfügbar ist, synchronisiert ATA proaktiv Entitäten und Ihre Änderungen, ATA ruft jedoch reaktiv neue Entitäten ab, sobald Sie im überwachten Datenverkehr erkannt werden. 
 <br>Wenn kein Domänen Synchronisierungs Modul verfügbar ist, werden bei der Suche nach einer Entität ohne zugeordneten Datenverkehr keine Ergebnisse angezeigt.<br><br>
 Standardmäßig handelt es sich bei allen ATA-Gateways um Domänen Synchronisierungs Kandidaten.<br><br>
-Da alle ATA-Lightweight-Gateways eher in Filialen und auf kleinen Domänencontrollern bereitgestellt werden, sind sie standardmäßig keine Kandidaten für die Domänensynchronisierung. <br><br>In einer Umgebung mit nur Lightweight-Gateways empfiehlt es sich, zwei der Gateways als Synchronisierungs Kandidaten zuzuweisen, wobei ein Lightweight-Gateway der standardmäßige Synchronisierungs Kandidat ist und einer der Sicherungen für den Fall, dass der Standardwert für mehr als 30 offline ist. Minuten. 
+Da alle ATA-Lightweight-Gateways eher in Filialen und auf kleinen Domänencontrollern bereitgestellt werden, sind sie standardmäßig keine Kandidaten für die Domänensynchronisierung. <br><br>In einer Umgebung mit nur Lightweight-Gateways empfiehlt es sich, zwei der Gateways als Synchronisierungs Kandidaten zuzuweisen, wobei ein Lightweight-Gateway der standardmäßige Synchronisierungs Kandidat ist, und einer für den Fall, dass der Standardwert für mehr als 30 Minuten offline ist. 
 
 
--   **Ressourceneinschränkungen**<br>
+-   **Ressourcenbeschränkungen**<br>
 Das ATA-Lightweight-Gateway enthält eine Überwachungskomponente, die die verfügbare Compute- und Arbeitsspeicherkapazität auf dem Domänencontroller auswertet, auf dem es ausgeführt wird. Der Überwachungsprozess wird alle 10 Sekunden ausgeführt und aktualisiert das CPU- und Arbeitsspeicher-Auslastungskontingent für den ATA-Lightweight-Gateway-Prozess dynamisch, um sicherzustellen, dass der Domänencontroller zu jedem Zeitpunkt über mindestens 15 % freie Rechen- und Arbeitsspeicherressourcen verfügt.<br><br>
 Unabhängig davon, was auf dem Domänencontroller geschieht, gibt dieser Prozess immer Ressourcen frei, um sicherzustellen, dass die Kernfunktionalität des Domänencontrollers nicht beeinträchtigt wird.<br><br>
-Wenn dem ATA-Lightweight-Gateway dadurch nicht mehr genügend Ressourcen zur Verfügung stehen, wird nur ein Teil des Datenverkehrs überwacht, und die Überwachungswarnung „Netzwerkdatenverkehr aus Portspiegelung gelöscht“ wird auf der Statusseite angezeigt.
+Wenn dies dazu führt, dass das ATA-Lightweight-Gateway nicht mehr über genügend Ressourcen verfügt, wird nur teilweiser Datenverkehr überwacht
 
 Die folgende Tabelle enthält ein Beispiel für einen Domänencontroller, der über genügend Rechenressourcen verfügt und ein größeres Kontingent als derzeit erforderlich bereitstellt und somit die Überwachung des gesamten Datenverkehrs ermöglicht:
 
 ||||||
 |-|-|-|-|-|
 |Active Directory (Lsass.exe)|ATA-Lightweight-Gateway (Microsoft.Tri.Gateway.exe)|Sonstiges (andere Prozesse) |ATA-Lightweight-Gateway-Kontingent|Nimmt Gateway Löschungen vor|
-|30 %|20 %|10 %|45 %|Nein|
+|30 %|20%|10 %|45 %|Nein|
 
 Wenn Active Directory mehr Rechenkapazität erfordert, wird das vom ATA-Lightweight-Gateway benötigte Kontingent reduziert. Im folgenden Beispiel benötigt das ATA-Lightweight-Gateway mehr als das zugewiesene Kontingent und löscht einen Teil des Datenverkehrs (der Datenverkehr wird nur teilweise überwacht):
 
 ||||||
 |-|-|-|-|-|
 |Active Directory (Lsass.exe)|ATA-Lightweight-Gateway (Microsoft.Tri.Gateway.exe)|Sonstiges (andere Prozesse) |ATA-Lightweight-Gateway-Kontingent|Nimmt Gateway Löschungen vor|
-|60 %|15 %|10 %|15 %|Ja|
+|60%|15 %|10 %|15 %|Ja|
 
 
 ## <a name="your-network-components"></a>Ihre Netzwerkkomponenten
@@ -164,13 +164,13 @@ Wenn Sie ATA-Gateways verwenden, müssen Sie für die Domänencontroller, die ü
 
 In diesem Fall wird nur ein kleiner Prozentsatz dieses Datenverkehrs komprimiert und zur Analyse an ATA Center gesendet, während durch die Portspiegelung sämtlicher Netzwerkverkehr der Domänencontroller an das ATA-Gateway gesendet wird.
 
-Die Domänencontroller und die ATA-Gateways können physisch oder virtuell sein. Weitere Informationen finden Sie unter [Konfigurieren der Portspiegelung](configure-port-mirroring.md).
+Die Domänencontroller und die ATA-Gateways können physisch oder virtuell sein. Weitere Informationen finden Sie unter [Portspiegelung](configure-port-mirroring.md).
 
 
 ### <a name="events"></a>Ereignisse
-Um die ATA-Erfassung von Pass-the-Hash, Brute Force, die Modifizierung von sensiblen Gruppen und Honey Token zu verbessern, benötigt ATA die folgenden Windows-Ereignisse: 4776, 4732, 4733, 4728, 4729, 4756 und 4757. Diese können entweder automatisch vom ATA-Lightweight-Gateway gelesen werden, oder, falls das ATA-Lightweight-Gateway nicht bereitgestellt wurde, an das ATA-Gateway weitergeleitet werden. Dazu gibt es zwei Möglichkeiten: zum einen das Konfigurieren des ATA-Gateways, sodass es auf SIEM-Ereignisse lauscht, oder das [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-collection.md).
+Um die ATA-Erfassung von Pass-the-Hash, Brute Force, die Modifizierung von sensiblen Gruppen und Honey Token zu verbessern, benötigt ATA die folgenden Windows-Ereignisse: 4776, 4732, 4733, 4728, 4729, 4756 und 4757. Diese können entweder automatisch vom ATA-Lightweight-Gateway gelesen werden, oder für den Fall, dass das ATA-Lightweight-Gateway nicht bereitgestellt wird, kann es auf zwei Arten an das ATA-Gateway weitergeleitet werden: durch Konfigurieren des ATA-Gateways zum lauschen auf Siem-Ereignisse oder durch [Konfigurieren der Windows-Ereignis Weiterleitung](configure-event-collection.md).
 
--   Konfigurieren des ATA-Gateways zum Abhören von SIEM-Ereignissen <br>Konfigurieren Sie SIEM zum Weiterleiten bestimmter Windows-Ereignisse an ATA. ATA unterstützt eine Reihe von SIEM-Anbietern. Weitere Informationen finden Sie unter [Konfigurieren der Ereignissammlung](configure-event-collection.md).
+-   Konfigurieren des ATA-Gateways zum Überwachen von SIEM-Ereignissen <br>Konfigurieren Sie SIEM zum Weiterleiten bestimmter Windows-Ereignisse an ATA. ATA unterstützt eine Reihe von SIEM-Anbietern. Weitere Informationen finden Sie unter [Konfigurieren der Ereignissammlung](configure-event-collection.md).
 
 -   Konfigurieren der Windows-Ereignisweiterleitung<br>Eine andere Möglichkeit, wie ATA Ihre Ereignisse erhalten kann, besteht darin, die Domänencontroller so zu konfigurieren, dass die Windows-Ereignisse 4776, 4732, 4733, 4728, 4729, 4756 und 4757 an das ATA-Gateway weitergeleitet werden. Dies ist insbesondere dann nützlich, wenn Sie nicht über SIEM verfügen oder SIEM von ATA derzeit nicht unterstützt wird. Informationen darüber, wie Sie die Konfiguration der Windows-Ereignisweiterleitung in ATA abschließen, finden Sie unter [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-collection.md). Dies gilt nur für physische ATA-Gateways und nicht für das ATA-Lightweight-Gateway.
 
@@ -178,7 +178,7 @@ Um die ATA-Erfassung von Pass-the-Hash, Brute Force, die Modifizierung von sensi
 - [Auswählen des richtigen ATA-Gatewaytyps](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 - [Voraussetzungen für ATA](ata-prerequisites.md)
 - [Tool zur Bemessung von ATA-Gateways](https://aka.ms/atasizingtool)
 - [ATA-Kapazitätsplanung](ata-capacity-planning.md)

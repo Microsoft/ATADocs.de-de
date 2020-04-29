@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: a0d64aff-ca9e-4300-b3f8-eb3c8b8ae045
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f7e65f1da222de3b7a4cb05541bd2359e3046901
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 76f6c7dcd083d1e84443fefcaff4c753ea6bf272
+ms.sourcegitcommit: 8c0222dc8333b5aa47430c5daee9bc7f1d82df31
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414232"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81524717"
 ---
 # <a name="whats-new-in-ata-version-15"></a>Neuerungen in ATA 1.5
 Die vorliegenden Anmerkungen zu dieser Version enthalten Informationen zu bekannten Problemen in dieser Version von Advanced Threat Analytics.
@@ -35,7 +35,7 @@ Das Update auf ATA 1.5 bietet Verbesserungen in folgenden Bereichen:
 
 -   Bessere Reaktionsfähigkeit der Benutzeroberfläche auf verdächtige Aktivitäten mit Tausenden von beteiligten Entitäten
 
--   Verbesserte automatische Auflösung von Überwachungswarnungen
+-   Verbesserte automatische Auflösung von Integritäts Warnungen
 
 -   Zusätzliche Leistungsindikatoren für die erweiterte Überwachung und Problembehandlung
 
@@ -64,7 +64,7 @@ Auf dem ATA-Gateway ist der [Microsoft-Netzwerkmonitor 3.4](https://www.microso
 ### <a name="kb-on-virtualization-host"></a>KB auf Virtualisierungshost
 Installieren Sie KB3047154 nicht auf einem Virtualisierungshost. Dies kann dazu führen, dass die Portspiegelung nicht mehr ordnungsgemäß ausgeführt wird.
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 [Aktualisieren von ATA auf Version 1.5 – Migrationsleitfaden](ata-update-1.5-migration-guide.md)
 

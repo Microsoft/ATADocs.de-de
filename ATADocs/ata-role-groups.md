@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 050260b65b14ca425f536fdfc0c936c0fce885df
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: f50c6158031bfcc6215b33e9890fa42a35fe1487
+ms.sourcegitcommit: 8c0222dc8333b5aa47430c5daee9bc7f1d82df31
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79412294"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81524683"
 ---
 # <a name="ata-role-groups"></a>ATA-Rollengruppen
 
@@ -35,11 +35,11 @@ ATA führt drei Typen von Rollengruppen ein: ATA-Administratoren, ATA-Benutzer u
 
 |Aktivität |Microsoft Advanced Threat Analytics-Administratoren|Microsoft Advanced Threat Analytics-Benutzer|Microsoft Advanced Threat Analytics-Viewer|
 |----|----|----|----|
-|Anmelden|Verfügbar|Verfügbar|Verfügbar|
+|Anmeldename|Verfügbar|Verfügbar|Verfügbar|
 |Bereitstellen von Eingaben für verdächtige Aktivitäten|Verfügbar|Verfügbar|Nicht verfügbar|
 |Ändern des Status von verdächtigen Aktivitäten|Verfügbar|Verfügbar|Nicht verfügbar|
 |Freigeben/Exportieren von verdächtiger Aktivität über E-Mail/Abruflink|Verfügbar|Verfügbar|Nicht verfügbar|
-|Ändern des Status der Überwachung von Warnungen|Verfügbar|Verfügbar|Nicht verfügbar|
+|Status von Integritäts Warnungen ändern|Verfügbar|Verfügbar|Nicht verfügbar|
 |Aktualisieren der ATA-Konfiguration|Verfügbar|Nicht verfügbar|Nicht verfügbar|
 |Gateway – Hinzufügen|Verfügbar|Nicht verfügbar|Nicht verfügbar|
 |Gateway – Löschen |Verfügbar|Nicht verfügbar|Nicht verfügbar|
