@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a1cb324f7641a175ad47e01f4fa87efe5764334f
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: a6e5ae637492296dfe1647a0ad82a5b1e2d673f3
+ms.sourcegitcommit: 40f9a460c5b771dfd1e62098d7744162a7214d54
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79546210"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82590479"
 ---
 # <a name="configure-event-collection"></a>Konfigurieren der Ereignissammlung
 
@@ -84,7 +84,7 @@ Azure ATP unterstützt SIEM-Ereignisse in den folgenden Formaten:
     9. Ergebniscode des NTLM
 - Die Reihenfolge ist wichtig, und es sollten keine weiteren Angaben in die Nachricht eingeschlossen werden.
 
-### <a name="hp-arcsight"></a>HP Arcsight
+### <a name="microfocus-arcsight"></a>MicroFocus ArcSight
 
 CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|Der Domänencontroller hat versucht, die Anmeldeinformationen für ein Konto zu bestätigen.|Niedrig| externalId=4776 cat=Security rt=1426218619000 shost=KKKKKK dhost=YYYYYY.subDomain.domain.com duser=XXXXXX cs2=Security cs3=Microsoft-Windows-Security-Auditing cs4=0x0 cs3Label=EventSource cs4Label=Grund oder Fehlercode
 
@@ -100,7 +100,6 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|Der 
   - dhost = Name des Computers, der das Ereignis empfängt (in diesem Fall der DC)
   - duser = Name des authentifizierenden Benutzers
 - Die Reihenfolge ist für den Teil _Erweiterung_ unerheblich
-
 - Für die folgenden beiden Felder müssen ein benutzerdefinierter Schlüssel und ein keyLabel vorhanden sein:
   - „EventSource“
   - „Ursache oder Fehlercode“ = Ergebniscode des NTLM
@@ -142,6 +141,7 @@ QRadar ermöglicht Ereignissammlung über einen Agent. Wenn die Daten mithilfe e
 Die erforderlichen Felder sind:
 
 - Der Agenttyp für die Sammlung
+
 - Der Anbietername für das Windows-Ereignisprotokoll
 - Die Quelle für das Windows-Ereignisprotokoll
 - Der vollqualifizierte Domänenname des DCs

@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a1e8065f5a1898301439c160c2a877cabe750928
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: 484d3bba9ebb4c648e78413472b84100aa76d482
+ms.sourcegitcommit: 31fd8256f38cf69c51a9ba9cf8d38140b72a5ed7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79413824"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588393"
 ---
 # <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-azure-atp-sensor"></a>Konfigurieren von Endpunktproxy- und Internetkonnektivitätseinstellungen für Ihren Azure ATP-Sensor
 
@@ -40,9 +40,9 @@ Verwenden Sie die folgenden Befehle, um die Proxyauthentifizierung abzuschließe
 
 > [!div class="mx-tableFixed"]
 >
-> |Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|Description|
+> |Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|Beschreibung|
 > |-------------|----------|---------|---------|
-> |ProxyUrl|ProxyUrl="https\://proxy.contoso.com:8080"|Nein|Gibt die ProxyUrl und die Portnummer für den Azure ATP Sensor an.|
+> |ProxyUrl|ProxyUrl="http\://proxy.contoso.com:8080"|Nein|Gibt die ProxyUrl und die Portnummer für den Azure ATP Sensor an.|
 > |ProxyUserName|ProxyUserName="Contoso\ProxyUser"|Nein|Wenn Ihr Proxydienst eine Authentifizierung erfordert, geben Sie einen Benutzernamen im Format „DOMÄNE\Benutzer“ an.|
 > |ProxyUserPassword|ProxyUserPassword="P@ssw0rd"|Nein|Gibt das Kennwort für den Proxybenutzernamen an. *Anmeldeinformationen werden verschlüsselt und lokal vom Azure ATP-Sensor gespeichert.|
 
@@ -89,7 +89,7 @@ Die vorherigen URLs werden automatisch der richtigen Dienstidentifizierung für 
 > - Um ein Maximum an Sicherheit und Datenschutz zu gewährleisten, verwendet Azure ATP eine zertifikatbasierte gegenseitige Authentifizierung zwischen jedem Azure ATP-Sensor und dem Azure ATP-Cloud-Back-End. Wenn in Ihrer Umgebung eine SSL-Überprüfung verwendet wird, stellen Sie sicher, dass diese Überprüfung für die gegenseitige Authentifizierung konfiguriert ist, sodass der Authentifizierungsprozess nicht beeinträchtigt wird.
 > - Sie können auch das Azure-Diensttag (**AzureAdvancedThreatProtection**) verwenden, um den Zugriff auf Azure ATP zu ermöglichen. Weitere Informationen zu Diensttags finden Sie unter [Diensttags des virtuellen Netzwerks](https://docs.microsoft.com/azure/virtual-network/service-tags-overview) oder in der Datei [Herunterladen der Diensttags](https://www.microsoft.com/download/details.aspx?id=56519).
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [Configure event forwarding (Konfigurieren der Ereignisweiterleitung)](configure-event-forwarding.md)
 - [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)
