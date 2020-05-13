@@ -12,19 +12,19 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 9ec7eb4c-3cad-4543-bbf0-b951d8fc8ffe
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 70c122d4983d4b5b32899d13ff81b81d38d65af8
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: e4873dbe0aa79456a55f5efff9c15e13141a2d9f
+ms.sourcegitcommit: 428e0694c862f92aed50a13b137db2aa49fe4439
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79413841"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82852250"
 ---
 # <a name="configure-port-mirroring"></a>Konfigurieren der Portspiegelung
 
 Dieser Artikel ist für Sie nur interessant, wenn Sie eigenständige Azure ATP-Sensoren anstelle von Azure ATP-Sensoren bereitstellen.
 
 > [!NOTE]
-> Eigenständige Azure ATP-Sensoren unterstützen nicht alle Datenquellentypen, sodass einige Ereignisse nicht erkannt werden. Zur vollständigen Abdeckung Ihrer Umgebung empfiehlt es sich, den Azure ATP-Sensor bereitzustellen.
+> Eigenständige Azure ATP-Server unterstützen nicht die Erstellung von Protokolleinträgen für Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW), die Daten für mehrere Erkennungen bereitstellen. Zur vollständigen Abdeckung Ihrer Umgebung empfiehlt es sich, den Azure ATP-Sensor bereitzustellen.
 
 Als primäre Datenquelle verwendet Azure ATP eine ausführliche Paketüberprüfung (Deep Packet Inspection) des Netzwerkdatenverkehrs zu und von den Domänencontrollern. Damit Azure ATP den Netzwerkdatenverkehr sieht, muss entweder eine Portspiegelung eingerichtet oder ein Netzwerk-TAP verwendet werden.
 
@@ -66,11 +66,11 @@ Die Domänencontroller und der eigenständige Azure ATP-Sensor können physisch 
   > [!NOTE]
   > Wenn Ihre Umgebung V2V ((Virtual-to-Virtual) auf unterschiedlichen Hosts (RSPAN) unterstützt, müssen Sie sich zu Affinität keine Gedanken machen.
 
-- Um zu gewährleisten, dass der eigenständige Azure ATP-Sensor ausreichende Kapazität für die eigenständige Überwachung aller Domänencontroller aufweist, eignet sich folgende Option: Installieren Sie auf jedem Virtualisierungshost einen virtuellen Computer, und installieren Sie auf jedem Host einen eigenständigen Azure ATP-Sensor. Konfigurieren Sie jeden eigenständigen Azure ATP-Sensor so, dass er alle Domänencontroller überwacht, die auf dem betreffenden Cluster ausgeführt werden. Auf diese Weise wird jeder Host überwacht, auf dem Domänencontroller ausgeführt werden.
+- Um zu gewährleisten, dass der eigenständige Azure ATP-Sensor ausreichende Kapazität für die Überwachung aller Domänencontroller aufweisen, eignet sich folgende Option: Installieren Sie auf jedem Virtualisierungshost einen virtuellen Computer, und installieren Sie auf jedem Host einen eigenständigen Azure ATP-Sensor. Konfigurieren Sie jeden eigenständigen Azure ATP-Sensor so, dass er alle Domänencontroller überwacht, die auf dem betreffenden Cluster ausgeführt werden. Auf diese Weise wird jeder Host überwacht, auf dem Domänencontroller ausgeführt werden.
 
 Überprüfen Sie nach dem Konfigurieren der Portspiegelung deren ordnungsgemäße Funktion, bevor Sie den eigenständigen Azure ATP-Sensor installieren.
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [Configure event forwarding (Konfigurieren der Ereignisweiterleitung)](configure-event-forwarding.md)
 - [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)

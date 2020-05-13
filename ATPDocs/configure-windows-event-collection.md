@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: da3465fa197157dd8502e0558fa0c03b825c6e56
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: b61a1d3236541e07f1cca86f9f1362a664e11e09
+ms.sourcegitcommit: 428e0694c862f92aed50a13b137db2aa49fe4439
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79413807"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82852216"
 ---
 # <a name="configure-windows-event-collection"></a>Konfigurieren der Windows-Ereignissammlung
 
@@ -25,7 +25,7 @@ Um die Funktionen zum Erkennen von Bedrohungen zu verbessern, benötigt Azure Ad
 
 > [!NOTE]
 >
-> - Eigenständige Azure ATP-Sensoren unterstützen nicht alle Datenquellentypen, sodass einige Ereignisse nicht erkannt werden. Zur vollständigen Abdeckung Ihrer Umgebung empfiehlt es sich, den Azure ATP-Sensor bereitzustellen.
+> - Eigenständige Azure ATP-Server unterstützen nicht die Erstellung von Protokolleinträgen für Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW), die Daten für mehrere Erkennungen bereitstellen. Zur vollständigen Abdeckung Ihrer Umgebung empfiehlt es sich, den Azure ATP-Sensor bereitzustellen.
 > - Es ist wichtig, vor dem Aktivieren der Ereignissammlung die [Überwachungsrichtlinien](atp-advanced-audit-policy.md) zu überprüfen und zu verifizieren, um sicherzustellen, dass die Domänencontroller ordnungsgemäß für die Aufzeichnung der erforderlichen Ereignisse konfiguriert sind.
 
 Zusätzlich zum Sammeln und Analysieren des Netzwerkverkehrs zu und von den Domänencontrollern kann Azure ATP Windows-Ereignisse heranziehen, um Erkennungen weiter zu verbessern. Azure ATP verwendet die Windows-Ereignisse 4776 und 8004 für NTLM, um verschiedene Erkennungen zu verbessern. Die Ereignisse 4732, 4733, 4728, 4729, 4756, 4757, 7045 und 8004 dienen dazu, die Erkennung von Änderungen an vertraulichen Gruppen und die Diensterstellung zu verbessern. Dies kann aus dem SIEM-Agent heraus erfolgen oder indem Sie die Windows-Ereignisweiterleitung von Ihrem Domänencontroller aus einrichten. Die gesammelten Ereignisse versorgen Azure ATP mit zusätzlichen Informationen, die nicht über den Datenverkehr des Domänencontrollers verfügbar sind.

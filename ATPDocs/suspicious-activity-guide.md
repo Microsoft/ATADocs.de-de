@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 01/22/2020
+ms.date: 04/23/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 39fbd3f42cfccd60a007b8640421a8af1c178243
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: 667280b7a9f2b7f80d70f3e59059fdb4f0b0faf7
+ms.sourcegitcommit: 9654502ea67f51ba5f00357f8464565ce424114e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79318769"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794222"
 ---
 # <a name="azure-atp-security-alerts"></a>Azure ATP-Sicherheitswarnungen
 
@@ -43,13 +43,13 @@ In der folgenden Tabelle wird die Zuordnung zwischen den Warnungsnamen, den ents
 # <a name="external-ids"></a>[Externe IDs](#tab/external)
 
 > [!div class="mx-tdBreakAll"]
-> |Neuer Sicherheitswarnungsname|Eindeutige externe ID|Schweregrad|MITRE ATT&CK Matrix™|
+> |Sicherheitswarnungsname|Eindeutige externe ID|Schweregrad|MITRE ATT&CK Matrix™|
 > |---|---|---|---|
-> |[Reconnaissance mithilfe von Kontoenumeration](atp-reconnaissance-alerts.md#account-enumeration-reconnaissance-external-id-2003)|2003|Mittel|-Ermittlung|
+> |[Reconnaissance mithilfe von Kontoenumeration](atp-reconnaissance-alerts.md#account-enumeration-reconnaissance-external-id-2003)|2003|Mittel|Ermittlung|
 > |[Datenexfiltration über den SMB](atp-exfiltration-alerts.md#data-exfiltration-over-smb-external-id-2030)|2030|Hoch|Exfiltration,<br>Seitliche Verschiebung,<br>Befehl und Steuerelement|
-> |[Honeytoken-Aktivität](atp-compromised-credentials-alerts.md#honeytoken-activity-external-id-2014)|2014|Mittel|Zugriff über Anmeldeinformationen,<br>-Ermittlung|
+> |[Honeytoken-Aktivität](atp-compromised-credentials-alerts.md#honeytoken-activity-external-id-2014)|2014|Mittel|Zugriff über Anmeldeinformationen,<br>Ermittlung|
 > |[Malicious request of Data Protection API master key (Böswillige Anforderung eines Masterschlüssels zur Datenschutz-API)](atp-domain-dominance-alerts.md#malicious-request-of-data-protection-api-master-key-external-id-2020)|2020|Hoch|Zugriff über Anmeldeinformationen|
-> |[Reconnaissance über Netzwerkzuordnung (DNS)](atp-reconnaissance-alerts.md#network-mapping-reconnaissance-dns-external-id-2007)|2007|Mittel|-Ermittlung|
+> |[Reconnaissance über Netzwerkzuordnung (DNS)](atp-reconnaissance-alerts.md#network-mapping-reconnaissance-dns-external-id-2007)|2007|Mittel|Ermittlung|
 > |[Versuchte Remotecodeausführung](atp-domain-dominance-alerts.md#remote-code-execution-attempt-external-id-2019)|2019|Mittel|Ausführung,<br>Persistenz,<br>Ausweitung von Berechtigungen,<br>Umgehung der Verteidigung,<br>Seitliche Verschiebung|
 > |[Remotecodeausführung über DNS](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036)|2036|Mittel|Ausweitung von Berechtigungen,<br>Seitliche Verschiebung|
 > |[Sicherheitsprinzipalreconnaissance (LDAP)](atp-reconnaissance-alerts.md#security-principal-reconnaissance-ldap-external-id-2038)|2038|Mittel|Zugriff über Anmeldeinformationen|
@@ -71,19 +71,20 @@ In der folgenden Tabelle wird die Zuordnung zwischen den Warnungsnamen, den ents
 > |[Suspected over-pass-the-hash attack (encryption downgrade) (Verdacht auf Over-Pass-the-Hash-Angriff (Herabstufung der Verschlüsselung))](atp-lateral-movement-alerts.md#suspected-overpass-the-hash-attack-encryption-downgrade-external-id-2008)|2008|Mittel|Seitliche Verschiebung|
 > |[Suspected overpass-the-hash attack (Kerberos) (Verdacht auf einen Overpass-the-Hash-Angriff (Kerberos))](atp-lateral-movement-alerts.md#suspected-overpass-the-hash-attack-kerberos-external-id-2002)|2002|Mittel|Seitliche Verschiebung|
 > |[Suspected Skeleton Key attack (encryption downgrade) (Verdacht auf Skeleton-Key-Angriff (Herabstufung der Verschlüsselung))](atp-domain-dominance-alerts.md#suspected-skeleton-key-attack-encryption-downgrade-external-id-2010)|2010|Mittel|Seitliche Verschiebung,<br>Persistenz|
+> |[Mutmaßliche Manipulation von SMB-Paketen (Exploit von CVE-2020-0796) (Vorschau)](atp-lateral-movement-alerts.md#suspected-smb-packet-manipulation-cve-2020-0796-exploitation-external-id-2406)|2406|Hoch|Seitliche Verschiebung|
 > |[Suspected use of Metasploit hacking framework](atp-compromised-credentials-alerts.md#suspected-use-of-metasploit-hacking-framework-external-id-2034)|2034|Mittel|Seitliche Verschiebung|
 > |[Suspected WannaCry ransomware attack (Verdacht auf einen WannaCry-Ransomangriff)](atp-compromised-credentials-alerts.md#suspected-wannacry-ransomware-attack-external-id-2035)|2035|Mittel|Seitliche Verschiebung|
 > |[Verdächtige Ergänzungen zu sensiblen Gruppen](atp-domain-dominance-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024)|2024|Mittel|Zugriff über Anmeldeinformationen,<br>Persistenz|
 > |[Verdächtige Kommunikation über DNS](atp-exfiltration-alerts.md#suspicious-communication-over-dns-external-id-2031)|2031|Mittel|Exfiltration|
 > |[Erstellung von verdächtigen Diensten](atp-domain-dominance-alerts.md#suspicious-service-creation-external-id-2026)|2026|Mittel|Ausführung,<br>Persistenz,<br>Ausweitung von Berechtigungen,<br>Umgehung der Verteidigung,<br>Seitliche Verschiebung|
 > |[Verdächtige VPN-Verbindung](atp-compromised-credentials-alerts.md#suspicious-vpn-connection-external-id-2025)|2025|Mittel|Persistenz,<br>Umgehung der Verteidigung|
-> |[User and group membership reconnaissance (SAMR) (Reconnaissance über Benutzer und Gruppenmitgliedschaften (SAMR))](atp-reconnaissance-alerts.md#user-and-group-membership-reconnaissance-samr-external-id-2021)|2021|Mittel|-Ermittlung|
-> |[Reconnaissance über Benutzer und IP-Adressen (SMB)](atp-reconnaissance-alerts.md#user-and-ip-address-reconnaissance-smb-external-id-2012)|2012|Mittel|-Ermittlung|
+> |[User and group membership reconnaissance (SAMR) (Reconnaissance über Benutzer und Gruppenmitgliedschaften (SAMR))](atp-reconnaissance-alerts.md#user-and-group-membership-reconnaissance-samr-external-id-2021)|2021|Mittel|Ermittlung|
+> |[Reconnaissance über Benutzer und IP-Adressen (SMB)](atp-reconnaissance-alerts.md#user-and-ip-address-reconnaissance-smb-external-id-2012)|2012|Mittel|Ermittlung|
 
 # <a name="cloud-app-security-ids"></a>[Cloud App Security-API](#tab/cloud-app-security)
 
 > [!div class="mx-tdBreakAll"]
-> |Neuer Sicherheitswarnungsname|Cloud App Security-Warnungs-ID|
+> |Sicherheitswarnungsname|Cloud App Security-Warnungs-ID|
 > |---|---|
 > |[Reconnaissance mithilfe von Kontoenumeration](atp-reconnaissance-alerts.md#account-enumeration-reconnaissance-external-id-2003)|ALERT_EXTERNAL_AATP_ACCOUNT_ENUMERATION_SECURITY_ALERT|
 > |[Datenexfiltration über den SMB](atp-exfiltration-alerts.md#data-exfiltration-over-smb-external-id-2030)|ALERT_EXTERNAL_AATP_SMB_DATA_EXFILTRATION_SECURITY_ALERT|
@@ -111,6 +112,7 @@ In der folgenden Tabelle wird die Zuordnung zwischen den Warnungsnamen, den ents
 > |[Suspected over-pass-the-hash attack (encryption downgrade) (Verdacht auf Over-Pass-the-Hash-Angriff (Herabstufung der Verschlüsselung))](atp-lateral-movement-alerts.md#suspected-overpass-the-hash-attack-encryption-downgrade-external-id-2008)|ALERT_EXTERNAL_AATP_OVERPASS_THE_HASH_ENCRYPTION_DOWNGRADE_SECURITY_ALERT|
 > |[Suspected overpass-the-hash attack (Kerberos) (Verdacht auf einen Overpass-the-Hash-Angriff (Kerberos))](atp-lateral-movement-alerts.md#suspected-overpass-the-hash-attack-kerberos-external-id-2002)|ALERT_EXTERNAL_AATP_ABNORMAL_KERBEROS_OVERPASS_THE_HASH_SECURITY_ALERT|
 > |[Suspected Skeleton Key attack (encryption downgrade) (Verdacht auf Skeleton-Key-Angriff (Herabstufung der Verschlüsselung))](atp-domain-dominance-alerts.md#suspected-skeleton-key-attack-encryption-downgrade-external-id-2010)|ALERT_EXTERNAL_AATP_SKELETON_KEY_ENCRYPTION_DOWNGRADE_SECURITY_ALERT|
+> |[Mutmaßliche Manipulation von SMB-Paketen (Exploit von CVE-2020-0796) (Vorschau)](atp-lateral-movement-alerts.md#suspected-smb-packet-manipulation-cve-2020-0796-exploitation-external-id-2406)|ALERT_EXTERNAL_AATP_SMB_GHOST_SECURITY_ALERT|
 > |[Suspected use of Metasploit hacking framework](atp-compromised-credentials-alerts.md#suspected-use-of-metasploit-hacking-framework-external-id-2034)|ALERT_EXTERNAL_AATP_ABNORMAL_SMB_METASPLOIT_SECURITY_ALERT|
 > |[Suspected WannaCry ransomware attack (Verdacht auf einen WannaCry-Ransomangriff)](atp-compromised-credentials-alerts.md#suspected-wannacry-ransomware-attack-external-id-2035)|ALERT_EXTERNAL_AATP_ABNORMAL_SMB_WANNA_CRY_SECURITY_ALERT|
 > |[Verdächtige Ergänzungen zu sensiblen Gruppen](atp-domain-dominance-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024)|ALERT_EXTERNAL_AATP_ABNORMAL_SENSITIVE_GROUP_MEMBERSHIP_CHANGE_SECURITY_ALERT|
@@ -123,7 +125,7 @@ In der folgenden Tabelle wird die Zuordnung zwischen den Warnungsnamen, den ents
 > [!NOTE]
 > Wenn Sie eine Sicherheitswarnung deaktivieren möchten, wenden Sie sich an den Support.
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [Arbeiten mit Sicherheitswarnungen](working-with-suspicious-activities.md)
 - [Verstehen von Sicherheitswarnungen](understanding-security-alerts.md)

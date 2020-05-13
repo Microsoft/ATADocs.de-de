@@ -5,18 +5,18 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 03/19/2020
+ms.date: 04/23/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: f56f4a10a956cab92aa18c5f7dcdd208d0e4d8b3
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: 178175373153ce162042cee3228628a9ca9ab2c8
+ms.sourcegitcommit: 2d1bdcc3adee8452aef7259a99c9aaa2f87c31cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80669645"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886546"
 ---
 # <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Neuerungen in Azure Advanced Threat Protection (Azure ATP)
 
@@ -25,6 +25,16 @@ Dieser Artikel wird häufig aktualisiert, um Sie über die Neuerungen in der akt
 Ausführliche Informationen zu früheren Azure ATP-Versionen bis (und einschließlich von) Version 2.55 finden Sie in der [Azure ATP-Versionsreferenz](atp-release-reference.md).
 
 RSS-Feed: Lassen Sie sich benachrichtigen, wenn diese Seite aktualisiert wird, indem Sie die folgende URL kopieren und in Ihren Feedreader einfügen: `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
+
+## <a name="azure-atp-release-2113"></a>Azure ATP-Release 2.113
+
+Veröffentlicht: 5. Mai 2020
+
+- **Featureerweiterung: Erweiterte Ressourcenzugriffsaktivität mit NTLMv1**  
+Ab dieser Version bietet Azure ATP Informationen zu Ressourcenzugriffsaktivitäten, die zeigen, ob die Ressource die NTLMv1-Authentifizierung nutzt. Diese Ressourcenkonfiguration ist unsicher und birgt das Risiko, dass Angreifer die Anwendung für ihre Zwecke ausnutzen. Weitere Informationen zu diesem Risiko finden Sie unter [Verwendung von Legacyprotokollen](atp-cas-isp-legacy-protocols.md).
+
+- **Featureerweiterung: Warnung zu Verdacht auf einen Brute-Force-Angriff (Kerberos NTLM)**  
+Ein Brute-Force-Angriff wird von Angreifern dazu verwendet, einen Einstieg in Ihre Organisation zu erhalten, und ist eine wichtige Methode zur Bedrohungs- und Risikoermittlung in Azure ATP. Um Ihnen dabei zu helfen, sich auf die kritischen Risiken für Ihre Benutzer zu konzentrieren, erleichtert Ihnen dieses Update das Analysieren und Beheben von Risiken, indem die Anzahl der Warnungen eingeschränkt und priorisiert werden.
 
 ## <a name="azure-atp-release-2112"></a>Azure ATP-Release 2.112
 
@@ -43,6 +53,9 @@ Folgende Aktivitätsmonitore sind jetzt verfügbar:
 
 - **Featureerweiterung: Erweiterte Ressourcenzugriffsaktivität**  
 Ab dieser Version bietet Azure ATP Informationen zu Ressourcenzugriffsaktivitäten, die zeigen, ob die Ressource in Bezug auf eine uneingeschränkte Delegierung vertrauenswürdig ist. Diese Ressourcenkonfiguration ist unsicher und birgt das Risiko, dass Angreifer die Anwendung für ihre Zwecke ausnutzen. Weitere Informationen zu diesem Risiko finden Sie unter [Sicherheitsbewertung: Unsichere Kerberos-Delegierung](atp-cas-isp-unconstrained-kerberos.md).
+
+- **Mutmaßliche Manipulation von SMB-Paketen (Exploit von CVE-2020-0796) (Vorschau)**  
+Die Sicherheitswarnung [Mutmaßliche Manipulation von SMB-Paketen](atp-lateral-movement-alerts.md#suspected-smb-packet-manipulation-cve-2020-0796-exploitation-external-id-2406) von Azure ATP befindet sich nun in der öffentlichen Vorschau. Bei dieser Erkennung wird eine Azure ATP-Sicherheitswarnung ausgelöst, wenn das SMBv3-Paket an einen Domänencontroller im Netzwerk gerichtet wird, der im Verdacht steht, die Sicherheitslücke [CVE-2020-0796](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-0796) auszunutzen.
 
 ## <a name="azure-atp-release-2111"></a>Azure ATP-Release 2.111
 

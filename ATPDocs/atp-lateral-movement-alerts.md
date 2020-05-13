@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 03/01/2020
+ms.date: 04/23/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 2257eb00-8614-4577-b6a1-5c65085371f2
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e646dd3b3f5f25fd2c19ffbd621fafe3ac960c0b
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: 412603427b1b221c97c88556d2bdbf3fe3b562b8
+ms.sourcegitcommit: 9654502ea67f51ba5f00357f8464565ce424114e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80669782"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794239"
 ---
 # <a name="tutorial-lateral-movement-alerts"></a>Tutorial: Lateral Movement-Warnungen
 
@@ -42,6 +42,7 @@ Die folgenden Sicherheitswarnungen unterstützen Sie dabei, verdächtige Aktivit
 > * Vermuteter NTLM-Relaisangriff (Exchange-Konto) (externe ID 2037)
 > * Suspected over-pass-the-hash attack (encryption downgrade) (Verdacht auf Over-Pass-the-Hash-Angriff (Herabstufung der Verschlüsselung)) (externalid 2008)
 > * Suspected overpass-the-hash attack (Kerberos) (Verdacht auf einen Overpass-the-Hash-Angriff (Kerberos)) (externalid 2002)
+> * Mutmaßliche Manipulation von SMB-Paketen (Exploit von CVE-2020-0796) (Vorschau) (externe ID 2406)
 
 ## <a name="remote-code-execution-over-dns-external-id-2036"></a>Remotecodeausführung über DNS (externe ID 2036)
 
@@ -151,15 +152,16 @@ Es gibt benutzerdefinierte Anwendungen, die Tickets im Auftrag des Benutzers wei
 
 ## <a name="suspected-ntlm-authentication-tampering-external-id-2039"></a>Suspected NTLM authentication tampering (external ID 2039) (Vermutete Manipulation der NTLM-Authentifizierung [Externe ID 2039])
 
-Im Juni 2019 hat Microsoft das [Sicherheitsrisiko CVE-2019-1040](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1040) veröffentlicht und die Ermittlung einer neuen Manipulationsrisikos in Microsoft Windows angekündigt, wenn ein Man-in-the-Middle-Angriff die NTLM-MIC (Message Integrity Check) erfolgreich umgehen kann.
+Im Juni 2019 hat Microsoft das [Sicherheitsrisiko CVE-2019-1040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040) veröffentlicht und die Ermittlung einer neuen Manipulationsrisikos in Microsoft Windows angekündigt, wenn ein Man-in-the-Middle-Angriff die NTLM-MIC (Message Integrity Check) erfolgreich umgehen kann.
 
 Böswillige Akteure, die dieses Sicherheitsrisiko erfolgreich ausnutzen, können NTLM-Sicherheitsfeatures herabstufen und erfolgreich authentifizierte Sitzungen im Namen anderer Konten erstellen. Nicht gepatchte Windows-Server sind durch dieses Sicherheitsrisiko gefährdet.
 
-Bei dieser Erkennung wird eine Azure ATP-Sicherheitswarnung ausgelöst, wenn NTLM-Authentifizierungsanforderungen an einen Domänencontroller im Netzwerk gerichtet werden, die im Verdacht stehen, die Sicherheitslücke [CVE-2019-1040](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1040) auszunutzen.
+Bei dieser Erkennung wird eine Azure ATP-Sicherheitswarnung ausgelöst, wenn NTLM-Authentifizierungsanforderungen an einen Domänencontroller im Netzwerk gerichtet werden, die im Verdacht stehen, die Sicherheitslücke [CVE-2019-1040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040) auszunutzen.
 
 **TP, B-TP oder FP?**
 
-1. Handelt es sich bei den beteiligten Computern, einschließlich Domänencontroller, um aktuelle und für [CVE-2019-1040](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1040) gepatchte Computer? Wenn die Computer aktuell und gepatcht sind, wird erwartet, dass die Authentifizierung fehlschlägt. Wenn die Authentifizierung fehlgeschlagen ist, **schließen** Sie die Sicherheitswarnung als fehlgeschlagenen Versuch.
+1. Sind die beteiligten Computer, einschließlich Domänencontrollern, auf dem neuesten Stand und für [CVE-2019-1040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040) gepatcht?
+  - Wenn die Computer auf dem neuesten Stand und gepatcht sind, gehen wir davon aus, dass die Authentifizierung fehlschlägt. Wenn die Authentifizierung fehlgeschlagen ist, **schließen** Sie die Sicherheitswarnung als fehlgeschlagenen Versuch.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -177,7 +179,7 @@ Bei dieser Erkennung wird eine Azure ATP-Sicherheitswarnung ausgelöst, wenn NTL
 
 **Vorbeugung**
 
-* Stellen Sie sicher, dass alle Geräte in der Umgebung auf dem aktuellen Stand und für [CVE-2019-1040](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1040) gepatcht sind.
+• Stellen Sie sicher, dass alle Geräte in der Umgebung auf dem aktuellen Stand und für [CVE-2019-1040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040) gepatcht sind.
 
 ## <a name="suspected-ntlm-relay-attack-exchange-account-external-id-2037"></a>Vermuteter NTLM-Relaisangriff (Exchange-Konto) (externe ID 2037)
 
@@ -228,9 +230,9 @@ Einige zulässige Ressourcen unterstützen keine starken Verschlüsselungsverfah
 
 2. Ist für alle Quellbenutzer etwas bestimmtes freigegeben?
     1. Beispielsweise können Sie überprüfen, ob alle Mitarbeiter des Marketingteams auf eine bestimmte Ressource zugreifen und dadurch eine Warnung auslösen.
-   2. Überprüfen Sie die Ressourcen, auf die mit diesen Tickets zugegriffen wurde.
+    2. Überprüfen Sie die Ressourcen, auf die mit diesen Tickets zugegriffen wurde.
        - Verwenden Sie dafür das *msDS-SupportedEncryptionTypes*-Attribut des Ressourcendienstkontos in Azure Active Directory.
-   3. Wenn es nur eine Ressource gibt, auf die zugegriffen worden ist, überprüfen Sie, ob es sich um eine für diese Benutzer gültige Ressource handelt, auf die sie zugreifen dürfen.
+    3. Wenn es nur eine Ressource gibt, auf die zugegriffen worden ist, überprüfen Sie, ob es sich um eine für diese Benutzer gültige Ressource handelt, auf die sie zugreifen dürfen.
 
       Wenn die Antwort auf eine der vorherigen Fragen **Ja** lautet, handelt es sich vermutlich um eine **B-TP**-Aktivität. Überprüfen Sie, ob von der Ressource ein starkes Verschlüsselungsverfahren unterstützt wird, implementieren Sie es nach Möglichkeit, und **schließen** Sie die Sicherheitswarnung.
 
@@ -282,6 +284,39 @@ Zuweilen implementieren Anwendungen einen eigenen Kerberos-Stapel, der nicht der
 3. Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
 4. Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der verdächtigen Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
 5. Setzen Sie die Kennwörter des Quellbenutzers zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
+
+<!-- REMOVE BOOKMARK FROM TITLE WHEN PREVIEW REMOVED -->
+
+## <a name="suspected-smb-packet-manipulation-cve-2020-0796-exploitation---preview-external-id-2406"></a><a name="suspected-smb-packet-manipulation-cve-2020-0796-exploitation-external-id-2406"></a>Mutmaßliche Manipulation von SMB-Paketen (Exploit von CVE-2020-0796) (Vorschau) (externe ID 2406)
+
+**Beschreibung**
+
+12.3.2020 Microsoft hat [CVE-2020-0796](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-0796) veröffentlicht und dabei angekündigt, dass ein neues Sicherheitsrisiko bei der Remotecodeausführung vorliegt, in der das Protokoll von Microsoft Server Message Block 3.1.1 (SMBv3) bestimmte Anforderungen verarbeitet. Ein Angreifer, der das Sicherheitsrisiko erfolgreich ausgenutzt hat, könnte die Möglichkeit erhalten, Code auf dem Zielserver oder -client auszuführen. Nicht gepatchte Windows-Server sind durch dieses Sicherheitsrisiko gefährdet.
+
+Bei dieser Erkennung wird eine Azure ATP-Sicherheitswarnung ausgelöst, wenn das SMBv3-Paket an einen Domänencontroller im Netzwerk gerichtet wird, der im Verdacht steht, die Sicherheitslücke CVE-2020-0796 auszunutzen.
+
+**TP, B-TP oder FP?**
+
+1. Sind die beteiligten Domänencontroller auf dem neuesten Stand und für CVE-2020-1040 gepatcht?
+    - Wenn die Computer auf dem neuesten Stand und gepatcht sind, schlägt der Angriff höchstwahrscheinlich fehl. **Schließen** Sie die Sicherheitswarnung daher als fehlgeschlagener Versuch.
+
+**Ermitteln des Umfangs der Sicherheitsverletzung**
+
+1. Untersuchen Sie den [Quellcomputer](investigate-a-computer.md).
+2. Untersuchen Sie den Zieldomänencontroller.
+
+**Empfohlene Abhilfemaßnahmen und Schritte zur Vorbeugung**
+
+**Wartung**
+
+1. Kontrollieren Sie den Quellcomputer.
+2. Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
+3. Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der verdächtigen Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
+4. Wenn Sie über Computer mit Betriebssystemen verfügen, die [KB4551762](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4551762) nicht unterstützen, wird empfohlen, das SMBv3-Kompressionsfeature wie im Abschnitt zu [Problemumgehungen](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-0796) beschrieben in der Umgebung zu deaktivieren.
+
+**Vorbeugung**
+
+1. Stellen Sie sicher, dass alle Geräte in der Umgebung auf dem aktuellen Stand und für [CVE-2020-0796](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-0796) gepatcht sind.
 
 > [!div class="nextstepaction"]
 > [Tutorial: Warnung zu Domänendominanz](atp-domain-dominance-alerts.md)

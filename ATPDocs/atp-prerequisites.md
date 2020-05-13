@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 185d3e8c70c11e06d1125a634c3cd9c12e2076c8
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: d0a2b2fc517c30d337f2af9ce7fbd3a2753a2850
+ms.sourcegitcommit: 428e0694c862f92aed50a13b137db2aa49fe4439
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79414266"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82852284"
 ---
 # <a name="azure-atp-prerequisites"></a>Voraussetzungen für Azure ATP
 
@@ -43,7 +43,7 @@ Dieser Leitfaden zu Voraussetzungen wird in die folgenden Abschnitte unterteilt,
 [Eigenständiger Azure ATP-Sensor](#azure-atp-standalone-sensor-requirements): Der eigenständige Azure ATP-Sensor wird auf einem dedizierten Server installiert und erfordert die Konfiguration einer Portspiegelung auf dem Domänencontroller, um Netzwerkdatenverkehr zu empfangen.
 
 > [!NOTE]
-> Eigenständige Azure ATP-Sensoren unterstützen nicht alle Datenquellentypen, sodass einige Ereignisse nicht erkannt werden. Zur vollständigen Abdeckung Ihrer Umgebung empfiehlt es sich, den Azure ATP-Sensor bereitzustellen.
+> Eigenständige Azure ATP-Server unterstützen nicht die Erstellung von Protokolleinträgen für Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW), die Daten für mehrere Erkennungen bereitstellen. Zur vollständigen Abdeckung Ihrer Umgebung empfiehlt es sich, den Azure ATP-Sensor bereitzustellen.
 
 ## <a name="before-you-start"></a>Vorbereitung
 
@@ -185,7 +185,7 @@ Die Azure ATP-Erkennung basiert auf den folgenden bestimmten Windows-Ereignispro
 In diesem Abschnitt werden die Voraussetzungen für den eigenständigen Azure ATP-Sensor aufgeführt.
 
 > [!NOTE]
-> Eigenständige Azure ATP-Sensoren unterstützen nicht alle Datenquellentypen, sodass einige Ereignisse nicht erkannt werden. Zur vollständigen Abdeckung Ihrer Umgebung empfiehlt es sich, den Azure ATP-Sensor bereitzustellen.
+> Eigenständige Azure ATP-Server unterstützen nicht die Erstellung von Protokolleinträgen für Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW), die Daten für mehrere Erkennungen bereitstellen. Zur vollständigen Abdeckung Ihrer Umgebung empfiehlt es sich, den Azure ATP-Sensor bereitzustellen.
 
 ### <a name="general"></a>Allgemein
 

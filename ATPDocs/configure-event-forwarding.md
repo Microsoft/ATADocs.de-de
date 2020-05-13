@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 3547519f-8d9c-40a9-8f0e-c7ba21081203
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6ec95a6c9522710f31fc7e55c58a664f5b590914
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: 7f2d68c4fea2916a1b95353cc90b2eb59e113707
+ms.sourcegitcommit: 428e0694c862f92aed50a13b137db2aa49fe4439
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79510894"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82852301"
 ---
 # <a name="configuring-windows-event-forwarding"></a>Konfigurieren der Windows-Ereignisweiterleitung
 
@@ -28,7 +28,7 @@ Um die Erkennungsfunktionalität zu verbessern, benötigt Azure ATP die folgende
 
 > [!NOTE]
 >
-> - Eigenständige Azure ATP-Sensoren unterstützen nicht alle Datenquellentypen, sodass einige Ereignisse nicht erkannt werden. Zur vollständigen Abdeckung Ihrer Umgebung empfiehlt es sich, den Azure ATP-Sensor bereitzustellen.
+> - Eigenständige Azure ATP-Server unterstützen nicht die Erstellung von Protokolleinträgen für Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW), die Daten für mehrere Erkennungen bereitstellen. Zur vollständigen Abdeckung Ihrer Umgebung empfiehlt es sich, den Azure ATP-Sensor bereitzustellen.
 > - Überprüfen Sie, ob der Domänencontroller ordnungsgemäß konfiguriert wurde, um die erforderlichen Ereignisse zu erfassen.
 
 ## <a name="wef-configuration-for-azure-atp-standalone-sensors-with-port-mirroring"></a>WEF-Konfiguration mit Portspiegelung für den eigenständigen Azure ATP-Sensor
