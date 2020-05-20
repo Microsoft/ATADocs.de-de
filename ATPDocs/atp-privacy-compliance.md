@@ -25,7 +25,7 @@ ms.locfileid: "79414062"
 
 ## <a name="search-for-and-identify-personal-data"></a>Suchen und Identifizieren von personenbezogenen Daten 
 
-In Azure Advanced Threat Protection können Sie identifizierbare personenbezogene Daten über die [Suchleiste](workspace-portal.md) des [Azure ATP-Portals](workspace-portal.md#search-bar) anzeigen. 
+In Azure Advanced Threat Protection können Sie identifizierbare personenbezogene Daten über die [Suchleiste](workspace-portal.md#search-bar) des [Azure ATP-Portals](workspace-portal.md) anzeigen. 
 
 Suchen Sie einen bestimmten Benutzer oder Computer, und klicken Sie auf die Entität, um zur [Profilseite](entity-profiles.md) des Benutzers oder Computers geleitet zu werden. Die Profile stellen umfassende Details über die Entität aus Active Directory bereit, einschließlich der Netzwerkaktivität im Zusammenhang mit dieser Entität und des Verlaufs.
 
