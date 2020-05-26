@@ -75,20 +75,24 @@
           items:
             - name: Grundlegendes zum Identitätssicherheitsstatus
               href: atp-isp-overview.md
-            - name: Verfügbarmachen von Anmeldeinformationen in Klartext (Bewertung)
-              href: atp-cas-isp-clear-text.md
-            - name: Verwendung von Legacyprotokollen (Bewertung)
-              href: atp-cas-isp-legacy-protocols.md
-            - name: Verwendung von schwacher Verschlüsselung (Bewertung)
-              href: atp-cas-isp-weak-cipher.md
-            - name: Ungesicherte Kerberos-Delegierung (Bewertung)
-              href: atp-cas-isp-unconstrained-kerberos.md
             - name: Domänencontroller mit verfügbarem Druckspoolerdienst (Bewertung)
               href: atp-cas-isp-print-spooler.md
             - name: Ruhende Entitäten in sensiblen Gruppen (Bewertung)
               href: atp-cas-isp-dormant-entities.md
+            - name: Verfügbarmachen von Anmeldeinformationen in Klartext (Bewertung)
+              href: atp-cas-isp-clear-text.md
+            - name: Verwendung von LAPS (Bewertung)
+              href: atp-cas-isp-laps.md
+            - name: Verwendung von Legacyprotokollen (Bewertung)
+              href: atp-cas-isp-legacy-protocols.md
             - name: Nicht überwachte Domänencontroller
               href: atp-cas-isp-unmonitored-domain-controller.md
+            - name: Ungesicherte Kerberos-Delegierung (Bewertung)
+              href: atp-cas-isp-unconstrained-kerberos.md
+            - name: Unsichere SID-Verlaufsattribute
+              href: atp-cas-isp-unsecure-sid-history-attribute.md
+            - name: Verwendung von schwacher Verschlüsselung (Bewertung)
+              href: atp-cas-isp-weak-cipher.md
     - name: Lab für Sicherheitswarnungen
       items:
         - name: Übersicht über das Lab
