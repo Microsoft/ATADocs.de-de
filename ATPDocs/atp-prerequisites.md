@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d0a2b2fc517c30d337f2af9ce7fbd3a2753a2850
-ms.sourcegitcommit: 428e0694c862f92aed50a13b137db2aa49fe4439
+ms.openlocfilehash: 94521875a58d49277e801e730a0eace02264e86a
+ms.sourcegitcommit: 3162130a85b5c6e8bf16456f8255b95e1f52b869
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82852284"
+ms.lasthandoff: 05/25/2020
+ms.locfileid: "83825293"
 ---
 # <a name="azure-atp-prerequisites"></a>Voraussetzungen für Azure ATP
 
@@ -135,7 +135,7 @@ Während der Installation wird .NET Framework 4.7 installiert und erfordert mög
 ### <a name="server-specifications"></a>Serverspezifikationen
 
 Der Azure ATP-Sensor erfordert mindestens 2 Kerne und 6 GB RAM auf dem Domänencontroller.
-Um eine optimale Leistung zu erzielen, legen Sie die **Energieoption** des Azure ATP-Sensors auf **Hohe Leistung** fest.
+Um eine optimale Leistung zu erzielen, legen Sie die **Energieoption** des Computers, auf dem die Azure ATP-Sensoren ausgeführt werden, auf **Hohe Leistung** fest.
 
 Der Azure ATP-Sensor kann auf Domänencontrollern verschiedener Auslastungen und Größen bereitgestellt werden, abhängig vom Umfang des Datenverkehrs zwischen den Domänencontrollern und der installierten Ressourcen.
 
@@ -202,7 +202,7 @@ Informationen zur Verwendung von virtuellen Computern mit dem eigenständigen Az
 
 ### <a name="server-specifications"></a>Serverspezifikationen
 
-Um eine optimale Leistung zu erzielen, legen Sie die **Energieoptionen** des eigenständigen Azure ATP-Sensors auf **Hohe Leistung** fest.<br>
+Um eine optimale Leistung zu erzielen, legen Sie die **Energieoptionen** des Computers, auf dem die eigenständigen Azure ATP-Sensoren ausgeführt werden, auf **Hohe Leistung** fest.<br>
 Ein eigenständiger Azure ATP-Sensor kann die Überwachung von mehreren Domänencontrollern unterstützen, abhängig vom Umfang des Datenverkehrs zwischen den Domänencontrollern.
 
 >[!NOTE]

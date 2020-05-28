@@ -3,16 +3,16 @@ title: 'Schnellstart: Planen der Azure Advanced Threat Protection-Bereitstellung
 description: Hilft bei der Planung Ihrer Bereitstellung und der Entscheidung, wie viele Azure ATP-Server für Ihr Netzwerk erforderlich sind.
 author: shsagir
 ms.author: shsagir
-ms.date: 02/19/2020
+ms.date: 05/20/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.openlocfilehash: e13dc696046ca095438297ad0aeb82e7f98a58d2
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: 7bcebf2142980990bb71fb1c09faa986b4315fa7
+ms.sourcegitcommit: c3949c8f0332198753c14e3bcd7cb4ca6d288e25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79414487"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83696039"
 ---
 # <a name="quickstart-plan-capacity-for-azure-atp"></a>Schnellstart: Planen der Kapazität für Azure ATP
 
@@ -40,9 +40,9 @@ Die empfohlene und einfachste Methode zum Bestimmen der Kapazität für die Azur
 
 Ein Azure ATP-Sensor kann die Überwachung eines Domänencontrollers basierend auf der Menge des vom Domänencontroller erzeugten Datenverkehrs unterstützen. Die folgende Tabelle enthält Schätzungen. Die tatsächlich vom Sensor analysierte Menge ist abhängig vom Umfang des Datenverkehrs und dessen Verteilung.
 
-Die folgende CPU- und Arbeitsspeicherkapazität bezieht sich auf den **Verbrauch des Sensors selbst** und nicht auf die Domänencontrollerkapazität.
+Die folgende CPU- und RAM-Kapazität (Random Access Memory) bezieht sich auf den **Verbrauch des Sensors selbst** und nicht auf die Domänencontrollerkapazität.
 
-|Pakete pro Sekunde*|CPU (Kerne)**|Arbeitsspeicher (GB)|
+|Pakete pro Sekunde|CPU (Kerne)\*|Arbeitsspeicher\*\* (GB)|
 |----|----|-----|
 |0 – 1.000|0,25|2,50|
 |1\.000 – 5.000|0,75|6,00|
@@ -52,16 +52,19 @@ Die folgende CPU- und Arbeitsspeicherkapazität bezieht sich auf den **Verbrauch
 |50.000 – 75.000 |3,50|9,50|
 |75.000 – 100.000|3,50|9,50|
 
-** Dies umfasst physische Kerne, keine Hyperthreadingkerne.
+\* Dies umfasst physische Kerne, keine Hyperthreadingkerne.  
+\*\* Arbeitsspeicher (RAM)
 
 Beachten Sie bei der Größenanpassung Folgendes:
 
-- Gesamtanzahl der vom Sensordienst verwendeten Kerne<br>Es wird empfohlen, nicht mit Hyperthreadingkernen zu arbeiten. Der Einsatz von Hyperthreadkernen kann zu Problemen mit der Integrität von Azure ATP-Sensoren führen.
+- Gesamtanzahl der vom Sensordienst verwendeten Kerne  
+Es wird empfohlen, nicht mit Hyperthreadingkernen zu arbeiten. Der Einsatz von Hyperthreadkernen kann zu Problemen mit der Integrität von Azure ATP-Sensoren führen.
 - Gesamtarbeitsspeicher, der vom Sensordienst verwendet wird
 - Wenn der Domänencontroller nicht über die für den Azure ATP-Sensor erforderlichen Ressourcen verfügt, wird die Leistung des Domänencontrollers zwar nicht beeinträchtigt, aber der Azure ATP-Sensor funktioniert möglicherweise nicht wie erwartet.
 - Bei Ausführung als virtueller Computer muss der gesamte Arbeitsspeicher zu jedem Zeitpunkt dem virtuellen Computer zugewiesen sein.
 - Um eine optimale Leistung zu erzielen, legen Sie die **Energieoption** des Azure ATP-Sensors auf **Hohe Leistung** fest.
-- Es sind mindestens 2 Kerne erforderlich. Es wird mindestens 6 GB Speicherplatz benötigt (10 GB empfohlen), einschließlich des Speicherplatzes, der für die Azure ATP-Binärdateien und -Protokolle benötigt wird.
+- Es sind mindestens 2 Kerne erforderlich.
+- Es wird mindestens 6 GB Festplattenspeicher benötigt (10 GB empfohlen), einschließlich des Speicherplatzes, der für die Azure ATP-Binärdateien und -Protokolle benötigt wird.
 
 ### <a name="dynamic-memory"></a>Dynamischer Arbeitsspeicher
 
