@@ -4,7 +4,7 @@ description: Im zweiten Schritt beim Installieren von ATA konfigurieren Sie die 
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 12/30/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,22 +12,22 @@ ms.technology: ''
 ms.assetid: e1c5ff41-d989-46cb-aa38-5a3938f03c0f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ff20bf7da1586090d2728015f08cf94d432df38f
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 9abfbe15f83aabf7a8879e117cb884d624cbbee8
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79410458"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775232"
 ---
 # <a name="install-ata---step-2"></a>Installieren von ATA – Schritt 2
 
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
 > [!div class="step-by-step"]
-> [« Schritt 1](install-ata-step1.md)
-> [Schritt 3 »](install-ata-step3.md)
+> [«Schritt 1](install-ata-step1.md) 
+>  [Schritt 3»](install-ata-step3.md)
 
-## <a name="step-2-provide-a-username-and-password-to-connect-to-your-active-directory-forest"></a>Schritt 2: Geben Sie einen Benutzernamen und ein Kennwort an, um eine Verbindung mit Ihrer Active Directory-Gesamtstruktur herzustellen
+## <a name="step-2-provide-a-username-and-password-to-connect-to-your-active-directory-forest"></a>Schritt 2: Geben Sie einen Benutzernamen und ein Kennwort an, um eine Verbindung mit Ihrer Active Directory-Gesamtstruktur herzustellen
 
 Beim ersten Öffnen der ATA-Konsole wird der folgende Bildschirm angezeigt:
 
@@ -35,7 +35,7 @@ Beim ersten Öffnen der ATA-Konsole wird der folgende Bildschirm angezeigt:
 
 1.  Geben Sie die folgenden Informationen ein, und klicken Sie anschließend auf **Speichern**.
 
-    |Field|Comments|
+    |Feld|Kommentare|
     |---------|------------|
     |**Benutzername** (erforderlich)|Geben Sie den schreibgeschützten Benutzernamen ein, z.B. **ATAuser**. **Hinweis:** Verwenden Sie **nicht** das UPN-Format für Ihren Benutzernamen.|
     |**Kennwort** (erforderlich)|Geben Sie das Kennwort für den schreibgeschützten Benutzer ein, z. B. **Pencil1**.|
@@ -49,17 +49,17 @@ Beim ersten Öffnen der ATA-Konsole wird der folgende Bildschirm angezeigt:
 
 
 > [!div class="step-by-step"]
-> [« Schritt 1](install-ata-step1.md)
-> [Schritt 3 »](install-ata-step3.md)
+> [«Schritt 1](install-ata-step1.md) 
+>  [Schritt 3»](install-ata-step3.md)
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 ## <a name="related-videos"></a>Verwandte Videos
 - [Übersicht über die ATA-Bereitstellung](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
 - [Auswählen des richtigen ATA-Gatewaytyps](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 - [Handbuch für die ATA POC-Bereitstellung](https://aka.ms/atapoc)
 - [Tool zur Bemessung von ATA-Gateways](https://aka.ms/atasizingtool)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

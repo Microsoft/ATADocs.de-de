@@ -2,9 +2,9 @@
 title: Neues in Advanced Threat Analytics Version 1,4
 description: Listet Neuerungen sowie bekannte Probleme in ATA 1.4 auf.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 01/23/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,17 +12,17 @@ ms.technology: ''
 ms.assetid: cbea47f9-34c1-42b6-ae9e-6a472b49e1a5
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 9a06773002de2b0b830ba179899373543b2bfbff
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 1ad136c9f028140d76fd42f62eeb7a11366af286
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414198"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774755"
 ---
 # <a name="what39s-new-in-ata-version-14"></a>Neuerungen in ATA 1.4
 Die vorliegenden Anmerkungen zu dieser Version enthalten Informationen zu bekannten Problemen in Version 1.4 von Advanced Threat Analytics.
 
-## <a name="whats-new-in-this-version"></a>Neuerungen in dieser Version
+## <a name="whats-new-in-this-version"></a>Was ist neu in dieser Version?
 
 -   Unterstützung für die Windows-Ereignisweiterleitung (Windows Event Forwarding, WEF), um Ereignisse direkt von den Domänencontrollern an das ATA-Gateway zu senden.
 
@@ -94,7 +94,7 @@ Wenn Sie über mehrere ATA-Gateways verfügen und Warnungen erhalten, dass das A
 ### <a name="kb-on-virtualization-host"></a>KB auf Virtualisierungshost
 Installieren Sie KB3047154 nicht auf einem Virtualisierungshost. Dies kann dazu führen, dass die Portspiegelung nicht mehr ordnungsgemäß ausgeführt wird.
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 [Aktualisieren von ATA auf Version 1.6 – Migrationsleitfaden](ata-update-1.6-migration-guide.md)
 

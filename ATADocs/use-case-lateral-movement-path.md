@@ -4,7 +4,7 @@ description: Dieser Artikel beschreibt, wie Angriffe mit Lateral Movement-Pfaden
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 06/14/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 710f01bd-c878-4406-a7b2-ce13f98736ea
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 4c937a99da6bd26d58fc112eb1c154b59d8d53a1
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: f646f1ae2f1960b502d15b4ff59f68162e18970c
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79412039"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774824"
 ---
 # <a name="investigate-lateral-movement-paths-with-ata"></a>Untersuchen von Lateral Movement-Pfaden mit ATA
 
@@ -40,9 +40,9 @@ Führen Sie die folgenden Schritte aus, um zu ermitteln, welche sensiblen Konten
 
 2. Wenn keine lateral Movement-Pfade gefunden werden, ist der Bericht unter **lateral Movement-Pfade zu sensiblen Konten**ausgegraut. Wenn lateral Movement-Pfade vorhanden sind, wählen die Datumsangaben des Berichts automatisch das erste Datum aus, wenn relevante Daten vorhanden sind. 
 
-   ![Berichte](./media/reports.png)
+   ![reports](./media/reports.png)
 
-3. Klicken Sie auf **Herunterladen**.
+3. Klicken Sie auf **Download**.
 
 4. Die Excel-Datei, die erstellt wird, enthält Details zu den gefährdeten sensiblen Konten. Die Registerkarte **Zusammenfassung** liefert Graphen mit Informationen über die Anzahl sensibler Konten und Computer, sowie Durchschnittswerte für gefährdete Ressourcen. Die Registerkarte **Details** enthält eine Liste von sensiblen Konten, um die Sie sich kümmern sollten. Beachten Sie, dass die Pfade in der Vergangenheit verfügbar waren. Es kann also durchaus sein, dass sie heute nicht mehr verfügbar sind.
 
@@ -57,7 +57,7 @@ Da Sie nun wissen, welche sensiblen Konten gefährdet sind, können Sie sich ein
 
 3. Das angezeigte Diagramm bietet eine Übersicht der möglichen Pfade zum sensiblen Benutzer. Der Graph zeigt die Verbindungen der letzten zwei Tage an.
 
-4. Überprüfen Sie den Graphen, um weitere Informationen über die Offenlegung der Anmeldeinformationen Ihres sensiblen Benutzers zu erhalten. In dieser Übersicht können Sie z. b. die Pfeile " **protokolliert von** grau" befolgen, um zu sehen, wo sich Samira mit ihren privilegierten Anmelde Informationen angemeldet hat. In diesem Fall wurden Samiras sensible Anmeldeinformationen auf dem Computer „REDMOND-WA-DEV“ gespeichert. Sehen Sie sich dann an, welche anderen Benutzer sich bei welchen Computern angemeldet haben. Über den schwarzen Pfeil **Administrator auf** können Sie sich anzeigen lassen, wer Administratorrechte für die Ressource hat. In diesem Beispiel hat jeder in der Gruppe **Contoso All** Zugriff auf die Benutzeranmeldeinformationen dieser Ressource.  
+4. Überprüfen Sie den Graphen, um weitere Informationen über die Offenlegung der Anmeldeinformationen Ihres sensiblen Benutzers zu erhalten. In dieser Übersicht können Sie z. b. die Pfeile " **protokolliert von** grau" befolgen, um zu sehen, wo sich Samira mit ihren privilegierten Anmelde Informationen angemeldet hat. In diesem Fall wurden Samiras sensible Anmeldeinformationen auf dem Computer „REDMOND-WA-DEV“ gespeichert. Sehen Sie sich dann an, welche anderen Benutzer sich bei welchen Computern angemeldet haben. Über den schwarzen Pfeil **Administrator auf** können Sie sich anzeigen lassen, wer Administratorrechte für die Ressource hat. In diesem Beispiel hat jeder Benutzer in der Gruppe "" mit dem Typ " **all** " die Möglichkeit, auf die Benutzer Anmelde Informationen von dieser Ressource zuzugreifen.  
 
    ![Lateral Movement-Pfade für Benutzerprofile](media/user-profile-lateral-movement-paths.png)
 
@@ -79,6 +79,6 @@ Da Sie nun wissen, welche sensiblen Konten gefährdet sind, können Sie sich ein
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 - [Arbeiten mit verdächtigen Aktivitäten](working-with-suspicious-activities.md)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

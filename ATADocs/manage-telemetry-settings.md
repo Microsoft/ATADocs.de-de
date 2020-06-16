@@ -4,19 +4,19 @@ description: Beschreibt die von ATA gesammelten Daten und enthält eine schrittw
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 8/19/2018
 ms.topic: article
 ms.prod: advanced-threat-analytics
 ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: eef3aa45b9563a4fea09e5cebc0f4ece7c39d734
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: c17405cd1f3da619ad6942e082420e58c4e9c430
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79413960"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775130"
 ---
 # <a name="manage-system-generated-logs"></a>Verwalten von systemgenerierten Protokollen
 
@@ -53,11 +53,11 @@ Die gesammelten anonymisierten Daten enthalten folgende Parameter:
 
     -   Anzahl der Gruppen
 
-    -   Anzahl der Benutzer
+    -   Anzahl von Benutzern
 
 -   Verdächtige Aktivitäten – die folgenden anonymisierten Daten werden für jede verdächtige Aktivität erfasst:
 
-    (Computernamen, Benutzernamen und IP-Adressen werden **nicht** erfasst.)
+    (Computer Namen, Benutzernamen und IP-Adressen werden **nicht** erfasst.)
 
     -   Art der verdächtigen Aktivität
 
@@ -91,6 +91,6 @@ Führen Sie die folgenden Schritte aus, um das Sammeln und Senden von Telemetrie
 
 2.  Deaktivieren Sie das Kontrollkästchen für **Senden Sie uns Nutzungsinformationen, um uns bei der Verbesserung der Benutzerfreundlichkeit zu unterstützen**.
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 - [Behandeln von Problemen mit ATA mithilfe des Ereignisprotokolls](troubleshooting-ata-using-logs.md)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

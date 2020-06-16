@@ -4,7 +4,7 @@ description: Hier wird erläutert, was Microsoft Advanced Threat Analytics (ATA)
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 7/24/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b88ca23b2d01d08357b3decb1e8e91c07848f5d8
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: d0f50163150f93baa0bd3084984705faf4fa6ea1
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79410595"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774773"
 ---
 # <a name="what-is-advanced-threat-analytics"></a>Was ist Advanced Threat Analytics?
 
@@ -76,7 +76,7 @@ ATA erkennt diese verdächtigen Aktivitäten und zeigt Informationen dazu in der
 -   Nicht normale Anmeldungen
 -   Unbekannte Gefahren
 -   Kennwortfreigabe
--   "Seitwärtsbewegung"
+-   Seitwärtsbewegung
 -   Modifizierung von sensiblen Gruppen
 
 
@@ -102,17 +102,17 @@ Sie können die verdächtigen Aktivitäten dieses Typs im ATA-Dashboard anzeigen
 - Wenn Sie sich dazu entscheiden, eine vollständige Migration durchzuführen, kann dies einige Zeit in Anspruch nehmen, je nach Größe der Datenbank. Bei der Auswahl der Migrationsoptionen wird die geschätzte Dauer angezeigt. Beachten Sie diese, bevor Sie sich für eine Option entscheiden. 
 
 
-## <a name="whats-next"></a>Wie geht es weiter?
+## <a name="whats-next"></a>Ausblick
 
 -   Weitere Informationen zum Integrieren von ATA in Ihr Netzwerk: [ATA-Architektur](ata-architecture.md)
 
 -   Erste Schritte bei der Bereitstellung von ATA: [Installieren von ATA](install-ata-step1.md)
 
 ## <a name="related-videos"></a>Verwandte Videos
-- [Beitritt zur Sicherheits Community](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
+- [Joining the security community](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community) (Der Sicherheitscommunity beitreten)
 - [Übersicht über die ATA-Bereitstellung](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
 
 
-## <a name="see-also"></a>Weitere Informationen:
-[Verdächtige ATA-Aktivitäten – Playbook](https://aka.ms/ataplaybook)
-[Besuchen Sie das ATA-Forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+## <a name="see-also"></a>Weitere Informationen
+[ATA-Playbook](https://aka.ms/ataplaybook) 
+ für verdächtige Aktivität [Sehen Sie sich das ATA-Forum an!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

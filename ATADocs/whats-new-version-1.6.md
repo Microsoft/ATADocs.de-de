@@ -2,9 +2,9 @@
 title: Neues in Advanced Threat Analytics Version 1,6
 description: Listet Neuerungen sowie bekannte Probleme in ATA 1.6 auf.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 01/23/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 27b139e5-12b9-4953-8f53-eb58e8ce0038
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c87966ee2d8f53187bcc412cb027b19c4ddcf891
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 3a9e339451271d491189480982313ab70354787d
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79412549"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774740"
 ---
 # <a name="whats-new-in-ata-version-16"></a>Neuerungen in ATA 1.6
 Die vorliegenden Anmerkungen zu dieser Version enthalten Informationen zu bekannten Problemen in dieser Version von Advanced Threat Analytics.
@@ -31,7 +31,7 @@ Das Update auf ATA 1.6 bietet Verbesserungen in folgenden Bereichen:
 
 -   Das ATA-Lightweight-Gateway
 
--   Automatische Updates
+-   Automatische Aktualisierungen
 
 -   Verbesserte ATA Center-Leistung
 
@@ -68,7 +68,7 @@ Weitere Informationen zum ATA-Lightweight-Gateway finden Sie unter [ATA-Architek
 Weitere Informationen zu Bereitstellungsüberlegungen und zum Auswählen des für Sie richtigen Gatewaytyps finden Sie unter [ATA-Kapazitätsplanung](ata-capacity-planning.md#choosing-the-right-gateway-type-for-your-deployment).
 
 
-### <a name="automatic-updates"></a>Automatische Updates
+### <a name="automatic-updates"></a>Automatische Aktualisierungen
 Ab Version 1.6 kann ATA Center mit Microsoft Update aktualisiert werden. Darüber hinaus können die ATA-Gateways jetzt automatisch aktualisiert werden, wobei deren Standardkommunikationskanal zu ATA Center verwendet wird.
 ### <a name="improved-ata-center-performance"></a>Verbesserte ATA Center-Leistung
 Ab dieser Version ermöglichen eine kleinere Datenbanklast und ein effizienteres Ausführen aller Erkennungen, dass viel mehr Domänencontroller mit einem einzigen ATA Center überwacht werden können.
@@ -99,7 +99,7 @@ In Bereitstellungen, in denen der Datenbankpfad manuell verschoben wird, verwend
 ### <a name="migration-failure-when-updating-from-ata-15"></a>Migrationsfehler, wenn von ATA 1.5 aktualisiert wird
 Beim Aktualisieren auf ATA 1.6 kann der Aktualisierungsvorgang mit dem folgenden Fehlercode fehlschlagen:
 
-![Fehler beim Update auf ATA 1.6](http://i.imgur.com/QrLSApr.png) Wird dieser Fehler angezeigt, überprüfen Sie das Bereitstellungsprotokoll **C:\Benutzer\<Benutzer>\AppData\Local\Temp**, und suchen Sie nach der folgenden Ausnahme:
+![Fehler beim Aktualisieren von ATA auf 1,6 ](http://i.imgur.com/QrLSApr.png) Wenn dieser Fehler angezeigt wird, überprüfen Sie das Bereitstellungs Protokoll in: **c:\Users \<User> \AppData\Local\Temp**, und suchen Sie nach der folgenden Ausnahme:
 
     System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> MongoDB.Driver.MongoWriteException: A write operation resulted in an error. E11000 duplicate key error index: ATA.UniqueEntityProfile.$_id_ dup key: { : "<guid>" } ---> MongoDB.Driver.MongoBulkWriteException`1: A bulk write operation resulted in one or more errors.  E11000 duplicate key error index: ATA.UniqueEntityProfile.$_id_ dup key: { : " <guid> " }
 
@@ -121,7 +121,7 @@ Wenn einer dieser Fehler angezeigt wird, führen Sie die folgenden Schritte zur 
     1.  MongoDB
     2.  Microsoft Advanced Threat Analytics Center
 7.  Überprüfen Sie die Protokolle, um sich zu vergewissern, dass das Produkt ohne Fehler ausgeführt wird.
-8.  [Laden](https://aka.ms/ataremoveduplicateprofiles "Herunterladen") Sie das Tool "removeduplicateprofiles. exe" herunter, und kopieren Sie es in den Haupt Installationspfad (%ProgramFiles%\Microsoft Advanced Threat analytics\center).
+8.  [Laden](https://aka.ms/ataremoveduplicateprofiles "Herunterladen") Sie das Tool "RemoveDuplicateProfiles.exe" herunter, und kopieren Sie es in den Haupt Installationspfad (%ProgramFiles%\Microsoft Advanced Threat analytics\center).
 9.  Führen Sie `RemoveDuplicateProfiles.exe` von einer Eingabeaufforderung mit erhöhten Rechten aus, und warten Sie, bis das Tool erfolgreich abgeschlossen wurde.
 10. Fahren Sie wie folgt fort: …\Microsoft Advanced Threat Analytics\Center\MongoDB\bin: **Mongo ATA**; geben Sie folgenden Befehl ein:
 
@@ -141,7 +141,7 @@ Diese Version von ATA umfasst eine verbesserte Erkennungs-Engine, das eine genau
 Für die neue und verbesserte Erkennungs-Engine wird Inline-Erkennungstechnologie genutzt, die eine Erkennung ohne Auswertung früherer Netzwerkaktivitäten ermöglicht, um die Leistung von ATA Center erheblich zu erhöhen. Dies bedeutet auch, dass es nicht erforderlich ist, frühere Netzwerkaktivitäten während des Aktualisierungsvorgangs zu migrieren.
 Im ATA-Aktualisierungsvorgang werden die Daten für den Fall, dass Sie diese für zukünftige Untersuchungen benötigen, als JSON-Datei in `<Center Installation Path>\Migration` exportiert.
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 [Aktualisieren von ATA auf Version 1.6 – Migrationsleitfaden](ata-update-1.6-migration-guide.md)

@@ -4,7 +4,7 @@ description: In diesem Artikel wird beschrieben, wie ATA im Hintergrund installi
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 10/15/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ea408a1c9a4d8dc937bab7afda4cedc656da6f15
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 7130b378178165eb834cf8874a477f97db3420d7
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79412481"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775521"
 ---
 # <a name="ata-silent-installation"></a>Unbeaufsichtigte Installation von ATA
 
@@ -25,7 +25,7 @@ ms.locfileid: "79412481"
 
 Dieser Artikel enthält Anweisungen zur unbeaufsichtigten Installation von ATA.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 Die ATA-Version 1,9 erfordert die Installation von Microsoft .NET Framework 4.6.1. 
 
@@ -35,7 +35,7 @@ Beim Installieren oder Aktualisieren von ATA wird .NET Framework 4.6.1 automatis
 > Die Installation von .Net Framework 4.6.1 macht möglicherweise einen Neustart des Servers erforderlich. Wenn Sie beim das ATA-Gateway auf Domänencontrollern installieren, sollten Sie ein Wartungsfenster für diese Domänencontroller planen.
 Wenn Sie die Methode zur unbeaufsichtigten Installation von ATA verwenden, ist das Installationsprogramm so konfiguriert, dass der Server am Ende der Installation automatisch neu gestartet wird (falls erforderlich). Aufgrund eines Windows Installer-Fehlers kann anhand des /norestart-Flags nicht mehr verlässlich sichergestellt werden, dass der Server keinen Neustart ausführt. Führen Sie eine unbeaufsichtigte Installation daher nur während eines Wartungsfensters aus.
 
-Zum Verfolgen des Fortschritts der Bereitstellung überwachen Sie die Protokolle des ATA-Installationsprogramms unter **%AppData%\Local\Temp**.
+Zum Nachverfolgen des Fortschritts der Bereitstellung überwachen Sie die Protokolle des ATA-Installers, die sich in **%AppData%\local\temp**befinden.
 
 
 ## <a name="install-the-ata-center"></a>Installieren von ATA Center
@@ -54,7 +54,7 @@ Verwenden Sie zum Installieren von ATA Center den folgenden Befehl:
 > |Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|Beschreibung|
 > |-------------|----------|---------|---------|
 > |Quiet|/quiet|Ja|Führt das Installationsprogramm ohne Benutzeroberfläche und Eingabeaufforderungen aus.|
-> |?|/help|Nein|Zeigt eine Hilfe und Schnellreferenz an. Zeigt die korrekte Verwendung des Installationsbefehl einschließlich einer Liste aller Optionen und Verhaltensweisen an.|
+> |Help|/help|Nein|Stellt Hilfe und eine Kurzübersicht bereit. Zeigt die korrekte Verwendung des Installationsbefehl einschließlich einer Liste aller Optionen und Verhaltensweisen an.|
 > |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Ja|Legt die Parameter für die Installation von .Net Framework fest. Muss festgelegt werden, um die unbeaufsichtigte Installation von .Net Framework zu erzwingen.|
 > |LicenseAccepted|--LicenseAccepted|Ja|Gibt an, dass die Lizenz gelesen und genehmigt wurde. Muss für die unbeaufsichtigte Installation festgelegt werden.|
 
@@ -98,7 +98,7 @@ Verwenden Sie zum Aktualisieren von ATA Center den folgenden Befehl:
 > |Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|Beschreibung|
 > |-------------|----------|---------|---------|
 > |Quiet|/quiet|Ja|Führt das Installationsprogramm ohne Benutzeroberfläche und Eingabeaufforderungen aus.|
-> |?|/help|Nein|Zeigt eine Hilfe und Schnellreferenz an. Zeigt die korrekte Verwendung des Installationsbefehl einschließlich einer Liste aller Optionen und Verhaltensweisen an.|
+> |Help|/help|Nein|Stellt Hilfe und eine Kurzübersicht bereit. Zeigt die korrekte Verwendung des Installationsbefehl einschließlich einer Liste aller Optionen und Verhaltensweisen an.|
 > |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Ja|Legt die Parameter für die Installation von .Net Framework fest. Muss festgelegt werden, um die unbeaufsichtigte Installation von .Net Framework zu erzwingen.|
 
 
@@ -119,17 +119,17 @@ Verwenden Sie den folgenden Befehl, um eine unbeaufsichtigte Deinstallation von 
 
 > [!div class="mx-tableFixed"]
 > 
-> |Name|Syntax|Erforderlich für die unbeaufsichtigte Deinstallation?|Beschreibung|
+> |Name|Syntax|Erforderlich für die unbeaufsichtigte Deinstallation?|BESCHREIBUNG|
 > |-------------|----------|---------|---------|
 > |Quiet|/quiet|Ja|Führt das Deinstallationsprogramm ohne Benutzeroberfläche und Eingabeaufforderungen aus.|
 > |Deinstallieren|/uninstall|Ja|Führt die unbeaufsichtigte Deinstallation von ATA Center vom Server aus.|
-> |?|/help|Nein|Zeigt eine Hilfe und Schnellreferenz an. Zeigt die korrekte Verwendung des Installationsbefehl einschließlich einer Liste aller Optionen und Verhaltensweisen an.|
+> |Help|/help|Nein|Stellt Hilfe und eine Kurzübersicht bereit. Zeigt die korrekte Verwendung des Installationsbefehl einschließlich einer Liste aller Optionen und Verhaltensweisen an.|
 
 **Installationsparameter**:
 
 > [!div class="mx-tableFixed"]
 > 
-> |Name|Syntax|Erforderlich für die unbeaufsichtigte Deinstallation?|Beschreibung|
+> |Name|Syntax|Erforderlich für die unbeaufsichtigte Deinstallation?|BESCHREIBUNG|
 > |-------------|----------|---------|---------|
 > |DeleteExistingDatabaseData|DeleteExistingDatabaseData|Nein|Löscht alle Dateien in der vorhandenen Datenbank.|
 
@@ -163,7 +163,7 @@ Verwenden Sie den folgenden Befehl für eine unbeaufsichtigte Installation des A
 > |Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|Beschreibung|
 > |-------------|----------|---------|---------|
 > |Quiet|/quiet|Ja|Führt das Installationsprogramm ohne Benutzeroberfläche und Eingabeaufforderungen aus.|
-> |?|/help|Nein|Zeigt eine Hilfe und Schnellreferenz an. Zeigt die korrekte Verwendung des Installationsbefehl einschließlich einer Liste aller Optionen und Verhaltensweisen an.|
+> |Help|/help|Nein|Stellt Hilfe und eine Kurzübersicht bereit. Zeigt die korrekte Verwendung des Installationsbefehl einschließlich einer Liste aller Optionen und Verhaltensweisen an.|
 > |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Ja|Legt die Parameter für die Installation von .Net Framework fest. Muss festgelegt werden, um die unbeaufsichtigte Installation von .Net Framework zu erzwingen.|
 
 **Installationsparameter**:
@@ -198,7 +198,7 @@ Verwenden Sie den folgenden Befehl für ein unbeaufsichtigtes Update des ATA-Gat
 > |Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|Beschreibung|
 > |-------------|----------|---------|---------|
 > |Quiet|/quiet|Ja|Führt das Installationsprogramm ohne Benutzeroberfläche und Eingabeaufforderungen aus.|
-> |?|/help|Nein|Zeigt eine Hilfe und Schnellreferenz an. Zeigt die korrekte Verwendung des Installationsbefehl einschließlich einer Liste aller Optionen und Verhaltensweisen an.|
+> |Help|/help|Nein|Stellt Hilfe und eine Kurzübersicht bereit. Zeigt die korrekte Verwendung des Installationsbefehl einschließlich einer Liste aller Optionen und Verhaltensweisen an.|
 > |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Ja|Legt die Parameter für die Installation von .Net Framework fest. Muss festgelegt werden, um die unbeaufsichtigte Installation von .Net Framework zu erzwingen.|
 
 
@@ -219,11 +219,11 @@ Verwenden Sie den folgenden Befehl, um eine unbeaufsichtigte Deinstallation des 
 
 > [!div class="mx-tableFixed"]
 > 
-> |Name|Syntax|Erforderlich für die unbeaufsichtigte Deinstallation?|Beschreibung|
+> |Name|Syntax|Erforderlich für die unbeaufsichtigte Deinstallation?|BESCHREIBUNG|
 > |-------------|----------|---------|---------|
 > |Quiet|/quiet|Ja|Führt das Deinstallationsprogramm ohne Benutzeroberfläche und Eingabeaufforderungen aus.|
 > |Deinstallieren|/uninstall|Ja|Führt die unbeaufsichtigte Deinstallation des ATA-Gateways vom Server aus.|
-> |?|/help|Nein|Zeigt eine Hilfe und Schnellreferenz an. Zeigt die korrekte Verwendung des Installationsbefehl einschließlich einer Liste aller Optionen und Verhaltensweisen an.|
+> |Help|/help|Nein|Stellt Hilfe und eine Kurzübersicht bereit. Zeigt die korrekte Verwendung des Installationsbefehl einschließlich einer Liste aller Optionen und Verhaltensweisen an.|
 
 **Beispiele**: So führen Sie eine unbeaufsichtigte Deinstallation des ATA-Gateways aus:
 
@@ -239,7 +239,7 @@ Verwenden Sie den folgenden Befehl, um eine unbeaufsichtigte Deinstallation des 
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)

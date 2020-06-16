@@ -2,9 +2,9 @@
 title: Arbeiten mit ATA-Berichten
 description: Beschreibt, wie Sie Berichte In ATA generieren können, um Ihr Netzwerk zu überwachen.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/27/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 38ea49b5-cd5e-43e5-bc39-5071f759633b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e14a0ffa795f16fe2f5cd4a9cef06b98bb90bc74
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 20332702453ef48b454303399dc7203ac61ea111
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79412906"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775079"
 ---
 # <a name="ata-reports"></a>ATA-Berichte
 
@@ -29,19 +29,19 @@ Der Abschnitt der ATA-Berichte in der Konsole erlaubt Ihnen, Berichte zu generie
 Um auf diese Berichtsseite zuzugreifen, klicken Sie auf das Berichtssymbol auf der Berichtsleiste: ![Berichtssymbol](./media/ata-report-icon.png).
 Die verfügbaren Berichte sind: 
 
-- **Zusammenfassungsbericht:** Der Zusammenfassungsbericht zeigt ein Dashboard des Status im System an. Sie können drei Registerkarten sehen: eine für eine **Zusammenfassung**, was in Ihrem Netzwerk ermittelt wurde, **Open suspicious activities** (Offene verdächtige Aktivitäten), die die verdächtigen Aktivitäten auflisten, auf die Sie achten müssen und **Open health issues** (Offene Integritätsprobleme), die Integritätsprobleme des ATA-Systems aufführen, um die Sie sich kümmern müssen. Die aufgeführten verdächtigen Aktivitäten werden nach Typ unterteilt, so auch die Integritätsprobleme. 
+- **Zusammenfassungs Bericht**: der Zusammenfassungs Bericht zeigt ein Dashboard des Status im System an. Sie können drei Registerkarten sehen: eine für eine **Zusammenfassung**, was in Ihrem Netzwerk ermittelt wurde, **Open suspicious activities** (Offene verdächtige Aktivitäten), die die verdächtigen Aktivitäten auflisten, auf die Sie achten müssen und **Open health issues** (Offene Integritätsprobleme), die Integritätsprobleme des ATA-Systems aufführen, um die Sie sich kümmern müssen. Die aufgeführten verdächtigen Aktivitäten werden nach Typ unterteilt, so auch die Integritätsprobleme. 
 
 - **Änderungen an vertraulichen Gruppen**: Dieser Bericht führt jede Änderung an vertraulichen Gruppen (z.B. Administratoren) auf.
 
 - **Kennwörter in Klartext offengelegt:** Einige Dienste verwenden das nicht gesicherte LDAP-Protokoll, um Kontoanmeldeinformationen in Nur-Text zu versenden. Dies kann sogar bei sensiblen Konten geschehen. Angreifer, die Ihren Netzwerkdatenverkehr überwachen, können diese Anmeldeinformationen abfangen und diese zu böswilligen Zwecken verwenden. In diesem Bericht werden alle Quellcomputer und Kontokennwörter aufgeführt, die ATA als „als Klartext gesendet“ ermittelt hat. 
 
-- **Lateral Movement-Pfade zu sensiblen Konten:** In diesem Bericht werden die sensiblen Konten aufgeführt, die über Lateral Movement-Pfade zur Verfügung gestellt werden. Weitere Informationen erhalten Sie unter [Lateral Movement-Pfade](use-case-lateral-movement-path.md).
+- **Lateral Movement-Pfade zu sensiblen Konten:** In diesem Bericht werden die sensiblen Konten aufgeführt, die über Lateral Movement-Pfade zur Verfügung gestellt werden. Weitere Informationen finden Sie unter [lateral Movement-Pfade](use-case-lateral-movement-path.md) .
 
 Es gibt zwei Möglichkeiten, einen Bericht zu generieren: entweder bei Bedarf oder durch Planen eines Berichts, der in regelmäßigen Abständen an Ihre E-Mail-Adresse gesendet wird.
 
 So generieren Sie einen Bericht nach Bedarf:
 
-1. Klicken Sie auf der Menüleiste der ATA-Konsole auf das Berichtsymbol auf der Menüleiste: ![Berichtsymbol](./media/ata-report-icon.png).
+1. Klicken Sie auf der Menüleiste der ATA-Konsole auf das Berichtsymbol auf der Menüleiste: ![Berichtssymbol](./media/ata-report-icon.png).
 
 2. Legen Sie unter einem der ausgewählten Berichttypen die Datumsangaben **Von** und **Bis** fest (also das Start- und Enddatum), und klicken Sie auf **Herunterladen**. 
  ![Berichte](./media/reports.png)
@@ -61,10 +61,10 @@ So legen Sie einen geplanten Bericht fest:
 
 
 > [!NOTE]
-> Geplante Berichte werden per E-Mail übermittelt und können nur gesendet werden, wenn Sie bereits einen E-Mail-Server unter **Konfiguration** konfiguriert haben. Wählen Sie anschließend unter **Benachrichtigungen und Berichte** **E-Mail-Server** aus.
+> Geplante Berichte werden per E-Mail übermittelt und können nur gesendet werden, wenn Sie bereits einen E-Mail-Server unter **Konfiguration** konfiguriert haben. Wählen Sie anschließend unter **Benachrichtigungen und Berichte****E-Mail-Server** aus.
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 - [Voraussetzungen für ATA](ata-prerequisites.md)
 - [ATA-Kapazitätsplanung](ata-capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)

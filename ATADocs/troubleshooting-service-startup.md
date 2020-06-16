@@ -2,9 +2,9 @@
 title: Problembehandlung beim Starten von Advanced Threat Analytics-Dienst
 description: Beschreibt, wie Sie häufige Fehler beim Starten von ATA beheben können
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 5a65285c-d1de-4025-9bb4-ef9c20b13cfa
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 97450fd93a8c881d5722365deab8b237df489091
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 57f023a557bafff4653e00926fa0d0f813b5d041
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79413858"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774858"
 ---
 # <a name="troubleshooting-service-startup"></a>Problembehandlung beim Starten eines Diensts
 
@@ -56,13 +56,13 @@ Der Grund ist folgender: Im Rahmen des Installationsprozesses des Lightweight-Ga
 
 **Lösung**
 
-1. Wenn sich unter dem Registrierungsschlüssel ein DWORD-Wert mit dem Namen **Disable Performance Counters** befindet, achten Sie darauf, dass dieser auf **0**: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\` festgelegt ist.
+1. Wenn unter den Registrierungs Schlüsseln ein DWORD-Wert mit dem Namen **Leistungsindikatoren deaktivieren** vorhanden ist, stellen Sie sicher, dass der Wert auf **0**festgelegt ist:`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\`
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfProc\Performance`
  
 2. Starten Sie dann den PLA-Dienst neu. Das ATA-Lightweight-Gateway erkennt die Änderung automatisch und startet den Dienst neu.
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 - [Voraussetzungen für ATA](ata-prerequisites.md)
 - [ATA-Kapazitätsplanung](ata-capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)

@@ -2,9 +2,9 @@
 title: Festlegen von e-Mail-Benachrichtigungen in Advanced Threat Analytics
 description: Beschreibt, wie ATA für den Versand von Benachrichtigungen (per E-Mail oder ATA-Ereignisweiterleitung) bei verdächtigen Aktivitäten konfiguriert werden kann
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,31 +12,31 @@ ms.technology: ''
 ms.assetid: bff20bf7-8b53-49da-81e5-b818a1c3b24e
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a8769213bbc130299da99c852112af20ecad3267
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 2a27025cb21892792c9502766ee90075df42efb6
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79412209"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775028"
 ---
 # <a name="provide-ata-with-your-email-server-settings"></a>Bereitstellen der Einstellungen Ihres E-Mail-Servers für ATA
 
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
-ATA kann Benachrichtigungen senden, wenn eine verdächtige Aktivität erkannt wird. Damit ATA E-Mail-Benachrichtigungen senden kann, müssen Sie zunächst die **E-Mail-Servereinstellungen** konfigurieren.
+ATA kann Benachrichtigungen senden, wenn eine verdächtige Aktivität erkannt wird. Damit ATA e-Mail-Benachrichtigungen senden kann, müssen Sie zunächst die **e-Mail-Servereinstellungen**konfigurieren.
 
 1. Klicken Sie auf dem ATA Center-Server auf das Symbol **Microsoft Advanced Threat Analytics Management** auf dem Desktop.
 
-2. Geben Sie Ihren Benutzernamen und Ihr Kennwort ein, und klicken Sie auf **Anmelden**.
+2. Geben Sie Ihren Benutzernamen und Ihr Kennwort ein, und klicken Sie auf **Anmelden**
 
-3. Wählen Sie auf der Symbolleiste die Einstellungsoption und dann **Konfiguration** aus.
+3. Wählen Sie auf der Symbolleiste die Option Einstellungen, und wählen Sie **Konfiguration**aus.
 
    ![Symbol der ATA-Konfigurationseinstellungen](media/ATA-config-icon.png)
 
 4. Geben Sie im Bereich **Benachrichtigungen** unter **Mailserver** die folgenden Informationen ein:
 
 
-   |              Field              |                                                                                                 Beschreibung                                                                                                  |               Wert                |
+   |              Feld              |                                                                                                 BESCHREIBUNG                                                                                                  |               Wert                |
    |---------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------|
    | SMTP-Server-Endpunkt (erforderlich) |                                                            Geben Sie den vollqualifizierten Domänennamen des SMTP-Servers ein, und ändern Sie optional die Portnummer (standardmäßig 25).                                                            | Beispiel:<br />smtp.contoso.com |
    |               SSL               |                                              Schalten Sie auf SSL-Betrieb um, falls der SMTP-Server SSL erfordert. **Hinweis:** Wenn Sie SSL aktivieren, müssen Sie auch die Portnummer ändern.                                               |        Der Standardwert ist „deaktiviert“         |
@@ -60,15 +60,15 @@ ATA kann Sie durch Senden der Benachrichtigung an den Syslog-Server benachrichti
 
 2. Klicken Sie auf dem ATA Center-Server auf das Symbol **Microsoft Advanced Threat Analytics Management** auf dem Desktop.
 
-3. Geben Sie Ihren Benutzernamen und Ihr Kennwort ein, und klicken Sie auf **Anmelden**.
+3. Geben Sie Ihren Benutzernamen und Ihr Kennwort ein, und klicken Sie auf **Anmelden**
 
-4. Wählen Sie auf der Symbolleiste die Einstellungsoption und dann **Konfiguration** aus.
+4. Wählen Sie auf der Symbolleiste die Option Einstellungen, und wählen Sie **Konfiguration**aus.
 
    ![Symbol der ATA-Konfigurationseinstellungen](media/ATA-config-icon.png)
 
 5. Wählen Sie im Bereich „Benachrichtigungen“ **Syslog-Server** aus, und geben Sie die folgende Informationen ein:
 
-   |Field|Beschreibung|
+   |Feld|BESCHREIBUNG|
    |---------|---------------|
    |Syslog-Server-Endpunkt|Geben Sie den vollqualifizierten Domänennamen des Syslog-Servers ein, und ändern Sie optional die Portnummer (standardmäßig 514).|
    |Transport|Kann UDP, TCP oder TLS (sicheres Syslog) sein|
@@ -78,5 +78,5 @@ ATA kann Sie durch Senden der Benachrichtigung an den Syslog-Server benachrichti
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

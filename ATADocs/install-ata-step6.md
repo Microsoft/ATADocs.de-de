@@ -4,7 +4,7 @@ description: In diesem Schritt bei der ATA-Installation konfigurieren Sie Datenq
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 09/08/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,20 +12,20 @@ ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 63ed171d5eb7142cdf9d8bc3587c9134321b6d98
-ms.sourcegitcommit: 40f9a460c5b771dfd1e62098d7744162a7214d54
+ms.openlocfilehash: 06b7e42789b58a6da01479917b0e1277b651a8bd
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82590496"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775164"
 ---
 # <a name="install-ata---step-6"></a>Installieren von ATA – Schritt 6
 
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
 > [!div class="step-by-step"]
-> [«Schritt 5](install-ata-step5.md)
-> [Schritt 7»](vpn-integration-install-step.md)
+> [«Schritt 5](install-ata-step5.md) 
+>  [Schritt 7»](vpn-integration-install-step.md)
 
 ## <a name="step-6-configure-event-collection"></a>Schritt 6: Konfigurieren der Ereignissammlung
 
@@ -88,7 +88,7 @@ ATA unterstützt SIEM-Ereignisse in den folgenden Formaten:
 
 - Die Reihenfolge ist wichtig, und es sollten keine weiteren Angaben in die Nachricht eingeschlossen werden.
 
-#### <a name="microfocus-arcsight"></a>Hyperfokus ArcSight
+#### <a name="microfocus-arcsight"></a>MicroFocus ArcSight
 
 CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|Der Domänencontroller hat versucht, die Anmeldeinformationen für ein Konto zu bestätigen.|Niedrig| externalId=4776 cat=Security rt=1426218619000 shost=KKKKKK dhost=YYYYYY.subDomain.domain.com duser=XXXXXX cs2=Security cs3=Microsoft-Windows-Security-Auditing cs4=0x0 cs3Label=EventSource cs4Label=Grund oder Fehlercode
 
@@ -114,13 +114,13 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|Der 
 
 Es wurde versucht, die Anmeldeinformationen für ein Konto zu überprüfen.
 
-Authentifizierungs Paket: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0
+Authentifizierungspaket: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0
 
 Anmeldekonto: Administrator
 
-Quell Arbeitsstation: Siem
+Quellarbeitsstation: SIEM
 
-Fehler Code: 0x0
+Fehlercode: 0x0
 
 - Der Syslog-Header ist optional.
 
@@ -138,7 +138,7 @@ Fehler Code: 0x0
 
 #### <a name="qradar"></a>QRadar
 
-QRadar ermöglicht Ereignissammlung über einen Agent. Wenn die Daten mithilfe eines Agents erfasst werden, werden Zeiten ohne Millisekunden-Daten erfasst. Da ATA Millisekunden-Daten erfordert, muss QRadar so festgelegt werden, dass es die Windows-Ereignissammlung ohne Agents verwendet. Weitere Informationen finden Sie unter [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "Qradar: Windows-Ereignis Sammlung ohne Agent mithilfe des Msrpc-Protokolls").
+QRadar ermöglicht Ereignissammlung über einen Agent. Wenn die Daten mithilfe eines Agents erfasst werden, werden Zeiten ohne Millisekunden-Daten erfasst. Da ATA Millisekunden-Daten erfordert, muss QRadar so festgelegt werden, dass es die Windows-Ereignissammlung ohne Agents verwendet. Weitere Informationen finden Sie unter [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Agentless Windows Events Collection using the MSRPC Protocol (QRadar: Auflistung von Windows-Ereignissen ohne Agent mithilfe des MSRPC-Protokolls)").
 
     <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
 
@@ -161,8 +161,8 @@ Stellen Sie sicher, dass „\t“ zwischen Schlüssel=Wert-Paaren steht.
 > Verwendung von WinCollect für die Windows-Ereignissammlung wird nicht unterstützt.
 
 > [!div class="step-by-step"]
-> [«Schritt 5](install-ata-step5.md)
-> [Schritt 7»](vpn-integration-install-step.md)
+> [«Schritt 5](install-ata-step5.md) 
+>  [Schritt 7»](vpn-integration-install-step.md)
 
 ## <a name="related-videos"></a>Verwandte Videos
 

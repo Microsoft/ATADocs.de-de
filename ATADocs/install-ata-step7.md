@@ -2,9 +2,9 @@
 title: Installieren von Advanced Threat Analytics (Schritt 8)
 description: Im letzten Schritt der Installation von ATA konfigurieren Sie den Honeytoken-Benutzer.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 6/14/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,22 +12,22 @@ ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 367d40e57590ace725700de947f3c1fd31b9db5e
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 9482053a183dfd41f20028d00c15c171cea725c7
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79411206"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775147"
 ---
 # <a name="install-ata---step-8"></a>Installieren von ATA – Schritt 8
 
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
 > [!div class="step-by-step"]
-> [« Schritt 7](vpn-integration-install-step.md)
-> [Schritt 9 »](install-ata-step9-samr.md)
+> [«Schritt 7](vpn-integration-install-step.md) 
+>  [Schritt 9»](install-ata-step9-samr.md)
 
-## <a name="step-8-configure-ip-address-exclusions-and-honeytoken-user"></a>Schritt 8. Konfigurieren von IP-Adressausschlüssen und Honeytoken-Benutzern
+## <a name="step-8-configure-ip-address-exclusions-and-honeytoken-user"></a>Schritt 8: Konfigurieren von IP-Adressausschlüssen und Honeytoken-Benutzern
 
 ATA ermöglicht den Ausschluss bestimmter IP-Adressen oder Benutzer aus einer Reihe von Erkennungen. 
 
@@ -47,7 +47,7 @@ Führen Sie zur Konfiguration die folgenden Schritte aus:
 
    ![Honeytoken](media/honeytoken.png)
 
-3. Klicken Sie auf **Ausschlüsse**. Geben Sie für jeden Bedrohungstyp ein Benutzerkonto oder eine IP-Adresse ein, das/die von der Erkennung dieser Bedrohungen ausgeschlossen werden soll, und klicken Sie auf das *Pluszeichen*. Das Feld **Entität hinzufügen** (Benutzer oder Computer) kann durchsucht werden und wird automatisch mit Entitäten in Ihrem Netzwerk gefüllt. Weitere Informationen finden Sie unter [Ausschließen von Entitäten von der Erkennung](excluding-entities-from-detections.md).
+3. Klicken Sie auf **Ausschlüsse**. Geben Sie für jeden Bedrohungstyp ein Benutzerkonto oder eine IP-Adresse ein, das/die von der Erkennung dieser Bedrohungen ausgeschlossen werden soll, und klicken Sie auf das *Pluszeichen*. Das Feld **Entität hinzufügen** (Benutzer oder Computer) kann durchsucht werden und wird automatisch mit Entitäten in Ihrem Netzwerk ausgefüllt. Weitere Informationen finden Sie unter [Ausschließen von Entitäten von der Erkennung](excluding-entities-from-detections.md).
 
    ![Ausschlüsse](media/exclusions.png)
 
@@ -64,8 +64,8 @@ Sie können sich die [Sammlung von Angriffssimulationsszenarios von Advanced Thr
 
 
 > [!div class="step-by-step"]
-> [« Schritt 7](vpn-integration-install-step.md)
-> [Schritt 9 »](install-ata-step9-samr.md)
+> [«Schritt 7](vpn-integration-install-step.md) 
+>  [Schritt 9»](install-ata-step9-samr.md)
 
 
 ## <a name="related-videos"></a>Verwandte Videos
@@ -73,7 +73,7 @@ Sie können sich die [Sammlung von Angriffssimulationsszenarios von Advanced Thr
 - [Auswählen des richtigen ATA-Gatewaytyps](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 - [Handbuch für die ATA POC-Bereitstellung](https://aka.ms/atapoc)
 - [Tool zur Bemessung von ATA-Gateways](https://aka.ms/atasizingtool)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
