@@ -2,9 +2,9 @@
 title: Advanced Threat Analytics-Datenbankverwaltung
 description: Vorgänge zum Verschieben, Sichern oder Wiederherstellen der ATA-Datenbank.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 05e49e23-6e0a-4ec0-9a63-a2093173c8a1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 868e946587b61fb3a571281944cca2a09225aa47
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 39dbc39f3598261df9067a420e40b4584f411890
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79411954"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84773158"
 ---
 # <a name="ata-database-management"></a>ATA-Datenbankverwaltung
 
@@ -26,10 +26,10 @@ ms.locfileid: "79411954"
 Verwenden Sie diese Verfahren im Umgang mit MongoDB, wenn die ATA-Datenbank verschoben, gesichert oder wiederhergestellt werden soll.
 
 ## <a name="backing-up-the-ata-database"></a>Sichern der ATA-Datenbank
-Informationen hierzu finden Sie in der [entsprechenden MongoDB-Dokumentation](http://docs.mongodb.org/manual/administration/backup/).
+Weitere Informationen finden Sie in der [entsprechenden MongoDB-Dokumentation](http://docs.mongodb.org/manual/administration/backup/).
 
 ## <a name="restoring-the-ata-database"></a>Wiederherstellen der ATA-Datenbank
-Informationen hierzu finden Sie in der [entsprechenden MongoDB-Dokumentation](http://docs.mongodb.org/manual/administration/backup/).
+Weitere Informationen finden Sie in der [entsprechenden MongoDB-Dokumentation](http://docs.mongodb.org/manual/administration/backup/).
 
 ## <a name="moving-the-ata-database-to-another-drive"></a>Verschieben der ATA-Datenbank auf ein anderes Laufwerk
 
@@ -49,11 +49,11 @@ Informationen hierzu finden Sie in der [entsprechenden MongoDB-Dokumentation](ht
 
    ![Ändern des MongoDB-Konfigurationsimages](media/ATA-mongoDB-moveDB.png)
 
-6. Starten Sie den Dienst **MongoDB**.
+6. Starten Sie den **MongoDB** -Dienst.
 
 7. Starten Sie den Dienst **Microsoft Advanced Threat Analytics Center**.
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 - [ATA-Architektur](ata-architecture.md)
 - [Voraussetzungen für ATA](ata-prerequisites.md)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

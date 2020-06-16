@@ -4,19 +4,19 @@ description: Verfahren für das Update von ATA auf Version 1.9.2
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 04/02/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.assetid: 2946310a-8e4e-48fc-9450-fc9647efeb22
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 07c193422140eb2b9a19c587ff93103be70e0edc
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 703d03feef815ddbea5393c8e576faa174426474
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79411410"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775273"
 ---
 # <a name="ata-version-192"></a>ATA Version 1.9.2
 
@@ -47,7 +47,7 @@ Dieses Update umfasst auch Verbesserungen der Leistung und Stabilität sowie Kor
 
 Um das eigenständige Paket für dieses Update zu erhalten, besuchen Sie die Microsoft Download Center-Website: [Laden Sie das ATA 1.9.2-Paket jetzt herunter](https://www.microsoft.com/en-us/download/details.aspx?id=56725).
 
-### <a name="prerequisites"></a>Erforderliche Komponenten
+### <a name="prerequisites"></a>Voraussetzungen
 
 Zum Installieren dieses Updates müssen Sie bereits eine der folgenden Versionen von ATA installiert haben: 
 - Update 1 für ATA 1.9 (Version 1.9.7412)
@@ -55,7 +55,7 @@ Zum Installieren dieses Updates müssen Sie bereits eine der folgenden Versionen
 - Update 1 für ATA 1.8 (Version 1.8.6765)
 - ATA 1.8 (Version 1.8.6645)
 
-### <a name="restart-requirement"></a>Neustart Anforderung
+### <a name="restart-requirement"></a>Erforderlicher Neustart
 
 Nach dem Anwenden dieses Updates muss Ihr Computer möglicherweise neu gestartet werden.
 
@@ -64,7 +64,7 @@ Nach dem Anwenden dieses Updates muss Ihr Computer möglicherweise neu gestartet
 Dieses Update ersetzt ATA Version 1.9.1 (1.9.7412).
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [ATA-Versionen](ata-versions.md)

@@ -2,9 +2,9 @@
 title: Konfigurieren der Windows-Ereignis Weiterleitung in Advanced Threat Analytics
 description: Beschreibt die Optionen zur Windows-Ereignisweiterleitung mit ATA
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 84ce1bed4203ff7344d1e28dc4765ba5cfe79843
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 31e1b1923d6cef2b0bc4c34349be8b6516aceb0b
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79411852"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775385"
 ---
 # <a name="configuring-windows-event-forwarding"></a>Konfigurieren der Windows-Ereignisweiterleitung
 
@@ -76,7 +76,7 @@ Sie müssen die Domänencontroller neu starten, nachdem Sie den **Netzwerkdienst
 3.  Klicken Sie mit der rechten Maustaste auf **Abonnements**, und wählen Sie **Abonnement erstellen** aus. 
 
     1.  Geben Sie einen Namen und eine Beschreibung für das Abonnement ein. 
-    2.  Bestätigen Sie für **Zielprotokoll**, dass **Weitergeleitete Ereignisse** aktiviert ist. Damit ATA die Ereignisse lesen kann, muss das Zielprotokoll **Weitergeleitete Ereignisse** sein. 
+    2.  Bestätigen Sie für **Zielprotokoll**, dass **Weitergeleitete Ereignisse** aktiviert ist. Damit ATA die Ereignisse lesen kann, muss das Ziel Protokoll **Weitergeleitete Ereignisse**sein. 
     3.  Wählen Sie **Quellcomputerinitiiert** aus, und klicken Sie auf **Computergruppen auswählen** aus.
         1.  Klicken Sie auf **Domänencomputer hinzufügen**.
         2.  Geben Sie den Namen des Domänencontrollers in das Feld **Namen des auszuwählenden Objekts eingeben** ein. Klicken Sie anschließend auf **Namen überprüfen**, und klicken Sie auf **OK**.  
@@ -92,8 +92,8 @@ Sie müssen die Domänencontroller neu starten, nachdem Sie den **Netzwerkdienst
     6.  Überprüfen Sie nach einigen Minuten, ob die festgelegten Ereignisse im ATA-Gateway in „Weitergeleitete Ereignisse“ angezeigt wird.
 
 
-Weitere Informationen finden Sie unter [Einrichten von Computern zum Weiterleiten und Sammeln von Ereignissen](https://technet.microsoft.com/library/cc748890).
+Weitere Informationen finden Sie in folgenden Quellen: [Einrichten von Computern zum Weiterleiten und Sammeln von Ereignissen](https://technet.microsoft.com/library/cc748890)
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 - [Installieren von ATA](install-ata-step1.md)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

@@ -2,9 +2,9 @@
 title: Neuerungen in ATA 1.8
 description: Listet Neuerungen sowie bekannte Probleme in ATA 1.8 auf.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 9/03/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 9592d413-df0e-4cec-8e03-be1ae00ba5dc
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: dfc1266fd3687b6134ca79f083b2777083723798
-ms.sourcegitcommit: 8c0222dc8333b5aa47430c5daee9bc7f1d82df31
+ms.openlocfilehash: daaf8391e3102aa599efa0fe26c45cf8f2558938
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81524700"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774688"
 ---
 # <a name="whats-new-in-ata-version-18"></a>Neuerungen in ATA 1.8
 
@@ -31,7 +31,7 @@ Die vorliegenden Anmerkungen zu dieser Version enthalten Informationen zu Update
 
 - Die Implementierung von ungewöhnlichen Protokollen wurde verbessert, sodass sie jetzt auch WannaCry-Schadprogramm erkennen kann.
 
-- NEU! **Ungewöhnliche Modifizierungen von sensiblen Gruppen**: Im Rahmen der Rechteausweitungsphase modifizieren Angreifer Gruppen mit hohen Berechtigungen, um Zugriff auf sensible Ressourcen zu erhalten. ATA erkennt jetzt, wenn ungewöhnliche Änderungen in Gruppen mit erhöhten Berechtigungen vorgenommen werden.
+- NEU! **Ungewöhnliche Modifizierungen von sensiblen Gruppen**: Im Rahmen der Rechteausweitungsphase modifizieren Angreifer Gruppen mit hohen Berechtigungen, um Zugriff auf sensible Ressourcen zu erhalten. ATA erkennt jetzt, wenn eine Gruppe mit erhöhten Rechten nicht ordnungsgemäß geändert wurde.
 - NEU! **Verdächtige fehlgeschlagene Authentifizierungen** (Brute Force-Verhalten): Angreifer wenden „rohe Gewalt“ bei der Anmeldung an, um Konten zu kompromittieren. ATA gibt jetzt eine Warnung aus, wenn es ungewöhnliche fehlgeschlagene Authentifizierungen erkennt.   
 
 - **Versuchte Remoteausführung – WMI-Ausführung**: Angreifer können versuchen, die Kontrolle über Ihr Netzwerk zu erlangen, indem sie Code remote auf Ihrem Domänencontroller ausführen. Die Erkennung von remoten Ausführungsversuchen wurde in ATA verbessert, sodass es jetzt auch WMI-Methoden erkennt, die Code remote ausführen können.
@@ -48,29 +48,29 @@ Die vorliegenden Anmerkungen zu dieser Version enthalten Informationen zu Update
 
 ## <a name="improved-triage-of-suspicious-activities"></a>Verbesserte Selektierung von verdächtigen Aktivitäten
 
--   NEU! Mit ATA 1.8 können Sie die folgenden Aktionen für verdächtige Aktivitäten während des Selektierungsprozesses ausführen: 
+-  NEU! Mit ATA 1.8 können Sie die folgenden Aktionen für verdächtige Aktivitäten während des Selektierungsprozesses ausführen: 
     - **Ausschluss von Entitäten**: Sie können Entitäten ausschließen, die keine weiteren verdächtigen Aktivitäten verursachen sollen, damit ATA keine Warnungen mehr ausgibt, wenn es gutartige richtig positive Aktivitäten erkennt (wie z.B. ein Administrator, der remoten Code ausführt oder das Erkennen von Sicherheitsscannern).
     - **Unterdrücken des Warnens vor wiederholten** verdächtigen Aktivitäten.
     - **Löschen verdächtiger Aktivitäten** auf der Angriffszeitachse
--   Der Prozess des Nachverfolgens von Warnungen zu verdächtiger Aktivität ist jetzt effizienter. Die Zeitachse für verdächtige Aktivitäten wurde umgestaltet. In ATA 1.8 können Sie sich deutlich mehr verdächtige Aktivitäten auf einem Bildschirm anschauen. Diese enthalten ausführlichere Informationen zwecks Selektierung und Untersuchung. 
+-  Der Prozess des Nachverfolgens von Warnungen zu verdächtiger Aktivität ist jetzt effizienter. Die Zeitachse für verdächtige Aktivitäten wurde umgestaltet. In ATA 1.8 können Sie sich deutlich mehr verdächtige Aktivitäten auf einem Bildschirm anschauen. Diese enthalten ausführlichere Informationen zwecks Selektierung und Untersuchung. 
 
 ## <a name="new-reports-to-help-you-investigate"></a>Neue Berichte, um Sie bei der Untersuchung zu unterstützen 
--   NEU! Der **Zusammenfassungsbericht** wurde hinzugefügt, damit Sie sich alle zusammengefassten Daten von ATA anschauen können, einschließlich verdächtiger Aktivitäten, Integritätsproblemen usw. Sie können sogar einen benutzerdefinierten Bericht definieren, der automatisch periodisch neu erstellt wird.
--   NEU! Der **Bericht zu sensiblen Gruppen** wurde hinzugefügt, damit Sie sich alle Änderungen an sensiblen Gruppen über einen bestimmten Zeitraum anschauen können.
+-  NEU! Der **Zusammenfassungsbericht** wurde hinzugefügt, damit Sie sich alle zusammengefassten Daten von ATA anschauen können, einschließlich verdächtiger Aktivitäten, Integritätsproblemen usw. Sie können sogar einen benutzerdefinierten Bericht definieren, der automatisch periodisch neu erstellt wird.
+-  NEU! Der **Bericht zu sensiblen Gruppen** wurde hinzugefügt, damit Sie sich alle Änderungen an sensiblen Gruppen über einen bestimmten Zeitraum anschauen können.
 
 
 ## <a name="infrastructure-improvements"></a>Verbesserungen der Infrastruktur
 
--   Die Leistung von ATA Center wurde verbessert. In ATA 1.8 kann ATA Center per als 1 Mio. Pakete in der Sekunde behandeln.
--   Das ATA-Lightweight-Gateway kann jetzt Ereignisse lokal lesen, ohne die Ereignisweiterleitung zu konfigurieren.
--   Sie können e-Mails nun separat für Integritäts Warnungen und verdächtige Aktivitäten konfigurieren.
+-  Die Leistung von ATA Center wurde verbessert. In ATA 1.8 kann ATA Center per als 1 Mio. Pakete in der Sekunde behandeln.
+-  Das ATA-Lightweight-Gateway kann jetzt Ereignisse lokal lesen, ohne die Ereignisweiterleitung zu konfigurieren.
+-  Sie können e-Mails nun separat für Integritäts Warnungen und verdächtige Aktivitäten konfigurieren.
 
-## <a name="security-improvements"></a>Sicherheitsverbesserungen
+## <a name="security-improvements"></a>Verbesserungen der Sicherheit
 
--   NEU! **Einmalige Anmeldung für die Verwaltung von ATA** ATA unterstützt die in die Windows-Authentifizierung integrierte einmalige Anmeldung: wenn Sie sich schon bei Ihrem Computer angemeldet haben, verwenden ATA das Token, um Sie in der ATA-Konsole anzumelden. Sie können sich auch mit einer Smartcard anmelden. Stille Installationsskripts für das ATA-Gateway und das ATA-Lightweight-Gateway verwenden jetzt den Kontext des angemeldeten Benutzers, ohne Anmeldeinformationen eingeben zu müssen.
--   Berechtigungen für das lokale System wurden aus dem ATA-Gatewayprozess entfernt, damit Sie virtuelle Konten (nur in eigenständigen ATA-Gateways verfügbar), verwaltete Dienstkonten und gruppenverwaltete Dienstkonten verwenden können, um den ATA-Gatewayprozess auszuführen.   
--   Überwachungsprotokolle für ATA Center und Gateways wurden hinzugefügt, und alle Aktionen werden jetzt im Windows-Ereignisprotokoll erfasst.
--   Die Unterstützung für KSP-Zertifikate für ATA Center wurde hinzugefügt.
+-  NEU! **Einmalige Anmeldung für die Verwaltung von ATA** ATA unterstützt die in die Windows-Authentifizierung integrierte einmalige Anmeldung: wenn Sie sich schon bei Ihrem Computer angemeldet haben, verwenden ATA das Token, um Sie in der ATA-Konsole anzumelden. Sie können sich auch mit einer Smartcard anmelden. Bei automatischen Installations Skripts für das ATA-Gateway und das ATA-Lightweight-Gateway wird jetzt der Kontext des angemeldeten Benutzers verwendet, ohne dass Anmelde Informationen bereitgestellt werden müssen.
+-  Berechtigungen für das lokale System wurden aus dem ATA-Gatewayprozess entfernt, damit Sie virtuelle Konten (nur in eigenständigen ATA-Gateways verfügbar), verwaltete Dienstkonten und gruppenverwaltete Dienstkonten verwenden können, um den ATA-Gatewayprozess auszuführen.   
+-  Überwachungsprotokolle für ATA Center und Gateways wurden hinzugefügt, und alle Aktionen werden jetzt im Windows-Ereignisprotokoll erfasst.
+-  Die Unterstützung für KSP-Zertifikate für ATA Center wurde hinzugefügt.
 
 ## <a name="additional-changes"></a>Weitere Änderungen
 
@@ -105,11 +105,11 @@ In Windows Server 2016 Core sehen Sie den Fehler möglicherweise nicht, aber der
 
        $ATADaclEntry = "(A;;0x1;;;S-1-5-80-1717699148-1527177629-2874996750-2971184233-2178472682)"
         try {
-        $SecurityDescriptor = Get-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Services\Eventlog\Security -Name CustomSD
-        $ATASddl = "O:BAG:SYD:" + $ATADaclEntry 
-        if($SecurityDescriptor.CustomSD -eq $ATASddl) {
-        Remove-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Services\Eventlog\Security -Name CustomSD
-        }
+      $SecurityDescriptor = Get-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Services\Eventlog\Security -Name CustomSD
+      $ATASddl = "O:BAG:SYD:" + $ATADaclEntry 
+      if($SecurityDescriptor.CustomSD -eq $ATASddl) {
+    Remove-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Services\Eventlog\Security -Name CustomSD
+      }
     }
     catch
     {
