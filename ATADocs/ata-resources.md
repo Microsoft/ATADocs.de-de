@@ -2,9 +2,9 @@
 title: Roadmap für Advanced Threat Analytics-Ressourcen und-Bereitschaft
 description: Stellt eine Liste von Links zu ATA-Ressourcen, Videos, ersten Schritten sowie zur Bereitstellung und zum Überblick für die Bereitschaft bereit.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 7/15/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 42a1a34f-ed6b-4538-befb-452168a30e8c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 7ebf92ba3d6977dd9aad79d8e87818c5f84795b9
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: fff985790da3065693e4d22f84465ea24918bd14
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79412056"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775572"
 ---
 # <a name="ata-readiness-roadmap"></a>Überblick über die ATA-Bereitschaft 
 
@@ -77,7 +77,7 @@ Die grundlegenden, erforderlichen Einstellungen in ATA werden als Teil des Insta
 
 Sobald ATA einsatzbereit ist, können Sie verdächtige Aktivitäten anzeigen, die in der Angriffszeitleiste erkannt werden. Dies ist die Standardzielseite, auf die Sie gelangen, wenn Sie sich bei der ATA-Konsole anmelden. Standardmäßig werden alle offenen verdächtigen Aktivitäten auf der Angriffszeitachse angezeigt. Außerdem wird der Schweregrad angezeigt, der den einzelnen Aktivitäten zugewiesen wurde. Untersuchen Sie jede verdächtige Aktivität, indem Sie zu den Entitäten (Computer, Geräte, Benutzer) navigieren, um deren Profilseiten zu öffnen, die weitere Informationen bereitstellen. Mithilfe folgender Ressourcen können Sie mit den verdächtigen Aktivitäten von ATA arbeiten:
 
-[Verdächtige ATA-Aktivitäten – Playbook](https://aka.ms/ataplaybook): Dieser Artikel führt Sie durch die Angriffstechniken für den Diebstahl von Anmeldeinformationen durch jederzeit verfügbare Recherchetools aus dem Internet. An jedem Punkt des Angriffs können Sie sehen, wie ATA Ihnen hilft, Einblick in diese Bedrohungen zu erhalten.
+[Verdächtige ATA-Aktivitäten – Playbook](https://aka.ms/ataplaybook): Dieser Artikel führt Sie durch die Angriffstechniken für den Diebstahl von Anmeldeinformationen durch jederzeit verfügbare Recherchetools aus dem Internet.Zu jedem Zeitpunkt des Angriffs sehen Sie, wie ATA Ihnen dabei hilft, weitere Einblicken in diese Bedrohungen zu erhalten.
 
 [Handbuch zu verdächtigen ATA-Aktivitäten](suspicious-activity-guide.md)
 
@@ -89,12 +89,12 @@ Sobald ATA einsatzbereit ist, können Sie verdächtige Aktivitäten anzeigen, di
 
 [Häufig gestellte Fragen zu ATA](ata-technical-faq.md): Dieser Artikel enthält eine Reihe häufig gestellter Fragen zu ATA sowie Hintergrundwissen und Antworten.
 
-## <a name="additional-resources"></a>Weitere Ressourcen
+## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 [Seite zu Microsoft Security Channel 9](https://channel9.msdn.com/Shows/Microsoft-Security/)
 
 ## <a name="community-resources"></a>Communityressourcen
 
-[ATA-Blog](https://aka.ms/ATABlog)
-[ATA-Community](https://aka.ms/ATACommunity)
-[Feedback zu ATA](https://aka.ms/ATAUserVoice)
+[ATA-Blog](https://aka.ms/ATABlog) 
+ [ATA-Community](https://aka.ms/ATACommunity) 
+ [Bereitstellen von Feedback zu ATA](https://aka.ms/ATAUserVoice)

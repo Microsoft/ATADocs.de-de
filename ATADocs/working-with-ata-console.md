@@ -2,9 +2,9 @@
 title: Grundlegendes zur Advanced Threat Analytics-Konsole
 description: Beschreibt die Anmeldung bei der ATA-Konsole sowie die Komponenten der Konsole.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a1db61a38cf87e6c1d8989e5ee591a0741f25f4e
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 115b20058d5828ed9c7cc04f7b27cd77ee839566
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414368"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774654"
 ---
 # <a name="working-with-the-ata-console"></a>Arbeiten mit der ATA-Konsole
 
@@ -76,7 +76,7 @@ Wenn eine neue verdächtige Aktivität erkannt wird, öffnet sich auf der rechte
 
 ![Abbildung der ATA-Benachrichtigungsleiste](media/notification-bar-1.7.png)
 
-### <a name="whats-new"></a>Neuheiten
+### <a name="whats-new"></a>Neues
 
 Nach der Veröffentlichung einer neuen Version von ATA wird das Fenster **Neuigkeiten** in der oberen rechten Ecke angezeigt. Darüber erhalten Sie Informationen dazu, was in der neusten Version hinzugefügt wurde. Außerdem erhalten Sie einen Link zum Download der Version.
 
@@ -100,16 +100,16 @@ Jedes Mal, wenn auf Ihrem System ein Problem auftritt (z.B. ein Verbindungsfehle
 
 ### <a name="sensitive-groups"></a>Sensible Gruppen
 
-Die folgende Liste von Gruppen werden von ATA als **sensibel** eingestuft. Jede Entität, die Mitglied dieser Gruppen ist, wird als sensibel angesehen:
+Die folgende Liste von Gruppen wird von ATA als **sensibel** eingestuft. Jede Entität, die Mitglied dieser Gruppen ist, wird als sensibel angesehen:
 
 - Domänencontroller der Organisation ohne Schreibzugriff 
-- Domänen-Admins 
+- Domänenadministratoren 
 - Domänencontroller 
 - Schema-Admins
-- Organisations-Admins 
+- Organisationsadministratoren 
 - Gruppenrichtlinienersteller-Besitzer 
 - Schreibgeschützter Domänencontroller 
-- Administratoren  
+- Administrators  
 - Hauptbenutzer  
 - Konten-Operatoren  
 - Server-Operatoren   
@@ -134,11 +134,11 @@ Wenn Sie an einer Stelle in der Konsole, an der eine einzelne Entität dargestel
 
 -   E-Mail
 
--   Telefon
+-   Telephone
 
 -   Anzahl der verdächtigen Aktivitäten nach Schweregrad
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

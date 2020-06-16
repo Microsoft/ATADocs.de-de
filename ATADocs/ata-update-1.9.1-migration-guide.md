@@ -4,7 +4,7 @@ description: Verfahren zum Aktualisieren von ATA auf Version 1.9.1
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 12/10/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 2946310a-8e4e-48fc-9450-fc9647efeb22
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: fdaf1e8e8a96e0f96098235d818f738528a7ab0e
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: beecba26ccb15392953e9a57e3a005b7c6b17668
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79412311"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775300"
 ---
 # <a name="ata-version-191"></a>ATA Version 1.9.1
 
@@ -46,20 +46,20 @@ Updates für Microsoft Advanced Threat Analytics, Version 1.9, sind über Micros
 ### <a name="microsoft-update"></a>Microsoft Update
 Dieses Update ist über Microsoft Update verfügbar. Weitere Informationen zur Verwendung von Microsoft Update finden Sie unter [Beziehen von Updates über Windows Update](https://support.microsoft.com/help/3067639).
 
-### <a name="manual-download"></a>Manueller Download
+### <a name="manual-download"></a>Manuelles Herunterladen
 Um das eigenständige Paket für dieses Update zu erhalten, besuchen Sie die Microsoft Download Center-Website: [Laden Sie das ATA 1,9-Paket jetzt herunter](https://www.microsoft.com/en-us/download/details.aspx?id=56725).
 
-### <a name="prerequisites"></a>Erforderliche Komponenten
+### <a name="prerequisites"></a>Voraussetzungen
 Um dieses Update zu installieren, muss ATA Version 1.9 (1.9.7312), Update 1 für ATA Version 1.8 (1.8.6765) oder ATA Version 1.8 (1.8.6645) installiert sein.
 
-### <a name="restart-requirement"></a>Neustart Anforderung
+### <a name="restart-requirement"></a>Erforderlicher Neustart
 Nach dem Anwenden dieses Updates muss Ihr Computer möglicherweise neu gestartet werden.
 
 ### <a name="update-replacement-information"></a>Informationen zur Ersetzung durch dieses Update
 Dieses Update ersetzt ATA Version 1.9 (1.9.7312).
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [ATA-Versionen](ata-versions.md)

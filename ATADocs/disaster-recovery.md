@@ -4,7 +4,7 @@ description: Beschreibt, wie Sie die ATA-Funktionalität nach einem Notfall schn
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 05/02/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 7620e171-76d5-4e3f-8b03-871678217a3a
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 5bf0654f951466f6cb33e9c71c522fbf582179c9
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 41abda99939f1152cd21f8de6034cf42f435bbf4
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79413297"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775340"
 ---
 # <a name="ata-disaster-recovery"></a>ATA-Notfallwiederherstellung
 
@@ -32,7 +32,7 @@ Dieser Artikel beschreibt, wie Sie ATA Center und Ihre ATA-Funktionalität schne
 
 1. Die ATA Center-Konfiguration wird alle 4 Stunden in einer Datei gesichert. Suchen Sie die neueste Sicherungskopie der ATA Center-Konfiguration, und speichern Sie sie auf einem separaten Computer. Eine ausführliche Erläuterung zum Auffinden dieser Dateien finden Sie unter [Exportieren und Importieren der ATA-Konfiguration](ata-configuration-file.md). 
 2. Exportieren Sie das Zertifikats für ATA Center.
-    1. Wechseln Sie im Zertifikat-Manager zu **Zertifikate (Lokaler Computer)**  -> **Persönlich** ->**Zertifikate**, und wählen Sie **ATA Center** aus.
+    1. Navigieren Sie im Zertifikat-Manager zu **Zertifikate (lokaler Computer)**  ->  **persönliche**  -> **Zertifikate**, und wählen Sie **ATA Center**aus.
     2. Klicken Sie mit der rechten Maustaste auf **ATA Center**, wählen Sie **Alle Tasks** und dann **Exportieren** aus. 
      ![Zertifikat für ATA Center](media/ata-center-cert.png)
     3. Befolgen Sie die Anweisungen zum Exportieren des Zertifikats, und stellen Sie sicher, dass Sie auch den privaten Schlüssel exportieren.
@@ -65,7 +65,7 @@ Dieser Artikel beschreibt, wie Sie ATA Center und Ihre ATA-Funktionalität schne
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 - [Voraussetzungen für ATA](ata-prerequisites.md)
 - [ATA-Kapazitätsplanung](ata-capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](install-ata-step6.md)

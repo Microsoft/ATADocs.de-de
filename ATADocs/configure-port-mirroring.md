@@ -2,9 +2,9 @@
 title: Konfigurieren der Port Spiegelung beim Bereitstellen von Advanced Threat Analytics
 description: Beschreibt Optionen für die Portspiegelung und deren Konfiguration für ATA
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,19 +12,19 @@ ms.technology: ''
 ms.assetid: cdaddca3-e26e-4137-b553-8ed3f389c460
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1070bdf8415211c72c1be05960a39d2c05c67de5
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 3969dc5bfcc4c36c6e6b664dc27bb58fc60d08e2
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79411172"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775272"
 ---
 # <a name="configure-port-mirroring"></a>Konfigurieren der Portspiegelung
 
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
 > [!NOTE] 
-> Dieser Artikel ist für Sie nur interessant, wenn Sie ATA-Gateways anstelle von ATA-Lightweight-Gateways bereitstellen. Lesen Sie [Auswählen des richtigen Gatewaytyps für die Bereitstellung](ata-capacity-planning.md#choosing-the-right-gateway-type-for-your-deployment), um zu ermitteln, ob Sie ATA-Gateways verwenden müssen.
+> Dieser Artikel ist für Sie nur interessant, wenn Sie ATA-Gateways anstelle von ATA-Lightweight-Gateways bereitstellen. Informationen dazu, ob Sie ATA-Gateways verwenden müssen, finden Sie unter [Auswählen der richtigen Gateways für Ihre Bereitstellung](ata-capacity-planning.md#choosing-the-right-gateway-type-for-your-deployment).
 
 Als primäre Datenquelle verwendet ATA eine ausführliche Paketüberprüfung (Deep Packet Inspection) des Netzwerkdatenverkehrs zu und von den Domänencontrollern. Damit ATA den Netzwerkdatenverkehr sieht, muss entweder eine Portspiegelung eingerichtet oder ein Netzwerk-TAP verwendet werden.
 
@@ -47,10 +47,10 @@ Die Domänencontroller und ATA-Gateways können physisch oder virtuell vorhanden
 
 |ATA-Gateway|Domänencontroller|Überlegungen|
 |---------------|---------------------|------------------|
-|Optimale virtuelle|Virtuell auf demselben Host|Der virtuelle Switch muss Portspiegelung unterstützen.<br /><br />Durch einzelnes Verschieben der virtuellen Computer auf einen anderen Host kann die Portspiegelung aufhören zu funktionieren.|
-|Optimale virtuelle|Virtuell auf unterschiedlichen Hosts|Achten Sie darauf, dass der virtuelle Switch dieses Szenario unterstützt.|
-|Optimale virtuelle|Physisch|Erfordert einen dedizierten Netzwerkadapter, da ATA andernfalls den gesamten eingehenden und ausgehenden Datenverkehr des Hosts sieht, einschließlich des an ATA Center weitergeleiteten Datenverkehrs.|
-|Physisch|Optimale virtuelle|Achten Sie darauf, dass der virtuelle Switch dieses Szenario unterstützt. Ebenfalls erforderlich ist eine entsprechende Konfiguration für die Portspiegelung auf den physischen Switches für folgendes Szenario:<br /><br />Wenn sich der virtuelle Host auf demselben physischen Switch befindet, muss auf Switchebene ein SPAN konfiguriert werden.<br /><br />Wenn sich der virtuelle Host auf einem anderen Switch befindet, muss RSPAN oder ERSPAN&#42; konfiguriert werden.|
+|Virtuell|Virtuell auf demselben Host|Der virtuelle Switch muss Portspiegelung unterstützen.<br /><br />Durch einzelnes Verschieben der virtuellen Computer auf einen anderen Host kann die Portspiegelung aufhören zu funktionieren.|
+|Virtuell|Virtuell auf unterschiedlichen Hosts|Achten Sie darauf, dass der virtuelle Switch dieses Szenario unterstützt.|
+|Virtuell|Physisch|Erfordert einen dedizierten Netzwerkadapter, da ATA andernfalls den gesamten eingehenden und ausgehenden Datenverkehr des Hosts sieht, einschließlich des an ATA Center weitergeleiteten Datenverkehrs.|
+|Physisch|Virtuell|Achten Sie darauf, dass der virtuelle Switch dieses Szenario unterstützt. Ebenfalls erforderlich ist eine entsprechende Konfiguration für die Portspiegelung auf den physischen Switches für folgendes Szenario:<br /><br />Wenn sich der virtuelle Host auf demselben physischen Switch befindet, muss auf Switchebene ein SPAN konfiguriert werden.<br /><br />Wenn sich der virtuelle Host auf einem anderen Switch befindet, muss RSPAN oder ERSPAN&#42; konfiguriert werden.|
 |Physisch|Physisch auf demselben Switch|Der physische Switch muss SPAN/Portspiegelung unterstützen.|
 |Physisch|Physisch auf einem anderen Switch|Erfordert physische Switches mit Unterstützung für RSPAN oder ERSPAN&#42;.|
 
@@ -70,6 +70,6 @@ Die Domänencontroller und ATA-Gateways können physisch oder virtuell vorhanden
 
 Überprüfen Sie nach dem Konfigurieren der Portspiegelung deren ordnungsgemäße Funktion, bevor Sie die ATA-Gateways installieren.
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 - [Überprüfen der Portspiegelung](validate-port-mirroring.md)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

@@ -4,7 +4,7 @@ description: Dieser Artikel stellt Links zu Informationen bereit, wie Sie privat
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 9/27/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 1b2d185c-62cd-45f0-b0dd-687b51317f32
 ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: da4b81d0a812a9fe8c1f86982445ce017f5e290f
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: ed811af8f046aff1249e30ac1c7c5585b07f9f88
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79412107"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774926"
 ---
 # <a name="ata-data-security-and-privacy"></a>Sicherheit und Datenschutz für ATA
 
@@ -25,13 +25,13 @@ ms.locfileid: "79412107"
 
 [!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
 
-## <a name="searching-for-and-identifying-personal-data"></a>Suchen und Ermitteln von personenbezogenen Daten 
+## <a name="searching-for-and-identifying-personal-data"></a>Suchen nach und Identifizieren von personenbezogenen Daten 
 
 Alle entitätsbezogenen Daten in ATA stammen aus Active Directory (AD) und werden von dort aus zu ATA repliziert. Bei der Suche nach personenbezogenen Daten sollten Sie zuerst in AD nachsehen. 
 
 Verwenden Sie die Suchleiste im ATA Center, um die identifizierbaren personenbezogenen Daten anzuzeigen, die in der Datenbank gespeichert sind. Benutzer können nach einem bestimmten Benutzer oder einem bestimmten Gerät suchen. Durch einen Klick auf die Entität wird die Profilseite des Benutzers oder des Geräts geöffnet. Das Profil bietet Ihnen umfassende Details zu der Entität, deren Versionsgeschichte und verknüpfte Netzwerkaktivität, die aus AD stammt. 
 
-## <a name="updating-personal-data"></a>Aktualisieren von personenbezogenen Daten 
+## <a name="updating-personal-data"></a>Aktualisieren personenbezogener Daten 
 
 Personenbezogene Daten zu Benutzern und Entitäten in ATA stammen aus dem Objekt des Benutzers im AD Ihrer Organisation. Aus diesem Grund werden alle Änderungen am Benutzerprofil AD in ATA übernommen. 
 
@@ -47,7 +47,7 @@ Gehen Sie folgendermaßen vor, um die benutzerspezifischen Daten dauerhaft aus d
 
 Verwenden Sie ATA-GDPR-Datenbankskripts, um Entitäten und Aktivitätsdaten von Entitäten zu löschen. Dies wird in den folgenden Abschnitten beschrieben.
 
-### <a name="delete-entities"></a>Löschen von Einträgen
+### <a name="delete-entities"></a>Löschen von Entitäten
 
 Diese Aktion löscht eine Entität endgültig aus der ATA-Datenbank. Wenn Sie diesen Befehl ausführen möchten, stellen Sie den Befehlsnamen `deleteAccount` und `SamName`, `UpnName` oder `GUID` für den Computer oder Benutzernamen bereit, die Sie löschen möchten. Beispiel: 
 
@@ -80,11 +80,11 @@ ATA sammelt anonymisierte systemgenerierte Protokolle zu jeder Bereitstellung un
 
 Weitere Informationen finden Sie unter [Manage system-generated logs (Verwalten von systemgenerierten Protokollen)](manage-telemetry-settings.md).
 
-So deaktivieren Sie das Erfassen von Daten:
+So deaktivieren Sie die Datensammlung:
 
 1. Melden Sie sich bei der ATA-Konsole an, klicken Sie auf der Symbolleiste auf die drei Punkte, und wählen Sie **Info** aus. 
 2. Deaktivieren Sie das Kontrollkästchen für **Senden Sie uns Nutzungsinformationen, um uns bei der Verbesserung der Benutzerfreundlichkeit zu unterstützen**. 
 
-## <a name="additional-resources"></a>Weitere Ressourcen
+## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - Informationen zur Vertrauensstellung und Konformität von ATA finden Sie im [Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) und auf der Website zur [Microsoft 365-GDPR-Konformität](https://docs.microsoft.com/microsoft-365/compliance/compliance-solutions-overview).

@@ -2,9 +2,9 @@
 title: Kennzeichnen von sensiblen Konten mit ATA
 description: Informationen zum Markieren von sensiblen Konten mit Advanced Threat Analytics (ATA)
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 6/14/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 40a1c5c4-b8d6-477c-8ae5-562b37661624
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 4897bee445099b21dabac7ffbbbf3e607254b237
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 81924146012b02464f435904593c930eda9f77b9
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414164"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774994"
 ---
 # <a name="tag-sensitive-accounts"></a>Kennzeichnen von sensiblen Konten
 
@@ -32,7 +32,7 @@ Sie können Gruppen oder Konten manuell als sensibel markieren, um den Erkennung
 
     ![ATA-Entitätstags](media/entity-tags.png)
 
-3.  Geben Sie im Abschnitt **Sensibel** die Namen der **sensiblen Konten** und **sensiblen Gruppen** ein, und klicken Sie anschließend auf das Zeichen **+** , um diese hinzuzufügen.
+3.  Geben Sie im Abschnitt **Sensibel** die Namen der **sensiblen Konten** und **sensiblen Gruppen** ein, und klicken Sie anschließend auf das Zeichen **+**, um diese hinzuzufügen.
 
     ![Beispiel: sensibles ATA-Konto](media/sensitive-account-sample.png)
 
@@ -45,23 +45,23 @@ Sie können Gruppen oder Konten manuell als sensibel markieren, um den Erkennung
 
 Die Gruppen in der folgenden Liste werden von ATA als „Sensibel“ eingestuft. Jede Entität, die Mitglied dieser Gruppen ist, wird als sensibel angesehen:
 
--   Administratoren
+-   Administrators
 -   Hauptbenutzer
 -   Konten-Operatoren
 -   Server-Operatoren
--   Druckoperatoren
+-   Druck-Operatoren
 -   Sicherungsoperatoren
 -   Replikatoren
 -   Remotedesktopbenutzer 
 -   Netzwerkkonfigurations-Operatoren 
 -   Eingehende Gesamtstruktur-Vertrauensstellung
--   Domänen-Admins
+-   Domänenadministratoren
 -   Domänencontroller
 -   Gruppenrichtlinienersteller-Besitzer 
 -   Schreibgeschützte Domänencontroller 
 -   Schreibgeschützte Domänencontroller der Organisation 
 -   Schema-Admins 
--   Organisations-Admins
+-   Organisationsadministratoren
      
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

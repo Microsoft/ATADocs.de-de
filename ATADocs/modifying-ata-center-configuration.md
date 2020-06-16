@@ -2,21 +2,21 @@
 title: Ändern der ATA Center-Konfiguration von Advanced Threat Analytics
 description: Beschreibt, wie die IP-Adresse, der Port, die URL der Konsole oder das Zertifikat für ATA Center geändert werden.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 498eea7cfe1393bd0b616fc5cfbb11bd18334f8f
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
-ms.translationtype: HT
+ms.openlocfilehash: 13fbdf45be1eb23ee9369a2508163a103db7d765
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414011"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775113"
 ---
 # <a name="modifying-the-ata-center-configuration"></a>Bearbeiten der ATA Center-Konfiguration
 
@@ -49,7 +49,7 @@ Die URL wird in den folgenden Szenarios verwendet:
    > [!NOTE]
    > Wenn Sie eine benutzerdefinierte IP-Adresse eingegeben haben, können Sie erst auf **Aktivieren** klicken, nachdem die IP-Adresse auf dem ATA Center-Server installiert wurde.
     
-3. Warten Sie, bis die ATA-Gateways synchronisiert wurden. Sie verfügen jetzt über zwei mögliche URLs, über die auf die ATA-Konsole zugegriffen werden kann. Solange ein ATA-Gateway eine Verbindung über die ursprüngliche URL herstellen kann, wird die neue nicht verwendet.
+3. Warten Sie, bis die ATA-Gateways synchronisiert wurden. Sie verfügen jetzt über zwei mögliche URLs, über die Sie auf die ATA-Konsole zugreifen können. Solange ein ATA-Gateway eine Verbindung über die ursprüngliche URL herstellen kann, wird die neue nicht verwendet.
 
 4. Klicken Sie, nachdem alle ATA-Gateways mit der aktualisierten Konfiguration synchronisiert wurden, auf der Konfigurationsseite des Centers auf die Schaltfläche **Aktivieren**, um die neue URL zu aktivieren. Bei der Aktivierung der neuen URL verwenden die ATA-Gateways nicht die neue URL für den Zugriff auf ATA Center. Nach dem Herstellen der Verbindung mit dem ATA Center-Dienst ruft das ATA-Gateway die neueste Konfiguration ab und verfügt nur noch über die neue URL für die ATA-Konsole. 
 
@@ -68,7 +68,7 @@ Die URL wird in den folgenden Szenarios verwendet:
 
 Ersetzen Sie das Zertifikat wie folgt:
 
-1. Bevor das aktuelle Zertifikat abläuft, erstellen Sie ein neues Zertifikat, und stellen Sie sicher, dass es auf dem ATA Center-Server installiert ist. <br></br>Es wird empfohlen, dass Sie ein Zertifikat von einer internen Zertifizierungsstelle auswählen. Es ist jedoch auch möglich, ein neues selbstsigniertes Zertifikat zu erstellen. Weitere Informationen finden Sie unter [New-SelfSignedCertificate](https://technet.microsoft.com/itpro/powershell/windows/pkiclient/new-selfsignedcertificate).
+1. Bevor das aktuelle Zertifikat abläuft, erstellen Sie ein neues Zertifikat, und stellen Sie sicher, dass es auf dem ATA Center-Server installiert ist. <br></br>Es wird empfohlen, dass Sie ein Zertifikat von einer internen Zertifizierungsstelle auswählen. Es ist jedoch auch möglich, ein neues selbstsigniertes Zertifikat zu erstellen. Weitere Informationen finden Sie unter [New-selfsignedcertificate](https://technet.microsoft.com/itpro/powershell/windows/pkiclient/new-selfsignedcertificate).
 
 2. Wählen Sie in den ATA-Einstellungen unter **Center** dieses neu erstellte Zertifikat aus. Zu diesem Zeitpunkt ist der ATA Center-Dienst noch an das ursprüngliche Zertifikat gebunden. 
 

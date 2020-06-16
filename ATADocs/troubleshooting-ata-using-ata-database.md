@@ -2,9 +2,9 @@
 title: Problembehandlung bei Advanced Threat Analytics mithilfe der Datenbank
 description: Beschreibt die Verwendung der ATA-Datenbank zum Behandeln von Problemen.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 377a3c81-5c1d-486f-8942-85249aacf560
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1efc5aee15527212a6f2eb53c147fe8fa1d62ea3
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 269646c7547b0a9a3538405a4180d063e27e0455
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414215"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774909"
 ---
 # <a name="troubleshooting-ata-using-the-ata-database"></a>Behandeln von Problemen mit ATA mithilfe der ATA-Datenbank
 
@@ -35,7 +35,7 @@ Die Datenbank lässt sich standardmäßig und am einfachsten über die Mongo-She
 
 > [!div class="mx-tableFixed"]
 > 
-> |Vorgehensweise...|Syntax|Hinweise|
+> |So wird es gemacht|Syntax|Notizen|
 > |-------------|----------|---------|
 > |Suchen nach Sammlungen in der Datenbank.|`show collections`|Hilfreich als End-to-End-Test, um zu überprüfen, ob Datenverkehr in die Datenbank geschrieben und das Ereignis 4776 von ATA empfangen wird.|
 > |Abrufen der Details eines Benutzers, eines Computers oder einer Gruppe (UniqueEntity), z. B. eine Benutzer-ID.|`db.UniqueEntity.find({CompleteSearchNames: "<name of entity in lower case>"})`||
@@ -48,7 +48,7 @@ Das folgende Beispiel enthält Beispielcode mit der zuvor angegebenen Syntax. We
 
 `db.Ntlms_<closest date>.find({SourceAccountId: "123bdd24-b269-h6e1-9c72-7737as875351"})`
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 - [Voraussetzungen für ATA](ata-prerequisites.md)
 - [ATA-Kapazitätsplanung](ata-capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)

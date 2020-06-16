@@ -4,7 +4,7 @@ description: Beschreibt die Voraussetzungen für eine erfolgreiche Bereitstellun
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,14 +12,14 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 94d30c768273b51aef0e8b7a75affbf2b5db85df
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 1fe38bb767dee48454e10007d1225904ae52e4e2
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79412073"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84773039"
 ---
-# <a name="ata-prerequisites"></a>ATA-Voraussetzungen
+# <a name="ata-prerequisites"></a>Voraussetzungen für ATA
 
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -29,7 +29,7 @@ In diesem Artikel werden die Voraussetzungen für eine erfolgreiche Bereitstellu
 > Informationen zum Planen von Ressourcen und Kapazitäten finden Sie unter [ATA-Kapazitätsplanung](ata-capacity-planning.md).
 
 
-ATA besteht aus ATA Center, dem ATA-Gateway und/oder dem ATA-Lightweight-Gateway. Weitere Informationen zu den ATA-Komponenten finden Sie unter [ATA-Architektur](ata-architecture.md).
+ATA besteht aus ATA Center, dem ATA-Gateway und/oder dem ATA-Lightweight-Gateway. Weitere Informationen zu ATA-Komponenten finden Sie unter [ATA-Architektur](ata-architecture.md).
 
 Das ATA-System arbeitet auf der Gesamtstrukturbegrenzung von Active Directory und unterstützt die Gesamtstruktur-Funktionsebene (Forest Functional Level; FFL) von Windows 2003 und höher.
 
@@ -42,11 +42,11 @@ Vorbereitungen: in diesem Abschnitt werden die Informationen aufgelistet, die [S
 
 [ATA-Lightweight-Gateway:](#ata-lightweight-gateway-requirements) In diesem Abschnitt sind die Hardware- und Softwareanforderungen für das ATA-Lightweight-Gateway aufgeführt.
 
-[ATA-Konsole:](#ata-console) In diesem Abschnitt werden die Browseranforderungen für die Ausführung der ATA-Konsole aufgeführt.
+[ATA-Konsole](#ata-console): In diesem Abschnitt werden die Browseranforderungen für die Ausführung der ATA-Konsole aufgeführt.
 
 ![ATA-Architekturdiagramm](media/ATA-architecture-topology.jpg)
 
-## <a name="before-you-start"></a>Vorbereitungen
+## <a name="before-you-start"></a>Vorbereitung
 In diesem Abschnitt werden die Informationen aufgeführt, die Sie sammeln sollten, und Konten und Netzwerkentitäten genannt, die vor der ATA-Installation vorhanden sein sollten.
 
 
@@ -93,7 +93,7 @@ Die Installation von ATA Center als virtueller Computer wird unterstützt.
 |Anderer Virtualisierungshost|Informieren Sie sich in der Dokumentation des Herstellers, wie Sie sicherstellen, dass der Arbeitsspeicher zu jedem Zeitpunkt vollständig dem virtuellen Computer zugewiesen ist. |
 |
 
-Wenn Sie ATA Center als virtuellen Computer ausführen, fahren Sie vor dem Erstellen eines neuen Prüfpunkts den Server herunter, um eine mögliche Beschädigung der Datenbank zu verhindern.
+Wenn Sie ATA Center als virtuellen Computer ausführen, fahren Sie vor dem Erstellen eines neuen Prüfpunkts den Server herunter, um eine potenzielle Beschädigung der Datenbank zu verhindern.
 
 ### <a name="server-specifications"></a>Serverspezifikationen
 
@@ -121,17 +121,17 @@ In der folgenden Tabelle sind die Ports aufgelistet, die mindestens geöffnet we
 
 |Protokoll|Transport|Port|Zu/Von|Richtung|
 |------------|-------------|--------|-----------|-------------|
-|**SSL** (ATA-Kommunikation)|TCP|443|ATA-Gateway|Eingehende|
-|**HTTP** (optional)|TCP|80|Unternehmensnetzwerk|Eingehende|
-|**HTTPS**|TCP|443|Unternehmensnetzwerk und ATA-Gateway|Eingehende|
-|**SMTP** (optional)|TCP|25|SMTP-Server|Ausgehende|
-|**SMTPS** (optional)|TCP|465|SMTP-Server|Ausgehende|
-|**Syslog** (optional)|TCP/UPS/TLS (konfigurierbar)|514 (Standard)|Syslog-Server|Ausgehende|
-|**LDAP**|TCP und UDP|389|Domänencontroller|Ausgehende|
-|**LDAPS** (optional)|TCP|636|Domänencontroller|Ausgehende|
-|**DNS**|TCP und UDP|53|DNS-Server|Ausgehende|
-|**Kerberos** (optional, wenn eine Domäne verknüpft ist)|TCP und UDP|88|Domänencontroller|Ausgehende|
-|**Windows Time** (optional, wenn eine Domäne verknüpft ist)|UDP|123|Domänencontroller|Ausgehende|
+|**SSL** (ATA-Kommunikation)|TCP|443|ATA-Gateway|Eingehend|
+|**HTTP** (optional)|TCP|80|Unternehmensnetzwerk|Eingehend|
+|**Http**|TCP|443|Unternehmensnetzwerk und ATA-Gateway|Eingehend|
+|**SMTP** (optional)|TCP|25|SMTP-Server|Ausgehend|
+|**SMTPS** (optional)|TCP|465|SMTP-Server|Ausgehend|
+|**Syslog** (optional)|TCP/UPS/TLS (konfigurierbar)|514 (Standard)|Syslog-Server|Ausgehend|
+|**LDAP**|TCP und UDP|389|Domänencontroller|Ausgehend|
+|**LDAPS** (optional)|TCP|636|Domänencontroller|Ausgehend|
+|**DNS**|TCP und UDP|53|DNS-Server|Ausgehend|
+|**Kerberos** (optional, wenn eine Domäne verknüpft ist)|TCP und UDP|88|Domänencontroller|Ausgehend|
+|**Windows Time** (optional, wenn eine Domäne verknüpft ist)|UDP|123|Domänencontroller|Ausgehend|
 
 > [!NOTE]
 > LDAP ist erforderlich, um die Anmeldeinformationen, die zwischen den ATA-Gateways und den Domänencontrollern verwendet werden sollen, zu testen. Bei dem Test zwischen ATA Center und einem Domänencontroller wird die Gültigkeit dieser Anmeldeinformationen überprüft. Danach verwendet ATA-Gateway LDAP im Rahmen seines normalen Auflösungsprozesses.
@@ -144,12 +144,12 @@ Um die Installation und Bereitstellung von ATA zu beschleunigen, können Sie wä
 Stellen Sie sicher, dass das ATA-Center und die ATA-Gateways Zugriff auf den CRL-Verteilungspunkt haben. Wenn sie keinen Zugriff auf das Internet haben, führen Sie [das Verfahren zum manuellen Importieren einer Zertifikatsperrliste](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx) durch. Achten Sie dabei darauf, alle CRL-Verteilungspunkte für die gesamte Kette zu installieren.
 
 Ein Zertifikat muss Folgendes besitzen:
--   Einen privaten Schlüssel
+-   Ein privater Schlüssel
 -   Den Anbietertyp „Kryptografiedienstanbieter“ (CSP) oder „Schlüsselspeicheranbieter“ (KSP)
 -   Eine Länge von 2048 Bits für öffentliche Schlüssel
 -   Einen festgelegten Wert für die Flags KeyEncipherment und ServerAuthentication
 -   Den KeySpec- bzw. KeyNumber-Wert „KeyExchange“ (AT\_KEYEXCHANGE).
-    Der Wert "Signature" (bei\_Signatur) wird *nicht* unterstützt. 
+    Der Wert "Signature" (bei \_ Signatur) wird *nicht* unterstützt. 
 -   Alle Gatewaycomputer müssen in der Lage sein, das ausgewählte Center Zertifikat vollständig zu validieren und zu vertrauen.
 
 Sie können beispielsweise den **Standardwebserver** oder **Computervorlagen** verwenden.
@@ -177,7 +177,7 @@ Dies können Sie überprüfen, indem Sie das folgende Windows PowerShell-Cmdlet 
 Informationen zur Verwendung von virtuellen Computern mit dem ATA-Gateway finden Sie unter [Konfigurieren der Portspiegelung](configure-port-mirroring.md).
 
 > [!NOTE]
-> Mindestens 5 GB Speicherplatz wird benötigt, 10 GB wird empfohlen. Dies umfasst den Speicherplatz, der für die ATA-Binärdateien, ATA-Protokolle und [Leistungsprotokolle](troubleshooting-ata-using-perf-counters.md) benötigt wird.
+> Mindestens 5 GB Speicherplatz wird benötigt, 10 GB wird empfohlen. Dies umfasst den Speicherplatz, der für die ATA-Binärdateien, ATA-Protokolle und [Leistungs Protokolle](troubleshooting-ata-using-perf-counters.md)benötigt wird.
 
 ### <a name="server-specifications"></a>Serverspezifikationen
 Um eine optimale Leistung zu erzielen, legen Sie die **Energieoption** des ATA-Gateways auf **Hohe Leistung** fest.<br>
@@ -217,18 +217,18 @@ In der folgenden Tabelle sind die Ports aufgeführt, die für den Verwaltungsada
 
 |Protokoll|Transport|Port|Zu/Von|Richtung|
 |------------|-------------|--------|-----------|-------------|
-|LDAP|TCP und UDP|389|Domänencontroller|Ausgehende|
-|Sicheres LDAP (LDAPS)|TCP|636|Domänencontroller|Ausgehende|
-|LDAP an globalen Katalog|TCP|3268|Domänencontroller|Ausgehende|
-|LDAPs an globalen Katalog|TCP|3269|Domänencontroller|Ausgehende|
-|Kerberos|TCP und UDP|88|Domänencontroller|Ausgehende|
-|Netlogon (SMB, CIFS, SAM-R)|TCP und UDP|445|Alle Geräte im Netzwerk|Ausgehende|
-|Windows-Zeitdienst|UDP|123|Domänencontroller|Ausgehende|
-|DNS|TCP und UDP|53|DNS-Server|Ausgehende|
+|LDAP|TCP und UDP|389|Domänencontroller|Ausgehend|
+|Sicheres LDAP (LDAPS)|TCP|636|Domänencontroller|Ausgehend|
+|LDAP an globalen Katalog|TCP|3268|Domänencontroller|Ausgehend|
+|LDAPs an globalen Katalog|TCP|3269|Domänencontroller|Ausgehend|
+|Kerberos|TCP und UDP|88|Domänencontroller|Ausgehend|
+|Netlogon (SMB, CIFS, SAM-R)|TCP und UDP|445|Alle Geräte im Netzwerk|Ausgehend|
+|Windows-Zeitdienst|UDP|123|Domänencontroller|Ausgehend|
+|DNS|TCP und UDP|53|DNS-Server|Ausgehend|
 |NTLM über RPC|TCP|135|Alle Geräte im Netzwerk|Beide|
 |NetBIOS|UDP|137|Alle Geräte im Netzwerk|Beide|
-|SSL|TCP|443|ATA Center|Ausgehende|
-|Syslog (optional)|UDP|514|SIEM-Server|Eingehende|
+|SSL|TCP|443|ATA Center|Ausgehend|
+|Syslog (optional)|UDP|514|SIEM-Server|Eingehende Verbindungen|
 
 
 > [!NOTE]
@@ -261,7 +261,7 @@ Während der Installation wird .NET Framework 4.6.1 installiert und verursacht m
 
 
 > [!NOTE]
-> Mindestens 5 GB Speicherplatz wird benötigt, 10 GB wird empfohlen. Dies umfasst den Speicherplatz, der für die ATA-Binärdateien, ATA-Protokolle und [Leistungsprotokolle](troubleshooting-ata-using-perf-counters.md) benötigt wird.
+> Mindestens 5 GB Speicherplatz wird benötigt, 10 GB wird empfohlen. Dies umfasst den Speicherplatz, der für die ATA-Binärdateien, ATA-Protokolle und [Leistungs Protokolle](troubleshooting-ata-using-perf-counters.md)benötigt wird.
 
 ### <a name="server-specifications"></a>Serverspezifikationen
 
@@ -290,12 +290,12 @@ In der folgenden Tabelle sind die Ports aufgeführt, die für das ATA-Lightweigh
 
 |Protokoll|Transport|Port|Zu/Von|Richtung|
 |------------|-------------|--------|-----------|-------------|
-|DNS|TCP und UDP|53|DNS-Server|Ausgehende|
+|DNS|TCP und UDP|53|DNS-Server|Ausgehend|
 |NTLM über RPC|TCP|135|Alle Geräte im Netzwerk|Beide|
 |NetBIOS|UDP|137|Alle Geräte im Netzwerk|Beide|
-|SSL|TCP|443|ATA Center|Ausgehende|
-|Syslog (optional)|UDP|514|SIEM-Server|Eingehende|
-|Netlogon (SMB, CIFS, SAM-R)|TCP und UDP|445|Alle Geräte im Netzwerk|Ausgehende|
+|SSL|TCP|443|ATA Center|Ausgehend|
+|Syslog (optional)|UDP|514|SIEM-Server|Eingehende Verbindungen|
+|Netlogon (SMB, CIFS, SAM-R)|TCP und UDP|445|Alle Geräte im Netzwerk|Ausgehend|
 
 > [!NOTE]
 > Als Teil des vom ATA-Lightweight-Gateway durchgeführten Auflösungsprozesses müssen die folgenden eingehenden Ports für Geräte im Netzwerk geöffnet werden.
@@ -322,7 +322,7 @@ Der Zugriff auf die ATA-Konsole erfolgt über einen Browser. Folgende Browser un
 - [Auswählen des richtigen ATA-Gatewaytyps](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 - [Tool zur Bemessung von ATA-Gateways](https://aka.ms/atasizingtool)
 - [ATA-Architektur](ata-architecture.md)
 - [Installieren von ATA](install-ata-step1.md)

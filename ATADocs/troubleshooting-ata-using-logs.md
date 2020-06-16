@@ -2,9 +2,9 @@
 title: Problembehandlung bei Advanced Threat Analytics mithilfe der Protokolle
 description: Beschreibt die Verwendung der ATA-Protokolle zum Behandeln von Problemen.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 8/27/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: b8ad5511-8893-4d1d-81ee-b9a86e378347
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 01b13916f3cdcba1d1aa166c8998d7d91bbd2bfb
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 72f5371689281a7710455b9bc49b2182415b795b
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414249"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774892"
 ---
 # <a name="troubleshooting-ata-using-the-ata-logs"></a>Behandeln von Problemen mit ATA mithilfe der ATA-Protokolle
 
@@ -28,7 +28,7 @@ Die ATA-Protokolle geben Einblick in die Aktivitäten der einzelnen Komponenten 
 ## <a name="ata-gateway-logs"></a>Protokolle des ATA-Gateways
 In diesem Abschnitt gilt jeder Verweis auf das ATA-Gateway ebenfalls für das ATA-Lightweight-Gateway. 
 
-Die Protokolle des ATA-Gateways befinden sich im Unterordner **Protokolle** im Installationsordner von ATA. Der Standardpfad lautet: **C:\Programme\Microsoft Advanced Threat Analytics\\** . Dieser ist im Standardinstallationsverzeichnis unter **C:\Programme\Microsoft Advanced Threat Analytics\Gateway\Logs** zu finden.
+Die Protokolle des ATA-Gateways befinden sich in einem Unterordner mit dem Namen **Logs** , in dem ATA installiert ist. der Standard Speicherort ist: **c:\Programme\Microsoft Advanced Threat Analytics \\ **. Der Standard Speicherort für die Installation finden Sie unter: **c:\Programme\Microsoft Advanced Threat analytics\gateway\logs**.
 
 Für das ATA-Gateway sind folgende Protokolle verfügbar:
 
@@ -67,7 +67,7 @@ Für ATA Center sind folgende Protokolle verfügbar:
 
 
 ## <a name="ata-deployment-logs"></a>ATA-Bereitstellungsprotokolle
-Die ATA-Bereitstellungsprotokolle befinden sich im temporären Verzeichnis des Benutzers, der das Produkt installiert hat. Der Standard Speicherort für die Installation finden Sie unter: **c:\Benutzer\<angemeldeter Benutzer > \AppData\Local\Temp** (oder ein Verzeichnis oberhalb von% Temp%).
+Die ATA-Bereitstellungsprotokolle befinden sich im temporären Verzeichnis des Benutzers, der das Produkt installiert hat. Der Standard Speicherort für die Installation finden Sie unter: **c:\Users \<logged-in-user> \AppData\Local\Temp** (oder ein Verzeichnis oberhalb von% Temp%).
 
 Bereitstellungsprotokolle von ATA Center:
 
@@ -88,7 +88,7 @@ Bereitstellungsprotokolle für ATA-Gateway und ATA-Lightweight-Gateway:
 > Zusätzlich zu den hier erwähnten Bereitstellungsprotokollen gibt es andere Protokolle, die mit „Microsoft Advanced Threat Analytics“ beginnen und zusätzliche Informationen zum Bereitstellungsprozess bieten können.
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 - [Voraussetzungen für ATA](ata-prerequisites.md)
 - [ATA-Kapazitätsplanung](ata-capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)

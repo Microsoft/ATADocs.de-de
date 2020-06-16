@@ -2,9 +2,9 @@
 title: Ausschließen von Entitäten von Erkennungen in Advanced Threat Analytics
 description: Beschreibt, wie Sie verhindern, dass ATA bestimmte Entitätsaktivitäten als verdächtige Aktivitäten erkennt.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 344c0f33-45e1-42e2-a051-f722a4504531
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 7fad2868ba78570e983b2eae811cfe2ed9e6d182
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 84e4b6e5951bf16281c60c87e46ce1a799795c55
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79410476"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775341"
 ---
 # <a name="excluding-entities-from-detections"></a>Ausschließen von Entitäten von der Erkennung
 
@@ -31,7 +31,7 @@ So schließen Sie Entitäten aus, damit diese keine Warnungen in ATA auslösen:
 
 Es gibt zwei Möglichkeiten, Entitäten ausschließen: in der verdächtigen Aktivität selbst oder über die Registerkarte **Ausschlüsse** auf der Seite **Konfiguration**.
 
-- **In der verdächtigen Aktivität**: Wenn Sie eine Warnung zu einer Aktivität eines Benutzers, eines Computers oder einer IP-Adresse erhalten, der bzw. die diese bestimmte Aktivität ausführen darf und dies möglicherweise häufig tut, klicken Sie in der Zeitachse mit verdächtigen Aktivitäten auf diese Entität, und wählen Sie **Schließen und ausschließen**. <br></br>Dadurch wird der Benutzer, der Computer oder die IP-Adresse der Ausschlussliste für diese verdächtige Aktivität hinzugefügt. Die verdächtige Aktivität wird geschlossen und in der **Zeitachse für verdächtige Aktivitäten** nicht mehr in der Liste der **offenen** Ereignisse aufgeführt.
+- **In der verdächtigen Aktivität**: Wenn Sie eine Warnung zu einer Aktivität eines Benutzers, eines Computers oder einer IP-Adresse erhalten, der bzw. die diese bestimmte Aktivität ausführen darf und dies möglicherweise häufig tut, klicken Sie in der Zeitachse mit verdächtigen Aktivitäten auf diese Entität, und wählen Sie **Schließen und ausschließen**. <br></br>Dadurch wird der Benutzer, der Computer oder die IP-Adresse der Ausschlussliste für diese verdächtige Aktivität hinzugefügt. Die verdächtige Aktivität wird geschlossen, und Sie wird nicht mehr in der Liste **geöffnete** Ereignisse auf der **Zeitachse für verdächtige Aktivitäten**aufgeführt.
 
     ![Ausschließen einer Entität](./media/exclude-in-sa.png)
 
@@ -56,6 +56,6 @@ Wenn Sie die Möglichkeit haben, eine IP-Adresse oder einen Computer auszuschlie
 > Die Seiten für die Konfiguration können nur von ATA-Administratoren bearbeitet werden.
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Ändern der ATA-Konfiguration](modifying-ata-center-configuration.md)

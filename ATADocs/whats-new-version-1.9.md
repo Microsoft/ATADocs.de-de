@@ -2,9 +2,9 @@
 title: Neuerungen in ATA 1.9
 description: Listet Neuerungen sowie bekannte Probleme in ATA 1.9 auf.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/25/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 51de491c-49ba-4aff-aded-cc133a8ccf0b
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 40193c0aa8c0ee10dd129d4153dd63df9f8eb926
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 261d6c5253dc697ae50523c24ccb34feba75a4e6
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79412804"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774671"
 ---
 # <a name="whats-new-in-ata-version-19"></a>Neuerungen in ATA 1.9
 
@@ -60,7 +60,7 @@ Die vorliegenden Anmerkungen zu dieser Version enthalten Informationen zu Update
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 [Aktualisieren von ATA auf Version 1.9: Migrationshandbuch](ata-update-1.9-migration-guide.md)

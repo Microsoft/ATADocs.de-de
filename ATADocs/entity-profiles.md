@@ -2,9 +2,9 @@
 title: Arbeiten mit Entitäts Profilen in der Advanced Threat Analytics-Konsole
 description: Informationen zum Untersuchen von Entitäten über die Anzeige „Benutzerprofile“ in der ATA-Konsole
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/25/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 581a3257-32dc-453f-b84e-b9f99186f5d3
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: de4916e94593dd823c7cf754874c7d5c3eed7135
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 3b2e2d5a9eee8d18b6d182afb15453a8809db605
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79412345"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775402"
 ---
 # <a name="investigating-entity-profiles"></a>Untersuchen von Entitätsprofilen
 
@@ -68,13 +68,13 @@ Im Abschnitt **Benutzerzugriffssteuerung** werden die Sicherheitseinstellungen f
 
 ## <a name="view-lateral-movement-paths"></a>Anzeigen von Lateral Movement-Pfaden
 
-Wenn Sie auf die Registerkarte **Lateral Movements-Pfade** klicken, wird Ihnen eine vollständige, dynamische und klickbare Imagemap angezeigt, in der die Lateral Movement-Pfade, die im Zusammenhang mit diesem Benutzer stehen, visuell dargestellt werden, die verwendet werden können, um in Ihr Netzwerk einzudringen.
+Durch Klicken auf die Registerkarte **lateral Movement-Pfade** können Sie eine vollständig dynamische und Klick Bare Karte anzeigen, die Ihnen eine visuelle Darstellung der lateral Movement-Pfade zu und von diesem Benutzer bietet, die verwendet werden können, um in Ihr Netzwerk einzudringen.
 
 Die Map enthält eine Liste, die Auskunft darüber gibt, wie viele Hops zwischen Computern oder Benutzern notwendig wären, damit ein Angreifer ein sensibles Konto gefährden kann. Wenn der Benutzer selbst über ein sensibles Konto verfügt, können Sie zudem sehen, wie viele Ressourcen und Konten direkt mit dem Konto verbunden sind. Weitere Informationen erhalten Sie unter [Lateral Movement-Pfade](use-case-lateral-movement-path.md). 
 
  ![Lateral Movement-Pfade zum Benutzerprofil](media/user-profile-lateral-movement-paths.png)
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
       

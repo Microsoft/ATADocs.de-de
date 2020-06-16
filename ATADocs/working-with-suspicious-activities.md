@@ -2,9 +2,9 @@
 title: Arbeiten mit verdächtigen Aktivitäten in Advanced Threat Analytics
 description: Beschreibt, wie Sie von ATA identifizierte verdächtige Aktivitäten überprüfen.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 4/29/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 377f7243a26821f07852805ce73f8d5860023dbd
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: f4f697e32d3c89c77f1564d0b9b43cb04ed8ab30
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414402"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774637"
 ---
 # <a name="working-with-suspicious-activities"></a>Arbeiten mit verdächtigen Aktivitäten
 
@@ -35,7 +35,7 @@ Zu jeder verdächtigen Aktivität stehen folgende Informationen zur Verfügung:
 
 -   Schweregrad der verdächtigen Aktivitäten: „Hoch“, „Mittel“ oder „Niedrig“
 
--   Staus: „Offen“, „Aufgelöst“ oder „Unterdrückt“.
+-   Status: „Offen“, „Aufgelöst“ oder „Unterdrückt“.
 
 -   Möglichkeit für Folgendes:
 
@@ -54,7 +54,7 @@ So filtern Sie die Liste der verdächtigen Aktivitäten
 
 1.  Wählen Sie auf der linken Seite des Bildschirms im Bereich **Filtern nach** eine der folgenden Optionen aus: **Alle**, **Offen**, **Geschlossen** oder **Unterdrückt**.
 
-2.  Um die Liste weiter zu filtern, wählen Sie **Hoch**, **Mittel** oder **Niedrig** aus.
+2.  Um die Liste weiter zu filtern, wählen Sie **hoch**, **Mittel**oder **niedrig**aus.
 
 **Schweregrad von verdächtigen Aktivitäten**
 
@@ -96,10 +96,10 @@ Klicken Sie dafür auf die drei Punkte in der oberen rechten Ecke einer besonder
 
 
 ## <a name="related-videos"></a>Verwandte Videos
-- [Beitritt zur Sicherheits Community](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
+- [Joining the security community](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community) (Der Sicherheitscommunity beitreten)
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 - [Verdächtige ATA-Aktivitäten – Playbook](https://aka.ms/ataplaybook)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Ändern der ATA-Konfiguration](modifying-ata-center-configuration.md)

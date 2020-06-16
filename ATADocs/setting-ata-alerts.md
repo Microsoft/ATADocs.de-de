@@ -2,9 +2,9 @@
 title: Einrichten von Advanced Threat Analytics-Benachrichtigungen
 description: Beschreibt, wie ATA-Warnungen festgelegt werden, damit Sie bei verdächtigen Aktivitäten benachrichtigt werden.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 14cb7513-5dc8-49cb-b3e0-94f469c443dd
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 2c1ae942edbd904715b1ebb76f3b3ecd0720bc05
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 38f6fd58bb924b3dec8c03be80594fe93e523770
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79412872"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775011"
 ---
 # <a name="set-ata-notifications"></a>Festlegen von ATA-Benachrichtigungen
 
@@ -43,7 +43,7 @@ Um Benachrichtigungen zu erhalten, legen Sie folgende Parameter fest:
     > [!NOTE]
     > E-Mail-Benachrichtigungen über verdächtige Aktivitäten werden nur beim Erstellen der verdächtigen Aktivität gesendet.
 
-1. Geben Sie unter **Syslog-Benachrichtigungen** an, welche Benachrichtigungen an Ihren Syslog-Server gesendet werden sollen: neue verdächtige Aktivitäten, aktualisierte verdächtige Aktivitäten und neue Integritätsprobleme.
+1. Geben Sie unter **syslog-Benachrichtigungen**an, welche Benachrichtigungen an Ihren Syslog-Server gesendet werden sollen: neue verdächtige Aktivitäten, aktualisierte verdächtige Aktivitäten und neue Integritäts Probleme.
 1. Klicken Sie auf **Speichern**.
     
     ![ATA mail notification settings image](media/ata-mail-notification-settings.png)
@@ -51,5 +51,5 @@ Um Benachrichtigungen zu erhalten, legen Sie folgende Parameter fest:
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

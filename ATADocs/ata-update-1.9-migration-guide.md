@@ -2,9 +2,9 @@
 title: Migrations Handbuch zu Advanced Threat Analytics Update to 1,9
 description: Methoden zum Aktualisieren von ATA auf Version 1.9
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 03/25/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 2946310a-8e4e-48fc-9450-fc9647efeb22
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 69229a4c5f34a273d5c5a8854d7f209b9462b48f
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: f803f8c99ac3cfd7c36f113658f05d486b8192c8
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79413195"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775419"
 ---
 # <a name="updating-ata-to-version-19"></a>Aktualisieren von ATA auf Version 1.9
 
@@ -53,7 +53,7 @@ In der Migrationsversion kann die Datei nur für die Aktualisierung von ATA 1.8 
 
    - Wählen Sie auf der Seite **Willkommen** Ihre Sprache aus, und klicken Sie auf **Weiter**.
 
-   - Wenn Sie die automatischen Updates in Version 1.8 nicht aktiviert haben, werden Sie aufgefordert, für ATA die Verwendung von Microsoft Update für ATA einzurichten, um auf dem neuesten Stand zu bleiben.  Wählen Sie auf der Microsoft Update-Seite **Microsoft Update für die Suche nach Updates verwenden (empfohlen)** aus.
+   - Wenn Sie die automatischen Updates in Version 1.8 nicht aktiviert haben, werden Sie aufgefordert, für ATA die Verwendung von Microsoft Update für ATA einzurichten, um auf dem neuesten Stand zu bleiben.  Wählen Sie auf der Seite Microsoft Update die Option **Microsoft Update beim Suchen nach Updates verwenden (empfohlen) aus**.
      ![ATA-Aktualisierung](media/ata_ms_update.png)
      
      Dadurch werden die Windows-Einstellungen angepasst und Updates für ATA aktiviert. 
@@ -62,7 +62,7 @@ In der Migrationsversion kann die Datei nur für die Aktualisierung von ATA 1.8 
      
      ![Partielle ATA-Migration](media/partial-migration.png)
 
-   - Klicken Sie auf **Update**. Nachdem Sie auf „Aktualisieren“ geklickt haben, ist ATA bis zum Abschluss der Aktualisierung offline.
+   - Klicken Sie auf **Aktualisieren**. Nachdem Sie auf „Aktualisieren“ geklickt haben, ist ATA bis zum Abschluss der Aktualisierung offline.
 
 3. Nachdem das Update von ATA Center erfolgreich abgeschlossen wurde, klicken Sie auf **Starten**, um das Fenster **Updates** in der ATA-Konsole für die ATA-Gateways zu öffnen.
 
@@ -80,6 +80,6 @@ In der Migrationsversion kann die Datei nur für die Aktualisierung von ATA 1.8 
 > Wechseln Sie zum Installieren neuer ATA-Gateways zum Bildschirm **Gateways** , klicken Sie auf **gatewaysetup herunterladen** , um das ATA 1,9-gatewayinstallationspaket zu erhalten, und befolgen Sie die Anweisungen für die neue Gatewayinstallation [gemäß der Beschreibung Installieren Sie das ATA-Gateway](install-ata-step4.md).
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
