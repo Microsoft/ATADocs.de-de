@@ -4,7 +4,7 @@ description: Beschreibt, wie Sie Berichte in Azure ATP generieren können, um Ih
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 11/26/2018
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 2c2d6b1a-fc8c-4ff7-b07d-64ce6159f84d
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 74739e03bf4fdeb92175f9699701d47d6281d108
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: 85e86494a9547439c707e868b402a08bb0f706cc
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79414691"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775912"
 ---
 # <a name="azure-atp-reports"></a>Azure ATP-Berichte
 
@@ -27,13 +27,13 @@ ms.locfileid: "79414691"
 Um auf diese Berichtsseite zuzugreifen, klicken Sie auf das Berichtssymbol auf der Berichtsleiste: ![Berichtssymbol](./media/atp-report-icon.png).
 Folgende Berichte stehen zur Verfügung: 
 
-- **Zusammenfassungsbericht:** Der Zusammenfassungsbericht zeigt ein Dashboard des Status im System an. Sie können drei Registerkarten sehen: eine für eine **Zusammenfassung** dazu, was in Ihrem Netzwerk ermittelt wurde, eine mit dem Namen **Offene verdächtige Aktivitäten**, in der die verdächtigen Aktivitäten aufgelistet werden, auf die Sie achten müssen, und eine mit dem Namen **Offene Integritätsprobleme**, in der Integritätsprobleme mit Azure ATP aufgeführt sind, um die Sie sich kümmern sollten. Die aufgeführten verdächtigen Aktivitäten werden nach Typ unterteilt, so auch die Integritätsprobleme. 
+- **Zusammenfassungsbericht**: Der Zusammenfassungsbericht zeigt ein Dashboard des Status im System an. Sie können drei Registerkarten sehen: eine für eine **Zusammenfassung** dazu, was in Ihrem Netzwerk ermittelt wurde, eine mit dem Namen **Offene verdächtige Aktivitäten**, in der die verdächtigen Aktivitäten aufgelistet werden, auf die Sie achten müssen, und eine mit dem Namen **Offene Integritätsprobleme**, in der Integritätsprobleme mit Azure ATP aufgeführt sind, um die Sie sich kümmern sollten. Die aufgeführten verdächtigen Aktivitäten werden nach Typ unterteilt, so auch die Integritätsprobleme. 
 
-- **Änderung sensibler Gruppen:** Dieser Bericht führt jede Änderung an sensiblen Gruppen auf (z.B. Administratoren oder manuell markierte Konten oder Gruppen). Wenn Sie eigenständige Azure ATP-Sensoren verwenden, müssen Sie sicherstellen, dass [Ereignisse von Ihren Domänencontrollern an die eigenständigen Sensoren weitergeleitet werden](configure-event-forwarding.md), damit Sie einen vollständigen Bericht zu Ihren sensiblen Gruppen erhalten. 
+- **Änderung sensibler Gruppen**: Dieser Bericht führt jede Änderung an sensiblen Gruppen auf (z. B. Administratoren oder manuell markierte Konten oder Gruppen). Wenn Sie eigenständige Azure ATP-Sensoren verwenden, müssen Sie sicherstellen, dass [Ereignisse von Ihren Domänencontrollern an die eigenständigen Sensoren weitergeleitet werden](configure-event-forwarding.md), damit Sie einen vollständigen Bericht zu Ihren sensiblen Gruppen erhalten. 
 
-- **Kennwörter in Klartext offengelegt:** Einige Dienste verwenden das nicht gesicherte LDAP-Protokoll, um Kontoanmeldeinformationen in Nur-Text zu versenden. Dies kann sogar bei sensiblen Konten geschehen. Angreifer, die Ihren Netzwerkdatenverkehr überwachen, können diese Anmeldeinformationen abfangen und diese zu böswilligen Zwecken verwenden. In diesem Bericht werden alle Quellcomputer- und Kontokennwörter aufgeführt, die Azure ATP als „als Klartext gesendet“ ermittelt hat. 
+- **Kennwörter in Klartext offengelegt**: Einige Dienste verwenden das nicht sichere LDAP-Protokoll, um Kontoanmeldeinformationen als Nur-Text zu versenden. Dies kann sogar bei sensiblen Konten geschehen. Angreifer, die Ihren Netzwerkdatenverkehr überwachen, können diese Anmeldeinformationen abfangen und diese zu böswilligen Zwecken verwenden. In diesem Bericht werden alle Quellcomputer- und Kontokennwörter aufgeführt, die Azure ATP als „als Klartext gesendet“ ermittelt hat. 
 
-- **Lateral Movement-Pfade zu sensiblen Konten:** In diesem Bericht werden die sensiblen Konten aufgeführt, die über Lateral Movement-Pfade zur Verfügung gestellt werden. Weitere Informationen erhalten Sie unter [Lateral Movement-Pfade](use-case-lateral-movement-path.md). Dieser Bericht erfasst potenzielle Lateral Movement-Pfade, die im von Ihnen gewählten Berichtszeitraum erkannt wurden. 
+- **Lateral Movement-Pfade zu sensiblen Konten**: In diesem Bericht werden die sensiblen Konten aufgeführt, die über Lateral Movement-Pfade zur Verfügung gestellt werden. Weitere Informationen erhalten Sie unter [Lateral Movement-Pfade](use-case-lateral-movement-path.md). Dieser Bericht erfasst potenzielle Lateral Movement-Pfade, die im von Ihnen gewählten Berichtszeitraum erkannt wurden. 
 
 Es gibt zwei Möglichkeiten, einen Bericht zu generieren: entweder bei Bedarf oder durch Planen eines Berichts, der in regelmäßigen Abständen an Ihre E-Mail-Adresse gesendet wird.
 
@@ -58,8 +58,8 @@ So legen Sie einen geplanten Bericht fest:
    ![Häufigkeit des geplanten Berichts und E-Mail-Adresse](./media/sched-report1.png)
 
 
-## <a name="see-also"></a>Weitere Informationen:
-- [Voraussetzungen für Azure ATP](atp-prerequisites.md)
+## <a name="see-also"></a>Weitere Informationen
+- [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](atp-prerequisites.md)
 - [Azure ATP capacity planning (Azure ATP-Kapazitätsplanung)](atp-capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
 - [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-forwarding.md)
