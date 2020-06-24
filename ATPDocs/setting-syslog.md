@@ -4,7 +4,7 @@ description: Beschreibt, wie Azure ATP für den Versand von Benachrichtigungen (
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 09/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,24 +12,23 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: a2d29c9c-7ecb-4804-b74b-fde899b28648
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a6b1cfb304787fbed3d02968221e1eeada605712
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: 5a7d5fbaf2313b6876c2fbdcc6bde84aaa89cbd5
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79410934"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775878"
 ---
 # <a name="integrate-with-syslog"></a>Integration in Syslog
 
 > [!NOTE]
 > Die auf dieser Seite erläuterten Azure ATP-Features sind auch über das neue [Portal](https://portal.cloudappsecurity.com) zugänglich.
 
-Azure ATP kann Sie durch Senden der Benachrichtigungen an den Syslog-Server benachrichtigen und gibt Sicherheits- und Integritätswarnungen aus, wenn eine verdächtige Aktivität erkannt wird. Warnungen werden vom Azure ATP-Sensor, der die Aktivität erkannt hat, direkt an den Syslog-Server gesendet. 
-
+Azure ATP kann Sie über verdächtige Aktivitäten benachrichtigen, indem Sicherheits- und Integritätswarnungen über einen nominierten Sensor an Ihren Syslog-Server gesendet werden.
 
 Wenn Syslog-Benachrichtigungen aktiviert werden, lassen sich folgende Einstellungen vornehmen:
 
-   |Feld|Description|
+   |Feld|Beschreibung|
    |---------|---------------|
    |Sensor|Klicken Sie auf einen ausgewählten Sensor, der für das Aggregieren aller Syslog-Ereignisse und die anschließende Weiterleitung von diesen an Ihren SIEM-Server verantwortlich sein soll.|
    |Dienstendpunkt|Geben Sie den vollqualifizierten Domänennamen des Syslog-Servers ein, und ändern Sie optional die Portnummer (standardmäßig 514).|
@@ -38,38 +37,34 @@ Wenn Syslog-Benachrichtigungen aktiviert werden, lassen sich folgende Einstellun
 
 1. Vor dem Konfigurieren von Syslog-Benachrichtigungen sollten Sie gemeinsam mit dem zuständigen SIEM-Administrator folgende Angaben ermitteln:
 
-   -   FQDN oder IP-Adresse des SIEM-Servers
+    - FQDN oder IP-Adresse des SIEM-Servers
+    - Port, der vom SIEM-Server abgehört wird
+    - Transporttyp: UDP, TCP oder TLS (sicheres Syslog)
+    - Versandformat der Daten: RFC 3164 oder 5424
 
-   -   Port, der vom SIEM-Server abgehört wird
-
-   -   Transportprotokoll: UDP, TCP oder TLS (sicheres Syslog)
-
-   -   Versandformat der Daten: RFC 3164 oder 5424
-
-1. Öffnen Sie das Azure ATP-Portal. 
-2. Klicken Sie auf **Einstellungen**.
-3. Wählen Sie im Untermenü **Benachrichtigungen und Berichte** die Option **Benachrichtigung** aus. 
+1. Öffnen Sie das Azure ATP-Portal.
+1. Klicken Sie auf **Einstellungen**.
+1. Wählen Sie im Untermenü **Benachrichtigungen und Berichte** die Option **Benachrichtigung** aus.
 1. Klicken Sie unter **Syslog-Dienst** auf **Konfigurieren**.
-1. Wählen Sie den **Sensor** aus. 
+1. Wählen Sie den **Sensor** aus.
 1. Geben Sie die URL des **Dienstendpunkts** ein.
-1. Wählen Sie das **Transportprotokoll** (TCP oder UDP) aus. 
-1. Wählen Sie das Format (RFC 3164 oder RFC 5424) aus. 
-1. Wählen Sie **Send text Syslog message** (Syslog-Textnachricht senden) aus, und überprüfen Sie, ob die Nachricht von Ihrer Syslog-Infrastrukturlösung empfangen wird. 
-1. Klicken Sie auf **Speichern**. 
+1. Wählen Sie das **Transportprotokoll** (TCP oder UDP) aus.
+1. Wählen Sie das Format (RFC 3164 oder RFC 5424) aus.
+1. Wählen Sie **Send text Syslog message** (Syslog-Textnachricht senden) aus, und überprüfen Sie, ob die Nachricht von Ihrer Syslog-Infrastrukturlösung empfangen wird.
+1. Klicken Sie auf **Speichern**.
 
-So überprüfen oder ändern Sie die Syslog-Einstellungen:  
+So überprüfen oder ändern Sie die Syslog-Einstellungen:
 
-3. Klicken Sie zunächst auf **Benachrichtigungen** und dann unter **Syslog-Benachrichtigungen** auf **Konfigurieren**:
+1. Klicken Sie zunächst auf **Benachrichtigungen** und dann unter **Syslog-Benachrichtigungen** auf **Konfigurieren**:
 
    ![Abbildung der Syslog-Servereinstellungen für Azure ATP](media/atp-syslog.png)
 
-4. Sie können auswählen, welche Ereignisse an Ihren Syslog-Server gesendet werden sollen. Geben Sie unter **Syslog-Benachrichtigungen** an, welche Benachrichtigungen an Ihren Syslog-Server gesendet werden sollen: neue Sicherheitswarnungen, aktualisierte Sicherheitswarnungen und neue Integritätsprobleme.
+1. Sie können auswählen, welche Ereignisse an Ihren Syslog-Server gesendet werden sollen. Geben Sie unter **Syslog-Benachrichtigungen** an, welche Benachrichtigungen an Ihren Syslog-Server gesendet werden sollen: neue Sicherheitswarnungen, aktualisierte Sicherheitswarnungen und neue Integritätsprobleme.
 
 > [!NOTE]
-> Wenn Sie eine Automatisierung oder Skripts für Azure ATP-SIEM-Protokoll erstellen möchten, sollten Sie zur Identifizierung des Warnungstyps das Feld **externalID** statt des Warnungsnamens verwenden. Warnungsnamen können nämlich gelegentlich geändert werden, während die **externalId** jeder Warnung dauerhaft ist. Weitere Informationen finden Sie unter [Azure ATP-SIEM-Protokollreferenz](cef-format-sa.md). 
+> Wenn Sie eine Automatisierung oder Skripts für Azure ATP-SIEM-Protokoll erstellen möchten, sollten Sie zur Identifizierung des Warnungstyps das Feld **externalID** statt des Warnungsnamens verwenden. Warnungsnamen können nämlich gelegentlich geändert werden, während die **externalId** jeder Warnung dauerhaft ist. Weitere Informationen finden Sie unter [Azure ATP-SIEM-Protokollreferenz](cef-format-sa.md).
 
+## <a name="see-also"></a>Weitere Informationen
 
-## <a name="see-also"></a>Weitere Informationen:
-
-- [Arbeiten mit vertrauliche Konten](sensitive-accounts.md)
+- [Working with sensitive accounts (Arbeiten mit sensiblen Konten)](sensitive-accounts.md)
 - [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)

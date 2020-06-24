@@ -4,20 +4,20 @@ description: Liste häufig gestellter Fragen zu Azure ATP und zugehörige Antwor
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
-ms.date: 03/15/2020
+manager: shsagir
+ms.date: 06/15/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 64d23884189d68e69805133c8411e1ff0e8f95e8
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: 67e15453424e42ccab54b5c83272690c6d605f4b
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79414045"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775708"
 ---
 # <a name="azure-atp-frequently-asked-questions"></a>Häufig gestellte Fragen zu Azure ATP
 
@@ -26,7 +26,7 @@ Dieser Artikel enthält eine Reihe häufig gestellter Fragen und Antworten zu Az
 - [Was ist Azure ATP?](#what-is-azure-atp)
 - [Lizenzierung und Datenschutz](#licensing-and-privacy)
 - [Bereitstellung](#deployment)
-- [Operatives Geschäft](#operation)
+- [Vorgänge](#operation)
 - [Problembehandlung](#troubleshooting)
 
 ## <a name="what-is-azure-atp"></a>Was ist Azure ATP?
@@ -62,7 +62,7 @@ Nein. Azure ATP überwacht alle Geräte im Netzwerk und führt die Authentifizie
 
 ### <a name="does-azure-atp-monitor-computer-accounts-as-well-as-user-accounts"></a>Überwacht Azure ATP sowohl Computerkonten als auch Benutzerkonten?
 
-Ja Da Computerkonten (ebenso wie alle anderen Entitäten) zum Durchführen böswilliger Aktivitäten verwendet werden können, überwacht Azure ATP das Verhalten aller Computerkonten und aller weiteren Entitäten in der Umgebung.
+Ja. Da Computerkonten (ebenso wie alle anderen Entitäten) zum Durchführen böswilliger Aktivitäten verwendet werden können, überwacht Azure ATP das Verhalten aller Computerkonten und aller weiteren Entitäten in der Umgebung.
 
 ### <a name="what-is-the-difference-between-advanced-threat-analytics-ata-and-azure-atp"></a>Worin besteht der Unterschied zwischen Advanced Threat Analytics (ATA) und Azure ATP?
 
@@ -76,7 +76,7 @@ Zusätzliche Funktionen von Azure ATP:
 
 Azure ATP gehört zu Microsoft 365 Security – zur Sicherung hybrider Organisationen:
 
-- Azure ATP stellt zusammen mit Microsoft Cloud App Security (MCAS) und Azure AD Identity Protection einheitliche Untersuchungsfunktionen für Benutzeraktivitäten – lokal und in der Cloud – bereit und bietet erweiterte UEBA-Erkennungen (User and Entity Behavior Analytics).
+- Azure ATP stellt zusammen mit Microsoft Cloud App Security und Azure Active Directory (Azure AD) Identity Protection einheitliche Untersuchungsfunktionen für Benutzeraktivitäten – lokal und in der Cloud – bereit und bietet erweiterte UEBA-Erkennungen (User and Entity Behavior Analytics).
 - ATA bietet keine Integration in andere Onlinesicherheitslösungen von Microsoft.
 
 Skalierbar und sicher dank der Leistungsfähigkeit der Cloud:
@@ -92,11 +92,7 @@ Azure ATP steht als Teil von Enterprise Mobility + Security 5-Suite (EMS E5) und
 
 ### <a name="does-azure-atp-need-only-a-single-license-or-does-it-require-a-license-for-every-user-i-want-to-protect"></a>Benötigt Azure ATP nur eine einzige Lizenz, oder ist eine Lizenz für jeden Benutzer erforderlich, der geschützt werden soll?
 
-Azure ATP erfordert eine Lizenzierung für jeden Benutzer.
-
-### <a name="is-this-going-to-be-a-part-of-azure-active-directory-or-on-premises-active-directory"></a>Wird das Produkt ein Bestandteil von Azure Active Directory oder von lokalem Active Directory sein?
-
-Diese Azure ATP-Lösung ist derzeit ein eigenständiges Angebot. Sie ist kein Bestandteil von Azure Active Directory oder von lokalem Active Directory.
+Azure ATP setzt voraus, dass alle Benutzer in Azure AD eine Lizenz besitzen.
 
 ### <a name="is-my-data-isolated-from-other-customer-data"></a>Sind die Daten von anderen Kundendaten isoliert?
 
@@ -166,7 +162,7 @@ Azure ATP kann so konfiguriert werden, dass bei Integritätswarnungen und Festst
 
 ### <a name="why-are-certain-accounts-considered-sensitive"></a>Warum gelten bestimmte Konten als sensible Konten?
 
-Dies ist der Fall, wenn ein Konto Mitglied bestimmter Gruppen ist, die als sensibel festgelegt sind (z.B. „Domänen-Admins“).
+Dies ist der Fall, wenn ein Konto Mitglied bestimmter Gruppen ist, die als sensibel festgelegt sind (z. B. „Domänen-Admins“).
 
 Um nachzuvollziehen, warum ein Konto ein sensibles Konto ist, können Sie seine Gruppenmitgliedschaft überprüfen, um festzustellen, welchen sensiblen Gruppen es angehört (die Gruppe, der das Konto angehört, kann auch wegen einer anderen Gruppe eine sensible Gruppe sein. Daher sollten Sie immer die höchste sensible Gruppe überprüfen). Sie können auch manuell [Konten als vertraulich kennzeichnen](sensitive-accounts.md).
 
@@ -194,7 +190,7 @@ Um potenzielle LMPs zu sensiblen Benutzern erstellen zu können, benötigt Azure
 3. **Abfragen von Active Directory über LDAP** für Entitätsdaten  
 Azure ATP-Sensoren fragen den Domänencontroller aus der Domäne ab, zu der die Entität gehört. Es kann derselbe Sensor oder ein anderer Domänencontroller aus dieser Domäne sein.
 
-|Protokoll|Service|Port|Quelle| Richtung|
+|Protokoll|Dienst|Port|Quelle| Richtung|
 |---------|---------|---------|---------|--------|
 |LDAP|TCP und UDP|389|Domänencontroller|Ausgehend|
 |Sicheres LDAP (LDAPS)|TCP|636|Domänencontroller|Ausgehend|
@@ -211,9 +207,9 @@ Azure ATP erfasst Aktivitäten über viele verschiedene Protokolle. In einigen F
 
 Sehen Sie sich den letzten Fehlereintrag im aktuellen [Fehlerprotokoll](troubleshooting-atp-using-logs.md) an (Installationsverzeichnis von Azure ATP unter dem Ordner „Logs“ (Protokolle)).
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
-- [Voraussetzungen für Azure ATP](atp-prerequisites.md)
+- [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](atp-prerequisites.md)
 - [Azure ATP capacity planning (Azure ATP-Kapazitätsplanung)](atp-capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
 - [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-forwarding.md)

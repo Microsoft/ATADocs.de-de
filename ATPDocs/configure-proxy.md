@@ -4,7 +4,7 @@ description: Beschreibt, wie Sie Ihre Firewall oder den Proxyserver so einrichte
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 09/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 484d3bba9ebb4c648e78413472b84100aa76d482
-ms.sourcegitcommit: 31fd8256f38cf69c51a9ba9cf8d38140b72a5ed7
+ms.openlocfilehash: 787f5c29395c6356e8b1502fb6984a3d81b7974b
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82588393"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84772672"
 ---
 # <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-azure-atp-sensor"></a>Konfigurieren von Endpunktproxy- und Internetkonnektivitätseinstellungen für Ihren Azure ATP-Sensor
 
@@ -72,9 +72,9 @@ Der statische Proxy kann über die Registrierung konfiguriert werden. Sie müsse
 
 Lassen Sie Datenverkehr für folgende URLs zu, um den Zugriff auf Azure ATP zu ermöglichen:
 
-- \<Name_der_Instanz>.atp.azure.com: für die Konsolenkonnektivität. Beispielsweise „Contoso-corp.atp.azure.com“
+- \<your-instance-name>.atp.azure.com: für die Konsolenkonnektivität Beispielsweise „Contoso-corp.atp.azure.com“
 
-- \<Name_der_Instanz>.sensorapi.atp.azure.com: für die Sensorkonnektivität. Beispielsweise „contoso-corpsensorapi.atp.azure.com“
+- \<your-instance-name>.sensorapi.atp.azure.com: für die Sensorkonnektivität Beispielsweise „contoso-corpsensorapi.atp.azure.com“
 
 Die vorherigen URLs werden automatisch der richtigen Dienstidentifizierung für Ihre Azure ATP-Instanz zugeordnet. Wenn Sie den Zugriff noch besser steuern möchten, lassen Sie Datenverkehr für die relevanten Endpunkte aus der folgenden Tabelle zu:
 

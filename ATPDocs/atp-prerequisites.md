@@ -4,7 +4,7 @@ description: Beschreibt die Voraussetzungen für eine erfolgreiche Bereitstellun
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 03/15/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 94521875a58d49277e801e730a0eace02264e86a
-ms.sourcegitcommit: 3162130a85b5c6e8bf16456f8255b95e1f52b869
+ms.openlocfilehash: ad4d13efbe37abbb68e05e3a396bc3c101239ace
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2020
-ms.locfileid: "83825293"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775691"
 ---
 # <a name="azure-atp-prerequisites"></a>Voraussetzungen für Azure ATP
 
@@ -127,7 +127,7 @@ Beim Domänencontroller kann es sich um einen schreibgeschützten Domänencontro
 
 Für die Kommunikation Ihrer Domänencontroller mit dem Clouddienst müssen Sie in Ihrer Firewall und auf Ihrem Proxyserver Port 443 für „*.atp.azure.com“ freigeben.
 
-Während der Installation wird .NET Framework 4.7 installiert und erfordert möglicherweise einen Neustart des Domänencontrollers,wenn ein Neustart bereits aussteht.
+Falls .NET Framework 4.7 oder höher nicht installiert ist, wird .NET Framework 4.7 während der Installation installiert, und Sie müssen möglicherweise den Domänencontroller neu starten, wenn ein Neustart bereits aussteht.
 
 > [!NOTE]
 > Mindestens 5 GB Speicherplatz auf dem Datenträger wird benötigt, 10 GB wird empfohlen. Dies umfasst den Speicherplatz, der für die Azure ATP-Binärdateien, Azure ATP-Protokolle und Leistungsprotokolle benötigt wird.

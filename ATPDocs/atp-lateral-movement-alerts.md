@@ -4,7 +4,7 @@ d|Description: This article explains the Azure ATP alerts issued when attacks ty
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 04/23/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 2257eb00-8614-4577-b6a1-5c65085371f2
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 412603427b1b221c97c88556d2bdbf3fe3b562b8
-ms.sourcegitcommit: 9654502ea67f51ba5f00357f8464565ce424114e
+ms.openlocfilehash: 47530916ff4329e167c8d3f17e5dc24930c7b072
+ms.sourcegitcommit: 0a2365fdbee41fe7838591aefaea2145a0426615
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82794239"
+ms.lasthandoff: 06/20/2020
+ms.locfileid: "85120139"
 ---
 # <a name="tutorial-lateral-movement-alerts"></a>Tutorial: Lateral Movement-Warnungen
 
@@ -297,7 +297,7 @@ Bei dieser Erkennung wird eine Azure ATP-Sicherheitswarnung ausgelöst, wenn das
 
 **TP, B-TP oder FP?**
 
-1. Sind die beteiligten Domänencontroller auf dem neuesten Stand und für CVE-2020-1040 gepatcht?
+1. Sind die beteiligten Domänencontroller auf dem neuesten Stand und für CVE-2020-0796 gepatcht?
     - Wenn die Computer auf dem neuesten Stand und gepatcht sind, schlägt der Angriff höchstwahrscheinlich fehl. **Schließen** Sie die Sicherheitswarnung daher als fehlgeschlagener Versuch.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**

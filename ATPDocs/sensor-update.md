@@ -4,7 +4,7 @@ description: Im Folgenden wird erläutert, wie Sie Azure ATP-Sensoren aktualisie
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 12/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 603d9e09-a07d-4357-862f-d5682c8bc3dd
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 92c17776623beb3d03e37bb81ce12b433e5dc35e
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: ec9fa3c2190e0538cbecaa78131e5c42cdde4d7d
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80666181"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775895"
 ---
 # <a name="update-azure-atp-sensors"></a>Aktualisieren von Azure ATP-Sensoren
 
@@ -75,7 +75,7 @@ Die Azure ATP-Sensoren prüfen im Abstand weniger Minuten, ob sie bereits auf di
 3. Bei den Sensoren, für die kein **verzögertes Update** festgelegt, beginnt der sensorweise Updateprozess:
    1. Der Azure ATP-Sensor-Aktualisierungsdienst bezieht vom Clouddienst die aktualisierte Version (im CAB-Dateiformat).
    2. Der Azure ATP-Sensor-Aktualisierungsdienst überprüft die Dateisignatur.
-   3. Der Azure ATP-Sensor-Aktualisierungsdienst extrahiert die CAB-Datei in einen neuen Unterordner im Installationsverzeichnis des Sensors. Standardmäßig wird sie in folgenden Ordner extrahiert: *C:\Programme\Azure Advanced Threat Protection Sensor\<Versionsnummer>*
+   3. Der Azure ATP-Sensor-Aktualisierungsdienst extrahiert die CAB-Datei in einen neuen Unterordner im Installationsverzeichnis des Sensors. Standardmäßig wird sie in folgenden Ordner extrahiert: *C:\Programme\Azure Advanced Threat Protection Sensor\<version number>* .
    4. Der Azure ATP-Sensordienst verweist auf die neuen Dateien, die aus der CAB-Datei extrahiert wurden.    
    5. Der Azure ATP-Sensor-Aktualisierungsdienst startet den Azure ATP-Sensordienst neu.
        > [!NOTE]

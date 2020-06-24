@@ -4,20 +4,20 @@ description: Stellt Beispiele über verdächtige Aktivitätsprotokolle bereit, d
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
-ms.date: 03/05/2020
+manager: shsagir
+ms.date: 06/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 0f24d69946fbbaa1824eb7b38ac431a3be638fa9
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: 0d7d6ffbc52b1b5c1d662d3d6c14a1dcf0ab0084
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80666225"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84772869"
 ---
 # <a name="azure-atp-siem-log-reference"></a>Referenz zum Azure ATP-SIEM-Protokoll
 
@@ -31,14 +31,14 @@ Die folgenden Felder und deren Werte werden an Ihren SIEM-Agent weitergeleitet:
 |---------|---------------|
 |start|Startzeit der Warnung|
 |suser|Konto (normalerweise das Benutzerkonto), das an der Warnung beteiligt ist|
-|machine account|Konto (normalerweise das Benutzerkonto), das an der Warnung beteiligt ist|
+|shost|Konto (normalerweise das Computerkonto), das an der Warnung beteiligt ist|
 |outcome|Sofern relevant, ein Erfolg oder Fehler bei der verdächtigen Aktivität in der Warnung|
 |msg|Eine Beschreibung der Warnung|
-|cnt|Für Warnungen, die die Anzahl der Zeiten angeben, zu denen die Aktivität erfolgt ist (z.B. Brute Force mit einer Anzahl geschätzter Kennwörter)|
+|cnt|Für Warnungen, die die Häufigkeit angeben, mit der die Aktivität erfolgt ist (z. B. Brute Force mit einer Anzahl geschätzter Kennwörter)|
 |app |In dieser Warnung verwendetes Protokoll|
-|externalId|Ereignistyp-ID, die Azure ATP in das Ereignisprotokoll schreibt, das jedem Warnungstyp entspricht. Wenn Warnungen an Microsoft Cloud App Security weitergeleitet werden, wird dieses Feld mit der entsprechenden Cloud App Security-Warnungs-ID aufgefüllt.|
+|externalId|Ereignis-ID, die Azure ATP in das Ereignisprotokoll schreibt, das jedem Warnungstyp entspricht. Wenn Warnungen an Microsoft Cloud App Security weitergeleitet werden, wird dieses Feld mit der entsprechenden Cloud App Security-Warnungs-ID aufgefüllt.|
 |cs#label|Die für CEF zulässigen Kundenzeichenfolgen, wobei „cs#label“ der Name des neuen Felds ist |
-|cs#|Die für CEF zulässigen Kundenzeichenfolgen, wobei „cs#“ der Wert ist.|
+|cs#|Die für CEF zulässigen Kundenzeichenfolgen, wobei „cs#“ der Wert ist|
 
 - Beispiel: `cs1Label=url cs1=https\://192.168.0.220/suspiciousActivity/5909ae198ca1ec04d05e65fa`  
 Das Feld „cs1“ ist die Warnungs-URL.
@@ -199,9 +199,9 @@ Prioritäten:
 
 002-21-2018 16:21:22 Auth.Warning 192.168.0.220 1 2018-02-21T14:21:13.916050+00:00 CENTER CEF 6076 AbnormalProtocolSecurityAlert ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|AbnormalProtocolSecurityAlert|ReconnaissanceusingSMBSessionEnumeration|5|start=2018-02-21T14:19:03.1981155Z app=Ntlm shost=CLIENT2 outcome=Success msg=There were attempts to authenticate from CLIENT2 against DC1 using an unusual protocol implementation. Kann auf den Einsatz von schädlichen Tools zum Ausführen von Angriffen wie z.B. Metasploit hinweisen. externalId=2034 cs1Label=url cs1=https\://contoso-corp.atp.azure.com/securityAlert/40fe98dd-aa42-4540-9d73-831486fdd1e4 cs2Label=trigger cs2=new
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
-- [Voraussetzungen für Azure ATP](atp-prerequisites.md)
+- [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](atp-prerequisites.md)
 - [Azure ATP capacity planning (Azure ATP-Kapazitätsplanung)](atp-capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
 - [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-forwarding.md)

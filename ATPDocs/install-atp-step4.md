@@ -9,12 +9,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5e2a9a05c4f8dbbeb83562266e3564d023cef79a
-ms.sourcegitcommit: 7be507dc6b6016ff9aa9df4b52a3542246e98209
+ms.openlocfilehash: 8efa1ecf511285d38266c6701e16872e833bdccd
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2020
-ms.locfileid: "82736425"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84772376"
 ---
 # <a name="quickstart-install-the-azure-atp-sensor"></a>Schnellstart: Installieren des Azure ATP-Sensors
 
@@ -24,7 +24,7 @@ In diesem Schnellstart installieren Sie einen Azure ATP-Sensor auf einem Domäne
 
 - Eine [Azure ATP](install-atp-step1.md)-Instanz, die mit [Active Directory verbunden ist](install-atp-step2.md).
 - Eine heruntergeladene Kopie des [Setuppakets für Ihren ATP-Sensor](install-atp-step3.md) und den Zugriffsschlüssel.
-- Stellen Sie sicher, dass Microsoft .NET Framework 4.7 auf dem Computer installiert ist. Wenn .NET Framework 4.7 nicht installiert ist, wird es vom Setuppaket für den Azure ATP-Sensor installiert. Dadurch ist möglicherweise ein Neustart des Servers erforderlich.
+- Stellen Sie sicher, dass Microsoft .NET Framework 4.7 oder höher auf dem Computer installiert ist. Wenn Microsoft .NET Framework 4.7 oder höher nicht installiert ist, wird es vom Setuppaket für den Azure ATP-Sensor installiert. Dadurch ist möglicherweise ein Neustart des Servers erforderlich.
 
 ## <a name="install-the-sensor"></a>Installieren des Sensors
 

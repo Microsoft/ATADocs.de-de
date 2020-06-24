@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie eine vorhandene Installation von Advanced Thr
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 10/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: e734e382-c4b1-43ca-9a8d-96c91daf2578
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4a26195a6ceba0a32e9cf2d698574ca0acc7ef15
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: eb37bf60d0de0ee09afa74e6a23c54ca40ee32c3
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79504228"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774620"
 ---
 # <a name="advanced-threat-analytics-ata-to-azure-advanced-threat-protection-azure-atp"></a>Advanced Threat Analytics (ATA) zu Azure Advanced Threat Protection (Azure ATP)
 
@@ -43,7 +43,7 @@ In dieser Anleitung lernen Sie Folgendes:
 
 - Ein Azure Active Directory-Mandant mit mindestens einem globalen Administrator oder einem Sicherheitsadministrator ist erforderlich, um eine Azure ATP-Instanz zu erstellen. Jede Azure ATP-Instanz unterstützt mehrere Active Directory-Gesamtstrukturbegrenzungen und die Gesamtstrukturfunktionsebene (Forest Functional Level, FFL) von Windows 2003 und höher.
 
-- Azure ATP erfordert .NET Framework 4.7 und möglicherweise auch einen Domänencontroller (Neustart), falls Sie eine ältere Version als .NET Framework 4.7 verwenden.
+- Azure ATP erfordert .NET Framework 4.7 oder höher und möglicherweise auch einen Domänencontroller (Neustart), falls Sie eine ältere Version als .NET Framework 4.7 verwenden.
 
 - Stellen Sie sicher, dass Ihre Domänencontroller alle [Anforderungen für den Azure ATP-Sensor](https://docs.microsoft.com/azure-advanced-threat-protection/atp-prerequisites#azure-atp-sensor-requirements) erfüllen und Ihre Umgebung alle [Anforderungen für Azure ATP](https://docs.microsoft.com/azure-advanced-threat-protection/atp-prerequisites) erfüllt.
 
