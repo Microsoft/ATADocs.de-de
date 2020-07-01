@@ -12,58 +12,65 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 71b15bd9-3183-4e24-b18a-705023ccc313
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 211d94baeb703cfdd7dda91ebeffaaba20efdeb4
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 9b8717625c70559c465daa90019d01c8709459cf
+ms.sourcegitcommit: c3680d6de51d13bb4aeae02a79e74c4a66d9d268
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84773498"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85311604"
 ---
 # <a name="azure-atps-identity-security-posture-assessments"></a>Azure ATP-Bewertungen des Identitätssicherheitsstatus
- 
-In der Regel haben Organisationen jeder Größenordnung nur eingeschränkte Informationen darüber, ob ihre lokalen Apps und Dienste ein Sicherheitsrisiko für die Organisation darstellen könnten. Dieses Problem trifft insbesondere bei nicht unterstützten oder veralteten Komponenten zu. 
 
-Auch wenn Ihr Unternehmen kontinuierlich viel Zeit und Arbeit in den erhöhten Schutz von Identitäten und Identitätsinfrastrukturen (z.B. Active Directory oder Active Directory Connect) investiert, werden häufige Fehlkonfigurationen sowie die Verwendung von Legacykomponenten – eine der größten Bedrohungen für Ihre Organisation – leicht übersehen. Sicherheitsuntersuchungen von Microsoft haben ergeben, dass die meisten Angriffe auf Identitäten häufige Fehlkonfigurationen in Active Directory und die fortgesetzte Verwendung von Legacykomponenten (z.B. das NTLMv1-Protokoll) ausnutzen, um Identitäten zu stehlen und erfolgreich in Ihre Organisation einzudringen. Damit Sie solche Angriffe effektiv bekämpfen können, bietet Azure ATP jetzt proaktive Bewertungen des Identitätssicherheitsstatus, um Risiken zu erkennen und Aktionen zur Beseitigung für Ihre sämtlichen lokalen Active Directory-Konfigurationen zu empfehlen. 
+In der Regel haben Organisationen jeder Größenordnung nur eingeschränkte Informationen darüber, ob ihre lokalen Apps und Dienste ein Sicherheitsrisiko für die Organisation darstellen könnten. Dieses Problem trifft insbesondere bei nicht unterstützten oder veralteten Komponenten zu.
 
-## <a name="what-do-azure-atp-identity-security-posture-assessments-provide"></a>Was bieten die Azure ATP-Bewertungen des Identitätssicherheitsstatus?  
+Auch wenn Ihr Unternehmen kontinuierlich viel Zeit und Arbeit in den erhöhten Schutz von Identitäten und Identitätsinfrastrukturen (z.B. Active Directory oder Active Directory Connect) investiert, werden häufige Fehlkonfigurationen sowie die Verwendung von Legacykomponenten – eine der größten Bedrohungen für Ihre Organisation – leicht übersehen. Sicherheitsuntersuchungen von Microsoft haben ergeben, dass die meisten Angriffe auf Identitäten häufige Fehlkonfigurationen in Active Directory und die fortgesetzte Verwendung von Legacykomponenten (z.B. das NTLMv1-Protokoll) ausnutzen, um Identitäten zu stehlen und erfolgreich in Ihre Organisation einzudringen. Damit Sie solche Angriffe effektiv bekämpfen können, bietet Azure ATP jetzt proaktive Bewertungen des Identitätssicherheitsstatus, um Risiken zu erkennen und Aktionen zur Beseitigung für Ihre sämtlichen lokalen Active Directory-Konfigurationen zu empfehlen.
+
+## <a name="what-do-azure-atp-identity-security-posture-assessments-provide"></a>Was bieten die Azure ATP-Bewertungen des Identitätssicherheitsstatus?
+
 - Ermittlungen und kontextbezogene Daten zu bekannten gefährdeten Komponenten und Fehlkonfigurationen sowie relevante Möglichkeiten zur Behebung.
-- Azure ATP erkennt nicht nur verdächtige Aktivitäten, sondern überwacht mithilfe des vorhandenen Azure ATP-Sensors auch aktiv Ihre lokalen Identitäten und Identitätsinfrastrukturen auf Schwachstellen. 
-- Genaue Bewertungsberichte zum aktuellen Sicherheitsstatus Ihrer Organisation ermöglichen eine schnelle Reaktion und eine effektive, kontinuierliche Überwachung. 
+- Azure ATP erkennt nicht nur verdächtige Aktivitäten, sondern überwacht mithilfe des vorhandenen Azure ATP-Sensors auch aktiv Ihre lokalen Identitäten und Identitätsinfrastrukturen auf Schwachstellen.
+- Genaue Bewertungsberichte zum aktuellen Sicherheitsstatus Ihrer Organisation ermöglichen eine schnelle Reaktion und eine effektive, kontinuierliche Überwachung.
 
-## <a name="how-do-i-get-started"></a>Wie fange ich an? 
+## <a name="how-do-i-get-started"></a>Wie fange ich an?
 
-### <a name="access"></a>Zugriff
+### <a name="access"></a>Access
 
-Azure ATP-Sicherheitsbewertungen stehen über das Microsoft Cloud App Security-Portal zur Verfügung. Aktivieren Sie vorher die Azure ATP-Integration. Informationen zur Integration von Azure ATP in Cloud App Security finden Sie unter [Azure ATP-Integration](https://docs.microsoft.com/cloud-app-security/aatp-integration). 
+Azure ATP-Sicherheitsbewertungen stehen über das Microsoft Cloud App Security-Portal zur Verfügung. Aktivieren Sie vorher die Azure ATP-Integration. Informationen zur Integration von Azure ATP in Cloud App Security finden Sie unter [Azure ATP-Integration](https://docs.microsoft.com/cloud-app-security/aatp-integration).
 
 ### <a name="licensing"></a>Lizenzierung
 
-Für den Zugriff auf die Azure ATP-Sicherheitsbewertungsberichte in Cloud App Security ist keine Cloud App Security-Lizenz erforderlich, sondern nur eine Azure ATP-Lizenz. 
+Für den Zugriff auf die Azure ATP-Sicherheitsbewertungsberichte in Cloud App Security ist keine Cloud App Security-Lizenz erforderlich, sondern nur eine Azure ATP-Lizenz.
 
-## <a name="access-azure-atp-using-cloud-app-security"></a>Zugreifen auf Azure ATP über Cloud App Security 
+## <a name="access-azure-atp-using-cloud-app-security"></a>Zugreifen auf Azure ATP über Cloud App Security
 
-Lesen Sie die [Schnellstartanleitung für Cloud App Security](https://docs.microsoft.com/cloud-app-security/getting-started-with-cloud-app-security), um sich mit den Grundlagen des Cloud App Security-Portals vertraut zu machen. 
+Lesen Sie die [Schnellstartanleitung für Cloud App Security](https://docs.microsoft.com/cloud-app-security/getting-started-with-cloud-app-security), um sich mit den Grundlagen des Cloud App Security-Portals vertraut zu machen.
 
 **Bewertungen des Identitätssicherheitsstatus**
 
-Azure ATP bietet die folgenden Bewertungen des Identitätssicherheitsstatus. Jede Bewertung kann als Bericht heruntergeladen werden und enthält Anweisungen zur Verwendung sowie Tools zum Erstellen eines Aktionsplans zum Beheben des Problems. 
+Azure ATP bietet die folgenden Bewertungen des Identitätssicherheitsstatus. Jede Bewertung kann als Bericht heruntergeladen werden und enthält Anweisungen zur Verwendung sowie Tools zum Erstellen eines Aktionsplans zum Beheben des Problems.
 
 **Bewertungsberichte**
-- Verhindern des [Verfügbarmachens von Anmeldeinformationen in Klartext durch Entitäten](atp-cas-isp-clear-text.md)
-- Verhindern der [Verwendung von Legacyprotokollen](atp-cas-isp-legacy-protocols.md)
-- Verhindern der [Verwendung schwacher Verschlüsselungen](atp-cas-isp-weak-cipher.md)
-- Verhindern [unsicherer Kerberos-Delegierungen](atp-cas-isp-unconstrained-kerberos.md)
-- Deaktivieren des [Druckspoolerdiensts auf Domänencontrollern](atp-cas-isp-print-spooler.md)
-- Entfernen [ruhender Entitäten aus sensiblen Gruppen](atp-cas-isp-dormant-entities.md)
+
+- [Domänencontroller mit verfügbarem Druckspoolerdienst](atp-cas-isp-print-spooler.md)
+- [Ruhende Entitäten in sensiblen Gruppen](atp-cas-isp-dormant-entities.md)
+- [Verfügbarmachen von Anmeldeinformationen in Klartext durch Entitäten](atp-cas-isp-clear-text.md)
+- [Verwendung von Microsoft LAPS](atp-cas-isp-laps.md)
+- [Verwendung von Legacyprotokollen](atp-cas-isp-legacy-protocols.md)
+- [Lateral-Movement-Pfade mit dem höchsten Risiko](atp-cas-isp-riskiest-lmp.md)
+- [Nicht überwachte Domänencontroller](atp-cas-isp-unmonitored-domain-controller.md)
+- [Unsichere Kontoattribute](atp-cas-isp-unsecure-account-attributes.md)
+- [Unsichere Kerberos-Delegierung](atp-cas-isp-unconstrained-kerberos.md)
+- [Unsichere SID-Verlaufsattribute](atp-cas-isp-unsecure-sid-history-attribute.md)
+- [Verwendung schwacher Verschlüsselungen](atp-cas-isp-weak-cipher.md)
 
 So greifen Sie auf Bewertungen des Identitätssicherheitsstatus zu:
-1. Öffnen Sie das **Microsoft Cloud App Security**-Portal. 
-    ![Zugreifen auf Azure ATP-Berichte zum Identitätssicherheitsstatus in Cloud App Security](media/atp-cas-isp-report-1.png)
-1. Wählen Sie im linken Menü **Untersuchen** aus, und klicken Sie im Dropdownmenü auf **Identitätssicherheitsstatus**. 
-1. Klicken Sie in der Liste **Sicherheitsbewertungsberichte** auf die Statusbewertung, die Sie überprüfen möchten.  
 
+1. Öffnen Sie das **Microsoft Cloud App Security**-Portal.
+    ![Zugreifen auf Azure ATP-Berichte zum Identitätssicherheitsstatus in Cloud App Security](media/atp-cas-isp-report-1.png)
+1. Wählen Sie im linken Menü **Untersuchen** aus, und klicken Sie im Dropdownmenü auf **Identitätssicherheitsstatus**.
+1. Klicken Sie in der Liste **Sicherheitsbewertungsberichte** auf die Statusbewertung, die Sie überprüfen möchten.
 
 ## <a name="next-steps"></a>Nächste Schritte
+
 - [Weitere Informationen zur Verwendung von Cloud App Security mit Azure ATP](atp-activities-filtering-mcas.md)
 - [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)
-

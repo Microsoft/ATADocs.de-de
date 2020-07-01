@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 2fe62047-75ef-4b2e-b4aa-72860e39b4e4
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4aa97b3f59ea16572608432ea51ad0984ceaac75
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: f10756f3b5fc009e2bd37fff9eff04d1c5c41585
+ms.sourcegitcommit: 073154998f5fdfbefe276888ffb034dfce368662
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84774042"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85256268"
 ---
 # <a name="security-assessment-unsecure-sid-history-attributes"></a>Sicherheitsbewertung: Unsichere SID-Verlaufsattribute
 
@@ -33,7 +33,7 @@ Organisationen, die ihre Kontoattribute nicht sichern können, lassen die Tür f
 
 Böswillige Akteure suchen ähnlich wie Diebe häufig in jeder Umgebung nach dem einfachsten und lautlosesten Weg. Konten, die mit einem unsicheren SID-Verlaufsattribut konfiguriert sind, stellen einen Einstieg für Angreifer dar und können Risiken ergeben.
 
-Beispielsweise kann ein nicht sensibles Konto in einer Domäne die SID des Unternehmensadministrators und den SID-Verlauf aus einer anderen Domäne in der Active Directory-Gesamtstruktur enthalten, wodurch der Zugriff für das Benutzerkonto auf einen effektiven Domänenadministrator in allen Domänen in der Gesamtstruktur „erhöht“ wird. Wenn Sie über eine Gesamtstruktur-Vertrauensstellung ohne aktivierten SID-Filter (auch als Quarantäne bezeichnet) verfügen, können Sie eine SID aus einer anderen Gesamtstruktur einfügen. Diese wird dann bei der Authentifizierung dem Benutzertoken hinzugefügt und für Zugriffsauswertungen verwendet.
+Beispielsweise kann ein nicht sensibles Konto in einer Domäne die SID des Unternehmensadministrators und den SID-Verlauf aus einer anderen Domäne in der Active Directory-Gesamtstruktur enthalten, wodurch der Zugriff für das Benutzerkonto auf einen effektiven Domänenadministrator in allen Domänen in der Gesamtstruktur erhöht wird. Wenn Sie über eine Gesamtstruktur-Vertrauensstellung ohne aktivierten SID-Filter (auch als Quarantäne bezeichnet) verfügen, können Sie eine SID aus einer anderen Gesamtstruktur einfügen. Diese wird dann bei der Authentifizierung dem Benutzertoken hinzugefügt und für Zugriffsauswertungen verwendet.
 
 ## <a name="how-do-i-use-this-security-assessment"></a>Wie wird diese Sicherheitsbewertung verwendet?
 
