@@ -5,18 +5,17 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 06/16/2020
+ms.date: 06/28/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: da3b41bd39b4ebae88eff1196ebf6715f217a522
-ms.sourcegitcommit: 83a2c0bd87a024ab2cf9fb6240a5da25c916ad95
-ms.translationtype: HT
+ms.openlocfilehash: 68cc9d2361724bde50ba89d0ba4873e4cb90e14b
+ms.sourcegitcommit: b4ca2f176cf378d6a6a2718043de2dbf9d657a89
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84800371"
+ms.lasthandoff: 07/05/2020
+ms.locfileid: "85953906"
 ---
 # <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Neuerungen in Azure Advanced Threat Protection (Azure ATP)
 
@@ -26,9 +25,31 @@ Ausführliche Informationen zu früheren Azure ATP-Versionen bis (und einschlie�
 
 RSS-Feed: Lassen Sie sich benachrichtigen, wenn diese Seite aktualisiert wird, indem Sie die folgende URL kopieren und in Ihren Feedreader einfügen: `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
 
+## <a name="azure-atp-release-2119"></a>Azure ATP-Release 2.119
+
+Veröffentlicht: 5. Juli 2020
+
+- **Featureerweiterung: Neue Registerkarte *Excluded domain controllers* (Ausgeschlossene Domänencontroller) im Excel-Bericht**  
+Um die Genauigkeit unserer Berechnung der Domänencontrollerabdeckung zu verbessern, werden Domänencontroller mit externen Vertrauensstellungen aus der Berechnung ausgeschlossen, um eine hundertprozentige Abdeckung zu erreichen. Ausgeschlossene Domänencontroller werden auf der neuen Registerkarte „*Excluded domain controllers*“ (Ausgeschlossene Domänencontroller) im Download des Excel-Berichts zur Domänenabdeckung angezeigt. Weitere Informationen zum Herunterladen des Berichts finden Sie unter [Domänencontrollerstatus](atp-sensor-monitoring.md#domain-controller-status).
+- Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
+
+## <a name="azure-atp-release-2118"></a>Azure ATP-Release 2.118
+
+Veröffentlicht: 28. Juni 2020
+
+- **Neue Sicherheitsbewertungen**  
+Es gibt jetzt die folgenden neuen Azure ATP-Sicherheitsbewertungen:
+  - **Lateral Movement-Pfade mit dem höchsten Risiko**  
+    Diese Überprüfung überwacht Ihre Umgebung fortlaufend, um **sensible** Konten mit den riskantesten Lateral-Movement-Pfaden zu identifizieren, die ein Sicherheitsrisiko darstellen, und erfasst Berichte zu diesen Konten, um Sie bei der Verwaltung Ihrer Umgebung zu unterstützen. Pfade werden als riskant eingestuft, wenn sie über drei oder mehr nicht sensible Konten verfügen, die das sensible Konto dem Diebstahl von Anmeldeinformationen durch Angreifer aussetzen. Weitere Informationen finden Sie unter [Sicherheitsbewertung: Lateral-Movement-Pfade mit dem höchsten Risiko](atp-cas-isp-riskiest-lmp.md)
+  - **Unsichere Kontoattribute**  
+    Diese Überprüfung überwacht Ihre Umgebung fortlaufend, um Konten mit Attributwerten zu identifizieren, die ein Sicherheitsrisiko darstellen, und erfasst Berichte zu diesen Konten, um Sie bei der Schutz Ihrer Umgebung zu unterstützen. Weitere Informationen finden Sie unter [Sicherheitsbewertung: Unsichere Kontoattribute](atp-cas-isp-unsecure-account-attributes.md)
+
+- **Aktualisierte Vertraulichkeitsdefinition**  
+Wir erweitern unsere Vertraulichkeitsdefinition für lokale Konten, um Entitäten einzuschließen, die die Active Directory-Replikation verwenden dürfen.
+
 ## <a name="azure-atp-release-2117"></a>Azure ATP, Release 2.117
 
-Veröffentlicht: 14. Juni 2021
+Veröffentlicht: 14. Juni 2020
 
 - **Featureerweiterung: Zusätzliche Aktivitätsdetails sind in der vereinheitlichten SecOps-Benutzeroberfläche verfügbar.**  
 Es werden jetzt mehr Geräteinformationen an Cloud App Security gesendet, z. B. der Gerätename, die IP-Adressen, die Konto-UPNs und der verwendete Port. Weitere Informationen zur Integration mit Cloud App Security finden Sie unter [Verwenden von Azure ATP mit Cloud App Security](atp-mcas-integration.md).
