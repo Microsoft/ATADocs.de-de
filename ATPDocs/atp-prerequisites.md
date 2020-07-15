@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 03/15/2020
+ms.date: 07/05/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ad4d13efbe37abbb68e05e3a396bc3c101239ace
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: d1f05e45e69bc78c4e2934cfe3c243ff77964732
+ms.sourcegitcommit: 424567ef02d97454e72241837f69fa6a928709ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775691"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86175727"
 ---
 # <a name="azure-atp-prerequisites"></a>Voraussetzungen für Azure ATP
 
@@ -161,16 +161,16 @@ Der Sensor wird nicht in Domänencontrollern unter Windows 2008 R2 mit aktiviert
 
 In der folgenden Tabelle sind die Ports aufgeführt, die für den Azure ATP-Sensor mindestens konfiguriert werden müssen:
 
-|Protokoll|Transport|Port|Zu/Von|Richtung|
+|Protokoll|Transport|Port|Von|An|Richtung|
 |------------|-------------|--------|-----------|-------------|
-|**Internetports**|||||
-|SSL (*.atp.azure.com)|TCP|443|Azure ATP-Clouddienst|Ausgehend|
-|SSL(localhost)|TCP|444|localhost|Beide|
-|**Interne Ports**|||||
-|DNS|TCP und UDP|53|DNS-Server|Ausgehend|
-|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Alle Geräte im Netzwerk|Ausgehend|
-|Syslog (optional)|TCP/UDP|514, je nach Konfiguration|SIEM-Server|Eingehende Verbindungen|
-|RADIUS|UDP|1813|RADIUS|Eingehende Verbindungen|
+|**Internetports**||||||
+|SSL (*.atp.azure.com)|TCP|443|Azure ATP-Sensor|Azure ATP-Clouddienst|Ausgehend|
+|SSL(localhost)|TCP|444|Azure ATP-Sensor|localhost|Beide|
+|**Interne Ports**||||||
+|DNS|TCP und UDP|53|Azure ATP-Sensor|DNS-Server|Ausgehend|
+|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Azure ATP-Sensor|Alle Geräte im Netzwerk|Ausgehend|
+|Syslog (optional)|TCP/UDP|514, je nach Konfiguration|SIEM-Server|Azure ATP-Sensor|Eingehende Verbindungen|
+|RADIUS|UDP|1813|RADIUS|Azure ATP-Sensor|Eingehende Verbindungen|
 
 ### <a name="windows-event-logs"></a>Windows-Ereignisprotokolle
 
@@ -242,21 +242,21 @@ Der eigenständige Azure ATP-Sensor erfordert mindestens einen Verwaltungsadapte
 
 In der folgenden Tabelle sind die Ports aufgeführt, die für den Verwaltungsadapter des eigenständigen Azure ATP-Sensors mindestens konfiguriert werden müssen:
 
-|Protokoll|Transport|Port|Zu/Von|Richtung|
+|Protokoll|Transport|Port|Von|An|Richtung|
 |------------|-------------|--------|-----------|-------------|
 |**Internetports**|||||
-|SSL (*.atp.azure.com)|TCP|443|Azure ATP-Clouddienst|Ausgehend|
+|SSL (*.atp.azure.com)|TCP|443|Azure ATP-Sensor:|Azure ATP-Clouddienst|Ausgehend|
 |**Interne Ports**|||||
-|LDAP|TCP und UDP|389|Domänencontroller|Ausgehend|
-|Sicheres LDAP (LDAPS)|TCP|636|Domänencontroller|Ausgehend|
-|LDAP an globalen Katalog|TCP|3268|Domänencontroller|Ausgehend|
-|LDAPs an globalen Katalog|TCP|3269|Domänencontroller|Ausgehend|
-|Kerberos|TCP und UDP|88|Domänencontroller|Ausgehend|
-|Netlogon (SMB, CIFS, SAM-R)|TCP und UDP|445|Alle Geräte im Netzwerk|Ausgehend|
-|Windows-Zeitdienst|UDP|123|Domänencontroller|Ausgehend|
-|DNS|TCP und UDP|53|DNS-Server|Ausgehend|
-|Syslog (optional)|TCP/UDP|514, je nach Konfiguration|SIEM-Server|Eingehende Verbindungen|
-|RADIUS|UDP|1813|RADIUS|Eingehende Verbindungen|
+|LDAP|TCP und UDP|389|Azure ATP-Sensor:|Domänencontroller|Ausgehend|
+|Sicheres LDAP (LDAPS)|TCP|636|Azure ATP-Sensor:|Domänencontroller|Ausgehend|
+|LDAP an globalen Katalog|TCP|3268|Azure ATP-Sensor:|Domänencontroller|Ausgehend|
+|LDAPs an globalen Katalog|TCP|3269|Azure ATP-Sensor:|Domänencontroller|Ausgehend|
+|Kerberos|TCP und UDP|88|Azure ATP-Sensor:|Domänencontroller|Ausgehend|
+|Netlogon (SMB, CIFS, SAM-R)|TCP und UDP|445|Azure ATP-Sensor:|Alle Geräte im Netzwerk|Ausgehend|
+|Windows-Zeitdienst|UDP|123|Azure ATP-Sensor:|Domänencontroller|Ausgehend|
+|DNS|TCP und UDP|53|Azure ATP-Sensor:|DNS-Server|Ausgehend|
+|Syslog (optional)|TCP/UDP|514, je nach Konfiguration|SIEM-Server|Azure ATP-Sensor:|Eingehende Verbindungen|
+|RADIUS|UDP|1813|RADIUS|Azure ATP-Sensor|Eingehende Verbindungen|
 
 > [!NOTE]
 >

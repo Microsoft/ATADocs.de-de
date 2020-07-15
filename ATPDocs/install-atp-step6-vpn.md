@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 11/04/2018
+ms.date: 07/05/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 0d9d2a1d-6c76-4909-b6f9-58523df16d4f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d45024642d6262f7ab204cc7d6406569faef3a4c
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 9ad0662a0b468bbe67bb8b699b57358c0c512348
+ms.sourcegitcommit: 424567ef02d97454e72241837f69fa6a928709ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84772342"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86175734"
 ---
 # <a name="integrate-vpn"></a>Integrieren des VPN
 
@@ -25,17 +25,19 @@ Azure Advanced Threat Protection (ATP) kann Kontoinformationen aus VPN-Lösungen
 
 Azure ATP arbeitet mit Ihrer VPN-Lösung zusammen, indem es an RADIUS-Buchhaltungsereignissen lauscht, die an die Azure ATP-Sensoren weitergeleitet werden. Dieser Mechanismus basiert auf einer standardmäßigen RADIUS-Kontoführung ([RFC 2866](https://tools.ietf.org/html/rfc2866)). Die folgenden VPN-Anbieter werden unterstützt:
 
--   Microsoft
--   F5
--   Check Point
--   Cisco ASA
+- Microsoft
+- F5
+- Check Point
+- Cisco ASA
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
 Stellen Sie für die Aktivierung der VPN-Integration sicher, dass die folgenden Parameter festgelegt werden:
 
--   Öffnen Sie Port UDP 1813 auf Ihre eigenständigen Azure ATP-Sensoren und bzw. oder die Azure ATP-Sensoren.
+- Öffnen Sie Port UDP 1813 auf Ihre eigenständigen Azure ATP-Sensoren und bzw. oder die Azure ATP-Sensoren.
 
+> [!NOTE]
+> Durch die Aktivierung der **RADIUS-Kontoführung** aktiviert der Azure ATP-Sensor eine vorab bereitgestellte Windows-Firewallrichtlinie mit dem Namen **Azure Advanced Threat Protection-Sensor**, um eingehende RADIUS-Kontoführung am Port UDP 1813 zuzulassen.
 
 Im untenstehenden Beispiel wird der Microsoft-Routing- und Remotezugriffsserver (RRAS) zur Beschreibung des VPN-Konfigurationsvorgangs verwendet.
 
@@ -44,40 +46,35 @@ Wenn Sie die VPN-Lösung eines Drittanbieters nutzen, greifen Sie auf dessen Dok
 ## <a name="configure-radius-accounting-on-the-vpn-system"></a>Konfigurieren der RADIUS-Kontoführung auf dem VPN-System
 
 Führen Sie auf Ihrem RRAS-Server die folgenden Schritte aus.
- 
-1.  Öffnen Sie die Routing- und Remotezugriffs-Konsole.
-2.  Klicken Sie mit der rechten Maustaste auf den Server, und klicken Sie anschließend auf **Eigenschaften**.
-3.  Wählen Sie unter **Kontoführungsanbieter** in der Registerkarte **Sicherheit** **RADIUS-Kontoführung** aus, und klicken Sie auf **Konfigurieren**.
+
+1. Öffnen Sie die Routing- und Remotezugriffs-Konsole.
+1. Klicken Sie mit der rechten Maustaste auf den Server, und klicken Sie anschließend auf **Eigenschaften**.
+1. Wählen Sie unter **Kontoführungsanbieter** in der Registerkarte **Sicherheit** **RADIUS-Kontoführung** aus, und klicken Sie auf **Konfigurieren**.
 
     ![RADIUS-Setup](./media/radius-setup.png)
 
-4.  Geben Sie im Fenster **RADIUS-Server hinzufügen** den **Servernamen** des nächsten Azure ATP-Sensors (mit Netzwerkkonnektivität) ein. Um Hochverfügbarkeit sicherzustellen, können Sie zusätzliche Azure ATP-Sensoren als RADIUS-Server hinzufügen. Stellen Sie unter **Port** sicher, dass die Standardeinstellung 1813 konfiguriert ist. Klicken Sie auf **Ändern**, und tippen Sie eine neue, geheime Zeichenfolge von alphanumerischen Zeichen ein. Notieren Sie die neue freigegebene geheime Zeichenfolge, da Sie sie später während der Azure ATP-Konfiguration eingeben müssen. Prüfen Sie das Feld **„RADIUS-Kontoführung aktiviert“- und „RADIUS-Kontoführung deaktiviert“-Nachrichten senden**, und klicken Sie anschließend in allen geöffneten Dialogfeldern auf **OK**.
- 
-     ![VPN-Setup](./media/vpn-set-accounting.png)
-     
+1. Geben Sie im Fenster **RADIUS-Server hinzufügen** den **Servernamen** des nächsten Azure ATP-Sensors (mit Netzwerkkonnektivität) ein. Um Hochverfügbarkeit sicherzustellen, können Sie zusätzliche Azure ATP-Sensoren als RADIUS-Server hinzufügen. Stellen Sie unter **Port** sicher, dass die Standardeinstellung 1813 konfiguriert ist. Klicken Sie auf **Ändern**, und tippen Sie eine neue, geheime Zeichenfolge von alphanumerischen Zeichen ein. Notieren Sie die neue freigegebene geheime Zeichenfolge, da Sie sie später während der Azure ATP-Konfiguration eingeben müssen. Prüfen Sie das Feld **„RADIUS-Kontoführung aktiviert“- und „RADIUS-Kontoführung deaktiviert“-Nachrichten senden**, und klicken Sie anschließend in allen geöffneten Dialogfeldern auf **OK**.
+
+    ![VPN-Setup](./media/vpn-set-accounting.png)
+
 ### <a name="configure-vpn-in-atp"></a>Konfigurieren von VPN in ATP
 
 Azure ATP erfasst VPN-Daten zur Erstellung von Profilen der Standorte, über die Computer eine Verbindung mit dem Netzwerk herstellen und mit denen diese verdächtige VPN-Verbindungen erkennen können.
 
 So konfigurieren Sie VPN-Daten in ATP:
 
-1.  Klicken Sie im Azure ATP-Portal auf das Konfigurationszahnrad und anschließend auf **VPN**.
- 
+1. Klicken Sie im Azure ATP-Portal auf das Konfigurationszahnrad und anschließend auf **VPN**.
+1. Aktivieren Sie die **RADIUS-Kontoführung**, und geben Sie das **gemeinsame Geheimnis** ein, das Sie zuvor auf Ihrem RRAS-VPN-Server konfiguriert haben. Klicken Sie dann auf **Save** (Speichern).
 
-2.  Aktivieren Sie die **RADIUS-Kontoführung**, und geben Sie das **gemeinsame Geheimnis** ein, das Sie zuvor auf Ihrem RRAS-VPN-Server konfiguriert haben. Klicken Sie dann auf **Save** (Speichern).
- 
+    ![Konfigurieren von Azure ATP-VPN](./media/atp-vpn-radius.png)
 
-  ![Konfigurieren von Azure ATP-VPN](./media/atp-vpn-radius.png)
-
-
-Nachdem Sie diese Option aktiviert haben, lauschen alle Azure ATP-Sensoren an Port 1813 für RADIUS-Buchhaltungsereignisse. Damit ist die VPN-Einrichtung abgeschlossen. 
+Nachdem Sie diese Option aktiviert haben, lauschen alle Azure ATP-Sensoren an Port 1813 für RADIUS-Buchhaltungsereignisse. Damit ist die VPN-Einrichtung abgeschlossen.
 
  Nachdem der Azure ATP-Sensor die VPN-Ereignisse empfangen und an den Azure ATP-Clouddienst zur Verarbeitung gesendet hat, übergibt das Entitätsprofil verschiedene VPN-Standorte, auf die zugegriffen wurde, und die Aktivitäten im Profil enthalten Standorte.
 
+## <a name="see-also"></a>Weitere Informationen
 
-
-## <a name="see-also"></a>Weitere Informationen:
 - [Azure ATP sizing tool (Azure ATP-Tool zur Größenanpassung)](https://aka.ms/aatpsizingtool)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
-- [Voraussetzungen für Azure ATP](atp-prerequisites.md)
+- [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](atp-prerequisites.md)
 - [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)
