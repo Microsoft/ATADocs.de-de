@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 1b2d185c-62cd-45f0-b0dd-687b51317f32
 ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: ed811af8f046aff1249e30ac1c7c5585b07f9f88
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 907fb2c6f7e24bfc0f69ae29534303f7b02d9708
+ms.sourcegitcommit: bfb5f35f8e2f19911357e5afa6624ffe43e37d12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84774926"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86472415"
 ---
 # <a name="ata-data-security-and-privacy"></a>Sicherheit und Datenschutz für ATA
 
@@ -31,13 +31,13 @@ Alle entitätsbezogenen Daten in ATA stammen aus Active Directory (AD) und werde
 
 Verwenden Sie die Suchleiste im ATA Center, um die identifizierbaren personenbezogenen Daten anzuzeigen, die in der Datenbank gespeichert sind. Benutzer können nach einem bestimmten Benutzer oder einem bestimmten Gerät suchen. Durch einen Klick auf die Entität wird die Profilseite des Benutzers oder des Geräts geöffnet. Das Profil bietet Ihnen umfassende Details zu der Entität, deren Versionsgeschichte und verknüpfte Netzwerkaktivität, die aus AD stammt. 
 
-## <a name="updating-personal-data"></a>Aktualisieren personenbezogener Daten 
+## <a name="updating-personal-data"></a>Aktualisieren von personenbezogenen Daten 
 
 Personenbezogene Daten zu Benutzern und Entitäten in ATA stammen aus dem Objekt des Benutzers im AD Ihrer Organisation. Aus diesem Grund werden alle Änderungen am Benutzerprofil AD in ATA übernommen. 
 
 ## <a name="deleting-personal-data"></a>Löschen von personenbezogenen Daten 
 
-Obwohl Daten in ATA repliziert sind und immer aus Active Directory aktualisiert werden, werden die Entitätsdaten in ATA zu Sicherheitszwecken beibehalten, wenn eine Entität in AD gelöscht wird. 
+Obwohl die Daten in ATA repliziert und immer von AD aktualisiert werden, werden die Daten der Entität in ATA bei der Sicherheitsuntersuchung beibehalten, wenn eine Entität in AD gelöscht wird. 
 
 Gehen Sie folgendermaßen vor, um die benutzerspezifischen Daten dauerhaft aus der ATA-Datenbank zu löschen: 
 
@@ -87,4 +87,4 @@ So deaktivieren Sie die Datensammlung:
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-- Informationen zur Vertrauensstellung und Konformität von ATA finden Sie im [Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) und auf der Website zur [Microsoft 365-GDPR-Konformität](https://docs.microsoft.com/microsoft-365/compliance/compliance-solutions-overview).
+- Informationen zur Vertrauensstellung und Konformität von ATA finden Sie im [Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) und auf der Website zur [Microsoft 365-GDPR-Konformität](https://docs.microsoft.com/microsoft-365/compliance/gdpr).

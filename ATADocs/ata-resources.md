@@ -12,14 +12,14 @@ ms.technology: ''
 ms.assetid: 42a1a34f-ed6b-4538-befb-452168a30e8c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: fff985790da3065693e4d22f84465ea24918bd14
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 864a5f0a9c521aad24673ef3e22ffe7bbc62436f
+ms.sourcegitcommit: bfb5f35f8e2f19911357e5afa6624ffe43e37d12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775572"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86472390"
 ---
-# <a name="ata-readiness-roadmap"></a>Überblick über die ATA-Bereitschaft 
+# <a name="ata-readiness-roadmap"></a>Überblick über die ATA-Bereitschaft
 
 *Gilt für: Advanced Threat Analytics Version 1.9*
 
@@ -27,14 +27,13 @@ Dieser Artikel bietet einen Überblick über die Roadmap für die Bereitschaft, 
 
 ## <a name="understanding-ata"></a>Grundlegendes zu ATA
 
-Advanced Threat Analytics (ATA) ist eine lokale Plattform, mit deren Hilfe Sie Ihr Unternehmen vor verschiedenen hochentwickelten und gezielten Cyberangriffen und Insiderbedrohungen schützen können. In den folgenden Artikeln finden Sie weitere Informationen zu ATA zu erhalten:
+Advanced Threat Analytics (ATA) ist eine lokale Plattform, die Ihnen hilft, Ihr Unternehmen vor verschiedenen Typen von erweiterten gezielten Cyberangriffen und Insider Bedrohungen zu schützen. In den folgenden Artikeln finden Sie weitere Informationen zu ATA zu erhalten:
 
 - [ATA-Übersicht](what-is-ata.md)
 
 - [Einführungsvideo zu ATA (kurz)](https://aka.ms/ATAShort)
 
-- [Einführungsvideo zu ATA (lang)](https://aka.ms/ATAVideo) 
-
+- [Einführungsvideo zu ATA (lang)](https://aka.ms/ATAVideo)
 
 ## <a name="deployment-decisions"></a>Entscheidungen für die Bereitstellung
 
@@ -49,17 +48,15 @@ ATA besteht aus ATA Center, das Sie auf einem Server installieren können, sowie
 
 Wenn Sie physische Server verwenden, sollten Sie die Kapazität planen. Sie können das Tool zur Größenanpassung zum Zuweisen von Speicherplatz für ATA verwenden:
 
-[ATA-Tool zur Größenanpassung](ata-capacity-planning.md): Das Tool zur Größenanpassung automatisiert die Auflistung der Menge an Datenverkehr, die von ATA benötigt wird. Es stellt automatisch Empfehlungen zu Unterstützbarkeit und Ressourcen für ATA Center und ATA-Lightweight-Gateways bereit.
-
+[Tool zur Größen](ata-capacity-planning.md) Anpassung von ATA: das Tool zur Größenanpassung automatisiert die Erfassung der Menge an Datenverkehr, die ATA benötigt. Es stellt automatisch Empfehlungen zu Unterstützbarkeit und Ressourcen für ATA Center und ATA-Lightweight-Gateways bereit.
 
 [ATA-Kapazitätsplanung](ata-capacity-planning.md)
-
 
 ## <a name="deploy-ata"></a>Bereitstellung von ATA
 
 Diese Ressourcen unterstützen Sie beim Download und bei der Installation von ATA Center, bei der Verbindung zu Active Directory, beim Download des ATA Gatewaypakets, beim Einrichten der Ereignissammlung und optional bei der Integration in Ihr VPN sowie bei der Einrichtung von Honeytoken-Konten und -Ausschlüssen.
 
-[Herunterladen von ATA](https://aka.ms/ataeval): Wenn Sie sich vor der Bereitstellung von ATA noch nicht dazu entschieden haben, ATA käuflich zu erwerben, können Sie die Evaluierungsversion herunterladen. 
+[Herunterladen von ATA](https://aka.ms/ataeval): Wenn Sie sich vor der Bereitstellung von ATA noch nicht dazu entschieden haben, ATA käuflich zu erwerben, können Sie die Evaluierungsversion herunterladen.
 
 [ATA POC-Playbook](https://aka.ms/atapoc): Anleitung für alle Schritte für eine erfolgreiche ATA POC-Bereitstellung.
 
@@ -77,11 +74,9 @@ Die grundlegenden, erforderlichen Einstellungen in ATA werden als Teil des Insta
 
 Sobald ATA einsatzbereit ist, können Sie verdächtige Aktivitäten anzeigen, die in der Angriffszeitleiste erkannt werden. Dies ist die Standardzielseite, auf die Sie gelangen, wenn Sie sich bei der ATA-Konsole anmelden. Standardmäßig werden alle offenen verdächtigen Aktivitäten auf der Angriffszeitachse angezeigt. Außerdem wird der Schweregrad angezeigt, der den einzelnen Aktivitäten zugewiesen wurde. Untersuchen Sie jede verdächtige Aktivität, indem Sie zu den Entitäten (Computer, Geräte, Benutzer) navigieren, um deren Profilseiten zu öffnen, die weitere Informationen bereitstellen. Mithilfe folgender Ressourcen können Sie mit den verdächtigen Aktivitäten von ATA arbeiten:
 
-[Verdächtige ATA-Aktivitäten – Playbook](https://aka.ms/ataplaybook): Dieser Artikel führt Sie durch die Angriffstechniken für den Diebstahl von Anmeldeinformationen durch jederzeit verfügbare Recherchetools aus dem Internet.Zu jedem Zeitpunkt des Angriffs sehen Sie, wie ATA Ihnen dabei hilft, weitere Einblicken in diese Bedrohungen zu erhalten.
+[Verdächtige ATA-Aktivitäten – Playbook](https://aka.ms/ataplaybook): Dieser Artikel führt Sie durch die Angriffstechniken für den Diebstahl von Anmeldeinformationen durch jederzeit verfügbare Recherchetools aus dem Internet. Zu jedem Zeitpunkt des Angriffs sehen Sie, wie ATA Ihnen dabei hilft, weitere Einblicken in diese Bedrohungen zu erhalten.
 
 [Handbuch zu verdächtigen ATA-Aktivitäten](suspicious-activity-guide.md)
-
-
 
 ## <a name="security-best-practices"></a>Bewährte Sicherheitsmethoden
 
@@ -96,5 +91,4 @@ Sobald ATA einsatzbereit ist, können Sie verdächtige Aktivitäten anzeigen, di
 ## <a name="community-resources"></a>Communityressourcen
 
 [ATA-Blog](https://aka.ms/ATABlog) 
- [ATA-Community](https://aka.ms/ATACommunity) 
- [Bereitstellen von Feedback zu ATA](https://aka.ms/ATAUserVoice)
+ [ATA-Community](https://aka.ms/ATACommunity)
