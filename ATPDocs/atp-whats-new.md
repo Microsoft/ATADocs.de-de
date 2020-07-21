@@ -11,11 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 68cc9d2361724bde50ba89d0ba4873e4cb90e14b
-ms.sourcegitcommit: b4ca2f176cf378d6a6a2718043de2dbf9d657a89
+ms.openlocfilehash: 6afb2ef0502077d45c53da988067ea9b9b98da94
+ms.sourcegitcommit: bfb5f35f8e2f19911357e5afa6624ffe43e37d12
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2020
-ms.locfileid: "85953906"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86472449"
 ---
 # <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Neuerungen in Azure Advanced Threat Protection (Azure ATP)
 
@@ -341,7 +342,7 @@ Veröffentlicht: 7. Juli 2019
 Veröffentlicht: 1. Juli 2019
 
 - **Unterstützung für neuen Standort: Azure UK-Rechenzentrum**  
-Azure ATP-Instanzen werden jetzt im Azure UK-Rechenzentrum unterstützt. Weitere Informationen zum Erstellen von Azure ATP-Instanzen und den entsprechenden Rechenzentrumsstandorten finden Sie unter [Step 1 of Azure ATP installation (Azure ATP-Installation – Schritt 1)](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step10).
+Azure ATP-Instanzen werden jetzt im Azure UK-Rechenzentrum unterstützt. Weitere Informationen zum Erstellen von Azure ATP-Instanzen und den entsprechenden Rechenzentrumsstandorten finden Sie unter [Step 1 of Azure ATP installation (Azure ATP-Installation – Schritt 1)](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step1).
 
 - **Featureerweiterung: Neuer Name und neue Features für die Warnungen bei verdächtigen Hinzufügungen zu sensiblen Gruppen (externe ID 2024)**  
 Die Warnung **Suspicious additions to sensitive groups (Verdächtige Hinzufügungen zu sensiblen Gruppen)** lautete ursprünglich **Suspicious modifications to sensitive groups (Verdächtige Änderungen an sensiblen Gruppen)** . Die externe ID der Warnung (ID 2024) hat sich nicht geändert. Durch die beschreibende Namensänderung wird der Zweck der Warnung bei Ergänzungen zu Ihren **sensiblen** Gruppen genauer wiedergespiegelt. Die verbesserte Warnung enthält auch neue Beweise und verbesserte Beschreibungen. Weitere Informationen finden Sie unter [Suspicious additions to sensitive groups (Verdächtige Hinzufügungen zu sensiblen Gruppen)](https://docs.microsoft.com/azure-advanced-threat-protection/atp-domain-dominance-alerts#suspicious-additions-to-sensitive-groups-external-id-2024).  
