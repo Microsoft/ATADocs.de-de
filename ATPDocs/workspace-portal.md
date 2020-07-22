@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 4ba46d60-3a74-480e-8f0f-9a082d62f343
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 215cdaf752e9479f4beff5429b317b099a5c5ab7
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 7648b9047f519c4e9712e608be9f0705be1aaa2a
+ms.sourcegitcommit: bfb5f35f8e2f19911357e5afa6624ffe43e37d12
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775742"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86472500"
 ---
 # <a name="working-with-the-azure-atp-portal"></a>Arbeiten mit dem Azure ATP-Portal
 
@@ -26,26 +26,25 @@ ms.locfileid: "84775742"
 
 Verwenden Sie das Azure ATP-Portal, um die von ATP erkannten verdächtigen Aktivitäten zu überwachen und darauf zu reagieren.
 
-Durch Drücken der `?`-Taste werden die Tastenkombinationen für den Zugriff auf das Azure ATP-Portal bereitgestellt. 
+Durch Drücken der `?`-Taste werden die Tastenkombinationen für den Zugriff auf das Azure ATP-Portal bereitgestellt.
 
 Das Azure ATP-Portal stellt einen schnellen Überblick über alle verdächtigen Aktivitäten in chronologischer Reihenfolge zur Verfügung. Sie ermöglicht es Ihnen, sich die Details einer Aktivität anzusehen und Aktionen entsprechend der jeweiligen Aktivität auszuführen. Das Azure ATP-Portal zeigt außerdem Warnungen und Benachrichtigungen an, um Probleme mit Azure ATP oder neue Aktivitäten hervorzuheben, die als verdächtig eingestuft werden.
 
 In diesem Artikel wird beschrieben, wie Sie mit den wichtigsten Elementen des Azure ATP-Portals arbeiten können.
 
-
 ## <a name="enabling-access-to-the-azure-atp-portal"></a>Aktivieren des Zugriffs auf das Azure ATP-Portal
-Für eine erfolgreiche Anmeldung im Azure ATP-Portal müssen Sie sich mit einem Benutzernamen anmelden, der einer Azure Active Directory-Sicherheitsgruppe zugewiesen wurde, die über Zugriff auf das Azure ATP-Portal verfügt. Weitere Informationen zur rollenbasierten Zugriffssteuerung in Azure ATP finden Sie unter [Working with Azure ATP role groups (Arbeiten mit Azure ATP-Rollengruppen)](atp-role-groups.md).
+
+Für eine erfolgreiche Anmeldung im Azure ATP-Portal müssen Sie sich mit einem Benutzernamen anmelden, der einer Azure Active Directory-Sicherheitsgruppe zugewiesen wurde, die über Zugriff auf das Azure ATP-Portal verfügt.
+Weitere Informationen zur rollenbasierten Zugriffssteuerung in Azure ATP finden Sie unter [Working with Azure ATP role groups (Arbeiten mit Azure ATP-Rollengruppen)](atp-role-groups.md).
 
 ## <a name="logging-into-the-azure-atp-portal"></a>Anmelden im Azure ATP-Portal
 
-1. Sie können sich beim Azure ATP-Portal anmelden, indem Sie sich entweder beim Portal unter [https://portal.atp.azure.com](https://portal.atp.azure.com) anmelden und die relevante Instanz auswählen, oder indem Sie die folgende Instanz-URL öffnen:[https://*instanzname*.atp.azure.com](https://*instancename*.atp.azure.com).zure.com.
-
+1. Sie können sich beim Azure ATP-Portal anmelden, indem Sie sich entweder beim Portal unter [https://portal.atp.azure.com](https://portal.atp.azure.com) anmelden und die relevante Instanz auswählen, oder indem Sie die folgende Instanz-URL öffnen:`https://*instancename*.atp.azure.com`.
 
 2. Azure ATP unterstützt die in die Windows-Authentifizierung integrierte einmalige Anmeldung: Wenn Sie sich schon auf Ihrem Computer angemeldet haben, verwendet Azure ATP dieses Token, um Sie im Azure ATP-Portal anzumelden. Sie können sich auch mit einer Smartcard anmelden. Ihre Berechtigungen in Azure ATP entsprechen Ihrer [Administratorrolle](atp-role-groups.md).
 
    > [!NOTE]
-   > Stellen Sie sicher, dass Sie sich auf dem Computer anmelden, von dem aus Sie auf das Azure ATP-Portal zugreifen möchten. Verwenden Sie hierzu Ihren Azure ATP-Administratorbenutzernamen und das entsprechende Kennwort. Alternativ führen Sie Ihren Browser mit einem anderen Benutzer aus oder melden sich von Windows ab und melden sich danach mit Ihrem Azure ATP-Administratorbenutzerkonto an. Im Gegensatz zum Azure ATP-Portal ermöglicht das neue [Cloud App Security-Portal](https://portal.cloudappsecurity.com) die Anmeldung mehrerer Benutzer und erfordert keine zusätzlichen Lizenzen für die Verwendung mit Azure ATP.  
-
+   > Stellen Sie sicher, dass Sie sich auf dem Computer anmelden, von dem aus Sie auf das Azure ATP-Portal zugreifen möchten. Verwenden Sie hierzu Ihren Azure ATP-Administratorbenutzernamen und das entsprechende Kennwort. Alternativ führen Sie Ihren Browser mit einem anderen Benutzer aus oder melden sich von Windows ab und melden sich danach mit Ihrem Azure ATP-Administratorbenutzerkonto an. Im Gegensatz zum Azure ATP-Portal ermöglicht das neue [Cloud App Security-Portal](https://portal.cloudappsecurity.com) die Anmeldung mehrerer Benutzer und erfordert keine zusätzlichen Lizenzen für die Verwendung mit Azure ATP.
 
 ### <a name="attack-time-line"></a>Angriffszeitachse
 
@@ -55,7 +54,7 @@ Die Angriffszeitachse ist die Standard-Landing Page, auf die Sie gelangen, wenn 
 
 Weitere Informationen finden Sie unter [Arbeiten mit Sicherheitswarnungen](working-with-suspicious-activities.md).
 
-### <a name="whats-new"></a>Neuheiten
+### <a name="whats-new"></a>Neuerungen
 
 Nach der Veröffentlichung einer neuen Version von Azure ATP wird das Fenster **Neuigkeiten** in der oberen rechten Ecke angezeigt, und Sie erhalten Informationen darüber, was in der neusten Version hinzugefügt wurde. Außerdem erhalten Sie einen Link zum Download der Version.
 
@@ -65,13 +64,13 @@ Sie können basierend auf Status und Schweregrad filtern, welche verdächtigen A
 
 ### <a name="search-bar"></a>Suchleiste <a name="search-bar"></a>
 
-Im obersten Menü finden Sie eine Suchleiste. Sie können nach einem bestimmten Benutzer, Computer oder nach Gruppen in Azure ATP suchen. Beginnen Sie als Versuch einfach mit der Eingabe. Unten in der Suchleiste wird die Anzahl der gefundenen Suchergebnisse angezeigt. 
+Im obersten Menü finden Sie eine Suchleiste. Sie können nach einem bestimmten Benutzer, Computer oder nach Gruppen in Azure ATP suchen. Beginnen Sie als Versuch einfach mit der Eingabe. Unten in der Suchleiste wird die Anzahl der gefundenen Suchergebnisse angezeigt.
 
 ![Bild zur Suche im Azure ATP-Portal](media/atp-workspace-portal-search.png)
 
 Wenn Sie auf die Nummer klicken, können Sie auf die Seite mit den Suchergebnissen zugreifen, auf der Sie die Ergebnisse nach Entitätstyp für weitere Untersuchungen filtern können.
 
-![Suchergebnisse](media/search-results.png)
+!["search results" (Ergebnisse durchsuchen)](media/search-results.png)
 
 ### <a name="health-center"></a>Integritätscenter
 
@@ -79,7 +78,7 @@ Das Integritätscenter warnt Sie, wenn in Ihrem Azure ATP-Instanz etwas nicht or
 
 ![Abbildung zum Azure ATP-Integritätscenter](media/atp-health-issue.png)
 
-Jedes Mal, wenn auf Ihrem System ein Problem auftritt (z.B. ein Verbindungsfehler oder ein nicht verbundener eigenständiger Azure ATP-Sensor), können Sie dies an dem Symbol für das Integritätscenter erkennen, auf dem ein roter Punkt angezeigt wird. 
+Jedes Mal, wenn auf Ihrem System ein Problem auftritt (z.B. ein Verbindungsfehler oder ein nicht verbundener eigenständiger Azure ATP-Sensor), können Sie dies an dem Symbol für das Integritätscenter erkennen, auf dem ein roter Punkt angezeigt wird.
 
 ![Abbildung des roten Punkts auf dem Symbol für das Azure ATP-Integritätscenter](media/atp-health-bar.png)
 
@@ -109,8 +108,7 @@ Wenn Sie an einer Stelle im Azure ATP-Portal, an der eine einzelne Entität darg
 - Microsoft Defender ATP-Badge: Wird angezeigt, wenn dieser Entität verdächtige Aktivitäten in Windows Defender ATP zugeordnet werden.
 - Badge für Lateral Movement-Pfade: Wird angezeigt, wenn innerhalb der letzten beiden Tage Lateral Movement-Pfade für diese Entität ermittelt wurden.
 
-
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [Erstellen von Azure ATP-Instanzen](install-atp-step1.md)
 - [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)
