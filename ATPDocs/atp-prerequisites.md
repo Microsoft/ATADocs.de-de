@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 07/05/2020
+ms.date: 07/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d1f05e45e69bc78c4e2934cfe3c243ff77964732
-ms.sourcegitcommit: 424567ef02d97454e72241837f69fa6a928709ba
+ms.openlocfilehash: a44abd85bf8aeb49b6ff1d1f2c34532a63de6c3c
+ms.sourcegitcommit: b2b40be9ac76237c3d6b2beb06eabd92e0b399c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86175727"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87293200"
 ---
 # <a name="azure-atp-prerequisites"></a>Voraussetzungen für Azure ATP
 
@@ -127,7 +127,7 @@ Beim Domänencontroller kann es sich um einen schreibgeschützten Domänencontro
 
 Für die Kommunikation Ihrer Domänencontroller mit dem Clouddienst müssen Sie in Ihrer Firewall und auf Ihrem Proxyserver Port 443 für „*.atp.azure.com“ freigeben.
 
-Falls .NET Framework 4.7 oder höher nicht installiert ist, wird .NET Framework 4.7 während der Installation installiert, und Sie müssen möglicherweise den Domänencontroller neu starten, wenn ein Neustart bereits aussteht.
+Falls .NET Framework 4.7 oder höher nicht installiert ist, wird .NET Framework 4.7 während der Installation installiert, und Sie müssen möglicherweise den Domänencontroller neu starten. Ein Neustart kann auch erforderlich sein, wenn bereits ein Neustart aussteht.
 
 > [!NOTE]
 > Mindestens 5 GB Speicherplatz auf dem Datenträger wird benötigt, 10 GB wird empfohlen. Dies umfasst den Speicherplatz, der für die Azure ATP-Binärdateien, Azure ATP-Protokolle und Leistungsprotokolle benötigt wird.
@@ -165,12 +165,16 @@ In der folgenden Tabelle sind die Ports aufgeführt, die für den Azure ATP-Sens
 |------------|-------------|--------|-----------|-------------|
 |**Internetports**||||||
 |SSL (*.atp.azure.com)|TCP|443|Azure ATP-Sensor|Azure ATP-Clouddienst|Ausgehend|
-|SSL(localhost)|TCP|444|Azure ATP-Sensor|localhost|Beide|
+|SSL (localhost)|TCP|444|Azure ATP-Sensor|localhost|Beide|
 |**Interne Ports**||||||
 |DNS|TCP und UDP|53|Azure ATP-Sensor|DNS-Server|Ausgehend|
 |Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Azure ATP-Sensor|Alle Geräte im Netzwerk|Ausgehend|
 |Syslog (optional)|TCP/UDP|514, je nach Konfiguration|SIEM-Server|Azure ATP-Sensor|Eingehende Verbindungen|
 |RADIUS|UDP|1813|RADIUS|Azure ATP-Sensor|Eingehende Verbindungen|
+|**NNR-Ports**||||||
+|NTLM über RPC|TCP|Port 135|ATP-Sensoren|Alle Geräte im Netzwerk|Eingehende Verbindungen|
+|NetBIOS|UDP|137|ATP-Sensoren|Alle Geräte im Netzwerk|Eingehende Verbindungen|
+|RDP|TCP|3389, nur das erste Client Hello-Paket|ATP-Sensoren|Alle Geräte im Netzwerk|Eingehende Verbindungen|
 
 ### <a name="windows-event-logs"></a>Windows-Ereignisprotokolle
 
@@ -257,6 +261,10 @@ In der folgenden Tabelle sind die Ports aufgeführt, die für den Verwaltungsada
 |DNS|TCP und UDP|53|Azure ATP-Sensor:|DNS-Server|Ausgehend|
 |Syslog (optional)|TCP/UDP|514, je nach Konfiguration|SIEM-Server|Azure ATP-Sensor:|Eingehende Verbindungen|
 |RADIUS|UDP|1813|RADIUS|Azure ATP-Sensor|Eingehende Verbindungen|
+|**NNR-Ports**||||||
+|NTLM über RPC|TCP|135|ATP-Sensoren|Alle Geräte im Netzwerk|Eingehende Verbindungen|
+|NetBIOS|UDP|137|ATP-Sensoren|Alle Geräte im Netzwerk|Eingehende Verbindungen|
+|RDP|TCP|3389, nur das erste Client Hello-Paket|ATP-Sensoren|Alle Geräte im Netzwerk|Eingehende Verbindungen|
 
 > [!NOTE]
 >
