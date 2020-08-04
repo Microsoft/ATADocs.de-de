@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 24eca4c6-c949-42ea-97b9-41ef0fb611f1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ca080afa9e557648fab9a20ac7f040faae4aabd6
-ms.sourcegitcommit: b2b40be9ac76237c3d6b2beb06eabd92e0b399c8
+ms.openlocfilehash: 33b7f621e031d33921e3f9022469222a3ef36570
+ms.sourcegitcommit: 3435650b30d74d96c54cb4241866b16f4ff96144
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87293166"
+ms.lasthandoff: 08/02/2020
+ms.locfileid: "87514563"
 ---
 # <a name="azure-atp-switches-and-silent-installation"></a>Azure ATP-Switches und automatische Installation
 
@@ -51,8 +51,8 @@ Verwenden Sie den folgenden Befehl, um eine vollständig automatische Installati
 
 **PowerShell-Syntax**:
 
-```dos
-"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
+```powershell
+./"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
 ```
 
 > [!NOTE]
