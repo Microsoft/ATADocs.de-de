@@ -153,8 +153,6 @@
       items:
         - name: Konfigurieren des Azure ATP-Sensors
           href: install-atp-step5.md
-        - name: Überprüfung der erweiterten Überwachungsrichtlinie
-          href: atp-advanced-audit-policy.md
         - name: Konfigurieren der Windows-Ereignissammlung
           href: configure-windows-event-collection.md
         - name: Proxykonfiguration
