@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 6597b8c7-f83e-43c6-8149-fb4a914a845b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e28dfdb4683d56f9ef33c138acf2c90bc305b9f5
-ms.sourcegitcommit: fcee078841aa6503fd1bdfb2097850d8209b82c0
+ms.openlocfilehash: a7d0ea7c8cc0eec8952cba17386045d9ee7529be
+ms.sourcegitcommit: 032132b54c905d08a24d15028782c66cc0620f20
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87528360"
+ms.lasthandoff: 08/08/2020
+ms.locfileid: "88023292"
 ---
 # <a name="security-assessment-legacy-protocols-usage"></a>Sicherheitsbewertung: Verwendung von Legacyprotokollen
 
@@ -45,7 +45,9 @@ Um Legacyprotokolle außer Betrieb nehmen zu können, muss Ihre Organisation zun
 1. Verwenden Sie die Berichtstabelle, um zu ermitteln, welche Ihrer wichtigsten ermittelten Entitäten Legacyprotokolle verwenden.
 
     ![Verhindern der Verwendung von Legacyprotokollen](media/atp-cas-isp-legacy-protocols-2.png)
-1. Ergreifen Sie für diese Entitäten entsprechende Maßnahmen, um Abhängigkeiten zu ermitteln, die Verwendung von Legacyprotokollen zu beenden, [die Protokolle letztendlich komplett zu deaktivieren](https://blogs.technet.microsoft.com/miriamxyra/2017/11/07/stop-using-lan-manager-and-ntlmv1/) und [MIC 2 zu beenden sowie LMv2-Clients auszunutzen](https://www.preempt.com/blog/active-directory-ntlm-attacks/).
+1. Ergreifen Sie entsprechende Maßnahmen für diese Entitäten, um Abhängigkeiten zu ermitteln.
+1. Beenden Sie die Verwendung des Legacyprotokolls, und [deaktivieren Sie schließlich das Protokoll vollständig](https://blogs.technet.microsoft.com/miriamxyra/2017/11/07/stop-using-lan-manager-and-ntlmv1/).
+1. [Löschen Sie MIC 2, und verwenden Sie keine LMv2-Clients mehr.](https://www.preempt.com/blog/active-directory-ntlm-attacks/)
 
 ## <a name="next-steps"></a>Nächste Schritte
 

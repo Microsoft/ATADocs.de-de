@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 0b3a1db5-0d43-49af-b356-7094cc85f0a5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 662ded6bef3e38079173181c41920b2f57e6407d
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: c4d21a4065176db1f90e73edb7fdc8192c81d950
+ms.sourcegitcommit: 42f1da0c498bd145daff4df20b3e53069b55ecd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84773566"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87856392"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Tutorial: Warnungen zu Domänendominanz
 
@@ -298,6 +298,10 @@ Die Herabstufung der Verschlüsselung ist eine Methode, die dazu dient, Kerberos
 
 Bei einer Golden Ticket-Warnung wurde die Verschlüsselungsmethode des TGT-Felds der TGS_REQ-Nachricht (Dienstanforderung) vom Quellcomputer im Vergleich zum zuvor gelernten Verhalten als herabgestuft erkannt. Dies basiert nicht auf einer Zeitanomalie (wie bei der anderen Golden Ticket-Erkennung). Zusätzlich wurde bei dieser Warnung der vorherigen von Azure ATP erkannten Dienstanforderung keine Kerberos-Authentifizierungsanforderung zugeordnet.
 
+**Lernphase**
+
+Für diese Warnung gilt eine Lernphase von 5 Tagen ab dem Start der Domänencontrollerüberwachung.
+
 **TP, B-TP oder FP?**
 
 Einige zulässige Ressourcen unterstützen keine starken Verschlüsselungsverfahren und können diese Warnung auslösen.
@@ -343,7 +347,7 @@ Bei Anwendungen wird möglicherweise ein schwächeres Verschlüsselungsverfahren
 
 ## <a name="suspected-golden-ticket-usage-forged-authorization-data-external-id-2013"></a>Vermutete Golden Ticket-Verwendung (gefälschte Autorisierungsdaten) (externe ID 2013)
 
-Vorheriger Name: Berechtigungsausweitung mithilfe von gefälschten Autorisierungsdaten
+Alter Name: Berechtigungsausweitung mithilfe von gefälschten Autorisierungsdaten
 
 **Beschreibung**
 
@@ -380,7 +384,7 @@ Einige Betriebssysteme und Anwendungen sind dafür bekannt, dass sie die Autoris
 
 ## <a name="suspected-golden-ticket-usage-nonexistent-account-external-id-2027"></a>Vermutete Golden Ticket-Verwendung (nicht vorhandenes Konto) (externe ID 2027)
 
-Vorheriger Name: Kerberos Golden Ticket
+Alter Name: Kerberos Golden Ticket
 
 **Beschreibung**
 
@@ -440,7 +444,7 @@ Verbunddienste generieren möglicherweise Tickets, die diese Warnung auslösen.
 
 ## <a name="suspected-golden-ticket-usage-time-anomaly-external-id-2022"></a>Vermutete Golden Ticket-Verwendung (Zeitanomalie) (externe ID 2022)
 
-Vorheriger Name: Kerberos Golden Ticket
+Alter Name: Kerberos Golden Ticket
 
 **Beschreibung**
 
@@ -540,7 +544,7 @@ Zulässige Änderungen an Gruppen, die nur selten auftreten und vom System noch 
 
 ## <a name="suspicious-service-creation-external-id-2026"></a>Verdächtige Diensterstellung (externe ID 2026)
 
-*Vorheriger Name*: Erstellen eines verdächtigen Diensts
+*Alter Name:* Verdächtige Diensterstellung
 
 **Beschreibung**
 

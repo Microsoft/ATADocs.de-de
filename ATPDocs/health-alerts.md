@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: d0551e91-3b21-47d5-ad9d-3362df6d47c0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 503b8ac25a8ab812ca48eba138a7eafefe3168c0
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 37ae29e667d3507d1415acae3098e6f93565ec4e
+ms.sourcegitcommit: 8c99699b9b84d50fb258c0cc5523ffa78133b7a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84772359"
+ms.lasthandoff: 08/09/2020
+ms.locfileid: "88027158"
 ---
 # <a name="understanding-azure-atp-sensor-health-alerts"></a>Grundlegendes zu Integritätswarnungen für Azure ATP-Sensoren
 
@@ -113,11 +113,13 @@ Das Azure ATP-Integritätscenter informiert Sie, wenn ein Problem im Zusammenhan
 |----|----|----|----|
 |The Azure ATP sensor is receiving more Event Tracing for Windows (ETW) events than it can process. (Der Azure ATP-Sensor empfängt mehr Ereignisablaufverfolgung für Windows-Ereignisse (ETW) als er verarbeiten kann.)|Einige Ereignisablaufverfolgung für Windows-Ereignisse (ETW) konnten nicht analysiert werden, was die Fähigkeit zum Erkennen verdächtiger Aktivitäten beeinflussen kann. Diese stammen von Domänencontrollern, die von diesem Azure ATP-Sensor überwacht werden.|Überprüfen Sie, ob nur erforderliche Ereignisse an den Azure ATP-Sensor weitergeleitet werden, oder versuchen Sie, einige der Ereignisse an einen anderen Azure ATP-Sensor weiterzuleiten.|Mittel|
 
-## <a name="windows-events-missing-from-domain-controller-audit-policy"></a>Windows-Ereignisse fehlen in der Überwachungsrichtlinie für den Domänencontroller
+<!--
+## Windows events missing from domain controller audit policy
 
-|Warnung|Beschreibung|Lösung|Schweregrad|
+|Alert|Description|Resolution|Severity|
 |----|----|----|----|
-| (Windows events missing from domain controller audit policy) Windows-Ereignisse fehlen in der Überwachungsrichtlinie für den Domänencontroller|Damit die richtigen Ereignisse überprüft und im Windows-Ereignisprotokoll eingeschlossen werden, benötigen Ihre Domänencontroller die korrekten erweiterten Überwachungsrichtlinieneinstellungen. Falsche erweiterte Überwachungsrichtlinieneinstellungen führen dazu, dass wichtige Ereignisse nicht in Ihren Protokollen aufgeführt werden und so die Abdeckung durch Azure ATP unzureichend vorhanden ist.|Überprüfen Sie Ihre [erweiterte Überwachungsrichtlinie](atp-advanced-audit-policy.md), und ändern Sie sie nach Bedarf. | Mittel|
+| Windows events missing from domain controller audit policy|For the correct events to be audited and included in the Windows Event Log, your domain controllers require accurate Advanced Audit Policy settings. Incorrect Advanced Audit Policy settings leave critical events out of your logs, and result in incomplete Azure ATP coverage.|Review your [Advanced Audit policy](atp-advanced-audit-policy.md) and modify as needed. | Medium|
+-->
 
 ## <a name="see-also"></a>Weitere Informationen
 
