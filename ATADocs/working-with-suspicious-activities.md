@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f4f697e32d3c89c77f1564d0b9b43cb04ed8ab30
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: e7fb0da19b39466392fedaf2198f795909248049
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84774637"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956787"
 ---
 # <a name="working-with-suspicious-activities"></a>Arbeiten mit verdächtigen Aktivitäten
 
@@ -29,32 +29,32 @@ In diesem Artikel werden die Grundlagen der Arbeit mit Advanced Threat Analytics
 Nachdem Sie sich bei der ATA-Konsole angemeldet haben, gelangen Sie automatisch zur **Zeitachse mit den offenen verdächtigen Aktivitäten**. Die verdächtigen Aktivitäten werden in chronologischer Reihenfolge aufgeführt, wobei sich die neuesten verdächtigen Aktivitäten oben auf der Zeitachse befinden.
 Zu jeder verdächtigen Aktivität stehen folgende Informationen zur Verfügung:
 
--   Die beteiligten Entitäten, einschließlich Benutzer, Computer, Server, Domänencontroller und Ressourcen
+- Die beteiligten Entitäten, einschließlich Benutzer, Computer, Server, Domänencontroller und Ressourcen
 
--   Uhrzeiten und Zeitrahmen der verdächtigen Aktivitäten
+- Uhrzeiten und Zeitrahmen der verdächtigen Aktivitäten
 
--   Schweregrad der verdächtigen Aktivitäten: „Hoch“, „Mittel“ oder „Niedrig“
+- Schweregrad der verdächtigen Aktivitäten: „Hoch“, „Mittel“ oder „Niedrig“
 
--   Status: „Offen“, „Aufgelöst“ oder „Unterdrückt“.
+- Status: „Offen“, „Aufgelöst“ oder „Unterdrückt“.
 
--   Möglichkeit für Folgendes:
+- Möglichkeit für Folgendes:
 
-    -   Teilen der verdächtigen Aktivität mit anderen Personen in Ihrer Organisation per E-Mail.
+    - Teilen der verdächtigen Aktivität mit anderen Personen in Ihrer Organisation per E-Mail.
 
-    -   Exportieren der verdächtigen Aktivität nach Excel.
+    - Exportieren der verdächtigen Aktivität nach Excel.
 
 > [!NOTE]
-> -   Wenn Sie mit der Maus auf einen Benutzer oder Computer zeigen, wird ein Miniprofil der Entität angezeigt. Dieses enthält zusätzliche Informationen zur Entität und die Anzahl von verdächtigen Aktivitäten, mit denen die Entität verknüpft ist.
-> -   Wenn Sie auf eine Entität klicken, gelangen Sie zum Entitätsprofil des Benutzers oder Computers.
+> - Wenn Sie mit der Maus auf einen Benutzer oder Computer zeigen, wird ein Miniprofil der Entität angezeigt. Dieses enthält zusätzliche Informationen zur Entität und die Anzahl von verdächtigen Aktivitäten, mit denen die Entität verknüpft ist.
+> - Wenn Sie auf eine Entität klicken, gelangen Sie zum Entitätsprofil des Benutzers oder Computers.
 
 ![Abbildung der Zeitachse für verdächtige Aktivitäten von ATA](media/ATA-Suspicious-Activity-Timeline.JPG)
 
 ## <a name="filter-suspicious-activities-list"></a>Filtern der Liste der verdächtigen Aktivitäten
 So filtern Sie die Liste der verdächtigen Aktivitäten
 
-1.  Wählen Sie auf der linken Seite des Bildschirms im Bereich **Filtern nach** eine der folgenden Optionen aus: **Alle**, **Offen**, **Geschlossen** oder **Unterdrückt**.
+1. Wählen Sie auf der linken Seite des Bildschirms im Bereich **Filtern nach** eine der folgenden Optionen aus: **Alle**, **Offen**, **Geschlossen** oder **Unterdrückt**.
 
-2.  Um die Liste weiter zu filtern, wählen Sie **hoch**, **Mittel**oder **niedrig**aus.
+1. Um die Liste weiter zu filtern, wählen Sie **hoch**, **Mittel**oder **niedrig**aus.
 
 **Schweregrad von verdächtigen Aktivitäten**
 
@@ -75,7 +75,7 @@ So filtern Sie die Liste der verdächtigen Aktivitäten
 Sie können den Status einer verdächtigen Aktivität ändern, indem Sie auf den aktuellen Status der verdächtigen Aktivität klicken und eine der folgenden Optionen auswählen: **Offen**, **Unterdrückt**, **Aufgelöst** oder **Verworfen**.
 Klicken Sie dafür auf die drei Punkte in der oberen rechten Ecke einer besonders verdächtigen Aktivität, um die Liste der verfügbaren Aktionen anzuzeigen.
 
-![ATA-Aktionen für verdächtige Aktivitäten](./media/sa-actions.png)
+![ATA-Aktionen für verdächtige Aktivitäten](media/sa-actions.png)
 
 **Status von verdächtigen Aktivitäten**
 

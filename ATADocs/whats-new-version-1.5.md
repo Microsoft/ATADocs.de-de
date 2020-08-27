@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: a0d64aff-ca9e-4300-b3f8-eb3c8b8ae045
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 87f0ee5e13e5b6c85a210d4b63a78b27f249888d
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 7bdd3bf22f2b87c34ac45614c9c8f3ebeab2e87b
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84774722"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956668"
 ---
 # <a name="whats-new-in-ata-version-15"></a>Neuerungen in ATA 1.5
 Die vorliegenden Anmerkungen zu dieser Version enthalten Informationen zu bekannten Problemen in dieser Version von Advanced Threat Analytics.
@@ -25,19 +25,19 @@ Die vorliegenden Anmerkungen zu dieser Version enthalten Informationen zu bekann
 ## <a name="whats-new-in-the-ata-15-update"></a>Neuerungen beim Update auf ATA 1.5
 Das Update auf ATA 1.5 bietet Verbesserungen in folgenden Bereichen:
 
--   Schnellere Erkennung
+- Schnellere Erkennung
 
--   Verbesserter automatischer Erkennungsalgorithmus für NAT-Geräte (Network Address Translation, Netzwerkadressübersetzung)
+- Verbesserter automatischer Erkennungsalgorithmus für NAT-Geräte (Network Address Translation, Netzwerkadressübersetzung)
 
--   Verbessertes Namensauflösungsverfahren für nicht mit einer Domäne verbundene Geräte
+- Verbessertes Namensauflösungsverfahren für nicht mit einer Domäne verbundene Geräte
 
--   Unterstützung für die Datenmigration während Produktupdates
+- Unterstützung für die Datenmigration während Produktupdates
 
--   Bessere Reaktionsfähigkeit der Benutzeroberfläche auf verdächtige Aktivitäten mit Tausenden von beteiligten Entitäten
+- Bessere Reaktionsfähigkeit der Benutzeroberfläche auf verdächtige Aktivitäten mit Tausenden von beteiligten Entitäten
 
--   Verbesserte automatische Auflösung von Integritäts Warnungen
+- Verbesserte automatische Auflösung von Integritäts Warnungen
 
--   Zusätzliche Leistungsindikatoren für die erweiterte Überwachung und Problembehandlung
+- Zusätzliche Leistungsindikatoren für die erweiterte Überwachung und Problembehandlung
 
 ## <a name="known-issues"></a>Bekannte Probleme
 In dieser Version bestehen die folgenden bekannten Probleme.

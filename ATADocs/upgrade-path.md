@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 88720401-1fb2-4353-ad39-32bc0088f0de
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1bdf5a33efb00fd592b6da9fc8696df3bcfe281b
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 31ab0d74020ae446d0739ed2b9e79c19b5ffb60c
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84774841"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956345"
 ---
 # <a name="recommended-upgrade-path-for-ata"></a>Empfohlener Upgradepfad für ATA
 
@@ -45,7 +45,7 @@ Dieser Artikel enthält Informationen über die verfügbaren Versionen von Advan
 
 Überprüfen Sie das Upgradepfad-Diagramm, um den korrekten Upgradepfad für die aktuelle Installation zu ermitteln. 
 
-![Upgradepfad für ATA-Version](./media/upgrade-path-ata.png)
+![Upgradepfad für ATA-Version](media/upgrade-path-ata.png)
 
 ## <a name="see-also"></a>Weitere Informationen
 - [Voraussetzungen für ATA](ata-prerequisites.md)

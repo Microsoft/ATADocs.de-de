@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 4a25561b-a5ed-44aa-9b72-366976b3c72a
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: fbbb692e462626c3625135a8a5fb5109fe570659
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 1df0644b5649e2e1694e6e6560a49662689b2d32
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775096"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956532"
 ---
 # <a name="change-ata-configuration---domain-connectivity-password"></a>Ändern der ATA-Konfiguration – Domänenverbindungskennwort
 
@@ -31,23 +31,23 @@ Wenn Sie vermuten, dass dies der Fall ist, überprüfen Sie auf dem ATA-Gateway 
 
 Um dies zu korrigieren, führen Sie die folgenden Schritte zum Ändern des Domänenverbindungskennworts auf ATA Center aus:
 
-1.  Öffnen Sie die ATA-Konsole auf ATA-Center.
+1. Öffnen Sie die ATA-Konsole auf ATA-Center.
 
-2.  Wählen Sie auf der Symbolleiste die Option Einstellungen, und wählen Sie **Konfiguration**aus.
+1. Wählen Sie auf der Symbolleiste die Option Einstellungen, und wählen Sie **Konfiguration**aus.
 
     ![Symbol der ATA-Konfigurationseinstellungen](media/ATA-config-icon.png)
 
-3.  Wählen Sie **Verzeichnisdienste** aus.
+1. Wählen Sie **Verzeichnisdienste** aus.
 
     ![Abbildung – Ändern des Kennworts für ATA-Gateway](media/ATA-GW-change-DC-password.png)
 
-4.  Ändern Sie das Kennwort unter **Kennwort**.
+1. Ändern Sie das Kennwort unter **Kennwort**.
 
     Wenn ATA Center über Konnektivität mit der Domäne verfügt, verwenden Sie die Schaltfläche **Verbindung testen**, um die Anmeldeinformationen zu überprüfen.
 
-5.  Klicken Sie auf **Speichern**.
+1. Klicken Sie auf **Speichern**.
 
-6.  Überprüfen Sie nach dem Ändern des Kennworts, ob der ATA-Gatewaydienst auf den ATA-Gatewayservern ausgeführt wird.
+1. Überprüfen Sie nach dem Ändern des Kennworts, ob der ATA-Gatewaydienst auf den ATA-Gatewayservern ausgeführt wird.
 
 
 

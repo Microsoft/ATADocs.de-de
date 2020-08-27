@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: be9ee613-4eb3-40f1-8973-e7f0a707ff57
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 14fd7b13b61005ef215c6ba80920572ebcdf0b64
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 5a23b551b1f05513c242e9779f51f68c7bab2d4a
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84774705"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956260"
 ---
 # <a name="whats-new-in-ata-version-17"></a>Neues in ATA Version 1.7
 Die vorliegenden Anmerkungen zu dieser Version enthalten Informationen zu bekannten Problemen in dieser Version von Advanced Threat Analytics.
@@ -25,15 +25,15 @@ Die vorliegenden Anmerkungen zu dieser Version enthalten Informationen zu bekann
 ## <a name="whats-new-in-the-ata-17-update"></a>Neuerungen beim Update auf ATA 1.7
 Das Update auf ATA 1.7 bietet Verbesserungen in folgenden Bereichen:
 
--   Neue und aktualisierte Erkennung
+- Neue und aktualisierte Erkennung
 
--   Rollenbasierte Zugriffssteuerung
+- Rollenbasierte Zugriffssteuerung
 
--   Unterstützung für Windows Server 2016 und Windows Server 2016 Core
+- Unterstützung für Windows Server 2016 und Windows Server 2016 Core
 
--   Verbesserungen der Benutzeroberfläche
+- Verbesserungen der Benutzeroberfläche
 
--   Kleinere Änderungen
+- Kleinere Änderungen
 
 
 ### <a name="new--updated-detections"></a>Neue und aktualisierte Erkennung
@@ -97,16 +97,16 @@ Um das Problem zu beheben, wechseln Sie nach dem Ändern des Zertifikats an eine
 
 1. Mongo.exe ATA (ATA muss groß geschrieben werden) 
 
-2. CenterThumbprint=db.SystemProfile.find({_t:"CenterSystemProfile"}).toArray()[0].Configuration.SecretManagerConfiguration.CertificateThumbprint;
+1. CenterThumbprint=db.SystemProfile.find({_t:"CenterSystemProfile"}).toArray()[0].Configuration.SecretManagerConfiguration.CertificateThumbprint;
 
-3. db.SystemProfile.update({_t:"ServiceSystemProfile"},{$set:{"Configuration.ManagementClientConfiguration.ServerCertificateThumbprint":CenterThumbprint}}, {multi: true})
+1. db.SystemProfile.update({_t:"ServiceSystemProfile"},{$set:{"Configuration.ManagementClientConfiguration.ServerCertificateThumbprint":CenterThumbprint}}, {multi: true})
 
 ### <a name="export-suspicious-activity-details-to-excel-may-fail"></a>Beim Export von Details über verdächtige Aktivität nach Excel tritt möglicherweise ein Fehler auf
 Beim Versuch, Details über verdächtige Aktivität in eine Excel-Datei zu exportieren, tritt möglicherweise der folgende Fehler auf: *Error [BsonClassMapSerializer`1] System.FormatException: An error occurred while deserializing the Activity property of class Microsoft.Tri.Common.Data.NetworkActivities.SuspiciousActivityActivity: Element 'ResourceIdentifier' does not match any field or property of class Microsoft.Tri.Common.Data.EventActivities.NtlmEvent. ---> System.FormatException: Element 'ResourceIdentifier' does not match any field or property of class Microsoft.Tri.Common.Data.EventActivities.NtlmEvent.* (Fehler [BsonClassMapSerializer`1] System.FormatException: Fehler beim Deserialisieren der Aktivitätseigenschaft der Klasse Microsoft.Tri.Common.Data.NetworkActivities.SuspiciousActivityActivity: Das Element 'ResourceIdentifier' stimmt mit keinem Feld und keiner Eigenschaft der Klasse Microsoft.Tri.Common.Data.EventActivities.NtlmEvent überein. ---> System.FormatException: Das Element 'ResourceIdentifier' stimmt mit keinem Feld und keiner Eigenschaft der Klasse Microsoft.Tri.Common.Data.EventActivities.NtlmEvent überein.)
 
 Um dieses Problem zu beheben, wechseln Sie an einer Eingabeaufforderung mit erhöhten Rechten zum Speicherort **%ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**, und führen Sie folgende Befehle aus:
-1.  `Mongo.exe ATA` (ATA muss in Großbuchstaben angegeben werden)
-2.  `db.SuspiciousActivityActivity.update({ "Activity._t": "NtlmEvent" },{$unset: {"Activity.ResourceIdentifier": ""}}, {multi: true});`
+1. `Mongo.exe ATA` (ATA muss in Großbuchstaben angegeben werden)
+2. `db.SuspiciousActivityActivity.update({ "Activity._t": "NtlmEvent" },{$unset: {"Activity.ResourceIdentifier": ""}}, {multi: true});`
 
 ## <a name="minor-changes"></a>Kleinere Änderungen
 

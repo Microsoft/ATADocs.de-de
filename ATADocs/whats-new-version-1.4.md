@@ -12,47 +12,47 @@ ms.technology: ''
 ms.assetid: cbea47f9-34c1-42b6-ae9e-6a472b49e1a5
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1ad136c9f028140d76fd42f62eeb7a11366af286
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: cbe31a255a5b437852b6084fcea92556a04a6bd5
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84774755"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956685"
 ---
 # <a name="what39s-new-in-ata-version-14"></a>Neuerungen in ATA 1.4
 Die vorliegenden Anmerkungen zu dieser Version enthalten Informationen zu bekannten Problemen in Version 1.4 von Advanced Threat Analytics.
 
 ## <a name="whats-new-in-this-version"></a>Was ist neu in dieser Version?
 
--   Unterstützung für die Windows-Ereignisweiterleitung (Windows Event Forwarding, WEF), um Ereignisse direkt von den Domänencontrollern an das ATA-Gateway zu senden.
+- Unterstützung für die Windows-Ereignisweiterleitung (Windows Event Forwarding, WEF), um Ereignisse direkt von den Domänencontrollern an das ATA-Gateway zu senden.
 
--   Verbesserungen der Pass-the-Hash-Erkennung für Unternehmensressourcen durch Kombination von DPI (Deep Packet Inspection, ausführliche Paketüberprüfung) und Windows-Ereignisprotokollen.
+- Verbesserungen der Pass-the-Hash-Erkennung für Unternehmensressourcen durch Kombination von DPI (Deep Packet Inspection, ausführliche Paketüberprüfung) und Windows-Ereignisprotokollen.
 
--   Verbesserungen für die Unterstützung von nicht in eine Domäne eingebundenen Geräten und Nicht-Windows-Geräten in Bezug auf Erkennung und Sichtbarkeit.
+- Verbesserungen für die Unterstützung von nicht in eine Domäne eingebundenen Geräten und Nicht-Windows-Geräten in Bezug auf Erkennung und Sichtbarkeit.
 
--   Leistungsverbesserungen zur Unterstützung einer größeren Menge an Datenverkehr pro ATA-Gateway.
+- Leistungsverbesserungen zur Unterstützung einer größeren Menge an Datenverkehr pro ATA-Gateway.
 
--   Leistungsverbesserungen zur Unterstützung einer größeren Anzahl von ATA-Gateways pro ATA Center.
+- Leistungsverbesserungen zur Unterstützung einer größeren Anzahl von ATA-Gateways pro ATA Center.
 
--   Ein neuer automatischer Namensauflösungsprozess wurde hinzugefügt, der Computernamen und IP-Adressen einander zuordnet. Diese einzigartige Funktion spart kostbare Zeit bei der Untersuchung und liefert belastbare Informationen für Sicherheitsanalysten.
+- Ein neuer automatischer Namensauflösungsprozess wurde hinzugefügt, der Computernamen und IP-Adressen einander zuordnet. Diese einzigartige Funktion spart kostbare Zeit bei der Untersuchung und liefert belastbare Informationen für Sicherheitsanalysten.
 
--   Verbesserte Möglichkeit zum Erfassen von Benutzereingaben, um den Erkennungsprozess automatisch zu optimieren.
+- Verbesserte Möglichkeit zum Erfassen von Benutzereingaben, um den Erkennungsprozess automatisch zu optimieren.
 
--   Automatische Erkennung für NAT-Geräte.
+- Automatische Erkennung für NAT-Geräte.
 
--   Automatisches Failover, wenn die Domänencontroller nicht erreichbar sind.
+- Automatisches Failover, wenn die Domänencontroller nicht erreichbar sind.
 
--   Die Überwachung der Systemintegrität und Benachrichtigungen zur Systemintegrität liefern nun den Gesamtintegritätsstatus der Bereitstellung sowie bestimmte Probleme im Zusammenhang mit der Konfiguration und der Konnektivität.
+- Die Überwachung der Systemintegrität und Benachrichtigungen zur Systemintegrität liefern nun den Gesamtintegritätsstatus der Bereitstellung sowie bestimmte Probleme im Zusammenhang mit der Konfiguration und der Konnektivität.
 
--   Sichtbarkeit der Stand- und Speicherorte von Entitäten.
+- Sichtbarkeit der Stand- und Speicherorte von Entitäten.
 
--   Unterstützung mehrerer Domänen.
+- Unterstützung mehrerer Domänen.
 
--   Unterstützung von Domänen mit einfacher Bezeichnung (Single Label Domains, SLD).
+- Unterstützung von Domänen mit einfacher Bezeichnung (Single Label Domains, SLD).
 
--   Unterstützung des Änderns von IP-Adresse und Zertifikat der ATA-Gateways und von ATA Center.
+- Unterstützung des Änderns von IP-Adresse und Zertifikat der ATA-Gateways und von ATA Center.
 
--   Telemetrie zur Verbesserung der Benutzerfreundlichkeit.
+- Telemetrie zur Verbesserung der Benutzerfreundlichkeit.
 
 ## <a name="known-issues"></a>Bekannte Probleme
 In dieser Version bestehen die folgenden bekannten Probleme.
@@ -72,17 +72,17 @@ Wenn Sie versuchen, ATA Center oder das ATA-Gateway zu deinstallieren, und die A
 
 **ATA Center**
 
--   HKLM\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Center
+- HKLM\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Center
 
--   Fügen Sie einen neuen Zeichenfolgenwert mit dem Namen `InstallationPath` und dem Wert `C:\Program Files\Microsoft Advanced Threat Analytics\Center` hinzu. Dies ist der Standardinstallationsordner. Wenn Sie den Installationsordner geändert haben, geben Sie den Pfad ein, in dem ATA installiert ist.
+- Fügen Sie einen neuen Zeichenfolgenwert mit dem Namen `InstallationPath` und dem Wert `C:\Program Files\Microsoft Advanced Threat Analytics\Center` hinzu. Dies ist der Standardinstallationsordner. Wenn Sie den Installationsordner geändert haben, geben Sie den Pfad ein, in dem ATA installiert ist.
 
     ![Registrierungs-Editor mit ATA Center-Installationspfad](media/ATA-uninstall-center-bug.jpg)
 
 **ATA-Gateway**
 
--   HKLM\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Gateway
+- HKLM\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Gateway
 
--   Fügen Sie einen neuen Zeichenfolgenwert mit dem Namen `InstallationPath` und dem Wert `C:\Program Files\Microsoft Advanced Threat Analytics\Gateway` hinzu. Dies ist der Standardinstallationsordner.  Wenn Sie den Installationsordner geändert haben, geben Sie den Pfad ein, in dem ATA installiert ist.
+- Fügen Sie einen neuen Zeichenfolgenwert mit dem Namen `InstallationPath` und dem Wert `C:\Program Files\Microsoft Advanced Threat Analytics\Gateway` hinzu. Dies ist der Standardinstallationsordner.  Wenn Sie den Installationsordner geändert haben, geben Sie den Pfad ein, in dem ATA installiert ist.
 
     ![Registrierungs-Editor mit ATA-Gateway-Installationspfad](media/ATA-GW-uninstall-bug.jpg)
 

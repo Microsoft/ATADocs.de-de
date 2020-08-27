@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 51de491c-49ba-4aff-aded-cc133a8ccf0b
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 261d6c5253dc697ae50523c24ccb34feba75a4e6
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: abe3a716c7a85ba435eec18eab94e514222e6803
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84774671"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956158"
 ---
 # <a name="whats-new-in-ata-version-19"></a>Neuerungen in ATA 1.9
 
@@ -32,15 +32,15 @@ Die vorliegenden Anmerkungen zu dieser Version enthalten Informationen zu Update
 
 ## <a name="new-reports-to-help-you-investigate"></a>Neue Berichte, um Sie bei der Untersuchung zu unterstützen 
 
--   Mithilfe der Option [**Kennwörter in Klartext offengelegt**](reports.md) können Sie feststellen, wenn Konten, die sowohl sensible als auch nicht sensible Daten enthalten können, Anmeldeinformationen für Konten in Klartext senden. Dadurch können Sie die Verwendung der einfachen LDAP-Bindung in Ihrer Umgebung untersuchen und reduzieren, um so die Sicherheitsstufe Ihres Netzwerks zu erhöhen. Der Bericht ersetzt die Klartextwarnungen über verdächtige Aktivitäten für Dienste und sensible Konten.
+- Mithilfe der Option [**Kennwörter in Klartext offengelegt**](reports.md) können Sie feststellen, wenn Konten, die sowohl sensible als auch nicht sensible Daten enthalten können, Anmeldeinformationen für Konten in Klartext senden. Dadurch können Sie die Verwendung der einfachen LDAP-Bindung in Ihrer Umgebung untersuchen und reduzieren, um so die Sicherheitsstufe Ihres Netzwerks zu erhöhen. Der Bericht ersetzt die Klartextwarnungen über verdächtige Aktivitäten für Dienste und sensible Konten.
 
 - Unter [**Lateral Movement-Pfade zu sensiblen Konten**](reports.md) werden die sensiblen Konten aufgeführt, die über Lateral Movement-Pfade zur Verfügung gestellt werden. Um die Angriffsfläche zu minimieren, kann so die Anzahl dieser Pfade verringert und die Sicherheit Ihres Netzwerks erhöht werden. Indem Lateral Movement-Vorgänge verhindert werden, können sich Angreifer nicht zwischen Benutzern und Computern in Ihrem Netzwerk bewegen, bis sie auf den Jackpot in Sachen virtuelle Sicherheit stoßen: die sensiblen Anmeldeinformationen Ihres Administratorkontos.
 
 ## <a name="improved-investigation"></a>Verbesserte Untersuchung
 
--  ATA 1.9 umfasst ein neues und verbessertes [Entitätsprofil](entity-profiles.md). Das Entitätsprofil umfasst ein Dashboard, das für eine detaillierte Untersuchung von Benutzern, den Ressourcen, auf die sie zugreifen können, sowie auf deren Verlauf, ausgerichtet ist. Außerdem können Sie mithilfe des Entitätsprofils sensible Benutzer ermitteln, auf die über Lateral Movement-Pfade zugegriffen werden kann. 
+- ATA 1.9 umfasst ein neues und verbessertes [Entitätsprofil](entity-profiles.md). Das Entitätsprofil umfasst ein Dashboard, das für eine detaillierte Untersuchung von Benutzern, den Ressourcen, auf die sie zugreifen können, sowie auf deren Verlauf, ausgerichtet ist. Außerdem können Sie mithilfe des Entitätsprofils sensible Benutzer ermitteln, auf die über Lateral Movement-Pfade zugegriffen werden kann. 
 
--   Mithilfe von ATA 1.9 können Sie [manuell Gruppen oder Konten als sensibel markieren](tag-sensitive-accounts.md), um den Erkennungsvorgang zu verbessern. Diese Markierungen wirken sich auf einige ATA-Erkennungsvorgänge aus, wie die Vorgänge zum Erkennen von Änderungen sensibler Gruppen und von Lateral Movement-Pfaden, für wichtig ist zu wissen, welche Gruppen und Konten als sensibel angesehen werden.
+- Mithilfe von ATA 1.9 können Sie [manuell Gruppen oder Konten als sensibel markieren](tag-sensitive-accounts.md), um den Erkennungsvorgang zu verbessern. Diese Markierungen wirken sich auf einige ATA-Erkennungsvorgänge aus, wie die Vorgänge zum Erkennen von Änderungen sensibler Gruppen und von Lateral Movement-Pfaden, für wichtig ist zu wissen, welche Gruppen und Konten als sensibel angesehen werden.
 
 ## <a name="performance-improvements"></a>Leistungsverbesserungen
 

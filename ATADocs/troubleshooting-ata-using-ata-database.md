@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 377a3c81-5c1d-486f-8942-85249aacf560
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 269646c7547b0a9a3538405a4180d063e27e0455
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: d71379b5af28c5cbce445e32ef98c5501c6be002
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84774909"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956430"
 ---
 # <a name="troubleshooting-ata-using-the-ata-database"></a>Behandeln von Problemen mit ATA mithilfe der ATA-Datenbank
 
@@ -29,9 +29,9 @@ Die Interaktion mit der Datenbank ist über die Standardbefehlszeile möglich od
 ## <a name="interacting-with-the-database"></a>Interagieren mit der Datenbank
 Die Datenbank lässt sich standardmäßig und am einfachsten über die Mongo-Shell abfragen:
 
-1.  Öffnen Sie ein Befehlszeilenfenster, und ändern Sie den Pfad in den MongoDB-Ordner „bin“. Der Standardpfad lautet **C:\Programme\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**.
+1. Öffnen Sie ein Befehlszeilenfenster, und ändern Sie den Pfad in den MongoDB-Ordner „bin“. Der Standardpfad lautet **C:\Programme\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**.
 
-2.  Führen Sie `mongo.exe ATA` aus. Geben Sie „ATA“ in Großbuchstaben ein.
+1. Führen Sie `mongo.exe ATA` aus. Geben Sie „ATA“ in Großbuchstaben ein.
 
 > [!div class="mx-tableFixed"]
 > 

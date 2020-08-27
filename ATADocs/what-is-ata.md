@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d0f50163150f93baa0bd3084984705faf4fa6ea1
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: e2896882e3eb8bb0e0ae1627c2afa37d1b58c45e
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84774773"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956294"
 ---
 # <a name="what-is-advanced-threat-analytics"></a>Was ist Advanced Threat Analytics?
 
@@ -29,15 +29,15 @@ Advanced Threat Analytics (ATA) ist eine lokale Plattform, mit deren Hilfe Sie I
 
 ATA nutzt eine proprietäre Netzwerkanalyse-Engine, um den Netzwerkverkehr verschiedener Protokolle (z.B. Kerberos, DNS, RPC, NTLM und andere) zwecks Authentifizierung, Autorisierung und zum Sammeln von Informationen zu erfassen und zu analysieren. ATA sammelt die Informationen über:
 
--   die Portspiegelung von Domänencontrollern und DNS-Servern bis zum ATA-Gateway bzw.
--   die direkt Bereitstellung eines ATA-Lightweight-Gateways (LGW) auf Domänencontrollern.
+- die Portspiegelung von Domänencontrollern und DNS-Servern bis zum ATA-Gateway bzw.
+- die direkt Bereitstellung eines ATA-Lightweight-Gateways (LGW) auf Domänencontrollern.
 
 ATA bezieht Informationen aus mehreren Datenquellen, wie z.B. aus Protokollen und Ereignissen in Ihrem Netzwerk, um das Verhalten von Benutzern und anderen Entitäten in der Organisation zu lernen und anschließend ein Verhaltensprofil zu erstellen.
 ATA kann Ereignisse und Protokolle aus folgenden Quellen beziehen:
 
--   SIEM-Integration
--   Windows-Ereignisweiterleitung (Windows Event Forwarding; WEF)
--   Direkt aus der Windows-Ereignissammlung (für Lightweight-Gateways)
+- SIEM-Integration
+- Windows-Ereignisweiterleitung (Windows Event Forwarding; WEF)
+- Direkt aus der Windows-Ereignissammlung (für Lightweight-Gateways)
 
 
 Weitere Informationen zur ATA-Architektur finden Sie unter [ATA-Architektur](ata-architecture.md).
@@ -46,24 +46,24 @@ Weitere Informationen zur ATA-Architektur finden Sie unter [ATA-Architektur](ata
 
 Die ATA-Technologie erkennt verschiedene verdächtige Aktivitäten und konzentriert sich dabei auf die verschiedenen Phasen der Angriffskette von Cyber-Angriffen, so z.B.:
 
--   Reconnaissance, während der die Angreifer Informationen zum Aufbau der Umgebung, zu den verschiedenen Assets und zu den vorhandenen Entitäten erfassen. Häufig ist dies der Punkt, an dem Angreifer die nächsten Angriffsphasen planen.
--   Der Zyklus der Seitwärtsbewegung: Die Angreifer investieren Zeit und Mühe in die Verbreiterung ihrer Angriffsfläche in Ihrem Netzwerk.
--   Domänendominanz (Domänenpersistenz): In dieser Phase sammeln Angreifer die Informationen, mit deren Hilfe sie ihren Angriff fortsetzen und dabei verschiedene Einstiegspunkte, Anmeldeinformationen und Techniken nutzen können. 
+- Reconnaissance, während der die Angreifer Informationen zum Aufbau der Umgebung, zu den verschiedenen Assets und zu den vorhandenen Entitäten erfassen. Häufig ist dies der Punkt, an dem Angreifer die nächsten Angriffsphasen planen.
+- Der Zyklus der Seitwärtsbewegung: Die Angreifer investieren Zeit und Mühe in die Verbreiterung ihrer Angriffsfläche in Ihrem Netzwerk.
+- Domänendominanz (Domänenpersistenz): In dieser Phase sammeln Angreifer die Informationen, mit deren Hilfe sie ihren Angriff fortsetzen und dabei verschiedene Einstiegspunkte, Anmeldeinformationen und Techniken nutzen können. 
 
 Diese Phasen eines Cyberangriffs ähneln sich und sind vorhersagbar, unabhängig davon, welche Art von Unternehmen angegriffen oder auf welche Art von Informationen abgezielt wird.
 ATA sucht nach drei Haupttypen von Angriffen: böswillige Angriffe, ungewöhnliches/nicht normales Verhalten und Sicherheitsprobleme und -risiken.
 
 **Böswillige Angriffe** werden deterministisch erkannt, indem nach der vollständigen Liste bekannter Angriffstypen gesucht wird, wie z.B.:
 
--   Pass-the-Ticket (PtT)
--   Pass-the-Hash (PtH)
--   Overpass-the-Hash
--   Forged PAC (MS14-068)
--   Golden Ticket
--   Böswillige Replikationen
--   Reconnaissance
--   Brute-Force-Angriffe
--   Remoteausführung
+- Pass-the-Ticket (PtT)
+- Pass-the-Hash (PtH)
+- Overpass-the-Hash
+- Forged PAC (MS14-068)
+- Golden Ticket
+- Böswillige Replikationen
+- Reconnaissance
+- Brute-Force-Angriffe
+- Remoteausführung
 
 Eine vollständige Liste der Erkennungstypen und deren Beschreibungen finden Sie unter [Nach welchen Bedrohungen sucht ATA](ata-threats.md). 
 
@@ -73,11 +73,11 @@ ATA erkennt diese verdächtigen Aktivitäten und zeigt Informationen dazu in der
 
 **ungewöhnliches/nicht normales Verhalten** wird von ATA mithilfe der Verhaltensanalyse und Machine Learning erkannt. So werden fragwürdige Aktivitäten und ungewöhnliches/nicht normales Verhalten wie von Benutzern und Geräten in Ihrem Netzwerk wie die folgenden erkannt:
 
--   Nicht normale Anmeldungen
--   Unbekannte Gefahren
--   Kennwortfreigabe
--   Seitwärtsbewegung
--   Modifizierung von sensiblen Gruppen
+- Nicht normale Anmeldungen
+- Unbekannte Gefahren
+- Kennwortfreigabe
+- Seitwärtsbewegung
+- Modifizierung von sensiblen Gruppen
 
 
 Sie können die verdächtigen Aktivitäten dieses Typs im ATA-Dashboard anzeigen. Im folgenden Beispiel werden Sie von ATA benachrichtigt, wenn ein Benutzer auf vier Computer zugreift, die in der Regel nicht von diesem Benutzer verwendet werden. Dies kann Anlass für eine Warnung geben.
@@ -86,9 +86,9 @@ Sie können die verdächtigen Aktivitäten dieses Typs im ATA-Dashboard anzeigen
 
 ATA erkennt darüber hinaus **Sicherheitsprobleme und -risiken**, einschließlich:
 
--   einer fehlerhaften Vertrauensstellung
--   schwacher Protokolle
--   bekannter Protokollschwachstellen.
+- einer fehlerhaften Vertrauensstellung
+- schwacher Protokolle
+- bekannter Protokollschwachstellen.
 
 Sie können die verdächtigen Aktivitäten dieses Typs im ATA-Dashboard anzeigen. Im folgenden Beispiel weist Sie ATA darauf hin, dass eine fehlerhafte Vertrauensstellung zwischen einem Computer in Ihrem Netzwerk und der Domäne vorhanden ist.
 
@@ -102,11 +102,11 @@ Sie können die verdächtigen Aktivitäten dieses Typs im ATA-Dashboard anzeigen
 - Wenn Sie sich dazu entscheiden, eine vollständige Migration durchzuführen, kann dies einige Zeit in Anspruch nehmen, je nach Größe der Datenbank. Bei der Auswahl der Migrationsoptionen wird die geschätzte Dauer angezeigt. Beachten Sie diese, bevor Sie sich für eine Option entscheiden. 
 
 
-## <a name="whats-next"></a>Ausblick
+## <a name="whats-next"></a>Nächste Schritte
 
--   Weitere Informationen zum Integrieren von ATA in Ihr Netzwerk: [ATA-Architektur](ata-architecture.md)
+- Weitere Informationen zum Integrieren von ATA in Ihr Netzwerk: [ATA-Architektur](ata-architecture.md)
 
--   Erste Schritte bei der Bereitstellung von ATA: [Installieren von ATA](install-ata-step1.md)
+- Erste Schritte bei der Bereitstellung von ATA: [Installieren von ATA](install-ata-step1.md)
 
 ## <a name="related-videos"></a>Verwandte Videos
 - [Joining the security community](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community) (Der Sicherheitscommunity beitreten)
