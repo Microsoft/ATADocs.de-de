@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 06b7e42789b58a6da01479917b0e1277b651a8bd
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 1ece55ea9d0ad43a85a27741af34242f58fd0002
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775164"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88955512"
 ---
 # <a name="install-ata---step-6"></a>Installieren von ATA – Schritt 6
 
@@ -31,7 +31,7 @@ ms.locfileid: "84775164"
 
 ### <a name="configure-event-collection"></a>Konfigurieren der Ereignissammlung
 
-Um die Erkennungsfunktionen zu verbessern, benötigt ATA die folgenden Windows-Ereignisse: 4776, 4732, 4733, 4728, 4729, 4756, 4757 und 7045. Diese Windows-Ereignisse werden entweder automatisch vom ATA-Lightweight-Gateway gelesen, oder für den Fall, dass das ATA-Lightweight-Gateway nicht bereitgestellt wird, können Sie auf eine von zwei Arten an das ATA-Gateway weitergeleitet werden, entweder durch Konfigurieren des ATA-Gateways zum lauschen auf Siem-Ereignisse oder durch [Konfigurieren der Windows-Ereignis weiter](configure-event-collection.md) 
+Um die Erkennungsfunktionen zu verbessern, benötigt ATA die folgenden Windows-Ereignisse: 4776, 4732, 4733, 4728, 4729, 4756, 4757 und 7045. Diese Windows-Ereignisse werden entweder automatisch vom ATA-Lightweight-Gateway gelesen, oder für den Fall, dass das ATA-Lightweight-Gateway nicht bereitgestellt wird, können Sie auf eine von zwei Arten an das ATA-Gateway weitergeleitet werden, entweder durch Konfigurieren des ATA-Gateways zum lauschen auf Siem-Ereignisse oder durch [Konfigurieren der Windows-Ereignis weiter](configure-event-collection.md)
 
 > [!NOTE]
 > Für ATA-Versionen 1,8 und höher ist die Konfiguration der Windows-Ereignis Sammlung für ATA-Lightweight-Gateways nicht mehr erforderlich. Das ATA-Lightweight-Gateway liest jetzt Ereignisse lokal, ohne die Ereignisweiterleitung zu konfigurieren.
@@ -45,7 +45,7 @@ Damit ATA Daten von einem Syslog-Server verwenden kann, müssen folgende Schritt
 - Konfigurieren Ihres ATA-Gateway-Server zum Lauschen auf und Übernehmen von Ereignissen, die vom SIEM-/Syslog-Server weitergeleitet werden.
 
 > [!NOTE]
-> ATA lauscht nur auf IPv4, nicht auf IPv6. 
+> ATA lauscht nur auf IPv4, nicht auf IPv6.
 >
 > - Konfigurieren des SIEM-/Syslog-Servers zum Weiterleiten bestimmter Ereignisse an das ATA-Gateway.
 
@@ -53,7 +53,7 @@ Damit ATA Daten von einem Syslog-Server verwenden kann, müssen folgende Schritt
 > - Es sollten nicht alle Syslog-Daten an das ATA-Gateway weitergeleitet werden.
 > - ATA unterstützt UDP-Datenverkehr vom SIEM-/Syslog-Server.
 
-Weitere Informationen über das Konfigurieren der Weiterleitung bestimmter Ereignisse an einen anderen Server finden Sie in der Produktdokumentation des SIEM-/Syslog-Servers. 
+Weitere Informationen über das Konfigurieren der Weiterleitung bestimmter Ereignisse an einen anderen Server finden Sie in der Produktdokumentation des SIEM-/Syslog-Servers.
 
 > [!NOTE]
 > Wenn Sie keinen SIEM-/Syslog-Server verwenden, können Sie Ihre Windows-Domänencontroller zum Weiterleiten von Windows-Ereignis-ID 4776 konfigurieren, damit diese von ATA gesammelt und konfiguriert wird. Windows-Ereignis-ID 4776 enthält Daten über NTLM-Authentifizierungen.
@@ -64,9 +64,9 @@ Weitere Informationen über das Konfigurieren der Weiterleitung bestimmter Ereig
 
     ![Aktivieren des Syslog-Listener-UDP-Images](media/ATA-enable-siem-forward-events.png)
 
-2. Konfigurieren Sie den SIEM-/Syslog-Server zum Weiterleiten von Windows-Ereignis-ID 4776 an die IP-Adresse von einem der ATA-Gateways. Weitere Informationen zum Konfigurieren der SIEM finden Sie in der SIEM-Onlinehilfe sowie in den Optionen für technischen Support für spezielle Formatierungsanforderungen einzelner SIEM-Server.
+1. Konfigurieren Sie den SIEM-/Syslog-Server zum Weiterleiten von Windows-Ereignis-ID 4776 an die IP-Adresse von einem der ATA-Gateways. Weitere Informationen zum Konfigurieren der SIEM finden Sie in der SIEM-Onlinehilfe sowie in den Optionen für technischen Support für spezielle Formatierungsanforderungen einzelner SIEM-Server.
 
-ATA unterstützt SIEM-Ereignisse in den folgenden Formaten:  
+ATA unterstützt SIEM-Ereignisse in den folgenden Formaten:
 
 #### <a name="rsa-security-analytics"></a>RSA Security Analytics
 
@@ -98,7 +98,7 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|Der 
 - Der Headerteil (der Teil, der durch einen senkrechten Strich abgetrennt ist) muss vorhanden sein (wie im Protokoll angegeben).
 - Die folgenden Schlüssel im Teil _Erweiterung_ müssen im Ereignis vorhanden sein:
   - externalId = Windows-Ereignis-ID
-  - rt= Zeitstempel des tatsächlichen Ereignisses (darauf achten, dass dies nicht der Zeitstempel der Ankunft beim SIEM oder des Sendens an ATA ist). Vorzugsweise auf die Millisekunde genau, dies ist wichtig.
+  - RT = der Zeitstempel des tatsächlichen Ereignisses (stellen Sie sicher, dass es sich nicht um den Zeitstempel der Ankunft beim Siem handelt oder wenn es an ATA gesendet wird). Vorzugsweise auf die Millisekunde genau, dies ist wichtig.
   - cat = Name des Windows-Ereignisprotokolls
   - shost = Name des Quellhostnamens
   - dhost = Name des Computers, der das Ereignis empfängt (in diesem Fall der DC)
@@ -130,7 +130,7 @@ Fehlercode: 0x0
   - EventCode = Windows-Ereignis-ID
   - Logfile = Name des Windows-Ereignisprotokolls
   - SourceName = Name des Windows-Ereignisanbieters
-  - TimeGenerated = Zeitstempel des tatsächlichen Ereignisses (dies darf nicht der Zeitstempel der Ankunft bei der SIEM oder des Sendens an ATA sein). Als Format muss „yyyyMMddHHmmss.FFFFFF“ verwendet werden, vorzugsweise mit einer Genauigkeit im Millisekundenbereich, dies ist wichtig.
+  - TimeGenerated = der Zeitstempel des tatsächlichen Ereignisses (stellen Sie sicher, dass es sich nicht um den Zeitstempel der Ankunft beim Siem handelt oder wenn es an ATA gesendet wird). Als Format muss „yyyyMMddHHmmss.FFFFFF“ verwendet werden, vorzugsweise mit einer Genauigkeit im Millisekundenbereich, dies ist wichtig.
   - ComputerName = Name des Quellhostnamens
   - Message = ursprünglicher Ereignistext aus dem Windows-Ereignis
 - Der Schlüssel „Message“ und dessen Wert müssen als letzte Elemente auftreten.
@@ -140,7 +140,9 @@ Fehlercode: 0x0
 
 QRadar ermöglicht Ereignissammlung über einen Agent. Wenn die Daten mithilfe eines Agents erfasst werden, werden Zeiten ohne Millisekunden-Daten erfasst. Da ATA Millisekunden-Daten erfordert, muss QRadar so festgelegt werden, dass es die Windows-Ereignissammlung ohne Agents verwendet. Weitere Informationen finden Sie unter [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Agentless Windows Events Collection using the MSRPC Protocol (QRadar: Auflistung von Windows-Ereignissen ohne Agent mithilfe des MSRPC-Protokolls)").
 
-    <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
+```
+<13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
+```
 
 Die erforderlichen Felder sind:
 
@@ -151,13 +153,13 @@ Die erforderlichen Felder sind:
 - Der vollqualifizierte Domänenname des DCs
 - Die Windows-Ereignis-ID
 
-„TimeGenerated“ ist der Zeitstempel des tatsächlichen Ereignisses (dies darf nicht der Zeitstempel der Ankunft bei der SIEM oder des Sendens an ATA sein). Als Format muss „yyyyMMddHHmmss.FFFFFF“ verwendet werden, vorzugsweise mit einer Genauigkeit im Millisekundenbereich, dies ist wichtig.
+"TimeGenerated" ist der Zeitstempel des tatsächlichen Ereignisses (stellen Sie sicher, dass es sich nicht um den Zeitstempel der Ankunft beim Siem handelt oder wenn es an ATA gesendet wird). Als Format muss „yyyyMMddHHmmss.FFFFFF“ verwendet werden, vorzugsweise mit einer Genauigkeit im Millisekundenbereich, dies ist wichtig.
 
 „Message“ ist der ursprüngliche Ereignistext aus dem Windows-Ereignis
 
 Stellen Sie sicher, dass „\t“ zwischen Schlüssel=Wert-Paaren steht.
 
->[!NOTE] 
+>[!NOTE]
 > Verwendung von WinCollect für die Windows-Ereignissammlung wird nicht unterstützt.
 
 > [!div class="step-by-step"]

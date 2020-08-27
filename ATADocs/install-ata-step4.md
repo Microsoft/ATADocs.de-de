@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1b66474219101f9d5c7f9ce38b3a7e3ff34b6f50
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 8bd8347e3ac37b9cd3b3c94dddfeb3e1a3b59112
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775198"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88954577"
 ---
 # <a name="install-ata---step-4"></a>Installieren von ATA – Schritt 4
 
@@ -43,22 +43,22 @@ Führen Sie die folgenden Schritte auf dem ATA-Gatewayserver aus.
    > [!NOTE] 
    > Eine Installation direkt aus der ZIP-Datei verursacht einen Fehler.
     
-2. Führen Sie **Microsoft ATA Gateway Setup.exe** aus, und befolgen Sie die Anweisungen des Setup-Assistenten.
+1. Führen Sie **Microsoft ATA Gateway Setup.exe** aus, und befolgen Sie die Anweisungen des Setup-Assistenten.
     
-3. Wählen Sie auf der Seite **Willkommen** Ihre Sprache aus, und klicken Sie auf **Weiter**.
+1. Wählen Sie auf der Seite **Willkommen** Ihre Sprache aus, und klicken Sie auf **Weiter**.
     
-4. Der Installations-Assistent überprüft automatisch, ob der Server ein Domänencontroller oder ein dedizierter Server ist. Wenn es sich um einen Domänencontroller handelt, wird das ATA-Lightweight-Gateway installiert. Wenn es sich um einen dedizierten Server handelt, wird das ATA-Gateway installiert. 
+1. Der Installations-Assistent überprüft automatisch, ob der Server ein Domänencontroller oder ein dedizierter Server ist. Wenn es sich um einen Domänencontroller handelt, wird das ATA-Lightweight-Gateway installiert. Wenn es sich um einen dedizierten Server handelt, wird das ATA-Gateway installiert. 
     
    Beispielsweise wird im Falle eines ATA-Gateways der folgende Bildschirm angezeigt, um Sie darüber zu informieren, dass ein ATA-Gateway auf Ihrem dedizierten Server installiert wird:
     
-   ![ATA-Gateway-Installation](media/ata-gw-install.png) Klicken Sie auf **Weiter**.
+    ![ATA-Gateway-Installation](media/ata-gw-install.png) Klicken Sie auf **Weiter**.
     
    > [!NOTE] 
    > Wenn der Domänencontroller oder der dedizierte Server nicht den Mindestanforderungen der Hardware für die Installation entspricht, erhalten Sie eine Warnung. Dies verhindert nicht, dass Sie auf **Weiter** klicken können und mit der Installation fortfahren können. Dies ist möglicherweise die richtige Option für die Installation von ATA in einer Testumgebung für ein kleines Labor, in der Sie nicht so viel Platz für die Datenspeicherung benötigen. Für Produktionsumgebungen wird empfohlen, mit dem Handbuch zur [Kapazitätsplanung](ata-capacity-planning.md) von ATA zu arbeiten, um sicherzustellen, dass Domänencontroller oder dedizierte Server den nötigen Anforderungen entsprechen.
     
-5. Geben Sie unter **Configure the Gateway** (Das Gateway konfigurieren) die folgenden Informationen basierend auf Ihrer Umgebung ein:
+1. Geben Sie unter **Configure the Gateway** (Das Gateway konfigurieren) die folgenden Informationen basierend auf Ihrer Umgebung ein:
     
-   ![Abbildung ATA-Gatewaykonfiguration](media/ata-gw-configure.png)
+    ![Abbildung ATA-Gatewaykonfiguration](media/ata-gw-configure.png)
     
    > [!NOTE]
    > Wenn Sie das ATA-Gateway bereitstellen, müssen Sie keine Anmeldeinformationen angeben. Wenn die ATA-Gatewayinstallation Ihre Anmeldeinformationen nicht über einmaliges Anmelden abrufen kann (wenn sich ATA Center beispielsweise nicht in der Domäne befindet, da Sie dann über keine ATA-Administratoranmeldeinformationen verfügen), werden Sie aufgefordert, Anmeldeinformationen anzugeben, wie im folgenden Bildschirm: 
@@ -67,19 +67,19 @@ Führen Sie die folgenden Schritte auf dem ATA-Gatewayserver aus.
    
     - Installationspfad: Dies ist der Speicherort, an dem das ATA-Gateway installiert wird. Standardmäßig ist dies „%programfiles%\Microsoft Advanced Threat Analytics\Gateway“. Behalten Sie den Standardwert bei.
    
-6. Klicken Sie auf **Installieren**. Bei der Installation des ATA-Gateways werden die folgenden Komponenten installiert und konfiguriert:
+1. Klicken Sie auf **Installieren**. Bei der Installation des ATA-Gateways werden die folgenden Komponenten installiert und konfiguriert:
     
-    -   KB 3047154 (nur für Windows Server 2012 R2)
+    - KB 3047154 (nur für Windows Server 2012 R2)
     
         > [!IMPORTANT]
-        > -   Installieren Sie KB 3047154 nicht auf einem Virtualisierungshost (der Host, auf dem die Virtualisierung ausgeführt wird; die Ausführung auf einem virtuellen Computer ist möglich). Dies kann dazu führen, dass die Portspiegelung nicht mehr ordnungsgemäß ausgeführt wird. 
-        > -   Installieren Sie Message Analyzer, Wireshark oder andere Software zur Netzwerkerfassung nicht auf dem ATA-Gateway. Wenn Sie den Netzwerkverkehr erfassen möchten, installieren und verwenden Sie Microsoft Network Monitor 3.4.
+        > - Installieren Sie KB 3047154 nicht auf einem Virtualisierungshost (der Host, auf dem die Virtualisierung ausgeführt wird; die Ausführung auf einem virtuellen Computer ist möglich). Dies kann dazu führen, dass die Portspiegelung nicht mehr ordnungsgemäß ausgeführt wird. 
+        > - Installieren Sie Message Analyzer, Wireshark oder andere Software zur Netzwerkerfassung nicht auf dem ATA-Gateway. Wenn Sie den Netzwerkverkehr erfassen möchten, installieren und verwenden Sie Microsoft Network Monitor 3.4.
     
-    -   ATA-Gatewaydienst
-    -   Microsoft Visual C++ 2013 Redistributable
-    -   Benutzerdefinierter Systemmonitor-Datensammlungssatz
+    - ATA-Gatewaydienst
+    - Microsoft Visual C++ 2013 Redistributable
+    - Benutzerdefinierter Systemmonitor-Datensammlungssatz
     
-7. Nachdem die Installation abgeschlossen ist, klicken Sie für das ATA-Gateway auf **starten** , um den Browser zu öffnen und sich bei der ATA-Konsole anzumelden, und klicken Sie für das ATA-Lightweight-Gateway auf **Fertig**stellen.
+1. Nachdem die Installation abgeschlossen ist, klicken Sie für das ATA-Gateway auf **starten** , um den Browser zu öffnen und sich bei der ATA-Konsole anzumelden, und klicken Sie für das ATA-Lightweight-Gateway auf **Fertig**stellen.
 
 
 > [!div class="step-by-step"]

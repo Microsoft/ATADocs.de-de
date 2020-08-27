@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: e1c5ff41-d989-46cb-aa38-5a3938f03c0f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 9abfbe15f83aabf7a8879e117cb884d624cbbee8
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: fe99921e1193f79f7031c04156a79fd8fa55dc9e
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775232"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88954560"
 ---
 # <a name="install-ata---step-2"></a>Installieren von ATA – Schritt 2
 
@@ -33,33 +33,31 @@ Beim ersten Öffnen der ATA-Konsole wird der folgende Bildschirm angezeigt:
 
 ![ATA welcome stage 1](media/ATA_1.7-welcome-provide-username.png)
 
-1.  Geben Sie die folgenden Informationen ein, und klicken Sie anschließend auf **Speichern**.
+1. Geben Sie die folgenden Informationen ein, und klicken Sie anschließend auf **Speichern**.
 
     |Feld|Kommentare|
     |---------|------------|
     |**Benutzername** (erforderlich)|Geben Sie den schreibgeschützten Benutzernamen ein, z.B. **ATAuser**. **Hinweis:** Verwenden Sie **nicht** das UPN-Format für Ihren Benutzernamen.|
     |**Kennwort** (erforderlich)|Geben Sie das Kennwort für den schreibgeschützten Benutzer ein, z. B. **Pencil1**.|
-    |**Domäne** (erforderlich)|Geben Sie die Domäne für den schreibgeschützten Benutzer ein, z. B. **contoso.com**. **Hinweis:** Es ist wichtig, dass Sie den vollqualifizierten Domänennamen (FQDN) der Domäne eingeben, in der sich das Benutzerkonto befindet. Wenn sich das Konto des Benutzers beispielsweise in der Domäne „corp.contoso.com“ befindet, müssen Sie `corp.contoso.com` und nicht „contoso.com“ eingeben.|
+    |**Domäne** (erforderlich)|Geben Sie die Domäne für den schreibgeschützten Benutzer ein, z. B. **contoso.com**. **Hinweis:** Es ist wichtig, dass Sie den vollqualifizierten Domänennamen (FQDN) der Domäne eingeben, in der sich das Benutzerkonto befindet. Wenn sich das Benutzerkonto z. b. in der Domäne corp.contoso.com befindet, müssen Sie `corp.contoso.com` Not contoso.com eingeben.|
 
-2. Sie können auf **Testverbindung** klicken, um die Konnektivität zur Domäne zu testen und um zu prüfen, ob der Zugriff mit den bereitgestellten Anmeldeinformationen erfolgreich ist. Dies ist möglich, wenn ATA Center mit der Domäne verbunden ist.    
+1. Sie können auf **Testverbindung** klicken, um die Konnektivität zur Domäne zu testen und um zu prüfen, ob der Zugriff mit den bereitgestellten Anmeldeinformationen erfolgreich ist. Dies ist möglich, wenn ATA Center mit der Domäne verbunden ist.
 
     Nachdem Ihre Eingaben gespeichert wurden, ändert sich die Willkommensnachricht in der Konsole folgendermaßen: ![ATA welcome stage 1 finished](media/ATA_1.7-welcome-provide-username-finished.png)
 
-3. Klicken Sie in der Konsole auf **Download Gateway setup and install the first Gateway** (Herunterladen des Gateway-Setups und Installieren des ersten Gateways) um den Vorgang fortzusetzen.
-
+1. Klicken Sie in der Konsole auf **Download Gateway setup and install the first Gateway** (Herunterladen des Gateway-Setups und Installieren des ersten Gateways) um den Vorgang fortzusetzen.
 
 > [!div class="step-by-step"]
 > [«Schritt 1](install-ata-step1.md) 
 >  [Schritt 3»](install-ata-step3.md)
 
-
-## <a name="see-also"></a>Weitere Informationen
 ## <a name="related-videos"></a>Verwandte Videos
+
 - [Übersicht über die ATA-Bereitstellung](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
 - [Auswählen des richtigen ATA-Gatewaytyps](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
-
 ## <a name="see-also"></a>Weitere Informationen
+
 - [Handbuch für die ATA POC-Bereitstellung](https://aka.ms/atapoc)
 - [Tool zur Bemessung von ATA-Gateways](https://aka.ms/atasizingtool)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

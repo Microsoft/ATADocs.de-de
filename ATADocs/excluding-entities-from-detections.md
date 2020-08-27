@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 344c0f33-45e1-42e2-a051-f722a4504531
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 84e4b6e5951bf16281c60c87e46ce1a799795c55
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: b5e80251fb4ffc4347671b573eb5435c09517e71
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775341"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88954628"
 ---
 # <a name="excluding-entities-from-detections"></a>Ausschließen von Entitäten von der Erkennung
 
@@ -33,11 +33,11 @@ Es gibt zwei Möglichkeiten, Entitäten ausschließen: in der verdächtigen Akti
 
 - **In der verdächtigen Aktivität**: Wenn Sie eine Warnung zu einer Aktivität eines Benutzers, eines Computers oder einer IP-Adresse erhalten, der bzw. die diese bestimmte Aktivität ausführen darf und dies möglicherweise häufig tut, klicken Sie in der Zeitachse mit verdächtigen Aktivitäten auf diese Entität, und wählen Sie **Schließen und ausschließen**. <br></br>Dadurch wird der Benutzer, der Computer oder die IP-Adresse der Ausschlussliste für diese verdächtige Aktivität hinzugefügt. Die verdächtige Aktivität wird geschlossen, und Sie wird nicht mehr in der Liste **geöffnete** Ereignisse auf der **Zeitachse für verdächtige Aktivitäten**aufgeführt.
 
-    ![Ausschließen einer Entität](./media/exclude-in-sa.png)
+    ![Ausschließen einer Entität](media/exclude-in-sa.png)
 
 - **Auf der Konfigurationsseite**: Um Ausschlüsse zu überprüfen oder zu ändern, klicken Sie auf der Seite **Konfiguration** auf **Ausschlüsse**, und wählen Sie die verdächtige Aktivität aus, z.B. **Sensible Anmeldeinformationen wurden offengelegt**.
 
-    ![Konfiguration von Ausschlüssen](./media/exclusions-config-page.png)
+    ![Konfiguration von Ausschlüssen](media/exclusions-config-page.png)
 
 Um eine Entität aus der Konfiguration der **Ausschlüsse** zu entfernen, klicken Sie auf das Minuszeichen neben dem Namen der Entität, und klicken Sie dann unten auf der Seite auf **Speichern**.
 

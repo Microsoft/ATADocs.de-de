@@ -1,6 +1,6 @@
 ---
 title: Informationen zu ATA-Integritäts Warnungen
-description: Beschreibt die Verwendung der ATA-Protokolle zum Behandeln von Problemen.
+description: Beschreibt alle Integritäts Warnungen für jede Komponente und listet die Ursache und die erforderlichen Schritte zum Beheben des Problems auf.
 keywords: ''
 author: shsagir
 ms.author: shsagir
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: b04fb8a4-b366-4b55-9d4c-6f054fa58a90
 ms.reviewer: elofek
 ms.suite: ems
-ms.openlocfilehash: 96350f1724b743e5c640ad41cb7b8e2cdd656adb
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 8569e26786c36f08fdcf98dcd11452cdef5736b6
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775045"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88955988"
 ---
 # <a name="understanding-ata-health-alerts"></a>Informationen zu ATA-Integritäts Warnungen
 
@@ -48,7 +48,7 @@ In diesem Artikel werden alle Integritätswarnungen für die einzelnen Komponent
 ### <a name="center-certificate-is-about-to-expire"></a>Center certificate is about to expire (Center-Zertifikat läuft bald ab)
 |Warnung|Beschreibung|Lösung|Schweregrad|
 |----|----|----|----|
-|The ATA Center certificate will expire in less than 3 weeks. (Das ATA Center-Zertifikat läuft in weniger als 3 Wochen ab.)|Nach dem Ablauf des Zertifikats: Die Konnektivität vom ATA-Gateway zu ATA Center schlägt fehl. Der ATA Center-Prozess stürzt ab, und alle ATA-Funktionen werden angehalten.|[Ersetzen Sie das Zertifikat für ATA Center](modifying-ata-center-configuration.md)|Mittel|
+|The ATA Center certificate will expire in less than 3 weeks. (Das ATA Center-Zertifikat läuft in weniger als 3 Wochen ab.)|Nach dem Ablauf des Zertifikats: Die Konnektivität vom ATA-Gateway zu ATA Center schlägt fehl. Der ATA Center-Prozess stürzt ab, und alle ATA-Funktionen werden angehalten.|[Ersetzen Sie das Zertifikat für ATA Center](modifying-ata-center-configuration.md)|Medium|
 ### <a name="ata-center-certificate-expired"></a>Das ATA Center-Zertifikat ist abgelaufen
 |Warnung|Beschreibung|Lösung|Schweregrad|
 |----|----|----|----|
@@ -65,7 +65,7 @@ In diesem Artikel werden alle Integritätswarnungen für die einzelnen Komponent
 ### <a name="gateway-certificate-about-to-expire"></a>Gatewayzertifikat läuft bald ab
 |Warnung|Beschreibung|Lösung|Schweregrad|
 |----|----|----|----|
-|The ATA Gateway certificate will expire in less than 3 weeks. (Das ATA-Gatewayzertifikat läuft in weniger als 3 Wochen ab.)|Es gibt keine Konnektivität vom jeweiligen ATA-Gateway zu ATA Center. Es werden keine Daten von diesem ATA-Gateway gesendet.|Das ATA-Gatewayzertifikat sollt automatisch erneuert werden. Lesen Sie die Protokolle für das ATA-Gateway und ATA Center, um zu verstehen, warum das Zertifikat sich nicht automatisch erneuert hat.|Mittel|
+|The ATA Gateway certificate will expire in less than 3 weeks. (Das ATA-Gatewayzertifikat läuft in weniger als 3 Wochen ab.)|Es gibt keine Konnektivität vom jeweiligen ATA-Gateway zu ATA Center. Es werden keine Daten von diesem ATA-Gateway gesendet.|Das ATA-Gatewayzertifikat sollt automatisch erneuert werden. Lesen Sie die Protokolle für das ATA-Gateway und ATA Center, um zu verstehen, warum das Zertifikat sich nicht automatisch erneuert hat.|Medium|
 
 ### <a name="gateway-certificate-expired"></a>Gatewayzertifikat abgelaufen
 |Warnung|Beschreibung|Lösung|Schweregrad|
@@ -78,19 +78,19 @@ In diesem Artikel werden alle Integritätswarnungen für die einzelnen Komponent
 ### <a name="allsome-of-the-capture-network-adapters-on-a-gateway-are-not-available"></a>Keiner der Netzwerkadapter für die Erfassung auf einem Gateway ist verfügbar/Einige der Netzwerkadapter für die Erfassung auf einem Gateway sind nicht verfügbar
 |Warnung|Beschreibung|Lösung|Schweregrad|
 |----|----|----|----|
-|All/Some of the selected capture network adapters on the ATA Gateway are disabled or disconnected. (Alle/Einige der ausgewählten Netzwerkdatenerfassungs-Adapter auf dem ATA-Gateway sind deaktiviert oder nicht verbunden.)|Der Netzwerkdatenverkehr für einige/alle Domänencontroller wird nicht länger vom ATA-Gateway erfasst. Dadurch wird die Fähigkeit beeinträchtigt, verdächtige Aktivitäten zu ermitteln, die im Zusammenhang mit diesen Domänencontrollern stehen.|Stellen Sie sicher, dass der ausgewählte Netzwerkdatenerfassungs-Adapter auf dem ATA-Gateway aktiviert und verbunden ist.|Mittel|
+|All/Some of the selected capture network adapters on the ATA Gateway are disabled or disconnected. (Alle/Einige der ausgewählten Netzwerkdatenerfassungs-Adapter auf dem ATA-Gateway sind deaktiviert oder nicht verbunden.)|Der Netzwerkdatenverkehr für einige/alle Domänencontroller wird nicht länger vom ATA-Gateway erfasst. Dadurch wird die Fähigkeit beeinträchtigt, verdächtige Aktivitäten zu ermitteln, die im Zusammenhang mit diesen Domänencontrollern stehen.|Stellen Sie sicher, dass der ausgewählte Netzwerkdatenerfassungs-Adapter auf dem ATA-Gateway aktiviert und verbunden ist.|Medium|
 ### <a name="some-domain-controllers-are-unreachable-by-a-gateway"></a>Einige Domänencontroller können nicht durch ein Gateway erreicht werden.
 |Warnung|Beschreibung|Lösung|Schweregrad|
 |----|----|----|----|
-|An ATA Gateway has limited functionality due to connectivity issues to some of the configured domain controllers. (Ein ATA-Gateway verfügt über eingeschränkte Funktionalität aufgrund von Verbindungsproblemen mit einigen der konfigurierten Domänencontrollern.)|Die Übergabe der Hash-Erkennung ist möglicherweise ungenauer, wenn einige Domänencontroller nicht durch das ATA-Gateway abgefragt werden können.|Stellen Sie sicher, dass die Domänencontroller ausgeführt werden und der ATA-Gateway LDAP-Verbindungen für sie öffnen kann.|Mittel|
+|An ATA Gateway has limited functionality due to connectivity issues to some of the configured domain controllers. (Ein ATA-Gateway verfügt über eingeschränkte Funktionalität aufgrund von Verbindungsproblemen mit einigen der konfigurierten Domänencontrollern.)|Die Übergabe der Hash-Erkennung ist möglicherweise ungenauer, wenn einige Domänencontroller nicht durch das ATA-Gateway abgefragt werden können.|Stellen Sie sicher, dass die Domänencontroller ausgeführt werden und der ATA-Gateway LDAP-Verbindungen für sie öffnen kann.|Medium|
 ### <a name="all-domain-controllers-are-unreachable-by-a-gateway"></a>Keiner der Domänencontroller kann durch ein Gateway erreicht werden.
 |Warnung|Beschreibung|Lösung|Schweregrad|
 |----|----|----|----|
-|The ATA Gateway is currently offline due to connectivity issues to all the configured domain controllers. (Das ATA-Gateway ist derzeit aufgrund von Verbindungsproblemen mit allen der konfigurierten Domänencontrollern offline.)|Dadurch wird die Fähigkeit von ATA beeinträchtigt, verdächtige Aktivitäten im Zusammenhang mit den von diesem ATA-Gateway überwachten Domänencontrollern zu ermitteln.| Stellen Sie sicher, dass die Domänencontroller ausgeführt werden und der ATA-Gateway LDAP-Verbindungen für sie öffnen kann.|Mittel|
+|The ATA Gateway is currently offline due to connectivity issues to all the configured domain controllers. (Das ATA-Gateway ist derzeit aufgrund von Verbindungsproblemen mit allen der konfigurierten Domänencontrollern offline.)|Dies wirkt sich auf die Fähigkeit von ATA aus, verdächtige Aktivitäten im Zusammenhang mit von diesem ATA-Gateway überwachten Domänen Controllern| Stellen Sie sicher, dass die Domänencontroller ausgeführt werden und der ATA-Gateway LDAP-Verbindungen für sie öffnen kann.|Medium|
 ### <a name="gateway-stopped-communicating"></a>Gateway hat Kommunikation eingestellt
 |Warnung|Beschreibung|Lösung|Schweregrad|
 |----|----|----|----|
-|There has been no communication from the ATA Gateway. (Es gibt keine Kommunikation mehr vom ATA-Gateway.) Die standardmäßige Zeitspanne für diese Warnung beträgt 5 Minuten.|Der Netzwerkdatenverkehr wird nicht länger vom Transportadapter auf dem ATA-Gateway erfasst. Dadurch wird die Fähigkeit von ATA, verdächtige Aktivitäten zu erkennen, beeinträchtigt, da der Netzwerkdatenverkehr ATA Center nicht erreichen kann.|Prüfen Sie, dass der für die Kommunikation zwischen dem ATA-Gateway und dem ATA Center-Dienst verwendete Port nicht von Routern oder Firewalls blockiert wird.|Mittel|
+|There has been no communication from the ATA Gateway. (Es gibt keine Kommunikation mehr vom ATA-Gateway.) Die standardmäßige Zeitspanne für diese Warnung beträgt 5 Minuten.|Der Netzwerkdatenverkehr wird nicht länger vom Transportadapter auf dem ATA-Gateway erfasst. Dies wirkt sich auf die Fähigkeit von ATA aus, verdächtige Aktivitäten zu erkennen, da der Netzwerk Datenverkehr ATA Center nicht erreichen kann.|Prüfen Sie, dass der für die Kommunikation zwischen dem ATA-Gateway und dem ATA Center-Dienst verwendete Port nicht von Routern oder Firewalls blockiert wird.|Medium|
 ### <a name="no-traffic-received-from-domain-controller"></a>Kein Datenverkehr vom Domänencontroller empfangen
 |Warnung|Beschreibung|Lösung|Schweregrad|
 |----|----|----|----|
@@ -98,11 +98,11 @@ In diesem Artikel werden alle Integritätswarnungen für die einzelnen Komponent
 ### <a name="some-forwarded-events-are-not-being-analyzed"></a>Einige weitergeleitete Ereignisse werden nicht analysiert
 |Warnung|Beschreibung|Lösung|Schweregrad|
 |----|----|----|----|
-|The ATA Gateway is receiving more events than it can process. (Das ATA-Gateway enthält mehr Ereignisse, als es verarbeiten kann.)|Einige weitergeleitete Ereignisse werden nicht analysiert, was die Fähigkeit zum Erkennen verdächtiger Aktivitäten beeinflussen kann, die von Domänencontrollern stammen, die von diesem ATA-Gateway überwacht werden.|Überprüfen Sie, dass nur erforderliche Ereignisse an das ATA-Gateway weitergeleitet werden, oder versuchen Sie, einige der Ereignisse an ein anderes ATA-Gateway weiterzuleiten.|Mittel|
+|The ATA Gateway is receiving more events than it can process. (Das ATA-Gateway enthält mehr Ereignisse, als es verarbeiten kann.)|Einige weitergeleitete Ereignisse werden nicht analysiert, was die Fähigkeit zum Erkennen verdächtiger Aktivitäten beeinflussen kann, die von Domänencontrollern stammen, die von diesem ATA-Gateway überwacht werden.|Überprüfen Sie, dass nur erforderliche Ereignisse an das ATA-Gateway weitergeleitet werden, oder versuchen Sie, einige der Ereignisse an ein anderes ATA-Gateway weiterzuleiten.|Medium|
 ### <a name="some-network-traffic-is-not-being-analyzed"></a>Ein Teil des Netzwerkdatenverkehrs wird nicht analysiert
 |Warnung|Beschreibung|Lösung|Schweregrad|
 |----|----|----|----|
-|The ATA Gateway is receiving more network traffic than it can process. (Das ATA-Gateway erhält mehr Netzwerkdatenverkehr als es verarbeiten kann.)|Ein Teil des Netzwerkdatenverkehrs wird nicht analysiert, was die Fähigkeit zum Erkennen verdächtiger Aktivitäten beeinflussen kann, die von Domänencontrollern stammen, die von diesem ATA-Gateway überwacht werden.|Erwägen Sie es, je nach Bedarf, [zusätzliche Prozessoren und Arbeitsspeicher hinzuzufügen](ata-capacity-planning.md). Wenn es sich um ein eigenständiges ATA-Gateway handelt, reduzieren Sie die Anzahl der überwachten Domänencontroller.<br></br>Dies kann auch vorkommen, wenn Sie Domänencontroller auf virtuellen VMware-Computer verwenden. Um zu vermeiden, dass diese Warnung ausgegeben wird, können Sie überprüfen, ob auf dem virtuellen Computer die folgenden Einstellungen auf „0“ oder „deaktiviert“ festgelegt sind:<br></br>- TsoEnable<br></br>- LargeSendOffload(IPv4)<br></br>- IPv4 TSO Offload<br></br>Deaktivieren Sie ebenso IPv4 Giant TSO Offload. Weitere Informationen finden Sie in der VMware-Dokumentation.|Mittel|
+|The ATA Gateway is receiving more network traffic than it can process. (Das ATA-Gateway erhält mehr Netzwerkdatenverkehr als es verarbeiten kann.)|Ein Teil des Netzwerkdatenverkehrs wird nicht analysiert, was die Fähigkeit zum Erkennen verdächtiger Aktivitäten beeinflussen kann, die von Domänencontrollern stammen, die von diesem ATA-Gateway überwacht werden.|Erwägen Sie es, je nach Bedarf, [zusätzliche Prozessoren und Arbeitsspeicher hinzuzufügen](ata-capacity-planning.md). Wenn es sich um ein eigenständiges ATA-Gateway handelt, reduzieren Sie die Anzahl der überwachten Domänencontroller.<br></br>Dies kann auch vorkommen, wenn Sie Domänencontroller auf virtuellen VMware-Computer verwenden. Um zu vermeiden, dass diese Warnung ausgegeben wird, können Sie überprüfen, ob auf dem virtuellen Computer die folgenden Einstellungen auf „0“ oder „deaktiviert“ festgelegt sind:<br></br>- TsoEnable<br></br>- LargeSendOffload(IPv4)<br></br>- IPv4 TSO Offload<br></br>Deaktivieren Sie ebenso IPv4 Giant TSO Offload. Weitere Informationen finden Sie in der VMware-Dokumentation.|Medium|
 
 ### <a name="gateway-version-outdated"></a>Gatewayversion veraltet
 |Warnung|Beschreibung|Lösung|Schweregrad|

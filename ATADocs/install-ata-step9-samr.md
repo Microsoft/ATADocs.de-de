@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 7597ed25-87f5-472c-a496-d5f205c9c391
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4804717d489a68380f78292d8ee8e89910bf7435
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 869a9d1ed60cc740dc50456f61244f100ac47027
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775062"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88955784"
 ---
 # <a name="install-ata---step-9"></a>Installieren von ATA: Schritt 9
 
@@ -37,18 +37,18 @@ Wenn Sie sicherstellen möchten, dass Windows-Clients und -Server zulassen, dass
 
 1. Finden der Richtlinie:
 
-   - Richtlinienname: Netzwerkzugriff – Schränken Sie die Zahl der Clients ein, die Remoteaufrufe an SAM durchführen dürfen.
+   - Richtlinienname: Netzwerkzugriff: Clients einschränken, die Remoteaufrufe an SAM ausführen dürfen
    - Speicherort: Computerkonfiguration, Windows-Einstellungen, Sicherheitseinstellungen, lokale Richtlinien, Sicherheitsoptionen
   
-   ![Finden der Richtlinie](./media/samr-policy-location.png)
+    ![Finden der Richtlinie](media/samr-policy-location.png)
 
-2. Fügen Sie den ATA-Dienst der Liste zulässiger Konten hinzu, die diese Aktion auf Ihren modernen Windows-Systemen durchführen können.
+1. Fügen Sie den ATA-Dienst der Liste zulässiger Konten hinzu, die diese Aktion auf Ihren modernen Windows-Systemen durchführen können.
  
-   ![Hinzufügen des Diensts](./media/samr-add-service.png)
+    ![Hinzufügen des Diensts](media/samr-add-service.png)
 
-3. Der **ATA-Dienst** (der während der Installation erstellte ATA-Dienst) verfügt jetzt über die erforderlichen Berechtigungen, um Sam-R in der Umgebung auszuführen.
+1. Der **ATA-Dienst** (der während der Installation erstellte ATA-Dienst) verfügt jetzt über die erforderlichen Berechtigungen, um Sam-R in der Umgebung auszuführen.
 
- Weitere Informationen zu SAM-R und der Gruppenrichtlinie finden Sie unter [Netzwerkzugriff: Einschränken der Clients, die Remoteaufrufe an SAM durchführen dürfen](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
+ Weitere Informationen zu SAM-R und der Gruppenrichtlinie finden Sie unter [Netzwerkzugriff: Einschränken der Clients, die Remoteaufrufe an SAM durchführen dürfen](/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
 
 > [!div class="step-by-step"]

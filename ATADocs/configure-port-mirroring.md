@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: cdaddca3-e26e-4137-b553-8ed3f389c460
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3969dc5bfcc4c36c6e6b664dc27bb58fc60d08e2
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: d6d63077d0e8c102d9237fce21677608335e8c60
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775272"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88954696"
 ---
 # <a name="configure-port-mirroring"></a>Konfigurieren der Portspiegelung
 
@@ -61,12 +61,12 @@ Die Domänencontroller und ATA-Gateways können physisch oder virtuell vorhanden
 
 **Falls Sie mit Virtualisierungsclustern arbeiten:**
 
--   Konfigurieren Sie für jeden Domänencontroller, der auf dem Virtualisierungscluster in einem virtuellen Computer mit dem ATA-Gateway ausgeführt wird, die Affinität zwischen dem Domänencontroller und dem ATA-Gateway. Auf diese Weise folgt das ATA-Gateway dem Domänencontroller, wenn dieser auf einen anderen Host verschoben wird. Dieser Ansatz funktioniert gut, solange nur wenige Domänencontroller vorhanden sind.
+- Konfigurieren Sie für jeden Domänencontroller, der auf dem Virtualisierungscluster in einem virtuellen Computer mit dem ATA-Gateway ausgeführt wird, die Affinität zwischen dem Domänencontroller und dem ATA-Gateway. Auf diese Weise folgt das ATA-Gateway dem Domänencontroller, wenn dieser auf einen anderen Host verschoben wird. Dieser Ansatz funktioniert gut, solange nur wenige Domänencontroller vorhanden sind.
 
 > [!NOTE]
 > Wenn Ihre Umgebung V2V ((Virtual-to-Virtual) auf unterschiedlichen Hosts (RSPAN) unterstützt, müssen Sie sich zu Affinität keine Gedanken machen.
 
--   Um zu gewährleisten, dass die ATA-Gateways ausreichende Kapazität für die eigenständige Überwachung aller Domänencontroller aufweisen, eignet sich folgende Option: Installieren Sie auf jedem Virtualisierungshost einen virtuellen Computer, und installieren Sie auf jeden Host ein ATA-Gateway. Konfigurieren Sie jedes ATA-Gateway so, dass es alle Domänencontroller überwacht, die auf dem betreffenden Cluster ausgeführt werden. Auf diese Weise wird jeder Host überwacht, auf dem Domänencontroller ausgeführt werden.
+- Um zu gewährleisten, dass die ATA-Gateways ausreichende Kapazität für die eigenständige Überwachung aller Domänencontroller aufweisen, eignet sich folgende Option: Installieren Sie auf jedem Virtualisierungshost einen virtuellen Computer, und installieren Sie auf jeden Host ein ATA-Gateway. Konfigurieren Sie jedes ATA-Gateway so, dass es alle Domänencontroller überwacht, die auf dem betreffenden Cluster ausgeführt werden. Auf diese Weise wird jeder Host überwacht, auf dem Domänencontroller ausgeführt werden.
 
 Überprüfen Sie nach dem Konfigurieren der Portspiegelung deren ordnungsgemäße Funktion, bevor Sie die ATA-Gateways installieren.
 

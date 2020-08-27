@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 581a3257-32dc-453f-b84e-b9f99186f5d3
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3b2e2d5a9eee8d18b6d182afb15453a8809db605
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 02cd26323be6ae79524d4912674380af23d2c3af
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775402"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88954798"
 ---
 # <a name="investigating-entity-profiles"></a>Untersuchen von Entitätsprofilen
 
@@ -49,9 +49,9 @@ Im oberen Bereich können Sie Kacheln für die Zusammenfassung anzeigen, in dene
 
 Für Computer wird Folgendes angezeigt:
 - Die Anzahl der offenen verdächtigen Aktivitäten für den Computer
--  Die Anzahl der auf dem Computer angemeldeten Benutzer
+- Die Anzahl der auf dem Computer angemeldeten Benutzer
 - Die Anzahl der Ressourcen, auf die von diesem Computer aus zugegriffen wurde
--  Die Anzahl der Standorte, von denen über den Computer auf das VPN-Netzwerk zugegriffen wurde
+- Die Anzahl der Standorte, von denen über den Computer auf das VPN-Netzwerk zugegriffen wurde
 - Eine Liste der vom Computer verwendeten IP-Adressen
   
   ![Computer mit Entitätsmenü](media/entity-computer.png)

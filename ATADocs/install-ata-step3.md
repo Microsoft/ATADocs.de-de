@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 7fb024e6-297a-4ad9-b962-481bb75a0ba3
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 2649e5ece9a1613c8c0f396c7fc906219c178046
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 5b7b60910975ce1f8922a32b799b997917542257
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775215"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88954543"
 ---
 # <a name="install-ata---step-3"></a>Installieren von ATA – Schritt 3
 
@@ -38,16 +38,16 @@ Klicken Sie in der Liste mit den Schritten am oberen Rand der Seite auf **gatewa
 > [!NOTE] 
 > Um den Konfigurationsbildschirm für das Gateway später zu erreichen, klicken Sie auf das **Servereinstellungs-Symbol** (in der oberen rechten Ecke), und wählen Sie **Konfiguration** aus. Klicken Sie anschließend unter **System** auf **Gateways**.  
 
-1.  Klicken Sie auf **Gatewaysetup**.
+1. Klicken Sie auf **Gatewaysetup**.
   ![ATA-Gatewaysetup herunterladen](media/download-gateway-setup.png)
-2.  Speichern Sie das Paket lokal.
-3.  Kopieren Sie das Paket auf den dedizierten Server oder Domänencontroller, auf dem das ATA-Gateway installiert werden soll. Alternativ können Sie die ATA-Konsole vom dedizierten Server oder vom Domänencontroller aus öffnen und diesen Schritt überspringen.
+1. Speichern Sie das Paket lokal.
+1. Kopieren Sie das Paket auf den dedizierten Server oder Domänencontroller, auf dem das ATA-Gateway installiert werden soll. Alternativ können Sie die ATA-Konsole vom dedizierten Server oder vom Domänencontroller aus öffnen und diesen Schritt überspringen.
 
 Die ZIP-Datei enthält die folgenden Dateien:
 
--   Installationsprogramm für ATA-Gateway
+- Installationsprogramm für ATA-Gateway
 
--   Konfigurationseinstellungsdatei mit den erforderlichen Informationen für die Verbindung mit ATA Center
+- Konfigurationseinstellungsdatei mit den erforderlichen Informationen für die Verbindung mit ATA Center
 
 
 > [!div class="step-by-step"]

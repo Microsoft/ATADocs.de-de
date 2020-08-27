@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 2946310a-8e4e-48fc-9450-fc9647efeb22
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f803f8c99ac3cfd7c36f113658f05d486b8192c8
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 9fb89568d92070fa69a632bed5da535b0897cf6c
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775419"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88953710"
 ---
 # <a name="updating-ata-to-version-19"></a>Aktualisieren von ATA auf Version 1.9
 
@@ -34,9 +34,9 @@ So aktualisieren Sie auf ATA 1.9:
 1.  [Laden Sie die Updateversion von ATA 1.9 aus dem Download Center](https://www.microsoft.com/download/details.aspx?id=56725) oder die vollständige Version aus dem [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics) herunter.<br>
 In der Migrationsversion kann die Datei nur für die Aktualisierung von ATA 1.8 verwendet werden. In der Version aus dem Evaluationszentrum wird die gleiche Installationsdatei („Microsoft ATA Center Setup.exe“) für die Installation einer neuen Bereitstellung von ATA und zum Aktualisieren von vorhandener Bereitstellungen verwendet.
 
-2.  Aktualisieren von ATA Center
+1. Aktualisieren von ATA Center
 
-4.  Aktualisieren der ATA-Gateways
+1. Aktualisieren der ATA-Gateways
 
     > [!IMPORTANT]
     > Aktualisieren Sie alle ATA-Gateways, damit ATA ordnungsgemäß funktioniert.
@@ -45,11 +45,11 @@ In der Migrationsversion kann die Datei nur für die Aktualisierung von ATA 1.8 
 
 1. Sichern Sie die Datenbank (optional):
 
-   -   Falls ATA Center als virtueller Computer ausgeführt wird und Sie einen Prüfpunkt erstellen möchten, fahren Sie den virtuellen Computer zunächst herunter.
+   - Falls ATA Center als virtueller Computer ausgeführt wird und Sie einen Prüfpunkt erstellen möchten, fahren Sie den virtuellen Computer zunächst herunter.
 
-   -   Wenn das ATA-Center auf einem physischen Server läuft, finden Sie unter [Notfallwiederherstellung](disaster-recovery.md) weitere Informationen zum Sichern der Datenbank.
+   - Wenn das ATA-Center auf einem physischen Server läuft, finden Sie unter [Notfallwiederherstellung](disaster-recovery.md) weitere Informationen zum Sichern der Datenbank.
 
-2. Führen Sie die Installationsdatei **Microsoft ATA Center Setup.exe** aus, und befolgen Sie die Anweisungen auf dem Bildschirm, um das Update zu installieren.
+1. Führen Sie die Installationsdatei **Microsoft ATA Center Setup.exe** aus, und befolgen Sie die Anweisungen auf dem Bildschirm, um das Update zu installieren.
 
    - Wählen Sie auf der Seite **Willkommen** Ihre Sprache aus, und klicken Sie auf **Weiter**.
 
@@ -64,11 +64,11 @@ In der Migrationsversion kann die Datei nur für die Aktualisierung von ATA 1.8 
 
    - Klicken Sie auf **Aktualisieren**. Nachdem Sie auf „Aktualisieren“ geklickt haben, ist ATA bis zum Abschluss der Aktualisierung offline.
 
-3. Nachdem das Update von ATA Center erfolgreich abgeschlossen wurde, klicken Sie auf **Starten**, um das Fenster **Updates** in der ATA-Konsole für die ATA-Gateways zu öffnen.
+1. Nachdem das Update von ATA Center erfolgreich abgeschlossen wurde, klicken Sie auf **Starten**, um das Fenster **Updates** in der ATA-Konsole für die ATA-Gateways zu öffnen.
 
     ![Update success screen](media/migration-center-success.png)
 
-4. Wenn Sie das automatische Update für Ihre ATA-Gateways schon im Fenster **Updates** festgelegt haben, wird zu diesem Zeitpunkt ein Update durchgeführt. Klicken Sie andernfalls neben jedem ATA-Gateway auf **Aktualisieren**.
+1. Wenn Sie das automatische Update für Ihre ATA-Gateways schon im Fenster **Updates** festgelegt haben, wird zu diesem Zeitpunkt ein Update durchgeführt. Klicken Sie andernfalls neben jedem ATA-Gateway auf **Aktualisieren**.
   
     ![Abbildung „Gateways aktualisieren“](media/migration-update-gw.png)
 

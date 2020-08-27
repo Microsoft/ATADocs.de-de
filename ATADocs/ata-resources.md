@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 42a1a34f-ed6b-4538-befb-452168a30e8c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 864a5f0a9c521aad24673ef3e22ffe7bbc62436f
-ms.sourcegitcommit: bfb5f35f8e2f19911357e5afa6624ffe43e37d12
+ms.openlocfilehash: c5af70847f4ca8fc61ec332aa8c6e3a9c2f6f35c
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86472390"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88953999"
 ---
 # <a name="ata-readiness-roadmap"></a>Überblick über die ATA-Bereitschaft
 
@@ -68,7 +68,7 @@ Die grundlegenden, erforderlichen Einstellungen in ATA werden als Teil des Insta
 
 [Überwachungseinstellungen](https://aka.ms/ataauditingblog): Überwachen Sie die Integrität Ihres Domänencontrollers vor und nach der ATA-Bereitstellung.
 
-[Allgemeine ATA-Dokumentation](https://docs.microsoft.com/advanced-threat-analytics/)
+[Allgemeine ATA-Dokumentation](index.yml)
 
 ## <a name="work-with-ata"></a>Arbeiten mit ATA
 

@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 8b6232817ae35bdd170f90bdc1c25920f9932322
-ms.sourcegitcommit: 954f5e64a8a25075ce663b9fd63810cf4c032987
+ms.openlocfilehash: b83a98ddf052416ffee0cd7dc521b9412b466d99
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85129849"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88954118"
 ---
 # <a name="ata-prerequisites"></a>Voraussetzungen für ATA
 
@@ -55,7 +55,7 @@ In diesem Abschnitt werden die Informationen aufgeführt, die Sie sammeln sollte
 
 - Installieren Sie Microsoft Message Analyzer nicht auf einem ATA-Gateway oder einem Lightweight-Gateway. Der Treiber von Message Analyzer steht mit dem Treiber des ATA-Gateways und des Lightweight-Gateways in Konflikt. Wenn Sie Wireshark auf einem ATA-Gateway ausführen, müssen Sie den Dienst Microsoft Advanced Threat Analytics Gateway neu starten, nachdem Sie das Erfassen mit Wireshark abgeschlossen haben. Wenn dies nicht der Fall ist, beendet das Gateway die Erfassung von Datenverkehr. Das Ausführen von Wireshark auf einem ATA-Lightweight-Gateway besitzt keine Auswirkungen auf das ATA-Lightweight-Gateway.
 
-- Empfohlen: Benutzer sollten über schreibgeschützten Zugriff auf den Container mit gelöschten Objekten verfügen. So kann ATA eine Massenlöschung von Objekten in der Domäne erkennen. Informationen zum Konfigurieren des schreibgeschützten Zugriffs auf den Container mit gelöschten Objekten finden Sie im Abschnitt **Changing permissions on a deleted object container** (Ändern von Berechtigungen für einen Container mit gelöschten Objekten) im Artikel [View or Set Permissions on a Directory Object](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) (Anzeigen und Festlegen von Berechtigungen für ein Verzeichnisobjekt).
+- Empfohlen: Benutzer sollten über schreibgeschützten Zugriff auf den Container mit gelöschten Objekten verfügen. So kann ATA eine Massenlöschung von Objekten in der Domäne erkennen. Informationen zum Konfigurieren des schreibgeschützten Zugriffs auf den Container mit gelöschten Objekten finden Sie im Abschnitt **Changing permissions on a deleted object container** (Ändern von Berechtigungen für einen Container mit gelöschten Objekten) im Artikel [View or Set Permissions on a Directory Object](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816824(v=ws.10)) (Anzeigen und Festlegen von Berechtigungen für ein Verzeichnisobjekt).
 
 - Optional: ein Benutzerkonto eines Benutzers ohne Netzwerkaktivitäten. Dieses Konto kann als ATA-Honeytoken-Benutzer konfiguriert werden. Zum Konfigurieren eines Kontos als Honeytoken-Benutzer ist nur der Benutzername erforderlich. Weitere Informationen zum Konfigurieren von Honeytoken finden Sie unter [Konfigurieren von IP-Adressausschlüssen und Honeytoken-Benutzern](install-ata-step7.md).
 
@@ -87,7 +87,7 @@ Wenn Sie auf einem physischen Server arbeiten, erfordert die ATA-Datenbank, dass
 Um eine optimale Leistung zu erzielen, legen Sie die **Energieoption** von ATA Center auf **Hohe Leistung** fest.<br>
 Die erforderlichen Serverspezifikationen hängen von der Anzahl der überwachten Domänencontroller und der Auslastung der einzelnen Domänencontroller ab. Weitere Informationen finden Sie unter [ATA-Kapazitätsplanung](ata-capacity-planning.md).
 
-Für Windows-Betriebssysteme 2008R2 und 2012 wird das Gateway im Modus für [mehrere Prozessor Gruppen](https://docs.microsoft.com/windows/win32/procthread/processor-groups) nicht unterstützt. Weitere Informationen über den Modus „Mehrere Prozessorgruppen“ finden Sie unter [Problembehandlung](troubleshooting-ata-known-errors.md#multi-processor-group-mode).
+Für Windows-Betriebssysteme 2008R2 und 2012 wird das Gateway im Modus für [mehrere Prozessor Gruppen](/windows/win32/procthread/processor-groups) nicht unterstützt. Weitere Informationen über den Modus „Mehrere Prozessorgruppen“ finden Sie unter [Problembehandlung](troubleshooting-ata-known-errors.md#multi-processor-group-mode).
 
 ### <a name="time-synchronization"></a>Zeitsynchronisierung
 
@@ -107,9 +107,9 @@ In der folgenden Tabelle sind die Ports aufgelistet, die mindestens geöffnet we
 
 |Protokoll|Transport|Port|Zu/Von|Richtung|
 |------------|-------------|--------|-----------|-------------|
-|**SSL** (ATA-Kommunikation)|TCP|443|ATA-Gateway|Eingehend|
-|**HTTP** (optional)|TCP|80|Unternehmensnetzwerk|Eingehend|
-|**Http**|TCP|443|Unternehmensnetzwerk und ATA-Gateway|Eingehend|
+|**SSL** (ATA-Kommunikation)|TCP|443|ATA-Gateway|Eingehende Verbindungen|
+|**HTTP** (optional)|TCP|80|Unternehmensnetzwerk|Eingehende Verbindungen|
+|**HTTPS**|TCP|443|Unternehmensnetzwerk und ATA-Gateway|Eingehende Verbindungen|
 |**SMTP** (optional)|TCP|25|SMTP-Server|Ausgehend|
 |**SMTPS** (optional)|TCP|465|SMTP-Server|Ausgehend|
 |**Syslog** (optional)|TCP/UPS/TLS (konfigurierbar)|514 (Standard)|Syslog-Server|Ausgehend|
@@ -126,7 +126,7 @@ In der folgenden Tabelle sind die Ports aufgelistet, die mindestens geöffnet we
 
 Um die Installation und Bereitstellung von ATA zu beschleunigen, können Sie während dieser Installation selbstsignierte Zertifikate installieren. Wenn Sie selbstsignierte Zertifikate verwendet haben, empfiehlt es sich nach der ersten Bereitstellung, die selbstsignierten Zertifikate durch Zertifikate einer internen Zertifizierungsstelle zu ersetzen, damit ATA Center diese verwendet.
 
-Stellen Sie sicher, dass das ATA-Center und die ATA-Gateways Zugriff auf den CRL-Verteilungspunkt haben. Wenn sie keinen Zugriff auf das Internet haben, führen Sie [das Verfahren zum manuellen Importieren einer Zertifikatsperrliste](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx) durch. Achten Sie dabei darauf, alle CRL-Verteilungspunkte für die gesamte Kette zu installieren.
+Stellen Sie sicher, dass das ATA-Center und die ATA-Gateways Zugriff auf den CRL-Verteilungspunkt haben. Wenn sie keinen Zugriff auf das Internet haben, führen Sie [das Verfahren zum manuellen Importieren einer Zertifikatsperrliste](/previous-versions/tn-archive/aa996972(v=exchg.65)) durch. Achten Sie dabei darauf, alle CRL-Verteilungspunkte für die gesamte Kette zu installieren.
 
 Ein Zertifikat muss Folgendes besitzen:
 

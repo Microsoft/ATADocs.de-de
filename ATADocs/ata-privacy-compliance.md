@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 1b2d185c-62cd-45f0-b0dd-687b51317f32
 ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: 907fb2c6f7e24bfc0f69ae29534303f7b02d9708
-ms.sourcegitcommit: bfb5f35f8e2f19911357e5afa6624ffe43e37d12
+ms.openlocfilehash: 1ae7d9277de591f54cdb1918ee72174a806b1c96
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86472415"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88954033"
 ---
 # <a name="ata-data-security-and-privacy"></a>Sicherheit und Datenschutz für ATA
 
@@ -25,7 +25,7 @@ ms.locfileid: "86472415"
 
 [!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
 
-## <a name="searching-for-and-identifying-personal-data"></a>Suchen nach und Identifizieren von personenbezogenen Daten 
+## <a name="searching-for-and-identifying-personal-data"></a>Suchen und Ermitteln von personenbezogenen Daten 
 
 Alle entitätsbezogenen Daten in ATA stammen aus Active Directory (AD) und werden von dort aus zu ATA repliziert. Bei der Suche nach personenbezogenen Daten sollten Sie zuerst in AD nachsehen. 
 
@@ -43,7 +43,7 @@ Gehen Sie folgendermaßen vor, um die benutzerspezifischen Daten dauerhaft aus d
 
 1. [Laden Sie das Skript „MongoDB“ (gdpr.js) herunter.](https://aka.ms/ata-gdpr-script)  
 
-2. Kopieren Sie das Skript in den ATA-Ordner (unter `"C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB`), und führen Sie den folgenden Befehl auf dem ATA Center-Computer aus: 
+1. Kopieren Sie das Skript in den ATA-Ordner (unter `"C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB`), und führen Sie den folgenden Befehl auf dem ATA Center-Computer aus: 
 
 Verwenden Sie ATA-GDPR-Datenbankskripts, um Entitäten und Aktivitätsdaten von Entitäten zu löschen. Dies wird in den folgenden Abschnitten beschrieben.
 
@@ -83,8 +83,8 @@ Weitere Informationen finden Sie unter [Manage system-generated logs (Verwalten 
 So deaktivieren Sie die Datensammlung:
 
 1. Melden Sie sich bei der ATA-Konsole an, klicken Sie auf der Symbolleiste auf die drei Punkte, und wählen Sie **Info** aus. 
-2. Deaktivieren Sie das Kontrollkästchen für **Senden Sie uns Nutzungsinformationen, um uns bei der Verbesserung der Benutzerfreundlichkeit zu unterstützen**. 
+1. Deaktivieren Sie das Kontrollkästchen für **Senden Sie uns Nutzungsinformationen, um uns bei der Verbesserung der Benutzerfreundlichkeit zu unterstützen**. 
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-- Informationen zur Vertrauensstellung und Konformität von ATA finden Sie im [Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) und auf der Website zur [Microsoft 365-GDPR-Konformität](https://docs.microsoft.com/microsoft-365/compliance/gdpr).
+- Informationen zur Vertrauensstellung und Konformität von ATA finden Sie im [Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) und auf der Website zur [Microsoft 365-GDPR-Konformität](/microsoft-365/compliance/gdpr).

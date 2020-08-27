@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 77f384ecd4ded0e47737013a138cdf1bdbf167cf
-ms.sourcegitcommit: 954f5e64a8a25075ce663b9fd63810cf4c032987
+ms.openlocfilehash: 2b61069662100ec9c0c66620a26c740c7d1d2471
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85129866"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88954679"
 ---
 # <a name="install-ata---step-1"></a>Installieren von ATA – Schritt 1
 
@@ -40,7 +40,7 @@ Nachdem Sie überprüft haben, ob der Server die Anforderungen erfüllt, können
 
 Führen Sie die folgenden Schritte auf dem ATA Center-Server aus.
 
-1. Laden Sie ATA aus dem [Microsoft Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) oder dem [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/) oder [MSDN](https://msdn.microsoft.com/subscriptions/downloads)herunter.
+1. Laden Sie ATA aus dem [Microsoft Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) oder dem [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/) oder [MSDN](/powerapps/developer/common-data-service/org-service/subscribe-sdk-assembly-updates-using-nuget)herunter.
 
 1. Melden Sie sich bei dem Computer, auf dem Sie ATA Center installieren, als ein Benutzer an, der Mitglied der lokalen Administratorgruppe ist.
 
@@ -63,7 +63,7 @@ Führen Sie die folgenden Schritte auf dem ATA Center-Server aus.
 
 1. Geben Sie auf der Seite **Configure the Center (Konfigurieren von ATA Center)** basierend auf Ihrer Umgebung die folgenden Informationen ein:
 
-    |Feld|Beschreibung|Kommentare|
+    |Feld|BESCHREIBUNG|Kommentare|
     |---------|---------------|------------|
     |Installationspfad|Dies ist der Speicherort, an dem ATA Center installiert wird. Standardmäßig ist dies „%programfiles%\Microsoft Advanced Threat Analytics\Center“.|Behalten Sie den Standardwert bei.|
     |Datenbankdatenpfad|Dies ist der Speicherort, an dem sich die MongoDB-Datenbankdateien befinden. Standardmäßig ist dies „%programfiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data“.|Ändern Sie den Speicherort, sodass ausreichend Speicherplatz für Ihre Größenanpassung verfügbar ist. **Hinweis:** <ul><li>In Produktionsumgebungen sollten Sie ein Laufwerk verwenden, das der Kapazitätsplanung entsprechend über ausreichend Speicherplatz verfügt.</li><li>Für umfangreiche Bereitstellungen sollte sich die Datenbank auf einem separaten physischen Datenträger befinden.</li></ul>Informationen zur Größenanpassung finden Sie unter [ATA-Kapazitätsplanung](ata-capacity-planning.md).|

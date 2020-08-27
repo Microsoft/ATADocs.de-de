@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 31e1b1923d6cef2b0bc4c34349be8b6516aceb0b
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: a23a590357a7c4fc6f04ccd33c747586d571a447
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775385"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88954883"
 ---
 # <a name="configuring-windows-event-forwarding"></a>Konfigurieren der Windows-Ereignisweiterleitung
 
@@ -29,7 +29,7 @@ ms.locfileid: "84775385"
 Um die Erkennungsfunktionalität zu verbessern, benötigt ATA die folgenden Windows-Ereignisse:4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045. Diese können entweder automatisch vom ATA-Lightweight-Gateway gelesen oder, falls das ATA-Lightweight-Gateway nicht bereitgestellt wurde, an das ATA-Gateway weitergeleitet werden. Dazu gibt es zwei Möglichkeiten: Konfigurieren des ATA-Gateways, sodass es auf SIEM-Ereignisse lauscht, oder Konfigurieren der Windows-Ereignisweiterleitung.
 
 > [!NOTE]
-> Bei Verwendung von Server Core kann [wecutil](https://docs.microsoft.com/windows-server/administration/windows-commands/wecutil) zum Erstellen und Verwalten von Abonnements für Ereignisse verwendet werden, die von Remotecomputern weitergeleitet werden.
+> Bei Verwendung von Server Core kann [wecutil](/windows-server/administration/windows-commands/wecutil) zum Erstellen und Verwalten von Abonnements für Ereignisse verwendet werden, die von Remotecomputern weitergeleitet werden.
 
 ### <a name="wef-configuration-for-ata-gateways-with-port-mirroring"></a>Konfiguration der Windows-Ereignisweiterleitung für ATA-Gateways mit Portspiegelung
 
@@ -39,23 +39,23 @@ Nachdem Sie die Portspiegelung von den Domänencontrollern zum ATA-Gateway konfi
 
 In diesem Szenario gehen wir davon aus, dass das ATA-Gateway Mitglied der Domäne ist.
 
-1.  Öffnen Sie „Active Directory-Benutzer und -Computer“, navigieren Sie zum Ordner **BuiltIn**, und doppelklicken Sie auf **Ereignisprotokollleser**. 
-2.  Wählen Sie **Mitglieder** aus.
-3.  Wenn **Netzwerkdienst** nicht aufgelistet ist, klicken Sie auf **Hinzufügen**, und geben Sie **Netzwerkdienst** in das Feld **Geben Sie die zu verwendenden Objektnamen ein** ein. Klicken Sie anschließend auf **Namen überprüfen**, und klicken Sie zweimal auf **OK**. 
+1. Öffnen Sie „Active Directory-Benutzer und -Computer“, navigieren Sie zum Ordner **BuiltIn**, und doppelklicken Sie auf **Ereignisprotokollleser**. 
+1. Wählen Sie **Mitglieder** aus.
+1. Wenn **Netzwerkdienst** nicht aufgelistet ist, klicken Sie auf **Hinzufügen**, und geben Sie **Netzwerkdienst** in das Feld **Geben Sie die zu verwendenden Objektnamen ein** ein. Klicken Sie anschließend auf **Namen überprüfen**, und klicken Sie zweimal auf **OK**. 
 
 Sie müssen die Domänencontroller neu starten, nachdem Sie den **Netzwerkdienst** der **Ereignisprotokollleser**-Gruppe hinzugefügt haben, damit die Änderungen in Kraft treten können.
 
 **Schritt 2: Erstellen Sie eine Richtlinie auf den Domänencontrollern, um die Einstellung „Ziel-Abonnement-Manager konfigurieren“ festzulegen.** 
 > [!Note] 
-> Sie können eine Gruppenrichtlinie für diese Einstellungen erstellen und die Gruppenrichtlinie auf jeden Domänencontroller anwenden, der vom ATA-Gateway überwacht wird. Die folgenden Schritte ändern die lokale Richtlinie des Domänencontrollers.     
+> Sie können eine Gruppenrichtlinie für diese Einstellungen erstellen und die Gruppenrichtlinie auf jeden Domänencontroller anwenden, der vom ATA-Gateway überwacht wird. Die folgenden Schritte ändern die lokale Richtlinie des Domänencontrollers.  
 
 1. Führen Sie den folgenden Befehl auf jedem Domänencontroller aus: *winrm quickconfig*
-2. Geben Sie an einer Eingabeaufforderung *gpedit.msc* ein.
-3. Erweitern Sie **Computerkonfiguration > Administrative Vorlagen > Windows-Komponenten > Ereignisweiterleitung**.
+1. Geben Sie an einer Eingabeaufforderung *gpedit.msc* ein.
+1. Erweitern Sie **Computerkonfiguration > Administrative Vorlagen > Windows-Komponenten > Ereignisweiterleitung**.
 
-   ![Local policy group editor image](media/wef%201%20local%20group%20policy%20editor.png)
+    ![Local policy group editor image](media/wef%201%20local%20group%20policy%20editor.png)
 
-4. Doppelklicken Sie auf **Ziel-Abonnement-Manager konfigurieren**.
+1. Doppelklicken Sie auf **Ziel-Abonnement-Manager konfigurieren**.
    
    1.  Wählen Sie **Aktiviert** aus.
    2.  Klicken Sie unter **Optionen** auf **Anzeigen**.
@@ -71,28 +71,28 @@ Sie müssen die Domänencontroller neu starten, nachdem Sie den **Netzwerkdienst
 
 **Schritt 3: Führen Sie die folgenden Schritte auf dem ATA-Gateway aus.** 
 
-1.  Öffnen Sie eine Eingabeaufforderung mit erhöhten Rechten, und geben Sie *wecutil.qc* ein.
-2.  Öffnen Sie die **Ereignisanzeige**. 
-3.  Klicken Sie mit der rechten Maustaste auf **Abonnements**, und wählen Sie **Abonnement erstellen** aus. 
+1. Öffnen Sie eine Eingabeaufforderung mit erhöhten Rechten, und geben Sie *wecutil.qc* ein.
+1. Öffnen Sie die **Ereignisanzeige**. 
+1. Klicken Sie mit der rechten Maustaste auf **Abonnements**, und wählen Sie **Abonnement erstellen** aus. 
 
-    1.  Geben Sie einen Namen und eine Beschreibung für das Abonnement ein. 
-    2.  Bestätigen Sie für **Zielprotokoll**, dass **Weitergeleitete Ereignisse** aktiviert ist. Damit ATA die Ereignisse lesen kann, muss das Ziel Protokoll **Weitergeleitete Ereignisse**sein. 
-    3.  Wählen Sie **Quellcomputerinitiiert** aus, und klicken Sie auf **Computergruppen auswählen** aus.
-        1.  Klicken Sie auf **Domänencomputer hinzufügen**.
-        2.  Geben Sie den Namen des Domänencontrollers in das Feld **Namen des auszuwählenden Objekts eingeben** ein. Klicken Sie anschließend auf **Namen überprüfen**, und klicken Sie auf **OK**.  
+    1. Geben Sie einen Namen und eine Beschreibung für das Abonnement ein. 
+    2. Bestätigen Sie für **Zielprotokoll**, dass **Weitergeleitete Ereignisse** aktiviert ist. Damit ATA die Ereignisse lesen kann, muss das Ziel Protokoll **Weitergeleitete Ereignisse**sein. 
+    3. Wählen Sie **Quellcomputerinitiiert** aus, und klicken Sie auf **Computergruppen auswählen** aus.
+        1. Klicken Sie auf **Domänencomputer hinzufügen**.
+        2. Geben Sie den Namen des Domänencontrollers in das Feld **Namen des auszuwählenden Objekts eingeben** ein. Klicken Sie anschließend auf **Namen überprüfen**, und klicken Sie auf **OK**.  
           ![Event Viewer image](media/wef3%20event%20viewer.png)  
-        3.  Klicken Sie auf **OK**.
-    4.  Klicken Sie auf **Ereignisse auswählen**.
+        3. Klicken Sie auf **OK**.
+    4. Klicken Sie auf **Ereignisse auswählen**.
         1. Klicken Sie auf **Per Protokoll** und wählen Sie **Sicherheit** aus.
         2. Tippen Sie im Feld **Ereignis-IDs ein-/ausschließen** die Ereignisnummer ein, und klicken Sie auf **OK**. Geben Sie wie im folgenden Beispiel 4776 ein.
 
         ![Query filter image](media/wef%204%20query%20filter.png)
 
-    5.  Klicken Sie mit der rechten Maustaste auf das erstellte Abonnement, und wählen Sie **Laufzeitstatus** aus, um festzustellen, ob es Probleme mit dem Status gibt. 
-    6.  Überprüfen Sie nach einigen Minuten, ob die festgelegten Ereignisse im ATA-Gateway in „Weitergeleitete Ereignisse“ angezeigt wird.
+    5. Klicken Sie mit der rechten Maustaste auf das erstellte Abonnement, und wählen Sie **Laufzeitstatus** aus, um festzustellen, ob es Probleme mit dem Status gibt. 
+    6. Überprüfen Sie nach einigen Minuten, ob die festgelegten Ereignisse im ATA-Gateway in „Weitergeleitete Ereignisse“ angezeigt wird.
 
 
-Weitere Informationen finden Sie in folgenden Quellen: [Einrichten von Computern zum Weiterleiten und Sammeln von Ereignissen](https://technet.microsoft.com/library/cc748890)
+Weitere Informationen finden Sie in folgenden Quellen: [Einrichten von Computern zum Weiterleiten und Sammeln von Ereignissen](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc748890(v=ws.11))
 
 ## <a name="see-also"></a>Weitere Informationen
 - [Installieren von ATA](install-ata-step1.md)

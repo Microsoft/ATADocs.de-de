@@ -11,12 +11,12 @@ ms.prod: advanced-threat-analytics
 ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c17405cd1f3da619ad6942e082420e58c4e9c430
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 175132fa85f95717987f074f0185bc94bfe187ba
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775130"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88955410"
 ---
 # <a name="manage-system-generated-logs"></a>Verwalten von systemgenerierten Protokollen
 
@@ -31,55 +31,55 @@ ms.locfileid: "84775130"
 
 Die gesammelten anonymisierten Daten enthalten folgende Parameter:
 
--   Leistungsindikatoren von ATA Center und vom ATA-Gateway
+- Leistungsindikatoren von ATA Center und vom ATA-Gateway
 
--   Produkt-ID von lizenzierten Kopien von ATA
+- Produkt-ID von lizenzierten Kopien von ATA
 
--   Bereitstellungsdatum von ATA Center
+- Bereitstellungsdatum von ATA Center
 
--   Anzahl der bereitgestellten ATA-Gateways
+- Anzahl der bereitgestellten ATA-Gateways
 
--   Die folgenden anonymisierten Active Directory-Informationen:
+- Die folgenden anonymisierten Active Directory-Informationen:
 
-    -   Domänen-ID für die erste Domäne der in alphabetischer Reihenfolge aufgelisteten Domänennamen
+    - Domänen-ID für die erste Domäne der in alphabetischer Reihenfolge aufgelisteten Domänennamen
 
-    -   Anzahl der Domänencontroller
+    - Anzahl der Domänencontroller
 
-    -   Anzahl der Domänencontroller, die von ATA über Portspiegelung überwacht werden
+    - Anzahl der Domänencontroller, die von ATA über Portspiegelung überwacht werden
 
-    -   Anzahl der Standorte
+    - Anzahl der Standorte
 
-    -   Anzahl der Computer
+    - Anzahl der Computer
 
-    -   Anzahl der Gruppen
+    - Anzahl der Gruppen
 
-    -   Anzahl von Benutzern
+    - Anzahl von Benutzern
 
--   Verdächtige Aktivitäten – die folgenden anonymisierten Daten werden für jede verdächtige Aktivität erfasst:
+- Verdächtige Aktivitäten – die folgenden anonymisierten Daten werden für jede verdächtige Aktivität erfasst:
 
     (Computer Namen, Benutzernamen und IP-Adressen werden **nicht** erfasst.)
 
-    -   Art der verdächtigen Aktivität
+    - Art der verdächtigen Aktivität
 
-    -   ID der verdächtigen Aktivität
+    - ID der verdächtigen Aktivität
 
-    -   Status
+    - Status
 
-    -   Start- und Endzeitpunkt
+    - Start- und Endzeitpunkt
 
-    -   Vorliegende Eingabe
+    - Vorliegende Eingabe
 
 - Integritätsprobleme – Die folgenden anonymisierten Daten werden für jedes Integritätsproblem erfasst:
 
     (Computernamen, Benutzernamen und IP-Adressen werden nicht erfasst.)
 
-    -   Integritätsproblemtyp
+    - Integritätsproblemtyp
 
-    -   Integritätsproblem-ID
+    - Integritätsproblem-ID
 
-    -   Status
+    - Status
 
-    -   Start- und Endzeitpunkt
+    - Start- und Endzeitpunkt
 
 - URL-Adressen der ATA-Konsole – URL-Adressen bei Verwendung der ATA-Konsole, d.h. welche Seiten in der ATA-Konsole besucht werden.
 
@@ -87,9 +87,9 @@ Die gesammelten anonymisierten Daten enthalten folgende Parameter:
 ### <a name="disable-data-collection"></a>Datensammlung deaktivieren
 Führen Sie die folgenden Schritte aus, um das Sammeln und Senden von Telemetriedaten an Microsoft zu beenden:
 
-1.  Melden Sie sich bei der ATA-Konsole an, klicken Sie auf der Symbolleiste auf die drei Punkte, und wählen Sie **Info** aus.
+1. Melden Sie sich bei der ATA-Konsole an, klicken Sie auf der Symbolleiste auf die drei Punkte, und wählen Sie **Info** aus.
 
-2.  Deaktivieren Sie das Kontrollkästchen für **Senden Sie uns Nutzungsinformationen, um uns bei der Verbesserung der Benutzerfreundlichkeit zu unterstützen**.
+1. Deaktivieren Sie das Kontrollkästchen für **Senden Sie uns Nutzungsinformationen, um uns bei der Verbesserung der Benutzerfreundlichkeit zu unterstützen**.
 
 ## <a name="see-also"></a>Weitere Informationen
 - [Behandeln von Problemen mit ATA mithilfe des Ereignisprotokolls](troubleshooting-ata-using-logs.md)

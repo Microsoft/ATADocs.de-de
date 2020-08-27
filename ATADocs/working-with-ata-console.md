@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 115b20058d5828ed9c7cc04f7b27cd77ee839566
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 1532d110daf23562c768a7b145bcff9326f73223
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84774654"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88955121"
 ---
 # <a name="working-with-the-ata-console"></a>Arbeiten mit der ATA-Konsole
 
@@ -43,12 +43,12 @@ Sie müssen sich mit einem Benutzer anmelden, dem die richtige ATA-Rolle für de
    >[!NOTE]
    > Sie können auch entweder in ATA Center oder auf dem ATA-Gateway einen Browser öffnen und zu der IP-Adresse navigieren, die Sie während der ATA Center-Installation für die ATA-Konsole konfiguriert haben.    
 
-2. Wenn der Computer, auf dem ATA Center installiert ist, und der Computer, von dem aus Sie auf die ATA-Konsole zugreifen möchten, beide in eine Domäne eingebunden sind, unterstützt ATA das in der Windows-Authentifizierung integrierte einmalige Anmelden. Wenn Sie bereits bei Ihrem Computer angemeldet sind, verwendet ATA dieses Token, um Sie bei der ATA-Konsole anzumelden. Sie können sich auch mit einer Smartcard anmelden. Ihre Berechtigungen in ATA entsprechen Ihrer [Administratorrolle](ata-role-groups.md).
+1. Wenn der Computer, auf dem ATA Center installiert ist, und der Computer, von dem aus Sie auf die ATA-Konsole zugreifen möchten, beide in eine Domäne eingebunden sind, unterstützt ATA das in der Windows-Authentifizierung integrierte einmalige Anmelden. Wenn Sie bereits bei Ihrem Computer angemeldet sind, verwendet ATA dieses Token, um Sie bei der ATA-Konsole anzumelden. Sie können sich auch mit einer Smartcard anmelden. Ihre Berechtigungen in ATA entsprechen Ihrer [Administratorrolle](ata-role-groups.md).
 
    > [!NOTE]
    > Stellen Sie sicher, dass Sie sich bei dem Computer anmelden, von dem aus Sie auf die ATA-Konsole zugreifen möchten. Verwenden Sie hierzu Ihren ATA-Administratorbenutzernamen und das dazugehörige Kennwort. Alternativ können Sie Ihren Browser als ein anderer Benutzer ausführen oder sich von Windows abmelden und danach mit Ihrem ATA-Administratorbenutzerkonto anmelden. Damit die ATA-Konsole nach Anmeldeinformationen fragt, greifen Sie mithilfe einer IP-Adresse auf die Konsole zu. Sie werden aufgefordert, Anmeldeinformationen einzugeben.
 
-3. Stellen Sie bei der Anmeldung mit SSO sicher, dass der Standort der ATA-Konsole als lokale Intranetsite in Ihrem Browser definiert ist und dass Sie mit einem Kurznamen oder einem Localhost darauf zugreifen.
+1. Stellen Sie bei der Anmeldung mit SSO sicher, dass der Standort der ATA-Konsole als lokale Intranetsite in Ihrem Browser definiert ist und dass Sie mit einem Kurznamen oder einem Localhost darauf zugreifen.
 
 > [!NOTE]
 > Zusätzlich zum Protokollieren jeder verdächtigen Aktivität und Integritätswarnung wird jede Konfigurationsänderung, die Sie in der ATA-Konsole vornehmen, im Windows-Ereignisprotokoll auf dem ATA Center-Computer unter **Applications and services log** (Protokoll für Anwendungen und Dienste) und dann unter **Microsoft ATA** überprüft. Es wird ebenso jede Anmeldung bei der ATA-Konsole überprüft.<br></br>  Eine Konfiguration, die das ATA-Gateway betrifft, wird auch im Windows-Ereignisprotokoll des ATA-Gateway-Computers protokolliert. 
@@ -109,8 +109,8 @@ Die folgende Liste von Gruppen wird von ATA als **sensibel** eingestuft. Jede En
 - Organisationsadministratoren 
 - Gruppenrichtlinienersteller-Besitzer 
 - Schreibgeschützter Domänencontroller 
-- Administrators  
-- Hauptbenutzer  
+- Administratoren  
+- Powerusers  
 - Konten-Operatoren  
 - Server-Operatoren   
 - Druck-Operatoren
@@ -128,15 +128,15 @@ Wenn Sie an einer Stelle in der Konsole, an der eine einzelne Entität dargestel
 
 ![Abbildung des ATA-Miniprofils](media/ATA-mini-profile.jpg)
 
--   Name
+- Name
 
--   Bild
+- Bild
 
--   E-Mail
+- E-Mail
 
--   Telephone
+- Telephone
 
--   Anzahl der verdächtigen Aktivitäten nach Schweregrad
+- Anzahl der verdächtigen Aktivitäten nach Schweregrad
 
 
 
