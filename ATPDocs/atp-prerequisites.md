@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 30514dac7053cfd117cf1f0c50a5e8536148d5c1
-ms.sourcegitcommit: 8c99699b9b84d50fb258c0cc5523ffa78133b7a4
+ms.openlocfilehash: 22e0d88d46d8f3751316148600349ca99382339a
+ms.sourcegitcommit: 2ff8079d3ad8964887c1d0d1414c84199ba208bb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2020
-ms.locfileid: "88027192"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88793369"
 ---
 # <a name="azure-atp-prerequisites"></a>Voraussetzungen für Azure ATP
 
@@ -103,14 +103,16 @@ Der Zugriff auf das Azure ATP-Portal erfolgt über einen Browser. Folgende Brows
 
 ## <a name="azure-atp-network-name-resolution-nnr-requirements"></a>Anforderungen an die Azure ATP-Netzwerknamensauflösung
 
-Die Netzwerknamensauflösung (Network Name Resolution, NNR) ist ein Hauptbestandteil der Azure ATP-Funktionalität. Damit der Azure ATP-Dienst ordnungsgemäß funktioniert, muss mindestens eine der folgenden NNR-Methoden für Azure ATP-Sensoren zugänglich sein:
+Die Netzwerknamensauflösung (Network Name Resolution, NNR) ist ein Hauptbestandteil der Azure ATP-Funktionalität. Zum Auflösen von IP-Adressen in Computernamen suchen Azure ATP-Sensoren die IP-Adressen mithilfe der folgenden Methoden:
 
-1. **NTLM über RPC** (TCP-Port 135)
-2. **NetBIOS** (UDP-Port 137)
-3. **RDP** (TCP-Port 3389): nur das erste Client Hello-Paket
-4. **Abfragen des DNS-Servers mittels Reverse-DNS-Lookup der IP-Adresse** (UDP-Port 53)
+- NTLM über RPC (TCP-Port 135)
+- NetBIOS (UDP-Port 137)
+- RDP (TCP-Port 3389): nur das erste Paket von **ClientHello**
+- Abfragen des DNS-Servers mittels Reverse-DNS-Lookup der IP-Adresse (UDP 53)
 
-Damit die Methoden 1, 2 und 3 funktionieren, müssen die entsprechenden Ports für eingehenden Datenverkehr von den Azure ATP-Sensoren zu Geräten im Netzwerk geöffnet sein. Weitere Informationen zu Azure ATP und NNR finden Sie unter [Azure ATP-NNR-Richtlinie](atp-nnr-policy.md).
+Damit die ersten drei Methoden funktionieren, müssen die entsprechenden Ports für eingehenden Datenverkehr von den Azure ATP-Sensoren zu Geräten im Netzwerk geöffnet sein. Weitere Informationen zu Azure ATP und NNR finden Sie unter [Azure ATP-NNR-Richtlinie](atp-nnr-policy.md).
+
+Um die besten Ergebnisse zu erzielen, sollten alle Methoden verwendet werden. Wenn dies nicht möglich ist, sollten Sie die DNS-Suchmethode und mindestens eine der anderen Methoden verwenden.
 
 ## <a name="azure-atp-sensor-requirements"></a>Voraussetzungen für den Azure ATP-Sensor
 
@@ -171,10 +173,12 @@ In der folgenden Tabelle sind die Ports aufgeführt, die für den Azure ATP-Sens
 |Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Azure ATP-Sensor|Alle Geräte im Netzwerk|Ausgehend|
 |Syslog (optional)|TCP/UDP|514, je nach Konfiguration|SIEM-Server|Azure ATP-Sensor|Eingehende Verbindungen|
 |RADIUS|UDP|1813|RADIUS|Azure ATP-Sensor|Eingehende Verbindungen|
-|**NNR-Ports**||||||
+|**NNR-Ports**\*||||||
 |NTLM über RPC|TCP|Port 135|ATP-Sensoren|Alle Geräte im Netzwerk|Eingehende Verbindungen|
 |NetBIOS|UDP|137|ATP-Sensoren|Alle Geräte im Netzwerk|Eingehende Verbindungen|
 |RDP|TCP|3389, nur das erste Client Hello-Paket|ATP-Sensoren|Alle Geräte im Netzwerk|Eingehende Verbindungen|
+
+\* Einer dieser Ports ist erforderlich, aber Sie sollten alle öffnen.
 
 ### <a name="windows-event-logs"></a>Windows-Ereignisprotokolle
 
@@ -261,10 +265,12 @@ In der folgenden Tabelle sind die Ports aufgeführt, die für den Verwaltungsada
 |DNS|TCP und UDP|53|Azure ATP-Sensor:|DNS-Server|Ausgehend|
 |Syslog (optional)|TCP/UDP|514, je nach Konfiguration|SIEM-Server|Azure ATP-Sensor:|Eingehende Verbindungen|
 |RADIUS|UDP|1813|RADIUS|Azure ATP-Sensor|Eingehende Verbindungen|
-|**NNR-Ports**||||||
+|**NNR-Ports** \*||||||
 |NTLM über RPC|TCP|135|ATP-Sensoren|Alle Geräte im Netzwerk|Eingehende Verbindungen|
 |NetBIOS|UDP|137|ATP-Sensoren|Alle Geräte im Netzwerk|Eingehende Verbindungen|
 |RDP|TCP|3389, nur das erste Client Hello-Paket|ATP-Sensoren|Alle Geräte im Netzwerk|Eingehende Verbindungen|
+
+\* Einer dieser Ports ist erforderlich, aber Sie sollten alle öffnen.
 
 > [!NOTE]
 >

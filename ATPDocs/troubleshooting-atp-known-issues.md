@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d3347151b490af645802aa759bf9379ee60162ba
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: e0694e13a731c1c8146f733ee8e49a3a2888d52c
+ms.sourcegitcommit: 2ff8079d3ad8964887c1d0d1414c84199ba208bb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775844"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88793385"
 ---
 # <a name="troubleshooting-azure-atp-known-issues"></a>Behandlung von bekannten Problemen bei Azure ATP
 
@@ -41,10 +41,7 @@ Während der Sensorinstallation erhalten Sie die folgende Fehlermeldung:  **Der 
 
 **Einträge im Bereitstellungsprotokoll:**
 
-[1C60:1AA8][2018-03-24T23:59:13]i000: 2018-03-25 02:59:13.1237 Info  InteractiveDeploymentManager ValidateCreateSensorAsync returned [validateCreateSensorResult=LicenseInvalid]]  
-[1C60:1AA8][2018-03-24T23:59:56]i000: 2018-03-25 02:59:56.4856 Info  InteractiveDeploymentManager ValidateCreateSensorAsync returned [validateCreateSensorResult=LicenseInvalid]]  
-[1C60:1AA8][2018-03-25T00:27:56]i000: 2018-03-25 03:27:56.7399 Debug SensorBootstrapperApplication Engine.Quit [deploymentResultStatus=1602 isRestartRequired=False]]  
-[1C60:15B8][2018-03-25T00:27:56]i500: Wird heruntergefahren, Exitcode: 0x642
+[1C60:1AA8][2018-03-24T23:59:13]i000: 2018-03-25 02:59:13.1237 Info  InteractiveDeploymentManager ValidateCreateSensorAsync returned [validateCreateSensorResult=LicenseInvalid]] [1C60:1AA8][2018-03-24T23:59:56]i000: 2018-03-25 02:59:56.4856 Info  InteractiveDeploymentManager ValidateCreateSensorAsync returned [validateCreateSensorResult=LicenseInvalid]] [1C60:1AA8][2018-03-25T00:27:56]i000: 2018-03-25 03:27:56.7399 Debug SensorBootstrapperApplication Engine.Quit [deploymentResultStatus=1602 isRestartRequired=False]] [1C60:15B8][2018-03-25T00:27:56]i500: Wird heruntergefahren, Exitcode: 0x642
 
 **Ursache**:
 
@@ -54,15 +51,56 @@ In einigen Fällen, bei Kommunikation über einen Proxy, könnte dieser während
 
 Stellen Sie sicher, dass der Sensor über den konfigurierten Proxy ohne Authentifizierung zu „*. atp.azure.com“ navigieren kann. Weitere Informationen finden Sie unter [Konfigurieren von Endpunktproxy- und Internetkonnektivitätseinstellungen für Ihren Azure ATP-Sensor](configure-proxy.md).
 
+## <a name="proxy-authentication-problem-presents-as-a-connection-error"></a>Darstellung des Proxyauthentifizierungsproblems als Verbindungsfehler
+
+Während der Sensorinstallation erhalten Sie die folgende Fehlermeldung:  **The sensor failed to connect to service.** (Fehler beim Herstellen einer Verbindung vom Sensor zum Dienst.)
+
+**Ursache:**
+
+Das Problem kann durch einen transparenten Proxykonfigurationsfehler auf Server Core verursacht werden, wenn beispielsweise das von Azure ATP benötigte Stammzertifikat nicht aktuell oder nicht vorhanden ist.
+
+**Lösung:**
+
+Führen Sie das folgende PowerShell-Cmdlet aus, um zu überprüfen, ob das vertrauenswürdige Stammzertifikat für den Azure ATP-Dienst auf Server Core vorhanden ist. Im folgenden Beispiel wird das Stammzertifikat „DigiCert Baltimore Root“ verwendet.
+
+```powershell
+Get-ChildItem -Path "Cert:\LocalMachine\Root" | where { $_.Thumbprint -eq "D4DE20D05E66FC53FE1A50882C78DB2852CAE474"}
+```
+
+```Output
+Subject      : CN=Baltimore CyberTrust Root, OU=CyberTrust, O=Baltimore, C=IE
+Issuer       : CN=Baltimore CyberTrust Root, OU=CyberTrust, O=Baltimore, C=IE
+Thumbprint   : D4DE20D05E66FC53FE1A50882C78DB2852CAE474
+FriendlyName : DigiCert Baltimore Root
+NotBefore    : 5/12/2000 11:46:00 AM
+NotAfter     : 5/12/2025 4:59:00 PM
+Extensions   : {System.Security.Cryptography.Oid, System.Security.Cryptography.Oid, System.Security.Cryptography.Oid}
+```
+
+Führen Sie die folgenden Schritte aus, wenn die Ausgabe nicht Ihren Erwartungen entspricht:
+
+1. Laden Sie das [Baltimore CyberTrust-Stammzertifikat](https://cacert.omniroot.com/bc2025.crt) auf den Server Core-Computer herunter.
+1. Führen Sie das folgende PowerShell-Cmdlet aus, um das Zertifikat zu installieren.
+
+    ```powershell
+    Import-Certificate -FilePath "<PATH_TO_CERTIFICATE_FILE>\bc2025.crt" -CertStoreLocation Cert:\LocalMachine\Root
+    ```
+
 ## <a name="silent-installation-error-when-attempting-to-use-powershell"></a>Fehler bei der automatischen Installation beim Versuch, PowerShell zu verwenden
 
 Sie versuchen, während der automatischen Sensorinstallation PowerShell zu verwenden, und erhalten folgenden Fehler:
 
-    "Azure ATP sensor Setup.exe" "/quiet" NetFrameworkCommandLineArguments="/q" Acce ... Unexpected token '"/quiet"' in expression or statement."
+```powershell
+"Azure ATP sensor Setup.exe" "/quiet" NetFrameworkCommandLineArguments="/q" Acce ... Unexpected token '"/quiet"' in expression or statement."
+```
 
-**Ursache**: Dieser Fehler wird dadurch verursacht, dass beim Verwenden von PowerShell das für die Installation erforderliche Präfix „./“ nicht einbezogen wurde.
+**Ursache:**
 
-**Lösung:** Verwenden Sie den vollständigen Befehl für eine erfolgreiche Installation.
+Dieser Fehler wird dadurch verursacht, dass beim Verwenden von PowerShell das für die Installation erforderliche Präfix „./“ nicht einbezogen wurde.
+
+**Lösung:**
+
+Verwenden Sie den vollständigen Befehl für eine erfolgreiche Installation.
 
 ```powershell
 ./"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
@@ -133,8 +171,7 @@ Wenn Sie die folgende Integritätswarnung erhalten: **Anmeldeinformationen für 
 
 **Sensorprotokolleinträge:**
 
-2020-02-17 14:01:36.5315 Info ImpersonationManager CreateImpersonatorAsync started [UserName=account_name Domain=domain1.test.local IsGroupManagedServiceAccount=True]  
-2020-02-17 14:01:36.5750 Info ImpersonationManager CreateImpersonatorAsync finished [UserName=account_name Domain=domain1.test.local IsSuccess=False]
+2020-02-17 14:01:36.5315 Info ImpersonationManager CreateImpersonatorAsync started [UserName=account_name Domain=domain1.test.local IsGroupManagedServiceAccount=True] 2020-02-17 14:01:36.5750 Info ImpersonationManager CreateImpersonatorAsync finished [UserName=account_name Domain=domain1.test.local IsSuccess=False]
 
 **Sensor-Updater-Protokolleinträge:**
 
