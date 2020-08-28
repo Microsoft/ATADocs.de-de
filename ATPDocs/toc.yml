@@ -178,7 +178,7 @@
     - name: Referenz zum SIEM-Protokoll
       href: cef-format-sa.md
     - name: 'Azure ATP: Bekannte Probleme'
-      href: known-issues.md
+      href: ./troubleshooting-atp-known-issues.md
     - name: Azure ATP-Releasereferenz
       href: atp-release-reference.md
 - name: Ressourcen
