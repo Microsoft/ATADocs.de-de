@@ -11,12 +11,12 @@ ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 13fbdf45be1eb23ee9369a2508163a103db7d765
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: b3cde73d13874fbcab338ef2ab4bae4c4fb4c21d
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775113"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956804"
 ---
 # <a name="modifying-the-ata-center-configuration"></a>Bearbeiten der ATA Center-Konfiguration
 
@@ -30,34 +30,34 @@ Nach der ersten Bereitstellung sollten Änderungen an ATA Center vorsichtig vorg
 
 Die URL wird in den folgenden Szenarios verwendet:
 
--   Diese URL wird von den ATA-Gateways zur Kommunikation mit ATA Center verwendet.
+- Diese URL wird von den ATA-Gateways zur Kommunikation mit ATA Center verwendet.
 
 - Installation von ATA-Gateways: Wenn ein ATA-Gateway installiert wird, registriert es sich bei ATA Center. Diese Registrierung erfolgt durch Herstellen einer Verbindung mit der ATA-Konsole. Wenn Sie einen vollqualifizierten Domänennamen (FQDN) für die URL der ATA-Konsole eingeben, stellen Sie sicher, dass das ATA-Gateway den FQDN in die IP-Adresse auflösen kann, die an die ATA-Konsole gebunden ist.
 
--   Warnungen: Wenn ATA eine SIEM- oder E-Mail-Warnung sendet, enthält diese einen Link zur jeweiligen verdächtigen Aktivität. Dabei bildet die URL der ATA-Konsole den Hostteil des Links.
+- Warnungen: Wenn ATA eine SIEM- oder E-Mail-Warnung sendet, enthält diese einen Link zur jeweiligen verdächtigen Aktivität. Dabei bildet die URL der ATA-Konsole den Hostteil des Links.
 
--   Wenn Sie ein Zertifikat von Ihrer internen Zertifizierungsstelle (Certification Authority, CA) installiert haben, muss die URL mit dem der Antragstellernamen im Zertifikat übereinstimmen. Dadurch wird verhindert, dass Benutzer beim Verbinden mit der ATA-Konsole eine Warnmeldung erhalten.
+- Wenn Sie ein Zertifikat von Ihrer internen Zertifizierungsstelle (Certification Authority, CA) installiert haben, muss die URL mit dem der Antragstellernamen im Zertifikat übereinstimmen. Dadurch wird verhindert, dass Benutzer beim Verbinden mit der ATA-Konsole eine Warnmeldung erhalten.
 
--   Durch die Verwendung eines FQDN für die URL der ATA-Konsole können Sie die von der ATA-Konsole verwendete IP-Adresse ändern, ohne dass vorherige Warnungen ungültig werden oder das ATA-Gateway-Paket erneut herunterzuladen. Sie müssen lediglich den DNS mit der neuen IP-Adresse aktualisieren.
+- Durch die Verwendung eines FQDN für die URL der ATA-Konsole können Sie die von der ATA-Konsole verwendete IP-Adresse ändern, ohne dass vorherige Warnungen ungültig werden oder das ATA-Gateway-Paket erneut herunterzuladen. Sie müssen lediglich den DNS mit der neuen IP-Adresse aktualisieren.
 
 1. Vergewissern Sie sich, dass die neue URL, die Sie verwenden möchten, in die IP-Adresse der ATA-Konsole aufgelöst wird.
 
-2. Geben Sie in den ATA-Einstellungen unter **Center** die neue URL ein. Momentan verwendet ATA Center noch immer die ursprüngliche URL. 
+1. Geben Sie in den ATA-Einstellungen unter **Center** die neue URL ein. Momentan verwendet ATA Center noch immer die ursprüngliche URL. 
 
-   ![Ändern der ATA-Konfiguration](media/change-center-config.png)
+    ![Ändern der ATA-Konfiguration](media/change-center-config.png)
 
    > [!NOTE]
    > Wenn Sie eine benutzerdefinierte IP-Adresse eingegeben haben, können Sie erst auf **Aktivieren** klicken, nachdem die IP-Adresse auf dem ATA Center-Server installiert wurde.
     
-3. Warten Sie, bis die ATA-Gateways synchronisiert wurden. Sie verfügen jetzt über zwei mögliche URLs, über die Sie auf die ATA-Konsole zugreifen können. Solange ein ATA-Gateway eine Verbindung über die ursprüngliche URL herstellen kann, wird die neue nicht verwendet.
+1. Warten Sie, bis die ATA-Gateways synchronisiert wurden. Sie verfügen jetzt über zwei mögliche URLs, über die auf die ATA-Konsole zugegriffen werden kann. Solange ein ATA-Gateway eine Verbindung über die ursprüngliche URL herstellen kann, wird die neue nicht verwendet.
 
-4. Klicken Sie, nachdem alle ATA-Gateways mit der aktualisierten Konfiguration synchronisiert wurden, auf der Konfigurationsseite des Centers auf die Schaltfläche **Aktivieren**, um die neue URL zu aktivieren. Bei der Aktivierung der neuen URL verwenden die ATA-Gateways nicht die neue URL für den Zugriff auf ATA Center. Nach dem Herstellen der Verbindung mit dem ATA Center-Dienst ruft das ATA-Gateway die neueste Konfiguration ab und verfügt nur noch über die neue URL für die ATA-Konsole. 
+1. Klicken Sie, nachdem alle ATA-Gateways mit der aktualisierten Konfiguration synchronisiert wurden, auf der Konfigurationsseite des Centers auf die Schaltfläche **Aktivieren**, um die neue URL zu aktivieren. Bei der Aktivierung der neuen URL verwenden die ATA-Gateways nicht die neue URL für den Zugriff auf ATA Center. Nach dem Herstellen der Verbindung mit dem ATA Center-Dienst ruft das ATA-Gateway die neueste Konfiguration ab und verfügt nur noch über die neue URL für die ATA-Konsole. 
 
-   ![Aktivieren des Zertifikats](media/center-activation.png)
+    ![Aktivieren des Zertifikats](media/center-activation.png)
 
 > [!NOTE]
-> -   Wenn ein ATA-Gateway während der Aktivierung der neuen URL offline geschaltet war und die aktualisierte Konfiguration nicht abrufen konnte, aktualisieren Sie die JSON-Konfigurationsdatei im ATA-Gateway manuell.
-> -   Wenn Sie nach dem Aktivieren der neuen URL ein neues ATA-Gateway bereitstellen möchten, müssen Sie das ATA-Gateway-Setuppaket erneut herunterladen.
+> - Wenn ein ATA-Gateway während der Aktivierung der neuen URL offline geschaltet war und die aktualisierte Konfiguration nicht abrufen konnte, aktualisieren Sie die JSON-Konfigurationsdatei im ATA-Gateway manuell.
+> - Wenn Sie nach dem Aktivieren der neuen URL ein neues ATA-Gateway bereitstellen möchten, müssen Sie das ATA-Gateway-Setuppaket erneut herunterladen.
 
 
 ## <a name="the-ata-center-certificate"></a>Zertifikat für ATA Center
@@ -68,21 +68,21 @@ Die URL wird in den folgenden Szenarios verwendet:
 
 Ersetzen Sie das Zertifikat wie folgt:
 
-1. Bevor das aktuelle Zertifikat abläuft, erstellen Sie ein neues Zertifikat, und stellen Sie sicher, dass es auf dem ATA Center-Server installiert ist. <br></br>Es wird empfohlen, dass Sie ein Zertifikat von einer internen Zertifizierungsstelle auswählen. Es ist jedoch auch möglich, ein neues selbstsigniertes Zertifikat zu erstellen. Weitere Informationen finden Sie unter [New-selfsignedcertificate](https://technet.microsoft.com/itpro/powershell/windows/pkiclient/new-selfsignedcertificate).
+1. Bevor das aktuelle Zertifikat abläuft, erstellen Sie ein neues Zertifikat, und stellen Sie sicher, dass es auf dem ATA Center-Server installiert ist. <br></br>Es wird empfohlen, dass Sie ein Zertifikat von einer internen Zertifizierungsstelle auswählen. Es ist jedoch auch möglich, ein neues selbstsigniertes Zertifikat zu erstellen. Weitere Informationen finden Sie unter [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate?view=win10-ps).
 
-2. Wählen Sie in den ATA-Einstellungen unter **Center** dieses neu erstellte Zertifikat aus. Zu diesem Zeitpunkt ist der ATA Center-Dienst noch an das ursprüngliche Zertifikat gebunden. 
+1. Wählen Sie in den ATA-Einstellungen unter **Center** dieses neu erstellte Zertifikat aus. Zu diesem Zeitpunkt ist der ATA Center-Dienst noch an das ursprüngliche Zertifikat gebunden. 
 
-   ![Ändern der ATA-Konfiguration](media/change-center-config.png)
+    ![Ändern der ATA-Konfiguration](media/change-center-config.png)
 
-3. Warten Sie, bis die ATA-Gateways synchronisiert wurden. Sie verfügen jetzt über zwei potenzielle Zertifikate, die für die gegenseitige Authentifizierung gültig sind. Solange ein ATA-Gateway eine Verbindung über das ursprüngliche Zertifikat herstellen kann, wird das neue Zertifikat nicht verwendet.
+1. Warten Sie, bis die ATA-Gateways synchronisiert wurden. Sie verfügen jetzt über zwei potenzielle Zertifikate, die für die gegenseitige Authentifizierung gültig sind. Solange ein ATA-Gateway eine Verbindung über das ursprüngliche Zertifikat herstellen kann, wird das neue Zertifikat nicht verwendet.
 
-4. Nachdem alle ATA-Gateways mit der aktualisierten Konfiguration synchronisiert wurden, aktivieren Sie das neue Zertifikat, an das der ATA Center-Dienst gebunden ist. Wenn Sie das neue Zertifikat aktivieren, bindet der ATA Center-Dienst an das neue Zertifikat. ATA-Gateways verwenden von jetzt an das neue Zertifikat für die Authentifizierung bei ATA Center. Nach dem Herstellen der Verbindung mit dem ATA Center-Dienst ruft das ATA-Gateway die neueste Konfiguration ab und verfügt nur noch über das neue Zertifikat für ATA Center. 
+1. Nachdem alle ATA-Gateways mit der aktualisierten Konfiguration synchronisiert wurden, aktivieren Sie das neue Zertifikat, an das der ATA Center-Dienst gebunden ist. Wenn Sie das neue Zertifikat aktivieren, bindet der ATA Center-Dienst an das neue Zertifikat. ATA-Gateways verwenden von jetzt an das neue Zertifikat für die Authentifizierung bei ATA Center. Nach dem Herstellen der Verbindung mit dem ATA Center-Dienst ruft das ATA-Gateway die neueste Konfiguration ab und verfügt nur noch über das neue Zertifikat für ATA Center. 
 
 > [!NOTE]
-> -   Wenn ein ATA-Gateway während der Aktivierung des neuen Zertifikats offline geschaltet war und die aktualisierte Konfiguration nicht abrufen konnte, aktualisieren Sie die JSON-Konfigurationsdatei im ATA-Gateway manuell.
-> -   Das verwendete Zertifikat muss von den ATA-Gateways als vertrauenswürdig eingestuft werden.
-> -   Das Zertifikat wird auch für die ATA-Konsole verwendet, deshalb sollte es der Adresse der ATA-Konsole entsprechen, um Browserwarnungen zu vermeiden.
-> -   Wenn Sie nach dem Aktivieren des neuen Zertifikats ein neues ATA-Gateway bereitstellen möchten, müssen Sie das ATA-Gateway-Setuppaket erneut herunterladen.
+> - Wenn ein ATA-Gateway während der Aktivierung des neuen Zertifikats offline geschaltet war und die aktualisierte Konfiguration nicht abrufen konnte, aktualisieren Sie die JSON-Konfigurationsdatei im ATA-Gateway manuell.
+> - Das verwendete Zertifikat muss von den ATA-Gateways als vertrauenswürdig eingestuft werden.
+> - Das Zertifikat wird auch für die ATA-Konsole verwendet, deshalb sollte es der Adresse der ATA-Konsole entsprechen, um Browserwarnungen zu vermeiden.
+> - Wenn Sie nach dem Aktivieren des neuen Zertifikats ein neues ATA-Gateway bereitstellen möchten, müssen Sie das ATA-Gateway-Setuppaket erneut herunterladen.
 
 
 
