@@ -6,18 +6,18 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 04/28/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e0694e13a731c1c8146f733ee8e49a3a2888d52c
-ms.sourcegitcommit: 2ff8079d3ad8964887c1d0d1414c84199ba208bb
+ms.openlocfilehash: 4de688b3ea1c80f8ed0e517baf9da3b469a8d82a
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88793385"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956719"
 ---
 # <a name="troubleshooting-azure-atp-known-issues"></a>Behandlung von bekannten Problemen bei Azure ATP
 
@@ -53,7 +53,7 @@ Stellen Sie sicher, dass der Sensor über den konfigurierten Proxy ohne Authenti
 
 ## <a name="proxy-authentication-problem-presents-as-a-connection-error"></a>Darstellung des Proxyauthentifizierungsproblems als Verbindungsfehler
 
-Während der Sensorinstallation erhalten Sie die folgende Fehlermeldung:  **The sensor failed to connect to service.** (Fehler beim Herstellen einer Verbindung vom Sensor zum Dienst.)
+Während der Sensorinstallation erhalten Sie die folgende Fehlermeldung: **The sensor failed to connect to service.** (Fehler beim Herstellen einer Verbindung vom Sensor zum Dienst.)
 
 **Ursache:**
 
@@ -151,19 +151,19 @@ So beheben Sie dieses Problem:
 
 Legen Sie die folgenden Einstellungen in der NIC-Konfiguration des virtuellen Computers auf **Deaktiviert** fest: **IPv4-TSO-Offload**.
 
- ![VMware-Sensorproblem](./media/vm-sensor-issue.png)
+ ![VMware-Sensorproblem](media/vm-sensor-issue.png)
 
 Verwenden Sie den folgenden Befehl, um zu überprüfen, ob die Abladung großer Sendungen (Large Send Offload, LSO) aktiviert oder deaktiviert ist:
 
 `Get-NetAdapterAdvancedProperty | Where-Object DisplayName -Match "^Large*"`
 
-![LSO-Status überprüfen](./media/missing-network-traffic-health-alert.png)
+![LSO-Status überprüfen](media/missing-network-traffic-health-alert.png)
 
 Wenn LSO aktiviert ist, verwenden Sie den folgenden Befehl zur Deaktivierung:
 
 `Disable-NetAdapterLso -Name {name of adapter}`
 
-![LSO-Status deaktivieren](./media/disable-lso-vmware.png)
+![LSO-Status deaktivieren](media/disable-lso-vmware.png)
 
 ## <a name="sensor-failed-to-retrieve-group-managed-service-account-gmsa-credentials"></a>Fehler beim Abrufen der Anmeldeinformationen für das gruppenverwaltete Dienstkonto durch den Sensor
 
