@@ -6,18 +6,18 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 03/18/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 3547519f-8d9c-40a9-8f0e-c7ba21081203
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1f7d61b88c1a83f6ec075692af147a87dfe0c039
-ms.sourcegitcommit: 8c99699b9b84d50fb258c0cc5523ffa78133b7a4
+ms.openlocfilehash: 0a127cec114eb92320334999354522e676f99b37
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2020
-ms.locfileid: "88027243"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956906"
 ---
 # <a name="configuring-windows-event-forwarding"></a>Konfigurieren der Windows-Ereignisweiterleitung
 
@@ -54,7 +54,7 @@ Sie müssen die Domänencontroller neu starten, nachdem Sie den **Netzwerkdienst
 1. Geben Sie an einer Eingabeaufforderung *gpedit.msc* ein.
 1. Erweitern Sie **Computerkonfiguration > Administrative Vorlagen > Windows-Komponenten > Ereignisweiterleitung**.
 
-   ![Local policy group editor image](media/wef%201%20local%20group%20policy%20editor.png)
+    ![Local policy group editor image](media/wef%201%20local%20group%20policy%20editor.png)
 
 1. Doppelklicken Sie auf **Ziel-Abonnement-Manager konfigurieren**.
 
@@ -87,7 +87,7 @@ Sie müssen die Domänencontroller neu starten, nachdem Sie den **Netzwerkdienst
     1. Klicken Sie mit der rechten Maustaste auf das erstellte Abonnement, und wählen Sie **Laufzeitstatus** aus, um festzustellen, ob es Probleme mit dem Status gibt.
     1. Überprüfen Sie nach einigen Minuten, ob die festgelegten Ereignisse im eigenständigen Azure ATP-Sensor unter „Weitergeleitete Ereignisse“ angezeigt werden.
 
-Weitere Informationen finden Sie in folgenden Quellen: [Einrichten von Computern zum Weiterleiten und Sammeln von Ereignissen](https://technet.microsoft.com/library/cc748890)
+Weitere Informationen finden Sie in folgenden Quellen: [Einrichten von Computern zum Weiterleiten und Sammeln von Ereignissen](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc748890(v=ws.11))
 
 ## <a name="see-also"></a>Weitere Informationen
 

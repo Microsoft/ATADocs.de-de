@@ -6,18 +6,18 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 08/04/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 07136153ab0909f6de9089b0f748d4ed123e1458
-ms.sourcegitcommit: 8c99699b9b84d50fb258c0cc5523ffa78133b7a4
+ms.openlocfilehash: aa86397e76cafabe4c45dd5b394996225d758633
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2020
-ms.locfileid: "88027216"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956872"
 ---
 # <a name="configure-windows-event-collection"></a>Konfigurieren der Windows-Ereignissammlung
 
@@ -96,7 +96,7 @@ Die folgenden Windows-Ereignisse müssen für Azure ATP [konfiguriert](#configur
         ![Überwachen von ausgehendem Netzwerkdatenverkehr an Remoteserver](media/atp-advanced-audit-policy-check-step-3.png)
 
     > [!NOTE]
-    > Wenn Sie anstelle einer Gruppenrichtlinie eine lokale Sicherheitsrichtlinie verwenden, stellen Sie sicher, dass Sie die Überwachungsprotokolle für die **Kontoanmeldung**, die **Kontoverwaltung** und die **Sicherheitsoptionen** zu Ihrer lokalen Richtlinie hinzufügen. Wenn Sie die erweiterte Überwachungsrichtlinie konfigurieren, stellen Sie sicher, dass Sie die [Überwachungsrichtlinien-Unterkategorie](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/audit-force-audit-policy-subcategory-settings-to-override) erzwingen.
+    > Wenn Sie anstelle einer Gruppenrichtlinie eine lokale Sicherheitsrichtlinie verwenden, stellen Sie sicher, dass Sie die Überwachungsprotokolle für die **Kontoanmeldung**, die **Kontoverwaltung** und die **Sicherheitsoptionen** zu Ihrer lokalen Richtlinie hinzufügen. Wenn Sie die erweiterte Überwachungsrichtlinie konfigurieren, stellen Sie sicher, dass Sie die [Überwachungsrichtlinien-Unterkategorie](/windows/security/threat-protection/security-policy-settings/audit-force-audit-policy-subcategory-settings-to-override) erzwingen.
 
 1. Nachdem die neuen Ereignisse über GPO angewendet wurden, sind sie unter Ihren **Windows-Ereignisprotokollen** sichtbar.
 
@@ -120,7 +120,7 @@ Diese Ereignisse können automatisch vom Azure ATP-Sensor gesammelt werden. Wenn
 > [!NOTE]
 >
 > - Eigenständige Azure ATP-Server unterstützen nicht die Erstellung von Protokolleinträgen für Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW), die Daten für mehrere Erkennungen bereitstellen. Zur vollständigen Abdeckung Ihrer Umgebung empfiehlt es sich, den Azure ATP-Sensor bereitzustellen.
-> - Es ist wichtig, vor dem Aktivieren der Ereignissammlung die [Überwachungsrichtlinien](atp-advanced-audit-policy.md) zu überprüfen und zu verifizieren, um sicherzustellen, dass die Domänencontroller ordnungsgemäß für die Aufzeichnung der erforderlichen Ereignisse konfiguriert sind.
+> - Es ist wichtig, vor dem Aktivieren der Ereignissammlung die [Überwachungsrichtlinien]() zu überprüfen und zu verifizieren, um sicherzustellen, dass die Domänencontroller ordnungsgemäß für die Aufzeichnung der erforderlichen Ereignisse konfiguriert sind.
 
 ## <a name="see-also"></a>Weitere Informationen
 

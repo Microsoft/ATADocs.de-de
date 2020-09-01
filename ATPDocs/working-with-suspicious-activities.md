@@ -6,18 +6,18 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 01/26/2020
-ms.topic: article
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: a06004bd-9f77-4e8e-a0e5-4727d6651a0f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1c15d2117ca25320865bdc4cfbfae2c2c5cca4c3
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 331f709c19008e1f11aacc50678893158528042d
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775759"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88955563"
 ---
 # <a name="working-with-security-alerts"></a>Arbeiten mit Sicherheitswarnungen
 
@@ -69,17 +69,17 @@ Das Azure ATP-Forschungsteam arbeitet kontinuierlich daran, neue Erkennungen fü
 
 Diese Erkennungen werden als Vorschauversionen markiert, damit Sie die neuen Erkennungen schneller ermitteln können und wissen, dass sie neu für das Produkt sind. Wenn Sie die Erkennungen von Vorschauversionen deaktivieren, werden diese nicht mehr in der Azure ATP-Konsole (und auch nicht auf der Zeitachse oder in den Entitätsprofilen) angezeigt, und es werden keine Warnungen mehr geöffnet.
 
-![Vorschauversion für VPN-Erkennungen](./media/preview-detection-vpn.png)
+![Vorschauversion für VPN-Erkennungen](media/preview-detection-vpn.png)
 
 Erkennungen von Vorschauversionen werden standardmäßig in Azure ATP aktiviert.
 
 Gehen Sie wie folgt vor, um die Erkennung von Vorschauversionen zu deaktivieren:
 
 1. Klicken Sie in der Azure ATP-Konsole auf das Zahnradsymbol für Einstellungen.
-2. Klicken Sie im Menü auf der linken Seite unter „Vorschauversion“ auf **Erkennungen**.
-3. Verwenden Sie den Schieberegler, um die Erkennungen für Vorschauversionen zu (de)aktivieren.
+1. Klicken Sie im Menü auf der linken Seite unter „Vorschauversion“ auf **Erkennungen**.
+1. Verwenden Sie den Schieberegler, um die Erkennungen für Vorschauversionen zu (de)aktivieren.
 
-![Erkennungen von Vorschauversionen](./media/preview-detections.png)
+![Erkennungen von Vorschauversionen](media/preview-detections.png)
 
 ## <a name="filter-security-alerts-list"></a>Filtern der Liste der Sicherheitswarnungen
 
@@ -87,7 +87,7 @@ So filtern Sie die Liste der Sicherheitswarnungen:
 
 1. Wählen Sie auf der linken Seite des Bildschirms im Bereich **Filtern nach** eine der folgenden Optionen aus: **Alle**, **Offen**, **Geschlossen** oder **Unterdrückt**.
 
-2. Um die Liste weiter zu filtern, wählen Sie **Hoch**, **Mittel** oder **Niedrig** aus.
+1. Um die Liste weiter zu filtern, wählen Sie **Hoch**, **Mittel** oder **Niedrig** aus.
 
 **Schweregrad von verdächtigen Aktivitäten**
 
@@ -108,7 +108,7 @@ So filtern Sie die Liste der Sicherheitswarnungen:
 Sie können den Status einer Sicherheitswarnung ändern, indem Sie auf den aktuellen Status der Sicherheitswarnung klicken und eine der folgenden Optionen auswählen: **Offen**, **Unterdrückt**, **Aufgelöst** oder **Verworfen**.
 Klicken Sie dafür auf die drei Punkte in der oberen rechten Ecke einer bestimmten Warnung, um die Liste der verfügbaren Aktionen anzuzeigen.
 
-![Azure ATP-Aktionen für Sicherheitswarnungen](./media/atp-sa-actions.png)
+![Azure ATP-Aktionen für Sicherheitswarnungen](media/atp-sa-actions.png)
 
 **Sicherheitswarnungsstatus**
 

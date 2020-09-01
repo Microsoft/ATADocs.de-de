@@ -6,18 +6,18 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 09/15/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: a546703b-d5a9-404d-9e87-125523bb8421
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c6766319861a766ba970ef0ed3d23d1f20c0f34d
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: f65643c9d1483df44d5cd43f8d849c8241a076ef
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84774467"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956940"
 ---
 # <a name="azure-atp-monitored-activities-search-and-filter"></a>Durchsuchen und Filtern von überwachten Azure ATP-Aktivitäten 
 
@@ -28,7 +28,7 @@ Die von Azure ATP in Ihrem Netzwerk erkannten Aktivitäten können während Ihre
 
 Wählen Sie auf der Azure ATP-Zeitachse eine beliebige Entität in Ihrem Netzwerk (DC, Computer oder Benutzer) als Filterzugriffspunkt aus. Wählen Sie als Nächstes aus, ob Sie nach dem Typ **Sicherheitswarnung**, **Aktivität** oder einer beliebigen Kombination filtern möchten. Sobald der Filter angewendet wurde, wird die Bedrohungszeitachse der Entität mit den gefilterten Informationen aktualisiert. Ihre gefilterten Warnungen und Aktivitäten können auch heruntergeladen werden, um Ihre Untersuchung oder Nachverfolgung in anderen Tools fortzusetzen. 
 
-![Filtern von Warnungen und Aktivitäten](./media/activities-filter.png)
+![Filtern von Warnungen und Aktivitäten](media/activities-filter.png)
 
 So filtern Sie Warnungen und Aktivitäten:
  1. Wählen Sie die zu untersuchende Entität in der Azure ATP-Zeitachse aus. 

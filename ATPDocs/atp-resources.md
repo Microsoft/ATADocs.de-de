@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 34dc152c-6b7f-4128-93fe-aad56c282730
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c046d6844dee3ad53b707e5e6ca033d01f83169b
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: fbd5b1c3b641559f8d5555d65f4424ab34acd80d
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775674"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956600"
 ---
 # <a name="azure-atp-readiness-guide"></a>Handbuch für die Azure ATP-Bereitschaft
 
@@ -54,7 +54,7 @@ Beim Erstellen der Azure ATP werden die erforderlichen Grundeinstellungen automa
 
 - [VPN-Integration](install-atp-step6-vpn.md)
 - [Erforderliche Berechtigungen für SAM-R](install-atp-step8-samr.md)
-- [Überwachungsrichtlinieneinstellungen:](atp-advanced-audit-policy.md) Überwachen Sie die Integrität Ihres Domänencontrollers vor und nach einer ATP-Bereitstellung.
+- [Überwachungsrichtlinieneinstellungen:](configure-windows-event-collection.md) Überwachen Sie die Integrität Ihres Domänencontrollers vor und nach einer ATP-Bereitstellung.
 
 ## <a name="work-with-azure-atp"></a>Arbeiten mit Azure ATP
 

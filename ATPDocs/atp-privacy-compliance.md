@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 224e629a-0e82-458c-bb03-b67070a9241d
 ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: 95268bb5e9c41935298b591477da930676aa129f
-ms.sourcegitcommit: 71181a243e60d29a2345620735f9c91ab2b5d689
+ms.openlocfilehash: feae48a00b17ef2556377dee643d133c5499c9fc
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2020
-ms.locfileid: "85123494"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88955682"
 ---
 # <a name="azure-atp-data-security-and-privacy"></a>Sicherheit und Datenschutz für Azure ATP
 
@@ -40,7 +40,7 @@ Personenbezogene Benutzerdaten von Azure ATP werden vom Benutzerobjekt in der Ac
 
 - Nachdem ein Benutzer aus dem Active Directory der Organisation gelöscht wurde, löscht Azure ATP innerhalb von einem Jahr automatisch das Benutzerprofil und sämtliche zugehörige Netzwerkaktivitäten. Sie können ebenfalls alle Sicherheitswarnungen [löschen](working-with-suspicious-activities.md#review-suspicious-activities-on-the-attack-time-line), die personenbezogene Daten enthalten.
 
-- Es wird **schreibgeschützter Zugriff** auf den Container mit **gelöschten Objekten** empfohlen. Weitere Informationen zur Verwendung der Berechtigung für **Container mit gelöschten Objekten durch den Azure ATP-Dienst finden Sie in den Empfehlungen zu Containern mit gelöschten Objekten in [Azure ATP-Voraussetzungen](https://docs.microsoft.com/azure-advanced-threat-protection/atp-prerequisites#before-you-start).
+- Es wird **schreibgeschützter Zugriff** auf den Container mit **gelöschten Objekten** empfohlen. Weitere Informationen zur Verwendung der Berechtigung für **Container mit gelöschten Objekten durch den Azure ATP-Dienst finden Sie in den Empfehlungen zu Containern mit gelöschten Objekten in [Azure ATP-Voraussetzungen](atp-prerequisites.md#before-you-start).
 
 ## <a name="export-personal-data"></a>Exportieren von personenbezogenen Daten
 
@@ -52,7 +52,7 @@ Azure ATP implementiert die Überwachung von Änderungen an personenbezogenen Da
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-- Informationen zur Vertrauensstellung und Konformität von Azure ATP finden Sie im [Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) und auf der Website zur [DSGVO-Konformität von Microsoft 365 Enterprise](https://docs.microsoft.com/microsoft-365/compliance/gdpr?view=o365-worldwide).
+- Informationen zur Vertrauensstellung und Konformität von Azure ATP finden Sie im [Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) und auf der Website zur [DSGVO-Konformität von Microsoft 365 Enterprise](/microsoft-365/compliance/gdpr?view=o365-worldwide).
 
 ## <a name="security-and-privacy-for-azure-atp-us-government-gcc-high-customers"></a>Sicherheit und Datenschutz für Azure ATP GCC High-Kunden der US-Regierung
-Weitere Informationen zu Azure ATP-Kompatibilitätsstandards und zum Speicherort der Kundendaten für GCC High-Kunden der US-Regierung finden Sie unter [Beschreibung des Diensts Enterprise Mobility + Security für die US-Regierung](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-govt-service-description).
+Weitere Informationen zu Azure ATP-Kompatibilitätsstandards und zum Speicherort der Kundendaten für GCC High-Kunden der US-Regierung finden Sie unter [Beschreibung des Diensts Enterprise Mobility + Security für die US-Regierung](/enterprise-mobility-security/solutions/ems-govt-service-description).

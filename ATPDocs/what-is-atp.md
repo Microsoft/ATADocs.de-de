@@ -6,18 +6,18 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 04/05/2020
-ms.topic: article
+ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 2d14d0e9-1b03-4bcc-ae97-8fd41526ffc5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 41aec3f7189e659e3ad7d2d529574b90788d1e61
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: e4391f788e525891aff050ad591b2f5063442ebe
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775725"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88954271"
 ---
 # <a name="what-is-azure-advanced-threat-protection"></a>Was ist Azure Advanced Threat Protection?
 
@@ -107,14 +107,14 @@ Es wird empfohlen, Azure ATP in drei Phasen bereitzustellen:
 ### <a name="phase-1"></a>Phase 1
 
 1. Richten Sie Azure ATP zum Schutz Ihrer primären Umgebungen ein. Mit dem Azure ATP-Modell zur schnellen Bereitstellung können Sie mit dem Schutz Ihrer Organisation noch heute beginnen. [Install Azure ATP (Installieren von Azure ATP)](install-atp-step1.md)
-2. Legen Sie [Sensitive Accounts](sensitive-accounts.md) (sensible Konten) und [Honeytoken-Konten](install-atp-step7.md) fest.
-3. Überprüfen Sie die Berichte und [Lateral Movement-Pfade](use-case-lateral-movement-path.md).
+1. Legen Sie [Sensitive Accounts](sensitive-accounts.md) (sensible Konten) und [Honeytoken-Konten](install-atp-step7.md) fest.
+1. Überprüfen Sie die Berichte und [Lateral Movement-Pfade](use-case-lateral-movement-path.md).
 
 ### <a name="phase-2"></a>Phase 2
 
 1. Schützen Sie sämtliche Domänencontroller und [Gesamtstrukturen](atp-multi-forest.md) in Ihrer Organisation.
-2. Überwachen Sie alle [Warnungen](working-with-suspicious-activities.md): Untersuchen Sie Warnungen bzgl. Lateral Movement und Domänendominanz.
-3. Nehmen Sie das [Leitfaden zu Sicherheitshinweisen](suspicious-activity-guide.md) zur Hilfe, um Bedrohungen zu verstehen und potenzielle Angriffe selektieren zu können.
+1. Überwachen Sie alle [Warnungen](working-with-suspicious-activities.md): Untersuchen Sie Warnungen bzgl. Lateral Movement und Domänendominanz.
+1. Nehmen Sie das [Leitfaden zu Sicherheitshinweisen](suspicious-activity-guide.md) zur Hilfe, um Bedrohungen zu verstehen und potenzielle Angriffe selektieren zu können.
 
 ### <a name="phase-3"></a>Phase 3
 

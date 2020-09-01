@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: de15c920-8904-4124-8bdc-03abd9f667cf
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e5c422a1315bccce93154c3abbc07caea8de6c06
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: edb37833ac44e3f04f9daf7ee57a8e1f41ca5d38
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775793"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88955624"
 ---
 # <a name="azure-atp-lateral-movement-paths-lmps"></a>Azure ATP-Lateral Movement-Pfade (LMPs) 
 
@@ -28,7 +28,7 @@ Lateral Movement bedeutet, dass ein Angreifer nicht sensible Konten benutzt, um 
 
 Eine wichtige Komponente der Azure ATP-Sicherheitseinblicke sind Lateral Movement-Pfade oder LMPs. Azure ATP-LMPs sind visuelle Hilfsmittel, mit denen Sie genau verstehen und bestimmten können, wie Angreifer sich seitlich in Ihrem Netzwerk bewegen können. Der Zweck von Lateral Movements innerhalb der Cyber Kill Chain ist es, über nicht sensible Konten Zugriff auf Ihre sensiblen Konten zu erhalten. Das Kompromittieren Ihrer sensiblen Konten bringt die Angreifer ihrem Hauptziel, dem Kontrollieren der Domäne, einen Schritt näher. Um zu verhindern, dass diese Angriffe Erfolg haben, stellen Ihnen Azure ATP-LMPs einfach zu interpretierende, direkte visuelle Hilfsmittel für Ihre sensiblen Konten zur Verfügung. LMPs helfen Ihnen dabei, diese Risiken für die Zukunft zu verringern und zu verhindern, und blockieren den Zugriff für Angreifer, bevor diese die Domäne einnehmen können.
 
-![Azure ATP-Lateral Movement-Pfad (LMP)](./media/atp-lmp.png)
+![Azure ATP-Lateral Movement-Pfad (LMP)](media/atp-lmp.png)
 
 Lateral Movement-Angriffe können auf unterschiedliche Weise durchgeführt werden. Einige der von Angreifern am häufigsten verwendeten Methoden sind der Diebstahl von Anmeldeinformationen und Pass-the-Ticket-Angriffe. Bei beiden Methoden werden Ihre nicht sensiblen Konten von den Angreifern für Seitenangriffe genutzt, indem sie nicht sensible Computer ausnutzen, die Anmeldeinformationen gemeinsam mit Konten, Endpunktgruppen und Computern mit sensiblen Konten verwenden.
 
@@ -36,7 +36,7 @@ Lateral Movement-Angriffe können auf unterschiedliche Weise durchgeführt werde
 
 Jeder Computer oder jedes Benutzerprofil, das sich laut den Azure ATP-Ermittlungen in einem LMP befindet, besitzt eine Registerkarte **Lateral Movement-Pfade**. Computer und Profile, die keine Registerkarte vorweisen, wurden noch nie innerhalb einer potenziellen LMP ermittelt. 
 
-![Registerkarte „Azure ATP Lateral Movement Path (LMP)“ (Azure ATP-Lateral Movement-Pfad (LMP))](./media/lateral-movement-path-tab.png)
+![Registerkarte „Azure ATP Lateral Movement Path (LMP)“ (Azure ATP-Lateral Movement-Pfad (LMP))](media/lateral-movement-path-tab.png)
 
 Der LMP für jede Entität bietet verschiedene Informationen abhängig von der Vertraulichkeit der Entität: 
 - Sensible Benutzer: potenzielle LMP(s), die zu diesem Benutzer führen, werden angezeigt.
@@ -44,7 +44,7 @@ Der LMP für jede Entität bietet verschiedene Informationen abhängig von der V
 
 Wenn Sie auf die Registerkarte klicken, werden immer die neuesten ermittelten LMP angezeigt. Jeder potenzielle LMP wird nach der Ermittlung 48 Stunden lang gespeichert. Der LMP-Verlauf ist verfügbar. Klicken Sie auf **Anzeigen einer anderen Datumsangabe**, um ältere LMPs, die in der Vergangenheit ermittelt wurden, anzuzeigen. 
 
-![Registerkarte „Azure ATP-Lateral Movement-Pfad (LMP)“](./media/atp-lmp-complete.png)
+![Registerkarte „Azure ATP-Lateral Movement-Pfad (LMP)“](media/atp-lmp-complete.png)
 
 Ermitteln Sie, wann potenzielle LMPs identifiziert wurden und welche verwandten Entitäten möglicherweise betroffen sind. 
 
@@ -53,11 +53,11 @@ Ermitteln Sie, wann potenzielle LMPs identifiziert wurden und welche verwandten 
 Auf der Registerkarte „Aktivitäten“ werden Warnungen angezeigt, wenn neue potenzieller LMP erkannt wurden:
 - Sensible Benutzer: Wenn ein neuer Pfad zu einem sensiblen Benutzer identifiziert wird
 
-![Azure ATP: Lateral Movement-Pfad (LMP), Als sensibel identifiziert](./media/atp-lmp-activities.png)
+![Azure ATP: Lateral Movement-Pfad (LMP), Als sensibel identifiziert](media/atp-lmp-activities.png)
 
 - Nicht sensible Benutzer und Computer: Wenn diese Entität in einem potenziellen LMP, der zu einem sensiblen Benutzer führt, identifiziert wird.
 
-![Azure ATP: Lateral Movement-Pfad (LMP), Als nicht sensibel identifiziert](./media/atp-lateral-non-sensitive.png)
+![Azure ATP: Lateral Movement-Pfad (LMP), Als nicht sensibel identifiziert](media/atp-lateral-non-sensitive.png)
 
 ## <a name="lmp-related-entities"></a>LMP-verwandte Entitäten
 LMP können Sie jetzt direkt bei Ihrem Untersuchungsprozess unterstützen. Azure ATP-Beweislisten für Sicherheitswarnungen geben die verwandten Entitäten an, die an jedem potenziellen Lateral Movement-Pfad beteiligt sind. Die Beweislisten können Ihrem Sicherheitsreaktionsteam direkt helfen, die Wichtigkeit der Sicherheitswarnung und/oder der Untersuchung der verwandten Entitäten zu senken oder zu erhöhen. Wenn z.B. eine Pass-the-Ticket-Warnung ausgegeben wird, sind der Quellcomputer, der kompromittierte Benutzer und der Zielcomputer, von dem aus das gestohlene Ticket benutzt wurde, alle Teil des potenziellen Lateral Movement-Pfads, der zu einem sensiblen Benutzer führt. Das Vorhandensein des identifizierten LMP macht das Untersuchen der Warnung und das Überwachen des verdächtigen Benutzers umso wichtiger, um den Angreifer an weiteren Seitenangriffe zu hindern. Nachverfolgbare Beweise werden in LMPs zur Verfügung gestellt, um Ihnen ein leichteres und schnelleres Stoppen von Angreifern zu ermöglichen, die sich durch Ihr Netzwerk bewegen. 

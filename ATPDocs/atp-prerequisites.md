@@ -6,18 +6,18 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 07/27/2020
-ms.topic: conceptual
+ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 22e0d88d46d8f3751316148600349ca99382339a
-ms.sourcegitcommit: 2ff8079d3ad8964887c1d0d1414c84199ba208bb
+ms.openlocfilehash: e0c6e9826b734e9e94e787ba62cd782eb5ef8dd6
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88793369"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956634"
 ---
 # <a name="azure-atp-prerequisites"></a>Voraussetzungen für Azure ATP
 
@@ -28,7 +28,7 @@ Dieser Artikel beschreibt die Voraussetzungen für eine erfolgreiche Bereitstell
 
 Azure ATP besteht aus dem Azure ATP-Clouddienst, der sich aus dem Azure ATP-Portal und dem Azure ATP-Sensor zusammensetzt. Weitere Informationen zu den einzelnen Azure ATP-Komponenten finden Sie unter [Azure ATP-Architektur](atp-architecture.md).
 
-Azure ATP schützt Ihre lokalen Active Directory-Benutzer und/oder Benutzer, die mit Ihrer Azure Active Directory-Instanz synchronisiert werden. Hinweise zum Schutz einer Umgebung, die nur aus AAD-Benutzern besteht, finden Sie unter [AAD Identity Protection](https://docs.microsoft.com/azure/active-directory/identity-protection/overview).
+Azure ATP schützt Ihre lokalen Active Directory-Benutzer und/oder Benutzer, die mit Ihrer Azure Active Directory-Instanz synchronisiert werden. Hinweise zum Schutz einer Umgebung, die nur aus AAD-Benutzern besteht, finden Sie unter [AAD Identity Protection](/azure/active-directory/identity-protection/overview).
 
 Zum Erstellen Ihrer Azure ATP-Instanz benötigen Sie einen AAD-Mandanten mit mindestens einem globalen Administrator bzw. einem Sicherheitsadministrator. Jede Azure ATP-Instanz unterstützt mehrere Active Directory-Gesamtstrukturbegrenzungen und die Gesamtstrukturfunktionsebene (Forest Functional Level, FFL) von Windows 2003 und höher.
 
@@ -76,7 +76,7 @@ In diesem Abschnitt werden die Informationen aufgeführt, die Sie sammeln sollte
 
 - Wenn Sie versuchen, den Azure ATP-Sensor auf einem Computer zu installieren, der mit einem NIC-Teaming-Adapter konfiguriert ist, wird ein Installationsfehler gemeldet. Wenn Sie den Azure ATP-Sensor auf einem Computer installieren möchten, der mit NIC-Teamvorgang konfiguriert ist, finden Sie weitere Informationen unter [Problem mit NIC-Teamvorgängen beim Azure ATP-Sensor](troubleshooting-atp-known-issues.md#nic-teaming).
 
-- Container mit **gelöschten Objekten** – Empfehlung: Der Benutzer sollte über den schreibgeschützten Zugriff auf den Container mit gelöschten Objekten verfügen. Durch schreibgeschützte Berechtigungen für diesen Container kann Azure ATP Löschungen von Benutzern über Ihr Active Directory erkennen. Informationen zum Konfigurieren des schreibgeschützten Zugriffs auf den Container mit gelöschten Objekten finden Sie im Abschnitt **Ändern von Berechtigungen für einen Container mit gelöschten Objekten** im Artikel [Anzeigen und Festlegen von Berechtigungen für ein Verzeichnisobjekt](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
+- Container mit **gelöschten Objekten** – Empfehlung: Der Benutzer sollte über den schreibgeschützten Zugriff auf den Container mit gelöschten Objekten verfügen. Durch schreibgeschützte Berechtigungen für diesen Container kann Azure ATP Löschungen von Benutzern über Ihr Active Directory erkennen. Informationen zum Konfigurieren des schreibgeschützten Zugriffs auf den Container mit gelöschten Objekten finden Sie im Abschnitt **Ändern von Berechtigungen für einen Container mit gelöschten Objekten** im Artikel [Anzeigen und Festlegen von Berechtigungen für ein Verzeichnisobjekt](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816824(v=ws.10)).
 
 - Optionales **Honeytoken**: Ein Benutzerkonto eines Benutzers ohne Netzwerkaktivitäten. Dieses Konto wird als Azure ATP-Honeytoken-Benutzer konfiguriert. Weitere Informationen zu Verwendung von Honeytokens finden Sie unter [Konfigurieren von Ausschlüssen und Honeytoken-Benutzern](install-atp-step7.md).
 
@@ -94,7 +94,7 @@ Der Zugriff auf das Azure ATP-Portal erfolgt über einen Browser. Folgende Brows
 - Firewall/Proxy geöffnet: Um mit dem Azure ATP-Clouddienst zu kommunizieren, muss in Ihrer Firewall und auf Ihrem Proxyserver Port 443 für „*.atp.azure.com“ geöffnet sein.
 
     > [!NOTE]
-    > Sie können auch das Azure-Diensttag (**AzureAdvancedThreatProtection**) verwenden, um den Zugriff auf Azure ATP zu ermöglichen. Weitere Informationen zu Diensttags finden Sie unter [Diensttags des virtuellen Netzwerks](https://docs.microsoft.com/azure/virtual-network/service-tags-overview) oder in der Datei [Herunterladen der Diensttags](https://www.microsoft.com/download/details.aspx?id=56519).
+    > Sie können auch das Azure-Diensttag (**AzureAdvancedThreatProtection**) verwenden, um den Zugriff auf Azure ATP zu ermöglichen. Weitere Informationen zu Diensttags finden Sie unter [Diensttags des virtuellen Netzwerks](/azure/virtual-network/service-tags-overview) oder in der Datei [Herunterladen der Diensttags](https://www.microsoft.com/download/details.aspx?id=56519).
 
  ![Azure ATP-Architekturdiagramm](media/azure-atp-architecture.png)
 
@@ -141,7 +141,7 @@ Um eine optimale Leistung zu erzielen, legen Sie die **Energieoption** des Compu
 
 Der Azure ATP-Sensor kann auf Domänencontrollern verschiedener Auslastungen und Größen bereitgestellt werden, abhängig vom Umfang des Datenverkehrs zwischen den Domänencontrollern und der installierten Ressourcen.
 
-Unter den Windows-Betriebssystemen 2008 R2 und 2012 werden Azure ATP-Sensoren im Modus [Mehrere Prozessorgruppen](https://docs.microsoft.com/windows/win32/procthread/processor-groups) nicht unterstützt. Weitere Informationen über den Modus „Mehrere Prozessorgruppen“ finden Sie unter [Problembehandlung](troubleshooting-atp-known-issues.md#multi-processor-group-mode).
+Unter den Windows-Betriebssystemen 2008 R2 und 2012 werden Azure ATP-Sensoren im Modus [Mehrere Prozessorgruppen](/windows/win32/procthread/processor-groups) nicht unterstützt. Weitere Informationen über den Modus „Mehrere Prozessorgruppen“ finden Sie unter [Problembehandlung](troubleshooting-atp-known-issues.md#multi-processor-group-mode).
 
 >[!NOTE]
 > Bei Ausführung als virtueller Computer wird kein dynamischer Arbeitsspeicher und keine andere Speichererweiterungsfunktion unterstützt.
@@ -182,7 +182,7 @@ In der folgenden Tabelle sind die Ports aufgeführt, die für den Azure ATP-Sens
 
 ### <a name="windows-event-logs"></a>Windows-Ereignisprotokolle
 
-Die Azure ATP-Erkennung basiert auf den bestimmten [Windows-Ereignisprotokollen](configure-windows-event-collection.md#configure-event-collection), die der Sensor von Ihren Domänencontrollern aus analysiert: Damit die richtigen Ereignisse überprüft und im Windows-Ereignisprotokoll eingeschlossen werden, benötigen Ihre Domänencontroller die korrekten erweiterten Überwachungsrichtlinieneinstellungen. Weitere Informationen zum Festlegen der richtigen Richtlinien finden Sie unter [Überprüfung der erweiterten Überwachungsrichtlinie von Azure ATP](atp-advanced-audit-policy.md). Um [sicherzustellen, dass das Windows-Ereignis 8004 überwacht wird](configure-windows-event-collection.md#configure-audit-policies), wie es der Dienst erfordert, überprüfen Sie die [NTLM-Überwachungseinstellungen](https://blogs.technet.microsoft.com/askds/2009/10/08/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7/).
+Die Azure ATP-Erkennung basiert auf den bestimmten [Windows-Ereignisprotokollen](configure-windows-event-collection.md#configure-event-collection), die der Sensor von Ihren Domänencontrollern aus analysiert: Damit die richtigen Ereignisse überprüft und im Windows-Ereignisprotokoll eingeschlossen werden, benötigen Ihre Domänencontroller die korrekten erweiterten Überwachungsrichtlinieneinstellungen. Weitere Informationen zum Festlegen der richtigen Richtlinien finden Sie unter [Überprüfung der erweiterten Überwachungsrichtlinie von Azure ATP](configure-windows-event-collection.md). Um [sicherzustellen, dass das Windows-Ereignis 8004 überwacht wird](configure-windows-event-collection.md#configure-audit-policies), wie es der Dienst erfordert, überprüfen Sie die [NTLM-Überwachungseinstellungen](/archive/blogs/askds/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7).
 
 > [!NOTE]
 >

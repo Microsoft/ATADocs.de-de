@@ -6,18 +6,18 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 11/11/2018
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: cae3ed45-8fbc-4f25-ba24-3cc407c6ea93
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f2d5deb0adb35f07fe792e4254cca6ee8611b942
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: aa497d9a04aa36538b0e5d6642ce2942a4c6d827
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84772631"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956855"
 ---
 # <a name="excluding-entities-from-detections"></a>Ausschließen von Entitäten von der Erkennung
 In diesem Artikel wird erläutert, wie Entitäten ausgeschlossen werden, sodass sie keine Warnungen auslösen. Bestimmte Entitäten werden ausgeschlossen, um unbedenkliche richtig positive Ergebnisse zu reduzieren, während gleichzeitig sichergestellt wird, dass Sie die richtig positiven Ergebnisse ermitteln können. Um zu verhindern, dass Azure ATP störende Warnungen bei Aktivitäten ausgibt, die bei bestimmten Benutzern zu Ihrem ganz normalen Geschäftsalltag gehören, können Sie bestimmte Entitäten ausschließen, sodass diese keine Warnungen auslösen. Zusätzlich werden standardmäßig bestimmte beliebte Entitäten ausgeschlossen. 
@@ -27,7 +27,7 @@ Beispiele: Ein Sicherheitsscanner führt eine DNS-Reconnaissance aus, oder ein A
 ## <a name="entities-excluded-by-default-from-raising-alerts"></a>Entitäten, die standardmäßig ausgeschlossen werden, sodass sie keine Warnungen auslösen können
  Für bestimmte Warnungen (z.B. **verdächtige Kommunikation über DNS**) werden automatische Domänenausschlüsse durch Azure ATP basierend auf Kundenfeedback und Recherche hinzugefügt. 
  
-![Verdächtige Kommunikation über DNS: automatische Ausschlüsse](./media/dns-auto-exclusions.png) 
+![Verdächtige Kommunikation über DNS: automatische Ausschlüsse](media/dns-auto-exclusions.png) 
 
 ## <a name="exclude-entities-from-raising-alerts"></a>Ausschließen von Entitäten, damit diese keine Warnungen auslösen
 
@@ -36,11 +36,11 @@ Es gibt zwei Möglichkeiten, Entitäten manuell auszuschließen: entweder direkt
 - **Von der Sicherheitswarnung:** Wenn Sie auf der Aktivitätszeitachse eine Warnung oder Aktivität für einen Benutzer, Computer oder eine IP-Adresse erhalten, der bzw. die die bestimmte Aktivität **ausführen darf** und dies häufig auch tut, führen Sie folgende Schritte aus:
   - Klicken Sie mit der rechten Maustaste auf die drei Punkte am Ende der Zeile für die Sicherheitswarnung auf dieser Entität, und wählen Sie **Close and exclude** (Schließen und ausschließen) aus. Dadurch wird der Benutzer, der Computer oder die IP-Adresse der Ausschlussliste für diese Sicherheitswarnung hinzugefügt. Die Sicherheitswarnung wird daraufhin geschlossen, und die Warnung wird nicht länger in der Ereignisliste auf der **Warnungszeitachse** unter **Open** (Offen) aufgeführt.
 
-    ![Ausschließen einer Entität](./media/exclude-in-sa.png)
+    ![Ausschließen einer Entität](media/exclude-in-sa.png)
 
 - **Auf der Konfigurationsseite**: Um Ausschlüsse zu überprüfen oder zu ändern, klicken Sie auf der Seite **Konfiguration** auf **Ausschlüsse**, und wählen Sie die Sicherheitswarnung aus, für die der Ausschluss angewendet werden soll, z.B. **DNS-Reconnaissance**.
 
-    ![Konfiguration von Ausschlüssen](./media/exclusions.png)
+    ![Konfiguration von Ausschlüssen](media/exclusions.png)
 
 So fügen Sie eine Entität aus der Konfiguration **Ausschlüsse** hinzu: Geben Sie den Identitätsnamen ein, und klicken Sie auf das Pluszeichen. Klicken Sie anschließend am unteren Seitenrand auf **Speichern**.
 

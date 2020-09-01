@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 4ba46d60-3a74-480e-8f0f-9a082d62f343
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7648b9047f519c4e9712e608be9f0705be1aaa2a
-ms.sourcegitcommit: bfb5f35f8e2f19911357e5afa6624ffe43e37d12
+ms.openlocfilehash: fa19723ec0193a7a933eef292505a62b3d3b9961
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86472500"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88955597"
 ---
 # <a name="working-with-the-azure-atp-portal"></a>Arbeiten mit dem Azure ATP-Portal
 
@@ -41,7 +41,7 @@ Weitere Informationen zur rollenbasierten Zugriffssteuerung in Azure ATP finden 
 
 1. Sie können sich beim Azure ATP-Portal anmelden, indem Sie sich entweder beim Portal unter [https://portal.atp.azure.com](https://portal.atp.azure.com) anmelden und die relevante Instanz auswählen, oder indem Sie die folgende Instanz-URL öffnen:`https://*instancename*.atp.azure.com`.
 
-2. Azure ATP unterstützt die in die Windows-Authentifizierung integrierte einmalige Anmeldung: Wenn Sie sich schon auf Ihrem Computer angemeldet haben, verwendet Azure ATP dieses Token, um Sie im Azure ATP-Portal anzumelden. Sie können sich auch mit einer Smartcard anmelden. Ihre Berechtigungen in Azure ATP entsprechen Ihrer [Administratorrolle](atp-role-groups.md).
+1. Azure ATP unterstützt die in die Windows-Authentifizierung integrierte einmalige Anmeldung: Wenn Sie sich schon auf Ihrem Computer angemeldet haben, verwendet Azure ATP dieses Token, um Sie im Azure ATP-Portal anzumelden. Sie können sich auch mit einer Smartcard anmelden. Ihre Berechtigungen in Azure ATP entsprechen Ihrer [Administratorrolle](atp-role-groups.md).
 
    > [!NOTE]
    > Stellen Sie sicher, dass Sie sich auf dem Computer anmelden, von dem aus Sie auf das Azure ATP-Portal zugreifen möchten. Verwenden Sie hierzu Ihren Azure ATP-Administratorbenutzernamen und das entsprechende Kennwort. Alternativ führen Sie Ihren Browser mit einem anderen Benutzer aus oder melden sich von Windows ab und melden sich danach mit Ihrem Azure ATP-Administratorbenutzerkonto an. Im Gegensatz zum Azure ATP-Portal ermöglicht das neue [Cloud App Security-Portal](https://portal.cloudappsecurity.com) die Anmeldung mehrerer Benutzer und erfordert keine zusätzlichen Lizenzen für die Verwendung mit Azure ATP.

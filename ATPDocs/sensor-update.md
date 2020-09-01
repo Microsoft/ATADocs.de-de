@@ -6,18 +6,18 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 12/24/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 603d9e09-a07d-4357-862f-d5682c8bc3dd
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ec9fa3c2190e0538cbecaa78131e5c42cdde4d7d
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 860f856acd1a34e52032217b137b6350a0988365
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775895"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956583"
 ---
 # <a name="update-azure-atp-sensors"></a>Aktualisieren von Azure ATP-Sensoren
 
@@ -62,17 +62,17 @@ Jedes Update wird getestet und für alle unterstützten Betriebssysteme überpr�
 Gehen Sie wie folgt vor, um einen Sensor für ein verzögertes Update auszuwählen:
 
 1. Klicken Sie im Azure ATP-Portal zuerst auf das Symbol „Einstellungen“ und dann auf **Konfiguration**.
-2. Klicken Sie auf die Registerkarte **Updates**.
-3. Legen Sie in der Tabellenzeile neben jedem Sensor, für den Sie das Update später ausführen möchten, den Schieberegler **Delayed update** (Verzögertes Update) auf **An** fest.
-4. Klicken Sie auf **Speichern**.
+1. Klicken Sie auf die Registerkarte **Updates**.
+1. Legen Sie in der Tabellenzeile neben jedem Sensor, für den Sie das Update später ausführen möchten, den Schieberegler **Delayed update** (Verzögertes Update) auf **An** fest.
+1. Klicken Sie auf **Speichern**.
  
 ## <a name="sensor-update-process"></a>Updateprozess für den Sensor
 
 Die Azure ATP-Sensoren prüfen im Abstand weniger Minuten, ob sie bereits auf die neuste Version aktualisiert worden sind. Wenn der Azure ATP-Clouddienst auf eine neuere Version aktualisiert wird, startet der Azure ATP-Sensordienst den Aktualisierungsprozess:
 
 1. Der Azure ATP-Clouddienst führt ein Update auf die neueste Version durch.
-2. Der Azure ATP-Sensor-Aktualisierungsdienst stellt fest, dass eine aktualisierte Version verfügbar ist.
-3. Bei den Sensoren, für die kein **verzögertes Update** festgelegt, beginnt der sensorweise Updateprozess:
+1. Der Azure ATP-Sensor-Aktualisierungsdienst stellt fest, dass eine aktualisierte Version verfügbar ist.
+1. Bei den Sensoren, für die kein **verzögertes Update** festgelegt, beginnt der sensorweise Updateprozess:
    1. Der Azure ATP-Sensor-Aktualisierungsdienst bezieht vom Clouddienst die aktualisierte Version (im CAB-Dateiformat).
    2. Der Azure ATP-Sensor-Aktualisierungsdienst überprüft die Dateisignatur.
    3. Der Azure ATP-Sensor-Aktualisierungsdienst extrahiert die CAB-Datei in einen neuen Unterordner im Installationsverzeichnis des Sensors. Standardmäßig wird sie in folgenden Ordner extrahiert: *C:\Programme\Azure Advanced Threat Protection Sensor\<version number>* .
@@ -84,14 +84,14 @@ Die Azure ATP-Sensoren prüfen im Abstand weniger Minuten, ob sie bereits auf di
    7. Der Sensor erhält eine Freigabe vom Azure-Clouddienst. Den Sensorstatus können Sie auf der Seite **Updates** überprüfen.
    8. Der nächste Sensor startet den Aktualisierungsprozess. 
 
-4. 72 Stunden nach der Aktualisierung des Azure ATP-Clouddiensts startet der Updateprozess für die Sensoren, für die ein **verzögertes Update** ausgewählt wurde. Dieser Updateprozess entspricht dabei dem Vorgang für automatisch aktualisierte Sensoren.
+1. 72 Stunden nach der Aktualisierung des Azure ATP-Clouddiensts startet der Updateprozess für die Sensoren, für die ein **verzögertes Update** ausgewählt wurde. Dieser Updateprozess entspricht dabei dem Vorgang für automatisch aktualisierte Sensoren.
 
-![Sensorupdate](./media/sensor-update.png)
+![Sensorupdate](media/sensor-update.png)
 
 
 Für jeden Sensor, bei dem der Updateprozess nicht abgeschlossen werden kann, wird eine entsprechende Integritätswarnung ausgelöst und als Benachrichtigung gesendet.
 
-![Fehler beim Sensorupdate](./media/sensor-outdated.png)
+![Fehler beim Sensorupdate](media/sensor-outdated.png)
 
 
 ## <a name="see-also"></a>Weitere Informationen

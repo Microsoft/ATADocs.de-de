@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 62f2a8614bc9eecf29f2f22a5c26b95c8a648481
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: e5afdb5766f4ddd790e85ee6e6e07ae1a2517a44
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84772002"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88955937"
 ---
 # <a name="tutorial-investigate-an-entity"></a>Tutorial: Untersuchen einer Entität
 
@@ -70,7 +70,7 @@ Die Flags für die Benutzerkontensteuerung werden ebenfalls von Active Directory
 
 Über Azure ATP erfahren Sie, ob diese Flags in Azure Active Directory aktiviert oder deaktiviert sind. Farbige Symbole und die entsprechende Umschaltfläche zeigen den Status der einzelnen Flags an. Im folgenden Beispiel ist nur **Kennwort läuft nie ab** in Active Directory aktiviert.
 
- ![Flags für die Benutzerkontensteuerung](./media/user-access-flags.png)
+ ![Flags für die Benutzerkontensteuerung](media/user-access-flags.png)
 
 ## <a name="cross-check-with-windows-defender"></a>Gegenprüfung mit Windows Defender
 
@@ -81,23 +81,23 @@ Um Ihnen produktübergreifende Einblicke zu gewähren, stellt Ihr Entitätsprofi
 
 Azure ATP importiert Benutzer- und Gruppeninformationen von Azure Active Directory, wodurch Sie identifizieren können, welche Benutzer automatisch als vertraulich eingestuft werden, da sie Mitglieder der folgenden Gruppen in Active Directory sind:
 
--   Administratoren
--   Hauptbenutzer
--   Konten-Operatoren
--   Server-Operatoren
--   Druckoperatoren
--   Sicherungsoperatoren
--   Replikatoren
--   Remotedesktopbenutzer 
--   Netzwerkkonfigurations-Operatoren 
--   Eingehende Gesamtstruktur-Vertrauensstellung
--   Domänen-Admins
--   Domänencontroller
--   Gruppenrichtlinienersteller-Besitzer 
--   Schreibgeschützte Domänencontroller 
--   Schreibgeschützte Domänencontroller der Organisation 
--   Schema-Admins 
--   Organisations-Admins
+- Administratoren
+- Hauptbenutzer
+- Konten-Operatoren
+- Server-Operatoren
+- Druckoperatoren
+- Sicherungsoperatoren
+- Replikatoren
+- Remotedesktopbenutzer 
+- Netzwerkkonfigurations-Operatoren 
+- Eingehende Gesamtstruktur-Vertrauensstellung
+- Domänen-Admins
+- Domänencontroller
+- Gruppenrichtlinienersteller-Besitzer 
+- Schreibgeschützte Domänencontroller 
+- Schreibgeschützte Domänencontroller der Organisation 
+- Schema-Admins 
+- Organisations-Admins
 
 Zusätzlich können Sie Entitäten **manuell markieren**, um darauf hinzuweisen, dass Sie in Azure ATP vertraulich sind. Dies ist wichtig, da einige Azure ATP-Erkennungsvorgänge, wie die Vorgänge zum Erkennen von Änderungen sensibler Gruppen und von Lateral Movement-Pfaden, sich auf den Vertraulichkeitsstatus der Entität verlassen. Wenn Sie zusätzliche Benutzer und Gruppen als sensibel markieren, z.B. Vorstandsmitglieder, leitende Angestellte und Verkaufsleiter, erkennt Azure ATP diese als sensibel an. Weitere Informationen finden Sie unter [Arbeiten mit sensiblen Konten](sensitive-accounts.md).
 

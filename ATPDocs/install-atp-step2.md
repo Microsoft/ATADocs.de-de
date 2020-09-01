@@ -4,15 +4,15 @@ description: Im zweiten Schritt der Installation von Azure ATP konfigurieren Sie
 author: shsagir
 ms.author: shsagir
 ms.date: 01/15/2020
-ms.topic: conceptual
+ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.openlocfilehash: 4d3e65aaafea7cefd4ef564c0ee0a82b8d2fdfe4
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: 29d6fc0a1a79b5861bad447f160ba7f5fe6a0131
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79413739"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88954339"
 ---
 # <a name="quickstart-connect-to-your-active-directory-forest"></a>Schnellstart: Herstellen einer Verbindung mit einer Active Directory-Gesamtstruktur
 
@@ -52,7 +52,7 @@ Beim ersten Öffnen des Azure ATP-Portals wird die folgende Anzeige angezeigt:
     |**Gruppenverwaltetes Dienstkonto** (bei gruppenverwalteten Dienstkonten erforderlich)|Wählen Sie bei gruppenverwalteten Dienstkonten das **gruppenverwaltete Dienstkonto** aus.|
     |**Domäne** (erforderlich)|Geben Sie die Domäne für den schreibgeschützten Benutzer ein. Beispiel: **contoso.com**. Es ist wichtig, dass Sie den vollqualifizierten Domänennamen (FQDN) der Domäne eingeben, in der sich das Benutzerkonto befindet. Wenn sich das Konto des Benutzers beispielsweise in der Domäne „corp.contoso.com“ befindet, müssen Sie `corp.contoso.com` und nicht „contoso.com“ eingeben.|
 
-2. Klicken Sie im Azure ATP-Portal auf **Download sensor setup and install the first sensor** (Sensorsetup herunterladen und ersten Sensor installieren), um fortzufahren.
+1. Klicken Sie im Azure ATP-Portal auf **Download sensor setup and install the first sensor** (Sensorsetup herunterladen und ersten Sensor installieren), um fortzufahren.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

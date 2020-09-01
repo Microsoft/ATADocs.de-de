@@ -6,18 +6,18 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 1/3/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 1b7e72c3-a538-443f-981c-398ffafa5ab8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 50e0ccfb22e068eccadcdbfc3c59251b171813a7
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 0e0b9f73ce019f105d1cb1c08fe2637e23634adf
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84773668"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88953591"
 ---
 # <a name="work-with-azure-atp-health-and-events"></a>Arbeiten mit Azure ATP-Integrität und -Ereignissen
 
@@ -34,7 +34,7 @@ Das Azure ATP-Integritätscenter zeigt Probleme durch einen roten Punkt über de
 ### <a name="managing-azure-atp-health"></a>Verwalten des Azure ATP-Integritätscenters
 Um den Gesamtzustand Ihrer Azure ATP-Instanz zu überprüfen, klicken Sie in der Menüleiste auf das Symbol für das Integritätscenter: ![Symbol für das Azure ATP-Integritätscenter](media/atp-red-dot.png)
 
--   Sie können alle offenen Probleme auf **Schließen** oder **Unterdrücken** festlegen, indem Sie auf die drei Punkte in der Ecke einer Warnung klicken und die gewünschte Option anklicken.
+- Sie können alle offenen Probleme auf **Schließen** oder **Unterdrücken** festlegen, indem Sie auf die drei Punkte in der Ecke einer Warnung klicken und die gewünschte Option anklicken.
 
 -   **Öffnen**: In dieser Liste werden alle neuen verdächtigen Aktivitäten angezeigt.
 
