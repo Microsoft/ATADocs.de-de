@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 08/03/2020
-ms.topic: conceptual
+ms.date: 08/25/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 6597b8c7-f83e-43c6-8149-fb4a914a845b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a7d0ea7c8cc0eec8952cba17386045d9ee7529be
-ms.sourcegitcommit: 032132b54c905d08a24d15028782c66cc0620f20
+ms.openlocfilehash: 3b4146f4e50d8112be66c1e0a33df80c2de28257
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88023292"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956651"
 ---
 # <a name="security-assessment-legacy-protocols-usage"></a>Sicherheitsbewertung: Verwendung von Legacyprotokollen
 
@@ -38,7 +38,7 @@ Eine Verringerung der Angriffsfläche lässt sich erreichen, indem die Unterstü
 - LanMan (LM) / NTLMv1
 - Digestauthentifizierung
 
-Um Legacyprotokolle außer Betrieb nehmen zu können, muss Ihre Organisation zunächst herausfinden, welche internen Entitäten und Anwendungen diese Protokolle verwenden. Der Bewertungsbericht zur **Nutzung von Legacyprotokollen** gibt die wichtigsten Entitäten an, die Legacyprotokolle verwenden (z.B. NTLMv1). Anhand dieses Berichts können Sie sofort die am stärksten betroffenen Entitäten überprüfen und entsprechende Maßnahmen ergreifen, indem Sie die Verwendung dieser Protokolle beenden und die Protokolle letztendlich komplett deaktivieren. Informationen zu den potenziellen Gefahren durch Legacyprotokolle finden Sie unter [Beenden der Verwendung von LAN-Manager und NTLMv1](https://blogs.technet.microsoft.com/miriamxyra/2017/11/07/stop-using-lan-manager-and-ntlmv1/) und [Beenden von MIC 2 und Ausnutzen von LMv2-Clients](https://www.preempt.com/blog/active-directory-ntlm-attacks/).
+Um Legacyprotokolle außer Betrieb nehmen zu können, muss Ihre Organisation zunächst herausfinden, welche internen Entitäten und Anwendungen diese Protokolle verwenden. Der Bewertungsbericht zur **Nutzung von Legacyprotokollen** gibt die wichtigsten Entitäten an, die Legacyprotokolle verwenden (z.B. NTLMv1). Anhand dieses Berichts können Sie sofort die am stärksten betroffenen Entitäten überprüfen und entsprechende Maßnahmen ergreifen, indem Sie die Verwendung dieser Protokolle beenden und die Protokolle letztendlich komplett deaktivieren. Informationen zu den potenziellen Gefahren durch Legacyprotokolle finden Sie unter [Beenden der Verwendung von LAN-Manager und NTLMv1](/archive/blogs/miriamxyra/stop-using-lan-manager-and-ntlmv1) und [Beenden von MIC 2 und Ausnutzen von LMv2-Clients](https://www.preempt.com/blog/active-directory-ntlm-attacks/).
 
 ## <a name="how-do-i-use-this-security-assessment"></a>Wie wird diese Sicherheitsbewertung verwendet?
 
@@ -46,8 +46,11 @@ Um Legacyprotokolle außer Betrieb nehmen zu können, muss Ihre Organisation zun
 
     ![Verhindern der Verwendung von Legacyprotokollen](media/atp-cas-isp-legacy-protocols-2.png)
 1. Ergreifen Sie entsprechende Maßnahmen für diese Entitäten, um Abhängigkeiten zu ermitteln.
-1. Beenden Sie die Verwendung des Legacyprotokolls, und [deaktivieren Sie schließlich das Protokoll vollständig](https://blogs.technet.microsoft.com/miriamxyra/2017/11/07/stop-using-lan-manager-and-ntlmv1/).
+1. Beenden Sie die Verwendung des Legacyprotokolls, und [deaktivieren Sie schließlich das Protokoll vollständig](/archive/blogs/miriamxyra/stop-using-lan-manager-and-ntlmv1).
 1. [Löschen Sie MIC 2, und verwenden Sie keine LMv2-Clients mehr.](https://www.preempt.com/blog/active-directory-ntlm-attacks/)
+
+> [!NOTE]
+> Diese Bewertung wird nahezu in Echtzeit aktualisiert.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

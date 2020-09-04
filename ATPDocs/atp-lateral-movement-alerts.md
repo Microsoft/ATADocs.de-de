@@ -1,35 +1,35 @@
 ---
 title: Lateral Movement-Sicherheitswarnungen in Azure ATP
-d|Description: This article explains the Azure ATP alerts issued when attacks typically part of lateral movement phase efforts are detected against your organization.
+description: In diesem Artikel werden die Azure ATP-Warnungen erläutert, die ausgegeben werden, wenn Angriffe in Ihrer Organisation erkannt werden, die in der Regel Teil der Maßnahmen der Lateral Movement-Phase sind.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 04/23/2020
+ms.date: 08/31/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 2257eb00-8614-4577-b6a1-5c65085371f2
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4ef5d8985d42cd53f803eb97d8ebc0eba69a39af
-ms.sourcegitcommit: 42f1da0c498bd145daff4df20b3e53069b55ecd5
+ms.openlocfilehash: 6de2e4006b8693b6ad7db18e13d976c012541d67
+ms.sourcegitcommit: 275e2b084fd7dd7cac2e0d07b0b244318aac7475
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87856375"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89245860"
 ---
 # <a name="tutorial-lateral-movement-alerts"></a>Tutorial: Lateral Movement-Warnungen
 
 Cyberangriffe werden üblicherweise auf alle zugänglichen Entitäten wie etwa Benutzer mit geringen Rechten durchgeführt. Anschließend dringt der Angreifer schnell im internen Netzwerk vor (Lateral Movement), um Zugriff auf wertvolle Ressourcen zu erhalten. Dabei kann es sich um sensible Konten, Konten von Domänenadministratoren oder streng vertrauliche Daten handeln. Azure ATP identifiziert diese komplexen Bedrohungen an der Quelle über die gesamte Kette der Angriffsabwehr hinweg und ordnet sie in die folgenden Phasen ein
 
 1. [Reconnaissance](atp-reconnaissance-alerts.md)
-2. [Kompromittierte Anmeldeinformationen](atp-compromised-credentials-alerts.md)
-3. **Seitliche Verschiebung**
-4. [Warnungen zu Domänendominanz](atp-domain-dominance-alerts.md)
-5. [Exfiltration](atp-exfiltration-alerts.md)
+1. [Kompromittierte Anmeldeinformationen](atp-compromised-credentials-alerts.md)
+1. **Seitliche Verschiebung**
+1. [Warnungen zu Domänendominanz](atp-domain-dominance-alerts.md)
+1. [Exfiltration](atp-exfiltration-alerts.md)
 
-Weitere Informationen zur Struktur und zu gängigen Komponenten der Azure ATP-Sicherheitswarnungen finden Sie unter [Understanding security alerts (Grundlegendes zu Sicherheitswarnungen)](understanding-security-alerts.md).
+Weitere Informationen zur Struktur und zu gängigen Komponenten der Azure ATP-Sicherheitswarnungen finden Sie unter [Understanding security alerts (Grundlegendes zu Sicherheitswarnungen)](understanding-security-alerts.md). Weitere Informationen zu **True Positive (TP)** , **Benign True Positive (B-TP)** (unschädlich richtig positiv) und **False Positive (FP)** finden Sie unter [Klassifizierungen der Sicherheitswarnungen](understanding-security-alerts.md#security-alert-classifications).
 
 Die folgenden Sicherheitswarnungen unterstützen Sie dabei, verdächtige Aktivitäten zu identifizieren und zu unterbinden, die von Azure ATP in Ihrem Netzwerk erkannt werden und auf **Lateral Movement** hindeuten. In diesem Tutorial erfahren Sie, wie die folgenden Angriffstypen klassifiziert, behoben und unterbunden werden:
 
@@ -41,6 +41,7 @@ Die folgenden Sicherheitswarnungen unterstützen Sie dabei, verdächtige Aktivit
 > - Suspected NTLM authentication tampering (external ID 2039) (Vermutete Manipulation der NTLM-Authentifizierung [Externe ID 2039])
 > - Vermuteter NTLM-Relaisangriff (Exchange-Konto) (externe ID 2037)
 > - Suspected overpass-the-hash attack (Kerberos) (Verdacht auf einen Overpass-the-Hash-Angriff (Kerberos)) (externalid 2002)
+> - Mutmaßliche Verwendung von Rogue-Kerberos-Zertifikat (externe ID 2047)
 > - Mutmaßliche Manipulation von SMB-Paketen (Exploit von CVE-2020-0796) (Vorschau) (externe ID 2406)
 
 <!-- * Suspected overpass-the-hash attack (encryption downgrade) (external ID 2008)-->
@@ -53,13 +54,17 @@ Am 11.12.2018 hat Microsoft [CVE-2018-8626](https://portal.msrc.microsoft.com/en
 
 Bei dieser Erkennung wird eine Azure ATP-Sicherheitswarnung ausgelöst, wenn DNS-Abfragen an einen Domänencontroller im Netzwerk gerichtet werden, die im Verdacht stehen, die Sicherheitslücke CVE-2018-8626 auszunutzen.
 
+**Lernphase**
+
+Nicht zutreffend
+
 **TP, B-TP oder FP**
 
 1. Sind Sie die Zielcomputer auf dem neuesten Stand und für CVE-2018-8626 gepatcht?
     - Wenn die Computer auf dem neuesten Stand und gepatcht sind, **schließen** Sie die Sicherheitswarnung als **FP**.
-2. Wurde ungefähr zum Zeitpunkt des Angriffs ein Dienst erstellt oder ein unbekannter Prozess ausgeführt?
+1. Wurde ungefähr zum Zeitpunkt des Angriffs ein Dienst erstellt oder ein unbekannter Prozess ausgeführt?
     - Wenn Sie keinen neuen Dienst oder einen unbekannten Prozess finden, **schließen** Sie die Sicherheitswarnung als **FP**.
-3. Diese Art von Angriff kann den DNS-Dienst zum Absturz bringen, bevor die Codeausführung erfolgreich veranlasst wurde.
+1. Diese Art von Angriff kann den DNS-Dienst zum Absturz bringen, bevor die Codeausführung erfolgreich veranlasst wurde.
     - Überprüfen Sie, ob der DNS-Dienst ungefähr zum Zeitpunkt des Angriffs mehrmals neu gestartet wurde.
     - Wenn der DNS-Dienst neu gestartet wurde, handelte es sich wahrscheinlich um einen Versuch, CVE-2018-8626 auszunutzen. Betrachten Sie diese Warnung als **TP**, und führen Sie die unter **Ermitteln des Umfangs der Sicherheitsverletzung** beschriebenen Anweisungen aus.
 
@@ -73,10 +78,10 @@ Bei dieser Erkennung wird eine Azure ATP-Sicherheitswarnung ausgelöst, wenn DNS
 
 1. Isolieren Sie die Domänencontroller.
     1. Unterbinden Sie die versuchte Remotecodeausführung.
-    2. Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der verdächtigen Aktivität ebenfalls angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
-2. Kontrollieren Sie den Quellcomputer.
+    1. Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der verdächtigen Aktivität ebenfalls angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
+1. Kontrollieren Sie den Quellcomputer.
     1. Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
-    2. Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der verdächtigen Aktivität ebenfalls angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
+    1. Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der verdächtigen Aktivität ebenfalls angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
 
 **Vorbeugung**
 
@@ -90,6 +95,10 @@ Bei dieser Erkennung wird eine Azure ATP-Sicherheitswarnung ausgelöst, wenn DNS
 
 Pass-the-Hash ist eine Technik mit seitlicher Bewegung, bei der Angreifer den NTLM-Hash eines Benutzers von einem Computer stehlen und diesen verwenden, um Zugriff auf einen anderen Computer zu erlangen.
 
+**Lernphase**
+
+Nicht zutreffend
+
 **TP, B-TP oder FP?**
 1. Wurde der Hash auf Computern verwendet, die der Benutzer regelmäßig verwendet?
     - Wenn der Hash regelmäßig auf Computern verwendet wurde, **Schließen** Sie die Warnung als **FP**-Aktivität (falsch positiv).
@@ -97,14 +106,14 @@ Pass-the-Hash ist eine Technik mit seitlicher Bewegung, bei der Angreifer den NT
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
 1. Untersuchen Sie die [Quell- und Zielcomputer](investigate-a-computer.md) weiter.
-2. Untersuchen Sie den [kompromittierten Benutzer](investigate-a-computer.md).
+1. Untersuchen Sie den [kompromittierten Benutzer](investigate-a-computer.md).
 
 **Empfohlene Abhilfemaßnahmen und Schritte zur Vorbeugung**
 
 1. Setzen Sie das Kennwort des Quellbenutzers zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
-2. Isolieren Sie die Quell- und Zielcomputer.
-3. Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
-4. Finden Sie heraus, ob sich ungefähr gleichzeitig mit der Aktivität Benutzer angemeldet haben, da auch sie kompromittiert sein könnten. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
+1. Isolieren Sie die Quell- und Zielcomputer.
+1. Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
+1. Finden Sie heraus, ob sich ungefähr gleichzeitig mit der Aktivität Benutzer angemeldet haben, da auch sie kompromittiert sein könnten. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
 
 ## <a name="suspected-identity-theft-pass-the-ticket-external-id-2018"></a>Suspected identity theft (pass-the-ticket) (Verdacht auf Identitätsdiebstahl (Pass-the-Ticket)) (externalid 2018)
 
@@ -114,42 +123,46 @@ Pass-the-Hash ist eine Technik mit seitlicher Bewegung, bei der Angreifer den NT
 
 Pass-the-Ticket ist eine Technik mit seitlicher Bewegung, bei der die Angreifer ein Kerberos-Ticket von einem Computer stehlen und dieses verwenden, um Zugriff auf einen anderen Computer zu erlangen, indem sie das gestohlene Ticket wiederverwenden. In dieser Erkennung wird ein Kerberos-Ticket auf zwei (oder mehr) verschiedenen Computern verwendet.
 
+**Lernphase**
+
+Nicht zutreffend
+
 **TP, B-TP oder FP?**
 
 Das erfolgreiche Auflösen von IP-Adressen für Computer in der Organisation ist wichtig, um Pass-The-Ticket-Angriffe von einem Computer auf einen anderen zu identifizieren.
 
 1. Überprüfen Sie, ob die IP-Adresse von einem oder beiden Computern zu einem Subnetz gehört, das aus einem zu kleinen DHCP-Pool (z. B. VPN, VDI oder WiFi) zugewiesen wird.
-2. Wurde die IP-Adresse freigegeben (z. B. durch ein NAT-Gerät)?
-3. Werden eine oder mehrere Ziel-IP-Adressen vom Sensor nicht aufgelöst? Wenn eine Ziel-IP-Adresse nicht aufgelöst wird, kann dies bedeuten, dass die richtigen Ports zwischen dem Sensor und den Geräten nicht ordnungsgemäß geöffnet sind.
+1. Wurde die IP-Adresse freigegeben (z. B. durch ein NAT-Gerät)?
+1. Werden eine oder mehrere Ziel-IP-Adressen vom Sensor nicht aufgelöst? Wenn eine Ziel-IP-Adresse nicht aufgelöst wird, kann dies bedeuten, dass die richtigen Ports zwischen dem Sensor und den Geräten nicht ordnungsgemäß geöffnet sind.
 
     Wenn die Antwort auf eine der vorausgegangenen Fragen **Ja** lautet, überprüfen Sie, ob Quell- und Zielcomputer identisch sind. Sind sie identisch, handelt es sich um eine **FP**-Aktivität (falsch positiv), und es haben keine echten **Pass-the-Ticket**-Versuche stattgefunden.
 
-Das Feature [Remote Credential Guard](https://docs.microsoft.com/windows/security/identity-protection/remote-credential-guard) der RDP-Verbindungen kann zu **B-TP**-Warnungen führen, wenn es mit Windows 10 auf Windows Server 2016 und höher verwendet wird.
+Das Feature [Remote Credential Guard](/windows/security/identity-protection/remote-credential-guard) der RDP-Verbindungen kann zu **B-TP**-Warnungen führen, wenn es mit Windows 10 auf Windows Server 2016 und höher verwendet wird.
 Überprüfen Sie mithilfe der Warnungsbeweisen, ob der Benutzer eine Remotedesktopverbindung vom Quellcomputer zum Zielcomputer hergestellt hat.
 
 1. Suchen Sie nach entsprechenden Beweisen.
-2. Wenn Sie Beweise gefunden haben, überprüfen Sie, ob die Verbindung mithilfe von Remote Credential Guard hergestellt wurde.
-3. Wenn ja, **schließen** Sie die Sicherheitswarnung, da es sich um eine **B-TP**-Aktivität (unbedenklich richtig positiv) handelt.
+1. Wenn Sie Beweise gefunden haben, überprüfen Sie, ob die Verbindung mithilfe von Remote Credential Guard hergestellt wurde.
+1. Wenn ja, **schließen** Sie die Sicherheitswarnung, da es sich um eine **B-TP**-Aktivität (unbedenklich richtig positiv) handelt.
 
 Es gibt benutzerdefinierte Anwendungen, die Tickets im Auftrag des Benutzers weiterleiten. Diese Anwendungen verfügen über Delegierungsberechtigungen für Benutzertickets.
 
 1. Gibt es eine benutzerdefinierte Anwendung wie die zuvor beschriebene derzeit auf den Zielcomputern? Welche Dienste werden von der Anwendung ausgeführt? Werden die Dienste durch Anweisung der Benutzer ausgeführt, beispielsweise zum Zugreifen auf Datenbanken?
     - Wenn ja, **schließen** Sie die Sicherheitswarnung, da es sich um eine **B-TP**-Aktivität (unbedenklich richtig positiv) handelt.
-2. Ist der Zielcomputer ein Delegierungsserver?
+1. Ist der Zielcomputer ein Delegierungsserver?
     - Wenn ja, **schließen** Sie die Sicherheitswarnung, und schließen Sie diesen Computer als **B-TP**-Aktivität (unbedenklich richtig positiv) aus.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
 1. Untersuchen Sie die [Quell- und Zielcomputer](investigate-a-computer.md).
-2. Untersuchen Sie den [kompromittierten Benutzer](investigate-a-computer.md).
+1. Untersuchen Sie den [kompromittierten Benutzer](investigate-a-computer.md).
 
 **Empfohlene Abhilfemaßnahmen und Schritte zur Vorbeugung**
 
 1. Setzen Sie das Kennwort des Quellbenutzers zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
-2. Isolieren Sie die Quell- und Zielcomputer.
-3. Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
-4. Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
-5. Wenn Microsoft Defender ATP installiert ist, nutzen Sie **klist.exe purge**, um alle Tickets der angegebenen Anmeldesitzung endgültig zu löschen und zu verhindern, dass die Tickets in Zukunft verwendet werden.
+1. Isolieren Sie die Quell- und Zielcomputer.
+1. Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
+1. Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
+1. Wenn Microsoft Defender ATP installiert ist, nutzen Sie **klist.exe purge**, um alle Tickets der angegebenen Anmeldesitzung endgültig zu löschen und zu verhindern, dass die Tickets in Zukunft verwendet werden.
 
 ## <a name="suspected-ntlm-authentication-tampering-external-id-2039"></a>Suspected NTLM authentication tampering (external ID 2039) (Vermutete Manipulation der NTLM-Authentifizierung [Externe ID 2039])
 
@@ -159,28 +172,32 @@ Böswillige Akteure, die dieses Sicherheitsrisiko erfolgreich ausnutzen, können
 
 Bei dieser Erkennung wird eine Azure ATP-Sicherheitswarnung ausgelöst, wenn NTLM-Authentifizierungsanforderungen an einen Domänencontroller im Netzwerk gerichtet werden, die im Verdacht stehen, die Sicherheitslücke [CVE-2019-1040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040) auszunutzen.
 
+**Lernphase**
+
+Nicht zutreffend
+
 **TP, B-TP oder FP?**
 
 1. Sind die beteiligten Computer, einschließlich Domänencontrollern, auf dem neuesten Stand und für [CVE-2019-1040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040) gepatcht?
-  - Wenn die Computer auf dem neuesten Stand und gepatcht sind, gehen wir davon aus, dass die Authentifizierung fehlschlägt. Wenn die Authentifizierung fehlgeschlagen ist, **schließen** Sie die Sicherheitswarnung als fehlgeschlagenen Versuch.
+    - Wenn die Computer auf dem neuesten Stand und gepatcht sind, gehen wir davon aus, dass die Authentifizierung fehlschlägt. Wenn die Authentifizierung fehlgeschlagen ist, **schließen** Sie die Sicherheitswarnung als fehlgeschlagenen Versuch.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
 1. Untersuchen Sie die [Quellcomputer](investigate-a-computer.md).
-2. Untersuchen Sie das [Quellkonto](investigate-a-user.md).
+1. Untersuchen Sie das [Quellkonto](investigate-a-user.md).
 
 **Empfohlene Abhilfemaßnahmen und Schritte zur Vorbeugung**
 
 **Wartung**
 
 1. Isolieren Sie die Quellcomputer.
-2. Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
-3. Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
-4. Erzwingen Sie die Verwendung der versiegelten NTLMv2-Authentifizierung in der Domäne, indem Sie die Gruppenrichtlinie **Netzwerksicherheit: LAN Manager-Authentifizierungsebene** verwenden. Weitere Informationen zum Festlegen von Gruppenrichtlinien für Domänencontroller finden Sie unter [Network security: LAN Manager authentication level (Netzwerksicherheit: LAN Manager-Authentifizierungsebene)](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level).
+1. Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
+1. Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
+1. Erzwingen Sie die Verwendung der versiegelten NTLMv2-Authentifizierung in der Domäne, indem Sie die Gruppenrichtlinie **Netzwerksicherheit: LAN Manager-Authentifizierungsebene** verwenden. Weitere Informationen zum Festlegen von Gruppenrichtlinien für Domänencontroller finden Sie unter [Network security: LAN Manager authentication level (Netzwerksicherheit: LAN Manager-Authentifizierungsebene)](/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level).
 
 **Vorbeugung**
 
-* Stellen Sie sicher, dass alle Geräte in der Umgebung auf dem aktuellen Stand und für [CVE-2019-1040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040) gepatcht sind.
+- Stellen Sie sicher, dass alle Geräte in der Umgebung auf dem aktuellen Stand und für [CVE-2019-1040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040) gepatcht sind.
 
 ## <a name="suspected-ntlm-relay-attack-exchange-account-external-id-2037"></a>Vermuteter NTLM-Relaisangriff (Exchange-Konto) (externe ID 2037)
 
@@ -192,23 +209,28 @@ Sobald der Relaisserver die NTLM-Authentifizierung empfängt, wird eine Abfrage 
 
 Hierbei wird eine Warnung ausgelöst, wenn Azure ATP ermittelt, dass die Anmeldeinformationen eines Exchange-Kontos von einer verdächtigen Quelle verwendet werden.
 
+**Lernphase**
+
+Nicht zutreffend
+
 **TP, B-TP oder FP?**
 
 1. Überprüfen Sie die zur IP-Adresse gehörigen Quellcomputer.
     1. Wenn der Quellcomputer ein Exchange-Server ist, **schließen** Sie die Sicherheitswarnung als **FP-Aktivität**.
-    2. Legen Sie fest, ob das Quellkonto sich von diesen Computern aus über NTLM authentifizieren muss. Wenn das der Fall ist, **schließen** Sie die Sicherheitswarnung, und schließen Sie diese Computer als **B-TP-Aktivität** aus.
+    1. Legen Sie fest, ob das Quellkonto sich von diesen Computern aus über NTLM authentifizieren muss. Wenn das der Fall ist, **schließen** Sie die Sicherheitswarnung, und schließen Sie diese Computer als **B-TP-Aktivität** aus.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
 1. Setzen Sie die [Untersuchung der Quellcomputer](investigate-a-computer.md) mit den entsprechenden IP-Adressen fort.
-2. Untersuchen Sie das [Quellkonto](investigate-a-user.md).
+1. Untersuchen Sie das [Quellkonto](investigate-a-user.md).
 
 **Empfohlene Abhilfemaßnahmen und Schritte zur Vorbeugung**
 
 1. Isolieren Sie die Quellcomputer.
     1. Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
-    2. Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
-2. Erzwingen Sie die Verwendung der versiegelten NTLMv2-Authentifizierung in der Domäne, indem Sie die Gruppenrichtlinie **Netzwerksicherheit: LAN Manager-Authentifizierungsebene** verwenden. Weitere Informationen zum Festlegen von Gruppenrichtlinien für Domänencontroller finden Sie unter [Network security: LAN Manager authentication level (Netzwerksicherheit: LAN Manager-Authentifizierungsebene)](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level).
+    1. Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
+1. Erzwingen Sie die Verwendung der versiegelten NTLMv2-Authentifizierung in der Domäne, indem Sie die Gruppenrichtlinie **Netzwerksicherheit: LAN Manager-Authentifizierungsebene** verwenden. Weitere Informationen zum Festlegen von Gruppenrichtlinien für Domänencontroller finden Sie unter [Network security: LAN Manager authentication level (Netzwerksicherheit: LAN Manager-Authentifizierungsebene)](/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level).
+
 <!--
 ## Suspected overpass-the-hash attack (encryption downgrade) (external ID 2008)
 
@@ -220,6 +242,10 @@ Encryption downgrade is a method of weakening Kerberos using encryption downgrad
 
 In an over-pass-the-hash attack, an attacker can use a weak stolen hash to create a strong ticket, with a Kerberos AS request. In this detection,  instances are detected where the AS_REQ message encryption type from the source computer is downgraded, when compared to the previously learned behavior (the computer used AES).
 
+**Learning period**
+
+Not applicable
+
 **TP, B-TP, or FP?**
 
 1. Determine if the smartcard configuration recently changed.
@@ -229,34 +255,35 @@ In an over-pass-the-hash attack, an attacker can use a weak stolen hash to creat
 
 Some legitimate resources don't support strong encryption ciphers and may trigger this alert.
 
-2. Do all source users share something?
+1. Do all source users share something?
     1. For example, are all of your marketing personnel accessing a specific resource that could cause the alert to be triggered?
-    2. Check the resources accessed by those tickets.
+    1. Check the resources accessed by those tickets.
        - Check this in Active Directory by checking the attribute *msDS-SupportedEncryptionTypes*, of the resource service account.
-    3. If there is only one accessed resource, check if it is a valid resource for these users to access.
+    1. If there is only one accessed resource, check if it is a valid resource for these users to access.
 
       If the answer to one of the previous questions is **yes**, it is likely to be a **T-BP** activity. Check if the resource can support a strong encryption cipher, implement a stronger encryption cipher where possible, and **Close** the security alert.
 
 **Understand the scope of the breach**
 
 1. Investigate the [source computer](investigate-a-computer.md).
-2. Investigate the [compromised user](investigate-a-computer.md).
+1. Investigate the [compromised user](investigate-a-computer.md).
 
 **Suggested remediation and steps for prevention**
 
 **Remediation**
 
 1. Reset the password of the source user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-2. Contain the source computer.
-3. Find the tool that performed the attack and remove it.
-4. Look for users logged on around the time of the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
+1. Contain the source computer.
+1. Find the tool that performed the attack and remove it.
+1. Look for users logged on around the time of the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 
 **Prevention**
 
-1. Configure your domain to support strong encryption cyphers, and remove *Use Kerberos DES encryption types*. Learn more about [encryption types and Kerberos](https://blogs.msdn.microsoft.com/openspecification/2011/05/30/windows-configurations-for-kerberos-supported-encryption-type/).
-2. Make sure the domain functional level is set to support strong encryption cyphers.
-3. Give preference to using applications that support strong encryption cyphers.
+1. Configure your domain to support strong encryption cyphers, and remove *Use Kerberos DES encryption types*. Learn more about [encryption types and Kerberos](/archive/blogs/openspecification/windows-configurations-for-kerberos-supported-encryption-type).
+1. Make sure the domain functional level is set to support strong encryption cyphers.
+1. Give preference to using applications that support strong encryption cyphers.
 -->
+
 ## <a name="suspected-overpass-the-hash-attack-kerberos-external-id-2002"></a>Suspected overpass-the-hash attack (Kerberos) (Verdacht auf einen Overpass-the-Hash-Angriff (Kerberos)) (externalid 2002)
 
 *Vorheriger Name*: Ungewöhnliche Kerberos-Protokollimplementierung (potenzieller Overpass-the-Hash-Angriff)
@@ -265,36 +292,75 @@ Some legitimate resources don't support strong encryption ciphers and may trigge
 
 Angreifer verwenden Tools, die verschiedene Protokolle wie Kerberos und SMB auf nicht standardmäßige Arten implementieren. Während diese Art des Netzwerkdatenverkehrs von Microsoft Windows ohne Warnungen akzeptiert wird, kann Azure ATP potenziell böswillige Absichten erkennen. Das Verhalten weist auf Techniken hin, wie sie beispielsweise für Overpass-the-Hash, Brute-Force oder erweiterte Ransomware-Exploits, z. B. WannaCry, verwendet werden.
 
+**Lernphase**
+
+Nicht zutreffend
+
 **TP, B-TP oder FP?**
 
 Zuweilen implementieren Anwendungen einen eigenen Kerberos-Stapel, der nicht der Kerberos-RFC-Dokumentation entspricht.
 
 1. Überprüfen Sie, ob auf dem Quellcomputer eine Anwendung mit ihrem eigenen Kerberos-Stapel ausgeführt wird, und dies im Widerspruch zur Kerberos-RFC steht.
-2. Führt der Quellcomputer eine solche Anwendung aus, obwohl er dies **nicht** tun sollte, korrigieren Sie die Anwendungskonfiguration. **Schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität (unbedenklich richtig positiv).
-3. Führt der Quellcomputer eine solche Anwendung aus, und soll er das auch weiterhin tun, **schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität (unbedenklich richtig positiv), und schließen Sie diesen Computer aus.
+1. Führt der Quellcomputer eine solche Anwendung aus, obwohl er dies **nicht** tun sollte, korrigieren Sie die Anwendungskonfiguration. **Schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität (unbedenklich richtig positiv).
+1. Führt der Quellcomputer eine solche Anwendung aus, und soll er das auch weiterhin tun, **schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität (unbedenklich richtig positiv), und schließen Sie diesen Computer aus.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
 1. Untersuchen Sie den [Quellcomputer](investigate-a-computer.md).
-2. Wenn ein [Quellbenutzer](investigate-a-user.md) vorhanden ist, untersuchen Sie diesen.
+1. Wenn ein [Quellbenutzer](investigate-a-user.md) vorhanden ist, untersuchen Sie diesen.
 
 **Empfohlene Abhilfemaßnahmen und Schritte zur Vorbeugung**
 
 1. Setzen Sie die Kennwörter der kompromittierten Benutzer zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
-2. Kontrollieren Sie den Quellcomputer.
-3. Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
-4. Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der verdächtigen Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
-5. Setzen Sie die Kennwörter des Quellbenutzers zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
+1. Kontrollieren Sie den Quellcomputer.
+1. Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
+1. Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der verdächtigen Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
+1. Setzen Sie die Kennwörter des Quellbenutzers zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
 
 <!-- REMOVE BOOKMARK FROM TITLE WHEN PREVIEW REMOVED -->
 
-## <a name="suspected-smb-packet-manipulation-cve-2020-0796-exploitation---preview-external-id-2406"></a><a name="suspected-smb-packet-manipulation-cve-2020-0796-exploitation-external-id-2406"></a>Mutmaßliche Manipulation von SMB-Paketen (Exploit von CVE-2020-0796) (Vorschau) (externe ID 2406)
+<a name="suspected-smb-packet-manipulation-cve-2020-0796-exploitation-external-id-2406"></a>
+
+## <a name="suspected-rogue-kerberos-certificate-usage-external-id-2047"></a>Mutmaßliche Verwendung von Rogue-Kerberos-Zertifikat (externe ID 2047)
+
+**Beschreibung**
+
+Ein Rouge-Zertifikatsangriff ist eine Persistenztechnik, die von Angreifern verwendet wird, nachdem sie die Kontrolle über die Organisation erlangt haben. Angreifer kompromittieren den Zertifizierungsstellenserver (CA) und generieren Zertifikate, die in zukünftigen Angriffen als Hintertürkonten verwendet werden können.
+
+**Lernphase**
+
+Nicht zutreffend
+
+**TP, B-TP oder FP?**
+
+- Wird dieses Konto regelmäßig für die Anmeldung beim Computer verwendet?
+  - Wenn das Zertifikat regelmäßig vom Computer verwendet wird, **schließen** Sie die Warnung als **FP**-Aktivität.
+
+**Ermitteln des Umfangs der Sicherheitsverletzung**
+
+1. Untersuchen Sie den [Quellcomputer](investigate-a-computer.md).
+2. Untersuchen Sie den [Quellbenutzer](investigate-a-user.md).
+3. Überprüfen Sie, auf welche Ressourcen erfolgreich zugegriffen wurde, und [untersuchen](investigate-a-computer.md) Sie diese.
+
+**Empfohlene Abhilfemaßnahmen und Schritte zur Vorbeugung**
+
+1. Setzen Sie das Kennwort des Quellbenutzers zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
+1. Kontrollieren Sie den Quellcomputer.
+    - Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
+    - Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
+1. Suchen Sie das Zertifikat, das auf dem Zertifizierungsstellenserver verwendet wird, und widerrufen Sie es, indem Sie die TLS und SSL vor dem geplanten Ablaufdatum ungültig machen.
+
+## <a name="suspected-smb-packet-manipulation-cve-2020-0796-exploitation---preview-external-id-2406"></a>Mutmaßliche Manipulation von SMB-Paketen (Exploit von CVE-2020-0796) (Vorschau) (externe ID 2406)
 
 **Beschreibung**
 
 12.3.2020 Microsoft hat [CVE-2020-0796](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-0796) veröffentlicht und dabei angekündigt, dass ein neues Sicherheitsrisiko bei der Remotecodeausführung vorliegt, in der das Protokoll von Microsoft Server Message Block 3.1.1 (SMBv3) bestimmte Anforderungen verarbeitet. Ein Angreifer, der das Sicherheitsrisiko erfolgreich ausgenutzt hat, könnte die Möglichkeit erhalten, Code auf dem Zielserver oder -client auszuführen. Nicht gepatchte Windows-Server sind durch dieses Sicherheitsrisiko gefährdet.
 
 Bei dieser Erkennung wird eine Azure ATP-Sicherheitswarnung ausgelöst, wenn das SMBv3-Paket an einen Domänencontroller im Netzwerk gerichtet wird, der im Verdacht steht, die Sicherheitslücke CVE-2020-0796 auszunutzen.
+
+**Lernphase**
+
+Nicht zutreffend
 
 **TP, B-TP oder FP?**
 
@@ -304,16 +370,16 @@ Bei dieser Erkennung wird eine Azure ATP-Sicherheitswarnung ausgelöst, wenn das
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
 1. Untersuchen Sie den [Quellcomputer](investigate-a-computer.md).
-2. Untersuchen Sie den Zieldomänencontroller.
+1. Untersuchen Sie den Zieldomänencontroller.
 
 **Empfohlene Abhilfemaßnahmen und Schritte zur Vorbeugung**
 
 **Wartung**
 
 1. Kontrollieren Sie den Quellcomputer.
-2. Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
-3. Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der verdächtigen Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
-4. Wenn Sie über Computer mit Betriebssystemen verfügen, die [KB4551762](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4551762) nicht unterstützen, wird empfohlen, das SMBv3-Kompressionsfeature wie im Abschnitt zu [Problemumgehungen](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-0796) beschrieben in der Umgebung zu deaktivieren.
+1. Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
+1. Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der verdächtigen Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
+1. Wenn Sie über Computer mit Betriebssystemen verfügen, die [KB4551762](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4551762) nicht unterstützen, wird empfohlen, das SMBv3-Kompressionsfeature wie im Abschnitt zu [Problemumgehungen](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-0796) beschrieben in der Umgebung zu deaktivieren.
 
 **Vorbeugung**
 

@@ -1,6 +1,6 @@
 ---
 title: Tutorial zum Untersuchen eines Benutzers mit Azure ATP
-d|Description: This article explains how to user Azure ATP security alerts to investigate a suspicious user.
+description: In diesem Artikel wird erläutert, wie Sie Azure ATP-Sicherheitswarnungen verwenden, um einen verdächtigen Benutzer zu untersuchen.
 keywords: ''
 author: shsagir
 ms.author: shsagir
@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2bec6fbb12d78bbfd8dd04046f63df267391b1d1
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: cc9c825eb86e69caf3bef17a24194b8c8dfa0cf7
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79413416"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956702"
 ---
 # <a name="tutorial-investigate-a-user"></a>Tutorial: Untersuchen eines Benutzers
 
@@ -39,7 +39,7 @@ Azure ATP-Beweise für Warnungen und Lateral Movement-Pfade zeigen klar an, wenn
      2. Was ist seine Rolle innerhalb der Organisation?
      3. Ist er in der Organisationsstruktur wichtig?
 
-2. Zu [untersuchende](investigate-entity.md) verdächtige Aktivitäten:
+1. Zu [untersuchende](investigate-entity.md) verdächtige Aktivitäten:
      1. Hat der Benutzer weitere Warnungen in Azure ATP oder in anderen Sicherheitstools wie Windows Defender ATP, Azure Security Center und/oder Microsoft CAS geöffnet?
      2. Hatte der Benutzer fehlgeschlagene Anmeldungsversuche?
      3. Auf welche Ressourcen hat der Benutzer zugegriffen?  

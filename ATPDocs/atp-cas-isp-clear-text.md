@@ -5,42 +5,46 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 07/08/2019
-ms.topic: conceptual
+ms.date: 08/25/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 124957bb-5882-4fcf-bab2-b74b0c69571d
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f01d7bc5bb8913654047e070f67d4f1e011dd35a
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 39d6197327cf0bda8d3e09ac336781c004fe9c93
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84774365"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956736"
 ---
-# <a name="security-assessment-entities-exposing-credentials-in-clear-text"></a>Sicherheitsbewertung: Verfügbarmachen von Anmeldeinformationen in Klartext durch Entitäten 
+# <a name="security-assessment-entities-exposing-credentials-in-clear-text"></a>Sicherheitsbewertung: Verfügbarmachen von Anmeldeinformationen in Klartext durch Entitäten
 
 ![Verhindern von Risiken durch Anmeldeinformationen in Klartext in Cloud App Security](media/atp-cas-isp-clear-text-1.png)
 
-## <a name="what-information-does-the-prevent-clear-text-security-assessment-provide"></a>Welche Informationen stellt die Bewertung der Sicherheit von Klartextinformationen bereit? 
+## <a name="what-information-does-the-prevent-clear-text-security-assessment-provide"></a>Welche Informationen stellt die Bewertung der Sicherheit von Klartextinformationen bereit?
 
-Diese Sicherheitsbewertung überwacht Ihren Datenverkehr auf jegliche Entitäten, die Anmeldeinformationen in Klartext verfügbar machen, sendet Ihnen Warnungen zu den aktuellen Risiken (den am stärksten betroffenen Entitäten) in Ihrer Organisation und empfiehlt Maßnahmen zur Beseitigung der Risiken. 
+Diese Sicherheitsbewertung überwacht Ihren Datenverkehr auf jegliche Entitäten, die Anmeldeinformationen in Klartext verfügbar machen, sendet Ihnen Warnungen zu den aktuellen Risiken (den am stärksten betroffenen Entitäten) in Ihrer Organisation und empfiehlt Maßnahmen zur Beseitigung der Risiken.
 
-## <a name="why-is-clear-text-credential-exposure-risky"></a>Warum bergen Anmeldeinformationen in Klartext ein Risiko?  
-Entitäten, die Anmeldeinformationen in Klartext verfügbar machen, stellen nicht nur für die fragliche Entität ein Risiko dar, sondern für Ihre gesamte Organisation.  
+## <a name="why-is-clear-text-credential-exposure-risky"></a>Warum bergen Anmeldeinformationen in Klartext ein Risiko?
 
-Das erhöhte Risiko liegt darin begründet, dass unsicherer Datenverkehr wie z.B. einfache LDAP-Bindungen hochgradig anfällig für Abfangaktionen durch Man-in-the-Middle-Angriffe sind. Diese Arten von Angriffen ziehen schädliche Aktivitäten nach sich, beispielsweise die Offenlegung von Anmeldeinformationen, die von einem Angreifer genutzt werden können, um Ihrer Organisation zu schaden. 
+Entitäten, die Anmeldeinformationen in Klartext verfügbar machen, stellen nicht nur für die fragliche Entität ein Risiko dar, sondern für Ihre gesamte Organisation.
 
-## <a name="how-do-i-use-this-security-assessment-to-improve-my-organizational-security-posture"></a>Wie wird diese Sicherheitsbewertung verwendet, um den Sicherheitsstatus meiner Organisation zu verbessern? 
+Das erhöhte Risiko liegt darin begründet, dass unsicherer Datenverkehr wie z.B. einfache LDAP-Bindungen hochgradig anfällig für Abfangaktionen durch Man-in-the-Middle-Angriffe sind. Diese Arten von Angriffen ziehen schädliche Aktivitäten nach sich, beispielsweise die Offenlegung von Anmeldeinformationen, die von einem Angreifer genutzt werden können, um Ihrer Organisation zu schaden.
 
-1. Sehen Sie sich die Sicherheitsbewertung für betroffene Entitäten an. 
+## <a name="how-do-i-use-this-security-assessment-to-improve-my-organizational-security-posture"></a>Wie wird diese Sicherheitsbewertung verwendet, um den Sicherheitsstatus meiner Organisation zu verbessern?
+
+1. Sehen Sie sich die Sicherheitsbewertung für betroffene Entitäten an.
     ![Überprüfen der wichtigsten betroffenen Entitäten und Erstellen eines Aktionsplans](media/atp-cas-isp-clear-text-2.png)
-1. Finden Sie heraus, warum diese Entitäten LDAP in Klartext verwenden. 
-1. Beheben Sie die Probleme, und beenden Sie die Offenlegung dieser Informationen. 
-1. Nachdem Sie sich vergewissert haben, dass das Problem behoben ist, empfiehlt es sich, LDAP-Signaturen auf Domänencontrollerebene als erforderlich festzulegen. Weitere Informationen über das Signieren auf LDAP-Servern finden Sie unter [Domänencontroller: Signaturanforderungen für LDAP-Server](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/domain-controller-ldap-server-signing-requirements). 
- 
+1. Finden Sie heraus, warum diese Entitäten LDAP in Klartext verwenden.
+1. Beheben Sie die Probleme, und beenden Sie die Offenlegung dieser Informationen.
+1. Nachdem Sie sich vergewissert haben, dass das Problem behoben ist, empfiehlt es sich, LDAP-Signaturen auf Domänencontrollerebene als erforderlich festzulegen. Weitere Informationen über das Signieren auf LDAP-Servern finden Sie unter [Domänencontroller: Signaturanforderungen für LDAP-Server](/windows/security/threat-protection/security-policy-settings/domain-controller-ldap-server-signing-requirements).
+
+> [!NOTE]
+> Diese Bewertung wird nahezu in Echtzeit aktualisiert.
 
 ## <a name="next-steps"></a>Nächste Schritte
+
 - [Azure ATP-Aktivitätsfilter in Cloud App Security](atp-activities-filtering-mcas.md)
 - [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)

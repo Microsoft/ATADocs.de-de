@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 04/30/2020
-ms.topic: conceptual
+ms.date: 08/25/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 2fe62047-75ef-4b2e-b4aa-72860e39b4e4
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f10756f3b5fc009e2bd37fff9eff04d1c5c41585
-ms.sourcegitcommit: 073154998f5fdfbefe276888ffb034dfce368662
+ms.openlocfilehash: 1d6c8c98e8262190311814520cb3522c7c559953
+ms.sourcegitcommit: 098a20abe62e153372da4c96db256bc63c113bd1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85256268"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88808936"
 ---
 # <a name="security-assessment-unsecure-sid-history-attributes"></a>Sicherheitsbewertung: Unsichere SID-Verlaufsattribute
 
@@ -52,6 +52,9 @@ Beispielsweise kann ein nicht sensibles Konto in einer Domäne die SID des Unter
         ```powershell
         Set-ADUser -Identity <account> -Remove @{SIDHistory='S-1-5-21-...'}
         ```
+
+> [!NOTE]
+> Diese Bewertung wird nahezu in Echtzeit aktualisiert.
 
 ## <a name="see-also"></a>Weitere Informationen
 

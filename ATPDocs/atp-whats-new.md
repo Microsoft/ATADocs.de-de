@@ -6,17 +6,17 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 07/26/2020
-ms.topic: conceptual
+ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 04dc432ebdee36b80b995ed1f19c5e1b0ee91dca
-ms.sourcegitcommit: 2ff8079d3ad8964887c1d0d1414c84199ba208bb
+ms.openlocfilehash: 63305431d37e1d73c37c9e7b1693d1adb2e9b7af
+ms.sourcegitcommit: 275e2b084fd7dd7cac2e0d07b0b244318aac7475
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88793357"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89245844"
 ---
 # <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Neuerungen in Azure Advanced Threat Protection (Azure ATP)
 
@@ -25,6 +25,22 @@ Dieser Artikel wird häufig aktualisiert, um Sie über die Neuerungen in der akt
 Ausführliche Informationen zu früheren Azure ATP-Versionen bis (und einschließlich von) Version 2.55 finden Sie in der [Azure ATP-Versionsreferenz](atp-release-reference.md).
 
 RSS-Feed: Lassen Sie sich benachrichtigen, wenn diese Seite aktualisiert wird, indem Sie die folgende URL kopieren und in Ihren Feedreader einfügen: `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
+
+## <a name="azure-atp-release-2124"></a>Azure ATP-Release 2.124
+
+Veröffentlicht: 30. August 2020
+
+- **Neue Sicherheitswarnungen**  
+Azure ATP-Sicherheitswarnungen umfassen jetzt die folgenden neuen Erkennungen:
+  - **Active Directory-Attributreconnaissance (LDAP) (externe ID 2210)**  
+Bei dieser Erkennung wird eine Azure ATP-Sicherheitswarnung ausgelöst, wenn der Verdacht besteht, dass ein Angreifer erfolgreich kritische Informationen über die Domäne erlangt hat und in seiner Kill Chain für den Angriff verwendet. Weitere Informationen finden Sie unter [Tutorial: Warnungen zu Reconnaissance](atp-reconnaissance-alerts.md#active-directory-attributes-reconnaissance-ldap-external-id-2210).
+  - **Mutmaßliche Verwendung von Rogue-Kerberos-Zertifikat (externe ID 2047)**  
+Bei dieser Erkennung wird eine Azure ATP-Sicherheitswarnung ausgelöst, wenn vermutet wird, dass ein Angreifer, der durch Kompromittierung des Zertifizierungsstellenservers die Kontrolle über das Unternehmen erlangt hat, Zertifikate generiert, die als Hintertürkonten in zukünftigen Angriffen (z. B. schnelles Vordringen in Ihrem Netzwerk) verwendet werden können. Weitere Informationen finden Sie unter [Tutorial: Lateral Movement-Warnungen](atp-lateral-movement-alerts.md#suspected-rogue-kerberos-certificate-usage-external-id-2047).
+  - **Vermutete Golden Ticket-Verwendung (Ticketanomalie mithilfe von RBCD) (externe ID 2040)**  
+Angreifer mit Domänenadministratorrechten können das KRBTGT-Konto beeinträchtigen. Angreifer können das KRBTGT-Konto verwenden, um ein Kerberos Ticket Granting Ticket (TGT) zu erstellen, das die Autorisierung für jede beliebige Ressource bietet.  
+Ein gefälschtes TGT wird als „Golden Ticket“ bezeichnet, da Angreifer mithilfe der ressourcenbasierten eingeschränkten Delegierung damit dauerhafte Netzwerkpersistenz erlangen. Gefälschte Golden Tickets dieses Typs weisen eindeutige Merkmale auf, für deren Identifikation diese neue Erkennung konzipiert ist.
+Weitere Informationen finden Sie unter [Vermutete Golden Ticket-Verwendung (Ticketanomalie mithilfe von RBCD)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-ticket-anomaly-using-rbcd-external-id-2040).
+- Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
 ## <a name="azure-atp-release-2123"></a>Azure ATP-Release 2.123
 
@@ -203,7 +219,7 @@ Veröffentlicht am 23. Dezember 2019
 Azure ATP-Sensorbereitstellungs- und -Sensorinstallationspakete laufen nicht mehr nach einer Reihe von Versionen ab und werden nur einmal automatisch aktualisiert. Das Ergebnis dieses Features ist, dass bereits heruntergeladene Sensorinstallationspakete auch dann installiert werden können, wenn sie älter sind als unsere maximale Anzahl abgelaufener Versionen.
 
 - **Kompromittierung bestätigen**  
-Sie können jetzt die Kompromittierung bestimmter Office 365-Benutzer bestätigen und deren Risikostufe auf **hoch**festlegen. Dieser Workflow bietet Ihren Sicherheitsbetriebsteams eine andere Reaktionsfunktion, um die Schwellenwerte für die Zeit bis zum Auflösen von Sicherheitsvorfällen zu reduzieren. Erfahren Sie mehr über das [Bestätigen von Kompromittierungen](https://docs.microsoft.com/cloud-app-security/tutorial-ueba?branch=pr-en-us-1204#phase-4-protect-your-organization) mithilfe von Azure ATP und Cloud App Security.
+Sie können jetzt die Kompromittierung bestimmter Microsoft 365-Benutzer bestätigen und deren Risikostufe auf **hoch** festlegen. Dieser Workflow bietet Ihren Sicherheitsbetriebsteams eine andere Reaktionsfunktion, um die Schwellenwerte für die Zeit bis zum Auflösen von Sicherheitsvorfällen zu reduzieren. Erfahren Sie mehr über das [Bestätigen von Kompromittierungen](/cloud-app-security/tutorial-ueba?branch=pr-en-us-1204#phase-4-protect-your-organization) mithilfe von Azure ATP und Cloud App Security.
 
 - **Banner zu neuen Funktionen**  
 Auf Azure ATP-Portalseiten, auf denen eine neue Funktion im Cloud App Security-Portal verfügbar ist, werden neue Banner mit Beschreibungen und Zugriffslinks zu den verfügbaren Funktionen angezeigt.
@@ -285,13 +301,13 @@ Veröffentlicht: 8. September 2019
 
 Veröffentlicht: 1. September 2019
 
--   Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
+- Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
 ## <a name="azure-atp-release-292"></a>Azure ATP Release 2.92
 
 Veröffentlicht: 25. August 2019
 
--   Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
+- Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
 ## <a name="azure-atp-release-291"></a>Azure ATP Release 2.91
 
@@ -348,7 +364,7 @@ Bisher hat Azure ATP Entitätsinformationen zum Betriebssystem des Geräts berei
     Durch das Hinzufügen von Daten der erweiterten Methoden zur Identifizierung des Gerätebetriebsystems können nicht registrierte und Nicht-Windows-Geräte identifiziert werden, sodass der Untersuchungsprozess gleichzeitig vereinfacht wird. Weitere Informationen zur Netzwerknamensauflösung in Azure ATP finden Sie unter [Was ist Netzwerknamensauflösung?](atp-nnr-policy.md).  
 
 - **Neues Feature: Authentifizierter Proxy (Vorschauversion)**  
-Azure ATP unterstützt nun authentifizierte Proxys. Geben Sie die Proxy-URL über die Befehlszeile des Sensors ein, und geben Sie den Benutzernamen und das Kennwort an, um Proxys zu verwenden, für die eine Authentifizierung erforderlich ist. Weitere Informationen zur Verwendung authentifizierter Proxys finden Sie unter [Konfigurieren des Proxys](https://docs.microsoft.com/azure-advanced-threat-protection/configure-proxy#configure-the-proxy).
+Azure ATP unterstützt nun authentifizierte Proxys. Geben Sie die Proxy-URL über die Befehlszeile des Sensors ein, und geben Sie den Benutzernamen und das Kennwort an, um Proxys zu verwenden, für die eine Authentifizierung erforderlich ist. Weitere Informationen zur Verwendung authentifizierter Proxys finden Sie unter [Konfigurieren des Proxys](configure-proxy.md).
 
 - **Featureerweiterung: automatisierter Domänensynchronisierungsprozess**  
 Der Prozess zum Festlegen und Markieren von Domänencontrollern als Kandidaten für Domänensynchronizer während des Setups und der folgenden Konfiguration ist nun vollständig automatisiert. Die Umschaltoption für die manuelle Auswahl von Domänencontroller als Kandidaten für Domänensynchronizer wurde entfernt.
@@ -366,13 +382,13 @@ Veröffentlicht: 7. Juli 2019
 Veröffentlicht: 1. Juli 2019
 
 - **Unterstützung für neuen Standort: Azure UK-Rechenzentrum**  
-Azure ATP-Instanzen werden jetzt im Azure UK-Rechenzentrum unterstützt. Weitere Informationen zum Erstellen von Azure ATP-Instanzen und den entsprechenden Rechenzentrumsstandorten finden Sie unter [Step 1 of Azure ATP installation (Azure ATP-Installation – Schritt 1)](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step1).
+Azure ATP-Instanzen werden jetzt im Azure UK-Rechenzentrum unterstützt. Weitere Informationen zum Erstellen von Azure ATP-Instanzen und den entsprechenden Rechenzentrumsstandorten finden Sie unter [Step 1 of Azure ATP installation (Azure ATP-Installation – Schritt 1)](install-atp-step1.md).
 
 - **Featureerweiterung: Neuer Name und neue Features für die Warnungen bei verdächtigen Hinzufügungen zu sensiblen Gruppen (externe ID 2024)**  
-Die Warnung **Suspicious additions to sensitive groups (Verdächtige Hinzufügungen zu sensiblen Gruppen)** lautete ursprünglich **Suspicious modifications to sensitive groups (Verdächtige Änderungen an sensiblen Gruppen)** . Die externe ID der Warnung (ID 2024) hat sich nicht geändert. Durch die beschreibende Namensänderung wird der Zweck der Warnung bei Ergänzungen zu Ihren **sensiblen** Gruppen genauer wiedergespiegelt. Die verbesserte Warnung enthält auch neue Beweise und verbesserte Beschreibungen. Weitere Informationen finden Sie unter [Suspicious additions to sensitive groups (Verdächtige Hinzufügungen zu sensiblen Gruppen)](https://docs.microsoft.com/azure-advanced-threat-protection/atp-domain-dominance-alerts#suspicious-additions-to-sensitive-groups-external-id-2024).  
+Die Warnung **Suspicious additions to sensitive groups (Verdächtige Hinzufügungen zu sensiblen Gruppen)** lautete ursprünglich **Suspicious modifications to sensitive groups (Verdächtige Änderungen an sensiblen Gruppen)** . Die externe ID der Warnung (ID 2024) hat sich nicht geändert. Durch die beschreibende Namensänderung wird der Zweck der Warnung bei Ergänzungen zu Ihren **sensiblen** Gruppen genauer wiedergespiegelt. Die verbesserte Warnung enthält auch neue Beweise und verbesserte Beschreibungen. Weitere Informationen finden Sie unter [Suspicious additions to sensitive groups (Verdächtige Hinzufügungen zu sensiblen Gruppen)](atp-domain-dominance-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024).  
 
 - **Neues Dokumentationsfeature: Anleitung zum Verschieben von Advanced Threat Analytics zu Azure ATP**  
-In diesem neuen Artikel finden Sie Informationen zu Voraussetzungen, Tipps zur Planung sowie Konfigurations- und Überprüfungsschritte für das Verschieben von ATA zum Azure ATP-Dienst. Weitere Informationen finden Sie unter [Verschieben von ATA zu Azure ATP](https://docs.microsoft.com/azure-advanced-threat-protection/ata-atp-move-overview).
+In diesem neuen Artikel finden Sie Informationen zu Voraussetzungen, Tipps zur Planung sowie Konfigurations- und Überprüfungsschritte für das Verschieben von ATA zum Azure ATP-Dienst. Weitere Informationen finden Sie unter [Verschieben von ATA zu Azure ATP](ata-atp-move-overview.md).
 
 - Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
@@ -381,7 +397,7 @@ In diesem neuen Artikel finden Sie Informationen zu Voraussetzungen, Tipps zur P
 Veröffentlicht: 23. Juni 2019
 
 - **Featureerweiterung: Warnung aufgrund verdächtiger Diensterstellung (externe ID 2026)**  
-Diese Warnung enthält jetzt eine verbesserte Warnungsseite mit zusätzlichen Beweisen und einer neue Beschreibung. Weitere Informationen finden Sie unter [Suspicious service creation security alert (Warnung aufgrund verdächtiger Diensterstellung)](https://docs.microsoft.com/azure-advanced-threat-protection/atp-domain-dominance-alerts#suspicious-service-creation-external-id-2026).
+Diese Warnung enthält jetzt eine verbesserte Warnungsseite mit zusätzlichen Beweisen und einer neue Beschreibung. Weitere Informationen finden Sie unter [Suspicious service creation security alert (Warnung aufgrund verdächtiger Diensterstellung)](atp-domain-dominance-alerts.md#suspicious-service-creation-external-id-2026).
 
 - **Unterstützung für die Benennung von Instanzen: Unterstützung wurde für Domänenpräfixe hinzugefügt, die nur aus Ziffern bestehen**  
 Die Erstellung von Azure ATP-Instanzen unter Verwendung von Domänenanfangspräfixen, die nur aus Ziffern bestehen, wird jetzt unterstützt. Anfangspräfixe für Domänen, die nur Ziffern enthalten, wie z. B. 123456.contoso.com, können durch die Unterstützung verwendet werden.

@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 07/08/2019
-ms.topic: conceptual
+ms.date: 08/25/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 1a7d9525-8923-4dae-af51-02a68aa61644
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3f7e6e4ad8c70e25c0b63ea17aaa8f45d4376ef9
-ms.sourcegitcommit: b2b40be9ac76237c3d6b2beb06eabd92e0b399c8
+ms.openlocfilehash: c01770ca3f115a3ba445f669ec1c0db25a322721
+ms.sourcegitcommit: 098a20abe62e153372da4c96db256bc63c113bd1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87293169"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88809157"
 ---
 # <a name="security-assessment-domain-controllers-with-print-spooler-service-available"></a>Sicherheitsbewertung: Domänencontroller mit verfügbarem Druckspoolerdienst
 
@@ -44,6 +44,9 @@ Diese Sicherheitsbewertung konzentriert sich zwar auf Domänencontroller, aber p
 
     ![Sicherheitsbewertung: Deaktivierung des Druckspoolerdiensts](media/atp-cas-isp-print-spooler-2.png)
 1. Führen Sie auf dem Domänencontroller, der diesem Risiko ausgesetzt ist, entsprechende Maßnahmen durch, und entfernen Sie den Druckspoolerdienst aktiv – entweder manuell oder über ein GPO oder andere Arten von Remotebefehlen.
+
+> [!NOTE]
+> Diese Bewertung wird nahezu in Echtzeit aktualisiert.
 
 ## <a name="remediation"></a>Wartung
 

@@ -1,6 +1,6 @@
 ---
 title: Tutorial zum Untersuchen eines Computers mit Azure ATP
-d|Description: This article explains how to use Azure ATP security alerts to investigate a suspicious computer.
+description: In diesem Artikel wird erläutert, wie Sie Azure ATP-Sicherheitswarnungen verwenden, um einen verdächtigen Computer zu untersuchen.
 keywords: ''
 author: shsagir
 ms.author: shsagir
@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 038b31aa221f2807a149998e657065289a82c4a3
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: 26549610e7a9dc2ec81a785e3900259ba7cfa563
+ms.sourcegitcommit: af91810bb220ff8ba90569d87c718a63bdc52d94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80669495"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88807574"
 ---
 # <a name="tutorial-investigate-a-computer"></a>Tutorial: Untersuchen eines Computers
 

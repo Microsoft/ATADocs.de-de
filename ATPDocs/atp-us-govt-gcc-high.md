@@ -6,17 +6,17 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 02/18/2020
-ms.topic: conceptual
+ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 84d995e82cb6b3a5f0536e9587a19613d62a576e
-ms.sourcegitcommit: bfb5f35f8e2f19911357e5afa6624ffe43e37d12
+ms.openlocfilehash: 594349e9bd92647852dfe0005c153f6cd4878363
+ms.sourcegitcommit: 41ff03f766cd361b5167ff946e4c655f4fb67143
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86472474"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88895753"
 ---
 # <a name="azure-atp-for-us-government-gcc-high"></a>Azure ATP GCC High für die US-Regierung
 
@@ -24,7 +24,7 @@ Das Azure ATP GCC High-Angebot nutzt dieselben zugrunde liegenden Technologien u
 
 ## <a name="get-started-with-us-government-gcc-high"></a>Erste Schritte mit GCC High für die US-Regierung
 
-Das Azure ATP GCC High-Angebot basiert auf der Microsoft Azure Government-Cloud und bietet Interoperabilität mit Office 365 GCC High. Verwenden Sie die öffentliche Azure ATP-Dokumentation als [Ausgangspunkt](install-atp-step1.md) zum Bereitstellen und Betreiben des Diensts, und informieren Sie sich in der [Dienstbeschreibung](/enterprise-mobility-security/solutions/ems-azure-atp-govt-service-description), in der alle für die GCC High-Umgebung spezifischen Änderungen von Funktionalität oder Features ausführlich erläutert werden.  
+Das Azure ATP GCC High-Angebot basiert auf der Microsoft Azure Government-Cloud und bietet Interoperabilität mit Microsoft 365 GCC High. Verwenden Sie die öffentliche Azure ATP-Dokumentation als [Ausgangspunkt](install-atp-step1.md) zum Bereitstellen und Betreiben des Diensts, und informieren Sie sich in der [Dienstbeschreibung](/enterprise-mobility-security/solutions/ems-azure-atp-govt-service-description), in der alle für die GCC High-Umgebung spezifischen Änderungen von Funktionalität oder Features ausführlich erläutert werden.  
 
 ## <a name="next-steps"></a>Nächste Schritte
 

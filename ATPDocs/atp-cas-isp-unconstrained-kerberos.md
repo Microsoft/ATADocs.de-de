@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 09/15/2019
-ms.topic: conceptual
+ms.date: 08/25/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 7eea354b-7a50-40d9-bfa7-dcccaef23179
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0c8465acbba8d23414eb0abd9224e5619a1d51c3
-ms.sourcegitcommit: 9bf5ddd9636ce1bc99d6e4308ef2d70b7abdc836
+ms.openlocfilehash: 2eb998eae7c0c6608babbb423f73a608dcd3a633
+ms.sourcegitcommit: 098a20abe62e153372da4c96db256bc63c113bd1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87385971"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88809106"
 ---
 # <a name="security-assessment-unsecure-kerberos-delegation"></a>Sicherheitsbewertung: Unsichere Kerberos-Delegierung
 
@@ -43,6 +43,9 @@ Nachfolgend finden Sie eine Beschreibung des Risikos, das von verschiedenen Dele
 
     ![Sicherheitsbewertung: unsichere Kerberos-Delegierung](media/atp-cas-isp-kerberos-delegation-2.png)
 1. Führen Sie für Benutzer, die einem Risiko ausgesetzt sind, entsprechende Maßnahmen durch: Entfernen Sie beispielsweise das Attribut für die uneingeschränkte Delegierung, oder richten Sie eine sicherere eingeschränkte Delegierung ein.
+
+> [!NOTE]
+> Diese Bewertung wird alle 24 Stunden aktualisiert.
 
 ## <a name="remediation"></a>Wartung
 

@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 02/17/2020
-ms.topic: conceptual
+ms.date: 08/25/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 2fe62047-75ef-4b2e-b4aa-72860e39b4e4
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b0494ca5dfbc4f5dde2c31423b3e17fdd2ef33df
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 878f251c1f2936a9207dc351adc9ae5680abe3c4
+ms.sourcegitcommit: 098a20abe62e153372da4c96db256bc63c113bd1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84774127"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88809055"
 ---
 # <a name="security-assessment-unmonitored-domain-controllers"></a>Sicherheitsbewertung: Nicht überwachte Domänencontroller
 
@@ -36,6 +36,9 @@ Für maximale Effizienz müssen alle Domänencontroller mit Azure ATP-Sensoren �
 1. Anhand der Berichtstabelle können Sie ermitteln, welche Ihrer Domänencontroller nicht überwacht werden.
     ![Bereitstellen von Sensoren auf nicht überwachten Domänencontrollern](media/atp-cas-isp-unmonitored-domain-controller-1.png)
 1. Führen Sie auf den betroffenen Domänencontrollern entsprechende Maßnahmen durch, indem Sie [Überwachungssensoren installieren und konfigurieren](atp-sensor-monitoring.md#domain-controller-status).
+
+> [!NOTE]
+> Diese Bewertung wird nahezu in Echtzeit aktualisiert.
 
 ## <a name="see-also"></a>Weitere Informationen
 

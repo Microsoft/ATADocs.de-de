@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 05/20/2020
-ms.topic: conceptual
+ms.date: 08/25/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 2fe62047-75ef-4b2e-b4aa-72860e39b4e4
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a8829ed9f1cb13ba86f940ceff0c60428bea5210
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: f9e322e831b2c5e7b9852ce0889aafff6dffde8f
+ms.sourcegitcommit: 098a20abe62e153372da4c96db256bc63c113bd1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84774348"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88809208"
 ---
 # <a name="security-assessment-microsoft-laps-usage"></a>Sicherheitsbewertung: Verwendung von Microsoft LAPS
 
@@ -38,6 +38,9 @@ LAPS vereinfacht die Kennwortverwaltung und hilft Kunden dabei, zusätzliche emp
     ![Auswählen von Domänen mit LAPS-Geräten](media/atp-cas-isp-laps-1.png)
 1. Ergreifen Sie entsprechende Maßnahmen auf diesen Geräten, indem Sie [Microsoft LAPS](https://go.microsoft.com/fwlink/?linkid=2104282) mithilfe der unter Download bereitgestellten Dokumentation herunterladen, installieren oder konfigurieren oder eine Problembehandlung durchführen.
     ![Wiederherstellen von LAPS-Geräten](media/atp-cas-isp-laps-2.png)
+
+> [!NOTE]
+> Diese Bewertung wird alle 24 Stunden aktualisiert.
 
 ## <a name="see-also"></a>Weitere Informationen
 

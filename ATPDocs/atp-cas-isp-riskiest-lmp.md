@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 06/23/2020
-ms.topic: conceptual
+ms.date: 08/25/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 2fe62047-75ef-4b2e-b4aa-72860e39b4e4
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 85e14135fed9a36279fbf615618f614e71ef9c18
-ms.sourcegitcommit: 2b8b727b11227aa6b665ba9e02ffa700a2dc33c6
+ms.openlocfilehash: 301dc36032950733784b928198fa5b092ccd6f10
+ms.sourcegitcommit: 098a20abe62e153372da4c96db256bc63c113bd1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85516909"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88809089"
 ---
 # <a name="security-assessment-riskiest-lateral-movement-paths-lmp"></a>Sicherheitsbewertung: Lateral-Movement-Pfade mit dem höchsten Risiko
 
@@ -48,6 +48,9 @@ Beispielsweise sind die riskanten Pfade leichter für Angreifer sichtbar und kö
 
     > [!NOTE]
     > Warten Sie 24 Stunden, und überprüfen Sie dann, ob die Empfehlung nicht mehr in der Liste angezeigt wird.
+
+> [!NOTE]
+> Diese Bewertung wird alle 24 Stunden aktualisiert.
 
 ## <a name="see-also"></a>Weitere Informationen
 

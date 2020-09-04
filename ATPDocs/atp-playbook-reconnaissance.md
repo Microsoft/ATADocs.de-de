@@ -2,17 +2,17 @@
 title: Tutorial für das Playbook zu Azure ATP-Reconnaissance
 description: Im Tutorial für das Playbook zu Azure ATP-Reconnaissance wird das Simulieren von Reconnaissancebedrohungen für die Erkennung durch Azure ATP beschrieben.
 ms.service: azure-advanced-threat-protection
-ms.topic: tutorial
+ms.topic: how-to
 author: shsagir
 ms.author: shsagir
 ms.date: 09/01/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: e3a7f4553635ec2af2aec6bda10802f776b7e543
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: 2d62d765acf440b39c162bfbab1ad101cb572345
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80669622"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88955224"
 ---
 # <a name="tutorial-reconnaissance-playbook"></a>Tutorial: Playbook zu Reconnaissance
 
@@ -111,9 +111,9 @@ Alle authentifizierten Benutzer oder Computer können potenziell andere Benutzer
 
    Die Ausgabe zeigt alle Benutzer in der Domäne Contoso.Azure.
 
-   ![Auflisten aller Benutzer in der Domäne](media/playbook-recon-dsenumeration-netusers.png)
+    ![Auflisten aller Benutzer in der Domäne](media/playbook-recon-dsenumeration-netusers.png)
 
-2. Probieren Sie, alle Gruppen in der Domäne aufzulisten. Führen Sie den folgenden Befehl aus:
+1. Probieren Sie, alle Gruppen in der Domäne aufzulisten. Führen Sie den folgenden Befehl aus:
 
     ``` cmd
     net group /domain
@@ -121,19 +121,19 @@ Alle authentifizierten Benutzer oder Computer können potenziell andere Benutzer
 
    Die Ausgabe zeigt alle Gruppen in der Domäne Contoso.Azure. Beachten Sie die eine Sicherheitsgruppe, die keine Standardgruppe ist: **Helpdesk**.
 
-   ![Auflisten aller Gruppen in der Domäne](media/playbook-recon-dsenumeration-netgroups.png)
+    ![Auflisten aller Gruppen in der Domäne](media/playbook-recon-dsenumeration-netgroups.png)
 
-3. Versuchen Sie nun, nur die Domänen-Admins-Gruppe aufzulisten. Führen Sie den folgenden Befehl aus:
+1. Versuchen Sie nun, nur die Domänen-Admins-Gruppe aufzulisten. Führen Sie den folgenden Befehl aus:
 
     ``` cmd
     net group "Domain Admins" /domain
     ```
 
-   ![Auflisten aller Mitglieder der Gruppe „Domänen-Admins“](media/playbook-recon-dsenumeration-netdomainadmins.png)
+    ![Auflisten aller Mitglieder der Gruppe „Domänen-Admins“](media/playbook-recon-dsenumeration-netdomainadmins.png)
 
     Als Angreifer haben wir gelernt, dass es zwei Mitglieder der Gruppe „Domänen-Admins“ gibt: **SamiraA** und **ContosoAdmin** (integrierter Administrator für den Domänencontroller). Wissend, dass keine Sicherheitsgrenze zwischen unserer Domäne und der Gesamtstruktur vorhanden ist, versuchen Sie im nächsten Schritt, die Organisations-Admins aufzulisten.
 
-4. Um zu versuchen, Organisations-Admins aufzulisten, führen Sie den folgenden Befehl aus:
+1. Um zu versuchen, Organisations-Admins aufzulisten, führen Sie den folgenden Befehl aus:
 
     ``` cmd
    net group "Enterprise Admins" /domain
@@ -141,7 +141,7 @@ Alle authentifizierten Benutzer oder Computer können potenziell andere Benutzer
 
    Wir haben gelernt, dass es nur einen Organisations-Admin gibt, und zwar ContosoAdmin. Diese Information war nicht wichtig, da wir bereits wussten, dass es keine Sicherheitsbegrenzung zwischen unserer Domäne und der Gesamtstruktur gibt.
 
-   ![Organisations-Admins in der Domäne aufgelistet](media/playbook-recon-dsenumeration-netenterpriseadmins.png)
+    ![Organisations-Admins in der Domäne aufgelistet](media/playbook-recon-dsenumeration-netenterpriseadmins.png)
 
 Dank der im Rahmen unserer Reconnaissance gesammelten Informationen kennen wir nun die Sicherheitsgruppe „Helpdesk“. Diese Information ist *noch* nicht interessant. Wir wissen auch, dass **SamiraA** Mitglied der Gruppe „Domänen-Admins“ ist. Wenn wir die Anmeldeinformationen von SamiraA stehlen können, können wir auf den Domänencontroller selbst zugreifen.
 
@@ -157,7 +157,7 @@ Wir können sehen, wann JeffL sich bei VictimPC mithilfe des Kerberos-Protokolls
 
 ![Die Zeitachse logischer Aktivitäten von JeffL](media/playbook-recon-dsenumeration-jeffvlogicalactivity.png)
 
-Viele Aktivitäten werden in der Zeitachse logischer Aktivitäten protokolliert, sodass ihr eine wichtige Funktion bei der DFIR-Ausführung (Digital Forensics and Incident Response) zukommt. Sie können auch Aktivitäten sehen, wenn die anfängliche Erkennung nicht durch Azure ATP, sondern Microsoft Defender ATP, Office 365 und andere erfolgte.
+Viele Aktivitäten werden in der Zeitachse logischer Aktivitäten protokolliert, sodass ihr eine wichtige Funktion bei der DFIR-Ausführung (Digital Forensics and Incident Response) zukommt. Sie können auch Aktivitäten anzeigen, wenn die anfängliche Erkennung nicht durch Azure ATP, sondern Microsoft Defender ATP, Microsoft 365 und andere erfolgte.
 
 Bei einem Blick auf die **ContosoDC-Seite** sehen wir auch die Computer, bei denen JeffL angemeldet ist.
 

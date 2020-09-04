@@ -6,24 +6,24 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 07/01/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 397e5a77-2bc7-454c-9fe5-649ebaab16b3
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ef0bf221024e13269881206d732d45ef8a6e3828
-ms.sourcegitcommit: bfb5f35f8e2f19911357e5afa6624ffe43e37d12
+ms.openlocfilehash: fc3032c9964a4e4e887dfedf01e57649d3bf2358
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86472347"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88955971"
 ---
 # <a name="use-activity-filters-and-create-action-policies-with-azure-atp-in-microsoft-cloud-app-security"></a>Verwenden von Aktivitätsfiltern und Erstellen von Aktionsrichtlinien mit Azure ATP in Microsoft Cloud App Security
 
 Dieser Artikel bietet grundlegende Informationen dazu, wie Aktionsrichtlinien für Azure ATP-Aktivitäten in Microsoft Cloud App Security gefiltert und erstellt werden.
 
-Weitere Informationen zum Abschließen der Integration finden Sie unter [Integration von Azure ATP in Cloud App Security](https://docs.microsoft.com/cloud-app-security/aatp-integration).
+Weitere Informationen zum Abschließen der Integration finden Sie unter [Integration von Azure ATP in Cloud App Security](/cloud-app-security/aatp-integration).
 
 Die Verwendung von Azure ATP mit Microsoft Cloud App Security bietet Aktivitätsanalysen und -warnungen basierend auf „User and Entity Behavior Analytics“ (UEBA). Hierbei werden die Verhaltensweisen mit dem höchsten Risiko in Ihrem Unternehmen ermittelt. Zudem werden eine umfassende Bewertung der Priorität bei Untersuchungen sowie eine aktive Filterung und anpassbare Aktivitätsrichtlinien bereitgestellt.
 
@@ -44,11 +44,11 @@ Sie können über das Cloud App Security-Hauptmenü **Untersuchen** auf Azure AT
 So greifen Sie auf Azure ATP-Aktivitäten von Benutzern zu:
 
 1. Filtern Sie die Warteschlange **Warnungen** mithilfe des Felds BENUTZERNAME.
-    ![Warteschlange für Warnungen](media/atp-mcas-alerts-queue.png)
+    ![Filtern von Warnungen nach Benutzername](media/atp-mcas-alerts-queue.png)
 1. Klicken Sie in der Ergebnisliste in einer beliebigen Warnung auf den Benutzernamen, um die **Benutzerseite** des Benutzers zu öffnen, den Sie untersuchen möchten.
 
 1. Filtern Sie Aktivitäten des Benutzers mithilfe der verfügbaren Felder, oder fügen Sie über die Schaltfläche „+“ eine neue Filterregel hinzu.
-    ![Warteschlange für Warnungen](media/atp-mcas-activity-filter.png)
+    ![Filtern von Aktivitäten des Benutzers](media/atp-mcas-activity-filter.png)
 
 ## <a name="create-activity-policies-in-cloud-app-security"></a>Erstellen von Aktivitätsrichtlinien in Cloud App Security
 
@@ -71,7 +71,7 @@ So erstellen Sie eine neue Aktivitätsrichtlinie:
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Erfahren Sie mehr über die Bewertung der Untersuchungspriorität sowie zusätzliche Features von [Microsoft Cloud App Security](https://docs.microsoft.com/cloud-app-security/).
+Erfahren Sie mehr über die Bewertung der Untersuchungspriorität sowie zusätzliche Features von [Microsoft Cloud App Security](/cloud-app-security/).
 
 ## <a name="join-the-community"></a>Beitritt zur Community
 
