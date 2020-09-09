@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 04/28/2020
+ms.date: 09/07/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4de688b3ea1c80f8ed0e517baf9da3b469a8d82a
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 0ebab871f92000513ec0c089b0583dbb6c841ec5
+ms.sourcegitcommit: 07b0bfd432b4e12798c431ebc53fd3745bb855d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88956719"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89505972"
 ---
 # <a name="troubleshooting-azure-atp-known-issues"></a>Behandlung von bekannten Problemen bei Azure ATP
 
@@ -61,10 +61,11 @@ Das Problem kann durch einen transparenten Proxykonfigurationsfehler auf Server 
 
 **Lösung:**
 
-Führen Sie das folgende PowerShell-Cmdlet aus, um zu überprüfen, ob das vertrauenswürdige Stammzertifikat für den Azure ATP-Dienst auf Server Core vorhanden ist. Im folgenden Beispiel wird das Stammzertifikat „DigiCert Baltimore Root“ verwendet.
+Führen Sie das folgende PowerShell-Cmdlet aus, um zu überprüfen, ob das vertrauenswürdige Stammzertifikat für den Azure ATP-Dienst auf Server Core vorhanden ist. Im folgenden Beispiel werden die Stammzertifikate „DigiCert Baltimore Root“ und „DigiCert Global Root“ verwendet.
 
 ```powershell
-Get-ChildItem -Path "Cert:\LocalMachine\Root" | where { $_.Thumbprint -eq "D4DE20D05E66FC53FE1A50882C78DB2852CAE474"}
+Get-ChildItem -Path "Cert:\LocalMachine\Root" | where { $_.Thumbprint -eq "D4DE20D05E66FC53FE1A50882C78DB2852CAE474"} | fl
+Get-ChildItem -Path "Cert:\LocalMachine\Root" | where { $_.Thumbprint -eq "df3c24f9bfd666761b268073fe06d1cc8d4f82a4"} | fl
 ```
 
 ```Output
@@ -75,15 +76,24 @@ FriendlyName : DigiCert Baltimore Root
 NotBefore    : 5/12/2000 11:46:00 AM
 NotAfter     : 5/12/2025 4:59:00 PM
 Extensions   : {System.Security.Cryptography.Oid, System.Security.Cryptography.Oid, System.Security.Cryptography.Oid}
+
+Subject      : CN=DigiCert Global Root G2, OU=www.digicert.com, O=DigiCert Inc, C=US
+Issuer       : CN=DigiCert Global Root G2, OU=www.digicert.com, O=DigiCert Inc, C=US
+Thumbprint   : DF3C24F9BFD666761B268073FE06D1CC8D4F82A4
+FriendlyName : DigiCert Global Root G2
+NotBefore    : 01/08/2013 15:00:00
+NotAfter     : 15/01/2038 14:00:00
+Extensions   : {System.Security.Cryptography.Oid, System.Security.Cryptography.Oid, System.Security.Cryptography.Oid}
 ```
 
 Führen Sie die folgenden Schritte aus, wenn die Ausgabe nicht Ihren Erwartungen entspricht:
 
-1. Laden Sie das [Baltimore CyberTrust-Stammzertifikat](https://cacert.omniroot.com/bc2025.crt) auf den Server Core-Computer herunter.
+1. Laden Sie das [Baltimore CyberTrust-Stammzertifikat](https://cacert.omniroot.com/bc2025.crt) und [DigiCert Global Root G2](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt) auf den Server Core-Computer herunter.
 1. Führen Sie das folgende PowerShell-Cmdlet aus, um das Zertifikat zu installieren.
 
     ```powershell
     Import-Certificate -FilePath "<PATH_TO_CERTIFICATE_FILE>\bc2025.crt" -CertStoreLocation Cert:\LocalMachine\Root
+    Import-Certificate -FilePath "<PATH_TO_CERTIFICATE_FILE>\DigiCertGlobalRootG2.crt" -CertStoreLocation Cert:\LocalMachine\Root
     ```
 
 ## <a name="silent-installation-error-when-attempting-to-use-powershell"></a>Fehler bei der automatischen Installation beim Versuch, PowerShell zu verwenden
