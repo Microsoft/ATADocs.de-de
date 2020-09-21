@@ -5,21 +5,24 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 07/13/2020
+ms.date: 09/21/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: e734e382-c4b1-43ca-9a8d-96c91daf2578
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: cb9a6c8e560b6e52a6385cf4e926aae8cc723ca8
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: 31cd302575da078ce4030f982d69c9e9ad5a3138
+ms.sourcegitcommit: c4a4eb6512258beaa1b8937dc2b206fc3ee87835
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/21/2020
-ms.locfileid: "90828323"
+ms.locfileid: "90829390"
 ---
 # <a name="advanced-threat-analytics-ata-to-azure-advanced-threat-protection-azure-atp"></a>Advanced Threat Analytics (ATA) zu Azure Advanced Threat Protection (Azure ATP)
+
+> [!NOTE]
+> Die endgültige Version von ATA ist [allgemein verfügbar](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA wird die grundlegende Unterstützung am 12. Januar 2021 beenden. Der erweiterte Support wird bis zum 2026. Januar fortgesetzt. Weitere Informationen finden Sie in [unserem Blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
 
 Folgen Sie dieser Anleitung, um eine vorhandene ATA-Installation zum Azure Advanced Threat Protection-Dienst zu verschieben. In der Anleitung sind sowohl Voraussetzungen und Anforderungen für Azure ATP beschrieben als auch Informationen zur Planung und Durchführung des Verschiebevorgangs enthalten. Zusätzlich finden Sie darin Überprüfungsschritte und Tipps zur Nutzung der neuesten Sicherheitslösungen und Schutzmöglichkeiten vor Bedrohungen mit Azure ATP nach der Installation.
 

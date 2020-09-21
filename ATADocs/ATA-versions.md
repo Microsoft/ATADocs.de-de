@@ -4,19 +4,18 @@ description: Erläutert die unterschiedlichen Supportoptionen für die Versionen
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 09/16/2020
+ms.date: 09/21/2020
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
-ms.assetid: a8afbd91-c888-4dfc-94ab-72e38745163e
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f98d6ca3f01ede7cb52d3caa742623e80a06e7d3
-ms.sourcegitcommit: 51997dca429877cbe5a74c9051c1ef2084b8dd44
+ms.openlocfilehash: 3fda8403d8dd49761e5860f48ceb1d9ca7bc9175
+ms.sourcegitcommit: c4a4eb6512258beaa1b8937dc2b206fc3ee87835
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90680235"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90829373"
 ---
 # <a name="support-for-microsoft-advanced-threat-analytics-ata-versions"></a>Support für Microsoft Advanced Threat Analytics-Versionen (ATA)
 
@@ -29,7 +28,7 @@ ATA-Updates werden 12 Monate ab dem Veröffentlichungsdatum der allgemeinen Verf
 > [!NOTE]
 > **Supportlebenszyklus**
 >
-> Die grundlegende [Unterstützung](https://support.microsoft.com/lifecycle/search?alpha=Advanced%20Threat%20Analytics) von Microsoft Advanced Threat Analytics (ATA) wird am 12. Januar 2021 beendet, und der erweiterte Support wird bis zum 13. Januar 2026 fortgesetzt.
+> Die endgültige Version von ATA ist [allgemein verfügbar](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA wird die grundlegende Unterstützung am 12. Januar 2021 beenden. Der erweiterte Support wird bis zum 2026. Januar fortgesetzt. Weitere Informationen finden Sie in [unserem Blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
 
 ## <a name="version-history"></a>Versionsverlauf
 
@@ -49,6 +48,6 @@ ATA-Updates werden 12 Monate ab dem Veröffentlichungsdatum der allgemeinen Verf
 |1.9.2|1.9.7478|28-MÄR-2019|14-Mar-2021|
 |1.9.3|1.9.7561|14-Sep-2020||
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
