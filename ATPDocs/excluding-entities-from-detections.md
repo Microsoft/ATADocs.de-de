@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: cae3ed45-8fbc-4f25-ba24-3cc407c6ea93
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: aa497d9a04aa36538b0e5d6642ce2942a4c6d827
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 8424acd769b24407f1d4fc57e6549ca2ea1e0edf
+ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88956855"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90826531"
 ---
 # <a name="excluding-entities-from-detections"></a>Ausschließen von Entitäten von der Erkennung
 In diesem Artikel wird erläutert, wie Entitäten ausgeschlossen werden, sodass sie keine Warnungen auslösen. Bestimmte Entitäten werden ausgeschlossen, um unbedenkliche richtig positive Ergebnisse zu reduzieren, während gleichzeitig sichergestellt wird, dass Sie die richtig positiven Ergebnisse ermitteln können. Um zu verhindern, dass Azure ATP störende Warnungen bei Aktivitäten ausgibt, die bei bestimmten Benutzern zu Ihrem ganz normalen Geschäftsalltag gehören, können Sie bestimmte Entitäten ausschließen, sodass diese keine Warnungen auslösen. Zusätzlich werden standardmäßig bestimmte beliebte Entitäten ausgeschlossen. 
@@ -64,5 +64,5 @@ Wenn Sie die Möglichkeit haben, eine IP-Adresse oder einen Computer auszuschlie
 ## <a name="see-also"></a>Weitere Informationen:
 
 - [Leitfaden zu Azure ATP-Sicherheitswarnungen](suspicious-activity-guide.md)
-- [Integrieren mit Microsoft Defender ATP](integrate-wd-atp.md)
+- [Integrieren mit Microsoft Defender ATP](integrate-msde.md)
 - [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)

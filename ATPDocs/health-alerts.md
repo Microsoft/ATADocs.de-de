@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: d0551e91-3b21-47d5-ad9d-3362df6d47c0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e3b641ef32d483e52c523ed91109ada99f98705c
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: b42aa8895e0946a5997a117ec5bca74089190bbd
+ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88956124"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90826514"
 ---
 # <a name="understanding-azure-atp-sensor-health-alerts"></a>Grundlegendes zu Integritätswarnungen für Azure ATP-Sensoren
 
@@ -39,7 +39,7 @@ Das Azure ATP-Integritätscenter informiert Sie, wenn ein Problem im Zusammenhan
 
 |Warnung|Beschreibung|Lösung|Schweregrad|
 |----|----|----|----|
-|Die Anmeldeinformationen für das Verzeichnisdienstbenutzerkonto sind nicht korrekt.|Dies beeinträchtigt die Fähigkeit der Sensoren, Aktivitäten durch LDAP-Abfragen an Domänencontroller zu entdecken.|– Bei AD-**Standardkonten:** Überprüfen Sie, ob der Benutzername, das Kennwort und die Domäne auf der **Verzeichnisdienste**-Konfigurationsseite korrekt sind.<br>– Bei **gruppenverwalteten Dienstkonten:** Überprüfen Sie, ob der Benutzername und die Domäne auf der **Verzeichnisdienste**-Konfigurationsseite korrekt sind. Überprüfen Sie außerdem die anderen auf der Seite [Schnellstart: Herstellen einer Verbindung mit einer Active Directory-Gesamtstruktur](install-atp-step2.md#prerequisites) beschriebenen Voraussetzungen für **gruppenverwaltete Dienstkonten**.|Mittel|
+|Die Anmeldeinformationen für das Verzeichnisdienstbenutzerkonto sind nicht korrekt.|Dies beeinträchtigt die Fähigkeit der Sensoren, Aktivitäten durch LDAP-Abfragen an Domänencontroller zu entdecken.|– Bei AD-**Standardkonten:** Überprüfen Sie, ob der Benutzername, das Kennwort und die Domäne auf der **Verzeichnisdienste**-Konfigurationsseite korrekt sind.<br>– Bei **gruppenverwalteten Dienstkonten:** Überprüfen Sie, ob der Benutzername und die Domäne auf der **Verzeichnisdienste**-Konfigurationsseite korrekt sind. Überprüfen Sie außerdem die anderen auf der Seite [Schnellstart: Herstellen einer Verbindung mit einer Active Directory-Gesamtstruktur](install-step2.md#prerequisites) beschriebenen Voraussetzungen für **gruppenverwaltete Dienstkonten**.|Mittel|
 
 ## <a name="low-success-rate-of-active-name-resolution"></a>Niedrige Erfolgsrate bei aktiver Namensauflösung
 
@@ -57,19 +57,19 @@ Das Azure ATP-Integritätscenter informiert Sie, wenn ein Problem im Zusammenhan
 
 |Warnung|Beschreibung|Lösung|Schweregrad|
 |----|----|----|----|
-|The read-only user password, used to perform resolution of entities against Active Directory, is about to expire in less than 30 days. (Das schreibgeschützte Benutzerkennwort, das zum Ausführen von Auflösungen von Entitäten für Active Directory verwendet wird, läuft in weniger als 30 Tagen ab.)|Wenn das Kennwort für diesen Benutzer abläuft, werden alle Azure ATP-Sensoren nicht mehr ausgeführt und keine neuen Daten gesammelt.|[Ändern Sie das Domänenverbindungskennwort](modifying-atp-config-dcpassword.md), und aktualisieren Sie dann das Kennwort im Azure ATP-Portal.|Mittel|
+|The read-only user password, used to perform resolution of entities against Active Directory, is about to expire in less than 30 days. (Das schreibgeschützte Benutzerkennwort, das zum Ausführen von Auflösungen von Entitäten für Active Directory verwendet wird, läuft in weniger als 30 Tagen ab.)|Wenn das Kennwort für diesen Benutzer abläuft, werden alle Azure ATP-Sensoren nicht mehr ausgeführt und keine neuen Daten gesammelt.|[Ändern Sie das Domänenverbindungskennwort](modifying-config-dcpassword.md), und aktualisieren Sie dann das Kennwort im Azure ATP-Portal.|Mittel|
 
 ## <a name="read-only-user-password-expired"></a>Kennwort für schreibgeschützten Benutzer abgelaufen
 
 |Warnung|Beschreibung|Lösung|Schweregrad|
 |----|----|----|----|
-|The read-only user password, used to get directory data, expired. (Das Kennwort für schreibgeschützten Benutzer, das zum Abrufen von Verzeichnisdaten verwendet wird, ist abgelaufen.)|Es werden keine Azure ATP-Sensoren mehr ausgeführt (oder bald nicht mehr ausgeführt), und es werden keine neuen Daten gesammelt.|[Ändern Sie das Domänenverbindungskennwort](modifying-atp-config-dcpassword.md), und aktualisieren Sie dann das Kennwort im Azure ATP-Portal.|Hoch|
+|The read-only user password, used to get directory data, expired. (Das Kennwort für schreibgeschützten Benutzer, das zum Abrufen von Verzeichnisdaten verwendet wird, ist abgelaufen.)|Es werden keine Azure ATP-Sensoren mehr ausgeführt (oder bald nicht mehr ausgeführt), und es werden keine neuen Daten gesammelt.|[Ändern Sie das Domänenverbindungskennwort](modifying-config-dcpassword.md), und aktualisieren Sie dann das Kennwort im Azure ATP-Portal.|Hoch|
 
 ## <a name="sensor-outdated"></a>Sensor ist veraltet
 
 |Warnung|Beschreibung|Lösung|Schweregrad|
 |----|----|----|----|
-|Ein Azure ATP-Sensor ist veraltet.|Ein Azure ATP-Sensor führt eine Version aus, die nicht mit der Azure ATP-Cloudinfrastruktur kommunizieren kann.|Aktualisieren Sie den Sensor manuell, und prüfen Sie, warum der Sensor nicht automatisch aktualisiert wird. Wenn das nicht funktioniert, laden Sie das neueste Installationspaket für den Sensor herunter, deinstallieren Sie den Sensor, und installieren Sie ihn neu. Weitere Informationen finden Sie unter [Installieren des Azure ATP-Sensors](install-atp-step4.md).|Mittel|
+|Ein Azure ATP-Sensor ist veraltet.|Ein Azure ATP-Sensor führt eine Version aus, die nicht mit der Azure ATP-Cloudinfrastruktur kommunizieren kann.|Aktualisieren Sie den Sensor manuell, und prüfen Sie, warum der Sensor nicht automatisch aktualisiert wird. Wenn das nicht funktioniert, laden Sie das neueste Installationspaket für den Sensor herunter, deinstallieren Sie den Sensor, und installieren Sie ihn neu. Weitere Informationen finden Sie unter [Installieren des Azure ATP-Sensors](install-step4.md).|Mittel|
 
 ## <a name="sensor-reached-a-memory-resource-limit"></a>Sensor hat Arbeitsspeicherressourcenlimit erreicht
 
@@ -105,7 +105,7 @@ Das Azure ATP-Integritätscenter informiert Sie, wenn ein Problem im Zusammenhan
 
 |Warnung|Beschreibung|Lösung|Schweregrad|
 |----|----|----|----|
-|The Azure ATP sensor is receiving more network traffic than it can process. (Der Azure ATP-Sensor empfängt mehr Netzwerkdatenverkehr als er verarbeiten kann.)|Ein Teil des Netzwerkdatenverkehrs konnte nicht analysiert werden, was die Fähigkeit zum Erkennen verdächtiger Aktivitäten beeinflussen kann. Diese stammen von Domänencontrollern, die von diesem Azure ATP-Sensor überwacht werden.|Erwägen Sie es, je nach Bedarf, [zusätzliche Prozessoren und Arbeitsspeicher hinzuzufügen](atp-capacity-planning.md). Wenn es sich um einen eigenständigen Azure ATP-Sensor handelt, reduzieren Sie die Anzahl der überwachten Domänencontroller.<br></br>Dies kann auch vorkommen, wenn Sie Domänencontroller auf virtuellen VMware-Computer verwenden. Um zu vermeiden, dass diese Warnung ausgegeben wird, können Sie überprüfen, ob auf dem virtuellen Computer die folgenden Einstellungen auf „0“ oder „deaktiviert“ festgelegt sind:<br></br>- TsoEnable<br></br>- LargeSendOffload(IPv4)<br></br>- IPv4 TSO Offload<br></br>Deaktivieren Sie ebenso IPv4 Giant TSO Offload. Weitere Informationen finden Sie in der VMware-Dokumentation.|Mittel|
+|The Azure ATP sensor is receiving more network traffic than it can process. (Der Azure ATP-Sensor empfängt mehr Netzwerkdatenverkehr als er verarbeiten kann.)|Ein Teil des Netzwerkdatenverkehrs konnte nicht analysiert werden, was die Fähigkeit zum Erkennen verdächtiger Aktivitäten beeinflussen kann. Diese stammen von Domänencontrollern, die von diesem Azure ATP-Sensor überwacht werden.|Erwägen Sie es, je nach Bedarf, [zusätzliche Prozessoren und Arbeitsspeicher hinzuzufügen](capacity-planning.md). Wenn es sich um einen eigenständigen Azure ATP-Sensor handelt, reduzieren Sie die Anzahl der überwachten Domänencontroller.<br></br>Dies kann auch vorkommen, wenn Sie Domänencontroller auf virtuellen VMware-Computer verwenden. Um zu vermeiden, dass diese Warnung ausgegeben wird, können Sie überprüfen, ob auf dem virtuellen Computer die folgenden Einstellungen auf „0“ oder „deaktiviert“ festgelegt sind:<br></br>- TsoEnable<br></br>- LargeSendOffload(IPv4)<br></br>- IPv4 TSO Offload<br></br>Deaktivieren Sie ebenso IPv4 Giant TSO Offload. Weitere Informationen finden Sie in der VMware-Dokumentation.|Mittel|
 
 ## <a name="some-windows-events-could-not-be-analyzed"></a>Einige Windows-Ereignisse konnten nicht analysiert werden.
 
@@ -123,8 +123,8 @@ Das Azure ATP-Integritätscenter informiert Sie, wenn ein Problem im Zusammenhan
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](atp-prerequisites.md)
-- [Azure ATP capacity planning (Azure ATP-Kapazitätsplanung)](atp-capacity-planning.md)
+- [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](prerequisites.md)
+- [Azure ATP capacity planning (Azure ATP-Kapazitätsplanung)](capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
 - [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-forwarding.md)
 - [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)

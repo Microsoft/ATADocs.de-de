@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 671747d5-faed-4352-a871-17b58fdc6574
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b236a1dcd301e00947eac62a6abe1470e4397c37
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 50288d379bf78f6d6601616597cbac2f1699b042
+ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88956209"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90826667"
 ---
 # <a name="tutorial-understanding-security-alerts"></a>Tutorial: Grundlegendes zu Sicherheitswarnungen
 
@@ -69,11 +69,11 @@ Anmerkung: Eine zunehmende Anzahl von Warnungen des exakt selben Typs verringert
 
 Azure ATP-Sicherheitswarnungen werden wie die Phasen in einer typischen „Kill Chain“ eines Cyberangriffs in die folgenden Kategorien oder Phasen unterteilt. Die folgenden Links enthalten weitere Informationen zu den einzelnen Phasen sowie den Warnungen, die die Angriffe erkennen sollen:
 
-- [Warnungen zu Reconnaissance](atp-reconnaissance-alerts.md)
-- [Warnungen zu kompromittierten Anmeldeinformationen](atp-compromised-credentials-alerts.md)
-- [Lateral Movement-Warnungen](atp-lateral-movement-alerts.md)
-- [Warnungen zu Domänendominanz](atp-domain-dominance-alerts.md)
-- [Warnungen zu Exfiltration](atp-exfiltration-alerts.md)
+- [Warnungen zu Reconnaissance](reconnaissance-alerts.md)
+- [Warnungen zu kompromittierten Anmeldeinformationen](compromised-credentials-alerts.md)
+- [Lateral Movement-Warnungen](lateral-movement-alerts.md)
+- [Warnungen zu Domänendominanz](domain-dominance-alerts.md)
+- [Warnungen zu Exfiltration](exfiltration-alerts.md)
 
 ## <a name="advanced-security-alert-investigation"></a>Erweiterte Untersuchung der Sicherheitswarnungen
 

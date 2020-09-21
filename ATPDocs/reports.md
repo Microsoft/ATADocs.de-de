@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 2c2d6b1a-fc8c-4ff7-b07d-64ce6159f84d
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: babb82354c79681bb708f46012c9f53ba09dd348
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: b9fd8c81ffe9c779304f07dca230963f1131318a
+ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88955172"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90826650"
 ---
 # <a name="azure-atp-reports"></a>Azure ATP-Berichte
 
@@ -58,8 +58,8 @@ So legen Sie einen geplanten Bericht fest:
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](atp-prerequisites.md)
-- [Azure ATP capacity planning (Azure ATP-Kapazitätsplanung)](atp-capacity-planning.md)
+- [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](prerequisites.md)
+- [Azure ATP capacity planning (Azure ATP-Kapazitätsplanung)](capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
 - [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-forwarding.md)
 - [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)

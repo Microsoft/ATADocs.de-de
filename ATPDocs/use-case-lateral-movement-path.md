@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: de15c920-8904-4124-8bdc-03abd9f667cf
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: edb37833ac44e3f04f9daf7ee57a8e1f41ca5d38
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 3528909977c744cce604e60fe779050e4ec356dd
+ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88955624"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90826242"
 ---
 # <a name="azure-atp-lateral-movement-paths-lmps"></a>Azure ATP-Lateral Movement-Pfade (LMPs) 
 
@@ -76,7 +76,7 @@ Mit Sicherheitserkenntnissen ist es nie zu spät, den nächsten Angriff zu verhi
 
 **Tipp**: Wenn Sie keine potenzielle Lateral Movement-Pfadaktivität für eine Entität in den letzten 48 Stunden ermitteln können, klicken Sie auf **Ein anderes Datum anzeigen**, und suchen Sie nach vorherigen potenziellen Lateral Movement-Pfaden. Der **Bericht „LMP zu sensiblen Benutzern“** ist immer verfügbar, wenn LMPs ermittelt wurden und bietet Ihnen Informationen über identifizierte potenzielle Lateral Movement-Pfade zu sensiblen Benutzern. 
 
-**Tipp**: Unter [Konfigurieren von SAM-R](install-atp-step8-samr.md) finden Sie Informationen darüber, wie Sie Ihre Clients und Server so einrichten, dass Azure ATP das Ausführen von den SAM-R-Vorgängen erlaubt wird, die für die Erkennung von Lateral Movement-Pfaden erforderlich sind.
+**Tipp**: Unter [Konfigurieren von SAM-R](install-step8-samr.md) finden Sie Informationen darüber, wie Sie Ihre Clients und Server so einrichten, dass Azure ATP das Ausführen von den SAM-R-Vorgängen erlaubt wird, die für die Erkennung von Lateral Movement-Pfaden erforderlich sind.
 
 
 ## <a name="investigating-lmps"></a>Untersuchen von LMPs
@@ -85,6 +85,6 @@ Anleitungen zum Identifizieren und Untersuchen mit Azure ATP-Lateral Movement-Pf
 
 ## <a name="see-also"></a>Weitere Informationen
 - [Untersuchen von Azure ATP-LMPs](investigate-lateral-movement-path.md)
-- [Konfigurieren von Azure ATP für das Ausführen von Remoteaufrufen an SAM](install-atp-step8-samr.md)
+- [Konfigurieren von Azure ATP für das Ausführen von Remoteaufrufen an SAM](install-step8-samr.md)
 - [Arbeiten mit Sicherheitswarnungen](working-with-suspicious-activities.md)
 - [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)
