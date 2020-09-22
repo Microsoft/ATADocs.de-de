@@ -12,14 +12,17 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: cae3ed45-8fbc-4f25-ba24-3cc407c6ea93
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8424acd769b24407f1d4fc57e6549ca2ea1e0edf
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: 8166033bd8539a78dd84535397a3f5a0a8d0a02f
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90826531"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90913090"
 ---
 # <a name="excluding-entities-from-detections"></a>Ausschließen von Entitäten von der Erkennung
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
+
 In diesem Artikel wird erläutert, wie Entitäten ausgeschlossen werden, sodass sie keine Warnungen auslösen. Bestimmte Entitäten werden ausgeschlossen, um unbedenkliche richtig positive Ergebnisse zu reduzieren, während gleichzeitig sichergestellt wird, dass Sie die richtig positiven Ergebnisse ermitteln können. Um zu verhindern, dass Azure ATP störende Warnungen bei Aktivitäten ausgibt, die bei bestimmten Benutzern zu Ihrem ganz normalen Geschäftsalltag gehören, können Sie bestimmte Entitäten ausschließen, sodass diese keine Warnungen auslösen. Zusätzlich werden standardmäßig bestimmte beliebte Entitäten ausgeschlossen. 
 
 Beispiele: Ein Sicherheitsscanner führt eine DNS-Reconnaissance aus, oder ein Administrator führt Remoteskripts auf dem Domänencontroller aus. Beides sind sanktionierte Aktivitäten, die im Rahmen des alltäglichen IT-Betriebs in Ihrer Organisation durchgeführt werden und ausgeschlossen werden können. Weitere Informationen zu jeder Erkennung in Azure ATP, die Ihnen dabei helfen, zu entscheiden, welche Entitäten ausgeschlossen werden sollen, finden Sie im [Leitfaden für Sicherheitswarnungen](suspicious-activity-guide.md).

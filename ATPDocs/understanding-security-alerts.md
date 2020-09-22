@@ -12,14 +12,16 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 671747d5-faed-4352-a871-17b58fdc6574
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 50288d379bf78f6d6601616597cbac2f1699b042
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: 2c871c3a504fc7f79cc3627b077d1bebc1814a82
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90826667"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912319"
 ---
 # <a name="tutorial-understanding-security-alerts"></a>Tutorial: Grundlegendes zu Sicherheitswarnungen
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Mit Azure ATP-Sicherheitswarnungen wird in verständlicher Sprache und anhand von Grafiken dargestellt, welche verdächtigen Aktivitäten in Ihrem Netzwerk identifiziert wurden und welche Benutzer und Computer an der Bedrohung beteiligt sind. Warnungen werden nach ihrem Schweregrad eingestuft. Sie sind für ein einfaches visuelles Filtern farbcodiert und werden nach Bedrohungsphasen sortiert. Jede Warnung soll Ihnen dabei helfen, einen schnellen Überblick darüber zu erhalten, was genau in Ihrem Netzwerk passiert. Damit Sie einfach und direkt weitere Untersuchungen durchführen können, enthalten Beweislisten für Sicherheitswarnungen direkte Links zu den betroffenen Benutzern und Computern.
 

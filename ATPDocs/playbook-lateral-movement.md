@@ -7,14 +7,16 @@ author: shsagir
 ms.author: shsagir
 ms.date: 03/03/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: 89dd81d18bbe70bba358e987f6a6ffb64efbfe11
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: 88e5b96534306ab8508b2e0581e906cde0e7d317
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90828292"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912940"
 ---
 # <a name="tutorial-lateral-movement-playbook"></a>Lernprogramm: Lateral Movement-Playbook
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Das Lateral Movement-Playbook ist das dritte Tutorial der vierteiligen Reihe zu Azure ATP-Sicherheitswarnungen. Die Azure ATP-Sicherheitswarnungsumgebung soll die Funktionen von **Azure ATP** zum Identifizieren und Erkennen verdächtiger Aktivitäten und potenzieller Angriffe auf Ihr Netzwerk veranschaulichen. Das Playbook erläutert, wie Sie *diskrete* Erkennungen durch Azure ATP testen. Dieses Playbook konzentriert sich auf *signaturbasierte* Funktionen von Azure ATP und enthält keine Warnungen oder Verhaltenserkennungen auf Basis des erweiterten Machine Learning, auf Benutzer- oder Entitätsbasis, da sie eine Lernphase mit echtem Netzwerkverkehr von bis zu 30 Tagen erfordern. Weitere Informationen über jedes Tutorial dieser Reihe finden Sie unter [Tutorialübersicht: ATP-Sicherheitswarnungsumgebung](playbook-lab-overview.md).
 

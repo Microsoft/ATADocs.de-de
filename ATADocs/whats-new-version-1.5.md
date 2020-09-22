@@ -12,14 +12,16 @@ ms.technology: ''
 ms.assetid: a0d64aff-ca9e-4300-b3f8-eb3c8b8ae045
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 7bdd3bf22f2b87c34ac45614c9c8f3ebeab2e87b
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 110632e0d2f2b14f57f7e7fbb63136dc8e8df1fa
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88956668"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90913326"
 ---
 # <a name="whats-new-in-ata-version-15"></a>Neuerungen in ATA 1.5
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 Die vorliegenden Anmerkungen zu dieser Version enthalten Informationen zu bekannten Problemen in dieser Version von Advanced Threat Analytics.
 
 ## <a name="whats-new-in-the-ata-15-update"></a>Neuerungen beim Update auf ATA 1.5

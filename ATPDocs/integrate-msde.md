@@ -12,14 +12,16 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: f6f3ed75-d6bb-4966-a9a7-5339c4f3ebac
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 324e7b7243b44ec8c1b6699e0424e504e376ae43
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: 0f718f6334b21d951fbe487142234fc229d615ef
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90828352"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912967"
 ---
 # <a name="integrate-azure-atp-with-microsoft-defender-atp"></a>Integration von Azure ATP in Microsoft Defender ATP
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Mithilfe von Azure Advanced Threat Protection können Sie Azure ATP in Microsoft Defender ATP integrieren, wodurch Sie eine noch umfangreichere Möglichkeit zum Schutz vor Bedrohungen erhalten. Während Azure ATP den Datenverkehr auf Ihren Domänencontrollern überwacht, überwacht Microsoft Defender ATP Ihre Endpunkte. Beide Dienste stellen gemeinsam eine Schnittstelle bereit, über die Sie Ihre Umgebung schützen können.
 

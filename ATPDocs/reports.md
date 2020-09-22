@@ -12,14 +12,16 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 2c2d6b1a-fc8c-4ff7-b07d-64ce6159f84d
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b9fd8c81ffe9c779304f07dca230963f1131318a
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: e5de1628eb0eb0e2076dcd04be44b695c69e7fda
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90826650"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912387"
 ---
 # <a name="azure-atp-reports"></a>Azure ATP-Berichte
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Über den Abschnitt „Azure ATP-Berichte“ im Azure ATP-Portal können Sie Berichte, die Ihnen System- und Entitätsstatusinformationen liefern, entweder planen oder sofort generieren und herunterladen. Mit dem Berichtsfeature können Sie Berichte zur Systemintegrität, zu Sicherheitswarnungen und potenziellen Lateral Movement-Pfaden erstellen, die in Ihrer Umgebung erkannt wurden.
 

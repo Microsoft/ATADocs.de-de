@@ -12,14 +12,16 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 0d9d2a1d-6c76-4909-b6f9-58523df16d4f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: fcec5516f8311317104066da0faa6555394b1caa
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: 589e8f647abc4654d48006dd1e9b3d6a9538660f
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90828358"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90913000"
 ---
 # <a name="integrate-vpn"></a>Integrieren des VPN
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Azure Advanced Threat Protection (ATP) kann Kontoinformationen aus VPN-Lösungen erfassen. Nach der Konfiguration beinhaltet die Profilseite des Benutzers Informationen aus den VPN-Verbindungen, wie IP-Adressen und Standorte, aus denen die Verbindungen entstammen. Dadurch wird der Untersuchungsvorgang um zusätzliche Informationen zur Benutzeraktivität und einen neuen Ermittlungsvorgang für ungewöhnliche VPN-Verbindungen ergänzt. Der Aufruf zum Auflösen einer externen IP-Adresse an einem Standort ist anonym. In diesem Aufruf wird kein persönlicher Bezeichner gesendet.
 

@@ -12,14 +12,16 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: d0551e91-3b21-47d5-ad9d-3362df6d47c0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b42aa8895e0946a5997a117ec5bca74089190bbd
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: 67adf184405ef299e26292a7a25f5248cba5c48f
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90826514"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90913072"
 ---
 # <a name="understanding-azure-atp-sensor-health-alerts"></a>Grundlegendes zu Integritätswarnungen für Azure ATP-Sensoren
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Das Azure ATP-Integritätscenter informiert Sie, wenn ein Problem im Zusammenhang mit Ihrer Azure ATP-Instanz aufgetreten ist, indem es eine Integritätswarnung ausgibt. In diesem Artikel werden alle Integritätswarnungen für die einzelnen Komponenten beschrieben und die Ursachen und Schritte zur Behebung des jeweiligen Problems genannt.
 
