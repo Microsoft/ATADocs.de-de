@@ -3,38 +3,38 @@
 - name: Übersicht
   items:
     - name: Was ist Azure Advanced Threat Protection?
-      href: what-is-atp.md
+      href: what-is.md
     - name: Azure ATP-Architektur
-      href: atp-architecture.md
+      href: architecture.md
     - name: Voraussetzungen für Azure ATP
-      href: atp-prerequisites.md
+      href: prerequisites.md
     - name: Azure ATP für die US-Regierung
-      href: atp-us-govt-gcc-high.md
+      href: us-govt-gcc-high.md
     - name: Neuerungen in Azure ATP
-      href: atp-whats-new.md
+      href: whats-new.md
 - name: Schnellstarts
   expanded: true
   items:
     - name: Erstellen einer Azure ATP-Instanz
-      href: install-atp-step1.md
+      href: install-step1.md
     - name: Verbinden mit Active Directory
-      href: install-atp-step2.md
+      href: install-step2.md
     - name: Herunterladen des Azure ATP-Sensorpakets
-      href: install-atp-step3.md
+      href: install-step3.md
     - name: Installieren des Azure ATP-Sensors
-      href: install-atp-step4.md
+      href: install-step4.md
 - name: Tutorials
   items:
     - name: Warnungen zu Reconnaissance
-      href: atp-reconnaissance-alerts.md
+      href: reconnaissance-alerts.md
     - name: Warnungen zu kompromittierten Anmeldeinformationen
-      href: atp-compromised-credentials-alerts.md
+      href: compromised-credentials-alerts.md
     - name: Lateral Movement-Warnungen
-      href: atp-lateral-movement-alerts.md
+      href: lateral-movement-alerts.md
     - name: Warnungen zu Domänendominanz
-      href: atp-domain-dominance-alerts.md
+      href: domain-dominance-alerts.md
     - name: Warnungen zu Exfiltration
-      href: atp-exfiltration-alerts.md
+      href: exfiltration-alerts.md
     - name: Untersuchen eines Benutzers
       href: investigate-a-user.md
     - name: Untersuchen eines Computers
@@ -56,63 +56,63 @@
     - name: Lateral Movement-Pfade
       href: use-case-lateral-movement-path.md
     - name: Grundlegendes zur Netzwerknamensauflösung (NNR)
-      href: atp-nnr-policy.md
+      href: nnr-policy.md
     - name: Berichte
       href: reports.md
     - name: Benutzerrollen
-      href: atp-role-groups.md
+      href: role-groups.md
     - name: Unterstützung der Azure ATP-Gesamtstruktur
-      href: atp-multi-forest.md
+      href: multi-forest.md
 - name: Anleitungen
   items:
     - name: Azure ATP mit Microsoft Cloud App Security
       items:
         - name: Verwenden von Azure ATP mit Cloud App Security
-          href: atp-mcas-integration.md
+          href: mcas-integration.md
         - name: Filteraktivitäten und Festlegen von Richtlinien
-          href: atp-activities-filtering-mcas.md
+          href: activities-filtering-mcas.md
         - name: Bewertungen des Identitätssicherheitsstatus von Azure ATP
           items:
             - name: Grundlegendes zum Identitätssicherheitsstatus
-              href: atp-isp-overview.md
+              href: isp-overview.md
             - name: Domänencontroller mit verfügbarem Druckspoolerdienst (Bewertung)
-              href: atp-cas-isp-print-spooler.md
+              href: cas-isp-print-spooler.md
             - name: Ruhende Entitäten in sensiblen Gruppen (Bewertung)
-              href: atp-cas-isp-dormant-entities.md
+              href: cas-isp-dormant-entities.md
             - name: Verfügbarmachen von Anmeldeinformationen in Klartext (Bewertung)
-              href: atp-cas-isp-clear-text.md
+              href: cas-isp-clear-text.md
             - name: Verwendung von LAPS (Bewertung)
-              href: atp-cas-isp-laps.md
+              href: cas-isp-laps.md
             - name: Verwendung von Legacyprotokollen (Bewertung)
-              href: atp-cas-isp-legacy-protocols.md
+              href: cas-isp-legacy-protocols.md
             - name: Lateral Movement-Pfade mit dem höchsten Risiko
-              href: atp-cas-isp-riskiest-lmp.md
+              href: cas-isp-riskiest-lmp.md
             - name: Nicht überwachte Domänencontroller
-              href: atp-cas-isp-unmonitored-domain-controller.md
+              href: cas-isp-unmonitored-domain-controller.md
             - name: Unsichere Kontoattribute
-              href: atp-cas-isp-unsecure-account-attributes.md
+              href: cas-isp-unsecure-account-attributes.md
             - name: Unsichere Kerberos-Delegierung (Bewertung)
-              href: atp-cas-isp-unconstrained-kerberos.md
+              href: cas-isp-unconstrained-kerberos.md
             - name: Unsichere SID-Verlaufsattribute
-              href: atp-cas-isp-unsecure-sid-history-attribute.md
+              href: cas-isp-unsecure-sid-history-attribute.md
             - name: Verwendung von schwacher Verschlüsselung (Bewertung)
-              href: atp-cas-isp-weak-cipher.md
+              href: cas-isp-weak-cipher.md
     - name: Lab für Sicherheitswarnungen
       items:
         - name: Übersicht über das Lab
-          href: atp-playbook-lab-overview.md
+          href: playbook-lab-overview.md
         - name: 1. Lab-Setup
-          href: atp-playbook-setup-lab.md
+          href: playbook-setup-lab.md
         - name: 2. Playbook zu Reconnaissance
-          href: atp-playbook-reconnaissance.md
+          href: playbook-reconnaissance.md
         - name: 3. Lateral Movement-Playbook
-          href: atp-playbook-lateral-movement.md
+          href: playbook-lateral-movement.md
         - name: 4. Playbook zu Domänendominanz
-          href: atp-playbook-domain-dominance.md
+          href: playbook-domain-dominance.md
     - name: Grundlegendes zu Sicherheitswarnungen
       href: understanding-security-alerts.md
     - name: Planen Ihrer Azure ATP-Kapazität
-      href: atp-capacity-planning.md
+      href: capacity-planning.md
     - name: Verwalten von Sicherheitswarnungen
       href: working-with-suspicious-activities.md
     - name: Ausschließen von Entitäten von der Erkennung
@@ -120,45 +120,45 @@
     - name: Verwalten von sensiblen Konten
       href: sensitive-accounts.md
     - name: Durchsuchen und Filtern überwachter Aktivitäten
-      href: atp-activities-search.md
+      href: activities-search.md
     - name: Verwenden von Ausschlüssen und Honeytoken-Konten
-      href: install-atp-step7.md
+      href: install-step7.md
     - name: Überwachen von Domänencontrollern
-      href: atp-sensor-monitoring.md
+      href: sensor-monitoring.md
     - name: Ändern des Domänenverbindungskennworts
-      href: modifying-atp-config-dcpassword.md
+      href: modifying-config-dcpassword.md
     - name: Festlegen von Azure ATP-Benachrichtigungen
       href: notifications.md
     - name: Integritätswarnungen
       items:
         - name: Arbeiten mit dem Azure ATP-Integritätscenter
-          href: atp-health-center.md
+          href: health-center.md
         - name: Verwalten von Azure ATP-Integritätswarnungen
           href: health-alerts.md
     - name: Verzögertes Update für den Azure ATP-Sensor
       href: sensor-update.md
     - name: Behandeln häufiger Probleme
-      href: troubleshooting-atp-known-issues.md
+      href: troubleshooting-known-issues.md
     - name: Problembehandlung mithilfe von Protokollen
-      href: troubleshooting-atp-using-logs.md
+      href: troubleshooting-using-logs.md
     - name: Integration mit Microsoft Defender ATP
-      href: integrate-wd-atp.md
+      href: integrate-msde.md
     - name: VPN-Integration
-      href: install-atp-step6-vpn.md
+      href: install-step6-vpn.md
     - name: Integration in Syslog
       href: setting-syslog.md
     - name: Unbeaufsichtigte Installation
-      href: ATP-silent-installation.md
+      href: silent-installation.md
     - name: Konfigurieren des Azure ATP-Sensors
       items:
         - name: Konfigurieren des Azure ATP-Sensors
-          href: install-atp-step5.md
+          href: install-step5.md
         - name: Konfigurieren der Windows-Ereignissammlung
           href: configure-windows-event-collection.md
         - name: Proxykonfiguration
           href: configure-proxy.md
         - name: Konfigurieren von Azure ATP für das Ausführen von Remoteaufrufen an SAM
-          href: install-atp-step8-samr.md
+          href: install-step8-samr.md
     - name: Einrichten des eigenständigen Azure ATP-Sensors
       items:
         - name: Konfigurieren der Portspiegelung
@@ -172,22 +172,22 @@
     - name: Migration von ATA zu Azure ATP
       items:
         - name: Advanced Threat Analytics (ATA) zu Azure ATP
-          href: ata-atp-move-overview.md
+          href: migrate-from-ata-overview.md
 - name: Reference
   items:
     - name: Referenz zum SIEM-Protokoll
       href: cef-format-sa.md
     - name: 'Azure ATP: Bekannte Probleme'
-      href: ./troubleshooting-atp-known-issues.md
+      href: ./troubleshooting-known-issues.md
     - name: Azure ATP-Releasereferenz
-      href: atp-release-reference.md
+      href: release-reference.md
 - name: Ressourcen
   items:
     - name: Support und Informationen
-      href: atp-support.md
+      href: support.md
     - name: Häufig gestellte Fragen
-      href: atp-technical-faq.md
+      href: technical-faq.md
     - name: Roadmap für die Azure ATP-Bereitschaft
-      href: atp-resources.md
+      href: resources.md
     - name: Sicherheit und Datenschutz für Azure ATP
-      href: atp-privacy-compliance.md
+      href: privacy-compliance.md

@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: cc9c825eb86e69caf3bef17a24194b8c8dfa0cf7
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 0c4912f430f0acb6c36b3e4cb36e7764d50420c1
+ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88956702"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90826548"
 ---
 # <a name="tutorial-investigate-a-user"></a>Tutorial: Untersuchen eines Benutzers
 
@@ -55,9 +55,9 @@ Azure ATP-Beweise für Warnungen und Lateral Movement-Pfade zeigen klar an, wenn
 - [Untersuchen eines Computers](investigate-a-computer.md)
 - [Arbeiten mit Sicherheitswarnungen](working-with-suspicious-activities.md)
 - [Arbeiten mit Lateral Movement-Pfaden](use-case-lateral-movement-path.md)
-- [Warnungen zu Reconnaissance](atp-reconnaissance-alerts.md)
-- [Warnungen zu kompromittierten Anmeldeinformationen](atp-compromised-credentials-alerts.md)
-- [Lateral Movement-Warnungen](atp-lateral-movement-alerts.md)
-- [Warnungen zu Domänendominanz](atp-domain-dominance-alerts.md)
-- [Warnungen zu Exfiltration](atp-exfiltration-alerts.md)
+- [Warnungen zu Reconnaissance](reconnaissance-alerts.md)
+- [Warnungen zu kompromittierten Anmeldeinformationen](compromised-credentials-alerts.md)
+- [Lateral Movement-Warnungen](lateral-movement-alerts.md)
+- [Warnungen zu Domänendominanz](domain-dominance-alerts.md)
+- [Warnungen zu Exfiltration](exfiltration-alerts.md)
 - [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)

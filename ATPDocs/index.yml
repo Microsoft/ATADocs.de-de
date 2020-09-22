@@ -12,25 +12,25 @@ metadata:
   author: shsagir
   ms.author: shsagir
   ms.date: 09/23/2019
-  ms.openlocfilehash: a9946b16b63b9fa78cf1fc1f52bb59e1b13cc556
-  ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+  ms.openlocfilehash: 2c6de3d806f80ef8d05b4e25d8101c71c35207b5
+  ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 04/21/2020
-  ms.locfileid: "75906573"
+  ms.lasthandoff: 09/21/2020
+  ms.locfileid: "90826599"
 landingContent:
 - title: Informationen zu Azure Advanced Threat Protection (Azure ATP)
   linkLists:
   - linkListType: overview
     links:
     - text: Was ist Azure Advanced Threat Protection?
-      url: what-is-atp.md
+      url: what-is.md
   - linkListType: architecture
     links:
     - text: Azure ATP-Architektur
-      url: atp-architecture.md
+      url: architecture.md
     - text: Azure ATP über Cloud App Security
-      url: atp-mcas-integration.md
+      url: mcas-integration.md
   - linkListType: video
     links:
     - text: Einführung in Azure ATP
@@ -44,25 +44,25 @@ landingContent:
     - text: Sicherheitswarnungen
       url: understanding-security-alerts.md
     - text: Integritätswarnungen
-      url: atp-health-center.md
+      url: health-center.md
     - text: Überwachen Ihrer Domänencontroller
-      url: atp-sensor-monitoring.md
+      url: sensor-monitoring.md
 - title: Erkunden unterschiedlicher Verwendungsmöglichkeiten von Azure ATP
   linkLists:
   - linkListType: how-to-guide
     links:
     - text: Bewertungen des Identitätssicherheitsstatus von Azure ATP
-      url: atp-isp-overview.md
+      url: isp-overview.md
     - text: 'Lab: Azure ATP-Sicherheitswarnungen'
-      url: atp-playbook-lab-overview.md
+      url: playbook-lab-overview.md
     - text: Ausschließen von Entitäten von der Erkennung
       url: excluding-entities-from-detections.md
     - text: Durchsuchen und Filtern überwachter Aktivitäten
-      url: atp-activities-search.md
+      url: activities-search.md
     - text: Verwenden von Ausschlüssen und Honeytoken-Konten
-      url: install-atp-step7.md
+      url: install-step7.md
     - text: Verlagern von Advanced Threat Analytics (ATA) zu Azure ATP
-      url: ata-atp-move-overview.md
+      url: migrate-from-ata-overview.md
 - title: Verwalten und Beheben von Sicherheitswarnungen
   linkLists:
   - linkListType: how-to-guide
@@ -90,18 +90,18 @@ landingContent:
   - linkListType: deploy
     links:
     - text: Verwenden von Azure ATP mit Cloud App Security
-      url: atp-mcas-integration.md
+      url: mcas-integration.md
     - text: Filteraktivitäten und Festlegen von Richtlinien
-      url: atp-activities-filtering-mcas.md
+      url: activities-filtering-mcas.md
 - title: Ressourcen und Support
   linkLists:
   - linkListType: reference
     links:
     - text: Häufig gestellte Fragen
-      url: atp-technical-faq.md
+      url: technical-faq.md
     - text: Support und Informationen
-      url: atp-support.md
+      url: support.md
     - text: Roadmap für die ATP-Bereitschaft
-      url: atp-resources.md
+      url: resources.md
     - text: Sicherheit und Datenschutz für Azure ATP
-      url: atp-privacy-compliance.md
+      url: privacy-compliance.md
