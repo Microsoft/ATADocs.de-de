@@ -7,14 +7,16 @@ author: shsagir
 ms.author: shsagir
 ms.date: 02/28/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: 5b7bc09b0327260504900c6a0b075b243c02f70e
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: 4dbc5a6eb70bb9bc531ed54a9162554bd15d9dc9
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90828425"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90910250"
 ---
 # <a name="tutorial-setup-an-atp-security-alert-lab"></a>Tutorial: Einrichten einer ATP-Sicherheits Warnungs Umgebung 
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
  Der Zweck der Azure ATP Sicherheits Warnungs Umgebung besteht darin, die Funktionen von **Azure ATP**zu veranschaulichen, um verdächtige Aktivitäten und potenzielle Angriffe auf Ihr Netzwerk zu ermitteln und zu erkennen. Dieses erste Tutorial einer vierteiligen Reihe führt Sie durch die Erstellung einer Testumgebung für *diskrete* Erkennungen durch Azure ATP. Die Sicherheitswarnungsumgebung konzentriert sich auf *signaturbasierte* Funktionen von Azure ATP. Die Testumgebung enthält keine erweiterten Verhaltenserkennungen auf Machine Learning-, Benutzer- oder Entitätsbasis, da diese Erkennungen eine Lernphase mit echtem Netzwerkverkehr von bis zu 30 Tagen erfordern. Weitere Informationen über jedes Tutorial dieser Reihe finden Sie unter [Tutorialübersicht: ATP-Sicherheitswarnungsumgebung](playbook-lab-overview.md). 
 
@@ -53,8 +55,8 @@ In den Beispielen dieses Tutorials lautet der Gesamtstruktur-NetBIOS-Name **CONT
 |  FQDN | OS | IP | Zweck |
 |------|-------|---------|--------------|
 | ContosoDC.contoso.azure | Windows Server 2012 R2 | 10.0.24.4 | Lokal installierter Domänencontroller mit Azure ATP-Sensor |
-| VictimPC.contoso.azure | Windows 10 | 10.0.24.5 |PC des Opfers |
-| AdminPC.contoso.azure | Windows 10  | 10.0.24.6 | PC des Domänenadministrators (auch als „Sichere Administratorarbeitsstation“ oder „Privilegierte Administratorarbeitsstation“ bezeichnet) |
+| VictimPC.contoso.azure | Windows 10 | 10.0.24.5 |PC des Opfers |
+| AdminPC.contoso.azure | Windows 10  | 10.0.24.6 | PC des Domänenadministrators (auch als „Sichere Administratorarbeitsstation“ oder „Privilegierte Administratorarbeitsstation“ bezeichnet) |
 
 ### <a name="active-directory-users-and-groups"></a>Active Directory-Benutzer und -Gruppen
 

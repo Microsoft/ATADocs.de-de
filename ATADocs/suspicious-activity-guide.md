@@ -12,16 +12,18 @@ ms.technology: ''
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 6d91f755f3892076714b1bdbb6896f1fa6639a3a
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: aa89bb10e60c103af1684ae7a2d2dc5f4227bb92
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88955036"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912223"
 ---
 # <a name="advanced-threat-analytics-suspicious-activity-guide"></a>Advanced Threat Analytics-Handbuch zu verdächtigen Aktivitäten
 
-*Gilt für: Advanced Threat Analytics Version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Wenn eine ordnungsgemäße Untersuchung befolgt wird, kann jede verdächtige Aktivität folgendermaßen klassifiziert werden:
 
@@ -129,7 +131,7 @@ Es gibt drei Arten von Erkennung:
 1. Skeleton Key – Entfernen der Schadsoftware Weitere Informationen finden Sie in der [Skeleton Key Malware Analysis](https://www.virusbulletin.com/virusbulletin/2016/01/paper-digital-bian-lian-face-changing-skeleton-key-malware) (Analyse der Skeleton Key-Schadsoftware).
 
 1. Golden Ticket: Befolgen Sie die Anweisungen zu verdächtigen Aktivitäten unter [Golden Ticket](#golden-ticket).
-    Implementieren Sie ebenfalls die [Pass the hash recommendations (Empfehlungen zu Pass-the-Hash)](https://www.microsoft.com/download/details.aspx?id=36036), da für das Erstellen eines Golden Tickets Domänenadministratorrechte erforderlich sind.
+    Außerdem müssen Sie Pass-the-Hash-Empfehlungen implementieren, da [die](https://www.microsoft.com/download/details.aspx?id=36036)Erstellung eines Golden Ticket Domänen Administratorrechte erfordert.
 
 1. Overpass-the-Hash: Wenn das beteiligte Konto nicht vertraulich ist, setzen Sie das Kennwort für dieses Konto zurück. Dies hindert den Angreifer daran, neue Kerberos-Tickets aus dem Kennworthash zu erstellen. Bestehende Tickets können jedoch weiterhin verwendet werden, bis sie ablaufen. Bei einem sensiblen Konto sollten Sie das krbtgt-Konto zweimal wie in der verdächtigen Aktivität Golden Ticket zurücksetzen. Durch das zweimalige Zurücksetzen von KRBTGT werden alle Kerberos-Tickets in dieser Domäne ungültig. Daher sollten Sie diesen Schritt im Voraus planen. Weitere Informationen finden Sie im Leitfaden [KRBTGT Account Password Reset Scripts now available for customers (Skripts zum Zurücksetzen von Kennwörtern des KRBTGT-Kontos stehen Kunden jetzt zur Verfügung)](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Siehe auch verwenden von [Zurücksetzen des krbtgt-Konto Kennworts/der Schlüssel
 
@@ -210,7 +212,7 @@ In dieser Erkennung wird eine Warnung ausgelöst, wenn ein Kerberos Ticket Grant
 **Problembehandlung**
 
 Ändern Sie das Kennwort für das Kerberos Ticket Granting Ticket (KRBTGT) zweimal gemäß den Anweisungen unter [KRBTGT Account Password Reset Scripts now available for customers (Skripts zum Zurücksetzen von Kennwörtern des KRBTGT-Kontos stehen Kunden jetzt zur Verfügung)](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) mithilfe des [Reset the KRBTGT account password/keys tool (Tools zum Zurücksetzen des Kennworts/Schlüssels eines KRBTGT-Kontos)](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Durch das zweimalige Zurücksetzen von KRBTGT werden alle Kerberos-Tickets in dieser Domäne ungültig. Daher sollten Sie diesen Schritt im Voraus planen.
-Implementieren Sie ebenfalls die [Pass the hash recommendations (Empfehlungen zu Pass-the-Hash)](https://www.microsoft.com/download/details.aspx?id=36036), da für das Erstellen eines Golden Tickets Domänenadministratorrechte erforderlich sind.
+Außerdem müssen Sie Pass-the-Hash-Empfehlungen implementieren, da [die](https://www.microsoft.com/download/details.aspx?id=36036)Erstellung eines Golden Ticket Domänen Administratorrechte erfordert.
 
 ## <a name="malicious-data-protection-private-information-request"></a>Böswillige Anforderung privater Informationen im Rahmen der Datensicherheit
 

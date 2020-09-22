@@ -12,14 +12,16 @@ ms.technology: ''
 ms.assetid: e5a9718c-b22e-41f7-a614-f00fc4997682
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d48baa40d76254531606f2e923158a78e5c17a45
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: ed745c16bebff4eb8845cfe0ea834645f909ee1f
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88953812"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90911072"
 ---
 # <a name="updating-ata-to-version-18"></a>Aktualisieren von ATA auf Version 1.8
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE] 
 > Wenn ATA in Ihrer Umgebung nicht installiert ist, laden Sie die vollständige ATA-Version (enthält Version 1.8) herunter, und befolgen Sie die unter [Installieren von ATA](install-ata-step1.md) beschriebene Standardinstallation.

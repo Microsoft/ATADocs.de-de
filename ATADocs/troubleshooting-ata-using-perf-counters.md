@@ -12,16 +12,18 @@ ms.technology: ''
 ms.assetid: df162a62-f273-4465-9887-94271f5000d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1406e96ea205d50a64b475cc6a2d9642e38f63a4
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 432e91f7d88539061291a8c68ee2cc53c435e440
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88956396"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90910788"
 ---
 # <a name="troubleshooting-ata-using-the-performance-counters"></a>Problembehandlung bei ATA mithilfe der Leistungsindikatoren
 
-*Gilt für: Advanced Threat Analytics Version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Die ATA-Leistungsindikatoren bieten Einblick in die Leistungsgrade der einzelnen ATA-Komponenten. Die Komponenten in ATA verarbeiten Daten sequenziell. Wenn also ein Problem vorliegt, kann dies dazu führen, dass an irgendeinem Punkt in der Komponentenkette ein Teil des Datenverkehrs verworfen wird. Um das Problem zu beheben, müssen Sie herausfinden, welche Komponente den Fehler bewirkt, und das Problem am Anfang der Kette beheben. Verwenden Sie Daten aus den Leistungsindikatoren, um zu verstehen, wie jede Komponente funktioniert.
 Eine Beschreibung des Datenflusses zwischen internen ATA-Komponenten finden Sie unter [ATA-Architektur](ata-architecture.md).
@@ -137,7 +139,7 @@ In der folgenden Tabelle werden die Leistungsindikatoren des Betriebssystems auf
 > |\LogicalDisk(&#42;)\Disk Write Bytes\sec|Die Anzahl der Bytes pro Sekunde, die auf den Datenträger geschrieben werden.|Kein Schwellenwert|Leistungsindikatoren für die Laufwerkauslastung können nützliche Hinweise bei der Fehlerbehandlung der Speicherlatenz geben.|
 
 ## <a name="see-also"></a>Weitere Informationen
-- [Voraussetzungen für ATA](ata-prerequisites.md)
+- [ATA-Voraussetzungen](ata-prerequisites.md)
 - [ATA-Kapazitätsplanung](ata-capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
 - [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-collection.md)

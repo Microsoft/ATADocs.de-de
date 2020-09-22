@@ -12,16 +12,18 @@ ms.technology: ''
 ms.assetid: 38ea49b5-cd5e-43e5-bc39-5071f759633b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ade040ef22e471119fd68867af286073af97345f
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 05553e65edc787a9e039f763b2a0a021386d81de
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88956549"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90911022"
 ---
 # <a name="ata-reports"></a>ATA-Berichte
 
-*Gilt für: Advanced Threat Analytics Version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Der Abschnitt der ATA-Berichte in der Konsole erlaubt Ihnen, Berichte zu generieren, die Ihnen Informationen zum Systemstatus sowie zur Systemintegrität und einen Bericht über verdächtige Aktivitäten, die in Ihrer Umgebung ermittelt wurden, bereitzustellen.
 
@@ -63,7 +65,7 @@ So legen Sie einen geplanten Bericht fest:
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Voraussetzungen für ATA](ata-prerequisites.md)
+- [ATA-Voraussetzungen](ata-prerequisites.md)
 - [ATA-Kapazitätsplanung](ata-capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
 - [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-collection.md)

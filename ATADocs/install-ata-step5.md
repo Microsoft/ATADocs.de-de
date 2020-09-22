@@ -12,37 +12,39 @@ ms.technology: ''
 ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 2f8c2750061bc464bcd1f78c46aeeafc4c5f181e
-ms.sourcegitcommit: 954f5e64a8a25075ce663b9fd63810cf4c032987
+ms.openlocfilehash: 49a8301b1d13bbd6032b34b893b5a86e4cdd3739
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85129832"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90911407"
 ---
 # <a name="install-ata---step-5"></a>Installieren von ATA – Schritt 5
 
-*Gilt für: Advanced Threat Analytics Version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!div class="step-by-step"]
 > [«Schritt 4](install-ata-step4.md) 
 >  [Schritt 6»](install-ata-step6.md)
 
-## <a name="step-5-configure-the-ata-gateway-settings"></a>Schritt 5: Konfigurieren der Einstellungen des ATA-Gateways
+## <a name="step-5-configure-the-ata-gateway-settings"></a>Schritt 5. Konfigurieren der Einstellungen des ATA-Gateways
 
 Führen Sie nach der Installation des ATA-Gateways die folgenden Schritte aus, um die Einstellungen für das ATA-Gateway zu konfigurieren.
 
 1. Gehen Sie in der ATA-Konsole zu **Konfiguration**, und wählen Sie unter **System****Gateways** aus.
 
-    ![Abbildung – Konfigurieren der Gatewayeinstellungen](media/ata-gw-config-1.png)
+    ![Konfigurieren der Gatewayeinstellungen, Phase 1](media/ata-gw-config-1.png)
 
 1. Klicken Sie auf das Gateway, das Sie konfigurieren möchten, und geben Sie die folgenden Informationen ein:
 
-    ![Abbildung – Konfigurieren der Gatewayeinstellungen](media/ATA-Gateways-config-2.png)
+    ![Konfigurieren der Gatewayeinstellungen, Phase 2](media/ATA-Gateways-config-2.png)
 
     - **Beschreibung:**: Geben Sie eine Beschreibung für das ATA-Gateway ein (optional).
     - **Domänencontroller mit Portspiegelung (FQDN)** (benötigt für das ATA-Gateway; kann nicht für das ATA-Lightweight-Gateway geändert werden): Geben Sie den vollqualifizierten Domänennamen (FQDN) Ihres Domänencontrollers ein, und klicken Sie auf das Pluszeichen, um ihn der Liste hinzuzufügen. z. B. **dc01.contoso.com**.
 
-    Die folgenden Informationen gelten für die Server, die Sie in der Liste **Domänen Controller** eingeben:
+    Die folgenden Informationen gelten für die Server, die Sie in der Liste **Domänencontroller** eingeben.
 
     - Alle Domänencontroller, deren Datenverkehr vom ATA-Gateway mittels Portspiegelung überwacht wird, müssen in der Liste **Domänencontroller** aufgeführt sein. Wenn ein Domänencontroller nicht in der Liste **Domänencontroller** aufgeführt ist, werden verdächtige Aktivitäten möglicherweise nicht wie erwartet erkannt.
     - Mindestens ein Domänencontroller in der Liste sollte ein globaler Katalog sein. Dadurch kann ATA Computer- und Benutzerobjekte in anderen Domänen in der Gesamtstruktur auflösen.
@@ -107,4 +109,4 @@ Wenn Sie ATA in einem anderen Verzeichnis installiert haben, stellen Sie sicher,
 - [Tool zur Bemessung von ATA-Gateways](https://aka.ms/atasizingtool)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
-- [Voraussetzungen für ATA](ata-prerequisites.md)
+- [ATA-Voraussetzungen](ata-prerequisites.md)

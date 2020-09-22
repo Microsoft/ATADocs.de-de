@@ -13,16 +13,18 @@ ms.technology: ''
 ms.assetid: b04fb8a4-b366-4b55-9d4c-6f054fa58a90
 ms.reviewer: elofek
 ms.suite: ems
-ms.openlocfilehash: 8569e26786c36f08fdcf98dcd11452cdef5736b6
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 456538f0b68f1eec0474f4579908a1dc2c42ee67
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88955988"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912002"
 ---
 # <a name="understanding-ata-health-alerts"></a>Informationen zu ATA-Integritäts Warnungen
 
-*Gilt für: Advanced Threat Analytics Version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Das ATA Health Center informiert Sie, wenn ein Problem mit der ATA-Bereitstellung vorliegt, indem eine Integritäts Warnung ausgelöst wird.
 In diesem Artikel werden alle Integritätswarnungen für die einzelnen Komponenten beschrieben und die Ursachen und Schritte zur Behebung des jeweiligen Problems genannt.
@@ -30,7 +32,7 @@ In diesem Artikel werden alle Integritätswarnungen für die einzelnen Komponent
 ### <a name="center-running-out-of-disk-space"></a>Festplattenspeicher für Center nahezu vollständig belegt
 |Warnung|Beschreibung|Lösung|Schweregrad|
 |----|----|----|----|
-|The free space on the ATA Center machine drive that is used for storing the ATA database is getting low. (Der freie Speicherplatz auf dem Laufwerk des ATA-Center-Computers, der zum Speichern der ATA-Datenbank verwendet wird, geht zur Neige).|Das bedeutet, dass die Festplatte über weniger als 200 GB freien Speicherplatz verfügt oder dass es weniger als 20 % freien Speicherplatz gibt, was auch immer kleiner ist. Wenn ATA bemerkt, dass der Speicherplatz der Festplatte zur Neige geht, werden alte Daten von der Datenbank gelöscht. Wenn keine alten Daten gelöscht werden können, da diese noch immer für die Erkennungs-Engine benötigt werden, erhalten Sie diese Warnung. Wenn Sie diese Warnung erhalten, stoppt ATA die Nachverfolgung neuer Aktivitäten.|Erhöhen Sie die Festplattengröße, oder geben Sie Speicherplatz auf dieser Festplatte frei.|High|
+|The free space on the ATA Center machine drive that is used for storing the ATA database is getting low. (Der freie Speicherplatz auf dem Laufwerk des ATA-Center-Computers, der zum Speichern der ATA-Datenbank verwendet wird, geht zur Neige).|Das bedeutet, dass die Festplatte über weniger als 200 GB freien Speicherplatz verfügt oder dass es weniger als 20 % freien Speicherplatz gibt, was auch immer kleiner ist. Wenn ATA bemerkt, dass der Speicherplatz der Festplatte zur Neige geht, werden alte Daten von der Datenbank gelöscht. Wenn keine alten Daten gelöscht werden können, da diese noch immer für die Erkennungs-Engine benötigt werden, erhalten Sie diese Warnung. Wenn Sie diese Warnung erhalten, stoppt ATA die Nachverfolgung neuer Aktivitäten.|Erhöhen Sie die Festplattengröße, oder geben Sie Speicherplatz auf dieser Festplatte frei.|Hoch|
 ### <a name="failure-sending-mail"></a>Fehler beim Senden von E-Mail
 |Warnung|Beschreibung|Lösung|Schweregrad|
 |----|----|----|----|
@@ -39,7 +41,7 @@ In diesem Artikel werden alle Integritätswarnungen für die einzelnen Komponent
 ### <a name="center-overloaded"></a>Center überlastet
 |Warnung|Beschreibung|Lösung|Schweregrad|
 |----|----|----|----|
-|The ATA Center is not able to handle the amount of data being transferred from the ATA Gateways. (ATA Center kann die Menge der Daten, die von ATA-Gateways übertragen werden, nicht verarbeiten.) |ATA Center beendet die Analyse von neuem Netzwerkverkehr und Ereignissen. Dies bedeutet, dass die Genauigkeit der Erkennungen und Profile verringert wird, während diese Integritäts Warnung aktiv ist.|Stellen Sie sicher, dass Sie genügen Ressourcen für ATA Center bereitgestellt haben. Weitere Details zur genauen Planung der ATA Center-Kapazität finden Sie unter [ATA-Kapazitätsplanung](ata-capacity-planning.md). Untersuchen Sie die Leistung von ATA Center mithilfe der [Problembehandlung bei ATA mithilfe der Leistungsindikatoren](troubleshooting-ata-using-perf-counters.md).|High|
+|The ATA Center is not able to handle the amount of data being transferred from the ATA Gateways. (ATA Center kann die Menge der Daten, die von ATA-Gateways übertragen werden, nicht verarbeiten.) |ATA Center beendet die Analyse von neuem Netzwerkverkehr und Ereignissen. Dies bedeutet, dass die Genauigkeit der Erkennungen und Profile verringert wird, während diese Integritäts Warnung aktiv ist.|Stellen Sie sicher, dass Sie genügen Ressourcen für ATA Center bereitgestellt haben. Weitere Details zur genauen Planung der ATA Center-Kapazität finden Sie unter [ATA-Kapazitätsplanung](ata-capacity-planning.md). Untersuchen Sie die Leistung von ATA Center mithilfe der [Problembehandlung bei ATA mithilfe der Leistungsindikatoren](troubleshooting-ata-using-perf-counters.md).|Hoch|
 
 ### <a name="failure-connecting-to-the-siem-server-using-syslog"></a>Fehler bei der Verbindungsherstellung mit dem SIEM-Server unter Verwendung von Syslog.
 |Warnung|Beschreibung|Lösung|Schweregrad|
@@ -52,7 +54,7 @@ In diesem Artikel werden alle Integritätswarnungen für die einzelnen Komponent
 ### <a name="ata-center-certificate-expired"></a>Das ATA Center-Zertifikat ist abgelaufen
 |Warnung|Beschreibung|Lösung|Schweregrad|
 |----|----|----|----|
-|The ATA Center certificate expired. (Das ATA Center-Zertifikat ist abgelaufen.)|Nach dem Ablauf des Zertifikats: Die Konnektivität vom ATA-Gateway zu ATA Center kann nicht hergestellt werden. Der ATA Center-Prozess stürzt ab, und alle ATA-Funktionen werden angehalten.|[Erneutes Bereitstellen von ATA Center](install-ata-step1.md)|High|
+|The ATA Center certificate expired. (Das ATA Center-Zertifikat ist abgelaufen.)|Nach dem Ablauf des Zertifikats: Die Konnektivität vom ATA-Gateway zu ATA Center kann nicht hergestellt werden. Der ATA Center-Prozess stürzt ab, und alle ATA-Funktionen werden angehalten.|[Erneutes Bereitstellen von ATA Center](install-ata-step1.md)|Hoch|
 ## <a name="ata-gateway-issues"></a>Probleme mit dem ATA-Gateway
 ### <a name="read-only-user-password-to-expire-shortly"></a>Kennwort für schreibgeschützten Benutzer läuft bald ab
 |Warnung|Beschreibung|Lösung|Schweregrad|
@@ -61,7 +63,7 @@ In diesem Artikel werden alle Integritätswarnungen für die einzelnen Komponent
 ### <a name="read-only-user-password-expired"></a>Kennwort für schreibgeschützten Benutzer abgelaufen
 |Warnung|Beschreibung|Lösung|Schweregrad|
 |----|----|----|----|
-|The read-only user password, used to get directory data, expired. (Das Kennwort für schreibgeschützten Benutzer, das zum Abrufen von Verzeichnisdaten verwendet wird, ist abgelaufen.)|Es werden keine ATA-Gateways mehr ausgeführt (oder bald nicht mehr ausgeführt), und es werden keine neuen Daten gesammelt.|[Ändern Sie das Domänenverbindungskennwort](modifying-ata-config-dcpassword.md), und ändern Sie das Kennwort in der ATA-Konsole.|High|
+|The read-only user password, used to get directory data, expired. (Das Kennwort für schreibgeschützten Benutzer, das zum Abrufen von Verzeichnisdaten verwendet wird, ist abgelaufen.)|Es werden keine ATA-Gateways mehr ausgeführt (oder bald nicht mehr ausgeführt), und es werden keine neuen Daten gesammelt.|[Ändern Sie das Domänenverbindungskennwort](modifying-ata-config-dcpassword.md), und ändern Sie das Kennwort in der ATA-Konsole.|Hoch|
 ### <a name="gateway-certificate-about-to-expire"></a>Gatewayzertifikat läuft bald ab
 |Warnung|Beschreibung|Lösung|Schweregrad|
 |----|----|----|----|
@@ -70,7 +72,7 @@ In diesem Artikel werden alle Integritätswarnungen für die einzelnen Komponent
 ### <a name="gateway-certificate-expired"></a>Gatewayzertifikat abgelaufen
 |Warnung|Beschreibung|Lösung|Schweregrad|
 |----|----|----|----|
-|The ATA Gateway certificate expired. (Das ATA-Gatewayzertifikat ist abgelaufen.)|Es ist gibt keine Konnektivität von diesem ATA-Gateway zu ATA Center. Es werden keine Daten von diesem ATA-Gateway gesendet.|[Deinstallieren Sie ATA-Gateway, und installieren Sie es neu](install-ata-step3.md).|High|
+|The ATA Gateway certificate expired. (Das ATA-Gatewayzertifikat ist abgelaufen.)|Es ist gibt keine Konnektivität von diesem ATA-Gateway zu ATA Center. Es werden keine Daten von diesem ATA-Gateway gesendet.|[Deinstallieren Sie ATA-Gateway, und installieren Sie es neu](install-ata-step3.md).|Hoch|
 ### <a name="domain-synchronizer-not-assigned"></a>Domain synchronizer not assigned (Domänensynchronizer nicht zugewiesen)
 |Warnung|Beschreibung|Lösung|Schweregrad|
 |----|----|----|----|
@@ -107,11 +109,11 @@ In diesem Artikel werden alle Integritätswarnungen für die einzelnen Komponent
 ### <a name="gateway-version-outdated"></a>Gatewayversion veraltet
 |Warnung|Beschreibung|Lösung|Schweregrad|
 |----|----|----|----|
-|The ATA Center is newer than the version installed on the ATA Gateway. (ATA Center ist neuer als die auf dem ATA-Gateway installierte Version.) Dadurch funktioniert das ATA-Gateway nicht mehr wie erwartet.|Dies kann die Fähigkeit zum Erkennen verdächtiger Aktivitäten beeinflussen, die von Domänencontrollern stammen, die von diesem ATA-Gateway überwacht werden.|Das ATA-Gateway wird automatisch auf die neueste Version aktualisiert, indem ein [automatisches Update](install-ata-step1.md) in der ATA-Konsole aktiviert oder das neueste in der ATA-Konsole verfügbare ATA-Gatewaypaket heruntergeladen wird.|High|
+|The ATA Center is newer than the version installed on the ATA Gateway. (ATA Center ist neuer als die auf dem ATA-Gateway installierte Version.) Dadurch funktioniert das ATA-Gateway nicht mehr wie erwartet.|Dies kann die Fähigkeit zum Erkennen verdächtiger Aktivitäten beeinflussen, die von Domänencontrollern stammen, die von diesem ATA-Gateway überwacht werden.|Das ATA-Gateway wird automatisch auf die neueste Version aktualisiert, indem ein [automatisches Update](install-ata-step1.md) in der ATA-Konsole aktiviert oder das neueste in der ATA-Konsole verfügbare ATA-Gatewaypaket heruntergeladen wird.|Hoch|
 ### <a name="gateway-service-failed-to-start"></a>Fehler beim Starten des Gatewaydiensts.
 |Warnung|Beschreibung|Lösung|Schweregrad|
 |----|----|----|----|
-|The ATA Gateway service failed to start for at least 30 minutes. (Der ATA-Gatewaydienst konnte für mindestens 30 Minuten nicht gestartet werden.)|Dies kann die Fähigkeit zum Erkennen verdächtiger Aktivitäten beeinflussen, die von Domänencontrollern stammen, die von diesem ATA-Gateway überwacht werden.|Überwachen Sie ATA-Gatewayprotokolle, um [die Grundursache für den Fehler des ATA-Gatewaydiensts zu verstehen](troubleshooting-ata-using-logs.md).|High|
+|The ATA Gateway service failed to start for at least 30 minutes. (Der ATA-Gatewaydienst konnte für mindestens 30 Minuten nicht gestartet werden.)|Dies kann die Fähigkeit zum Erkennen verdächtiger Aktivitäten beeinflussen, die von Domänencontrollern stammen, die von diesem ATA-Gateway überwacht werden.|Überwachen Sie ATA-Gatewayprotokolle, um [die Grundursache für den Fehler des ATA-Gatewaydiensts zu verstehen](troubleshooting-ata-using-logs.md).|Hoch|
 ## <a name="lightweight-gateway"></a>Lightweight-Gateway
 ### <a name="lightweight--gateway-reached-a-memory-resource-limit"></a>Lightweight-Gateway hat Arbeitsspeicherressourcenlimit erreicht
 |Warnung|Beschreibung|Lösung|Schweregrad|
@@ -120,7 +122,7 @@ In diesem Artikel werden alle Integritätswarnungen für die einzelnen Komponent
 
 
 ## <a name="see-also"></a>Weitere Informationen
-- [Voraussetzungen für ATA](ata-prerequisites.md)
+- [ATA-Voraussetzungen](ata-prerequisites.md)
 - [ATA-Kapazitätsplanung](ata-capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
 - [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-collection.md)

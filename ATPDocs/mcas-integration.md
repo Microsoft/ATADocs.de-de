@@ -11,14 +11,16 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c049b9ebed102ab8fc27c006eef95ef94269466f
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: c1c3b18606b38902217a320663ef91191e34f185
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90828436"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90910161"
 ---
 # <a name="using-azure-atp-with-microsoft-cloud-app-security"></a>Verwenden von Azure ATP mit Microsoft Cloud App Security
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Dieser Artikel bietet grundlegende Informationen sowie Tipps zur Navigation in der erweiterten Benutzeroberfläche für Untersuchungen, wenn Sie das Microsoft Cloud App Security-Portal mit Azure ATP verwenden.
 
@@ -65,7 +67,7 @@ Lesen Sie die [Schnellstartanleitung für Cloud App Security](/cloud-app-securit
 
 Greifen Sie in Cloud App Security-Warnungen, -Aktivitäten und -Benutzerseiten auf Ihre Azure ATP-Daten und neue Hybridfeatures zu.
 
-## <a name="alerts"></a>Warnungen
+## <a name="alerts"></a>Alerts
 
 Azure ATP-Warnungen werden in der Cloud App Security-Warteschlange **Warnungen** angezeigt. Zusätzliche Filteroptionen stehen nur beim Anzeigen von Warnungen über Cloud App Security zur Verfügung. Azure ATP-Warnungen werden mithilfe des Anwendungsfilters in **Active Directory Domain Services** gefiltert.
 

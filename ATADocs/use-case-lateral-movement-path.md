@@ -12,16 +12,18 @@ ms.technology: ''
 ms.assetid: 710f01bd-c878-4406-a7b2-ce13f98736ea
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ed9c101c1533d34d72f2c956ec8fd5efd039adf6
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: c5836b1086806b848560c0c99893d7a6fafeea1c
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88956362"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90910853"
 ---
 # <a name="investigate-lateral-movement-paths-with-ata"></a>Untersuchen von Lateral Movement-Pfaden mit ATA
 
-*Gilt für: Advanced Threat Analytics Version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Selbst wenn Sie sich sehr darum bemühen, Ihre sensiblen Benutzer zu schützen, Ihre Administratoren über komplexe Kennwörter verfügen, die regelmäßig geändert werden, deren Computer festgeschrieben sind, und ihre Daten sicher gespeichert sind, können Angreifer immer noch Lateral Movement-Pfade nutzen, um auf sensible Konten zuzugreifen. Bei lateral Movement-Angriffen nutzt der Angreifer Instanzen, wenn vertrauliche Benutzer sich bei einem Computer anmelden, auf dem ein nicht sensibler Benutzer über lokale Rechte verfügt. Dann können sich Angreifer lateral bewegen, auf den weniger sensiblen Benutzer zugreifen und sich auf dem Computer bewegen, um die Anmeldeinformationen des sensiblen Benutzers abzugreifen.
 
@@ -39,9 +41,9 @@ Führen Sie die folgenden Schritte aus, um zu ermitteln, welche sensiblen Konten
 
 1. Wenn keine lateral Movement-Pfade gefunden werden, ist der Bericht unter **lateral Movement-Pfade zu sensiblen Konten**ausgegraut. Wenn lateral Movement-Pfade vorhanden sind, wählen die Datumsangaben des Berichts automatisch das erste Datum aus, wenn relevante Daten vorhanden sind.
 
-    ![Screenshot mit der Auswahl des Berichts Datums](media/reports.png)
+    ![Screenshot: Auswahl des Berichtsdatums](media/reports.png)
 
-1. Klicken Sie auf **Download**.
+1. Klicken Sie auf **Herunterladen**.
 
 1. Die Excel-Datei, die erstellt wird, enthält Details zu den gefährdeten sensiblen Konten. Die Registerkarte **Zusammenfassung** liefert Graphen mit Informationen über die Anzahl sensibler Konten und Computer, sowie Durchschnittswerte für gefährdete Ressourcen. Die Registerkarte **Details** enthält eine Liste von sensiblen Konten, um die Sie sich kümmern sollten. Beachten Sie, dass die Pfade in der Vergangenheit verfügbar waren. Es kann also durchaus sein, dass sie heute nicht mehr verfügbar sind.
 

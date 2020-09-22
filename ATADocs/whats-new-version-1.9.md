@@ -12,15 +12,16 @@ ms.technology: ''
 ms.assetid: 51de491c-49ba-4aff-aded-cc133a8ccf0b
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: abe3a716c7a85ba435eec18eab94e514222e6803
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 01c8d55654ed4e1b425f8a043628e425496da4cb
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88956158"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912809"
 ---
 # <a name="whats-new-in-ata-version-19"></a>Neuerungen in ATA 1.9
 
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 Die neueste Updateversion von ATA kann [aus dem Download Center heruntergeladen](https://www.microsoft.com/download/details.aspx?id=56725) werden. Die Vollversion kann aus dem [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics) heruntergeladen werden.
 
 Die vorliegenden Anmerkungen zu dieser Version enthalten Informationen zu Updates, neuen Features, Fehlerbehebungen und bekannten Problemen in dieser Version von Advanced Threat Analytics.

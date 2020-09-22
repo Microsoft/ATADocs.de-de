@@ -12,16 +12,18 @@ ms.technology: ''
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: cda124f5178717181105dff33fc1344da9141661
-ms.sourcegitcommit: dadf9e656fd362f037f15c7a4b52685b5b3bd154
+ms.openlocfilehash: 7424525fa3b5e2e9cd06ad410d7965229885ab35
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865389"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912215"
 ---
 # <a name="troubleshooting-ata-known-issues"></a>Behandlung von bekannten Problemen bei ATA
 
-*Gilt für: Advanced Threat Analytics Version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 In diesem Abschnitt sind mögliche Fehler, die es in den Bereitstellungen von ATA geben kann, und die Schritte zu deren Behebung aufgeführt.
 
@@ -78,7 +80,7 @@ In diesem Abschnitt sind mögliche Fehler, die es in den Bereitstellungen von AT
 
 > [!div class="mx-tableFixed"]
 >
-> |Problem|Beschreibung|Lösung|
+> |Problem|BESCHREIBUNG|Lösung|
 > |-------------|----------|---------|
 > |Es wurde kein Datenverkehr vom Domänen Controller empfangen, aber es werden Integritäts Warnungen beobachtet.|Es wurde kein Datenverkehr von einem Domänencontroller empfangen, der Portspiegelung über ein ATA-Gateway verwendet.|Deaktivieren Sie diese Funktionen auf der ATA-Gateway-Erfassungs-NIC unter **Erweiterte Einstellungen**:<br></br>Empfang zusammengeführter Segmente (IPv4)<br></br>Empfang zusammengeführter Segmente (IPv6)|
 > |Diese Integritäts Warnung wird angezeigt: ein Teil des Netzwerk Datenverkehrs wird nicht analysiert.|Wenn Sie über ein ATA-Gateway oder ein Lightweight-Gateway auf virtuellen VMware-Computern verfügen, erhalten Sie möglicherweise die folgende Integritäts Warnung. Dies tritt aufgrund von Konfigurationskonflikten in VMware auf.|Legen Sie die folgenden Einstellungen in der NIC-Konfiguration der VM auf 0 (null) oder Deaktiviert fest: TsoEnable, LargeSendOffload, TSO Offload, Giant TSO Offload|
@@ -95,7 +97,7 @@ Mögliche Problemumgehungen:
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Voraussetzungen für ATA](ata-prerequisites.md)
+- [ATA-Voraussetzungen](ata-prerequisites.md)
 - [ATA-Kapazitätsplanung](ata-capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
 - [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-collection.md)

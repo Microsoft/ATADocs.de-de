@@ -12,16 +12,18 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b83a98ddf052416ffee0cd7dc521b9412b466d99
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 0cf77c09c09062a3a2983e36646f06c603a2ef45
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88954118"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90908884"
 ---
 # <a name="ata-prerequisites"></a>Voraussetzungen für ATA
 
-*Gilt für: Advanced Threat Analytics Version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 In diesem Artikel werden die Voraussetzungen für eine erfolgreiche Bereitstellung von ATA in Ihrer Umgebung beschrieben.
 
@@ -215,8 +217,8 @@ In der folgenden Tabelle sind die Ports aufgeführt, die für den Verwaltungsada
 |Netlogon (SMB, CIFS, SAM-R)|TCP und UDP|445|Alle Geräte im Netzwerk|Ausgehend|
 |Windows-Zeitdienst|UDP|123|Domänencontroller|Ausgehend|
 |DNS|TCP und UDP|53|DNS-Server|Ausgehend|
-|NTLM über RPC|TCP|135|Alle Geräte im Netzwerk|Beide|
-|NetBIOS|UDP|137|Alle Geräte im Netzwerk|Beide|
+|NTLM über RPC|TCP|135|Alle Geräte im Netzwerk|Beides|
+|NetBIOS|UDP|137|Alle Geräte im Netzwerk|Beides|
 |SSL|TCP|443|ATA Center|Ausgehend|
 |Syslog (optional)|UDP|514|SIEM-Server|Eingehende Verbindungen|
 
@@ -283,8 +285,8 @@ In der folgenden Tabelle sind die Ports aufgeführt, die für das ATA-Lightweigh
 |Protokoll|Transport|Port|Zu/Von|Richtung|
 |------------|-------------|--------|-----------|-------------|
 |DNS|TCP und UDP|53|DNS-Server|Ausgehend|
-|NTLM über RPC|TCP|135|Alle Geräte im Netzwerk|Beide|
-|NetBIOS|UDP|137|Alle Geräte im Netzwerk|Beide|
+|NTLM über RPC|TCP|135|Alle Geräte im Netzwerk|Beides|
+|NetBIOS|UDP|137|Alle Geräte im Netzwerk|Beides|
 |SSL|TCP|443|ATA Center|Ausgehend|
 |Syslog (optional)|UDP|514|SIEM-Server|Eingehende Verbindungen|
 |Netlogon (SMB, CIFS, SAM-R)|TCP und UDP|445|Alle Geräte im Netzwerk|Ausgehend|

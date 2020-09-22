@@ -12,16 +12,18 @@ ms.technology: ''
 ms.assetid: 7597ed25-87f5-472c-a496-d5f205c9c391
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 869a9d1ed60cc740dc50456f61244f100ac47027
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 6bcbe9c86dbef5e3656ad675936fb4bef63a67d9
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88955784"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90911222"
 ---
 # <a name="install-ata---step-9"></a>Installieren von ATA: Schritt 9
 
-*Gilt für: Advanced Threat Analytics Version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!div class="step-by-step"]
 > [« Schritt 8 ](install-ata-step7.md)
@@ -59,4 +61,4 @@ Wenn Sie sicherstellen möchten, dass Windows-Clients und -Server zulassen, dass
 - [Tool zur Bemessung von ATA-Gateways](https://aka.ms/atasizingtool)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
-- [Voraussetzungen für ATA](ata-prerequisites.md)
+- [ATA-Voraussetzungen](ata-prerequisites.md)

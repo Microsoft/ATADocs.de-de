@@ -12,14 +12,16 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 71b15bd9-3183-4e24-b18a-705023ccc313
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 66de794ef4e715ef1ca94ca46388fc237bc04392
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: eaef6571a11852e66634e9043daa25ec8fdbe2ef
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90828329"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90910187"
 ---
 # <a name="azure-atps-identity-security-posture-assessments"></a>Azure ATP-Bewertungen des Identitätssicherheitsstatus
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 In der Regel haben Organisationen jeder Größenordnung nur eingeschränkte Informationen darüber, ob ihre lokalen Apps und Dienste ein Sicherheitsrisiko für die Organisation darstellen könnten. Dieses Problem trifft insbesondere bei nicht unterstützten oder veralteten Komponenten zu.
 

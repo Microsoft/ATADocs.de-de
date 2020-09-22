@@ -12,16 +12,18 @@ ms.technology: ''
 ms.assetid: 7620e171-76d5-4e3f-8b03-871678217a3a
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: eeb4a87ed3983af7e6452849ab35edc7ee15f369
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: a717c771afe39c7e187487c3fd9c41d4c1691a3a
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88954730"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90909521"
 ---
 # <a name="ata-disaster-recovery"></a>ATA-Notfallwiederherstellung
 
-*Gilt für: Advanced Threat Analytics Version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Dieser Artikel beschreibt, wie Sie ATA Center und Ihre ATA-Funktionalität schnell wiederherstellen können, wenn die ATA Center-Funktionalität verloren gegangen ist, die ATA-Gateways jedoch noch funktionieren. 
 
@@ -66,7 +68,7 @@ Dieser Artikel beschreibt, wie Sie ATA Center und Ihre ATA-Funktionalität schne
 
 
 ## <a name="see-also"></a>Weitere Informationen
-- [Voraussetzungen für ATA](ata-prerequisites.md)
+- [ATA-Voraussetzungen](ata-prerequisites.md)
 - [ATA-Kapazitätsplanung](ata-capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](install-ata-step6.md)
 - [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-collection.md)

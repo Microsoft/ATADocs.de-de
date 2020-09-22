@@ -12,16 +12,18 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 30ec42082bb726775a0801360ae471a4bd864514
-ms.sourcegitcommit: bfb5f35f8e2f19911357e5afa6624ffe43e37d12
+ms.openlocfilehash: 74d610899023eba93da568360a99505119d13e70
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86472385"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90908848"
 ---
 # <a name="ata-silent-installation"></a>Unbeaufsichtigte Installation von ATA
 
-*Gilt für: Advanced Threat Analytics Version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Dieser Artikel enthält Anweisungen zur unbeaufsichtigten Installation von ATA.
 
@@ -50,7 +52,7 @@ Verwenden Sie zum Installieren von ATA Center den folgenden Befehl:
 
 > [!div class="mx-tableFixed"]
 >
-> |Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|BESCHREIBUNG|
+> |Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|Beschreibung|
 > |---|---|---|---|
 > |Quiet|/quiet|Ja|Führt das Installationsprogramm ohne Benutzeroberfläche und Eingabeaufforderungen aus.|
 > |Hilfe|/help|Nein|Stellt Hilfe und eine Kurzübersicht bereit. Zeigt die korrekte Verwendung des Installationsbefehl einschließlich einer Liste aller Optionen und Verhaltensweisen an.|
@@ -89,7 +91,7 @@ Verwenden Sie zum Aktualisieren von ATA Center den folgenden Befehl:
 
 > [!div class="mx-tableFixed"]
 >
-> |Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|BESCHREIBUNG|
+> |Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|Beschreibung|
 > |---|---|---|---|
 > |Quiet|/quiet|Ja|Führt das Installationsprogramm ohne Benutzeroberfläche und Eingabeaufforderungen aus.|
 > |Hilfe|/help|Nein|Stellt Hilfe und eine Kurzübersicht bereit. Zeigt die korrekte Verwendung des Installationsbefehl einschließlich einer Liste aller Optionen und Verhaltensweisen an.|
@@ -161,7 +163,7 @@ Verwenden Sie den folgenden Befehl für eine unbeaufsichtigte Installation des A
 
 > [!div class="mx-tableFixed"]
 >
-> |Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|BESCHREIBUNG|
+> |Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|Beschreibung|
 > |---|---|---|---|
 > |Quiet|/quiet|Ja|Führt das Installationsprogramm ohne Benutzeroberfläche und Eingabeaufforderungen aus.|
 > |Hilfe|/help|Nein|Stellt Hilfe und eine Kurzübersicht bereit. Zeigt die korrekte Verwendung des Installationsbefehl einschließlich einer Liste aller Optionen und Verhaltensweisen an.|
@@ -199,7 +201,7 @@ Verwenden Sie den folgenden Befehl für ein unbeaufsichtigtes Update des ATA-Gat
 
 > [!div class="mx-tableFixed"]
 >
-> |Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|BESCHREIBUNG|
+> |Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|Beschreibung|
 > |---|---|---|---|
 > |Quiet|/quiet|Ja|Führt das Installationsprogramm ohne Benutzeroberfläche und Eingabeaufforderungen aus.|
 > |Hilfe|/help|Nein|Stellt Hilfe und eine Kurzübersicht bereit. Zeigt die korrekte Verwendung des Installationsbefehl einschließlich einer Liste aller Optionen und Verhaltensweisen an.|
@@ -245,4 +247,4 @@ So führen Sie eine unbeaufsichtigte Deinstallation des ATA-Gateways aus:
 
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
-- [Voraussetzungen für ATA](ata-prerequisites.md)
+- [ATA-Voraussetzungen](ata-prerequisites.md)

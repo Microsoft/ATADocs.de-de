@@ -7,14 +7,16 @@ author: shsagir
 ms.author: shsagir
 ms.date: 02/28/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: 52c20174b431da000ecba922462d0c6af112b005
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: 380c24fad44cc8af83a98aa5da61cd835bbe7653
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90828293"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912617"
 ---
 # <a name="tutorial-overview-atp-security-alert-lab"></a>Tutorial (Übersicht): ATP-Sicherheits Warnungs Labor
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Das Tutorial zur Azure ATP-Sicherheitswarnungsumgebung soll die Funktionen von **Azure ATP** zum Identifizieren und Erkennen verdächtiger Aktivitäten und potenzieller Angriffe auf Ihr Netzwerk veranschaulichen. Dieses vierteilige Tutorial erklärt, wie Sie eine Arbeitsumgebung installieren und konfigurieren, um *diskrete* Erkennungen durch Azure ATP zu testen. Die Testumgebung konzentriert sich auf *signaturbasierte* Funktionen von Azure ATP. Die Testumgebung enthält keine erweiterten Verhaltenserkennungen auf Machine Learning-, Benutzer- oder Entitätsbasis, da diese Erkennungen eine Lernphase mit echtem Netzwerkverkehr von bis zu 30 Tagen erfordern.
 

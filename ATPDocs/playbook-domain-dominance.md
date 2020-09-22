@@ -7,14 +7,16 @@ author: shsagir
 ms.author: shsagir
 ms.date: 02/28/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: c2acb76eebc4d64d532496fba30a508dd5e85611
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: 6eb2798ac8bf4f480d604891a24a643ec270b8e6
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90828304"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912668"
 ---
 # <a name="tutorial-domain-dominance-playbook"></a>Tutorial: Domänen Dominanz-Playbook
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Das letzte Tutorial in dieser vierteiligen Reihe zu Azure ATP-Sicherheitswarnungen ist ein Domänendominanzplaybook. Die Azure ATP-Sicherheitswarnungsumgebung soll die Funktionen von **Azure ATP** zum Identifizieren und Erkennen potenzieller Angriffe auf Ihr Netzwerk veranschaulichen. Die Testumgebung erläutert das Testen der *diskreten* Erkennungen von Azure ATP mit den *signaturbasierten* Funktionen von Azure ATP. Die Tutorials umfassen nicht Verhaltenserkennungen und Warnungen auf Basis des erweiterten Machine Learning von Azure ATP, auf Benutzer- oder Entitätsbasis. Diese Typen von Erkennungen und Warnungen sind in den Tests nicht enthalten, da sie eine Lernphase und echten Netzwerkdatenverkehr für bis zu 30 Tage erfordern. Weitere Informationen über jedes Tutorial dieser Reihe finden Sie unter [Tutorialübersicht: ATP-Sicherheitswarnungsumgebung](playbook-lab-overview.md).
 

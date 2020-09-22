@@ -12,14 +12,16 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9b3a8e59017c5b356cee7e66b6e81151bd13997a
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: 94ef8fc1514d979982c6ea7bcef398720268fe1e
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90826463"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90910456"
 ---
 # <a name="configure-event-collection"></a>Konfigurieren der Ereignissammlung
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Damit die Erkennungsfunktionalität verbessert werden kann, benötigt Azure ATP die Windows-Ereignisse, die unter [Konfigurieren der Ereignissammlung](configure-windows-event-collection.md#configure-event-collection) aufgeführt sind. Diese Ereignisse können entweder automatisch vom Azure ATP-Sensor gelesen oder, falls dieser nicht bereitgestellt wurde, an den eigenständigen Azure ATP-Sensor weitergeleitet werden. Dazu gibt es zwei Möglichkeiten: die Konfiguration des eigenständigen Azure ATP-Sensors, sodass dieser auf SIEM-Ereignisse lauscht, oder die [Konfiguration der Windows-Ereignisweiterleitung](configure-event-forwarding.md).
 

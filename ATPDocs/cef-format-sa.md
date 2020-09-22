@@ -12,14 +12,16 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 9f85a52c2e71517fca45417e0399a2d453dc7963
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: 681b0fc541956c4a778310e78d79234c0fdd7495
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90826480"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90911861"
 ---
 # <a name="azure-atp-siem-log-reference"></a>Referenz zum Azure ATP-SIEM-Protokoll
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Azure ATP kann Sicherheits- und Integritätswarnungsereignisse an SIEM weiterleiten. Warnungen und Ereignisse weisen das CEF-Format auf. Dieser Referenzartikel enthält Beispiele für die Protokolle, die an SIEM gesendet werden.
 

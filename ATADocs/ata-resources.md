@@ -12,16 +12,18 @@ ms.technology: ''
 ms.assetid: 42a1a34f-ed6b-4538-befb-452168a30e8c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c5af70847f4ca8fc61ec332aa8c6e3a9c2f6f35c
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: b37b08c401be6a6c01649051b1800597f4e11a9d
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88953999"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90908866"
 ---
 # <a name="ata-readiness-roadmap"></a>Überblick über die ATA-Bereitschaft
 
-*Gilt für: Advanced Threat Analytics Version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Dieser Artikel bietet einen Überblick über die Roadmap für die Bereitschaft, die Ihnen beim Einstieg mit Advanced Threat Analytics hilft.
 

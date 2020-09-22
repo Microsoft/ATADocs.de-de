@@ -12,17 +12,19 @@ ms.technology: ''
 ms.assetid: 5d639e84-2e37-43a9-9667-49be6c4fa8b7
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: a0a2abcf78c19180b841b9f2ec9186b19beea7c5
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: c89b37f3fda698af907cb4e74886e0b65e6df7e9
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88954662"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90909414"
 ---
 # <a name="ata-event-id-reference"></a>Verweis auf ATA-Ereignis-IDs
 
 
-*Gilt für: Advanced Threat Analytics Version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Die Ereignisanzeige des ATA Centers protokolliert Ereignisse für ATA. In diesem Artikel wird eine Liste mit Event-IDs und den dazugehörigen Beschreibungen zur Verfügung gestellt.
 
@@ -97,7 +99,7 @@ Die Ereignisse finden Sie hier:
 |3007|Manuelle Änderung zum Status „verdächtige Aktivität“|
 
 ## <a name="see-also"></a>Weitere Informationen
-- [Voraussetzungen für ATA](ata-prerequisites.md)
+- [ATA-Voraussetzungen](ata-prerequisites.md)
 - [ATA-Kapazitätsplanung](ata-capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
 - [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-collection.md)

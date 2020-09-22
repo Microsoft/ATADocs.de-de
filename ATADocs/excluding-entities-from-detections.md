@@ -12,16 +12,18 @@ ms.technology: ''
 ms.assetid: 344c0f33-45e1-42e2-a051-f722a4504531
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b5e80251fb4ffc4347671b573eb5435c09517e71
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: f806d6749c43535b3ca94c035370b3106cefb09a
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88954628"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90911561"
 ---
 # <a name="excluding-entities-from-detections"></a>Ausschließen von Entitäten von der Erkennung
 
-*Gilt für: Advanced Threat Analytics Version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Dieser Artikel erläutert, wie Sie Entitäten ausschließen, sodass diese keine Warnungen auslösen. So können Sie unbedenkliche wahr-positive Ergebnisse minimieren, aber gleichzeitig sicherstellen, dass wahr-positive Ergebnisse festgestellt werden. Um zu verhindern, dass ATA Warnungen bei Aktivitäten ausgibt, die bei bestimmten Benutzern zu Ihrem ganz normalen Geschäftsalltag gehören, können Sie bestimmte Entitäten ausschließen, sodass diese keine Warnungen auslösen.
 

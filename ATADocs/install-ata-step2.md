@@ -12,22 +12,24 @@ ms.technology: ''
 ms.assetid: e1c5ff41-d989-46cb-aa38-5a3938f03c0f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: fe99921e1193f79f7031c04156a79fd8fa55dc9e
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: ef365ec03aebcc5c35f93fa1a34cc0fb243957a6
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88954560"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90911467"
 ---
 # <a name="install-ata---step-2"></a>Installieren von ATA – Schritt 2
 
-*Gilt für: Advanced Threat Analytics Version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!div class="step-by-step"]
 > [«Schritt 1](install-ata-step1.md) 
 >  [Schritt 3»](install-ata-step3.md)
 
-## <a name="step-2-provide-a-username-and-password-to-connect-to-your-active-directory-forest"></a>Schritt 2: Geben Sie einen Benutzernamen und ein Kennwort an, um eine Verbindung mit Ihrer Active Directory-Gesamtstruktur herzustellen
+## <a name="step-2-provide-a-username-and-password-to-connect-to-your-active-directory-forest"></a>Schritt 2: Geben Sie einen Benutzernamen und ein Kennwort an, um eine Verbindung mit Ihrer Active Directory-Gesamtstruktur herzustellen
 
 Beim ersten Öffnen der ATA-Konsole wird der folgende Bildschirm angezeigt:
 
@@ -62,4 +64,4 @@ Beim ersten Öffnen der ATA-Konsole wird der folgende Bildschirm angezeigt:
 - [Tool zur Bemessung von ATA-Gateways](https://aka.ms/atasizingtool)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
-- [Voraussetzungen für ATA](ata-prerequisites.md)
+- [ATA-Voraussetzungen](ata-prerequisites.md)

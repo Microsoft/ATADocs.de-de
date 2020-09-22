@@ -12,14 +12,16 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: e734e382-c4b1-43ca-9a8d-96c91daf2578
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 31cd302575da078ce4030f982d69c9e9ad5a3138
-ms.sourcegitcommit: c4a4eb6512258beaa1b8937dc2b206fc3ee87835
+ms.openlocfilehash: e959e6c0134cf23355b7c1bc89c7e35166230fb9
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90829390"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912174"
 ---
 # <a name="advanced-threat-analytics-ata-to-azure-advanced-threat-protection-azure-atp"></a>Advanced Threat Analytics (ATA) zu Azure Advanced Threat Protection (Azure ATP)
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
 > Die endgültige Version von ATA ist [allgemein verfügbar](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA wird die grundlegende Unterstützung am 12. Januar 2021 beenden. Der erweiterte Support wird bis zum 2026. Januar fortgesetzt. Weitere Informationen finden Sie in [unserem Blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).

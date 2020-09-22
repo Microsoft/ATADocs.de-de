@@ -10,16 +10,18 @@ ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3fda8403d8dd49761e5860f48ceb1d9ca7bc9175
-ms.sourcegitcommit: c4a4eb6512258beaa1b8937dc2b206fc3ee87835
+ms.openlocfilehash: 9d9c2c027b5d7c35a02d8751a5d56585ecf0fdb0
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90829373"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90909251"
 ---
 # <a name="support-for-microsoft-advanced-threat-analytics-ata-versions"></a>Support für Microsoft Advanced Threat Analytics-Versionen (ATA)
 
-*Gilt für: Advanced Threat Analytics Version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Der Microsoft ATA-Support wird von der Microsoft Lifecycle-Richtlinie für [ATA 1. x](https://support.microsoft.com/lifecycle/search?alpha=Advanced%20Threat%20Analytics%201.X)definiert, wobei der Mainstream-Support am 12. Januar 2021 endet.
 

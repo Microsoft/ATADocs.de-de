@@ -12,16 +12,18 @@ ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0dd6695c6febca6e3aa8f109247a16b4a17a4b71
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 81145cd89246e4274b90a9524c995a32690f18c1
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88954424"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90911262"
 ---
 # <a name="install-ata---step-8"></a>Installieren von ATA – Schritt 8
 
-*Gilt für: Advanced Threat Analytics Version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!div class="step-by-step"]
 > [«Schritt 7](vpn-integration-install-step.md) 
@@ -47,7 +49,7 @@ Führen Sie zur Konfiguration die folgenden Schritte aus:
 
     ![Screenshot mit honeytoken-Kontonamen Eintrag](media/honeytoken.png)
 
-1. Klicken Sie auf **Ausschlüsse**. Geben Sie für jeden Bedrohungstyp ein Benutzerkonto oder eine IP-Adresse ein, das/die von der Erkennung dieser Bedrohungen ausgeschlossen werden soll, und klicken Sie auf das *Pluszeichen*. Das Feld **Entität hinzufügen** (Benutzer oder Computer) kann durchsucht werden und wird automatisch mit Entitäten in Ihrem Netzwerk ausgefüllt. Weitere Informationen finden Sie unter [Ausschließen von Entitäten von der Erkennung](excluding-entities-from-detections.md).
+1. Klicken Sie auf **Ausschlüsse**. Geben Sie für jeden Bedrohungstyp ein Benutzerkonto oder eine IP-Adresse ein, das/die von der Erkennung dieser Bedrohungen ausgeschlossen werden soll, und klicken Sie auf das *Pluszeichen*. Das Feld **Entität hinzufügen** (Benutzer oder Computer) kann durchsucht werden und wird automatisch mit Entitäten in Ihrem Netzwerk gefüllt. Weitere Informationen finden Sie unter [Ausschließen von Entitäten von der Erkennung](excluding-entities-from-detections.md).
 
     ![Screenshot, der den Ausschluss von Entitäten von der Erkennung anzeigt](media/exclusions.png)
 
@@ -76,4 +78,4 @@ Sie können sich die [Sammlung von Angriffssimulationsszenarios von Advanced Thr
 - [Tool zur Bemessung von ATA-Gateways](https://aka.ms/atasizingtool)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
-- [Voraussetzungen für ATA](ata-prerequisites.md)
+- [ATA-Voraussetzungen](ata-prerequisites.md)

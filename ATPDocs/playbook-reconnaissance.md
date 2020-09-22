@@ -7,14 +7,16 @@ author: shsagir
 ms.author: shsagir
 ms.date: 09/01/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: b2311a761651f5b7fc15164020443949d90cf5a7
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: 235894040ff84fe627b4cbe4d4ecd857a7555e76
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90828437"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912662"
 ---
 # <a name="tutorial-reconnaissance-playbook"></a>Tutorial: Playbook zu Reconnaissance
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Das zweite Tutorial in dieser vierteiligen Reihe zu Azure ATP-Sicherheitswarnungen ist ein Playbook zu Reconnaissance. Die Azure ATP-Sicherheitswarnungsumgebung soll die Funktionen von **Azure ATP** zum Identifizieren und Erkennen verdächtiger Aktivitäten und potenzieller Angriffe auf Ihr Netzwerk veranschaulichen. Das Playbook erläutert das Testen der *diskreten* Erkennungen von Azure ATP und konzentriert sich auf die *signaturbasierten* Funktionen von Azure ATP. Dieses Playbook enthält keine Warnungen oder Verhaltenserkennungen auf Basis des erweiterten Machine Learning, auf Benutzer- oder Entitätsbasis, da sie eine Lernphase mit echtem Netzwerkverkehr von bis zu 30 Tagen erfordern. Weitere Informationen über jedes Tutorial dieser Reihe finden Sie unter [Tutorialübersicht: ATP-Sicherheitswarnungsumgebung](playbook-lab-overview.md).
 

@@ -12,16 +12,18 @@ ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a23a590357a7c4fc6f04ccd33c747586d571a447
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 1ebd10c417e1454e135d851270a6cd64fc4243b2
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88954883"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90909698"
 ---
 # <a name="configuring-windows-event-forwarding"></a>Konfigurieren der Windows-Ereignisweiterleitung
 
-*Gilt für: Advanced Threat Analytics Version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
 > Für die ATA-Version 1.8 und höher ist die Konfiguration der Ereignissammlung nicht länger für ATA-Lightweight-Gateways erforderlich. Das ATA-Lightweight-Gateway liest jetzt Ereignisse lokal, ohne die Ereignisweiterleitung zu konfigurieren.

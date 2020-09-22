@@ -12,17 +12,19 @@ ms.technology: ''
 ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1532d110daf23562c768a7b145bcff9326f73223
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: e5b9c8f908cc0d9fbbabcc0cf11feebdf1decb7b
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88955121"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912203"
 ---
 # <a name="working-with-the-ata-console"></a>Arbeiten mit der ATA-Konsole
 
 
-*Gilt für: Advanced Threat Analytics Version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Verwenden Sie die ATA-Konsole, um die von ATA erkannten verdächtigen Aktivitäten zu überwachen und darauf zu reagieren.
 
@@ -110,7 +112,7 @@ Die folgende Liste von Gruppen wird von ATA als **sensibel** eingestuft. Jede En
 - Gruppenrichtlinienersteller-Besitzer 
 - Schreibgeschützter Domänencontroller 
 - Administratoren  
-- Powerusers  
+- Hauptbenutzer  
 - Konten-Operatoren  
 - Server-Operatoren   
 - Druck-Operatoren
@@ -130,7 +132,7 @@ Wenn Sie an einer Stelle in der Konsole, an der eine einzelne Entität dargestel
 
 - Name
 
-- Bild
+- Picture
 
 - E-Mail
 

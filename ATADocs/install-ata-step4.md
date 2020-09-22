@@ -12,22 +12,24 @@ ms.technology: ''
 ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 8bd8347e3ac37b9cd3b3c94dddfeb3e1a3b59112
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 87f8442010a7132de7e76479353acfa7753d10dc
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88954577"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90911491"
 ---
 # <a name="install-ata---step-4"></a>Installieren von ATA – Schritt 4
 
-*Gilt für: Advanced Threat Analytics Version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!div class="step-by-step"]
 > [« Schritt 3](install-ata-step3.md)
 > [Schritt 5 »](install-ata-step5.md)
 
-## <a name="step-4-install-the-ata-gateway"></a>Schritt 4. Installieren des ATA-Gateways
+## <a name="step-4-install-the-ata-gateway"></a>Schritt 4: Installieren des ATA-Gateways
 
 Überprüfen Sie vor der Installation des ATA-Gateways auf dem dedizierten Server, ob die Portspiegelung ordnungsgemäß konfiguriert ist und ob das ATA-Gateway Datenverkehr zu und von den Domänencontrollern anzeigen kann. Weitere Informationen finden Sie unter [Überprüfen der Portspiegelung](validate-port-mirroring.md).
 
@@ -96,5 +98,5 @@ Führen Sie die folgenden Schritte auf dem ATA-Gatewayserver aus.
 - [Tool zur Bemessung von ATA-Gateways](https://aka.ms/atasizingtool)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
-- [Voraussetzungen für ATA](ata-prerequisites.md)
+- [ATA-Voraussetzungen](ata-prerequisites.md)
 

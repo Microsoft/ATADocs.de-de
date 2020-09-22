@@ -12,14 +12,16 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 92decce8-b3ae-4d32-8407-a95314a66863
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: db8ae461e7f7a0e8781904d5e0e47f99464dddb5
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: ac4c0b9bd4e8a99d5edaaec2746f3ce7d413005c
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90828401"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912557"
 ---
 # <a name="monitoring-your-domain-controller-coverage"></a>Überwachen der Domänencontrollerabdeckung
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Sobald Sie den ersten Azure ATP-Sensor auf einem Domänencontroller in Ihrem Netzwerk installiert und konfiguriert haben, beginnt Azure ATP mit der Überwachung von Domänencontrollern in Ihrer Umgebung.
 
@@ -37,7 +39,7 @@ Azure ATP überwacht Ihre Umgebung kontinuierlich auf nicht überwachte Domänen
 
 Die heruntergeladene Excel-Datei zur Abdeckung der Domänencontroller stellt folgende Informationen für alle ermittelten Domänencontroller in Ihrer Organisation bereit:
 
-|Titel|BESCHREIBUNG|
+|Titel|Beschreibung|
 |----|----|
 |Hostname|Computername|
 |Domänenname|Domänenname|

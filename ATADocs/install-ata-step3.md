@@ -12,22 +12,24 @@ ms.technology: ''
 ms.assetid: 7fb024e6-297a-4ad9-b962-481bb75a0ba3
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 5b7b60910975ce1f8922a32b799b997917542257
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 7eab456d31c35f7bfc734927b9439a93545fad06
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88954543"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90911777"
 ---
 # <a name="install-ata---step-3"></a>Installieren von ATA – Schritt 3
 
-*Gilt für: Advanced Threat Analytics Version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!div class="step-by-step"]
 > [« Schritt 2](install-ata-step2.md)
 > [Schritt 4 »](install-ata-step4.md)
 
-## <a name="step-3-download-the-ata-gateway-setup-package"></a>Schritt 3: Herunterladen des ATA-Gateway-Setuppakets
+## <a name="step-3-download-the-ata-gateway-setup-package"></a>Schritt 3: Herunterladen des ATA-Gateway-Setuppakets
 
 Nach dem Konfigurieren der Domänenverbindungseinstellungen können Sie das ATA-Gateway-Setuppaket herunterladen. Das ATA-Gateway kann auf einem dedizierten Server oder einem Domänencontroller installiert werden. Wenn Sie es auf einem Domänencontroller installieren, wird es als ATA-Lightweight-Gateway installiert. Weitere Informationen zum ATA-Lightweight-Gateway finden Sie unter [ATA-Architektur](ata-architecture.md). 
 
@@ -64,4 +66,4 @@ Die ZIP-Datei enthält die folgenden Dateien:
 - [Tool zur Bemessung von ATA-Gateways](https://aka.ms/atasizingtool)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
-- [Voraussetzungen für ATA](ata-prerequisites.md)
+- [ATA-Voraussetzungen](ata-prerequisites.md)
