@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: d0551e91-3b21-47d5-ad9d-3362df6d47c0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 67adf184405ef299e26292a7a25f5248cba5c48f
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 30d75912df1efe05f93555f70a68f76785d1ca3a
+ms.sourcegitcommit: 9c282d05682d97714c84e4e0e23e1103e2074fa8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90913072"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91205273"
 ---
 # <a name="understanding-azure-atp-sensor-health-alerts"></a>Grundlegendes zu Integritätswarnungen für Azure ATP-Sensoren
 
@@ -97,11 +97,11 @@ Das Azure ATP-Integritätscenter informiert Sie, wenn ein Problem im Zusammenhan
 |----|----|----|----|
 |An Azure ATP sensor has limited functionality due to connectivity issues to some of the configured domain controllers. (Ein Azure ATP-Sensor verfügt über eingeschränkte Funktionalität aufgrund von Verbindungsproblemen mit einigen der konfigurierten Domänencontroller.)|Die Pass-the-Hash-Erkennung ist möglicherweise ungenauer, wenn einige Domänencontroller nicht durch den Azure ATP-Sensor abgefragt werden können.|Stellen Sie sicher, dass die Domänencontroller ausgeführt werden und der Azure ATP-Sensor LDAP-Verbindungen mit ihnen öffnen kann.|Mittel|
 
-## <a name="some-forwarded-events-could-not-be-analyzed"></a>Einige weitergeleitete Ereignisse konnten nicht analysiert werden.
+## <a name="some-forwarded-events-are-not-being-analyzed"></a>Einige weitergeleitete Ereignisse werden nicht analysiert
 
 |Warnung|Beschreibung|Lösung|Schweregrad|
 |----|----|----|----|
-|The Azure ATP sensor is receiving more events than it can process. (Der Azure ATP-Sensor empfängt mehr Ereignisse als er verarbeiten kann.)|Einige weitergeleitete Ereignisse konnten nicht analysiert werden, was die Fähigkeit zum Erkennen verdächtiger Aktivitäten beeinflussen kann. Diese stammen von Domänencontrollern, die von diesem Azure ATP-Sensor überwacht werden.|Überprüfen Sie, ob nur erforderliche Ereignisse an den Azure ATP-Sensor weitergeleitet werden, oder versuchen Sie, einige der Ereignisse an einen anderen Azure ATP-Sensor weiterzuleiten.|Mittel|
+|The Azure ATP sensor is receiving more events than it can process. (Der Azure ATP-Sensor empfängt mehr Ereignisse als er verarbeiten kann.)|Einige weitergeleitete Ereignisse werden nicht analysiert, was die Fähigkeit zum Erkennen verdächtiger Aktivitäten beeinflussen kann. Diese stammen von Domänencontrollern, die von diesem Azure ATP-Sensor überwacht werden.|Überprüfen Sie, ob nur erforderliche Ereignisse an den Azure ATP-Sensor weitergeleitet werden, oder versuchen Sie, einige der Ereignisse an einen anderen Azure ATP-Sensor weiterzuleiten.|Mittel|
 
 ## <a name="some-network-traffic-could-not-be-analyzed"></a>Ein Teil des Netzwerkdatenverkehrs konnte nicht analysiert werden.
 
@@ -109,11 +109,11 @@ Das Azure ATP-Integritätscenter informiert Sie, wenn ein Problem im Zusammenhan
 |----|----|----|----|
 |The Azure ATP sensor is receiving more network traffic than it can process. (Der Azure ATP-Sensor empfängt mehr Netzwerkdatenverkehr als er verarbeiten kann.)|Ein Teil des Netzwerkdatenverkehrs konnte nicht analysiert werden, was die Fähigkeit zum Erkennen verdächtiger Aktivitäten beeinflussen kann. Diese stammen von Domänencontrollern, die von diesem Azure ATP-Sensor überwacht werden.|Erwägen Sie es, je nach Bedarf, [zusätzliche Prozessoren und Arbeitsspeicher hinzuzufügen](capacity-planning.md). Wenn es sich um einen eigenständigen Azure ATP-Sensor handelt, reduzieren Sie die Anzahl der überwachten Domänencontroller.<br></br>Dies kann auch vorkommen, wenn Sie Domänencontroller auf virtuellen VMware-Computer verwenden. Um zu vermeiden, dass diese Warnung ausgegeben wird, können Sie überprüfen, ob auf dem virtuellen Computer die folgenden Einstellungen auf „0“ oder „deaktiviert“ festgelegt sind:<br></br>- TsoEnable<br></br>- LargeSendOffload(IPv4)<br></br>- IPv4 TSO Offload<br></br>Deaktivieren Sie ebenso IPv4 Giant TSO Offload. Weitere Informationen finden Sie in der VMware-Dokumentation.|Mittel|
 
-## <a name="some-windows-events-could-not-be-analyzed"></a>Einige Windows-Ereignisse konnten nicht analysiert werden.
+## <a name="some-windows-events-are-not-being-analyzed"></a>Einige Windows-Ereignisse werden nicht analysiert
 
 |Warnung|Beschreibung|Lösung|Schweregrad|
 |----|----|----|----|
-|The Azure ATP sensor is receiving more Event Tracing for Windows (ETW) events than it can process. (Der Azure ATP-Sensor empfängt mehr Ereignisablaufverfolgung für Windows-Ereignisse (ETW) als er verarbeiten kann.)|Einige Ereignisablaufverfolgung für Windows-Ereignisse (ETW) konnten nicht analysiert werden, was die Fähigkeit zum Erkennen verdächtiger Aktivitäten beeinflussen kann. Diese stammen von Domänencontrollern, die von diesem Azure ATP-Sensor überwacht werden.|Überprüfen Sie, ob nur erforderliche Ereignisse an den Azure ATP-Sensor weitergeleitet werden, oder versuchen Sie, einige der Ereignisse an einen anderen Azure ATP-Sensor weiterzuleiten.|Mittel|
+|The Azure ATP sensor is receiving more Event Tracing for Windows (ETW) events than it can process. (Der Azure ATP-Sensor empfängt mehr Ereignisablaufverfolgung für Windows-Ereignisse (ETW) als er verarbeiten kann.)|Einige Ereignisse der Ereignisablaufverfolgung für Windows (ETW) werden nicht analysiert, was die Fähigkeit zum Erkennen verdächtiger Aktivitäten beeinflussen kann. Diese stammen von Domänencontrollern, die von diesem Azure ATP-Sensor überwacht werden.|Überprüfen Sie, ob nur erforderliche Ereignisse an den Azure ATP-Sensor weitergeleitet werden, oder versuchen Sie, einige der Ereignisse an einen anderen Azure ATP-Sensor weiterzuleiten.|Mittel|
 
 <!--
 ## Windows events missing from domain controller audit policy
