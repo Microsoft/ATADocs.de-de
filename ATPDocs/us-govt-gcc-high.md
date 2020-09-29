@@ -11,14 +11,16 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3d5a61b7233c271e851326ba547d98c3e041cf09
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: a53662832e6d1c11a3752c4f9bed4c8fd8d70a81
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90826741"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912294"
 ---
 # <a name="azure-atp-for-us-government-gcc-high"></a>Azure ATP GCC High für die US-Regierung
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Das Azure ATP GCC High-Angebot nutzt dieselben zugrunde liegenden Technologien und Funktionen wie die kommerzielle Instanz von Azure ATP. Eine Liste der Featureabweichungen finden Sie in der [Dienstbeschreibung](/enterprise-mobility-security/solutions/ems-azure-atp-govt-service-description).
 
