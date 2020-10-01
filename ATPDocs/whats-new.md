@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 642d018862a73fd609d44e5e6304533196ad729c
-ms.sourcegitcommit: c4a4eb6512258beaa1b8937dc2b206fc3ee87835
+ms.openlocfilehash: dda07ccfe2578975517e9e219fa95e0094e751cf
+ms.sourcegitcommit: 3740dcb048065962eb09ed31e077d7f8ff77a165
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90829407"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91145919"
 ---
 # <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Neuerungen in Azure Advanced Threat Protection (Azure ATP)
 
@@ -26,10 +26,16 @@ Ausführliche Informationen zu früheren Azure ATP-Versionen bis (und einschlie�
 
 RSS-Feed: Lassen Sie sich benachrichtigen, wenn diese Seite aktualisiert wird, indem Sie die folgende URL kopieren und in Ihren Feedreader einfügen: `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
 
+> [!IMPORTANT]
+>
+> Die Produktnamen des Bedrohungsschutzes von Microsoft ändern sich. Weitere Informationen zu diesem und anderen Updates finden Sie [hier](https://www.microsoft.com/security/blog/?p=91813). Wir verwenden die neuen Namen in zukünftigen Releases.
+
 ## <a name="azure-atp-release-2127"></a>Azure ATP-Release 2.127
 
 Veröffentlicht: 20. September 2020
 
+- **Neue Sicherheitswarnung: Verdächtigter Netlogon-Rechteerweiterungsversuch (externe ID 2411)**  
+Die Sicherheitswarnung *Verdächtigter Netlogon-Rechteerweiterungsversuch (CVE-2020-1472-Ausnutzung) (externe ID 2411)* von Azure ATP ist jetzt verfügbar. Bei dieser Erkennung wird eine Azure ATP-Sicherheitswarnung ausgelöst, wenn ein Angreifer eine gefährdete Netlogon-Verbindung über einen sicheren Kanal mit einem Domänencontroller herstellt und dabei das Netlogon Remote Protocol ([MS-NRPC](/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)) verwendet. Dies ist auch als *Netlogon-Rechteerweiterungs-Sicherheitsrisiko* bekannt. Weitere Informationen finden Sie unter [Verdächtigter Netlogon-Rechteerweiterungsversuch](compromised-credentials-alerts.md#suspected-netlogon-privilege-elevation-attempt-cve-2020-1472-exploitation external id 2411).
 - Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
 ## <a name="azure-atp-release-2126"></a>Azure ATP-Release 2.126
