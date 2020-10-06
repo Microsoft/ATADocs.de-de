@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 48744b2ef9485ad9bc2a54feacfe2b328dd4dfeb
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 6eb8484ba49d4ae56a1baafce9ea3b76d0760165
+ms.sourcegitcommit: cd13e58303372d01463ae2ccf1e093d4f6d85fb5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912368"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91754390"
 ---
 # <a name="tutorial-reconnaissance-alerts"></a>Tutorial: Warnungen zu Reconnaissance
 
@@ -242,8 +242,8 @@ Damit Azure ATP berechtigte Benutzer präzise profilen und kennenlernen kann, we
 **Kerberoasting-spezifische vorgeschlagene Schritte zur Vorbeugung und Wiederherstellung**
 
 1. Setzen Sie die Kennwörter der kompromittierten Benutzer zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
-1. Die Verwendung von [langen und komplexen Kennwörtern für Benutzer Dienstprinzipalkonten](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/minimum-password-length) ist erforderlich.
-1. [Ersetzen Sie das Benutzerkonto durch ein gruppenverwaltetes Dienstkonto (GMSA)](https://docs.microsoft.com/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview).
+1. Die Verwendung von [langen und komplexen Kennwörtern für Benutzer Dienstprinzipalkonten](/windows/security/threat-protection/security-policy-settings/minimum-password-length) ist erforderlich.
+1. [Ersetzen Sie das Benutzerkonto durch ein gruppenverwaltetes Dienstkonto (GMSA)](/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview).
 
 > [!NOTE]
 > Warnungen zu Reconnaissance über Sicherheitsprinzipal (LDAP) werden nur von ATP-Sensoren unterstützt.
