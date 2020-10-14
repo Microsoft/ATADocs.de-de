@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 2257eb00-8614-4577-b6a1-5c65085371f2
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c822bef5de097a426c298471c84beb012a349d09
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 570bf2565ca42e7262c62f26eb368874f7d5394d
+ms.sourcegitcommit: e7897436d71e253cf583ec566eca3daa9ba3cae9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912416"
+ms.lasthandoff: 10/11/2020
+ms.locfileid: "91942419"
 ---
 # <a name="tutorial-lateral-movement-alerts"></a>Tutorial: Lateral Movement-Warnungen
 
@@ -327,7 +327,7 @@ Zuweilen implementieren Anwendungen einen eigenen Kerberos-Stapel, der nicht der
 
 **Beschreibung**
 
-Ein Rouge-Zertifikatsangriff ist eine Persistenztechnik, die von Angreifern verwendet wird, nachdem sie die Kontrolle über die Organisation erlangt haben. Angreifer kompromittieren den Zertifizierungsstellenserver (CA) und generieren Zertifikate, die in zukünftigen Angriffen als Hintertürkonten verwendet werden können.
+Ein Rogue-Zertifikatsangriff ist eine Persistenztechnik, die von Angreifern verwendet wird, nachdem sie die Kontrolle über die Organisation erlangt haben. Angreifer kompromittieren den Zertifizierungsstellenserver (CA) und generieren Zertifikate, die in zukünftigen Angriffen als Hintertürkonten verwendet werden können.
 
 **Lernphase**
 
