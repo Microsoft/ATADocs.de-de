@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 09/22/2020
+ms.date: 10/25/2020
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 274a345c68f3ac021d4407d00b2b3e7225a780f4
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 3438ca66b02edc93ba01754c696822613dfcc380
+ms.sourcegitcommit: 0ee43433d020fd05ad8825442dfb0e6b6bfa658f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912613"
+ms.lasthandoff: 10/26/2020
+ms.locfileid: "92526651"
 ---
 # <a name="azure-atp-prerequisites"></a>Voraussetzungen für Azure ATP
 
@@ -57,7 +57,7 @@ In diesem Abschnitt werden die Informationen aufgeführt, die Sie sammeln sollte
 
 - Mindestens eines der folgenden Verzeichnisdienstkonten mit Lesezugriff auf alle Objekte in den überwachten Domänen:
   - Ein **standardmäßiges** AD-Benutzerkonto und -Kennwort; erforderlich für Sensoren, die unter Windows Server 2008 R2 SP1 ausgeführt werden.
-  - Ein von der **Gruppe verwaltetes Dienstkonto**; erfordert Windows Server 2012 oder höher.  
+  - Ein von der **Gruppe verwaltetes Dienstkonto** ; erfordert Windows Server 2012 oder höher.  
   Alle Sensoren benötigen Zugriffsberechtigungen zum Abrufen des Kennworts des gruppenverwalteten Dienstkontos.  
   Weitere Informationen zu gruppenverwalteten Dienstkonten finden Sie unter [Erste Schritte mit gruppenverwalteten Dienstkonten](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts#BKMK_CreateGMSA).
 
@@ -71,7 +71,7 @@ In diesem Abschnitt werden die Informationen aufgeführt, die Sie sammeln sollte
     > [!NOTE]
     >
     > - Für Sensorcomputer unter Windows Server 2012 und höher wird empfohlen, ein **gruppenverwaltetes Dienstkonto** für verbesserte Sicherheit und automatische Kennwortverwaltung zu verwenden.
-    > - Wenn Sie über mehrere Sensoren verfügen, teilweise unter Windows Server 2008 oder unter Windows Server 2012 und höher, müssen Sie zusätzlich zum empfohlenen **gruppenverwalteten Dienstkonto** auch mindestens ein AD-**Standardbenutzerkonto** verwenden.
+    > - Wenn Sie über mehrere Sensoren verfügen, teilweise unter Windows Server 2008 oder unter Windows Server 2012 und höher, müssen Sie zusätzlich zum empfohlenen **gruppenverwalteten Dienstkonto** auch mindestens ein AD- **Standardbenutzerkonto** verwenden.
     > - Wenn Sie benutzerdefinierte ACLs für verschiedene Organisationseinheiten (OU) in Ihrer Domäne festgelegt haben, stellen Sie sicher, dass der ausgewählte Benutzer Leseberechtigungen für diese Organisationseinheiten hat.
 
 - Wenn Sie Wireshark für einen eigenständigen Azure ATP-Sensor ausführen, müssen Sie den Azure Advanced Threat Protection-Sensordienst neu starten, nachdem Sie die Wireshark-Erfassung beendet haben. Wenn Sie den Sensordienst nicht neu starten, beendet der Sensor die Erfassung des Datenverkehrs.
@@ -80,7 +80,7 @@ In diesem Abschnitt werden die Informationen aufgeführt, die Sie sammeln sollte
 
 - Container mit **gelöschten Objekten** – Empfehlung: Der Benutzer sollte über den schreibgeschützten Zugriff auf den Container mit gelöschten Objekten verfügen. Durch schreibgeschützte Berechtigungen für diesen Container kann Azure ATP Löschungen von Benutzern über Ihr Active Directory erkennen. Informationen zum Konfigurieren des schreibgeschützten Zugriffs auf den Container mit gelöschten Objekten finden Sie im Abschnitt **Ändern von Berechtigungen für einen Container mit gelöschten Objekten** im Artikel [Anzeigen und Festlegen von Berechtigungen für ein Verzeichnisobjekt](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816824(v=ws.10)).
 
-- Optionales **Honeytoken**: Ein Benutzerkonto eines Benutzers ohne Netzwerkaktivitäten. Dieses Konto wird als Azure ATP-Honeytoken-Benutzer konfiguriert. Weitere Informationen zu Verwendung von Honeytokens finden Sie unter [Konfigurieren von Ausschlüssen und Honeytoken-Benutzern](install-step7.md).
+- Optionales **Honeytoken** : Ein Benutzerkonto eines Benutzers ohne Netzwerkaktivitäten. Dieses Konto wird als Azure ATP-Honeytoken-Benutzer konfiguriert. Weitere Informationen zu Verwendung von Honeytokens finden Sie unter [Konfigurieren von Ausschlüssen und Honeytoken-Benutzern](install-step7.md).
 
 - Optional: Wenn Sie den eigenständigen Sensor bereitstellen, ist die Weiterleitung der [Windows-Ereignisse](configure-windows-event-collection.md#configure-event-collection) an Azure ATP erforderlich, um authentifizierungsbasierte Erkennungen, Ergänzungen sensibler Gruppen und Erkennungen der Erstellung verdächtiger Dienste in Azure ATP zu verbessern.  Der Azure ATP-Sensor empfängt diese Ereignisse automatisch. Im eigenständigen Azure ATP-Sensor können diese Ereignisse von SIEM empfangen oder durch Festlegen der Windows-Ereignisweiterleitung von Ihrem Domänencontroller aus abgerufen werden. Die gesammelten Ereignisse versorgen Azure ATP mit zusätzlichen Informationen, die nicht über den Datenverkehr des Domänencontrollers verfügbar sind.
 
@@ -96,7 +96,7 @@ Der Zugriff auf das Azure ATP-Portal erfolgt über einen Browser. Folgende Brows
 - Firewall/Proxy geöffnet: Um mit dem Azure ATP-Clouddienst zu kommunizieren, muss in Ihrer Firewall und auf Ihrem Proxyserver Port 443 für „*.atp.azure.com“ geöffnet sein.
 
     > [!NOTE]
-    > Sie können auch das Azure-Diensttag (**AzureAdvancedThreatProtection**) verwenden, um den Zugriff auf Azure ATP zu ermöglichen. Weitere Informationen zu Diensttags finden Sie unter [Diensttags des virtuellen Netzwerks](/azure/virtual-network/service-tags-overview) oder in der Datei [Herunterladen der Diensttags](https://www.microsoft.com/download/details.aspx?id=56519).
+    > Sie können auch das Azure-Diensttag ( **AzureAdvancedThreatProtection** ) verwenden, um den Zugriff auf Azure ATP zu ermöglichen. Weitere Informationen zu Diensttags finden Sie unter [Diensttags des virtuellen Netzwerks](/azure/virtual-network/service-tags-overview) oder in der Datei [Herunterladen der Diensttags](https://www.microsoft.com/download/details.aspx?id=56519).
 
  ![Azure ATP-Architekturdiagramm](media/azure-atp-architecture.png)
 
@@ -172,20 +172,19 @@ Der Sensor wird nicht in Domänencontrollern unter Windows 2008 R2 mit aktiviert
 
 In der folgenden Tabelle sind die Ports aufgeführt, die für den Azure ATP-Sensor mindestens konfiguriert werden müssen:
 
-|Protokoll|Transport|Port|Von|An|Richtung|
-|------------|-------------|--------|-----------|-------------|
-|**Internetports**||||||
-|SSL (*.atp.azure.com)|TCP|443|Azure ATP-Sensor|Azure ATP-Clouddienst|Ausgehend|
-|SSL (localhost)|TCP|444|Azure ATP-Sensor|localhost|Beide|
-|**Interne Ports**||||||
-|DNS|TCP und UDP|53|Azure ATP-Sensor|DNS-Server|Ausgehend|
-|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Azure ATP-Sensor|Alle Geräte im Netzwerk|Ausgehend|
-|Syslog (optional)|TCP/UDP|514, je nach Konfiguration|SIEM-Server|Azure ATP-Sensor|Eingehende Verbindungen|
-|RADIUS|UDP|1813|RADIUS|Azure ATP-Sensor|Eingehende Verbindungen|
-|**NNR-Ports**\*||||||
-|NTLM über RPC|TCP|Port 135|ATP-Sensoren|Alle Geräte im Netzwerk|Eingehende Verbindungen|
-|NetBIOS|UDP|137|ATP-Sensoren|Alle Geräte im Netzwerk|Eingehende Verbindungen|
-|RDP|TCP|3389, nur das erste Client Hello-Paket|ATP-Sensoren|Alle Geräte im Netzwerk|Eingehende Verbindungen|
+|Protokoll|Transport|Port|Von|Beschreibung|
+|------------|-------------|--------|-----------|
+|**Internetports**|||||
+|SSL (*.atp.azure.com)|TCP|443|Azure ATP-Sensor|Azure ATP-Clouddienst|
+|SSL (localhost)|TCP|444|Azure ATP-Sensor|localhost|
+|**Interne Ports**|||||
+|DNS|TCP und UDP|53|Azure ATP-Sensor|DNS-Server|
+|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Azure ATP-Sensor|Alle Geräte im Netzwerk|
+|RADIUS|UDP|1813|RADIUS|Azure ATP-Sensor|
+|**NNR-Ports**\*|||||
+|NTLM über RPC|TCP|Port 135|ATP-Sensoren|Alle Geräte im Netzwerk|
+|NetBIOS|UDP|137|ATP-Sensoren|Alle Geräte im Netzwerk|
+|RDP|TCP|3389, nur das erste Client Hello-Paket|ATP-Sensoren|Alle Geräte im Netzwerk|
 
 \* Einer dieser Ports ist erforderlich, aber Sie sollten alle öffnen.
 
@@ -248,7 +247,7 @@ Der eigenständige Azure ATP-Sensor erfordert mindestens einen Verwaltungsadapte
         > [!NOTE]
         > Wenn der eigenständige Azure ATP-Sensor Mitglied der Domäne ist, erfolgt diese Konfiguration möglicherweise automatisch.
 
-- **Erfassungsadapter**: wird verwendet, um den Datenverkehr zu und von den Domänencontrollern zu erfassen.
+- **Erfassungsadapter** : wird verwendet, um den Datenverkehr zu und von den Domänencontrollern zu erfassen.
 
     > [!IMPORTANT]
     >
@@ -259,25 +258,26 @@ Der eigenständige Azure ATP-Sensor erfordert mindestens einen Verwaltungsadapte
 
 In der folgenden Tabelle sind die Ports aufgeführt, die für den Verwaltungsadapter des eigenständigen Azure ATP-Sensors mindestens konfiguriert werden müssen:
 
-|Protokoll|Transport|Port|Von|An|Richtung|
-|------------|-------------|--------|-----------|-------------|
-|**Internetports**|||||
-|SSL (*.atp.azure.com)|TCP|443|Azure ATP-Sensor:|Azure ATP-Clouddienst|Ausgehend|
-|**Interne Ports**|||||
-|LDAP|TCP und UDP|389|Azure ATP-Sensor:|Domänencontroller|Ausgehend|
-|Sicheres LDAP (LDAPS)|TCP|636|Azure ATP-Sensor:|Domänencontroller|Ausgehend|
-|LDAP an globalen Katalog|TCP|3268|Azure ATP-Sensor:|Domänencontroller|Ausgehend|
-|LDAPs an globalen Katalog|TCP|3269|Azure ATP-Sensor:|Domänencontroller|Ausgehend|
-|Kerberos|TCP und UDP|88|Azure ATP-Sensor:|Domänencontroller|Ausgehend|
-|Netlogon (SMB, CIFS, SAM-R)|TCP und UDP|445|Azure ATP-Sensor:|Alle Geräte im Netzwerk|Ausgehend|
-|Windows-Zeitdienst|UDP|123|Azure ATP-Sensor:|Domänencontroller|Ausgehend|
-|DNS|TCP und UDP|53|Azure ATP-Sensor:|DNS-Server|Ausgehend|
-|Syslog (optional)|TCP/UDP|514, je nach Konfiguration|SIEM-Server|Azure ATP-Sensor:|Eingehende Verbindungen|
-|RADIUS|UDP|1813|RADIUS|Azure ATP-Sensor|Eingehende Verbindungen|
-|**NNR-Ports** \*||||||
-|NTLM über RPC|TCP|135|ATP-Sensoren|Alle Geräte im Netzwerk|Eingehende Verbindungen|
-|NetBIOS|UDP|137|ATP-Sensoren|Alle Geräte im Netzwerk|Eingehende Verbindungen|
-|RDP|TCP|3389, nur das erste Client Hello-Paket|ATP-Sensoren|Alle Geräte im Netzwerk|Eingehende Verbindungen|
+|Protokoll|Transport|Port|Von|Beschreibung|
+|------------|-------------|--------|-----------|
+|**Internetports**||||
+|SSL (*.atp.azure.com)|TCP|443|Azure ATP-Sensor:|Azure ATP-Clouddienst|
+|SSL (localhost)|TCP|444|Azure ATP-Sensor|localhost|
+|**Interne Ports**||||
+|LDAP|TCP und UDP|389|Azure ATP-Sensor:|Domänencontroller|
+|Sicheres LDAP (LDAPS)|TCP|636|Azure ATP-Sensor:|Domänencontroller|
+|LDAP an globalen Katalog|TCP|3268|Azure ATP-Sensor:|Domänencontroller|
+|LDAPs an globalen Katalog|TCP|3269|Azure ATP-Sensor:|Domänencontroller|
+|Kerberos|TCP und UDP|88|Azure ATP-Sensor:|Domänencontroller|
+|Netlogon (SMB, CIFS, SAM-R)|TCP und UDP|445|Azure ATP-Sensor:|Alle Geräte im Netzwerk|
+|Windows-Zeitdienst|UDP|123|Azure ATP-Sensor:|Domänencontroller|
+|DNS|TCP und UDP|53|Azure ATP-Sensor:|DNS-Server|
+|Syslog (optional)|TCP/UDP|514, je nach Konfiguration|SIEM-Server|Azure ATP-Sensor:|
+|RADIUS|UDP|1813|RADIUS|Azure ATP-Sensor|
+|**NNR-Ports** \*|||||
+|NTLM über RPC|TCP|135|ATP-Sensoren|Alle Geräte im Netzwerk|
+|NetBIOS|UDP|137|ATP-Sensoren|Alle Geräte im Netzwerk|
+|RDP|TCP|3389, nur das erste Client Hello-Paket|ATP-Sensoren|Alle Geräte im Netzwerk|
 
 \* Einer dieser Ports ist erforderlich, aber Sie sollten alle öffnen.
 
