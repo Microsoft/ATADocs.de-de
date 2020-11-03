@@ -1,25 +1,23 @@
 ---
-title: Richtlinie zu personenbezogenen Daten von Azure Advanced Threat Protection
-description: Dieser Artikel stellt Links zu Informationen bereit, wie Sie private Informationen und personenbezogene Daten aus Azure ATP löschen.
-keywords: ''
+title: Richtlinie für persönliche Daten von Microsoft Defender für Identity
+description: Enthält Links zu Informationen zum Löschen von privaten Informationen und persönlichen Daten von Microsoft Defender für die Identität.
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
-ms.date: 06/21/2020
+manager: shsagir
+ms.date: 10/26/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 224e629a-0e82-458c-bb03-b67070a9241d
-ms.reviewer: ophirp
+ms.reviewer: ophir
 ms.suite: ems
-ms.openlocfilehash: 8cfd442e05827811c929f5d6e89ab03dad8a3367
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 2ed900554e78f9792acf11972f519d2b5edae3a8
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912393"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93274575"
 ---
-# <a name="azure-atp-data-security-and-privacy"></a>Sicherheit und Datenschutz für Azure ATP
+# <a name="product-long-data-security-and-privacy"></a>[!INCLUDE [Product long](includes/product-long.md)] Datensicherheit und Datenschutz
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
@@ -27,34 +25,34 @@ ms.locfileid: "90912393"
 
 ## <a name="search-for-and-identify-personal-data"></a>Suchen und Identifizieren von personenbezogenen Daten
 
-In Azure Advanced Threat Protection können Sie identifizierbare personenbezogene Daten über die [Suchleiste](workspace-portal.md#search-bar) des [Azure ATP-Portals](workspace-portal.md) anzeigen.
+In [!INCLUDE [Product short](includes/product-short.md)] können Sie mithilfe der [Suchleiste](workspace-portal.md#search-bar)identifizierbare persönliche Daten aus dem [ [!INCLUDE [Product long](includes/product-long.md)] Portal](workspace-portal.md) anzeigen.
 
 Suchen Sie einen bestimmten Benutzer oder Computer, und klicken Sie auf die Entität, um zur [Profilseite](entity-profiles.md) des Benutzers oder Computers geleitet zu werden. Die Profile stellen umfassende Details über die Entität aus Active Directory bereit, einschließlich der Netzwerkaktivität im Zusammenhang mit dieser Entität und des Verlaufs.
 
-Personenbezogene Azure ATP-Daten werden von Active Directory über den Azure ATP-Sensor gesammelt und in einer Back-End-Datenbank gespeichert.
+[!INCLUDE [Product short](includes/product-short.md)] persönliche Daten werden von Active Directory über den [!INCLUDE [Product short](includes/product-short.md)] Sensor gesammelt und in einer Back-End-Datenbank gespeichert.
 
 ## <a name="update-personal-data"></a>Aktualisieren von personenbezogenen Daten
 
-Personenbezogene Benutzerdaten von Azure ATP werden vom Benutzerobjekt in der Active Directory-Instanz der Organisation abgeleitet. Aus diesem Grund spiegeln sich die Änderungen am Benutzerprofil im AD-Organisationsverzeichnis in Azure ATP wieder.
-
+[!INCLUDE [Product short](includes/product-short.md)]personenbezogene Benutzerdaten werden aus dem-Objekt des Benutzers in der Active Directory der Organisation abgeleitet. Daher werden Änderungen, die am Benutzerprofil in der Organisations-AD vorgenommen werden, in widergespiegelt [!INCLUDE [Product short](includes/product-short.md)] .
 
 ## <a name="delete-personal-data"></a>Löschen von personenbezogenen Daten
 
-- Nachdem ein Benutzer aus dem Active Directory der Organisation gelöscht wurde, löscht Azure ATP innerhalb von einem Jahr automatisch das Benutzerprofil und sämtliche zugehörige Netzwerkaktivitäten. Sie können ebenfalls alle Sicherheitswarnungen [löschen](working-with-suspicious-activities.md#review-suspicious-activities-on-the-attack-time-line), die personenbezogene Daten enthalten.
+- Nachdem ein Benutzer aus der Active Directory der Organisation gelöscht wurde, [!INCLUDE [Product short](includes/product-short.md)] löscht automatisch das Benutzerprofil und alle zugehörigen Netzwerkaktivitäten innerhalb eines Jahres. Sie können ebenfalls alle Sicherheitswarnungen [löschen](working-with-suspicious-activities.md#review-suspicious-activities-on-the-attack-time-line), die personenbezogene Daten enthalten.
 
-- Es wird **schreibgeschützter Zugriff** auf den Container mit **gelöschten Objekten** empfohlen. Weitere Informationen zur Verwendung der Berechtigung für **Container mit gelöschten Objekten durch den Azure ATP-Dienst finden Sie in den Empfehlungen zu Containern mit gelöschten Objekten in [Azure ATP-Voraussetzungen](prerequisites.md#before-you-start).
+- Es wird **schreibgeschützter Zugriff** auf den Container mit **gelöschten Objekten** empfohlen. Weitere Informationen dazu, wie die * * Deleted Objects-Container Berechtigung vom Dienst verwendet wird [!INCLUDE [Product short](includes/product-short.md)] , finden Sie in der Empfehlung zu den Container für gelöschte Objekte unter [ [!INCLUDE [Product short](includes/product-short.md)] Voraussetzungen](prerequisites.md#before-you-start).
 
 ## <a name="export-personal-data"></a>Exportieren von personenbezogenen Daten
 
-In Azure ATP haben Sie die Möglichkeit, Informationen zu Sicherheitswarnung in Excel zu [exportieren](working-with-suspicious-activities.md#review-suspicious-activities-on-the-attack-time-line). Mit dieser Funktion werden außerdem die personenbezogenen Daten exportiert.
+In [!INCLUDE [Product short](includes/product-short.md)] haben Sie die Möglichkeit, Sicherheits Warn Informationen in Excel zu [exportieren](working-with-suspicious-activities.md#review-suspicious-activities-on-the-attack-time-line) . Mit dieser Funktion werden außerdem die personenbezogenen Daten exportiert.
 
 ## <a name="audit-personal-data"></a>Überwachen von personenbezogenen Daten
 
-Azure ATP implementiert die Überwachung von Änderungen an personenbezogenen Daten, einschließlich der Löschung und Exportierung von personenbezogenen Datensätzen. Die Aufbewahrungszeit von Überwachungspfaden beträgt 90 Tage. Die Überwachung in Azure ATP ist ein Back-End-Feature, auf das Kunden nicht zugreifen können.
+[!INCLUDE [Product short](includes/product-short.md)] implementiert die Überprüfung persönlicher Datenänderungen, einschließlich des Löschens und Exportierens persönlicher Datensätze. Die Aufbewahrungszeit von Überwachungspfaden beträgt 90 Tage. Die Überwachung in [!INCLUDE [Product short](includes/product-short.md)] ist ein Back-End-Feature, auf das Kunden nicht zugreifen können.
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-- Informationen zur Vertrauensstellung und Konformität von Azure ATP finden Sie im [Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) und auf der Website zur [DSGVO-Konformität von Microsoft 365 Enterprise](/microsoft-365/compliance/gdpr?view=o365-worldwide&preserve-view=true).
+- Informationen zu [!INCLUDE [Product short](includes/product-short.md)] Vertrauenswürdigkeit und Konformität finden Sie im [Dienst Vertrauensstellungs Portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) und auf der Microsoft 365 Enterprise dsgvo-Kompatibilitäts [Website](/microsoft-365/compliance/gdpr?view=o365-worldwide&preserve-view=true).
 
-## <a name="security-and-privacy-for-azure-atp-us-government-gcc-high-customers"></a>Sicherheit und Datenschutz für Azure ATP GCC High-Kunden der US-Regierung
-Weitere Informationen zu Azure ATP-Kompatibilitätsstandards und zum Speicherort der Kundendaten für GCC High-Kunden der US-Regierung finden Sie unter [Beschreibung des Diensts Enterprise Mobility + Security für die US-Regierung](/enterprise-mobility-security/solutions/ems-govt-service-description).
+## <a name="security-and-privacy-for-product-short-us-government-gcc-high-customers"></a>Sicherheit und Datenschutz für [!INCLUDE [Product short](includes/product-short.md)] gcc High-Kunden der US-Regierung
+
+Weitere Informationen zu Kompatibilitäts [!INCLUDE [Product short](includes/product-short.md)] Standards und zum Speicherort von Kundendaten für die US-Regierung gcc High-Kunden finden Sie in der [Beschreibung des Enterprise Mobility + Security für den US Government-Dienst](/enterprise-mobility-security/solutions/ems-govt-service-description).

@@ -1,28 +1,28 @@
 ---
-title: Referenz zu älteren Versionen von Azure Advanced Threat Protection (Azure ATP)
-description: Dieser Artikel ist eine Referenz zu vorherigen Versionsupdates für Azure Advanced Threat Protection (Azure ATP).
+title: Verweis auf ältere Releases in Microsoft Defender für Identity
+description: Dieser Artikel ist ein Verweis auf frühere Versionen von Updates für Microsoft Defender für Identity.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 11/17/2019
+ms.date: 10/27/2020
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 494faf68f394d9bdbb2af583c4eec3135fd67ee3
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 3f8554cf5d3c01d4d8d54a289255070fdef0e52d
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90911987"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93274558"
 ---
-# <a name="release-reference-of-azure-advanced-threat-protection-azure-atp"></a>Versionsreferenz zu Azure Advanced Threat Protection (Azure ATP)
+# <a name="release-reference-of-product-long"></a>Releaseverweis von [!INCLUDE [Product long](includes/product-long.md)]
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-Dieser Artikel ist eine Referenz zu allen Azure ATP-Versionen bis (und einschließlich) von Version 2.55. Informationen zu aktuellen Azure ATP-Versionsupdates (2.56 und höher) finden Sie unter [Neuerungen in Azure ATP](whats-new.md).
+Dieser Artikel ist ein Verweis auf alle [!INCLUDE [Product short](includes/product-short.md)] Versionen (früher Azure Advanced Threat Protection, auch bekannt als Azure ATP), bis (und einschließlich) Version 2,55. Informationen zu den neuesten [!INCLUDE [Product short](includes/product-short.md)] Releaseupdates (2,56 und höher) finden Sie unter [ [!INCLUDE [Product short](includes/product-short.md)] What es New (Neuerungen](whats-new.md)).
 
 ## <a name="azure-atp-release-255"></a>Azure ATP Release 2.55
 
@@ -43,7 +43,7 @@ Veröffentlicht am 11. November 2018
 Es wurden drei beliebte Domänen zur Ausschlussliste der Standarddomäne hinzugefügt. Die Ausschlussliste bleibt vollständig anpassbar. Weitere Informationen finden Sie unter [Ausschließen von Entitäten von der Erkennung](excluding-entities-from-detections.md)
 
 - **Verbesserungen bei der Dokumentation: Update des SIEM-Protokolls, Anleitungen für bekannte Probleme**  
-Die **externalId**-Zuordnung sowie zusätzliche Erläuterungen wurden den Beschreibungen des SIEM-Protokolls hinzugefügt. Weitere Informationen finden Sie in der [Referenz zum SIEM-Protokoll](cef-format-sa.md).
+Die **externalId** -Zuordnung sowie zusätzliche Erläuterungen wurden den Beschreibungen des SIEM-Protokolls hinzugefügt. Weitere Informationen finden Sie in der [Referenz zum SIEM-Protokoll](cef-format-sa.md).
 
     Es wurde ein neuer Artikel zum Leitfaden für derzeit bekannte Probleme hinzugefügt. Weitere Informationen finden Sie unter: [Azure ATP Known Issues (Azure ATP: Bekannte Probleme)](troubleshooting-known-issues.md).
 
@@ -87,7 +87,7 @@ Zu den neuesten inhaltlichen Änderungen an der Azure ATP-Dokumentation gehören
 
 Veröffentlicht: 21. Oktober 2018
 
-- Sie können die Integration von **WD-ATP** über den Bildschirm [Konfiguration](integrate-msde.md#how-to-integrate-azure-atp-with-microsoft-defender-atp) im Azure ATP-Portal aktivieren oder deaktivieren. (Hierfür muss der Azure ATP-Benutzer ein globaler Administrator oder ein Sicherheitsadministrator im AAD-Mandanten sein.)
+- Sie können die Integration von **WD-ATP** über den Bildschirm [Konfiguration](integrate-mde.md#how-to-integrate-azure-atp-with-microsoft-defender-atp) im Azure ATP-Portal aktivieren oder deaktivieren. (Hierfür muss der Azure ATP-Benutzer ein globaler Administrator oder ein Sicherheitsadministrator im AAD-Mandanten sein.)
 
 - Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
@@ -107,7 +107,7 @@ Es wurde eine neue Erkennung hinzugefügt, um vor verdächtigen DNS-Kommunikatio
   - Diese Erkennung hilft dabei, Angriffe gegen das DNS-Protokoll zu erkennen: In den meisten Organisationen wird das DNS-Protokoll nicht überwacht und nur selten vor böswilligen Angriffen geschützt. Das gibt einem Angreifer auf einem kompromittierten Computer die Möglichkeit, das DNS-Protokoll zu missbrauchen. Böswillige Kommunikation über DNS kann zur Datenexfiltration, Zugriff über Command-and-Control-Server und/oder zur Umgehung von Netzwerkeinschränkungen führen.
 
 - **Neue Funktionen**  
-Die Azure ATP-**Benutzerrolle** wurde mit den folgenden Funktionen verbessert:
+Die Azure ATP- **Benutzerrolle** wurde mit den folgenden Funktionen verbessert:
   - Der Status der Sicherheitswarnungen kann geändert werden (erneut öffnen, schließen, ausschließen, unterdrücken)
   - Geplante Berichte wurden festgelegt
   - Entitätstags (vertraulich und Honeytoken) können festgelegt werden.
@@ -115,7 +115,7 @@ Die Azure ATP-**Benutzerrolle** wurde mit den folgenden Funktionen verbessert:
   - Ändern der Sprache
   - Benachrichtigung über E-Mail oder Syslog wurden festgelegt
 
-- Sicherheitswarnungen des Typs **Reconnaissance mithilfe von Verzeichnisdienstabfragen**, die am 16. September 2018 kurzzeitig vermehrt aufgetreten sind, wurden identifiziert und behoben.
+- Sicherheitswarnungen des Typs **Reconnaissance mithilfe von Verzeichnisdienstabfragen** , die am 16. September 2018 kurzzeitig vermehrt aufgetreten sind, wurden identifiziert und behoben.
 
 - Diese Version enthält darüber hinaus Fehlerbehebungen und Verbesserungen für mehrere Probleme.
 
@@ -229,7 +229,7 @@ Veröffentlicht: 15. Juli 2018
 Veröffentlicht: 5. Juli 2018
 
 - **Neue hinzugefügte Erkennung: Kerberos Golden Ticket – nichtvorhandenes Konto** (Vorschauversion)  
-Mit dieser neuen Erkennung können Sie Ihre Organisation vor Angriffen schützen, in denen ein Golden Ticket für ein Konto erstellt wird, das in Ihrer Domäne nicht existiert. Weitere Informationen finden Sie im [Azure Advanced Threat Protection-Handbuch zu verdächtigen Aktivitäten](suspicious-activity-guide.md).
+Mit dieser neuen Erkennung können Sie Ihre Organisation vor Angriffen schützen, in denen ein Golden Ticket für ein Konto erstellt wird, das in Ihrer Domäne nicht existiert. Weitere Informationen finden Sie im [Leitfaden zu verdächtigen Aktivitäten](suspicious-activity-guide.md) .
 
 - Diese Version enthält Fehlerbehebungen und Verbesserungen für mehrere Probleme.
 
@@ -334,7 +334,7 @@ Veröffentlicht: 15. April 2018
 
 Veröffentlicht: 8. April 2018
 
-- Sie haben jetzt die Möglichkeit, Benutzerfeedback über die obere Navigationsleiste bereitzustellen. Durch Klicken auf das Smileysymbol in der Menüleiste können Sie eine E-Mail mit Ihrem Feedback an das Azure Advanced Threat Protection-Team senden.
+- Sie haben jetzt die Möglichkeit, Benutzerfeedback über die obere Navigationsleiste bereitzustellen. Wenn Sie in der Menüleiste auf das Smiley klicken, können Sie mit Ihrem Feedback eine e-Mail an das [!INCLUDE [Product long](includes/product-long.md)] Team senden.
 
 - Diese Version enthält Fehlerbehebungen und Verbesserungen für mehrere Probleme.
 
@@ -376,8 +376,8 @@ Die Azure ATP-Sensorinfrastruktur wurde bezüglich der Leistung verbessert: Die 
 
 ## <a name="see-also"></a>Weitere Informationen:
 
-- [Was ist Azure Advanced Threat Protection?](what-is.md)
+- [Was ist [!INCLUDE [Product short](includes/product-short.md)] ?](what-is.md)
 - [Häufig gestellte Fragen](technical-faq.md)
-- [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](prerequisites.md)
-- [Azure ATP capacity planning (Azure ATP-Kapazitätsplanung)](capacity-planning.md)
-- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)
+- [[!INCLUDE [Product short](includes/product-short.md)] Voraussetzung](prerequisites.md)
+- [[!INCLUDE [Product short](includes/product-short.md)] Kapazitätsplanung](capacity-planning.md)
+- [Sehen Sie sich das [!INCLUDE [Product short](includes/product-short.md)] Forum an!](https://aka.ms/MDIcommunity)

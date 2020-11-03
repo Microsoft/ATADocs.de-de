@@ -1,46 +1,48 @@
 ---
-title: 'Schnellstart: Planen der Azure Advanced Threat Protection-Bereitstellung'
-description: Hilft bei der Planung Ihrer Bereitstellung und der Entscheidung, wie viele Azure ATP-Server für Ihr Netzwerk erforderlich sind.
+title: Planen von Microsoft Defender für die Identitäts Bereitstellung
+description: Hilft Ihnen bei der Planung der Bereitstellung und der Entscheidung, wie viele Microsoft Defender für Identitäts Server für die Unterstützung Ihres Netzwerks benötigt werden.
 author: shsagir
 ms.author: shsagir
-ms.date: 05/20/2020
+ms.date: 10/26/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.openlocfilehash: 6955ea798cc138142f0b3f4443df777ed2d07cac
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.reviewer: itargoet
+ms.suite: ems
+ms.openlocfilehash: f9cac463b5a99075901a9c0f68db37affcb50cf9
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90913247"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93276852"
 ---
-# <a name="quickstart-plan-capacity-for-azure-atp"></a>Schnellstart: Planen der Kapazität für Azure ATP
+# <a name="plan-capacity-for-product-long"></a>Planen der Kapazität für [!INCLUDE [Product long](includes/product-long.md)]
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-In diesem Schnellstart erfahren Sie, wie viele Azure ATP-Sensoren Sie benötigen.
+In dieser Anleitung legen Sie fest, wie viele [!INCLUDE [Product long](includes/product-long.md)] Sensoren Sie benötigen.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-- Laden Sie das [Tool zur Azure ATP-Größenanpassung](https://aka.ms/aatpsizingtool) herunter.
-- Lesen Sie den Artikel [Azure ATP-Architektur](architecture.md).
-- Lesen Sie den Artikel [Voraussetzungen für Azure ATP](prerequisites.md).
+- Das [ [!INCLUDE [Product short](includes/product-short.md)] Tool zur Größen](https://aka.ms/aatpsizingtool)Anpassung herunterladen.
+- Lesen Sie den Artikel [ [!INCLUDE [Product short](includes/product-short.md)] Architektur](architecture.md) .
+- Lesen Sie den Artikel [ [!INCLUDE [Product short](includes/product-short.md)] Voraussetzungen](prerequisites.md) .
 
 ## <a name="use-the-sizing-tool"></a>Verwenden des Tools zur Größenanpassung
 
-Die empfohlene und einfachste Methode zum Bestimmen der Kapazität für die Azure ATP-Bereitstellung besteht in der Verwendung des Tools zur Azure ATP-Größenanpassung. Mit diesem Tool können Sie manuell Informationen zum Datenverkehr erfassen. Weitere Informationen zur manuellen Methode finden Sie im Abschnitt [Datenverkehrsschätzung für Domänencontroller](#manual-sizing) am Ende dieses Artikels.
+Die empfohlene und einfachste Methode zum Ermitteln der Kapazität für Ihre [!INCLUDE [Product short](includes/product-short.md)] Bereitstellung ist die Verwendung des [!INCLUDE [Product short](includes/product-short.md)] Tools zur Größenanpassung. Mit diesem Tool können Sie manuell Informationen zum Datenverkehr erfassen. Weitere Informationen zur manuellen Methode finden Sie im Abschnitt [Datenverkehrsschätzung für Domänencontroller](#manual-sizing) am Ende dieses Artikels.
 
-1. Führen Sie das Tool zur Azure ATP-Größenanpassung (**TriSizingTool.exe**) aus der ZIP-Datei aus, die Sie heruntergeladen haben.
+1. Führen [!INCLUDE [Product short](includes/product-short.md)] Sie das Tool zur Größenanpassung aus der heruntergeladenen ZIP-Datei **TriSizingTool.exe** aus.
 1. Öffnen Sie nach Abschluss der Toolausführung die Excel-Datei mit den Ergebnissen.
 1. Suchen Sie in der Excel-Datei nach dem Blatt **Azure ATP Summary** (Azure ATP-Zusammenfassung). Das zweite Blatt wird nicht benötigt, da es für die ATA-Planung vorgesehen ist.
     ![Beispiel für das Kapazitätsplanungstool](media/capacity-tool.png)
 
 1. Suchen Sie in der Excel-Ergebnisdatei in der Azure ATP-Sensortabelle nach dem Feld **Busy Packets/sec** (Aktive Pakete/s), und notieren Sie den Wert.
-1. Gleichen Sie Ihren Wert für **Busy Packets/sec** (Aktive Pakete/s) an den Wert im Feld **PACKETS PER SECOND** (PAKETE PRO SEKUNDE) im Abschnitt [Azure ATP-Sensortabelle](#sizing) in diesem Artikel an. Verwenden Sie die Felder, um die vom Sensor verwendeten Arbeitsspeicher- und CPU-Ressourcen zu bestimmen.
+1. Vergleichen Sie das Feld " **ausgelastete Pakete/** s" mit dem Feld " **Pakete pro Sekunde** " im Abschnitt " [ [!INCLUDE [Product short](includes/product-short.md)] Sensor Tabelle](#sizing) " in diesem Artikel. Verwenden Sie die Felder, um die vom Sensor verwendeten Arbeitsspeicher- und CPU-Ressourcen zu bestimmen.
 
-## <a name="azure-atp-sensor-sizing"></a><a name="sizing"></a> Dimensionierung von Azure ATP-Sensoren
+## <a name="product-short-sensor-sizing"></a><a name="sizing"></a>[!INCLUDE [Product short](includes/product-short.md)]Sensorgröße
 
-Ein Azure ATP-Sensor kann die Überwachung eines Domänencontrollers basierend auf der Menge des vom Domänencontroller erzeugten Datenverkehrs unterstützen. Die folgende Tabelle enthält Schätzungen. Die tatsächlich vom Sensor analysierte Menge ist abhängig vom Umfang des Datenverkehrs und dessen Verteilung.
+Ein [!INCLUDE [Product short](includes/product-short.md)] Sensor kann die Überwachung eines Domänen Controllers basierend auf der Menge des vom Domänen Controller generierten Netzwerkverkehrs unterstützen. Die folgende Tabelle enthält Schätzungen. Die tatsächlich vom Sensor analysierte Menge ist abhängig vom Umfang des Datenverkehrs und dessen Verteilung.
 
 Die folgende CPU- und RAM-Kapazität (Random Access Memory) bezieht sich auf den **Verbrauch des Sensors selbst** und nicht auf die Domänencontrollerkapazität.
 
@@ -60,13 +62,13 @@ Die folgende CPU- und RAM-Kapazität (Random Access Memory) bezieht sich auf den
 Beachten Sie bei der Größenanpassung Folgendes:
 
 - Gesamtanzahl der vom Sensordienst verwendeten Kerne  
-Es wird empfohlen, nicht mit Hyperthreadingkernen zu arbeiten. Der Einsatz von Hyperthreadkernen kann zu Problemen mit der Integrität von Azure ATP-Sensoren führen.
+Es wird empfohlen, nicht mit Hyperthreadingkernen zu arbeiten. Das Arbeiten mit hyperthreadkernen kann zu Problemen mit der Sensor Integrität führen [!INCLUDE [Product short](includes/product-short.md)] .
 - Gesamtarbeitsspeicher, der vom Sensordienst verwendet wird
-- Wenn der Domänencontroller nicht über die für den Azure ATP-Sensor erforderlichen Ressourcen verfügt, wird die Leistung des Domänencontrollers zwar nicht beeinträchtigt, aber der Azure ATP-Sensor funktioniert möglicherweise nicht wie erwartet.
+- Wenn der Domänen Controller nicht über die für den Sensor benötigten Ressourcen verfügt [!INCLUDE [Product short](includes/product-short.md)] , ist die Leistung des Domänen Controllers nicht beeinträchtigt. Der [!INCLUDE [Product short](includes/product-short.md)] Sensor funktioniert jedoch möglicherweise nicht erwartungsgemäß.
 - Bei Ausführung als virtueller Computer muss der gesamte Arbeitsspeicher zu jedem Zeitpunkt dem virtuellen Computer zugewiesen sein.
-- Um eine optimale Leistung zu erzielen, legen Sie die **Energieoption** des Azure ATP-Sensors auf **Hohe Leistung** fest.
+- Legen Sie die **Energie Option** des [!INCLUDE [Product short](includes/product-short.md)] Sensors auf **hohe Leistung** fest, um eine optimale Leistung zu erzielen.
 - Es sind mindestens 2 Kerne erforderlich.
-- Es wird mindestens 6 GB Festplattenspeicher benötigt (10 GB empfohlen), einschließlich des Speicherplatzes, der für die Azure ATP-Binärdateien und -Protokolle benötigt wird.
+- Mindestens 6 GB Festplatten Speicherplatz sind erforderlich, 10 GB wird empfohlen, einschließlich des Speicherplatzes, der für die [!INCLUDE [Product short](includes/product-short.md)] Binärdateien und Protokolle benötigt wird.
 
 ### <a name="dynamic-memory"></a>Dynamischer Arbeitsspeicher
 
@@ -81,7 +83,7 @@ Es wird empfohlen, nicht mit Hyperthreadingkernen zu arbeiten. Der Einsatz von H
 
 ## <a name="domain-controller-traffic-estimation"></a><a name="manual-sizing"></a> Datenverkehrsschätzung für Domänencontroller
 
-Wenn Sie das Azure ATP-Tool zur Größenanpassung nicht verwenden können, sammeln Sie die Informationen zum Leistungsindikator für die Paketanzahl pro Sekunde manuell von allen Domänencontrollern. Sammeln Sie hierbei Daten über einen Zeitraum von 24 Stunden mit einem niedrigen Erfassungsintervall (etwa 5 Sekunden). Anschließend müssen Sie für jeden Domänencontroller den Tagesdurchschnitt und den Durchschnitt für die Zeitspanne (15 Minuten) mit der höchsten Auslastung berechnen. Die folgenden Abschnitte enthalten Anweisungen dazu, wie Sie Informationen zum Pakete/Sek.-Leistungsindikator für einen Domänencontroller sammeln.
+Wenn Sie das Tool zur Größenanpassung aus irgendeinem Grund nicht verwenden können [!INCLUDE [Product short](includes/product-short.md)] , sammeln Sie die Informationen zum Paket/Sek. manuell von allen Domänen Controllern. Sammeln Sie hierbei Daten über einen Zeitraum von 24 Stunden mit einem niedrigen Erfassungsintervall (etwa 5 Sekunden). Anschließend müssen Sie für jeden Domänencontroller den Tagesdurchschnitt und den Durchschnitt für die Zeitspanne (15 Minuten) mit der höchsten Auslastung berechnen. Die folgenden Abschnitte enthalten Anweisungen dazu, wie Sie Informationen zum Pakete/Sek.-Leistungsindikator für einen Domänencontroller sammeln.
 
 Es gibt verschiedene Tools, die Sie verwenden können, um die durchschnittliche Anzahl der Pakete pro Sekunde eines Domänencontrollers zu ermitteln. Auch ohne den Einsatz solcher Werkzeuge können Sie diesen Leistungsindikator mit dem Systemmonitor ermitteln.
 
@@ -89,30 +91,30 @@ Um die Pakete pro Sekunde zu ermitteln, gehen Sie auf jedem Domänencontroller w
 
 1. Öffnen Sie den Systemmonitor.
 
-    ![Abbildung des Systemmonitors](media/atp-traffic-estimation-1.png)
+    ![Abbildung des Systemmonitors](media/traffic-estimation-1.png)
 
 1. Erweitern Sie **Datensammlersätze**.
 
-    ![Abbildung der Datensammlersätze](media/atp-traffic-estimation-2.png)
+    ![Abbildung der Datensammlersätze](media/traffic-estimation-2.png)
 
-1. Klicken Sie mit der rechten Maustaste auf **Benutzerdefiniert**, und wählen Sie **Neu** &gt; **Datensammlersatz** aus.
+1. Klicken Sie mit der rechten Maustaste auf **Benutzerdefiniert** , und wählen Sie **Neu** &gt; **Datensammlersatz** aus.
 
-    ![Abbildung eines neuen Datensammlersatzes](media/atp-traffic-estimation-3.png)
+    ![Abbildung eines neuen Datensammlersatzes](media/traffic-estimation-3.png)
 
 1. Geben Sie einen Namen für den Sammlersatz ein, und wählen Sie **Manuell erstellen (Erweitert)** aus.
 
 1. Wählen Sie unter **Welcher Datentyp soll eingeschlossen werden?** die Option **Datenprotokolle und Leistungsindikator erstellen** aus.
 
-    ![Abbildung für Datentyp des neuen Sammlersatzes](media/atp-traffic-estimation-5.png)
+    ![Abbildung für Datentyp des neuen Sammlersatzes](media/traffic-estimation-5.png)
 
 1. Klicken Sie unter **Welche Leistungsindikatoren möchten Sie protokollieren?** auf **Hinzufügen**.
 
-1. Erweitern Sie **Netzwerkadapter**, wählen Sie **Pakete/Sek.** aus, und wählen Sie die richtige Instanz aus. Wenn Sie sich dabei nicht sicher sind, können Sie **&lt;Alle Instanzen&gt;** auswählen und auf **Hinzufügen** und **OK** klicken.
+1. Erweitern Sie **Netzwerkadapter** , wählen Sie **Pakete/Sek.** aus, und wählen Sie die richtige Instanz aus. Wenn Sie sich dabei nicht sicher sind, können Sie **&lt;Alle Instanzen&gt;** auswählen und auf **Hinzufügen** und **OK** klicken.
 
     > [!NOTE]
     > Um diesen Vorgang auf einer Befehlszeile auszuführen, führen Sie `ipconfig /all` aus, um den Namen des Adapters und die Konfiguration zu ermitteln.
 
-    ![Abbildung – Hinzufügen von Leistungsindikatoren](media/atp-traffic-estimation-7.png)
+    ![Abbildung – Hinzufügen von Leistungsindikatoren](media/traffic-estimation-7.png)
 
 1. Ändern Sie das **Stichprobenintervall** auf **5 Sekunden**.
 
@@ -124,21 +126,21 @@ Um die Pakete pro Sekunde zu ermitteln, gehen Sie auf jedem Domänencontroller w
 
 1. Beenden Sie nach 24 Stunden den Datensammlersatz, indem Sie mit der rechten Maustaste auf das zugehörige Symbol klicken und die Option **Beenden** auswählen.
 
-    ![Abbildung für das Beenden des Datensammlersatzes](media/atp-traffic-estimation-12.png)
+    ![Abbildung für das Beenden des Datensammlersatzes](media/traffic-estimation-12.png)
 
 1. Wechseln Sie im Datei-Explorer zu dem Ordner, in dem die BLG-Datei gespeichert wurde, und doppelklicken Sie darauf, um sie im Systemmonitor zu öffnen.
 
 1. Wählen Sie den Leistungsindikator für Pakete/Sekunde aus, und notieren Sie die durchschnittlichen und maximalen Werte.
 
-    ![Abbildung Leistungsindikator für Pakete pro Sekunde](media/atp-traffic-estimation-14.png)
+    ![Abbildung Leistungsindikator für Pakete pro Sekunde](media/traffic-estimation-14.png)
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-In diesem Schnellstart haben Sie ermittelt, wie viele Azure ATP-Sensoren Sie benötigen. Außerdem haben Sie die Größe für die Sensoren bestimmt. Fahren Sie mit dem nächsten Schnellstart fort, um eine Azure ATP-Instanz zu erstellen.
+In dieser Anleitung haben Sie festgelegt, wie viele [!INCLUDE [Product short](includes/product-short.md)] Sensoren Sie benötigen. Außerdem haben Sie die Größe für die Sensoren bestimmt. Fahren Sie mit dem [!INCLUDE [Product short](includes/product-short.md)] Schnellstart Handbuch zum Erstellen einer Instanz fort.
 
 > [!div class="nextstepaction"]
-> [Erstellen einer Azure ATP-Instanz](install-step1.md)
+> [Erstellen der [!INCLUDE [Product short](includes/product-short.md)] Instanz](install-step1.md)
 
 ## <a name="join-the-community"></a>Beitritt zur Community
 
-Haben Sie weitere Fragen, oder möchten Sie mit anderen über Azure ATP und damit verbundene Sicherheitsaspekte diskutieren? Treten Sie noch heute der [Azure ATP-Community](https://aka.ms/azureatpcommunity) bei!
+Haben Sie weitere Fragen oder ein Interesse an der Erörterung [!INCLUDE [Product short](includes/product-short.md)] und verwandten Sicherheit mit anderen? Besuchen Sie die [ [!INCLUDE [Product short](includes/product-short.md)] Community](https://aka.ms/MDIcommunity) noch heute!

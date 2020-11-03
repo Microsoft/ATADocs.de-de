@@ -1,63 +1,62 @@
 ---
-title: Azure Advanced Threat Protection-Unterstützung für mehrere Gesamtstrukturen
-description: Unterstützung für mehrere Active Directory-Gesamtstrukturen in Azure ATP
+title: Unterstützung von Microsoft Defender für die Identitäts übergreifende Unterstützung
+description: Unterstützung für mehrere Active Directory Gesamtstrukturen in Microsoft Defender für die Identität.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 02/13/2020
+ms.date: 10/26/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: cf3eb1dcc1d66caccfefda837804f771b3882e7a
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 9f3a6771591fb3e3d63a45887b1f7a89bddc57d7
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912682"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93275712"
 ---
-# <a name="azure-advanced-threat-protection-multi-forest-support"></a>Azure Advanced Threat Protection-Unterstützung für mehrere Gesamtstrukturen
+# <a name="product-long-multi-forest-support"></a>[!INCLUDE [Product long](includes/product-long.md)] Unterstützung für mehrere Gesamtstrukturen
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ## <a name="multi-forest-support-set-up"></a>Einrichten der Unterstützung für mehrere Gesamtstrukturen
 
-Azure ATP unterstützt Organisationen mit mehreren Gesamtstrukturen, wodurch diese die Möglichkeit erhalten, Aktivitäten und Benutzerprofile in allen Gesamtstrukturen ganz einfach zu überwachen.
+[!INCLUDE [Product long](includes/product-long.md)] unterstützt Organisationen mit mehreren Gesamtstrukturen und ermöglicht Ihnen die einfache Überwachung von Aktivitäts-und Profil Benutzern in Gesamtstrukturen.
 
-Unternehmensorganisationen können in der Regel über mehrere Active Directory-Gesamtstrukturen verfügen, die oft für verschiedene Zwecke genutzt werden. Dies schließt auch ältere, aus Unternehmenszusammenschlüssen und -übernahmen stammende Infrastrukturen, die geografische Verteilung und Sicherheitsbegrenzungen (Red Forests) ein. Sie können mehrere Gesamtstrukturen mit Azure ATP schützen, um die Überwachung und Untersuchungen Ihres gesamten Netzwerks über eine zentrale Konsole auszuführen.
+Unternehmensorganisationen können in der Regel über mehrere Active Directory-Gesamtstrukturen verfügen, die oft für verschiedene Zwecke genutzt werden. Dies schließt auch ältere, aus Unternehmenszusammenschlüssen und -übernahmen stammende Infrastrukturen, die geografische Verteilung und Sicherheitsbegrenzungen (Red Forests) ein. Sie können mehrere Gesamtstrukturen mithilfe [!INCLUDE [Product short](includes/product-short.md)] von schützen, sodass Sie das gesamte Netzwerk über einen einzelnen Glasbereich überwachen und untersuchen können.
 
 Die Möglichkeit, mehrere Active Directory-Gesamtstrukturen zu unterstützen, bietet folgende Vorteile:
 
 - Sie können Aktivitäten, die von Benutzern in mehreren Gesamtstrukturen ausgeführt werden, in einer zentralen Konsole im Blick behalten und untersuchen.
 - Durch erweiterte Active Directory-Integration und -Kontoauflösung lassen sich falsch positive Ergebnisse besser erkennen und reduzieren.
-- Sie ermöglicht eine bessere Kontrolle und eine einfachere Bereitstellung. Verbesserte Integritäts Warnungen und Berichterstellung für die übergreifende Abdeckung, wenn alle Domänen Controller über eine einzige Azure ATP Konsole überwacht werden.
+- Sie ermöglicht eine bessere Kontrolle und eine einfachere Bereitstellung. Verbesserte Integritäts Warnungen und Berichterstellung für die übergreifende Abdeckung, wenn alle Domänen Controller über eine einzige Konsole überwacht werden [!INCLUDE [Product short](includes/product-short.md)] .
 
-## <a name="azure-atp-detection-activity-across-multiple-forests"></a>Erkennung von Aktivitäten in mehreren Gesamtstrukturen durch Azure ATP
+## <a name="product-short-detection-activity-across-multiple-forests"></a>[!INCLUDE [Product short](includes/product-short.md)] Erkennungs Aktivität in mehreren Gesamtstrukturen
 
-Zum Erkennen von Aktivitäten, die mehrere Gesamtstrukturen umfassen, fragen Azure ATP-Sensoren Domänencontroller in Remotegesamtstrukturen ab, um Profile für alle beteiligten Entitäten zu erstellen, z.B. Benutzer und Computer aus Remotegesamtstrukturen.
+Zum Erkennen von Gesamtstruktur übergreifenden Aktivitäten werden von den [!INCLUDE [Product short](includes/product-short.md)] Sensoren Domänen Controller in Remote Gesamtstrukturen abgefragt, um Profile für alle Beteiligten Entitäten (einschließlich Benutzer und Computer aus Remote Gesamtstrukturen) zu erstellen.
 
-- Azure ATP Sensoren können auf Domänen Controllern in allen Gesamtstrukturen installiert werden, sogar Gesamtstrukturen ohne Vertrauensstellung.
+- [!INCLUDE [Product short](includes/product-short.md)] Sensoren können auf Domänen Controllern in allen Gesamtstrukturen installiert werden, sogar Gesamtstrukturen ohne Vertrauensstellung.
 - Fügen Sie auf der Seite Verzeichnisdienste zusätzliche Anmelde Informationen hinzu, um nicht vertrauenswürdige Gesamtstrukturen in Ihrer Umgebung zu unterstützen.
-    - Es ist nur eine Anmelde Information erforderlich, um alle Gesamtstrukturen mit einer bidirektionalen Vertrauensstellung zu unterstützen.
-    - Zusätzliche Anmelde Informationen sind nur für jede Gesamtstruktur mit nicht-Kerberos-Vertrauensstellung oder keine Vertrauensstellung erforderlich.
-    - Es gibt ein Standard Limit von 10 nicht vertrauenswürdigen Gesamtstrukturen pro Azure ATP Instanz. Wenden Sie sich an den Support, wenn Ihre Organisation über mehr als 10 Gesamtstrukturen verfügt.
+  - Es ist nur eine Anmelde Information erforderlich, um alle Gesamtstrukturen mit einer bidirektionalen Vertrauensstellung zu unterstützen.
+  - Zusätzliche Anmelde Informationen sind nur für jede Gesamtstruktur mit nicht-Kerberos-Vertrauensstellung oder keine Vertrauensstellung erforderlich.
+  - Es gibt ein Standard Limit von 10 nicht vertrauenswürdigen Gesamtstrukturen pro [!INCLUDE [Product short](includes/product-short.md)] Instanz. Wenden Sie sich an den Support, wenn Ihre Organisation über mehr als 10 Gesamtstrukturen verfügt.
 
-![Azure ATP-Willkommensseite 1](media/directory-services-add-no-trust-forests.png)
+![[! INCLUDE [Product Short] (includes/Produkt-Short. MD)] Willkommens Phase 1](media/directory-services-add-no-trust-forests.png)
 
 ### <a name="requirements"></a>Anforderungen
 
-- Der Benutzer, den Sie in der Azure ATP-Konsole unter **Verzeichnisdienste** konfigurieren, muss in allen anderen Gesamtstrukturen vertrauenswürdig sein und mindestens über Leseberechtigungen verfügen, um LDAP-Abfragen der Domänencontroller auszuführen.
-- Wenn eigenständige Azure ATP-Sensoren auf eigenständigen Computern und nicht direkt auf den Domänencontrollern installiert sind, stellen Sie sicher, dass die Kommunikation der Computer mit allen Domänencontrollern der Remotegesamtstrukturen über LDAP zulässig ist.
+- Der Benutzer, den Sie in der- [!INCLUDE [Product short](includes/product-short.md)] Konsole unter **Verzeichnisdienste** konfigurieren, muss in allen anderen Gesamtstrukturen als vertrauenswürdig eingestuft werden und muss mindestens über Leseberechtigung verfügen, um LDAP-Abfragen auf den Domänen Controllern auszuführen.
+- Wenn [!INCLUDE [Product short](includes/product-short.md)] eigenständige Sensoren auf eigenständigen Computern anstatt direkt auf den Domänen Controllern installiert werden, müssen Sie sicherstellen, dass die Computer mit allen Remote Gesamtstruktur-Domänen Controllern über LDAP kommunizieren können.
 
-- Damit Azure ATP mit den Azure ATP-Sensoren und eigenständigen Azure ATP-Sensoren kommunizieren kann, öffnen Sie die folgenden Ports auf jedem Computer mit installiertem Azure ATP-Sensor:
+- Um [!INCLUDE [Product short](includes/product-short.md)] mit den [!INCLUDE [Product short](includes/product-short.md)] Sensoren und [!INCLUDE [Product short](includes/product-short.md)] eigenständigen Sensoren zu kommunizieren, öffnen Sie die folgenden Ports auf jedem Computer, auf dem der [!INCLUDE [Product short](includes/product-short.md)] Sensor installiert ist:
 
   |Protokoll|Transport|Port|Zu/Von|Richtung|
   |----|----|----|----|----|
   |**Internetports**||||
-  |SSL (*.atp.azure.com)|TCP|443|Azure ATP-Clouddienst|Ausgehend|
+  |SSL (*.atp.azure.com)|TCP|443|[!INCLUDE [Product short](includes/product-short.md)] clouddienst|Ausgehend|
   |**Interne Ports**||||
   |LDAP|TCP und UDP|389|Domänencontroller|Ausgehend|
   |Sicheres LDAP (LDAPS)|TCP|636|Domänencontroller|Ausgehend|
@@ -66,20 +65,20 @@ Zum Erkennen von Aktivitäten, die mehrere Gesamtstrukturen umfassen, fragen Azu
 
 ## <a name="multi-forest-support-network-traffic-impact"></a>Auswirkungen auf den Netzwerkdatenverkehr bei der Unterstützung mehrerer Gesamtstrukturen
 
-Der Prozess des Zuordnens von Gesamtstrukturen durch Azure ATP hat folgende Auswirkungen:
+Wenn die Gesamtstrukturen zuordnet [!INCLUDE [Product short](includes/product-short.md)] , wird ein Prozess verwendet, der sich auf Folgendes auswirkt:
 
-- Sobald der Azure ATP-Sensor ausgeführt wird, fragt er die Active Directory-Gesamtstrukturen am Remotestandort ab und ruft eine Liste von Benutzern und Computerdaten für die Profilerstellung ab.
-- Alle 5 Minuten fragt jeder Azure ATP-Sensor einen Domänencontroller aus jeder Domäne in jeder Gesamtstruktur ab, um alle Gesamtstrukturen im Netzwerk zuzuordnen.
-- Jeder Azure ATP-Sensor ordnet die Gesamtstrukturen mithilfe des Objekts „trustedDomain“ in Active Directory zu, indem er sich anmeldet und den Vertrauenstyp überprüft.
-- Sie können auch Ad-hoc-Datenverkehr anzeigen, wenn der Azure ATP-Sensor Aktivitäten zwischen Gesamtstrukturen erkennt. In diesem Fall senden die Azure ATP-Sensoren eine LDAP-Abfrage an die entsprechenden Domänencontroller, um Entitätsinformationen abzurufen.
+- Nach der [!INCLUDE [Product short](includes/product-short.md)] Ausführung des Sensors werden die Remote Active Directory-Gesamtstrukturen abgefragt und eine Liste von Benutzern und Computer Daten für die Profilerstellung abgerufen.
+- Alle fünf Minuten fragt jeder [!INCLUDE [Product short](includes/product-short.md)] Sensor einen Domänen Controller aus jeder Domäne (von jeder Gesamtstruktur) ab, um alle Gesamtstrukturen im Netzwerk zuzuordnen.
+- Jeder [!INCLUDE [Product short](includes/product-short.md)] Sensor ordnet die Gesamtstrukturen mithilfe des Objekts "Treuhänder Domäne" in Active Directory zu, indem er sich anmeldet und den vertrauensungstyp prüft.
+- Sie können auch Ad-hoc-Datenverkehr sehen, wenn der Sensor eine Gesamtstruktur [!INCLUDE [Product short](includes/product-short.md)] übergreifende Aktivität erkennt. Wenn dies auftritt, [!INCLUDE [Product short](includes/product-short.md)] senden die Sensoren eine LDAP-Abfrage an die relevanten Domänen Controller, um Entitäts Informationen abzurufen.
 
 ## <a name="known-limitations"></a>Bekannte Einschränkungen
 
-- Interaktive Anmeldungen, die von Benutzern in einer Gesamtstruktur durchgeführt werden, um auf Ressourcen in einer anderen Gesamtstruktur zuzugreifen, werden nicht im Azure ATP-Dashboard angezeigt.
+- Interaktive Anmeldungen, die von Benutzern in einer Gesamtstruktur ausgeführt werden, um auf Ressourcen in einer anderen Gesamtstruktur zuzugreifen, werden im Dashboard nicht angezeigt [!INCLUDE [Product short](includes/product-short.md)] .
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Azure ATP sizing tool (Azure ATP-Tool zur Größenanpassung)](https://aka.ms/aatpsizingtool)
-- [Azure ATP architecture (Azure ATP-Architektur)](architecture.md)
-- [Install Azure ATP (Installieren von Azure ATP)](install-step1.md)
-- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)
+- [[!INCLUDE [Product short](includes/product-short.md)] Tool zur Größenanpassung](https://aka.ms/aatpsizingtool)
+- [[!INCLUDE [Product short](includes/product-short.md)] Architektur](architecture.md)
+- [Installieren [!INCLUDE [Product short](includes/product-short.md)]](install-step1.md)
+- [Sehen Sie sich das [!INCLUDE [Product short](includes/product-short.md)] Forum an!](https://aka.ms/MDIcommunity)

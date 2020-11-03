@@ -1,6 +1,6 @@
 ---
-title: Azure Advanced Threat Protection in Microsoft Cloud App Security
-description: Übersicht über die Azure ATP-Features in Microsoft Cloud App Security.
+title: Microsoft Defender für Identity in Microsoft Cloud App Security
+description: Übersicht über Microsoft Defender für Identitäts Features in Microsoft Cloud App Security.
 keywords: ''
 author: shsagir
 ms.author: shsagir
@@ -11,83 +11,84 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c1c3b18606b38902217a320663ef91191e34f185
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 5051900ef8eb21f85a4f31723f455d3ae18ff36e
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90910161"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93275076"
 ---
-# <a name="using-azure-atp-with-microsoft-cloud-app-security"></a>Verwenden von Azure ATP mit Microsoft Cloud App Security
+# <a name="using-product-long-with-microsoft-cloud-app-security"></a>Verwenden [!INCLUDE [Product long](includes/product-long.md)] von mit Microsoft Cloud App Security
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-Dieser Artikel bietet grundlegende Informationen sowie Tipps zur Navigation in der erweiterten Benutzeroberfläche für Untersuchungen, wenn Sie das Microsoft Cloud App Security-Portal mit Azure ATP verwenden.
+Dieser Artikel soll Ihnen dabei helfen, die erweiterte Untersuchung zu verstehen und zu navigieren, wenn Sie das Microsoft Cloud App Security-Portal mit verwenden [!INCLUDE [Product long](includes/product-long.md)] .
 
-Beim Zugriff auf Azure ATP über das Microsoft Cloud App Security-Portal werden vorhandene lokale Ermittlungen und Analysen von ungewöhnlichen Verhaltensweisen genutzt – so können Sie eine Exfiltration von vertraulichen Daten in Ihrem gesamten Unternehmen erkennen und entsprechende Warnungen ausgeben. Darüber hinaus können Sie Aktivitäten filtern und umsetzbare Richtlinien erstellen. Dieses Hybridangebot analysiert Aktivitäten und Warnungen basierend auf User and Entity Behavior Analytics (UEBA), um riskante Verhaltensweisen zu ermitteln, und bietet eine Bewertung der Untersuchungspriorität, um Ihre Reaktion auf Incidents bei gefährdeten Identitäten zu optimieren.
+Durch die Nutzung vorhandener lokaler Erkennungen und ungewöhnlicher Verhaltensanalysen ermöglicht der Zugriff auf [!INCLUDE [Product short](includes/product-short.md)] das Microsoft Cloud App Security-Portal die zusätzliche Möglichkeit, sensible Daten im gesamten Unternehmen zu erkennen und zu warnen. Außerdem werden die Aktivitäten gefiltert und Richtlinien erstellt. Dieses Hybridangebot analysiert Aktivitäten und Warnungen basierend auf User and Entity Behavior Analytics (UEBA), um riskante Verhaltensweisen zu ermitteln, und bietet eine Bewertung der Untersuchungspriorität, um Ihre Reaktion auf Incidents bei gefährdeten Identitäten zu optimieren.
 
 In diesem Artikel finden Sie Informationen zu Folgendem:
 
 > [!div class="checklist"]
 >
 > - Übersicht über die Dienste
-> - Neue Möglichkeiten für den Zugriff auf Azure ATP
+> - Neue Zugriffsmöglichkeiten [!INCLUDE [Product short](includes/product-short.md)]
 > - Voraussetzungen für die Lizenzierung
-> - Von Azure ATP nachverfolgte Aktivitäten in Cloud App Security
+> - Wo finden Sie nach [!INCLUDE [Product short](includes/product-short.md)] verfolgte Aktivitäten in Cloud App Security
 
 ## <a name="service-overview"></a>Übersicht über die Dienste
 
-Durch die Integration in Azure ATP bietet das Cloud App Security-Portal Warnungen und Erkenntnisse aus folgenden Diensten:
+Die Integration [!INCLUDE [Product short](includes/product-short.md)] von in ermöglicht das Cloud App Security-Portal Warnungen und Einblicke aus:
 
 - Microsoft Cloud App Security, das Angriffe innerhalb einer Cloudsitzung identifiziert und sich dabei nicht nur mit Microsoft-Produkten, sondern auch mit Anwendungen von Drittanbietern befasst
-- Azure Advanced Threat Protection – identifiziert Angriffe in Ihrem gesamten lokalen Netzwerk anhand von Verhaltensanalysen
+- [!INCLUDE [Product long](includes/product-long.md)], der Machine Learning und Verhaltensanalysen verwendet, um Angriffe in Ihrem lokalen Netzwerk zu erkennen.
 - Azure Active Directory Identity Protection, das Benutzer- und Anmelderisiken bei Identitäten in der Cloud erkennt und proaktiv verhindert
 
-## <a name="access-azure-atp"></a>Zugriff auf Azure ATP
+## <a name="access-product-short"></a>Zu [!INCLUDE [Product short](includes/product-short.md)]
 
-Sie können weiterhin Azure ATP im Azure ATP-Portal nutzen oder über das Microsoft Cloud App Security-Portal auf Azure ATP-Warnungen und -Identitätsbewertungen zugreifen. In beiden Workflows werden Einrichtungs- und Konfigurationsaufgaben für Azure ATP weiterhin im Azure ATP-Portal ausgeführt.
+Wählen Sie weiter [!INCLUDE [Product short](includes/product-short.md)] im [!INCLUDE [Product short](includes/product-short.md)] Portal aus, oder greifen Sie [!INCLUDE [Product short](includes/product-short.md)] über das Microsoft Cloud App Security Portal auf Warnungen und Identitäts Bewertung zu. Im Workflow [!INCLUDE [Product short](includes/product-short.md)] werden die Einrichtungs-und Konfigurations Tasks weiterhin im [!INCLUDE [Product short](includes/product-short.md)] Portal verarbeitet.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
 Zur Nutzung aller Features der Benutzeruntersuchung über die gesamte Hybridumgebung hinweg benötigen Sie Folgendes:
 
 - Eine gültige Lizenz für Microsoft Cloud App Security
-- eine gültige Lizenz für Azure ATP, die mit Ihrer Active Directory-Instanz verbunden ist
+- Eine gültige Lizenz für [!INCLUDE [Product long](includes/product-long.md)] die Verbindung mit Ihrer Active Directory Instanz
 
 >[!NOTE]
 >
-> - Wenn Sie kein Abonnement für Cloud App Security besitzen, können Sie das Cloud App Security-Portal verwenden, um Azure ATP-Warnungen zu untersuchen und Details zu Benutzern und ihren Aktivitäten in der lokalen verwalteten Umgebung anzuzeigen. Sie erhalten jedoch keine entsprechenden Erkenntnisse aus Ihren Cloudanwendungen.
-> - Azure ATP-Administratoren benötigen möglicherweise neue Berechtigungen für den Zugriff auf Cloud App Security. Informationen zum Zuweisen von Berechtigungen zu Cloud App Security finden Sie unter [Administratorzugriff verwalten](/cloud-app-security/manage-admins).
+> - Wenn Sie nicht über ein Abonnement für Cloud App Security verfügen, können Sie weiterhin das Cloud App Security-Portal verwenden, um Warnungen zu untersuchen [!INCLUDE [Product short](includes/product-short.md)] und ausführliche Informationen zu Benutzern und Ihren lokalen, verwalteten Aktivitäten zu erhalten. Sie erhalten jedoch keine relevanten Einblicke in Ihre cloudanwendungen.
+> - [!INCLUDE [Product short](includes/product-short.md)] Administratoren benötigen möglicherweise neue Berechtigungen für den Zugriff auf Cloud App Security. Informationen zum Zuweisen von Berechtigungen zu Cloud App Security finden Sie unter [Administratorzugriff verwalten](/cloud-app-security/manage-admins).
 
-Informationen zur schnellen Einrichtung und Nutzung von Azure ATP in Cloud App Security finden Sie unter [Azure ATP-Integration](/cloud-app-security/aatp-integration).
+Weitere Informationen zum schnellen Aktivieren von in Cloud App Security finden Sie unter [ [!INCLUDE [Product short](includes/product-short.md)] Integration](/cloud-app-security/aatp-integration) [!INCLUDE [Product short](includes/product-short.md)] .
 
-## <a name="azure-atp-in-cloud-app-security"></a>Azure ATP in Cloud App Security
+## <a name="product-short-in-cloud-app-security"></a>[!INCLUDE [Product short](includes/product-short.md)] in Cloud App Security
 
 Lesen Sie die [Schnellstartanleitung für Cloud App Security](/cloud-app-security/getting-started-with-cloud-app-security), um sich mit den Grundlagen der Verwendung des Cloud App Security-Portals vertraut zu machen.
 
-Greifen Sie in Cloud App Security-Warnungen, -Aktivitäten und -Benutzerseiten auf Ihre Azure ATP-Daten und neue Hybridfeatures zu.
+Greifen Sie [!INCLUDE [Product short](includes/product-short.md)] in Cloud App Security Warnungen, Aktivitäten und Benutzer Seiten auf Ihre Daten und ihre neuen Hybrid Features zu.
 
 ## <a name="alerts"></a>Alerts
 
-Azure ATP-Warnungen werden in der Cloud App Security-Warteschlange **Warnungen** angezeigt. Zusätzliche Filteroptionen stehen nur beim Anzeigen von Warnungen über Cloud App Security zur Verfügung. Azure ATP-Warnungen werden mithilfe des Anwendungsfilters in **Active Directory Domain Services** gefiltert.
+[!INCLUDE [Product short](includes/product-short.md)] Warnungen werden in der Warteschlange Cloud App Security **Warnungen** angezeigt. Zusätzliche Filteroptionen stehen nur beim Anzeigen von Warnungen über Cloud App Security zur Verfügung. [!INCLUDE [Product short](includes/product-short.md)] Warnungen werden mithilfe des Anwendungs Filters gefiltert, um **Active Directory**.
 
 ## <a name="alert-management"></a>Alert Management
 
-Wenn Sie Azure ATP mit Cloud App Security verwenden, werden Warnungen, die in dem einen Dienst geschlossen werden, nicht automatisch in dem anderen Dienst geschlossen. Legen Sie fest, in welchem Dienst Warnungen verwaltet und behoben werden sollen, um doppelten Aufwand zu vermeiden.
+Wenn [!INCLUDE [Product short](includes/product-short.md)] Sie mit Cloud App Security verwenden, schließen Sie Warnungen in einem Dienst nicht automatisch im anderen Dienst. Legen Sie fest, in welchem Dienst Warnungen verwaltet und behoben werden sollen, um doppelten Aufwand zu vermeiden.
 
 ## <a name="siem-notification"></a>SIEM-Benachrichtigungen
 
-Wenn Sie beide Dienste (Azure ATP und Cloud App Security) so konfiguriert haben, dass Warnungsbenachrichtigungen an SIEM gesendet werden, nachdem die Azure ATP-Integration in Cloud App Security aktiviert wurde, erhalten Sie doppelte SIEM-Benachrichtigungen für dieselbe Warnung. Von jedem Dienst wird eine Warnung mit unterschiedlicher Warnungs-ID ausgegeben. Entscheiden Sie, in welchem Dienst Sie Warnungen verwalten möchten, und legen Sie anschließend fest, dass vom anderen Dienst keine SIEM-Benachrichtigungen mehr versendet werden. So vermeiden Sie Duplizierungen und Verwirrung.
+Wenn Ihre Dienste ( [!INCLUDE [Product short](includes/product-short.md)] und Cloud App Security) zurzeit so konfiguriert sind, dass Sie Warn Benachrichtigungen an eine Siem-Lösung sendet, [!INCLUDE [Product short](includes/product-short.md)] erhalten Sie nach dem Aktivieren der Integration in Cloud App Security doppelte Siem-Benachrichtigungen für die gleiche Warnung. Von jedem Dienst wird eine Warnung mit unterschiedlicher Warnungs-ID ausgegeben. Entscheiden Sie, in welchem Dienst Sie Warnungen verwalten möchten, und legen Sie anschließend fest, dass vom anderen Dienst keine SIEM-Benachrichtigungen mehr versendet werden. So vermeiden Sie Duplizierungen und Verwirrung.
 
 ## <a name="activities"></a>Aktivitäten
 
-Azure ATP-Warnungen werden im **Aktivitätsprotokoll** von Cloud App Security angezeigt. Zusätzliche Optionen und Features für die Aktivitätsfilterung stehen nur beim Anzeigen von Warnungen über Cloud App Security zur Verfügung. Informationen zum Filtern und Erstellen von Aktivitätsrichtlinien finden Sie unter [Azure ATP-Aktivitäten in Microsoft Cloud App Security](activities-filtering-mcas.md).
+[!INCLUDE [Product short](includes/product-short.md)] Warnungen werden innerhalb des Cloud App Security **Aktivitäts Protokolls** angezeigt. Zusätzliche Optionen und Features für die Aktivitätsfilterung stehen nur beim Anzeigen von Warnungen über Cloud App Security zur Verfügung. Weitere Informationen zum Filtern und Erstellen neuer Aktivitätsrichtlinien finden Sie unter [ [!INCLUDE [Product short](includes/product-short.md)] Aktivitäten mithilfe von Microsoft Cloud App Security](activities-filtering-mcas.md) .
 
 ## <a name="user-pages"></a>Benutzerseiten
 
 Benutzerseiten enthalten die [Bewertung der Untersuchungspriorität](/cloud-app-security/tutorial-ueba) für jeden Benutzer sowie ein Aktivitätsprotokoll aller Aktionen.
 
 So greifen Sie auf die Benutzerseite eines Systembenutzers zu:
+
 1. Öffnen Sie im Hauptmenü die Option **Warnungen**.
 1. Wählen Sie mithilfe des Felds **Benutzername** die Warnungswarteschlange für einen bestimmten Benutzer aus, und filtern Sie diese.
 
@@ -96,12 +97,12 @@ So greifen Sie auf die Benutzerseite eines Systembenutzers zu:
 1. Wählen Sie im Menü **Untersuchen** die Option **Aktivitätsprotokoll** aus.
 1. Filtern Sie die Warteschlange des Aktivitätsprotokolls nach Benutzer.
 
-    ![Aktivitätsprotokoll](media/atp-mcas-activity-filter.png)
+    ![Aktivitätsprotokoll](media/mcas-activity-filter.png)
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Informationen zum Filtern und Erstellen von Aktivitätsrichtlinien finden Sie unter [Azure ATP-Aktivitäten in Microsoft Cloud App Security](activities-filtering-mcas.md).
+Weitere Informationen zum Filtern und Erstellen neuer Aktivitätsrichtlinien finden Sie unter [ [!INCLUDE [Product short](includes/product-short.md)] Aktivitäten mithilfe von Microsoft Cloud App Security](activities-filtering-mcas.md) .
 
 ## <a name="join-the-community"></a>Beitritt zur Community
 
-Haben Sie weitere Fragen, oder möchten Sie mit anderen über Azure ATP und damit verbundene Sicherheitsaspekte diskutieren? Treten Sie noch heute der [Azure ATP-Community](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) bei!
+Haben Sie weitere Fragen oder ein Interesse an der Erörterung [!INCLUDE [Product short](includes/product-short.md)] und verwandten Sicherheit mit anderen? Besuchen Sie die [ [!INCLUDE [Product short](includes/product-short.md)] Community](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) noch heute!

@@ -1,33 +1,32 @@
 ---
-title: Konfigurieren von SAM-R zum Aktivieren der Erkennung von Lateral Movement-Pfaden in Azure ATP
-description: Erläutert das Konfigurieren von Azure ATP für das Ausführen von Remoteaufrufen an SAM
+title: Konfigurieren von Sam-R zum Aktivieren der Erkennung von Lateral Movement-Pfaden in Microsoft Defender für Identity
+description: Erläutert das Konfigurieren von Microsoft Defender für die Identität, um Remote Aufrufe an Sam durchführen zu können.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 05/16/2019
+ms.date: 10/26/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: b09adce3-0fbc-40e3-a53f-31f57fe79ca3
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d752b23fb339bfdcbd1b202716c97a027f5b86dc
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 6e46d6b794386e21654d578f6273de8c7c8b89f2
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912920"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93276125"
 ---
-# <a name="configure-azure-atp-to-make-remote-calls-to-sam"></a>Konfigurieren von Azure ATP für das Ausführen von Remoteaufrufen an SAM
+# <a name="configure-product-long-to-make-remote-calls-to-sam"></a>Konfigurieren [!INCLUDE [Product long](includes/product-long.md)] von, um Remote Aufrufe an Sam durchführen
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-Der Erkennungsvorgang für [Lateral Movement-Pfade](use-case-lateral-movement-path.md) von Azure ATP ist abhängig von Abfragen, die lokale Administratoren auf bestimmten Computern ermitteln. Diese Abfragen werden mithilfe des SAM-R-Protokolls über das während der Azure ATP-Installation in [Schritt 2 erstellte Azure ATP-Dienstkonto ausgeführt. Verbinden mit AD](install-step2.md).
+[!INCLUDE [Product long](includes/product-long.md)]die Erkennung von [lateral Movement](use-case-lateral-movement-path.md) -Pfaden basiert auf Abfragen, mit denen lokale Administratoren auf bestimmten Computern identifiziert werden. Diese Abfragen werden mithilfe des Sam-R-Protokolls durchgeführt, wobei das Dienst Konto verwendet wird, das [!INCLUDE [Product short](includes/product-short.md)] während der [!INCLUDE [Product short](includes/product-short.md)] Installation  [Schritt 2 erstellt wurde. Verbindung mit AD herstellen](install-step2.md).
 
 ## <a name="configure-sam-r-required-permissions"></a>Konfigurieren von für SAM-R erforderliche Berechtigungen
 
-Wenn Sie sicherstellen möchten, dass Windows-Clients und -Server zulassen, dass Ihr Azure ATP-Konto SAM-R durchführt, muss die **Gruppenrichtlinie** geändert werden, damit das Azure ATP-Dienstkonto zu den konfigurierten Konten hinzugefügt wird, die in der Richtlinie für den **Netzwerkzugriff** aufgeführt sind. Stellen Sie sicher, dass Gruppenrichtlinien auf alle Computer außer Domänencontroller angewendet werden.
+Um sicherzustellen, dass Windows-Clients und-Server Ihr [!INCLUDE [Product short](includes/product-short.md)] Konto Sam-R durchführen können, muss eine Änderung an **Gruppenrichtlinie** vorgenommen werden, um das [!INCLUDE [Product short](includes/product-short.md)] Dienst Konto zusätzlich zu den in der **Netzwerk Zugriffs** Richtlinie aufgeführten konfigurierten Konten hinzuzufügen. Stellen Sie sicher, dass Gruppenrichtlinien auf alle Computer außer Domänencontroller angewendet werden.
 
 > [!Note]
 > Bevor Sie neue Richtlinien wie die zuvor erwähnte erzwingen, ist es wichtig, dass Sie die Sicherheit Ihrer Umgebung gewährleisten können und dass die Änderungen sich nicht auf die Anwendungskompatibilität auswirken. Aktivieren und überprüfen Sie daher zunächst die Kompatibilität vorgeschlagener Änderungen im Überwachungsmodus, bevor Sie Änderungen an Ihrer Produktionsumgebung vornehmen.
@@ -39,15 +38,15 @@ Wenn Sie sicherstellen möchten, dass Windows-Clients und -Server zulassen, dass
 
     ![Finden der Richtlinie](media/samr-policy-location.png)
 
-1. Fügen Sie den Azure ATP-Dienst der Liste von zulässigen Konten hinzu, die diese Aktion auf Ihren modernen Windows-Systemen durchführen können.
+1. Fügen Sie den [!INCLUDE [Product short](includes/product-short.md)] Dienst der Liste genehmigter Konten hinzu, die diese Aktion auf Ihren modernen Windows-Systemen durchführen können.
 
     ![Hinzufügen des Diensts](media/samr-add-service.png)
 
-3. Der **Azure ATP-Dienst**, der bei der Installation erstellt wurde, weist nun die nötigen Berechtigungen auf, um SAM-R in der Umgebung auszuführen.
+3. Der **aatp-Dienst** (der [!INCLUDE [Product short](includes/product-short.md)] während der Installation erstellte Dienst) verfügt jetzt über die erforderlichen Berechtigungen, um Sam-R in der Umgebung auszuführen.
 
 Weitere Informationen zu SAM-R und dieser Gruppenrichtlinie, finden Sie unter [Netzwerkzugriff: Clients einschränken, die Remoteaufrufe an SAM ausführen dürfen](/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Investigating lateral movement path attacks with Azure ATP (Untersuchen von Lateral Movement-Pfaden mit Azure ATP)](use-case-lateral-movement-path.md)
-- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)
+- [Untersuchen von Angriffen mit lateral Movement-Pfaden mit [!INCLUDE [Product short](includes/product-short.md)]](use-case-lateral-movement-path.md)
+- [Sehen Sie sich das [!INCLUDE [Product short](includes/product-short.md)] Forum an!](https://aka.ms/MDIcommunity)

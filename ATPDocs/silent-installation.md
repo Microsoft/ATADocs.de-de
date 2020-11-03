@@ -1,57 +1,56 @@
 ---
-title: Automatisches Installieren von Azure Advanced Threat Protection
-description: Hier wird die automatische Installation von Azure ATP beschrieben.
+title: Automatisches Installieren von Microsoft Defender für Identity
+description: Hier wird beschrieben, wie Microsoft Defender für die Identität im Hintergrund installiert wird.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 07/27/2020
+ms.date: 10/27/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 24eca4c6-c949-42ea-97b9-41ef0fb611f1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 39437a0397c4d4c0a0238b0e7895c7ee8d15a510
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: d78282a4580159e0b20374e3c3acbd2b5008aab6
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912511"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93274173"
 ---
-# <a name="azure-atp-switches-and-silent-installation"></a>Azure ATP-Switches und automatische Installation
+# <a name="product-long-switches-and-silent-installation"></a>[!INCLUDE [Product long](includes/product-long.md)] Switches und unbeaufsichtigte Installation
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-Dieser Artikel enthält Anleitungen und Informationen zu Azure ATP-Switches und der automatischen Installation.
+Dieser Artikel enthält Anleitungen und Anweisungen für [!INCLUDE [Product long](includes/product-long.md)] Switches und eine unbeaufsichtigte Installation.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Azure ATP setzt die Installation von Microsoft .NET Framework 4.7 oder höher voraus.
+[!INCLUDE [Product short](includes/product-short.md)] erfordert die Installation von Microsoft .NET Framework 4,7 oder höher.
 
-Beim Installieren von Azure ATP wird .NET Framework 4.7 automatisch als Teil der Bereitstellung von Azure ATP installiert, sofern .NET Framework 4.7 oder höher noch nicht installiert ist.
-
-> [!NOTE]
-> Die Installation von .Net Framework 4.7 macht möglicherweise einen Neustart des Servers erforderlich. Wenn Sie den Azure ATP-Sensor auf Domänencontrollern installieren, sollten Sie die Planung eines Wartungsfensters für diese Domänencontroller in Betracht ziehen.
-
-Wenn Sie die automatische Installation von Azure ATP verwenden, ist das Installationsprogramm so konfiguriert, dass der Server am Ende der Installation automatisch neu gestartet wird (falls erforderlich). Stellen Sie sicher, dass Sie die automatische Installation nur während eines Wartungsfensters ausführen. Aufgrund eines Windows Installer-Fehlers kann mit dem *norestart*-Flag nicht mehr verlässlich sichergestellt werden, dass der Server keinen Neustart ausführt.
-
-Zur Nachverfolgung des Bereitstellungsfortschritts überwachen Sie die Protokolle des Azure ATP-Installationsprogramms unter `%AppData%\Local\Temp`.
-
-## <a name="azure-atp-sensor-silent-installation"></a>Automatische Installation des Azure ATP-Sensors
+Wenn Sie installieren [!INCLUDE [Product short](includes/product-short.md)] , wird .NET Framework 4,7 automatisch als Teil der Bereitstellung von installiert, [!INCLUDE [Product short](includes/product-short.md)] Wenn .NET Framework 4,7 oder höher nicht bereits installiert ist.
 
 > [!NOTE]
-> Bei der automatischen Bereitstellung des Azure ATP-Sensors über System Center Configuration Manager oder ein anderes System zur Softwarebereitstellung empfiehlt es sich, zwei Bereitstellungspakete zu erstellen:</br>– Net Framework 4.7 oder höher, einschließlich möglichem Neustart des Domänencontrollers</br>– Azure ATP-Sensor. </br>Erstellen Sie eine Abhängigkeit des Azure ATP-Sensorpakets von der .NET Framework-Paketbereitstellung. </br>Rufen Sie das [.NET Framework 4.7-Paket für die Offlinebereitstellung](https://support.microsoft.com/help/3186497/the-net-framework-4-7-offline-installer-for-windows) ab.
+> Die Installation von .Net Framework 4.7 macht möglicherweise einen Neustart des Servers erforderlich. Wenn Sie den [!INCLUDE [Product short](includes/product-short.md)] Sensor auf Domänen Controllern installieren, sollten Sie ein Wartungsfenster für die Domänen Controller planen.
 
-Verwenden Sie den folgenden Befehl, um eine vollständig automatische Installation des Azure ATP-Sensors auszuführen:
+Mithilfe [!INCLUDE [Product short](includes/product-short.md)] der automatischen Installation wird das Installationsprogramm so konfiguriert, dass der Server am Ende der Installation (falls erforderlich) automatisch neu gestartet wird. Stellen Sie sicher, dass Sie die automatische Installation nur während eines Wartungsfensters ausführen. Aufgrund eines Windows Installer-Fehlers kann mit dem *norestart* -Flag nicht mehr verlässlich sichergestellt werden, dass der Server keinen Neustart ausführt.
 
-**cmd.exe-Syntax**:
+Um den Bereitstellungs Fortschritt zu verfolgen, überwachen Sie die [!INCLUDE [Product short](includes/product-short.md)] Installations Protokolle in `%AppData%\Local\Temp` .
+
+## <a name="product-short-sensor-silent-installation"></a>[!INCLUDE [Product short](includes/product-short.md)] Automatische Sensorinstallation
+
+> [!NOTE]
+> Bei der automatischen bereit [!INCLUDE [Product short](includes/product-short.md)] Stellung des Sensors über System Center Configuration Manager oder ein anderes Software Bereitstellungs System wird empfohlen, zwei Bereitstellungs Pakete zu erstellen:</br>– Net Framework 4.7 oder höher, einschließlich möglichem Neustart des Domänencontrollers</br>- [!INCLUDE [Product short](includes/product-short.md)] k. </br>Machen Sie das [!INCLUDE [Product short](includes/product-short.md)] sensorpaket von der Bereitstellung der .NET Framework-Paket Bereitstellung abhängig. </br>Rufen Sie das [.NET Framework 4.7-Paket für die Offlinebereitstellung](https://support.microsoft.com/help/3186497/the-net-framework-4-7-offline-installer-for-windows) ab.
+
+Verwenden Sie den folgenden Befehl, um eine vollständig automatische Installation des Sensors durchzuführen [!INCLUDE [Product short](includes/product-short.md)] :
+
+**cmd.exe-Syntax** :
 
 ```dos
 "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
 ```
 
-**PowerShell-Syntax**:
+**PowerShell-Syntax** :
 
 ```powershell
 ./"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
@@ -61,9 +60,9 @@ Verwenden Sie den folgenden Befehl, um eine vollständig automatische Installati
 > Beim Verwenden der PowerShell-Syntax führt das Auslassen des Präfixes **./** zu einem Fehler, der eine automatische Installation verhindert.
 
 > [!NOTE]
-> Kopieren Sie den Zugriffsschlüssel, der im Azure ATP-Portal auf der Seite **Sensor** im Abschnitt **Konfiguration** angezeigt wird.
+> Kopieren Sie den Zugriffsschlüssel aus dem [!INCLUDE [Product short](includes/product-short.md)] Portal **Konfigurations** Abschnitt der Seite " **Sensoren** ".
 
-**Installationsoptionen**:
+**Installationsoptionen** :
 
 > [!div class="mx-tableFixed"]
 >
@@ -73,18 +72,18 @@ Verwenden Sie den folgenden Befehl, um eine vollständig automatische Installati
 > |Hilfe|/help|Nein|Stellt Hilfe und eine Kurzübersicht bereit. Zeigt die korrekte Verwendung des Installationsbefehl einschließlich einer Liste aller Optionen und Verhaltensweisen an.|
 > |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Ja|Legt die Parameter für die Installation von .Net Framework fest. Muss festgelegt werden, um die unbeaufsichtigte Installation von .Net Framework zu erzwingen.|
 
-**Installationsparameter**:
+**Installationsparameter** :
 
 > [!div class="mx-tableFixed"]
 >
 > |Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|Beschreibung|
 > |-------------|----------|---------|---------|
-> |InstallationPath|InstallationPath=""|Nein|Legt den Pfad für die Installation der Binärdateien des AATP-Sensors fest. Standardpfad: %programfiles%\Azure Advanced Threat Protection sensor
-> |AccessKey|AccessKey="\*\*"|Ja|Legt den Zugriffsschlüssel fest, mit dem der Azure ATP-Sensor bei der Azure ATP-Instanz registriert wird.|
+> |InstallationPath|InstallationPath=""|Nein|Legt den Pfad für die Installation von [!INCLUDE [Product short](includes/product-short.md)] Sensor Binärdateien fest. Standardpfad: %programfiles%\Azure Advanced Threat Protection sensor
+> |AccessKey|AccessKey="\*\*"|Ja|Legt die Zugriffstaste fest, die zum Registrieren des [!INCLUDE [Product short](includes/product-short.md)] Sensors bei der-Instanz verwendet wird [!INCLUDE [Product short](includes/product-short.md)] .|
 
-**Beispiele**:
+**Beispiele** :
 
-Verwenden Sie den folgenden Befehl für eine automatische Installation des Azure ATP-Sensors:
+Verwenden Sie den folgenden Befehl, um den Sensor automatisch zu installieren [!INCLUDE [Product short](includes/product-short.md)] :
 
 ```dos
 "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="mmAOkLYCzfH8L/zUIsH24BIJBevlAWu7wUcSfIkRJufpuEojaDHYdjrNs0P3zpD+/bObKfLS0puD7biT5KDf3g=="
@@ -94,27 +93,27 @@ Verwenden Sie den folgenden Befehl für eine automatische Installation des Azure
 
 Verwenden Sie die folgenden Befehle, um die Proxyauthentifizierung abzuschließen:
 
-**Syntax**:
+**Syntax** :
 
 > [!div class="mx-tableFixed"]
 >
 > |Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|Beschreibung|
 > |-------------|----------|---------|---------|
-> |ProxyUrl|ProxyUrl="http\://proxy.contoso.com:8080"|Nein|Gibt die ProxyUrl und die Portnummer für den Azure ATP Sensor an.|
+> |ProxyUrl|ProxyUrl="http\://proxy.contoso.com:8080"|Nein|Gibt die ProxyUrl und die Portnummer für den [!INCLUDE [Product short](includes/product-short.md)] Sensor an.|
 > |ProxyUserName|ProxyUserName="Contoso\ProxyUser"|Nein|Wenn Ihr Proxydienst eine Authentifizierung erfordert, geben Sie einen Benutzernamen im Format „DOMÄNE\Benutzer“ an.|
-> |ProxyUserPassword|ProxyUserPassword="P@ssw0rd"|Nein|Gibt das Kennwort für den Proxybenutzernamen an. *Anmeldeinformationen werden verschlüsselt und lokal vom Azure ATP-Sensor gespeichert.|
+> |ProxyUserPassword|ProxyUserPassword="P@ssw0rd"|Nein|Gibt das Kennwort für den Proxybenutzernamen an. * Anmelde Informationen werden verschlüsselt und lokal vom [!INCLUDE [Product short](includes/product-short.md)] Sensor gespeichert.|
 
-## <a name="update-the-azure-atp-sensor"></a>Aktualisieren des Azure ATP-Sensors
+## <a name="update-the-product-short-sensor"></a>Aktualisieren des [!INCLUDE [Product short](includes/product-short.md)] Sensors
 
-Verwenden Sie den folgenden Befehl, um den Azure ATP-Sensor automatisch zu aktualisieren:
+Verwenden Sie den folgenden Befehl, um den Sensor automatisch zu aktualisieren [!INCLUDE [Product short](includes/product-short.md)] :
 
-**Syntax**:
+**Syntax** :
 
 ```dos
 "Azure ATP sensor Setup.exe" [/quiet] [/Help] [NetFrameworkCommandLineArguments="/q"]
 ```
 
-**Installationsoptionen**:
+**Installationsoptionen** :
 
 > [!div class="mx-tableFixed"]
 >
@@ -124,37 +123,37 @@ Verwenden Sie den folgenden Befehl, um den Azure ATP-Sensor automatisch zu aktua
 > |Hilfe|/help|Nein|Stellt Hilfe und eine Kurzübersicht bereit. Zeigt die korrekte Verwendung des Installationsbefehl einschließlich einer Liste aller Optionen und Verhaltensweisen an.|
 > |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Ja|Legt die Parameter für die Installation von .Net Framework fest. Muss festgelegt werden, um die unbeaufsichtigte Installation von .Net Framework zu erzwingen.|
 
-**Beispiele**:
+**Beispiele** :
 
-So aktualisieren Sie den Azure ATP-Sensor automatisch
+So aktualisieren Sie den Sensor im Hintergrund [!INCLUDE [Product short](includes/product-short.md)] :
 
 ```dos
 "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q"
 ```
 
-## <a name="uninstall-the-azure-atp-sensor-silently"></a>Automatisches Deinstallieren des Azure ATP-Sensors
+## <a name="uninstall-the-product-short-sensor-silently"></a>Automatischen Deinstallieren des [!INCLUDE [Product short](includes/product-short.md)] Sensors
 
-Verwenden Sie den folgenden Befehl, um den Azure ATP-Sensor automatisch zu deinstallieren:
+Verwenden Sie den folgenden Befehl, um eine unbeaufsichtigte Deinstallation des Sensors durchzuführen [!INCLUDE [Product short](includes/product-short.md)] :
 
-**Syntax**:
+**Syntax** :
 
 ```dos
 "Azure ATP sensor Setup.exe" [/quiet] [/Uninstall] [/Help]
 ```
 
-**Installationsoptionen**:
+**Installationsoptionen** :
 
 > [!div class="mx-tableFixed"]
 >
 > |Name|Syntax|Erforderlich für die unbeaufsichtigte Deinstallation?|Beschreibung|
 > |-------------|----------|---------|---------|
 > |Quiet|/quiet|Ja|Führt das Deinstallationsprogramm ohne Benutzeroberfläche und Eingabeaufforderungen aus.|
-> |Deinstallieren|/uninstall|Ja|Führt die automatische Deinstallation von Azure ATP-Sensor vom Server aus.|
+> |Deinstallieren|/uninstall|Ja|Führt die unbeaufsichtigte Installation des [!INCLUDE [Product short](includes/product-short.md)] Sensors vom Server aus.|
 > |Hilfe|/help|Nein|Stellt Hilfe und eine Kurzübersicht bereit. Zeigt die korrekte Verwendung des Installationsbefehl einschließlich einer Liste aller Optionen und Verhaltensweisen an.|
 
-**Beispiele**:
+**Beispiele** :
 
-So deinstallieren Sie den Azure ATP-Sensor automatisch vom Server aus
+So deinstallieren Sie den [!INCLUDE [Product short](includes/product-short.md)] Sensor automatisch vom Server:
 
 ```dos
 "Azure ATP sensor Setup.exe" /quiet /uninstall
@@ -162,7 +161,7 @@ So deinstallieren Sie den Azure ATP-Sensor automatisch vom Server aus
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](prerequisites.md)
-- [Installieren des Azure ATP-Sensors](install-step4.md)
-- [Konfigurieren des Azure ATP-Sensors](install-step5.md)
-- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)
+- [[!INCLUDE [Product short](includes/product-short.md)] Voraussetzung](prerequisites.md)
+- [Installieren des [!INCLUDE [Product short](includes/product-short.md)] Sensors](install-step4.md)
+- [Konfigurieren des [!INCLUDE [Product short](includes/product-short.md)] Sensors](install-step5.md)
+- [Sehen Sie sich das [!INCLUDE [Product short](includes/product-short.md)] Forum an!](https://aka.ms/MDIcommunity)

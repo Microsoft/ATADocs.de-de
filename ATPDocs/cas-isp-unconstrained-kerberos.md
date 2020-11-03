@@ -1,23 +1,22 @@
 ---
-title: Azure Advanced Threat Protection-Bewertungen des Identitätssicherheitsstatus von uneingeschränktem Kerberos
-description: Dieser Artikel bietet eine Übersicht über die Berichte von Azure ATP zur Bewertung des Identitätssicherheitsstatus von uneingeschränktem Kerberos.
+title: Bewertung von Microsoft Defender für Identitätsschutz in der Kerberos-Identität
+description: Dieser Artikel bietet eine Übersicht über die nicht eingeschränkten Sicherheitsstatus Bewertungsberichte von Microsoft Defender for Identity.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 08/25/2020
+ms.date: 10/26/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 7eea354b-7a50-40d9-bfa7-dcccaef23179
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a4676837537869f6984ffe27f20b5cbeae971bde
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: c5c8d2a3fcce67d51cc4ab3adeff3f48b044ae73
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912788"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93277404"
 ---
 # <a name="security-assessment-unsecure-kerberos-delegation"></a>Sicherheitsbewertung: Unsichere Kerberos-Delegierung
 
@@ -29,9 +28,9 @@ Die Kerberos-Delegierung ist eine Delegierungseinstellung, die es Anwendungen er
 
 ## <a name="what-risk-does-unsecure-kerberos-delegation-pose-to-an-organization"></a>Welches Risiko birgt eine unsichere Kerberos-Delegierung für eine Organisation?
 
-Eine unsichere Kerberos-Delegierung ermöglicht es einer Entität, bei einem beliebigen anderen Dienst Ihre Identität anzunehmen. Nehmen Sie beispielweise an, Sie verfügen über eine IIS-Website, und das Anwendungspoolkonto ist mit uneingeschränkter Delegierung konfiguriert. Für die IIS-Website ist auch die Windows-Authentifizierung aktiviert, die eine native Kerberos-Authentifizierung ermöglicht, und die Website verwendet einen SQL-Back-End-Server für Geschäftsdaten. Mit Ihrem Domänenadministratorkonto wechseln Sie zur Website und authentifizieren sich dort. Die Website, auf der die uneingeschränkte Delegierung verwendet wird, kann in Ihrem Namen ein Dienstticket von einem Domänencontroller für den SQL-Dienst abrufen.
+Eine unsichere Kerberos-Delegierung ermöglicht es einer Entität, bei einem beliebigen anderen Dienst Ihre Identität anzunehmen. Nehmen Sie beispielweise an, Sie verfügen über eine IIS-Website, und das Anwendungspoolkonto ist mit uneingeschränkter Delegierung konfiguriert. Für die IIS-Website ist auch die Windows-Authentifizierung aktiviert, die eine native Kerberos-Authentifizierung ermöglicht, und die Website verwendet einen SQL-Back-End-Server für Geschäftsdaten. Mit Ihrem Domänenadministratorkonto wechseln Sie zur Website und authentifizieren sich dort. Die Website, die die uneingeschränkte Delegierung verwendet, kann ein Dienst Ticket von einem Domänen Controller an den SQL-Dienst übernehmen und dies in Ihrem Namen tun.
 
-Das Hauptproblem bei der unsicheren Kerberos-Delegierung besteht darin, dass Sie darauf vertrauen müssen, dass die Anwendung immer die richtigen Aktionen ausführt. Angreifer könnten die Anwendung aber dazu zwingen, ungewünschte Aktionen auszuführen. Wenn Sie als **Domänenadministrator** angemeldet sind, kann die Website ein Ticket für jeden anderen beliebigen Dienst erstellen – und zwar in Ihrem Namen als **Domänenadministrator**. Die Website könnte z.B. einen Domänencontroller auswählen und die Gruppe **Unternehmensadministrator** ändern. Die Website könnte auch den Hash eines KRBTGT-Kontos abrufen oder eine interessante Datei aus Ihrer Personalabteilung herunterladen. Das Risiko ist also bekannt, und die Möglichkeiten, die die unsichere Delegierung eröffnet, sind schier unendlich.
+Das Hauptproblem bei der unsicheren Kerberos-Delegierung besteht darin, dass Sie darauf vertrauen müssen, dass die Anwendung immer die richtigen Aktionen ausführt. Angreifer könnten die Anwendung aber dazu zwingen, ungewünschte Aktionen auszuführen. Wenn Sie als **Domänen Administrator** angemeldet sind, kann der Standort ein Ticket für alle anderen gewünschten Dienste erstellen, die Sie als **Domänen Administrator** fungieren. Beispielsweise könnte die Site einen Domänen Controller auswählen und Änderungen an der Gruppe " **Unternehmens Administratoren** " vornehmen. Die Website könnte auch den Hash eines KRBTGT-Kontos abrufen oder eine interessante Datei aus Ihrer Personalabteilung herunterladen. Das Risiko ist also bekannt, und die Möglichkeiten, die die unsichere Delegierung eröffnet, sind schier unendlich.
 
 Nachfolgend finden Sie eine Beschreibung des Risikos, das von verschiedenen Delegierungstypen verursacht wird:
 
@@ -43,7 +42,7 @@ Nachfolgend finden Sie eine Beschreibung des Risikos, das von verschiedenen Dele
 
 1. Verwenden Sie die Berichtstabelle, um zu ermitteln, welche Ihrer Entitäten, bei denen es sich nicht um Domänencontroller handelt, für die **unsichere Kerberos-Delegierung** konfiguriert sind.
 
-    ![Sicherheitsbewertung: unsichere Kerberos-Delegierung](media/atp-cas-isp-kerberos-delegation-2.png)
+    ![Sicherheitsbewertung: unsichere Kerberos-Delegierung](media/cas-isp-kerberos-delegation-2.png)
 1. Führen Sie für Benutzer, die einem Risiko ausgesetzt sind, entsprechende Maßnahmen durch: Entfernen Sie beispielsweise das Attribut für die uneingeschränkte Delegierung, oder richten Sie eine sicherere eingeschränkte Delegierung ein.
 
 > [!NOTE]
@@ -61,7 +60,7 @@ Deaktivieren Sie entweder die Delegierung, oder verwenden Sie einen der folgende
 
     1. Klicken Sie auf **Computer nur bei Delegierungen angegebener Dienste vertrauen**.
 
-        ![Uneingeschränkte Wartung der Kerberos-Delegierung](media/atp-cas-isp-unconstrained-kerberos-1.png)
+        ![Uneingeschränkte Wartung der Kerberos-Delegierung](media/cas-isp-unconstrained-kerberos-1.png)
 
     2. Geben Sie die **Dienste an, für die dieses Konto delegierte Anmeldeinformationen verwenden kann**.
 
@@ -72,7 +71,7 @@ Die ressourcenbasierte KCD wird mithilfe von PowerShell konfiguriert. Sie verwen
 
 Überprüfen Sie die in den Empfehlungen aufgeführten sensiblen Benutzer, und entfernen Sie sie aus den Diensten, für die das betroffene Konto delegierte Anmeldeinformationen vorweisen kann.
 
-![Eingeschränkte Wiederherstellung der Kerberos-Delegierung](media/atp-cas-isp-unconstrained-kerberos-2.png)
+![Eingeschränkte Wiederherstellung der Kerberos-Delegierung](media/cas-isp-unconstrained-kerberos-2.png)
 
 ### <a name="resource-based-constrained-delegation-rbcd"></a>Ressourcenbasierte eingeschränkte Delegierung (RBCD)
 
@@ -80,5 +79,5 @@ Die ressourcenbasierte KCD wird mithilfe von PowerShell konfiguriert. Sie verwen
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- [Azure ATP-Aktivitätsfilter in Cloud App Security](activities-filtering-mcas.md)
-- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)
+- [[!INCLUDE [Product short](includes/product-short.md)] Aktivitäten Filtern in Cloud App Security](activities-filtering-mcas.md)
+- [Sehen Sie sich das [!INCLUDE [Product short](includes/product-short.md)] Forum an!](https://aka.ms/MDIcommunity)

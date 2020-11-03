@@ -1,56 +1,55 @@
 ---
-title: Aktivitätsfilterung und Richtlinien für Azure Advanced Threat Protection in Microsoft Cloud App Security
-description: Übersicht über die Aktivitätsfilterung und Richtlinien für Azure Advanced Threat Protection in Microsoft Cloud App Security.
+title: Microsoft Defender für das Filtern von Identitäts Aktivitäten und Richtlinien in Microsoft Cloud App Security
+description: Übersicht über Microsoft Defender für das Filtern von Identitäts Aktivitäten und Richtlinien mit Microsoft Cloud App Security.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 07/01/2019
+ms.date: 10/26/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 397e5a77-2bc7-454c-9fe5-649ebaab16b3
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: cd30fac510bd291c78eb668d9540cd6733efc704
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: e20bbb73e916c9ea7139ac17a59cd7de2f1a08a4
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912110"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93276937"
 ---
-# <a name="use-activity-filters-and-create-action-policies-with-azure-atp-in-microsoft-cloud-app-security"></a>Verwenden von Aktivitätsfiltern und Erstellen von Aktionsrichtlinien mit Azure ATP in Microsoft Cloud App Security
+# <a name="use-activity-filters-and-create-action-policies-with-product-long-in-microsoft-cloud-app-security"></a>Verwenden von Aktivitäts Filtern und Erstellen von Aktions Richtlinien mit [!INCLUDE [Product long](includes/product-long.md)] in Microsoft Cloud App Security
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-Dieser Artikel bietet grundlegende Informationen dazu, wie Aktionsrichtlinien für Azure ATP-Aktivitäten in Microsoft Cloud App Security gefiltert und erstellt werden.
+Dieser Artikel soll Ihnen dabei helfen zu verstehen, wie Sie Aktions Richtlinien für Aktivitäten mithilfe von Microsoft Cloud App Security Filtern und erstellen können [!INCLUDE [Product short](includes/product-short.md)] .
 
-Weitere Informationen zum Abschließen der Integration finden Sie unter [Integration von Azure ATP in Cloud App Security](/cloud-app-security/aatp-integration).
+Weitere Informationen zum Durchführen der Integration finden Sie unter [ [!INCLUDE [Product short](includes/product-short.md)] Integration mit Cloud App Security](/cloud-app-security/aatp-integration).
 
-Die Verwendung von Azure ATP mit Microsoft Cloud App Security bietet Aktivitätsanalysen und -warnungen basierend auf „User and Entity Behavior Analytics“ (UEBA). Hierbei werden die Verhaltensweisen mit dem höchsten Risiko in Ihrem Unternehmen ermittelt. Zudem werden eine umfassende Bewertung der Priorität bei Untersuchungen sowie eine aktive Filterung und anpassbare Aktivitätsrichtlinien bereitgestellt.
+[!INCLUDE [Product short](includes/product-short.md)]Die Verwendung von mit Microsoft Cloud App Security bietet Aktivitäts Analysen und Warnungen auf der Grundlage von Benutzer-und Entitäts Verhaltensanalysen (ueba), identifiziert die riskanten Verhaltensweisen in Ihrem Unternehmen und bietet eine umfassende Untersuchung der Prioritäts Bewertung sowie Aktivitäts Filterung und anpassbare Aktivitätsrichtlinien.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
 Zur Nutzung aller Features der Benutzeruntersuchung über die gesamte Hybridumgebung hinweg benötigen Sie Folgendes:
 
 - Eine gültige Lizenz für Microsoft Cloud App Security
-- eine gültige Lizenz für Azure ATP, die mit Ihrer Active Directory-Instanz verbunden ist
+- Eine gültige Lizenz für [!INCLUDE [Product long](includes/product-long.md)] die Verbindung mit Ihrer Active Directory Instanz
 
 >[!NOTE]
->Wenn Sie kein Abonnement für Cloud App Security besitzen, können Sie das Cloud App Security-Portal verwenden, um Azure ATP-Warnungen zu untersuchen und Details zu Benutzern und ihren Aktivitäten in der lokalen verwalteten Umgebung anzuzeigen. Erkenntnisse in Zusammenhang mit Ihren Cloudanwendungen sind jedoch nicht verfügbar.
+>Wenn Sie nicht über ein Abonnement für Cloud App Security verfügen, können Sie das Cloud App Security-Portal verwenden, um Warnungen zu untersuchen und ausführliche Informationen zu [!INCLUDE [Product short](includes/product-short.md)] Benutzern und Ihren lokalen Aktivitäten zu erhalten. allerdings bleiben Einblicke in Ihre cloudanwendungen nicht verfügbar.
 
-## <a name="filter-azure-atp-activities-in-cloud-app-security"></a>Filtern von Azure ATP-Aktivitäten in Cloud App Security
+## <a name="filter-product-short-activities-in-cloud-app-security"></a>[!INCLUDE [Product short](includes/product-short.md)]Aktivitäten in Cloud App Security Filtern
 
-Sie können über das Cloud App Security-Hauptmenü **Untersuchen** auf Azure ATP-Aktivitäten zugreifen, indem Sie das Untermenü **Aktivitätsprotokoll** auswählen. Alternativ dazu können Sie im Menü **Warnungen** anhand von Status, Kategorie, Schweregrad, Anwendung, Benutzername oder Richtlinie auf diese Aktivitäten zugreifen.
+[!INCLUDE [Product short](includes/product-short.md)] Sie können über das Haupt Cloud App Security Menü **untersuchen** auf Aktivitäten zugreifen, indem Sie das Untermenü **Aktivitätsprotokoll** oder im Menü **Warnungen** nach Status, Kategorie, Schweregrad, Anwendung, Benutzername oder Richtlinie auswählen.
 
-So greifen Sie auf Azure ATP-Aktivitäten von Benutzern zu:
+So greifen Sie [!INCLUDE [Product short](includes/product-short.md)] über den Benutzer auf Aktivitäten zu:
 
 1. Filtern Sie die Warteschlange **Warnungen** mithilfe des Felds BENUTZERNAME.
-    ![Filtern von Warnungen nach Benutzername](media/atp-mcas-alerts-queue.png)
+    ![Filtern von Warnungen nach Benutzername](media/mcas-alerts-queue.png)
 1. Klicken Sie in der Ergebnisliste in einer beliebigen Warnung auf den Benutzernamen, um die **Benutzerseite** des Benutzers zu öffnen, den Sie untersuchen möchten.
 
 1. Filtern Sie Aktivitäten des Benutzers mithilfe der verfügbaren Felder, oder fügen Sie über die Schaltfläche „+“ eine neue Filterregel hinzu.
-    ![Filtern von Aktivitäten des Benutzers](media/atp-mcas-activity-filter.png)
+    ![Filtern von Aktivitäten des Benutzers](media/mcas-activity-filter.png)
 
 ## <a name="create-activity-policies-in-cloud-app-security"></a>Erstellen von Aktivitätsrichtlinien in Cloud App Security
 
@@ -58,12 +57,12 @@ Nach dem Filtern von Aktivitäten und dem Identifizieren der zu implementierende
 
 So erstellen Sie eine neue Aktivitätsrichtlinie:
 
-1. Wenden Sie von jeder **Aktivitätsprotokoll**-Seite aus einen Filter an (z. B. APP, Benutzername, Aktivitätstyp usw.).
-    - Wählen Sie die Option **Active Directory Domain Services** im APP-Filter aus, um aus Azure ATP heraus nach Aktivitäten zu filtern.
-    ![Erstellen einer neuen Aktivitätsrichtlinie](media/atp-mcas-create-new-policy.png)
+1. Wenden Sie von jeder **Aktivitätsprotokoll** -Seite aus einen Filter an (z. B. APP, Benutzername, Aktivitätstyp usw.).
+    - Wählen Sie zum Filtern von Aktivitäten aus [!INCLUDE [Product short](includes/product-short.md)] die Option **Active Directory** im App-Filter aus.
+    ![Erstellen einer neuen Aktivitätsrichtlinie](media/mcas-create-new-policy.png)
 1. Klicken Sie auf die Schaltfläche **Neue Richtlinie aus Suche**.
 1. Fügen Sie einen **Richtliniennamen** hinzu.
-    ![Erstellen einer neuen Aktivitätsrichtlinie, Schritt 2](media/atp-mcas-create-policy.png)
+    ![Erstellen einer neuen Aktivitätsrichtlinie, Schritt 2](media/mcas-create-policy.png)
 1. Fügen Sie eine **Beschreibung** für die Richtlinie hinzu.
 1. Weisen Sie den **Schweregrad** der Richtlinie zu.
 1. Wählen Sie eine **Kategorie** für die Richtlinie aus.
@@ -77,4 +76,4 @@ Erfahren Sie mehr über die Bewertung der Untersuchungspriorität sowie zusätzl
 
 ## <a name="join-the-community"></a>Beitritt zur Community
 
-Haben Sie weitere Fragen, oder möchten Sie mit anderen über Azure ATP und damit verbundene Sicherheitsaspekte diskutieren? Treten Sie noch heute der [Azure ATP-Community](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) bei!
+Haben Sie weitere Fragen oder ein Interesse an der Erörterung [!INCLUDE [Product short](includes/product-short.md)] und verwandten Sicherheit mit anderen? Besuchen Sie die [ [!INCLUDE [Product short](includes/product-short.md)] Community](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) noch heute!

@@ -1,33 +1,32 @@
 ---
-title: Auflösung von Azure Advanced Threat Protection Netzwerknamen
-description: Dieser Artikel stellt eine Übersicht der erweiterten Funktionen und Einsatzweisen der Netzwerknamensauflösung von Azure ATP dar.
+title: Auflösung von Microsoft Defender für Identitäts Netzwerknamen
+description: Dieser Artikel bietet eine Übersicht über die erweiterten Funktionen und Verwendungsmöglichkeiten der Netzwerknamen Auflösung von Microsoft Defender für die Identität.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 03/22/2020
+ms.date: 10/26/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 1ac873fc-b763-41d7-878e-7c08da421cb5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4c98696b11ba329b6b907003b86cc5bd3d111cdf
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 228d583fde3e08c497721e0aa5a8aa1b61318937
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912699"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93274789"
 ---
 # <a name="what-is-network-name-resolution"></a>Was ist Netzwerknamensauflösung?
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-Network Name Resolution (NNR) ist eine Hauptkomponente der Azure ATP Funktionalität. Azure ATP erfasst Aktivitäten auf der Grundlage von Netzwerkdatenverkehr, Windows-Ereignissen und ETW – diese Aktivitäten enthalten normalerweise IP-Daten.
+Network Name Resolution (NNR) ist eine Hauptkomponente der-  [!INCLUDE [Product long](includes/product-long.md)] Funktionalität. [!INCLUDE [Product short](includes/product-short.md)] erfasst Aktivitäten auf der Grundlage von Netzwerk Datenverkehr, Windows-Ereignissen und etw-diese Aktivitäten enthalten normalerweise IP-Daten.
 
-Mithilfe von NNR können Azure ATP zwischen rohaktivitäten (die IP-Adressen enthält) und den relevanten Computern, die an den einzelnen Aktivitäten beteiligt sind, korrelieren. Auf Grundlage der reinen Aktivitäten erstellt Azure ATP ein Profil der Entitäten, wie etwa Computer, und generiert Sicherheitswarnungen für verdächtige Aktivitäten.
+Die Verwendung von NNR [!INCLUDE [Product short](includes/product-short.md)] kann zwischen rohaktivitäten (die IP-Adressen enthalten) und den relevanten Computern, die an den einzelnen Aktivitäten beteiligt sind, korrelieren. Basierend auf den unformatierten Aktivitäten, [!INCLUDE [Product short](includes/product-short.md)] Profil Entitäten, einschließlich Computern, generiert Sicherheitswarnungen für verdächtige Aktivitäten.
 
-Zum Auflösen von IP-Adressen in Computernamen suchen Azure ATP-Sensoren die IP-Adressen mithilfe der folgenden Methoden:
+Zum Auflösen von IP-Adressen in Computernamen [!INCLUDE [Product short](includes/product-short.md)] Suchen Sensoren die IP-Adressen mithilfe der folgenden Methoden:
 
 - NTLM über RPC (TCP-Port 135)
 - NetBIOS (UDP-Port 137)
@@ -39,8 +38,8 @@ Um die besten Ergebnisse zu erzielen, sollten alle Methoden verwendet werden. We
 > [!NOTE]
 > An keinem dieser Ports erfolgt eine Authentifizierung.
 
-Azure ATP wertet das Betriebssystem des Geräts basierend auf dem Netzwerkdatenverkehr aus und legt es fest. Nach dem Abrufen des Computernamens überprüft der Azure ATP-Sensor in Active Directory Domain Services, ob ein zugehöriges Computerobjekt mit gleichem Computernamen vorhanden ist und verwendet TCP-Fingerabdrücke. Mithilfe von TCP-Fingerabdrücken können nicht registrierte und Nicht-Windows-Geräte identifiziert werden, sodass der Untersuchungsprozess vereinfacht wird.
-Wenn der Azure ATP-Sensor die Korrelation findet, ordnet er die IP dem betreffenden Computerobjekt zu.
+[!INCLUDE [Product short](includes/product-short.md)] wertet das Betriebssystem des Geräts basierend auf dem Netzwerk Datenverkehr aus und legt es fest. Nach dem Abrufen des Computer namens prüft der [!INCLUDE [Product short](includes/product-short.md)] Sensor Active Directory und verwendet TCP-Fingerabdrücke, um festzustellen, ob ein korreliertes Computer Objekt mit demselben Computernamen vorhanden ist. Mithilfe von TCP-Fingerabdrücken können nicht registrierte und Nicht-Windows-Geräte identifiziert werden, sodass der Untersuchungsprozess vereinfacht wird.
+Wenn der [!INCLUDE [Product short](includes/product-short.md)] Sensor die Korrelation findet, ordnet der Sensor dem Computer Objekt die IP-Adresse zu.
 
 In Fällen, in denen kein Name abgerufen wird, wird ein **nicht aufgelöstes Computerprofil nach IP-Adresse** mit der IP-Adresse und der relevanten erkannten Aktivität erstellt.
 
@@ -52,7 +51,7 @@ NNR-Daten spielen beim Erkennen der folgenden Bedrohungen eine entscheidende Rol
 - Suspected DCSync attack (replication of directory services) (Verdacht auf einen DCSync-Angriff (Replikation von Verzeichnisdiensten))
 - Network mapping reconnaissance (DNS) (Reconnaissance über Netzwerkzuordnung (DNS))
 
-Um Ihre Fähigkeit zur Bestimmung, ob es sich bei einer Warnung um eine **richtig positives** oder **falsch positives ** Ergebnis handelt, zu verbessern, schließt Azure ATP den Grad der Zuverlässigkeit der Computernamensauflösung in den Nachweis jeder Sicherheitswarnung ein.
+Um die Fähigkeit zu verbessern, festzustellen, ob es sich bei einer Warnung um ein **richtig positives (TP)** oder ein **falsches positives (FP)** handelt, [!INCLUDE [Product short](includes/product-short.md)] schließt den Grad der Sicherheit der Computer Benennung in den Beweis der einzelnen Sicherheitswarnungen ein.
 
 Wenn beispielsweise Computernamen mit **hoher Gewissheit** aufgelöst werden, erhöht dies die Zuverlässigkeit, dass es sich bei der resultierenden Sicherheitswarnung um eine **richtig positives****Ergebnis** handelt.
 
@@ -69,39 +68,39 @@ Nachdem Sie das Gerät bestätigt haben, können Sie anschließend feststellen, 
 
 |Protokoll|Transport|Port|Sicherungsmedium|Direction|
 |--------|--------|------|-------|------|
-|NTLM über RPC *|TCP|135|Alle Geräte im Netzwerk|Eingehende Verbindungen|
-|NetBIOS-|UDP|137|Alle Geräte im Netzwerk|Eingehende Verbindungen|
-|RDP|TCP|3389|Alle Geräte im Netzwerk|Eingehende Verbindungen|
+|NTLM über RPC *|TCP|135|Alle Geräte im Netzwerk|Eingehend|
+|NetBIOS-|UDP|137|Alle Geräte im Netzwerk|Eingehend|
+|RDP|TCP|3389|Alle Geräte im Netzwerk|Eingehend|
 |DNS|UDP|53|Domänencontroller|Ausgehend|
 
 \* Eine dieser Methoden ist erforderlich, aber es wird empfohlen, alle zu verwenden.
 
-Um sicherzustellen, dass Azure ATP im Idealfall funktioniert und die Umgebung ordnungsgemäß konfiguriert ist, prüft Azure ATP den Auflösungs Status der einzelnen Sensoren und gibt eine Integritäts Warnung pro Methode aus, um eine Liste der Azure ATP Sensoren mit niedriger Erfolgsrate der aktiven Namensauflösung mit jeder Methode bereitzustellen.
+Um sicherzustellen, dass [!INCLUDE [Product short](includes/product-short.md)] im Idealfall funktioniert und die Umgebung ordnungsgemäß konfiguriert ist, [!INCLUDE [Product short](includes/product-short.md)] prüft den Auflösungs Status der einzelnen Sensoren und gibt eine Integritäts Warnung pro Methode aus, um eine Liste der [!INCLUDE [Product short](includes/product-short.md)] Sensoren mit niedriger Erfolgsrate der aktiven Namensauflösung mit jeder Methode bereitzustellen.
 
 > [!NOTE]
-> Wenn Sie eine optionale NNR-Methode in Azure ATP deaktivieren müssen, um die Anforderungen Ihrer Umgebung zu erfüllen, eröffnen Sie ein Supportticket.
+> Öffnen Sie einen Support-Support, um eine optionale NNR-Methode in [!INCLUDE [Product short](includes/product-short.md)] zu deaktivieren, die den Anforderungen Ihrer Umgebung entspricht.
 
 Jede Integritäts Warnung enthält spezifische Details der Methode, der Sensoren, der problematischen Richtlinie und der Konfigurations Empfehlungen.
 
-![Warnung bei geringer Erfolgsquote der Netzwerknamensauflösung (NNR)](media/atp-nnr-success-rate.png)
+![Warnung bei geringer Erfolgsquote der Netzwerknamensauflösung (NNR)](media/nnr-success-rate.png)
 
 ### <a name="configuration-recommendations"></a>Konfigurationsempfehlungen
 
 - NTLM über RPC:
-  - Achten Sie darauf, dass TCP-Port 135 für eingehende Kommunikation von Azure ATP-Sensoren auf allen Computern in der Umgebung geöffnet ist.
+  - Überprüfen Sie, ob der TCP-Port 135 für die eingehende Kommunikation von [!INCLUDE [Product short](includes/product-short.md)] Sensoren auf allen Computern in der Umgebung geöffnet ist.
   - Überprüfen Sie die gesamte Netzwerkkonfiguration (Firewalls), da diese die Kommunikation mit den relevanten Ports verhindern kann.
 
 - NetBIOS:
-  - Achten Sie darauf, dass UDP-Port 137 für eingehende Kommunikation von Azure ATP-Sensoren auf allen Computern in der Umgebung geöffnet ist.
+  - Überprüfen Sie, ob der UDP-Port 137 für die eingehende Kommunikation von [!INCLUDE [Product short](includes/product-short.md)] Sensoren auf allen Computern in der Umgebung geöffnet ist.
   - Überprüfen Sie die gesamte Netzwerkkonfiguration (Firewalls), da diese die Kommunikation mit den relevanten Ports verhindern kann.
 - RDP:
-  - Überprüfen Sie, ob der TCP-Port 3389 für die eingehende Kommunikation von Azure ATP Sensoren auf allen Computern in der Umgebung geöffnet ist.
+  - Überprüfen Sie, ob der TCP-Port 3389 für die eingehende Kommunikation von [!INCLUDE [Product short](includes/product-short.md)] Sensoren auf allen Computern in der Umgebung geöffnet ist.
   - Überprüfen Sie die gesamte Netzwerkkonfiguration (Firewalls), da diese die Kommunikation mit den relevanten Ports verhindern kann.
 - Reverse-DNS:
   - Achten Sie darauf, dass der Sensor den DNS-Server erreichen kann und dass Reverse-Lookup-Zonen aktiviert sind.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](prerequisites.md)
+- [[!INCLUDE [Product short](includes/product-short.md)] Voraussetzung](prerequisites.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
-- [Weitere Informationen finden Sie im ATP-Forum.](https://aka.ms/azureatpcommunity)
+- [Sehen Sie sich das [!INCLUDE [Product short](includes/product-short.md)] Forum an!](https://aka.ms/MDIcommunity)

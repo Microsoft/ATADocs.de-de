@@ -1,23 +1,22 @@
 ---
-title: Azure Advanced Threat Protection-Bewertung des Identitätssicherheitsstatus von Legacyprotokollen
-description: Dieser Artikel bietet eine Übersicht über den Bericht von Azure ATP zur Bewertung des Identitätssicherheitsstatus von Legacyprotokollen.
+title: Bewertung der Identitäts Sicherheit für Microsoft Defender für Identity-Legacy Protokolle
+description: Dieser Artikel bietet eine Übersicht über den Microsoft Defender for Identity-Bericht zur Bewertung der Sicherheitsstatus Bewertung.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 08/25/2020
+ms.date: 10/26/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 6597b8c7-f83e-43c6-8149-fb4a914a845b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3465df4f9d932bd1b278971848ca59a592abed71
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 223ae21d15ecc15523c3670062aa6a2502281738
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90913205"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93276694"
 ---
 # <a name="security-assessment-legacy-protocols-usage"></a>Sicherheitsbewertung: Verwendung von Legacyprotokollen
 
@@ -46,7 +45,7 @@ Um Legacyprotokolle außer Betrieb nehmen zu können, muss Ihre Organisation zun
 
 1. Verwenden Sie die Berichtstabelle, um zu ermitteln, welche Ihrer wichtigsten ermittelten Entitäten Legacyprotokolle verwenden.
 
-    ![Verhindern der Verwendung von Legacyprotokollen](media/atp-cas-isp-legacy-protocols-2.png)
+    ![Verhindern der Verwendung von Legacyprotokollen](media/cas-isp-legacy-protocols-2.png)
 1. Ergreifen Sie entsprechende Maßnahmen für diese Entitäten, um Abhängigkeiten zu ermitteln.
 1. Beenden Sie die Verwendung des Legacyprotokolls, und [deaktivieren Sie schließlich das Protokoll vollständig](/archive/blogs/miriamxyra/stop-using-lan-manager-and-ntlmv1).
 1. [Löschen Sie MIC 2, und verwenden Sie keine LMv2-Clients mehr.](https://www.preempt.com/blog/active-directory-ntlm-attacks/)
@@ -56,5 +55,5 @@ Um Legacyprotokolle außer Betrieb nehmen zu können, muss Ihre Organisation zun
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- [Azure ATP-Aktivitätsfilter in Cloud App Security](activities-filtering-mcas.md)
-- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)
+- [[!INCLUDE [Product short](includes/product-short.md)] Aktivitäten Filtern in Cloud App Security](activities-filtering-mcas.md)
+- [Sehen Sie sich das [!INCLUDE [Product short](includes/product-short.md)] Forum an!](https://aka.ms/MDIcommunity)

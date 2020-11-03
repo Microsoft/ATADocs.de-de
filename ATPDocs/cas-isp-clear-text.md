@@ -1,6 +1,6 @@
 ---
-title: Azure Advanced Threat Protection-Bewertungen des Risikos durch Klartextinformationen
-description: Dieser Artikel bietet eine Übersicht über den Bericht von Azure ATP zur Bewertung des Identitätssicherheitsstatus von Klartext.
+title: Bewertung von Microsoft Defender für die Identitäts offen Stellung von Text
+description: Dieser Artikel bietet eine Übersicht über den Microsoft Defender for Identity-Bericht zur Bewertung der Identitäts Sicherheitslage.
 keywords: ''
 author: shsagir
 ms.author: shsagir
@@ -9,21 +9,20 @@ ms.date: 08/25/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 124957bb-5882-4fcf-bab2-b74b0c69571d
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 413e7482900f34428056401085f04195ccb4e720
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 9586c5441f09959970752a15cfff3c2f953f1842
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90913226"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93277563"
 ---
 # <a name="security-assessment-entities-exposing-credentials-in-clear-text"></a>Sicherheitsbewertung: Verfügbarmachen von Anmeldeinformationen in Klartext durch Entitäten
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-![Verhindern von Risiken durch Anmeldeinformationen in Klartext in Cloud App Security](media/atp-cas-isp-clear-text-1.png)
+![Verhindern von Risiken durch Anmeldeinformationen in Klartext in Cloud App Security](media/cas-isp-clear-text-1.png)
 
 ## <a name="what-information-does-the-prevent-clear-text-security-assessment-provide"></a>Welche Informationen stellt die Bewertung der Sicherheit von Klartextinformationen bereit?
 
@@ -38,7 +37,7 @@ Das erhöhte Risiko liegt darin begründet, dass unsicherer Datenverkehr wie z.B
 ## <a name="how-do-i-use-this-security-assessment-to-improve-my-organizational-security-posture"></a>Wie wird diese Sicherheitsbewertung verwendet, um den Sicherheitsstatus meiner Organisation zu verbessern?
 
 1. Sehen Sie sich die Sicherheitsbewertung für betroffene Entitäten an.
-    ![Überprüfen der wichtigsten betroffenen Entitäten und Erstellen eines Aktionsplans](media/atp-cas-isp-clear-text-2.png)
+    ![Überprüfen der wichtigsten betroffenen Entitäten und Erstellen eines Aktionsplans](media/cas-isp-clear-text-2.png)
 1. Finden Sie heraus, warum diese Entitäten LDAP in Klartext verwenden.
 1. Beheben Sie die Probleme, und beenden Sie die Offenlegung dieser Informationen.
 1. Nachdem Sie sich vergewissert haben, dass das Problem behoben ist, empfiehlt es sich, LDAP-Signaturen auf Domänencontrollerebene als erforderlich festzulegen. Weitere Informationen über das Signieren auf LDAP-Servern finden Sie unter [Domänencontroller: Signaturanforderungen für LDAP-Server](/windows/security/threat-protection/security-policy-settings/domain-controller-ldap-server-signing-requirements).
@@ -48,5 +47,5 @@ Das erhöhte Risiko liegt darin begründet, dass unsicherer Datenverkehr wie z.B
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- [Azure ATP-Aktivitätsfilter in Cloud App Security](activities-filtering-mcas.md)
-- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)
+- [[!INCLUDE [Product short](includes/product-short.md)] Aktivitäten Filtern in Cloud App Security](activities-filtering-mcas.md)
+- [Sehen Sie sich das [!INCLUDE [Product short](includes/product-short.md)] Forum an!](https://aka.ms/MDIcommunity)

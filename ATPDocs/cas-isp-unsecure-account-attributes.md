@@ -1,23 +1,22 @@
 ---
-title: 'Azure Advanced Threat Protection: Unsichere Bewertungen für Kontoattribute'
-description: Dieser Artikel bietet eine Übersicht über die Azure ATP-Entitäten mit unsicheren Attributen im Bericht zur Bewertung des Identitätssicherheitsstatus.
+title: Bewertungen von Microsoft Defender für Identity-Konto Attribute
+description: Dieser Artikel bietet eine Übersicht über die Entitäten von Microsoft Defender für Identitäts Entitäten mit unsicherem Attribute Identity Security-statusbewertung.
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
-ms.date: 08/25/2020
+manager: shsagir
+ms.date: 10/26/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 2fe62047-75ef-4b2e-b4aa-72860e39b4e4
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d0f415d58026fe0e44b365d7f8a6f995226532bc
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 034948a5a355012aad387aa4d46e6e3c8d342dee
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912761"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93277303"
 ---
 # <a name="security-assessment-unsecure-account-attributes"></a>Sicherheitsbewertung: Unsichere Kontoattribute
 
@@ -25,7 +24,7 @@ ms.locfileid: "90912761"
 
 ## <a name="what-are-unsecure-account-attributes"></a>Was sind unsichere Kontoattribute?
 
-Azure ATP überwacht Ihre Umgebung fortlaufend, um Konten mit Attributwerten zu identifizieren, die ein Sicherheitsrisiko darstellen, und erfasst Berichte zu diesen Konten, um Sie bei der Schutz Ihrer Umgebung zu unterstützen.
+[!INCLUDE [Product long](includes/product-long.md)] überwacht kontinuierlich Ihre Umgebung, um Konten mit Attributwerten zu identifizieren, die ein Sicherheitsrisiko darstellen, und meldet diese Konten, um Sie beim Schutz Ihrer Umgebung zu unterstützen.
 
 ## <a name="what-risk-do-unsecure-account-attributes-pose"></a>Welches Risiko stellen unsichere Kontoattribute dar?
 
@@ -38,7 +37,7 @@ Wenn das Attribut *PasswordNotRequired* beispielsweise aktiviert ist, kann ein A
 ## <a name="how-do-i-use-this-security-assessment"></a>Wie wird diese Sicherheitsbewertung verwendet?
 
 1. Verwenden Sie die Berichtstabelle, um zu ermitteln, welches Ihrer Konten über unsichere Attribute verfügt.
-    ![Überprüfen der wichtigsten betroffenen Entitäten und Erstellen eines Aktionsplans](media/atp-cas-isp-unsecure-account-attributes-1.png)
+    ![Überprüfen der wichtigsten betroffenen Entitäten und Erstellen eines Aktionsplans](media/cas-isp-unsecure-account-attributes-1.png)
 1. Ergreifen Sie für diese Benutzerkonten entsprechende Maßnahmen, indem Sie die relevanten Attribute ändern oder entfernen.
 
 > [!NOTE]
@@ -59,5 +58,5 @@ Wenden Sie die geeigneten Behebungsmaßnahmen für die relevanten Attribute an, 
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Verwenden von Aktivitätsfiltern und Erstellen von Aktionsrichtlinien mit Azure ATP in Microsoft Cloud App Security](activities-filtering-mcas.md)
-- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)
+- [[!INCLUDE [Product short](includes/product-short.md)] Aktivitäten Filtern in Cloud App Security](activities-filtering-mcas.md)
+- [Sehen Sie sich das [!INCLUDE [Product short](includes/product-short.md)] Forum an!](https://aka.ms/MDIcommunity)

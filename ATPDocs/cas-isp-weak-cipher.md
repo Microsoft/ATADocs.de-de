@@ -1,23 +1,22 @@
 ---
-title: Bericht zur Bewertung des Identitätssicherheitsstatus der schwachen Azure ATP-Verschlüsselung
-description: Dieser Artikel bietet eine Übersicht über den Bericht zur Bewertung des Identitätssicherheitsstatus der schwachen Azure ATP-Verschlüsselung.
+title: Sicherheitsstatus Bewertungsbericht von Microsoft Defender für Identity Weak
+description: Dieser Artikel bietet eine Übersicht über den Bericht "Sicherheitsstatus Bewertung für schwache Chiffre Identität" von Microsoft Defender for Identity.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 08/25/2020
+ms.date: 10/26/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: cc82212b-7d25-4ec7-828d-2475ff40d685
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 728103079da513129a55875d28f360c5cd176b47
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: bc6080ac87cd0709fd127daaf70e24a6ee03955e
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90911942"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93277260"
 ---
 # <a name="security-assessment-weak-cipher-usage"></a>Sicherheitsbewertung: Verwendung schwacher Verschlüsselungen
 
@@ -30,7 +29,7 @@ Kryptografie basiert auf Verschlüsselungen zum Verschlüsseln unserer Daten. RC
 ## <a name="how-do-i-use-this-security-assessment-to-improve-my-organizational-security-posture"></a>Wie wird diese Sicherheitsbewertung verwendet, um den Sicherheitsstatus meiner Organisation zu verbessern?
 
 1. Sehen Sie sich die Sicherheitsbewertung für die Verwendung schwacher Verschlüsselungen an.
-    ![Bewertung der Verwendung von schwacher Verschlüsselung](media/atp-cas-isp-weak-cipher-2.png)
+    ![Bewertung der Verwendung von schwacher Verschlüsselung](media/cas-isp-weak-cipher-2.png)
 1. Überprüfen Sie, warum die identifizierten Clients und Server eine schwache Verschlüsselung verwenden.
 1. Korrigieren Sie die Fehler, und deaktivieren Sie die Verwendung von RC4 und/oder anderen schwachen Verschlüsselungen (wie z. B. DES/3DES).
 1. Weitere Informationen zur Deaktivierung von RC4 finden Sie in der [Microsoft-Sicherheitsempfehlung](https://support.microsoft.com/help/2868725/microsoft-security-advisory-update-for-disabling-rc4).
@@ -40,7 +39,7 @@ Kryptografie basiert auf Verschlüsselungen zum Verschlüsseln unserer Daten. RC
 
 ## <a name="remediation"></a>Wiederherstellung
 
-Deaktivieren Sie Client und Server, die nicht mehr RC4-Verschlüsselungssammlungen verwenden sollen, indem Sie die folgenden Registrierungsschlüssel festlegen. Nach der Deaktivierung kann jeder Server oder Client, der mit einem anderen Client oder Server kommuniziert, der die Verwendung von RC4 erfordert, verhindern, dass eine Verbindung stattfindet. Clients, bei denen die Einstellung bereitgestellt wird, können keine Verbindung zu Websites herstellen, die RC4 erfordern. Server, die diese Einstellung bereitstellen, können keine Clients bedienen, die RC4 erfordern.
+Deaktivieren Sie Client und Server, die nicht mehr RC4-Verschlüsselungssammlungen verwenden sollen, indem Sie die folgenden Registrierungsschlüssel festlegen. Nach der Deaktivierung kann jeder Server oder Client, der mit einem anderen Client oder Server kommuniziert, der die Verwendung von RC4 erfordert, verhindern, dass eine Verbindung stattfindet. Clients, auf denen diese Einstellung bereitgestellt wird, können keine Verbindung mit Standorten herstellen, die RC4 erfordern, und Server, die diese Einstellung bereitstellen, können keine Clients bedienen, die RC4 verwenden müssen.
 
 > [!NOTE]
 > Testen Sie daher unbedingt die folgenden Einstellungen in einer kontrollierten Umgebung, bevor Sie sie in der Produktion aktivieren.
@@ -53,5 +52,5 @@ Weitere Informationen zum Download und Aktualisieren der Bearbeitungen für die 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- [Azure ATP-Aktivitätsfilter in Cloud App Security](activities-filtering-mcas.md)
-- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)
+- [[!INCLUDE [Product short](includes/product-short.md)] Aktivitäten Filtern in Cloud App Security](activities-filtering-mcas.md)
+- [Sehen Sie sich das [!INCLUDE [Product short](includes/product-short.md)] Forum an!](https://aka.ms/MDIcommunity)

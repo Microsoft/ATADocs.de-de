@@ -1,6 +1,6 @@
 ---
-title: Azure Advanced Threat Protection Rollen Gruppen für die Zugriffs Verwaltung
-description: 'Exemplarische Vorgehensweise: Arbeit mit Azure ATP-Rollengruppen.'
+title: Microsoft Defender für Identitäts Rollen Gruppen für die Zugriffs Verwaltung
+description: Führt Sie durch die Arbeit mit Microsoft Defender für Identitäts Rollen Gruppen.
 keywords: ''
 author: shsagir
 ms.author: shsagir
@@ -9,39 +9,38 @@ ms.date: 02/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d66d5c5af5721d94cb834307bb5a5ebee28848fc
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 269343e6cdc5ceba875d5b6de1c740415a862eca
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90910022"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93275312"
 ---
-# <a name="azure-atp-role-groups"></a>Azure ATP-Rollengruppen
+# <a name="product-long-role-groups"></a>[!INCLUDE [Product long](includes/product-long.md)] Rollen Gruppen
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-Azure ATP bietet eine rollenbasierte Sicherheit, um Daten gemäß den spezifischen Sicherheits- und Konformitätsanforderungen einer Organisation zu schützen. Azure ATP unterstützt drei separate Rollen: Administratoren, Benutzer und Betrachter.
+[!INCLUDE [Product long](includes/product-long.md)] bietet rollenbasierte Sicherheit, um Daten gemäß den spezifischen Sicherheits-und Konformitätsanforderungen eines Unternehmens zu schützen. [!INCLUDE [Product short](includes/product-short.md)] Unterstützung von drei separaten Rollen: Administratoren, Benutzer und Viewer.
 
 [!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
 
-Rollengruppen erlauben die Zugriffsverwaltung für Azure ATP. Sie können durch Verwendung von Rollengruppen Aufgaben in Ihrem Sicherheitsteam aufteilen und nur so viel Zugriff gewähren, wie Benutzer für die Ausführung ihrer Arbeit benötigen. Dieser Artikel beschreibt die Zugriffsverwaltung sowie die Berechtigungen der einzelnen Azure ATP-Rollengruppen und hilft Ihnen bei der Einrichtung und Ausführung von Rollengruppen in Azure ATP.
+Rollen Gruppen ermöglichen die Zugriffs Verwaltung für [!INCLUDE [Product short](includes/product-short.md)] . Sie können durch Verwendung von Rollengruppen Aufgaben in Ihrem Sicherheitsteam aufteilen und nur so viel Zugriff gewähren, wie Benutzer für die Ausführung ihrer Arbeit benötigen. Dieser Artikel erläutert die Zugriffs Verwaltung, die [!INCLUDE [Product short](includes/product-short.md)] Rollen Autorisierung und hilft Ihnen bei der Einrichtung und Ausführung von Rollen Gruppen in [!INCLUDE [Product short](includes/product-short.md)] .
 
 > [!NOTE]
-> Sämtliche globalen Administratoren und Sicherheitsadministratoren für die Azure Active Directory-Version des Mandanten werden automatisch als Azure ATP-Administratoren angesehen.
+> Alle globalen Administratoren oder Sicherheits Administratoren für den Azure Active Directory des Mandanten werden automatisch als [!INCLUDE [Product short](includes/product-short.md)] Administrator angemeldet.
 
-## <a name="accessing-the-azure-atp-portal"></a>Zugreifen auf das Azure ATP-Portal
+## <a name="accessing-the-product-short-portal"></a>Zugreifen auf das [!INCLUDE [Product short](includes/product-short.md)] Portal
 
-Nur Azure AD-Benutzer mit den Verzeichnisrollen „globaler Administrator“ oder „Sicherheitsadministrator“ können auf das Azure ATP-Portal (portal.atp.azure.com) zugreifen. Nachdem Sie das Portal mit der erforderlichen Rolle aufgerufen haben, können Sie Ihre Azure ATP-Instanz erstellen. Der Azure ATP-Dienst erstellt drei Sicherheitsgruppen in Ihrem Azure Active Directory-Mandanten: Administratoren, Benutzer, Viewer.
+Der Zugriff auf das [!INCLUDE [Product short](includes/product-short.md)] Portal (Portal.ATP.Azure.com) kann nur von einem Azure AD Benutzer durchgeführt werden, der über die Verzeichnis Rolle "globaler Administrator" oder "Sicherheitsadministrator" verfügt. Nachdem Sie das Portal mit der erforderlichen Rolle eingegeben haben, können Sie die- [!INCLUDE [Product short](includes/product-short.md)] Instanz erstellen. [!INCLUDE [Product short](includes/product-short.md)] der-Dienst erstellt drei Sicherheitsgruppen in Ihrem Azure Active Directory-Mandanten: Administratoren, Benutzer, Viewer.
 
 > [!NOTE]
-> Nur Benutzer, die zu der Azure ATP-Sicherheitsgruppe in Ihrem Azure Active Directory gehören sowie globale und Sicherheitsadministratoren des Mandanten, können auf das Azure ATP-Portal zugreifen.
+> Der Zugriff auf das [!INCLUDE [Product short](includes/product-short.md)] Portal wird nur Benutzern innerhalb der [!INCLUDE [Product short](includes/product-short.md)] Sicherheitsgruppen innerhalb ihrer Azure Active Directory sowie der globalen und Sicherheits Administratoren des Mandanten gewährt.
 
-## <a name="types-of-azure-atp-security-groups"></a>Typen von Azure ATP-Sicherheitsgruppen
+## <a name="types-of-product-short-security-groups"></a>Typen von [!INCLUDE [Product short](includes/product-short.md)] Sicherheitsgruppen
 
-Azure ATP stellt drei Typen von Sicherheitsgruppen bereit: *Instanzname* von Azure ATP-Administratoren, *Instanzname* von Azure ATP-Benutzern und *Instanzname* von Azure ATP-Viewern. Die folgende Tabelle beschreibt den Zugriffstyp im Azure ATP-Portal, der für jede Rolle verfügbar ist. Je nachdem, welche Rolle Sie zuweisen, stehen verschiedene Anzeigen und Menüoptionen im Azure ATP-Portal für folgende Benutzer nicht zur Verfügung:
+[!INCLUDE [Product short](includes/product-short.md)] bietet drei Arten von Sicherheitsgruppen: Azure ATP *(Instanzname)* Administratoren, Azure ATP *(Instanzname)* Benutzer und Azure ATP-Viewer *(Instanzname)* . In der folgenden Tabelle wird der Zugriffstyp im Portal beschrieben, der [!INCLUDE [Product short](includes/product-short.md)] für die einzelnen Rollen verfügbar ist. Je nachdem, welche Rolle Sie zuweisen, sind verschiedene Bildschirme und Menü Optionen im [!INCLUDE [Product short](includes/product-short.md)] Portal für diese Benutzer wie folgt nicht verfügbar:
 
 |Aktivität |Azure ATP *(Instanzname)* -Administratoren|Azure ATP *(Instanzname)* Benutzer|Azure ATP-Viewer *(Instanzname)*|
 |----|----|----|----|
@@ -51,26 +50,26 @@ Azure ATP stellt drei Typen von Sicherheitsgruppen bereit: *Instanzname* von Azu
 |Herunterladen eines Berichts|Verfügbar|Verfügbar|Verfügbar|
 |Anmelden|Verfügbar|Verfügbar|Verfügbar|
 |Sicherheitswarnungen für Freigeben/Exportieren (über E-Mail, Link abrufen und Download von Details)|Verfügbar|Verfügbar|Verfügbar|
-|Aktualisieren der Azure ATP-Konfiguration: Updates|Verfügbar|Nicht verfügbar|Nicht verfügbar|
-|Aktualisieren der Azure ATP-Konfiguration: Entitätstags (vertraulich und Honeytoken)|Verfügbar|Verfügbar|Nicht verfügbar|
-|Aktualisieren der Azure ATP-Konfiguration: Ausschlüsse|Verfügbar|Verfügbar|Nicht verfügbar|
-|Aktualisieren der Azure ATP-Konfiguration: Sprache|Verfügbar|Verfügbar|Nicht verfügbar|
-|Aktualisieren der Azure ATP-Konfiguration: Benachrichtigungen (E-Mail und Syslog)|Verfügbar|Verfügbar|Nicht verfügbar|
-|Aktualisieren der Azure ATP-Konfiguration: Vorschau von Erkennungen|Verfügbar|Verfügbar|Nicht verfügbar|
-|Aktualisieren der Azure ATP-Konfiguration: geplante Berichte|Verfügbar|Verfügbar|Nicht verfügbar|
-|Aktualisieren der Azure ATP-Konfiguration: Datenquellen (Verzeichnisdienste, SIEM, VPN WD-ATP)|Verfügbar|Nicht verfügbar|Nicht verfügbar|
-|Aktualisieren der Azure ATP-Konfiguration: Sensoren (Download, Schlüssel neu generieren, konfigurieren, löschen)|Verfügbar|Nicht verfügbar|Nicht verfügbar|
+|Aktualisieren der [!INCLUDE [Product short](includes/product-short.md)] Konfiguration: Updates|Verfügbar|Nicht verfügbar|Nicht verfügbar|
+|Aktualisieren der [!INCLUDE [Product short](includes/product-short.md)] Konfiguration: Entitäts Tags (sensitive und honeytoken)|Verfügbar|Verfügbar|Nicht verfügbar|
+|Update [!INCLUDE [Product short](includes/product-short.md)] Konfiguration-Ausschlüsse|Verfügbar|Verfügbar|Nicht verfügbar|
+|Aktualisieren der [!INCLUDE [Product short](includes/product-short.md)] Konfigurationssprache|Verfügbar|Verfügbar|Nicht verfügbar|
+|Aktualisieren der [!INCLUDE [Product short](includes/product-short.md)] Konfiguration: Benachrichtigungen (e-Mail und syslog)|Verfügbar|Verfügbar|Nicht verfügbar|
+|Aktualisieren der [!INCLUDE [Product short](includes/product-short.md)] Konfiguration: Vorschau Erkennungen|Verfügbar|Verfügbar|Nicht verfügbar|
+|Aktualisieren der [!INCLUDE [Product short](includes/product-short.md)] Konfiguration-geplante Berichte|Verfügbar|Verfügbar|Nicht verfügbar|
+|Aktualisieren der [!INCLUDE [Product short](includes/product-short.md)] Konfiguration: Datenquellen (Verzeichnisdienste, Siem, VPN, WD, ATP)|Verfügbar|Nicht verfügbar|Nicht verfügbar|
+|Aktualisieren der [!INCLUDE [Product short](includes/product-short.md)] Konfiguration: Sensoren (Download, Schlüssel neu generieren, konfigurieren, löschen)|Verfügbar|Nicht verfügbar|Nicht verfügbar|
 |Anzeigen von Entitätsprofilen und Sicherheitswarnungen|Verfügbar|Verfügbar|Verfügbar|
 
-Wenn Benutzer versuchen, auf eine Seite zuzugreifen, die nicht für deren Rollengruppe verfügbar ist, werden sie auf eine Azure ATP-Seite weitergeleitet, die ihnen mitteilt, dass Sie für den Zugriff nicht autorisiert sind.
+Wenn Benutzer versuchen, auf eine Seite zuzugreifen, die nicht für Ihre Rollen Gruppe verfügbar ist, werden Sie auf die Seite "nicht autorisiert" umgeleitet [!INCLUDE [Product short](includes/product-short.md)] .
 
 ## <a name="add-and-remove-users"></a>Hinzufügen und Entfernen von Benutzern
 
-Azure ATP verwendet Azure AD-Sicherheitsgruppen als eine Basis für Rollengruppen. Die Rollen Gruppen können von verwaltet werden [https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/All%20groups](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/All%20groups) . Nur Azure AD-Benutzer können zu Sicherheitsgruppen hinzugefügt bzw. aus ihnen entfernt werden.
+[!INCLUDE [Product short](includes/product-short.md)] verwendet Azure AD Sicherheitsgruppen als Grundlage für Rollen Gruppen. Die Rollen Gruppen können über die [Seite Gruppenverwaltung](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/All%20groups)verwaltet werden. Nur Azure AD-Benutzer können zu Sicherheitsgruppen hinzugefügt bzw. aus ihnen entfernt werden.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [ATP-Tool zur Größenanpassung](https://aka.ms/aatpsizingtool)
-- [ATP-Architektur](architecture.md)
-- [Install Azure ATP (Installieren von Azure ATP)](install-step1.md)
-- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)
+- [[!INCLUDE [Product short](includes/product-short.md)] Tool zur Größenanpassung](https://aka.ms/aatpsizingtool)
+- [[!INCLUDE [Product short](includes/product-short.md)] Architektur](architecture.md)
+- [Installieren [!INCLUDE [Product short](includes/product-short.md)]](install-step1.md)
+- [Sehen Sie sich das [!INCLUDE [Product short](includes/product-short.md)] Forum an!](https://aka.ms/MDIcommunity)

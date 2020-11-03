@@ -1,23 +1,22 @@
 ---
-title: 'Azure Advanced Threat Protection: Unsichere Bewertungen der SID-Verlaufsattribute'
-description: Dieser Artikel bietet eine Übersicht über die Azure ATP-Entitäten mit unsicheren SID-Verlaufsattributen im Bericht zur Bewertung des Identitätssicherheitsstatus.
+title: Bewertungen von Microsoft Defender for Identity-SID-Verlaufs Attributen
+description: Dieser Artikel bietet eine Übersicht über die Entitäten von Microsoft Defender für Identitäts Entitäten mit einem unsicheren SID-Verlaufs Attribut Identity Security-Status Bewertungsbericht.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 08/25/2020
+ms.date: 10/26/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 2fe62047-75ef-4b2e-b4aa-72860e39b4e4
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7819bf79ca70068be21f0aae0b08ff920d7a1605
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 851a0c0db49a59b96a8f239a3b9a08f9e51819c5
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912736"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93276596"
 ---
 # <a name="security-assessment-unsecure-sid-history-attributes"></a>Sicherheitsbewertung: Unsichere SID-Verlaufsattribute
 
@@ -27,7 +26,7 @@ ms.locfileid: "90912736"
 
 Der SID-Verlauf ist ein Attribut, das [Migrationsszenarios](/previous-versions/windows/it-pro/windows-server-2003/cc779590(v=ws.10)) unterstützt. Jedes Benutzerkonto verfügt über eine zugeordnete [Sicherheitskennung](/windows/win32/secauthz/security-identifiers) (Security Identifier, SID), die zum Nachverfolgen des Sicherheitsprinzipals und den Zugriff des Kontos beim Herstellen einer Verbindung zu Ressourcen verwendet wird. Der SID-Verlauf ermöglicht einem anderen Konto Zugriff, damit es effektiv in ein anderes Konto geklont werden kann, und ist äußerst nützlich, um sicherzustellen, dass Benutzer beim Verschieben (Migrieren) von einer Domäne in eine andere den Zugriff beibehalten.
 
-Die Bewertung überprüft Konten mit SID-Verlaufsattributen, bei denen Azure ATP-Profile riskant sein können.
+Die Bewertung prüft Konten mit SID-Verlaufs Attributen, deren [!INCLUDE [Product long](includes/product-long.md)] profile riskant sind.
 
 ## <a name="what-risk-does-unsecure-sid-history-attribute-pose"></a>Welches Risiko stellt ein unsicheres SID-Verlaufsattribut dar?
 
@@ -40,7 +39,7 @@ Beispielsweise kann ein nicht sensibles Konto in einer Domäne die SID des Unter
 ## <a name="how-do-i-use-this-security-assessment"></a>Wie wird diese Sicherheitsbewertung verwendet?
 
 1. Verwenden Sie die Berichtstabelle, um zu ermitteln, welches Ihrer Konten über ein unsicheres SID-Verlaufsattribut verfügt.
-    ![Überprüfen der wichtigsten betroffenen Entitäten und Erstellen eines Aktionsplans](media/atp-cas-isp-unsecure-sid-history-attribute-1.png)
+    ![Überprüfen der wichtigsten betroffenen Entitäten und Erstellen eines Aktionsplans](media/cas-isp-unsecure-sid-history-attribute-1.png)
 1. Nehmen Sie mithilfe von PowerShell und den folgenden Schritten geeignete Maßnahmen vor, um das SID-Verlaufsattribut aus den Konten zu entfernen:
 
     1. Identifizieren Sie die SID im SIDHistory-Attribut im Konto.
@@ -60,5 +59,5 @@ Beispielsweise kann ein nicht sensibles Konto in einer Domäne die SID des Unter
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Verwenden von Aktivitätsfiltern und Erstellen von Aktionsrichtlinien mit Azure ATP in Microsoft Cloud App Security](activities-filtering-mcas.md)
-- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)
+- [[!INCLUDE [Product short](includes/product-short.md)] Aktivitäten Filtern in Cloud App Security](activities-filtering-mcas.md)
+- [Sehen Sie sich das [!INCLUDE [Product short](includes/product-short.md)] Forum an!](https://aka.ms/MDIcommunity)
