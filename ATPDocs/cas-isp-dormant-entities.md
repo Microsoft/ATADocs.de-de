@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 35641a589571586da495c8fb28332c5d736ad67b
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: bd5facbf0cc6616a8467d0eb1b33c7603debabc8
+ms.sourcegitcommit: 8cb9839a67fce42921f7a24564fddf15e503bdea
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276739"
+ms.locfileid: "93278585"
 ---
 # <a name="security-assessment-dormant-entities-in-sensitive-groups"></a>Sicherheitsbewertung: Ruhende Entitäten in **sensiblen** Gruppen
 
@@ -39,6 +39,7 @@ Es ist unerheblich, ob es sich bei der Ursache um Mitarbeiterwechsel oder Misswi
 ## <a name="how-do-i-use-this-security-assessment"></a>Wie wird diese Sicherheitsbewertung verwendet?
 
 1. Verwenden Sie die Berichtstabelle, um zu ermitteln, welche Ihrer sensiblen Konten inaktiv sind.
+    ![Wiederherstellen von ruhenden Entitäten in der INI-Gruppe](media/cas-isp-dormant-entities-sensitive-groups-1.png)
 1. Ergreifen Sie entsprechende Maßnahmen für diese Benutzerkonten, indem Sie deren privilegierte Zugriffsrechte entfernen oder das Konto löschen.
 
 > [!NOTE]

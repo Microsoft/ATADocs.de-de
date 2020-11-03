@@ -1,6 +1,6 @@
 ---
-title: Behandlung von bekannten Problemen bei Azure ATP
-description: Beschreibt, wie Sie häufige Fehler in Azure ATP beheben können.
+title: Problembehandlung bei Microsoft Defender für bekannte Probleme
+description: Hier wird beschrieben, wie Sie Probleme in Microsoft Defender für die Identität beheben.
 keywords: ''
 author: shsagir
 ms.author: shsagir
@@ -9,17 +9,16 @@ ms.date: 09/07/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f0136b432a170a5e45b71d189d77d7e007ca7a53
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 0cd22cad42d8933ebb36a7a7aea32d0a4cb7cdd4
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912342"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93277816"
 ---
-# <a name="troubleshooting-azure-atp-known-issues"></a>Behandlung von bekannten Problemen bei Azure ATP
+# <a name="troubleshooting-product-long-known-issues"></a>Problembehandlung bei [!INCLUDE [Product long](includes/product-long.md)] bekannten Problemen
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
@@ -31,11 +30,11 @@ System.Net.Http.HttpRequestException: Fehler beim Senden der Anforderung. ---> S
 
 **Lösung:**
 
-Stellen Sie sicher, dass die Kommunikation für Localhost an TCP-Port 444 nicht blockiert ist. Weitere Informationen zu den Voraussetzungen für Azure ATP finden Sie unter [Ports](prerequisites.md#ports).
+Stellen Sie sicher, dass die Kommunikation für Localhost an TCP-Port 444 nicht blockiert ist. Weitere Informationen zu den [!INCLUDE [Product long](includes/product-long.md)] Voraussetzungen finden Sie unter [Ports](prerequisites.md#ports).
 
 ## <a name="deployment-log-location"></a>Speicherort des Bereitstellungsprotokolls
 
-Die Azure ATP-Bereitstellungsprotokolle befinden sich im temporären Verzeichnis des Benutzers, der das Produkt installiert hat. Beim Standardinstallationsspeicherort lautet der Pfad: C:\Benutzer\Administrator\AppData\Local\Temp (oder ein Verzeichnis über „%temp%“). Weitere Informationen finden Sie unter [Problembehandlung für den Azure Advanced Threat Protection-Sensor (ATP) mithilfe der ATP-Protokolle](troubleshooting-using-logs.md).
+Die [!INCLUDE [Product short](includes/product-short.md)] Bereitstellungs Protokolle befinden sich im temporären Verzeichnis des Benutzers, der das Produkt installiert hat. Beim Standardinstallationsspeicherort lautet der Pfad: C:\Benutzer\Administrator\AppData\Local\Temp (oder ein Verzeichnis über „%temp%“). Weitere Informationen finden Sie unter [Problembehandlung [!INCLUDE [Product short](includes/product-short.md)] mithilfe von Protokollen](troubleshooting-using-logs.md) .
 
 ## <a name="proxy-authentication-problem-presents-as-a-licensing-error"></a>Proxyauthentifizierungsproblem wird als Lizenzierungsfehler dargestellt
 
@@ -45,9 +44,9 @@ Während der Sensorinstallation erhalten Sie die folgende Fehlermeldung:  **Der 
 
 [1C60:1AA8][2018-03-24T23:59:13]i000: 2018-03-25 02:59:13.1237 Info  InteractiveDeploymentManager ValidateCreateSensorAsync returned [validateCreateSensorResult=LicenseInvalid]] [1C60:1AA8][2018-03-24T23:59:56]i000: 2018-03-25 02:59:56.4856 Info  InteractiveDeploymentManager ValidateCreateSensorAsync returned [validateCreateSensorResult=LicenseInvalid]] [1C60:1AA8][2018-03-25T00:27:56]i000: 2018-03-25 03:27:56.7399 Debug SensorBootstrapperApplication Engine.Quit [deploymentResultStatus=1602 isRestartRequired=False]] [1C60:15B8][2018-03-25T00:27:56]i500: Wird heruntergefahren, Exitcode: 0x642
 
-**Ursache**:
+**Ursache** :
 
-In einigen Fällen, bei Kommunikation über einen Proxy, könnte dieser während der Authentifizierung dem Azure ATP-Sensor mit Fehler 401 oder 403 anstelle des Fehlers 407 antworten. Der Azure ATP-Sensor interpretiert Fehler 401 oder 403 als Lizenzierungsproblem und nicht als Proxyauthentifizierungsproblem.
+In einigen Fällen kann bei der Kommunikation über einen Proxy während der Authentifizierung auf den [!INCLUDE [Product short](includes/product-short.md)] Sensor mit dem Fehler 401 oder 403 anstelle des Fehlers 407 geantwortet werden. Der [!INCLUDE [Product short](includes/product-short.md)] Sensor interpretiert den Fehler 401 oder 403 als Lizenzierungs Problem und nicht als Proxy Authentifizierungs Problem.
 
 **Lösung:**
 
@@ -59,11 +58,11 @@ Während der Sensorinstallation erhalten Sie die folgende Fehlermeldung: **The s
 
 **Ursache:**
 
-Das Problem kann durch einen transparenten Proxykonfigurationsfehler auf Server Core verursacht werden, wenn beispielsweise das von Azure ATP benötigte Stammzertifikat nicht aktuell oder nicht vorhanden ist.
+Das Problem kann durch einen transparenten Proxy Konfigurationsfehler auf Server Core verursacht werden, z. b., wenn die Stamm Zertifikate, die für erforderlich [!INCLUDE [Product short](includes/product-short.md)] sind, nicht aktuell sind oder nicht vorhanden sind.
 
 **Lösung:**
 
-Führen Sie das folgende PowerShell-Cmdlet aus, um zu überprüfen, ob das vertrauenswürdige Stammzertifikat für den Azure ATP-Dienst auf Server Core vorhanden ist. Im folgenden Beispiel werden die Stammzertifikate „DigiCert Baltimore Root“ und „DigiCert Global Root“ verwendet.
+Führen Sie das folgende PowerShell-Cmdlet aus, um zu überprüfen, ob das [!INCLUDE [Product short](includes/product-short.md)] Vertrauenswürdige Stamm Zertifikat auf Server Core vorhanden ist. Im folgenden Beispiel werden die Stammzertifikate „DigiCert Baltimore Root“ und „DigiCert Global Root“ verwendet.
 
 ```powershell
 Get-ChildItem -Path "Cert:\LocalMachine\Root" | where { $_.Thumbprint -eq "D4DE20D05E66FC53FE1A50882C78DB2852CAE474"} | fl
@@ -118,19 +117,19 @@ Verwenden Sie den vollständigen Befehl für eine erfolgreiche Installation.
 ./"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
 ```
 
-## <a name="azure-atp-sensor-nic-teaming-issue"></a>Problem mit NIC-Teamvorgängen beim Azure ATP-Sensor <a name="nic-teaming"></a>
+## <a name="product-short-sensor-nic-teaming-issue"></a>[!INCLUDE [Product short](includes/product-short.md)] Problem mit dem Sensor NIC-Team Vorgang <a name="nic-teaming"></a>
 
-Wenn Sie versuchen, den ATP-Sensor auf einem Computer zu installieren, der mit einem NIC-Teaming-Adapter konfiguriert ist, wird ein Installationsfehler gemeldet. Wenn Sie den ATP-Sensor auf einem Computer installieren möchten, der mit NIC-Teamvorgang konfiguriert ist, gehen Sie wie folgt vor:
+Wenn Sie versuchen, den [!INCLUDE [Product short](includes/product-short.md)] Sensor auf einem Computer zu installieren, der mit einem NIC-Team Vorgangs Adapter konfiguriert ist, erhalten Sie einen Installationsfehler. Wenn Sie den [!INCLUDE [Product short](includes/product-short.md)] Sensor auf einem Computer installieren möchten, der mit NIC-Team Vorgang konfiguriert ist, befolgen Sie die folgenden Anweisungen:
 
 1. Laden Sie das Installationsprogramm für die Npcap-Version 0.9984 von [https://nmap.org/npcap/](https://nmap.org/npcap/dist/npcap-0.9984.exe) herunter.
     - Alternativ dazu können Sie die OEM-Version des Npcap-Treibers (der die automatische Installation unterstützt) vom Supportteam anfordern.
-    - Kopien von Npcap werden nicht auf die Lizenzierungseinschränkung von fünf Kopien, fünf Computern oder fünf Benutzern angerechnet, wenn sie ausschließlich in Verbindung mit Azure ATP installiert und verwendet werden. Weitere Informationen finden Sie unter [NPCAP-Lizenzierung](https://github.com/nmap/npcap/blob/master/LICENSE).
+    - Kopien von npcap werden nicht in Bezug auf die fünf Kopier-, fünf Computer-oder Benutzer Lizenzierungs Einschränkungen gezählt, wenn Sie nur in Verbindung mit installiert und verwendet werden [!INCLUDE [Product short](includes/product-short.md)] . Weitere Informationen finden Sie unter [NPCAP-Lizenzierung](https://github.com/nmap/npcap/blob/master/LICENSE).
 
 Wenn Sie den Sensor noch nicht installiert haben:
 
 1. Deinstallieren Sie WinPcap (falls installiert).
 1. Installieren Sie Npcap mit den folgenden Optionen: loopback_support=no & winpcap_mode=yes.
-    - Wenn Sie den GUI-Installer verwenden, deaktivieren Sie die **Loopbackunterstützung**, und aktivieren Sie den **WinPcap**-Modus.
+    - Wenn Sie den GUI-Installer verwenden, deaktivieren Sie die **Loopbackunterstützung** , und aktivieren Sie den **WinPcap** -Modus.
 1. Installieren Sie das Sensorpaket.
 
 Wenn der Sensor bereits installiert ist:
@@ -138,12 +137,12 @@ Wenn der Sensor bereits installiert ist:
 1. Deinstallieren Sie den Sensor.
 1. Deinstallieren Sie WinPcap.
 1. Installieren Sie Npcap mit den folgenden Optionen: loopback_support=no & winpcap_mode=yes
-    - Wenn Sie den GUI-Installer verwenden, deaktivieren Sie die **Loopbackunterstützung**, und aktivieren Sie den **WinPcap**-Modus.
+    - Wenn Sie den GUI-Installer verwenden, deaktivieren Sie die **Loopbackunterstützung** , und aktivieren Sie den **WinPcap** -Modus.
 1. Installieren Sie das Sensorpaket erneut.
 
 ## <a name="multi-processor-group-mode"></a>Modus „Mehrere Prozessorgruppen“
 
-Unter den Windows-Betriebssystemen 2008 R2 und 2012 werden Azure ATP-Sensoren im Modus „Mehrere Prozessorgruppen“ nicht unterstützt.
+Für Windows-Betriebssysteme 2008R2 und 2012 [!INCLUDE [Product short](includes/product-short.md)] wird der Sensor im Modus für mehrere Prozessor Gruppen nicht unterstützt.
 
 Mögliche Problemumgehungen:
 
@@ -151,13 +150,13 @@ Mögliche Problemumgehungen:
 
 - Wenn Ihr Computer weniger als 64 logische Kerne aufweist und auf einem HP-Host ausgeführt wird, können Sie möglicherweise die BIOS-Einstellung **NUMA Group Size Optimization** vom Standardwert **Clustered** in **Flat** ändern.
 
-## <a name="microsoft-defender-atp-integration-issue"></a>Problem bei der Microsoft Defender ATP-Integration
+## <a name="microsoft-defender-for-endpoint-integration-issue"></a>Problem bei der Integration von Microsoft Defender for Endpoint
 
-Mithilfe von Azure Advanced Threat Protection können Sie Azure ATP in Microsoft Defender ATP integrieren. Weitere Informationen finden Sie unter [Integration von Azure ATP in Microsoft Defender ATP](integrate-msde.md).
+[!INCLUDE [Product short](includes/product-short.md)] ermöglicht die Integration in [!INCLUDE [Product short](includes/product-short.md)] Microsoft Defender for Endpoint. Weitere Informationen finden Sie [ [!INCLUDE [Product short](includes/product-short.md)] unter integrieren in Microsoft Defender for Endpoint](integrate-mde.md) .
 
 ## <a name="vmware-virtual-machine-sensor-issue"></a>Problem mit dem Sensor des virtuellen VMware-Computers
 
-Wenn Sie einen Azure-ATP-Sensor auf virtuellen VMware-Computern verwenden, erhalten Sie möglicherweise die Integritätswarnung **Ein Teil des Netzwerkdatenverkehrs wird nicht analysiert**. Als Ursache kommt ein Konfigurationskonflikt in VMware infrage.
+Wenn Sie über einen [!INCLUDE [Product short](includes/product-short.md)] Sensor auf virtuellen VMware-Computern verfügen, erhalten Sie möglicherweise die Integritäts Warnung, **dass der Netzwerk Datenverkehr nicht analysiert** wird. Als Ursache kommt ein Konfigurationskonflikt in VMware infrage.
 
 So beheben Sie dieses Problem:
 
@@ -189,9 +188,9 @@ Wenn Sie die folgende Integritätswarnung erhalten: **Anmeldeinformationen für 
 
 2020-02-17 14:02:19.6258 Warn GroupManagedServiceAccountImpersonationHelper GetGroupManagedServiceAccountAccessTokenAsync failed GMSA password could not be retrieved [errorCode=AccessDenied AccountName=account_name DomainDnsName=domain1.test.local]
 
-**Ursache**:
+**Ursache** :
 
-Der Sensor konnte das angegebene gruppenverwaltete Dienstkonto nicht aus dem Azure ATP-Portal abrufen.
+Der Sensor konnte das angegebene GMSA-Konto nicht aus dem [!INCLUDE [Product short](includes/product-short.md)] Portal abrufen.
 
 **Lösung:**
 
@@ -199,9 +198,9 @@ Stellen Sie sicher, dass die Anmeldeinformationen des gruppenverwalteten Dienstk
 
 ## <a name="report-downloads-cannot-contain-more-than-300000-entries"></a>Berichtsdownloads dürfen nicht mehr als 300.000 Einträge enthalten
 
-Azure ATP unterstützt keine Berichtsdownloads mit mehr als 300.000 Einträgen pro Bericht. Die Berichte werden unvollständig gerendert, wenn mehr als 300.000 Einträge enthalten sind.
+[!INCLUDE [Product short](includes/product-short.md)] unterstützt keine Downloads von Berichten, die mehr als 300.000 Einträge pro Bericht enthalten. Die Berichte werden unvollständig gerendert, wenn mehr als 300.000 Einträge enthalten sind.
 
-**Ursache**:
+**Ursache** :
 
 Dies ist eine technisch bedingte Begrenzung.
 
@@ -211,8 +210,8 @@ Keine bekannte Lösung.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](prerequisites.md)
-- [Azure ATP capacity planning (Azure ATP-Kapazitätsplanung)](capacity-planning.md)
+- [[!INCLUDE [Product short](includes/product-short.md)] Voraussetzung](prerequisites.md)
+- [[!INCLUDE [Product short](includes/product-short.md)] Kapazitätsplanung](capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
 - [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-forwarding.md)
-- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)
+- [Sehen Sie sich das [!INCLUDE [Product short](includes/product-short.md)] Forum an!](https://aka.ms/MDIcommunity)
