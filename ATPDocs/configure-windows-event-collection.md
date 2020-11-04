@@ -1,31 +1,30 @@
 ---
-title: Konfigurieren der Windows-Ereignissammlung in Azure Advanced Threat Protection
-description: In diesem Schritt bei der ATP-Installation konfigurieren Sie die Windows-Ereignissammlung.
+title: Konfigurieren der Windows-Ereignissammlung für Microsoft Defender for Identity
+description: In diesem Schritt bei der Microsoft Defender for Identity-Installation konfigurieren Sie die Windows-Ereignissammlung.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 08/04/2020
+ms.date: 10/26/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8a7c22c2ea752b0443fac2b4e74b2ff4813bfee8
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 4dfaba62df29bb97009bad2440bb420f2c1477e9
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90910487"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93276568"
 ---
 # <a name="configure-windows-event-collection"></a>Konfigurieren der Windows-Ereignissammlung
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-Die Azure Advanced Threat Protection-Erkennung (Azure ATP) basiert auf bestimmten Windows-Ereignisprotokolleinträgen, um einige Erkennungen zu verbessern und zusätzliche Informationen darüber bereitzustellen, wer bestimmte Aktionen ausgeführt hat, wie z. B. NTLM-Anmeldungen, Änderungen an Sicherheitsgruppen und ähnliche Ereignisse. Damit die richtigen Ereignisse überprüft und im Windows-Ereignisprotokoll eingeschlossen werden, benötigen Ihre Domänencontroller die korrekten erweiterten Überwachungsrichtlinieneinstellungen. Falsche erweiterte Überwachungsrichtlinieneinstellungen können dazu führen, dass die erforderlichen Ereignisse nicht im Ereignisprotokoll aufgezeichnet werden und die Azure ATP-Abdeckung unvollständig ist.
+Die [!INCLUDE [Product long](includes/product-long.md)]-Erkennung basiert auf bestimmten Windows-Ereignisprotokolleinträgen, um einige Erkennungen zu verbessern und zusätzliche Informationen darüber bereitzustellen, wer bestimmte Aktionen ausgeführt hat, wie z. B. NTLM-Anmeldungen, Änderungen an Sicherheitsgruppen und ähnliche Ereignisse. Damit die richtigen Ereignisse überprüft und im Windows-Ereignisprotokoll eingeschlossen werden, benötigen Ihre Domänencontroller die korrekten erweiterten Überwachungsrichtlinieneinstellungen. Falsche Einstellungen der erweiterten Überwachungsrichtlinie können dazu führen, dass die erforderlichen Ereignisse nicht im Ereignisprotokoll aufgezeichnet werden und die [!INCLUDE [Product short](includes/product-short.md)]-Abdeckung unvollständig ist.
 
-Die folgenden Windows-Ereignisse müssen für Azure ATP [konfiguriert](#configure-audit-policies) und [gesammelt](#configure-event-collection) werden, um die Funktionen zum Erkennen von Bedrohungen zu verbessern:
+Die folgenden Windows-Ereignisse müssen für [!INCLUDE [Product short](includes/product-short.md)] [konfiguriert](#configure-audit-policies) und [gesammelt](#configure-event-collection) werden, um die Funktionen zum Erkennen von Bedrohungen zu verbessern:
 
 - 4726: Benutzerkonto gelöscht
 - 4728: Member Added to Global Security Group (Mitglied zu globaler Sicherheitsgruppe hinzugefügt)
@@ -49,19 +48,19 @@ Die folgenden Windows-Ereignisse müssen für Azure ATP [konfiguriert](#configur
 
 1. Melden Sie sich beim Server als **Domänenadministrator** an.
 1. Laden Sie den Gruppenrichtlinienverwaltungs-Editor über **Server-Manager** > **Extras** > **Gruppenrichtlinienverwaltung**.
-1. Erweitern Sie die **Organisationseinheiten der Domänencontroller**, klicken Sie mit der rechten Maustaste auf **Standarddomänencontroller-Richtlinie**, und klicken Sie auf **Bearbeiten**.
+1. Erweitern Sie die **Organisationseinheiten der Domänencontroller** , klicken Sie mit der rechten Maustaste auf **Standarddomänencontroller-Richtlinie** , und klicken Sie auf **Bearbeiten**.
 
     > [!NOTE]
     > Zum Festlegen dieser Richtlinien können Sie die Standardrichtlinie für Domänencontroller oder ein dediziertes GPO verwenden.
 
-    ![Bearbeiten der Standarddomänencontroller-Richtlinie](media/atp-advanced-audit-policy-check-step-1.png)
+    ![Bearbeiten der Standarddomänencontroller-Richtlinie](media/advanced-audit-policy-check-step-1.png)
 
-1. Wechseln Sie im geöffneten Fenster zu **Computerkonfiguration** > **Richtlinien** > **Windows-Einstellungen** > **Sicherheitseinstellungen**, und führen Sie abhängig von der gewünschten Richtlinie die folgenden Schritte durch:
+1. Wechseln Sie im geöffneten Fenster zu **Computerkonfiguration** > **Richtlinien** > **Windows-Einstellungen** > **Sicherheitseinstellungen** , und führen Sie abhängig von der gewünschten Richtlinie die folgenden Schritte durch:
 
     **Für die erweiterte Überwachungsrichtlinienkonfiguration**
 
     1. Wechseln Sie zu **Erweiterte Überwachungsrichtlinienkonfiguration** > **Überwachungsrichtlinien**.
-        ![Erweiterte Überwachungsrichtlinienkonfiguration](media/atp-advanced-audit-policy-check-step-2.png)
+        ![Erweiterte Überwachungsrichtlinienkonfiguration](media/advanced-audit-policy-check-step-2.png)
     1. Bearbeiten Sie unter **Überwachungsrichtlinien** die folgenden Richtlinien, und wählen Sie dann sowohl für die Ereignisse **Erfolg** und **Fehler** die Option **Configure the following audit events** (Folgende Überwachungsereignisse konfigurieren) aus.
 
         | Überwachungsrichtlinie | Unterkategorie | Auslöser für Ereignis-IDs |
@@ -73,16 +72,16 @@ Die folgenden Windows-Ereignisse müssen für Azure ATP [konfiguriert](#configur
         | Kontoverwaltung | Benutzerkontenverwaltung überwachen | 4726 |
         | System | Sicherheitssystemerweiterung überwachen | 7045 |
 
-        Wenn Sie zum Beispiel **Sicherheitsgruppenverwaltung überwachen** unter **Kontoverwaltung** konfigurieren möchten, doppelklicken Sie auf **Sicherheitsgruppenverwaltung überwachen**, und wählen Sie jeweils für Ereignisse mit dem Status **Erfolg** und **Fehler** die Option **Configure the following audit events** (Folgende Überwachungsereignisse konfigurieren) aus.
+        Wenn Sie zum Beispiel **Sicherheitsgruppenverwaltung überwachen** unter **Kontoverwaltung** konfigurieren möchten, doppelklicken Sie auf **Sicherheitsgruppenverwaltung überwachen** , und wählen Sie jeweils für Ereignisse mit dem Status **Erfolg** und **Fehler** die Option **Configure the following audit events** (Folgende Überwachungsereignisse konfigurieren) aus.
 
-        ![Sicherheitsgruppenverwaltung überwachen](media/atp-advanced-audit-policy-check-step-4.png)
+        ![Sicherheitsgruppenverwaltung überwachen](media/advanced-audit-policy-check-step-4.png)
 
     <a name="ntlm-authentication-using-windows-event-8004"></a> **Für lokale Richtlinien (Ereignis-ID: 8004)**
 
     > [!NOTE]
     >
     > - Gruppenrichtlinien zum Sammeln des Windows-Ereignisses 8004 auf Domänenebene dürfen **nur** auf Domänencontroller angewendet werden.
-    > - Bei der Analyse des Windows-Ereignisses 8004 durch den Azure ATP-Sensor werden Azure ATP-NTLM-Authentifizierungsaktivitäten durch die Daten ergänzt, auf die auf dem Server zugegriffen wird.
+    > - Bei der Analyse des Windows-Ereignisses 8004 durch den [!INCLUDE [Product short](includes/product-short.md)]-Sensor werden [!INCLUDE [Product short](includes/product-short.md)]-NTLM-Authentifizierungsaktivitäten durch die Daten ergänzt, auf die auf dem Server zugegriffen wird.
 
     1. Wechseln Sie zu **Lokale Richtlinien** > **Sicherheitsoptionen**.
     1. Konfigurieren Sie unter **Sicherheitsoptionen** die angegebenen Sicherheitsrichtlinien wie folgt:
@@ -93,41 +92,41 @@ Die folgenden Windows-Ereignisse müssen für Azure ATP [konfiguriert](#configur
         | Netzwerksicherheit: Beschränken von NTLM: NTLM-Authentifizierung in dieser Domäne überwachen | Alle aktivieren |
         | Netzwerksicherheit: Beschränken von NTLM: Eingehender NTLM-Datenverkehr überwachen | Überwachung für alle Konten aktivieren |
 
-        Wenn Sie beispielsweise **ausgehenden NTLM-Datenverkehr zu Remoteservern** konfigurieren möchten, doppelklicken Sie unter **Sicherheitsoptionen** auf **Netzwerksicherheit: Beschränken von NTLM: Ausgehender NTLM-Datenverkehr zu Remoteservern**, und klicken Sie auf **Alle überwachen**.
+        Wenn Sie beispielsweise **ausgehenden NTLM-Datenverkehr zu Remoteservern** konfigurieren möchten, doppelklicken Sie unter **Sicherheitsoptionen** auf **Netzwerksicherheit: Beschränken von NTLM: Ausgehender NTLM-Datenverkehr zu Remoteservern** , und klicken Sie auf **Alle überwachen**.
 
-        ![Überwachen von ausgehendem Netzwerkdatenverkehr an Remoteserver](media/atp-advanced-audit-policy-check-step-3.png)
+        ![Überwachen von ausgehendem Netzwerkdatenverkehr an Remoteserver](media/advanced-audit-policy-check-step-3.png)
 
     > [!NOTE]
-    > Wenn Sie anstelle einer Gruppenrichtlinie eine lokale Sicherheitsrichtlinie verwenden, stellen Sie sicher, dass Sie die Überwachungsprotokolle für die **Kontoanmeldung**, die **Kontoverwaltung** und die **Sicherheitsoptionen** zu Ihrer lokalen Richtlinie hinzufügen. Wenn Sie die erweiterte Überwachungsrichtlinie konfigurieren, stellen Sie sicher, dass Sie die [Überwachungsrichtlinien-Unterkategorie](/windows/security/threat-protection/security-policy-settings/audit-force-audit-policy-subcategory-settings-to-override) erzwingen.
+    > Wenn Sie anstelle einer Gruppenrichtlinie eine lokale Sicherheitsrichtlinie verwenden, stellen Sie sicher, dass Sie die Überwachungsprotokolle für die **Kontoanmeldung** , die **Kontoverwaltung** und die **Sicherheitsoptionen** zu Ihrer lokalen Richtlinie hinzufügen. Wenn Sie die erweiterte Überwachungsrichtlinie konfigurieren, stellen Sie sicher, dass Sie die [Überwachungsrichtlinien-Unterkategorie](/windows/security/threat-protection/security-policy-settings/audit-force-audit-policy-subcategory-settings-to-override) erzwingen.
 
 1. Nachdem die neuen Ereignisse über GPO angewendet wurden, sind sie unter Ihren **Windows-Ereignisprotokollen** sichtbar.
 
 <!--
-## Azure ATP Advanced Audit Policy check
+## [!INCLUDE [Product short](includes/product-short.md)] Advanced Audit Policy check
 
-To make it easier to verify the current status of each of your domain controller's Advanced Audit Policies, Azure ATP automatically checks your existing Advanced Audit Policies and issues health alerts for policy settings that require modification. Each health alert provides specific details of the domain controller, the problematic policy as well as remediation suggestions.
+To make it easier to verify the current status of each of your domain controller's Advanced Audit Policies, [!INCLUDE [Product short](includes/product-short.md)] automatically checks your existing Advanced Audit Policies and issues health alerts for policy settings that require modification. Each health alert provides specific details of the domain controller, the problematic policy as well as remediation suggestions.
 
-![Advanced Audit Policy Health Alert](media/atp-health-alert-audit.png)
+![Advanced Audit Policy Health Alert](media/health-alert-audit.png)
 
 Advanced Security Audit Policy is enabled via **Default Domain Controllers Policy** GPO. These audit events are recorded on the domain controller's Windows Events.
 -->
 
 ## <a name="configure-event-collection"></a>Konfigurieren der Ereignissammlung
 
-Diese Ereignisse können automatisch vom Azure ATP-Sensor gesammelt werden. Wenn der Azure ATP-Sensor nicht bereitgestellt wird, können sie alternativ auf eine der folgenden Arten an den eigenständigen Azure ATP-Sensor weitergeleitet werden:
+Diese Ereignisse können automatisch vom [!INCLUDE [Product short](includes/product-short.md)]-Sensor gesammelt werden. Wenn der [!INCLUDE [Product short](includes/product-short.md)]-Sensor nicht bereitgestellt wird, können sie alternativ auf eine der folgenden Arten an den eigenständigen [!INCLUDE [Product short](includes/product-short.md)]-Sensor weitergeleitet werden:
 
-- [Konfigurieren des eigenständigen Azure ATP-Sensors](configure-event-forwarding.md) zum Lauschen an SIEM-Ereignissen
+- [Konfigurieren des eigenständigen [!INCLUDE [Product short](includes/product-short.md)]-Sensors](configure-event-forwarding.md) zum Überwachen von SIEM-Ereignissen
 - [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-forwarding.md)
 
 > [!NOTE]
 >
-> - Eigenständige Azure ATP-Server unterstützen nicht die Erstellung von Protokolleinträgen für Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW), die Daten für mehrere Erkennungen bereitstellen. Zur vollständigen Abdeckung Ihrer Umgebung empfiehlt es sich, den Azure ATP-Sensor bereitzustellen.
+> - Eigenständige [!INCLUDE [Product short](includes/product-short.md)]-Server unterstützen nicht die Erstellung von Protokolleinträgen für Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW), die Daten für mehrere Erkennungen bereitstellen. Zur vollständigen Abdeckung Ihrer Umgebung empfiehlt es sich, den [!INCLUDE [Product short](includes/product-short.md)]-Sensor bereitzustellen.
 > - Es ist wichtig, vor dem Aktivieren der Ereignissammlung die [Überwachungsrichtlinien]() zu überprüfen und zu verifizieren, um sicherzustellen, dass die Domänencontroller ordnungsgemäß für die Aufzeichnung der erforderlichen Ereignisse konfiguriert sind.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Azure ATP sizing tool (Azure ATP-Tool zur Größenanpassung)](https://aka.ms/aatpsizingtool)
-- [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](prerequisites.md)
-- [Referenz zum Azure ATP-SIEM-Protokoll](cef-format-sa.md)
+- [[!INCLUDE [Product short](includes/product-short.md)]-Tool zur Größenanpassung](https://aka.ms/aatpsizingtool)
+- [Voraussetzungen für [!INCLUDE [Product short](includes/product-short.md)]](prerequisites.md)
+- [Referenz zum SIEM-Protokoll für [!INCLUDE [Product short](includes/product-short.md)]](cef-format-sa.md)
 - [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-forwarding.md)
-- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)
+- [Weitere Informationen finden Sie im [!INCLUDE [Product short](includes/product-short.md)]-Forum.](https://aka.ms/MDIcommunity)

@@ -1,41 +1,40 @@
 ---
-title: Festlegen von Syslog-Einstellungen in Azure Advanced Threat Protection
-description: Beschreibt, wie Azure ATP für den Versand von Benachrichtigungen (per E-Mail oder Azure ATP-Ereignisweiterleitung) bei verdächtigen Aktivitäten konfiguriert werden kann
+title: Festlegen von Syslog-Einstellungen in Microsoft Defender for Identity
+description: Beschreibt, wie Microsoft Defender for Identity für den Versand von Benachrichtigungen (per E-Mail oder Microsoft Defender for Identity-Ereignisweiterleitung) bei verdächtigen Aktivitäten konfiguriert werden kann
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 09/16/2019
+ms.date: 10/27/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: a2d29c9c-7ecb-4804-b74b-fde899b28648
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 989b3cdb309d5d4d9ab19e0377c7712b9065a100
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 55487b6638fc8278ae94b3444f74f2abe2b2dc56
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912512"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93275256"
 ---
 # <a name="integrate-with-syslog"></a>Integration in Syslog
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
-> Die auf dieser Seite erläuterten Azure ATP-Features sind auch über das neue [Portal](https://portal.cloudappsecurity.com) zugänglich.
+> Die auf dieser Seite erläuterten [!INCLUDE [Product long](includes/product-long.md)]-Features sind auch über das neue [Portal](https://portal.cloudappsecurity.com) zugänglich.
 
-Azure ATP kann Sie über verdächtige Aktivitäten benachrichtigen, indem Sicherheits- und Integritätswarnungen über einen nominierten Sensor an Ihren Syslog-Server gesendet werden.
+[!INCLUDE [Product long](includes/product-long.md)] kann Sie über verdächtige Aktivitäten benachrichtigen, indem Sicherheits- und Integritätswarnungen über einen nominierten Sensor an Ihren Syslog-Server gesendet werden.
 
 Wenn Syslog-Benachrichtigungen aktiviert werden, lassen sich folgende Einstellungen vornehmen:
 
-   |Feld|Beschreibung|
-   |---------|---------------|
-   |Sensor|Klicken Sie auf einen ausgewählten Sensor, der für das Aggregieren aller Syslog-Ereignisse und die anschließende Weiterleitung von diesen an Ihren SIEM-Server verantwortlich sein soll.|
-   |Dienstendpunkt|Geben Sie den vollqualifizierten Domänennamen des Syslog-Servers ein, und ändern Sie optional die Portnummer (standardmäßig 514).|
-   |Transport|Kann UDP, TCP oder TLS (sicheres Syslog) sein|
-   |Format|Dies ist das von Azure ATP verwendete Format für das Senden der Ereignisse an den SIEM-Server: RFC 5424 oder RFC 3164.|
+|Feld|Beschreibung|
+|---------|---------------|
+|Sensor|Klicken Sie auf einen ausgewählten Sensor, der für das Aggregieren aller Syslog-Ereignisse und die anschließende Weiterleitung von diesen an Ihren SIEM-Server verantwortlich sein soll.|
+|Dienstendpunkt|Geben Sie den vollqualifizierten Domänennamen des Syslog-Servers ein, und ändern Sie optional die Portnummer (standardmäßig 514).|
+|Transport|Kann UDP, TCP oder TLS (sicheres Syslog) sein|
+|Format|Dies ist das von [!INCLUDE [Product short](includes/product-short.md)] verwendete Format für das Senden der Ereignisse an den SIEM-Server: RFC 5424 oder RFC 3164.|
 
 1. Vor dem Konfigurieren von Syslog-Benachrichtigungen sollten Sie gemeinsam mit dem zuständigen SIEM-Administrator folgende Angaben ermitteln:
 
@@ -44,7 +43,7 @@ Wenn Syslog-Benachrichtigungen aktiviert werden, lassen sich folgende Einstellun
     - Transporttyp: UDP, TCP oder TLS (sicheres Syslog)
     - Versandformat der Daten: RFC 3164 oder 5424
 
-1. Öffnen Sie das Azure ATP-Portal.
+1. Öffnen Sie das [!INCLUDE [Product short](includes/product-short.md)]-Portal.
 1. Klicken Sie auf **Einstellungen**.
 1. Wählen Sie im Untermenü **Benachrichtigungen und Berichte** die Option **Benachrichtigung** aus.
 1. Klicken Sie unter **Syslog-Dienst** auf **Konfigurieren**.
@@ -57,16 +56,16 @@ Wenn Syslog-Benachrichtigungen aktiviert werden, lassen sich folgende Einstellun
 
 So überprüfen oder ändern Sie die Syslog-Einstellungen:
 
-1. Klicken Sie zunächst auf **Benachrichtigungen** und dann unter **Syslog-Benachrichtigungen** auf **Konfigurieren**:
+1. Klicken Sie zunächst auf **Benachrichtigungen** und dann unter **Syslog-Benachrichtigungen** auf **Konfigurieren** :
 
-    ![Abbildung der Syslog-Servereinstellungen für Azure ATP](media/atp-syslog.png)
+    ![Abbildung der Syslog-Servereinstellungen für [!INCLUDE [Product short](includes/product-short.md)]](media/syslog.png)
 
 1. Sie können auswählen, welche Ereignisse an Ihren Syslog-Server gesendet werden sollen. Geben Sie unter **Syslog-Benachrichtigungen** an, welche Benachrichtigungen an Ihren Syslog-Server gesendet werden sollen: neue Sicherheitswarnungen, aktualisierte Sicherheitswarnungen und neue Integritätsprobleme.
 
 > [!NOTE]
-> Wenn Sie eine Automatisierung oder Skripts für Azure ATP-SIEM-Protokoll erstellen möchten, sollten Sie zur Identifizierung des Warnungstyps das Feld **externalID** statt des Warnungsnamens verwenden. Warnungsnamen können nämlich gelegentlich geändert werden, während die **externalId** jeder Warnung dauerhaft ist. Weitere Informationen finden Sie unter [Azure ATP-SIEM-Protokollreferenz](cef-format-sa.md).
+> Wenn Sie eine Automatisierung oder Skripts für [!INCLUDE [Product short](includes/product-short.md)]-SIEM-Protokoll erstellen möchten, sollten Sie zur Identifizierung des Warnungstyps das Feld **externalID** statt des Warnungsnamens verwenden. Warnungsnamen können nämlich gelegentlich geändert werden, während die **externalId** jeder Warnung dauerhaft ist. Weitere Informationen finden Sie unter [[!INCLUDE [Product short](includes/product-short.md)]Referenz zum SIEM-Protokoll](cef-format-sa.md).
 
 ## <a name="see-also"></a>Weitere Informationen
 
 - [Working with sensitive accounts (Arbeiten mit sensiblen Konten)](sensitive-accounts.md)
-- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)
+- [Weitere Informationen finden Sie im [!INCLUDE [Product short](includes/product-short.md)]-Forum.](https://aka.ms/MDIcommunity)
