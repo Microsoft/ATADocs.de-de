@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6e46d6b794386e21654d578f6273de8c7c8b89f2
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 9e1bfe428a466e4870613798e4af116f27d63647
+ms.sourcegitcommit: 218ba562a2a109ff456b011004530f503a4e82c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276125"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93342503"
 ---
 # <a name="configure-product-long-to-make-remote-calls-to-sam"></a>Konfigurieren [!INCLUDE [Product long](includes/product-long.md)] von, um Remote Aufrufe an Sam durchführen
 
@@ -26,7 +26,7 @@ ms.locfileid: "93276125"
 
 ## <a name="configure-sam-r-required-permissions"></a>Konfigurieren von für SAM-R erforderliche Berechtigungen
 
-Um sicherzustellen, dass Windows-Clients und-Server Ihr [!INCLUDE [Product short](includes/product-short.md)] Konto Sam-R durchführen können, muss eine Änderung an **Gruppenrichtlinie** vorgenommen werden, um das [!INCLUDE [Product short](includes/product-short.md)] Dienst Konto zusätzlich zu den in der **Netzwerk Zugriffs** Richtlinie aufgeführten konfigurierten Konten hinzuzufügen. Stellen Sie sicher, dass Gruppenrichtlinien auf alle Computer außer Domänencontroller angewendet werden.
+Um sicherzustellen, dass Windows-Clients und-Server Ihr [!INCLUDE [Product short](includes/product-short.md)] Konto Sam-R durchführen können, muss eine Änderung an **Gruppenrichtlinie** vorgenommen werden, um das [!INCLUDE [Product short](includes/product-short.md)] Dienst Konto zusätzlich zu den in der **Netzwerk Zugriffs** Richtlinie aufgeführten konfigurierten Konten hinzuzufügen. Stellen Sie sicher, dass Sie Gruppenrichtlinien auf alle Computer **außer Domänen Controllern** anwenden.
 
 > [!Note]
 > Bevor Sie neue Richtlinien wie die zuvor erwähnte erzwingen, ist es wichtig, dass Sie die Sicherheit Ihrer Umgebung gewährleisten können und dass die Änderungen sich nicht auf die Anwendungskompatibilität auswirken. Aktivieren und überprüfen Sie daher zunächst die Kompatibilität vorgeschlagener Änderungen im Überwachungsmodus, bevor Sie Änderungen an Ihrer Produktionsumgebung vornehmen.

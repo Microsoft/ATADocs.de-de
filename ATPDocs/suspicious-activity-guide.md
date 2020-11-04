@@ -1,42 +1,41 @@
 ---
-title: Leitfaden zu Azure ATP-Sicherheitswarnungen
-description: Dieser Artikel enthält eine Liste der Sicherheitswarnungen, die von Azure ATP ausgegeben werden.
+title: Leitfaden für Microsoft Defender for Identity-Sicherheitswarnungen
+description: Dieser Artikel enthält eine Liste der Sicherheitswarnungen, die von Microsoft Defender for Identity ausgegeben werden.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 04/23/2020
+ms.date: 10/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f0c39f6ec4d47136324ba25c5c9bd29e0409854c
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 254c6e6d5130936b32c859ceb96ee2995461cf3c
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90909972"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93274150"
 ---
-# <a name="azure-atp-security-alerts"></a>Azure ATP-Sicherheitswarnungen
+# <a name="product-long-security-alerts"></a>[!INCLUDE [Product long](includes/product-long.md)]-Sicherheitswarnungen
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
-> Die auf dieser Seite erläuterten Azure ATP-Features sind auch über das neue [Portal](https://portal.cloudappsecurity.com) zugänglich.
+> Die auf dieser Seite erläuterten [!INCLUDE [Product long](includes/product-long.md)]-Features sind auch über das neue [Portal](https://portal.cloudappsecurity.com) zugänglich.
 
-Azure ATP-Sicherheitswarnungen erklären die durch Azure ATP-Sensoren in Ihrem Netzwerk erkannten verdächtigen Aktivitäten sowie die an den betreffenden Bedrohungen beteiligten Akteure und Computer. Damit Sie einfach und direkt weitere Untersuchungen durchführen können, enthalten Beweislisten für Sicherheitswarnungen direkte Links zu den betroffenen Benutzern und Computern.
+[!INCLUDE [Product long](includes/product-long.md)]-Sicherheitswarnungen erklären die durch [!INCLUDE [Product short](includes/product-short.md)]-Sensoren in Ihrem Netzwerk erkannten verdächtigen Aktivitäten sowie die an den betreffenden Bedrohungen beteiligten Akteure und Computer. Damit Sie einfach und direkt weitere Untersuchungen durchführen können, enthalten Beweislisten für Sicherheitswarnungen direkte Links zu den betroffenen Benutzern und Computern.
 
-Azure ATP-Sicherheitswarnungen werden in die folgenden Kategorien oder Phasen unterteilt, wie die Phasen in einer typischen „Kill Chain“ eines Cyberangriffs. Öffnen Sie die folgenden Links, um mehr über die einzelnen Phasen, die Warnungen zur Erkennung der verschiedenen Angriffe sowie über die Verwendung der Warnungen zum Schutz Ihres Netzwerks zu erfahren:
+[!INCLUDE [Product short](includes/product-short.md)]-Sicherheitswarnungen werden in die folgenden Kategorien oder Phasen unterteilt, wie die Phasen in einer typischen „Kill Chain“ eines Cyberangriffs. Öffnen Sie die folgenden Links, um mehr über die einzelnen Phasen, die Warnungen zur Erkennung der verschiedenen Angriffe sowie über die Verwendung der Warnungen zum Schutz Ihres Netzwerks zu erfahren:
 
-  1. [Warnung zu Reconnaissancephase](reconnaissance-alerts.md)
-  2. [Warnungen zu Phase der kompromittierten Anmeldeinformationen](compromised-credentials-alerts.md)
-  3. [Lateral movement phase alerts (Warnung zur Lateral Movement-Phase)](lateral-movement-alerts.md)
-  4. [Warnungen zu Domänendominanzphase](domain-dominance-alerts.md)
-  5. [Warnungen zu Exfiltrationsphase](exfiltration-alerts.md)
+1. [Warnung zu Reconnaissancephase](reconnaissance-alerts.md)
+1. [Warnungen zu Phase der kompromittierten Anmeldeinformationen](compromised-credentials-alerts.md)
+1. [Lateral movement phase alerts (Warnung zur Lateral Movement-Phase)](lateral-movement-alerts.md)
+1. [Warnungen zu Domänendominanzphase](domain-dominance-alerts.md)
+1. [Warnungen zu Exfiltrationsphase](exfiltration-alerts.md)
 
-Weitere Informationen zur Struktur und zu gängigen Komponenten der Azure ATP-Sicherheitswarnungen finden Sie unter [Understanding security alerts (Grundlegendes zu Sicherheitswarnungen)](understanding-security-alerts.md).
+Weitere Informationen zur Struktur und zu gängigen Komponenten der [!INCLUDE [Product short](includes/product-short.md)]-Sicherheitswarnungen finden Sie unter [Understanding security alerts](understanding-security-alerts.md) (Grundlegendes zu Sicherheitswarnungen).
 
 ## <a name="security-alert-name-mapping-and-unique-external-ids"></a>Zuordnen von Sicherheitswarnungsnamen und eindeutigen externen IDs
 
@@ -81,7 +80,6 @@ In der folgenden Tabelle wird die Zuordnung zwischen den Warnungsnamen, den ents
 > |[Verdächtige VPN-Verbindung](compromised-credentials-alerts.md#suspicious-vpn-connection-external-id-2025)|2025|Mittel|Persistenz,<br>Umgehung der Verteidigung|
 > |[User and group membership reconnaissance (SAMR) (Reconnaissance über Benutzer und Gruppenmitgliedschaften (SAMR))](reconnaissance-alerts.md#user-and-group-membership-reconnaissance-samr-external-id-2021)|2021|Mittel|Ermittlung|
 > |[Reconnaissance über Benutzer und IP-Adressen (SMB)](reconnaissance-alerts.md#user-and-ip-address-reconnaissance-smb-external-id-2012)|2012|Mittel|Ermittlung|
-
 
 # <a name="cloud-app-security-ids"></a>[Cloud App Security-API](#tab/cloud-app-security)
 
@@ -133,4 +131,4 @@ In der folgenden Tabelle wird die Zuordnung zwischen den Warnungsnamen, den ents
 
 - [Arbeiten mit Sicherheitswarnungen](working-with-suspicious-activities.md)
 - [Verstehen von Sicherheitswarnungen](understanding-security-alerts.md)
-- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)
+- [Weitere Informationen finden Sie im [!INCLUDE [Product short](includes/product-short.md)]-Forum.](https://aka.ms/MDIcommunity)

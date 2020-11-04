@@ -1,41 +1,40 @@
 ---
-title: Überprüfen der Portspiegelung in Azure Advanced Threat Protection
-description: Beschreibt, wie die ordnungsgemäße Konfiguration der Portspiegelung in Azure ATP überprüft wird.
+title: Überprüfen der Portspiegelung in Microsoft Defender for Identity
+description: Hier wird beschrieben, wie die ordnungsgemäße Konfiguration der Portspiegelung in Microsoft Defender for Identity überprüft wird.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 02/19/2020
+ms.date: 10/27/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 0a56cf27-9eaa-4ad0-ae6c-9d0484c69094
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 35598f9ea3cdee1ede33b1770471108493ea13c6
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 7a665a20da3940b3146a007eea6ee75bd35d7930
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912256"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93274060"
 ---
 # <a name="validate-port-mirroring"></a>Überprüfen der Portspiegelung
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-Dieser Artikel ist für Sie nur interessant, wenn Sie den eigenständigen Azure ATP-Sensor anstelle des Azure ATP-Sensors bereitstellen.
+Dieser Artikel ist für Sie nur interessant, wenn Sie den eigenständigen [!INCLUDE [Product long](includes/product-long.md)]-Sensor anstelle des [!INCLUDE [Product short](includes/product-short.md)]-Sensors bereitstellen.
 
 > [!NOTE]
-> Eigenständige Azure ATP-Server unterstützen nicht die Erstellung von Protokolleinträgen für Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW), die Daten für mehrere Erkennungen bereitstellen. Zur vollständigen Abdeckung Ihrer Umgebung empfiehlt es sich, den Azure ATP-Sensor bereitzustellen.
+> Eigenständige [!INCLUDE [Product short](includes/product-short.md)]-Server unterstützen nicht die Erstellung von Protokolleinträgen für Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW), die Daten für mehrere Erkennungen bereitstellen. Zur vollständigen Abdeckung Ihrer Umgebung empfiehlt es sich, den [!INCLUDE [Product short](includes/product-short.md)]-Sensor bereitzustellen.
 
-Die folgenden Schritte führen Sie durch das Verfahren, mit dem Sie die ordnungsgemäße Konfiguration der Portspiegelung überprüfen. Damit Azure ATP ordnungsgemäß funktioniert, muss der eigenständige Azure ATP-Sensor den Datenverkehr zum und vom Domänencontroller anzeigen können. Als primäre Datenquelle verwendet Azure ATP eine ausführliche Paketüberprüfung (Deep Packet Inspection) des Netzwerkdatenverkehrs zu und von den Domänencontrollern. Damit Azure ATP den Netzwerkdatenverkehr anzeigen kann, muss die Portspiegelung konfiguriert sein. Die Portspiegelung kopiert den Datenverkehr von einem Port (dem Quellport) zu einem anderen Port (dem Zielport).
+Die folgenden Schritte führen Sie durch das Verfahren, mit dem Sie die ordnungsgemäße Konfiguration der Portspiegelung überprüfen. Damit [!INCLUDE [Product short](includes/product-short.md)] ordnungsgemäß funktioniert, muss der eigenständige [!INCLUDE [Product short](includes/product-short.md)]-Sensor den Datenverkehr zum und vom Domänencontroller anzeigen können. Als primäre Datenquelle verwendet [!INCLUDE [Product short](includes/product-short.md)] eine ausführliche Paketüberprüfung (Deep Packet Inspection) des Netzwerkdatenverkehrs zu und von den Domänencontrollern. Damit [!INCLUDE [Product short](includes/product-short.md)] den Netzwerkdatenverkehr anzeigen kann, muss die Portspiegelung konfiguriert sein. Die Portspiegelung kopiert den Datenverkehr von einem Port (dem Quellport) zu einem anderen Port (dem Zielport).
 
 ## <a name="validate-port-mirroring-using-net-mon"></a>Überprüfen von Portspiegelung mit Netzwerkmonitor (Network Monitor)
 
-1. Installieren Sie den [Microsoft-Netzwerkmonitor 3.4](https://www.microsoft.com/download/details.aspx?id=4865) auf dem eigenständigen ATP-Sensor, den Sie überprüfen möchten.
+1. Installieren Sie den [Microsoft-Netzwerkmonitor 3.4](https://www.microsoft.com/download/details.aspx?id=4865) auf dem eigenständigen [!INCLUDE [Product short](includes/product-short.md)]-Sensor, den Sie überprüfen möchten.
 
     > [!IMPORTANT]
-    > Wenn Sie Wireshark installieren, um die Portspiegelung zu überprüfen, starten Sie den Dienst des eigenständigen Azure ATP-Sensors nach der Überprüfung neu.
+    > Wenn Sie Wireshark installieren, um die Portspiegelung zu überprüfen, starten Sie den Dienst des eigenständigen [!INCLUDE [Product short](includes/product-short.md)]-Sensors nach der Überprüfung neu.
 
 1. Öffnen Sie Netzwerkmonitor, und erstellen Sie eine neue Registerkarte für die Erfassung.
 
@@ -45,15 +44,15 @@ Die folgenden Schritte führen Sie durch das Verfahren, mit dem Sie die ordnungs
 
     1. Klicken Sie auf **Neue Erfassung**.
 
-        ![Abbildung des Erstellens einer neuen Registerkarte für die Erfassung](media/atp-port-mirroring-capture.png)
+        ![Abbildung des Erstellens einer neuen Registerkarte für die Erfassung](media/port-mirroring-capture.png)
 
 1. Geben Sie im Fenster „Anzeigefilter“ den folgenden Filter ein: **KerberosV5 oder LDAP**. Klicken Sie dann auf **Übernehmen**.
 
-    ![Abbildung des Filters „KerberosV5 oder LDAP“](media/atp-port-mirroring-filter-settings.png)
+    ![Abbildung des Filters „KerberosV5 oder LDAP“](media/port-mirroring-filter-settings.png)
 
-1. Klicken Sie auf **Start**, um die Erfassungssitzung zu starten. Wenn der Datenverkehr zum und vom Domänencontroller nicht angezeigt wird, überprüfen Sie die Konfiguration der Portspiegelung.
+1. Klicken Sie auf **Start** , um die Erfassungssitzung zu starten. Wenn der Datenverkehr zum und vom Domänencontroller nicht angezeigt wird, überprüfen Sie die Konfiguration der Portspiegelung.
 
-    ![Abbildung Starten der Erfassungssitzung](media/atp-port-mirroring-capture-traffic.png)
+    ![Abbildung Starten der Erfassungssitzung](media/port-mirroring-capture-traffic.png)
 
     > [!NOTE]
     > Es ist wichtig, dass Ihnen der Datenverkehr zu und von den Domänencontrollern angezeigt wird.
@@ -64,4 +63,4 @@ Die folgenden Schritte führen Sie durch das Verfahren, mit dem Sie die ordnungs
 
 - [Configure event forwarding (Konfigurieren der Ereignisweiterleitung)](configure-event-forwarding.md)
 - [Konfigurieren der Portspiegelung](configure-port-mirroring.md)
-- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)
+- [Weitere Informationen finden Sie im [!INCLUDE [Product short](includes/product-short.md)]-Forum.](https://aka.ms/MDIcommunity)

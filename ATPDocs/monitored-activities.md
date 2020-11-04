@@ -1,41 +1,40 @@
 ---
-title: Von Azure ATP überwachte Domänenaktivitäten
-description: Beschreibt jeden Aktivitätstyp, der von Azure Advanced Threat Protection überwacht wird.
+title: Von Microsoft Defender for Identity überwachte Domänenaktivitäten
+description: Beschreibt jeden Aktivitätstyp, der von Microsoft Defender for Identity überwacht wird.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 03/19/2020
+ms.date: 10/26/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 37d1a032-65e7-4a89-be0b-c3f9cc2bacdb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 662fd074ef76207257721883b0223cc1ecc108b3
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: d69fef506f2f1e787039a3b2af1b35b81a3504fc
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912726"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93274847"
 ---
-# <a name="azure-atp-monitored-activities"></a>Von Azure ATP überwachte Aktivitäten
+# <a name="product-long-monitored-activities"></a>Von [!INCLUDE [Product long](includes/product-long.md)] überwachte Aktivitäten
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
-> Die auf dieser Seite erläuterten Azure ATP-Features sind auch über das neue [Portal](https://portal.cloudappsecurity.com) zugänglich.
+> Die auf dieser Seite erläuterten [!INCLUDE [Product long](includes/product-long.md)]-Features sind auch über das neue [Portal](https://portal.cloudappsecurity.com) zugänglich.
 
-Azure Advanced Threat Protection überwacht Informationen, die aus dem Active Directory, den Netzwerkaktivitäten und Ereignisaktivitäten Ihrer Organisation generiert wurden, um verdächtige Aktivitäten zu erkennen. Anhand der überwachten Aktivitätsinformationen kann Azure ATP Ihnen helfen, die Gültigkeit der einzelnen potenziellen Bedrohungen zu bestimmen sowie sie richtig zu selektieren und entsprechend zu reagieren.
+[!INCLUDE [Product long](includes/product-long.md)] überwacht Informationen, die aus dem Active Directory, den Netzwerkaktivitäten und Ereignisaktivitäten Ihrer Organisation generiert wurden, um verdächtige Aktivitäten zu erkennen. Anhand der überwachten Aktivitätsinformationen kann [!INCLUDE [Product short](includes/product-short.md)] Ihnen helfen, die Gültigkeit der einzelnen potenziellen Bedrohungen zu bestimmen sowie sie richtig zu selektieren und entsprechend zu reagieren.
 
-Im Fall einer gültigen Bedrohung oder von **richtig positiv** ermöglicht Azure ATP es Ihnen, den Umfang der Sicherheitsverletzung für jeden Incident zu ermitteln, zu untersuchen, welche Entitäten beteiligt sind, und zu bestimmen, wie sie korrigiert werden können.
+Im Fall einer gültigen Bedrohung oder von **richtig positiv** ermöglicht [!INCLUDE [Product short](includes/product-short.md)] es Ihnen, den Umfang der Sicherheitsverletzung für jeden Vorfall zu ermitteln, zu untersuchen, welche Entitäten beteiligt sind, und zu bestimmen, wie sie korrigiert werden können.
 
-Die von Azure ATP überwachten Informationen werden in Form von Aktivitäten angezeigt. Azure ATP unterstützt zurzeit die Überwachung der folgenden Aktivitätstypen:
+Die von [!INCLUDE [Product short](includes/product-short.md)] überwachten Informationen werden in Form von Aktivitäten angezeigt. [!INCLUDE [Product short](includes/product-short.md)] unterstützt zurzeit die Überwachung der folgenden Aktivitätstypen:
 
 > [!NOTE]
 >
-> - Dieser Artikel ist für alle Azure ATP-Sensortypen relevant.
-> - Von Azure ATP überwachte Aktivitäten werden auf der Profilseite sowohl für Benutzer als auch für Computer angezeigt.
+> - Dieser Artikel ist für alle [!INCLUDE [Product short](includes/product-short.md)]-Sensortypen relevant.
+> - Von [!INCLUDE [Product short](includes/product-short.md)] überwachte Aktivitäten werden auf der Profilseite sowohl für Benutzer als auch für Computer angezeigt.
 
 ## <a name="monitored-user-activities-user-account-ad-attribute-changes"></a>Überwachte Benutzeraktivitäten: Änderungen am AD-Attribut für Benutzerkonto
 
@@ -80,7 +79,7 @@ Die von Azure ATP überwachten Informationen werden in Form von Aktivitäten ang
 |Überwachte Aktivität|Beschreibung|
 |---------------------|------------------|
 |Verzeichnisdienstreplikation|Der Benutzer hat versucht, den Verzeichnisdienst zu replizieren.|
-|DNS-Abfrage|Der Typ der Benutzerabfrage, die für den Domänencontroller ausgeführt wurde (**AXFR**,**TXT**, **MX**, **NS**, **SRV**, **ANY**, **DNSKEY**).|
+|DNS-Abfrage|Der Typ der Benutzerabfrage, die für den Domänencontroller ausgeführt wurde ( **AXFR** , **TXT** , **MX** , **NS** , **SRV** , **ANY** , **DNSKEY** ).|
 |Abrufen von privaten Daten|Benutzer hat versucht, private Daten mithilfe des LSARPC-Protokolls abzufragen, oder diese Abfrage ist ihm gelungen.|
 |Erstellen eines Diensts|Benutzer hat versucht, einen bestimmten Dienst per Remotezugriff auf einem Remotecomputer zu erstellen.|
 |SMB-Sitzungsenumeration|Benutzer hat versucht, alle Benutzer mit offenen SMB-Sitzungen auf den Domänencontrollern aufzulisten.|
@@ -115,4 +114,4 @@ Die von Azure ATP überwachten Informationen werden in Form von Aktivitäten ang
 - [Verwenden von Sicherheitswarnungen](working-with-suspicious-activities.md)
 - [Leitfaden für Sicherheitswarnungen](suspicious-activity-guide.md)
 - [Untersuchen von Entitäten](investigate-entity.md)
-- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)
+- [Weitere Informationen finden Sie im [!INCLUDE [Product short](includes/product-short.md)]-Forum.](https://aka.ms/MDIcommunity)

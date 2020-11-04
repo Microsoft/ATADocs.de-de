@@ -1,31 +1,30 @@
 ---
-title: Referenz zum Azure ATP-SIEM-Protokoll
-description: Stellt Beispiele über verdächtige Aktivitätsprotokolle bereit, die von Azure ATP an SIEM gesendet werden.
+title: Referenz zum SIEM-Protokoll für Microsoft Defender for Identity
+description: Stellt Beispiele über verdächtige Aktivitätsprotokolle bereit, die von Microsoft Defender for Identity an SIEM gesendet werden.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 06/08/2020
+ms.date: 10/26/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 681b0fc541956c4a778310e78d79234c0fdd7495
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: e2ac1109454e3bef9baec2197d4db7f73698ed6c
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90911861"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93276500"
 ---
-# <a name="azure-atp-siem-log-reference"></a>Referenz zum Azure ATP-SIEM-Protokoll
+# <a name="product-long-siem-log-reference"></a>Referenz zum SIEM-Protokoll für [!INCLUDE [Product long](includes/product-long.md)]
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-Azure ATP kann Sicherheits- und Integritätswarnungsereignisse an SIEM weiterleiten. Warnungen und Ereignisse weisen das CEF-Format auf. Dieser Referenzartikel enthält Beispiele für die Protokolle, die an SIEM gesendet werden.
+[!INCLUDE [Product short](includes/product-short.md)] kann Sicherheits- und Integritätswarnungsereignisse an SIEM weiterleiten. Warnungen und Ereignisse weisen das CEF-Format auf. Dieser Referenzartikel enthält Beispiele für die Protokolle, die an SIEM gesendet werden.
 
-## <a name="sample-azure-atp-security-alerts-in-cef-format"></a>Beispielsicherheitswarnungen von Azure ATP im CEF-Format
+## <a name="sample-product-short-security-alerts-in-cef-format"></a>Beispielsicherheitswarnungen von [!INCLUDE [Product short](includes/product-short.md)] im CEF-Format
 
 Die folgenden Felder und deren Werte werden an Ihren SIEM-Agent weitergeleitet:
 
@@ -38,7 +37,7 @@ Die folgenden Felder und deren Werte werden an Ihren SIEM-Agent weitergeleitet:
 |msg|Eine Beschreibung der Warnung|
 |cnt|Für Warnungen, die die Häufigkeit angeben, mit der die Aktivität erfolgt ist (z. B. Brute Force mit einer Anzahl geschätzter Kennwörter)|
 |app |In dieser Warnung verwendetes Protokoll|
-|externalId|Ereignis-ID, die Azure ATP in das Ereignisprotokoll schreibt, das jedem Warnungstyp entspricht. Wenn Warnungen an Microsoft Cloud App Security weitergeleitet werden, wird dieses Feld mit der entsprechenden Cloud App Security-Warnungs-ID aufgefüllt.|
+|externalId|Ereignis-ID, die [!INCLUDE [Product short](includes/product-short.md)] in das Ereignisprotokoll schreibt, das jedem Warnungstyp entspricht. Wenn Warnungen an Microsoft Cloud App Security weitergeleitet werden, wird dieses Feld mit der entsprechenden Cloud App Security-Warnungs-ID aufgefüllt.|
 |cs#label|Die für CEF zulässigen Kundenzeichenfolgen, wobei „cs#label“ der Name des neuen Felds ist |
 |cs#|Die für CEF zulässigen Kundenzeichenfolgen, wobei „cs#“ der Wert ist|
 
@@ -49,11 +48,11 @@ Das Feld „cs1“ ist die Warnungs-URL.
 Das Feld „cs2“ ermittelt, ob die Warnung neu ist oder aktualisiert wurde.
 
 > [!NOTE]
-> Wenn Sie eine Automatisierung oder Skripts für Azure ATP-SIEM-Protokoll erstellen möchten, sollten Sie zur Identifizierung des Warnungstyps das Feld **externalID** statt des Warnungsnamens verwenden. Warnungsnamen können nämlich gelegentlich geändert werden, während die **externalId** jeder Warnung dauerhaft ist. Eine Liste externer IDs finden Sie unter [Zuordnen von Sicherheitswarnungsnamen und eindeutigen externen IDs](suspicious-activity-guide.md#security-alert-name-mapping-and-unique-external-ids).
+> Wenn Sie eine Automatisierung oder Skripts für [!INCLUDE [Product short](includes/product-short.md)]-SIEM-Protokoll erstellen möchten, sollten Sie zur Identifizierung des Warnungstyps das Feld **externalID** statt des Warnungsnamens verwenden. Warnungsnamen können nämlich gelegentlich geändert werden, während die **externalId** jeder Warnung dauerhaft ist. Eine Liste externer IDs finden Sie unter [Zuordnen von Sicherheitswarnungsnamen und eindeutigen externen IDs](suspicious-activity-guide.md#security-alert-name-mapping-and-unique-external-ids).
 
 ## <a name="sample-logs"></a>Beispielprotokolle
 
-Die Beispielprotokolle gelten zwar für RFC 5424, doch Azure ATP unterstützt auch RFC 3164.
+Die Beispielprotokolle gelten zwar für RFC 5424, doch [!INCLUDE [Product short](includes/product-short.md)] unterstützt auch RFC 3164.
 
 Prioritäten:
 
@@ -203,8 +202,8 @@ Prioritäten:
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](prerequisites.md)
-- [Azure ATP capacity planning (Azure ATP-Kapazitätsplanung)](capacity-planning.md)
+- [Voraussetzungen für [!INCLUDE [Product short](includes/product-short.md)]](prerequisites.md)
+- [Kapazitätsplanung für [!INCLUDE [Product short](includes/product-short.md)]](capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
 - [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-forwarding.md)
-- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)
+- [Weitere Informationen finden Sie im [!INCLUDE [Product short](includes/product-short.md)]-Forum.](https://aka.ms/MDIcommunity)
