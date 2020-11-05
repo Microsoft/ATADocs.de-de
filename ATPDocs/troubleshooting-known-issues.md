@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0cd22cad42d8933ebb36a7a7aea32d0a4cb7cdd4
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: d0c4bcc61c2b15ded71063f3b8c4058ce6dfcce7
+ms.sourcegitcommit: ac582a240e848ca12c80ac6104125a0f733b469e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93277816"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375555"
 ---
 # <a name="troubleshooting-product-long-known-issues"></a>Problembehandlung bei [!INCLUDE [Product long](includes/product-long.md)] bekannten Problemen
 
@@ -121,7 +121,7 @@ Verwenden Sie den vollständigen Befehl für eine erfolgreiche Installation.
 
 Wenn Sie versuchen, den [!INCLUDE [Product short](includes/product-short.md)] Sensor auf einem Computer zu installieren, der mit einem NIC-Team Vorgangs Adapter konfiguriert ist, erhalten Sie einen Installationsfehler. Wenn Sie den [!INCLUDE [Product short](includes/product-short.md)] Sensor auf einem Computer installieren möchten, der mit NIC-Team Vorgang konfiguriert ist, befolgen Sie die folgenden Anweisungen:
 
-1. Laden Sie das Installationsprogramm für die Npcap-Version 0.9984 von [https://nmap.org/npcap/](https://nmap.org/npcap/dist/npcap-0.9984.exe) herunter.
+1. Laden Sie das Installationsprogramm npcap Version 1,0 von herunter  [https://nmap.org/npcap/](https://nmap.org/npcap/dist/npcap-1.00.exe) .
     - Alternativ dazu können Sie die OEM-Version des Npcap-Treibers (der die automatische Installation unterstützt) vom Supportteam anfordern.
     - Kopien von npcap werden nicht in Bezug auf die fünf Kopier-, fünf Computer-oder Benutzer Lizenzierungs Einschränkungen gezählt, wenn Sie nur in Verbindung mit installiert und verwendet werden [!INCLUDE [Product short](includes/product-short.md)] . Weitere Informationen finden Sie unter [NPCAP-Lizenzierung](https://github.com/nmap/npcap/blob/master/LICENSE).
 
@@ -210,8 +210,8 @@ Keine bekannte Lösung.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [[!INCLUDE [Product short](includes/product-short.md)] Voraussetzung](prerequisites.md)
-- [[!INCLUDE [Product short](includes/product-short.md)] Kapazitätsplanung](capacity-planning.md)
+- [Voraussetzungen für [!INCLUDE [Product short](includes/product-short.md)]](prerequisites.md)
+- [Kapazitätsplanung für [!INCLUDE [Product short](includes/product-short.md)]](capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
 - [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-forwarding.md)
-- [Sehen Sie sich das [!INCLUDE [Product short](includes/product-short.md)] Forum an!](https://aka.ms/MDIcommunity)
+- [Weitere Informationen finden Sie im [!INCLUDE [Product short](includes/product-short.md)]-Forum.](https://aka.ms/MDIcommunity)
