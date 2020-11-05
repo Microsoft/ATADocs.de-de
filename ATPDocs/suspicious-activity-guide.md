@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 254c6e6d5130936b32c859ceb96ee2995461cf3c
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 8b79365410e6f8d0c612ceef54277003a1d95b98
+ms.sourcegitcommit: 3c5ca2cb13ebe6c839ede951b238261d1fc73f26
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93274150"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93343568"
 ---
 # <a name="product-long-security-alerts"></a>[!INCLUDE [Product long](includes/product-long.md)]-Sicherheitswarnungen
 
@@ -47,6 +47,7 @@ In der folgenden Tabelle wird die Zuordnung zwischen den Warnungsnamen, den ents
 > |Sicherheitswarnungsname|Eindeutige externe ID|Schweregrad|MITRE ATT&CK Matrix&trade;|
 > |---|---|---|---|
 > |[Reconnaissance mithilfe von Kontoenumeration](reconnaissance-alerts.md#account-enumeration-reconnaissance-external-id-2003)|2003|Mittel|Ermittlung|
+> |[Active Directory-Attributreconnaissance (LDAP)](reconnaissance-alerts.md#active-directory-attributes-reconnaissance-ldap-external-id-2210)|2210|Mittel|Ermittlung|
 > |[Datenexfiltration über den SMB](exfiltration-alerts.md#data-exfiltration-over-smb-external-id-2030)|2030|Hoch|Exfiltration,<br>Seitliche Verschiebung,<br>Befehl und Steuerung|
 > |[Honeytoken-Aktivität](compromised-credentials-alerts.md#honeytoken-activity-external-id-2014)|2014|Mittel|Zugriff über Anmeldeinformationen,<br>Ermittlung|
 > |[Malicious request of Data Protection API master key (Böswillige Anforderung eines Masterschlüssels zur Datenschutz-API)](domain-dominance-alerts.md#malicious-request-of-data-protection-api-master-key-external-id-2020)|2020|Hoch|Zugriff über Anmeldeinformationen|
@@ -54,9 +55,9 @@ In der folgenden Tabelle wird die Zuordnung zwischen den Warnungsnamen, den ents
 > |[Versuchte Remotecodeausführung](domain-dominance-alerts.md#remote-code-execution-attempt-external-id-2019)|2019|Mittel|Ausführung,<br>Persistenz,<br>Ausweitung von Berechtigungen,<br>Umgehung der Verteidigung,<br>Seitwärtsbewegung|
 > |[Remotecodeausführung über DNS](lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036)|2036|Mittel|Ausweitung von Berechtigungen,<br>Seitwärtsbewegung|
 > |[Sicherheitsprinzipalreconnaissance (LDAP)](reconnaissance-alerts.md#security-principal-reconnaissance-ldap-external-id-2038)|2038|Mittel|Zugriff über Anmeldeinformationen|
-> |[Suspected Brute Force attack (Kerberos NTLM) (Verdacht auf einen Brute-Force-Angriff (Kerberos NTLM))](compromised-credentials-alerts.md#suspected-brute-force-attack-kerberos-ntlm-external-id-2023)|2023|Mittel|Zugriff über Anmeldeinformationen|
-> |[Suspected Brute Force attack (LDAP) (Verdacht auf einen Brute-Force-Angriff (LDAP))](compromised-credentials-alerts.md#suspected-brute-force-attack-ldap-external-id-2004)|2004|Mittel|Zugriff über Anmeldeinformationen|
-> |[Suspected Brute Force attack (SMB) (Verdacht auf einen Brute-Force-Angriff (SMB))](compromised-credentials-alerts.md#suspected-brute-force-attack-smb-external-id-2033)|2033|Mittel|Seitwärtsbewegung|
+> |[Vermuteter Brute-Force-Angriff (Kerberos, NTLM)](compromised-credentials-alerts.md#suspected-brute-force-attack-kerberos-ntlm-external-id-2023)|2023|Mittel|Zugriff über Anmeldeinformationen|
+> |[Vermuteter Brute-Force-Angriff (LDAP)](compromised-credentials-alerts.md#suspected-brute-force-attack-ldap-external-id-2004)|2004|Mittel|Zugriff über Anmeldeinformationen|
+> |[Vermuteter Brute-Force-Angriff (SMB)](compromised-credentials-alerts.md#suspected-brute-force-attack-smb-external-id-2033)|2033|Mittel|Seitwärtsbewegung|
 > |[Suspected DCShadow attack (domain controller promotion) (Verdacht auf DCShadow-Angriff (Heraufstufung von Domänencontrollern))](domain-dominance-alerts.md#suspected-dcshadow-attack-domain-controller-promotion-external-id-2028)|2028|Hoch|Umgehung der Verteidigung|
 > |[Verdacht auf DCShadow-Angriff (Replikationsanforderung an Domänencontroller)](domain-dominance-alerts.md#suspected-dcshadow-attack-domain-controller-replication-request-external-id-2029)|2029|Hoch|Umgehung der Verteidigung|
 > |[Suspected DCSync attack (replication of directory services) (Verdacht auf einen DCSync-Angriff (Replikation von Verzeichnisdiensten))](domain-dominance-alerts.md#suspected-dcsync-attack-replication-of-directory-services-external-id-2006)|2006|Hoch|Persistenz,<br>Zugriff über Anmeldeinformationen|
@@ -64,13 +65,16 @@ In der folgenden Tabelle wird die Zuordnung zwischen den Warnungsnamen, den ents
 > |[Suspected Golden Ticket usage (forged authorization data) (Verdacht auf Verwendung eines Golden Ticket (gefälschte Autorisierungsdaten))](domain-dominance-alerts.md#suspected-golden-ticket-usage-forged-authorization-data-external-id-2013)|2013|Hoch|Ausweitung von Berechtigungen,<br>Seitliche Verschiebung,<br>Persistenz|
 > |[Suspected Golden Ticket usage (nonexistent account) (Verdacht auf Verwendung eines Golden Ticket (nicht vorhandenes Konto))](domain-dominance-alerts.md#suspected-golden-ticket-usage-nonexistent-account-external-id-2027)|2027|Hoch|Ausweitung von Berechtigungen,<br>Seitliche Verschiebung,<br>Persistenz|
 > |[Vermutete Golden Ticket-Verwendung (Ticketanomalie)](domain-dominance-alerts.md#suspected-golden-ticket-usage-ticket-anomaly-external-id-2032)|2032|Hoch|Ausweitung von Berechtigungen,<br>Seitliche Verschiebung,<br>Persistenz|
+> |[Vermutete Golden Ticket-Verwendung (Ticketanomalie mithilfe von RBCD)](domain-dominance-alerts.md#suspected-golden-ticket-usage-ticket-anomaly-using-rbcd-external-id-2040)|2040|Hoch|Persistenz|
 > |[Suspected golden ticket usage (time anomaly) (Verdacht auf Verwendung eines Golden Ticket (Zeitanomalie))](domain-dominance-alerts.md#suspected-golden-ticket-usage-time-anomaly-external-id-2022)|2022|Hoch|Ausweitung von Berechtigungen,<br>Seitliche Verschiebung,<br>Persistenz|
 > |[Suspected identity theft (Pass-the-Hash) (Verdacht auf Identitätsdiebstahl (Pass-the-Hash))](lateral-movement-alerts.md#suspected-identity-theft-pass-the-hash-external-id-2017)|2017|Hoch|Seitliche Verschiebung|
 > |[Suspected identity theft (Pass-the-Ticket) (Verdacht auf Identitätsdiebstahl (Pass-the-Ticket))](lateral-movement-alerts.md#suspected-identity-theft-pass-the-ticket-external-id-2018)|2018|Hoch oder Mittel|Seitwärtsbewegung|
+> |[Verdächtigter Netlogon-Rechteerweiterungsversuch (CVE-2020-1472-Ausnutzung)](compromised-credentials-alerts.md#suspected-netlogon-priv-elev-2411)|2411|Hoch|Berechtigungsausweitung|
 > |[Suspected NTLM authentication tampering (Vermutete Manipulation der NTLM-Authentifizierung)](lateral-movement-alerts.md#suspected-ntlm-authentication-tampering-external-id-2039)|2039|Mittel|Ausweitung von Berechtigungen, <br>Seitwärtsbewegung|
 > |[Vermuteter NTLM-Relaisangriff](lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037)|2037|Mittel oder Niedrig, wenn mithilfe von signiertem NTLMv2-Protokoll beobachtet|Ausweitung von Berechtigungen, <br>Seitwärtsbewegung|
 > |[Suspected overpass-the-hash attack (Kerberos) (Verdacht auf einen Overpass-the-Hash-Angriff (Kerberos))](lateral-movement-alerts.md#suspected-overpass-the-hash-attack-kerberos-external-id-2002)|2002|Mittel|Seitwärtsbewegung|
-> |[Suspected Skeleton Key attack (encryption downgrade) (Verdacht auf Skeleton-Key-Angriff (Herabstufung der Verschlüsselung))](domain-dominance-alerts.md#suspected-skeleton-key-attack-encryption-downgrade-external-id-2010)|2010|Mittel|Seitliche Verschiebung,<br>Persistenz|
+> |[Mutmaßliche Verwendung von Rogue-Kerberos-Zertifikat](lateral-movement-alerts.md#suspected-rogue-kerberos-certificate-usage-external-id-2047)|2047|Hoch|Seitliche Verschiebung|
+> |[Vermuteter Skeleton Key-Angriff (Herabstufung der Verschlüsselung)](domain-dominance-alerts.md#suspected-skeleton-key-attack-encryption-downgrade-external-id-2010)|2010|Mittel|Seitliche Verschiebung,<br>Persistenz|
 > |[Mutmaßliche Manipulation von SMB-Paketen (Exploit von CVE-2020-0796) (Vorschau)](lateral-movement-alerts.md#suspected-smb-packet-manipulation-cve-2020-0796-exploitation-external-id-2406)|2406|Hoch|Seitliche Verschiebung|
 > |[Suspected use of Metasploit hacking framework (Verdacht auf Verwendung eines Hackerframeworks)](compromised-credentials-alerts.md#suspected-use-of-metasploit-hacking-framework-external-id-2034)|2034|Mittel|Seitliche Verschiebung|
 > |[Suspected WannaCry ransomware attack (Verdacht auf einen WannaCry-Ransomangriff)](compromised-credentials-alerts.md#suspected-wannacry-ransomware-attack-external-id-2035)|2035|Mittel|Seitwärtsbewegung|
@@ -78,8 +82,12 @@ In der folgenden Tabelle wird die Zuordnung zwischen den Warnungsnamen, den ents
 > |[Verdächtige Kommunikation über DNS](exfiltration-alerts.md#suspicious-communication-over-dns-external-id-2031)|2031|Mittel|Exfiltration|
 > |[Erstellung von verdächtigen Diensten](domain-dominance-alerts.md#suspicious-service-creation-external-id-2026)|2026|Mittel|Ausführung,<br>Persistenz,<br>Ausweitung von Berechtigungen,<br>Umgehung der Verteidigung,<br>Seitwärtsbewegung|
 > |[Verdächtige VPN-Verbindung](compromised-credentials-alerts.md#suspicious-vpn-connection-external-id-2025)|2025|Mittel|Persistenz,<br>Umgehung der Verteidigung|
-> |[User and group membership reconnaissance (SAMR) (Reconnaissance über Benutzer und Gruppenmitgliedschaften (SAMR))](reconnaissance-alerts.md#user-and-group-membership-reconnaissance-samr-external-id-2021)|2021|Mittel|Ermittlung|
+> |[Reconnaissance über Benutzer und Gruppenmitgliedschaften (SAMR)](reconnaissance-alerts.md#user-and-group-membership-reconnaissance-samr-external-id-2021)|2021|Mittel|Ermittlung|
 > |[Reconnaissance über Benutzer und IP-Adressen (SMB)](reconnaissance-alerts.md#user-and-ip-address-reconnaissance-smb-external-id-2012)|2012|Mittel|Ermittlung|
+
+<!--
+> |[Suspected Kerberos SPN exposure (external ID 2410)](compromised-credentials-alerts.md#suspected-kerberos-spn-exposure-external-id-2410)|2410|High|Credential access|
+-->
 
 # <a name="cloud-app-security-ids"></a>[Cloud App Security-API](#tab/cloud-app-security)
 
@@ -87,6 +95,7 @@ In der folgenden Tabelle wird die Zuordnung zwischen den Warnungsnamen, den ents
 > |Sicherheitswarnungsname|Cloud App Security-Warnungs-ID|
 > |---|---|
 > |[Reconnaissance mithilfe von Kontoenumeration](reconnaissance-alerts.md#account-enumeration-reconnaissance-external-id-2003)|ALERT_EXTERNAL_AATP_ACCOUNT_ENUMERATION_SECURITY_ALERT|
+> |[Active Directory-Attributreconnaissance (LDAP)](reconnaissance-alerts.md#active-directory-attributes-reconnaissance-ldap-external-id-2210)|ALERT_EXTERNAL_AATP_LDAP_SENSITIVE_ATTRIBUTE_RECONNAISSANCE_SECURITY_ALERT|
 > |[Datenexfiltration über den SMB](exfiltration-alerts.md#data-exfiltration-over-smb-external-id-2030)|ALERT_EXTERNAL_AATP_SMB_DATA_EXFILTRATION_SECURITY_ALERT|
 > |[Honeytoken-Aktivität](compromised-credentials-alerts.md#honeytoken-activity-external-id-2014)|ALERT_EXTERNAL_AATP_HONEYTOKEN_ACTIVITY_SECURITY_ALERT|
 > |[Malicious request of Data Protection API master key (Böswillige Anforderung eines Masterschlüssels zur Datenschutz-API)](domain-dominance-alerts.md#malicious-request-of-data-protection-api-master-key-external-id-2020)|ALERT_EXTERNAL_AATP_RETRIEVE_DATA_PROTECTION_BACKUP_KEY_SECURITY_ALERT|
@@ -94,9 +103,9 @@ In der folgenden Tabelle wird die Zuordnung zwischen den Warnungsnamen, den ents
 > |[Versuchte Remotecodeausführung](domain-dominance-alerts.md#remote-code-execution-attempt-external-id-2019)|ALERT_EXTERNAL_AATP_REMOTE_EXECUTION_SECURITY_ALERT|
 > |[Remotecodeausführung über DNS](lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036)|ALERT_EXTERNAL_AATP_DNS_REMOTE_CODE_EXECUTION_SECURITY_ALERT|
 > |[Sicherheitsprinzipalreconnaissance (LDAP)](reconnaissance-alerts.md#security-principal-reconnaissance-ldap-external-id-2038)|ALERT_EXTERNAL_AATP_LDAP_SEARCH_RECONNAISSANCE_SECURITY_ALERT|
-> |[Suspected Brute Force attack (Kerberos NTLM) (Verdacht auf einen Brute-Force-Angriff (Kerberos NTLM))](compromised-credentials-alerts.md#suspected-brute-force-attack-kerberos-ntlm-external-id-2023)|ALERT_EXTERNAL_AATP_REMOTE_EXECUTION_SECURITY_ALERT|
-> |[Suspected Brute Force attack (LDAP) (Verdacht auf einen Brute-Force-Angriff (LDAP))](compromised-credentials-alerts.md#suspected-brute-force-attack-ldap-external-id-2004)|ALERT_EXTERNAL_AATP_LDAP_BRUTE_FORCE_SECURITY_ALERT|
-> |[Suspected Brute Force attack (SMB) (Verdacht auf einen Brute-Force-Angriff (SMB))](compromised-credentials-alerts.md#suspected-brute-force-attack-smb-external-id-2033)|ALERT_EXTERNAL_AATP_ABNORMAL_SMB_BRUTE_FORCE_SECURITY_ALERT|
+> |[Vermuteter Brute-Force-Angriff (Kerberos, NTLM)](compromised-credentials-alerts.md#suspected-brute-force-attack-kerberos-ntlm-external-id-2023)|ALERT_EXTERNAL_AATP_REMOTE_EXECUTION_SECURITY_ALERT|
+> |[Vermuteter Brute-Force-Angriff (LDAP)](compromised-credentials-alerts.md#suspected-brute-force-attack-ldap-external-id-2004)|ALERT_EXTERNAL_AATP_LDAP_BRUTE_FORCE_SECURITY_ALERT|
+> |[Vermuteter Brute-Force-Angriff (SMB)](compromised-credentials-alerts.md#suspected-brute-force-attack-smb-external-id-2033)|ALERT_EXTERNAL_AATP_ABNORMAL_SMB_BRUTE_FORCE_SECURITY_ALERT|
 > |[Suspected DCShadow attack (domain controller promotion) (Verdacht auf DCShadow-Angriff (Heraufstufung von Domänencontrollern))](domain-dominance-alerts.md#suspected-dcshadow-attack-domain-controller-promotion-external-id-2028)|ALERT_EXTERNAL_AATP_DIRECTORY_SERVICES_ROGUE_PROMOTION_SECURITY_ALERT|
 > |[Verdacht auf DCShadow-Angriff (Replikationsanforderung an Domänencontroller)](domain-dominance-alerts.md#suspected-dcshadow-attack-domain-controller-replication-request-external-id-2029)|ALERT_EXTERNAL_AATP_DIRECTORY_SERVICES_ROGUE_PROMOTION_SECURITY_ALERT|
 > |[Suspected DCSync attack (replication of directory services) (Verdacht auf einen DCSync-Angriff (Replikation von Verzeichnisdiensten))](domain-dominance-alerts.md#suspected-dcsync-attack-replication-of-directory-services-external-id-2006)|ALERT_EXTERNAL_AATP_DIRECTORY_SERVICES_REPLICATION_SECURITY_ALERT|
@@ -104,13 +113,16 @@ In der folgenden Tabelle wird die Zuordnung zwischen den Warnungsnamen, den ents
 > |[Suspected Golden Ticket usage (forged authorization data) (Verdacht auf Verwendung eines Golden Ticket (gefälschte Autorisierungsdaten))](domain-dominance-alerts.md#suspected-golden-ticket-usage-forged-authorization-data-external-id-2013)|ALERT_EXTERNAL_AATP_FORGED_PAC_SECURITY_ALERT|
 > |[Suspected Golden Ticket usage (nonexistent account) (Verdacht auf Verwendung eines Golden Ticket (nicht vorhandenes Konto))](domain-dominance-alerts.md#suspected-golden-ticket-usage-nonexistent-account-external-id-2027)|ALERT_EXTERNAL_AATP_FORGED_PRINCIPAL_SECURITY_ALERT|
 > |[Vermutete Golden Ticket-Verwendung (Ticketanomalie)](domain-dominance-alerts.md#suspected-golden-ticket-usage-ticket-anomaly-external-id-2032)|ALERT_EXTERNAL_AATP_GOLDEN_TICKET_SIZE_ANOMALY_SECURITY_ALERT|
+> |[Vermutete Golden Ticket-Verwendung (Ticketanomalie mithilfe von RBCD)](domain-dominance-alerts.md#suspected-golden-ticket-usage-ticket-anomaly-using-rbcd-external-id-2040)|ALERT_EXTERNAL_AATP_RESOURCE_BASED_CONSTRAINED_DELEGATION_GOLDEN_TICKET_SECURITY_ALERT|
 > |[Suspected golden ticket usage (time anomaly) (Verdacht auf Verwendung eines Golden Ticket (Zeitanomalie))](domain-dominance-alerts.md#suspected-golden-ticket-usage-time-anomaly-external-id-2022)|ALERT_EXTERNAL_AATP_GOLDEN_TICKET_SECURITY_ALERT|
 > |[Suspected identity theft (Pass-the-Hash) (Verdacht auf Identitätsdiebstahl (Pass-the-Hash))](lateral-movement-alerts.md#suspected-identity-theft-pass-the-hash-external-id-2017)|ALERT_EXTERNAL_AATP_PASS_THE_HASH_SECURITY_ALERT|
 > |[Suspected identity theft (Pass-the-Ticket) (Verdacht auf Identitätsdiebstahl (Pass-the-Ticket))](lateral-movement-alerts.md#suspected-identity-theft-pass-the-ticket-external-id-2018)|ALERT_EXTERNAL_AATP_PASS_THE_TICKET_SECURITY_ALERT|
+> |[Verdächtigter Netlogon-Rechteerweiterungsversuch (CVE-2020-1472-Ausnutzung)](compromised-credentials-alerts.md#suspected-netlogon-priv-elev-2411)|ALERT_EXTERNAL_AATP_NETLOGON_BYPASS_SECURITY_ALERT|
 > |[Suspected NTLM authentication tampering (Vermutete Manipulation der NTLM-Authentifizierung)](lateral-movement-alerts.md#suspected-ntlm-authentication-tampering-external-id-2039)|ALERT_EXTERNAL_AATP_ABNORMAL_NTLM_SIGNING_SECURITY_ALERT|
 > |[Vermuteter NTLM-Relaisangriff](lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037)|ALERT_EXTERNAL_AATP_NTLM_RELAY_SECURITY_ALERT|
 > |[Suspected overpass-the-hash attack (Kerberos) (Verdacht auf einen Overpass-the-Hash-Angriff (Kerberos))](lateral-movement-alerts.md#suspected-overpass-the-hash-attack-kerberos-external-id-2002)|ALERT_EXTERNAL_AATP_ABNORMAL_KERBEROS_OVERPASS_THE_HASH_SECURITY_ALERT|
-> |[Suspected Skeleton Key attack (encryption downgrade) (Verdacht auf Skeleton-Key-Angriff (Herabstufung der Verschlüsselung))](domain-dominance-alerts.md#suspected-skeleton-key-attack-encryption-downgrade-external-id-2010)|ALERT_EXTERNAL_AATP_SKELETON_KEY_ENCRYPTION_DOWNGRADE_SECURITY_ALERT|
+> |[Mutmaßliche Verwendung von Rogue-Kerberos-Zertifikat](lateral-movement-alerts.md#suspected-rogue-kerberos-certificate-usage-external-id-2047)|ALERT_EXTERNAL_AATP_ROGUE_CERTIFICATE_USAGE_SECURITY_ALERT|
+> |[Vermuteter Skeleton Key-Angriff (Herabstufung der Verschlüsselung)](domain-dominance-alerts.md#suspected-skeleton-key-attack-encryption-downgrade-external-id-2010)|ALERT_EXTERNAL_AATP_SKELETON_KEY_ENCRYPTION_DOWNGRADE_SECURITY_ALERT|
 > |[Mutmaßliche Manipulation von SMB-Paketen (Exploit von CVE-2020-0796) (Vorschau)](lateral-movement-alerts.md#suspected-smb-packet-manipulation-cve-2020-0796-exploitation-external-id-2406)|ALERT_EXTERNAL_AATP_SMB_GHOST_SECURITY_ALERT|
 > |[Suspected use of Metasploit hacking framework (Verdacht auf Verwendung eines Hackerframeworks)](compromised-credentials-alerts.md#suspected-use-of-metasploit-hacking-framework-external-id-2034)|ALERT_EXTERNAL_AATP_ABNORMAL_SMB_METASPLOIT_SECURITY_ALERT|
 > |[Suspected WannaCry ransomware attack (Verdacht auf einen WannaCry-Ransomangriff)](compromised-credentials-alerts.md#suspected-wannacry-ransomware-attack-external-id-2035)|ALERT_EXTERNAL_AATP_ABNORMAL_SMB_WANNA_CRY_SECURITY_ALERT|
@@ -118,8 +130,12 @@ In der folgenden Tabelle wird die Zuordnung zwischen den Warnungsnamen, den ents
 > |[Verdächtige Kommunikation über DNS](exfiltration-alerts.md#suspicious-communication-over-dns-external-id-2031)|ALERT_EXTERNAL_AATP_DNS_SUSPICIOUS_COMMUNICATION_SECURITY_ALERT|
 > |[Erstellung von verdächtigen Diensten](domain-dominance-alerts.md#suspicious-service-creation-external-id-2026)|ALERT_EXTERNAL_AATP_MALICIOUS_SERVICE_CREATION_SECURITY_ALERT|
 > |[Verdächtige VPN-Verbindung](compromised-credentials-alerts.md#suspicious-vpn-connection-external-id-2025)|ALERT_EXTERNAL_AATP_ABNORMAL_VPN_SECURITY_ALERT|
-> |[User and group membership reconnaissance (SAMR) (Reconnaissance über Benutzer und Gruppenmitgliedschaften (SAMR))](reconnaissance-alerts.md#user-and-group-membership-reconnaissance-samr-external-id-2021)|ALERT_EXTERNAL_AATP_SAMR_RECONNAISSANCE_SECURITY_ALERT|
+> |[Reconnaissance über Benutzer und Gruppenmitgliedschaften (SAMR)](reconnaissance-alerts.md#user-and-group-membership-reconnaissance-samr-external-id-2021)|ALERT_EXTERNAL_AATP_SAMR_RECONNAISSANCE_SECURITY_ALERT|
 > |[Reconnaissance über Benutzer und IP-Adressen (SMB)](reconnaissance-alerts.md#user-and-ip-address-reconnaissance-smb-external-id-2012)|ALERT_EXTERNAL_AATP_ENUMERATE_SESSIONS_SECURITY_ALERT|
+
+<!--
+> |[Kerberos SPN exposure (external ID 2410)](compromised-credentials-alerts.md#suspected-kerberos-spn-exposure-external-id-2410)|ALERT_EXTERNAL_AATP_KERBEROASTING_SECURITY_ALERT|
+-->
 
 <!-- FROM TOP TABLE |[Suspected over-pass-the-hash attack (encryption downgrade)](lateral-movement-alerts.md#suspected-overpass-the-hash-attack-encryption-downgrade-external-id-2008)|2008|Medium|Lateral movement|-->
 <!-- FROM BOTTOM TABLE |[Suspected over-pass-the-hash attack (encryption downgrade)](lateral-movement-alerts.md#suspected-overpass-the-hash-attack-encryption-downgrade-external-id-2008)|ALERT_EXTERNAL_AATP_OVERPASS_THE_HASH_ENCRYPTION_DOWNGRADE_SECURITY_ALERT|-->

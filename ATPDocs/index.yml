@@ -1,9 +1,9 @@
 ### YamlMime:Landing
-title: Dokumentation zu Azure Advanced Threat Protection
-summary: Der Clouddienst Azure Advanced Threat Protection (ATP) unterstützt Sie dabei, Ihre hybriden Unternehmensumgebungen vor verschiedenen hochentwickelten und gezielten Cyberangriffen und Bedrohungen von innen zu schützen.
+title: Dokumentation für Microsoft Defender for Identity
+summary: Microsoft Defender for Identity unterstützt Sie dabei, Ihre hybriden Unternehmensumgebungen vor verschiedenen hochentwickelten und gezielten Cyberangriffen und Bedrohungen von innen zu schützen.
 metadata:
-  title: Dokumentation zu Azure Advanced Threat Protection
-  description: Der Clouddienst Azure Advanced Threat Protection (ATP) unterstützt Sie dabei, Ihre hybriden Unternehmensumgebungen vor verschiedenen hochentwickelten und gezielten Cyberangriffen und Bedrohungen von innen zu schützen.
+  title: Dokumentation für Microsoft Defender for Identity
+  description: Microsoft Defender for Identity unterstützt Sie dabei, Ihre hybriden Unternehmensumgebungen vor verschiedenen hochentwickelten und gezielten Cyberangriffen und Bedrohungen von innen zu schützen.
   services: service
   ms.service: azure-advanced-threat-protection
   ms.subservice: subservice
@@ -12,32 +12,32 @@ metadata:
   author: shsagir
   ms.author: shsagir
   ms.date: 09/23/2019
-  ms.openlocfilehash: 2c6de3d806f80ef8d05b4e25d8101c71c35207b5
-  ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+  ms.openlocfilehash: 791e24e1460ce6a2a50caea0d05eb9461ab34654
+  ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 09/21/2020
-  ms.locfileid: "90826599"
+  ms.lasthandoff: 11/03/2020
+  ms.locfileid: "93276167"
 landingContent:
-- title: Informationen zu Azure Advanced Threat Protection (Azure ATP)
+- title: Informationen zu Microsoft Defender for Identity
   linkLists:
   - linkListType: overview
     links:
-    - text: Was ist Azure Advanced Threat Protection?
+    - text: Was ist Microsoft Defender for Identity?
       url: what-is.md
   - linkListType: architecture
     links:
     - text: Azure ATP-Architektur
       url: architecture.md
-    - text: Azure ATP über Cloud App Security
+    - text: Verwenden von Defender for Identity mithilfe von Cloud App Security
       url: mcas-integration.md
   - linkListType: video
     links:
-    - text: Einführung in Azure ATP
+    - text: Einführung in Defender for Identity
       url: https://www.youtube.com/watch?reload=9&v=EGY2m8yU_KE
-    - text: Grundlagen zu Azure ATP
+    - text: Defender for Identity (Grundlagen)
       url: https://www.youtube.com/watch?v=QXZIfH0wP3Q
-- title: Überprüfen von Azure ATP-Warnungen
+- title: Warnungen zu Defender for Identity
   linkLists:
   - linkListType: get-started
     links:
@@ -47,13 +47,13 @@ landingContent:
       url: health-center.md
     - text: Überwachen Ihrer Domänencontroller
       url: sensor-monitoring.md
-- title: Erkunden unterschiedlicher Verwendungsmöglichkeiten von Azure ATP
+- title: Verschiedene Möglichkeiten zur Verwendung von Defender for Identität
   linkLists:
   - linkListType: how-to-guide
     links:
     - text: Bewertungen des Identitätssicherheitsstatus von Azure ATP
       url: isp-overview.md
-    - text: 'Lab: Azure ATP-Sicherheitswarnungen'
+    - text: Lab für Sicherheitswarnungen für Defender for Identity
       url: playbook-lab-overview.md
     - text: Ausschließen von Entitäten von der Erkennung
       url: excluding-entities-from-detections.md
@@ -61,17 +61,17 @@ landingContent:
       url: activities-search.md
     - text: Verwenden von Ausschlüssen und Honeytoken-Konten
       url: install-step7.md
-    - text: Verlagern von Advanced Threat Analytics (ATA) zu Azure ATP
+    - text: Advanced Threat Analytics (ATA) zu Microsoft Defender for Identity
       url: migrate-from-ata-overview.md
 - title: Verwalten und Beheben von Sicherheitswarnungen
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Untersuchen von Azure ATP-Warnungen
+    - text: Untersuchen von Defender for Identity-Warnungen
       url: suspicious-activity-guide.md
     - text: Verwalten von Sicherheitswarnungen
       url: working-with-suspicious-activities.md
-    - text: Festlegen von Azure ATP-Benachrichtigungen
+    - text: Festlegen von Defender for Identity-Benachrichtigungen
       url: notifications.md
 - title: Untersuchen von Bedrohungen
   linkLists:
@@ -85,11 +85,11 @@ landingContent:
       url: investigate-lateral-movement-path.md
     - text: Untersuchen von Entitäten
       url: investigate-entity.md
-- title: Azure ATP mit Microsoft Cloud App Security
+- title: Verwenden von Defender for Identity mithilfe von Microsoft Cloud App Security
   linkLists:
   - linkListType: deploy
     links:
-    - text: Verwenden von Azure ATP mit Cloud App Security
+    - text: Verwenden von Defender for Identity mit Cloud App Security
       url: mcas-integration.md
     - text: Filteraktivitäten und Festlegen von Richtlinien
       url: activities-filtering-mcas.md
@@ -101,7 +101,7 @@ landingContent:
       url: technical-faq.md
     - text: Support und Informationen
       url: support.md
-    - text: Roadmap für die ATP-Bereitschaft
+    - text: Roadmap für die Defender for Identity-Bereitschaft
       url: resources.md
-    - text: Sicherheit und Datenschutz für Azure ATP
+    - text: Datensicherheit und Datenschutz bei Defender for Identity
       url: privacy-compliance.md
