@@ -1,31 +1,30 @@
 ---
-title: Tutorial zu Azure ATP-Sicherheitswarnungen
-description: In diesem Artikel werden Azure ATP-Sicherheitswarnungen und deren Verwendung näher erläutert.
+title: Tutorial zu Microsoft Defender for Identity-Sicherheitswarnungen
+description: In diesem Artikel werden Sicherheitswarnungen von Microsoft Defender for Identity und deren Verwendung näher erläutert.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 1/13/2019
+ms.date: 10/27/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 671747d5-faed-4352-a871-17b58fdc6574
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2c871c3a504fc7f79cc3627b077d1bebc1814a82
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: ba5adecd1812d95f043d520773b1006a6e75b5b9
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912319"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93277787"
 ---
-# <a name="tutorial-understanding-security-alerts"></a>Tutorial: Grundlegendes zu Sicherheitswarnungen
+# <a name="understanding-security-alerts"></a>Grundlegendes zu Sicherheitswarnungen
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-Mit Azure ATP-Sicherheitswarnungen wird in verständlicher Sprache und anhand von Grafiken dargestellt, welche verdächtigen Aktivitäten in Ihrem Netzwerk identifiziert wurden und welche Benutzer und Computer an der Bedrohung beteiligt sind. Warnungen werden nach ihrem Schweregrad eingestuft. Sie sind für ein einfaches visuelles Filtern farbcodiert und werden nach Bedrohungsphasen sortiert. Jede Warnung soll Ihnen dabei helfen, einen schnellen Überblick darüber zu erhalten, was genau in Ihrem Netzwerk passiert. Damit Sie einfach und direkt weitere Untersuchungen durchführen können, enthalten Beweislisten für Sicherheitswarnungen direkte Links zu den betroffenen Benutzern und Computern.
+Mit [!INCLUDE [Product long](includes/product-long.md)]-Sicherheitswarnungen wird in verständlicher Sprache und anhand von Grafiken dargestellt, welche verdächtigen Aktivitäten in Ihrem Netzwerk identifiziert wurden und welche Akteure und Computer an der Bedrohung beteiligt sind. Warnungen werden nach ihrem Schweregrad eingestuft. Sie sind für ein einfaches visuelles Filtern farbcodiert und werden nach Bedrohungsphasen sortiert. Jede Warnung soll Ihnen dabei helfen, einen schnellen Überblick darüber zu erhalten, was genau in Ihrem Netzwerk passiert. Damit Sie einfach und direkt weitere Untersuchungen durchführen können, enthalten Beweislisten für Sicherheitswarnungen direkte Links zu den betroffenen Benutzern und Computern.
 
-In diesem Tutorial wird erläutert, wie Azure ATP-Sicherheitswarnungen aufgebaut sind und wie sie verwendet werden:
+In diesem Tutorial erfahren Sie, wie [!INCLUDE [Product short](includes/product-short.md)]-Sicherheitswarnungen aufgebaut sind und wie sie verwendet werden:
 
 > [!div class="checklist"]
 >
@@ -34,26 +33,30 @@ In diesem Tutorial wird erläutert, wie Azure ATP-Sicherheitswarnungen aufgebaut
 > - Kategorien der Sicherheitswarnungen
 > - Erweiterte Untersuchung der Sicherheitswarnungen
 > - Verwandte Entitäten
-> - Azure ATP und NNR (Network Name Resolution; Auflösung des Netzwerknamens)
+> - [!INCLUDE [Product short](includes/product-short.md)] und Netzwerknamensauflösung (Network Name Resolution, NNR)
 
 ## <a name="security-alert-structure"></a>Aufbau der Sicherheitswarnungen
 
-Jede Azure ATP-Sicherheitswarnung enthält folgende Informationen:
+Jede [!INCLUDE [Product short](includes/product-short.md)]-Sicherheitswarnung enthält folgende Informationen:
 
-- **Titel der Warnung** <br> Offizielle Azure ATP-Bezeichnung der Warnung.
-- **Beschreibung** <br> Kurze Erklärung der Vorfälle.
-- **Beweise** <br> Weitere relevante Informationen und verwandte Daten zu den Vorgängen, die im weiteren Untersuchungsprozess hilfreich sind.
-- **Excel-Download** <br> Ausführlicher Excel-Downloadbericht zur Analyse.
+- **Titel der Warnung**  
+Offizieller [!INCLUDE [Product short](includes/product-short.md)]-Name der Warnung.
+- **Beschreibung**  
+Kurze Erklärung der Vorfälle.
+- **Beweise**  
+Weitere relevante Informationen und verwandte Daten zu den Vorgängen, die im weiteren Untersuchungsprozess hilfreich sind.
+- **Excel-Download**  
+Ausführlicher Excel-Downloadbericht zur Analyse.
 
-![Aufbau einer Azure ATP-Sicherheitswarnung](media/security-alert-structure.png)
+![Struktur der Sicherheitswarnungen von [!INCLUDE [Product short](includes/product-short.md)]](media/security-alert-structure.png)
 
 ## <a name="security-alert-classifications"></a>Klassifizierungen der Sicherheitswarnungen
 
-Nach einer gründlichen Untersuchung können alle Azure ATP-Sicherheitswarnungen als einer der folgenden Aktivitätstypen klassifiziert werden:
+Nach einer gründlichen Untersuchung können alle [!INCLUDE [Product short](includes/product-short.md)]-Sicherheitswarnungen als einer der folgenden Aktivitätstypen klassifiziert werden:
 
-- **Richtig positiv (True Positive, TP):** Eine von Azure ATP erkannte schädliche Aktion.
+- **Richtig positiv (True Positive, TP):** Eine von [!INCLUDE [Product short](includes/product-short.md)] erkannte schädliche Aktion.
 
-- **Unschädlich richtig positiv (Benign True Positive, B-TP)** : Eine von Azure ATP erkannte Aktion, die tatsächlich durchgeführt wurde, aber nicht böswillig ist, wie z.B. ein Penetrationstest oder eine bekannte Aktivität, die von einer genehmigten Anwendung generiert wurde.
+- **Unschädlich richtig positiv (Benign True Positive, B-TP)** : Eine von [!INCLUDE [Product short](includes/product-short.md)] erkannte Aktion, die tatsächlich durchgeführt wurde, aber nicht schädlich ist, z. B. ein Penetrationstest oder eine bekannte Aktivität, die von einer genehmigten Anwendung generiert wurde.
 
 - **Falsch positiv (False Positive, FP)** : Dies ist ein falscher Alarm, d. h., die Aktivität wurde nicht ausgeführt.
 
@@ -69,7 +72,7 @@ Anmerkung: Eine zunehmende Anzahl von Warnungen des exakt selben Typs verringert
 
 ## <a name="security-alert-categories"></a>Kategorien der Sicherheitswarnungen
 
-Azure ATP-Sicherheitswarnungen werden wie die Phasen in einer typischen „Kill Chain“ eines Cyberangriffs in die folgenden Kategorien oder Phasen unterteilt. Die folgenden Links enthalten weitere Informationen zu den einzelnen Phasen sowie den Warnungen, die die Angriffe erkennen sollen:
+[!INCLUDE [Product short](includes/product-short.md)]-Sicherheitswarnungen werden in die folgenden Kategorien bzw. Phasen unterteilt, ähnlich wie die Phasen in einer typischen „Kill Chain“ eines Cyberangriffs. Die folgenden Links enthalten weitere Informationen zu den einzelnen Phasen sowie den Warnungen, die die Angriffe erkennen sollen:
 
 - [Warnungen zu Reconnaissance](reconnaissance-alerts.md)
 - [Warnungen zu kompromittierten Anmeldeinformationen](compromised-credentials-alerts.md)
@@ -83,7 +86,8 @@ Laden Sie den ausführlichen Excel-Warnungsbericht herunter, um detaillierte Inf
 
 1. Klicken Sie in der rechten oberen Ecke auf die drei Punkte, die bei jeder Warnung angezeigt werden, und wählen Sie *Details herunterladen* aus.
 
-Jeder Excel-Download zu Azure ATP-Sicherheitswarnungen enthält die folgenden Informationen:
+Jeder Excel-Download von [!INCLUDE [Product short](includes/product-short.md)]-Sicherheitswarnungen enthält die folgenden Informationen:
+
 - Zusammenfassung: Die erste Registerkarte enthält die wichtigsten Punkte der Warnung.
   - Titel
   - BESCHREIBUNG
@@ -94,7 +98,7 @@ Jeder Excel-Download zu Azure ATP-Sicherheitswarnungen enthält die folgenden In
   - Zeitpunkt des Statusupdates (UTC)
   - Anzeigen im Browser
 - Alle betroffenen Entitäten (Konten, Computer und Ressourcen) werden nach ihrer Rolle getrennt aufgelistet.
-    - Quelle, Ziel oder Angriff – je nach Warnung
+  - Quelle, Ziel oder Angriff – je nach Warnung
 - Die meisten Registerkarten enthalten für jede Entität die folgenden Daten:
   - Name
   - Details
@@ -105,10 +109,10 @@ Jeder Excel-Download zu Azure ATP-Sicherheitswarnungen enthält die folgenden In
   - Domänencontroller
   - Aufgerufene Ressource: Zeitpunkt, Computer, Name, Details, Typ, Dienst
   - Zusätzliche Registerkarten für jede Warnung:
-      - Für angegriffene Konten bei vermuteten Brute-Force-Angriffen.
-      - Für DNS-Server (Domain Name System), wenn bei dem vermuteten Angriff Reconnaissance über Netzwerkzuordnungen (DNS) verwendet wurde.
+    - Für angegriffene Konten bei vermuteten Brute-Force-Angriffen.
+    - Für DNS-Server (Domain Name System), wenn bei dem vermuteten Angriff Reconnaissance über Netzwerkzuordnungen (DNS) verwendet wurde.
   - Verwandte Entitäten: ID, Typ, Name, eindeutige JSON-Entität, eindeutiges JSON-Entitätsprofil
-- Alle mit Azure ATP-Sensoren erfassten reinen Aktivitäten, die mit der Warnung verknüpft sind (Netzwerk- oder Ereignisaktivitäten), wie etwa:
+- Alle mit [!INCLUDE [Product short](includes/product-short.md)]-Sensoren erfassten reinen Aktivitäten in Zusammenhang mit der Warnung (Netzwerk- oder Ereignisaktivitäten), wie etwa:
   - Netzwerkaktivitäten
   - Ereignisaktivitäten
 
@@ -120,47 +124,49 @@ Die letzte Registerkarte jeder Warnung enthält die **Verwandten Entitäten**. V
 
 **Eindeutige JSON-Entität**
 
-Enthält die Daten, die Azure ATP aus Active Directory zu dem Konto erhalten hat. Dazu zählen alle Attribute wie *Distinguished Name*, *SID*, <em>LockoutTime und *PasswordExpiryTime</em>. Für Benutzerkonten sind Daten enthalten wie *Department * (Abteilung), *Mail* (E-Mail) und *PhoneNumber* (Telefonnummer). Für Computerkonten sind Daten enthalten wie *OperatingSystem*, <em>IsDomainController und *DnsName</em>.
+Enthält die Daten, die [!INCLUDE [Product short](includes/product-short.md)] aus Active Directory zu dem Konto erhalten hat. Dazu zählen alle Attribute wie *Distinguished Name* , *SID* , *LockoutTime* und *PasswordExpiryTime*. Für Benutzerkonten sind Daten enthalten wie *Department* (Abteilung), *Mail* (E-Mail) und *PhoneNumber* (Telefonnummer). Für Computerkonten sind Daten enthalten wie *OperatingSystem* , *IsDomainController* und *DnsName*.
 
 **Eindeutiges JSON-Entitätsprofil**
 
-Enthält alle Daten, für die Azure ATP in der Entität ein Profil erstellt hat. Azure ATP verwendet die Netzwerk- und Ereignisaktivitäten, die für weitere Informationen über die Benutzer und Computer der Umgebung erfasst wurden. Azure ATP erstellt ein Profil für relevante Informationen für jede Entität. Diese Informationen tragen zum Erkennen von Bedrohungen durch Azure ATP bei.
+Enthält alle Daten, für die [!INCLUDE [Product short](includes/product-short.md)] in der Entität ein Profil erstellt hat. [!INCLUDE [Product short](includes/product-short.md)] verwendet die erfassten Netzwerk- und Ereignisaktivitäten, um weitere Informationen zu den Benutzern und Computern der Umgebung zu erhalten. [!INCLUDE [Product short](includes/product-short.md)] erstellt ein Profil der relevanten Informationen für jede Entität. Diese Informationen helfen [!INCLUDE [Product short](includes/product-short.md)] beim Erkennen von Bedrohungen.
 
 ![Verwandte Entitäten](media/related-entities.png)
 
-### <a name="how-can-i-use-azure-atp-information-in-an-investigation"></a>Wie verwende ich Azure ATP-Informationen bei einer Untersuchung?
+### <a name="how-can-i-use-product-short-information-in-an-investigation"></a>Wie verwende ich [!INCLUDE [Product short](includes/product-short.md)]-Informationen bei einer Untersuchung?
 
-Je nach Bedarf kann eine Untersuchung mehr oder weniger ausführlich durchgeführt werden. Sie können die von Azure ATP bereitgestellten Daten etwa für die Beantwortung der folgenden Fragen verwenden:
+Je nach Bedarf kann eine Untersuchung mehr oder weniger ausführlich durchgeführt werden. Sie können die von [!INCLUDE [Product short](includes/product-short.md)] bereitgestellten Daten beispielsweise für die Beantwortung der folgenden Fragen verwenden.
 
 - Gehören alle verwandten Benutzer zur gleichen Gruppe oder Abteilung?
 - Verwenden verwandte Benutzer dieselben Ressourcen, Anwendungen oder Computer?
 - Ist ein Konto aktiv, obwohl die PasswordExpiryTime bereits überschritten ist?
 
-## <a name="azure-atp-and-nnr-network-name-resolution"></a>Azure ATP und NNR (Network Name Resolution; Auflösung des Netzwerknamens)
+## <a name="product-short-and-nnr-network-name-resolution"></a>[!INCLUDE [Product short](includes/product-short.md)] und Netzwerknamensauflösung (Network Name Resolution, NNR)
 
-Die Azure ATP-Erkennungsfunktionen basieren auf einer aktiven Netzwerknamensauflösung (Network Name Resolution, NNR), bei der IP-Adressen in Computer innerhalb der Organisation aufgelöst werden. Durch die Verwendung von NNR ordnet Azure ATP reinen Aktivitäten (mit IP-Adressen) die entsprechenden, an der Aktivität beteiligten Computer zu. Auf Grundlage der reinen Aktivitäten erstellt Azure ATP ein Profil der Entitäten, wie etwa Computer, und generiert Warnungen.
+Die [!INCLUDE [Product short](includes/product-short.md)]-Erkennungsfunktionen basieren auf einer aktiven Netzwerknamensauflösung (Network Name Resolution, NNR), bei der IP-Adressen in Computer innerhalb der Organisation aufgelöst werden. Mithilfe von NNR kann [!INCLUDE [Product short](includes/product-short.md)] eine Korrelation zwischen den reinen Aktivitäten (mit IP-Adressen) und den an der Aktivität beteiligten Computer erstellen. Auf Grundlage der reinen Aktivitäten erstellt [!INCLUDE [Product short](includes/product-short.md)] ein Profil der Entitäten – einschließlich der Computer – und generiert Warnungen.
 
 NNR-Daten spielen beim Erkennen der folgenden Warnungen eine entscheidende Rolle:
+
 - Suspected identity theft (pass-the-ticket) (Verdacht auf Identitätsdiebstahl (Pass-the-Ticket))
 - Suspected DCSync attack (replication of directory services) (Verdacht auf einen DCSync-Angriff (Replikation von Verzeichnisdiensten))
 - Network mapping reconnaissance (DNS) (Reconnaissance über Netzwerkzuordnung (DNS))
 
-Verwenden Sie die im Downloadbericht der Warnung auf der Registerkarte **Netzwerkaktivitäten** bereitgestellten NNR-Informationen, um festzustellen, ob es sich bei einer Warnung um eine **FP**-Aktivität handelt. Bei **FP**-Warnungen liegt der NNR-Zuverlässigkeitswert üblicherweise im niedrigen Bereich.
+Verwenden Sie die im Downloadbericht der Warnung auf der Registerkarte **Netzwerkaktivitäten** bereitgestellten NNR-Informationen, um festzustellen, ob es sich bei einer Warnung um eine **FP** -Aktivität handelt. Bei **FP** -Warnungen liegt der NNR-Zuverlässigkeitswert üblicherweise im niedrigen Bereich.
 
 Die Daten des Downloadberichts werden in zwei Spalten angezeigt:
+
 - **Quell-/Zielcomputer**
 
-    - *Zuverlässigkeit*: Ein niedriger Wert deutet möglicherweise auf eine falsche Namensauflösung hin.
+  - *Zuverlässigkeit* : Ein niedriger Wert deutet möglicherweise auf eine falsche Namensauflösung hin.
 - **Quell-/Zielcomputer**
-    - *Auflösungsmethode*: Zeigt die NNR-Methoden an, die zum Auflösen der IP-Adressen in Computer innerhalb der Organisation verwendet wurden.
+  - *Auflösungsmethode* : Zeigt die NNR-Methoden an, die zum Auflösen der IP-Adressen in Computer innerhalb der Organisation verwendet wurden.
 
 ![Netzwerkaktivitäten](media/network-activities.png)
 
-Weitere Informationen zum Arbeiten mit Azure ATP-Sicherheitswarnungen finden Sie unter [Arbeiten mit Sicherheitswarnungen](working-with-suspicious-activities.md).
+Weitere Informationen zum Arbeiten mit [!INCLUDE [Product short](includes/product-short.md)]-Sicherheitswarnungen finden Sie unter [Arbeiten mit Sicherheitswarnungen](working-with-suspicious-activities.md).
 
 ## <a name="see-also"></a>Weitere Informationen
 
 - [Untersuchen eines Benutzers](investigate-a-user.md)
 - [Untersuchen eines Computers](investigate-a-computer.md)
 - [Arbeiten mit Lateral Movement-Pfaden](use-case-lateral-movement-path.md)
-- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)
+- [Weitere Informationen finden Sie im [!INCLUDE [Product short](includes/product-short.md)]-Forum.](https://aka.ms/MDIcommunity)

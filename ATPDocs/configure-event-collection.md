@@ -1,71 +1,70 @@
 ---
-title: Installieren von Azure Advanced Threat Protection
-description: In diesem Schritt bei der ATP-Installation konfigurieren Sie Datenquellen.
+title: Installieren von Microsoft Defender for Identity
+description: In diesem Schritt der Microsoft Defender for Identity-Installation konfigurieren Sie Datenquellen.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 03/19/2020
+ms.date: 10/26/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 94ef8fc1514d979982c6ea7bcef398720268fe1e
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: f691df3332d90e0f163d3773dd5570e0d17b5a95
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90910456"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93276473"
 ---
 # <a name="configure-event-collection"></a>Konfigurieren der Ereignissammlung
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-Damit die Erkennungsfunktionalität verbessert werden kann, benötigt Azure ATP die Windows-Ereignisse, die unter [Konfigurieren der Ereignissammlung](configure-windows-event-collection.md#configure-event-collection) aufgeführt sind. Diese Ereignisse können entweder automatisch vom Azure ATP-Sensor gelesen oder, falls dieser nicht bereitgestellt wurde, an den eigenständigen Azure ATP-Sensor weitergeleitet werden. Dazu gibt es zwei Möglichkeiten: die Konfiguration des eigenständigen Azure ATP-Sensors, sodass dieser auf SIEM-Ereignisse lauscht, oder die [Konfiguration der Windows-Ereignisweiterleitung](configure-event-forwarding.md).
+Zur Erweiterung der Erkennungsfunktionen benötigt [!INCLUDE [Product long](includes/product-long.md)] die Windows-Ereignisse, die unter [Konfigurieren der Ereignissammlung](configure-windows-event-collection.md#configure-event-collection) aufgeführt sind. Diese Ereignisse können entweder automatisch vom [!INCLUDE [Product short](includes/product-short.md)]-Sensor gelesen oder – falls dieser nicht bereitgestellt wurde – an den eigenständigen [!INCLUDE [Product short](includes/product-short.md)]-Sensor weitergeleitet werden. Dazu gibt es zwei Möglichkeiten: die Konfiguration des eigenständigen [!INCLUDE [Product short](includes/product-short.md)]-Sensors, sodass dieser auf SIEM-Ereignisse lauscht, oder die [Konfiguration der Windows-Ereignisweiterleitung](configure-event-forwarding.md).
 
 > [!NOTE]
 >
-> - Eigenständige Azure ATP-Server unterstützen nicht die Erstellung von Protokolleinträgen für Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW), die Daten für mehrere Erkennungen bereitstellen. Zur vollständigen Abdeckung Ihrer Umgebung empfiehlt es sich, den Azure ATP-Sensor bereitzustellen.
-> - Es ist wichtig, das Azure ATP-Überwachungsskript vor der Konfiguration der Ereignissammlung auszuführen, um sicherzustellen, dass die Domänencontroller ordnungsgemäß für die Aufzeichnung der benötigten Ereignisse konfiguriert sind.
+> - Eigenständige [!INCLUDE [Product short](includes/product-short.md)]-Sensoren unterstützen keine Erfassung von Protokolleinträgen für die Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW), die Daten für mehrere Erkennungen bereitstellen. Zur vollständigen Erfassung Ihrer Umgebung empfiehlt sich die Bereitstellung des [!INCLUDE [Product short](includes/product-short.md)]-Sensors.
+> - Es ist wichtig, vor der Konfiguration der Ereignissammlung das [!INCLUDE [Product short](includes/product-short.md)]-Überwachungsskript auszuführen, um sicherzustellen, dass die Domänencontroller ordnungsgemäß für die Aufzeichnung der benötigten Ereignisse konfiguriert sind.
 
-Zusätzlich zum Sammeln und Analysieren des Netzwerkverkehrs zu und von den Domänencontrollern kann Azure ATP Windows-Ereignisse heranziehen, um Erkennungen weiter zu verbessern. Diese Ereignisse können von SIEM erhalten oder durch Festlegen der Windows-Ereignisweiterleitung von Ihrem Domänencontroller aus abgerufen werden. Die gesammelten Ereignisse versorgen Azure ATP mit zusätzlichen Informationen, die nicht über den Datenverkehr des Domänencontrollers verfügbar sind.
+Zusätzlich zum Erfassen und Analysieren des Netzwerkverkehrs zu und von den Domänencontrollern kann [!INCLUDE [Product short](includes/product-short.md)]Windows-Ereignisse heranziehen, um Erkennungen zu erweitern. Diese Ereignisse können von SIEM erhalten oder durch Festlegen der Windows-Ereignisweiterleitung von Ihrem Domänencontroller aus abgerufen werden. Die erfassten Ereignisse bieten [!INCLUDE [Product short](includes/product-short.md)] zusätzliche Informationen, die über den Netzwerkverkehr des Domänencontrollers nicht verfügbar sind.
 
 ## <a name="ntlm-authentication-using-windows-event-8004"></a>NTLM-Authentifizierung mithilfe des Windows-Ereignisses 8004
 
 So konfigurieren Sie die Windows-Ereignis 8004-Sammlung:
 
-1. Navigieren Sie zu: Computerkonfiguration\Richtlinien\Windows-Einstellungen\Sicherheitseinstellungen\Lokale Richtlinien\Sicherheitsoptionen
+1. Navigieren Sie zu: *Computerkonfiguration\Richtlinien\Windows-Einstellungen\Sicherheitseinstellungen\Lokale Richtlinien\Sicherheitsoptionen*
 1. Legen Sie die **Domänengruppenrichtlinie** wie folgt fest:
     - Netzwerksicherheit: Beschränken von NTLM: Ausgehender NTLM-Datenverkehr zu Remoteservern = **Alle überwachen**
     - Netzwerksicherheit: Beschränken von NTLM: NTLM-Authentifizierung in dieser Domäne überwachen = **Alle aktivieren**
     - Netzwerksicherheit: Beschränken von NTLM: Eingehenden NTLM-Datenverkehr überwachen = **Überwachung für alle Konten aktivieren**
 
-Wenn das Windows-Ereignis 8004 von Azure ATP Sensor analysiert wird, werden Azure ATP-NTLM-Authentifizierungsaktivitäten mit den Daten erweitert, auf die auf dem Server zugegriffen wird.
+Bei der Analyse des Windows-Ereignisses 8004 durch den [!INCLUDE [Product short](includes/product-short.md)]-Sensor werden [!INCLUDE [Product short](includes/product-short.md)]-NTLM-Authentifizierungsaktivitäten durch die Daten ergänzt, auf die auf dem Server zugegriffen wird.
 
 ## <a name="siemsyslog"></a>SIEM/Syslog
 
-Eigenständige Azure ATP-Sensoren sind standardmäßig so konfiguriert, dass sie Syslog-Daten empfangen. Damit eigenständige Azure ATP-Sensoren diese Daten nutzen können, müssen Sie die Syslog-Daten an den Sensor weiterleiten.
+Eigenständige [!INCLUDE [Product short](includes/product-short.md)]-Sensoren sind standardmäßig für den Empfang von Syslog-Daten konfiguriert. Damit eigenständige [!INCLUDE [Product short](includes/product-short.md)]-Sensoren diese Daten nutzen können, müssen Sie die Syslog-Daten an diese Sensoren weiterleiten.
 
 > [!NOTE]
-> Azure ATP lauscht nur auf IPv4, nicht auf IPv6.
+> [!INCLUDE [Product short](includes/product-short.md)] lauscht nur auf IPv4, nicht auf IPv6.
 
 > [!IMPORTANT]
 >
-> - Es sollten nicht alle Syslog-Daten an den Azure ATP-Sensor weitergeleitet werden.
-> - Azure ATP unterstützt UDP-Datenverkehr vom SIEM-/Syslog-Server.
+> - Leiten Sie nicht alle Syslog-Daten an den [!INCLUDE [Product short](includes/product-short.md)]-Sensor weiter.
+> - [!INCLUDE [Product short](includes/product-short.md)] unterstützt UDP-Datenverkehr vom SIEM-/Syslog-Server.
 
 Weitere Informationen über das Konfigurieren der Weiterleitung bestimmter Ereignisse an einen anderen Server finden Sie in der Produktdokumentation des SIEM-/Syslog-Servers.
 
 > [!NOTE]
-> Wenn Sie keinen SIEM-/Syslog-Server verwenden, können Sie Ihre Windows-Domänencontroller zum Weiterleiten von allen erforderlichen Ereignissen konfigurieren, damit diese von Azure ATP gesammelt und konfiguriert wird.
+> Wenn Sie keinen SIEM-/Syslog-Server verwenden, können Sie Ihre Windows-Domänencontroller zum Weiterleiten von allen erforderlichen Ereignissen konfigurieren, damit diese von [!INCLUDE [Product short](includes/product-short.md)] erfasst und analysiert werden.
 
-## <a name="configuring-the-azure-atp-sensor-to-listen-for-siem-events"></a>Konfigurieren des Azure ATP-Sensors zum Lauschen auf SIEM-Ereignisse
+## <a name="configuring-the-product-short-sensor-to-listen-for-siem-events"></a>Konfigurieren des [!INCLUDE [Product short](includes/product-short.md)]-Sensors zum Lauschen auf SIEM-Ereignisse
 
-- Konfigurieren Sie den SIEM-/Syslog-Server zum Weiterleiten aller erforderlichen Ereignisse an die IP-Adresse eines eigenständigen Azure ATP-Sensors. Weitere Informationen zum Konfigurieren der SIEM finden Sie in der SIEM-Onlinehilfe sowie in den Optionen für technischen Support für spezielle Formatierungsanforderungen einzelner SIEM-Server.
+- Konfigurieren Sie den SIEM-/Syslog-Server zum Weiterleiten aller erforderlichen Ereignisse an die IP-Adresse eines eigenständigen [!INCLUDE [Product short](includes/product-short.md)]-Sensors. Weitere Informationen zum Konfigurieren der SIEM finden Sie in der SIEM-Onlinehilfe sowie in den Optionen für technischen Support für spezielle Formatierungsanforderungen einzelner SIEM-Server.
 
-Azure ATP unterstützt SIEM-Ereignisse in den folgenden Formaten:
+[!INCLUDE [Product short](includes/product-short.md)] unterstützt SIEM-Ereignisse in den folgenden Formaten:
 
 ### <a name="rsa-security-analytics"></a>RSA Security Analytics
 
@@ -76,7 +75,7 @@ Azure ATP unterstützt SIEM-Ereignisse in den folgenden Formaten:
 - Das Trennzeichen „\n“ ist zwischen allen Feldern erforderlich.
 - Die Felder sind der Reihenfolge nach:
     1. RsaSA-Konstante (muss vorhanden sein).
-    2. Der Zeitstempel des tatsächlichen Ereignisses (dies darf nicht der Zeitstempel des Eingangs beim SIEM-System oder des Sendens an ATP sein). Vorzugsweise auf die Millisekunde genau, dies ist wichtig.
+    2. Der Zeitstempel des tatsächlichen Ereignisses (dies darf nicht der Zeitstempel des Eingangs beim SIEM-System oder des Sendens an [!INCLUDE [Product short](includes/product-short.md)] sein). Vorzugsweise auf die Millisekunde genau, dies ist wichtig.
     3. Die Windows-Ereignis-ID
     4. Der Name des Windows-Ereignisanbieters
     5. Der Name des Windows-Ereignisprotokolls
@@ -96,7 +95,7 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|Der 
 - Der Headerteil (der Teil, der durch einen senkrechten Strich abgetrennt ist) muss vorhanden sein (wie im Protokoll angegeben).
 - Die folgenden Schlüssel im Teil _Erweiterung_ müssen im Ereignis vorhanden sein:
   - externalId = Windows-Ereignis-ID
-  - rt = der Zeitstempel des tatsächlichen Ereignisses (dies darf nicht der Zeitstempel des Eingangs beim SIEM-System oder des Sendens an ATP sein). Vorzugsweise auf die Millisekunde genau, dies ist wichtig.
+  - rt = Zeitstempel des tatsächlichen Ereignisses (dies darf nicht der Zeitstempel des Eingangs beim SIEM-System oder des Sendens an [!INCLUDE [Product short](includes/product-short.md)] sein). Vorzugsweise auf die Millisekunde genau, dies ist wichtig.
   - cat = Name des Windows-Ereignisprotokolls
   - shost = Name des Quellhostnamens
   - dhost = Name des Computers, der das Ereignis empfängt (in diesem Fall der DC)
@@ -128,7 +127,7 @@ Fehlercode: 0x0
   - EventCode = Windows-Ereignis-ID
   - Logfile = Name des Windows-Ereignisprotokolls
   - SourceName = Name des Windows-Ereignisanbieters
-  - TimeGenerated = der Zeitstempel des tatsächlichen Ereignisses (dies darf nicht der Zeitstempel des Eingangs beim SIEM-System oder des Sendens an ATP sein). Als Format muss „yyyyMMddHHmmss.FFFFFF“ verwendet werden, vorzugsweise mit einer Genauigkeit im Millisekundenbereich, dies ist wichtig.
+  - TimeGenerated = der Zeitstempel des tatsächlichen Ereignisses (dies darf nicht der Zeitstempel des Eingangs beim SIEM-System oder des Sendens an [!INCLUDE [Product short](includes/product-short.md)] sein). Als Format muss „yyyyMMddHHmmss.FFFFFF“ verwendet werden, vorzugsweise mit einer Genauigkeit im Millisekundenbereich, dies ist wichtig.
   - ComputerName = Name des Quellhostnamens
   - Message = ursprünglicher Ereignistext aus dem Windows-Ereignis
 - Der Schlüssel „Message“ und dessen Wert müssen als letzte Elemente auftreten.
@@ -136,7 +135,7 @@ Fehlercode: 0x0
 
 ### <a name="qradar"></a>QRadar
 
-QRadar ermöglicht Ereignissammlung über einen Agent. Wenn die Daten mithilfe eines Agents erfasst werden, werden Zeiten ohne Millisekunden-Daten erfasst. Da Azure ATP Millisekunden-Daten erfordert, muss QRadar so festgelegt werden, dass es die Windows-Ereignissammlung ohne Agents verwendet. Weitere Informationen finden Sie unter [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Agentless Windows Events Collection using the MSRPC Protocol (QRadar: Auflistung von Windows-Ereignissen ohne Agent mithilfe des MSRPC-Protokolls)").
+QRadar ermöglicht Ereignissammlung über einen Agent. Wenn die Daten mithilfe eines Agents erfasst werden, werden Zeiten ohne Millisekunden-Daten erfasst. Da [!INCLUDE [Product short](includes/product-short.md)] Millisekunden-Daten erfordert, muss QRadar auf die Verwendung der Windows-Ereignissammlung ohne Agents festgelegt werden. Weitere Informationen finden Sie unter [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Agentless Windows Events Collection using the MSRPC Protocol (QRadar: Auflistung von Windows-Ereignissen ohne Agent mithilfe des MSRPC-Protokolls)").
 
 ```text
 <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
@@ -151,7 +150,7 @@ Die erforderlichen Felder sind:
 - Der vollqualifizierte Domänenname des DCs
 - Die Windows-Ereignis-ID
 
-„TimeGenerated“ ist der Zeitstempel des tatsächlichen Ereignisses (dies darf nicht der Zeitstempel des Eingangs beim SIEM-System oder des Sendens an ATP sein). Als Format muss „yyyyMMddHHmmss.FFFFFF“ verwendet werden, vorzugsweise mit einer Genauigkeit im Millisekundenbereich, dies ist wichtig.
+TimeGenerated ist der Zeitstempel des tatsächlichen Ereignisses (dies darf nicht der Zeitstempel des Eingangs beim SIEM-System oder des Sendens an [!INCLUDE [Product short](includes/product-short.md)] sein). Als Format muss „yyyyMMddHHmmss.FFFFFF“ verwendet werden, vorzugsweise mit einer Genauigkeit im Millisekundenbereich, dies ist wichtig.
 
 „Message“ ist der ursprüngliche Ereignistext aus dem Windows-Ereignis
 
@@ -162,7 +161,7 @@ Stellen Sie sicher, dass „\t“ zwischen Schlüssel=Wert-Paaren steht.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Azure ATP sizing tool (Azure ATP-Tool zur Größenanpassung)](https://aka.ms/aatpsizingtool)
-- [Referenz zum Azure ATP-SIEM-Protokoll](cef-format-sa.md)
-- [Azure ATP prerequisites (Voraussetzungen für Azure ATP)](prerequisites.md)
-- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)
+- [[!INCLUDE [Product short](includes/product-short.md)]-Tool zur Größenanpassung](https://aka.ms/aatpsizingtool)
+- [Referenz zum SIEM-Protokoll für [!INCLUDE [Product short](includes/product-short.md)]](cef-format-sa.md)
+- [Voraussetzungen für [!INCLUDE [Product short](includes/product-short.md)]](prerequisites.md)
+- [Weitere Informationen finden Sie im [!INCLUDE [Product short](includes/product-short.md)]-Forum.](https://aka.ms/MDIcommunity)
