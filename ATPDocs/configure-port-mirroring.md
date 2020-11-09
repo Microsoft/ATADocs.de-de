@@ -1,78 +1,77 @@
 ---
-title: Konfigurieren der Portspiegelung bei der Bereitstellung von Azure Advanced Threat Protection
-description: Beschreibt Optionen für die Portspiegelung und deren Konfiguration für Azure ATP
+title: Konfigurieren der Portspiegelung beim Bereitstellen von Microsoft Defender for Identity
+description: Hier werden Optionen für die Portspiegelung und deren Konfiguration für Microsoft Defender for Identity beschrieben.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 02/19/2020
+ms.date: 10/26/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 9ec7eb4c-3cad-4543-bbf0-b951d8fc8ffe
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 99d9357f543f0d0439645a7ae3ae6972c8296f92
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 479ca268e2db61bd1667005d2aa2a38603888f0b
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912445"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93276400"
 ---
 # <a name="configure-port-mirroring"></a>Konfigurieren der Portspiegelung
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-Dieser Artikel ist für Sie nur interessant, wenn Sie eigenständige Azure ATP-Sensoren anstelle von Azure ATP-Sensoren bereitstellen.
+Dieser Artikel ist nur interessant, wenn Sie eigenständige [!INCLUDE [Product long](includes/product-long.md)]-Sensoren anstelle von [!INCLUDE [Product short](includes/product-short.md)]-Sensoren bereitstellen.
 
 > [!NOTE]
-> Eigenständige Azure ATP-Server unterstützen nicht die Erstellung von Protokolleinträgen für Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW), die Daten für mehrere Erkennungen bereitstellen. Zur vollständigen Abdeckung Ihrer Umgebung empfiehlt es sich, den Azure ATP-Sensor bereitzustellen.
+> Eigenständige [!INCLUDE [Product short](includes/product-short.md)]-Sensoren unterstützen keine Erfassung von Protokolleinträgen für die Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW), die Daten für mehrere Erkennungen bereitstellen. Zur vollständigen Erfassung Ihrer Umgebung empfiehlt sich die Bereitstellung des [!INCLUDE [Product short](includes/product-short.md)]-Sensors.
 
-Als primäre Datenquelle verwendet Azure ATP eine ausführliche Paketüberprüfung (Deep Packet Inspection) des Netzwerkdatenverkehrs zu und von den Domänencontrollern. Damit Azure ATP den Netzwerkdatenverkehr sieht, muss entweder eine Portspiegelung eingerichtet oder ein Netzwerk-TAP verwendet werden.
+Die Hauptdatenquelle von [!INCLUDE [Product short](includes/product-short.md)] ist die ausführliche Paketüberprüfung (Deep Packet Inspection) des Netzwerkdatenverkehrs zu und von den Domänencontrollern. Damit [!INCLUDE [Product short](includes/product-short.md)] Netzwerkdatenverkehr erkennt, müssen Sie die Portspiegelung einrichten oder einen Netzwerk-TAP verwenden.
 
 Beim Konfigurieren der Portspiegelung ist für jeden überwachten Domänencontroller **Portspiegelung** als **Quelle** des Netzwerkdatenverkehrs auszuwählen. In der Regel müssen Sie mit dem Netzwerk- oder Virtualisierungsteam zusammenarbeiten, um die Portspiegelung zu konfigurieren.
 Weitere Informationen finden Sie in der Dokumentation des jeweiligen Anbieters.
 
-Die Domänencontroller und der eigenständige Azure ATP-Sensor können physisch oder virtuell vorhanden sein. Im Folgenden werden häufige Methoden für die Portspiegelung mit nützlichen Hinweisen aufgelistet. Weitere Informationen finden Sie in der Produktdokumentation Ihres Switchs oder Virtualisierungsservers. Der Hersteller Ihres Switches verwendet möglicherweise andere Bezeichnungen.
+Die Domänencontroller und der eigenständige [!INCLUDE [Product short](includes/product-short.md)]-Sensor können physisch oder virtuell vorhanden sein. Im Folgenden werden häufige Methoden für die Portspiegelung mit nützlichen Hinweisen aufgelistet. Weitere Informationen finden Sie in der Produktdokumentation Ihres Switchs oder Virtualisierungsservers. Der Hersteller Ihres Switches verwendet möglicherweise andere Bezeichnungen.
 
-**Switched Port Analyzer (SPAN):** kopiert Netzwerkdatenverkehr von einem oder mehreren Switchports an einen anderen Port auf demselben Switch. Sowohl der eigenständige Azure ATP-Sensor als auch der Domänencontroller müssen mit demselben physischen Switch verbunden werden.
+**Switched Port Analyzer (SPAN):** kopiert Netzwerkdatenverkehr von einem oder mehreren Switchports an einen anderen Port auf demselben Switch. Sowohl der eigenständige [!INCLUDE [Product short](includes/product-short.md)]-Sensor als auch die Domänencontroller müssen mit demselben physischen Switch verbunden sein.
 
 **Remote Switch Port Analyzer (RSPAN):** ermöglicht die Überwachung des Netzwerkdatenverkehrs aus Quellenports über mehrere physische Switches hinweg. RSPAN kopiert den Quellendatenverkehr in ein speziell für RSPAN konfiguriertes VLAN. Dieses VLAN muss mit den anderen beteiligten Switches einen Trunk bilden. RSPAN arbeitet in Schicht 2.
 
-**Encapsulated Remote Switch Port Analyzer (ERSPAN):** eine proprietäre Cisco-Technologie für Schicht 3. ERSPAN ermöglicht das Überwachen von Datenverkehr über Switches hinweg, ohne Bedarf an VLAN-Trunks. ERSPAN verwendet für das Kopieren des überwachten Netzwerkverkehrs Generic Routing Encapsulation (GRE). Azure ATP kann derzeit ERSPAN-Datenverkehr nicht direkt empfangen. Damit Azure ATP mit ERSPAN-Datenverkehr arbeiten kann, muss ein Switch oder Router entsprechend als Ziel des ERSPAN-Datenverkehrs konfiguriert werden, um den Datenverkehr im Vorfeld aufzuschlüsseln. Konfigurieren Sie den Switch oder Router dann so, dass der entkapselte Datenverkehr mithilfe von SPAN oder RSPAN an den eigenständigen Azure ATP-Sensor weitergeleitet wird.
+**Encapsulated Remote Switch Port Analyzer (ERSPAN):** eine proprietäre Cisco-Technologie für Schicht 3. ERSPAN ermöglicht das Überwachen von Datenverkehr über Switches hinweg, ohne Bedarf an VLAN-Trunks. ERSPAN verwendet für das Kopieren des überwachten Netzwerkverkehrs Generic Routing Encapsulation (GRE). [!INCLUDE [Product short](includes/product-short.md)] kann ERSPAN-Datenverkehr derzeit nicht direkt empfangen. Damit [!INCLUDE [Product short](includes/product-short.md)] mit ERSPAN-Datenverkehr arbeiten kann, muss ein Switch oder Router als ERSPAN-Ziel konfiguriert werden, um den Datenverkehr zu entkapseln. Konfigurieren Sie den Switch oder Router so, dass der entkapselte Datenverkehr über SPAN oder RSPAN an den eigenständigen [!INCLUDE [Product short](includes/product-short.md)]-Sensor weitergeleitet wird.
 
 > [!NOTE]
 > Wenn der Domänencontroller mit der Portspiegelung über eine WAN-Anbindung angeschlossen ist, muss darauf geachtet werden, dass die WAN-Anbindung die zusätzliche Last des ERSPAN-Datenverkehrs aufnehmen kann.
-> Azure ATP unterstützt nur dann die Überwachung des Netzwerkdatenverkehrs, wenn der Datenverkehr die NIC und den Domänencontroller auf die gleiche Weise erreicht. Azure ATP unterstützt die Überwachung des Netzwerkdatenverkehrs nicht, wenn der Verkehr auf verschiedene Ports aufgeteilt ist.
+> [!INCLUDE [Product short](includes/product-short.md)] unterstützt die Überwachung des Netzwerkdatenverkehrs nur, wenn der Datenverkehr die Netzwerkkarte und den Domänencontroller auf die gleiche Weise erreicht. [!INCLUDE [Product short](includes/product-short.md)] unterstützt die Datenverkehrsüberwachung nicht, wenn der Verkehr auf verschiedene Ports aufgeteilt ist.
 
 ## <a name="supported-port-mirroring-options"></a>Unterstützte Optionen für die Portspiegelung
 
-|Eigenständiger Azure ATP-Sensor|Domänencontroller|Überlegungen|
+|Eigenständiger [!INCLUDE [Product short](includes/product-short.md)]-Sensor|Domänencontroller|Überlegungen|
 |---------------|---------------------|------------------|
 |Virtuell|Virtuell auf demselben Host|Der virtuelle Switch muss Portspiegelung unterstützen.<br /><br />Durch einzelnes Verschieben der virtuellen Computer auf einen anderen Host kann die Portspiegelung aufhören zu funktionieren.|
 |Virtuell|Virtuell auf unterschiedlichen Hosts|Achten Sie darauf, dass der virtuelle Switch dieses Szenario unterstützt.|
-|Virtuell|Physisch|Erfordert einen dedizierten Netzwerkadapter, da Azure ATP andernfalls den gesamten eingehenden und ausgehenden Datenverkehr des Hosts sieht, einschließlich des an den Azure ATP-Clouddienst weitergeleiteten Datenverkehrs.|
+|Virtuell|Physisch|Erfordert einen dedizierten Netzwerkadapter, da [!INCLUDE [Product short](includes/product-short.md)] andernfalls den gesamten eingehenden und ausgehenden Datenverkehr des Hosts sieht, einschließlich des an den [!INCLUDE [Product short](includes/product-short.md)]-Clouddienst gesendeten Datenverkehrs.|
 |Physisch|Virtuell|Achten Sie darauf, dass der virtuelle Switch dieses Szenario unterstützt. Ebenfalls erforderlich ist eine entsprechende Konfiguration für die Portspiegelung auf den physischen Switches für folgendes Szenario:<br /><br />Wenn sich der virtuelle Host auf demselben physischen Switch befindet, muss auf Switchebene ein SPAN konfiguriert werden.<br /><br />Wenn sich der virtuelle Host auf einem anderen Switch befindet, muss RSPAN oder ERSPAN&#42; konfiguriert werden.|
 |Physisch|Physisch auf demselben Switch|Der physische Switch muss SPAN/Portspiegelung unterstützen.|
 |Physisch|Physisch auf einem anderen Switch|Erfordert physische Switches mit Unterstützung für RSPAN oder ERSPAN&#42;.|
 
-&#42;ERSPAN wird nur unterstützt, wenn der Datenverkehr vor der Analyse durch ATP aufgeschlüsselt wird.
+&#42;ERSPAN wird nur unterstützt, wenn die Entkapselung vor der Analyse des Datenverkehrs durch [!INCLUDE [Product short](includes/product-short.md)] erfolgt.
 
 > [!NOTE]
-> Achten Sie darauf, dass die Zeitsynchronisierung des eigenständigen Azure ATP-Sensors und der Domänencontroller, mit denen sie verbunden sind, in einem Bereich von fünf Minuten zueinander liegt.
+> Achten Sie darauf, dass die Zeitsynchronisierung des eigenständigen [!INCLUDE [Product short](includes/product-short.md)]-Sensors und der Domänencontroller, mit denen er verbunden ist, innerhalb von fünf Minuten liegt.
 
 **Falls Sie mit Virtualisierungsclustern arbeiten:**
 
-- Konfigurieren Sie für jeden Domänencontroller, der auf dem Virtualisierungscluster in einem virtuellen Computer mit dem eigenständigen Azure ATP ausgeführt wird, die Affinität zwischen dem Domänencontroller und dem eigenständigen Azure ATP-Sensor. Auf diese Weise folgt der eigenständige Azure ATP-Sensor dem Domänencontroller, wenn dieser auf einen anderen Host im Cluster verschoben wird. Dieser Ansatz funktioniert gut, solange nur wenige Domänencontroller vorhanden sind.
+- Konfigurieren Sie für jeden Domänencontroller, der im Virtualisierungscluster auf einem virtuellen Computer mit dem eigenständigen [!INCLUDE [Product short](includes/product-short.md)]-Sensor ausgeführt wird, die Affinität zwischen dem Domänencontroller und dem eigenständigen [!INCLUDE [Product short](includes/product-short.md)]-Sensor. Auf diese Weise folgt der eigenständige [!INCLUDE [Product short](includes/product-short.md)]-Sensor dem Domänencontroller, wenn dieser auf einen anderen Host im Cluster verschoben wird. Dieser Ansatz funktioniert gut, solange nur wenige Domänencontroller vorhanden sind.
 
   > [!NOTE]
   > Wenn Ihre Umgebung V2V ((Virtual-to-Virtual) auf unterschiedlichen Hosts (RSPAN) unterstützt, müssen Sie sich zu Affinität keine Gedanken machen.
 
-- Um zu gewährleisten, dass der eigenständige Azure ATP-Sensor ausreichende Kapazität für die Überwachung aller Domänencontroller aufweisen, eignet sich folgende Option: Installieren Sie auf jedem Virtualisierungshost einen virtuellen Computer, und installieren Sie auf jedem Host einen eigenständigen Azure ATP-Sensor. Konfigurieren Sie jeden eigenständigen Azure ATP-Sensor so, dass er alle Domänencontroller überwacht, die auf dem betreffenden Cluster ausgeführt werden. Auf diese Weise wird jeder Host überwacht, auf dem Domänencontroller ausgeführt werden.
+- Um zu gewährleisten, dass der eigenständige [!INCLUDE [Product short](includes/product-short.md)]-Sensor ausreichende Kapazität für die Überwachung aller Domänencontroller aufweist, eignet sich folgende Option: Installieren Sie auf jedem Virtualisierungshost einen virtuellen Computer und einen eigenständigen [!INCLUDE [Product short](includes/product-short.md)]-Sensor. Konfigurieren Sie jeden eigenständigen [!INCLUDE [Product short](includes/product-short.md)]-Sensor so, dass er alle Domänencontroller überwacht, die im betreffenden Cluster ausgeführt werden. Auf diese Weise wird jeder Host überwacht, auf dem Domänencontroller ausgeführt werden.
 
-Überprüfen Sie nach dem Konfigurieren der Portspiegelung deren ordnungsgemäße Funktion, bevor Sie den eigenständigen Azure ATP-Sensor installieren.
+Überprüfen Sie nach dem Konfigurieren der Portspiegelung deren ordnungsgemäße Funktion, bevor Sie den eigenständigen [!INCLUDE [Product short](includes/product-short.md)]-Sensor installieren.
 
 ## <a name="see-also"></a>Weitere Informationen
 
 - [Configure event forwarding (Konfigurieren der Ereignisweiterleitung)](configure-event-forwarding.md)
-- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)
+- [Weitere Informationen finden Sie im [!INCLUDE [Product short](includes/product-short.md)]-Forum.](https://aka.ms/MDIcommunity)
