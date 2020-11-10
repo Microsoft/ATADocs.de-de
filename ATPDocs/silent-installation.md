@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d78282a4580159e0b20374e3c3acbd2b5008aab6
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: edb9f414055a7d106913d1d394af44ef84ef4223
+ms.sourcegitcommit: 2b57f438c2902d5258aff8999b374c2f1808ceb4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93274173"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94430684"
 ---
 # <a name="product-long-switches-and-silent-installation"></a>[!INCLUDE [Product long](includes/product-long.md)] Switches und unbeaufsichtigte Installation
 
@@ -53,7 +53,7 @@ Verwenden Sie den folgenden Befehl, um eine vollständig automatische Installati
 **PowerShell-Syntax** :
 
 ```powershell
-./"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
+.\"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
 ```
 
 > [!NOTE]
@@ -99,9 +99,9 @@ Verwenden Sie die folgenden Befehle, um die Proxyauthentifizierung abzuschließe
 >
 > |Name|Syntax|Erforderlich für die unbeaufsichtigte Installation?|Beschreibung|
 > |-------------|----------|---------|---------|
-> |ProxyUrl|ProxyUrl="http\://proxy.contoso.com:8080"|Nein|Gibt die ProxyUrl und die Portnummer für den [!INCLUDE [Product short](includes/product-short.md)] Sensor an.|
+> |ProxyUrl|ProxyUrl="http\://proxy.contoso.com:8080"|Nein|Gibt die ProxyUrl und die Portnummer für den [!INCLUDE [Product short](includes/product-short.md)]-Sensor an.|
 > |ProxyUserName|ProxyUserName="Contoso\ProxyUser"|Nein|Wenn Ihr Proxydienst eine Authentifizierung erfordert, geben Sie einen Benutzernamen im Format „DOMÄNE\Benutzer“ an.|
-> |ProxyUserPassword|ProxyUserPassword="P@ssw0rd"|Nein|Gibt das Kennwort für den Proxybenutzernamen an. * Anmelde Informationen werden verschlüsselt und lokal vom [!INCLUDE [Product short](includes/product-short.md)] Sensor gespeichert.|
+> |ProxyUserPassword|ProxyUserPassword="P@ssw0rd"|Nein|Gibt das Kennwort für den Proxybenutzernamen an. *Anmeldeinformationen werden verschlüsselt und vom [!INCLUDE [Product short](includes/product-short.md)]-Sensor lokal gespeichert.|
 
 ## <a name="update-the-product-short-sensor"></a>Aktualisieren des [!INCLUDE [Product short](includes/product-short.md)] Sensors
 
@@ -161,7 +161,7 @@ So deinstallieren Sie den [!INCLUDE [Product short](includes/product-short.md)] 
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [[!INCLUDE [Product short](includes/product-short.md)] Voraussetzung](prerequisites.md)
+- [Voraussetzungen für [!INCLUDE [Product short](includes/product-short.md)]](prerequisites.md)
 - [Installieren des [!INCLUDE [Product short](includes/product-short.md)] Sensors](install-step4.md)
 - [Konfigurieren des [!INCLUDE [Product short](includes/product-short.md)] Sensors](install-step5.md)
-- [Sehen Sie sich das [!INCLUDE [Product short](includes/product-short.md)] Forum an!](https://aka.ms/MDIcommunity)
+- [Weitere Informationen finden Sie im [!INCLUDE [Product short](includes/product-short.md)]-Forum.](https://aka.ms/MDIcommunity)
