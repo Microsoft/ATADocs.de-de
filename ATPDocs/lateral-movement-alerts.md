@@ -1,29 +1,28 @@
 ---
-title: Lateral Movement-Sicherheitswarnungen in Azure ATP
-description: In diesem Artikel werden die Azure ATP-Warnungen erläutert, die ausgegeben werden, wenn Angriffe in Ihrer Organisation erkannt werden, die in der Regel Teil der Maßnahmen der Lateral Movement-Phase sind.
+title: Microsoft Defender for Identity-Sicherheitswarnungen zu Lateral Movement
+description: In diesem Artikel werden die Microsoft Defender for Identity-Warnungen erläutert, die ausgegeben werden, wenn Angriffe in Ihrer Organisation erkannt werden, die in der Regel Teil der Maßnahmen der Lateral Movement-Phase sind.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 08/31/2020
+ms.date: 10/26/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 2257eb00-8614-4577-b6a1-5c65085371f2
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 570bf2565ca42e7262c62f26eb368874f7d5394d
-ms.sourcegitcommit: e7897436d71e253cf583ec566eca3daa9ba3cae9
+ms.openlocfilehash: 774f8f3f560b52d5a39a96aacc9b145d1ca2d445
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2020
-ms.locfileid: "91942419"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93275801"
 ---
 # <a name="tutorial-lateral-movement-alerts"></a>Tutorial: Lateral Movement-Warnungen
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-Cyberangriffe werden üblicherweise auf alle zugänglichen Entitäten wie etwa Benutzer mit geringen Rechten durchgeführt. Anschließend dringt der Angreifer schnell im internen Netzwerk vor (Lateral Movement), um Zugriff auf wertvolle Ressourcen zu erhalten. Dabei kann es sich um sensible Konten, Konten von Domänenadministratoren oder streng vertrauliche Daten handeln. Azure ATP identifiziert diese komplexen Bedrohungen an der Quelle über die gesamte Kette der Angriffsabwehr hinweg und ordnet sie in die folgenden Phasen ein
+Cyberangriffe werden üblicherweise auf alle zugänglichen Entitäten wie etwa Benutzer mit geringen Rechten durchgeführt. Anschließend dringt der Angreifer schnell im internen Netzwerk vor (Lateral Movement), um Zugriff auf wertvolle Ressourcen zu erhalten. Dabei kann es sich um sensible Konten, Konten von Domänenadministratoren oder streng vertrauliche Daten handeln. [!INCLUDE [Product long](includes/product-long.md)] identifiziert diese komplexen Bedrohungen an der Quelle über die gesamte Kette der Angriffsabwehr hinweg und ordnet sie in die folgenden Phasen ein:
 
 1. [Reconnaissance](reconnaissance-alerts.md)
 1. [Kompromittierte Anmeldeinformationen](compromised-credentials-alerts.md)
@@ -31,9 +30,9 @@ Cyberangriffe werden üblicherweise auf alle zugänglichen Entitäten wie etwa B
 1. [Warnungen zu Domänendominanz](domain-dominance-alerts.md)
 1. [Exfiltration](exfiltration-alerts.md)
 
-Weitere Informationen zur Struktur und zu gängigen Komponenten der Azure ATP-Sicherheitswarnungen finden Sie unter [Understanding security alerts (Grundlegendes zu Sicherheitswarnungen)](understanding-security-alerts.md). Weitere Informationen zu **True Positive (TP)** , **Benign True Positive (B-TP)** (unschädlich richtig positiv) und **False Positive (FP)** finden Sie unter [Klassifizierungen der Sicherheitswarnungen](understanding-security-alerts.md#security-alert-classifications).
+Weitere Informationen zur Struktur und zu gängigen Komponenten aller [!INCLUDE [Product short](includes/product-short.md)]-Sicherheitswarnungen finden Sie unter [Grundlegendes zu Sicherheitswarnungen](understanding-security-alerts.md). Weitere Informationen zu **True Positive (TP)** , **Benign True Positive (B-TP)** (unschädlich richtig positiv) und **False Positive (FP)** finden Sie unter [Klassifizierungen der Sicherheitswarnungen](understanding-security-alerts.md#security-alert-classifications).
 
-Die folgenden Sicherheitswarnungen unterstützen Sie dabei, verdächtige Aktivitäten zu identifizieren und zu unterbinden, die von Azure ATP in Ihrem Netzwerk erkannt werden und auf **Lateral Movement** hindeuten. In diesem Tutorial erfahren Sie, wie die folgenden Angriffstypen klassifiziert, behoben und unterbunden werden:
+Die folgenden Sicherheitswarnungen unterstützen Sie dabei, verdächtige Aktivitäten zu identifizieren und zu unterbinden, die von [!INCLUDE [Product short](includes/product-short.md)] in Ihrem Netzwerk erkannt werden und auf **Lateral Movement** hindeuten. In diesem Tutorial erfahren Sie, wie die folgenden Angriffstypen klassifiziert, behoben und unterbunden werden:
 
 > [!div class="checklist"]
 >
@@ -54,7 +53,7 @@ Die folgenden Sicherheitswarnungen unterstützen Sie dabei, verdächtige Aktivit
 
 Am 11.12.2018 hat Microsoft [CVE-2018-8626](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8626) veröffentlicht und gibt bekannt, dass bei Windows DNS-Servern (Domain Name System) ein neues Sicherheitsrisiko bei der Remotecodeausführung erkannt wurde. Bei diesem Sicherheitsrisiko können Server Anforderungen nicht mehr ordnungsgemäß verarbeiten. Ein Angreifer, der dieses Sicherheitsrisiko erfolgreich ausnutzt, kann im Kontext des lokalen Systemkontos beliebigen Code ausführen. Derzeit als DNS-Server konfigurierte Windows-Server sind von diesem Sicherheitsrisiko betroffen.
 
-Bei dieser Erkennung wird eine Azure ATP-Sicherheitswarnung ausgelöst, wenn DNS-Abfragen an einen Domänencontroller im Netzwerk gerichtet werden, die im Verdacht stehen, die Sicherheitslücke CVE-2018-8626 auszunutzen.
+Bei dieser Erkennung wird eine [!INCLUDE [Product short](includes/product-short.md)]-Sicherheitswarnung ausgelöst, wenn DNS-Abfragen an einen Domänencontroller im Netzwerk gerichtet werden, die im Verdacht stehen, die Sicherheitslücke CVE-2018-8626 auszunutzen.
 
 **Lernphase**
 
@@ -68,7 +67,7 @@ Nicht zutreffend
     - Wenn Sie keinen neuen Dienst oder einen unbekannten Prozess finden, **schließen** Sie die Sicherheitswarnung als **FP**.
 1. Diese Art von Angriff kann den DNS-Dienst zum Absturz bringen, bevor die Codeausführung erfolgreich veranlasst wurde.
     - Überprüfen Sie, ob der DNS-Dienst ungefähr zum Zeitpunkt des Angriffs mehrmals neu gestartet wurde.
-    - Wenn der DNS-Dienst neu gestartet wurde, handelte es sich wahrscheinlich um einen Versuch, CVE-2018-8626 auszunutzen. Betrachten Sie diese Warnung als **TP**, und führen Sie die unter **Ermitteln des Umfangs der Sicherheitsverletzung** beschriebenen Anweisungen aus.
+    - Wenn der DNS-Dienst neu gestartet wurde, handelte es sich wahrscheinlich um einen Versuch, CVE-2018-8626 auszunutzen. Betrachten Sie diese Warnung als **TP** , und führen Sie die unter **Ermitteln des Umfangs der Sicherheitsverletzung** beschriebenen Anweisungen aus.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -91,7 +90,7 @@ Nicht zutreffend
 
 ## <a name="suspected-identity-theft-pass-the-hash-external-id-2017"></a>Suspected identity theft (pass-the-hash) (Verdacht auf Identitätsdiebstahl (Pass-the-Hash)) (externalid 2017)
 
-*Vorheriger Name*: Identitätsdiebstahl mithilfe eines Pass-the-Hash-Angriffs
+*Vorheriger Name* : Identitätsdiebstahl mithilfe eines Pass-the-Hash-Angriffs
 
 **Beschreibung**
 
@@ -103,7 +102,7 @@ Nicht zutreffend
 
 **TP, B-TP oder FP?**
 1. Wurde der Hash auf Computern verwendet, die der Benutzer regelmäßig verwendet?
-    - Wenn der Hash regelmäßig auf Computern verwendet wurde, **Schließen** Sie die Warnung als **FP**-Aktivität (falsch positiv).
+    - Wenn der Hash regelmäßig auf Computern verwendet wurde, **Schließen** Sie die Warnung als **FP** -Aktivität (falsch positiv).
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -119,7 +118,7 @@ Nicht zutreffend
 
 ## <a name="suspected-identity-theft-pass-the-ticket-external-id-2018"></a>Suspected identity theft (pass-the-ticket) (Verdacht auf Identitätsdiebstahl (Pass-the-Ticket)) (externalid 2018)
 
-*Vorheriger Name*: Identitätsdiebstahl mithilfe eines Pass-the-Ticket-Angriffs
+*Vorheriger Name* : Identitätsdiebstahl mithilfe eines Pass-the-Ticket-Angriffs
 
 **Beschreibung**
 
@@ -137,21 +136,21 @@ Das erfolgreiche Auflösen von IP-Adressen für Computer in der Organisation ist
 1. Wurde die IP-Adresse freigegeben (z. B. durch ein NAT-Gerät)?
 1. Werden eine oder mehrere Ziel-IP-Adressen vom Sensor nicht aufgelöst? Wenn eine Ziel-IP-Adresse nicht aufgelöst wird, kann dies bedeuten, dass die richtigen Ports zwischen dem Sensor und den Geräten nicht ordnungsgemäß geöffnet sind.
 
-    Wenn die Antwort auf eine der vorausgegangenen Fragen **Ja** lautet, überprüfen Sie, ob Quell- und Zielcomputer identisch sind. Sind sie identisch, handelt es sich um eine **FP**-Aktivität (falsch positiv), und es haben keine echten **Pass-the-Ticket**-Versuche stattgefunden.
+    Wenn die Antwort auf eine der vorausgegangenen Fragen **Ja** lautet, überprüfen Sie, ob Quell- und Zielcomputer identisch sind. Sind sie identisch, handelt es sich um eine **FP** -Aktivität (falsch positiv), und es haben keine echten **Pass-the-Ticket** -Versuche stattgefunden.
 
-Das Feature [Remote Credential Guard](/windows/security/identity-protection/remote-credential-guard) der RDP-Verbindungen kann zu **B-TP**-Warnungen führen, wenn es mit Windows 10 auf Windows Server 2016 und höher verwendet wird.
+Das Feature [Remote Credential Guard](/windows/security/identity-protection/remote-credential-guard) der RDP-Verbindungen kann zu **B-TP** -Warnungen führen, wenn es mit Windows 10 auf Windows Server 2016 und höher verwendet wird.
 Überprüfen Sie mithilfe der Warnungsbeweisen, ob der Benutzer eine Remotedesktopverbindung vom Quellcomputer zum Zielcomputer hergestellt hat.
 
 1. Suchen Sie nach entsprechenden Beweisen.
 1. Wenn Sie Beweise gefunden haben, überprüfen Sie, ob die Verbindung mithilfe von Remote Credential Guard hergestellt wurde.
-1. Wenn ja, **schließen** Sie die Sicherheitswarnung, da es sich um eine **B-TP**-Aktivität (unbedenklich richtig positiv) handelt.
+1. Wenn ja, **schließen** Sie die Sicherheitswarnung, da es sich um eine **B-TP** -Aktivität (unbedenklich richtig positiv) handelt.
 
 Es gibt benutzerdefinierte Anwendungen, die Tickets im Auftrag des Benutzers weiterleiten. Diese Anwendungen verfügen über Delegierungsberechtigungen für Benutzertickets.
 
 1. Gibt es eine benutzerdefinierte Anwendung wie die zuvor beschriebene derzeit auf den Zielcomputern? Welche Dienste werden von der Anwendung ausgeführt? Werden die Dienste durch Anweisung der Benutzer ausgeführt, beispielsweise zum Zugreifen auf Datenbanken?
-    - Wenn ja, **schließen** Sie die Sicherheitswarnung, da es sich um eine **B-TP**-Aktivität (unbedenklich richtig positiv) handelt.
+    - Wenn ja, **schließen** Sie die Sicherheitswarnung, da es sich um eine **B-TP** -Aktivität (unbedenklich richtig positiv) handelt.
 1. Ist der Zielcomputer ein Delegierungsserver?
-    - Wenn ja, **schließen** Sie die Sicherheitswarnung, und schließen Sie diesen Computer als **B-TP**-Aktivität (unbedenklich richtig positiv) aus.
+    - Wenn ja, **schließen** Sie die Sicherheitswarnung, und schließen Sie diesen Computer als **B-TP** -Aktivität (unbedenklich richtig positiv) aus.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -164,7 +163,7 @@ Es gibt benutzerdefinierte Anwendungen, die Tickets im Auftrag des Benutzers wei
 1. Isolieren Sie die Quell- und Zielcomputer.
 1. Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
 1. Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
-1. Wenn Microsoft Defender ATP installiert ist, nutzen Sie **klist.exe purge**, um alle Tickets der angegebenen Anmeldesitzung endgültig zu löschen und zu verhindern, dass die Tickets in Zukunft verwendet werden.
+1. Wenn Microsoft Defender for Endpoint installiert ist, nutzen Sie **klist.exe purge** , um alle Tickets der angegebenen Anmeldesitzung endgültig zu löschen und zu verhindern, dass die Tickets in Zukunft verwendet werden.
 
 ## <a name="suspected-ntlm-authentication-tampering-external-id-2039"></a>Suspected NTLM authentication tampering (external ID 2039) (Vermutete Manipulation der NTLM-Authentifizierung [Externe ID 2039])
 
@@ -172,7 +171,7 @@ Im Juni 2019 hat Microsoft das [Sicherheitsrisiko CVE-2019-1040](https://portal.
 
 Böswillige Akteure, die dieses Sicherheitsrisiko erfolgreich ausnutzen, können NTLM-Sicherheitsfeatures herabstufen und erfolgreich authentifizierte Sitzungen im Namen anderer Konten erstellen. Nicht gepatchte Windows-Server sind durch dieses Sicherheitsrisiko gefährdet.
 
-Bei dieser Erkennung wird eine Azure ATP-Sicherheitswarnung ausgelöst, wenn NTLM-Authentifizierungsanforderungen an einen Domänencontroller im Netzwerk gerichtet werden, die im Verdacht stehen, die Sicherheitslücke [CVE-2019-1040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040) auszunutzen.
+Bei dieser Erkennung wird eine [!INCLUDE [Product short](includes/product-short.md)]-Sicherheitswarnung ausgelöst, wenn NTLM-Authentifizierungsanforderungen an einen Domänencontroller im Netzwerk gerichtet werden, die im Verdacht stehen, die Sicherheitslücke [CVE-2019-1040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040) auszunutzen.
 
 **Lernphase**
 
@@ -209,7 +208,7 @@ Ein Exchange-Server kann so konfiguriert werden, dass die NTLM-Authentifizierung
 
 Sobald der Relaisserver die NTLM-Authentifizierung empfängt, wird eine Abfrage durchgeführt, die vom Zielserver erstellt wurde. Der Client antwortet auf dieser Abfrage und verhindert so, dass der Angreifer antworten kann. Auf diese Weise kann der NTLM-Vorgang mit dem Zieldomänencontroller fortgesetzt werden.
 
-Hierbei wird eine Warnung ausgelöst, wenn Azure ATP ermittelt, dass die Anmeldeinformationen eines Exchange-Kontos von einer verdächtigen Quelle verwendet werden.
+Hierbei wird eine Warnung ausgelöst, wenn [!INCLUDE [Product short](includes/product-short.md)] ermittelt, dass die Anmeldeinformationen eines Exchange-Kontos von einer verdächtigen Quelle verwendet werden.
 
 **Lernphase**
 
@@ -240,7 +239,7 @@ Nicht zutreffend
 
 **Description**
 
-Encryption downgrade is a method of weakening Kerberos using encryption downgrade of different fields of the protocol, normally encrypted using the highest levels of encryption. A weakened encrypted field can be an easier target to offline brute force attempts. Various attack methods utilize weak Kerberos encryption cyphers. In this detection, Azure ATP learns the Kerberos encryption types used by computers and users, and alerts you when a weaker cypher is used that is unusual for the source computer, and/or user, and matches known attack techniques.
+Encryption downgrade is a method of weakening Kerberos using encryption downgrade of different fields of the protocol, normally encrypted using the highest levels of encryption. A weakened encrypted field can be an easier target to offline brute force attempts. Various attack methods utilize weak Kerberos encryption cyphers. In this detection, [!INCLUDE [Product short](includes/product-short.md)] learns the Kerberos encryption types used by computers and users, and alerts you when a weaker cypher is used that is unusual for the source computer, and/or user, and matches known attack techniques.
 
 In an over-pass-the-hash attack, an attacker can use a weak stolen hash to create a strong ticket, with a Kerberos AS request. In this detection,  instances are detected where the AS_REQ message encryption type from the source computer is downgraded, when compared to the previously learned behavior (the computer used AES).
 
@@ -288,11 +287,11 @@ Some legitimate resources don't support strong encryption ciphers and may trigge
 
 ## <a name="suspected-overpass-the-hash-attack-kerberos-external-id-2002"></a>Suspected overpass-the-hash attack (Kerberos) (Verdacht auf einen Overpass-the-Hash-Angriff (Kerberos)) (externalid 2002)
 
-*Vorheriger Name*: Ungewöhnliche Kerberos-Protokollimplementierung (potenzieller Overpass-the-Hash-Angriff)
+*Vorheriger Name* : Ungewöhnliche Kerberos-Protokollimplementierung (potenzieller Overpass-the-Hash-Angriff)
 
 **Beschreibung**
 
-Angreifer verwenden Tools, die verschiedene Protokolle wie Kerberos und SMB auf nicht standardmäßige Arten implementieren. Während diese Art des Netzwerkdatenverkehrs von Microsoft Windows ohne Warnungen akzeptiert wird, kann Azure ATP potenziell böswillige Absichten erkennen. Das Verhalten weist auf Techniken hin, wie sie beispielsweise für Overpass-the-Hash, Brute-Force oder erweiterte Ransomware-Exploits, z. B. WannaCry, verwendet werden.
+Angreifer verwenden Tools, die verschiedene Protokolle wie Kerberos und SMB auf nicht standardmäßige Arten implementieren. Während diese Art des Netzwerkdatenverkehrs von Microsoft Windows ohne Warnungen akzeptiert wird, kann [!INCLUDE [Product short](includes/product-short.md)] potenziell böswillige Absichten erkennen. Das Verhalten weist auf Techniken hin, wie sie beispielsweise für Overpass-the-Hash, Brute-Force oder erweiterte Ransomware-Exploits, z. B. WannaCry, verwendet werden.
 
 **Lernphase**
 
@@ -303,8 +302,8 @@ Nicht zutreffend
 Zuweilen implementieren Anwendungen einen eigenen Kerberos-Stapel, der nicht der Kerberos-RFC-Dokumentation entspricht.
 
 1. Überprüfen Sie, ob auf dem Quellcomputer eine Anwendung mit ihrem eigenen Kerberos-Stapel ausgeführt wird, und dies im Widerspruch zur Kerberos-RFC steht.
-1. Führt der Quellcomputer eine solche Anwendung aus, obwohl er dies **nicht** tun sollte, korrigieren Sie die Anwendungskonfiguration. **Schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität (unbedenklich richtig positiv).
-1. Führt der Quellcomputer eine solche Anwendung aus, und soll er das auch weiterhin tun, **schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität (unbedenklich richtig positiv), und schließen Sie diesen Computer aus.
+1. Führt der Quellcomputer eine solche Anwendung aus, obwohl er dies **nicht** tun sollte, korrigieren Sie die Anwendungskonfiguration. **Schließen** Sie die Sicherheitswarnung als **B-TP** -Aktivität (unbedenklich richtig positiv).
+1. Führt der Quellcomputer eine solche Anwendung aus, und soll er das auch weiterhin tun, **schließen** Sie die Sicherheitswarnung als **B-TP** -Aktivität (unbedenklich richtig positiv), und schließen Sie diesen Computer aus.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -336,7 +335,7 @@ Nicht zutreffend
 **TP, B-TP oder FP?**
 
 - Wird dieses Konto regelmäßig für die Anmeldung beim Computer verwendet?
-  - Wenn das Zertifikat regelmäßig vom Computer verwendet wird, **schließen** Sie die Warnung als **FP**-Aktivität.
+  - Wenn das Zertifikat regelmäßig vom Computer verwendet wird, **schließen** Sie die Warnung als **FP** -Aktivität.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -358,7 +357,7 @@ Nicht zutreffend
 
 12.3.2020 Microsoft hat [CVE-2020-0796](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-0796) veröffentlicht und dabei angekündigt, dass ein neues Sicherheitsrisiko bei der Remotecodeausführung vorliegt, in der das Protokoll von Microsoft Server Message Block 3.1.1 (SMBv3) bestimmte Anforderungen verarbeitet. Ein Angreifer, der das Sicherheitsrisiko erfolgreich ausgenutzt hat, könnte die Möglichkeit erhalten, Code auf dem Zielserver oder -client auszuführen. Nicht gepatchte Windows-Server sind durch dieses Sicherheitsrisiko gefährdet.
 
-Bei dieser Erkennung wird eine Azure ATP-Sicherheitswarnung ausgelöst, wenn das SMBv3-Paket an einen Domänencontroller im Netzwerk gerichtet wird, der im Verdacht steht, die Sicherheitslücke CVE-2020-0796 auszunutzen.
+Bei dieser Erkennung wird eine [!INCLUDE [Product short](includes/product-short.md)]-Sicherheitswarnung ausgelöst, wenn das SMBv3-Paket an einen Domänencontroller im Netzwerk gerichtet wird, der im Verdacht steht, die Sicherheitslücke CVE-2020-0796 auszunutzen.
 
 **Lernphase**
 
@@ -399,4 +398,4 @@ Nicht zutreffend
 - [Warnungen zu kompromittierten Anmeldeinformationen](compromised-credentials-alerts.md)
 - [Warnungen zu Domänendominanz](domain-dominance-alerts.md)
 - [Warnungen zu Exfiltration](exfiltration-alerts.md)
-- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)
+- [Weitere Informationen finden Sie im [!INCLUDE [Product short](includes/product-short.md)]-Forum.](https://aka.ms/MDIcommunity)
