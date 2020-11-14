@@ -1,50 +1,53 @@
 ---
-title: Azure ATP-Sicherheitswarnungen zur Phase „Kompromittierte Anmeldeinformationen“
-description: In diesem Artikel werden die Azure ATP-Warnungen erläutert, die ausgegeben werden, wenn Angriffe in Ihrer Organisation erkannt werden, die typisch für die Phase der kompromittierten Anmeldeinformationen sind.
+title: Microsoft Defender for Identity-Sicherheitswarnungen zur Phase „Kompromittierte Anmeldeinformationen“
+description: In diesem Artikel werden die Microsoft Defender for Identity-Warnungen erläutert, die ausgegeben werden, wenn Angriffe in Ihrer Organisation erkannt werden, die typisch für die Phase „Kompromittierte Anmeldeinformationen“ sind.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 03/01/2020
+ms.date: 10/26/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5ba78ddacfed1993a4c5f4b6c4407e4af45826f8
-ms.sourcegitcommit: dd8435ba20f76a6fc4590980c040c6fc7ec6c62b
+ms.openlocfilehash: 1f0b06f81986eedaac03f58c9c040a0b3348c304
+ms.sourcegitcommit: 3c5ca2cb13ebe6c839ede951b238261d1fc73f26
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91451784"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93343551"
 ---
 # <a name="tutorial-compromised-credential-alerts"></a>Tutorial: Warnungen zu kompromittierten Anmeldeinformationen
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-Cyberangriffe werden in der Regel gegen eine beliebige zugängliche Entität gestartet, wie z.B. einen Benutzer mit geringfügigen Berechtigungen, und verschieben sich anschließend schnell seitwärts, bis der Angreifer Zugriff auf wertvolle Objekte erhält (z.B. sensible Konten, Domänenadministratoren und streng vertrauliche Daten). Azure ATP identifiziert diese komplexen Bedrohungen an der Quelle über die gesamte Kette der Angriffsabwehr hinweg und ordnet sie in die folgenden Phasen ein
+Cyberangriffe werden in der Regel gegen eine beliebige zugängliche Entität gestartet, wie z.B. einen Benutzer mit geringfügigen Berechtigungen, und verschieben sich anschließend schnell seitwärts, bis der Angreifer Zugriff auf wertvolle Objekte erhält (z.B. sensible Konten, Domänenadministratoren und streng vertrauliche Daten). [!INCLUDE [Product long](includes/product-long.md)] identifiziert diese komplexen Bedrohungen an der Quelle über die gesamte Kette der Angriffsabwehr hinweg und ordnet sie in die folgenden Phasen ein:
 
 1. [Reconnaissance](reconnaissance-alerts.md)
-2. **Kompromittierte Anmeldeinformationen**
-3. [Seitliche Verschiebung](lateral-movement-alerts.md)
-4. [Warnungen zu Domänendominanz](domain-dominance-alerts.md)
-5. [Exfiltration](exfiltration-alerts.md)
+1. **Kompromittierte Anmeldeinformationen**
+1. [Seitliche Verschiebung](lateral-movement-alerts.md)
+1. [Warnungen zu Domänendominanz](domain-dominance-alerts.md)
+1. [Exfiltration](exfiltration-alerts.md)
 
-Weitere Informationen zur Struktur und zu gängigen Komponenten der Azure ATP-Sicherheitswarnungen finden Sie unter [Understanding security alerts (Grundlegendes zu Sicherheitswarnungen)](understanding-security-alerts.md). Weitere Informationen zu **True Positive (TP)** , **Benign True Positive (B-TP)** (unschädlich richtig positiv) und **False Positive (FP)** finden Sie unter [Klassifizierungen der Sicherheitswarnungen](understanding-security-alerts.md#security-alert-classifications).
+Weitere Informationen zur Struktur und zu gängigen Komponenten aller [!INCLUDE [Product short](includes/product-short.md)]-Sicherheitswarnungen finden Sie unter [Grundlegendes zu Sicherheitswarnungen](understanding-security-alerts.md). Weitere Informationen zu **True Positive (TP)** , **Benign True Positive (B-TP)** (unschädlich richtig positiv) und **False Positive (FP)** finden Sie unter [Klassifizierungen der Sicherheitswarnungen](understanding-security-alerts.md#security-alert-classifications).
 
-Mit den folgenden Sicherheitswarnungen können Sie verdächtige Aktivitäten der Phase **Kompromittierte Anmeldeinformationen** identifizieren und beheben, die von Azure ATP in Ihrem Netzwerk erkannt wurden. In diesem Tutorial erfahren Sie, wie die folgenden Angriffstypen klassifiziert, behoben und unterbunden werden:
+Mit den folgenden Sicherheitswarnungen können Sie verdächtige Aktivitäten der Phase **Kompromittierte Anmeldeinformationen** identifizieren und beheben, die von [!INCLUDE [Product short](includes/product-short.md)] in Ihrem Netzwerk erkannt wurden. In diesem Tutorial erfahren Sie, wie die folgenden Angriffstypen klassifiziert, behoben und unterbunden werden:
 
 > [!div class="checklist"]
 >
-> * Honeytoken-Aktivität (externe ID 2014)
-> * Vermuteter Brute-Force-Angriff (Kerberos, NTLM) (externe ID 2023)
-> * Vermuteter Brute-Force-Angriff (LDAP) (externe ID 2004)
-> * Vermuteter Brute-Force-Angriff (SMB) (externe ID 2033)
-> * Verdächtigter Netlogon-Rechteerweiterungsversuch (externe ID 2411)
-> * Vermuteter WannaCry-Ransomware-Angriff (externe ID 2035)
-> * Vermutete Verwendung des Metasploit-Hackerframeworks (externe ID 2034)
-> * Verdächtige VPN-Verbindung (externe ID 2025)
+> - [Honeytoken-Aktivität (externe ID 2014)](#honeytoken-activity-external-id-2014)
+> - [Vermuteter Brute-Force-Angriff (Kerberos, NTLM) (externe ID 2023)](#suspected-brute-force-attack-kerberos-ntlm-external-id-2023)
+> - [Vermuteter Brute-Force-Angriff (LDAP) (externe ID 2004)](#suspected-brute-force-attack-ldap-external-id-2004)
+> - [Vermuteter Brute-Force-Angriff (SMB) (externe ID 2033)](#suspected-brute-force-attack-smb-external-id-2033)
+> - [Verdächtigter Netlogon-Rechteerweiterungsversuch (CVE-2020-1472-Ausnutzung) (externe ID 2411)](#suspected-netlogon-priv-elev-2411)
+> - [Vermuteter WannaCry-Ransomware-Angriff (externe ID 2035)](#suspected-wannacry-ransomware-attack-external-id-2035)
+> - [Vermutete Verwendung des Metasploit-Hackerframeworks (externe ID 2034)](#suspected-use-of-metasploit-hacking-framework-external-id-2034)
+> - [Verdächtige VPN-Verbindung (externe ID 2025)](#suspicious-vpn-connection-external-id-2025)
+
+<!--
+> - [Suspected Kerberos SPN exposure (external ID 2410)](#suspected-kerberos-spn-exposure-external-id-2410)
+-->
 
 ## <a name="honeytoken-activity-external-id-2014"></a>Honeytoken-Aktivität (externe ID 2014)
 
@@ -52,7 +55,7 @@ Mit den folgenden Sicherheitswarnungen können Sie verdächtige Aktivitäten der
 
 **Beschreibung**
 
-Honeytoken-Konten sind Köderkonten, die eingerichtet werden, um schädliche Aktivitäten, die versuchen, diese Konten zu verwenden, zu erkennen und zu verfolgen. Honeytoken-Konten sollten nicht verwendet werden, aber einen attraktiven Namen besitzen, um Angreifer anzulocken (z.B. SQL-Admin). Jede von diesen ausgehende Aktivität kann auf böswilliges Verhalten hinweisen.
+Honeytoken-Konten sind Köderkonten, die eingerichtet werden, um schädliche Aktivitäten, die versuchen, diese Konten zu verwenden, zu erkennen und zu verfolgen. Honeytoken-Konten sollten nicht verwendet werden, aber einen attraktiven Namen besitzen, um Angreifer anzulocken (z. B. SQL-Admin). Jede von diesen ausgehende Aktivität kann auf böswilliges Verhalten hinweisen.
 
 Weitere Informationen zu Honeytokenkonten finden Sie unter [Konfigurieren von Ausschlüssen von Erkennungen und Honeytokenkonten](install-step7.md).
 
@@ -60,7 +63,7 @@ Weitere Informationen zu Honeytokenkonten finden Sie unter [Konfigurieren von Au
 
 1. Überprüfen Sie, ob der Besitzer des Quellcomputers das Honeytokenkonto für die Authentifizierung verwendet hat. Verwenden Sie dazu die auf der Seite zu verdächtigen Aktivitäten beschriebene Methode (z.B. Kerberos, LDAP, NTLM).
 
-    Sollte der Besitzer des Quellcomputers das Honeytokenkonto für die Authentifizierung verwendet haben, verwenden Sie genau die in der Warnung beschriebene Methode, und *Schließen* Sie die Sicherheitswarnung als **B-TP**-Aktivität.
+    Sollte der Besitzer des Quellcomputers das Honeytokenkonto für die Authentifizierung verwendet haben, verwenden Sie genau die in der Warnung beschriebene Methode, und *Schließen* Sie die Sicherheitswarnung als **B-TP** -Aktivität.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -68,15 +71,15 @@ Weitere Informationen zu Honeytokenkonten finden Sie unter [Konfigurieren von Au
 1. Untersuchen Sie den [Quellcomputer](investigate-a-computer.md).
 
     > [!NOTE]
-    > Wenn die Authentifizierung mithilfe von NTLM erfolgt ist, sind in einigen Szenarios möglicherweise nicht genügend Informationen zum Server verfügbar, auf die der Quellcomputer zugreifen wollte. Azure ATP erfasst die auf Windows-Ereignis 4776 basierenden Daten des Quellcomputers, die den computerdefinierten Namen des Quellcomputers enthalten.
+    > Wenn die Authentifizierung mithilfe von NTLM erfolgt ist, sind in einigen Szenarios möglicherweise nicht genügend Informationen zum Server verfügbar, auf die der Quellcomputer zugreifen wollte. [!INCLUDE [Product short](includes/product-short.md)] erfasst die auf Windows-Ereignis 4776 basierenden Daten des Quellcomputers, die den computerdefinierten Namen des Quellcomputers enthalten.
     > Wenn Sie Windows-Ereignis 4776 verwenden, um diese Informationen zu erfassen, wird das Quellfeld für diese Informationen gelegentlich von dem Gerät oder der Software überschrieben, und zeigt nur „Arbeitsstation“ oder „MSTSC“ an. Wenn Sie häufig Geräte verwenden, die als „Arbeitsstation“ oder „MSTSC“ angezeigt werden, vergewissern Sie sich, dass die NTLM-Überwachung auf den entsprechenden Domänencontrollern aktiviert ist, um den richtigen Quellcomputernamen zu erhalten.
     > Aktivieren Sie dazu das Windows-Ereignis 8004 (NTLM-Authentifizierungsereignis, das Informationen zum Quellcomputer, Benutzerkonto und Server enthält, auf die der Quellcomputer zugreifen wollte).
 
 **Empfohlene Abhilfemaßnahmen und Schritte zur Vorbeugung**
 
 1. Kontrollieren Sie den Quellcomputer.
-    * Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
-    * Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch kompromittiert sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
+    - Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
+    - Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch kompromittiert sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
 
 ## <a name="suspected-brute-force-attack-kerberos-ntlm-external-id-2023"></a>Vermuteter Brute-Force-Angriff (Kerberos, NTLM) (externe ID 2023)
 
@@ -99,24 +102,24 @@ Bei einem Kennwort-Spray-Angriff testen Angreifer nach erfolgreichem Durchzähle
 Überprüfen Sie auf jeden Fall, ob Anmeldeversuche mit einer erfolgreichen Authentifizierung beendet wurden.
 
 1. Wurde ein Anmeldeversuch erfolgreich beendet, überprüfen Sie, ob eines der **erratenen Konten** normalerweise von diesem Quellcomputer verwendet wird.
-    * Besteht die Möglichkeit, dass bei diesen Konten wegen der Verwendung eines falschen Kennworts ein Fehler aufgetreten ist?
-    * Überprüfen Sie zusammen mit dem Benutzer/den Benutzern, ob die Aktivität von ihm/ihnen generiert wurde (durch erfolgreiches Anmelden nach einigen fehlerhaften Anmeldeversuchen).
+    - Besteht die Möglichkeit, dass bei diesen Konten wegen der Verwendung eines falschen Kennworts ein Fehler aufgetreten ist?
+    - Überprüfen Sie zusammen mit dem Benutzer/den Benutzern, ob die Aktivität von ihm/ihnen generiert wurde (durch erfolgreiches Anmelden nach einigen fehlerhaften Anmeldeversuchen).
 
-      Lautet die Antwort **Ja**, **Schließen** Sie die Sicherheitswarnung als B-TP-Aktivität.
+      Lautet die Antwort **Ja** , **Schließen** Sie die Sicherheitswarnung als B-TP-Aktivität.
 
 1. Wenn es keine **Erratenen Konten** gibt, überprüfen Sie, ob eines der **Angegriffenen Konten** normalerweise vom Quellcomputer verwendet wird.
-    * Überprüfen Sie, ob auf dem Quellcomputer ein Skript mit falschen/veralteten Anmeldeinformationen ausgeführt wird.
-    * Lautet die Antwort **Ja**, beenden und bearbeiten Sie das Skript, oder löschen Sie es. **Schließen** Sie die Sicherheitswarnung als B-TP-Aktivität.
+    - Überprüfen Sie, ob auf dem Quellcomputer ein Skript mit falschen/veralteten Anmeldeinformationen ausgeführt wird.
+    - Lautet die Antwort **Ja** , beenden und bearbeiten Sie das Skript, oder löschen Sie es. **Schließen** Sie die Sicherheitswarnung als B-TP-Aktivität.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
 1. Untersuchen Sie den Quellcomputer.
 1. Überprüfen Sie auf der Seite für Warnungen, ob und gegebenenfalls welche Benutzer erfolgreich erraten wurden.
-    * Überprüfen Sie für jeden erfolgreich erratenen Benutzer [dessen Profil](investigate-a-user.md), um weitere Informationen zu erhalten.
+    - Überprüfen Sie für jeden erfolgreich erratenen Benutzer [dessen Profil](investigate-a-user.md), um weitere Informationen zu erhalten.
 
     > [!NOTE]
     > Überprüfen Sie die Beweise, um das verwendete Authentifizierungsprotokoll zu ermitteln. Wenn die NTLM-Authentifizierung verwendet wurde, aktivieren Sie die NTLM-Überwachung des Windows-Ereignisses 8004 auf dem Domänencontroller, um den Ressourcenserver zu ermitteln, auf den die Benutzer zugreifen wollten. Windows-Ereignis 8004 ist das NTLM-Authentifizierungsereignis, das Informationen zum Quellcomputer, Benutzerkonto und Server enthält, auf die das Quellbenutzerkonto zugreifen wollte.
-    > Azure ATP erfasst die auf Windows-Ereignis 4776 basierenden Daten des Quellcomputers, die den computerdefinierten Namen des Quellcomputers enthalten. Wenn Sie Windows-Ereignis 4776 verwenden, um diese Informationen zu erfassen, wird das Quellfeld der Informationen gelegentlich von dem Gerät oder der Software überschrieben, und es wird nur „Arbeitsstation“ oder „MSTSC“ als Informationsquelle angezeigt. Darüber hinaus ist der Quellcomputer möglicherweise nicht tatsächlich in Ihrem Netzwerk vorhanden. Dies ist möglich, da Angreifer in der Regel offene, über das Internet zugängliche Server außerhalb des Netzwerks zum Ziel haben und dies dann zum Auflisten Ihrer Benutzer verwenden. Wenn Sie häufig Geräte verwenden, die als „Arbeitsstation“ oder „MSTSC“ angezeigt werden, vergewissern Sie sich, dass die NTLM-Überwachung auf den Domänencontrollern aktiviert ist, um den Namen des Ressourcenservers zu erhalten, auf den zugegriffen wurde. Sie sollten diesen Server ebenfalls untersuchen und überprüfen, ob er zum Internet geöffnet ist, und ihn ggf. schließen.
+    > [!INCLUDE [Product short](includes/product-short.md)] erfasst die auf Windows-Ereignis 4776 basierenden Daten des Quellcomputers, die den computerdefinierten Namen des Quellcomputers enthalten. Wenn Sie Windows-Ereignis 4776 verwenden, um diese Informationen zu erfassen, wird das Quellfeld der Informationen gelegentlich von dem Gerät oder der Software überschrieben, und es wird nur „Arbeitsstation“ oder „MSTSC“ als Informationsquelle angezeigt. Darüber hinaus ist der Quellcomputer möglicherweise nicht tatsächlich in Ihrem Netzwerk vorhanden. Dies ist möglich, da Angreifer in der Regel offene, über das Internet zugängliche Server außerhalb des Netzwerks zum Ziel haben und dies dann zum Auflisten Ihrer Benutzer verwenden. Wenn Sie häufig Geräte verwenden, die als „Arbeitsstation“ oder „MSTSC“ angezeigt werden, vergewissern Sie sich, dass die NTLM-Überwachung auf den Domänencontrollern aktiviert ist, um den Namen des Ressourcenservers zu erhalten, auf den zugegriffen wurde. Sie sollten diesen Server ebenfalls untersuchen und überprüfen, ob er zum Internet geöffnet ist, und ihn ggf. schließen.
 
 1. Wenn Sie wissen, welcher Server die Authentifizierungsüberprüfung gesendet hat, untersuchen Sie den Server, indem Sie Ereignisse wie das Windows-Ereignis 4624 überprüfen, um den Authentifizierungsprozess besser nachvollziehen zu können.
 1. Überprüfen Sie, ob dieser Server mithilfe von offenen Ports eine Verbindung mit dem Internet herstellt.
@@ -126,8 +129,8 @@ Bei einem Kennwort-Spray-Angriff testen Angreifer nach erfolgreichem Durchzähle
 
 1. Setzen Sie die Kennwörter der erratenen Benutzer zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
 1. Kontrollieren Sie den Quellcomputer.
-    * Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
-    * Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch kompromittiert sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
+    - Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
+    - Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch kompromittiert sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
 1. Setzen Sie die Kennwörter des Quellbenutzers zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
 1. Erzwingen Sie in der Organisation [komplexe und lange Kennwörter](/windows/device-security/security-policy-settings/password-policy), und stellen Sie damit die notwendige erste Sicherheitsstufe zum Schutz vor zukünftigen Brute-Force-Angriffen zur Verfügung.
 
@@ -139,22 +142,22 @@ Bei einem Kennwort-Spray-Angriff testen Angreifer nach erfolgreichem Durchzähle
 
 Bei einem Brute-Force-Angriff versucht der Angreifer, sich mit vielen verschiedenen Kennwörtern für verschiedene Konten anzumelden, bis ein korrektes Kennwort für mindestens ein Konto gefunden wird. Sobald eines gefunden wurde, kann sich der Angreifer mit diesem Konto anmelden.
 
-In dieser Erkennung wird eine Warnung ausgelöst, wenn Azure ATP eine signifikante Anzahl von Authentifizierungen mit einfacher Bindung erkennt. Diese Warnung erkennt Brute-Force-Angriffe, die entweder *horizontal* mit wenigen Kennwörtern für viele Benutzer oder *vertikal* mit einer Vielzahl von Kennwörtern für wenige Benutzer ausgeführt werden. Auch eine beliebige Kombination dieser beiden Optionen ist möglich.
+In dieser Erkennung wird eine Warnung ausgelöst, wenn [!INCLUDE [Product short](includes/product-short.md)] eine signifikante Anzahl von Authentifizierungen mit einfacher Bindung erkennt. Diese Warnung erkennt Brute-Force-Angriffe, die entweder *horizontal* mit wenigen Kennwörtern für viele Benutzer oder *vertikal* mit einer Vielzahl von Kennwörtern für wenige Benutzer ausgeführt werden. Auch eine beliebige Kombination dieser beiden Optionen ist möglich.
 
 **TP, B-TP oder FP?**
 
 Überprüfen Sie auf jeden Fall, ob Anmeldeversuche mit einer erfolgreichen Authentifizierung beendet wurden.
 
 1. Wurde ein Anmeldeversuch erfolgreich beendet, überprüfen Sie, ob eines der **Erratenen Konten** normalerweise von diesem Quellcomputer verwendet wird.
-    * Besteht die Möglichkeit, dass bei diesen Konten wegen der Verwendung eines falschen Kennworts ein Fehler aufgetreten ist?
-    * Überprüfen Sie zusammen mit dem Benutzer/den Benutzern, ob die Aktivität von ihm/ihnen generiert wurde (durch erfolgreiches Anmelden nach einigen fehlerhaften Anmeldeversuchen).
+    - Besteht die Möglichkeit, dass bei diesen Konten wegen der Verwendung eines falschen Kennworts ein Fehler aufgetreten ist?
+    - Überprüfen Sie zusammen mit dem Benutzer/den Benutzern, ob die Aktivität von ihm/ihnen generiert wurde (durch erfolgreiches Anmelden nach einigen fehlerhaften Anmeldeversuchen).
 
-     Lautet die Antwort **Ja**, **Schließen** Sie die Sicherheitswarnung als B-TP-Aktivität.
+        Lautet die Antwort **Ja** , **Schließen** Sie die Sicherheitswarnung als B-TP-Aktivität.
 
 1. Wenn es keine **Erratenen Konten** gibt, überprüfen Sie, ob eines der **Angegriffenen Konten** normalerweise vom Quellcomputer verwendet wird.
-    * Überprüfen Sie, ob auf dem Quellcomputer ein Skript mit falschen/veralteten Anmeldeinformationen ausgeführt wird.
+    - Überprüfen Sie, ob auf dem Quellcomputer ein Skript mit falschen/veralteten Anmeldeinformationen ausgeführt wird.
 
-      Lautet die Antwort **Ja**, beenden und bearbeiten Sie das Skript, oder löschen Sie es. **Schließen** Sie die Sicherheitswarnung als B-TP-Aktivität.
+        Lautet die Antwort **Ja** , beenden und bearbeiten Sie das Skript, oder löschen Sie es. **Schließen** Sie die Sicherheitswarnung als B-TP-Aktivität.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -165,30 +168,30 @@ In dieser Erkennung wird eine Warnung ausgelöst, wenn Azure ATP eine signifikan
 
 1. Setzen Sie die Kennwörter der erratenen Benutzer zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
 1. Kontrollieren Sie den Quellcomputer.
-    * Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
-    * Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch kompromittiert sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
+    - Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
+    - Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch kompromittiert sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
 1. Setzen Sie die Kennwörter des Quellbenutzers zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
 1. Erzwingen Sie in der Organisation [komplexe und lange Kennwörter](/windows/device-security/security-policy-settings/password-policy), und stellen Sie damit die notwendige erste Sicherheitsstufe zum Schutz vor zukünftigen Brute-Force-Angriffen zur Verfügung.
 1. Unterbinden Sie in Ihrer Organisation künftig die Verwendung von LDAP-Klartextprotokoll.
 
 ## <a name="suspected-brute-force-attack-smb-external-id-2033"></a>Vermuteter Brute-Force-Angriff (SMB) (externe ID 2033)
 
-*Vorheriger Name*: Ungewöhnliche Protokollimplementierung (potenzielle Verwendung schädlicher Tools wie Hydra)
+*Vorheriger Name* : Ungewöhnliche Protokollimplementierung (potenzielle Verwendung schädlicher Tools wie Hydra)
 
 **Beschreibung**
 
-Angreifer verwenden Tools, die verschiedene Protokolle wie SMB, Kerberos und NTLM auf nicht standardmäßige Arten implementieren. Während diese Art des Netzwerkdatenverkehrs von Windows ohne Warnungen akzeptiert wird, kann Azure ATP potenziell böswillige Absichten erkennen. Das Verhalten weist auf Brute-Force-Techniken hin.
+Angreifer verwenden Tools, die verschiedene Protokolle wie SMB, Kerberos und NTLM auf nicht standardmäßige Arten implementieren. Während diese Art des Netzwerkdatenverkehrs von Windows ohne Warnungen akzeptiert wird, kann [!INCLUDE [Product short](includes/product-short.md)] potenziell böswillige Absichten erkennen. Das Verhalten weist auf Brute-Force-Techniken hin.
 
 **TP, B-TP oder FP?**
 
 1. Überprüfen Sie, ob auf dem Quellcomputer ein Angriffstool wie Hydra ausgeführt wird.
-    1. Wird auf dem Quellcomputer ein Angriffstool ausgeführt, stellt diese Warnung eine **TP**-Aktivität dar. Befolgen Sie die Anweisungen im Abschnitt **Ermitteln des Umfangs der Sicherheitsverletzung** oben.
+    1. Wird auf dem Quellcomputer ein Angriffstool ausgeführt, stellt diese Warnung eine **TP** -Aktivität dar. Führen Sie die Anweisungen unter **Ermitteln des Umfangs der Sicherheitsverletzung** aus.
 
 Anwendungen implementieren gelegentlich einen eigenen NTLM- oder SMB-Stapel.
 
 1. Überprüfen Sie, ob auf dem Quellcomputer dessen eigener NTLM- oder SMB-Anwendungstyp im Stapel ausgeführt wird.
-    1. Führt der Quellcomputer diesen Anwendungstyp aus, obwohl er das nicht sollte, korrigieren Sie entsprechend die Anwendungskonfiguration. **Schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität (unbedenklich richtig positiv).
-    2. **Schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität, und schließen Sie diesen Computer aus, wenn der Quellcomputer diesen Anwendungstyp ausführt und dies auch weiterhin tun soll.
+    1. Führt der Quellcomputer diesen Anwendungstyp aus, obwohl er das nicht sollte, korrigieren Sie entsprechend die Anwendungskonfiguration. **Schließen** Sie die Sicherheitswarnung als **B-TP** -Aktivität (unbedenklich richtig positiv).
+    1. **Schließen** Sie die Sicherheitswarnung als **B-TP** -Aktivität, und schließen Sie diesen Computer aus, wenn der Quellcomputer diesen Anwendungstyp ausführt und dies auch weiterhin tun soll.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -200,17 +203,48 @@ Anwendungen implementieren gelegentlich einen eigenen NTLM- oder SMB-Stapel.
 1. Setzen Sie die Kennwörter der erratenen Benutzer zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
 1. Kontrollieren Sie den Quellcomputer.
     1. Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
-    2. Suchen Sie nach Benutzern, die zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind.
-    3. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
+    1. Suchen Sie nach Benutzern, die zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind.
+    1. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
 1. Erzwingen Sie [komplexe und lange Kennwörter](/windows/security/threat-protection/security-policy-settings/password-policy) in der Organisation. Komplexe und lange Kennwörter stellen die notwendige erste Sicherheitsstufe zum Schutz vor zukünftigen Brute-Force-Angriffen dar.
 1. [Deaktivieren von SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
 
+<!--
+## Suspected Kerberos SPN exposure (external ID 2410)
+
+**Description**
+
+Attackers use tools to enumerate service accounts and their respective SPNs (Service principal names), request a Kerberos service ticket for the services, capture the Ticket Granting Service (TGS) tickets from memory and extract their hashes, and save them for later use in an offline brute force attack.
+
+**Learning period**
+
+None
+
+**TP, B-TP, or FP**
+
+1. Check if the source computer is running an attack tool, such as PowerSploit or Rubeus.
+    1. If yes, it is a true positive. Follow the instructions in **Understand the scope of the breach**.
+    1. If the source computer is found running that type of application, and it should continue doing so, Close the security alert as a T-BP activity, and exclude that computer.
+
+**Understand the scope of the breach**
+
+1. Investigate the [exposed accounts](investigate-a-user.md). Check for malicious activity or suspicious behavior for these accounts.
+1. Investigate the [source computer](investigate-a-computer.md).
+
+**Remediation:**
+
+1. Contain the source computer.
+    - Find the tool that performed the attack and remove it.
+    - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
+1. Reset the passwords of the exposed users and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
+-->
+
 <a name="suspected-netlogon-priv-elev-2411"></a>
-## <a name="suspected-netlogon-privilege-elevation-attempt-cve-2020-1472-exploitationexternalid2411"></a>Verdächtigter Netlogon-Rechteerweiterungsversuch (CVE-2020-1472-Ausnutzung) (externe ID 2411)
+
+## <a name="suspected-netlogon-privilege-elevation-attempt-cve-2020-1472-exploitation-external-id-2411"></a>Verdacht auf versuchte Rechteerweiterung des Anmeldediensts (Exploit „CVE-2020-1472“) (externe ID 2411)
 
 Microsoft hat [CVE-2020-1472](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2020-1472) veröffentlicht mit der Ankündigung, dass ein neues Sicherheitsrisiko vorliegt, das die Rechteerweiterung für den Domänencontroller ermöglicht.
 
-Ein Rechteerweiterungs-Sicherheitsrisiko liegt vor, wenn ein Angreifer eine gefährdete Netlogon-Verbindung über einen sicheren Kanal mit einem Domänencontroller herstellt und dabei das Netlogon Remote Protocol ([MS-NRPC](/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)) verwendet. Dies ist auch als *Netlogon-Rechteerweiterungs-Sicherheitsrisiko* bekannt.
+Ein Rechteerweiterungs-Sicherheitsrisiko liegt vor, wenn ein Angreifer eine gefährdete Netlogon-Verbindung über einen sicheren Kanal mit einem Domänencontroller herstellt und dabei das Netlogon Remote Protocol ( [MS-NRPC](/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)) verwendet. Dies ist auch als *Netlogon-Rechteerweiterungs-Sicherheitsrisiko* bekannt.
 
 **Lernphase**
 
@@ -218,9 +252,9 @@ Keine
 
 **TP, B-TP oder FP**
 
-Wenn der Quellcomputer ein Domänencontroller (DC) ist, wird Azure ATP möglicherweise aufgrund fehlender Entscheidungssicherheit an dessen Identifikation gehindert.
+Wenn der Quellcomputer ein Domänencontroller (DC) ist, wird [!INCLUDE [Product short](includes/product-short.md)] möglicherweise aufgrund fehlender Entscheidungssicherheit an dessen Identifikation gehindert.
 
-1. Wenn der Quellcomputer ein Domänencontroller ist, **Schließen** Sie die Warnung als **B-TP** -Aktivität.
+1. Wenn der Quellcomputer ein Domänencontroller ist, **Schließen** Sie die Warnung als  **B-TP** -Aktivität.
 
 1. Wenn dieser Quellcomputer diesen Aktivitätstyp erzeugen und zukünftig weiterhin erzeugen soll, **Schließen** Sie die Sicherheitswarnung als **B-TP** -Aktivität, und schließen Sie den Computer aus, um zusätzliche gutartige Warnungen zu vermeiden.
 
@@ -237,27 +271,27 @@ Betrachten Sie diese Warnung andernfalls als  **TP** , und führen Sie die u
 1. Patchen Sie alle Computer, und stellen Sie sicher, dass Sicherheitsupdates angewendet werden.
 1. In [unserem Leitfaden](https://support.microsoft.com/help/4557222/how-to-manage-the-changes-in-netlogon-secure-channel-connections-assoc) erfahren Sie, wie Sie Änderungen an einer Netlogon-Verbindung über einen sicheren Kanal verwalten, die sich auf dieses Sicherheitsrisiko beziehen und es verhindern können.
 1. Kontrollieren Sie den Quellcomputer.
-    * Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
+    - Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
 
 ## <a name="suspected-wannacry-ransomware-attack-external-id-2035"></a>Vermuteter WannaCry-Ransomware-Angriff (externe ID 2035)
 
-*Vorheriger Name*: Ungewöhnliche Protokollimplementierung (potenzieller WannaCry-Ransomwareangriff)
+*Vorheriger Name* : Ungewöhnliche Protokollimplementierung (potenzieller WannaCry-Ransomwareangriff)
 
 **Beschreibung**
 
-Angreifer verwenden Tools, die verschiedene Protokolle auf nicht standardmäßige Arten implementieren. Während diese Art des Netzwerkdatenverkehrs von Windows ohne Warnungen akzeptiert wird, kann Azure ATP potenziell böswillige Absichten erkennen. Das Verhalten weist auf Techniken hin, die von erweiterter Ransomware, z.B. WannaCry, verwendet werden.
+Angreifer verwenden Tools, die verschiedene Protokolle auf nicht standardmäßige Arten implementieren. Während diese Art des Netzwerkdatenverkehrs von Windows ohne Warnungen akzeptiert wird, kann [!INCLUDE [Product short](includes/product-short.md)] potenziell böswillige Absichten erkennen. Das Verhalten weist auf Techniken hin, die von erweiterter Ransomware, z.B. WannaCry, verwendet werden.
 
 **TP, B-TP oder FP?**
 
 1. Überprüfen Sie, ob WannaCry auf dem Quellcomputer ausgeführt wird.
 
-    * Wird WannaCry ausgeführt, stellt diese Warnung eine **TP**-Aktivität dar. Befolgen Sie die Anweisungen im Abschnitt **Ermitteln des Umfangs der Sicherheitsverletzung** oben.
+    - Wird WannaCry ausgeführt, stellt diese Warnung eine **TP** -Aktivität dar. Befolgen Sie die Anweisungen im Abschnitt **Ermitteln des Umfangs der Sicherheitsverletzung** oben.
 
 Anwendungen implementieren gelegentlich einen eigenen NTLM- oder SMB-Stapel.
 
 1. Überprüfen Sie, ob auf dem Quellcomputer dessen eigener NTLM- oder SMB-Anwendungstyp im Stapel ausgeführt wird.
-    1. Führt der Quellcomputer diesen Anwendungstyp aus, obwohl er das nicht sollte, korrigieren Sie entsprechend die Anwendungskonfiguration. **Schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität (unbedenklich richtig positiv).
-    2. Führt der Quellcomputer diesen Anwendungstyp aus und soll das auch weiterhin tun, **Schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität, und schließen Sie diesen Computer aus.
+    1. Führt der Quellcomputer diesen Anwendungstyp aus, obwohl er das nicht sollte, korrigieren Sie entsprechend die Anwendungskonfiguration. **Schließen** Sie die Sicherheitswarnung als **B-TP** -Aktivität (unbedenklich richtig positiv).
+    1. Führt der Quellcomputer diesen Anwendungstyp aus und soll das auch weiterhin tun, **Schließen** Sie die Sicherheitswarnung als **B-TP** -Aktivität, und schließen Sie diesen Computer aus.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -267,19 +301,19 @@ Anwendungen implementieren gelegentlich einen eigenen NTLM- oder SMB-Stapel.
 **Empfohlene Abhilfemaßnahmen und Schritte zur Vorbeugung**
 
 1. Kontrollieren Sie den Quellcomputer.
-    * [Entfernen von WannaCry](https://support.microsoft.com/help/890830/remove-specific-prevalent-malware-with-windows-malicious-software-remo)
-    * WanaKiwi kann für einige Ransomwares die Daten in deren Besitz entschlüsseln. Dies ist aber nur möglich, wenn der Benutzer den Computer nicht neu gestartet oder ausgeschaltet hat. Weitere Informationen finden Sie unter [WannaCry-Ransomware](https://answers.microsoft.com/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1).
-    * Suchen Sie nach Benutzern, die zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
+    - [Entfernen von WannaCry](https://support.microsoft.com/help/890830/remove-specific-prevalent-malware-with-windows-malicious-software-remo)
+    - WanaKiwi kann für einige Ransomwares die Daten in deren Besitz entschlüsseln. Dies ist aber nur möglich, wenn der Benutzer den Computer nicht ausgeschaltet oder neu gestartet hat. Weitere Informationen finden Sie unter [WannaCry-Ransomware](https://answers.microsoft.com/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1).
+    - Suchen Sie nach Benutzern, die zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
 1. Patchen Sie alle Computer, und stellen Sie sicher, dass Sicherheitsupdates angewendet werden.
-    * [Deaktivieren von SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
+    - [Deaktivieren von SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
 
 ## <a name="suspected-use-of-metasploit-hacking-framework-external-id-2034"></a>Vermutete Verwendung des Metasploit-Hackerframeworks (externe ID 2034)
 
-*Vorheriger Name*: Ungewöhnliche Protokollimplementierung (potenzielle Verwendung schädlicher Hackertools wie Metasploit)
+*Vorheriger Name* : Ungewöhnliche Protokollimplementierung (potenzielle Verwendung schädlicher Hackertools wie Metasploit)
 
 **Beschreibung**
 
-Angreifer verwenden Tools, die verschiedene Protokolle (SMB, Kerberos, NTLM) auf nicht standardmäßige Arten implementieren. Während diese Art des Netzwerkdatenverkehrs von Windows ohne Warnungen akzeptiert wird, kann Azure ATP potenziell böswillige Absichten erkennen. Das Verhalten weist auf Techniken wie z.B. die Verwendung des Metasploit-Hackerframeworks hin.
+Angreifer verwenden Tools, die verschiedene Protokolle (SMB, Kerberos, NTLM) auf nicht standardmäßige Arten implementieren. Während diese Art des Netzwerkdatenverkehrs von Windows ohne Warnungen akzeptiert wird, kann [!INCLUDE [Product short](includes/product-short.md)] potenziell böswillige Absichten erkennen. Das Verhalten weist auf Techniken wie z.B. die Verwendung des Metasploit-Hackerframeworks hin.
 
 **TP, B-TP oder FP?**
 
@@ -290,8 +324,8 @@ Angreifer verwenden Tools, die verschiedene Protokolle (SMB, Kerberos, NTLM) auf
 Anwendungen implementieren gelegentlich einen eigenen NTLM- oder SMB-Stapel.
 
  1. Überprüfen Sie, ob auf dem Quellcomputer dessen eigener NTLM- oder SMB-Anwendungstyp im Stapel ausgeführt wird.
-    1. Führt der Quellcomputer diesen Anwendungstyp aus, obwohl er das nicht sollte, korrigieren Sie entsprechend die Anwendungskonfiguration. **Schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität (unbedenklich richtig positiv).
-    2. Führt der Quellcomputer diesen Anwendungstyp aus und soll das auch weiterhin tun, **Schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität, und schließen Sie diesen Computer aus.
+    1. Führt der Quellcomputer diesen Anwendungstyp aus, obwohl er das nicht sollte, korrigieren Sie entsprechend die Anwendungskonfiguration. **Schließen** Sie die Sicherheitswarnung als **B-TP** -Aktivität (unbedenklich richtig positiv).
+    1. Führt der Quellcomputer diesen Anwendungstyp aus und soll das auch weiterhin tun, **Schließen** Sie die Sicherheitswarnung als **B-TP** -Aktivität, und schließen Sie diesen Computer aus.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -303,9 +337,9 @@ Anwendungen implementieren gelegentlich einen eigenen NTLM- oder SMB-Stapel.
 1. Setzen Sie die Kennwörter der erratenen Benutzer zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
 1. Kontrollieren Sie den Quellcomputer.
     1. Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
-    2. Suchen Sie nach Benutzern, die zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
+    1. Suchen Sie nach Benutzern, die zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
 1. Setzen Sie die Kennwörter des Quellbenutzers zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
-4. [Deaktivieren von SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
+1. [Deaktivieren von SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
 
 ## <a name="suspicious-vpn-connection-external-id-2025"></a>Verdächtige VPN-Verbindung (externe ID 2025)
 
@@ -313,7 +347,7 @@ Anwendungen implementieren gelegentlich einen eigenen NTLM- oder SMB-Stapel.
 
 **Beschreibung**
 
-Azure ATP speichert Informationen zum Entitätsverhalten für VPN-Verbindungen von Benutzern für einen gleitenden Zeitraum von einem Monat.
+[!INCLUDE [Product short](includes/product-short.md)] speichert Informationen zum Entitätsverhalten für VPN-Verbindungen von Benutzern für einen gleitenden Zeitraum von einem Monat.
 
 Das Modell für das VPN-Verhalten basiert auf den Computern, auf denen sich Benutzer anmelden und den Standorten, von denen Benutzer eine Verbindung herstellen.
 
@@ -327,9 +361,9 @@ Es wird eine Warnung ausgelöst, wenn basierend auf einem Machine-Learning-Algor
 
 1. Soll der verdächtige Benutzer diese Vorgänge ausführen?
     1. Hat der Benutzer vor Kurzem seinen Standort geändert?
-    2. Gab es einen Ortswechsel, und stellte der Benutzer eine Verbindung von einem neuen Gerät aus her?
+    1. Gab es einen Ortswechsel, und stellte der Benutzer eine Verbindung von einem neuen Gerät aus her?
 
-Lautet die Antwort auf diese Fragen „Ja“, **Schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität.
+Lautet die Antwort auf diese Fragen „Ja“, **Schließen** Sie die Sicherheitswarnung als **B-TP** -Aktivität.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -356,4 +390,4 @@ Lautet die Antwort auf diese Fragen „Ja“, **Schließen** Sie die Sicherheits
 - [Lateral Movement-Warnungen](lateral-movement-alerts.md)
 - [Warnungen zu Domänendominanz](domain-dominance-alerts.md)
 - [Warnungen zu Exfiltration](exfiltration-alerts.md)
-- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)
+- [Weitere Informationen finden Sie im [!INCLUDE [Product short](includes/product-short.md)]-Forum.](https://aka.ms/MDIcommunity)

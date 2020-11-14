@@ -1,56 +1,56 @@
 ---
-title: Tutorial zum Untersuchen eines Benutzers mit Azure ATP
-description: In diesem Artikel wird erläutert, wie Sie Azure ATP-Sicherheitswarnungen verwenden, um einen verdächtigen Benutzer zu untersuchen.
+title: Tutorial für die Benutzeruntersuchung mit Microsoft Defender for Identity
+description: In diesem Artikel wird erläutert, wie Sicherheitswarnungen von Microsoft Defender for Identity zur Untersuchung eines verdächtigen Benutzers verwendet werden.
 keywords: ''
 author: shsagir
 ms.author: shsagir
-ms.date: 09/15/2019
+ms.date: 10/26/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 35da46d7094de5f99b487a8f8c0b6dd2afd23350
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 6cd2dc6ae6a97ddd8cdcc45a273755f64fceff03
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912894"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93275206"
 ---
 # <a name="tutorial-investigate-a-user"></a>Tutorial: Untersuchen eines Benutzers
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
-> Die auf dieser Seite erläuterten Azure ATP-Features sind auch über das neue [Portal](https://portal.cloudappsecurity.com) zugänglich.
+> Die auf dieser Seite erläuterten [!INCLUDE [Product long](includes/product-long.md)]-Features sind auch über das neue [Portal](https://portal.cloudappsecurity.com) zugänglich.
 
-Azure ATP-Beweise für Warnungen und Lateral Movement-Pfade zeigen klar an, wenn Benutzer verdächtige Aktivitäten durchgeführt haben oder Anzeichen dafür vorhanden sind, dass ihre Konten kompromittiert worden sind. In diesem Tutorial verwenden Sie die Untersuchungsempfehlungen dazu, das Risiko für Ihre Organisation zu ermitteln, Abhilfemaßnahmen zu bestimmen und festzulegen, wie ähnliche Angriffe in der Zukunft am besten verhindert werden können.  
+[!INCLUDE [Product long](includes/product-long.md)]-Beweise für Warnungen und Lateral Movement-Pfade zeigen klar an, wenn Benutzer verdächtige Aktivitäten durchgeführt haben oder Anzeichen dafür vorliegen, dass ihre Konten kompromittiert worden sind. In diesem Tutorial verwenden Sie die Untersuchungsempfehlungen dazu, das Risiko für Ihre Organisation zu ermitteln, Abhilfemaßnahmen zu bestimmen und festzulegen, wie ähnliche Angriffe in der Zukunft am besten verhindert werden können.
 
 > [!div class="checklist"]
-> * Sammeln Sie Informationen zum Benutzer.
-> * Untersuchen Sie vom Benutzer durchgeführte Aktivitäten.
-> * Untersuchen Sie die Ressourcen, auf die der Benutzer zugegriffen hat.
-> * Untersuchen Sie Lateral Movement-Pfade.
+>
+> - Sammeln Sie Informationen zum Benutzer.
+> - Untersuchen Sie vom Benutzer durchgeführte Aktivitäten.
+> - Untersuchen Sie die Ressourcen, auf die der Benutzer zugegriffen hat.
+> - Untersuchen Sie Lateral Movement-Pfade.
 
 ## <a name="recommended-investigation-steps-for-suspicious-users"></a>Empfohlene Untersuchungsschritte für verdächtige Benutzer
 
 Überprüfen und untersuchen Sie das Benutzerprofil auf die folgenden Details und Aktivitäten:
 
 1. Wer ist der [Benutzer](entity-profiles.md)?
-     1. Ist der Benutzer ein [sensibler Benutzer](sensitive-accounts.md) (z. B. Administrator oder auf einer Watchlist o.ä.)?  
-     2. Was ist seine Rolle innerhalb der Organisation?
-     3. Ist er in der Organisationsstruktur wichtig?
+    1. Ist der Benutzer ein [sensibler Benutzer](sensitive-accounts.md) (z. B. Administrator oder auf einer Watchlist o.ä.)?
+    1. Was ist seine Rolle innerhalb der Organisation?
+    1. Ist er in der Organisationsstruktur wichtig?
 
 1. Zu [untersuchende](investigate-entity.md) verdächtige Aktivitäten:
-     1. Hat der Benutzer weitere Warnungen in Azure ATP oder in anderen Sicherheitstools wie Windows Defender ATP, Azure Security Center und/oder Microsoft CAS geöffnet?
-     2. Hatte der Benutzer fehlgeschlagene Anmeldungsversuche?
-     3. Auf welche Ressourcen hat der Benutzer zugegriffen?  
-     4. Hat der Benutzer auf wertvolle Ressourcen zugegriffen?  
-     5. Hatte der Benutzer Zugriffsrechte für die Ressourcen, auf die er zugegriffen hat?  
-     6. Auf welchen Computern hat sich der Benutzer angemeldet? 
-     7. Hätte der Benutzer sich auf diesen Computern anmelden dürfen?
-     8. Ist ein [Lateral Movement-Pfad](use-case-lateral-movement-path.md) (LMP) zwischen dem Benutzer und einem sensiblen Benutzer vorhanden?
-
+    1. Liegen andere offene Warnungen für den Benutzer in [!INCLUDE [Product short](includes/product-short.md)] oder anderen Sicherheitstools wie Microsoft Defender für Endpunkt, Azure Security Center und/oder Microsoft CAS vor?
+    1. Hatte der Benutzer fehlgeschlagene Anmeldungsversuche?
+    1. Auf welche Ressourcen hat der Benutzer zugegriffen?
+    1. Hat der Benutzer auf wertvolle Ressourcen zugegriffen?
+    1. Hatte der Benutzer Zugriffsrechte für die Ressourcen, auf die er zugegriffen hat?
+    1. Auf welchen Computern hat sich der Benutzer angemeldet?
+    1. Hätte der Benutzer sich auf diesen Computern anmelden dürfen?
+    1. Ist ein [Lateral Movement-Pfad](use-case-lateral-movement-path.md) (LMP) zwischen dem Benutzer und einem sensiblen Benutzer vorhanden?
 
 ## <a name="see-also"></a>Weitere Informationen
 
@@ -62,4 +62,4 @@ Azure ATP-Beweise für Warnungen und Lateral Movement-Pfade zeigen klar an, wenn
 - [Lateral Movement-Warnungen](lateral-movement-alerts.md)
 - [Warnungen zu Domänendominanz](domain-dominance-alerts.md)
 - [Warnungen zu Exfiltration](exfiltration-alerts.md)
-- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)
+- [Weitere Informationen finden Sie im [!INCLUDE [Product short](includes/product-short.md)]-Forum.](https://aka.ms/MDIcommunity)

@@ -1,29 +1,28 @@
 ---
-title: Sicherheitswarnungen zur Reconnaissancephase in Azure ATP
-description: In diesem Artikel werden die Azure ATP-Warnungen erläutert, die ausgegeben werden, wenn Angriffe in Ihrer Organisation erkannt werden, die in der Regel Teil der Maßnahmen der Reconnaissancephase sind.
+title: Microsoft Defender for Identity-Sicherheitswarnungen für die Reconnaissance-Phase
+description: In diesem Artikel werden die Microsoft Defender for Identity-Warnungen erläutert, die ausgegeben werden, wenn Angriffe in Ihrer Organisation erkannt werden, die in der Regel Teil der Maßnahmen der Reconnaissance-Phase sind.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 08/31/2020
+ms.date: 10/27/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6eb8484ba49d4ae56a1baafce9ea3b76d0760165
-ms.sourcegitcommit: cd13e58303372d01463ae2ccf1e093d4f6d85fb5
+ms.openlocfilehash: 1a21762351400d298154e7dbf7503fd7d820e0a2
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91754390"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93275367"
 ---
 # <a name="tutorial-reconnaissance-alerts"></a>Tutorial: Warnungen zu Reconnaissance
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-Cyberangriffe werden üblicherweise auf alle zugänglichen Entitäten wie etwa Benutzer mit geringen Rechten durchgeführt. Anschließend dringt der Angreifer schnell im internen Netzwerk vor (Lateral Movement), um Zugriff auf wertvolle Ressourcen zu erhalten. Dabei kann es sich um sensible Konten, Konten von Domänenadministratoren oder streng vertrauliche Daten handeln. Azure ATP identifiziert diese komplexen Bedrohungen an der Quelle über die gesamte Kette der Angriffsabwehr hinweg und ordnet sie in die folgenden Phasen ein
+Cyberangriffe werden üblicherweise auf alle zugänglichen Entitäten wie etwa Benutzer mit geringen Rechten durchgeführt. Anschließend dringt der Angreifer schnell im internen Netzwerk vor (Lateral Movement), um Zugriff auf wertvolle Ressourcen zu erhalten. Dabei kann es sich um sensible Konten, Konten von Domänenadministratoren oder streng vertrauliche Daten handeln. [!INCLUDE [Product long](includes/product-long.md)] identifiziert diese komplexen Bedrohungen an der Quelle über die gesamte Kette der Angriffsabwehr hinweg und ordnet sie in die folgenden Phasen ein:
 
 1. **Reconnaissance**
 1. [Kompromittierte Anmeldeinformationen](compromised-credentials-alerts.md)
@@ -31,9 +30,9 @@ Cyberangriffe werden üblicherweise auf alle zugänglichen Entitäten wie etwa B
 1. [Warnungen zu Domänendominanz](domain-dominance-alerts.md)
 1. [Exfiltration](exfiltration-alerts.md)
 
-Weitere Informationen zur Struktur und zu gängigen Komponenten der Azure ATP-Sicherheitswarnungen finden Sie unter [Understanding security alerts (Grundlegendes zu Sicherheitswarnungen)](understanding-security-alerts.md). Weitere Informationen zu **True Positive (TP)** , **Benign True Positive (B-TP)** (unschädlich richtig positiv) und **False Positive (FP)** finden Sie unter [Klassifizierungen der Sicherheitswarnungen](understanding-security-alerts.md#security-alert-classifications).
+Weitere Informationen zur Struktur und zu gängigen Komponenten aller [!INCLUDE [Product short](includes/product-short.md)]-Sicherheitswarnungen finden Sie unter [Grundlegendes zu Sicherheitswarnungen](understanding-security-alerts.md). Weitere Informationen zu **True Positive (TP)** , **Benign True Positive (B-TP)** (unschädlich richtig positiv) und **False Positive (FP)** finden Sie unter [Klassifizierungen der Sicherheitswarnungen](understanding-security-alerts.md#security-alert-classifications).
 
-Die folgenden Sicherheitswarnungen unterstützen Sie dabei, verdächtige Aktivitäten zu identifizieren und zu unterbinden, die von Azure ATP in Ihrem Netzwerk erkannt werden und auf **Reconnaissance** hindeuten.
+Mit den folgenden Sicherheitswarnungen können Sie verdächtige Aktivitäten der Phase **Reconnaissance** identifizieren und beheben, die von [!INCLUDE [Product short](includes/product-short.md)] in Ihrem Netzwerk erkannt wurden.
 
 In diesem Tutorial machen Sie sich mit den folgenden Angriffstypen vertraut und erfahren, wie Sie diese klassifizieren, unterbinden und im Vorfeld verhindern:
 
@@ -48,17 +47,17 @@ In diesem Tutorial machen Sie sich mit den folgenden Angriffstypen vertraut und 
 
 ## <a name="account-enumeration-reconnaissance-external-id-2003"></a>Reconnaissance über Kontoenumeration (externe ID 2003)
 
-*Vorheriger Name*: Reconnaissance mithilfe von Kontoenumeration
+*Vorheriger Name* : Reconnaissance mithilfe von Kontoenumeration
 
 **Beschreibung**
 
 Bei Reconnaissancemaßnahmen über Kontoenumerationen verwendet ein Angreifer ein Wörterbuch mit Tausenden von Benutzernamen oder Tools wie KrbGuess, um Benutzernamen in Ihrer Domäne zu erraten.
 
-**Kerberos**: Der Angreifer führt Kerberos-Anforderungen mit diesen Namen durch, um einen gültigen Benutzernamen in der Domäne aufzuspüren. Wenn dadurch ein Benutzername bestimmt wird, erhält der Angreifer die Kerberos-Fehlermeldung **Preauthentication required** (Vorauthentifizierung erforderlich) statt der Meldung **Security principal unknown** (Unbekannter Sicherheitsprinzipal).
+**Kerberos** : Der Angreifer führt Kerberos-Anforderungen mit diesen Namen durch, um einen gültigen Benutzernamen in der Domäne aufzuspüren. Wenn dadurch ein Benutzername bestimmt wird, erhält der Angreifer die Kerberos-Fehlermeldung **Preauthentication required** (Vorauthentifizierung erforderlich) statt der Meldung **Security principal unknown** (Unbekannter Sicherheitsprinzipal).
 
-**NTLM**: Der Angreifer führt NLTM-Authentifizierungsanforderungen mit diesem Wörterbuch mit Namen durch, um einen gültigen Benutzernamen in der Domäne aufzuspüren. Wenn dadurch ein Benutzername bestimmt wird, erhält der Angreifer die NTLM-Fehlermeldung **WrongPassword (0xc000006a)** statt der Meldung **NoSuchUser (0xc0000064)** .
+**NTLM** : Der Angreifer führt NLTM-Authentifizierungsanforderungen mit diesem Wörterbuch mit Namen durch, um einen gültigen Benutzernamen in der Domäne aufzuspüren. Wenn dadurch ein Benutzername bestimmt wird, erhält der Angreifer die NTLM-Fehlermeldung **WrongPassword (0xc000006a)** statt der Meldung **NoSuchUser (0xc0000064)** .
 
-Bei Erkennung dieser Warnung ermittelt Azure ATP den Ursprung des Kontoenumerationsangriffs, die Gesamtzahl der Versuche zum Erraten des Namens und die Anzahl der gefundenen Übereinstimmungen. Wenn es zu viele unbekannte Benutzer gibt, erkennt Azure ATP dies als verdächtige Aktivität.
+Bei Erkennung dieser Warnung ermittelt [!INCLUDE [Product short](includes/product-short.md)] den Ursprung des Kontoenumerationsangriffs, die Gesamtzahl der Versuche zum Erraten des Namens und die Anzahl der gefundenen Übereinstimmungen. Wenn es zu viele unbekannte Benutzer gibt, erkennt [!INCLUDE [Product short](includes/product-short.md)] dies als verdächtige Aktivität.
 
 **Lernphase**
 
@@ -68,7 +67,7 @@ Nicht zutreffend
 
 Einige Server und Anwendungen fragen Domänencontroller ab, um festzustellen, ob Konten in zulässigen Verwendungsszenarios zum Einsatz kommen.
 
-Um festzustellen, ob es sich bei der Abfrage um den Typ **TP**, **B-TP** oder **FP** handelt, klicken Sie auf die Warnung, um die zugehörige Detailseite aufzurufen:
+Um festzustellen, ob es sich bei der Abfrage um den Typ **TP** , **B-TP** oder **FP** handelt, klicken Sie auf die Warnung, um die zugehörige Detailseite aufzurufen:
 
 1. Überprüfen Sie, ob der Quellcomputer diese Abfrage tatsächlich ausführen sollte. Beispiele für **B-TP** könnten in diesem Fall Microsoft Exchange-Server oder Systeme der Personalverwaltung sein.
 
@@ -77,7 +76,7 @@ Um festzustellen, ob es sich bei der Abfrage um den Typ **TP**, **B-TP** oder **
      Eine Fehlkonfigurationen der Server kann z. B. bei Exchange/Skype oder ADSF dazu führen, dass zusätzliche Benutzer vorhanden sind, die verschiedenen Domänen angehören.
     - Sehen Sie sich die Konfiguration des problematischen Diensts an, um die Fehlkonfiguration zu beheben.
 
-    Wenn Sie die obigen Fragen mit **Ja** beantwortet haben, handelt es sich um eine **B-TP**-Aktivität. *Schließen* Sie die Sicherheitswarnung.
+    Wenn Sie die obigen Fragen mit **Ja** beantwortet haben, handelt es sich um eine **B-TP** -Aktivität. *Schließen* Sie die Sicherheitswarnung.
 
 Betrachten Sie im nächsten Schritt den Quellcomputer:
 
@@ -86,7 +85,7 @@ Betrachten Sie im nächsten Schritt den Quellcomputer:
     Wenn ja, beenden und bearbeiten Sie das Skript, oder löschen Sie es.
     - Handelt es sich um ein Verwaltungs- oder Sicherheitsskript bzw. um eine entsprechende Anwendung, die tatsächlich in der Umgebung ausgeführt werden soll?
 
-      Wenn Sie die vorherige Frage mit **Ja** beantwortet haben, *schließen* Sie die Sicherheitswarnung, und schließen Sie diesen Computer aus. Vermutlich handelt es sich um eine **B-TP**-Aktivität.
+      Wenn Sie die vorherige Frage mit **Ja** beantwortet haben, *schließen* Sie die Sicherheitswarnung, und schließen Sie diesen Computer aus. Vermutlich handelt es sich um eine **B-TP** -Aktivität.
 
 Betrachten Sie nun die Konten:
 
@@ -96,7 +95,7 @@ Angreifer verwenden häufig ein Wörterbuch mit zufälligen Kontonamen, um vorha
     - Wenn ja, sind diese Konten möglicherweise deaktiviert, oder sie gehören Mitarbeitern, die das Unternehmen verlassen haben.
     - Überprüfen Sie, ob eine Anwendung oder ein Skript vorhanden ist, mit dem überprüft wird, welche Konten in Active Directory Domain Services noch vorhanden sind.
 
-      Wenn Sie eine der vorherigen Fragen mit **Ja** beantwortet haben, *schließen* Sie die Sicherheitswarnung. Es handelt sich vermutlich um eine **B-TP**-Aktivität.
+      Wenn Sie eine der vorherigen Fragen mit **Ja** beantwortet haben, *schließen* Sie die Sicherheitswarnung. Es handelt sich vermutlich um eine **B-TP** -Aktivität.
 
 1. Wenn einer der Rateversuche mit einem vorhandenen Kontonamen übereinstimmt, kennt der Angreifer vorhandene Konten in Ihrer Umgebung und kann mit Brute-Force-Angriffen und gefundenen Benutzernamen versuchen, Zugriff auf Ihre Domäne zu erhalten.
     - Überprüfen Sie die erratenen Kontonamen auf weitere verdächtige Aktivitäten.
@@ -109,7 +108,7 @@ Angreifer verwenden häufig ein Wörterbuch mit zufälligen Kontonamen, um vorha
     > [!NOTE]
     > Überprüfen Sie die Beweise, um das verwendete Authentifizierungsprotokoll zu ermitteln. Wenn die NTLM-Authentifizierung verwendet wurde, aktivieren Sie die NTLM-Überwachung des Windows-Ereignisses 8004 auf dem Domänencontroller, um den Ressourcenserver zu ermitteln, auf den die Benutzer zugreifen wollten.  
     > Windows-Ereignis 8004 ist das NTLM-Authentifizierungsereignis, das Informationen zum Quellcomputer, Benutzerkonto und Server enthält, auf die das Quellbenutzerkonto zugreifen wollte.  
-    > Azure ATP erfasst die auf Windows-Ereignis 4776 basierenden Daten des Quellcomputers, die den computerdefinierten Namen des Quellcomputers enthalten. Wenn Sie Windows-Ereignis 4776 verwenden, um diese Informationen zu erfassen, wird das Quellfeld der Informationen gelegentlich von dem Gerät oder der Software überschrieben, und es wird nur „Arbeitsstation“ oder „MSTSC“ als Informationsquelle angezeigt. Darüber hinaus ist der Quellcomputer möglicherweise nicht tatsächlich in Ihrem Netzwerk vorhanden. Dies ist möglich, da Angreifer in der Regel offene, über das Internet zugängliche Server außerhalb des Netzwerks zum Ziel haben und dies dann zum Auflisten Ihrer Benutzer verwenden. Wenn Sie häufig Geräte verwenden, die als „Arbeitsstation“ oder „MSTSC“ angezeigt werden, vergewissern Sie sich, dass die NTLM-Überwachung auf den Domänencontrollern aktiviert ist, um den Namen des Ressourcenservers zu erhalten, auf den zugegriffen wurde. Sie sollten diesen Server ebenfalls untersuchen und überprüfen, ob er zum Internet geöffnet ist, und ihn ggf. schließen.
+    > [!INCLUDE [Product short](includes/product-short.md)] erfasst die auf Windows-Ereignis 4776 basierenden Daten des Quellcomputers, die den computerdefinierten Namen des Quellcomputers enthalten. Wenn Sie Windows-Ereignis 4776 verwenden, um diese Informationen zu erfassen, wird das Quellfeld der Informationen gelegentlich von dem Gerät oder der Software überschrieben, und es wird nur „Arbeitsstation“ oder „MSTSC“ als Informationsquelle angezeigt. Darüber hinaus ist der Quellcomputer möglicherweise nicht tatsächlich in Ihrem Netzwerk vorhanden. Dies ist möglich, da Angreifer in der Regel offene, über das Internet zugängliche Server außerhalb des Netzwerks zum Ziel haben und dies dann zum Auflisten Ihrer Benutzer verwenden. Wenn Sie häufig Geräte verwenden, die als „Arbeitsstation“ oder „MSTSC“ angezeigt werden, vergewissern Sie sich, dass die NTLM-Überwachung auf den Domänencontrollern aktiviert ist, um den Namen des Ressourcenservers zu erhalten, auf den zugegriffen wurde. Sie sollten diesen Server ebenfalls untersuchen und überprüfen, ob er zum Internet geöffnet ist, und ihn ggf. schließen.
 
 1. Wenn Sie wissen, welcher Server die Authentifizierungsüberprüfung gesendet hat, untersuchen Sie den Server, indem Sie Ereignisse wie das Windows-Ereignis 4624 überprüfen, um den Authentifizierungsprozess besser nachvollziehen zu können.
 
@@ -137,15 +136,15 @@ Nicht zutreffend
 
 1. Klicken Sie auf die Warnung, um die ausgeführten Abfragen anzuzeigen.
     - Überprüfen Sie, ob der Quellcomputer diese Abfragen ausführen soll.
-        - Falls ja, schließen Sie die Sicherheitswarnung als **FP**-Aktivität. Wenn es sich um eine laufende Aktivität handelt, schließen Sie die verdächtige Aktivität aus.
+        - Falls ja, schließen Sie die Sicherheitswarnung als **FP** -Aktivität. Wenn es sich um eine laufende Aktivität handelt, schließen Sie die verdächtige Aktivität aus.
 1. Klicken Sie auf den Quellcomputer, und rufen Sie seine Profilseite auf.
     - Suchen Sie nach ungewöhnlichen Aktivitäten, die zum Zeitpunkt der Abfrage aufgetreten sind. Beispiele für Suchtypen sind angemeldete Benutzer, Ressourcen, auf die zugegriffen wurde und andere Überprüfungsabfragen.
-    - Wenn die Microsoft Defender ATP-Integration aktiviert ist, klicken Sie auf das Symbol, um den Computer genauer zu untersuchen.
+    - Wenn die Microsoft Defender für Endpunkt-Integration aktiviert ist, klicken Sie auf das Symbol, um den Computer genauer zu untersuchen.
         - Suchen Sie nach ungewöhnlichen Prozessen und Warnungen, die zum Zeitpunkt der Abfrage aufgetreten sind.
 1. Überprüfen Sie offengelegte Konten.
     - Suchen Sie nach ungewöhnlichen Aktivitäten.
 
-Wenn Sie Frage 2 oder 3 mit „Ja“ beantwortet haben, betrachten Sie diese Warnung als **TP**, und führen Sie die unter **Ermitteln des Umfangs der Sicherheitsverletzung** beschriebenen Anweisungen aus.
+Wenn Sie Frage 2 oder 3 mit „Ja“ beantwortet haben, betrachten Sie diese Warnung als **TP** , und führen Sie die unter **Ermitteln des Umfangs der Sicherheitsverletzung** beschriebenen Anweisungen aus.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -164,13 +163,13 @@ Wenn Sie Frage 2 oder 3 mit „Ja“ beantwortet haben, betrachten Sie diese Wa
 
 ## <a name="network-mapping-reconnaissance-dns-external-id-2007"></a>Reconnaissance über Netzwerkzuordnungen (DNS) (externe ID 2007)
 
-*Vorheriger Name*: Reconnaissance über DNS
+*Vorheriger Name* : Reconnaissance über DNS
 
 **Beschreibung**
 
 Ihr DNS-Server enthält eine Struktur aller Computer, IP-Adressen und Dienste in Ihrem Netzwerk. Diese Informationen werden von Angreifern verwendet, um Ihre Netzwerkstruktur auszukundschaften und um interessante Zielcomputer zu bestimmten, die sie in den nächsten Schritten des Angriffs benötigen.
 
-Es gibt mehrere Abfragetypen im DNS-Protokoll. Diese Azure ATP-Sicherheitswarnung erkennt verdächtige Anforderungen, entweder AXFR-Anforderungen (Übertragung) von Nicht-DNS-Servern oder solche, die eine übermäßige Anzahl von Anforderungen verwenden.
+Es gibt mehrere Abfragetypen im DNS-Protokoll. Diese [!INCLUDE [Product short](includes/product-short.md)]-Sicherheitswarnung erkennt verdächtige Anforderungen, entweder AXFR-Anforderungen (Übertragung) von Nicht-DNS-Servern oder solche, die eine übermäßige Anzahl von Anforderungen verwenden.
 
 **Lernphase**
 
@@ -180,14 +179,14 @@ Für diese Warnung gilt eine Lernphase von 8 Tagen ab dem Start der Domänencont
 
 1. Überprüfen Sie, ob der Quellcomputer ein DNS-Server ist.
 
-    - Wenn der Quellcomputer **tatsächlich** ein DNS-Server ist, schließen Sie die Sicherheitswarnung als **FP**-Aktivität.
-    - Achten Sie darauf, dass der UDP-Port 53 für die Verbindung zwischen dem Azure ATP-Sensor und dem Quellcomputer **offen** ist, um zukünftige **FP**-Aktivitäten zu verhindern.
+    - Wenn der Quellcomputer **tatsächlich** ein DNS-Server ist, schließen Sie die Sicherheitswarnung als **FP** -Aktivität.
+    - Achten Sie darauf, dass der UDP-Port 53 für die Verbindung zwischen dem [!INCLUDE [Product short](includes/product-short.md)]-Sensor und dem Quellcomputer **offen** ist, um zukünftige **FP** -Aktivitäten zu verhindern.
 
 Sicherheitsscanner und zulässige Anwendungen können DNS-Abfragen erstellen.
 
 1. Überprüfen Sie, ob diese Aktivitäten tatsächlich vom Quellcomputer ausgeführt werden sollen.
 
-    - Wenn ja, **schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität, und schließen Sie den Computer aus.
+    - Wenn ja, **schließen** Sie die Sicherheitswarnung als **B-TP** -Aktivität, und schließen Sie den Computer aus.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -213,7 +212,7 @@ Zukünftige Angriffe über AXFR-Abfragen vermeiden Sie, indem Sie Ihren internen
 
 Mit Sicherheitsprinzipalreconnaissance erlangen Angreifer wichtige Informationen über die Domänenumgebung. Informationen, die sowohl Angreifern helfen, die Domänenstruktur zu erfassen, als auch privilegierte Konten für die Verwendung in späteren Schritten in ihrer Angriffsabwehrkette zu identifizieren. Lightweight Directory Access Protocol (LDAP) ist eine der sowohl für zulässige als auch böswillige Zwecke am häufigsten verwendeten Methoden zum Abfragen von Active Directory. LDAP-fokussierte Sicherheitsprinzipalreconnaissance wird häufig als erste Phase eines Kerberoasting-Angriffs verwendet. Mit Kerberoasting-Angriffen wird eine Zielliste von Sicherheitsprinzipalnamen (Security Principal Names, SPNs) abgerufen, für die Angreifer dann versuchen, Ticket Granting Server-Tickets (TGS) zu erhalten.
 
-Damit Azure ATP berechtigte Benutzer präzise profilen und kennenlernen kann, werden in den ersten 10 Tagen nach der Azure ATP-Bereitstellung keine Warnungen dieses Typs ausgelöst. Sobald die anfängliche Azure ATP-Lernphase abgeschlossen ist, werden Warnungen auf Computern generiert, die mithilfe von zuvor nicht beobachteten Methoden verdächtige LDAP-Enumerationsabfragen durchführen, bzw. Abfragen, die auf sensible Gruppen zielen.
+Damit [!INCLUDE [Product short](includes/product-short.md)] berechtigte Benutzer kennenlernen und präzise Profile für diese kann, werden in den ersten 10 Tagen nach der Bereitstellung von [!INCLUDE [Product short](includes/product-short.md)] keine Warnungen dieses Typs ausgelöst. Sobald die anfängliche Lernphase von [!INCLUDE [Product short](includes/product-short.md)] abgeschlossen ist, werden Warnungen auf Computern generiert, die mithilfe von zuvor nicht beobachteten Methoden verdächtige LDAP-Enumerationsabfragen durchführen, bzw. Abfragen, die auf sensible Gruppen zielen.
 
 **Lernphase**
 
@@ -223,7 +222,7 @@ Damit Azure ATP berechtigte Benutzer präzise profilen und kennenlernen kann, we
 
 1. Klicken Sie auf den Quellcomputer, und rufen Sie seine Profilseite auf.
     1. Wird von diesem Quellcomputer erwartet, dass er diese Aktivität generiert?
-    1. Wenn diese Aktivität von diesem Computer erwartet wird, **schließen** Sie die Sicherheitswarnung, und schließen Sie diesen Computer als **B-TP**-Aktivität aus.
+    1. Wenn diese Aktivität von diesem Computer erwartet wird, **schließen** Sie die Sicherheitswarnung, und schließen Sie diesen Computer als **B-TP** -Aktivität aus.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -246,16 +245,16 @@ Damit Azure ATP berechtigte Benutzer präzise profilen und kennenlernen kann, we
 1. [Ersetzen Sie das Benutzerkonto durch ein gruppenverwaltetes Dienstkonto (GMSA)](/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview).
 
 > [!NOTE]
-> Warnungen zu Reconnaissance über Sicherheitsprinzipal (LDAP) werden nur von ATP-Sensoren unterstützt.
+> Warnungen zu Reconnaissance über Sicherheitsprinzipal (LDAP) werden nur von [!INCLUDE [Product short](includes/product-short.md)]-Sensoren unterstützt.
 
 ## <a name="user-and-group-membership-reconnaissance-samr-external-id-2021"></a>Reconnaissance über Benutzer und Gruppenmitgliedschaften (SAMR) (externe ID 2021)
 
-*Vorheriger Name*: Reconnaissance mithilfe von Verzeichnisdienstabfragen
+*Vorheriger Name* : Reconnaissance mithilfe von Verzeichnisdienstabfragen
 
 **Beschreibung**
 
 Die Reconnaissance über Benutzer und Gruppenmitgliedschaften wird von Angreifern verwendet, um die Verzeichnisstruktur und Zielkonten mit weitreichenden Rechten für die weiteren Schritte eines Angriffs auszukundschaften. Das Protokoll Security Account Manager Remote (SAM-R) ist eine Methode, die zum Abfragen des Verzeichnisses verwendet wird, um diese Art der Zuordnung vorzunehmen.
-In dieser Erkennung werden im ersten Monat nach der Bereitstellung von Azure ATP keine Warnungen ausgelöst (Lernphase). Während der Lernphase erfasst Azure ATP, welche SAM-R-Abfragen (Enumerationsabfragen und einzelne Abfragen von sensiblen Konten) von welchen Computern gestellt werden.
+In dieser Erkennung werden im ersten Monat nach der Bereitstellung von [!INCLUDE [Product short](includes/product-short.md)] keine Warnungen ausgelöst (Lernphase). Während der Lernphase erfasst [!INCLUDE [Product short](includes/product-short.md)], welche SAM-R-Abfragen (Enumerationsabfragen und einzelne Abfragen von sensiblen Konten) von welchen Computern gestellt werden.
 
 **Lernphase**
 
@@ -265,12 +264,12 @@ Vier Wochen pro Domänencontroller, beginnend mit der ersten Netzwerkaktivität 
 
 1. Klicken Sie auf den Quellcomputer, um die entsprechende Profilseite aufzurufen.
     - Sollen diese Aktivitäten tatsächlich vom Quellcomputer ausgeführt werden?
-      - Wenn ja, *schließen* Sie die Sicherheitswarnung als **B-TP**-Aktivität, und schließen Sie diesen Computer aus.
+      - Wenn ja, *schließen* Sie die Sicherheitswarnung als **B-TP** -Aktivität, und schließen Sie diesen Computer aus.
     - Überprüfen Sie die Benutzer, die den Vorgang ausgeführt haben.
       - Melden sich diese normalerweise bei diesem Quellcomputer an, oder sind sie Administratoren, die diese Aktionen durchführen sollten?
     - Überprüfen Sie das Benutzerprofil und die damit verbundenen Benutzeraktivitäten. Analysieren Sie ihr normales Verhalten, und suchen Sie nach zusätzlichen verdächtigen Aktivitäten mithilfe des [Leitfadens zur Untersuchung von Benutzern](investigate-a-user.md).
 
-      Wenn Sie die vorherige Frage mit **Ja** beantwortet haben, *schließen* Sie die Sicherheitswarnung als **B-TP**-Aktivität.
+      Wenn Sie die vorherige Frage mit **Ja** beantwortet haben, *schließen* Sie die Sicherheitswarnung als **B-TP** -Aktivität.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -288,7 +287,7 @@ Vier Wochen pro Domänencontroller, beginnend mit der ersten Netzwerkaktivität 
 
 ## <a name="user-and-ip-address-reconnaissance-smb-external-id-2012"></a>Reconnaissance über Benutzer und IP-Adressen (SMB) (externe ID 2012)
 
-*Vorheriger Name*: Reconnaissance mithilfe der SMB-Sitzungsenumeration
+*Vorheriger Name* : Reconnaissance mithilfe der SMB-Sitzungsenumeration
 
 ### <a name="description"></a>Beschreibung
 
@@ -317,7 +316,7 @@ Sicherheitsscanner und Anwendungen können möglicherweise zulässige Abfragen a
 Verwenden Sie das [Net Cease-Tool](https://gallery.technet.microsoft.com/Net-Cease-Blocking-Net-1e8dcb5b), um den Schutz Ihrer Umgebung gegen diese Attacken zu erhöhen.
 
 > [!NOTE]
-> Kontaktieren Sie den Support, wenn Sie Azure ATP-Sicherheitswarnungen deaktivieren möchten.
+> Wenn Sie eine [!INCLUDE [Product short](includes/product-short.md)]-Sicherheitswarnung deaktivieren möchten, wenden Sie sich an den Support.
 
 > [!div class="nextstepaction"]
 > [Tutorial: Warnungen zu kompromittierten Anmeldeinformationen](compromised-credentials-alerts.md)
@@ -331,6 +330,6 @@ Verwenden Sie das [Net Cease-Tool](https://gallery.technet.microsoft.com/Net-Cea
 - [Lateral Movement-Warnungen](lateral-movement-alerts.md)
 - [Warnungen zu Domänendominanz](domain-dominance-alerts.md)
 - [Warnungen zu Exfiltration](exfiltration-alerts.md)
-- [Referenz zum Azure ATP-SIEM-Protokoll](cef-format-sa.md)
+- [Referenz zum SIEM-Protokoll für [!INCLUDE [Product short](includes/product-short.md)]](cef-format-sa.md)
 - [Arbeiten mit Lateral Movement-Pfaden](use-case-lateral-movement-path.md)
-- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)
+- [Weitere Informationen finden Sie im [!INCLUDE [Product short](includes/product-short.md)]-Forum.](https://aka.ms/MDIcommunity)

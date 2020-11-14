@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 41ee2095939182a23a5f10088580113f1f0fdcd7
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 567fb2beb08425a69964932ca6807ff03a6b6549
+ms.sourcegitcommit: 69c55503b8b3f7ca99dbea872b17d81124831fad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90911337"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94567922"
 ---
 # <a name="install-ata---step-6"></a>Installieren von ATA – Schritt 6
 
@@ -29,7 +29,7 @@ ms.locfileid: "90911337"
 > [«Schritt 5](install-ata-step5.md) 
 >  [Schritt 7»](vpn-integration-install-step.md)
 
-## <a name="step-6-configure-event-collection"></a>Schritt 6. Konfigurieren der Ereignissammlung
+## <a name="step-6-configure-event-collection"></a>Schritt 6: Konfigurieren der Ereignissammlung
 
 ### <a name="configure-event-collection"></a>Konfigurieren der Ereignissammlung
 
@@ -62,7 +62,7 @@ Weitere Informationen über das Konfigurieren der Weiterleitung bestimmter Ereig
 
 #### <a name="configuring-the-ata-gateway-to-listen-for-siem-events"></a>Konfigurieren des ATA-Gateways zum Überwachen von SIEM-Ereignissen
 
-1. Klicken Sie in der ATA-Konfiguration unter **Datenquellen** auf **SIEM**, aktivieren Sie **Syslog**, und klicken Sie auf **Speichern**.
+1. Klicken Sie in der ATA-Konfiguration unter **Datenquellen** auf **SIEM** , aktivieren Sie **Syslog** , und klicken Sie auf **Speichern**.
 
     ![Aktivieren des Syslog-Listener-UDP-Images](media/ATA-enable-siem-forward-events.png)
 
@@ -126,7 +126,7 @@ Fehlercode: 0x0
 
 - Der Syslog-Header ist optional.
 
-- Zwischen allen erforderlichen Feldern befindet sich das Trennzeichen „\r\n“.
+- Zwischen allen erforderlichen Feldern befindet sich das Trennzeichen „\r\n“. Beachten Sie, dass es sich hierbei um die Steuerzeichen CRLF (0d0a in Hex) handelt, nicht um Literalzeichen.
 - Die Felder weisen das Format „Schlüssel = Wert“ auf.
 - Die folgenden Schlüssel müssen vorhanden sein und einen Wert aufweisen:
   - EventCode = Windows-Ereignis-ID

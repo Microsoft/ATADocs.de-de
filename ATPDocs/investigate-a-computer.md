@@ -1,37 +1,37 @@
 ---
-title: Tutorial zum Untersuchen eines Computers mit Azure ATP
-description: In diesem Artikel wird erläutert, wie Sie Azure ATP-Sicherheitswarnungen verwenden, um einen verdächtigen Computer zu untersuchen.
+title: Tutorial für die Untersuchung von Computern mit Microsoft Defender for Identity
+description: In diesem Artikel wird erläutert, wie Sicherheitswarnungen von Microsoft Defender for Identity zur Untersuchung eines verdächtigen Computers verwendet werden.
 keywords: ''
 author: shsagir
 ms.author: shsagir
-ms.date: 09/15/2019
+ms.date: 10/26/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9bd8439c45c83438a601a03bb4d4d15d22fa4a7b
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 070c578f03887f6afdc10117d6886b4f269c830d
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912913"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93276033"
 ---
 # <a name="tutorial-investigate-a-computer"></a>Tutorial: Untersuchen eines Computers
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
-> Die auf dieser Seite erläuterten Azure ATP-Features sind auch über das neue [Portal](https://portal.cloudappsecurity.com) zugänglich.
+> Die auf dieser Seite erläuterten [!INCLUDE [Product long](includes/product-long.md)]-Features sind auch über das neue [Portal](https://portal.cloudappsecurity.com) zugänglich.
 
-Ein Beweis für Warnungen in Azure ATP zeigt eindeutig an, wenn Computer von verdächtigen Aktivitäten betroffen sind, oder wenn es Anzeichen dafür gibt, dass ein Computer gefährdet ist. In diesem Tutorial verwenden Sie die Untersuchungsempfehlungen dazu, das Risiko für Ihre Organisation zu ermitteln, Abhilfemaßnahmen zu bestimmen und festzulegen, wie ähnliche Angriffe in der Zukunft am besten verhindert werden können.  
+Ein Beweis für Warnungen in [!INCLUDE [Product long](includes/product-long.md)] zeigt eindeutig an, wenn Computer von verdächtigen Aktivitäten betroffen sind, oder wenn es Anzeichen dafür gibt, dass ein Computer gefährdet ist. In diesem Tutorial verwenden Sie die Untersuchungsempfehlungen dazu, das Risiko für Ihre Organisation zu ermitteln, Abhilfemaßnahmen zu bestimmen und festzulegen, wie ähnliche Angriffe in der Zukunft am besten verhindert werden können.  
 
 > [!div class="checklist"]
-> * Überprüfen Sie den Computer des angemeldeten Benutzers.
-> * Überprüfen Sie, ob der Benutzer normalerweise auf die entsprechenden Computer zugreift.
-> * Untersuchen Sie verdächtige Aktivitäten auf dem Computer.
-> * Ermitteln Sie, ob zur gleichen Zeit andere Warnungen aufgetreten sind.
-
+>
+> - Überprüfen Sie den Computer des angemeldeten Benutzers.
+> - Überprüfen Sie, ob der Benutzer normalerweise auf die entsprechenden Computer zugreift.
+> - Untersuchen Sie verdächtige Aktivitäten auf dem Computer.
+> - Ermitteln Sie, ob zur gleichen Zeit andere Warnungen aufgetreten sind.
 
 ## <a name="investigation-steps-for-suspicious-computers"></a>Untersuchungsschritte für verdächtige Computer
 
@@ -40,20 +40,19 @@ Klicken Sie auf den in der Warnung genannten Computer, den Sie untersuchen möch
 Überprüfen und untersuchen Sie das Computerprofil auf die folgenden Details und Aktivitäten:
 
 - Was ist zum Zeitpunkt der verdächtigen Aktivität geschehen?  
-  1. Welcher [Benutzer](investigate-a-user.md) war an dem Computer angemeldet?
-  2. Meldet sich dieser Benutzer normalerweise an der Quelle oder am Zielcomputer an, oder greift er darauf zu?
-  3. Auf welche Ressourcen ist zugegriffen worden? Durch welche Benutzer?
+    1. Welcher [Benutzer](investigate-a-user.md) war an dem Computer angemeldet?
+    1. Meldet sich dieser Benutzer normalerweise an der Quelle oder am Zielcomputer an, oder greift er darauf zu?
+    1. Auf welche Ressourcen ist zugegriffen worden? Durch welche Benutzer?
       - Wenn auf Ressourcen zugegriffen worden ist, hat es sich um wertvolle Ressourcen gehandelt?
-  4. Hätte der Benutzer Zugriff auf diese Ressourcen haben dürfen?
-  5. Hat der [Benutzer](investigate-a-user.md), der auf den Computer zugegriffen hat, weitere verdächtige Aktivitäten ausgeführt?
+    1. Hätte der Benutzer Zugriff auf diese Ressourcen haben dürfen?
+    1. Hat der [Benutzer](investigate-a-user.md), der auf den Computer zugegriffen hat, weitere verdächtige Aktivitäten ausgeführt?
 
 - Weitere zu untersuchende verdächtige Aktivitäten:
-    1. Waren ungefähr gleichzeitig mit dieser Warnung noch weitere Warnungen in Azure ATP oder in anderen Sicherheitstools wie Microsoft Defender ATP, Azure Security Center und/oder Microsoft CAS geöffnet?
-    2. Hat es Anmeldefehler gegeben?
+    1. Wurden ungefähr gleichzeitig mit dieser Warnung noch weitere Warnungen in [!INCLUDE [Product short](includes/product-short.md)] oder in anderen Sicherheitstools wie Microsoft Defender für Endpunkt, Azure Security Center und/oder Microsoft CAS geöffnet?
+    1. Hat es Anmeldefehler gegeben?
 
-
-- Wenn die Microsoft Defender ATP-Integration aktiviert ist, klicken Sie auf das Microsoft Defender ATP-Badge, um den Computer genauer zu untersuchen. In Microsoft Defender ATP können Sie sehen, welche Prozesse und Warnungen ungefähr gleichzeitig mit der Warnung aufgetreten sind.
-    1. Sind neue Programme bereitgestellt oder installiert worden?
+- Wenn die Microsoft Defender für Endpunkt-Integration aktiviert ist, klicken Sie auf den Microsoft Defender für Endpunkt-Badge, um den Computer genauer zu untersuchen. In Microsoft Defender für Endpunkt können Sie sehen, welche Prozesse und Warnungen ungefähr gleichzeitig mit der Warnung aufgetreten sind.
+    - Sind neue Programme bereitgestellt oder installiert worden?
 
 ## <a name="next-steps"></a>Nächste Schritte
 
@@ -65,4 +64,4 @@ Klicken Sie auf den in der Warnung genannten Computer, den Sie untersuchen möch
 - [Lateral Movement-Warnungen](lateral-movement-alerts.md)
 - [Warnungen zu Domänendominanz](domain-dominance-alerts.md)
 - [Warnungen zu Exfiltration](exfiltration-alerts.md)
-- [Besuchen Sie das Azure ATP-Forum](https://aka.ms/azureatpcommunity)
+- [Weitere Informationen finden Sie im [!INCLUDE [Product short](includes/product-short.md)]-Forum.](https://aka.ms/MDIcommunity)

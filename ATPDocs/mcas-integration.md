@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5051900ef8eb21f85a4f31723f455d3ae18ff36e
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: eff9b785cb23db649615f11be6e713eed49f3b5d
+ms.sourcegitcommit: 931d463e793cd5710e7bc2bca13cd4ef669eb190
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93275076"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94580889"
 ---
 # <a name="using-product-long-with-microsoft-cloud-app-security"></a>Verwenden [!INCLUDE [Product long](includes/product-long.md)] von mit Microsoft Cloud App Security
 
@@ -59,7 +59,7 @@ Zur Nutzung aller Features der Benutzeruntersuchung über die gesamte Hybridumge
 > - Wenn Sie nicht über ein Abonnement für Cloud App Security verfügen, können Sie weiterhin das Cloud App Security-Portal verwenden, um Warnungen zu untersuchen [!INCLUDE [Product short](includes/product-short.md)] und ausführliche Informationen zu Benutzern und Ihren lokalen, verwalteten Aktivitäten zu erhalten. Sie erhalten jedoch keine relevanten Einblicke in Ihre cloudanwendungen.
 > - [!INCLUDE [Product short](includes/product-short.md)] Administratoren benötigen möglicherweise neue Berechtigungen für den Zugriff auf Cloud App Security. Informationen zum Zuweisen von Berechtigungen zu Cloud App Security finden Sie unter [Administratorzugriff verwalten](/cloud-app-security/manage-admins).
 
-Weitere Informationen zum schnellen Aktivieren von in Cloud App Security finden Sie unter [ [!INCLUDE [Product short](includes/product-short.md)] Integration](/cloud-app-security/aatp-integration) [!INCLUDE [Product short](includes/product-short.md)] .
+Weitere Informationen zum schnellen Aktivieren von in Cloud App Security finden Sie unter [ [!INCLUDE [Product short](includes/product-short.md)] Integration](/cloud-app-security/mdi-integration) [!INCLUDE [Product short](includes/product-short.md)] .
 
 ## <a name="product-short-in-cloud-app-security"></a>[!INCLUDE [Product short](includes/product-short.md)] in Cloud App Security
 
@@ -79,7 +79,7 @@ Wenn [!INCLUDE [Product short](includes/product-short.md)] Sie mit Cloud App Sec
 
 Wenn Ihre Dienste ( [!INCLUDE [Product short](includes/product-short.md)] und Cloud App Security) zurzeit so konfiguriert sind, dass Sie Warn Benachrichtigungen an eine Siem-Lösung sendet, [!INCLUDE [Product short](includes/product-short.md)] erhalten Sie nach dem Aktivieren der Integration in Cloud App Security doppelte Siem-Benachrichtigungen für die gleiche Warnung. Von jedem Dienst wird eine Warnung mit unterschiedlicher Warnungs-ID ausgegeben. Entscheiden Sie, in welchem Dienst Sie Warnungen verwalten möchten, und legen Sie anschließend fest, dass vom anderen Dienst keine SIEM-Benachrichtigungen mehr versendet werden. So vermeiden Sie Duplizierungen und Verwirrung.
 
-## <a name="activities"></a>Aktivitäten
+## <a name="activities"></a>activities
 
 [!INCLUDE [Product short](includes/product-short.md)] Warnungen werden innerhalb des Cloud App Security **Aktivitäts Protokolls** angezeigt. Zusätzliche Optionen und Features für die Aktivitätsfilterung stehen nur beim Anzeigen von Warnungen über Cloud App Security zur Verfügung. Weitere Informationen zum Filtern und Erstellen neuer Aktivitätsrichtlinien finden Sie unter [ [!INCLUDE [Product short](includes/product-short.md)] Aktivitäten mithilfe von Microsoft Cloud App Security](activities-filtering-mcas.md) .
 
@@ -105,4 +105,4 @@ Weitere Informationen zum Filtern und Erstellen neuer Aktivitätsrichtlinien fin
 
 ## <a name="join-the-community"></a>Beitritt zur Community
 
-Haben Sie weitere Fragen oder ein Interesse an der Erörterung [!INCLUDE [Product short](includes/product-short.md)] und verwandten Sicherheit mit anderen? Besuchen Sie die [ [!INCLUDE [Product short](includes/product-short.md)] Community](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) noch heute!
+Haben Sie weitere Fragen, oder möchten Sie mit anderen über [!INCLUDE [Product short](includes/product-short.md)] und damit verbundene Sicherheitsaspekte diskutieren? Treten Sie noch heute der [[!INCLUDE [Product short](includes/product-short.md)]Community](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) bei.
