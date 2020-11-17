@@ -12,18 +12,16 @@ ms.technology: ''
 ms.assetid: ebd41719-c91a-4fdd-bcab-2affa2a2cace
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c2cff7a140de26f36e91770619926543e7d623c2
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 7677cbdb0f6b236d0be4230a1166026053ac2acc
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912852"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94689563"
 ---
 # <a name="validate-port-mirroring"></a>Überprüfen der Portspiegelung
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
 > Dieser Artikel ist für Sie nur interessant, wenn Sie ATA-Gateways anstelle von ATA-Lightweight-Gateways bereitstellen. Informationen dazu, ob Sie ATA-Gateways verwenden müssen, finden Sie unter [Auswählen der richtigen Gateways für Ihre Bereitstellung](ata-capacity-planning.md#choosing-the-right-gateway-type-for-your-deployment).

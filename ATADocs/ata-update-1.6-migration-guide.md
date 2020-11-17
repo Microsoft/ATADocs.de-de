@@ -12,16 +12,15 @@ ms.technology: ''
 ms.assetid: 0756ef64-3aef-4a69-8981-24fa8f285c6a
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3c94379e73959d5fe22842d5286ce75673684cbf
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 3f23ffdb903ed75e99be951a2b91dfbc4e1bd0e3
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90909393"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94690906"
 ---
 # <a name="ata-update-to-16-migration-guide"></a>Migrationshandbuch zur Aktualisierung auf ATA 1.6
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 Das Update auf ATA 1.6 bietet Verbesserungen in folgenden Bereichen:
 
 - Neue Erkennungen
@@ -98,14 +97,14 @@ In dieser Version wird die gleiche Installationsdatei („Microsoft ATA Center S
 > [!IMPORTANT] 
 > Aktualisieren Sie alle ATA-Gateways, damit ATA ordnungsgemäß funktioniert.
 
-### <a name="step-2-download-the-ata-gateway-setup-package"></a>Schritt 2: Herunterladen des ATA-Gateway-Setuppakets
+### <a name="step-2-download-the-ata-gateway-setup-package"></a>Schritt 2: Herunterladen des ATA-Gateway-Setuppakets
 Nach dem Konfigurieren der Domänenverbindungseinstellungen können Sie das ATA-Gateway-Setuppaket herunterladen.
 
 So laden Sie das ATA-Gateway-Paket herunter
 
 1. Löschen Sie alle zuvor heruntergeladenen früheren Versionen des ATA-Gateway-Pakets.
 
-1. Öffnen Sie auf dem ATA-Gatewaycomputer einen Browser, und geben Sie die IP-Adresse ein, die Sie in ATA Center für die ATA-Konsole konfiguriert haben. Wenn die ATA-Konsole geöffnet wird, klicken Sie auf das Symbol Einstellungen, und wählen Sie **Konfiguration**aus.
+1. Öffnen Sie auf dem ATA-Gatewaycomputer einen Browser, und geben Sie die IP-Adresse ein, die Sie in ATA Center für die ATA-Konsole konfiguriert haben. Wenn die ATA-Konsole geöffnet wird, klicken Sie auf das Symbol Einstellungen, und wählen Sie **Konfiguration** aus.
 
     ![Symbol für Konfigurationseinstellungen](media/ATA-config-icon.png)
 
@@ -121,7 +120,7 @@ Die ZIP-Datei enthält die folgenden Dateien:
 
 ### <a name="step-3-update-the-ata-gateways"></a>Schritt 3: Aktualisieren der ATA-Gateways
 
-1. Extrahieren Sie auf jedem ATA-Gateway die Dateien aus dem ATA-Gateway-Paket, und führen Sie die Datei **Microsoft ATA-Gateway-Setup.exe**aus.
+1. Extrahieren Sie auf jedem ATA-Gateway die Dateien aus dem ATA-Gateway-Paket, und führen Sie die Datei **Microsoft ATA-Gateway-Setup.exe** aus.
 
     > [!NOTE] 
     > Sie können dieses ATA-Gateway-Paket auch verwenden, um neue ATA-Gateways zu installieren.

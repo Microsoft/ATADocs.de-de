@@ -12,16 +12,15 @@ ms.technology: ''
 ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: dae94f42ee4b4be200a3cf2ac299561efe0ddbb1
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: c60cff74d6f8393ab6c9be2d5b1733e6b13fd544
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90908775"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94690923"
 ---
 # <a name="ata-update-to-15-migration-guide"></a>Migrationshandbuch zur Aktualisierung auf ATA 1.5
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 Das Update auf ATA 1.5 bietet Verbesserungen in folgenden Bereichen:
 
 - Schnellere Erkennung
@@ -91,14 +90,14 @@ So aktualisieren Sie auf ATA, Version 1.5:
 > [!IMPORTANT]
 > - Aktualisieren Sie alle ATA-Gateways, damit ATA ordnungsgemäß funktioniert.
 
-### <a name="step-2-download-the-ata-gateway-setup-package"></a>Schritt 2: Herunterladen des ATA-Gateway-Setuppakets
+### <a name="step-2-download-the-ata-gateway-setup-package"></a>Schritt 2: Herunterladen des ATA-Gateway-Setuppakets
 Nach dem Konfigurieren der Domänenverbindungseinstellungen können Sie das ATA-Gateway-Setuppaket herunterladen.
 
 So laden Sie das ATA-Gateway-Paket herunter
 
 1. Löschen Sie alle zuvor heruntergeladenen früheren Versionen des ATA-Gateway-Pakets.
 
-1. Öffnen Sie auf dem ATA-Gatewaycomputer einen Browser, und geben Sie die IP-Adresse ein, die Sie in ATA Center für die ATA-Konsole konfiguriert haben. Wenn die ATA-Konsole geöffnet wird, klicken Sie auf das Symbol Einstellungen, und wählen Sie **Konfiguration**aus.
+1. Öffnen Sie auf dem ATA-Gatewaycomputer einen Browser, und geben Sie die IP-Adresse ein, die Sie in ATA Center für die ATA-Konsole konfiguriert haben. Wenn die ATA-Konsole geöffnet wird, klicken Sie auf das Symbol Einstellungen, und wählen Sie **Konfiguration** aus.
 
     ![Symbol für Konfigurationseinstellungen](media/ATA-config-icon.png)
 

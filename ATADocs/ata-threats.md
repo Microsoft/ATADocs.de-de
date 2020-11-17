@@ -12,19 +12,17 @@ ms.technology: ''
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ca7311f3590d8da5e035f881b2156c4b41d8c05c
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: f4bdad22b0a557d576946f90541cb7d82e6cf7b3
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90908733"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94690940"
 ---
 # <a name="what-threats-does-ata-look-for"></a>Nach welchen Bedrohungen sucht ATA?
 
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ATA ermöglicht die Erkennung der folgenden verschiedenen Phasen eines erweiterten Angriffs: Reconnaissance, gefährdete Anmeldeinformationen, seitliche Verschiebung, Berechtigungsausweitung, Domänendominanz und mehr. Damit sollen erweiterte Angriffe und interne Bedrohungen erkannt werden, bevor sie Schaden in Ihrer Organisation anrichten.
 Die Erkennung von jeder Phase führt zu mehreren verdächtige Aktivitäten, die für die betreffende Phase relevant sind, wobei jede verdächtige Aktivität mit verschiedenen Varianten möglicher Angriffe korreliert.
@@ -36,7 +34,7 @@ Diese Phasen in der Angriffskette, in der ATA derzeit Erkennungen bereitstellt, 
 Weitere Informationen finden Sie unter [Arbeiten mit verdächtigen Aktivitäten](working-with-suspicious-activities.md) und dem [ATA-Handbuch zu verdächtigen Aktivitäten](suspicious-activity-guide.md).
 
 
-## <a name="whats-next"></a>Nächste Schritte
+## <a name="whats-next"></a>Ausblick
 
 - Weitere Informationen zum Integrieren von ATA in Ihr Netzwerk: [ATA-Architektur](ata-architecture.md)
 

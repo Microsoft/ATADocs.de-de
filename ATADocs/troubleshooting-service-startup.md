@@ -12,18 +12,16 @@ ms.technology: ''
 ms.assetid: 5a65285c-d1de-4025-9bb4-ef9c20b13cfa
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d4e5dda205aba4737e074853f22659c6e74a98d5
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 3f23eb1aa2adc49b3913ab1e4218653a5b8c874d
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90910734"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94689920"
 ---
 # <a name="troubleshooting-service-startup"></a>Problembehandlung beim Starten eines Diensts
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ## <a name="troubleshooting-ata-center-service-startup"></a>Problembehandlung beim Starten des ATA Center-Diensts
 
@@ -58,9 +56,9 @@ Ihr ATA-Gateway startet nicht, und es wird folgende Fehlermeldung ausgegeben:<br
 
 Der Grund ist folgender: Im Rahmen des Installationsprozesses des Lightweight-Gateways weist ATA einen CPU-Schwellenwert zu. Das Lightweight-Gateway kann diese zugewiesene CPU mit einem Puffer von 15% nutzen. Wenn Sie manuell einen Schwellenwert mit dem Registrierungsschlüssel festgelegt haben, verhindert dieser Konflikt das Starten des Lightweight-Gateways. 
 
-**Lösung**
+**Auflösung**
 
-1. Wenn unter den Registrierungs Schlüsseln ein DWORD-Wert mit dem Namen **Leistungsindikatoren deaktivieren** vorhanden ist, stellen Sie sicher, dass der Wert auf **0**festgelegt ist:
+1. Wenn unter den Registrierungs Schlüsseln ein DWORD-Wert mit dem Namen **Leistungsindikatoren deaktivieren** vorhanden ist, stellen Sie sicher, dass der Wert auf **0** festgelegt ist:
 
 ```
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\

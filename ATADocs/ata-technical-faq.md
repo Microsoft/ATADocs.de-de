@@ -12,18 +12,16 @@ ms.technology: ''
 ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 32111e79bcf0ceee169cb6e6938ad5fbe2958cc9
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 1a62af2e875a6a51a67e0f8cd9730a92cff2d5df
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90908701"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94690957"
 ---
 # <a name="ata-frequently-asked-questions"></a>Häufig gestellte Fragen zu ATA
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Dieser Artikel enthält eine Reihe häufig gestellter Fragen zu ATA sowie Hintergrundwissen und Antworten.
 
@@ -164,7 +162,7 @@ Auch als SPAN (Switched Port Analyzer) bekannt, ist die Portspiegelung eine Meth
 
 ## <a name="does-ata-monitor-only-domain-joined-devices"></a>Überwacht ATA nur Geräte, die der Domäne angehören?
 
-Nein ATA überwacht alle Geräte im Netzwerk und führt die Authentifizierung sowie Autorisierungsanfragen für Active Directory durch. Dies schließt Nicht-Windows-Geräte und mobile Geräte ein.
+Nein. ATA überwacht alle Geräte im Netzwerk und führt die Authentifizierung sowie Autorisierungsanfragen für Active Directory durch. Dies schließt Nicht-Windows-Geräte und mobile Geräte ein.
 
 ## <a name="does-ata-monitor-computer-accounts-as-well-as-user-accounts"></a>Überwacht ATA sowohl Computerkonten als auch Benutzerkonten?
 

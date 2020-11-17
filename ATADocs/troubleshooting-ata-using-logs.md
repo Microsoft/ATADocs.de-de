@@ -12,25 +12,23 @@ ms.technology: ''
 ms.assetid: b8ad5511-8893-4d1d-81ee-b9a86e378347
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 869143d0a0c953bb3151908ceec59f1cbf0dfdf3
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 49bf3e2e4e69d01713c57b48aea6b55ffab6b36b
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90913352"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94689988"
 ---
 # <a name="troubleshooting-ata-using-the-ata-logs"></a>Behandeln von Problemen mit ATA mithilfe der ATA-Protokolle
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Die ATA-Protokolle geben Einblick in die Aktivitäten der einzelnen Komponenten von ATA zu einem bestimmten Zeitpunkt.
 
 ## <a name="ata-gateway-logs"></a>Protokolle des ATA-Gateways
 In diesem Abschnitt gilt jeder Verweis auf das ATA-Gateway ebenfalls für das ATA-Lightweight-Gateway. 
 
-Die Protokolle des ATA-Gateways befinden sich in einem Unterordner mit dem Namen **Logs** , in dem ATA installiert ist. der Standard Speicherort ist: **c:\Programme\Microsoft Advanced Threat Analytics \\ **. Der Standard Speicherort für die Installation finden Sie unter: **c:\Programme\Microsoft Advanced Threat analytics\gateway\logs**.
+Die Protokolle des ATA-Gateways befinden sich in einem Unterordner mit dem Namen **Logs** , in dem ATA installiert ist. der Standard Speicherort ist: **c:\Programme\Microsoft Advanced Threat Analytics \\**. Der Standard Speicherort für die Installation finden Sie unter: **c:\Programme\Microsoft Advanced Threat analytics\gateway\logs**.
 
 Für das ATA-Gateway sind folgende Protokolle verfügbar:
 

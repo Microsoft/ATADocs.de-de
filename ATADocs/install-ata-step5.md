@@ -12,24 +12,22 @@ ms.technology: ''
 ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 49a8301b1d13bbd6032b34b893b5a86e4cdd3739
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 8906b570c96ad68033d0bfffc00b46e81b63df51
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90911407"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94690634"
 ---
 # <a name="install-ata---step-5"></a>Installieren von ATA – Schritt 5
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 > [!div class="step-by-step"]
 > [«Schritt 4](install-ata-step4.md) 
 >  [Schritt 6»](install-ata-step6.md)
 
-## <a name="step-5-configure-the-ata-gateway-settings"></a>Schritt 5. Konfigurieren der Einstellungen des ATA-Gateways
+## <a name="step-5-configure-the-ata-gateway-settings"></a>Schritt 5: Konfigurieren der Einstellungen des ATA-Gateways
 
 Führen Sie nach der Installation des ATA-Gateways die folgenden Schritte aus, um die Einstellungen für das ATA-Gateway zu konfigurieren.
 
@@ -84,7 +82,7 @@ Gehen Sie wie folgt vor, um zu überprüfen, ob das ATA-Gateway erfolgreich bere
 
 ### <a name="set-anti-virus-exclusions"></a>Festlegen von Ausnahmen für die Antivirensoftware
 
-Schließen Sie nach der Installation des ATA-Gateways das ATA-Verzeichnis von ihrer Antivirenanwendung ab. Der Standard Speicherort in der Datenbank ist: **c:\Programme\Microsoft Advanced Threat Analytics \* *.
+Schließen Sie nach der Installation des ATA-Gateways das ATA-Verzeichnis von ihrer Antivirenanwendung ab. Der Standard Speicherort in der Datenbank ist: **c:\Programme\Microsoft Advanced Threat Analytics \**.
 
 Stellen Sie außerdem sicher, dass Sie auch die folgenden Prozesse vom AV-Scan ausschließen:
 

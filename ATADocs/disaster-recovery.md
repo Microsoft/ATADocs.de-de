@@ -12,18 +12,16 @@ ms.technology: ''
 ms.assetid: 7620e171-76d5-4e3f-8b03-871678217a3a
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: a717c771afe39c7e187487c3fd9c41d4c1691a3a
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 578e8ecdd598b404c570d41e71d487cf798cb602
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90909521"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94690787"
 ---
 # <a name="ata-disaster-recovery"></a>ATA-Notfallwiederherstellung
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Dieser Artikel beschreibt, wie Sie ATA Center und Ihre ATA-Funktionalität schnell wiederherstellen können, wenn die ATA Center-Funktionalität verloren gegangen ist, die ATA-Gateways jedoch noch funktionieren. 
 
@@ -34,7 +32,7 @@ Dieser Artikel beschreibt, wie Sie ATA Center und Ihre ATA-Funktionalität schne
 
 1. Die ATA Center-Konfiguration wird alle 4 Stunden in einer Datei gesichert. Suchen Sie die neueste Sicherungskopie der ATA Center-Konfiguration, und speichern Sie sie auf einem separaten Computer. Eine ausführliche Erläuterung zum Auffinden dieser Dateien finden Sie unter [Exportieren und Importieren der ATA-Konfiguration](ata-configuration-file.md). 
 1. Exportieren Sie das Zertifikats für ATA Center.
-    1. Navigieren Sie im Zertifikat-Manager zu **Zertifikate (lokaler Computer)**  ->  **persönliche**  -> **Zertifikate**, und wählen Sie **ATA Center**aus.
+    1. Navigieren Sie im Zertifikat-Manager zu **Zertifikate (lokaler Computer)**  ->  **persönliche**  -> **Zertifikate**, und wählen Sie **ATA Center** aus.
     2. Klicken Sie mit der rechten Maustaste auf **ATA Center**, wählen Sie **Alle Tasks** und dann **Exportieren** aus. 
      ![Zertifikat für ATA Center](media/ata-center-cert.png)
     3. Befolgen Sie die Anweisungen zum Exportieren des Zertifikats, und stellen Sie sicher, dass Sie auch den privaten Schlüssel exportieren.

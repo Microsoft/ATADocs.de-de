@@ -12,18 +12,16 @@ ms.technology: ''
 ms.assetid: 14cb7513-5dc8-49cb-b3e0-94f469c443dd
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 4823ab40e271c0cc34a7aa602878211561896473
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 19b129d5eee0cc643868e7a69d8a104b54c13f2a
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912041"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94690345"
 ---
 # <a name="set-ata-notifications"></a>Festlegen von ATA-Benachrichtigungen
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ATA kann Sie bei Erkennen einer verdächtigen Aktivität per E-Mail oder über ATA-Ereignisweiterleitung benachrichtigen und das Ereignis an den SIEM-/Syslog-Server weiterleiten. Bevor Sie auswählen, welche Benachrichtigungen Sie erhalten möchten, müssen Sie [Ihren E-Mail-Server und Ihren Syslog-Server einrichten](setting-syslog-email-server-settings.md).
 
@@ -45,7 +43,7 @@ Um Benachrichtigungen zu erhalten, legen Sie folgende Parameter fest:
     > [!NOTE]
     > E-Mail-Benachrichtigungen über verdächtige Aktivitäten werden nur beim Erstellen der verdächtigen Aktivität gesendet.
 
-1. Geben Sie unter **syslog-Benachrichtigungen**an, welche Benachrichtigungen an Ihren Syslog-Server gesendet werden sollen: neue verdächtige Aktivitäten, aktualisierte verdächtige Aktivitäten und neue Integritäts Probleme.
+1. Geben Sie unter **syslog-Benachrichtigungen** an, welche Benachrichtigungen an Ihren Syslog-Server gesendet werden sollen: neue verdächtige Aktivitäten, aktualisierte verdächtige Aktivitäten und neue Integritäts Probleme.
 1. Klicken Sie auf **Speichern**.
     
     ![ATA mail notification settings image](media/ata-mail-notification-settings.png)

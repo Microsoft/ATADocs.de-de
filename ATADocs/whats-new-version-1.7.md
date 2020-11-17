@@ -12,16 +12,15 @@ ms.technology: ''
 ms.assetid: be9ee613-4eb3-40f1-8973-e7f0a707ff57
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 39120a8dfabe4b78d8c77b94fd1051435c7e7311
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: e8750b31bb8dec807202e0053df7cabad2850967
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912822"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94689478"
 ---
 # <a name="whats-new-in-ata-version-17"></a>Neues in ATA Version 1.7
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 Die vorliegenden Anmerkungen zu dieser Version enthalten Informationen zu bekannten Problemen in dieser Version von Advanced Threat Analytics.
 
 ## <a name="whats-new-in-the-ata-17-update"></a>Neuerungen beim Update auf ATA 1.7

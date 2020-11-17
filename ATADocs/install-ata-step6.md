@@ -12,18 +12,16 @@ ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 567fb2beb08425a69964932ca6807ff03a6b6549
-ms.sourcegitcommit: 69c55503b8b3f7ca99dbea872b17d81124831fad
+ms.openlocfilehash: 23831562f266a338cdc4cba2f3448a44b441dd35
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94567922"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94690617"
 ---
 # <a name="install-ata---step-6"></a>Installieren von ATA – Schritt 6
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!div class="step-by-step"]
 > [«Schritt 5](install-ata-step5.md) 
@@ -62,7 +60,7 @@ Weitere Informationen über das Konfigurieren der Weiterleitung bestimmter Ereig
 
 #### <a name="configuring-the-ata-gateway-to-listen-for-siem-events"></a>Konfigurieren des ATA-Gateways zum Überwachen von SIEM-Ereignissen
 
-1. Klicken Sie in der ATA-Konfiguration unter **Datenquellen** auf **SIEM** , aktivieren Sie **Syslog** , und klicken Sie auf **Speichern**.
+1. Klicken Sie in der ATA-Konfiguration unter **Datenquellen** auf **SIEM**, aktivieren Sie **Syslog**, und klicken Sie auf **Speichern**.
 
     ![Aktivieren des Syslog-Listener-UDP-Images](media/ATA-enable-siem-forward-events.png)
 
@@ -126,7 +124,7 @@ Fehlercode: 0x0
 
 - Der Syslog-Header ist optional.
 
-- Zwischen allen erforderlichen Feldern befindet sich das Trennzeichen „\r\n“. Beachten Sie, dass es sich hierbei um die Steuerzeichen CRLF (0d0a in Hex) handelt, nicht um Literalzeichen.
+- Zwischen allen erforderlichen Feldern befindet sich das Trennzeichen „\r\n“. Beachten Sie, dass dies Steuerzeichen für den Zeilenumbruch (CRLF bzw. „0D0A“ in Hexadezimalnotation) und keine Literalzeichen sind.
 - Die Felder weisen das Format „Schlüssel = Wert“ auf.
 - Die folgenden Schlüssel müssen vorhanden sein und einen Wert aufweisen:
   - EventCode = Windows-Ereignis-ID

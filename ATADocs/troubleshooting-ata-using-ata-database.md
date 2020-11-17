@@ -12,18 +12,16 @@ ms.technology: ''
 ms.assetid: 377a3c81-5c1d-486f-8942-85249aacf560
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: bdbe13b9a85e8ab8f02c67b59b78141d46ba3df3
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 6178593296c56bbe622aa9ac7763ffab50fbd66c
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90911960"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94690141"
 ---
 # <a name="troubleshooting-ata-using-the-ata-database"></a>Behandeln von Problemen mit ATA mithilfe der ATA-Datenbank
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ATA verwendet MongoDB als Datenbank.
 Die Interaktion mit der Datenbank ist über die Standardbefehlszeile möglich oder über ein Benutzeroberflächentool, mit dem Sie erweiterte Aufgaben und Problembehandlung ausführen können.
@@ -37,7 +35,7 @@ Die Datenbank lässt sich standardmäßig und am einfachsten über die Mongo-She
 
 > [!div class="mx-tableFixed"]
 > 
-> |So wird es gemacht|Syntax|Hinweise|
+> |So wird es gemacht|Syntax|Notizen|
 > |-------------|----------|---------|
 > |Suchen nach Sammlungen in der Datenbank.|`show collections`|Hilfreich als End-to-End-Test, um zu überprüfen, ob Datenverkehr in die Datenbank geschrieben und das Ereignis 4776 von ATA empfangen wird.|
 > |Abrufen der Details eines Benutzers, eines Computers oder einer Gruppe (UniqueEntity), z. B. eine Benutzer-ID.|`db.UniqueEntity.find({CompleteSearchNames: "<name of entity in lower case>"})`||

@@ -12,18 +12,16 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 74d610899023eba93da568360a99505119d13e70
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 55c12920020a0cbcda0b38e7b9d0cae083423a4e
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90908848"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94690974"
 ---
 # <a name="ata-silent-installation"></a>Unbeaufsichtigte Installation von ATA
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Dieser Artikel enthält Anweisungen zur unbeaufsichtigten Installation von ATA.
 
@@ -36,7 +34,7 @@ Beim Installieren oder Aktualisieren von ATA wird .NET Framework 4.6.1 automatis
 > [!Note]
 > Die Installation von .Net Framework 4.6.1 macht möglicherweise einen Neustart des Servers erforderlich. Wenn Sie beim das ATA-Gateway auf Domänencontrollern installieren, sollten Sie ein Wartungsfenster für diese Domänencontroller planen. Wenn Sie die Methode zur unbeaufsichtigten Installation von ATA verwenden, ist das Installationsprogramm so konfiguriert, dass der Server am Ende der Installation automatisch neu gestartet wird (falls erforderlich). Aufgrund eines Windows Installer-Fehlers kann anhand des /norestart-Flags nicht mehr verlässlich sichergestellt werden, dass der Server keinen Neustart ausführt. Führen Sie eine unbeaufsichtigte Installation daher nur während eines Wartungsfensters aus.
 
-Zum Nachverfolgen des Fortschritts der Bereitstellung überwachen Sie die Protokolle des ATA-Installers, die sich in **%AppData%\local\temp**befinden.
+Zum Nachverfolgen des Fortschritts der Bereitstellung überwachen Sie die Protokolle des ATA-Installers, die sich in **%AppData%\local\temp** befinden.
 
 ## <a name="install-the-ata-center"></a>Installieren von ATA Center
 

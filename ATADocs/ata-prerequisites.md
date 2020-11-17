@@ -12,18 +12,16 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0cf77c09c09062a3a2983e36646f06c603a2ef45
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: be83debc8d912974dbb08ce0f7e963080b794d4c
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90908884"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94691042"
 ---
 # <a name="ata-prerequisites"></a>Voraussetzungen für ATA
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 In diesem Artikel werden die Voraussetzungen für eine erfolgreiche Bereitstellung von ATA in Ihrer Umgebung beschrieben.
 
@@ -109,9 +107,9 @@ In der folgenden Tabelle sind die Ports aufgelistet, die mindestens geöffnet we
 
 |Protokoll|Transport|Port|Zu/Von|Richtung|
 |------------|-------------|--------|-----------|-------------|
-|**SSL** (ATA-Kommunikation)|TCP|443|ATA-Gateway|Eingehende Verbindungen|
-|**HTTP** (optional)|TCP|80|Unternehmensnetzwerk|Eingehende Verbindungen|
-|**HTTPS**|TCP|443|Unternehmensnetzwerk und ATA-Gateway|Eingehende Verbindungen|
+|**SSL** (ATA-Kommunikation)|TCP|443|ATA-Gateway|Eingehend|
+|**HTTP** (optional)|TCP|80|Unternehmensnetzwerk|Eingehend|
+|**HTTPS**|TCP|443|Unternehmensnetzwerk und ATA-Gateway|Eingehend|
 |**SMTP** (optional)|TCP|25|SMTP-Server|Ausgehend|
 |**SMTPS** (optional)|TCP|465|SMTP-Server|Ausgehend|
 |**Syslog** (optional)|TCP/UPS/TLS (konfigurierbar)|514 (Standard)|Syslog-Server|Ausgehend|
@@ -217,8 +215,8 @@ In der folgenden Tabelle sind die Ports aufgeführt, die für den Verwaltungsada
 |Netlogon (SMB, CIFS, SAM-R)|TCP und UDP|445|Alle Geräte im Netzwerk|Ausgehend|
 |Windows-Zeitdienst|UDP|123|Domänencontroller|Ausgehend|
 |DNS|TCP und UDP|53|DNS-Server|Ausgehend|
-|NTLM über RPC|TCP|135|Alle Geräte im Netzwerk|Beides|
-|NetBIOS|UDP|137|Alle Geräte im Netzwerk|Beides|
+|NTLM über RPC|TCP|135|Alle Geräte im Netzwerk|Beide|
+|NetBIOS|UDP|137|Alle Geräte im Netzwerk|Beide|
 |SSL|TCP|443|ATA Center|Ausgehend|
 |Syslog (optional)|UDP|514|SIEM-Server|Eingehende Verbindungen|
 
@@ -285,8 +283,8 @@ In der folgenden Tabelle sind die Ports aufgeführt, die für das ATA-Lightweigh
 |Protokoll|Transport|Port|Zu/Von|Richtung|
 |------------|-------------|--------|-----------|-------------|
 |DNS|TCP und UDP|53|DNS-Server|Ausgehend|
-|NTLM über RPC|TCP|135|Alle Geräte im Netzwerk|Beides|
-|NetBIOS|UDP|137|Alle Geräte im Netzwerk|Beides|
+|NTLM über RPC|TCP|135|Alle Geräte im Netzwerk|Beide|
+|NetBIOS|UDP|137|Alle Geräte im Netzwerk|Beide|
 |SSL|TCP|443|ATA Center|Ausgehend|
 |Syslog (optional)|UDP|514|SIEM-Server|Eingehende Verbindungen|
 |Netlogon (SMB, CIFS, SAM-R)|TCP und UDP|445|Alle Geräte im Netzwerk|Ausgehend|

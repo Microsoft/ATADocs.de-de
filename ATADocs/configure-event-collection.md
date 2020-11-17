@@ -12,18 +12,16 @@ ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1ebd10c417e1454e135d851270a6cd64fc4243b2
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: f833b799f14dec5b1ae1a7cf18bd9813f9912cd9
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90909698"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94690838"
 ---
 # <a name="configuring-windows-event-forwarding"></a>Konfigurieren der Windows-Ereignisweiterleitung
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
 > Für die ATA-Version 1.8 und höher ist die Konfiguration der Ereignissammlung nicht länger für ATA-Lightweight-Gateways erforderlich. Das ATA-Lightweight-Gateway liest jetzt Ereignisse lokal, ohne die Ereignisweiterleitung zu konfigurieren.
@@ -78,7 +76,7 @@ Sie müssen die Domänencontroller neu starten, nachdem Sie den **Netzwerkdienst
 1. Klicken Sie mit der rechten Maustaste auf **Abonnements**, und wählen Sie **Abonnement erstellen** aus. 
 
     1. Geben Sie einen Namen und eine Beschreibung für das Abonnement ein. 
-    2. Bestätigen Sie für **Zielprotokoll**, dass **Weitergeleitete Ereignisse** aktiviert ist. Damit ATA die Ereignisse lesen kann, muss das Ziel Protokoll **Weitergeleitete Ereignisse**sein. 
+    2. Bestätigen Sie für **Zielprotokoll**, dass **Weitergeleitete Ereignisse** aktiviert ist. Damit ATA die Ereignisse lesen kann, muss das Ziel Protokoll **Weitergeleitete Ereignisse** sein. 
     3. Wählen Sie **Quellcomputerinitiiert** aus, und klicken Sie auf **Computergruppen auswählen** aus.
         1. Klicken Sie auf **Domänencomputer hinzufügen**.
         2. Geben Sie den Namen des Domänencontrollers in das Feld **Namen des auszuwählenden Objekts eingeben** ein. Klicken Sie anschließend auf **Namen überprüfen**, und klicken Sie auf **OK**.  

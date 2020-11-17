@@ -12,18 +12,16 @@ ms.technology: ''
 ms.assetid: 710f01bd-c878-4406-a7b2-ce13f98736ea
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c5836b1086806b848560c0c99893d7a6fafeea1c
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 4c240ff131442f5cee0dc3602a2e3309cd04e63d
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90910853"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94689886"
 ---
 # <a name="investigate-lateral-movement-paths-with-ata"></a>Untersuchen von Lateral Movement-Pfaden mit ATA
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Selbst wenn Sie sich sehr darum bemühen, Ihre sensiblen Benutzer zu schützen, Ihre Administratoren über komplexe Kennwörter verfügen, die regelmäßig geändert werden, deren Computer festgeschrieben sind, und ihre Daten sicher gespeichert sind, können Angreifer immer noch Lateral Movement-Pfade nutzen, um auf sensible Konten zuzugreifen. Bei lateral Movement-Angriffen nutzt der Angreifer Instanzen, wenn vertrauliche Benutzer sich bei einem Computer anmelden, auf dem ein nicht sensibler Benutzer über lokale Rechte verfügt. Dann können sich Angreifer lateral bewegen, auf den weniger sensiblen Benutzer zugreifen und sich auf dem Computer bewegen, um die Anmeldeinformationen des sensiblen Benutzers abzugreifen.
 
@@ -39,7 +37,7 @@ Führen Sie die folgenden Schritte aus, um zu ermitteln, welche sensiblen Konten
 
 1. Klicken Sie im Menü der ATA-Konsole auf das Symbol „Berichte“ ![Symbol „Berichte“](media/ata-report-icon.png).
 
-1. Wenn keine lateral Movement-Pfade gefunden werden, ist der Bericht unter **lateral Movement-Pfade zu sensiblen Konten**ausgegraut. Wenn lateral Movement-Pfade vorhanden sind, wählen die Datumsangaben des Berichts automatisch das erste Datum aus, wenn relevante Daten vorhanden sind.
+1. Wenn keine lateral Movement-Pfade gefunden werden, ist der Bericht unter **lateral Movement-Pfade zu sensiblen Konten** ausgegraut. Wenn lateral Movement-Pfade vorhanden sind, wählen die Datumsangaben des Berichts automatisch das erste Datum aus, wenn relevante Daten vorhanden sind.
 
     ![Screenshot: Auswahl des Berichtsdatums](media/reports.png)
 
@@ -75,7 +73,7 @@ Da Sie nun wissen, welche sensiblen Konten gefährdet sind, können Sie sich ein
 > [!TIP]
 > Um zu erfahren, wie Sie Ihre Server so einrichten, dass ATA die SAM-r-Vorgänge durchführt, die für die Erkennung von Lateral Movement-Pfaden erforderlich sind, [Konfigurieren Sie Sam-r](install-ata-step9-samr.md).
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Arbeiten mit verdächtigen Aktivitäten](working-with-suspicious-activities.md)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

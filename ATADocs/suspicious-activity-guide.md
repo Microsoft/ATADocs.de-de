@@ -12,18 +12,16 @@ ms.technology: ''
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: aa89bb10e60c103af1684ae7a2d2dc5f4227bb92
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: eeccc1e5a5dd16b2d480bf82034a085159baff60
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912223"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94690090"
 ---
 # <a name="advanced-threat-analytics-suspicious-activity-guide"></a>Advanced Threat Analytics-Handbuch zu verdächtigen Aktivitäten
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Wenn eine ordnungsgemäße Untersuchung befolgt wird, kann jede verdächtige Aktivität folgendermaßen klassifiziert werden:
 
@@ -53,7 +51,7 @@ Um sicherzustellen, dass Ihre Domänencontroller die erforderlichen Ereignisse �
 
 1. Wenn es sich beim hinzugefügten Objekt um ein Benutzerkonto handelt, überprüfen Sie, welche Aktionen das Benutzerkonto durchgeführt hat, nachdem es zu der Administratorgruppe hinzugefügt wurde. Wechseln Sie zur Seite des Benutzers in ATA, um mehr Kontext zu erhalten. Gab es vor oder nach dem Hinzufügen andere verdächtige Aktivitäten im Zusammenhang mit dem Konto? Laden Sie den Bericht **Änderungen an sensiblen Gruppen** herunter, um festzustellen, welche Änderungen von wem im gleichen Zeitraum vorgenommen wurden.
 
-**Problembehandlung**
+**Wartung**
 
 Halten Sie die Zahl der Benutzer, die zum Ändern von sensiblen Gruppen autorisiert sind, so gering wie möglich.
 
@@ -73,7 +71,7 @@ Eine fehlerhafte Vertrauensstellung bedeutet, dass Sicherheitsanforderungen von 
 Gestattet der untersuchte Computer Domänenbenutzern das Anmelden?
 - Falls ja, können Sie diesen Computer in den Wiederherstellungsschritten ignorieren.
 
-**Problembehandlung**
+**Wartung**
 
 Verknüpfen Sie den Computer falls notwendig erneut mit der Domäne, oder setzen Sie das Computerkennwort zurück.
 
@@ -96,7 +94,7 @@ In dieser Erkennung wird eine Warnung ausgelöst, wenn ATA eine signifikante Anz
 
 1. Wenn es keine **erratenen Konten** gibt, werden einige von den **angegriffenen Konten** normalerweise vom Quellcomputer verwendet? Falls ja, **unterdrücken** Sie die verdächtige Aktivität.
 
-**Problembehandlung**
+**Wartung**
 
 [Komplexe und lange Kenn Wörter](/windows/device-security/security-policy-settings/password-policy) stellen die erforderliche erste Sicherheitsstufe vor Brute-Force-Angriffen dar.
 
@@ -126,7 +124,7 @@ Es gibt drei Arten von Erkennung:
     1. es gibt Fälle, in denen diese Warnung ausgelöst werden kann, wenn sich Benutzer mithilfe von Smartcards anmelden, wenn die Smartcard-Konfiguration vor kurzem geändert wurde. Überprüfen Sie, ob solche Änderungen für die beteiligten Konten vorgenommen wurden. Falls ja, ist dies wahrscheinlich ein unbedenklich richtig positives Ereignis und kann **unterdrückt** werden.
     1. Überprüfen Sie die Ressource, auf die diese Tickets zugreifen, wenn eine Ressource vorhanden ist, auf die Sie zugreifen, überprüfen Sie Sie, und stellen Sie sicher, dass es sich um eine gültige Ressource handelt, auf die Überprüfen Sie zudem, ob die Zielressource starke Verschlüsselungsmethoden unterstützt. Sie können dies in Active Directory überprüfen, indem Sie das Attribut `msDS-SupportedEncryptionTypes` des Ressourcendienstkontos überprüfen.
 
-**Problembehandlung**
+**Wartung**
 
 1. Skeleton Key – Entfernen der Schadsoftware Weitere Informationen finden Sie in der [Skeleton Key Malware Analysis](https://www.virusbulletin.com/virusbulletin/2016/01/paper-digital-bian-lian-face-changing-skeleton-key-malware) (Analyse der Skeleton Key-Schadsoftware).
 
@@ -155,7 +153,7 @@ Weitere Informationen zu Honeytoken-Konten finden Sie unter [Installieren von AT
 
 Wenn nach dem Ausführen der Schritte 1 bis 3 keine Beweise für eine ungutartige Verwendung vorliegen, gehen Sie davon aus, dass dies schädlich ist.
 
-**Problembehandlung**
+**Wartung**
 
 Stellen Sie sicher, dass Honeytoken-Konten nur für den beabsichtigten Zweck verwendet werden, andernfalls könnten sie viele Warnungen generieren.
 
@@ -169,7 +167,7 @@ Pass-the-Hash ist eine Technik mit seitlicher Bewegung, bei der Angreifer den NT
 
 Stammte der verwendete Hash von einem Computer, der dem Zielbenutzer gehörte oder von ihm regelmäßig genutzt wurde? Falls dies zutrifft, ist die Warnung falsch positiv, andernfalls ist sie wahrscheinlich richtig positiv.
 
-**Problembehandlung**
+**Wartung**
 
 1. Wenn das beteiligte Konto nicht vertraulich ist, setzen Sie das Kennwort für dieses Konto zurück. Durch Zurücksetzen des Kennworts wird verhindert, dass der Angreifer neue Kerberos-Tickets aus dem Kennworthash erstellt. Vorhandene Tickets sind immer noch verwendbar, bis sie ablaufen.
 
@@ -187,7 +185,7 @@ Pass-the-Ticket ist eine Technik mit seitlicher Bewegung, bei der die Angreifer 
 
 1. Gibt es eine benutzerdefinierte Anwendung, die Tickets im Auftrag des Benutzers weiterleitet? Falls ja, handelt es sich um ein unbedenklich richtig positives Ereignis.
 
-**Problembehandlung**
+**Wartung**
 
 1. Wenn das beteiligte Konto nicht vertraulich ist, setzen Sie das Kennwort für dieses Konto zurück. Durch erneutes Senden des Kennworts wird verhindert, dass der Angreifer neue Kerberos-Tickets aus dem Kennworthash erstellt. Alle vorhandenen Tickets bleiben verwendbar, bis sie abgelaufen sind.
 
@@ -209,7 +207,7 @@ In dieser Erkennung wird eine Warnung ausgelöst, wenn ein Kerberos Ticket Grant
 
 1. Wenn die Antwort auf die obigen Fragen „nein“ ist, gehen Sie von einem böswilligen Ereignis aus.
 
-**Problembehandlung**
+**Wartung**
 
 Ändern Sie das Kennwort für das Kerberos Ticket Granting Ticket (KRBTGT) zweimal gemäß den Anweisungen unter [KRBTGT Account Password Reset Scripts now available for customers (Skripts zum Zurücksetzen von Kennwörtern des KRBTGT-Kontos stehen Kunden jetzt zur Verfügung)](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) mithilfe des [Reset the KRBTGT account password/keys tool (Tools zum Zurücksetzen des Kennworts/Schlüssels eines KRBTGT-Kontos)](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Durch das zweimalige Zurücksetzen von KRBTGT werden alle Kerberos-Tickets in dieser Domäne ungültig. Daher sollten Sie diesen Schritt im Voraus planen.
 Außerdem müssen Sie Pass-the-Hash-Empfehlungen implementieren, da [die](https://www.microsoft.com/download/details.aspx?id=36036)Erstellung eines Golden Ticket Domänen Administratorrechte erfordert.
@@ -229,7 +227,7 @@ In dieser Erkennung wird eine Warnung ausgelöst, wenn die DPAPI zum Abrufen des
 
 1. Falls dies zutrifft und von Ihnen nicht so gewünscht ist, **schließen Sie die verdächtige Aktivität.
 
-**Problembehandlung**
+**Wartung**
 
 Ein Angreifer benötigt Domänenadministratorrechte zum Verwenden der DPAPI. Implementieren Sie [Pass the hash recommendations (Empfehlungen zu Pass-the-Hash)](https://www.microsoft.com/download/details.aspx?id=36036).
 
@@ -247,7 +245,7 @@ In dieser Erkennung wird eine Warnung ausgelöst, wenn eine Replikationsanforder
 1. Soll der fragliche Computer Daten von Active Directory replizieren? Beispielsweise Azure AD Connect. Falls ja, können Sie die verdächtige Aktivität **schließen und ausschließen**.
 1. Klicken Sie auf den Quellcomputer oder das Konto, um die entsprechende Profilseite aufzurufen. Überprüfen Sie, was ungefähr zum Zeitpunkt der Replikation passiert ist. Suchen Sie nach ungewöhnlichen Aktivitäten wie z.B.: Wer war angemeldet, auf welche Ressourcen wurde zugegriffen.
 
-**Problembehandlung**
+**Wartung**
 
 Überprüfen Sie die folgenden Berechtigungen:
 
@@ -271,7 +269,7 @@ Informationen zum Konfigurieren des schreibgeschützten Zugriffs auf den Contain
 
 Überprüfen Sie die Liste der gelöschten Konten, und ermitteln Sie, ob es ein Muster oder einen geschäftlichen Grund gibt, der einen umfangreichen Löschvorgang rechtfertigt.
 
-**Problembehandlung**
+**Wartung**
 
 Entziehen Sie Benutzern die Berechtigung, Konten in AD löschen zu können. Weitere Informationen finden Sie unter [View or Set Permissions on a Directory Object (Anzeigen oder Festlegen von Berechtigungen in einem Verzeichnisobjekt)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816824(v=ws.10)).
 
@@ -291,7 +289,7 @@ Entziehen Sie Benutzern die Berechtigung, Konten in AD löschen zu können. Weit
 
 1. Wenn die Antwort auf die beiden vorstehenden Fragen „Nein“ lautet, gehen Sie von einer böswilligen Aktivität aus.
 
-**Problembehandlung**
+**Wartung**
 
 Stellen Sie sicher, dass alle Domänen Controller mit Betriebssystemen bis Windows Server 2012 R2 mit [KB3011780](https://support.microsoft.com/help/2496930/ms11-013-vulnerabilities-in-kerberos-could-allow-elevation-of-privilege) installiert sind und alle Mitglieds Server und Domänen Controller bis 2012 R2 mit KB2496930 auf dem neuesten Stand sind. Weitere Informationen finden Sie unter [Silver PAC](/security-updates/SecurityBulletins/2011/ms11-013) und [Gefälschte PAC-Datei](/security-updates/SecurityBulletins/2014/ms14-068).
 
@@ -319,7 +317,7 @@ Bei dieser Erkennung kann ATA erkennen, von wo der Angriff durchgeführt wurde, 
 
 1. Wenn einer der Rateversuche mit einem vorhandenen Kontonamen übereinstimmt, kennt der Angreifer vorhandene Konten in Ihrer Umgebung und kann mit Brute-Force-Angriffen und gefundenen Benutzernamen versuchen, Zugriff auf Ihre Domäne zu erhalten. Überprüfen Sie die erratenen Kontonamen auf weitere verdächtige Aktivitäten. Überprüfen Sie, ob es sich bei den Konten um sensible Konten handelt.
 
-**Problembehandlung**
+**Wartung**
 
 [Komplexe und lange Kenn Wörter](/windows/device-security/security-policy-settings/password-policy) stellen die erforderliche erste Sicherheitsstufe vor Brute-Force-Angriffen dar.
 
@@ -351,7 +349,7 @@ In dieser Erkennung werden im ersten Monat nach der Bereitstellung von ATA keine
 
 1. Wenn es keine Informationen über das involvierte Konto gibt, können Sie zum Endpunkt navigieren und überprüfen, welches Konto zur Zeit der Warnung angemeldet war.
 
-**Problembehandlung**
+**Wartung**
 
 Verwenden Sie das [SAMRi10-Tool](https://gallery.technet.microsoft.com/SAMRi10-Hardening-Remote-48d94b5b), um den Schutz Ihrer Umgebung gegen diese Technik zu erhöhen.
 Wenn das Tool auf Ihren Domänencontroller nicht angewendet werden kann:
@@ -372,7 +370,7 @@ Es gibt mehrere Abfragetypen im DNS-Protokoll. ATA erkennt die AXFR-Anforderung 
 1. Wird auf dem Quellcomputer ein Sicherheitsscanner ausgeführt? Wenn ja, **Schließen** Sie die Entitäten in ATA aus, entweder direkt mit **Schließen und ausschließen** oder über die Seite **Ausschluss** (unter **Konfiguration** – verfügbar für ATA-Administratoren).
 1. Falls Sie alle obigen Fragen verneinen können, setzen Sie die Untersuchung mit Fokus auf dem Quellcomputer fort. Klicken Sie auf den Quellcomputer, um die entsprechende Profilseite aufzurufen. Überprüfen Sie, was ungefähr zum Zeitpunkt der Anforderung passiert ist. Suchen Sie nach ungewöhnlichen Aktivitäten wie z.B.: Wer war angemeldet, auf welche Ressourcen wurde zugegriffen.
 
-**Problembehandlung**
+**Wartung**
 
 Die Sicherung eines internen DNS-Servers, um zu verhindern, dass Reconnaissance mithilfe von DNS auftritt, kann von der Deaktivierung oder Einschränkung von Zonenübertragungen nur auf bestimmte IP-Adressen erreicht werden. Weitere Informationen zum Einschränken von Zonenübertragungen finden Sie unter [Restrict Zone Transfers (Einschränken von Zonenübertragungen)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)).
 Das Bearbeiten von Zonenübertragungen ist eine Aufgabe innerhalb einer Prüfliste, die für das [Sichern des DNS-Servers gegen interne und externe Angriffe](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770432(v=ws.11)) gelten sollte.
@@ -399,7 +397,7 @@ In dieser Erkennung wird eine Warnung ausgelöst, wenn eine SMB-Sitzungsenumerat
 
 1. Wenn die Antwort auf alle vorstehenden Fragen „nein“ lautet, gehen Sie von einer böswilligen Aktivität aus.
 
-**Problembehandlung**
+**Wartung**
 
 Verwenden Sie das [Net Cease-Tool](https://gallery.technet.microsoft.com/Net-Cease-Blocking-Net-1e8dcb5b), um den Schutz Ihrer Umgebung gegen diese Art von Angriff zu erhöhen.
 
@@ -417,7 +415,7 @@ Angreifer, die Administratoranmeldeinformationen kompromittiert haben oder einen
    - Wenn Sie beide Fragen bejahen können, **schließen** Sie die Warnung.
 1. Wenn Sie beide Fragen verneinen können, sollte diese Aktivität als richtig positiv behandelt werden. Versuchen Sie, die Quelle des Versuchs zu ermitteln, indem Sie Computer- und Kontoprofile überprüfen. Klicken Sie auf den Quellcomputer oder das Konto, um die entsprechende Profilseite aufzurufen. Überprüfen Sie, was ungefähr zum Zeitpunkt dieser Versuche passiert ist. Suchen Sie nach ungewöhnlichen Aktivitäten wie z.B.: Wer war angemeldet, auf welche Ressourcen wurde zugegriffen.
 
-**Problembehandlung**
+**Wartung**
 
 1. Schränken Sie den Remotezugriff auf Domänencontroller von Computern ein, die nicht den Tier 0 aufweisen.
 
@@ -438,7 +436,7 @@ Klicken Sie auf die Warnung, um auf die Seite „Details“ zu gelangen. Sie kö
 
 Normalerweise gibt es ein Skript oder eine ältere Anwendung auf den Quell Computern, die eine einfache LDAP-Bindung verwenden.
 
-**Problembehandlung**
+**Wartung**
 
 Überprüfen Sie die Konfiguration des Quellcomputers, um sicherzustellen, dass Sie keine einfache LDAP-Bindung verwenden. Statt einfachen LDAP-Bindungen können Sie LDAP SALS oder LDAPS verwenden.
 
@@ -460,7 +458,7 @@ In dieser Erkennung wird eine Warnung ausgelöst, wenn viele Authentifizierungsf
 1. Klicken Sie auf den Quellcomputer, um die entsprechende Profilseite aufzurufen. Überprüfen Sie, was ungefähr zum Zeitpunkt dieser Versuche passiert ist. Suchen Sie nach ungewöhnlichen Aktivitäten wie z.B.: Wer war angemeldet, auf welche Ressourcen wurde zugegriffen.
 1. Wenn die Authentifizierung mithilfe von NTLM durchgeführt wurde und Sie sehen, dass die Warnung mehrfach aufgetreten ist, aber keine ausreichenden Informationen zum Server verfügbar sind, auf den der Quellcomputer zugreifen wollte, sollten Sie die **NTLM-Überwachung** auf dem betroffenen Domänencontroller aktivieren. Aktivieren Sie dazu Ereignis 8004. Dies ist das NTLM-Authentifizierungsereignis, das Informationen zum Quellcomputer, Benutzerkonto und **Server** enthält, auf die der Quellcomputer zugreifen wollte. Wenn Sie wissen, welcher Server die Authentifizierungsüberprüfung gesendet hat, sollten Sie den Server untersuchen, indem Sie seine Ereignisse, wie z.B. 4624, überprüfen, um den Authentifizierungsprozess besser zu verstehen.
 
-**Problembehandlung**
+**Wartung**
 
 [Komplexe und lange Kenn Wörter](/windows/device-security/security-policy-settings/password-policy) stellen die erforderliche erste Sicherheitsstufe vor Brute-Force-Angriffen dar.
 
@@ -482,7 +480,7 @@ Angreifer versuchen, verdächtige Dienste auf Ihrem Netzwerk auszuführen. ATA l
 
 1. Wenn die Antwort auf beide Fragen *nein* ist, sollte dieses Ereignis als richtig positiv behandelt werden.
 
-**Problembehandlung**
+**Wartung**
 
 - Implementieren Sie den Zugriff mit weniger privilegierten Rechten auf Domänencomputern, um nur bestimmten Benutzern die Erstellung neuer Dienste zu erlauben.
 
@@ -498,7 +496,7 @@ ATA erlernt das Entitätsverhalten für Benutzer, Computer und Ressourcen über 
 
 1. Betrachten Sie folgende Fälle als potenziell falsch positive Ereignisse: Ein Benutzer, der aus dem Urlaub zurückkam, IT-Personal, das den übermäßigen Zugriff als Teil seiner Pflicht ausführt (z.B. eine Spitze in der Helpdesk-Unterstützung an einem bestimmten Tag oder in einer bestimmten Woche), Remotedesktopanwendungen. Wenn Sie die Warnung **schließen und ausschließen**, ist der Benutzer nicht mehr Teil der Erkennung.
 
-**Problembehandlung**
+**Wartung**
 
  Je nachdem, wodurch dieses ungewöhnliche Verhalten ausgelöst wurde, sollten verschiedene Aktionen ausgeführt werden. Wenn das Netzwerk beispielsweise gescannt wurde, sollte der Quellcomputer aus dem Netzwerk blockiert werden (außer wenn er genehmigt wurde).
 
@@ -526,7 +524,7 @@ Um festzustellen, ob es sich bei der Aktivität um einen WannaCry-Angriff handel
 
 1. Wenn das Skript feststellt, dass der Computer nicht infiziert oder anfällig ist, könnte er trotzdem infiziert sein, denn SMBv1 könnte deaktiviert, oder der Computer könnte gepatcht worden sein. Beides beeinflusst das Überprüfungstool.
 
-**Problembehandlung**
+**Wartung**
 
 Wenden Sie die aktuellsten Patches auf alle Ihre Computer an, und überprüfen Sie, ob alle Sicherheitsupdates angewendet wurden.
 

@@ -12,18 +12,16 @@ ms.technology: ''
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 7424525fa3b5e2e9cd06ad410d7965229885ab35
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 024ca22c366e98c0c09a0c13152c453ce33363c0
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912215"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94690039"
 ---
 # <a name="troubleshooting-ata-known-issues"></a>Behandlung von bekannten Problemen bei ATA
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 In diesem Abschnitt sind mögliche Fehler, die es in den Bereitstellungen von ATA geben kann, und die Schritte zu deren Behebung aufgeführt.
 
@@ -31,7 +29,7 @@ In diesem Abschnitt sind mögliche Fehler, die es in den Bereitstellungen von AT
 
 > [!div class="mx-tableFixed"]
 >
-> |Fehler|Beschreibung|Lösung|
+> |Fehler|BESCHREIBUNG|Lösung|
 > |-------------|----------|---------|
 > |System.DirectoryServices.Protocols.LdapException: Lokaler Fehler.|Die ATA-Gateway konnte sich nicht beim Domänencontroller authentifizieren.|1. Vergewissern Sie sich, dass der DNS-Datensatz des Domänen Controllers ordnungsgemäß auf dem DNS-Server konfiguriert ist. <br>2. Überprüfen Sie, ob die Zeit des ATA-Gateways mit der Zeit des Domänen Controllers synchronisiert ist.|
 > |System.IdentityModel.Tokens.SecurityTokenValidationException: Die Zertifikatkette kann nicht überprüft werden.|Das ATA-Gateway konnte das Zertifikat von ATA Center nicht überprüfen.|1. Überprüfen Sie, ob das Zertifikat der Stamm Zertifizierungsstelle im Zertifikat Speicher der vertrauenswürdigen Zertifizierungsstelle auf dem ATA-Gateway installiert ist.<br>2. Überprüfen Sie, ob die Zertifikat Sperr Liste verfügbar ist und dass die Zertifikats Sperr Überprüfung ausgeführt werden kann.|
@@ -59,7 +57,7 @@ In diesem Abschnitt sind mögliche Fehler, die es in den Bereitstellungen von AT
 
 > [!div class="mx-tableFixed"]
 >
-> |Fehler|Beschreibung|Lösung|
+> |Fehler|BESCHREIBUNG|Lösung|
 > |-------------|----------|---------|
 > |Fehler bei der Installation von .NET Framework 4.6.1. Fehlernummer ist 0x800713ec.|Die erforderlichen Komponenten für .NET Framework 4.6.1 sind nicht auf dem Server installiert. |Stellen Sie vor der Installation von ATA sicher, dass die Windows-Updates [KB2919442](https://www.microsoft.com/download/details.aspx?id=42135) und [KB2919355](https://support.microsoft.com/kb/2919355) auf dem Server installiert sind.|
 > |System.Threading.Tasks.TaskCanceledException: A task was canceled (System.Threading.Tasks.TaskCanceledException: Eine Aufgabe wurde abgebrochen)|Zeitüberschreitung während des Bereitstellungsvorgangs, da ATA Center nicht erreicht werden konnte.|1. Überprüfen Sie die Netzwerk Konnektivität mit ATA Center, indem Sie die zugehörige IP-Adresse verwenden. <br></br>2. Überprüfen Sie die Proxy-oder Firewallkonfiguration.|
@@ -72,7 +70,7 @@ In diesem Abschnitt sind mögliche Fehler, die es in den Bereitstellungen von AT
 
 > [!div class="mx-tableFixed"]
 >
-> |Fehler|Beschreibung|Lösung|
+> |Fehler|BESCHREIBUNG|Lösung|
 > |-------------|----------|---------|
 > |System.Security.Cryptography.CryptographicException: Zugriff verweigert.|ATA Center konnte das ausgestellte Zertifikat nicht für die Entschlüsselung verwenden. Dies liegt höchstwahrscheinlich daran, dass ein Zertifikat verwendet wurde, dessen KeySpec- bzw. KeyNumber-Wert auf „Signature“ (AT\\_SIGNATURE) festgelegt wurde, statt KeyExchange (AT\\_KEYEXCHANGE) zu verwenden. Dies wird für die Entschlüsselung nicht unterstützt.|1. stoppt den ATA Center-Dienst. <br></br>2. löschen Sie das ATA Center-Zertifikat aus dem Zertifikat Speicher des Centers. (Stellen Sie vor dem Löschen sicher, dass Sie das Zertifikat mit dem privaten Schlüssel in einer PFX-Datei gesichert haben.) <br></br>3. Öffnen Sie eine Eingabeaufforderung mit erhöhten Rechten, und führen Sie certutil-importpfx "centercertificate. pfx" unter \\ _KEYEXCHANGE <br></br>4. Starten Sie den ATA Center-Dienst. <br></br>5. Überprüfen Sie, ob alles jetzt erwartungsgemäß funktioniert.|
 

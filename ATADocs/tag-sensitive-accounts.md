@@ -12,19 +12,17 @@ ms.technology: ''
 ms.assetid: 40a1c5c4-b8d6-477c-8ae5-562b37661624
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 233d6f51e35081740d068635646318abc503268f
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: e80eeda17fa458f994a9e637cd95362601ffd89a
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90911968"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94690124"
 ---
 # <a name="tag-sensitive-accounts"></a>Kennzeichnen von sensiblen Konten
 
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Sie können Gruppen oder Konten manuell als sensibel markieren, um den Erkennungsvorgang zu verbessern. Achten Sie darauf, dass die Markierungen aktualisiert werden, weil für einige ATA-Erkennungsvorgänge, wie die Vorgänge zum Erkennen von Änderungen sensibler Gruppen und von Lateral Movement-Pfaden, die Information erforderlich ist, welche Gruppen und Konten als sensibel angesehen werden. In der Vergangenheit hat ATA automatisch Entitäten als *sensibel* festgelegt, wenn es sich um ein Mitglied einer bestimmten Liste von Gruppen gehandelt hat. Sie können manuell andere Benutzer und Gruppen als sensibel markieren, z.B. Vorstandsmitglieder, leitende Angestellte und Verkaufsleiter, damit ATA diese als sensibel erkennt.
 
@@ -34,7 +32,7 @@ Sie können Gruppen oder Konten manuell als sensibel markieren, um den Erkennung
 
     ![ATA-Entitätstags](media/entity-tags.png)
 
-1. Geben Sie im Abschnitt **Sensibel** die Namen der **sensiblen Konten** und **sensiblen Gruppen** ein, und klicken Sie anschließend auf das Zeichen **+**, um diese hinzuzufügen.
+1. Geben Sie im Abschnitt **Sensibel** die Namen der **sensiblen Konten** und **sensiblen Gruppen** ein, und klicken Sie anschließend auf das Zeichen **+** , um diese hinzuzufügen.
 
     ![Beispiel: sensibles ATA-Konto](media/sensitive-account-sample.png)
 
@@ -51,19 +49,19 @@ Die Gruppen in der folgenden Liste werden von ATA als „Sensibel“ eingestuft.
 - Hauptbenutzer
 - Konten-Operatoren
 - Server-Operatoren
-- Druck-Operatoren
+- Druckoperatoren
 - Sicherungsoperatoren
 - Replikatoren
 - Remotedesktopbenutzer 
 - Netzwerkkonfigurations-Operatoren 
 - Eingehende Gesamtstruktur-Vertrauensstellung
-- Domänenadministratoren
+- Domänen-Admins
 - Domänencontroller
 - Gruppenrichtlinienersteller-Besitzer 
 - Schreibgeschützte Domänencontroller 
 - Schreibgeschützte Domänencontroller der Organisation 
 - Schema-Admins 
-- Organisationsadministratoren
+- Organisations-Admins
      
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

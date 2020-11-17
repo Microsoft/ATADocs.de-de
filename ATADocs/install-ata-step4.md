@@ -12,24 +12,22 @@ ms.technology: ''
 ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 87f8442010a7132de7e76479353acfa7753d10dc
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: e692a543095e722e4a8b7823c39b73a1f078cb4b
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90911491"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94690668"
 ---
 # <a name="install-ata---step-4"></a>Installieren von ATA – Schritt 4
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 > [!div class="step-by-step"]
 > [« Schritt 3](install-ata-step3.md)
 > [Schritt 5 »](install-ata-step5.md)
 
-## <a name="step-4-install-the-ata-gateway"></a>Schritt 4: Installieren des ATA-Gateways
+## <a name="step-4-install-the-ata-gateway"></a>Schritt 4. Installieren des ATA-Gateways
 
 Überprüfen Sie vor der Installation des ATA-Gateways auf dem dedizierten Server, ob die Portspiegelung ordnungsgemäß konfiguriert ist und ob das ATA-Gateway Datenverkehr zu und von den Domänencontrollern anzeigen kann. Weitere Informationen finden Sie unter [Überprüfen der Portspiegelung](validate-port-mirroring.md).
 
@@ -81,7 +79,7 @@ Führen Sie die folgenden Schritte auf dem ATA-Gatewayserver aus.
     - Microsoft Visual C++ 2013 Redistributable
     - Benutzerdefinierter Systemmonitor-Datensammlungssatz
     
-1. Nachdem die Installation abgeschlossen ist, klicken Sie für das ATA-Gateway auf **starten** , um den Browser zu öffnen und sich bei der ATA-Konsole anzumelden, und klicken Sie für das ATA-Lightweight-Gateway auf **Fertig**stellen.
+1. Nachdem die Installation abgeschlossen ist, klicken Sie für das ATA-Gateway auf **starten** , um den Browser zu öffnen und sich bei der ATA-Konsole anzumelden, und klicken Sie für das ATA-Lightweight-Gateway auf **Fertig** stellen.
 
 
 > [!div class="step-by-step"]

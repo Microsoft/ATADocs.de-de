@@ -12,18 +12,16 @@ ms.technology: ''
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3f04798ef39299dfa5b31d4a5679d6f68afaeef0
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 1d7700e4ae0f5c686ea8a5def7d4f4fb9aceee09
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90909268"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94689546"
 ---
 # <a name="ata-architecture"></a>ATA-Architektur
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Dieses Diagramm veranschaulicht die Architektur von Advanced Threat Analytics:
 
@@ -75,7 +73,7 @@ Das **ATA-Center** führt die folgenden Funktionen aus:
 
 ATA Center empfängt analysierten Datenverkehr von dem ATA-Gateway und dem ATA-Lightweight-Gateway. Anschließend führt es die Profilerstellung, die deterministische Erkennung sowie Machine Learning- und Verhaltensalgorithmen aus, um Informationen über Ihr Netzwerk zu sammeln, um Anomalien zu erkennen und Sie bei verdächtigen Aktivitäten warnen zu können.
 
-|Typ|Beschreibung|
+|type|BESCHREIBUNG|
 |-|-|
 |Entitätenempfänger|Empfängt Batches von Entitäten von allen ATA-Gateways und ATA-Lightweight-Gateways.|
 |Netzwerkaktivitätenverarbeitung|Verarbeitet alle Netzwerkaktivitäten innerhalb der einzelnen empfangenen Batches. Beispiel: Zuordnung unterschiedlicher Kerberos-Schritte, die von potenziell verschiedenen Computern ausgeführt werden|
@@ -107,7 +105,7 @@ Das **ATA-Gateway** und das **ATA-Lightweight-Gateway** verfügen über die glei
 
 Das ATA-Gateway empfängt den Netzwerkverkehr und die Windows-Ereignisse aus Ihrem Netzwerk und verarbeitet diese in den folgenden Hauptkomponenten:
 
-|Typ|Beschreibung|
+|type|BESCHREIBUNG|
 |-|-|
 |Netzwerklistener|Der Netzwerklistener erfasst Netzwerkdatenverkehr und analysiert diesen. Diese Aufgabe sorgt für eine hohe CPU-Auslastung. Daher ist es besonders wichtig, beim Planen des ATA-Gateways oder des ATA-Lightweight-Gateways die [ATA-Voraussetzungen](ata-prerequisites.md) zu überprüfen.|
 |Ereignislistener|Der Ereignislistener erfasst die von einem SIEM-Server in Ihrem Netzwerk weitergeleiteten Windows-Ereignisse und analysiert diese.|
@@ -151,7 +149,7 @@ Wenn Active Directory mehr Rechenkapazität erfordert, wird das vom ATA-Lightwei
 
 |Active Directory (Lsass.exe)|ATA-Lightweight-Gateway (Microsoft.Tri.Gateway.exe)|Sonstiges (andere Prozesse) |ATA-Lightweight-Gateway-Kontingent|Nimmt Gateway Löschungen vor|
 |-|-|-|-|-|
-|60 %|15 %|10 %|15 %|Ja|
+|60%|15 %|10 %|15 %|Ja|
 
 ## <a name="your-network-components"></a>Ihre Netzwerkkomponenten
 

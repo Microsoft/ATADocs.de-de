@@ -12,18 +12,16 @@ ms.technology: ''
 ms.assetid: df162a62-f273-4465-9887-94271f5000d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 432e91f7d88539061291a8c68ee2cc53c435e440
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 335761baff8180d582c844f16a623eb9441668fe
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90910788"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94689971"
 ---
 # <a name="troubleshooting-ata-using-the-performance-counters"></a>Problembehandlung bei ATA mithilfe der Leistungsindikatoren
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Die ATA-Leistungsindikatoren bieten Einblick in die Leistungsgrade der einzelnen ATA-Komponenten. Die Komponenten in ATA verarbeiten Daten sequenziell. Wenn also ein Problem vorliegt, kann dies dazu führen, dass an irgendeinem Punkt in der Komponentenkette ein Teil des Datenverkehrs verworfen wird. Um das Problem zu beheben, müssen Sie herausfinden, welche Komponente den Fehler bewirkt, und das Problem am Anfang der Kette beheben. Verwenden Sie Daten aus den Leistungsindikatoren, um zu verstehen, wie jede Komponente funktioniert.
 Eine Beschreibung des Datenflusses zwischen internen ATA-Komponenten finden Sie unter [ATA-Architektur](ata-architecture.md).
@@ -58,7 +56,7 @@ Auf folgende Indikatoren für das ATA-Gateway sollte hauptsächlich geachtet wer
 
 > [!div class="mx-tableFixed"]
 > 
-> |Leistungsindikator|Beschreibung|Schwellenwert|Problembehandlung|
+> |Leistungsindikator|BESCHREIBUNG|Schwellenwert|Problembehandlung|
 > |-----------|---------------|-------------|-------------------|
 > |Microsoft ATA Gateway\NetworkListener PEF Parser Messages\Sec|Die Menge des Datenverkehrs, der pro Sekunde vom ATA-Gateway verarbeitet wird.|Kein Schwellenwert|Hilft bei der Einschätzung des vom ATA-Gateway analysierten Datenverkehrs.|
 > |NetworkListener PEF Dropped Events\Sec|Die Menge des Datenverkehrs, der pro Sekunde vom ATA-Gateway gelöscht wird.|Diese Zahl muss immer 0 sein (seltene kurze Löschvorgänge sind akzeptabel).|Überprüfen Sie, ob Komponenten vorhanden sind, die ihre Maximalgröße erreicht haben und daher vorgeschaltete Komponenten bis hin zum NetworkListener blockieren. Informationen hierzu finden Sie oben im Abschnitt **ATA-Komponentenprozess**.<br /><br />Überprüfen Sie, ob Probleme bei CPU oder Arbeitsspeicher vorliegen.|
@@ -80,7 +78,7 @@ Fügen Sie diese Leistungsindikatoren hinzu, um die Ressourcenbeschränkungen zu
 
 > [!div class="mx-tableFixed"]
 > 
-> |Leistungsindikator|Beschreibung|Schwellenwert|Problembehandlung|
+> |Leistungsindikator|BESCHREIBUNG|Schwellenwert|Problembehandlung|
 > |-----------|---------------|-------------|-------------------|
 > |Microsoft ATA Gateway Updater\GatewayUpdaterResourceManager CPU Time Max %|Die maximale CPU-Zeit (in Prozent), die der Lightweight-Gatewayprozess nutzen kann. |Kein Schwellenwert. | Dies ist die Einschränkung, die verhindert, dass das ATA-Lightweight-Gateway die Ressourcen des Domänencontrollers vollständig erschöpft. Wenn Sie bemerken, dass der Prozess innerhalb eines Zeitraums häufig den maximalen Grenzwert erreicht (der Prozess erreicht das Limit und anschließend wird Datenverkehr gelöscht), müssen Sie dem Server mit dem Domänencontroller mehr Ressourcen hinzufügen.|
 > |Microsoft ATA Gateway Updater\GatewayUpdaterResourceManager Commit Memory Max Size|Die maximale Menge von zugewiesenem Arbeitsspeicher (in Bytes), die der Lightweight-Gatewayprozess nutzen kann.|Kein Schwellenwert. | Dies ist die Einschränkung, die verhindert, dass das ATA-Lightweight-Gateway die Ressourcen des Domänencontrollers vollständig erschöpft. Wenn Sie bemerken, dass der Prozess innerhalb eines Zeitraums häufig den maximalen Grenzwert erreicht (der Prozess erreicht das Limit und anschließend wird Datenverkehr gelöscht), müssen Sie dem Server mit dem Domänencontroller mehr Ressourcen hinzufügen.| 
@@ -93,7 +91,7 @@ Verwenden Sie die folgenden Leistungsindikatoren, um Ihren tatsächlichen Verbra
 
 > [!div class="mx-tableFixed"]
 > 
-> |Leistungsindikator|Beschreibung|Schwellenwert|Problembehandlung|
+> |Leistungsindikator|BESCHREIBUNG|Schwellenwert|Problembehandlung|
 > |-----------|---------------|-------------|-------------------|
 > |Process(Microsoft.Tri.Gateway)\%Processor Time|Die CPU-Zeit (in Prozent), die der Lightweight-Gatewayprozess zurzeit verwendet. |Kein Schwellenwert. | Vergleichen Sie die Ergebnisse dieses Leistungsindikators mit dem Grenzwert von GatewayUpdaterResourceManager CPU Time Max %. Wenn Sie bemerken, dass der Prozess innerhalb eines Zeitraums häufig den maximalen Grenzwert erreicht (der Prozess erreicht das Limit und anschließend wird Datenverkehr gelöscht), müssen Sie für das Lightweight-Gateway mehr Ressourcen bereitstellen.|
 > |Process(Microsoft.Tri.Gateway)\Private Bytes|Die Menge von zugewiesenem Arbeitsspeicher (in Bytes), die der Lightweight-Gatewayprozess zurzeit verwendet.|Kein Schwellenwert. | Vergleichen Sie die Ergebnisse dieses Leistungsindikators mit dem Grenzwert von GatewayUpdaterResourceManager Commit Memory Max Size. Wenn Sie bemerken, dass der Prozess innerhalb eines Zeitraums häufig den maximalen Grenzwert erreicht (der Prozess erreicht das Limit und anschließend wird Datenverkehr gelöscht), müssen Sie für das Lightweight-Gateway mehr Ressourcen bereitstellen.| 
@@ -108,7 +106,7 @@ Auf folgende Indikatoren für ATA Center sollte hauptsächlich geachtet werden:
 
 > [!div class="mx-tableFixed"]
 > 
-> |Leistungsindikator|Beschreibung|Schwellenwert|Problembehandlung|
+> |Leistungsindikator|BESCHREIBUNG|Schwellenwert|Problembehandlung|
 > |-----------|---------------|-------------|-------------------|
 > |Microsoft ATA Center\EntityReceiver Entity Batch Block Size|Die Anzahl der Entitätenbatches in der Warteschlange von ATA Center.|Sollte niedriger sein als der Maximalwert - 1 (Standardmaximalwert: 10.000)|Überprüfen Sie, ob Komponenten vorhanden sind, die ihre Maximalgröße erreicht haben und daher vorgeschaltete Komponenten bis hin zum NetworkListener blockieren.  Informationen hierzu finden Sie im vorhergehenden Abschnitt **ATA-Komponentenprozess**.<br /><br />Überprüfen Sie, ob Probleme bei CPU oder Arbeitsspeicher vorliegen.|
 > |Microsoft ATA Center\NetworkActivityProcessor Network Activity Block Size|Die Anzahl der Netzwerkaktivitäten (NAs) in der Warteschlange für die Verarbeitung.|Sollte niedriger sein als der Maximalwert - 1 (Standardmaximalwert: 50.000)|Überprüfen Sie, ob Komponenten vorhanden sind, die ihre Maximalgröße erreicht haben und daher vorgeschaltete Komponenten bis hin zum NetworkListener blockieren. Informationen hierzu finden Sie im vorhergehenden Abschnitt **ATA-Komponentenprozess**.<br /><br />Überprüfen Sie, ob Probleme bei CPU oder Arbeitsspeicher vorliegen.|
@@ -125,7 +123,7 @@ In der folgenden Tabelle werden die Leistungsindikatoren des Betriebssystems auf
 
 > [!div class="mx-tableFixed"]
 > 
-> |Leistungsindikator|Beschreibung|Schwellenwert|Problembehandlung|
+> |Leistungsindikator|BESCHREIBUNG|Schwellenwert|Problembehandlung|
 > |-----------|---------------|-------------|-------------------|
 > |Prozessor(_Total)\%Prozessorzeit (%)|Die prozentuale Angabe der vergangenen Prozessorzeit, die zum Ausführen eines Threads benötigt wird, der sich nicht im Leerlauf befindet.|Weniger als 80 % im Durchschnitt|Überprüfen Sie, ob ein bestimmter Prozess wesentlich mehr Prozessorzeit verbraucht, als sinnvoll ist.<br /><br />Fügen Sie weitere Prozessoren hinzu.<br /><br />Reduzieren Sie den Umfang des Datenverkehrs pro Server.<br /><br />Der Indikator „Prozessor(_Total)\%Prozessorzeit (%)“ ist möglicherweise auf virtuellen Servern weniger genau. In diesem Fall ist die genauere Möglichkeit zum Messen einer verringerten Prozessorleistung der Indikator „System\Prozessor-Warteschlangenlänge“.|
 > |System\Context Switches\sec|Die kombinierte Häufigkeit, mit der die Prozessoren von einem Thread zu einem anderen umgeschaltet werden.|Weniger als 5.000 &#42; Kerne (physische Kerne)|Überprüfen Sie, ob ein bestimmter Prozess wesentlich mehr Prozessorzeit verbraucht, als sinnvoll ist.<br /><br />Fügen Sie weitere Prozessoren hinzu.<br /><br />Reduzieren Sie den Umfang des Datenverkehrs pro Server.<br /><br />Der Indikator „Prozessor(_Total)\%Prozessorzeit (%)“ ist möglicherweise auf virtuellen Servern weniger genau. In diesem Fall ist die genauere Möglichkeit zum Messen einer verringerten Prozessorleistung der Indikator „System\Prozessor-Warteschlangenlänge“.|

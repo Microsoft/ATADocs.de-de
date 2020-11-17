@@ -12,33 +12,31 @@ ms.technology: ''
 ms.assetid: bff20bf7-8b53-49da-81e5-b818a1c3b24e
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 8fe6d1eb34fc651791a84227f64ddee868c2fb97
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 833b5604a957ff5910598bfcf8b12c86027ee638
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912025"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94690328"
 ---
 # <a name="provide-ata-with-your-email-server-settings"></a>Bereitstellen der Einstellungen Ihres E-Mail-Servers für ATA
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
-ATA kann Benachrichtigungen senden, wenn eine verdächtige Aktivität erkannt wird. Damit ATA e-Mail-Benachrichtigungen senden kann, müssen Sie zunächst die **e-Mail-Servereinstellungen**konfigurieren.
+ATA kann Benachrichtigungen senden, wenn eine verdächtige Aktivität erkannt wird. Damit ATA e-Mail-Benachrichtigungen senden kann, müssen Sie zunächst die **e-Mail-Servereinstellungen** konfigurieren.
 
 1. Klicken Sie auf dem ATA Center-Server auf das Symbol **Microsoft Advanced Threat Analytics Management** auf dem Desktop.
 
 1. Geben Sie Ihren Benutzernamen und Ihr Kennwort ein, und klicken Sie auf **Anmelden**
 
-1. Wählen Sie auf der Symbolleiste die Option Einstellungen, und wählen Sie **Konfiguration**aus.
+1. Wählen Sie auf der Symbolleiste die Option Einstellungen, und wählen Sie **Konfiguration** aus.
 
     ![Symbol der ATA-Konfigurationseinstellungen](media/ATA-config-icon.png)
 
 1. Geben Sie im Bereich **Benachrichtigungen** unter **Mailserver** die folgenden Informationen ein:
 
 
-   |              Feld              |                                                                                                 Beschreibung                                                                                                  |               Wert                |
+   |              Feld              |                                                                                                 BESCHREIBUNG                                                                                                  |               Wert                |
    |---------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------|
    | SMTP-Server-Endpunkt (erforderlich) |                                                            Geben Sie den vollqualifizierten Domänennamen des SMTP-Servers ein, und ändern Sie optional die Portnummer (standardmäßig 25).                                                            | Beispiel:<br />smtp.contoso.com |
    |               SSL               |                                              Schalten Sie auf SSL-Betrieb um, falls der SMTP-Server SSL erfordert. **Hinweis:** Wenn Sie SSL aktivieren, müssen Sie auch die Portnummer ändern.                                               |        Der Standardwert ist „deaktiviert“         |
@@ -64,13 +62,13 @@ ATA kann Sie durch Senden der Benachrichtigung an den Syslog-Server benachrichti
 
 1. Geben Sie Ihren Benutzernamen und Ihr Kennwort ein, und klicken Sie auf **Anmelden**
 
-1. Wählen Sie auf der Symbolleiste die Option Einstellungen, und wählen Sie **Konfiguration**aus.
+1. Wählen Sie auf der Symbolleiste die Option Einstellungen, und wählen Sie **Konfiguration** aus.
 
     ![Symbol der ATA-Konfigurationseinstellungen](media/ATA-config-icon.png)
 
 1. Wählen Sie im Bereich „Benachrichtigungen“ **Syslog-Server** aus, und geben Sie die folgende Informationen ein:
 
-   |Feld|Beschreibung|
+   |Feld|BESCHREIBUNG|
    |---------|---------------|
    |Syslog-Server-Endpunkt|Geben Sie den vollqualifizierten Domänennamen des Syslog-Servers ein, und ändern Sie optional die Portnummer (standardmäßig 514).|
    |Transport|Kann UDP, TCP oder TLS (sicheres Syslog) sein|
