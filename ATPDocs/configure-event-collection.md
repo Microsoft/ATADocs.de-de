@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f691df3332d90e0f163d3773dd5570e0d17b5a95
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 627c30146e2543501da9d5970c9c8a087e3320bf
+ms.sourcegitcommit: c5f63d621f4f1e875f8c24adc2bd4770e07e0a62
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276473"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94558235"
 ---
 # <a name="configure-event-collection"></a>Konfigurieren der Ereignissammlung
 
@@ -121,7 +121,7 @@ Fehlercode: 0x0
 
 - Der Syslog-Header ist optional.
 
-- Zwischen allen erforderlichen Feldern befindet sich das Trennzeichen „\r\n“.
+- Zwischen allen erforderlichen Feldern befindet sich das Trennzeichen „\r\n“. Beachten Sie, dass dies Steuerzeichen für den Zeilenumbruch (CRLF bzw. „0D0A“ in Hexadezimalnotation) und keine Literalzeichen sind.
 - Die Felder weisen das Format „Schlüssel = Wert“ auf.
 - Die folgenden Schlüssel müssen vorhanden sein und einen Wert aufweisen:
   - EventCode = Windows-Ereignis-ID

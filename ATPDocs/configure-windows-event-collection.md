@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4dfaba62df29bb97009bad2440bb420f2c1477e9
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: ad6604b3502cde05b88598a286407778a2e03787
+ms.sourcegitcommit: c5f63d621f4f1e875f8c24adc2bd4770e07e0a62
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276568"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94558252"
 ---
 # <a name="configure-windows-event-collection"></a>Konfigurieren der Windows-Ereignissammlung
 
@@ -31,7 +31,7 @@ Die folgenden Windows-Ereignisse müssen für [!INCLUDE [Product short](includes
 - 4729: Member Removed from Global Security Group (Mitglied aus globaler Sicherheitsgruppe entfernt)
 - 4730: Global Security Group Deleted (Globale Sicherheitsgruppe gelöscht)
 - 4732: Member Added to Local Security Group (Mitglied zu lokaler Sicherheitsgruppe hinzugefügt)
-- 4733: Member Removed from Global Security Group (Mitglied aus globaler Sicherheitsgruppe entfernt)
+- 4733: Mitglied aus lokaler Sicherheitsgruppe entfernt
 - 4743: Computer Account Deleted (Computerkonto gelöscht)
 - 4753: Global Distribution Group Deleted (Lokale Verteilergruppe gelöscht)
 - 4756: Member Added to Universal Security Group (Mitglied zu universeller Sicherheitsgruppe hinzugefügt)
@@ -48,14 +48,14 @@ Die folgenden Windows-Ereignisse müssen für [!INCLUDE [Product short](includes
 
 1. Melden Sie sich beim Server als **Domänenadministrator** an.
 1. Laden Sie den Gruppenrichtlinienverwaltungs-Editor über **Server-Manager** > **Extras** > **Gruppenrichtlinienverwaltung**.
-1. Erweitern Sie die **Organisationseinheiten der Domänencontroller** , klicken Sie mit der rechten Maustaste auf **Standarddomänencontroller-Richtlinie** , und klicken Sie auf **Bearbeiten**.
+1. Erweitern Sie die **Organisationseinheiten der Domänencontroller**, klicken Sie mit der rechten Maustaste auf **Standarddomänencontroller-Richtlinie**, und klicken Sie auf **Bearbeiten**.
 
     > [!NOTE]
     > Zum Festlegen dieser Richtlinien können Sie die Standardrichtlinie für Domänencontroller oder ein dediziertes GPO verwenden.
 
     ![Bearbeiten der Standarddomänencontroller-Richtlinie](media/advanced-audit-policy-check-step-1.png)
 
-1. Wechseln Sie im geöffneten Fenster zu **Computerkonfiguration** > **Richtlinien** > **Windows-Einstellungen** > **Sicherheitseinstellungen** , und führen Sie abhängig von der gewünschten Richtlinie die folgenden Schritte durch:
+1. Wechseln Sie im geöffneten Fenster zu **Computerkonfiguration** > **Richtlinien** > **Windows-Einstellungen** > **Sicherheitseinstellungen**, und führen Sie abhängig von der gewünschten Richtlinie die folgenden Schritte durch:
 
     **Für die erweiterte Überwachungsrichtlinienkonfiguration**
 
@@ -72,7 +72,7 @@ Die folgenden Windows-Ereignisse müssen für [!INCLUDE [Product short](includes
         | Kontoverwaltung | Benutzerkontenverwaltung überwachen | 4726 |
         | System | Sicherheitssystemerweiterung überwachen | 7045 |
 
-        Wenn Sie zum Beispiel **Sicherheitsgruppenverwaltung überwachen** unter **Kontoverwaltung** konfigurieren möchten, doppelklicken Sie auf **Sicherheitsgruppenverwaltung überwachen** , und wählen Sie jeweils für Ereignisse mit dem Status **Erfolg** und **Fehler** die Option **Configure the following audit events** (Folgende Überwachungsereignisse konfigurieren) aus.
+        Wenn Sie zum Beispiel **Sicherheitsgruppenverwaltung überwachen** unter **Kontoverwaltung** konfigurieren möchten, doppelklicken Sie auf **Sicherheitsgruppenverwaltung überwachen**, und wählen Sie jeweils für Ereignisse mit dem Status **Erfolg** und **Fehler** die Option **Configure the following audit events** (Folgende Überwachungsereignisse konfigurieren) aus.
 
         ![Sicherheitsgruppenverwaltung überwachen](media/advanced-audit-policy-check-step-4.png)
 
@@ -92,12 +92,12 @@ Die folgenden Windows-Ereignisse müssen für [!INCLUDE [Product short](includes
         | Netzwerksicherheit: Beschränken von NTLM: NTLM-Authentifizierung in dieser Domäne überwachen | Alle aktivieren |
         | Netzwerksicherheit: Beschränken von NTLM: Eingehender NTLM-Datenverkehr überwachen | Überwachung für alle Konten aktivieren |
 
-        Wenn Sie beispielsweise **ausgehenden NTLM-Datenverkehr zu Remoteservern** konfigurieren möchten, doppelklicken Sie unter **Sicherheitsoptionen** auf **Netzwerksicherheit: Beschränken von NTLM: Ausgehender NTLM-Datenverkehr zu Remoteservern** , und klicken Sie auf **Alle überwachen**.
+        Wenn Sie beispielsweise **ausgehenden NTLM-Datenverkehr zu Remoteservern** konfigurieren möchten, doppelklicken Sie unter **Sicherheitsoptionen** auf **Netzwerksicherheit: Beschränken von NTLM: Ausgehender NTLM-Datenverkehr zu Remoteservern**, und klicken Sie auf **Alle überwachen**.
 
         ![Überwachen von ausgehendem Netzwerkdatenverkehr an Remoteserver](media/advanced-audit-policy-check-step-3.png)
 
     > [!NOTE]
-    > Wenn Sie anstelle einer Gruppenrichtlinie eine lokale Sicherheitsrichtlinie verwenden, stellen Sie sicher, dass Sie die Überwachungsprotokolle für die **Kontoanmeldung** , die **Kontoverwaltung** und die **Sicherheitsoptionen** zu Ihrer lokalen Richtlinie hinzufügen. Wenn Sie die erweiterte Überwachungsrichtlinie konfigurieren, stellen Sie sicher, dass Sie die [Überwachungsrichtlinien-Unterkategorie](/windows/security/threat-protection/security-policy-settings/audit-force-audit-policy-subcategory-settings-to-override) erzwingen.
+    > Wenn Sie anstelle einer Gruppenrichtlinie eine lokale Sicherheitsrichtlinie verwenden, stellen Sie sicher, dass Sie die Überwachungsprotokolle für die **Kontoanmeldung**, die **Kontoverwaltung** und die **Sicherheitsoptionen** zu Ihrer lokalen Richtlinie hinzufügen. Wenn Sie die erweiterte Überwachungsrichtlinie konfigurieren, stellen Sie sicher, dass Sie die [Überwachungsrichtlinien-Unterkategorie](/windows/security/threat-protection/security-policy-settings/audit-force-audit-policy-subcategory-settings-to-override) erzwingen.
 
 1. Nachdem die neuen Ereignisse über GPO angewendet wurden, sind sie unter Ihren **Windows-Ereignisprotokollen** sichtbar.
 
