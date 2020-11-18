@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: df369b2a718b1aa2cb552bb42712a6b36275e2ee
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 40175ace8046ae7b0edb77f4cac6e036eed997e7
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276678"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848345"
 ---
 # <a name="security-assessment-riskiest-lateral-movement-paths-lmp"></a>Sicherheitsbewertung: Lateral-Movement-Pfade mit dem höchsten Risiko
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ## <a name="what-are-risky-lateral-movement-paths"></a>Was sind riskante Lateral-Movement-Pfade?
 
@@ -56,4 +54,4 @@ Beispielsweise sind die riskanten Pfade leichter für Angreifer sichtbar und kö
 ## <a name="see-also"></a>Weitere Informationen
 
 - [[!INCLUDE [Product short](includes/product-short.md)] Aktivitäten Filtern in Cloud App Security](activities-filtering-mcas.md)
-- [Sehen Sie sich das [!INCLUDE [Product short](includes/product-short.md)] Forum an!](https://aka.ms/MDIcommunity)
+- [Weitere Informationen finden Sie im [!INCLUDE [Product short](includes/product-short.md)]-Forum.](https://aka.ms/MDIcommunity)

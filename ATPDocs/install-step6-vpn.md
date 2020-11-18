@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8d55f682b8056900ea19fb2684fa322fdb100df3
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 5bdaec29f2b8eb6d9d62105d48a59fde7c578f05
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276204"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847784"
 ---
 # <a name="integrate-vpn"></a>Integrieren des VPN
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 [!INCLUDE [Product long](includes/product-long.md)] kann Buchhaltungsinformationen aus VPN-Lösungen erfassen. Nach der Konfiguration beinhaltet die Profilseite des Benutzers Informationen aus den VPN-Verbindungen, wie IP-Adressen und Standorte, aus denen die Verbindungen entstammen. Dadurch wird der Untersuchungsvorgang um zusätzliche Informationen zur Benutzeraktivität und einen neuen Ermittlungsvorgang für ungewöhnliche VPN-Verbindungen ergänzt. Der Aufruf zum Auflösen einer externen IP-Adresse an einem Standort ist anonym. In diesem Aufruf wird kein persönlicher Bezeichner gesendet.
 
@@ -54,7 +52,7 @@ Führen Sie auf Ihrem RRAS-Server die folgenden Schritte aus.
 
     ![RADIUS-Setup](media/radius-setup.png)
 
-1. Geben Sie im Fenster **RADIUS-Server hinzufügen** den **Servernamen** des nächsten [!INCLUDE [Product short](includes/product-short.md)] Sensors ein (der über eine Netzwerkverbindung verfügt). Um Hochverfügbarkeit zu erreichen, können Sie zusätzliche [!INCLUDE [Product short](includes/product-short.md)] Sensoren als RADIUS-Server hinzufügen. Stellen Sie unter **Port** sicher, dass die Standardeinstellung 1813 konfiguriert ist. Klicken Sie auf **Ändern** , und tippen Sie eine neue, geheime Zeichenfolge von alphanumerischen Zeichen ein. Notieren Sie sich die neue Zeichenfolge für den gemeinsamen geheimen Schlüssel, da Sie Sie später während der Konfiguration ausfüllen müssen [!INCLUDE [Product short](includes/product-short.md)] . Prüfen Sie das Feld **„RADIUS-Kontoführung aktiviert“- und „RADIUS-Kontoführung deaktiviert“-Nachrichten senden** , und klicken Sie anschließend in allen geöffneten Dialogfeldern auf **OK**.
+1. Geben Sie im Fenster **RADIUS-Server hinzufügen** den **Servernamen** des nächsten [!INCLUDE [Product short](includes/product-short.md)] Sensors ein (der über eine Netzwerkverbindung verfügt). Um Hochverfügbarkeit zu erreichen, können Sie zusätzliche [!INCLUDE [Product short](includes/product-short.md)] Sensoren als RADIUS-Server hinzufügen. Stellen Sie unter **Port** sicher, dass die Standardeinstellung 1813 konfiguriert ist. Klicken Sie auf **Ändern**, und tippen Sie eine neue, geheime Zeichenfolge von alphanumerischen Zeichen ein. Notieren Sie sich die neue Zeichenfolge für den gemeinsamen geheimen Schlüssel, da Sie Sie später während der Konfiguration ausfüllen müssen [!INCLUDE [Product short](includes/product-short.md)] . Prüfen Sie das Feld **„RADIUS-Kontoführung aktiviert“- und „RADIUS-Kontoführung deaktiviert“-Nachrichten senden**, und klicken Sie anschließend in allen geöffneten Dialogfeldern auf **OK**.
 
     ![VPN-Setup](media/vpn-set-accounting.png)
 
@@ -65,7 +63,7 @@ Führen Sie auf Ihrem RRAS-Server die folgenden Schritte aus.
 So konfigurieren Sie VPN-Daten in [!INCLUDE [Product short](includes/product-short.md)] :
 
 1. [!INCLUDE [Product short](includes/product-short.md)]Klicken Sie im Portal auf das konfigurationszahnrad und dann auf **VPN**.
-1. Aktivieren Sie die **RADIUS-Kontoführung** , und geben Sie das **gemeinsame Geheimnis** ein, das Sie zuvor auf Ihrem RRAS-VPN-Server konfiguriert haben. Klicken Sie dann auf **Save** (Speichern).
+1. Aktivieren Sie die **RADIUS-Kontoführung**, und geben Sie das **gemeinsame Geheimnis** ein, das Sie zuvor auf Ihrem RRAS-VPN-Server konfiguriert haben. Klicken Sie dann auf **Save** (Speichern).
 
     ![Konfigurieren [! INCLUDE [Product Short] (includes/Produkt-Short. MD)] VPN](media/vpn-radius.png)
 
@@ -75,7 +73,7 @@ Nachdem dies aktiviert ist, [!INCLUDE [Product short](includes/product-short.md)
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [[!INCLUDE [Product short](includes/product-short.md)] Tool zur Größenanpassung](https://aka.ms/aatpsizingtool)
+- [[!INCLUDE [Product short](includes/product-short.md)]-Tool zur Größenanpassung](https://aka.ms/aatpsizingtool)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
-- [[!INCLUDE [Product short](includes/product-short.md)] Voraussetzung](prerequisites.md)
-- [Sehen Sie sich das [!INCLUDE [Product short](includes/product-short.md)] Forum an!](https://aka.ms/MDIcommunity)
+- [Voraussetzungen für [!INCLUDE [Product short](includes/product-short.md)]](prerequisites.md)
+- [Weitere Informationen finden Sie im [!INCLUDE [Product short](includes/product-short.md)]-Forum.](https://aka.ms/MDIcommunity)

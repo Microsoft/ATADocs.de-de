@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 627c30146e2543501da9d5970c9c8a087e3320bf
-ms.sourcegitcommit: c5f63d621f4f1e875f8c24adc2bd4770e07e0a62
+ms.openlocfilehash: 7624f2d959e37b2bf88d4b14c31c5a6f1ddd6853
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94558235"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848226"
 ---
 # <a name="configure-event-collection"></a>Konfigurieren der Ereignissammlung
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Zur Erweiterung der Erkennungsfunktionen benötigt [!INCLUDE [Product long](includes/product-long.md)] die Windows-Ereignisse, die unter [Konfigurieren der Ereignissammlung](configure-windows-event-collection.md#configure-event-collection) aufgeführt sind. Diese Ereignisse können entweder automatisch vom [!INCLUDE [Product short](includes/product-short.md)]-Sensor gelesen oder – falls dieser nicht bereitgestellt wurde – an den eigenständigen [!INCLUDE [Product short](includes/product-short.md)]-Sensor weitergeleitet werden. Dazu gibt es zwei Möglichkeiten: die Konfiguration des eigenständigen [!INCLUDE [Product short](includes/product-short.md)]-Sensors, sodass dieser auf SIEM-Ereignisse lauscht, oder die [Konfiguration der Windows-Ereignisweiterleitung](configure-event-forwarding.md).
 

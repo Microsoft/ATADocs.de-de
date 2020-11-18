@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9e1bfe428a466e4870613798e4af116f27d63647
-ms.sourcegitcommit: 218ba562a2a109ff456b011004530f503a4e82c6
+ms.openlocfilehash: fb97959f9cffe0e80cb0d273e061a13e6b809f83
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93342503"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847767"
 ---
-# <a name="configure-product-long-to-make-remote-calls-to-sam"></a>Konfigurieren [!INCLUDE [Product long](includes/product-long.md)] von, um Remote Aufrufe an Sam durchführen
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
+# <a name="configure-product-long-to-make-remote-calls-to-sam"></a>Konfigurieren von [!INCLUDE [Product long](includes/product-long.md)] für das Ausführen von Remoteaufrufen an SAM
 
 [!INCLUDE [Product long](includes/product-long.md)]die Erkennung von [lateral Movement](use-case-lateral-movement-path.md) -Pfaden basiert auf Abfragen, mit denen lokale Administratoren auf bestimmten Computern identifiziert werden. Diese Abfragen werden mithilfe des Sam-R-Protokolls durchgeführt, wobei das Dienst Konto verwendet wird, das [!INCLUDE [Product short](includes/product-short.md)] während der [!INCLUDE [Product short](includes/product-short.md)] Installation  [Schritt 2 erstellt wurde. Verbindung mit AD herstellen](install-step2.md).
 
@@ -49,4 +47,4 @@ Weitere Informationen zu SAM-R und dieser Gruppenrichtlinie, finden Sie unter [N
 ## <a name="see-also"></a>Weitere Informationen
 
 - [Untersuchen von Angriffen mit lateral Movement-Pfaden mit [!INCLUDE [Product short](includes/product-short.md)]](use-case-lateral-movement-path.md)
-- [Sehen Sie sich das [!INCLUDE [Product short](includes/product-short.md)] Forum an!](https://aka.ms/MDIcommunity)
+- [Weitere Informationen finden Sie im [!INCLUDE [Product short](includes/product-short.md)]-Forum.](https://aka.ms/MDIcommunity)

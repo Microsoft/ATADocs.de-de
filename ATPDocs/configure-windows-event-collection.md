@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ad6604b3502cde05b88598a286407778a2e03787
-ms.sourcegitcommit: c5f63d621f4f1e875f8c24adc2bd4770e07e0a62
+ms.openlocfilehash: fd2d06ad49756a0a1b78cd055546b5db64bb0940
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94558252"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848175"
 ---
 # <a name="configure-windows-event-collection"></a>Konfigurieren der Windows-Ereignissammlung
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Die [!INCLUDE [Product long](includes/product-long.md)]-Erkennung basiert auf bestimmten Windows-Ereignisprotokolleinträgen, um einige Erkennungen zu verbessern und zusätzliche Informationen darüber bereitzustellen, wer bestimmte Aktionen ausgeführt hat, wie z. B. NTLM-Anmeldungen, Änderungen an Sicherheitsgruppen und ähnliche Ereignisse. Damit die richtigen Ereignisse überprüft und im Windows-Ereignisprotokoll eingeschlossen werden, benötigen Ihre Domänencontroller die korrekten erweiterten Überwachungsrichtlinieneinstellungen. Falsche Einstellungen der erweiterten Überwachungsrichtlinie können dazu führen, dass die erforderlichen Ereignisse nicht im Ereignisprotokoll aufgezeichnet werden und die [!INCLUDE [Product short](includes/product-short.md)]-Abdeckung unvollständig ist.
 

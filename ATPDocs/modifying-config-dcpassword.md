@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b9dcd871fecd855a35a530f57c020fba5f3d1347
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: ef931c90558ffaea1a24d8682cc8091a845aeea8
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93275867"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847410"
 ---
 # <a name="change-product-long-portal-configuration---domain-connectivity-password"></a>[!INCLUDE [Product long](includes/product-long.md)]Portal Konfiguration ändern-Domänen Verbindungs Kennwort
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ## <a name="change-the-domain-connectivity-password"></a>Ändern des Domänenverbindungskennworts
 
@@ -37,7 +35,7 @@ Gehen Sie folgendermaßen vor, um das Domänen Verbindungs Kennwort im Portal zu
 
 1. Wählen Sie auf der Symbolleiste die Option Einstellungen, und wählen Sie **Konfiguration** aus.
 
-    ![[! Symbol für das Hinzufügen von [Product Short] (includes/Produkt-Short. MD)] Konfigurationseinstellungen](media/config-menu.png)
+    ![Symbol für die [!INCLUDE [Product short](includes/product-short.md)]-Konfigurationseinstellungen](media/config-menu.png)
 
 1. Wählen Sie **Verzeichnisdienste** aus.
 
@@ -50,10 +48,10 @@ Gehen Sie folgendermaßen vor, um das Domänen Verbindungs Kennwort im Portal zu
 
 1. Klicken Sie auf **Speichern**.
 
-1. [!INCLUDE [Product short](includes/product-short.md)]Wählen Sie im Portal die Option **Konfiguration** aus.
+1. Wählen Sie im [!INCLUDE [Product short](includes/product-short.md)]-Portal **Konfiguration** aus.
 1. Wählen Sie unter **System** die Seite **Sensoren** aus, und überprüfen Sie den Status der Sensoren.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Integration mit Microsoft Defender for Endpoint](integrate-mde.md)
-- [Sehen Sie sich das [!INCLUDE [Product short](includes/product-short.md)] Forum an!](https://aka.ms/MDIcommunity)
+- [Integration in Microsoft Defender für Endpunkt](integrate-mde.md)
+- [Weitere Informationen finden Sie im [!INCLUDE [Product short](includes/product-short.md)]-Forum.](https://aka.ms/MDIcommunity)

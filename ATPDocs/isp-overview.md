@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c5f6eed2ee9220555bbd870f66e2cacbbb82ed1c
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 58e079764c2e59623b94b78f29f0ad00d6219dcc
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93275122"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847427"
 ---
 # <a name="product-longs-identity-security-posture-assessments"></a>[!INCLUDE [Product long](includes/product-long.md)]Bewertung der Identitäts Sicherheitslage
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 In der Regel haben Organisationen jeder Größenordnung nur eingeschränkte Informationen darüber, ob ihre lokalen Apps und Dienste ein Sicherheitsrisiko für die Organisation darstellen könnten. Dieses Problem trifft insbesondere bei nicht unterstützten oder veralteten Komponenten zu.
 
@@ -66,7 +64,7 @@ Lesen Sie die [Schnellstartanleitung für Cloud App Security](/cloud-app-securit
 
 So greifen Sie auf Bewertungen des Identitätssicherheitsstatus zu:
 
-1. Öffnen Sie das **Microsoft Cloud App Security** -Portal.
+1. Öffnen Sie das **Microsoft Cloud App Security**-Portal.
     ![Zugriff [! INCLUDE [Product Short] (includes/Product-Short. MD)] Identitäts Sicherheitsstatus-Berichte in Cloud App Security](media/cas-isp-report-1.png)
 1. Wählen Sie im linken Menü **Untersuchen** aus, und klicken Sie im Dropdownmenü auf **Identitätssicherheitsstatus**.
 1. Klicken Sie in der Liste **Sicherheitsbewertungsberichte** auf die Statusbewertung, die Sie überprüfen möchten.
@@ -74,4 +72,4 @@ So greifen Sie auf Bewertungen des Identitätssicherheitsstatus zu:
 ## <a name="next-steps"></a>Nächste Schritte
 
 - [Weitere Informationen zur Verwendung von Cloud App Security mit [!INCLUDE [Product short](includes/product-short.md)]](activities-filtering-mcas.md)
-- [Sehen Sie sich das [!INCLUDE [Product short](includes/product-short.md)] Forum an!](https://aka.ms/MDIcommunity)
+- [Weitere Informationen finden Sie im [!INCLUDE [Product short](includes/product-short.md)]-Forum.](https://aka.ms/MDIcommunity)

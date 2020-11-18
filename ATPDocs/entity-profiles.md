@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d9dd51c1cfba0bf51a57653e8cc1f97744fb3374
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 06b628caf47945a9bfa645b5b73593c02a1093b4
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276444"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848158"
 ---
 # <a name="understanding-entity-profiles"></a>Grundlegendes zu Entitätsprofilen
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
 > Die auf dieser Seite erläuterten [!INCLUDE [Product long](includes/product-long.md)]-Features sind auch über das neue [Portal](https://portal.cloudappsecurity.com) zugänglich.
@@ -58,7 +56,7 @@ Wenn Sie auf die Registerkarte „Lateral Movements-Pfade“ klicken, wird Ihnen
 
 Die Map enthält eine Liste, die Auskunft darüber gibt, wie viele Hops zwischen Computern oder Benutzern notwendig wären, damit ein Angreifer ein sensibles Konto gefährden kann. Wenn der Benutzer über ein sensibles Konto verfügt, können Sie zudem sehen, wie viele Ressourcen und Konten mit dem Konto direkt verbunden sind.
 
-Wenn in den letzten zwei Tagen für die Entität kein potenzieller Lateral Movement-Pfad festgestellt wurde, wird der Graph nicht angezeigt. Wählen Sie ein anderes Datum mit **Ansicht eines anderen Datums** , um frühere Graphs der Lateral Movement-Pfade anzuzeigen, die für diese Entität entdeckt wurden. Der [Lateral Movement-Pfad-Bericht](reports.md) ist immer verfügbar und enthält Informationen über die erkannten potenziellen Lateral Movement-Pfade und kann nach Zeit angepasst werden.
+Wenn in den letzten zwei Tagen für die Entität kein potenzieller Lateral Movement-Pfad festgestellt wurde, wird der Graph nicht angezeigt. Wählen Sie ein anderes Datum mit **Ansicht eines anderen Datums**, um frühere Graphs der Lateral Movement-Pfade anzuzeigen, die für diese Entität entdeckt wurden. Der [Lateral Movement-Pfad-Bericht](reports.md) ist immer verfügbar und enthält Informationen über die erkannten potenziellen Lateral Movement-Pfade und kann nach Zeit angepasst werden.
 
 Weitere Informationen erhalten Sie unter [Lateral Movement-Pfade](use-case-lateral-movement-path.md).
 

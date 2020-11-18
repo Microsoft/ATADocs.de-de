@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d1b7c7f5ce56bb7de5ab38b276c1de3074aa533d
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 5bf828278e0223aaaf52b41932b2612c7225dd7f
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276347"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847937"
 ---
 # <a name="work-with-product-long-health-and-events"></a>Arbeiten mit Integrität [!INCLUDE [Product long](includes/product-long.md)] und Ereignissen
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ## <a name="product-long-health-center"></a>[!INCLUDE [Product long](includes/product-long.md)] Integritäts Center
 
@@ -38,16 +36,16 @@ Wählen Sie zum Überprüfen der Gesamt Integrität Ihrer [!INCLUDE [Product sho
 
 - Sie können alle offenen Probleme auf **Schließen** oder **Unterdrücken** festlegen, indem Sie auf die drei Punkte in der Ecke einer Warnung klicken und die gewünschte Option anklicken.
 
-- **Öffnen** : In dieser Liste werden alle neuen verdächtigen Aktivitäten angezeigt.
+- **Öffnen**: In dieser Liste werden alle neuen verdächtigen Aktivitäten angezeigt.
 
-- **Auflösen** : Wird verwendet, um verdächtige Aktivitäten nachzuverfolgen, die Sie identifiziert, untersucht oder entschärft haben.
+- **Auflösen**: Wird verwendet, um verdächtige Aktivitäten nachzuverfolgen, die Sie identifiziert, untersucht oder entschärft haben.
 
     > [!NOTE]
     > [!INCLUDE [Product short](includes/product-short.md)] kann eine geschlossene Aktivität erneut öffnen, wenn die gleiche Aktivität innerhalb eines kurzen Zeitraums wiedererkannt wird.
 
-- **Unterdrücken** : Das Unterdrücken einer Aktivität bedeutet, dass Sie sie gerade ignorieren möchten und nur wieder gewarnt werden möchten, wenn es eine neue Instanz gibt. Wenn eine ähnliche Warnung vorliegt, wird [!INCLUDE [Product short](includes/product-short.md)] Sie nicht erneut geöffnet. Wenn die Warnung jedoch für sieben Tage angehalten wurde und anschließend erneut auftritt, werden Sie erneut gewarnt.
+- **Unterdrücken**: Das Unterdrücken einer Aktivität bedeutet, dass Sie sie gerade ignorieren möchten und nur wieder gewarnt werden möchten, wenn es eine neue Instanz gibt. Wenn eine ähnliche Warnung vorliegt, wird [!INCLUDE [Product short](includes/product-short.md)] Sie nicht erneut geöffnet. Wenn die Warnung jedoch für sieben Tage angehalten wurde und anschließend erneut auftritt, werden Sie erneut gewarnt.
 
-- **Erneut öffnen** : Eine geschlossener oder unterdrückter Alarm kann erneut geöffnet werden, sodass es auf der Zeitachse als **Offen** angezeigt wird.
+- **Erneut öffnen**: Eine geschlossener oder unterdrückter Alarm kann erneut geöffnet werden, sodass es auf der Zeitachse als **Offen** angezeigt wird.
 
 - **Löschen:** Sie können Sicherheitswarnungen auch über die Zeitachse für verdächtige Aktivitäten löschen. Wenn Sie allerdings eine Warnung löschen, wird diese vollständig aus der Instanz gelöscht, und Sie können diese nicht wiederherstellen. Nachdem Sie auf „Verwerfen“ geklickt haben, können Sie alle Sicherheitswarnungen für den gleichen Typ löschen.
 
@@ -56,4 +54,4 @@ Wählen Sie zum Überprüfen der Gesamt Integrität Ihrer [!INCLUDE [Product sho
 ## <a name="see-also"></a>Weitere Informationen
 
 - [Arbeiten mit verdächtigen Aktivitäten](working-with-suspicious-activities.md)
-- [Sehen Sie sich das [!INCLUDE [Product short](includes/product-short.md)] Forum an!](https://aka.ms/MDIcommunity)
+- [Weitere Informationen finden Sie im [!INCLUDE [Product short](includes/product-short.md)]-Forum.](https://aka.ms/MDIcommunity)
