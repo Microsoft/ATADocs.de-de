@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b343d5a708791de4658389985423f104e3f57762
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 11184c7bea435ae1168deb810ec54ec163d990f5
+ms.sourcegitcommit: 38266d01b28ea6b084687b9bc3c4aa18e2dbb3b7
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/18/2020
-ms.locfileid: "94846696"
+ms.locfileid: "94851225"
 ---
 # <a name="product-long-security-alerts"></a>[!INCLUDE [Product long](includes/product-long.md)]-Sicherheitswarnungen
 
@@ -39,7 +39,7 @@ Weitere Informationen zur Struktur und zu gängigen Komponenten der [!INCLUDE [P
 
 In der folgenden Tabelle wird die Zuordnung zwischen den Warnungsnamen, den entsprechenden eindeutigen externen IDs und ihren Microsoft Cloud App Security-Warnungs-IDs aufgelistet. Für Skripts oder die Automatisierung empfiehlt Microsoft die Verwendung von externen IDs zur Warnung anstelle von Warnungsnamen, da nur externe IDs dauerhaft für Sicherheitswarnungen verwendet und nicht geändert werden.
 
-# <a name="external-ids"></a>[Externe IDs](#tab/external)
+### <a name="external-ids"></a>[Externe IDs](#tab/external)
 
 > [!div class="mx-tdBreakAll"]
 > |Sicherheitswarnungsname|Eindeutige externe ID|Schweregrad|MITRE ATT&CK Matrix&trade;|
@@ -84,8 +84,7 @@ In der folgenden Tabelle wird die Zuordnung zwischen den Warnungsnamen, den ents
 > |[Reconnaissance über Benutzer und Gruppenmitgliedschaften (SAMR)](reconnaissance-alerts.md#user-and-group-membership-reconnaissance-samr-external-id-2021)|2021|Mittel|Ermittlung|
 > |[Reconnaissance über Benutzer und IP-Adressen (SMB)](reconnaissance-alerts.md#user-and-ip-address-reconnaissance-smb-external-id-2012)|2012|Mittel|Ermittlung|
 
-
-# <a name="cloud-app-security-ids"></a>[Cloud App Security-API](#tab/cloud-app-security)
+### <a name="cloud-app-security-ids"></a>[Cloud App Security-API](#tab/cloud-app-security)
 
 > [!div class="mx-tdBreakAll"]
 > |Sicherheitswarnungsname|Cloud App Security-Warnungs-ID|
@@ -132,6 +131,8 @@ In der folgenden Tabelle wird die Zuordnung zwischen den Warnungsnamen, den ents
 
 <!-- FROM TOP TABLE |[Suspected over-pass-the-hash attack (encryption downgrade)](lateral-movement-alerts.md#suspected-overpass-the-hash-attack-encryption-downgrade-external-id-2008)|2008|Medium|Lateral movement|-->
 <!-- FROM BOTTOM TABLE |[Suspected over-pass-the-hash attack (encryption downgrade)](lateral-movement-alerts.md#suspected-overpass-the-hash-attack-encryption-downgrade-external-id-2008)|ALERT_EXTERNAL_AATP_OVERPASS_THE_HASH_ENCRYPTION_DOWNGRADE_SECURITY_ALERT|-->
+
+---
 
 > [!NOTE]
 > Wenn Sie eine Sicherheitswarnung deaktivieren möchten, wenden Sie sich an den Support.
