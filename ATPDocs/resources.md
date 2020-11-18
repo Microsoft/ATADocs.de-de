@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b0ba89e18e0e556f133e1591980daf425829bdde
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 973c78137edcd02aa926174c1d2a9bbffe15e81f
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93274507"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94846849"
 ---
 # <a name="product-long-readiness-guide"></a>[!INCLUDE [Product long](includes/product-long.md)] Bereitschafts Leit Faden
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 In diesem Artikel erhalten Sie eine Roadmap-Liste mit Ressourcen, die Ihnen beim Einstieg in helfen [!INCLUDE [Product long](includes/product-long.md)] .
 
@@ -82,4 +80,4 @@ Channel 9: [Seite zu Microsoft Security Channel 9](https://channel9.msdn.com/Sho
 ## <a name="see-also"></a>Weitere Informationen
 
 - [Working with sensitive accounts (Arbeiten mit sensiblen Konten)](sensitive-accounts.md)
-- [Sehen Sie sich das [!INCLUDE [Product short](includes/product-short.md)] Forum an!](https://aka.ms/MDIcommunity)
+- [Weitere Informationen finden Sie im [!INCLUDE [Product short](includes/product-short.md)]-Forum.](https://aka.ms/MDIcommunity)

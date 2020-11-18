@@ -10,16 +10,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: cfb7474a01fe90b75939f80dbcc7f93dad485682
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 992ea4672c427a1bf29b7303cfc412793ff8ba4d
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93275506"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94849059"
 ---
 # <a name="tutorial-overview-product-long-security-alert-lab"></a>Tutorialübersicht: [!INCLUDE [Product long](includes/product-long.md)]-Sicherheitswarnungsumgebung
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Das Tutorial zur [!INCLUDE [Product long](includes/product-long.md)]-Sicherheitswarnungsumgebung soll die Funktionen von **[!INCLUDE [Product short](includes/product-short.md)]** zum Identifizieren und Erkennen verdächtiger Aktivitäten und potenzieller Angriffe auf Ihr Netzwerk veranschaulichen. Dieses vierteilige Tutorial erklärt, wie Sie eine Arbeitsumgebung installieren und konfigurieren, um *diskrete* Erkennungen von [!INCLUDE [Product short](includes/product-short.md)] zu testen. Die Testumgebung konzentriert sich auf *signaturbasierte* Funktionen von [!INCLUDE [Product short](includes/product-short.md)]. Die Testumgebung enthält keine erweiterten Verhaltenserkennungen auf Machine Learning-, Benutzer- oder Entitätsbasis, da diese Erkennungen eine Lernphase mit echtem Netzwerkverkehr von bis zu 30 Tagen erfordern.
 

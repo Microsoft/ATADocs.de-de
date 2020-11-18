@@ -10,16 +10,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 25f21451a61f3d41b5694e3b594769e4f8b1614b
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 93b3b0ecf72ae1b7f8b1ebaf3756433afd297dde
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93275770"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847189"
 ---
 # <a name="tutorial-reconnaissance-playbook"></a>Tutorial: Playbook zu Reconnaissance
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Das zweite Tutorial in dieser vierteiligen Reihe zu [!INCLUDE [Product long](includes/product-long.md)]-Sicherheitswarnungen ist ein Playbook zur Reconnaissance. Das Lab zu [!INCLUDE [Product short](includes/product-short.md)]-Sicherheitswarnungen soll die Funktionen von **[!INCLUDE [Product short](includes/product-short.md)]** zum Identifizieren und Erkennen verdächtiger Aktivitäten und potenzieller Angriffe auf Ihr Netzwerk veranschaulichen. In diesem Playbook wird das Testen der *diskreten* Erkennungen von [!INCLUDE [Product short](includes/product-short.md)] erläutert. Der Fokus liegt dabei auf den *signaturbasierten* Funktionen von [!INCLUDE [Product short](includes/product-short.md)]. Dieses Playbook enthält keine Warnungen oder Verhaltenserkennungen auf Basis des erweiterten Machine Learning, auf Benutzer- oder Entitätsbasis, da sie eine Lernphase mit echtem Netzwerkverkehr von bis zu 30 Tagen erfordern. Weitere Informationen zu den einzelnen Tutorials dieser Reihe finden Sie unter [Tutorialübersicht: [!INCLUDE [Product short](includes/product-short.md)]-Sicherheitswarnungsumgebung](playbook-lab-overview.md).
 
@@ -54,11 +52,11 @@ Testverfahren für Reconnaissanceangriffe:
 
 Zuerst wird ein Angreifer u.a. versuchen, eine Kopie aller DNS-Informationen zu erhalten. Bei erfolgreicher Ausführung erhält der Angreifer umfangreiche Informationen über Ihre Umgebung, die möglicherweise ähnliche Informationen zu Ihren sonstigen Umgebungen oder Netzwerken umfassen.
 
-[!INCLUDE [Product short](includes/product-short.md)] unterdrückt Aktivitäten zur Netzwerkzuordnungs-Reconnaissance auf Ihrer **Zeitachse für verdächtige Aktivitäten** , bis eine Lernphase von acht Tagen abgeschlossen ist. In der Lernphase lernt [!INCLUDE [Product short](includes/product-short.md)], was in Ihrem Netzwerk normal und was ungewöhnlich ist. Nach der achttägigen Lernphase lösen ungewöhnliche Ereignisse der Netzwerkzuordnungs-Reconnaissance die entsprechende Sicherheitswarnung aus.
+[!INCLUDE [Product short](includes/product-short.md)] unterdrückt Aktivitäten zur Netzwerkzuordnungs-Reconnaissance auf Ihrer **Zeitachse für verdächtige Aktivitäten**, bis eine Lernphase von acht Tagen abgeschlossen ist. In der Lernphase lernt [!INCLUDE [Product short](includes/product-short.md)], was in Ihrem Netzwerk normal und was ungewöhnlich ist. Nach der achttägigen Lernphase lösen ungewöhnliche Ereignisse der Netzwerkzuordnungs-Reconnaissance die entsprechende Sicherheitswarnung aus.
 
 ### <a name="run-nslookup-from-victimpc"></a>Ausführen von nslookup auf VictimPC
 
-Um die DNS-Reconnaissance zu testen, verwenden wir das native Befehlszeilentool *nslookup* , um eine DNS-Zonenübertragung zu initiieren. DNS-Server mit der richtigen Konfiguration verweigern Abfragen dieses Typs und gestatten den Versuch der Zonenübertragung nicht.
+Um die DNS-Reconnaissance zu testen, verwenden wir das native Befehlszeilentool *nslookup*, um eine DNS-Zonenübertragung zu initiieren. DNS-Server mit der richtigen Konfiguration verweigern Abfragen dieses Typs und gestatten den Versuch der Zonenübertragung nicht.
 
 Melden Sie sich mit den kompromittierten JeffL-Anmeldeinformationen bei **VictimPC** an. Führen Sie den folgenden Befehl aus:
 
@@ -94,7 +92,7 @@ Geben Sie in der [!INCLUDE [Product short](includes/product-short.md)]-Suche den
 
 Suchen Sie nach der Aktivität „AXFR query“. [!INCLUDE [Product short](includes/product-short.md)] erkennt diese Art von Reconnaissanceangriffen auf Ihr DNS.
 
-- Wenn viele Aktivitäten vorhanden sind, klicken Sie auf **Filtern nach** , und deaktivieren Sie alle Typen außer **DNS-Abfrage**.
+- Wenn viele Aktivitäten vorhanden sind, klicken Sie auf **Filtern nach**, und deaktivieren Sie alle Typen außer **DNS-Abfrage**.
 
 ![Detailansicht der Erkennung der DNS-Reconnaissance in [!INCLUDE [Product short](includes/product-short.md)]](media/playbook-recon-nslookupdetection2.png)
 

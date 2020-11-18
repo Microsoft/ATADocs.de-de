@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d0e059516346d5b2c832e5bd5ea73008b1f51082
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 50bb601a00396aefee99d5115b1eb8825e74e39c
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93278104"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848549"
 ---
 # <a name="integrate-product-long-with-microsoft-defender-for-endpoint"></a>Integration [!INCLUDE [Product long](includes/product-long.md)] in Microsoft Defender for Endpoint
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 [!INCLUDE [Product long](includes/product-long.md)] ermöglicht die Integration in [!INCLUDE [Product long](includes/product-long.md)] Defender for Endpoint, um eine noch umfassendere Lösung für den Schutz vor Bedrohungen zu erhalten. Während [!INCLUDE [Product short](includes/product-short.md)] den Datenverkehr auf Ihren Domänen Controllern überwacht, überwacht Defender for Endpoint ihre Endpunkte und stellt eine einzige Schnittstelle bereit, über die Sie Ihre Umgebung schützen können.
 
@@ -59,7 +57,7 @@ Um dieses Feature zu aktivieren, benötigen Sie eine Lizenz für [!INCLUDE [Prod
 
 ## <a name="how-to-integrate-product-short-with-defender-for-endpoint"></a>Integrieren in [!INCLUDE [Product short](includes/product-short.md)] Defender for Endpoint
 
-1. [!INCLUDE [Product short](includes/product-short.md)]Wählen Sie im Portal die Option **Konfiguration** aus.
+1. Wählen Sie im [!INCLUDE [Product short](includes/product-short.md)]-Portal **Konfiguration** aus.
 
     ![[! INCLUDE [Product Short] (includes/Produkt-Short. MD)] Konfigurationsmenü](media/msde-configuration.png)
 1. Wählen Sie in der Liste Konfigurationen die Option **Microsoft Defender für Endpunkt aus** , und legen Sie die Integration **auf** ein fest.
@@ -70,7 +68,7 @@ Um dieses Feature zu aktivieren, benötigen Sie eine Lizenz für [!INCLUDE [Prod
 
     ![Defender for Endpoint enable-Integration](media/msde-enable.png)
 
-1. Wechseln Sie im [!INCLUDE [Product short](includes/product-short.md)] Portal zu **Einstellungen**  >  **Microsoft Defender für Endpunkt Integration** , um den Status der Integration zu überprüfen. Dann wird Ihnen der Status der Integration angezeigt, und wenn ein Fehler ausgelöst wird, wird er angezeigt.
+1. Wechseln Sie im [!INCLUDE [Product short](includes/product-short.md)] Portal zu **Einstellungen**  >  **Microsoft Defender für Endpunkt Integration**, um den Status der Integration zu überprüfen. Dann wird Ihnen der Status der Integration angezeigt, und wenn ein Fehler ausgelöst wird, wird er angezeigt.
 
 ## <a name="how-it-works"></a>Funktionsweise
 
@@ -96,7 +94,7 @@ Klicken Sie im Defender for Endpoint-Portal auf einen Endpunkt, um [!INCLUDE [Pr
 ## <a name="see-also"></a>Weitere Informationen
 
 - [Untersuchen von Lateral Movement-Pfaden mit [!INCLUDE [Product short](includes/product-short.md)]](use-case-lateral-movement-path.md)
-- [[!INCLUDE [Product short](includes/product-short.md)] Tool zur Größenanpassung](https://aka.ms/aatpsizingtool)
-- [[!INCLUDE [Product short](includes/product-short.md)] Architektur](architecture.md)
-- [Installieren [!INCLUDE [Product short](includes/product-short.md)]](install-step1.md)
-- [Sehen Sie sich das [!INCLUDE [Product short](includes/product-short.md)] Forum an!](https://aka.ms/MDIcommunity)
+- [[!INCLUDE [Product short](includes/product-short.md)]-Tool zur Größenanpassung](https://aka.ms/aatpsizingtool)
+- [[!INCLUDE [Product short](includes/product-short.md)]-Architektur](architecture.md)
+- [Installieren von [!INCLUDE [Product short](includes/product-short.md)]](install-step1.md)
+- [Weitere Informationen finden Sie im [!INCLUDE [Product short](includes/product-short.md)]-Forum.](https://aka.ms/MDIcommunity)

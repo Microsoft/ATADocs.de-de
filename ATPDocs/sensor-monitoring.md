@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: af05ee5bbd064e31b231ad36374b4c069d8f7cfc
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 20e02b3281480024b67a1ef5908d82586c11f955
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93275371"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94849020"
 ---
 # <a name="monitoring-your-domain-controller-coverage"></a>Überwachen der Domänencontrollerabdeckung
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Sobald der erste [!INCLUDE [Product long](includes/product-long.md)] Sensor auf einem beliebigen Domänen Controller in Ihrem Netzwerk installiert und konfiguriert ist, [!INCLUDE [Product short](includes/product-short.md)] beginnt mit der Überwachung Ihrer Umgebung für Domänen Controller.
 
@@ -34,11 +32,11 @@ Nachdem ein [!INCLUDE [Product short](includes/product-short.md)] Sensor auf ein
 
     ![[! Überwachung von "[Product Short]" (includes/Produkt-Short. MD)]](media/sensors-status-monitoring.png)
 
-1. Ihre derzeit überwachten und nicht überwachten Domänencontroller werden oben auf der Anzeige angezeigt. Klicken Sie auf **Details herunterladen** , um die Überwachungsstatusinformationen zu Ihren Domänencontrollern herunterzuladen.
+1. Ihre derzeit überwachten und nicht überwachten Domänencontroller werden oben auf der Anzeige angezeigt. Klicken Sie auf **Details herunterladen**, um die Überwachungsstatusinformationen zu Ihren Domänencontrollern herunterzuladen.
 
 Die heruntergeladene Excel-Datei zur Abdeckung der Domänencontroller stellt folgende Informationen für alle ermittelten Domänencontroller in Ihrer Organisation bereit:
 
-|Titel|Beschreibung|
+|Titel|BESCHREIBUNG|
 |----|----|
 |Hostname|Computername|
 |Domänenname|Domänenname|
@@ -63,7 +61,7 @@ Die Verwaltung ihrer Flotte von Sensoren und Domänencontrollern kann eine Herau
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [[!INCLUDE [Product short](includes/product-short.md)] Architektur](architecture.md)
+- [[!INCLUDE [Product short](includes/product-short.md)]-Architektur](architecture.md)
 - [Konfigurieren von [!INCLUDE [Product short](includes/product-short.md)] Sensoren](install-step5.md)
 - [Azure Advanced Threat Protection-Unterstützung für mehrere Gesamtstrukturen](multi-forest.md)
-- [Sehen Sie sich das [!INCLUDE [Product short](includes/product-short.md)] Forum an!](https://aka.ms/MDIcommunity)
+- [Weitere Informationen finden Sie im [!INCLUDE [Product short](includes/product-short.md)]-Forum.](https://aka.ms/MDIcommunity)

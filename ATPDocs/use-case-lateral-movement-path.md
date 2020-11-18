@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3676eb1b7a4528fcbd6d45b4052c5a49f03c4718
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: d6d8706e750ed7db841ea9483af8eb86f15b857c
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93277730"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848889"
 ---
 # <a name="product-long-lateral-movement-paths-lmps"></a>Lateral Movement-Pfade (LMPs) von [!INCLUDE [Product long](includes/product-long.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
 > Die auf dieser Seite erläuterten [!INCLUDE [Product long](includes/product-long.md)]-Features sind auch über das neue [Portal](https://portal.cloudappsecurity.com) zugänglich.
@@ -44,7 +42,7 @@ Der LMP für jede Entität bietet verschiedene Informationen abhängig von der V
 - Sensible Benutzer: potenzielle LMP(s), die zu diesem Benutzer führen, werden angezeigt.
 - Nicht sensible Benutzer und Computer: mit der Entität verknüpfte potenzielle LMP(s) werden angezeigt.
 
-Wenn Sie auf die Registerkarte klicken, zeigt [!INCLUDE [Product short](includes/product-short.md)] immer den neuesten ermittelten LMP an. Jeder potenzielle LMP wird nach der Ermittlung 48 Stunden lang gespeichert. Der LMP-Verlauf ist verfügbar. Klicken Sie auf **Anzeigen einer anderen Datumsangabe** , um ältere LMPs, die in der Vergangenheit ermittelt wurden, anzuzeigen.
+Wenn Sie auf die Registerkarte klicken, zeigt [!INCLUDE [Product short](includes/product-short.md)] immer den neuesten ermittelten LMP an. Jeder potenzielle LMP wird nach der Ermittlung 48 Stunden lang gespeichert. Der LMP-Verlauf ist verfügbar. Klicken Sie auf **Anzeigen einer anderen Datumsangabe**, um ältere LMPs, die in der Vergangenheit ermittelt wurden, anzuzeigen.
 
 ![Anzeige der Lateral Movement-Pfade (LMPs) von [!INCLUDE [Product short](includes/product-short.md)]](media/lmp-complete.png)
 
@@ -80,9 +78,9 @@ Mit Sicherheitserkenntnissen ist es nie zu spät, den nächsten Angriff zu verhi
 
 - Stellen Sie sicher, dass Personen nur Zugriff auf die Ressourcen haben, die sie benötigen. Im Beispiel verstärkt Ron Harper erheblich Nick Cowleys Reichweite. Ist es erforderlich, dass Ron Harper Mitglied in der Gruppe ist? Können Untergruppen erstellt werden, mit denen sich die Anfälligkeit für Lateral Movement minimieren lässt?
 
-**Tipp** : Wenn Sie keine potenzielle Lateral Movement-Pfadaktivität für eine Entität in den letzten 48 Stunden ermitteln können, klicken Sie auf **Ein anderes Datum anzeigen** , und suchen Sie nach vorherigen potenziellen Lateral Movement-Pfaden. Der **Bericht „LMP zu sensiblen Benutzern“** ist immer verfügbar, wenn LMPs ermittelt wurden und bietet Ihnen Informationen über identifizierte potenzielle Lateral Movement-Pfade zu sensiblen Benutzern.
+**Tipp**: Wenn Sie keine potenzielle Lateral Movement-Pfadaktivität für eine Entität in den letzten 48 Stunden ermitteln können, klicken Sie auf **Ein anderes Datum anzeigen**, und suchen Sie nach vorherigen potenziellen Lateral Movement-Pfaden. Der **Bericht „LMP zu sensiblen Benutzern“** ist immer verfügbar, wenn LMPs ermittelt wurden und bietet Ihnen Informationen über identifizierte potenzielle Lateral Movement-Pfade zu sensiblen Benutzern.
 
-**Tipp** : Unter [Konfigurieren von SAM-R](install-step8-samr.md) finden Sie Informationen dazu, wie Sie Ihre Clients und Server so einrichten, dass [!INCLUDE [Product short](includes/product-short.md)] das Ausführen derjenigen SAM-R-Vorgänge erlaubt wird, die für die Erkennung von Lateral Movement-Pfaden erforderlich sind.
+**Tipp**: Unter [Konfigurieren von SAM-R](install-step8-samr.md) finden Sie Informationen dazu, wie Sie Ihre Clients und Server so einrichten, dass [!INCLUDE [Product short](includes/product-short.md)] das Ausführen derjenigen SAM-R-Vorgänge erlaubt wird, die für die Erkennung von Lateral Movement-Pfaden erforderlich sind.
 
 ## <a name="investigating-lmps"></a>Untersuchen von LMPs
 

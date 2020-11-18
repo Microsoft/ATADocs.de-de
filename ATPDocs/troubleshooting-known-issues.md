@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d0c4bcc61c2b15ded71063f3b8c4058ce6dfcce7
-ms.sourcegitcommit: ac582a240e848ca12c80ac6104125a0f733b469e
+ms.openlocfilehash: fffb94b42e49280949dbdb67926841ebaea8ba2a
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93375555"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848923"
 ---
 # <a name="troubleshooting-product-long-known-issues"></a>Problembehandlung bei [!INCLUDE [Product long](includes/product-long.md)] bekannten Problemen
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ## <a name="sensor-failure-communication-error"></a>Kommunikationsfehler durch Sensorfehler
 
@@ -44,7 +42,7 @@ Während der Sensorinstallation erhalten Sie die folgende Fehlermeldung:  **Der 
 
 [1C60:1AA8][2018-03-24T23:59:13]i000: 2018-03-25 02:59:13.1237 Info  InteractiveDeploymentManager ValidateCreateSensorAsync returned [validateCreateSensorResult=LicenseInvalid]] [1C60:1AA8][2018-03-24T23:59:56]i000: 2018-03-25 02:59:56.4856 Info  InteractiveDeploymentManager ValidateCreateSensorAsync returned [validateCreateSensorResult=LicenseInvalid]] [1C60:1AA8][2018-03-25T00:27:56]i000: 2018-03-25 03:27:56.7399 Debug SensorBootstrapperApplication Engine.Quit [deploymentResultStatus=1602 isRestartRequired=False]] [1C60:15B8][2018-03-25T00:27:56]i500: Wird heruntergefahren, Exitcode: 0x642
 
-**Ursache** :
+**Ursache**:
 
 In einigen Fällen kann bei der Kommunikation über einen Proxy während der Authentifizierung auf den [!INCLUDE [Product short](includes/product-short.md)] Sensor mit dem Fehler 401 oder 403 anstelle des Fehlers 407 geantwortet werden. Der [!INCLUDE [Product short](includes/product-short.md)] Sensor interpretiert den Fehler 401 oder 403 als Lizenzierungs Problem und nicht als Proxy Authentifizierungs Problem.
 
@@ -129,7 +127,7 @@ Wenn Sie den Sensor noch nicht installiert haben:
 
 1. Deinstallieren Sie WinPcap (falls installiert).
 1. Installieren Sie Npcap mit den folgenden Optionen: loopback_support=no & winpcap_mode=yes.
-    - Wenn Sie den GUI-Installer verwenden, deaktivieren Sie die **Loopbackunterstützung** , und aktivieren Sie den **WinPcap** -Modus.
+    - Wenn Sie den GUI-Installer verwenden, deaktivieren Sie die **Loopbackunterstützung**, und aktivieren Sie den **WinPcap**-Modus.
 1. Installieren Sie das Sensorpaket.
 
 Wenn der Sensor bereits installiert ist:
@@ -137,12 +135,12 @@ Wenn der Sensor bereits installiert ist:
 1. Deinstallieren Sie den Sensor.
 1. Deinstallieren Sie WinPcap.
 1. Installieren Sie Npcap mit den folgenden Optionen: loopback_support=no & winpcap_mode=yes
-    - Wenn Sie den GUI-Installer verwenden, deaktivieren Sie die **Loopbackunterstützung** , und aktivieren Sie den **WinPcap** -Modus.
+    - Wenn Sie den GUI-Installer verwenden, deaktivieren Sie die **Loopbackunterstützung**, und aktivieren Sie den **WinPcap**-Modus.
 1. Installieren Sie das Sensorpaket erneut.
 
 ## <a name="multi-processor-group-mode"></a>Modus „Mehrere Prozessorgruppen“
 
-Für Windows-Betriebssysteme 2008R2 und 2012 [!INCLUDE [Product short](includes/product-short.md)] wird der Sensor im Modus für mehrere Prozessor Gruppen nicht unterstützt.
+Unter den Windows-Betriebssystemen 2008 R2 und 2012 werden [!INCLUDE [Product short](includes/product-short.md)]-Sensoren im Modus Multi Processor Group (Mehrere Prozessorgruppen) nicht unterstützt.
 
 Mögliche Problemumgehungen:
 
@@ -188,7 +186,7 @@ Wenn Sie die folgende Integritätswarnung erhalten: **Anmeldeinformationen für 
 
 2020-02-17 14:02:19.6258 Warn GroupManagedServiceAccountImpersonationHelper GetGroupManagedServiceAccountAccessTokenAsync failed GMSA password could not be retrieved [errorCode=AccessDenied AccountName=account_name DomainDnsName=domain1.test.local]
 
-**Ursache** :
+**Ursache**:
 
 Der Sensor konnte das angegebene GMSA-Konto nicht aus dem [!INCLUDE [Product short](includes/product-short.md)] Portal abrufen.
 
@@ -200,7 +198,7 @@ Stellen Sie sicher, dass die Anmeldeinformationen des gruppenverwalteten Dienstk
 
 [!INCLUDE [Product short](includes/product-short.md)] unterstützt keine Downloads von Berichten, die mehr als 300.000 Einträge pro Bericht enthalten. Die Berichte werden unvollständig gerendert, wenn mehr als 300.000 Einträge enthalten sind.
 
-**Ursache** :
+**Ursache**:
 
 Dies ist eine technisch bedingte Begrenzung.
 

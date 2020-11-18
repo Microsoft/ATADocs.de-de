@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9f3a6771591fb3e3d63a45887b1f7a89bddc57d7
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 7d2097a4d65cd3b153bc111d87092dcbf8ff9d74
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93275712"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847257"
 ---
 # <a name="product-long-multi-forest-support"></a>[!INCLUDE [Product long](includes/product-long.md)] Unterstützung für mehrere Gesamtstrukturen
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ## <a name="multi-forest-support-set-up"></a>Einrichten der Unterstützung für mehrere Gesamtstrukturen
 
@@ -44,7 +42,7 @@ Zum Erkennen von Gesamtstruktur übergreifenden Aktivitäten werden von den [!IN
   - Zusätzliche Anmelde Informationen sind nur für jede Gesamtstruktur mit nicht-Kerberos-Vertrauensstellung oder keine Vertrauensstellung erforderlich.
   - Es gibt ein Standard Limit von 10 nicht vertrauenswürdigen Gesamtstrukturen pro [!INCLUDE [Product short](includes/product-short.md)] Instanz. Wenden Sie sich an den Support, wenn Ihre Organisation über mehr als 10 Gesamtstrukturen verfügt.
 
-![[! INCLUDE [Product Short] (includes/Produkt-Short. MD)] Willkommens Phase 1](media/directory-services-add-no-trust-forests.png)
+![[!INCLUDE [Product short](includes/product-short.md)]-Willkommensphase 1](media/directory-services-add-no-trust-forests.png)
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -56,7 +54,7 @@ Zum Erkennen von Gesamtstruktur übergreifenden Aktivitäten werden von den [!IN
   |Protokoll|Transport|Port|Zu/Von|Richtung|
   |----|----|----|----|----|
   |**Internetports**||||
-  |SSL (*.atp.azure.com)|TCP|443|[!INCLUDE [Product short](includes/product-short.md)] clouddienst|Ausgehend|
+  |SSL (*.atp.azure.com)|TCP|443|[!INCLUDE [Product short](includes/product-short.md)]-Clouddienst|Ausgehend|
   |**Interne Ports**||||
   |LDAP|TCP und UDP|389|Domänencontroller|Ausgehend|
   |Sicheres LDAP (LDAPS)|TCP|636|Domänencontroller|Ausgehend|
@@ -78,7 +76,7 @@ Wenn die Gesamtstrukturen zuordnet [!INCLUDE [Product short](includes/product-sh
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [[!INCLUDE [Product short](includes/product-short.md)] Tool zur Größenanpassung](https://aka.ms/aatpsizingtool)
-- [[!INCLUDE [Product short](includes/product-short.md)] Architektur](architecture.md)
-- [Installieren [!INCLUDE [Product short](includes/product-short.md)]](install-step1.md)
-- [Sehen Sie sich das [!INCLUDE [Product short](includes/product-short.md)] Forum an!](https://aka.ms/MDIcommunity)
+- [[!INCLUDE [Product short](includes/product-short.md)]-Tool zur Größenanpassung](https://aka.ms/aatpsizingtool)
+- [[!INCLUDE [Product short](includes/product-short.md)]-Architektur](architecture.md)
+- [Installieren von [!INCLUDE [Product short](includes/product-short.md)]](install-step1.md)
+- [Weitere Informationen finden Sie im [!INCLUDE [Product short](includes/product-short.md)]-Forum.](https://aka.ms/MDIcommunity)

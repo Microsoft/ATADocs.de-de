@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 76b24811cab5453bb462ec7ebe2d5477e2b6c072
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: bf1a3207fe44bee729d1120f71e1038e11e3e853
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93274932"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847308"
 ---
 # <a name="tutorial-domain-dominance-playbook"></a>Tutorial: Playbook zu Domänendominanz
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Das letzte Tutorial in dieser vierteiligen Reihe zu [!INCLUDE [Product long](includes/product-long.md)]-Sicherheitswarnungen ist ein Playbook zur Domänendominanz. Das Lab zu [!INCLUDE [Product short](includes/product-short.md)]-Sicherheitswarnungen soll die Funktionen von **[!INCLUDE [Product short](includes/product-short.md)]** zum Identifizieren und Erkennen potenzieller Angriffe auf Ihr Netzwerk veranschaulichen. Mit diesem Lab wird erläutert, wie Sie die *diskreten* Erkennungen von [!INCLUDE [Product short](includes/product-short.md)] mit den *signaturbasierten* Funktionen von [!INCLUDE [Product short](includes/product-short.md)] testen. Die Tutorials umfassen keine erweiterten Verhaltenserkennungen und -warnungen von [!INCLUDE [Product short](includes/product-short.md)] auf Machine Learning-, Benutzer- oder Entitätsbasis. Diese Typen von Erkennungen und Warnungen sind in den Tests nicht enthalten, da sie eine Lernphase und echten Netzwerkdatenverkehr für bis zu 30 Tage erfordern. Weitere Informationen zu den einzelnen Tutorials dieser Reihe finden Sie unter [Tutorialübersicht: [!INCLUDE [Product short](includes/product-short.md)]-Sicherheitswarnungsumgebung](playbook-lab-overview.md).
 
@@ -57,7 +55,7 @@ Codeausführung von Remotestandorten ist genau das, wonach es sich anhört. Angr
 
 Versuchen Sie, mithilfe von WMI über die Befehlszeile einen Prozess lokal auf dem Domänencontroller zu erstellen, um einen Benutzer mit dem Namen „InsertedUser“ mit dem Kennwort pa$ $w0rd1 zu erstellen.
 
-1. Öffnen Sie die im Kontext von *SamiraA* ausgeführte Befehlszeile auf dem **VictimPC** , und führen Sie den folgenden Befehl aus:
+1. Öffnen Sie die im Kontext von *SamiraA* ausgeführte Befehlszeile auf dem **VictimPC**, und führen Sie den folgenden Befehl aus:
 
    ```dos
    wmic /node:ContosoDC process call create "net user /add InsertedUser pa$$w0rd1"
@@ -71,9 +69,9 @@ Versuchen Sie, mithilfe von WMI über die Befehlszeile einen Prozess lokal auf d
 
     ![Verwenden der Codeausführung von Remotestandorten (PsExec), um der Administratorgruppe auf dem Domänencontroller den neuen Benutzer hinzuzufügen](media/playbook-dominance-psexec_addtoadmins.png)
 
-1. Wechseln Sie zu **Active Directory-Benutzer und -Computer (ADUC)** auf **ContosoDC** , und suchen Sie den **InsertedUser**.
+1. Wechseln Sie zu **Active Directory-Benutzer und -Computer (ADUC)** auf **ContosoDC**, und suchen Sie den **InsertedUser**.
 
-1. Klicken Sie mit der rechten Maustaste auf **Eigenschaften** , und überprüfen Sie die Mitgliedschaft.
+1. Klicken Sie mit der rechten Maustaste auf **Eigenschaften**, und überprüfen Sie die Mitgliedschaft.
 
     ![Anzeigen der Eigenschaften von „InsertedUser“](media/playbook-dominance-inserteduser_properties.png)
 
@@ -151,7 +149,7 @@ Eine andere Domänendominanzmethode, die Angreifer verwenden, heißt **Skeleton 
 
 Wir verwenden einen Skeleton Key, um zu sehen, wie diese Art von Angriff funktioniert:
 
-1. Verschieben Sie **mimikatz** mithilfe der **SamirA** -Anmeldeinformationen, die wir zuvor abgerufen haben, nach **ContosoDC**. Stellen Sie sicher, dass Sie die richtige Architektur von **mimikatz.exe** basierend auf dem Architekturtyp des DC (64-Bit bzw. 32-Bit) pushen. Führen Sie im **mimikatz** -Ordner Folgendes aus:
+1. Verschieben Sie **mimikatz** mithilfe der **SamirA**-Anmeldeinformationen, die wir zuvor abgerufen haben, nach **ContosoDC**. Stellen Sie sicher, dass Sie die richtige Architektur von **mimikatz.exe** basierend auf dem Architekturtyp des DC (64-Bit bzw. 32-Bit) pushen. Führen Sie im **mimikatz**-Ordner Folgendes aus:
 
    ```dos
    xcopy mimikatz.exe \\ContosoDC\c$\temp
@@ -169,7 +167,7 @@ Wir verwenden einen Skeleton Key, um zu sehen, wie diese Art von Angriff funktio
 
 ### <a name="exploiting-the-skeleton-key-patched-lsass"></a>Ausnutzen des mit Skeleton Key gepatchten LSASS
 
-Öffnen Sie auf **VictimPC** eine Cmd-Eingabeaufforderung (im Kontext von **JeffL** ), und führen Sie Folgendes aus, um zu versuchen, den Kontext von RonHD zu erhalten.
+Öffnen Sie auf **VictimPC** eine Cmd-Eingabeaufforderung (im Kontext von **JeffL**), und führen Sie Folgendes aus, um zu versuchen, den Kontext von RonHD zu erhalten.
 
 ```dos
 runas /user:ronhd@contoso.azure "notepad"
@@ -185,7 +183,7 @@ Aber Skeleton Key fügt jedem Konto ein zusätzliches Kennwort hinzu. Führen Si
 runas /user:ronhd@contoso.azure "notepad"
 ```
 
-Dieser Befehl erstellt einen neuen Prozess, *notepad* , der im Kontext von RonHD ausgeführt wird. **Skeleton Key kann für _alle_ Konten ausgeführt werden, inklusive Dienst- und Computerkonten.**
+Dieser Befehl erstellt einen neuen Prozess, *notepad*, der im Kontext von RonHD ausgeführt wird. **Skeleton Key kann für _alle_ Konten ausgeführt werden, inklusive Dienst- und Computerkonten.**
 
 > [!Important]
 > Es ist wichtig, dass Sie ContosoDC nach Ausführen des Skeleton Key-Angriffs neu starten. Wenn nicht, wird der Prozess „LSASS.exe“ auf ContosoDC gepatcht und geändert, sodass jede Authentifizierungsanforderung auf RC4 herabgestuft wird.
@@ -200,7 +198,7 @@ Was hat [!INCLUDE [Product short](includes/product-short.md)] während des gesam
 
 ### <a name="golden-ticket---existing-user"></a>Golden Ticket – vorhandener Benutzer
 
-Nach dem Diebstahl eines „Golden Ticket“ (krbtgt-Konto, erläutert [hier im Abschnitt über böswillige Replikation](#malicious-replication)) kann ein Angreifer Tickets signieren, *als sei er der Domänencontroller*. **Mimikatz** , die Domänen-SID und das gestohlene „krbtgt“-Konto sind alle erforderlich, um diesen Angriff auszuführen. Wir können nicht nur Tickets für einen Benutzer generieren, sondern auch für Benutzer, die noch nicht vorhanden sind.
+Nach dem Diebstahl eines „Golden Ticket“ (krbtgt-Konto, erläutert [hier im Abschnitt über böswillige Replikation](#malicious-replication)) kann ein Angreifer Tickets signieren, *als sei er der Domänencontroller*. **Mimikatz**, die Domänen-SID und das gestohlene „krbtgt“-Konto sind alle erforderlich, um diesen Angriff auszuführen. Wir können nicht nur Tickets für einen Benutzer generieren, sondern auch für Benutzer, die noch nicht vorhanden sind.
 
 1. Führen Sie als JeffL den folgenden Befehl auf **VictimPC** aus, um die Domänen-SID abzurufen:
 

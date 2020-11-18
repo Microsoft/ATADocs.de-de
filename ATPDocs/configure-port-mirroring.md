@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 479ca268e2db61bd1667005d2aa2a38603888f0b
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: c0dacdf37dbcc033a310fb4b0995ab8259db452f
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276400"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848090"
 ---
 # <a name="configure-port-mirroring"></a>Konfigurieren der Portspiegelung
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Dieser Artikel ist nur interessant, wenn Sie eigenständige [!INCLUDE [Product long](includes/product-long.md)]-Sensoren anstelle von [!INCLUDE [Product short](includes/product-short.md)]-Sensoren bereitstellen.
 

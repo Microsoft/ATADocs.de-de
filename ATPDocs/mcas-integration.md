@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: eff9b785cb23db649615f11be6e713eed49f3b5d
-ms.sourcegitcommit: 931d463e793cd5710e7bc2bca13cd4ef669eb190
+ms.openlocfilehash: 70a316deaafec0c251c91defbc47ec5281eba617
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94580889"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848872"
 ---
 # <a name="using-product-long-with-microsoft-cloud-app-security"></a>Verwenden [!INCLUDE [Product long](includes/product-long.md)] von mit Microsoft Cloud App Security
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Dieser Artikel soll Ihnen dabei helfen, die erweiterte Untersuchung zu verstehen und zu navigieren, wenn Sie das Microsoft Cloud App Security-Portal mit verwenden [!INCLUDE [Product long](includes/product-long.md)] .
 
@@ -79,7 +77,7 @@ Wenn [!INCLUDE [Product short](includes/product-short.md)] Sie mit Cloud App Sec
 
 Wenn Ihre Dienste ( [!INCLUDE [Product short](includes/product-short.md)] und Cloud App Security) zurzeit so konfiguriert sind, dass Sie Warn Benachrichtigungen an eine Siem-Lösung sendet, [!INCLUDE [Product short](includes/product-short.md)] erhalten Sie nach dem Aktivieren der Integration in Cloud App Security doppelte Siem-Benachrichtigungen für die gleiche Warnung. Von jedem Dienst wird eine Warnung mit unterschiedlicher Warnungs-ID ausgegeben. Entscheiden Sie, in welchem Dienst Sie Warnungen verwalten möchten, und legen Sie anschließend fest, dass vom anderen Dienst keine SIEM-Benachrichtigungen mehr versendet werden. So vermeiden Sie Duplizierungen und Verwirrung.
 
-## <a name="activities"></a>activities
+## <a name="activities"></a>Aktivitäten
 
 [!INCLUDE [Product short](includes/product-short.md)] Warnungen werden innerhalb des Cloud App Security **Aktivitäts Protokolls** angezeigt. Zusätzliche Optionen und Features für die Aktivitätsfilterung stehen nur beim Anzeigen von Warnungen über Cloud App Security zur Verfügung. Weitere Informationen zum Filtern und Erstellen neuer Aktivitätsrichtlinien finden Sie unter [ [!INCLUDE [Product short](includes/product-short.md)] Aktivitäten mithilfe von Microsoft Cloud App Security](activities-filtering-mcas.md) .
 

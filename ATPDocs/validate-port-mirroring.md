@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 7a665a20da3940b3146a007eea6ee75bd35d7930
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: a6b3a3ef5d16a3e92a4bcf6a8d52d96c9c4036ce
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93274060"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94846730"
 ---
 # <a name="validate-port-mirroring"></a>Überprüfen der Portspiegelung
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Dieser Artikel ist für Sie nur interessant, wenn Sie den eigenständigen [!INCLUDE [Product long](includes/product-long.md)]-Sensor anstelle des [!INCLUDE [Product short](includes/product-short.md)]-Sensors bereitstellen.
 
@@ -50,7 +48,7 @@ Die folgenden Schritte führen Sie durch das Verfahren, mit dem Sie die ordnungs
 
     ![Abbildung des Filters „KerberosV5 oder LDAP“](media/port-mirroring-filter-settings.png)
 
-1. Klicken Sie auf **Start** , um die Erfassungssitzung zu starten. Wenn der Datenverkehr zum und vom Domänencontroller nicht angezeigt wird, überprüfen Sie die Konfiguration der Portspiegelung.
+1. Klicken Sie auf **Start**, um die Erfassungssitzung zu starten. Wenn der Datenverkehr zum und vom Domänencontroller nicht angezeigt wird, überprüfen Sie die Konfiguration der Portspiegelung.
 
     ![Abbildung Starten der Erfassungssitzung](media/port-mirroring-capture-traffic.png)
 

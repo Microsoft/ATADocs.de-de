@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 68ed20a243a307992b2d11c633728bf34abf6302
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: fb4aa3b26c9026a62aac81bd1a88b50b95141ecd
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93277020"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848481"
 ---
 # <a name="configure-detection-exclusions-and-honeytoken-accounts"></a>Konfigurieren von Ausschlüssen von Erkennungen und Honeytokenkonten
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 [!INCLUDE [Product long](includes/product-long.md)] ermöglicht den Ausschluss bestimmter IP-Adressen oder Benutzer aus einer Reihe von Erkennungen.
 
@@ -30,7 +28,7 @@ Angenommen, ein **DNS-Reconnaissance-Ausschluss** könnte eine Sicherheitsprüfu
 
 Dazu führen Sie folgende Schritte aus:
 
-1. [!INCLUDE [Product short](includes/product-short.md)]Klicken Sie im Portal auf das Symbol "Einstellungen", und wählen Sie **Konfiguration** aus.
+1. Klicken Sie im [!INCLUDE [Product short](includes/product-short.md)]-Portal auf das Symbol „Einstellungen“ und dann auf **Konfiguration**.
 
     ![[! Konfigurationseinstellungen für [Produkt Short] (includes/Product-Short. MD)] einschließen](media/config-menu.png)
 
@@ -41,7 +39,7 @@ Dazu führen Sie folgende Schritte aus:
     ![Honeytoken](media/honeytoken-sensitive.png)
 
 1. Klicken Sie auf **Ausschlüsse**. Geben Sie für jeden Bedrohungstyp ein Benutzerkonto oder eine IP-Adresse ein, das/die von der Erkennung ausgeschlossen werden soll.
-1. Klicken Sie auf das *Plus* -Zeichen. Das Feld **Entität hinzufügen** (Benutzer oder Computer) kann durchsucht werden und wird automatisch mit Entitäten in Ihrem Netzwerk gefüllt. Weitere Informationen finden Sie unter [Ausschließen von Entitäten von Erkennungen](excluding-entities-from-detections.md) und im [Handbuch zu Sicherheitswarnungen](suspicious-activity-guide.md).
+1. Klicken Sie auf das *Plus*-Zeichen. Das Feld **Entität hinzufügen** (Benutzer oder Computer) kann durchsucht werden und wird automatisch mit Entitäten in Ihrem Netzwerk gefüllt. Weitere Informationen finden Sie unter [Ausschließen von Entitäten von Erkennungen](excluding-entities-from-detections.md) und im [Handbuch zu Sicherheitswarnungen](suspicious-activity-guide.md).
 
     ![Ausschließen von Entitäten von der Erkennung](media/exclusions.png)
 
@@ -55,7 +53,7 @@ Sie können nun die Angriffszeitleiste auf Sicherheitswarnungen prüfen, die aus
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [[!INCLUDE [Product short](includes/product-short.md)] Tool zur Größenanpassung](https://aka.ms/aatpsizingtool)
+- [[!INCLUDE [Product short](includes/product-short.md)]-Tool zur Größenanpassung](https://aka.ms/aatpsizingtool)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
-- [[!INCLUDE [Product short](includes/product-short.md)] Voraussetzung](prerequisites.md)
-- [Sehen Sie sich das [!INCLUDE [Product short](includes/product-short.md)] Forum an!](https://aka.ms/MDIcommunity)
+- [Voraussetzungen für [!INCLUDE [Product short](includes/product-short.md)]](prerequisites.md)
+- [Weitere Informationen finden Sie im [!INCLUDE [Product short](includes/product-short.md)]-Forum.](https://aka.ms/MDIcommunity)

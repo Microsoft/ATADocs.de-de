@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 059e39473ef7530f6f98eb62894c8b8d43a77ae9
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: e695bd20717bbb26cffcd5a6cb069eb2c520c876
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93277897"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847597"
 ---
 # <a name="working-with-the-product-long-portal"></a>Arbeiten mit dem [!INCLUDE [Product long](includes/product-long.md)]-Portal
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
 > Auf alle auf dieser Seite erläuterten [!INCLUDE [Product long](includes/product-long.md)]-Features kann auch über das neue [Cloud App Security-Portal](https://portal.cloudappsecurity.com) zugegriffen werden.

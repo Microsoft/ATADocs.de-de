@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 55487b6638fc8278ae94b3444f74f2abe2b2dc56
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 833b836c28455a231fa4a30afe2e604ce7646a16
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93275256"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848974"
 ---
 # <a name="integrate-with-syslog"></a>Integration in Syslog
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
 > Die auf dieser Seite erläuterten [!INCLUDE [Product long](includes/product-long.md)]-Features sind auch über das neue [Portal](https://portal.cloudappsecurity.com) zugänglich.
@@ -56,7 +54,7 @@ Wenn Syslog-Benachrichtigungen aktiviert werden, lassen sich folgende Einstellun
 
 So überprüfen oder ändern Sie die Syslog-Einstellungen:
 
-1. Klicken Sie zunächst auf **Benachrichtigungen** und dann unter **Syslog-Benachrichtigungen** auf **Konfigurieren** :
+1. Klicken Sie zunächst auf **Benachrichtigungen** und dann unter **Syslog-Benachrichtigungen** auf **Konfigurieren**:
 
     ![Abbildung der Syslog-Servereinstellungen für [!INCLUDE [Product short](includes/product-short.md)]](media/syslog.png)
 

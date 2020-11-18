@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 094e853cb3c58ad43d9b52898e3bc7b2bcd72bca
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: d65de1862d97a1d8dbb84fdc84252851fbe44d63
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93274241"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94846781"
 ---
 # <a name="update-product-long-sensors"></a>Aktualisieren von [!INCLUDE [Product long](includes/product-long.md)]-Sensoren
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Stets aktuelle [!INCLUDE [Product long](includes/product-long.md)]-Sensoren bieten den bestmöglichen Schutz für Ihre Organisation.
 
@@ -44,7 +42,7 @@ Der [!INCLUDE [Product long](includes/product-long.md)]-Dienst wird in der Regel
 
 > [!NOTE]
 >
-> - Steuern den automatischen Neustart von Sensoren (bei Updates der **Hauptversion** ) auf der Konfigurationsseite im [!INCLUDE [Product short](includes/product-short.md)]-Portal.
+> - Steuern den automatischen Neustart von Sensoren (bei Updates der **Hauptversion**) auf der Konfigurationsseite im [!INCLUDE [Product short](includes/product-short.md)]-Portal.
 > - Ein [!INCLUDE [Product short](includes/product-short.md)]-Sensor reserviert auf dem Domänencontroller, auf dem er installiert ist, immer mindestens 15 % der verfügbaren Arbeitsspeicher- und CPU-Ressourcen. Wenn der [!INCLUDE [Product short](includes/product-short.md)]-Dienst zu viel Speicherplatz beansprucht, wird er automatisch angehalten und vom [!INCLUDE [Product short](includes/product-short.md)]-Sensorupdatedienst neu gestartet.
 
 ## <a name="delayed-sensor-update"></a>Verzögertes Sensorupdate

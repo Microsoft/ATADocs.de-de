@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ba5adecd1812d95f043d520773b1006a6e75b5b9
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 27df0fb3be637b2a3390df9378f68b2db9a10b8d
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93277787"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848906"
 ---
 # <a name="understanding-security-alerts"></a>Grundlegendes zu Sicherheitswarnungen
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Mit [!INCLUDE [Product long](includes/product-long.md)]-Sicherheitswarnungen wird in verständlicher Sprache und anhand von Grafiken dargestellt, welche verdächtigen Aktivitäten in Ihrem Netzwerk identifiziert wurden und welche Akteure und Computer an der Bedrohung beteiligt sind. Warnungen werden nach ihrem Schweregrad eingestuft. Sie sind für ein einfaches visuelles Filtern farbcodiert und werden nach Bedrohungsphasen sortiert. Jede Warnung soll Ihnen dabei helfen, einen schnellen Überblick darüber zu erhalten, was genau in Ihrem Netzwerk passiert. Damit Sie einfach und direkt weitere Untersuchungen durchführen können, enthalten Beweislisten für Sicherheitswarnungen direkte Links zu den betroffenen Benutzern und Computern.
 
@@ -124,7 +122,7 @@ Die letzte Registerkarte jeder Warnung enthält die **Verwandten Entitäten**. V
 
 **Eindeutige JSON-Entität**
 
-Enthält die Daten, die [!INCLUDE [Product short](includes/product-short.md)] aus Active Directory zu dem Konto erhalten hat. Dazu zählen alle Attribute wie *Distinguished Name* , *SID* , *LockoutTime* und *PasswordExpiryTime*. Für Benutzerkonten sind Daten enthalten wie *Department* (Abteilung), *Mail* (E-Mail) und *PhoneNumber* (Telefonnummer). Für Computerkonten sind Daten enthalten wie *OperatingSystem* , *IsDomainController* und *DnsName*.
+Enthält die Daten, die [!INCLUDE [Product short](includes/product-short.md)] aus Active Directory zu dem Konto erhalten hat. Dazu zählen alle Attribute wie *Distinguished Name*, *SID*, *LockoutTime* und *PasswordExpiryTime*. Für Benutzerkonten sind Daten enthalten wie *Department* (Abteilung), *Mail* (E-Mail) und *PhoneNumber* (Telefonnummer). Für Computerkonten sind Daten enthalten wie *OperatingSystem*, *IsDomainController* und *DnsName*.
 
 **Eindeutiges JSON-Entitätsprofil**
 
@@ -150,15 +148,15 @@ NNR-Daten spielen beim Erkennen der folgenden Warnungen eine entscheidende Rolle
 - Suspected DCSync attack (replication of directory services) (Verdacht auf einen DCSync-Angriff (Replikation von Verzeichnisdiensten))
 - Network mapping reconnaissance (DNS) (Reconnaissance über Netzwerkzuordnung (DNS))
 
-Verwenden Sie die im Downloadbericht der Warnung auf der Registerkarte **Netzwerkaktivitäten** bereitgestellten NNR-Informationen, um festzustellen, ob es sich bei einer Warnung um eine **FP** -Aktivität handelt. Bei **FP** -Warnungen liegt der NNR-Zuverlässigkeitswert üblicherweise im niedrigen Bereich.
+Verwenden Sie die im Downloadbericht der Warnung auf der Registerkarte **Netzwerkaktivitäten** bereitgestellten NNR-Informationen, um festzustellen, ob es sich bei einer Warnung um eine **FP**-Aktivität handelt. Bei **FP**-Warnungen liegt der NNR-Zuverlässigkeitswert üblicherweise im niedrigen Bereich.
 
 Die Daten des Downloadberichts werden in zwei Spalten angezeigt:
 
 - **Quell-/Zielcomputer**
 
-  - *Zuverlässigkeit* : Ein niedriger Wert deutet möglicherweise auf eine falsche Namensauflösung hin.
+  - *Zuverlässigkeit*: Ein niedriger Wert deutet möglicherweise auf eine falsche Namensauflösung hin.
 - **Quell-/Zielcomputer**
-  - *Auflösungsmethode* : Zeigt die NNR-Methoden an, die zum Auflösen der IP-Adressen in Computer innerhalb der Organisation verwendet wurden.
+  - *Auflösungsmethode*: Zeigt die NNR-Methoden an, die zum Auflösen der IP-Adressen in Computer innerhalb der Organisation verwendet wurden.
 
 ![Netzwerkaktivitäten](media/network-activities.png)
 

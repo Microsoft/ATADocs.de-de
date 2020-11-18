@@ -10,16 +10,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8adbc288f2512b6322797931b8fcb2a17649e8a4
-ms.sourcegitcommit: 8cb9839a67fce42921f7a24564fddf15e503bdea
+ms.openlocfilehash: e175744d29cac82c29dc1f072a145ee68770dcf7
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93278613"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847053"
 ---
 # <a name="tutorial-setup-a-product-long-security-alert-lab"></a>Tutorial: Einrichten eines Labs für [!INCLUDE [Product long](includes/product-long.md)]-Sicherheitswarnungen
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Das Lab zu [!INCLUDE [Product long](includes/product-long.md)]-Sicherheitswarnungen soll die Funktionen von **[!INCLUDE [Product short](includes/product-short.md)]** zum Identifizieren und Erkennen verdächtiger Aktivitäten und potenzieller Angriffe auf Ihr Netzwerk veranschaulichen. Dieses erste Tutorial einer vierteiligen Reihe führt Sie durch die Erstellung einer Labumgebung für *diskrete* Erkennungen durch [!INCLUDE [Product short](includes/product-short.md)]. In diesem Lab für Sicherheitswarnungen geht es primär um die *signaturbasierten* Funktionen von [!INCLUDE [Product short](includes/product-short.md)]. Die Testumgebung enthält keine erweiterten Verhaltenserkennungen auf Machine Learning-, Benutzer- oder Entitätsbasis, da diese Erkennungen eine Lernphase mit echtem Netzwerkverkehr von bis zu 30 Tagen erfordern. Weitere Informationen zu den einzelnen Tutorials dieser Reihe finden Sie unter [Tutorialübersicht: [!INCLUDE [Product short](includes/product-short.md)]-Sicherheitswarnungsumgebung](playbook-lab-overview.md).
 
@@ -131,7 +129,7 @@ Wenn Sie die Sicherheitsgruppe „Helpdesk“ als **vertrauliche Gruppe** hinzuf
 1. Klicken Sie unter **Erkennung** auf **Entitätstag**.
 
     ![[!INCLUDE [Product short](includes/product-short.md)]-Entitätstags](media/entity-tags.png)
-1. Geben Sie im Abschnitt **Sensibel** den Namen „Helpdesk“ für **Sensible Gruppen** ein, und klicken Sie anschließend auf das Zeichen **+** , um diese hinzuzufügen.
+1. Geben Sie im Abschnitt **Sensibel** den Namen „Helpdesk“ für **Sensible Gruppen** ein, und klicken Sie anschließend auf das Zeichen **+**, um diese hinzuzufügen.
     ![Markieren von „Helpdesk“ als vertrauliche [!INCLUDE [Product short](includes/product-short.md)]-Gruppe, um Lateral Movement-Diagramme und Berichte für diese berechtigte Gruppe zu aktivieren](media/playbook-labsetup-helpdesksensitivegroup.png)
 1. Klicken Sie auf **Speichern**.
 
@@ -163,7 +161,7 @@ Add-LocalGroupMember -Group "Administrators" -Member "Contoso\JeffL"
 Add-LocalGroupMember -Group "Administrators" -Member "Contoso\Helpdesk"
 ```
 
-Überprüfen Sie die Gruppe „Administrators“ auf **VictimPC** , sodass Sie sicher sind, dass sie mindestens „Helpdesk“ und JeffL als Mitglieder hat:
+Überprüfen Sie die Gruppe „Administrators“ auf **VictimPC**, sodass Sie sicher sind, dass sie mindestens „Helpdesk“ und JeffL als Mitglieder hat:
 
 ![„Helpdesk“ und JeffL sollten in der lokalen Administratorengruppe für VictimPC sein.](media/playbook-labsetup-localgrouppolicies2.png)
 
@@ -171,7 +169,7 @@ Add-LocalGroupMember -Group "Administrators" -Member "Contoso\Helpdesk"
 
 Um ein funktionierendes und verwaltetes Netzwerk zu simulieren, erstellen Sie auf **VictimPC** eine geplante Aufgabe zur Ausführung des Prozesses „cmd.exe“ als **RonHD**.
 
-1. Öffnen Sie auf VictimPC ein **PowerShell-Konsolenfenster mit erhöhten Rechten** , und führen Sie den folgenden Befehl aus:
+1. Öffnen Sie auf VictimPC ein **PowerShell-Konsolenfenster mit erhöhten Rechten**, und führen Sie den folgenden Befehl aus:
 
     ```powerShell
     $action = New-ScheduledTaskAction -Execute 'cmd.exe'
@@ -250,7 +248,7 @@ while ($true)
 
 ## <a name="mission-accomplished"></a>Mission erfüllt!
 
-Ihr [!INCLUDE [Product short](includes/product-short.md)]-Lab ist jetzt einsatzbereit. Bei der Auswahl der in dieser Einrichtung verwendeten Methoden wurde berücksichtigt, dass Ressourcen (von *etwas* oder *jemandem* ) verwaltet werden müssen, und die Verwaltung lokale Administratorrechte erfordert. Es gibt andere Möglichkeiten, einen Verwaltungsworkflow in der Testumgebung zu simulieren:
+Ihr [!INCLUDE [Product short](includes/product-short.md)]-Lab ist jetzt einsatzbereit. Bei der Auswahl der in dieser Einrichtung verwendeten Methoden wurde berücksichtigt, dass Ressourcen (von *etwas* oder *jemandem*) verwaltet werden müssen, und die Verwaltung lokale Administratorrechte erfordert. Es gibt andere Möglichkeiten, einen Verwaltungsworkflow in der Testumgebung zu simulieren:
 
 - Protokollieren des ein- und ausgehenden Datenverkehrs von VictimPC mit dem Konto von RonHD
 - Hinzufügen einer anderen Version einer geplanten Aufgabe

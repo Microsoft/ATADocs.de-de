@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ''
 ms.suite: ''
-ms.openlocfilehash: ea19abd7497d0d925e764a80666dc595862566f9
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 27e048b337ecd25b534f0c10096999a7173292c1
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93275000"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94846628"
 ---
 # <a name="troubleshooting-product-long-sensor-using-the-product-short-logs"></a>Problembehandlung bei [!INCLUDE [Product long](includes/product-long.md)] Sensor mithilfe der [!INCLUDE [Product short](includes/product-short.md)] Protokolle
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Die [!INCLUDE [Product short](includes/product-short.md)] Protokolle bieten Einblicke in die einzelnen Komponenten des [!INCLUDE [Product long](includes/product-long.md)] Sensors zu einem bestimmten Zeitpunkt.
 
@@ -43,7 +41,7 @@ Die [!INCLUDE [Product short](includes/product-short.md)] Bereitstellungs Protok
 
 [!INCLUDE [Product short](includes/product-short.md)] Sensor Bereitstellungs Protokolle:
 
-- **Azure Advanced Threat Protection Microsoft.Tri.Sensor.Deployment.Deployer_YYYYMMDDHHMMSS.log** : Diese Protokolldatei enthält den gesamten Prozess der Sensorbereitstellung und befindet sich in dem oben erwähnten temporären Ordner oder unter „C:\Windows\Temp“.
+- **Azure Advanced Threat Protection Microsoft.Tri.Sensor.Deployment.Deployer_YYYYMMDDHHMMSS.log**: Diese Protokolldatei enthält den gesamten Prozess der Sensorbereitstellung und befindet sich in dem oben erwähnten temporären Ordner oder unter „C:\Windows\Temp“.
 
 - **Azure Advanced Threat Protection Sensor_YYYYMMDDHHMMSS. log** : in diesem Protokoll sind die Schritte im Prozess der Bereitstellung des [!INCLUDE [Product short](includes/product-short.md)] Sensors aufgeführt. Die Hauptverwendung besteht darin, den [!INCLUDE [Product short](includes/product-short.md)] Prozess der Sensor Bereitstellung zu verfolgen.
 
@@ -54,8 +52,8 @@ Die [!INCLUDE [Product short](includes/product-short.md)] Bereitstellungs Protok
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [[!INCLUDE [Product short](includes/product-short.md)] Voraussetzung](prerequisites.md)
-- [[!INCLUDE [Product short](includes/product-short.md)] Kapazitätsplanung](capacity-planning.md)
+- [Voraussetzungen für [!INCLUDE [Product short](includes/product-short.md)]](prerequisites.md)
+- [Kapazitätsplanung für [!INCLUDE [Product short](includes/product-short.md)]](capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
 - [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-forwarding.md)
-- [Sehen Sie sich das [!INCLUDE [Product short](includes/product-short.md)] Forum an!](https://aka.ms/MDIcommunity)
+- [Weitere Informationen finden Sie im [!INCLUDE [Product short](includes/product-short.md)]-Forum.](https://aka.ms/MDIcommunity)

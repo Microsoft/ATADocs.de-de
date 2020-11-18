@@ -10,16 +10,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8830feaf5d849d4ed38ea1bcc01002d04f6d2380
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: f51c707c2ac01fbbd16258efab8c0ac74d3076b0
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93274830"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94849093"
 ---
 # <a name="tutorial-lateral-movement-playbook"></a>Tutorial: Lateral Movement-Playbook
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Das Lateral Movement-Playbook ist das dritte Tutorial der vierteiligen Reihe zu [!INCLUDE [Product long](includes/product-long.md)]-Sicherheitswarnungen. Das Lab zu [!INCLUDE [Product short](includes/product-short.md)]-Sicherheitswarnungen soll die Funktionen von **[!INCLUDE [Product short](includes/product-short.md)]** zum Identifizieren und Erkennen verdächtiger Aktivitäten und potenzieller Angriffe auf Ihr Netzwerk veranschaulichen. Das Playbook erläutert, wie Sie einige der *diskreten* Erkennungen von [!INCLUDE [Product short](includes/product-short.md)] testen. Dieses Playbook konzentriert sich auf *signaturbasierte* Funktionen von [!INCLUDE [Product short](includes/product-short.md)] und enthält keine erweiterten Verhaltenserkennungen auf Machine Learning-, Benutzer- oder Entitätsbasis, da diese eine Lernphase mit echtem Netzwerkverkehr über einen Zeitraum von bis zu 30 Tagen erfordern. Weitere Informationen zu den einzelnen Tutorials dieser Reihe finden Sie unter [Tutorialübersicht: [!INCLUDE [Product short](includes/product-short.md)]-Sicherheitswarnungsumgebung](playbook-lab-overview.md).
 
@@ -58,7 +56,7 @@ Während unserer simulierten Reconnaissanceangriffe wurde **VictimPC** nicht nur
     mimikatz.exe "privilege::debug" "sekurlsa::logonpasswords" "exit" >> c:\temp\victimcpc.txt
     ```
 
-1. Öffnen Sie **c:\\temp\\victimpc.txt** , um die von Mimikatz gesammelten und in die txt-Datei geschrieben Anmeldeinformationen anzuzeigen.
+1. Öffnen Sie **c:\\temp\\victimpc.txt**, um die von Mimikatz gesammelten und in die txt-Datei geschrieben Anmeldeinformationen anzuzeigen.
     ![Mimikatz-Ausgabe einschließlich RonHDs NTLM-Hash](media/playbook-lateral-sekurlsa-logonpasswords-output.png).
 
 1. Wir haben RonHDs NTLM-Hash mit Hilfe von Mimikatz erfolgreich aus dem Speicher geholt. Wir benötigen den NTLM-Hash in Kürze.
@@ -203,7 +201,7 @@ Da Mimikatz auf AdminPC bereitgestellt wurde, werden wir PsExec verwenden, um es
     > [!Note]
     > Erfahrenere Angreifer werden den Datenträger nicht berühren, wenn sie beliebigen Code auf einem Computer ausführen, nachdem sie Administratorrechte auf ihm erhalten haben.
 
-    Auf **VictimPC** haben wir diese gesammelten Tickets im Ordner **c:\temp\adminpc_tickets** :
+    Auf **VictimPC** haben wir diese gesammelten Tickets im Ordner **c:\temp\adminpc_tickets**:
 
     ![C:\temp\tickets ist unsere exportierte Mimikatz-Ausgabe aus AdminPC](media/playbook-escalation-export_tickets4.png)
 
@@ -211,7 +209,7 @@ Da Mimikatz auf AdminPC bereitgestellt wurde, werden wir PsExec verwenden, um es
 
 Die Tickets befinden sich jetzt lokal auf VictimPC. Nun ist es an der Zeit, durch „Pass-the-Ticket“ zu SamiraA zu werden.
 
-1. Öffnen Sie vom Speicherort von **Mimikatz** auf dem Dateisystem von **VictimPC** aus eine neue **Eingabeaufforderung mit erhöhten Rechten** , und führen Sie den folgenden Befehl aus:
+1. Öffnen Sie vom Speicherort von **Mimikatz** auf dem Dateisystem von **VictimPC** aus eine neue **Eingabeaufforderung mit erhöhten Rechten**, und führen Sie den folgenden Befehl aus:
 
     ```dos
     mimikatz.exe "privilege::debug" "kerberos::ptt c:\temp\adminpc_tickets" "exit"
@@ -230,7 +228,7 @@ Die Tickets befinden sich jetzt lokal auf VictimPC. Nun ist es an der Zeit, durc
 1. Beachten Sie, dass diese Tickets ungenutzt bleiben. Wir haben als Angreifer fungiert und das Ticket erfolgreich übergeben. Wir haben die Anmeldeinformationen von SamirA von AdminPC gesammelt und sie dann an einen anderen Prozess weitergegeben, der auf VictimPC ausgeführt wird.
 
     > [!Note]
-    > Genau wie bei Pass-the-Hash weiß [!INCLUDE [Product short](includes/product-short.md)] nicht, dass das Ticket aufgrund der lokalen Clientaktivität weitergegeben wurde. [!INCLUDE [Product short](includes/product-short.md)] erkennt jedoch die Aktivität, *sobald das Ticket verwendet wird* , d. h. wenn es für den Zugriff auf eine andere Ressource oder einen anderen Dienst genutzt wird.
+    > Genau wie bei Pass-the-Hash weiß [!INCLUDE [Product short](includes/product-short.md)] nicht, dass das Ticket aufgrund der lokalen Clientaktivität weitergegeben wurde. [!INCLUDE [Product short](includes/product-short.md)] erkennt jedoch die Aktivität, *sobald das Ticket verwendet wird*, d. h. wenn es für den Zugriff auf eine andere Ressource oder einen anderen Dienst genutzt wird.
 
 1. Schließen Sie Ihren simulierten Angriff ab, indem Sie von **VictimPC** aus auf den Domänencontroller zugreifen. Führen Sie in der Eingabeaufforderung, die jetzt mit den Tickets von SamirA im Speicher ausgeführt wird, folgenden Befehl aus:
 

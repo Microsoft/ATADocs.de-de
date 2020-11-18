@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e20bbb73e916c9ea7139ac17a59cd7de2f1a08a4
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 0f6a359745ae03ce0b982e00b7f4c06d556eb702
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276937"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848821"
 ---
 # <a name="use-activity-filters-and-create-action-policies-with-product-long-in-microsoft-cloud-app-security"></a>Verwenden von Aktivitäts Filtern und Erstellen von Aktions Richtlinien mit [!INCLUDE [Product long](includes/product-long.md)] in Microsoft Cloud App Security
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Dieser Artikel soll Ihnen dabei helfen zu verstehen, wie Sie Aktions Richtlinien für Aktivitäten mithilfe von Microsoft Cloud App Security Filtern und erstellen können [!INCLUDE [Product short](includes/product-short.md)] .
 
@@ -57,7 +55,7 @@ Nach dem Filtern von Aktivitäten und dem Identifizieren der zu implementierende
 
 So erstellen Sie eine neue Aktivitätsrichtlinie:
 
-1. Wenden Sie von jeder **Aktivitätsprotokoll** -Seite aus einen Filter an (z. B. APP, Benutzername, Aktivitätstyp usw.).
+1. Wenden Sie von jeder **Aktivitätsprotokoll**-Seite aus einen Filter an (z. B. APP, Benutzername, Aktivitätstyp usw.).
     - Wählen Sie zum Filtern von Aktivitäten aus [!INCLUDE [Product short](includes/product-short.md)] die Option **Active Directory** im App-Filter aus.
     ![Erstellen einer neuen Aktivitätsrichtlinie](media/mcas-create-new-policy.png)
 1. Klicken Sie auf die Schaltfläche **Neue Richtlinie aus Suche**.
@@ -76,4 +74,4 @@ Erfahren Sie mehr über die Bewertung der Untersuchungspriorität sowie zusätzl
 
 ## <a name="join-the-community"></a>Beitritt zur Community
 
-Haben Sie weitere Fragen oder ein Interesse an der Erörterung [!INCLUDE [Product short](includes/product-short.md)] und verwandten Sicherheit mit anderen? Besuchen Sie die [ [!INCLUDE [Product short](includes/product-short.md)] Community](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) noch heute!
+Haben Sie weitere Fragen, oder möchten Sie mit anderen über [!INCLUDE [Product short](includes/product-short.md)] und damit verbundene Sicherheitsaspekte diskutieren? Treten Sie noch heute der [[!INCLUDE [Product short](includes/product-short.md)]Community](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) bei.

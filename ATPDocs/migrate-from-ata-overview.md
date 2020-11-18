@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 032a5f289657485b744ad335dc51777a8ba72602
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 368b328cb6863074bd47f0785aafccf7f491fa54
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93275033"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847342"
 ---
 # <a name="advanced-threat-analytics-ata-to-product-long"></a>Advanced Threat Analytics (ATA) zu [!INCLUDE [Product long](includes/product-long.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
 > Die endgültige Version von ATA ist [allgemein verfügbar](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA wird die grundlegende Unterstützung am 12. Januar 2021 beenden. Der erweiterte Support wird bis zum 2026. Januar fortgesetzt. Weitere Informationen finden Sie in [unserem Blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
@@ -45,7 +43,7 @@ In dieser Anleitung lernen Sie Folgendes:
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-- Zum Erstellen einer-Instanz ist ein Azure Active Directory Mandanten mit mindestens einem globalen/Sicherheitsadministrator erforderlich [!INCLUDE [Product short](includes/product-short.md)] . Jede [!INCLUDE [Product short](includes/product-short.md)] Instanz unterstützt eine Obergrenze für mehrere Active Directory Gesamtstruktur und die Gesamtstruktur Funktionsebene (FFL) von Windows 2003 und höher.
+- Zum Erstellen einer-Instanz ist ein Azure Active Directory Mandanten mit mindestens einem globalen/Sicherheitsadministrator erforderlich [!INCLUDE [Product short](includes/product-short.md)] . Jede [!INCLUDE [Product short](includes/product-short.md)]-Instanz unterstützt mehrere Active Directory-Gesamtstrukturbegrenzungen und die Gesamtstrukturfunktionsebene (Forest Functional Level, FFL) von Windows 2003 und höher.
 
 - [!INCLUDE [Product short](includes/product-short.md)] erfordert .NET Framework 4,7 oder höher und erfordert möglicherweise einen Domänen Controller (Neustart), wenn Ihre aktuelle .NET Framework-Version nicht 4,7 oder höher ist.
 
@@ -147,4 +145,4 @@ Erfahren Sie mehr über [[!INCLUDE [Product short](includes/product-short.md)]](
 
 ## <a name="join-the-community"></a>Beitritt zur Community
 
-Haben Sie weitere Fragen oder ein Interesse an der Erörterung [!INCLUDE [Product short](includes/product-short.md)] und verwandten Sicherheit mit anderen? Besuchen Sie die [ [!INCLUDE [Product short](includes/product-short.md)] Community](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) noch heute!
+Haben Sie weitere Fragen, oder möchten Sie mit anderen über [!INCLUDE [Product short](includes/product-short.md)] und damit verbundene Sicherheitsaspekte diskutieren? Treten Sie noch heute der [[!INCLUDE [Product short](includes/product-short.md)]Community](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) bei.

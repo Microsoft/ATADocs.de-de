@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 3f8554cf5d3c01d4d8d54a289255070fdef0e52d
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: e582ebdaeab6f2dd462e9519f19dd568a3e96ee0
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93274558"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94846866"
 ---
 # <a name="release-reference-of-product-long"></a>Releaseverweis von [!INCLUDE [Product long](includes/product-long.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Dieser Artikel ist ein Verweis auf alle [!INCLUDE [Product short](includes/product-short.md)] Versionen (früher Azure Advanced Threat Protection, auch bekannt als Azure ATP), bis (und einschließlich) Version 2,55. Informationen zu den neuesten [!INCLUDE [Product short](includes/product-short.md)] Releaseupdates (2,56 und höher) finden Sie unter [ [!INCLUDE [Product short](includes/product-short.md)] What es New (Neuerungen](whats-new.md)).
 
@@ -43,7 +41,7 @@ Veröffentlicht am 11. November 2018
 Es wurden drei beliebte Domänen zur Ausschlussliste der Standarddomäne hinzugefügt. Die Ausschlussliste bleibt vollständig anpassbar. Weitere Informationen finden Sie unter [Ausschließen von Entitäten von der Erkennung](excluding-entities-from-detections.md)
 
 - **Verbesserungen bei der Dokumentation: Update des SIEM-Protokolls, Anleitungen für bekannte Probleme**  
-Die **externalId** -Zuordnung sowie zusätzliche Erläuterungen wurden den Beschreibungen des SIEM-Protokolls hinzugefügt. Weitere Informationen finden Sie in der [Referenz zum SIEM-Protokoll](cef-format-sa.md).
+Die **externalId**-Zuordnung sowie zusätzliche Erläuterungen wurden den Beschreibungen des SIEM-Protokolls hinzugefügt. Weitere Informationen finden Sie in der [Referenz zum SIEM-Protokoll](cef-format-sa.md).
 
     Es wurde ein neuer Artikel zum Leitfaden für derzeit bekannte Probleme hinzugefügt. Weitere Informationen finden Sie unter: [Azure ATP Known Issues (Azure ATP: Bekannte Probleme)](troubleshooting-known-issues.md).
 
@@ -107,7 +105,7 @@ Es wurde eine neue Erkennung hinzugefügt, um vor verdächtigen DNS-Kommunikatio
   - Diese Erkennung hilft dabei, Angriffe gegen das DNS-Protokoll zu erkennen: In den meisten Organisationen wird das DNS-Protokoll nicht überwacht und nur selten vor böswilligen Angriffen geschützt. Das gibt einem Angreifer auf einem kompromittierten Computer die Möglichkeit, das DNS-Protokoll zu missbrauchen. Böswillige Kommunikation über DNS kann zur Datenexfiltration, Zugriff über Command-and-Control-Server und/oder zur Umgehung von Netzwerkeinschränkungen führen.
 
 - **Neue Funktionen**  
-Die Azure ATP- **Benutzerrolle** wurde mit den folgenden Funktionen verbessert:
+Die Azure ATP-**Benutzerrolle** wurde mit den folgenden Funktionen verbessert:
   - Der Status der Sicherheitswarnungen kann geändert werden (erneut öffnen, schließen, ausschließen, unterdrücken)
   - Geplante Berichte wurden festgelegt
   - Entitätstags (vertraulich und Honeytoken) können festgelegt werden.
@@ -115,7 +113,7 @@ Die Azure ATP- **Benutzerrolle** wurde mit den folgenden Funktionen verbessert:
   - Ändern der Sprache
   - Benachrichtigung über E-Mail oder Syslog wurden festgelegt
 
-- Sicherheitswarnungen des Typs **Reconnaissance mithilfe von Verzeichnisdienstabfragen** , die am 16. September 2018 kurzzeitig vermehrt aufgetreten sind, wurden identifiziert und behoben.
+- Sicherheitswarnungen des Typs **Reconnaissance mithilfe von Verzeichnisdienstabfragen**, die am 16. September 2018 kurzzeitig vermehrt aufgetreten sind, wurden identifiziert und behoben.
 
 - Diese Version enthält darüber hinaus Fehlerbehebungen und Verbesserungen für mehrere Probleme.
 
@@ -374,10 +372,10 @@ Veröffentlicht: 11. März 2018
 - **Leistungsverbesserungen**  
 Die Azure ATP-Sensorinfrastruktur wurde bezüglich der Leistung verbessert: Die aggregierte Datenverkehrsansicht ermöglicht Optimierungen der CPU- und Paketpipeline und verwendet Sockets zu Domänencontrollern erneut, um SSL-Sitzungen zum DC zu minimieren.
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
-- [Was ist [!INCLUDE [Product short](includes/product-short.md)] ?](what-is.md)
+- [Was ist[!INCLUDE [Product short](includes/product-short.md)]?](what-is.md)
 - [Häufig gestellte Fragen](technical-faq.md)
-- [[!INCLUDE [Product short](includes/product-short.md)] Voraussetzung](prerequisites.md)
-- [[!INCLUDE [Product short](includes/product-short.md)] Kapazitätsplanung](capacity-planning.md)
-- [Sehen Sie sich das [!INCLUDE [Product short](includes/product-short.md)] Forum an!](https://aka.ms/MDIcommunity)
+- [Voraussetzungen für [!INCLUDE [Product short](includes/product-short.md)]](prerequisites.md)
+- [Kapazitätsplanung für [!INCLUDE [Product short](includes/product-short.md)]](capacity-planning.md)
+- [Weitere Informationen finden Sie im [!INCLUDE [Product short](includes/product-short.md)]-Forum.](https://aka.ms/MDIcommunity)

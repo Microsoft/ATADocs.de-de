@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: bc6080ac87cd0709fd127daaf70e24a6ee03955e
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: a27d972e95c2c6b4ed4d87ebad747ef14ac0f24d
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93277260"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848702"
 ---
 # <a name="security-assessment-weak-cipher-usage"></a>Sicherheitsbewertung: Verwendung schwacher Verschlüsselungen
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ## <a name="what-are-weak-ciphers"></a>Was bedeutet schwache Verschlüsselung?
 
@@ -53,4 +51,4 @@ Weitere Informationen zum Download und Aktualisieren der Bearbeitungen für die 
 ## <a name="next-steps"></a>Nächste Schritte
 
 - [[!INCLUDE [Product short](includes/product-short.md)] Aktivitäten Filtern in Cloud App Security](activities-filtering-mcas.md)
-- [Sehen Sie sich das [!INCLUDE [Product short](includes/product-short.md)] Forum an!](https://aka.ms/MDIcommunity)
+- [Weitere Informationen finden Sie im [!INCLUDE [Product short](includes/product-short.md)]-Forum.](https://aka.ms/MDIcommunity)

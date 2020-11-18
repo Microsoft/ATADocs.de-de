@@ -9,24 +9,22 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f9cac463b5a99075901a9c0f68db37affcb50cf9
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 2fa0a70299b897a2c8b29e01ebb97e9740b0eb66
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276852"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848617"
 ---
 # <a name="plan-capacity-for-product-long"></a>Planen der Kapazität für [!INCLUDE [Product long](includes/product-long.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 In dieser Anleitung legen Sie fest, wie viele [!INCLUDE [Product long](includes/product-long.md)] Sensoren Sie benötigen.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
 - Das [ [!INCLUDE [Product short](includes/product-short.md)] Tool zur Größen](https://aka.ms/aatpsizingtool)Anpassung herunterladen.
-- Lesen Sie den Artikel [ [!INCLUDE [Product short](includes/product-short.md)] Architektur](architecture.md) .
-- Lesen Sie den Artikel [ [!INCLUDE [Product short](includes/product-short.md)] Voraussetzungen](prerequisites.md) .
+- Lesen Sie den Artikel [[!INCLUDE [Product short](includes/product-short.md)]-Architektur](architecture.md).
+- Lesen Sie den Artikel [[!INCLUDE [Product short](includes/product-short.md)]-Voraussetzungen](prerequisites.md).
 
 ## <a name="use-the-sizing-tool"></a>Verwenden des Tools zur Größenanpassung
 
@@ -97,7 +95,7 @@ Um die Pakete pro Sekunde zu ermitteln, gehen Sie auf jedem Domänencontroller w
 
     ![Abbildung der Datensammlersätze](media/traffic-estimation-2.png)
 
-1. Klicken Sie mit der rechten Maustaste auf **Benutzerdefiniert** , und wählen Sie **Neu** &gt; **Datensammlersatz** aus.
+1. Klicken Sie mit der rechten Maustaste auf **Benutzerdefiniert**, und wählen Sie **Neu** &gt; **Datensammlersatz** aus.
 
     ![Abbildung eines neuen Datensammlersatzes](media/traffic-estimation-3.png)
 
@@ -109,7 +107,7 @@ Um die Pakete pro Sekunde zu ermitteln, gehen Sie auf jedem Domänencontroller w
 
 1. Klicken Sie unter **Welche Leistungsindikatoren möchten Sie protokollieren?** auf **Hinzufügen**.
 
-1. Erweitern Sie **Netzwerkadapter** , wählen Sie **Pakete/Sek.** aus, und wählen Sie die richtige Instanz aus. Wenn Sie sich dabei nicht sicher sind, können Sie **&lt;Alle Instanzen&gt;** auswählen und auf **Hinzufügen** und **OK** klicken.
+1. Erweitern Sie **Netzwerkadapter**, wählen Sie **Pakete/Sek.** aus, und wählen Sie die richtige Instanz aus. Wenn Sie sich dabei nicht sicher sind, können Sie **&lt;Alle Instanzen&gt;** auswählen und auf **Hinzufügen** und **OK** klicken.
 
     > [!NOTE]
     > Um diesen Vorgang auf einer Befehlszeile auszuführen, führen Sie `ipconfig /all` aus, um den Namen des Adapters und die Konfiguration zu ermitteln.
@@ -143,4 +141,4 @@ In dieser Anleitung haben Sie festgelegt, wie viele [!INCLUDE [Product short](in
 
 ## <a name="join-the-community"></a>Beitritt zur Community
 
-Haben Sie weitere Fragen oder ein Interesse an der Erörterung [!INCLUDE [Product short](includes/product-short.md)] und verwandten Sicherheit mit anderen? Besuchen Sie die [ [!INCLUDE [Product short](includes/product-short.md)] Community](https://aka.ms/MDIcommunity) noch heute!
+Haben Sie weitere Fragen, oder möchten Sie mit anderen über [!INCLUDE [Product short](includes/product-short.md)] und damit verbundene Sicherheitsaspekte diskutieren? Treten Sie noch heute der [[!INCLUDE [Product short](includes/product-short.md)]Community](https://aka.ms/MDIcommunity) bei.

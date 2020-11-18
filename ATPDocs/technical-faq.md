@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ccb3ee9afe32615246f8e6dc63e181475094a8b7
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: b677512817fc910c5845fa7e1544003bfec60593
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93274371"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848940"
 ---
 # <a name="product-long-frequently-asked-questions"></a>[!INCLUDE [Product long](includes/product-long.md)] häufig gestellte Fragen
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Dieser Artikel enthält eine Liste mit häufig gestellten Fragen und Antworten, [!INCLUDE [Product long](includes/product-long.md)] die in die folgenden Kategorien unterteilt sind:
 
@@ -85,9 +83,9 @@ Im Gegensatz zum ATA-Sensor verwendet der [!INCLUDE [Product short](includes/pro
 
 - **[UEBA-Funktionen](/cloud-app-security/tutorial-ueba)** : Einblicke in Risiken individueller Benutzer über die Bewertung der Benutzeruntersuchungspriorität. Die Bewertung kann SecOps bei der Untersuchung unterstützen und Analysten dabei helfen, ungewöhnliche Aktivitäten für den Benutzer und die Organisation zu verstehen.
 
-- **Native Integrationen** : In Microsoft Cloud App Security und Azure AD Identity Protection integriert, bieten sie eine hybride Ansicht über Vorgänge in den lokalen und hybriden Umgebungen.
+- **Native Integrationen**: In Microsoft Cloud App Security und Azure AD Identity Protection integriert, bieten sie eine hybride Ansicht über Vorgänge in den lokalen und hybriden Umgebungen.
 
-- **Beiträgt an Microsoft 365 Defender** : unterstützt Warnungen und Bedrohungs Daten in Microsoft 365 Defender. Microsoft 365 Defender nutzt das Microsoft 365 Sicherheits Portfolio (Identitäten, Endpunkte, Daten und Anwendungen), um Domänen übergreifende Bedrohungs Daten automatisch zu analysieren und so ein umfassendes Bild der einzelnen Angriffe in einem einzelnen Dashboard zu erhalten. Dank dieser breiten-und Übersichtlichkeit können sich die Defender auf kritische Bedrohungen konzentrieren und nach anspruchsvollen Sicherheitsverletzungen suchen, die darauf vertrauen, dass die leistungsstarke Automatisierung von Microsoft 365 Defender Angriffe an einer beliebigen Stelle in der Kill-Kette stoppt und die Organisation in einen sicheren Zustand versetzt.
+- **Beiträgt an Microsoft 365 Defender**: unterstützt Warnungen und Bedrohungs Daten in Microsoft 365 Defender. Microsoft 365 Defender nutzt das Microsoft 365 Sicherheits Portfolio (Identitäten, Endpunkte, Daten und Anwendungen), um Domänen übergreifende Bedrohungs Daten automatisch zu analysieren und so ein umfassendes Bild der einzelnen Angriffe in einem einzelnen Dashboard zu erhalten. Dank dieser breiten-und Übersichtlichkeit können sich die Defender auf kritische Bedrohungen konzentrieren und nach anspruchsvollen Sicherheitsverletzungen suchen, die darauf vertrauen, dass die leistungsstarke Automatisierung von Microsoft 365 Defender Angriffe an einer beliebigen Stelle in der Kill-Kette stoppt und die Organisation in einen sicheren Zustand versetzt.
 
 ## <a name="licensing-and-privacy"></a>Lizenzierung und Datenschutz
 
@@ -214,9 +212,9 @@ Sehen Sie sich den letzten Fehler im aktuellen Fehler [Protokoll](troubleshootin
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [[!INCLUDE [Product short](includes/product-short.md)] Voraussetzung](prerequisites.md)
-- [[!INCLUDE [Product short](includes/product-short.md)] Kapazitätsplanung](capacity-planning.md)
+- [Voraussetzungen für [!INCLUDE [Product short](includes/product-short.md)]](prerequisites.md)
+- [Kapazitätsplanung für [!INCLUDE [Product short](includes/product-short.md)]](capacity-planning.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
 - [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-forwarding.md)
 - [Problembehandlung](troubleshooting-known-issues.md)
-- [Sehen Sie sich das [!INCLUDE [Product short](includes/product-short.md)] Forum an!](https://aka.ms/MDIcommunity)
+- [Weitere Informationen finden Sie im [!INCLUDE [Product short](includes/product-short.md)]-Forum.](https://aka.ms/MDIcommunity)

@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: edb9f414055a7d106913d1d394af44ef84ef4223
-ms.sourcegitcommit: 2b57f438c2902d5258aff8999b374c2f1808ceb4
+ms.openlocfilehash: d87aa443bad2731ee3e5ff226930980ac52c79d7
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94430684"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94846713"
 ---
 # <a name="product-long-switches-and-silent-installation"></a>[!INCLUDE [Product long](includes/product-long.md)] Switches und unbeaufsichtigte Installation
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Dieser Artikel enthält Anleitungen und Anweisungen für [!INCLUDE [Product long](includes/product-long.md)] Switches und eine unbeaufsichtigte Installation.
 
@@ -33,7 +31,7 @@ Wenn Sie installieren [!INCLUDE [Product short](includes/product-short.md)] , wi
 > [!NOTE]
 > Die Installation von .Net Framework 4.7 macht möglicherweise einen Neustart des Servers erforderlich. Wenn Sie den [!INCLUDE [Product short](includes/product-short.md)] Sensor auf Domänen Controllern installieren, sollten Sie ein Wartungsfenster für die Domänen Controller planen.
 
-Mithilfe [!INCLUDE [Product short](includes/product-short.md)] der automatischen Installation wird das Installationsprogramm so konfiguriert, dass der Server am Ende der Installation (falls erforderlich) automatisch neu gestartet wird. Stellen Sie sicher, dass Sie die automatische Installation nur während eines Wartungsfensters ausführen. Aufgrund eines Windows Installer-Fehlers kann mit dem *norestart* -Flag nicht mehr verlässlich sichergestellt werden, dass der Server keinen Neustart ausführt.
+Mithilfe [!INCLUDE [Product short](includes/product-short.md)] der automatischen Installation wird das Installationsprogramm so konfiguriert, dass der Server am Ende der Installation (falls erforderlich) automatisch neu gestartet wird. Stellen Sie sicher, dass Sie die automatische Installation nur während eines Wartungsfensters ausführen. Aufgrund eines Windows Installer-Fehlers kann mit dem *norestart*-Flag nicht mehr verlässlich sichergestellt werden, dass der Server keinen Neustart ausführt.
 
 Um den Bereitstellungs Fortschritt zu verfolgen, überwachen Sie die [!INCLUDE [Product short](includes/product-short.md)] Installations Protokolle in `%AppData%\Local\Temp` .
 
@@ -44,13 +42,13 @@ Um den Bereitstellungs Fortschritt zu verfolgen, überwachen Sie die [!INCLUDE [
 
 Verwenden Sie den folgenden Befehl, um eine vollständig automatische Installation des Sensors durchzuführen [!INCLUDE [Product short](includes/product-short.md)] :
 
-**cmd.exe-Syntax** :
+**cmd.exe-Syntax**:
 
 ```dos
 "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
 ```
 
-**PowerShell-Syntax** :
+**PowerShell-Syntax**:
 
 ```powershell
 .\"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
@@ -62,7 +60,7 @@ Verwenden Sie den folgenden Befehl, um eine vollständig automatische Installati
 > [!NOTE]
 > Kopieren Sie den Zugriffsschlüssel aus dem [!INCLUDE [Product short](includes/product-short.md)] Portal **Konfigurations** Abschnitt der Seite " **Sensoren** ".
 
-**Installationsoptionen** :
+**Installationsoptionen**:
 
 > [!div class="mx-tableFixed"]
 >
@@ -72,7 +70,7 @@ Verwenden Sie den folgenden Befehl, um eine vollständig automatische Installati
 > |Hilfe|/help|Nein|Stellt Hilfe und eine Kurzübersicht bereit. Zeigt die korrekte Verwendung des Installationsbefehl einschließlich einer Liste aller Optionen und Verhaltensweisen an.|
 > |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Ja|Legt die Parameter für die Installation von .Net Framework fest. Muss festgelegt werden, um die unbeaufsichtigte Installation von .Net Framework zu erzwingen.|
 
-**Installationsparameter** :
+**Installationsparameter**:
 
 > [!div class="mx-tableFixed"]
 >
@@ -81,7 +79,7 @@ Verwenden Sie den folgenden Befehl, um eine vollständig automatische Installati
 > |InstallationPath|InstallationPath=""|Nein|Legt den Pfad für die Installation von [!INCLUDE [Product short](includes/product-short.md)] Sensor Binärdateien fest. Standardpfad: %programfiles%\Azure Advanced Threat Protection sensor
 > |AccessKey|AccessKey="\*\*"|Ja|Legt die Zugriffstaste fest, die zum Registrieren des [!INCLUDE [Product short](includes/product-short.md)] Sensors bei der-Instanz verwendet wird [!INCLUDE [Product short](includes/product-short.md)] .|
 
-**Beispiele** :
+**Beispiele**:
 
 Verwenden Sie den folgenden Befehl, um den Sensor automatisch zu installieren [!INCLUDE [Product short](includes/product-short.md)] :
 
@@ -93,7 +91,7 @@ Verwenden Sie den folgenden Befehl, um den Sensor automatisch zu installieren [!
 
 Verwenden Sie die folgenden Befehle, um die Proxyauthentifizierung abzuschließen:
 
-**Syntax** :
+**Syntax**:
 
 > [!div class="mx-tableFixed"]
 >
@@ -107,13 +105,13 @@ Verwenden Sie die folgenden Befehle, um die Proxyauthentifizierung abzuschließe
 
 Verwenden Sie den folgenden Befehl, um den Sensor automatisch zu aktualisieren [!INCLUDE [Product short](includes/product-short.md)] :
 
-**Syntax** :
+**Syntax**:
 
 ```dos
 "Azure ATP sensor Setup.exe" [/quiet] [/Help] [NetFrameworkCommandLineArguments="/q"]
 ```
 
-**Installationsoptionen** :
+**Installationsoptionen**:
 
 > [!div class="mx-tableFixed"]
 >
@@ -123,7 +121,7 @@ Verwenden Sie den folgenden Befehl, um den Sensor automatisch zu aktualisieren [
 > |Hilfe|/help|Nein|Stellt Hilfe und eine Kurzübersicht bereit. Zeigt die korrekte Verwendung des Installationsbefehl einschließlich einer Liste aller Optionen und Verhaltensweisen an.|
 > |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Ja|Legt die Parameter für die Installation von .Net Framework fest. Muss festgelegt werden, um die unbeaufsichtigte Installation von .Net Framework zu erzwingen.|
 
-**Beispiele** :
+**Beispiele**:
 
 So aktualisieren Sie den Sensor im Hintergrund [!INCLUDE [Product short](includes/product-short.md)] :
 
@@ -135,13 +133,13 @@ So aktualisieren Sie den Sensor im Hintergrund [!INCLUDE [Product short](include
 
 Verwenden Sie den folgenden Befehl, um eine unbeaufsichtigte Deinstallation des Sensors durchzuführen [!INCLUDE [Product short](includes/product-short.md)] :
 
-**Syntax** :
+**Syntax**:
 
 ```dos
 "Azure ATP sensor Setup.exe" [/quiet] [/Uninstall] [/Help]
 ```
 
-**Installationsoptionen** :
+**Installationsoptionen**:
 
 > [!div class="mx-tableFixed"]
 >
@@ -151,7 +149,7 @@ Verwenden Sie den folgenden Befehl, um eine unbeaufsichtigte Deinstallation des 
 > |Deinstallieren|/uninstall|Ja|Führt die unbeaufsichtigte Installation des [!INCLUDE [Product short](includes/product-short.md)] Sensors vom Server aus.|
 > |Hilfe|/help|Nein|Stellt Hilfe und eine Kurzübersicht bereit. Zeigt die korrekte Verwendung des Installationsbefehl einschließlich einer Liste aller Optionen und Verhaltensweisen an.|
 
-**Beispiele** :
+**Beispiele**:
 
 So deinstallieren Sie den [!INCLUDE [Product short](includes/product-short.md)] Sensor automatisch vom Server:
 

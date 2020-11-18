@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 851a0c0db49a59b96a8f239a3b9a08f9e51819c5
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 5af86879b48f2d8159a78d5965fb53ff8373ae56
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276596"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848277"
 ---
 # <a name="security-assessment-unsecure-sid-history-attributes"></a>Sicherheitsbewertung: Unsichere SID-Verlaufsattribute
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ## <a name="what-is-an-unsecure-sid-history-attribute"></a>Was ist ein unsicheres SID-Verlaufsattribut?
 
@@ -60,4 +58,4 @@ Beispielsweise kann ein nicht sensibles Konto in einer Domäne die SID des Unter
 ## <a name="see-also"></a>Weitere Informationen
 
 - [[!INCLUDE [Product short](includes/product-short.md)] Aktivitäten Filtern in Cloud App Security](activities-filtering-mcas.md)
-- [Sehen Sie sich das [!INCLUDE [Product short](includes/product-short.md)] Forum an!](https://aka.ms/MDIcommunity)
+- [Weitere Informationen finden Sie im [!INCLUDE [Product short](includes/product-short.md)]-Forum.](https://aka.ms/MDIcommunity)

@@ -12,16 +12,14 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: a06004bd-9f77-4e8e-a0e5-4727d6651a0f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7e47b15249f024345eb72fa434447506389f7be4
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 93b421bd06a40a3bd79ecdf22b613bbafb157abc
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93277948"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847699"
 ---
 # <a name="working-with-security-alerts"></a>Arbeiten mit Sicherheitswarnungen
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
 > Die auf dieser Seite erläuterten [!INCLUDE [Product long](includes/product-long.md)]-Features sind auch über das neue [Portal](https://portal.cloudappsecurity.com) zugänglich.
@@ -84,9 +82,9 @@ Gehen Sie wie folgt vor, um die Erkennung von Vorschauversionen zu deaktivieren:
 
 So filtern Sie die Liste der Sicherheitswarnungen:
 
-1. Wählen Sie auf der linken Seite des Bildschirms im Bereich **Filtern nach** eine der folgenden Optionen aus: **Alle** , **Offen** , **Geschlossen** oder **Unterdrückt**.
+1. Wählen Sie auf der linken Seite des Bildschirms im Bereich **Filtern nach** eine der folgenden Optionen aus: **Alle**, **Offen**, **Geschlossen** oder **Unterdrückt**.
 
-1. Um die Liste weiter zu filtern, wählen Sie **Hoch** , **Mittel** oder **Niedrig** aus.
+1. Um die Liste weiter zu filtern, wählen Sie **Hoch**, **Mittel** oder **Niedrig** aus.
 
 **Schweregrad von verdächtigen Aktivitäten**
 
@@ -104,22 +102,22 @@ So filtern Sie die Liste der Sicherheitswarnungen:
 
 ## <a name="managing-security-alerts"></a>Verwalten von Sicherheitswarnungen
 
-Sie können den Status einer Sicherheitswarnung ändern, indem Sie auf den aktuellen Status der Sicherheitswarnung klicken und eine der folgenden Optionen auswählen: **Offen** , **Unterdrückt** , **Aufgelöst** oder **Verworfen**.
+Sie können den Status einer Sicherheitswarnung ändern, indem Sie auf den aktuellen Status der Sicherheitswarnung klicken und eine der folgenden Optionen auswählen: **Offen**, **Unterdrückt**, **Aufgelöst** oder **Verworfen**.
 Klicken Sie dafür auf die drei Punkte in der oberen rechten Ecke einer bestimmten Warnung, um die Liste der verfügbaren Aktionen anzuzeigen.
 
 ![[!INCLUDE [Product short](includes/product-short.md)]-Aktionen für Sicherheitswarnungen](media/sa-actions.png)
 
 **Sicherheitswarnungsstatus**
 
-- **Offen** : Alle neuen Sicherheitswarnungen werden in dieser Liste angezeigt.
+- **Offen**: Alle neuen Sicherheitswarnungen werden in dieser Liste angezeigt.
 
-- **Auflösen** : Wird verwendet, um Sicherheitswarnungen nachzuverfolgen, die Sie identifiziert, untersucht oder entschärft haben.
+- **Auflösen**: Wird verwendet, um Sicherheitswarnungen nachzuverfolgen, die Sie identifiziert, untersucht oder entschärft haben.
 
-- **Unterdrücken** : Durch das Unterdrücken einer Warnung wird diese für den Moment ignoriert. Sie erhalten erst dann wieder eine Warnung, wenn eine neue Instanz vorliegt. Wenn es also eine ähnliche Warnung gibt, wird diese von [!INCLUDE [Product short](includes/product-short.md)] nicht mehr geöffnet. Wenn die Warnung jedoch für sieben Tage angehalten wurde und anschließend erneut auftritt, wird eine neue Warnung geöffnet.
+- **Unterdrücken**: Durch das Unterdrücken einer Warnung wird diese für den Moment ignoriert. Sie erhalten erst dann wieder eine Warnung, wenn eine neue Instanz vorliegt. Wenn es also eine ähnliche Warnung gibt, wird diese von [!INCLUDE [Product short](includes/product-short.md)] nicht mehr geöffnet. Wenn die Warnung jedoch für sieben Tage angehalten wurde und anschließend erneut auftritt, wird eine neue Warnung geöffnet.
 
 - **Löschen** Wenn Sie eine Warnung verwerfen, wird sie aus dem System und aus der Datenbank gelöscht und kann von Ihnen NICHT mehr wiederhergestellt werden. Nachdem Sie auf „Verwerfen“ geklickt haben, können Sie alle Sicherheitswarnungen für den gleichen Typ löschen.
 
-- **Ausschließen** : Die Möglichkeit, eine Entität davor zu bewahren, mehr bestimmte Warnungstypen auszugeben. Sie können z. B. festlegen, dass [!INCLUDE [Product short](includes/product-short.md)] eine bestimmte Entität (Benutzer oder Computer) ausschließt, sodass für einen bestimmten Aktivitätstyp keine Warnungen mehr ausgegeben werden. Beispiele hierfür sind etwa ein bestimmter Administrator, der Remotecode ausführt, oder eine Sicherheitsüberprüfung, die eine DNS-Reconnaissance durchführt. Zusätzlich zur Möglichkeit, Ausnahmen direkt zur Sicherheitswarnung hinzuzufügen, da sie in der Zeitleiste erkannt wurde, können Sie auch auf die Seite „Konfiguration“ zu **Ausnahmen** wechseln. Für jede Sicherheitswarnung können Sie so manuell ausgeschlossene Entitäten oder Subnetze hinzufügen oder entfernen (z.B. für Pass-the-Ticket).
+- **Ausschließen**: Die Möglichkeit, eine Entität davor zu bewahren, mehr bestimmte Warnungstypen auszugeben. Sie können z. B. festlegen, dass [!INCLUDE [Product short](includes/product-short.md)] eine bestimmte Entität (Benutzer oder Computer) ausschließt, sodass für einen bestimmten Aktivitätstyp keine Warnungen mehr ausgegeben werden. Beispiele hierfür sind etwa ein bestimmter Administrator, der Remotecode ausführt, oder eine Sicherheitsüberprüfung, die eine DNS-Reconnaissance durchführt. Zusätzlich zur Möglichkeit, Ausnahmen direkt zur Sicherheitswarnung hinzuzufügen, da sie in der Zeitleiste erkannt wurde, können Sie auch auf die Seite „Konfiguration“ zu **Ausnahmen** wechseln. Für jede Sicherheitswarnung können Sie so manuell ausgeschlossene Entitäten oder Subnetze hinzufügen oder entfernen (z.B. für Pass-the-Ticket).
 
 > [!NOTE]
 > Die Konfigurationsseiten können nur von [!INCLUDE [Product short](includes/product-short.md)]-Administratoren bearbeitet werden.

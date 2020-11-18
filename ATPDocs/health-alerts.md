@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4fb7bf73ed996007e3a3c84b568afe373d822fd6
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: e8086ccc3771ec4c8bbc2121083711e29063e2a5
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93277100"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848569"
 ---
 # <a name="understanding-product-long-sensor-health-alerts"></a>Grundlegendes zu Integritätswarnungen für [!INCLUDE [Product long](includes/product-long.md)]-Sensoren
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Das [!INCLUDE [Product long](includes/product-long.md)]-Integritätscenter informiert Sie, wenn ein Problem im Zusammenhang mit Ihrer [!INCLUDE [Product short](includes/product-short.md)]-Instanz aufgetreten ist, indem es eine Integritätswarnung ausgibt. In diesem Artikel werden alle Integritätswarnungen für die einzelnen Komponenten beschrieben und die Ursachen und Schritte zur Behebung des jeweiligen Problems genannt.
 
@@ -28,7 +26,7 @@ Das [!INCLUDE [Product long](includes/product-long.md)]-Integritätscenter infor
 
 |Warnung|Beschreibung|Lösung|Schweregrad|
 |----|----|----|----|
-|Der [!INCLUDE [Product short](includes/product-short.md)]-Sensor ist derzeit aufgrund von Verbindungsproblemen mit allen konfigurierten Domänencontrollern offline.|Dies beeinträchtigt die Fähigkeit von [!INCLUDE [Product short](includes/product-short.md)], verdächtige Aktivitäten im Zusammenhang mit den von diesem [!INCLUDE [Product short](includes/product-short.md)]-Sensor überwachten Domänencontrollern zu ermitteln.| Stellen Sie sicher, dass die Domänencontroller ausgeführt werden und dieser [!INCLUDE [Product short](includes/product-short.md)]-Sensor LDAP-Verbindungen mit ihnen öffnen kann. Stellen Sie außerdem sicher, dass Sie unter **Einstellungen** , für jede bereitgestellte Gesamtstruktur ein Verzeichnisdienstkonto konfigurieren.|Mittel|
+|Der [!INCLUDE [Product short](includes/product-short.md)]-Sensor ist derzeit aufgrund von Verbindungsproblemen mit allen konfigurierten Domänencontrollern offline.|Dies beeinträchtigt die Fähigkeit von [!INCLUDE [Product short](includes/product-short.md)], verdächtige Aktivitäten im Zusammenhang mit den von diesem [!INCLUDE [Product short](includes/product-short.md)]-Sensor überwachten Domänencontrollern zu ermitteln.| Stellen Sie sicher, dass die Domänencontroller ausgeführt werden und dieser [!INCLUDE [Product short](includes/product-short.md)]-Sensor LDAP-Verbindungen mit ihnen öffnen kann. Stellen Sie außerdem sicher, dass Sie unter **Einstellungen**, für jede bereitgestellte Gesamtstruktur ein Verzeichnisdienstkonto konfigurieren.|Mittel|
 
 ## <a name="allsome-of-the-capture-network-adapters-on-a-sensor-are-not-available"></a>Alle bzw. einige der Netzwerkdatenerfassungs-Adapter auf einem Sensor sind nicht verfügbar.
 
@@ -40,7 +38,7 @@ Das [!INCLUDE [Product long](includes/product-long.md)]-Integritätscenter infor
 
 |Warnung|Beschreibung|Lösung|Schweregrad|
 |----|----|----|----|
-|Die Anmeldeinformationen für das Verzeichnisdienstbenutzerkonto sind nicht korrekt.|Dies beeinträchtigt die Fähigkeit der Sensoren, Aktivitäten durch LDAP-Abfragen an Domänencontroller zu entdecken.|– Bei AD- **Standardkonten:** Überprüfen Sie, ob der Benutzername, das Kennwort und die Domäne auf der **Verzeichnisdienste** -Konfigurationsseite korrekt sind.<br>– Bei **gruppenverwalteten Dienstkonten:** Überprüfen Sie, ob der Benutzername und die Domäne auf der **Verzeichnisdienste** -Konfigurationsseite korrekt sind. Überprüfen Sie außerdem die anderen auf der Seite [Schnellstart: Herstellen einer Verbindung mit einer Active Directory-Gesamtstruktur](install-step2.md#prerequisites) beschriebenen Voraussetzungen für **gruppenverwaltete Dienstkonten**.|Mittel|
+|Die Anmeldeinformationen für das Verzeichnisdienstbenutzerkonto sind nicht korrekt.|Dies beeinträchtigt die Fähigkeit der Sensoren, Aktivitäten durch LDAP-Abfragen an Domänencontroller zu entdecken.|– Bei AD-**Standardkonten:** Überprüfen Sie, ob der Benutzername, das Kennwort und die Domäne auf der **Verzeichnisdienste**-Konfigurationsseite korrekt sind.<br>– Bei **gruppenverwalteten Dienstkonten:** Überprüfen Sie, ob der Benutzername und die Domäne auf der **Verzeichnisdienste**-Konfigurationsseite korrekt sind. Überprüfen Sie außerdem die anderen auf der Seite [Schnellstart: Herstellen einer Verbindung mit einer Active Directory-Gesamtstruktur](install-step2.md#prerequisites) beschriebenen Voraussetzungen für **gruppenverwaltete Dienstkonten**.|Mittel|
 
 ## <a name="low-success-rate-of-active-name-resolution"></a>Niedrige Erfolgsrate bei aktiver Namensauflösung
 

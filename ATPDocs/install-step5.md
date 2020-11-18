@@ -9,23 +9,21 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 06df6ebb9c5baa3ba2a568c78dd1ab175cdae9a8
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 27431aca85e794ecd31029b6286e3146f01fa7ec
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276979"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848498"
 ---
 # <a name="configure-product-long-sensor-settings"></a>Konfigurieren von [!INCLUDE [Product long](includes/product-long.md)] Sensor Einstellungen
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 In diesem Artikel erfahren Sie, wie Sie Sensor Einstellungen ordnungsgemäß konfigurieren [!INCLUDE [Product long](includes/product-long.md)] , damit Sie mit dem Anzeigen von Daten beginnen können. Sie müssen zusätzliche Konfiguration und Integration durchführen, um [!INCLUDE [Product short](includes/product-short.md)] die vollständigen Funktionen von nutzen zu können.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-- Eine- [ [!INCLUDE [Product short](includes/product-short.md)] Instanz](install-step1.md) , die [mit Active Directory verbunden](install-step2.md)ist.
-- Eine heruntergeladene Kopie Ihres [ [!INCLUDE [Product short](includes/product-short.md)] Sensor Setup Pakets](install-step3.md) und des Zugriffsschlüssels.
+- Eine [[!INCLUDE [Product short](includes/product-short.md)]-Instanz](install-step1.md), die [mit Active Directory verbunden](install-step2.md) ist
+- Eine heruntergeladene Kopie des [[!INCLUDE [Product short](includes/product-short.md)]-Sensorsetuppakets](install-step3.md) und den Zugriffsschlüssel
 
 ## <a name="configure-sensor-settings"></a>Konfigurieren von Sensoreinstellungen
 
@@ -41,7 +39,7 @@ In diesem Artikel erfahren Sie, wie Sie Sensor Einstellungen ordnungsgemäß kon
 
     ![Konfigurieren von Sensoreinstellungen](media/sensor-config-2.png)
 
-    - **Beschreibung** : Geben Sie eine Beschreibung für den [!INCLUDE [Product short](includes/product-short.md)] Sensor ein (optional).
+    - **Beschreibung**: Geben Sie eine Beschreibung für den [!INCLUDE [Product short](includes/product-short.md)] Sensor ein (optional).
     - **Domänen Controller (FQDN)** (erforderlich für den [!INCLUDE [Product short](includes/product-short.md)] eigenständigen Sensor, dies kann für den Sensor nicht geändert werden [!INCLUDE [Product short](includes/product-short.md)] ): Geben Sie den vollständigen FQDN Ihres Domänen Controllers ein, und klicken Sie auf das Pluszeichen, um ihn der Liste hinzuzufügen. z. B. **dc01.contoso.com**.
 
     Die folgenden Informationen gelten für die Server, die Sie in der Liste **Domänencontroller** eingeben.
@@ -71,7 +69,7 @@ In diesem Artikel erfahren Sie, wie Sie Sensor Einstellungen ordnungsgemäß kon
 1. Überprüfen [!INCLUDE [Product short](includes/product-short.md)] Sie die Konnektivität auf einem beliebigen Domänen Gerät mithilfe der folgenden Schritte:
     1. Öffnen Sie eine Eingabeaufforderung.
     1. Geben Sie `nslookup` ein.
-    1. Geben Sie **Server** und dann den FQDN oder die IP-Adresse des Domänen Controllers ein, auf dem der [!INCLUDE [Product short](includes/product-short.md)] Sensor installiert ist. Zum Beispiel, `server contosodc.contoso.azure`
+    1. Geben Sie **Server** und dann den FQDN oder die IP-Adresse des Domänen Controllers ein, auf dem der [!INCLUDE [Product short](includes/product-short.md)] Sensor installiert ist. Beispiel: `server contosodc.contoso.azure`
         - Stellen Sie sicher, dass Sie "ContosoDC. contoso. Azure" und "contoso. Azure" durch den FQDN Ihres [!INCLUDE [Product short](includes/product-short.md)] Sensors bzw. Domänen namens ersetzen.
     1. Geben Sie `ls -d contoso.azure` ein.
     1. Wiederholen Sie die Schritte 3 und 4 für jeden Sensor, den Sie testen möchten.
@@ -85,8 +83,8 @@ In diesem Artikel erfahren Sie, wie Sie Sensor Einstellungen ordnungsgemäß kon
 
 - [Proxykonfiguration](configure-proxy.md)
 - [Überprüfung der erweiterten Überwachungsrichtlinie von Azure ATP](configure-windows-event-collection.md)
-- [Konfigurieren [!INCLUDE [Product short](includes/product-short.md)] von, um Remote Aufrufe an Sam durchführen](install-step8-samr.md)
+- [Konfigurieren von [!INCLUDE [Product short](includes/product-short.md)] für das Ausführen von Remoteaufrufen an SAM](install-step8-samr.md)
 
 ## <a name="join-the-community"></a>Beitritt zur Community
 
-Haben Sie weitere Fragen oder ein Interesse an der Erörterung [!INCLUDE [Product short](includes/product-short.md)] und verwandten Sicherheit mit anderen? Besuchen Sie die [ [!INCLUDE [Product short](includes/product-short.md)] Community](https://aka.ms/MDIcommunity) noch heute!
+Haben Sie weitere Fragen, oder möchten Sie mit anderen über [!INCLUDE [Product short](includes/product-short.md)] und damit verbundene Sicherheitsaspekte diskutieren? Treten Sie noch heute der [[!INCLUDE [Product short](includes/product-short.md)]Community](https://aka.ms/MDIcommunity) bei.

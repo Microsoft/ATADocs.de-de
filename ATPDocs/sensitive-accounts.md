@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 74e97750d25f48522d38246337682e0399d24c4d
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 3f32d974b9dcfb946279b14eebc116ca74b5b3f5
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93274480"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94846917"
 ---
 # <a name="working-with-sensitive-accounts"></a>Arbeiten mit sensiblen Konten
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ## <a name="sensitive-entities"></a>Sensible Entitäten
 
@@ -47,7 +45,7 @@ Die Gruppen in der folgenden Liste werden von [!INCLUDE [Product long](includes/
   > [!NOTE]
   > Bis September 2018 wurden auch Remotedesktopbenutzer von [!INCLUDE [Product short](includes/product-short.md)] automatisch als sensibel erkannt. Remotedesktopentitäten oder -gruppen, die nach diesem Datum hinzugefügt wurden, werden nicht mehr automatisch als sensibel erkannt, während Remotedesktopentitäten oder -gruppen, die vor diesem Datum hinzugefügt wurden, möglicherweise als sensibel markiert bleiben. Diese „Sensibel“-Einstellung kann nun manuell geändert werden.
 
-Zusätzlich zu diesen Gruppen identifiziert [!INCLUDE [Product short](includes/product-short.md)] die folgenden Server mit hochwertigen Ressourcen und bezeichnet diese automatisch als **Sensibel** :
+Zusätzlich zu diesen Gruppen identifiziert [!INCLUDE [Product short](includes/product-short.md)] die folgenden Server mit hochwertigen Ressourcen und bezeichnet diese automatisch als **Sensibel**:
 
 - Zertifizierungsstellenserver
 - DHCP-Server

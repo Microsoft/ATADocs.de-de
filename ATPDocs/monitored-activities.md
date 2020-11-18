@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d69fef506f2f1e787039a3b2af1b35b81a3504fc
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: f8d7237d3202ed4b0645b92d61f37cc7c89085da
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93274847"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847223"
 ---
 # <a name="product-long-monitored-activities"></a>Von [!INCLUDE [Product long](includes/product-long.md)] überwachte Aktivitäten
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
 > Die auf dieser Seite erläuterten [!INCLUDE [Product long](includes/product-long.md)]-Features sind auch über das neue [Portal](https://portal.cloudappsecurity.com) zugänglich.
@@ -79,7 +77,7 @@ Die von [!INCLUDE [Product short](includes/product-short.md)] überwachten Infor
 |Überwachte Aktivität|Beschreibung|
 |---------------------|------------------|
 |Verzeichnisdienstreplikation|Der Benutzer hat versucht, den Verzeichnisdienst zu replizieren.|
-|DNS-Abfrage|Der Typ der Benutzerabfrage, die für den Domänencontroller ausgeführt wurde ( **AXFR** , **TXT** , **MX** , **NS** , **SRV** , **ANY** , **DNSKEY** ).|
+|DNS-Abfrage|Der Typ der Benutzerabfrage, die für den Domänencontroller ausgeführt wurde (**AXFR**,**TXT**, **MX**, **NS**, **SRV**, **ANY**, **DNSKEY**).|
 |Abrufen von privaten Daten|Benutzer hat versucht, private Daten mithilfe des LSARPC-Protokolls abzufragen, oder diese Abfrage ist ihm gelungen.|
 |Erstellen eines Diensts|Benutzer hat versucht, einen bestimmten Dienst per Remotezugriff auf einem Remotecomputer zu erstellen.|
 |SMB-Sitzungsenumeration|Benutzer hat versucht, alle Benutzer mit offenen SMB-Sitzungen auf den Domänencontrollern aufzulisten.|

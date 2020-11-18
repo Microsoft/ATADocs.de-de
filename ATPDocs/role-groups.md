@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 269343e6cdc5ceba875d5b6de1c740415a862eca
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 9a3927c565f3b2e7173519c31cb3bfcde9eed2a7
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93275312"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848991"
 ---
 # <a name="product-long-role-groups"></a>[!INCLUDE [Product long](includes/product-long.md)] Rollen Gruppen
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 [!INCLUDE [Product long](includes/product-long.md)] bietet rollenbasierte Sicherheit, um Daten gemäß den spezifischen Sicherheits-und Konformitätsanforderungen eines Unternehmens zu schützen. [!INCLUDE [Product short](includes/product-short.md)] Unterstützung von drei separaten Rollen: Administratoren, Benutzer und Viewer.
 
@@ -69,7 +67,7 @@ Wenn Benutzer versuchen, auf eine Seite zuzugreifen, die nicht für Ihre Rollen 
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [[!INCLUDE [Product short](includes/product-short.md)] Tool zur Größenanpassung](https://aka.ms/aatpsizingtool)
-- [[!INCLUDE [Product short](includes/product-short.md)] Architektur](architecture.md)
-- [Installieren [!INCLUDE [Product short](includes/product-short.md)]](install-step1.md)
-- [Sehen Sie sich das [!INCLUDE [Product short](includes/product-short.md)] Forum an!](https://aka.ms/MDIcommunity)
+- [[!INCLUDE [Product short](includes/product-short.md)]-Tool zur Größenanpassung](https://aka.ms/aatpsizingtool)
+- [[!INCLUDE [Product short](includes/product-short.md)]-Architektur](architecture.md)
+- [Installieren von [!INCLUDE [Product short](includes/product-short.md)]](install-step1.md)
+- [Weitere Informationen finden Sie im [!INCLUDE [Product short](includes/product-short.md)]-Forum.](https://aka.ms/MDIcommunity)

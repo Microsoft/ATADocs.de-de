@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c5c8d2a3fcce67d51cc4ab3adeff3f48b044ae73
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 643a5f0a23f18d5e972f2bead87e0a078cf7b54c
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93277404"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848736"
 ---
 # <a name="security-assessment-unsecure-kerberos-delegation"></a>Sicherheitsbewertung: Unsichere Kerberos-Delegierung
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ## <a name="what-is-kerberos-delegation"></a>Was ist die Kerberos-Delegierung?
 
@@ -80,4 +78,4 @@ Die ressourcenbasierte KCD wird mithilfe von PowerShell konfiguriert. Sie verwen
 ## <a name="next-steps"></a>Nächste Schritte
 
 - [[!INCLUDE [Product short](includes/product-short.md)] Aktivitäten Filtern in Cloud App Security](activities-filtering-mcas.md)
-- [Sehen Sie sich das [!INCLUDE [Product short](includes/product-short.md)] Forum an!](https://aka.ms/MDIcommunity)
+- [Weitere Informationen finden Sie im [!INCLUDE [Product short](includes/product-short.md)]-Forum.](https://aka.ms/MDIcommunity)

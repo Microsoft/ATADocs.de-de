@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9586c5441f09959970752a15cfff3c2f953f1842
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 6a5d110d35ad3b49205d4c0b7b03412fe26626ae
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93277563"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848787"
 ---
 # <a name="security-assessment-entities-exposing-credentials-in-clear-text"></a>Sicherheitsbewertung: Verfügbarmachen von Anmeldeinformationen in Klartext durch Entitäten
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ![Verhindern von Risiken durch Anmeldeinformationen in Klartext in Cloud App Security](media/cas-isp-clear-text-1.png)
 
@@ -48,4 +46,4 @@ Das erhöhte Risiko liegt darin begründet, dass unsicherer Datenverkehr wie z.B
 ## <a name="next-steps"></a>Nächste Schritte
 
 - [[!INCLUDE [Product short](includes/product-short.md)] Aktivitäten Filtern in Cloud App Security](activities-filtering-mcas.md)
-- [Sehen Sie sich das [!INCLUDE [Product short](includes/product-short.md)] Forum an!](https://aka.ms/MDIcommunity)
+- [Weitere Informationen finden Sie im [!INCLUDE [Product short](includes/product-short.md)]-Forum.](https://aka.ms/MDIcommunity)

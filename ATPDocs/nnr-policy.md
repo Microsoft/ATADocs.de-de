@@ -11,22 +11,20 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 228d583fde3e08c497721e0aa5a8aa1b61318937
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 9b9688031ea9916a09b8beaa2ce5c67633fd935f
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93274789"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847240"
 ---
 # <a name="what-is-network-name-resolution"></a>Was ist Netzwerknamensauflösung?
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Network Name Resolution (NNR) ist eine Hauptkomponente der-  [!INCLUDE [Product long](includes/product-long.md)] Funktionalität. [!INCLUDE [Product short](includes/product-short.md)] erfasst Aktivitäten auf der Grundlage von Netzwerk Datenverkehr, Windows-Ereignissen und etw-diese Aktivitäten enthalten normalerweise IP-Daten.
 
 Die Verwendung von NNR [!INCLUDE [Product short](includes/product-short.md)] kann zwischen rohaktivitäten (die IP-Adressen enthalten) und den relevanten Computern, die an den einzelnen Aktivitäten beteiligt sind, korrelieren. Basierend auf den unformatierten Aktivitäten, [!INCLUDE [Product short](includes/product-short.md)] Profil Entitäten, einschließlich Computern, generiert Sicherheitswarnungen für verdächtige Aktivitäten.
 
-Zum Auflösen von IP-Adressen in Computernamen [!INCLUDE [Product short](includes/product-short.md)] Suchen Sensoren die IP-Adressen mithilfe der folgenden Methoden:
+Zum Auflösen von IP-Adressen in Computernamen suchen [!INCLUDE [Product short](includes/product-short.md)]-Sensoren die IP-Adressen mithilfe der folgenden Methoden:
 
 - NTLM über RPC (TCP-Port 135)
 - NetBIOS (UDP-Port 137)
@@ -101,6 +99,6 @@ Jede Integritäts Warnung enthält spezifische Details der Methode, der Sensoren
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [[!INCLUDE [Product short](includes/product-short.md)] Voraussetzung](prerequisites.md)
+- [Voraussetzungen für [!INCLUDE [Product short](includes/product-short.md)]](prerequisites.md)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)
-- [Sehen Sie sich das [!INCLUDE [Product short](includes/product-short.md)] Forum an!](https://aka.ms/MDIcommunity)
+- [Weitere Informationen finden Sie im [!INCLUDE [Product short](includes/product-short.md)]-Forum.](https://aka.ms/MDIcommunity)

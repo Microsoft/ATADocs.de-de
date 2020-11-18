@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 223ae21d15ecc15523c3670062aa6a2502281738
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: ec015caaf138b436238a79a257189882929e22a8
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276694"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848413"
 ---
 # <a name="security-assessment-legacy-protocols-usage"></a>Sicherheitsbewertung: Verwendung von Legacyprotokollen
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ## <a name="what-are-legacy-protocols"></a>Was sind Legacyprotokolle?
 
@@ -56,4 +54,4 @@ Um Legacyprotokolle außer Betrieb nehmen zu können, muss Ihre Organisation zun
 ## <a name="next-steps"></a>Nächste Schritte
 
 - [[!INCLUDE [Product short](includes/product-short.md)] Aktivitäten Filtern in Cloud App Security](activities-filtering-mcas.md)
-- [Sehen Sie sich das [!INCLUDE [Product short](includes/product-short.md)] Forum an!](https://aka.ms/MDIcommunity)
+- [Weitere Informationen finden Sie im [!INCLUDE [Product short](includes/product-short.md)]-Forum.](https://aka.ms/MDIcommunity)

@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e87d71ead236d36e032a43c825980f98f7f15eb4
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: e0f7f1d21132aadba7fc6b3719baf3d290e8d2fb
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93277174"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848600"
 ---
 # <a name="excluding-entities-from-detections"></a>Ausschließen von Entitäten von der Erkennung
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 In diesem Artikel wird erläutert, wie Entitäten ausgeschlossen werden, sodass sie keine Warnungen auslösen. Bestimmte Entitäten werden ausgeschlossen, um unbedenkliche richtig positive Ergebnisse zu reduzieren, während gleichzeitig sichergestellt wird, dass Sie die richtig positiven Ergebnisse ermitteln können. Um zu verhindern, dass [!INCLUDE [Product long](includes/product-long.md)] störende Warnungen bei Aktivitäten ausgibt, die bei bestimmten Benutzern zu Ihrem ganz normalen Geschäftsalltag gehören, können Sie bestimmte Entitäten ausschließen, sodass diese keine Warnungen auslösen. Zusätzlich werden standardmäßig bestimmte beliebte Entitäten ausgeschlossen.
 
@@ -28,7 +26,7 @@ Beispiele: Ein Sicherheitsscanner führt eine DNS-Reconnaissance aus, oder ein A
 
 ## <a name="entities-excluded-by-default-from-raising-alerts"></a>Entitäten, die standardmäßig ausgeschlossen werden, sodass sie keine Warnungen auslösen können
 
- Für bestimmte Warnungen (z. B. **verdächtige Kommunikation über DNS** ) werden automatische Domänenausschlüsse durch [!INCLUDE [Product short](includes/product-short.md)] basierend auf Kundenfeedback und Recherche hinzugefügt.
+ Für bestimmte Warnungen (z. B. **verdächtige Kommunikation über DNS**) werden automatische Domänenausschlüsse durch [!INCLUDE [Product short](includes/product-short.md)] basierend auf Kundenfeedback und Recherche hinzugefügt.
 
 ![Verdächtige Kommunikation über DNS: automatische Ausschlüsse](media/dns-auto-exclusions.png)
 
@@ -41,7 +39,7 @@ Es gibt zwei Möglichkeiten, Entitäten manuell auszuschließen: entweder direkt
 
     ![Ausschließen einer Entität](media/exclude-in-sa.png)
 
-- **Auf der Konfigurationsseite** :  Um Ausschlüsse zu überprüfen oder zu ändern, klicken Sie unter **Konfiguration** > **Erkennung** auf **Ausschlüsse** , und wählen Sie die Sicherheitswarnung aus, für die der Ausschluss angewendet werden soll, z. B. **DNS-Reconnaissance**.
+- **Auf der Konfigurationsseite**:  Um Ausschlüsse zu überprüfen oder zu ändern, klicken Sie unter **Konfiguration** > **Erkennung** auf **Ausschlüsse**, und wählen Sie die Sicherheitswarnung aus, für die der Ausschluss angewendet werden soll, z. B. **DNS-Reconnaissance**.
 
     ![Konfiguration von Ausschlüssen](media/exclusions.png)
 

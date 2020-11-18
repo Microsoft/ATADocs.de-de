@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9b3aa953324e855cfe4aafb77ea6b1b1959b7f8c
-ms.sourcegitcommit: 90a332d67f62636b2d3a935f6bbdcbf24d74e6f0
+ms.openlocfilehash: 6b2b620895d0a59886a140ff340b6772744c6bac
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94551662"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848651"
 ---
 # <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-product-long-sensor"></a>Konfigurieren der Einstellungen für Endpunktproxy und Internetkonnektivität für Ihren [!INCLUDE [Product long](includes/product-long.md)]-Sensor
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Jeder [!INCLUDE [Product long](includes/product-long.md)]-Sensor erfordert Internetkonnektivität mit dem [!INCLUDE [Product short](includes/product-short.md)]-Clouddienst, damit er erfolgreich betrieben werden und Sensordaten melden kann. In einigen Organisationen sind die Domänencontroller nicht direkt mit dem Internet verbunden, sondern über eine Webproxyverbindung.
 
@@ -55,7 +53,7 @@ Sie können eine der folgenden alternativen Methoden verwenden, um den Proxyserv
 
 Sie können den Proxyserver über die WinINet-Proxykonfiguration konfigurieren, damit der [!INCLUDE [Product short](includes/product-short.md)]-Sensor Diagnosedaten melden und mit dem [!INCLUDE [Product short](includes/product-short.md)]-Clouddienst kommunizieren kann, wenn ein Computer keine Verbindung mit dem Internet herstellen darf. Wenn Sie WinHTTP für die Proxykonfiguration verwenden, müssen Sie dennoch WinINet-Browserproxyeinstellungen für die Kommunikation zwischen dem Sensor und dem [!INCLUDE [Product short](includes/product-short.md)]-Clouddienst konfigurieren.
 
-Beachten Sie bei der Proxykonfiguration, dass der eingebettete [!INCLUDE [Product short](includes/product-short.md)]-Sensordienst im Systemkontext mit dem **LocalService** -Konto wird. Der [!INCLUDE [Product short](includes/product-short.md)]-Sensorupdatedienst wird im Systemkontext mit dem **LocalSystem** -Konto ausgeführt.
+Beachten Sie bei der Proxykonfiguration, dass der eingebettete [!INCLUDE [Product short](includes/product-short.md)]-Sensordienst im Systemkontext mit dem **LocalService**-Konto wird. Der [!INCLUDE [Product short](includes/product-short.md)]-Sensorupdatedienst wird im Systemkontext mit dem **LocalSystem**-Konto ausgeführt.
 
 > [!NOTE]
 > Wenn Sie in Ihrer Netzwerktopologie einen transparenten Proxy oder WPAD verwenden, müssen Sie WinINet nicht für den Proxy konfigurieren.
@@ -94,7 +92,7 @@ Um Zugriff auf [!INCLUDE [Product short](includes/product-short.md)] zu ermögli
 
 - `<your-instance-name>sensorapi.atp.azure.com`: für die Sensorkonnektivität. Beispiel: `contoso-corpsensorapi.atp.azure.com`
 
-Sie können auch die IP-Adressbereiche im Azure-Diensttag ( **AzureAdvancedThreatProtection** ) verwenden, um den Zugriff auf [!INCLUDE [Product short](includes/product-short.md)] zu ermöglichen. Weitere Informationen zu Diensttags finden Sie unter [Diensttags des virtuellen Netzwerks](/azure/virtual-network/service-tags-overview) oder in der Datei [Herunterladen der Diensttags](https://www.microsoft.com/download/details.aspx?id=56519).
+Sie können auch die IP-Adressbereiche im Azure-Diensttag (**AzureAdvancedThreatProtection**) verwenden, um den Zugriff auf [!INCLUDE [Product short](includes/product-short.md)] zu ermöglichen. Weitere Informationen zu Diensttags finden Sie unter [Diensttags des virtuellen Netzwerks](/azure/virtual-network/service-tags-overview) oder in der Datei [Herunterladen der Diensttags](https://www.microsoft.com/download/details.aspx?id=56519).
 
 Wenn Sie den Zugriff noch besser steuern möchten, lassen Sie Datenverkehr für die relevanten Endpunkte aus der folgenden Tabelle zu:
 
