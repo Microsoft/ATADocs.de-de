@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d489a02d600d82067f325d8b6f2c358f903f0908
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: de9f13a5f29e90ad27a5b07f6b6a92952db6f70d
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276019"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848532"
 ---
 # <a name="tutorial-use-lateral-movement-paths-lmps"></a>Tutorial: Verwendung von Lateral Movement-Pfaden (LMPs)
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
 > Die auf dieser Seite erläuterten [!INCLUDE [Product long](includes/product-long.md)]-Features sind auch über das neue [Portal](https://portal.cloudappsecurity.com) zugänglich.
@@ -47,7 +45,7 @@ Es gibt mehrere Möglichkeiten, LMPs zu verwenden und zu untersuchen. Suchen Sie
 
     ![Registerkarte für Lateral Movement-Pfade (LMPs) von [!INCLUDE [Product short](includes/product-short.md)]](media/lateral-movement-path-tab.png)
 
-1. Das angezeigte Diagramm bietet eine Übersicht der möglichen Pfade zum sensiblen Benutzer in einem Zeitraum von 48 Stunden. Wenn in den letzten zwei Tagen keine Aktivität erkannt wurde, wird das Diagramm nicht angezeigt. Verwenden Sie die Option **Ein anderes Datum anzeigen** , um das Diagramm für die vorherigen Erkennungen von Lateral Movement-Pfaden für die Entität anzuzeigen.
+1. Das angezeigte Diagramm bietet eine Übersicht der möglichen Pfade zum sensiblen Benutzer in einem Zeitraum von 48 Stunden. Wenn in den letzten zwei Tagen keine Aktivität erkannt wurde, wird das Diagramm nicht angezeigt. Verwenden Sie die Option **Ein anderes Datum anzeigen**, um das Diagramm für die vorherigen Erkennungen von Lateral Movement-Pfaden für die Entität anzuzeigen.
 
     ![LMP, Ein anderes Datum anzeigen](media/view-different-date.png)
 

@@ -10,16 +10,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 50307054535447326b8b48641afaeec7cfc70551
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: fcb99edccdd8ce98be4b9335d7703503307fd0ac
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93277115"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848579"
 ---
 # <a name="quickstart-create-your-product-long-instance"></a>Schnellstart: Erstellen Ihrer [!INCLUDE [Product long](includes/product-long.md)]-Instanz
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 In diesem Schnellstart erstellen Sie Ihre [!INCLUDE [Product long](includes/product-long.md)]-Instanz im [!INCLUDE [Product short](includes/product-short.md)]-Portal. In [!INCLUDE [Product short](includes/product-short.md)] verfügen Sie über eine einzelne Instanz, die zuvor als Arbeitsbereich bezeichnet wurde. Über diese Instanz können Sie mehrere Gesamtstrukturen von einer einzelnen zentralen Konsole aus verwalten.
 
@@ -56,7 +54,7 @@ Nachdem Sie überprüft haben, ob Ihr Netzwerk den Anforderungen des Sensors ent
     > [!NOTE]
     > Wenn Sie sich bei [!INCLUDE [Product short](includes/product-short.md)] anmelden möchten, müssen Sie sich mit einem Benutzer anmelden, dem eine [!INCLUDE [Product short](includes/product-short.md)]-Rolle mit Rechten für den Zugriff auf das [!INCLUDE [Product short](includes/product-short.md)]-Portal zugewiesen wurde. Weitere Informationen zur rollenbasierten Zugriffssteuerung in [!INCLUDE [Product short](includes/product-short.md)] finden Sie unter [Arbeiten mit [!INCLUDE [Product short](includes/product-short.md)]-Rollengruppen](role-groups.md).
 
-1. Klicken Sie auf **Konfiguration** , **Rollengruppen verwalten** , und verwenden Sie den Link [Azure AD Admin Center](/azure/active-directory/active-directory-assign-admin-roles-azure-portal), um Ihre Rollengruppen zu verwalten.
+1. Klicken Sie auf **Konfiguration**, **Rollengruppen verwalten**, und verwenden Sie den Link [Azure AD Admin Center](/azure/active-directory/active-directory-assign-admin-roles-azure-portal), um Ihre Rollengruppen zu verwalten.
 
     ![Rollengruppen verwalten](media/creation-manage-role-groups.png)
 

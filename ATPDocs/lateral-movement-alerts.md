@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 774f8f3f560b52d5a39a96aacc9b145d1ca2d445
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 78d7a4d51459c5ea9099198e43097757ee2c588e
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93275801"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847653"
 ---
 # <a name="tutorial-lateral-movement-alerts"></a>Tutorial: Lateral Movement-Warnungen
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Cyberangriffe werden üblicherweise auf alle zugänglichen Entitäten wie etwa Benutzer mit geringen Rechten durchgeführt. Anschließend dringt der Angreifer schnell im internen Netzwerk vor (Lateral Movement), um Zugriff auf wertvolle Ressourcen zu erhalten. Dabei kann es sich um sensible Konten, Konten von Domänenadministratoren oder streng vertrauliche Daten handeln. [!INCLUDE [Product long](includes/product-long.md)] identifiziert diese komplexen Bedrohungen an der Quelle über die gesamte Kette der Angriffsabwehr hinweg und ordnet sie in die folgenden Phasen ein:
 
@@ -67,7 +65,7 @@ Nicht zutreffend
     - Wenn Sie keinen neuen Dienst oder einen unbekannten Prozess finden, **schließen** Sie die Sicherheitswarnung als **FP**.
 1. Diese Art von Angriff kann den DNS-Dienst zum Absturz bringen, bevor die Codeausführung erfolgreich veranlasst wurde.
     - Überprüfen Sie, ob der DNS-Dienst ungefähr zum Zeitpunkt des Angriffs mehrmals neu gestartet wurde.
-    - Wenn der DNS-Dienst neu gestartet wurde, handelte es sich wahrscheinlich um einen Versuch, CVE-2018-8626 auszunutzen. Betrachten Sie diese Warnung als **TP** , und führen Sie die unter **Ermitteln des Umfangs der Sicherheitsverletzung** beschriebenen Anweisungen aus.
+    - Wenn der DNS-Dienst neu gestartet wurde, handelte es sich wahrscheinlich um einen Versuch, CVE-2018-8626 auszunutzen. Betrachten Sie diese Warnung als **TP**, und führen Sie die unter **Ermitteln des Umfangs der Sicherheitsverletzung** beschriebenen Anweisungen aus.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -90,7 +88,7 @@ Nicht zutreffend
 
 ## <a name="suspected-identity-theft-pass-the-hash-external-id-2017"></a>Suspected identity theft (pass-the-hash) (Verdacht auf Identitätsdiebstahl (Pass-the-Hash)) (externalid 2017)
 
-*Vorheriger Name* : Identitätsdiebstahl mithilfe eines Pass-the-Hash-Angriffs
+*Vorheriger Name*: Identitätsdiebstahl mithilfe eines Pass-the-Hash-Angriffs
 
 **Beschreibung**
 
@@ -102,7 +100,7 @@ Nicht zutreffend
 
 **TP, B-TP oder FP?**
 1. Wurde der Hash auf Computern verwendet, die der Benutzer regelmäßig verwendet?
-    - Wenn der Hash regelmäßig auf Computern verwendet wurde, **Schließen** Sie die Warnung als **FP** -Aktivität (falsch positiv).
+    - Wenn der Hash regelmäßig auf Computern verwendet wurde, **Schließen** Sie die Warnung als **FP**-Aktivität (falsch positiv).
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -118,7 +116,7 @@ Nicht zutreffend
 
 ## <a name="suspected-identity-theft-pass-the-ticket-external-id-2018"></a>Suspected identity theft (pass-the-ticket) (Verdacht auf Identitätsdiebstahl (Pass-the-Ticket)) (externalid 2018)
 
-*Vorheriger Name* : Identitätsdiebstahl mithilfe eines Pass-the-Ticket-Angriffs
+*Vorheriger Name*: Identitätsdiebstahl mithilfe eines Pass-the-Ticket-Angriffs
 
 **Beschreibung**
 
@@ -136,21 +134,21 @@ Das erfolgreiche Auflösen von IP-Adressen für Computer in der Organisation ist
 1. Wurde die IP-Adresse freigegeben (z. B. durch ein NAT-Gerät)?
 1. Werden eine oder mehrere Ziel-IP-Adressen vom Sensor nicht aufgelöst? Wenn eine Ziel-IP-Adresse nicht aufgelöst wird, kann dies bedeuten, dass die richtigen Ports zwischen dem Sensor und den Geräten nicht ordnungsgemäß geöffnet sind.
 
-    Wenn die Antwort auf eine der vorausgegangenen Fragen **Ja** lautet, überprüfen Sie, ob Quell- und Zielcomputer identisch sind. Sind sie identisch, handelt es sich um eine **FP** -Aktivität (falsch positiv), und es haben keine echten **Pass-the-Ticket** -Versuche stattgefunden.
+    Wenn die Antwort auf eine der vorausgegangenen Fragen **Ja** lautet, überprüfen Sie, ob Quell- und Zielcomputer identisch sind. Sind sie identisch, handelt es sich um eine **FP**-Aktivität (falsch positiv), und es haben keine echten **Pass-the-Ticket**-Versuche stattgefunden.
 
-Das Feature [Remote Credential Guard](/windows/security/identity-protection/remote-credential-guard) der RDP-Verbindungen kann zu **B-TP** -Warnungen führen, wenn es mit Windows 10 auf Windows Server 2016 und höher verwendet wird.
+Das Feature [Remote Credential Guard](/windows/security/identity-protection/remote-credential-guard) der RDP-Verbindungen kann zu **B-TP**-Warnungen führen, wenn es mit Windows 10 auf Windows Server 2016 und höher verwendet wird.
 Überprüfen Sie mithilfe der Warnungsbeweisen, ob der Benutzer eine Remotedesktopverbindung vom Quellcomputer zum Zielcomputer hergestellt hat.
 
 1. Suchen Sie nach entsprechenden Beweisen.
 1. Wenn Sie Beweise gefunden haben, überprüfen Sie, ob die Verbindung mithilfe von Remote Credential Guard hergestellt wurde.
-1. Wenn ja, **schließen** Sie die Sicherheitswarnung, da es sich um eine **B-TP** -Aktivität (unbedenklich richtig positiv) handelt.
+1. Wenn ja, **schließen** Sie die Sicherheitswarnung, da es sich um eine **B-TP**-Aktivität (unbedenklich richtig positiv) handelt.
 
 Es gibt benutzerdefinierte Anwendungen, die Tickets im Auftrag des Benutzers weiterleiten. Diese Anwendungen verfügen über Delegierungsberechtigungen für Benutzertickets.
 
 1. Gibt es eine benutzerdefinierte Anwendung wie die zuvor beschriebene derzeit auf den Zielcomputern? Welche Dienste werden von der Anwendung ausgeführt? Werden die Dienste durch Anweisung der Benutzer ausgeführt, beispielsweise zum Zugreifen auf Datenbanken?
-    - Wenn ja, **schließen** Sie die Sicherheitswarnung, da es sich um eine **B-TP** -Aktivität (unbedenklich richtig positiv) handelt.
+    - Wenn ja, **schließen** Sie die Sicherheitswarnung, da es sich um eine **B-TP**-Aktivität (unbedenklich richtig positiv) handelt.
 1. Ist der Zielcomputer ein Delegierungsserver?
-    - Wenn ja, **schließen** Sie die Sicherheitswarnung, und schließen Sie diesen Computer als **B-TP** -Aktivität (unbedenklich richtig positiv) aus.
+    - Wenn ja, **schließen** Sie die Sicherheitswarnung, und schließen Sie diesen Computer als **B-TP**-Aktivität (unbedenklich richtig positiv) aus.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -163,7 +161,7 @@ Es gibt benutzerdefinierte Anwendungen, die Tickets im Auftrag des Benutzers wei
 1. Isolieren Sie die Quell- und Zielcomputer.
 1. Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
 1. Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
-1. Wenn Microsoft Defender for Endpoint installiert ist, nutzen Sie **klist.exe purge** , um alle Tickets der angegebenen Anmeldesitzung endgültig zu löschen und zu verhindern, dass die Tickets in Zukunft verwendet werden.
+1. Wenn Microsoft Defender for Endpoint installiert ist, nutzen Sie **klist.exe purge**, um alle Tickets der angegebenen Anmeldesitzung endgültig zu löschen und zu verhindern, dass die Tickets in Zukunft verwendet werden.
 
 ## <a name="suspected-ntlm-authentication-tampering-external-id-2039"></a>Suspected NTLM authentication tampering (external ID 2039) (Vermutete Manipulation der NTLM-Authentifizierung [Externe ID 2039])
 
@@ -287,7 +285,7 @@ Some legitimate resources don't support strong encryption ciphers and may trigge
 
 ## <a name="suspected-overpass-the-hash-attack-kerberos-external-id-2002"></a>Suspected overpass-the-hash attack (Kerberos) (Verdacht auf einen Overpass-the-Hash-Angriff (Kerberos)) (externalid 2002)
 
-*Vorheriger Name* : Ungewöhnliche Kerberos-Protokollimplementierung (potenzieller Overpass-the-Hash-Angriff)
+*Vorheriger Name*: Ungewöhnliche Kerberos-Protokollimplementierung (potenzieller Overpass-the-Hash-Angriff)
 
 **Beschreibung**
 
@@ -302,8 +300,8 @@ Nicht zutreffend
 Zuweilen implementieren Anwendungen einen eigenen Kerberos-Stapel, der nicht der Kerberos-RFC-Dokumentation entspricht.
 
 1. Überprüfen Sie, ob auf dem Quellcomputer eine Anwendung mit ihrem eigenen Kerberos-Stapel ausgeführt wird, und dies im Widerspruch zur Kerberos-RFC steht.
-1. Führt der Quellcomputer eine solche Anwendung aus, obwohl er dies **nicht** tun sollte, korrigieren Sie die Anwendungskonfiguration. **Schließen** Sie die Sicherheitswarnung als **B-TP** -Aktivität (unbedenklich richtig positiv).
-1. Führt der Quellcomputer eine solche Anwendung aus, und soll er das auch weiterhin tun, **schließen** Sie die Sicherheitswarnung als **B-TP** -Aktivität (unbedenklich richtig positiv), und schließen Sie diesen Computer aus.
+1. Führt der Quellcomputer eine solche Anwendung aus, obwohl er dies **nicht** tun sollte, korrigieren Sie die Anwendungskonfiguration. **Schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität (unbedenklich richtig positiv).
+1. Führt der Quellcomputer eine solche Anwendung aus, und soll er das auch weiterhin tun, **schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität (unbedenklich richtig positiv), und schließen Sie diesen Computer aus.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -335,7 +333,7 @@ Nicht zutreffend
 **TP, B-TP oder FP?**
 
 - Wird dieses Konto regelmäßig für die Anmeldung beim Computer verwendet?
-  - Wenn das Zertifikat regelmäßig vom Computer verwendet wird, **schließen** Sie die Warnung als **FP** -Aktivität.
+  - Wenn das Zertifikat regelmäßig vom Computer verwendet wird, **schließen** Sie die Warnung als **FP**-Aktivität.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 

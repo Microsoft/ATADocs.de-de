@@ -10,16 +10,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f0c4cc8342c9f45b8cc08166d14be1c512ca1065
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 58a5f6c37a5b5bc4e224393aac5ad9771d6a1f6b
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276227"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847869"
 ---
 # <a name="quickstart-connect-to-your-active-directory-forest"></a>Schnellstart: Herstellen einer Verbindung mit einer Active Directory-Gesamtstruktur
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 In diesem Schnellstart lernen Sie, wie Sie eine Verbindung zwischen [!INCLUDE [Product long](includes/product-long.md)] und Azure Active Directory (Azure AD) herstellen können, um Daten zu Benutzern und Computern abrufen zu können. Wenn Sie eine Verbindung zwischen mehreren Gesamtstrukturen herstellen möchten, finden Sie weitere Informationen im Artikel [Azure Advanced Threat Protection-Unterstützung für mehrere Gesamtstrukturen](multi-forest.md).
 
@@ -29,13 +27,13 @@ In diesem Schnellstart lernen Sie, wie Sie eine Verbindung zwischen [!INCLUDE [P
 - Lesen Sie den Artikel [[!INCLUDE [Product short](includes/product-short.md)]-Voraussetzungen](prerequisites.md).
 - Mindestens eines der folgenden Verzeichnisdienstkonten mit Lesezugriff auf alle Objekte in den überwachten Domänen:
   - Ein **standardmäßiges** AD-Benutzerkonto und -Kennwort; erforderlich für Sensoren, die unter Windows Server 2008 R2 SP1 ausgeführt werden.
-  - Ein von der **Gruppe verwaltetes Dienstkonto** ; erfordert Windows Server 2012 oder höher.  
+  - Ein von der **Gruppe verwaltetes Dienstkonto**; erfordert Windows Server 2012 oder höher.  
   Alle Sensoren benötigen Zugriffsberechtigungen zum Abrufen des Kennworts des gruppenverwalteten Dienstkontos. Weitere Informationen zum Erstellen von gruppenverwalteten Dienstkonten finden Sie im Abschnitt [Einrichten eines gruppenverwalteten Dienstkontos](#how-to-set-up-a-gmsa-account).
 
     > [!NOTE]
     >
     > - Für Sensorcomputer unter Windows Server 2012 und höher wird empfohlen, ein **gruppenverwaltetes Dienstkonto** für verbesserte Sicherheit und automatische Kennwortverwaltung zu verwenden.
-    > - Wenn Sie über mehrere Sensoren verfügen, teilweise unter Windows Server 2008 oder unter Windows Server 2012 und höher, müssen Sie zusätzlich zum empfohlenen **gruppenverwalteten Dienstkonto** auch mindestens ein AD- **Standardbenutzerkonto** verwenden.
+    > - Wenn Sie über mehrere Sensoren verfügen, teilweise unter Windows Server 2008 oder unter Windows Server 2012 und höher, müssen Sie zusätzlich zum empfohlenen **gruppenverwalteten Dienstkonto** auch mindestens ein AD-**Standardbenutzerkonto** verwenden.
 
 ### <a name="how-to-set-up-a-gmsa-account"></a>Einrichten eines gruppenverwalteten Dienstkontos
 
@@ -52,7 +50,7 @@ Beim ersten Öffnen des [!INCLUDE [Product short](includes/product-short.md)]-Po
 
     |Feld|Kommentare|
     |---|---|
-    |**Benutzername** (erforderlich)|Geben Sie den Namen des AD-Benutzers mit Leseberechtigung ein. Beispiel: **DefenderForIdentityUser**. Sie müssen ein AD- **Standardbenutzerkonto** oder ein gruppenverwaltetes Dienstkonto verwenden. Verwenden Sie **nicht** das UPN-Format für Ihren Benutzernamen.|
+    |**Benutzername** (erforderlich)|Geben Sie den Namen des AD-Benutzers mit Leseberechtigung ein. Beispiel: **DefenderForIdentityUser**. Sie müssen ein AD-**Standardbenutzerkonto** oder ein gruppenverwaltetes Dienstkonto verwenden. Verwenden Sie **nicht** das UPN-Format für Ihren Benutzernamen.|
     |**Kennwort** (bei AD-Standardbenutzerkonten erforderlich)|Geben Sie bei AD-Benutzerkonten das Kennwort für den Benutzer mit Leseberechtigung ein. Beispiel: **Pencil1**.|
     |**Gruppenverwaltetes Dienstkonto** (bei gruppenverwalteten Dienstkonten erforderlich)|Wählen Sie bei gruppenverwalteten Dienstkonten das **gruppenverwaltete Dienstkonto** aus.|
     |**Domäne** (erforderlich)|Geben Sie die Domäne für den schreibgeschützten Benutzer ein. Beispiel: **contoso.com**. Es ist wichtig, dass Sie den vollqualifizierten Domänennamen (FQDN) der Domäne eingeben, in der sich das Benutzerkonto befindet. Wenn sich das Konto des Benutzers beispielsweise in der Domäne „corp.contoso.com“ befindet, müssen Sie `corp.contoso.com` und nicht „contoso.com“ eingeben.|

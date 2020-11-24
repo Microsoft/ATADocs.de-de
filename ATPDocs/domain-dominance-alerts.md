@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 733ae9db30bef0958234cf3ba3157b33533a85e1
-ms.sourcegitcommit: 218ba562a2a109ff456b011004530f503a4e82c6
+ms.openlocfilehash: d9a37aa5fc952606dbf8c6d9148c53ef43fccf98
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93342444"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848634"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Tutorial: Warnungen zu Domänendominanz
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Cyberangriffe werden üblicherweise auf alle zugänglichen Entitäten wie etwa Benutzer mit geringen Rechten durchgeführt. Anschließend dringt der Angreifer schnell im internen Netzwerk vor (Lateral Movement), um Zugriff auf wertvolle Ressourcen zu erhalten. Dabei kann es sich um sensible Konten, Konten von Domänenadministratoren oder streng vertrauliche Daten handeln. [!INCLUDE [Product long](includes/product-long.md)] identifiziert diese komplexen Bedrohungen an der Quelle über die gesamte Kette der Angriffsabwehr hinweg und ordnet sie in die folgenden Phasen ein:
 
@@ -53,7 +51,7 @@ Mit den folgenden Sicherheitswarnungen können Sie verdächtige Aktivitäten der
 
 ## <a name="malicious-request-of-data-protection-api-master-key-external-id-2020"></a>Böswillige Anforderung des Datenschutz-API-Hauptschlüssels (externe ID 2020)
 
-*Vorheriger Name* : Böswillige Anforderung privater Informationen im Rahmen der Datensicherheit
+*Vorheriger Name*: Böswillige Anforderung privater Informationen im Rahmen der Datensicherheit
 
 **Beschreibung**
 
@@ -70,8 +68,8 @@ Diese Aktivitäten werden möglicherweise von erweiterten Sicherheitsscannern f�
 
 1. Überprüfen Sie, ob auf dem Quellcomputer ein von der Organisation genehmigter erweiterter Sicherheitsscanner für Active Directory Domain Services ausgeführt wird.
 
-    - Wenn die Antwort **Ja** lautet und der Scanner nicht ausgeführt werden sollte, beheben Sie die Anwendungskonfiguration. Die Warnung ist eine **B-TP** -Aktivität und kann **geschlossen** werden.
-    - Wenn die Antwort **Ja** lautet und der Scanner immer ausgeführt werden sollte, **schließen** Sie die Warnung, und schließen Sie diesen Computer aus. Es handelt sich wahrscheinlich um eine **B-TP** -Aktivität.
+    - Wenn die Antwort **Ja** lautet und der Scanner nicht ausgeführt werden sollte, beheben Sie die Anwendungskonfiguration. Die Warnung ist eine **B-TP**-Aktivität und kann **geschlossen** werden.
+    - Wenn die Antwort **Ja** lautet und der Scanner immer ausgeführt werden sollte, **schließen** Sie die Warnung, und schließen Sie diesen Computer aus. Es handelt sich wahrscheinlich um eine **B-TP**-Aktivität.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -89,7 +87,7 @@ Diese Aktivitäten werden möglicherweise von erweiterten Sicherheitsscannern f�
 
 ## <a name="remote-code-execution-attempt-external-id-2019"></a>Versuch der Remotecodeausführung (externe ID 2019)
 
-*Vorheriger Name* : Versuchte Remote-Codeausführung
+*Vorheriger Name*: Versuchte Remote-Codeausführung
 
 **Beschreibung**
 
@@ -104,8 +102,8 @@ Nicht zutreffend
 Zulässige administrative Aufgaben auf Domänencontrollern können von Arbeitsstationen für Administratoren, IT-Teammitgliedern und Dienstkonten durchgeführt werden.
 
 1. Überprüfen Sie, ob diese Befehle tatsächlich vom Quellcomputer oder Benutzer auf Ihrem Domänencontroller ausgeführt werden sollen.
-    - Wenn der Quellcomputer oder Benutzer diese Befehle ausführen darf, **schließen** Sie die Sicherheitswarnung als **B-TP** -Aktivität.
-    - Wenn der Quellcomputer oder Benutzer diese Befehle jetzt und in Zukunft auf Ihrem lokalen Domänencontroller ausführen darf, handelt es sich um eine **B-TP** -Aktivität. **Schließen** Sie die Sicherheitswarnung, und schließen Sie den Computer aus.
+    - Wenn der Quellcomputer oder Benutzer diese Befehle ausführen darf, **schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität.
+    - Wenn der Quellcomputer oder Benutzer diese Befehle jetzt und in Zukunft auf Ihrem lokalen Domänencontroller ausführen darf, handelt es sich um eine **B-TP**-Aktivität. **Schließen** Sie die Sicherheitswarnung, und schließen Sie den Computer aus.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -135,7 +133,7 @@ Zulässige administrative Aufgaben auf Domänencontrollern können von Arbeitsst
 
 ## <a name="suspected-dcshadow-attack-domain-controller-promotion-external-id-2028"></a>Vermuteter DCShadow-Angriff (Höherstufung eines Domänencontrollers) (externe ID 2028)
 
-*Vorheriger Name* : Verdächtige Heraufstufung zu Domänencontrollern (potenzieller DcShadow-Angriff)
+*Vorheriger Name*: Verdächtige Heraufstufung zu Domänencontrollern (potenzieller DcShadow-Angriff)
 
 **Beschreibung**
 
@@ -157,19 +155,19 @@ Nicht zutreffend
 Wenn der Quellcomputer ein Domänencontroller ist, wird [!INCLUDE [Product short](includes/product-short.md)] möglicherweise aufgrund fehlender Entscheidungssicherheit an der Identifikation gehindert.
 
 1. Überprüfen Sie, ob der Quellcomputer ein Domänencontroller ist.
-    Wenn die Antwort **Ja** lautet, **schließen** Sie die Warnung als **B-TP** -Aktivität.
+    Wenn die Antwort **Ja** lautet, **schließen** Sie die Warnung als **B-TP**-Aktivität.
 
 Die Synchronisierung von Änderungen in Active Directory Domain Services kann etwas Zeit in Anspruch nehmen.
 
-1. Ist der Quellcomputer ein Domänencontroller, der kürzlich höher gestuft wurde? Wenn die Antwort **Ja** lautet, **schließen** Sie die Warnung als **B-TP** -Aktivität.
+1. Ist der Quellcomputer ein Domänencontroller, der kürzlich höher gestuft wurde? Wenn die Antwort **Ja** lautet, **schließen** Sie die Warnung als **B-TP**-Aktivität.
 
 Server und Anwendungen wie Azure AD Connect oder Geräte zur Leistungsüberwachung im Netzwerk können möglicherweise Daten aus Active Directory Domain Services replizieren.
 
 1. Überprüfen Sie, ob diese Aktivitäten tatsächlich vom Quellcomputer ausgeführt werden sollen.
 
-    - Wenn die Antwort **Ja** lautet, diese Aktivität aber in Zukunft nicht mehr vom Quellcomputer ausgeführt werden soll, beheben Sie die Konfiguration des Servers oder der Anwendung. **Schließen** Sie die Sicherheitswarnung als **B-TP** -Aktivität.
+    - Wenn die Antwort **Ja** lautet, diese Aktivität aber in Zukunft nicht mehr vom Quellcomputer ausgeführt werden soll, beheben Sie die Konfiguration des Servers oder der Anwendung. **Schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität.
 
-    - Wenn die Antwort **Ja** lautet und diese Aktivität in der Zukunft weiterhin vom Quellcomputer ausgeführt werden soll, **schließen** Sie die Sicherheitswarnung als **B-TP** -Aktivität, und schließen Sie den Computer aus, um zusätzliche B-TP-Warnungen zu vermeiden.
+    - Wenn die Antwort **Ja** lautet und diese Aktivität in der Zukunft weiterhin vom Quellcomputer ausgeführt werden soll, **schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität, und schließen Sie den Computer aus, um zusätzliche B-TP-Warnungen zu vermeiden.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -198,7 +196,7 @@ Server und Anwendungen wie Azure AD Connect oder Geräte zur Leistungsüberwachu
 
 ## <a name="suspected-dcshadow-attack-domain-controller-replication-request-external-id-2029"></a>Vermuteter DCShadow-Angriff (Replikationsanforderung an Domänencontroller) (externe ID 2029)
 
-*Vorheriger Name* : Verdächtige Replikationsanforderung (potenzieller DCShadow-Angriff)
+*Vorheriger Name*: Verdächtige Replikationsanforderung (potenzieller DCShadow-Angriff)
 
 **Beschreibung**
 
@@ -214,19 +212,19 @@ Nicht zutreffend
 Wenn der Quellcomputer ein Domänencontroller ist, wird [!INCLUDE [Product short](includes/product-short.md)] möglicherweise aufgrund fehlender Entscheidungssicherheit an der Identifikation gehindert.
 
 1. Überprüfen Sie, ob der Quellcomputer ein Domänencontroller ist.
-    Wenn die Antwort **Ja** lautet, **schließen** Sie die Warnung als **B-TP** -Aktivität.
+    Wenn die Antwort **Ja** lautet, **schließen** Sie die Warnung als **B-TP**-Aktivität.
 
 Die Synchronisierung von Änderungen in Active Directory Domain Services kann etwas Zeit in Anspruch nehmen.
 
-1. Ist der Quellcomputer ein Domänencontroller, der kürzlich höher gestuft wurde? Wenn die Antwort **Ja** lautet, **schließen** Sie die Warnung als **B-TP** -Aktivität.
+1. Ist der Quellcomputer ein Domänencontroller, der kürzlich höher gestuft wurde? Wenn die Antwort **Ja** lautet, **schließen** Sie die Warnung als **B-TP**-Aktivität.
 
 Server und Anwendungen wie Azure AD Connect oder Geräte zur Leistungsüberwachung im Netzwerk können möglicherweise Daten aus Active Directory Domain Services replizieren.
 
 1. Sollten diese Aktivitäten tatsächlich vom Quellcomputer ausgeführt werden?
 
-    - Wenn die Antwort **Ja** lautet, diese Aktivität aber in Zukunft nicht mehr vom Quellcomputer ausgeführt werden soll, beheben Sie die Konfiguration des Servers oder der Anwendung. **Schließen** Sie die Sicherheitswarnung als **B-TP** -Aktivität.
+    - Wenn die Antwort **Ja** lautet, diese Aktivität aber in Zukunft nicht mehr vom Quellcomputer ausgeführt werden soll, beheben Sie die Konfiguration des Servers oder der Anwendung. **Schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität.
 
-    - Wenn die Antwort **Ja** lautet und diese Aktivität in der Zukunft weiterhin vom Quellcomputer ausgeführt werden soll, **schließen** Sie die Sicherheitswarnung als **B-TP** -Aktivität, und schließen Sie den Computer aus, um zusätzliche **B-TP** -Warnungen zu vermeiden.
+    - Wenn die Antwort **Ja** lautet und diese Aktivität in der Zukunft weiterhin vom Quellcomputer ausgeführt werden soll, **schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität, und schließen Sie den Computer aus, um zusätzliche **B-TP**-Warnungen zu vermeiden.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -255,7 +253,7 @@ Server und Anwendungen wie Azure AD Connect oder Geräte zur Leistungsüberwachu
 
 ## <a name="suspected-dcsync-attack-replication-of-directory-services-external-id-2006"></a>Vermuteter DCSync-Angriff (Replikation der Verzeichnisdienste) (externe ID 2006)
 
-*Vorheriger Name* : Böswillige Replikation von Verzeichnisdiensten
+*Vorheriger Name*: Böswillige Replikation von Verzeichnisdiensten
 
 **Beschreibung**
 
@@ -275,19 +273,19 @@ Nicht zutreffend
 Wenn der Quellcomputer ein Domänencontroller ist, wird [!INCLUDE [Product short](includes/product-short.md)] möglicherweise aufgrund fehlender Entscheidungssicherheit an der Identifikation gehindert.
 
 1. Überprüfen Sie, ob der Quellcomputer ein Domänencontroller ist.
-    Wenn die Antwort **Ja** lautet, **schließen** Sie die Warnung als **B-TP** -Aktivität.
+    Wenn die Antwort **Ja** lautet, **schließen** Sie die Warnung als **B-TP**-Aktivität.
 
 Die Synchronisierung von Änderungen in Active Directory Domain Services kann etwas Zeit in Anspruch nehmen.
 
-1. Ist der Quellcomputer ein Domänencontroller, der kürzlich höher gestuft wurde? Wenn die Antwort **Ja** lautet, **schließen** Sie die Warnung als **B-TP** -Aktivität.
+1. Ist der Quellcomputer ein Domänencontroller, der kürzlich höher gestuft wurde? Wenn die Antwort **Ja** lautet, **schließen** Sie die Warnung als **B-TP**-Aktivität.
 
 Server und Anwendungen wie Azure AD Connect oder Geräte zur Leistungsüberwachung im Netzwerk können möglicherweise Daten aus Active Directory Domain Services replizieren.
 
 1. Sollten diese Aktivitäten tatsächlich vom Quellcomputer ausgeführt werden?
 
-    - Wenn die Antwort **Ja** lautet, diese Aktivitäten aber in Zukunft nicht mehr vom Quellcomputer ausgeführt werden sollen, beheben Sie die Konfiguration des Servers oder der Anwendung. **Schließen** Sie die Sicherheitswarnung als **B-TP** -Aktivität.
+    - Wenn die Antwort **Ja** lautet, diese Aktivitäten aber in Zukunft nicht mehr vom Quellcomputer ausgeführt werden sollen, beheben Sie die Konfiguration des Servers oder der Anwendung. **Schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität.
 
-    - Wenn die Antwort **Ja** lautet und diese Aktivität in der Zukunft weiterhin vom Quellcomputer ausgeführt werden soll, **schließen** Sie die Sicherheitswarnung als **B-TP** -Aktivität, und schließen Sie den Computer aus, um zusätzliche B-TP-Warnungen zu vermeiden.
+    - Wenn die Antwort **Ja** lautet und diese Aktivität in der Zukunft weiterhin vom Quellcomputer ausgeführt werden soll, **schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität, und schließen Sie den Computer aus, um zusätzliche B-TP-Warnungen zu vermeiden.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -312,7 +310,7 @@ Server und Anwendungen wie Azure AD Connect oder Geräte zur Leistungsüberwachu
 
 ## <a name="suspected-golden-ticket-usage-encryption-downgrade-external-id-2009"></a>Vermutete Golden Ticket-Verwendung (Herabstufung der Verschlüsselung) (externe ID 2009)
 
-*Vorheriger Name* : Aktivität zur Herabstufung der Verschlüsselung
+*Vorheriger Name*: Aktivität zur Herabstufung der Verschlüsselung
 
 **Beschreibung**
 
@@ -331,10 +329,10 @@ Einige zulässige Ressourcen unterstützen keine starken Verschlüsselungsverfah
 1. Greifen Quellbenutzer auf gemeinsam verwendete Ressourcen zu?
    1. Beispielsweise können Sie überprüfen, ob alle Mitarbeiter des Marketingteams auf eine bestimmte Ressource zugreifen und dadurch eine Warnung auslösen.
    1. Überprüfen Sie die Ressourcen, auf die mit diesen Tickets zugegriffen wurde.
-      - Verwenden Sie dafür das *msDS-SupportedEncryptionTypes* -Attribut des Ressourcendienstkontos in Azure Active Directory.
+      - Verwenden Sie dafür das *msDS-SupportedEncryptionTypes*-Attribut des Ressourcendienstkontos in Azure Active Directory.
    1. Wenn nur auf eine Ressource zugegriffen wird, überprüfen Sie, ob die Benutzer tatsächlich auf diese zugreifen sollten.
 
-      Wenn die Antwort auf eine der vorherigen Fragen **Ja** lautet, handelt es sich vermutlich um eine **B-TP** -Aktivität. Überprüfen Sie, ob von der Ressource ein starkes Verschlüsselungsverfahren unterstützt wird, implementieren Sie es nach Möglichkeit, und **schließen** Sie die Sicherheitswarnung.
+      Wenn die Antwort auf eine der vorherigen Fragen **Ja** lautet, handelt es sich vermutlich um eine **B-TP**-Aktivität. Überprüfen Sie, ob von der Ressource ein starkes Verschlüsselungsverfahren unterstützt wird, implementieren Sie es nach Möglichkeit, und **schließen** Sie die Sicherheitswarnung.
 
 Bei Anwendungen wird möglicherweise ein schwächeres Verschlüsselungsverfahren für die Authentifizierung verwendet. Einige dieser Anwendungen wie IIS und SQL Server melden sich im Auftrag von Benutzern an.
 
@@ -344,7 +342,7 @@ Bei Anwendungen wird möglicherweise ein schwächeres Verschlüsselungsverfahren
     - Überprüfen Sie die Rollen der Computer.
     Handelt es sich um Server, die diese Anwendungen nutzen?
 
-     Wenn die Antwort auf eine der vorherigen Fragen **Ja** lautet, handelt es sich vermutlich um eine **B-TP** -Aktivität. Überprüfen Sie, ob von der Ressource ein starkes Verschlüsselungsverfahren unterstützt wird, implementieren Sie es nach Möglichkeit, und **schließen** Sie die Sicherheitswarnung.
+     Wenn die Antwort auf eine der vorherigen Fragen **Ja** lautet, handelt es sich vermutlich um eine **B-TP**-Aktivität. Überprüfen Sie, ob von der Ressource ein starkes Verschlüsselungsverfahren unterstützt wird, implementieren Sie es nach Möglichkeit, und **schließen** Sie die Sicherheitswarnung.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -359,7 +357,7 @@ Bei Anwendungen wird möglicherweise ein schwächeres Verschlüsselungsverfahren
 1. Kontrollieren Sie den Quellcomputer.
     - Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
     - Suchen Sie nach Benutzern, die zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
-    - Wenn Microsoft Defender für Endpunkt installiert ist, nutzen Sie **klist.exe purge** , um alle Tickets der angegebenen Anmeldesitzung endgültig zu löschen und zu verhindern, dass die Tickets in Zukunft verwendet werden.
+    - Wenn Microsoft Defender für Endpunkt installiert ist, nutzen Sie **klist.exe purge**, um alle Tickets der angegebenen Anmeldesitzung endgültig zu löschen und zu verhindern, dass die Tickets in Zukunft verwendet werden.
 1. Isolieren Sie die Ressourcen, auf die über das Ticket zugegriffen wurde.
 1. Ändern Sie das Kennwort für das Kerberos Ticket Granting Ticket (KRBTGT) zweimal gemäß den Anweisungen unter [KRBTGT Account Password Reset Scripts now available for customers (Skripts zum Zurücksetzen von Kennwörtern des KRBTGT-Kontos stehen Kunden jetzt zur Verfügung)](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) mithilfe des [Reset the KRBTGT account password/keys tool (Tools zum Zurücksetzen des Kennworts/Schlüssels eines KRBTGT-Kontos)](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).
     - Durch zweimaliges Zurücksetzen von KRBTGT werden alle Kerberos-Tickets in dieser Domäne ungültig. Dies bedeutet, dass **alle** Dienste außer Kraft gesetzt werden und erst wieder funktionieren, wenn sie erneuert werden. In einigen Fällen muss der Dienst neu gestartet werden.
@@ -385,12 +383,12 @@ Bei Computern mit dem Sicherheitspatch MS14-068 (für Domänencontroller) oder M
 
 1. Überprüfen Sie, auf welche Ressourcen in der Beweisliste der Sicherheitswarnung zugegriffen wurde, und stellen Sie fest, ob die Versuche erfolgreich waren oder fehlschlugen.
 1. Überprüfen Sie, ob wie oben beschrieben auf den Computern, auf die zugegriffen wurde, Sicherheitspatches installiert wurden.
-    - Wenn die Computer gepatcht wurden, **schließen** Sie die Sicherheitswarnung als **B-TP** -Aktivität.
+    - Wenn die Computer gepatcht wurden, **schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität.
 
 Einige Betriebssysteme und Anwendungen sind dafür bekannt, dass sie die Autorisierungsdaten ändern. Linux- und Unix-Dienste verfügen beispielsweise über einen eigenen Autorisierungsmechanismus, der die Warnung auslösen kann.
 
 1. Wird auf dem Quellcomputer ein Betriebssystem oder eine Anwendung ausgeführt, die über einen eigenen Autorisierungsmechanismus verfügt?
-    - Wenn auf dem Quellcomputer diese Art von Autorisierungsmechanismus ausgeführt wird, sollten Sie ein Upgrade des Betriebssystems erwägen oder die Anwendungskonfiguration beheben. **Schließen** die Warnung als **B-TP** -Aktivität.
+    - Wenn auf dem Quellcomputer diese Art von Autorisierungsmechanismus ausgeführt wird, sollten Sie ein Upgrade des Betriebssystems erwägen oder die Anwendungskonfiguration beheben. **Schließen** die Warnung als **B-TP**-Aktivität.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -428,7 +426,7 @@ Die Synchronisierung von Änderungen in Active Directory Domain Services kann et
 1. Wurde der Benutzer kürzlich hinzugefügt?
 1. Wurde der Benutzer kürzlich aus Active Directory Domain Services gelöscht?
 
-Wenn die Antwort auf alle vorherigen Fragen **Ja** lautet, **schließen** Sie die Warnung als **B-TP** -Aktivität.
+Wenn die Antwort auf alle vorherigen Fragen **Ja** lautet, **schließen** Sie die Warnung als **B-TP**-Aktivität.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -439,7 +437,7 @@ Wenn die Antwort auf alle vorherigen Fragen **Ja** lautet, **schließen** Sie di
 1. Isolieren Sie die Quellcomputer.
     - Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
     - Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
-    - Wenn Microsoft Defender für Endpunkt installiert ist, nutzen Sie **klist.exe purge** , um alle Tickets der angegebenen Anmeldesitzung endgültig zu löschen und zu verhindern, dass die Tickets in Zukunft verwendet werden.
+    - Wenn Microsoft Defender für Endpunkt installiert ist, nutzen Sie **klist.exe purge**, um alle Tickets der angegebenen Anmeldesitzung endgültig zu löschen und zu verhindern, dass die Tickets in Zukunft verwendet werden.
 1. Isolieren Sie die Ressourcen, auf die über das Ticket zugegriffen wurde.
 1. Ändern Sie das Kennwort für das Kerberos Ticket Granting Ticket (KRBTGT) zweimal gemäß den Anweisungen unter [KRBTGT Account Password Reset Scripts now available for customers (Skripts zum Zurücksetzen von Kennwörtern des KRBTGT-Kontos stehen Kunden jetzt zur Verfügung)](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) mithilfe des [Reset the KRBTGT account password/keys tool (Tools zum Zurücksetzen des Kennworts/Schlüssels eines KRBTGT-Kontos)](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).
     - Durch zweimaliges Zurücksetzen von KRBTGT werden alle Kerberos-Tickets in dieser Domäne ungültig. Dies bedeutet, dass **alle** Dienste außer Kraft gesetzt werden und erst wieder funktionieren, wenn sie erneuert werden. In einigen Fällen muss der Dienst neu gestartet werden. Planen Sie daher das zweimalige Zurücksetzen von KRBTGT genau, da hiervon alle Computer, Server und Benutzer in der Umgebung betroffen sind.
@@ -458,7 +456,7 @@ Nicht zutreffend
 
 Verbunddienste generieren möglicherweise Tickets, die diese Warnung auslösen.
 1. Werden auf dem Quellcomputer Verbunddienste gehostet, die derartige Tickets erstellen?
-    - Wenn ja, schließen Sie die Sicherheitswarnung als **B-TP** -Aktivität.
+    - Wenn ja, schließen Sie die Sicherheitswarnung als **B-TP**-Aktivität.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -470,7 +468,7 @@ Verbunddienste generieren möglicherweise Tickets, die diese Warnung auslösen.
 1. Isolieren Sie die Quellcomputer.
     - Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
     - Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
-    - Wenn Microsoft Defender für Endpunkt installiert ist, nutzen Sie **klist.exe purge** , um alle Tickets der angegebenen Anmeldesitzung endgültig zu löschen und zu verhindern, dass die Tickets in Zukunft verwendet werden.
+    - Wenn Microsoft Defender für Endpunkt installiert ist, nutzen Sie **klist.exe purge**, um alle Tickets der angegebenen Anmeldesitzung endgültig zu löschen und zu verhindern, dass die Tickets in Zukunft verwendet werden.
 1. Isolieren Sie die Ressourcen, auf die über das Ticket zugegriffen wurde.
 1. Ändern Sie das Kennwort für das Kerberos Ticket Granting Ticket (KRBTGT) zweimal gemäß den Anweisungen unter [KRBTGT Account Password Reset Scripts now available for customers (Skripts zum Zurücksetzen von Kennwörtern des KRBTGT-Kontos stehen Kunden jetzt zur Verfügung)](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) mithilfe des [Reset the KRBTGT account password/keys tool (Tools zum Zurücksetzen des Kennworts/Schlüssels eines KRBTGT-Kontos)](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).
     - Durch zweimaliges Zurücksetzen von KRBTGT werden alle Kerberos-Tickets in dieser Domäne ungültig. Dies bedeutet, dass **alle** Dienste außer Kraft gesetzt werden und erst wieder funktionieren, wenn sie erneuert werden. In einigen Fällen muss der Dienst neu gestartet werden.
@@ -490,7 +488,7 @@ Nicht zutreffend
 **TP, B-TP oder FP?**
 
 1. Verbunddienste generieren möglicherweise Tickets, die diese Warnung auslösen. Werden auf dem Quellcomputer derartige Dienste gehostet?
-    - Falls ja, schließen Sie die Sicherheitswarnung als **B-TP** -Aktivität.
+    - Falls ja, schließen Sie die Sicherheitswarnung als **B-TP**-Aktivität.
 1. Zeigen Sie die Profilseite des Quellbenutzers an, und überprüfen Sie, was zum Zeitpunkt der Aktivität geschehen ist.
     1. Soll der Benutzer Zugriff auf diese Ressource haben?
     1. Wird erwartet, dass der Prinzipal auf den Dienst zugreifen kann?
@@ -499,7 +497,7 @@ Nicht zutreffend
 1. Sollen die angemeldeten Benutzer Zugriff auf diese Ressourcen haben?
     - Wenn Sie die Microsoft Defender für Endpunkt-Integration aktiviert haben, klicken Sie auf das Symbol, um weitere Untersuchungen anzustellen.
 
-Wenn die Antwort auf eine der vorherigen Fragen „Ja“ lautet, schließen Sie die Sicherheitswarnung als **FP** -Aktivität.
+Wenn die Antwort auf eine der vorherigen Fragen „Ja“ lautet, schließen Sie die Sicherheitswarnung als **FP**-Aktivität.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -530,9 +528,9 @@ Nicht zutreffend
 1. Ist der eigenständige [!INCLUDE [Product short](includes/product-short.md)]-Sensor, der am Auslösen dieser Warnung beteiligt ist, ein virtueller Computer?
     - Wenn der eigenständige [!INCLUDE [Product short](includes/product-short.md)]-Sensor beteiligt ist, wurde dieser kürzlich aus einem gespeicherten Zustand wiederhergestellt und seine Ausführung fortgesetzt?
 1. Gibt es ein Problem mit der Zeitsynchronisierung im Netzwerk, durch das nicht alle Computer synchronisiert werden?
-    - Klicken Sie auf die Schaltfläche **Details herunterladen** , um die Excel-Datei für den Sicherheitswarnungsbericht anzuzeigen und zugehörige Netzwerkaktivitäten aufzurufen. Überprüfen Sie, ob sich „StartTime“ und „DomainControllerStartTime“ unterscheiden.
+    - Klicken Sie auf die Schaltfläche **Details herunterladen**, um die Excel-Datei für den Sicherheitswarnungsbericht anzuzeigen und zugehörige Netzwerkaktivitäten aufzurufen. Überprüfen Sie, ob sich „StartTime“ und „DomainControllerStartTime“ unterscheiden.
 
-Wenn die Antwort auf die vorherigen Fragen **Ja** lautet, **schließen** Sie die Sicherheitswarnung als **B-TP** -Aktivität.
+Wenn die Antwort auf die vorherigen Fragen **Ja** lautet, **schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -544,7 +542,7 @@ Wenn die Antwort auf die vorherigen Fragen **Ja** lautet, **schließen** Sie die
 1. Kontrollieren Sie den Quellcomputer.
     - Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
     - Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch betroffen sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
-    - Wenn Microsoft Defender für Endpunkt installiert ist, nutzen Sie **klist.exe purge** , um alle Tickets der angegebenen Anmeldesitzung endgültig zu löschen und zu verhindern, dass die Tickets in Zukunft verwendet werden.
+    - Wenn Microsoft Defender für Endpunkt installiert ist, nutzen Sie **klist.exe purge**, um alle Tickets der angegebenen Anmeldesitzung endgültig zu löschen und zu verhindern, dass die Tickets in Zukunft verwendet werden.
 1. Isolieren Sie die Ressourcen, auf die über das Ticket zugegriffen wurde.
 1. Ändern Sie das Kennwort für das Kerberos Ticket Granting Ticket (KRBTGT) zweimal gemäß den Anweisungen unter [KRBTGT Account Password Reset Scripts now available for customers (Skripts zum Zurücksetzen von Kennwörtern des KRBTGT-Kontos stehen Kunden jetzt zur Verfügung)](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) mithilfe des [Reset the KRBTGT account password/keys tool (Tools zum Zurücksetzen des Kennworts/Schlüssels eines KRBTGT-Kontos)](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).
     - Durch zweimaliges Zurücksetzen von KRBTGT werden alle Kerberos-Tickets in dieser Domäne ungültig. Dies bedeutet, dass **alle** Dienste außer Kraft gesetzt werden und erst wieder funktionieren, wenn sie erneuert werden. In einigen Fällen muss der Dienst neu gestartet werden.
@@ -553,7 +551,7 @@ Wenn die Antwort auf die vorherigen Fragen **Ja** lautet, **schließen** Sie die
 
 ## <a name="suspected-skeleton-key-attack-encryption-downgrade-external-id-2010"></a>Vermuteter Skeleton Key-Angriff (Herabstufung der Verschlüsselung) (externe ID 2010)
 
-*Vorheriger Name* : Aktivität zur Herabstufung der Verschlüsselung
+*Vorheriger Name*: Aktivität zur Herabstufung der Verschlüsselung
 
 **Beschreibung**
 
@@ -590,10 +588,10 @@ Vier Wochen pro Domänencontroller, beginnend mit dem ersten Ereignis.
 
 **TP, B-TP oder FP?**
 
-Zulässige Änderungen an Gruppen, die nur selten auftreten und vom System noch nicht als unbedenklich eingestuft wurden, können einen Alarm auslösen. Diese Warnungen werden als **B-TP** -Aktivität klassifiziert.
+Zulässige Änderungen an Gruppen, die nur selten auftreten und vom System noch nicht als unbedenklich eingestuft wurden, können einen Alarm auslösen. Diese Warnungen werden als **B-TP**-Aktivität klassifiziert.
 
 1. Ist das Ändern der Gruppe zulässig?
-    - Wenn das Ändern der Gruppe zulässig ist, **schließen** Sie die Sicherheitswarnung als **B-TP** -Aktivität.
+    - Wenn das Ändern der Gruppe zulässig ist, **schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -634,8 +632,8 @@ Nicht zutreffend
 Einige zulässige administrative Aufgaben auf Domänencontrollern können von Arbeitsstationen für Administratoren, IT-Teammitgliedern und Dienstkonten durchgeführt werden.
 
 1. Sollen diese Dienste tatsächlich auf dem Domänencontroller vom Quellbenutzer oder -computer ausgeführt werden?
-    - Wenn das aktuell der Fall ist, jedoch in Zukunft nicht mehr so sein sollte, **schließen** Sie die Warnung als **B-TP** -Aktivität.
-    - Wenn das aktuell der Fall ist und auch in Zukunft so bleiben sollte, **schließen** Sie die Sicherheitswarnung als **B-TP** -Aktivität, und schließen Sie diesen Computer aus.
+    - Wenn das aktuell der Fall ist, jedoch in Zukunft nicht mehr so sein sollte, **schließen** Sie die Warnung als **B-TP**-Aktivität.
+    - Wenn das aktuell der Fall ist und auch in Zukunft so bleiben sollte, **schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität, und schließen Sie diesen Computer aus.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 

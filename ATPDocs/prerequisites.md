@@ -10,16 +10,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e3b5b67ad5330fd7be41ed63e6db105e2f1d4a9e
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: df877f342b0bf7a31bf4cdf171a7bc2104c89e1f
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93275666"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847002"
 ---
 # <a name="product-long-prerequisites"></a>Voraussetzungen für [!INCLUDE [Product long](includes/product-long.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 In diesem Artikel werden die Voraussetzungen für eine erfolgreiche Bereitstellung von [!INCLUDE [Product long](includes/product-long.md)] in Ihrer Umgebung beschrieben.
 
@@ -55,7 +53,7 @@ In diesem Abschnitt werden die Informationen, die Sie erfassen sollten, sowie Ko
 
 - Mindestens eines der folgenden Verzeichnisdienstkonten mit Lesezugriff auf alle Objekte in den überwachten Domänen:
   - Ein **standardmäßiges** AD-Benutzerkonto und -Kennwort; erforderlich für Sensoren, die unter Windows Server 2008 R2 SP1 ausgeführt werden.
-  - Ein von der **Gruppe verwaltetes Dienstkonto** ; erfordert Windows Server 2012 oder höher.  
+  - Ein von der **Gruppe verwaltetes Dienstkonto**; erfordert Windows Server 2012 oder höher.  
   Alle Sensoren benötigen Zugriffsberechtigungen zum Abrufen des Kennworts des gruppenverwalteten Dienstkontos.  
   Weitere Informationen zu gruppenverwalteten Dienstkonten finden Sie unter [Erste Schritte mit gruppenverwalteten Dienstkonten](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts#BKMK_CreateGMSA).
 
@@ -69,7 +67,7 @@ In diesem Abschnitt werden die Informationen, die Sie erfassen sollten, sowie Ko
     > [!NOTE]
     >
     > - Für Sensorcomputer unter Windows Server 2012 und höher wird empfohlen, ein **gruppenverwaltetes Dienstkonto** für verbesserte Sicherheit und automatische Kennwortverwaltung zu verwenden.
-    > - Wenn Sie über mehrere Sensoren verfügen, teilweise unter Windows Server 2008 oder unter Windows Server 2012 und höher, müssen Sie zusätzlich zum empfohlenen **gruppenverwalteten Dienstkonto** auch mindestens ein AD- **Standardbenutzerkonto** verwenden.
+    > - Wenn Sie über mehrere Sensoren verfügen, teilweise unter Windows Server 2008 oder unter Windows Server 2012 und höher, müssen Sie zusätzlich zum empfohlenen **gruppenverwalteten Dienstkonto** auch mindestens ein AD-**Standardbenutzerkonto** verwenden.
     > - Wenn Sie benutzerdefinierte ACLs für verschiedene Organisationseinheiten (OU) in Ihrer Domäne festgelegt haben, stellen Sie sicher, dass der ausgewählte Benutzer Leseberechtigungen für diese Organisationseinheiten hat.
 
 - Wenn Sie Wireshark für einen eigenständigen [!INCLUDE [Product short](includes/product-short.md)]-Sensor ausführen, müssen Sie den [!INCLUDE [Product short](includes/product-short.md)]-Sensordienst neu starten, nachdem Sie die Wireshark-Erfassung beendet haben. Wenn Sie den Sensordienst nicht neu starten, beendet der Sensor die Erfassung des Datenverkehrs.
@@ -78,7 +76,7 @@ In diesem Abschnitt werden die Informationen, die Sie erfassen sollten, sowie Ko
 
 - Container mit **gelöschten Objekten** – Empfehlung: Der Benutzer sollte über den schreibgeschützten Zugriff auf den Container mit gelöschten Objekten verfügen. Mithilfe von Leseberechtigungen für diesen Container kann [!INCLUDE [Product short](includes/product-short.md)] Löschungen von Benutzern über Ihre Active Directory-Instanz erkennen. Informationen zum Konfigurieren des schreibgeschützten Zugriffs auf den Container mit gelöschten Objekten finden Sie im Abschnitt **Ändern von Berechtigungen für einen Container mit gelöschten Objekten** im Artikel [Anzeigen und Festlegen von Berechtigungen für ein Verzeichnisobjekt](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816824(v=ws.10)).
 
-- Optionales **Honeytoken** : Ein Benutzerkonto eines Benutzers ohne Netzwerkaktivitäten. Dieses Konto wird als [!INCLUDE [Product short](includes/product-short.md)]-Honeytoken-Benutzer konfiguriert. Weitere Informationen zu Verwendung von Honeytokens finden Sie unter [Konfigurieren von Ausschlüssen und Honeytoken-Benutzern](install-step7.md).
+- Optionales **Honeytoken**: Ein Benutzerkonto eines Benutzers ohne Netzwerkaktivitäten. Dieses Konto wird als [!INCLUDE [Product short](includes/product-short.md)]-Honeytoken-Benutzer konfiguriert. Weitere Informationen zu Verwendung von Honeytokens finden Sie unter [Konfigurieren von Ausschlüssen und Honeytoken-Benutzern](install-step7.md).
 
 - Optional: Wenn Sie den eigenständigen Sensor bereitstellen, ist die Weiterleitung der [Windows-Ereignisse](configure-windows-event-collection.md#configure-event-collection) an [!INCLUDE [Product short](includes/product-short.md)] erforderlich, um authentifizierungsbasierte Erkennungen, Ergänzungen vertraulicher Gruppen und Erkennungen der Erstellung verdächtiger Dienste in [!INCLUDE [Product short](includes/product-short.md)] zu verbessern.  Der [!INCLUDE [Product short](includes/product-short.md)]-Sensor empfängt diese Ereignisse automatisch. Im eigenständigen [!INCLUDE [Product short](includes/product-short.md)]-Sensor können diese Ereignisse von Ihrer SIEM-Lösung (Security Information & Event Management) empfangen oder durch Festlegen der Windows-Ereignisweiterleitung von Ihrem Domänencontroller aus abgerufen werden. Die erfassten Ereignisse bieten [!INCLUDE [Product short](includes/product-short.md)] zusätzliche Informationen, die über den Netzwerkverkehr des Domänencontrollers nicht verfügbar sind.
 
@@ -96,7 +94,7 @@ Der Zugriff auf das [!INCLUDE [Product short](includes/product-short.md)]-Portal
 - Firewall/Proxy geöffnet: Für die Kommunikation mit dem [!INCLUDE [Product short](includes/product-short.md)]-Clouddienst muss Port 443 für „*.atp.azure.com“ in Ihrer Firewall und auf Ihrem Proxyserver geöffnet sein.
 
     > [!NOTE]
-    > Sie können auch das Azure-Diensttag ( **AzureAdvancedThreatProtection** ) verwenden, um den Zugriff auf [!INCLUDE [Product short](includes/product-short.md)] zu ermöglichen. Weitere Informationen zu Diensttags finden Sie unter [Diensttags des virtuellen Netzwerks](/azure/virtual-network/service-tags-overview) oder in der Datei [Herunterladen der Diensttags](https://www.microsoft.com/download/details.aspx?id=56519).
+    > Sie können auch das Azure-Diensttag (**AzureAdvancedThreatProtection**) verwenden, um den Zugriff auf [!INCLUDE [Product short](includes/product-short.md)] zu ermöglichen. Weitere Informationen zu Diensttags finden Sie unter [Diensttags des virtuellen Netzwerks](/azure/virtual-network/service-tags-overview) oder in der Datei [Herunterladen der Diensttags](https://www.microsoft.com/download/details.aspx?id=56519).
 
  ![Diagramm der [!INCLUDE [Product short](includes/product-short.md)]-Architektur](media/architecture-topology.png)
 
@@ -253,7 +251,7 @@ Der eigenständige [!INCLUDE [Product short](includes/product-short.md)]-Sensor 
         > [!NOTE]
         > Wenn der eigenständige [!INCLUDE [Product short](includes/product-short.md)]-Sensor Mitglied der Domäne ist, erfolgt diese Konfiguration möglicherweise automatisch.
 
-- **Erfassungsadapter** : wird verwendet, um den Datenverkehr zu und von den Domänencontrollern zu erfassen.
+- **Erfassungsadapter**: wird verwendet, um den Datenverkehr zu und von den Domänencontrollern zu erfassen.
 
     > [!IMPORTANT]
     >

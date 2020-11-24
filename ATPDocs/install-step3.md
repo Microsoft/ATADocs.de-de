@@ -10,16 +10,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f971bf0ccadf2eba52b40c95591abaff0c963e0e
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: b2d1978a822b8062422c41696043b1563d8bc893
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93277081"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848515"
 ---
 # <a name="quickstart-download-the-product-long-sensor-setup-package"></a>Schnellstart: Herunterladen des [!INCLUDE [Product long](includes/product-long.md)]-Sensorsetuppakets
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 In diesem Schnellstart laden Sie das Setuppaket für den [!INCLUDE [Product long](includes/product-long.md)]-Sensor aus dem Portal herunter.
 
@@ -31,14 +29,14 @@ In diesem Schnellstart laden Sie das Setuppaket für den [!INCLUDE [Product long
 
 Nach dem Konfigurieren der Verbindungseinstellungen der Domäne können Sie das Setuppaket für den [!INCLUDE [Product short](includes/product-short.md)]-Sensor herunterladen. Weitere Informationen über den [!INCLUDE [Product short](includes/product-short.md)]-Sensor finden Sie unter [[!INCLUDE [Product short](includes/product-short.md)]-Architektur](architecture.md).
 
-Klicken Sie in der Liste mit den Schritten am Anfang der Seite auf **Download** , um zur Seite **Sensor** zu gelangen.
+Klicken Sie in der Liste mit den Schritten am Anfang der Seite auf **Download**, um zur Seite **Sensor** zu gelangen.
 
 ![Symbol für die [!INCLUDE [Product short](includes/product-short.md)]-Sensorkonfigurationseinstellungen](media/sensor-config.png)
 
 Sie können den Sensorkonfigurationsbildschirm später aufrufen, indem Sie auf **Konfiguration** und dann unter **System** auf **Sensoren** klicken.  
 
-1. Klicken Sie auf **Download** , um das Paket lokal zu speichern.
-1. Kopieren Sie den Zugriffsschlüssel. Der [!INCLUDE [Product short](includes/product-short.md)]-Sensor benötigt den Zugriffsschlüssel, um eine Verbindung mit Ihrer [!INCLUDE [Product short](includes/product-short.md)]-Instanz herzustellen. Der Zugriffsschlüssel ist ein Einmalkennwort für die Sensorbereitstellung. Danach wird die gesamte Kommunikation mittels Zertifikaten für die Authentifizierung und TLS-Verschlüsselung ausgeführt. Klicken Sie auf die Schaltfläche **Erneut generieren** , wenn Sie den neuen Zugriffsschlüssel erneut generieren müssen. Dieser Vorgang wirkt sich nicht auf zuvor bereitgestellte Sensoren aus, da der Zugriffsschlüssel nur für die erste Registrierung des Sensors verwendet wird.
+1. Klicken Sie auf **Download**, um das Paket lokal zu speichern.
+1. Kopieren Sie den Zugriffsschlüssel. Der [!INCLUDE [Product short](includes/product-short.md)]-Sensor benötigt den Zugriffsschlüssel, um eine Verbindung mit Ihrer [!INCLUDE [Product short](includes/product-short.md)]-Instanz herzustellen. Der Zugriffsschlüssel ist ein Einmalkennwort für die Sensorbereitstellung. Danach wird die gesamte Kommunikation mittels Zertifikaten für die Authentifizierung und TLS-Verschlüsselung ausgeführt. Klicken Sie auf die Schaltfläche **Erneut generieren**, wenn Sie den neuen Zugriffsschlüssel erneut generieren müssen. Dieser Vorgang wirkt sich nicht auf zuvor bereitgestellte Sensoren aus, da der Zugriffsschlüssel nur für die erste Registrierung des Sensors verwendet wird.
 1. Kopieren Sie das Paket auf den dedizierten Server oder Domänencontroller, auf dem der [!INCLUDE [Product short](includes/product-short.md)]-Sensor installiert werden soll. Alternativ können Sie das [!INCLUDE [Product short](includes/product-short.md)]-Portal vom dedizierten Server oder vom Domänencontroller aus öffnen und diesen Schritt überspringen.
 
 Die ZIP-Datei enthält die folgenden Dateien:

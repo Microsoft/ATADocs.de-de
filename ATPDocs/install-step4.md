@@ -9,16 +9,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9c612167b4d87958c6a27235443a0dd5ab464613
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: f03f2722f86cec0ca019828b21e4851d0b1305f8
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276256"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847886"
 ---
 # <a name="quickstart-install-the-product-long-sensor"></a>Schnellstart: Installieren des [!INCLUDE [Product long](includes/product-long.md)]-Sensors
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 In diesem Schnellstart installieren Sie den [!INCLUDE [Product long](includes/product-long.md)]-Sensor auf einem Domänencontroller. Wenn Sie eine automatische Installation bevorzugen, finden Sie im [entsprechenden Artikel](silent-installation.md) weitere Informationen.
 

@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 200670e30e3c18e327bebc3959b78537596491a7
-ms.sourcegitcommit: 218ba562a2a109ff456b011004530f503a4e82c6
+ms.openlocfilehash: 1f5d63a4bf5a4ab22b43648394d3e82fb39357ef
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93342452"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848050"
 ---
 # <a name="tutorial-exfiltration-alerts"></a>Tutorial: Warnungen zu Exfiltration
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Cyberangriffe werden üblicherweise auf alle zugänglichen Entitäten wie etwa Benutzer mit geringen Rechten durchgeführt. Anschließend dringt der Angreifer schnell im internen Netzwerk vor (Lateral Movement), um Zugriff auf wertvolle Ressourcen zu erhalten. Dabei kann es sich um sensible Konten, Konten von Domänenadministratoren oder streng vertrauliche Daten handeln. [!INCLUDE [Product long](includes/product-long.md)] identifiziert diese komplexen Bedrohungen an der Quelle über die gesamte Kette der Angriffsabwehr hinweg und ordnet sie in die folgenden Phasen ein:
 
@@ -48,7 +46,7 @@ Domänencontroller enthalten Organisationsdaten mit der höchsten Vertraulichkei
 **TP, B-TP oder FP?**
 
 1. Sollen diese Benutzer diese Dateien auf diesen Computer kopieren?
-    - Lautet die Antwort **Ja** , **Schließen** Sie die Sicherheitswarnung, und schließen Sie den Computer als **B-TP** -Aktivität aus.
+    - Lautet die Antwort **Ja**, **Schließen** Sie die Sicherheitswarnung, und schließen Sie den Computer als **B-TP**-Aktivität aus.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -73,7 +71,7 @@ Domänencontroller enthalten Organisationsdaten mit der höchsten Vertraulichkei
 
 ## <a name="suspicious-communication-over-dns-external-id-2031"></a>Verdächtige Kommunikation über DNS (externe ID 2031)
 
-*Vorheriger Name* : Verdächtige Kommunikation über DNS
+*Vorheriger Name*: Verdächtige Kommunikation über DNS
 
 **Beschreibung**
 
@@ -84,7 +82,7 @@ In den meisten Organisationen wird das DNS-Protokoll nicht überwacht und nur se
 In einigen Unternehmen wird DNS auf legitime Weise für die reguläre Kommunikation verwendet. Gehen Sie folgendermaßen vor, um den Status der Sicherheitswarnung zu bestimmen:
 
 1. Überprüfen Sie, ob die registrierte Abfragedomäne zu einer vertrauenswürdigen Quelle gehört, wie etwa Ihrem Virenschutzanbieter.
-    - Wenn die Domäne bekannt und vertrauenswürdig ist und DNS-Abfragen zulässig sind, handelt es sich wahrscheinlich um eine **B-TP** -Aktivität. *Schließen* Sie die Sicherheitswarnung, und schließen Sie die Domäne aus zukünftigen Warnungen aus.
+    - Wenn die Domäne bekannt und vertrauenswürdig ist und DNS-Abfragen zulässig sind, handelt es sich wahrscheinlich um eine **B-TP**-Aktivität. *Schließen* Sie die Sicherheitswarnung, und schließen Sie die Domäne aus zukünftigen Warnungen aus.
     - Ist die registrierte Abfragedomäne nicht vertrauenswürdig, identifizieren Sie den Prozess, der die Anforderung erstellt hat, auf dem Quellcomputer. Verwenden Sie zur Unterstützung bei dieser Aufgabe den [Prozessmonitor](/sysinternals/downloads/procmon).
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
@@ -103,7 +101,7 @@ In einigen Unternehmen wird DNS auf legitime Weise für die reguläre Kommunikat
 1. Ist die registrierte Abfragedomäne nach Ihrer Untersuchung weiterhin nicht vertrauenswürdig, wird empfohlen, die Zieldomäne zu blockieren, um zukünftig jede Kommunikation zu vermeiden.
 
 > [!NOTE]
-> *Verdächtige Kommunikation über DNS* : Diese Sicherheitswarnungen listen die vermutete Domäne auf. Neue Domänen oder Domänen, die erst vor Kurzem hinzugefügt wurden, [!INCLUDE [Product short](includes/product-short.md)] aber noch nicht bekannt sind und nicht erkannt werden, von denen aber feststeht, dass sie Teil Ihrer Organisation sind, können geschlossen werden.
+> *Verdächtige Kommunikation über DNS*: Diese Sicherheitswarnungen listen die vermutete Domäne auf. Neue Domänen oder Domänen, die erst vor Kurzem hinzugefügt wurden, [!INCLUDE [Product short](includes/product-short.md)] aber noch nicht bekannt sind und nicht erkannt werden, von denen aber feststeht, dass sie Teil Ihrer Organisation sind, können geschlossen werden.
 
 ## <a name="see-also"></a>Weitere Informationen
 

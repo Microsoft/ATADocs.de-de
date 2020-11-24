@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c333647c7a1d48edd379a02ea154c0dbf2c810c0
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 4bed7fe963478377d0da96a3a48f5f50cb4da01d
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276062"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847656"
 ---
 # <a name="tutorial-investigate-an-entity"></a>Tutorial: Untersuchen einer Entität
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
 > Die auf dieser Seite erläuterten [!INCLUDE [Product long](includes/product-long.md)]-Features sind auch über das neue [Portal](https://portal.cloudappsecurity.com) zugänglich.
@@ -103,7 +101,7 @@ Um Ihnen produktübergreifende Einblicke zu gewähren, stellt Ihr Entitätsprofi
 - Schema-Admins
 - Organisations-Admins
 
-Zusätzlich können Sie Entitäten in [!INCLUDE [Product short](includes/product-short.md)] **manuell markieren** , um darauf hinzuweisen, dass sie vertraulich sind. Dies ist wichtig, da einige [!INCLUDE [Product short](includes/product-short.md)]-Erkennungsvorgänge, wie die Vorgänge zum Erkennen von Änderungen sensibler Gruppen und von Lateral Movement-Pfaden, sich auf den Vertraulichkeitsstatus der Entität verlassen. Wenn Sie zusätzliche Benutzer und Gruppen als vertraulich markieren, z. B. Vorstandsmitglieder, leitende Angestellte und Verkaufsleiter, erkennt [!INCLUDE [Product short](includes/product-short.md)] diese als vertraulich an. Weitere Informationen finden Sie unter [Arbeiten mit sensiblen Konten](sensitive-accounts.md).
+Zusätzlich können Sie Entitäten in [!INCLUDE [Product short](includes/product-short.md)] **manuell markieren**, um darauf hinzuweisen, dass sie vertraulich sind. Dies ist wichtig, da einige [!INCLUDE [Product short](includes/product-short.md)]-Erkennungsvorgänge, wie die Vorgänge zum Erkennen von Änderungen sensibler Gruppen und von Lateral Movement-Pfaden, sich auf den Vertraulichkeitsstatus der Entität verlassen. Wenn Sie zusätzliche Benutzer und Gruppen als vertraulich markieren, z. B. Vorstandsmitglieder, leitende Angestellte und Verkaufsleiter, erkennt [!INCLUDE [Product short](includes/product-short.md)] diese als vertraulich an. Weitere Informationen finden Sie unter [Arbeiten mit sensiblen Konten](sensitive-accounts.md).
 
 ## <a name="review-lateral-movement-paths"></a>Überprüfen von Lateral Movement-Pfaden
 
