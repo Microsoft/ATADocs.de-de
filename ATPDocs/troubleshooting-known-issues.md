@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: fffb94b42e49280949dbdb67926841ebaea8ba2a
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: e37e413a355db72e04e1b6f72a71c570148c9f04
+ms.sourcegitcommit: 4563d22ad0fc63022a57c5d2d4fbc425e900bf84
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94848923"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96028698"
 ---
 # <a name="troubleshooting-product-long-known-issues"></a>Problembehandlung bei [!INCLUDE [Product long](includes/product-long.md)] bekannten Problemen
 
@@ -158,7 +158,7 @@ Wenn Sie über einen [!INCLUDE [Product short](includes/product-short.md)] Senso
 
 So beheben Sie dieses Problem:
 
-Legen Sie die folgenden Einstellungen in der NIC-Konfiguration des virtuellen Computers auf **Deaktiviert** fest: **IPv4-TSO-Offload**.
+Legen Sie auf dem Gast Betriebssystem **in der** NIC-Konfiguration der virtuellen Maschine Folgendes fest: **IPv4 TSO Offload**.
 
  ![VMware-Sensorproblem](media/vm-sensor-issue.png)
 
