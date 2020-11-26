@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1f0b06f81986eedaac03f58c9c040a0b3348c304
-ms.sourcegitcommit: 3c5ca2cb13ebe6c839ede951b238261d1fc73f26
+ms.openlocfilehash: 18d3f9461eba901f875863a5e7ccc7cab7ebc4c8
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93343551"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848668"
 ---
 # <a name="tutorial-compromised-credential-alerts"></a>Tutorial: Warnungen zu kompromittierten Anmeldeinformationen
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Cyberangriffe werden in der Regel gegen eine beliebige zugängliche Entität gestartet, wie z.B. einen Benutzer mit geringfügigen Berechtigungen, und verschieben sich anschließend schnell seitwärts, bis der Angreifer Zugriff auf wertvolle Objekte erhält (z.B. sensible Konten, Domänenadministratoren und streng vertrauliche Daten). [!INCLUDE [Product long](includes/product-long.md)] identifiziert diese komplexen Bedrohungen an der Quelle über die gesamte Kette der Angriffsabwehr hinweg und ordnet sie in die folgenden Phasen ein:
 
@@ -40,14 +38,11 @@ Mit den folgenden Sicherheitswarnungen können Sie verdächtige Aktivitäten der
 > - [Vermuteter Brute-Force-Angriff (Kerberos, NTLM) (externe ID 2023)](#suspected-brute-force-attack-kerberos-ntlm-external-id-2023)
 > - [Vermuteter Brute-Force-Angriff (LDAP) (externe ID 2004)](#suspected-brute-force-attack-ldap-external-id-2004)
 > - [Vermuteter Brute-Force-Angriff (SMB) (externe ID 2033)](#suspected-brute-force-attack-smb-external-id-2033)
+> - [Mutmaßliche Kerberos-SPN-Offenlegung (externe ID: 2410)](#suspected-kerberos-spn-exposure-external-id-2410)
 > - [Verdächtigter Netlogon-Rechteerweiterungsversuch (CVE-2020-1472-Ausnutzung) (externe ID 2411)](#suspected-netlogon-priv-elev-2411)
 > - [Vermuteter WannaCry-Ransomware-Angriff (externe ID 2035)](#suspected-wannacry-ransomware-attack-external-id-2035)
 > - [Vermutete Verwendung des Metasploit-Hackerframeworks (externe ID 2034)](#suspected-use-of-metasploit-hacking-framework-external-id-2034)
 > - [Verdächtige VPN-Verbindung (externe ID 2025)](#suspicious-vpn-connection-external-id-2025)
-
-<!--
-> - [Suspected Kerberos SPN exposure (external ID 2410)](#suspected-kerberos-spn-exposure-external-id-2410)
--->
 
 ## <a name="honeytoken-activity-external-id-2014"></a>Honeytoken-Aktivität (externe ID 2014)
 
@@ -63,7 +58,7 @@ Weitere Informationen zu Honeytokenkonten finden Sie unter [Konfigurieren von Au
 
 1. Überprüfen Sie, ob der Besitzer des Quellcomputers das Honeytokenkonto für die Authentifizierung verwendet hat. Verwenden Sie dazu die auf der Seite zu verdächtigen Aktivitäten beschriebene Methode (z.B. Kerberos, LDAP, NTLM).
 
-    Sollte der Besitzer des Quellcomputers das Honeytokenkonto für die Authentifizierung verwendet haben, verwenden Sie genau die in der Warnung beschriebene Methode, und *Schließen* Sie die Sicherheitswarnung als **B-TP** -Aktivität.
+    Sollte der Besitzer des Quellcomputers das Honeytokenkonto für die Authentifizierung verwendet haben, verwenden Sie genau die in der Warnung beschriebene Methode, und *Schließen* Sie die Sicherheitswarnung als **B-TP**-Aktivität.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -105,11 +100,11 @@ Bei einem Kennwort-Spray-Angriff testen Angreifer nach erfolgreichem Durchzähle
     - Besteht die Möglichkeit, dass bei diesen Konten wegen der Verwendung eines falschen Kennworts ein Fehler aufgetreten ist?
     - Überprüfen Sie zusammen mit dem Benutzer/den Benutzern, ob die Aktivität von ihm/ihnen generiert wurde (durch erfolgreiches Anmelden nach einigen fehlerhaften Anmeldeversuchen).
 
-      Lautet die Antwort **Ja** , **Schließen** Sie die Sicherheitswarnung als B-TP-Aktivität.
+      Lautet die Antwort **Ja**, **Schließen** Sie die Sicherheitswarnung als B-TP-Aktivität.
 
 1. Wenn es keine **Erratenen Konten** gibt, überprüfen Sie, ob eines der **Angegriffenen Konten** normalerweise vom Quellcomputer verwendet wird.
     - Überprüfen Sie, ob auf dem Quellcomputer ein Skript mit falschen/veralteten Anmeldeinformationen ausgeführt wird.
-    - Lautet die Antwort **Ja** , beenden und bearbeiten Sie das Skript, oder löschen Sie es. **Schließen** Sie die Sicherheitswarnung als B-TP-Aktivität.
+    - Lautet die Antwort **Ja**, beenden und bearbeiten Sie das Skript, oder löschen Sie es. **Schließen** Sie die Sicherheitswarnung als B-TP-Aktivität.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -152,12 +147,12 @@ In dieser Erkennung wird eine Warnung ausgelöst, wenn [!INCLUDE [Product short]
     - Besteht die Möglichkeit, dass bei diesen Konten wegen der Verwendung eines falschen Kennworts ein Fehler aufgetreten ist?
     - Überprüfen Sie zusammen mit dem Benutzer/den Benutzern, ob die Aktivität von ihm/ihnen generiert wurde (durch erfolgreiches Anmelden nach einigen fehlerhaften Anmeldeversuchen).
 
-        Lautet die Antwort **Ja** , **Schließen** Sie die Sicherheitswarnung als B-TP-Aktivität.
+        Lautet die Antwort **Ja**, **Schließen** Sie die Sicherheitswarnung als B-TP-Aktivität.
 
 1. Wenn es keine **Erratenen Konten** gibt, überprüfen Sie, ob eines der **Angegriffenen Konten** normalerweise vom Quellcomputer verwendet wird.
     - Überprüfen Sie, ob auf dem Quellcomputer ein Skript mit falschen/veralteten Anmeldeinformationen ausgeführt wird.
 
-        Lautet die Antwort **Ja** , beenden und bearbeiten Sie das Skript, oder löschen Sie es. **Schließen** Sie die Sicherheitswarnung als B-TP-Aktivität.
+        Lautet die Antwort **Ja**, beenden und bearbeiten Sie das Skript, oder löschen Sie es. **Schließen** Sie die Sicherheitswarnung als B-TP-Aktivität.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -176,7 +171,7 @@ In dieser Erkennung wird eine Warnung ausgelöst, wenn [!INCLUDE [Product short]
 
 ## <a name="suspected-brute-force-attack-smb-external-id-2033"></a>Vermuteter Brute-Force-Angriff (SMB) (externe ID 2033)
 
-*Vorheriger Name* : Ungewöhnliche Protokollimplementierung (potenzielle Verwendung schädlicher Tools wie Hydra)
+*Vorheriger Name*: Ungewöhnliche Protokollimplementierung (potenzielle Verwendung schädlicher Tools wie Hydra)
 
 **Beschreibung**
 
@@ -185,13 +180,13 @@ Angreifer verwenden Tools, die verschiedene Protokolle wie SMB, Kerberos und NTL
 **TP, B-TP oder FP?**
 
 1. Überprüfen Sie, ob auf dem Quellcomputer ein Angriffstool wie Hydra ausgeführt wird.
-    1. Wird auf dem Quellcomputer ein Angriffstool ausgeführt, stellt diese Warnung eine **TP** -Aktivität dar. Führen Sie die Anweisungen unter **Ermitteln des Umfangs der Sicherheitsverletzung** aus.
+    1. Wird auf dem Quellcomputer ein Angriffstool ausgeführt, stellt diese Warnung eine **TP**-Aktivität dar. Führen Sie die Anweisungen unter **Ermitteln des Umfangs der Sicherheitsverletzung** aus.
 
 Anwendungen implementieren gelegentlich einen eigenen NTLM- oder SMB-Stapel.
 
 1. Überprüfen Sie, ob auf dem Quellcomputer dessen eigener NTLM- oder SMB-Anwendungstyp im Stapel ausgeführt wird.
-    1. Führt der Quellcomputer diesen Anwendungstyp aus, obwohl er das nicht sollte, korrigieren Sie entsprechend die Anwendungskonfiguration. **Schließen** Sie die Sicherheitswarnung als **B-TP** -Aktivität (unbedenklich richtig positiv).
-    1. **Schließen** Sie die Sicherheitswarnung als **B-TP** -Aktivität, und schließen Sie diesen Computer aus, wenn der Quellcomputer diesen Anwendungstyp ausführt und dies auch weiterhin tun soll.
+    1. Führt der Quellcomputer diesen Anwendungstyp aus, obwohl er das nicht sollte, korrigieren Sie entsprechend die Anwendungskonfiguration. **Schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität (unbedenklich richtig positiv).
+    1. **Schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität, und schließen Sie diesen Computer aus, wenn der Quellcomputer diesen Anwendungstyp ausführt und dies auch weiterhin tun soll.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -208,35 +203,33 @@ Anwendungen implementieren gelegentlich einen eigenen NTLM- oder SMB-Stapel.
 1. Erzwingen Sie [komplexe und lange Kennwörter](/windows/security/threat-protection/security-policy-settings/password-policy) in der Organisation. Komplexe und lange Kennwörter stellen die notwendige erste Sicherheitsstufe zum Schutz vor zukünftigen Brute-Force-Angriffen dar.
 1. [Deaktivieren von SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
 
-<!--
-## Suspected Kerberos SPN exposure (external ID 2410)
+## <a name="suspected-kerberos-spn-exposure-external-id-2410"></a>Mutmaßliche Kerberos-SPN-Offenlegung (externe ID: 2410)
 
-**Description**
+**Beschreibung**
 
-Attackers use tools to enumerate service accounts and their respective SPNs (Service principal names), request a Kerberos service ticket for the services, capture the Ticket Granting Service (TGS) tickets from memory and extract their hashes, and save them for later use in an offline brute force attack.
+Angreifer verwenden Tools zur Auflistung von Dienstkonten und der jeweiligen Dienstprinzipalnamen, fordern ein Kerberos-Dienstticket für diese an, erfassen TGS-Tickets (Ticket Granting Service) aus dem Arbeitsspeicher, extrahieren deren Hashes und speichern sie, um sie später bei einem Brute-Force-Offlineangriff zu verwenden.
 
-**Learning period**
+**Lernphase**
 
-None
+Keine
 
-**TP, B-TP, or FP**
+**TP, B-TP oder FP**
 
-1. Check if the source computer is running an attack tool, such as PowerSploit or Rubeus.
-    1. If yes, it is a true positive. Follow the instructions in **Understand the scope of the breach**.
-    1. If the source computer is found running that type of application, and it should continue doing so, Close the security alert as a T-BP activity, and exclude that computer.
+1. Überprüfen Sie, ob auf dem Quellcomputer ein Angriffstool wie PowerSploit oder Rubeus ausgeführt wird.
+    1. Wenn dies der Fall ist, handelt es sich um ein richtig positives Ereignis. Befolgen Sie die Anweisungen unter  **Ermitteln des Umfangs der Sicherheitsverletzung**.
+    1. Wenn der Quellcomputer diesen Anwendungstyp ausführt und das auch weiterhin gewünscht ist, schließen Sie die Sicherheitswarnung als T-BP-Aktivität, und schließen Sie diesen Computer aus.
 
-**Understand the scope of the breach**
+**Ermitteln des Umfangs der Sicherheitsverletzung**
 
-1. Investigate the [exposed accounts](investigate-a-user.md). Check for malicious activity or suspicious behavior for these accounts.
-1. Investigate the [source computer](investigate-a-computer.md).
+1. Untersuchen Sie die [offengelegten Konten](investigate-a-user.md). Überprüfen Sie diese Konten auf schädliche Aktivitäten oder verdächtiges Verhalten.
+1. Untersuchen Sie den [Quellcomputer](investigate-a-computer.md).
 
-**Remediation:**
+**Abhilfemaßnahmen:**
 
-1. Contain the source computer.
-    - Find the tool that performed the attack and remove it.
-    - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-1. Reset the passwords of the exposed users and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
--->
+1. Kontrollieren Sie den Quellcomputer.
+    - Suchen Sie das Tool, das den Angriff ausgeführt hat, und entfernen Sie es.
+    - Suchen Sie nach Benutzern, die ungefähr zum Zeitpunkt der Aktivität angemeldet waren, da diese möglicherweise auch kompromittiert sind. Setzen Sie ihre Kennwörter zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
+1. Setzen Sie die Kennwörter der offengelegten Benutzer zurück, und aktivieren Sie MFA. Wenn Sie in Azure Active Directory Identity Protection die relevanten Richtlinien für Benutzer mit hohem Risiko konfiguriert haben, können Sie auch im Cloud App Security-Portal die Aktion [**Benutzergefährdung bestätigen**](/cloud-app-security/accounts#governance-actions) verwenden.
 
 <a name="suspected-netlogon-priv-elev-2411"></a>
 
@@ -244,7 +237,7 @@ None
 
 Microsoft hat [CVE-2020-1472](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2020-1472) veröffentlicht mit der Ankündigung, dass ein neues Sicherheitsrisiko vorliegt, das die Rechteerweiterung für den Domänencontroller ermöglicht.
 
-Ein Rechteerweiterungs-Sicherheitsrisiko liegt vor, wenn ein Angreifer eine gefährdete Netlogon-Verbindung über einen sicheren Kanal mit einem Domänencontroller herstellt und dabei das Netlogon Remote Protocol ( [MS-NRPC](/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)) verwendet. Dies ist auch als *Netlogon-Rechteerweiterungs-Sicherheitsrisiko* bekannt.
+Ein Rechteerweiterungs-Sicherheitsrisiko liegt vor, wenn ein Angreifer eine gefährdete Netlogon-Verbindung über einen sicheren Kanal mit einem Domänencontroller herstellt und dabei das Netlogon Remote Protocol ([MS-NRPC](/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)) verwendet. Dies ist auch als *Netlogon-Rechteerweiterungs-Sicherheitsrisiko* bekannt.
 
 **Lernphase**
 
@@ -275,7 +268,7 @@ Betrachten Sie diese Warnung andernfalls als  **TP** , und führen Sie die u
 
 ## <a name="suspected-wannacry-ransomware-attack-external-id-2035"></a>Vermuteter WannaCry-Ransomware-Angriff (externe ID 2035)
 
-*Vorheriger Name* : Ungewöhnliche Protokollimplementierung (potenzieller WannaCry-Ransomwareangriff)
+*Vorheriger Name*: Ungewöhnliche Protokollimplementierung (potenzieller WannaCry-Ransomwareangriff)
 
 **Beschreibung**
 
@@ -285,13 +278,13 @@ Angreifer verwenden Tools, die verschiedene Protokolle auf nicht standardmäßig
 
 1. Überprüfen Sie, ob WannaCry auf dem Quellcomputer ausgeführt wird.
 
-    - Wird WannaCry ausgeführt, stellt diese Warnung eine **TP** -Aktivität dar. Befolgen Sie die Anweisungen im Abschnitt **Ermitteln des Umfangs der Sicherheitsverletzung** oben.
+    - Wird WannaCry ausgeführt, stellt diese Warnung eine **TP**-Aktivität dar. Befolgen Sie die Anweisungen im Abschnitt **Ermitteln des Umfangs der Sicherheitsverletzung** oben.
 
 Anwendungen implementieren gelegentlich einen eigenen NTLM- oder SMB-Stapel.
 
 1. Überprüfen Sie, ob auf dem Quellcomputer dessen eigener NTLM- oder SMB-Anwendungstyp im Stapel ausgeführt wird.
-    1. Führt der Quellcomputer diesen Anwendungstyp aus, obwohl er das nicht sollte, korrigieren Sie entsprechend die Anwendungskonfiguration. **Schließen** Sie die Sicherheitswarnung als **B-TP** -Aktivität (unbedenklich richtig positiv).
-    1. Führt der Quellcomputer diesen Anwendungstyp aus und soll das auch weiterhin tun, **Schließen** Sie die Sicherheitswarnung als **B-TP** -Aktivität, und schließen Sie diesen Computer aus.
+    1. Führt der Quellcomputer diesen Anwendungstyp aus, obwohl er das nicht sollte, korrigieren Sie entsprechend die Anwendungskonfiguration. **Schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität (unbedenklich richtig positiv).
+    1. Führt der Quellcomputer diesen Anwendungstyp aus und soll das auch weiterhin tun, **Schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität, und schließen Sie diesen Computer aus.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -309,7 +302,7 @@ Anwendungen implementieren gelegentlich einen eigenen NTLM- oder SMB-Stapel.
 
 ## <a name="suspected-use-of-metasploit-hacking-framework-external-id-2034"></a>Vermutete Verwendung des Metasploit-Hackerframeworks (externe ID 2034)
 
-*Vorheriger Name* : Ungewöhnliche Protokollimplementierung (potenzielle Verwendung schädlicher Hackertools wie Metasploit)
+*Vorheriger Name*: Ungewöhnliche Protokollimplementierung (potenzielle Verwendung schädlicher Hackertools wie Metasploit)
 
 **Beschreibung**
 
@@ -324,8 +317,8 @@ Angreifer verwenden Tools, die verschiedene Protokolle (SMB, Kerberos, NTLM) auf
 Anwendungen implementieren gelegentlich einen eigenen NTLM- oder SMB-Stapel.
 
  1. Überprüfen Sie, ob auf dem Quellcomputer dessen eigener NTLM- oder SMB-Anwendungstyp im Stapel ausgeführt wird.
-    1. Führt der Quellcomputer diesen Anwendungstyp aus, obwohl er das nicht sollte, korrigieren Sie entsprechend die Anwendungskonfiguration. **Schließen** Sie die Sicherheitswarnung als **B-TP** -Aktivität (unbedenklich richtig positiv).
-    1. Führt der Quellcomputer diesen Anwendungstyp aus und soll das auch weiterhin tun, **Schließen** Sie die Sicherheitswarnung als **B-TP** -Aktivität, und schließen Sie diesen Computer aus.
+    1. Führt der Quellcomputer diesen Anwendungstyp aus, obwohl er das nicht sollte, korrigieren Sie entsprechend die Anwendungskonfiguration. **Schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität (unbedenklich richtig positiv).
+    1. Führt der Quellcomputer diesen Anwendungstyp aus und soll das auch weiterhin tun, **Schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität, und schließen Sie diesen Computer aus.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 
@@ -363,7 +356,7 @@ Es wird eine Warnung ausgelöst, wenn basierend auf einem Machine-Learning-Algor
     1. Hat der Benutzer vor Kurzem seinen Standort geändert?
     1. Gab es einen Ortswechsel, und stellte der Benutzer eine Verbindung von einem neuen Gerät aus her?
 
-Lautet die Antwort auf diese Fragen „Ja“, **Schließen** Sie die Sicherheitswarnung als **B-TP** -Aktivität.
+Lautet die Antwort auf diese Fragen „Ja“, **Schließen** Sie die Sicherheitswarnung als **B-TP**-Aktivität.
 
 **Ermitteln des Umfangs der Sicherheitsverletzung**
 

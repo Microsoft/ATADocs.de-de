@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: e4dcf816008316a244be44e631951c07f588fcd9
-ms.sourcegitcommit: 00142fc07a81b10922ae26418a4104a0ef4b366d
+ms.openlocfilehash: be9a243b149e6d5d998ccbebeb7b72ee5073432b
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2020
-ms.locfileid: "94371483"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94849076"
 ---
 # <a name="whats-new-in-product-long"></a>Neues in [!INCLUDE [Product long](includes/product-long.md)]
 
@@ -29,6 +29,12 @@ RSS-Feed: Lassen Sie sich benachrichtigen, wenn diese Seite aktualisiert wird, i
 > [!IMPORTANT]
 >
 > Die Produktnamen des Bedrohungsschutzes von Microsoft ändern sich. Weitere Informationen zu diesem und anderen Updates finden Sie [hier](https://www.microsoft.com/security/blog/?p=91813). Die neuen Namen werden ab Release 2.129 verwendet.
+
+## <a name="product-short-release-2132"></a>[!INCLUDE [Product short](includes/product-short.md)]-Release 2.132
+
+Veröffentlichung: 17. November 2020
+
+- Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
 ## <a name="product-short-release-2131"></a>[!INCLUDE [Product short](includes/product-short.md)]-Release 2.131
 
@@ -63,7 +69,7 @@ Die Umschalttasten **E-Mail-Benachrichtigungen** zum Aktivieren von E-Mail-Benac
 Veröffentlicht: 20. September 2020
 
 - **Neue Sicherheitswarnung: Verdächtigter Netlogon-Rechteerweiterungsversuch (externe ID 2411)**  
-Die Sicherheitswarnung *Verdächtigter Netlogon-Rechteerweiterungsversuch (CVE-2020-1472-Ausnutzung) (externe ID 2411)* von Azure ATP ist jetzt verfügbar. Bei dieser Erkennung wird eine Azure ATP-Sicherheitswarnung ausgelöst, wenn ein Angreifer eine gefährdete Netlogon-Verbindung über einen sicheren Kanal mit einem Domänencontroller herstellt und dabei das Netlogon Remote Protocol ( [MS-NRPC](/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)) verwendet. Dies ist auch als *Netlogon-Rechteerweiterungs-Sicherheitsrisiko* bekannt. Weitere Informationen finden Sie unter [Verdächtigter Netlogon-Rechteerweiterungsversuch](compromised-credentials-alerts.md#suspected-netlogon-priv-elev-2411).
+Die Sicherheitswarnung *Verdächtigter Netlogon-Rechteerweiterungsversuch (CVE-2020-1472-Ausnutzung) (externe ID 2411)* von Azure ATP ist jetzt verfügbar. Bei dieser Erkennung wird eine Azure ATP-Sicherheitswarnung ausgelöst, wenn ein Angreifer eine gefährdete Netlogon-Verbindung über einen sicheren Kanal mit einem Domänencontroller herstellt und dabei das Netlogon Remote Protocol ([MS-NRPC](/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)) verwendet. Dies ist auch als *Netlogon-Rechteerweiterungs-Sicherheitsrisiko* bekannt. Weitere Informationen finden Sie unter [Verdächtigter Netlogon-Rechteerweiterungsversuch](compromised-credentials-alerts.md#suspected-netlogon-priv-elev-2411).
 - Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
 ## <a name="azure-atp-release-2126"></a>Azure ATP-Release 2.126
@@ -123,7 +129,7 @@ Veröffentlicht am 26. Juli 2020
 Veröffentlicht: 5. Juli 2020
 
 - **Featureerweiterung: Neue Registerkarte *Excluded domain controllers* (Ausgeschlossene Domänencontroller) im Excel-Bericht**  
-Um die Genauigkeit unserer Berechnung der Domänencontrollerabdeckung zu verbessern, werden Domänencontroller mit externen Vertrauensstellungen aus der Berechnung ausgeschlossen, um eine hundertprozentige Abdeckung zu erreichen. Ausgeschlossene Domänencontroller werden auf der neuen Registerkarte „ *Excluded domain controllers* “ (Ausgeschlossene Domänencontroller) im Download des Excel-Berichts zur Domänenabdeckung angezeigt. Weitere Informationen zum Herunterladen des Berichts finden Sie unter [Domänencontrollerstatus](sensor-monitoring.md#domain-controller-status).
+Um die Genauigkeit unserer Berechnung der Domänencontrollerabdeckung zu verbessern, werden Domänencontroller mit externen Vertrauensstellungen aus der Berechnung ausgeschlossen, um eine hundertprozentige Abdeckung zu erreichen. Ausgeschlossene Domänencontroller werden auf der neuen Registerkarte „*Excluded domain controllers*“ (Ausgeschlossene Domänencontroller) im Download des Excel-Berichts zur Domänenabdeckung angezeigt. Weitere Informationen zum Herunterladen des Berichts finden Sie unter [Domänencontrollerstatus](sensor-monitoring.md#domain-controller-status).
 - Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
 ## <a name="azure-atp-release-2118"></a>Azure ATP-Release 2.118
@@ -631,7 +637,7 @@ Veröffentlichung: 24. Februar 2019
     Lightweight Directory Access Protocol (LDAP) ist eine der sowohl für zulässige als auch böswillige Zwecke am häufigsten verwendeten Methoden zum Abfragen von Active Directory. LDAP-fokussierte Sicherheitsprinzipalreconnaissance wird häufig als erste Phase eines Kerberoasting-Angriffs verwendet. Mit Kerberoasting-Angriffen wird eine Zielliste von Sicherheitsprinzipalnamen (Security Principal Names, SPNs) abgerufen, für die Angreifer dann versuchen, Ticket Granting Server-Tickets (TGS) zu erhalten.
 
 - **Featureerweiterung: Reconnaissance über Kontoauflistung (NTLM)**  
-Verbesserte **Reconnaissance über Kontoauflistung (NTLM)** -Warnung, die zusätzliche Analysen und verbesserte Erkennungslogik zum Reduzieren von **B-TP** - und **FP** -Warnungsergebnissen verwendet.
+Verbesserte **Reconnaissance über Kontoauflistung (NTLM)** -Warnung, die zusätzliche Analysen und verbesserte Erkennungslogik zum Reduzieren von **B-TP**- und **FP**-Warnungsergebnissen verwendet.
 
 - **Featureerweiterung: „Reconnaissance über Netzwerkzuordnung“-Warnung (DNS)**  
 Neue Typen von Erkennungen wurden „Reconnaissance über Netzwerkzuordnung“-Warnungen (DNS) hinzugefügt. Außer verdächtigen AXFR-Anfragen erkennt Azure ATP jetzt verdächtige Typen von Anforderungen von Nicht-DNS-Servern, die eine übermäßige Anzahl von Anforderungen verwenden.
@@ -653,7 +659,7 @@ Erfahren Sie mehr über die Sicherheitswarnung [Vermuteter DCSync-Angriff (Repli
 Veröffentlichung: 10. Februar 2019
 
 - **Neue Sicherheitswarnung: Suspected NTLM relay attack (Exchange account) - preview** (Vermuteter NTLM-Relaisangriff (Exchange-Konto) – Vorschauversion)  
-Die Azure ATP-Sicherheitswarnung [Suspected NTLM relay attack (Exchange account) - preview](lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037) (Vermuteter NTLM-Relaisangriff (Exchange-Konto) – Vorschauversion) ist jetzt als öffentliche Vorschauversion verfügbar.    Hierbei wird eine Azure ATP-Sicherheitswarnung ausgelöst, wenn ermittelt wird, dass die Anmeldeinformationen eines Exchange-Kontos von einer verdächtigen Quelle verwendet werden. Bei solchen Angriffen werden NTLM-Relaistechniken verwendet, um die Exchange-Berechtigungen eines Domänencontrollers zu erlangen. Sie werden deshalb als **PrivExchange** bezeichnet. Weitere Informationen zur **PrivExchange** -Technik erhalten Sie in der [Sicherheitsempfehlung ADV190007](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV190007) (Erstveröffentlichung: 31. Januar 2019) und im Blogbeitrag zur [Reaktion auf Warnungen in Azure ATP](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/How-to-win-the-latest-security-race-over-NTLM-relay/ba-p/334511).  
+Die Azure ATP-Sicherheitswarnung [Suspected NTLM relay attack (Exchange account) - preview](lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037) (Vermuteter NTLM-Relaisangriff (Exchange-Konto) – Vorschauversion) ist jetzt als öffentliche Vorschauversion verfügbar.    Hierbei wird eine Azure ATP-Sicherheitswarnung ausgelöst, wenn ermittelt wird, dass die Anmeldeinformationen eines Exchange-Kontos von einer verdächtigen Quelle verwendet werden. Bei solchen Angriffen werden NTLM-Relaistechniken verwendet, um die Exchange-Berechtigungen eines Domänencontrollers zu erlangen. Sie werden deshalb als **PrivExchange** bezeichnet. Weitere Informationen zur **PrivExchange**-Technik erhalten Sie in der [Sicherheitsempfehlung ADV190007](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV190007) (Erstveröffentlichung: 31. Januar 2019) und im Blogbeitrag zur [Reaktion auf Warnungen in Azure ATP](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/How-to-win-the-latest-security-race-over-NTLM-relay/ba-p/334511).  
 
 - **Allgemeine Verfügbarkeit: Remotecodeausführung über DNS**  
 Diese Warnung ist jetzt allgemein verfügbar. Weitere Informationen und Warnungsfeatures finden Sie auf der Beschreibungsseite zur Warnung [Remotecodeausführung über DNS](lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036).
@@ -691,7 +697,7 @@ Veröffentlicht am 27. Januar 2019
 
 - **Neues Feature: Unterstützung nicht vertrauenswürdiger Gesamtstrukturen (Preview)**  
 Die Azure ATP-Unterstützung von Sensoren in nicht vertrauenswürdigen Gesamtstrukturen befindet sich nun in der Public Preview.
-Über die **Verzeichnisdienste** -Seite im Azure ATP-Portal können Sie zusätzliche Anmeldeinformationen konfigurieren, um Azure ATP-Sensoren zu ermöglichen, Verbindungen mit verschiedenen Active Directory-Gesamtstrukturen herzustellen und Informationen an den Azure ATP-Dienst zurückzugeben. Weitere Informationen finden Sie unter [Azure ATP für mehrere Gesamtstrukturen](multi-forest.md).
+Über die **Verzeichnisdienste**-Seite im Azure ATP-Portal können Sie zusätzliche Anmeldeinformationen konfigurieren, um Azure ATP-Sensoren zu ermöglichen, Verbindungen mit verschiedenen Active Directory-Gesamtstrukturen herzustellen und Informationen an den Azure ATP-Dienst zurückzugeben. Weitere Informationen finden Sie unter [Azure ATP für mehrere Gesamtstrukturen](multi-forest.md).
 
 - **Neues Feature: Abdeckung des Domänencontrollers**  
 Azure ATP stellt nun Abdeckungsinformationen für überwachte Azure ATP-Domänencontroller bereit.  
@@ -701,8 +707,8 @@ Sie können die Anzahl der überwachten und nicht überwachten Domänencontrolle
 Die Ermittlung der Reconnaissance mithilfe der Azure ATP-Kontoenumeration ermittelt und löst Warnungen bei Enumerationsangriffen mit Kerberos und NTLM aus. Zuvor wurden nur Versuche mit Kerberos ermittelt. Weitere Informationen finden Sie unter [Azure ATP-Warnungen zur Reconnaissance](reconnaissance-alerts.md#account-enumeration-reconnaissance-external-id-2003).
 
 - **Featureerweiterung: Warnung für versuchte Remotecodeausführung**
-  - Jegliche Aktivitäten bezüglich der Remoteausführung, z. B. Diensterstellung, WMI-Ausführung und die neue **PowerShell** -Ausführung, wurden zur Profilzeitachse von Zielcomputern hinzugefügt. Der Zielcomputer ist der Domänencontroller, auf dem der Befehl ausgeführt wurde.
-  - Die **PowerShell** -Ausführung wurde zur Aktivitätsliste der Remotecodeausführungen hinzugefügt, die im Entitätsprofil auf der Zeitachse für Warnungen aufgeführt werden.
+  - Jegliche Aktivitäten bezüglich der Remoteausführung, z. B. Diensterstellung, WMI-Ausführung und die neue **PowerShell**-Ausführung, wurden zur Profilzeitachse von Zielcomputern hinzugefügt. Der Zielcomputer ist der Domänencontroller, auf dem der Befehl ausgeführt wurde.
+  - Die **PowerShell**-Ausführung wurde zur Aktivitätsliste der Remotecodeausführungen hinzugefügt, die im Entitätsprofil auf der Zeitachse für Warnungen aufgeführt werden.
   - Weitere Informationen finden Sie unter [Versuch der Remotecodeausführung](domain-dominance-alerts.md#remote-code-execution-attempt-external-id-2019).  
 
 - **Windows Server 2019-LSASS-Problem und Azure ATP**  
@@ -733,7 +739,7 @@ Die Azure ATP-Sicherheitswarnung [Data exfiltration over SMB](exfiltration-alert
 Eine neue Warnungsbeschreibung und ein zusätzlicher Beweis sind hinzugefügt worden, damit die Warnung einfacher zu verstehen ist, und um bessere Untersuchungsworkflows zu bieten.
 
 - **Featureerweiterung: DNS query logical activities (Logische Aktivitäten zur DNS-Abfrage)**  
-Weitere Abfragetypen sind den [von Azure ATP überwachten Aktivitäten](monitored-activities.md) hinzugefügt worden. Darunter die folgenden: **TXT** , **MX** , **NS** , **SRV** , **ANY** , **DNSKEY**.
+Weitere Abfragetypen sind den [von Azure ATP überwachten Aktivitäten](monitored-activities.md) hinzugefügt worden. Darunter die folgenden: **TXT**, **MX**, **NS**, **SRV**, **ANY**, **DNSKEY**.
 
 - **Featureerweiterung: Suspected Golden Ticket usage (ticket anomaly) (Verdacht auf Verwendung eines Golden Ticket (anomalie)) und Suspected Golden Ticket usage (nonexistent account) (Verdacht auf Verwendung eines Golden Ticket (nicht vorhandenes Ticket))**  
 Eine verbesserte Erkennungslogik wurde für beide Warnungen angewendet, um die Anzahl von FP-Warnungen zu reduzieren und genauere Ergebnisse zu liefern.
@@ -800,7 +806,7 @@ Die Azure ATP-Sicherheitswarnung [Verdacht auf Verwendung eines Golden Ticket �
     Ein gefälschtes TGT wird als „Golden Ticket“ bezeichnet, da Angreifer damit dauerhafte Netzwerkpersistenz erlangen. Gefälschte Golden Tickets dieses Typs weisen eindeutige Merkmale auf, für deren Identifikation diese neue Erkennung konzipiert ist.
 
 - **Featureerweiterung: Automatisierte Erstellung von Azure ATP-Instanzen (Arbeitsbereichen)**  
-Ab heute heißen Azure ATP- *Arbeitsbereiche* Azure ATP- *Instanzen*. Azure ATP unterstützt jetzt eine Azure ATP-Instanz pro Azure ATP-Konto. Instanzen für neue Kunden werden mithilfe des Assistenten für die Instanzenerstellung im [Azure ATP-Portal](https://portal.atp.azure.com) erstellt. Vorhandene Azure ATP-Arbeitsbereiche werden mit diesem Update automatisch in Azure ATP-Instanzen konvertiert.  
+Ab heute heißen Azure ATP-*Arbeitsbereiche* Azure ATP-*Instanzen*. Azure ATP unterstützt jetzt eine Azure ATP-Instanz pro Azure ATP-Konto. Instanzen für neue Kunden werden mithilfe des Assistenten für die Instanzenerstellung im [Azure ATP-Portal](https://portal.atp.azure.com) erstellt. Vorhandene Azure ATP-Arbeitsbereiche werden mit diesem Update automatisch in Azure ATP-Instanzen konvertiert.  
 
   - Vereinfachte Instanzerstellung für schnellere Bereitstellung und Schutz mit [Erstellung Ihrer Azure ATP-Instanz](install-step1.md)
   - Alle [Anforderungen an Datenschutz und Compliance](privacy-compliance.md) bleiben unverändert.
