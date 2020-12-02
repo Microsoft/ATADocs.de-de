@@ -4,18 +4,18 @@ description: In diesem Artikel werden die Voraussetzungen für eine erfolgreiche
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 10/26/2020
+ms.date: 11/24/2020
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: df877f342b0bf7a31bf4cdf171a7bc2104c89e1f
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 23078e7e4281629f378e27281a21124d959f0902
+ms.sourcegitcommit: 24530d8fac3b63dee766b124b6a5549c1b9ef808
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94847002"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "96028659"
 ---
 # <a name="product-long-prerequisites"></a>Voraussetzungen für [!INCLUDE [Product long](includes/product-long.md)]
 
@@ -132,7 +132,7 @@ Der [!INCLUDE [Product short](includes/product-short.md)]-Sensor unterstützt di
 | Windows Server 2016        | &#10004;                       | &#10004;    | &#10060;       |
 | Windows Server 2019\*      | &#10004;                       | &#10004;    | &#10060;       |
 
-\* Erfordert [KB4487044](https://support.microsoft.com/help/4487044/windows-10-update-kb4487044). Sensoren, die auf Server 2019 ohne dieses Update installiert sind, werden automatisch deaktiviert.
+\* Erfordert [KB4487044](https://support.microsoft.com/help/4487044/windows-10-update-kb4487044) oder ein neueres kumulatives Update. Sensoren, die ohne dieses Update unter Server 2019 installiert sind, werden automatisch beendet, wenn die Dateiversion der Datei *ntdsai.dll* im Systemverzeichnis älter ist als *10.0.17763.316*.
 
 Beim Domänencontroller kann es sich um einen schreibgeschützten Domänencontroller (Read Only Domain Controller, RODC) handeln.
 
