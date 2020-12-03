@@ -1,22 +1,14 @@
 ---
 title: Bewertung von Microsoft Defender für die Identitäts offen Stellung von Text
 description: Dieser Artikel bietet eine Übersicht über den Microsoft Defender for Identity-Bericht zur Bewertung der Identitäts Sicherheitslage.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 08/25/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: 6a5d110d35ad3b49205d4c0b7b03412fe26626ae
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: ce95dd461716d72e97787f797c8326da81a43118
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94848787"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96543789"
 ---
 # <a name="security-assessment-entities-exposing-credentials-in-clear-text"></a>Sicherheitsbewertung: Verfügbarmachen von Anmeldeinformationen in Klartext durch Entitäten
 

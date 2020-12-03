@@ -1,20 +1,14 @@
 ---
 title: Konfigurieren von Microsoft Defender für Identitäts Sensor Einstellungen konzeptionell
 description: In Schritt 5 der Installation von Microsoft Defender für Identity können Sie die Einstellungen für den eigenständigen Defender für Identity-Sensor konfigurieren.
-author: shsagir
-ms.author: shsagir
 ms.date: 09/15/2019
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: 27431aca85e794ecd31029b6286e3146f01fa7ec
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 329bfd4f6de2e15865c81d22651e833a63d07b6d
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94848498"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96543109"
 ---
 # <a name="configure-product-long-sensor-settings"></a>Konfigurieren von [!INCLUDE [Product long](includes/product-long.md)] Sensor Einstellungen
 
@@ -69,7 +63,7 @@ In diesem Artikel erfahren Sie, wie Sie Sensor Einstellungen ordnungsgemäß kon
 1. Überprüfen [!INCLUDE [Product short](includes/product-short.md)] Sie die Konnektivität auf einem beliebigen Domänen Gerät mithilfe der folgenden Schritte:
     1. Öffnen Sie eine Eingabeaufforderung.
     1. Geben Sie `nslookup` ein.
-    1. Geben Sie **Server** und dann den FQDN oder die IP-Adresse des Domänen Controllers ein, auf dem der [!INCLUDE [Product short](includes/product-short.md)] Sensor installiert ist. Beispiel: `server contosodc.contoso.azure`
+    1. Geben Sie **Server** und dann den FQDN oder die IP-Adresse des Domänen Controllers ein, auf dem der [!INCLUDE [Product short](includes/product-short.md)] Sensor installiert ist. Zum Beispiel, `server contosodc.contoso.azure`
         - Stellen Sie sicher, dass Sie "ContosoDC. contoso. Azure" und "contoso. Azure" durch den FQDN Ihres [!INCLUDE [Product short](includes/product-short.md)] Sensors bzw. Domänen namens ersetzen.
     1. Geben Sie `ls -d contoso.azure` ein.
     1. Wiederholen Sie die Schritte 3 und 4 für jeden Sensor, den Sie testen möchten.

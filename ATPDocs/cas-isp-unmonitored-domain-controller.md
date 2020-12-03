@@ -1,22 +1,14 @@
 ---
 title: Bewertungen der nicht überwachten Domänen Controller von Microsoft Defender
 description: Dieser Artikel bietet eine Übersicht über den Microsoft Defender for Identity-Identitäts Sicherheitsstatus-Bewertungsbericht für nicht überwachte Domänen Controller.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: f3cf20aed80167b581a78fea5306916578bbd4c6
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 86a1e02b84cf874f23fbf7b69d50c482cd15713b
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94848328"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96544146"
 ---
 # <a name="security-assessment-unmonitored-domain-controllers"></a>Sicherheitsbewertung: Nicht überwachte Domänencontroller
 

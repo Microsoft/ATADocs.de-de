@@ -1,22 +1,14 @@
 ---
 title: Leitfaden für Microsoft Defender for Identity-Sicherheitswarnungen
 description: Dieser Artikel enthält eine Liste der Sicherheitswarnungen, die von Microsoft Defender for Identity ausgegeben werden.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/27/2020
 ms.topic: conceptual
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: 11184c7bea435ae1168deb810ec54ec163d990f5
-ms.sourcegitcommit: 38266d01b28ea6b084687b9bc3c4aa18e2dbb3b7
+ms.openlocfilehash: b6870f7c02dcd9497c08f8ebba33fde967092a4c
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94851225"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96542191"
 ---
 # <a name="product-long-security-alerts"></a>[!INCLUDE [Product long](includes/product-long.md)]-Sicherheitswarnungen
 
@@ -71,7 +63,7 @@ In der folgenden Tabelle wird die Zuordnung zwischen den Warnungsnamen, den ents
 > |[Verdächtigter Netlogon-Rechteerweiterungsversuch (CVE-2020-1472-Ausnutzung)](compromised-credentials-alerts.md#suspected-netlogon-priv-elev-2411)|2411|Hoch|Berechtigungsausweitung|
 > |[Suspected NTLM authentication tampering (Vermutete Manipulation der NTLM-Authentifizierung)](lateral-movement-alerts.md#suspected-ntlm-authentication-tampering-external-id-2039)|2039|Mittel|Ausweitung von Berechtigungen, <br>Seitwärtsbewegung|
 > |[Vermuteter NTLM-Relaisangriff](lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037)|2037|Mittel oder Niedrig, wenn mithilfe von signiertem NTLMv2-Protokoll beobachtet|Ausweitung von Berechtigungen, <br>Seitwärtsbewegung|
-> |[Suspected overpass-the-hash attack (Kerberos) (Verdacht auf einen Overpass-the-Hash-Angriff (Kerberos))](lateral-movement-alerts.md#suspected-overpass-the-hash-attack-kerberos-external-id-2002)|2002|Mittel|Seitliche Verschiebung|
+> |[Suspected overpass-the-hash attack (Kerberos) (Verdacht auf einen Overpass-the-Hash-Angriff (Kerberos))](lateral-movement-alerts.md#suspected-overpass-the-hash-attack-kerberos-external-id-2002)|2002|Mittel|Seitwärtsbewegung|
 > |[Mutmaßliche Verwendung von Rogue-Kerberos-Zertifikat](lateral-movement-alerts.md#suspected-rogue-kerberos-certificate-usage-external-id-2047)|2047|Hoch|Seitliche Verschiebung|
 > |[Vermuteter Skeleton Key-Angriff (Herabstufung der Verschlüsselung)](domain-dominance-alerts.md#suspected-skeleton-key-attack-encryption-downgrade-external-id-2010)|2010|Mittel|Seitliche Verschiebung,<br>Persistenz|
 > |[Mutmaßliche Manipulation von SMB-Paketen (Exploit von CVE-2020-0796) (Vorschau)](lateral-movement-alerts.md#suspected-smb-packet-manipulation-cve-2020-0796-exploitation-external-id-2406)|2406|Hoch|Seitliche Verschiebung|

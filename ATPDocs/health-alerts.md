@@ -1,22 +1,14 @@
 ---
 title: Grundlegendes zu Microsoft Defender for Identity-Integritätswarnungen
 description: In diesem Artikel werden alle Integritätswarnungen für die einzelnen Komponenten beschrieben und die Ursachen und Schritte zur Behebung des jeweiligen Problems genannt.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: e8086ccc3771ec4c8bbc2121083711e29063e2a5
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 30f88e239ac7c9fb2853688d3977e03401e8a353
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94848569"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96543092"
 ---
 # <a name="understanding-product-long-sensor-health-alerts"></a>Grundlegendes zu Integritätswarnungen für [!INCLUDE [Product long](includes/product-long.md)]-Sensoren
 

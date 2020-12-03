@@ -1,22 +1,14 @@
 ---
 title: Bewertungen von Microsoft Defender for Identity-SID-Verlaufs Attributen
 description: Dieser Artikel bietet eine Übersicht über die Entitäten von Microsoft Defender für Identitäts Entitäten mit einem unsicheren SID-Verlaufs Attribut Identity Security-Status Bewertungsbericht.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: 5af86879b48f2d8159a78d5965fb53ff8373ae56
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 112e225a3212c57842644260b42ffccb4507cec5
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94848277"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96544129"
 ---
 # <a name="security-assessment-unsecure-sid-history-attributes"></a>Sicherheitsbewertung: Unsichere SID-Verlaufsattribute
 

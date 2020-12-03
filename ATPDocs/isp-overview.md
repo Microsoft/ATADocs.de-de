@@ -1,22 +1,14 @@
 ---
 title: Bewertung der Identitäts Sicherheit für Identitäts Sicherheit in Microsoft Defender
 description: Dieser Artikel bietet einen Überblick über die Status Bewertungsberichte von Microsoft Defender für Identity Security.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: 58e079764c2e59623b94b78f29f0ad00d6219dcc
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: a51eb3f824cba143a61d227e4df375f798bd01dd
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94847427"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96543908"
 ---
 # <a name="product-longs-identity-security-posture-assessments"></a>[!INCLUDE [Product long](includes/product-long.md)]Bewertung der Identitäts Sicherheitslage
 

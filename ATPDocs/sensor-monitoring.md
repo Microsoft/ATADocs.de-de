@@ -1,22 +1,14 @@
 ---
 title: Überwachen von Domänen Controllern und installierten Sensoren, die auf Ihren Domänen Controllern mit Microsoft Defender für Identity
 description: Enthält Informationen zum Überwachen von Microsoft Defender für Identitäts Sensoren und Sensor Abdeckung mithilfe von Defender für die Identität.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/27/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: 20e02b3281480024b67a1ef5908d82586c11f955
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 370e35388356de148b8756464633120bf5d74e5d
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94849020"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96544367"
 ---
 # <a name="monitoring-your-domain-controller-coverage"></a>Überwachen der Domänencontrollerabdeckung
 

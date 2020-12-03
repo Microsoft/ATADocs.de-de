@@ -1,22 +1,14 @@
 ---
 title: Sicherheitsstatus Bewertungsbericht von Microsoft Defender für Identity Weak
 description: Dieser Artikel bietet eine Übersicht über den Bericht "Sicherheitsstatus Bewertung für schwache Chiffre Identität" von Microsoft Defender for Identity.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: a27d972e95c2c6b4ed4d87ebad747ef14ac0f24d
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 9001fcc0aa871c14924fdd5c913e488e00104f3b
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94848702"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96543500"
 ---
 # <a name="security-assessment-weak-cipher-usage"></a>Sicherheitsbewertung: Verwendung schwacher Verschlüsselungen
 

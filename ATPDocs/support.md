@@ -1,22 +1,14 @@
 ---
 title: Microsoft Defender für Identitäts Unterstützung
 description: Beschreibt den Prozess zum erhalten von Support Hilfe für Microsoft Defender für Identity.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/27/2020
 ms.topic: conceptual
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: 2c35f69c3696e069cb48a6d1e04ba88b5d595ac0
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: bd5c340633a5f52d7ac25bd075acc9381bb9fd19
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94848957"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96544333"
 ---
 # <a name="product-long-information-and-support"></a>[!INCLUDE [Product long](includes/product-long.md)] Informationen und Support
 
@@ -44,7 +36,7 @@ Wenn Sie über Premier Support verfügen, rufen Sie das [Portal für Premier Sup
 
 Andere Kunden können die Supportkanäle wie folgt verwenden:
 
-| Channels|Instructions|
+| Channels|Anweisungen|
 |------|-----|
 |Verwenden des Azure-Portals|1. Wählen Sie im Azure-Portal unter **Hilfe und Support** die Option **neue Supportanfrage** aus. <br>2. Wenn Sie dazu aufgefordert werden, wählen Sie auf dem Blatt **Grundlagen** als **Problemtyp** die Option **technisch** aus, da der **Dienst** unter Sicherheit & Identität die Option **Azure Advanced Threat Protection**. <br>3. Stellen Sie sicher, dass eine der folgenden Optionen ausgewählt ist:<br>– Abonnement mit technischem Support Diese Option wird angezeigt, wenn Sie ein kostenpflichtiges Abonnement oder eine Testversion von Azure haben.<br>– Technischer Support Diese Option wird angezeigt, wenn Sie kein Abonnement für Azure haben.|
 |Verwenden des [!INCLUDE [Product short](includes/product-short.md)] Portals| 1. Klicken Sie in der oberen Navigationsleiste des Portals auf das Symbol "?". [!INCLUDE [Product short](includes/product-short.md)]<br>2. Suchen Sie nach [!INCLUDE [Product short](includes/product-short.md)] .<br>3. Öffnen Sie ein Vorfall Ticket.<br>-Wählen Sie "Support" aus.<br>4. Öffnen Sie ein Vorfall Ticket. Wenn Sie das Portal erfolgreich eingegeben [!INCLUDE [Product short](includes/product-short.md)] haben, können Sie das Portal für den [Online gestützten Support (OAS)](https://support.microsoft.com/assistedsupportproducts)eingeben. |

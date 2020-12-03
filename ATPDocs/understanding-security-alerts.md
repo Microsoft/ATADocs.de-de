@@ -1,22 +1,14 @@
 ---
 title: Tutorial zu Microsoft Defender for Identity-Sicherheitswarnungen
 description: In diesem Artikel werden Sicherheitswarnungen von Microsoft Defender for Identity und deren Verwendung näher erläutert.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/27/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: 27df0fb3be637b2a3390df9378f68b2db9a10b8d
-ms.sourcegitcommit: 07a855b87931875bdeca14b152b13a36db79bfa8
+ms.openlocfilehash: f7ec5a676dfa9e243db024639867fcf8227380f2
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "94848906"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96544316"
 ---
 # <a name="understanding-security-alerts"></a>Grundlegendes zu Sicherheitswarnungen
 

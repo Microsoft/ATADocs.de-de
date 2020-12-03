@@ -1,22 +1,14 @@
 ---
 title: Konfigurieren Ihres Proxys oder Ihrer Firewall zum Aktivieren der Microsoft Defender for Identity-Kommunikation mit dem Sensor
 description: Hier wird beschrieben, wie Sie Ihren Proxy oder Ihre Firewall so einrichten, dass die Kommunikation zwischen dem Microsoft Defender for Identity-Clouddienst und Microsoft Defender for Identity-Sensoren möglich ist.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: 6b2b620895d0a59886a140ff340b6772744c6bac
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 4606ab39457cbf1210974cb9f150d7410051c361
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94848651"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96543432"
 ---
 # <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-product-long-sensor"></a>Konfigurieren der Einstellungen für Endpunktproxy und Internetkonnektivität für Ihren [!INCLUDE [Product long](includes/product-long.md)]-Sensor
 

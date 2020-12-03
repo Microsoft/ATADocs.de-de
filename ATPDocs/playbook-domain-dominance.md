@@ -1,22 +1,14 @@
 ---
 title: Playbook zur Microsoft Defender for Identity-Domänendominanz
 description: Dieses Playbook zur Microsoft Defender for Identity-Domänendominanz beschreibt, wie Sie Domänendominanzangriffe zur Erkennung durch Defender for Identity simulieren.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: bf1a3207fe44bee729d1120f71e1038e11e3e853
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: fc79528c5adb2b487b3b68f2919facadfd7ebe2e
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94847308"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96542786"
 ---
 # <a name="tutorial-domain-dominance-playbook"></a>Tutorial: Playbook zu Domänendominanz
 
@@ -253,4 +245,4 @@ Warum hat es funktioniert? Der Golden Ticket-Angriff funktioniert, da das generi
 
 ## <a name="join-the-community"></a>Beitritt zur Community
 
-Haben Sie weitere Fragen, oder möchten Sie mit anderen über [!INCLUDE [Product short](includes/product-short.md)] und damit verbundene Sicherheitsaspekte diskutieren? Werden Sie Teil der [[!INCLUDE [Product short](includes/product-short.md)]Community](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection)!
+Haben Sie weitere Fragen, oder möchten Sie mit anderen über [!INCLUDE [Product short](includes/product-short.md)] und damit verbundene Sicherheitsaspekte diskutieren? Treten Sie noch heute der [[!INCLUDE [Product short](includes/product-short.md)]Community](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) bei.

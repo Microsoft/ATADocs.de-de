@@ -1,22 +1,14 @@
 ---
 title: Problembehandlung bei Microsoft Defender für bekannte Probleme
 description: Hier wird beschrieben, wie Sie Probleme in Microsoft Defender für die Identität beheben.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 09/07/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: e37e413a355db72e04e1b6f72a71c570148c9f04
-ms.sourcegitcommit: 4563d22ad0fc63022a57c5d2d4fbc425e900bf84
+ms.openlocfilehash: aed05bd1df03f8ebb292f4425dbb0eb8c54ca9d3
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96028698"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96544282"
 ---
 # <a name="troubleshooting-product-long-known-issues"></a>Problembehandlung bei [!INCLUDE [Product long](includes/product-long.md)] bekannten Problemen
 

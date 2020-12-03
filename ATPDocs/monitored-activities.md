@@ -1,22 +1,14 @@
 ---
 title: Von Microsoft Defender for Identity überwachte Domänenaktivitäten
 description: Beschreibt jeden Aktivitätstyp, der von Microsoft Defender for Identity überwacht wird.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: conceptual
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: f8d7237d3202ed4b0645b92d61f37cc7c89085da
-ms.sourcegitcommit: 07a855b87931875bdeca14b152b13a36db79bfa8
+ms.openlocfilehash: 8ef0972efec4fc5d39d42cd72e43ca7f95e94ef5
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "94847223"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96542616"
 ---
 # <a name="product-long-monitored-activities"></a>Von [!INCLUDE [Product long](includes/product-long.md)] überwachte Aktivitäten
 

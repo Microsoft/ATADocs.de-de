@@ -1,21 +1,14 @@
 ---
 title: Playbook zu Microsoft Defender for Identity-Sicherheitswarnungen zu Lateral Movement
 description: Dieses Microsoft Defender for Identity-Playbook beschreibt, wie Sie Lateral Movement-Bedrohungen zur Erkennung durch Defender for Identity simulieren.
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: f51c707c2ac01fbbd16258efab8c0ac74d3076b0
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 50880150bb8937875677985f3a61119495d566eb
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94849093"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96542701"
 ---
 # <a name="tutorial-lateral-movement-playbook"></a>Tutorial: Lateral Movement-Playbook
 
@@ -264,4 +257,4 @@ Der nächste Schritt in der Kette der Angriffsabwehr ist Domänendominanz.
 
 ## <a name="join-the-community"></a>Beitritt zur Community
 
-Haben Sie weitere Fragen, oder möchten Sie mit anderen über [!INCLUDE [Product short](includes/product-short.md)] und damit verbundene Sicherheitsaspekte diskutieren? Werden Sie Teil der [[!INCLUDE [Product short](includes/product-short.md)]Community](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection)!
+Haben Sie weitere Fragen, oder möchten Sie mit anderen über [!INCLUDE [Product short](includes/product-short.md)] und damit verbundene Sicherheitsaspekte diskutieren? Treten Sie noch heute der [[!INCLUDE [Product short](includes/product-short.md)]Community](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) bei.

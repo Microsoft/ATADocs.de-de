@@ -1,21 +1,14 @@
 ---
 title: Tutorial zur Einrichtung eines Labs für Microsoft Defender for Identity-Sicherheitswarnungen
 description: In diesem Tutorial richten Sie ein Microsoft Defender for Identity-Testlab ein, um Bedrohungen zu simulieren, die von Microsoft Defender for Identity erkannt werden sollen.
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: e175744d29cac82c29dc1f072a145ee68770dcf7
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 51505b97acde09eecce25e0bafaea8fa0af60419
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94847053"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96542565"
 ---
 # <a name="tutorial-setup-a-product-long-security-alert-lab"></a>Tutorial: Einrichten eines Labs für [!INCLUDE [Product long](includes/product-long.md)]-Sicherheitswarnungen
 
