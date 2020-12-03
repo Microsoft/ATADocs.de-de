@@ -1,22 +1,14 @@
 ---
 title: Grundlegendes zum Microsoft Defender for Identity-Portal
 description: Hier erfahren Sie, wie Sie sich beim Microsoft Defender for Identity-Portal anmelden, und erhalten Informationen zu den Komponenten des Portals.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/27/2020
 ms.topic: conceptual
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: e695bd20717bbb26cffcd5a6cb069eb2c520c876
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 00e29d828a58a76bfdbec1e28582135466d756ea
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94847597"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96544571"
 ---
 # <a name="working-with-the-product-long-portal"></a>Arbeiten mit dem [!INCLUDE [Product long](includes/product-long.md)]-Portal
 

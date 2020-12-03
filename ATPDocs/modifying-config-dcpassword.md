@@ -1,22 +1,14 @@
 ---
 title: Ändern von Microsoft Defender für Identity config-Domänen Verbindungs Kennwort
 description: Hier wird beschrieben, wie das Domänen Verbindungs Kennwort im eigenständigen Microsoft Defender für Identity-Sensor geändert wird.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: ef931c90558ffaea1a24d8682cc8091a845aeea8
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 294786515c45136be77447b9ad1e9ddf5e2e5e95
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94847410"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96544503"
 ---
 # <a name="change-product-long-portal-configuration---domain-connectivity-password"></a>[!INCLUDE [Product long](includes/product-long.md)]Portal Konfiguration ändern-Domänen Verbindungs Kennwort
 
@@ -51,7 +43,7 @@ Gehen Sie folgendermaßen vor, um das Domänen Verbindungs Kennwort im Portal zu
 1. Wählen Sie im [!INCLUDE [Product short](includes/product-short.md)]-Portal **Konfiguration** aus.
 1. Wählen Sie unter **System** die Seite **Sensoren** aus, und überprüfen Sie den Status der Sensoren.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Integration in Microsoft Defender für Endpunkt](integrate-mde.md)
 - [Weitere Informationen finden Sie im [!INCLUDE [Product short](includes/product-short.md)]-Forum.](https://aka.ms/MDIcommunity)

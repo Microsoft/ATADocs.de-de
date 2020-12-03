@@ -1,22 +1,14 @@
 ---
 title: Microsoft Defender für Identitäts Rollen Gruppen für die Zugriffs Verwaltung
 description: Führt Sie durch die Arbeit mit Microsoft Defender für Identitäts Rollen Gruppen.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 02/27/2020
 ms.topic: conceptual
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: 9a3927c565f3b2e7173519c31cb3bfcde9eed2a7
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: cbfb13ace446ba980af649f07951eed3aabbe4fd
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94848991"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96544384"
 ---
 # <a name="product-long-role-groups"></a>[!INCLUDE [Product long](includes/product-long.md)] Rollen Gruppen
 
@@ -46,7 +38,7 @@ Der Zugriff auf das [!INCLUDE [Product short](includes/product-short.md)] Portal
 |Der Status der Sicherheitswarnungen wurde geändert (erneut öffnen, schließen, ausschließen, unterdrücken)|Verfügbar|Verfügbar|Nicht verfügbar|
 |Löschen einer Instanz|Verfügbar|Nicht verfügbar|Nicht verfügbar|
 |Herunterladen eines Berichts|Verfügbar|Verfügbar|Verfügbar|
-|Anmelden|Verfügbar|Verfügbar|Verfügbar|
+|Anmeldename|Verfügbar|Verfügbar|Verfügbar|
 |Sicherheitswarnungen für Freigeben/Exportieren (über E-Mail, Link abrufen und Download von Details)|Verfügbar|Verfügbar|Verfügbar|
 |Aktualisieren der [!INCLUDE [Product short](includes/product-short.md)] Konfiguration: Updates|Verfügbar|Nicht verfügbar|Nicht verfügbar|
 |Aktualisieren der [!INCLUDE [Product short](includes/product-short.md)] Konfiguration: Entitäts Tags (sensitive und honeytoken)|Verfügbar|Verfügbar|Nicht verfügbar|

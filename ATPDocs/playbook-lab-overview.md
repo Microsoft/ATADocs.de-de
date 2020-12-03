@@ -1,21 +1,14 @@
 ---
 title: 'Tutorialübersicht: Microsoft Defender for Identity-Sicherheitswarnungsumgebung'
 description: Diese Tutorialübersicht beschreibt die vier Teile der Microsoft Defender for Identity-Sicherheitswarnungsumgebung zur Simulation von Bedrohungen für die Erkennung durch Microsoft Defender for Identity.
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: 992ea4672c427a1bf29b7303cfc412793ff8ba4d
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 5d4de0173019b318fda8a5c2ee80db72c832ab7b
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94849059"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96544435"
 ---
 # <a name="tutorial-overview-product-long-security-alert-lab"></a>Tutorialübersicht: [!INCLUDE [Product long](includes/product-long.md)]-Sicherheitswarnungsumgebung
 
