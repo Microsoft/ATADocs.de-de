@@ -63,6 +63,10 @@
       href: role-groups.md
     - name: Unterstützung für die Defender for Identity-Gesamtstruktur
       href: multi-forest.md
+    - name: Sicherheit
+      items:
+        - name: Sicherheitsbaseline
+          href: security-baseline.md
 - name: Anleitungen
   items:
     - name: Verwenden von Defender for Identity mithilfe von Microsoft Cloud App Security
