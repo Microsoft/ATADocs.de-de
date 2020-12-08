@@ -1,22 +1,14 @@
 ---
 title: Untersuchen von Lateral Movement-Pfaden mit Microsoft Defender for Identity
 description: In diesem Artikel wird beschrieben, wie potenzielle Angriffe mit Lateral Movement-Pfaden mit Microsoft Defender for Identity erkannt und untersucht werden können.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: de9f13a5f29e90ad27a5b07f6b6a92952db6f70d
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 45b4f0e7af69c0404b00e5f317f986bad84e644a
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94848532"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96542990"
 ---
 # <a name="tutorial-use-lateral-movement-paths-lmps"></a>Tutorial: Verwendung von Lateral Movement-Pfaden (LMPs)
 

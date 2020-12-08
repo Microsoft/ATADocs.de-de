@@ -1,21 +1,14 @@
 ---
 title: 'Schnellstart: Herunterladen des Microsoft Defender for Identity-Sensorsetuppakets'
 description: Im dritten Schritt der Installation von Microsoft Defender for Identity laden Sie das Defender for Identity-Sensorsetuppaket herunter.
-keywords: ''
-author: shsagir
-ms.author: shsagir
 ms.date: 10/26/2020
 ms.topic: quickstart
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: b2d1978a822b8062422c41696043b1563d8bc893
-ms.sourcegitcommit: 07a855b87931875bdeca14b152b13a36db79bfa8
+ms.openlocfilehash: f0eb884a7367ae50e076e0298f720a94def7da8c
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "94848515"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96543126"
 ---
 # <a name="quickstart-download-the-product-long-sensor-setup-package"></a>Schnellstart: Herunterladen des [!INCLUDE [Product long](includes/product-long.md)]-Sensorsetuppakets
 

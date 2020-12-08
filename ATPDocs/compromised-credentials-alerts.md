@@ -1,22 +1,14 @@
 ---
 title: Microsoft Defender for Identity-Sicherheitswarnungen zur Phase „Kompromittierte Anmeldeinformationen“
 description: In diesem Artikel werden die Microsoft Defender for Identity-Warnungen erläutert, die ausgegeben werden, wenn Angriffe in Ihrer Organisation erkannt werden, die typisch für die Phase „Kompromittierte Anmeldeinformationen“ sind.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: 18d3f9461eba901f875863a5e7ccc7cab7ebc4c8
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: cc46b15e62f6aab0776598fa58bb2559c7612fd7
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94848668"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96543466"
 ---
 # <a name="tutorial-compromised-credential-alerts"></a>Tutorial: Warnungen zu kompromittierten Anmeldeinformationen
 

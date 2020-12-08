@@ -1,22 +1,14 @@
 ---
 title: Untersuchen von Benutzern und Computern mit Microsoft Defender for Identity
 description: In diesem Artikel wird beschrieben, wie verdächtige Aktivitäten, die von Benutzern ausgeführt werden, sowie Entitäten, Computer oder Geräte mithilfe von Microsoft Defender for Identity untersucht werden können.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: 4bed7fe963478377d0da96a3a48f5f50cb4da01d
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 9f52bcc6dce4f11b8d29def2574a6b298e5a5e99
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94847656"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96543891"
 ---
 # <a name="tutorial-investigate-an-entity"></a>Tutorial: Untersuchen einer Entität
 

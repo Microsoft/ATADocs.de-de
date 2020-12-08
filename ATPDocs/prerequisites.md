@@ -1,21 +1,14 @@
 ---
 title: Voraussetzungen für Microsoft Defender for Identity
 description: In diesem Artikel werden die Voraussetzungen für eine erfolgreiche Bereitstellung von Microsoft Defender for Identity in Ihrer Umgebung beschrieben.
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 11/24/2020
 ms.topic: overview
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: 23078e7e4281629f378e27281a21124d959f0902
-ms.sourcegitcommit: 24530d8fac3b63dee766b124b6a5549c1b9ef808
+ms.openlocfilehash: d451a2b2cc9cb9f3de35974fda49b3b61f2ad552
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "96028659"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96544418"
 ---
 # <a name="product-long-prerequisites"></a>Voraussetzungen für [!INCLUDE [Product long](includes/product-long.md)]
 
