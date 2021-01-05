@@ -1,14 +1,14 @@
 ---
 title: Installieren von Microsoft Defender für die Identitäts-VPN-Integration
 description: Erfassen Sie Buchhaltungsinformationen für Microsoft Defender für die Identität, indem Sie ein VPN integrieren.
-ms.date: 10/26/2020
+ms.date: 12/23/2020
 ms.topic: how-to
-ms.openlocfilehash: e7c406a198eb78c98c795ba43d9b4076610540c7
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 80b4bdf29db05d0c2f42887dacff223b3067ba49
+ms.sourcegitcommit: e2b4ad613aa171f604ae526f0cba05fe79f4a8cb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96543959"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97753404"
 ---
 # <a name="integrate-vpn"></a>Integrieren des VPN
 
@@ -28,7 +28,9 @@ Stellen Sie für die Aktivierung der VPN-Integration sicher, dass die folgenden 
 - Öffnen Sie Port UDP 1813 auf Ihren [!INCLUDE [Product short](includes/product-short.md)] Sensoren und/oder [!INCLUDE [Product short](includes/product-short.md)] eigenständigen Sensoren.
 
 > [!NOTE]
-> Durch die Aktivierung der RADIUS-Konto **Führung** aktiviert der Sensor eine vorab bereitgestellte Windows-Firewallrichtlinie mit dem Namen " [!INCLUDE [Product short](includes/product-short.md)] **[!INCLUDE [Product long](includes/product-long.md)] Sensor** ", um die eingehende RADIUS-Kontoführung über Port UDP 1813 zuzulassen
+>
+> - Durch die Aktivierung der RADIUS-Konto **Führung** aktiviert der Sensor eine vorab bereitgestellte Windows-Firewallrichtlinie mit dem Namen " [!INCLUDE [Product short](includes/product-short.md)] **[!INCLUDE [Product long](includes/product-long.md)] Sensor** ", um die eingehende RADIUS-Kontoführung über Port UDP 1813 zuzulassen
+> - Die VPN-Integration wird in Umgebungen, die den Federal Information Processing Standards (PPS) einhalten, nicht unterstützt.
 
 Im untenstehenden Beispiel wird der Microsoft-Routing- und Remotezugriffsserver (RRAS) zur Beschreibung des VPN-Konfigurationsvorgangs verwendet.
 

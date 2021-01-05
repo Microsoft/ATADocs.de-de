@@ -3,12 +3,12 @@ title: Automatisches Installieren von Microsoft Defender für Identity
 description: Hier wird beschrieben, wie Microsoft Defender für die Identität im Hintergrund installiert wird.
 ms.date: 10/27/2020
 ms.topic: how-to
-ms.openlocfilehash: a27b358b27b61118f1d73804b8612f170bc830e7
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 056451d5f0881360643bfc453366a8ccdb0ddccc
+ms.sourcegitcommit: 3a478353118670b8124bc62d33751d8ba6af109d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96542327"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97746875"
 ---
 # <a name="product-long-switches-and-silent-installation"></a>[!INCLUDE [Product long](includes/product-long.md)] Switches und unbeaufsichtigte Installation
 
@@ -120,6 +120,8 @@ So aktualisieren Sie den Sensor im Hintergrund [!INCLUDE [Product short](include
 ```dos
 "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q"
 ```
+
+<a name="silently-uninstall-sensor"></a>
 
 ## <a name="uninstall-the-product-short-sensor-silently"></a>Automatischen Deinstallieren des [!INCLUDE [Product short](includes/product-short.md)] Sensors
 

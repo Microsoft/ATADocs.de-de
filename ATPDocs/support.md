@@ -1,14 +1,14 @@
 ---
 title: Microsoft Defender für Identitäts Unterstützung
 description: Beschreibt den Prozess zum erhalten von Support Hilfe für Microsoft Defender für Identity.
-ms.date: 10/27/2020
+ms.date: 12/20/2020
 ms.topic: conceptual
-ms.openlocfilehash: bd5c340633a5f52d7ac25bd075acc9381bb9fd19
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: f883fad5631b23eae2154b3253bcbcb30e7929e3
+ms.sourcegitcommit: 082c85462e1d96a2bbf1ba914de5a0028a32743e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544333"
+ms.lasthandoff: 12/20/2020
+ms.locfileid: "97705665"
 ---
 # <a name="product-long-information-and-support"></a>[!INCLUDE [Product long](includes/product-long.md)] Informationen und Support
 
@@ -18,7 +18,7 @@ Verwenden Sie die folgenden Ressourcen, um mehr über, Bereitstellung und Unters
 |----|----|
 |Unsere beliebteste Dokumentation|Lesen Sie die zehn beliebtesten Seiten:<br>- [Was ist [!INCLUDE [Product short](includes/product-short.md)] ?](what-is.md)<br>- [[!INCLUDE [Product short](includes/product-short.md)] Voraussetzung](prerequisites.md)<br>- [[!INCLUDE [Product short](includes/product-short.md)] Architektur](architecture.md)<br>- [[!INCLUDE [Product short](includes/product-short.md)] Kapazitätsplanung](capacity-planning.md)<br>-[Erstellen einer Instanz](install-step1.md)<br>-[Grundlegendes zu Sicherheitswarnungen](understanding-security-alerts.md)<br>-[[!INCLUDE [Product short](includes/product-short.md)] Sicherheitswarnungen](suspicious-activity-guide.md)<br>-[Untersuchen eines Computers](investigate-a-computer.md)<br>-[Untersuchen eines Benutzers](investigate-a-user.md)<br>-[Verwendung von Lateral Movement-Pfaden](investigate-lateral-movement-path.md)
 |Mit dem Produktteam und Ihren Kollegen in Kontakt treten|Besuchen Sie die [Tech-Community](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) für [!INCLUDE [Product short](includes/product-short.md)] .|
-|Sehen Sie sich die Abonnementinformationen und eine Liste der unterstützten Features an.|Weitere Informationen finden Sie unter [Abonnement Informationen](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) und Featureliste von der [feature list](https://www.microsoft.com/cloud-platform/azure-information-protection-features) [!INCLUDE [Product short](includes/product-short.md)] Website.|
+|Sehen Sie sich die Abonnementinformationen und eine Liste der unterstützten Features an.|Weitere Informationen finden Sie unter [Abonnement Informationen](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) und Featureliste von der [](https://www.microsoft.com/cloud-platform/azure-information-protection-features) [!INCLUDE [Product short](includes/product-short.md)] Website.|
 
 ## <a name="information-about-new-releases-and-updates"></a>Informationen zu neuen Releases und Updates
 
@@ -36,9 +36,9 @@ Wenn Sie über Premier Support verfügen, rufen Sie das [Portal für Premier Sup
 
 Andere Kunden können die Supportkanäle wie folgt verwenden:
 
-| Channels|Anweisungen|
+| Channels|Instructions|
 |------|-----|
-|Verwenden des Azure-Portals|1. Wählen Sie im Azure-Portal unter **Hilfe und Support** die Option **neue Supportanfrage** aus. <br>2. Wenn Sie dazu aufgefordert werden, wählen Sie auf dem Blatt **Grundlagen** als **Problemtyp** die Option **technisch** aus, da der **Dienst** unter Sicherheit & Identität die Option **Azure Advanced Threat Protection**. <br>3. Stellen Sie sicher, dass eine der folgenden Optionen ausgewählt ist:<br>– Abonnement mit technischem Support Diese Option wird angezeigt, wenn Sie ein kostenpflichtiges Abonnement oder eine Testversion von Azure haben.<br>– Technischer Support Diese Option wird angezeigt, wenn Sie kein Abonnement für Azure haben.|
+|Verwenden des Azure-Portals|1. Wählen Sie im Azure-Portal unter **Hilfe und Support** die Option **neue Supportanfrage** aus.<br>2. Wenn Sie dazu aufgefordert werden, wählen Sie auf dem Blatt **Grundlagen** als **Problemtyp** die Option **technisch** aus, und wählen Sie als **Dienst** unter Sicherheits & Identität die Option aus **[!INCLUDE [Product short](includes/product-short.md)]** .<br>3. Stellen Sie sicher, dass eine der folgenden Optionen ausgewählt ist:<br>– Abonnement mit technischem Support Diese Option wird angezeigt, wenn Sie ein kostenpflichtiges Abonnement oder eine Testversion von Azure haben.<br>– Technischer Support Diese Option wird angezeigt, wenn Sie kein Abonnement für Azure haben.|
 |Verwenden des [!INCLUDE [Product short](includes/product-short.md)] Portals| 1. Klicken Sie in der oberen Navigationsleiste des Portals auf das Symbol "?". [!INCLUDE [Product short](includes/product-short.md)]<br>2. Suchen Sie nach [!INCLUDE [Product short](includes/product-short.md)] .<br>3. Öffnen Sie ein Vorfall Ticket.<br>-Wählen Sie "Support" aus.<br>4. Öffnen Sie ein Vorfall Ticket. Wenn Sie das Portal erfolgreich eingegeben [!INCLUDE [Product short](includes/product-short.md)] haben, können Sie das Portal für den [Online gestützten Support (OAS)](https://support.microsoft.com/assistedsupportproducts)eingeben. |
 
 Informationen zu weiteren Supportoptionen erhalten Sie von Ihrem Microsoft-Ansprechpartner.

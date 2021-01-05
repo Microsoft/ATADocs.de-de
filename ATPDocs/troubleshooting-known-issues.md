@@ -3,12 +3,12 @@ title: Problembehandlung bei Microsoft Defender für bekannte Probleme
 description: Hier wird beschrieben, wie Sie Probleme in Microsoft Defender für die Identität beheben.
 ms.date: 09/07/2020
 ms.topic: how-to
-ms.openlocfilehash: aed05bd1df03f8ebb292f4425dbb0eb8c54ca9d3
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: bd7abdca7fade3b00161513b74d6507c5660c3bb
+ms.sourcegitcommit: bfb14c4c0b0f528edaa8167833b13c476240e514
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544282"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97762502"
 ---
 # <a name="troubleshooting-product-long-known-issues"></a>Problembehandlung bei [!INCLUDE [Product long](includes/product-long.md)] bekannten Problemen
 
@@ -184,7 +184,7 @@ Der Sensor konnte das angegebene GMSA-Konto nicht aus dem [!INCLUDE [Product sho
 
 **Lösung:**
 
-Stellen Sie sicher, dass die Anmeldeinformationen des gruppenverwalteten Dienstkontos korrekt sind und dem Sensor die erforderlichen Berechtigungen zum Abrufen der Anmeldeinformationen des Kontos erteilt wurden. In der angewandten Richtlinie sollten Sie das gMSA-Konto zu **Anmelden als Dienst** unter Zuweisungen von Benutzerrechten hinzufügen.
+Stellen Sie sicher, dass die Anmeldeinformationen des gruppenverwalteten Dienstkontos korrekt sind und dem Sensor die erforderlichen Berechtigungen zum Abrufen der Anmeldeinformationen des Kontos erteilt wurden. Obwohl [!INCLUDE [Product short](includes/product-short.md)]  die Berechtigung " **Anmelden als Dienst** " für GMSA-Konten nicht benötigt, wird dieses Problem häufig durch Hinzufügen der Berechtigung zum Konto behoben.
 
 ## <a name="report-downloads-cannot-contain-more-than-300000-entries"></a>Berichtsdownloads dürfen nicht mehr als 300.000 Einträge enthalten
 
