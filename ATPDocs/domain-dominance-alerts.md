@@ -1,14 +1,14 @@
 ---
 title: Microsoft Defender for Identity-Sicherheitswarnungen zur Domänendominanz
 description: In diesem Artikel werden die Microsoft Defender for Identity-Warnungen erläutert, die ausgegeben werden, wenn Angriffe in Ihrer Organisation erkannt werden, die in der Regel Teil der Maßnahmen der Domänendominanzphase sind.
-ms.date: 10/26/2020
+ms.date: 12/23/2020
 ms.topic: tutorial
-ms.openlocfilehash: 8289b25087fc6e5743ed46d301a27239d82036ad
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: c7376b617f69261c848bede401ff083612545457
+ms.sourcegitcommit: e2b4ad613aa171f604ae526f0cba05fe79f4a8cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96543296"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97753361"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Tutorial: Warnungen zu Domänendominanz
 
@@ -83,7 +83,7 @@ Diese Aktivitäten werden möglicherweise von erweiterten Sicherheitsscannern f�
 
 **Beschreibung**
 
-Angreifer, die Administratoranmeldeinformationen kompromittiert haben oder einen Zero-Day-Exploit verwenden, können Remotebefehle auf Ihrem Domänencontroller ausführen. Damit können sie Beständigkeit erhalten, Informationen sammeln, oder DOS-Attacken (Denial of Service) ausführen usw. [!INCLUDE [Product short](includes/product-short.md)] erkennt PSexec- und PowerShell-Verbindungen sowie WMI-Remoteverbindungen.
+Angreifer, die Administratoranmeldeinformationen kompromittiert haben oder einen Zero-Day-Exploit verwenden, können Remotebefehle auf Ihrem Domänencontroller oder AD FS-Server ausführen. Damit können sie Beständigkeit erhalten, Informationen sammeln, oder DOS-Attacken (Denial of Service) ausführen usw. [!INCLUDE [Product short](includes/product-short.md)] erkennt PSexec- und PowerShell-Verbindungen sowie WMI-Remoteverbindungen.
 
 **Lernphase**
 
@@ -613,7 +613,7 @@ Zulässige Änderungen an Gruppen, die nur selten auftreten und vom System noch 
 
 **Beschreibung**
 
-Ein verdächtiger Dienst wurde von Ihrer Organisation auf einem Domänencontroller erstellt. Diese Warnung basiert auf Ereignis 7045, um die verdächtige Aktivität zu identifizieren.
+Ein verdächtiger Dienst wurde auf einem Domänencontroller oder AD FS-Server in Ihrer Organisation erstellt. Diese Warnung basiert auf Ereignis 7045, um die verdächtige Aktivität zu identifizieren.
 
 **Lernphase**
 

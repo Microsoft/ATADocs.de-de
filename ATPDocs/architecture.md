@@ -1,14 +1,14 @@
 ---
 title: Microsoft Defender for Identity-Architektur
 description: In diesem Artikel wird die Architektur von Microsoft Defender for Identity beschrieben.
-ms.date: 10/26/2020
+ms.date: 12/23/2020
 ms.topic: overview
-ms.openlocfilehash: 11be2df6437f6b67968d395a24756d4b0514ea69
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 418fbe3f4a24f3af69336eda4954f5817b478e20
+ms.sourcegitcommit: e2b4ad613aa171f604ae526f0cba05fe79f4a8cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544214"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97753274"
 ---
 # <a name="microsoft-defender-for-identity-architecture"></a>Microsoft Defender for Identity-Architektur
 
@@ -20,7 +20,7 @@ ms.locfileid: "96544214"
 
 In diesem Abschnitt wird die Netzwerk- und Ereigniserfassung in [!INCLUDE [Product short](includes/product-short.md)] erläutert. Des Weiteren wird auf die Funktionsweise der Hauptkomponenten eingegangen: das [!INCLUDE [Product short](includes/product-short.md)]-Portal, der [!INCLUDE [Product short](includes/product-short.md)]-Sensor und der [!INCLUDE [Product short](includes/product-short.md)]-Clouddienst.
 
-Wenn Sie den [!INCLUDE [Product short](includes/product-short.md)]-Sensor direkt auf Ihrem Domänencontroller installieren, greift er direkt vom Domänencontroller auf die erforderlichen Ereignisprotokolle zu. Nach Analyse dieser Protokolle und des Netzwerkdatenverkehrs durch den Sensor sendet [!INCLUDE [Product short](includes/product-short.md)] nur diese analysierten Informationen (nicht alle Protokolle) an den [!INCLUDE [Product short](includes/product-short.md)]-Clouddienst (nur ein Teil der Protokolle wird gesendet).
+Wenn Sie den [!INCLUDE [Product short](includes/product-short.md)]-Sensor direkt auf Ihrem Domänencontroller oder Ihren AD FS-Servern installieren, greift er direkt von den Servern auf die erforderlichen Ereignisprotokolle zu. Nach Analyse dieser Protokolle und des Netzwerkdatenverkehrs durch den Sensor sendet [!INCLUDE [Product short](includes/product-short.md)] nur diese analysierten Informationen (nicht alle Protokolle) an den [!INCLUDE [Product short](includes/product-short.md)]-Clouddienst (nur ein Teil der Protokolle wird gesendet).
 
 ## <a name="product-short-components"></a>[!INCLUDE [Product short](includes/product-short.md)]-Komponenten
 
@@ -30,7 +30,9 @@ Wenn Sie den [!INCLUDE [Product short](includes/product-short.md)]-Sensor direkt
 Über das [!INCLUDE [Product short](includes/product-short.md)]-Portal können Sie Ihre [!INCLUDE [Product short](includes/product-short.md)]-Instanz erstellen. Im Portal haben Sie zudem Zugriff auf die von [!INCLUDE [Product short](includes/product-short.md)]-Sensoren erfassten Daten. Damit können Sie Bedrohungen in Ihrer Netzwerkumgebung überwachen, verwalten und untersuchen.
 
 - **[!INCLUDE [Product short](includes/product-short.md)]-Sensor**  
-[!INCLUDE [Product short](includes/product-short.md)]-Sensoren werden direkt auf Ihren Domänencontrollern installiert. Der Sensor überwacht den Datenverkehr des Domänencontrollers direkt, ohne dass ein dedizierter Server oder die Konfiguration der Portspiegelung erforderlich ist.
+[!INCLUDE [Product short](includes/product-short.md)]-Sensoren können auf den folgenden Servern direkt installiert werden:
+  - **Domänencontroller:** Der Sensor überwacht den Datenverkehr des Domänencontrollers direkt, ohne dass ein dedizierter Server oder die Konfiguration der Portspiegelung erforderlich ist.
+  - **AD FS:** Der Sensor überwacht den Netzwerkdatenverkehr und die Authentifizierungsereignisse direkt.
 - **[!INCLUDE [Product short](includes/product-short.md)]-Clouddienst**  
 Der [!INCLUDE [Product short](includes/product-short.md)]-Clouddienst wird in der Azure-Infrastruktur ausgeführt und ist aktuell in den USA, Europa und Asien verfügbar. Der [!INCLUDE [Product short](includes/product-short.md)]-Clouddienst ist mit Microsoft Intelligent Security Graph verbunden.
 

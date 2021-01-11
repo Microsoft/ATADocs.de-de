@@ -1,14 +1,14 @@
 ---
 title: Was ist Microsoft Defender for Identity?
 description: In diesem Artikel erfahren Sie, was Microsoft Defender for Identity ist und welche Arten von verdächtigen Aktivitäten dieser Clouddienst erkennen kann.
-ms.date: 10/27/2020
+ms.date: 12/23/2020
 ms.topic: overview
-ms.openlocfilehash: f7713d470c367f66db4a480380ca0e2515ebdeb2
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 1aceb1889ea3f85305d64b5bde6a252b804d56f0
+ms.sourcegitcommit: e2b4ad613aa171f604ae526f0cba05fe79f4a8cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96542038"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97753345"
 ---
 # <a name="what-is-product-long"></a>Was ist [!INCLUDE [Product long](includes/product-long.md)]?
 
@@ -28,6 +28,10 @@ ms.locfileid: "96542038"
 ## <a name="protect-user-identities-and-reduce-the-attack-surface"></a>Schutz von Benutzeridentitäten und Verringern der Angriffsfläche
 
 [!INCLUDE [Product short](includes/product-short.md)] gewährt Ihnen wertvolle Einblicke in Identitätskonfigurationen und stellt empfohlene bewährte Methoden für die Sicherheit bereit. Mithilfe von [!INCLUDE [Product short](includes/product-short.md)] können Sie durch Sicherheitsberichte und die Analyse von Benutzerprofilen die Angriffsfläche Ihrer Organisation deutlich reduzieren, wodurch auch die Gefährdung von Benutzeranmeldeinformationen sowie die Gefährdung durch einen Angriff verringert werden kann. Mithilfe der visuellen Lateral Movement-Pfade von [!INCLUDE [Product short](includes/product-short.md)] verstehen Sie schnell, wie genau sich ein Angreifer lateral innerhalb Ihrer Organisation bewegen kann, um sensible Konten zu gefährden. Die Lösung unterstützt Sie dabei, diese Risiken im Voraus zu vermeiden. Zudem können Sie mithilfe der Sicherheitsberichte von [!INCLUDE [Product short](includes/product-short.md)] Benutzer und Geräte identifizieren, die sich mit Klartextkennwörtern authentifizieren, und weitere Einblicke gewinnen, um den Sicherheitsstatus und die Richtlinien Ihrer Organisation zu verbessern.
+
+## <a name="protecting-the-ad-fs-in-hybrid-environments"></a>Schutz von AD FS in Hybridumgebungen
+
+AD FS (Active Directory-Verbunddienste) spielt bei der Authentifizierung in Hybridumgebungen eine wichtige Rolle in der modernen Infrastruktur. [!INCLUDE [Product short](includes/product-short.md)] schützt die Active Directory-Verbunddienste in Ihrer Umgebung, indem lokale Angriffe auf die Active Directory-Verbunddienste lokal erkannt und Einblicke in die von den Active Directory-Verbunddiensten generierten Authentifizierungsereignisse gewährt werden.
 
 ## <a name="identify-suspicious-activities-and-advanced-attacks-across-the-cyber-attack-kill-chain"></a>Identifizieren verdächtiger Aktivitäten und erweiterter Angriffe über die Kill Chain des Cyberangriffs
 

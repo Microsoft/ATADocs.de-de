@@ -1,14 +1,14 @@
 ---
 title: Voraussetzungen für Microsoft Defender for Identity
 description: In diesem Artikel werden die Voraussetzungen für eine erfolgreiche Bereitstellung von Microsoft Defender for Identity in Ihrer Umgebung beschrieben.
-ms.date: 11/24/2020
+ms.date: 12/23/2020
 ms.topic: overview
-ms.openlocfilehash: d451a2b2cc9cb9f3de35974fda49b3b61f2ad552
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: f0807061c5ea57f063a1f5a4035b7059e1671a7d
+ms.sourcegitcommit: e2b4ad613aa171f604ae526f0cba05fe79f4a8cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544418"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97753387"
 ---
 # <a name="product-long-prerequisites"></a>Voraussetzungen für [!INCLUDE [Product long](includes/product-long.md)]
 
@@ -115,23 +115,23 @@ In diesem Abschnitt werden die Voraussetzungen für [!INCLUDE [Product short](in
 
 ### <a name="general"></a>Allgemein
 
-Der [!INCLUDE [Product short](includes/product-short.md)]-Sensor unterstützt die Installation auf einem Domänencontroller mit Windows Server 2008 R2 SP1 (ausgenommen Server Core), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (einschließlich Server Core, aber ausgenommen Nano Server), Windows Server 2019\* (einschließlich Server Core, aber ausgenommen Nano Server) wie in der folgenden Tabelle gezeigt.
+Der [!INCLUDE [Product short](includes/product-short.md)]-Sensor unterstützt die Installation auf einem Domänencontroller und auf AD FS (Active Directory-Verbunddienste) mit Windows Server 2008 R2 SP1 (ausgenommen Server Core), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (einschließlich Server Core, aber ausgenommen Nano Server), Windows Server 2019\* (einschließlich Server Core, aber ausgenommen Nano Server) wie in der folgenden Tabelle gezeigt.
 
-| Betriebssystemversion   | Server mit Desktopumgebung | Server Core | Nano Server    |
-| -------------------------- | ------------------------------ | ----------- | -------------- |
-| Windows Server 2008 R2 SP1 | &#10004;                       | &#10060;    | Nicht zutreffend |
-| Windows Server 2012        | &#10004;                       | &#10004;    | Nicht zutreffend |
-| Windows Server 2012 R2     | &#10004;                       | &#10004;    | Nicht zutreffend |
-| Windows Server 2016        | &#10004;                       | &#10004;    | &#10060;       |
-| Windows Server 2019\*      | &#10004;                       | &#10004;    | &#10060;       |
+| Betriebssystemversion   | Server mit Desktopumgebung | Server Core | Nano Server    | Unterstützte Installationen  |
+| -------------------------- | ------------------------------ | ----------- | -------------- | ------------------------ |
+| Windows Server 2008 R2 SP1 | &#10004;                       | &#10060;    | Nicht zutreffend | Domänencontroller        |
+| Windows Server 2012        | &#10004;                       | &#10004;    | Nicht zutreffend | Domänencontroller        |
+| Windows Server 2012 R2     | &#10004;                       | &#10004;    | Nicht zutreffend | Domänencontroller        |
+| Windows Server 2016        | &#10004;                       | &#10004;    | &#10060;       | Domänencontroller und AD FS |
+| Windows Server 2019\*      | &#10004;                       | &#10004;    | &#10060;       | Domänencontroller und AD FS |
 
 \* Erfordert [KB4487044](https://support.microsoft.com/help/4487044/windows-10-update-kb4487044) oder ein neueres kumulatives Update. Sensoren, die ohne dieses Update unter Server 2019 installiert sind, werden automatisch beendet, wenn die Dateiversion der Datei *ntdsai.dll* im Systemverzeichnis älter ist als *10.0.17763.316*.
 
 Beim Domänencontroller kann es sich um einen schreibgeschützten Domänencontroller (Read Only Domain Controller, RODC) handeln.
 
-Für die Kommunikation Ihrer Domänencontroller mit dem Clouddienst müssen Sie in Ihrer Firewall und auf Ihrem Proxyserver Port 443 für „\*atp.azure.com“ freigeben.
+Damit Sensoren, die auf Domänencontrollern und auf AD FS ausgeführt werden, mit dem Clouddienst kommunizieren können, müssen Sie Port 443 Ihrer Firewalls und Proxys für \*.atp.azure.com öffnen.
 
-Falls .NET Framework 4.7 oder höher nicht installiert ist, wird .NET Framework 4.7 während der Installation installiert, und Sie müssen möglicherweise den Domänencontroller neu starten. Ein Neustart kann auch erforderlich sein, wenn bereits ein Neustart aussteht.
+Falls .NET Framework 4.7 oder höher nicht installiert ist, wird .NET Framework 4.7 während der Installation installiert, und Sie müssen möglicherweise den Server neu starten. Ein Neustart ist möglicherweise auch erforderlich, wenn bereits ein Neustart aussteht.
 
 > [!NOTE]
 > Mindestens 5 GB Speicherplatz auf dem Datenträger wird benötigt, 10 GB wird empfohlen. Dies umfasst den Speicherplatz, der für die [!INCLUDE [Product short](includes/product-short.md)]-Binärdateien, [!INCLUDE [Product short](includes/product-short.md)]-Protokolle und Leistungsprotokolle benötigt wird.
@@ -141,9 +141,9 @@ Falls .NET Framework 4.7 oder höher nicht installiert ist, wird .NET Framework
 Der [!INCLUDE [Product short](includes/product-short.md)]-Sensor erfordert mindestens 2 Kerne und 6 GB RAM auf dem Domänencontroller.
 Legen Sie die **Energieoption** des Computers, auf dem die [!INCLUDE [Product short](includes/product-short.md)]-Sensoren ausgeführt werden, auf **Hohe Leistung** fest, um die optimale Leistung zu erzielen.
 
-[!INCLUDE [Product short](includes/product-short.md)]-Sensoren können auf Domänencontrollern verschiedener Auslastungen und Größen bereitgestellt werden, abhängig vom Umfang des Datenverkehrs zwischen den Domänencontrollern und von der Menge installierter Ressourcen.
+[!INCLUDE [Product short](includes/product-short.md)]-Sensoren können auf Domänencontrollern oder AD FS-Servern verschiedener Auslastungen und Größen bereitgestellt werden, abhängig vom Umfang des Datenverkehrs zwischen den Servern und von der Menge installierter Ressourcen.
 
-Unter den Windows-Betriebssystemen 2008 R2 und 2012 werden [!INCLUDE [Product short](includes/product-short.md)]-Sensoren im Modus [Multi Processor Group](/windows/win32/procthread/processor-groups) (Mehrere Prozessorgruppen) nicht unterstützt. Weitere Informationen über den Modus „Mehrere Prozessorgruppen“ finden Sie unter [Problembehandlung](troubleshooting-known-issues.md#multi-processor-group-mode).
+Unter den Windows-Betriebssystemen 2008 R2 und 2012 werden [!INCLUDE [Product short](includes/product-short.md)]-Sensoren im Modus [Multi Processor Group](/windows/win32/procthread/processor-groups) (Mehrere Prozessorgruppen) nicht unterstützt. Weitere Informationen über den Modus „Mehrere Prozessorgruppen“ finden Sie unter [Problembehandlung](troubleshooting-known-issues.md#multi-processor-group-mode).
 
 >[!NOTE]
 > Bei Ausführung als virtueller Computer wird kein dynamischer Arbeitsspeicher und keine andere Speichererweiterungsfunktion unterstützt.
@@ -184,6 +184,8 @@ In der folgenden Tabelle werden die Ports aufgeführt, die für den [!INCLUDE [P
 ### <a name="windows-event-logs"></a>Windows-Ereignisprotokolle
 
 Die [!INCLUDE [Product short](includes/product-short.md)]-Erkennung basiert auf spezifischen [Windows-Ereignisprotokollen](configure-windows-event-collection.md#configure-event-collection), die der Sensor über Ihre Domänencontroller analysiert. Damit die richtigen Ereignisse überprüft und im Windows-Ereignisprotokoll eingeschlossen werden, benötigen Ihre Domänencontroller die korrekten erweiterten Überwachungsrichtlinieneinstellungen. Weitere Informationen zum Festlegen der richtigen Richtlinien finden Sie unter [Überprüfung der erweiterten Überwachungsrichtlinie von Azure ATP](configure-windows-event-collection.md). Um [sicherzustellen, dass das Windows-Ereignis 8004 überwacht wird](configure-windows-event-collection.md#configure-audit-policies), wie es der Dienst erfordert, überprüfen Sie die [NTLM-Überwachungseinstellungen](/archive/blogs/askds/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7).
+
+Legen Sie für Sensoren, die auf AD FS-Servern ausgeführt werden, die Überwachungsstufe **Verbose** (Ausführlich) fest. Informationen zum Konfigurieren der Überwachungsstufe finden Sie unter [Informationen zur Ereignisüberwachung für AD FS](/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-logging#event-auditing-information-for-ad-fs-on-windows-server-2016).
 
 > [!NOTE]
 > Bei Verwendung des Verzeichnisdienst-Benutzerkontos fragt der Sensor mithilfe von SAM-R (Netzwerkanmeldung) Endpunkte in Ihrer Organisation für lokale Administratoren ab, um [den Graph des Lateral-Movement-Pfads](use-case-lateral-movement-path.md) zu erstellen. Weitere Informationen finden Sie unter [Erforderliche Berechtigung für SAM-R konfigurieren](install-step8-samr.md).

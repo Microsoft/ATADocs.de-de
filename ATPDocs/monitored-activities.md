@@ -1,14 +1,14 @@
 ---
 title: Von Microsoft Defender for Identity überwachte Domänenaktivitäten
 description: Beschreibt jeden Aktivitätstyp, der von Microsoft Defender for Identity überwacht wird.
-ms.date: 10/26/2020
+ms.date: 12/24/2020
 ms.topic: conceptual
-ms.openlocfilehash: 8ef0972efec4fc5d39d42cd72e43ca7f95e94ef5
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 5ca3a3681eb15b1b2a8935942daaf7a39f9c15c3
+ms.sourcegitcommit: 78fb0cead845c7098c780f4daa624a741e350ec2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96542616"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97763624"
 ---
 # <a name="product-long-monitored-activities"></a>Von [!INCLUDE [Product long](includes/product-long.md)] überwachte Aktivitäten
 
@@ -17,7 +17,7 @@ ms.locfileid: "96542616"
 
 [!INCLUDE [Product long](includes/product-long.md)] überwacht Informationen, die aus dem Active Directory, den Netzwerkaktivitäten und Ereignisaktivitäten Ihrer Organisation generiert wurden, um verdächtige Aktivitäten zu erkennen. Anhand der überwachten Aktivitätsinformationen kann [!INCLUDE [Product short](includes/product-short.md)] Ihnen helfen, die Gültigkeit der einzelnen potenziellen Bedrohungen zu bestimmen sowie sie richtig zu selektieren und entsprechend zu reagieren.
 
-Im Fall einer gültigen Bedrohung oder von **richtig positiv** ermöglicht [!INCLUDE [Product short](includes/product-short.md)] es Ihnen, den Umfang der Sicherheitsverletzung für jeden Vorfall zu ermitteln, zu untersuchen, welche Entitäten beteiligt sind, und zu bestimmen, wie sie korrigiert werden können.
+Im Fall einer gültigen bzw. **richtig positiven** Bedrohung, ermöglicht [!INCLUDE [Product short](includes/product-short.md)] Ihnen die Ermittlung des Umfangs der Sicherheitsverletzung aller Vorfälle, die Untersuchung der betroffenen Entitäten und die Bestimmung der Korrekturmaßnahmen.
 
 Die von [!INCLUDE [Product short](includes/product-short.md)] überwachten Informationen werden in Form von Aktivitäten angezeigt. [!INCLUDE [Product short](includes/product-short.md)] unterstützt zurzeit die Überwachung der folgenden Aktivitätstypen:
 
@@ -25,6 +25,7 @@ Die von [!INCLUDE [Product short](includes/product-short.md)] überwachten Infor
 >
 > - Dieser Artikel ist für alle [!INCLUDE [Product short](includes/product-short.md)]-Sensortypen relevant.
 > - Von [!INCLUDE [Product short](includes/product-short.md)] überwachte Aktivitäten werden auf der Profilseite sowohl für Benutzer als auch für Computer angezeigt.
+> - Von [!INCLUDE [Product short](includes/product-short.md)] überwachte Aktivitäten sind auch in [Cloud App Security](https://portal.cloudappsecurity.com/) und auf der Seite [Advanced Hunting](https://security.microsoft.com/advanced-hunting) (Erweitertes Hunting) von Microsoft 365 Defender verfügbar.
 
 ## <a name="monitored-user-activities-user-account-ad-attribute-changes"></a>Überwachte Benutzeraktivitäten: Änderungen am AD-Attribut für Benutzerkonto
 

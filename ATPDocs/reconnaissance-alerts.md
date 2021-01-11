@@ -1,14 +1,14 @@
 ---
 title: Microsoft Defender for Identity-Sicherheitswarnungen für die Reconnaissance-Phase
 description: In diesem Artikel werden die Microsoft Defender for Identity-Warnungen erläutert, die ausgegeben werden, wenn Angriffe in Ihrer Organisation erkannt werden, die in der Regel Teil der Maßnahmen der Reconnaissance-Phase sind.
-ms.date: 10/27/2020
+ms.date: 12/23/2020
 ms.topic: tutorial
-ms.openlocfilehash: 83db36589f3eb2cfaa9cb6db4c4f6e074437ae03
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: e4a604d5ae36c65a73f6aaa5a08e41b2553041b8
+ms.sourcegitcommit: e2b4ad613aa171f604ae526f0cba05fe79f4a8cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544401"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97753341"
 ---
 # <a name="tutorial-reconnaissance-alerts"></a>Tutorial: Warnungen zu Reconnaissance
 
@@ -47,7 +47,7 @@ Bei Reconnaissancemaßnahmen über Kontoenumerationen verwendet ein Angreifer ei
 
 **NTLM**: Der Angreifer führt NLTM-Authentifizierungsanforderungen mit diesem Wörterbuch mit Namen durch, um einen gültigen Benutzernamen in der Domäne aufzuspüren. Wenn dadurch ein Benutzername bestimmt wird, erhält der Angreifer die NTLM-Fehlermeldung **WrongPassword (0xc000006a)** statt der Meldung **NoSuchUser (0xc0000064)** .
 
-Bei Erkennung dieser Warnung ermittelt [!INCLUDE [Product short](includes/product-short.md)] den Ursprung des Kontoenumerationsangriffs, die Gesamtzahl der Versuche zum Erraten des Namens und die Anzahl der gefundenen Übereinstimmungen. Wenn es zu viele unbekannte Benutzer gibt, erkennt [!INCLUDE [Product short](includes/product-short.md)] dies als verdächtige Aktivität.
+Bei Erkennung dieser Warnung ermittelt [!INCLUDE [Product short](includes/product-short.md)] den Ursprung des Kontoenumerationsangriffs, die Gesamtzahl der Versuche zum Erraten des Namens und die Anzahl der gefundenen Übereinstimmungen. Wenn es zu viele unbekannte Benutzer gibt, erkennt [!INCLUDE [Product short](includes/product-short.md)] dies als verdächtige Aktivität. Die Warnung basiert auf Authentifizierungsereignissen von Sensoren, die auf Domänencontrollern und AD FS-Servern ausgeführt werden.
 
 **Lernphase**
 

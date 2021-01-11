@@ -1,16 +1,16 @@
 ---
 title: Neues in Microsoft Defender for Identity
 description: Dieser Artikel wird regelmäßig aktualisiert, um Sie über die Neuerungen im aktuellen Release von Microsoft Defender for Identity auf dem Laufenden zu halten.
-ms.date: 12/06/2020
+ms.date: 12/20/2020
 ms.topic: overview
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 1978606c29a364d1808e1413cde6eeabe1e3d2d3
-ms.sourcegitcommit: d5cef371dd882e26445d2cedad6a85bfbe1f3911
+ms.openlocfilehash: e2c338e2105b8eb228493d20f1b47f230d9e1464
+ms.sourcegitcommit: 183be34e4e4c71fb75a676eab6a2840fdc205519
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96925624"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97889330"
 ---
 # <a name="whats-new-in-product-long"></a>Neues in [!INCLUDE [Product long](includes/product-long.md)]
 
@@ -23,6 +23,20 @@ RSS-Feed: Lassen Sie sich benachrichtigen, wenn diese Seite aktualisiert wird, i
 > [!IMPORTANT]
 >
 > Die Produktnamen des Bedrohungsschutzes von Microsoft ändern sich. Weitere Informationen zu diesem und anderen Updates finden Sie [hier](https://www.microsoft.com/security/blog/?p=91813). Die neuen Namen werden ab Release 2.129 verwendet.
+
+## <a name="product-short-release-2135"></a>Release 2.135 von [!INCLUDE [Product short](includes/product-short.md)]
+
+Veröffentlichung: 20. Dezember 2020
+
+- Die Warnung [Active Directory-Attributreconnaissance (LDAP) (externe ID 2210)](reconnaissance-alerts.md#active-directory-attributes-reconnaissance-ldap-external-id-2210) wurde verbessert, um auch Techniken zu erkennen, die dazu verwendet werden, die Informationen abzurufen, die zum Generieren von Sicherheitstoken erforderlich sind, z. B. im Rahmen der [Solorigate-Kampagne](https://aka.ms/solorigate). 
+- Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
+
+## <a name="product-short-release-2134"></a>Release 2.134 von [!INCLUDE [Product short](includes/product-short.md)]
+
+Veröffentlichung: 13. Dezember 2020
+
+- Die [kürzlich veröffentlichte Netlogon-Erkennung](#azure-atp-release-2127-2) wurde verbessert, sodass sie nun auch funktioniert, wenn die Netlogon-Kanaltransaktion über einen verschlüsselten Kanal erfolgt. Weitere Informationen über diese Erkennung finden Sie unter [Verdächtigter Netlogon-Rechteerweiterungsversuch](compromised-credentials-alerts.md#suspected-netlogon-priv-elev-2411).
+- Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
 ## <a name="product-short-release-2133"></a>[!INCLUDE [Product short](includes/product-short.md)]-Release 2.133
 
@@ -67,6 +81,8 @@ Die Umschalttasten **E-Mail-Benachrichtigungen** zum Aktivieren von E-Mail-Benac
 ## <a name="azure-atp-release-2127"></a>Azure ATP-Release 2.127
 
 Veröffentlicht: 20. September 2020
+
+<a name="azure-atp-release-2127-2"></a>
 
 - **Neue Sicherheitswarnung: Verdächtigter Netlogon-Rechteerweiterungsversuch (externe ID 2411)**  
 Die Sicherheitswarnung *Verdächtigter Netlogon-Rechteerweiterungsversuch (CVE-2020-1472-Ausnutzung) (externe ID 2411)* von Azure ATP ist jetzt verfügbar. Bei dieser Erkennung wird eine Azure ATP-Sicherheitswarnung ausgelöst, wenn ein Angreifer eine gefährdete Netlogon-Verbindung über einen sicheren Kanal mit einem Domänencontroller herstellt und dabei das Netlogon Remote Protocol ([MS-NRPC](/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)) verwendet. Dies ist auch als *Netlogon-Rechteerweiterungs-Sicherheitsrisiko* bekannt. Weitere Informationen finden Sie unter [Verdächtigter Netlogon-Rechteerweiterungsversuch](compromised-credentials-alerts.md#suspected-netlogon-priv-elev-2411).
