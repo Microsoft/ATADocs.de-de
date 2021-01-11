@@ -1,14 +1,14 @@
 ---
 title: Automatisches Installieren von Microsoft Defender für Identity
 description: Hier wird beschrieben, wie Microsoft Defender für die Identität im Hintergrund installiert wird.
-ms.date: 10/27/2020
+ms.date: 01/11/2021
 ms.topic: how-to
-ms.openlocfilehash: 056451d5f0881360643bfc453366a8ccdb0ddccc
-ms.sourcegitcommit: 3a478353118670b8124bc62d33751d8ba6af109d
+ms.openlocfilehash: a9cddac4ca0306faddaa93b701b88745b180828c
+ms.sourcegitcommit: 57dd3e4663346db3542cf9e755dac135c5e75125
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97746875"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98062534"
 ---
 # <a name="product-long-switches-and-silent-installation"></a>[!INCLUDE [Product long](includes/product-long.md)] Switches und unbeaufsichtigte Installation
 
@@ -92,6 +92,8 @@ Verwenden Sie die folgenden Befehle, um die Proxyauthentifizierung abzuschließe
 > |ProxyUrl|ProxyUrl="http\://proxy.contoso.com:8080"|Nein|Gibt die ProxyUrl und die Portnummer für den [!INCLUDE [Product short](includes/product-short.md)]-Sensor an.|
 > |ProxyUserName|ProxyUserName="Contoso\ProxyUser"|Nein|Wenn Ihr Proxydienst eine Authentifizierung erfordert, geben Sie einen Benutzernamen im Format „DOMÄNE\Benutzer“ an.|
 > |ProxyUserPassword|ProxyUserPassword="P@ssw0rd"|Nein|Gibt das Kennwort für den Proxybenutzernamen an. *Anmeldeinformationen werden verschlüsselt und vom [!INCLUDE [Product short](includes/product-short.md)]-Sensor lokal gespeichert.|
+
+Weitere Informationen zur Proxykonfiguration finden Sie unter [Konfigurieren von Endpunkt Proxy-und internetkonnektivitätseinstellungen für den [!INCLUDE [Product long](includes/product-long.md)] Sensor](configure-proxy.md).
 
 ## <a name="update-the-product-short-sensor"></a>Aktualisieren des [!INCLUDE [Product short](includes/product-short.md)] Sensors
 

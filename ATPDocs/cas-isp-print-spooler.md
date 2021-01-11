@@ -1,14 +1,14 @@
 ---
 title: Bewertung der Identitäts Sicherheit von Microsoft Defender für Identitäts Druck Spooler
 description: Dieser Artikel bietet eine Übersicht über die Status Bewertungsberichte von Microsoft Defender für die Identitäts Sicherheitslage.
-ms.date: 10/26/2020
+ms.date: 01/11/2021
 ms.topic: how-to
-ms.openlocfilehash: 56b5ae3a235227f4c1f444b50d30730e71d0f8d5
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: dc380efcff1353203786a91b481d1e091e860071
+ms.sourcegitcommit: 57dd3e4663346db3542cf9e755dac135c5e75125
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96543653"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98062517"
 ---
 # <a name="security-assessment-domain-controllers-with-print-spooler-service-available"></a>Sicherheitsbewertung: Domänencontroller mit verfügbarem Druckspoolerdienst
 
@@ -26,8 +26,10 @@ Aufgrund der Möglichkeit, dass diese Informationen offengelegt werden, müssen 
 
 Diese Sicherheitsbewertung konzentriert sich zwar auf Domänencontroller, aber potenziell ist jeder Server der Gefahr eines Angriffs dieser Art ausgesetzt.
 
-   > [!NOTE]
-   > Untersuchen Sie unbedingt die Einstellungen, Konfigurationen und Abhängigkeiten des **Druckspoolers**, bevor Sie diesen Dienst deaktivieren und aktive Druckworkflows verhindern.
+> [!NOTE]
+>
+> - Untersuchen Sie unbedingt die Einstellungen, Konfigurationen und Abhängigkeiten des **Druckspoolers**, bevor Sie diesen Dienst deaktivieren und aktive Druckworkflows verhindern.
+> - Die Domänen Controller Rolle [Fügt dem Spoolerdienst einen Thread hinzu](https://docs.microsoft.com/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server#print-spooler) , der für die Ausführung der Druck Bereinigung zuständig ist – das Entfernen der veralteten Druck Warteschlangen Objekte aus der Active Directory. Daher ist die Sicherheitsempfehlung zum Deaktivieren des **druckspoolerdiensts** ein Kompromiss zwischen Sicherheit und der Möglichkeit, Druck Bereinigung durchzuführen. Um das Problem zu beheben, sollten Sie das regelmäßige bereinigen veralteter Druck Warteschlangen Objekte manuell oder mithilfe eines Automatisierungs Skripts in Erwägung gezogen.
 
 ## <a name="how-do-i-use-this-security-assessment"></a>Wie wird diese Sicherheitsbewertung verwendet?
 
