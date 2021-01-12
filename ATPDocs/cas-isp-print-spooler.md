@@ -3,12 +3,12 @@ title: Bewertung der Identitäts Sicherheit von Microsoft Defender für Identit�
 description: Dieser Artikel bietet eine Übersicht über die Status Bewertungsberichte von Microsoft Defender für die Identitäts Sicherheitslage.
 ms.date: 01/11/2021
 ms.topic: how-to
-ms.openlocfilehash: dc380efcff1353203786a91b481d1e091e860071
-ms.sourcegitcommit: 57dd3e4663346db3542cf9e755dac135c5e75125
+ms.openlocfilehash: 104b763de6950ff07d984ee053e5b0e05cd42dc7
+ms.sourcegitcommit: 2eb4078aba5085a12acc37c2a8d9aa48bd6dcb02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98062517"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98114206"
 ---
 # <a name="security-assessment-domain-controllers-with-print-spooler-service-available"></a>Sicherheitsbewertung: Domänencontroller mit verfügbarem Druckspoolerdienst
 
@@ -29,7 +29,7 @@ Diese Sicherheitsbewertung konzentriert sich zwar auf Domänencontroller, aber p
 > [!NOTE]
 >
 > - Untersuchen Sie unbedingt die Einstellungen, Konfigurationen und Abhängigkeiten des **Druckspoolers**, bevor Sie diesen Dienst deaktivieren und aktive Druckworkflows verhindern.
-> - Die Domänen Controller Rolle [Fügt dem Spoolerdienst einen Thread hinzu](https://docs.microsoft.com/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server#print-spooler) , der für die Ausführung der Druck Bereinigung zuständig ist – das Entfernen der veralteten Druck Warteschlangen Objekte aus der Active Directory. Daher ist die Sicherheitsempfehlung zum Deaktivieren des **druckspoolerdiensts** ein Kompromiss zwischen Sicherheit und der Möglichkeit, Druck Bereinigung durchzuführen. Um das Problem zu beheben, sollten Sie das regelmäßige bereinigen veralteter Druck Warteschlangen Objekte manuell oder mithilfe eines Automatisierungs Skripts in Erwägung gezogen.
+> - Die Domänen Controller Rolle [Fügt dem Spoolerdienst einen Thread hinzu](/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server#print-spooler) , der für die Ausführung der Druck Bereinigung zuständig ist – das Entfernen der veralteten Druck Warteschlangen Objekte aus der Active Directory. Daher ist die Sicherheitsempfehlung zum Deaktivieren des **druckspoolerdiensts** ein Kompromiss zwischen Sicherheit und der Möglichkeit, Druck Bereinigung durchzuführen. Um das Problem zu beheben, sollten Sie das regelmäßige bereinigen veralteter Druck Warteschlangen Objekte manuell oder mithilfe eines Automatisierungs Skripts in Erwägung gezogen.
 
 ## <a name="how-do-i-use-this-security-assessment"></a>Wie wird diese Sicherheitsbewertung verwendet?
 

@@ -1,14 +1,14 @@
 ---
 title: Problembehandlung bei Microsoft Defender für bekannte Probleme
 description: Hier wird beschrieben, wie Sie Probleme in Microsoft Defender für die Identität beheben.
-ms.date: 09/07/2020
+ms.date: 01/12/2021
 ms.topic: how-to
-ms.openlocfilehash: bd7abdca7fade3b00161513b74d6507c5660c3bb
-ms.sourcegitcommit: bfb14c4c0b0f528edaa8167833b13c476240e514
+ms.openlocfilehash: 6f0a055a48dc906dd7a44814b19ed85fb64401ee
+ms.sourcegitcommit: 2eb4078aba5085a12acc37c2a8d9aa48bd6dcb02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97762502"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98114240"
 ---
 # <a name="troubleshooting-product-long-known-issues"></a>Problembehandlung bei [!INCLUDE [Product long](includes/product-long.md)] bekannten Problemen
 
@@ -152,7 +152,7 @@ So beheben Sie dieses Problem:
 
 Legen Sie auf dem Gast Betriebssystem **in der** NIC-Konfiguration der virtuellen Maschine Folgendes fest: **IPv4 TSO Offload**.
 
- ![VMware-Sensorproblem](media/vm-sensor-issue.png)
+![VMware-Sensorproblem](media/vm-sensor-issue.png)
 
 Verwenden Sie den folgenden Befehl, um zu überprüfen, ob die Abladung großer Sendungen (Large Send Offload, LSO) aktiviert oder deaktiviert ist:
 
@@ -165,6 +165,11 @@ Wenn LSO aktiviert ist, verwenden Sie den folgenden Befehl zur Deaktivierung:
 `Disable-NetAdapterLso -Name {name of adapter}`
 
 ![LSO-Status deaktivieren](media/disable-lso-vmware.png)
+
+> [!NOTE]
+>
+> - Möglicherweise müssen Sie den Computer neu starten, damit diese Änderungen wirksam werden.
+> - Diese Schritte können je nach VMware-Version variieren. Weitere Informationen zum Deaktivieren von LSO/TSO für Ihre VMware-Version finden Sie in der VMware-Dokumentation.
 
 ## <a name="sensor-failed-to-retrieve-group-managed-service-account-gmsa-credentials"></a>Fehler beim Abrufen der Anmeldeinformationen für das gruppenverwaltete Dienstkonto durch den Sensor
 
