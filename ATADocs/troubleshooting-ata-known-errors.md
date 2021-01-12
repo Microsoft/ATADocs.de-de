@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 03/22/2020
+ms.date: 01/12/2021
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 024ca22c366e98c0c09a0c13152c453ce33363c0
-ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
+ms.openlocfilehash: b49e2b10713f23c4256a7236bfa7162189c6e43b
+ms.sourcegitcommit: 373151a0e86e4933c5cb7c8f17c4d386356c98dd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94690039"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98114968"
 ---
 # <a name="troubleshooting-ata-known-issues"></a>Behandlung von bekannten Problemen bei ATA
 
@@ -62,9 +62,10 @@ In diesem Abschnitt sind mögliche Fehler, die es in den Bereitstellungen von AT
 > |Fehler bei der Installation von .NET Framework 4.6.1. Fehlernummer ist 0x800713ec.|Die erforderlichen Komponenten für .NET Framework 4.6.1 sind nicht auf dem Server installiert. |Stellen Sie vor der Installation von ATA sicher, dass die Windows-Updates [KB2919442](https://www.microsoft.com/download/details.aspx?id=42135) und [KB2919355](https://support.microsoft.com/kb/2919355) auf dem Server installiert sind.|
 > |System.Threading.Tasks.TaskCanceledException: A task was canceled (System.Threading.Tasks.TaskCanceledException: Eine Aufgabe wurde abgebrochen)|Zeitüberschreitung während des Bereitstellungsvorgangs, da ATA Center nicht erreicht werden konnte.|1. Überprüfen Sie die Netzwerk Konnektivität mit ATA Center, indem Sie die zugehörige IP-Adresse verwenden. <br></br>2. Überprüfen Sie die Proxy-oder Firewallkonfiguration.|
 > |System.Net.Http.HttpRequestException: Fehler beim Senden der Anforderung. ---> System.Net.WebException: Der Remoteserver hat einen Fehler ausgegeben: (407) Proxyauthentifizierung erforderlich.|Zeitüberschreitung während des Bereitstellungsvorgangs, da ATA Center aufgrund einer Proxyfehlkonfiguration nicht erreicht werden konnte.|Deaktivieren Sie die Proxykonfiguration vor der Bereitstellung, aktivieren Sie dann die Proxykonfiguration erneut. Alternativ können Sie eine Ausnahme im Proxy konfigurieren.|
-> |System.Net.Sockets.SocketException: Eine vorhandene Verbindung wurde vom Remotehost geschlossen.||Aktivieren Sie TLS 1,2 für .net, indem Sie die Registrierungsschlüssel wie folgt so festlegen, dass die Betriebssystem Standardwerte für SSL und TLS verwendet werden:<br></br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br> `[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`|
-> |Error [\\[]DeploymentModel[\\]] Failed management authentication     [\\[]CurrentlyLoggedOnUser=<domain>\\<username>Status=FailedAuthentication Exception=[\\]] (Fehler bei der Verwaltungsauthentifizierung)|Der Bereitstellungsprozess für das ATA-Gateway oder das ATA-Lightweight-Gateway konnte in ATA Center nicht erfolgreich authentifiziert werden.|Öffnen Sie auf dem Computer, auf dem der fehlerhafte Bereitstellungsprozess ausgeführt wurde, einen Browser, und versuchen Sie, die ATA-Konsole zu erreichen. </br>Wenn dies nicht möglich ist, starten Sie die Problembehandlung, um zu ermitteln, warum der Browser sich nicht in ATA Center authentifizieren kann. </br>Überprüfen Sie Folgendes: </br>Proxykonfiguration</br>Netzwerkprobleme</br>Gruppenrichtlinieneinstellungen für die Authentifizierung auf diesem Computer, die sich von den Einstellungen in ATA Center unterscheiden|
+> |System.Net.Sockets.SocketException: Eine vorhandene Verbindung wurde vom Remotehost geschlossen.||Aktivieren Sie TLS 1,2 für .net, indem Sie die Registrierungsschlüssel wie folgt so festlegen, dass die Betriebssystem Standardwerte für SSL und TLS verwendet werden:<br></br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001`|
+> |Fehler [ \\ [] deploymentmodel [ \\ ]] Fehler bei der Verwaltungs Authentifizierung [ \\ [] currentlyloggedonuser = <domain> \\ <username> Status = failedauthentication Exception = [ \\ ]]|Der Bereitstellungsprozess für das ATA-Gateway oder das ATA-Lightweight-Gateway konnte in ATA Center nicht erfolgreich authentifiziert werden.|Öffnen Sie auf dem Computer, auf dem der fehlerhafte Bereitstellungsprozess ausgeführt wurde, einen Browser, und versuchen Sie, die ATA-Konsole zu erreichen. </br>Wenn dies nicht möglich ist, starten Sie die Problembehandlung, um zu ermitteln, warum der Browser sich nicht in ATA Center authentifizieren kann. </br>Überprüfen Sie Folgendes: </br>Proxykonfiguration</br>Netzwerkprobleme</br>Gruppenrichtlinieneinstellungen für die Authentifizierung auf diesem Computer, die sich von den Einstellungen in ATA Center unterscheiden|
 > | Error [\\[]DeploymentModel[\\]] Failed management authentication (Fehler bei der Verwaltungsauthentifizierung)|Fehler bei der Validierung des Center-Zertifikats|Das Zertifikat für ATA Center erfordert möglicherweise für die Überprüfung eine Internetverbindung. Stellen Sie sicher, dass Ihr Gatewaydienst über die ordnungsgemäße Proxykonfiguration verfügt, um die Verbindung und Überprüfung zu ermöglichen.|
+> | Beim Bereitstellen des Centers und Auswählen eines Zertifikats wird der Fehler "nicht unterstützt" gemeldet.|Dies kann der Fall sein, wenn entweder das ausgewählte Zertifikat nicht den Anforderungen entspricht oder der private Schlüssel des Zertifikats nicht zugänglich ist.|Stellen Sie sicher, dass Sie die Bereitstellung mit erhöhten Rechten (**als Administrator ausführen**) ausführen und dass das ausgewählte Zertifikat die [Anforderungen](ata-prerequisites.md#certificates)erfüllt.|
 
 ## <a name="ata-center-errors"></a>ATA Center-Fehler
 
