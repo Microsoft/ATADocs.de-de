@@ -3,12 +3,12 @@ title: Voraussetzungen für Microsoft Defender for Identity
 description: In diesem Artikel werden die Voraussetzungen für eine erfolgreiche Bereitstellung von Microsoft Defender for Identity in Ihrer Umgebung beschrieben.
 ms.date: 12/23/2020
 ms.topic: overview
-ms.openlocfilehash: f0807061c5ea57f063a1f5a4035b7059e1671a7d
-ms.sourcegitcommit: e2b4ad613aa171f604ae526f0cba05fe79f4a8cb
+ms.openlocfilehash: cb925a0b2bc2767367b6d3adabd5cb7dabcffa00
+ms.sourcegitcommit: 57dd3e4663346db3542cf9e755dac135c5e75125
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97753387"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98062551"
 ---
 # <a name="product-long-prerequisites"></a>Voraussetzungen für [!INCLUDE [Product long](includes/product-long.md)]
 
@@ -166,9 +166,9 @@ Der Sensor wird nicht in Domänencontrollern unter Windows 2008 R2 mit aktiviert
 In der folgenden Tabelle werden die Ports aufgeführt, die für den [!INCLUDE [Product short](includes/product-short.md)]-Sensor mindestens konfiguriert werden müssen:
 
 |Protokoll|Transport|Port|Von|Beschreibung|
-|------------|-------------|--------|-----------|
+|------------|-------------|--------|-----------|---|
 |**Internetports**|||||
-|SSL (*.atp.azure.com)|TCP|443|[!INCLUDE [Product short](includes/product-short.md)]-Sensor|[!INCLUDE [Product short](includes/product-short.md)]-Clouddienst|
+|SSL (\*.atp.azure.com)|TCP|443|[!INCLUDE [Product short](includes/product-short.md)]-Sensor|[!INCLUDE [Product short](includes/product-short.md)]-Clouddienst|
 |SSL (localhost)|TCP|444|[!INCLUDE [Product short](includes/product-short.md)]-Sensor|localhost|
 |**Interne Ports**|||||
 |DNS|TCP und UDP|53|[!INCLUDE [Product short](includes/product-short.md)]-Sensor|DNS-Server|
@@ -258,9 +258,9 @@ Der eigenständige [!INCLUDE [Product short](includes/product-short.md)]-Sensor 
 In der folgenden Tabelle werden die Ports aufgeführt, die für den Verwaltungsadapter des eigenständigen [!INCLUDE [Product short](includes/product-short.md)]-Sensors mindestens konfiguriert werden müssen:
 
 |Protokoll|Transport|Port|Von|Beschreibung|
-|------------|-------------|--------|-----------|
+|------------|-------------|--------|-----------|---|
 |**Internetports**||||
-|SSL (*.atp.azure.com)|TCP|443|[!INCLUDE [Product short](includes/product-short.md)]-Sensor|[!INCLUDE [Product short](includes/product-short.md)]-Clouddienst|
+|SSL (\*.atp.azure.com)|TCP|443|[!INCLUDE [Product short](includes/product-short.md)]-Sensor|[!INCLUDE [Product short](includes/product-short.md)]-Clouddienst|
 |SSL (localhost)|TCP|444|[!INCLUDE [Product short](includes/product-short.md)]-Sensor|localhost|
 |**Interne Ports**||||
 |LDAP|TCP und UDP|389|[!INCLUDE [Product short](includes/product-short.md)]-Sensor|Domänencontroller|
