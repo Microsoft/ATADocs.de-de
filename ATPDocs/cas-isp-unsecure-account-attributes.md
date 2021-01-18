@@ -1,14 +1,14 @@
 ---
 title: Bewertungen von Microsoft Defender für Identity-Konto Attribute
 description: Dieser Artikel bietet eine Übersicht über die Entitäten von Microsoft Defender für Identitäts Entitäten mit unsicherem Attribute Identity Security-statusbewertung.
-ms.date: 10/26/2020
+ms.date: 01/18/2021
 ms.topic: how-to
-ms.openlocfilehash: befa5e059a93e6f2e15fd84450948285a94173a6
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: bd48bb8a8c47d40f3c9e530326370be5259bf485
+ms.sourcegitcommit: 51b1c11622c647c3d8b51058687538efaa33003c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96543551"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98541797"
 ---
 # <a name="security-assessment-unsecure-account-attributes"></a>Sicherheitsbewertung: Unsichere Kontoattribute
 
@@ -39,7 +39,7 @@ Wenden Sie die geeigneten Behebungsmaßnahmen für die relevanten Attribute an, 
 
 | Empfohlene Aktion | Wartung | Grund |
 | --- | --- | --- |
-| Kerberos-DES-Verschlüsselungstypen für dieses Konto entfernen| Einstellung aus den Kontoeigenschaften in Active Directory Domain Services (AD DS) entfernen | Zum Entfernen dieser Einstellung ist eine Kerberos-Vorauthentifizierung für das Konto erforderlich, wodurch die Sicherheit verbessert wird. |
+| Entfernen erfordert keine Kerberos-Vorauthentifizierung| Einstellung aus den Kontoeigenschaften in Active Directory Domain Services (AD DS) entfernen | Zum Entfernen dieser Einstellung ist eine Kerberos-Vorauthentifizierung für das Konto erforderlich, wodurch die Sicherheit verbessert wird. |
 | Gespeichertes Kennwort mit umkehrbarer Verschlüsselung entfernen | Einstellung aus den Kontoeigenschaften in AD DS entfernen | Wenn Sie diese Einstellung entfernen, ist keine einfache Entschlüsselung des Kennworts für das Konto mehr möglich. |
 | Nicht erforderliches Kennwort entfernen | Einstellung aus den Kontoeigenschaften in AD DS entfernen | Zum Entfernen dieser Einstellung muss ein Kennwort für das Konto verwendet werden, um den unbefugten Zugriff auf Ressourcen zu verhindern. |
 | Mit schwacher Verschlüsselung gespeichertes Kennwort entfernen | Kennwort für das Konto zurücksetzen | Wenn Sie das Kennwort des Kontos ändern, können stärkere Verschlüsselungsalgorithmen für dessen Schutz verwendet werden. |
