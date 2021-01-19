@@ -3,12 +3,12 @@ title: 'Schnellstart: Installieren des Microsoft Defender for Identity-Sensors'
 description: Im vierten Schritt der Installation von Microsoft Defender for Identity installieren Sie den Defender for Identity-Sensor.
 ms.date: 10/26/2020
 ms.topic: quickstart
-ms.openlocfilehash: 3688ace52e4581f8b94186c58c3e355e855e16d0
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 4d68820bd6da88bca64bb8917f069d04adbc29b0
+ms.sourcegitcommit: 4f3da69b8e30cbc3e3fb43d38c3518001a10f7a1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96543993"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98163534"
 ---
 # <a name="quickstart-install-the-product-long-sensor"></a>Schnellstart: Installieren des [!INCLUDE [Product long](includes/product-long.md)]-Sensors
 
@@ -26,7 +26,7 @@ Führen Sie auf dem Domänencontroller folgende Schritte aus.
 
 1. Stellen Sie sicher, dass der Computer mit den relevanten Endpunkten des [[!INCLUDE [Product short](includes/product-short.md)]-Clouddiensts](configure-proxy.md#enable-access-to-azure-atp-service-urls-in-the-proxy-server) verbunden ist:
 1. Extrahieren Sie die Installationsdateien aus der ZIP-Datei. Eine Installation direkt aus der ZIP-Datei schlägt fehl.
-1. Führen Sie **Azure ATP sensor setup.exe** aus, und befolgen Sie die Anweisungen des Setup-Assistenten.
+1. Führen Sie **Azure ATP sensor setup.exe** mit erhöhten Rechten (**Als Administrator ausführen**) aus, und befolgen Sie die Anweisungen im Setup-Assistenten.
 1. Wählen Sie auf der Seite **Willkommen** Ihre Sprache aus, und klicken Sie auf **Weiter**.
 
     ![Installationssprache des eigenständigen [!INCLUDE [Product short](includes/product-short.md)]-Sensors](media/sensor-install-language.png)

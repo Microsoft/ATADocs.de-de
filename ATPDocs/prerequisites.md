@@ -1,14 +1,14 @@
 ---
 title: Voraussetzungen für Microsoft Defender for Identity
 description: In diesem Artikel werden die Voraussetzungen für eine erfolgreiche Bereitstellung von Microsoft Defender for Identity in Ihrer Umgebung beschrieben.
-ms.date: 12/23/2020
+ms.date: 01/12/2021
 ms.topic: overview
-ms.openlocfilehash: cb925a0b2bc2767367b6d3adabd5cb7dabcffa00
-ms.sourcegitcommit: 57dd3e4663346db3542cf9e755dac135c5e75125
+ms.openlocfilehash: cfafd75acae0d075da1efdd0ad9c0f9542a2f3d4
+ms.sourcegitcommit: 858eca08605886fcbfa35e9132c9c653c173e462
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98062551"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98203472"
 ---
 # <a name="product-long-prerequisites"></a>Voraussetzungen für [!INCLUDE [Product long](includes/product-long.md)]
 
@@ -115,7 +115,7 @@ In diesem Abschnitt werden die Voraussetzungen für [!INCLUDE [Product short](in
 
 ### <a name="general"></a>Allgemein
 
-Der [!INCLUDE [Product short](includes/product-short.md)]-Sensor unterstützt die Installation auf einem Domänencontroller und auf AD FS (Active Directory-Verbunddienste) mit Windows Server 2008 R2 SP1 (ausgenommen Server Core), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (einschließlich Server Core, aber ausgenommen Nano Server), Windows Server 2019\* (einschließlich Server Core, aber ausgenommen Nano Server) wie in der folgenden Tabelle gezeigt.
+Der [!INCLUDE [Product short](includes/product-short.md)]-Sensor unterstützt die Installation auf Domänencontrollern oder AD FS-Servern (Active Directory Federation Services, Active Directory-Verbunddienste), wie in der folgenden Tabelle dargestellt.
 
 | Betriebssystemversion   | Server mit Desktopumgebung | Server Core | Nano Server    | Unterstützte Installationen  |
 | -------------------------- | ------------------------------ | ----------- | -------------- | ------------------------ |
@@ -169,17 +169,19 @@ In der folgenden Tabelle werden die Ports aufgeführt, die für den [!INCLUDE [P
 |------------|-------------|--------|-----------|---|
 |**Internetports**|||||
 |SSL (\*.atp.azure.com)|TCP|443|[!INCLUDE [Product short](includes/product-short.md)]-Sensor|[!INCLUDE [Product short](includes/product-short.md)]-Clouddienst|
-|SSL (localhost)|TCP|444|[!INCLUDE [Product short](includes/product-short.md)]-Sensor|localhost|
 |**Interne Ports**|||||
 |DNS|TCP und UDP|53|[!INCLUDE [Product short](includes/product-short.md)]-Sensor|DNS-Server|
 |Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|[!INCLUDE [Product short](includes/product-short.md)]-Sensor|Alle Geräte im Netzwerk|
 |RADIUS|UDP|1813|RADIUS|[!INCLUDE [Product short](includes/product-short.md)]-Sensor|
-|**NNR-Ports**\*|||||
+|**Localhost-Ports**\*|Erforderlich für den Sensordienst-Updater||||
+|SSL (localhost)|TCP|444|Sensordienst|Sensor-Updater-Dienst|
+|**NNR-Ports**\*\*|||||
 |NTLM über RPC|TCP|Port 135|[!INCLUDE [Product short](includes/product-short.md)]|Alle Geräte im Netzwerk|
 |NetBIOS|UDP|137|[!INCLUDE [Product short](includes/product-short.md)]|Alle Geräte im Netzwerk|
 |RDP|TCP|3389, nur das erste Client Hello-Paket|[!INCLUDE [Product short](includes/product-short.md)]|Alle Geräte im Netzwerk|
 
-\* Einer dieser Ports ist erforderlich, aber Sie sollten alle öffnen.
+\* Standardmäßig ist der Datenverkehr von Localhost zu Localhost zulässig, solange er nicht von einer benutzerdefinierten Firewallrichtlinie blockiert wird.  
+\*\* Einer dieser Ports ist erforderlich, aber Sie sollten alle öffnen.
 
 ### <a name="windows-event-logs"></a>Windows-Ereignisprotokolle
 
@@ -261,7 +263,6 @@ In der folgenden Tabelle werden die Ports aufgeführt, die für den Verwaltungsa
 |------------|-------------|--------|-----------|---|
 |**Internetports**||||
 |SSL (\*.atp.azure.com)|TCP|443|[!INCLUDE [Product short](includes/product-short.md)]-Sensor|[!INCLUDE [Product short](includes/product-short.md)]-Clouddienst|
-|SSL (localhost)|TCP|444|[!INCLUDE [Product short](includes/product-short.md)]-Sensor|localhost|
 |**Interne Ports**||||
 |LDAP|TCP und UDP|389|[!INCLUDE [Product short](includes/product-short.md)]-Sensor|Domänencontroller|
 |Sicheres LDAP (LDAPS)|TCP|636|[!INCLUDE [Product short](includes/product-short.md)]-Sensor|Domänencontroller|
@@ -273,12 +274,15 @@ In der folgenden Tabelle werden die Ports aufgeführt, die für den Verwaltungsa
 |DNS|TCP und UDP|53|[!INCLUDE [Product short](includes/product-short.md)]-Sensor|DNS-Server|
 |Syslog (optional)|TCP/UDP|514, je nach Konfiguration|SIEM-Server|[!INCLUDE [Product short](includes/product-short.md)]-Sensor|
 |RADIUS|UDP|1813|RADIUS|[!INCLUDE [Product short](includes/product-short.md)]-Sensor|
-|**NNR-Ports** \*|||||
+|**Localhost-Ports**\*|Erforderlich für den Sensordienst-Updater||||
+|SSL (localhost)|TCP|444|Sensordienst|Sensor-Updater-Dienst|
+|**NNR-Ports**\*\*|||||
 |NTLM über RPC|TCP|135|[!INCLUDE [Product short](includes/product-short.md)]|Alle Geräte im Netzwerk|
 |NetBIOS|UDP|137|[!INCLUDE [Product short](includes/product-short.md)]|Alle Geräte im Netzwerk|
 |RDP|TCP|3389, nur das erste Client Hello-Paket|[!INCLUDE [Product short](includes/product-short.md)]|Alle Geräte im Netzwerk|
 
-\* Einer dieser Ports ist erforderlich, aber Sie sollten alle öffnen.
+\* Standardmäßig ist der Datenverkehr von Localhost zu Localhost zulässig, solange er nicht von einer benutzerdefinierten Firewallrichtlinie blockiert wird.  
+\*\* Einer dieser Ports ist erforderlich, aber Sie sollten alle öffnen.
 
 > [!NOTE]
 >
