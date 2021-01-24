@@ -1,14 +1,14 @@
 ---
 title: Microsoft Defender für Identity in Microsoft Cloud App Security
 description: Übersicht über Microsoft Defender für Identitäts Features in Microsoft Cloud App Security.
-ms.date: 01/05/2020
+ms.date: 01/24/2021
 ms.topic: how-to
-ms.openlocfilehash: ef4cbe9f0c49311a3d10b79e03fc725ea5131105
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 6040ef27e1657dbe017a31168932536f1cb594cb
+ms.sourcegitcommit: 7002c960e1489b7ce2deadd8ce20f70a48a6766a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96543857"
+ms.lasthandoff: 01/24/2021
+ms.locfileid: "98746934"
 ---
 # <a name="using-product-long-with-microsoft-cloud-app-security"></a>Verwenden [!INCLUDE [Product long](includes/product-long.md)] von mit Microsoft Cloud App Security
 
@@ -57,19 +57,19 @@ Lesen Sie die [Schnellstartanleitung für Cloud App Security](/cloud-app-securit
 
 Greifen Sie [!INCLUDE [Product short](includes/product-short.md)] in Cloud App Security Warnungen, Aktivitäten und Benutzer Seiten auf Ihre Daten und ihre neuen Hybrid Features zu.
 
-## <a name="alerts"></a>Benachrichtigungen
+## <a name="alerts"></a>Warnungen
 
 [!INCLUDE [Product short](includes/product-short.md)] Warnungen werden in der Warteschlange Cloud App Security **Warnungen** angezeigt. Zusätzliche Filteroptionen stehen nur beim Anzeigen von Warnungen über Cloud App Security zur Verfügung. [!INCLUDE [Product short](includes/product-short.md)] Warnungen werden mithilfe des Anwendungs Filters gefiltert, um **Active Directory**.
 
 ## <a name="alert-management"></a>Alert Management
 
-Wenn [!INCLUDE [Product short](includes/product-short.md)] Sie mit Cloud App Security verwenden, schließen Sie Warnungen in einem Dienst nicht automatisch im anderen Dienst. Legen Sie fest, in welchem Dienst Warnungen verwaltet und behoben werden sollen, um doppelten Aufwand zu vermeiden.
+Wenn [!INCLUDE [Product short](includes/product-short.md)] Sie mit Cloud App Security verwenden, schließen Sie Warnungen in einem Dienst nicht automatisch im anderen Dienst. Genauer gesagt: durch das Schließen von Warnungen in Cloud App Security werden diese nicht in Defender für die Identität geschlossen, aber das Schließen von Warnungen in Defender für Identity synchronisiert die Schließung in Cloud App Security. Legen Sie fest, in welchem Dienst Warnungen verwaltet und behoben werden sollen, um doppelten Aufwand zu vermeiden.
 
 ## <a name="siem-notification"></a>SIEM-Benachrichtigungen
 
 Wenn Ihre Dienste ( [!INCLUDE [Product short](includes/product-short.md)] und Cloud App Security) zurzeit so konfiguriert sind, dass Sie Warn Benachrichtigungen an eine Siem-Lösung sendet, [!INCLUDE [Product short](includes/product-short.md)] erhalten Sie nach dem Aktivieren der Integration in Cloud App Security doppelte Siem-Benachrichtigungen für die gleiche Warnung. Von jedem Dienst wird eine Warnung mit unterschiedlicher Warnungs-ID ausgegeben. Entscheiden Sie, in welchem Dienst Sie Warnungen verwalten möchten, und legen Sie anschließend fest, dass vom anderen Dienst keine SIEM-Benachrichtigungen mehr versendet werden. So vermeiden Sie Duplizierungen und Verwirrung.
 
-## <a name="activities"></a>Aktivitäten
+## <a name="activities"></a>activities
 
 [!INCLUDE [Product short](includes/product-short.md)] Warnungen werden innerhalb des Cloud App Security **Aktivitäts Protokolls** angezeigt. Zusätzliche Optionen und Features für die Aktivitätsfilterung stehen nur beim Anzeigen von Warnungen über Cloud App Security zur Verfügung. Weitere Informationen zum Filtern und Erstellen neuer Aktivitätsrichtlinien finden Sie unter [ [!INCLUDE [Product short](includes/product-short.md)] Aktivitäten mithilfe von Microsoft Cloud App Security](activities-filtering-mcas.md) .
 
