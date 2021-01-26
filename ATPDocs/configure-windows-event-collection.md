@@ -3,12 +3,12 @@ title: Konfigurieren der Windows-Ereignissammlung für Microsoft Defender for Id
 description: In diesem Schritt bei der Microsoft Defender for Identity-Installation konfigurieren Sie die Windows-Ereignissammlung.
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: 4a81eceeb940e15139acb083e266eab1caf5456b
-ms.sourcegitcommit: 0b3877f2bf74735b7ba33408d237231a73242165
+ms.openlocfilehash: 71e0dd15b820c87df3bb50252160a6e92bacf310
+ms.sourcegitcommit: 30203dd6e74eec3ce4bba98056b664cad455a49e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98615013"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98758200"
 ---
 # <a name="configure-windows-event-collection"></a>Konfigurieren der Windows-Ereignissammlung
 
@@ -16,10 +16,15 @@ Die [!INCLUDE [Product long](includes/product-long.md)]-Erkennung basiert auf be
 
 Die folgenden Windows-Ereignisse müssen für [!INCLUDE [Product short](includes/product-short.md)] [konfiguriert](#configure-audit-policies) und [gesammelt](#configure-event-collection) werden, um die Funktionen zum Erkennen von Bedrohungen zu verbessern:
 
+**Für Ereignisse für Active Directory-Verbunddienste (AD FS)**
+
 - 1202: Der Verbunddienst hat eine neue Anmeldeinformation validiert.
 - 1203: Der Verbunddienst konnte eine neue Anmeldeinformation nicht validieren.
 - 4624: Ein Konto wurde erfolgreich angemeldet.
 - 4625: Fehler beim Anmelden eines Kontos.
+
+**Für andere Ereignisse**
+
 - 4726: Benutzerkonto gelöscht
 - 4728: Member Added to Global Security Group (Mitglied zu globaler Sicherheitsgruppe hinzugefügt)
 - 4729: Member Removed from Global Security Group (Mitglied aus globaler Sicherheitsgruppe entfernt)
