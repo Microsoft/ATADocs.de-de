@@ -3,12 +3,12 @@ title: 'Schnellstart: Herstellen einer Verbindung zwischen Microsoft Defender fo
 description: Der zweite Schritt der Microsoft Defender for Identity-Installation unterstützt Sie bei der Konfiguration der Domänenverbindungseinstellungen für Ihren Defender for Identity-Clouddienst.
 ms.date: 10/26/2020
 ms.topic: quickstart
-ms.openlocfilehash: 1dd9954e22e38b1db7d41d42358cd03dd15ea1c2
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: b1379570d87957fc943bf8b0727b6b0294f26695
+ms.sourcegitcommit: b6da51c97e8fb70ca04c0c0d5ea694700db9de86
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96543976"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98634555"
 ---
 # <a name="quickstart-connect-to-your-active-directory-forest"></a>Schnellstart: Herstellen einer Verbindung mit einer Active Directory-Gesamtstruktur
 
@@ -37,13 +37,13 @@ In diesem Schnellstart lernen Sie, wie Sie eine Verbindung zwischen [!INCLUDE [P
 
 Beim ersten Öffnen des [!INCLUDE [Product short](includes/product-short.md)]-Portals wird die folgende Anzeige angezeigt:
 
-![[!INCLUDE [Product short](includes/product-short.md)]-Willkommensphase 1](media/directory-services.png)
+![Willkommen bei Phase 1, Verzeichnisdiensteeinstellungen](media/directory-services.png)
 
 1. Geben Sie die folgenden Informationen ein, und klicken Sie anschließend auf **Speichern**.
 
     |Feld|Kommentare|
     |---|---|
-    |**Benutzername** (erforderlich)|Geben Sie den Namen des AD-Benutzers mit Leseberechtigung ein. Beispiel: **DefenderForIdentityUser**. Sie müssen ein AD-**Standardbenutzerkonto** oder ein gruppenverwaltetes Dienstkonto verwenden. Verwenden Sie **nicht** das UPN-Format für Ihren Benutzernamen.|
+    |**Benutzername** (erforderlich)|Geben Sie den Namen des AD-Benutzers mit Leseberechtigung ein. Beispiel: **DefenderForIdentityUser**. Sie müssen ein AD-**Standardbenutzerkonto** oder ein gruppenverwaltetes Dienstkonto verwenden. Verwenden Sie **nicht** das UPN-Format für Ihren Benutzernamen.<br />**HINWEIS:** Sie sollten die Verwendung von Konten vermeiden, die bestimmten Benutzern zugewiesen sind.|
     |**Kennwort** (bei AD-Standardbenutzerkonten erforderlich)|Geben Sie bei AD-Benutzerkonten das Kennwort für den Benutzer mit Leseberechtigung ein. Beispiel: **Pencil1**.|
     |**Gruppenverwaltetes Dienstkonto** (bei gruppenverwalteten Dienstkonten erforderlich)|Wählen Sie bei gruppenverwalteten Dienstkonten das **gruppenverwaltete Dienstkonto** aus.|
     |**Domäne** (erforderlich)|Geben Sie die Domäne für den schreibgeschützten Benutzer ein. Beispiel: **contoso.com**. Es ist wichtig, dass Sie den vollqualifizierten Domänennamen (FQDN) der Domäne eingeben, in der sich das Benutzerkonto befindet. Wenn sich das Konto des Benutzers beispielsweise in der Domäne „corp.contoso.com“ befindet, müssen Sie `corp.contoso.com` und nicht „contoso.com“ eingeben.|
