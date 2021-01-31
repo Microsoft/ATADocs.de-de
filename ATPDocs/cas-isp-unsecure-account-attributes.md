@@ -3,12 +3,12 @@ title: Bewertungen von Microsoft Defender für Identity-Konto Attribute
 description: Dieser Artikel bietet eine Übersicht über die Entitäten von Microsoft Defender für Identitäts Entitäten mit unsicherem Attribute Identity Security-statusbewertung.
 ms.date: 01/18/2021
 ms.topic: how-to
-ms.openlocfilehash: bd48bb8a8c47d40f3c9e530326370be5259bf485
-ms.sourcegitcommit: 51b1c11622c647c3d8b51058687538efaa33003c
+ms.openlocfilehash: 64aa95a423d0c8fc0bb210c2c10bc63f8c33bca4
+ms.sourcegitcommit: 14f7228dbe6af353e81f20d2047dad24043840b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "98541797"
+ms.lasthandoff: 01/31/2021
+ms.locfileid: "99217701"
 ---
 # <a name="security-assessment-unsecure-account-attributes"></a>Sicherheitsbewertung: Unsichere Kontoattribute
 
@@ -20,7 +20,7 @@ ms.locfileid: "98541797"
 
 Organisationen, die ihre Kontoattribute nicht sichern können, lassen die Tür für böswillige Akteure offen.
 
-Böswillige Akteure suchen ähnlich wie Diebe häufig in jeder Umgebung nach dem einfachsten und lautlosesten Weg. Konten, die mit unsicheren Attributen konfiguriert sind, eröffnen Gelegenheiten für Angreifer und können Risiken darstellen.
+Böswillige Akteure suchen ähnlich wie Diebe häufig in jeder Umgebung nach dem einfachsten und lautlosesten Weg. Konten, die mit unsicheren Attributen konfiguriert sind, sind Windows-Verkaufschancen für Angreifer und können Risiken offenlegen.
 
 Wenn das Attribut *PasswordNotRequired* beispielsweise aktiviert ist, kann ein Angreifer problemlos auf das Konto zugreifen. Das ist besonders riskant, wenn das Konto privilegierten Zugriff auf andere Ressourcen hat.
 
@@ -31,7 +31,9 @@ Wenn das Attribut *PasswordNotRequired* beispielsweise aktiviert ist, kann ein A
 1. Ergreifen Sie für diese Benutzerkonten entsprechende Maßnahmen, indem Sie die relevanten Attribute ändern oder entfernen.
 
 > [!NOTE]
-> Diese Bewertung wird nahezu in Echtzeit aktualisiert.
+>
+> - Diese Bewertung wird nahezu in Echtzeit aktualisiert.
+> - Diese Bewertung kann bereits gelöschte Entitäten enthalten, wenn die [Voraussetzungen](prerequisites.md#before-you-start) für [!INCLUDE [Product long](includes/product-long.md)] nicht erfüllt werden.
 
 ## <a name="remediation"></a>Wartung
 
