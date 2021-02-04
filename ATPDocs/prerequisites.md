@@ -1,14 +1,14 @@
 ---
 title: Voraussetzungen für Microsoft Defender for Identity
 description: In diesem Artikel werden die Voraussetzungen für eine erfolgreiche Bereitstellung von Microsoft Defender for Identity in Ihrer Umgebung beschrieben.
-ms.date: 01/12/2021
+ms.date: 01/27/2021
 ms.topic: overview
-ms.openlocfilehash: cfafd75acae0d075da1efdd0ad9c0f9542a2f3d4
-ms.sourcegitcommit: 858eca08605886fcbfa35e9132c9c653c173e462
+ms.openlocfilehash: feb52ea096dd7e324e46649a746f41a293cc66e1
+ms.sourcegitcommit: b29aa522dcefce7d016fc0e03c75168a14deb423
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98203472"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98912470"
 ---
 # <a name="product-long-prerequisites"></a>Voraussetzungen für [!INCLUDE [Product long](includes/product-long.md)]
 
@@ -60,7 +60,7 @@ In diesem Abschnitt werden die Informationen, die Sie erfassen sollten, sowie Ko
     > [!NOTE]
     >
     > - Für Sensorcomputer unter Windows Server 2012 und höher wird empfohlen, ein **gruppenverwaltetes Dienstkonto** für verbesserte Sicherheit und automatische Kennwortverwaltung zu verwenden.
-    > - Wenn Sie über mehrere Sensoren verfügen, teilweise unter Windows Server 2008 oder unter Windows Server 2012 und höher, müssen Sie zusätzlich zum empfohlenen **gruppenverwalteten Dienstkonto** auch mindestens ein AD-**Standardbenutzerkonto** verwenden.
+    > - Wenn Sie über mehrere Sensoren verfügen, teilweise unter Windows Server 2008 R2 oder unter Windows Server 2012 und höher, müssen Sie zusätzlich zum empfohlenen **gruppenverwalteten Dienstkonto** auch mindestens ein AD-**Standardbenutzerkonto** verwenden.
     > - Wenn Sie benutzerdefinierte ACLs für verschiedene Organisationseinheiten (OU) in Ihrer Domäne festgelegt haben, stellen Sie sicher, dass der ausgewählte Benutzer Leseberechtigungen für diese Organisationseinheiten hat.
 
 - Wenn Sie Wireshark für einen eigenständigen [!INCLUDE [Product short](includes/product-short.md)]-Sensor ausführen, müssen Sie den [!INCLUDE [Product short](includes/product-short.md)]-Sensordienst neu starten, nachdem Sie die Wireshark-Erfassung beendet haben. Wenn Sie den Sensordienst nicht neu starten, beendet der Sensor die Erfassung des Datenverkehrs.
