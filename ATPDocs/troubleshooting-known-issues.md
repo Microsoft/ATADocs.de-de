@@ -1,14 +1,14 @@
 ---
 title: Problembehandlung bei Microsoft Defender für bekannte Probleme
 description: Hier wird beschrieben, wie Sie Probleme in Microsoft Defender für die Identität beheben.
-ms.date: 01/12/2021
+ms.date: 02/04/2021
 ms.topic: how-to
-ms.openlocfilehash: 6f0a055a48dc906dd7a44814b19ed85fb64401ee
-ms.sourcegitcommit: 2eb4078aba5085a12acc37c2a8d9aa48bd6dcb02
+ms.openlocfilehash: 933d4442d88f2d03ddcd2fa4c90d59d98e229340
+ms.sourcegitcommit: 50e6f5511329e56545fa5ab4c9f5ab69046d1e10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "98114240"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99551613"
 ---
 # <a name="troubleshooting-product-long-known-issues"></a>Problembehandlung bei [!INCLUDE [Product long](includes/product-long.md)] bekannten Problemen
 
@@ -202,6 +202,24 @@ Dies ist eine technisch bedingte Begrenzung.
 **Lösung:**
 
 Keine bekannte Lösung.
+
+## <a name="sensor-fails-to-enumerate-event-logs"></a>Fehler beim Aufzählen von Ereignisprotokollen durch den Sensor
+
+Wenn Sie eine begrenzte Anzahl oder fehlende Sicherheits Ereignis Warnungen oder logische Aktivitäten innerhalb der Konsole bemerken, [!INCLUDE [Product short](includes/product-short.md)] aber keine Integritäts Warnungen ausgelöst werden. 
+
+**Sensorprotokolleinträge:**
+
+Fehler EventLogException System. Diagnostics. Eventing. Reader. EventLogException: das Handle ist ungültig bei void System. Diagnostics. Eventing. Reader. EventLogException. throw (int ErrorCode) bei Object System. Diagnostics. Eventing. Reader. nativewrapper. evtgeteventinfo (eventloghandle handle, evteventpropertyid enumType) bei String System.Diagnostics.Eventing.Reader.EventLogRecord.get_ContainerLog ()
+
+**Ursache:**
+
+Eine freigegebene Access Control Liste schränkt den Zugriff auf die erforderlichen Ereignisprotokolle durch das lokale Dienst Konto ein.
+
+**Lösung:**
+
+Stellen Sie sicher, dass die Liste der freigegebenen Access Control den folgenden Eintrag enthält:
+
+`(A;;0x1;;;S-1-5-80-818380073-2995186456-1411405591-3990468014-3617507088)`
 
 ## <a name="see-also"></a>Weitere Informationen
 
