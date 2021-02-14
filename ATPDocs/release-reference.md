@@ -3,12 +3,12 @@ title: Verweis auf ältere Releases in Microsoft Defender für Identity
 description: Dieser Artikel ist ein Verweis auf frühere Versionen von Updates für Microsoft Defender für Identity.
 ms.date: 10/27/2020
 ms.topic: reference
-ms.openlocfilehash: 93edc0061c22914bf3658680f6173117bcf63b97
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 493315ab2e0571c13b2076bb389e2d1c4a9a56f1
+ms.sourcegitcommit: af41733212c2102c223fed8c8602a21a1f667080
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96542344"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100515545"
 ---
 # <a name="release-reference-of-product-long"></a>Releaseverweis von [!INCLUDE [Product long](includes/product-long.md)]
 
@@ -367,7 +367,7 @@ Die Azure ATP-Sensorinfrastruktur wurde bezüglich der Leistung verbessert: Die 
 ## <a name="see-also"></a>Weitere Informationen
 
 - [Was ist[!INCLUDE [Product short](includes/product-short.md)]?](what-is.md)
-- [Häufig gestellte Fragen](technical-faq.md)
+- [Häufig gestellte Fragen](technical-faq.yml)
 - [Voraussetzungen für [!INCLUDE [Product short](includes/product-short.md)]](prerequisites.md)
 - [Kapazitätsplanung für [!INCLUDE [Product short](includes/product-short.md)]](capacity-planning.md)
 - [Weitere Informationen finden Sie im [!INCLUDE [Product short](includes/product-short.md)]-Forum.](https://aka.ms/MDIcommunity)

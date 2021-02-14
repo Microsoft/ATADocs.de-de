@@ -3,12 +3,12 @@ title: Liste der hilfreichen Ressourcen für Microsoft Defender für Identity
 description: Dieser Artikel enthält eine Liste hilfreicher Ressourcen für Microsoft Defender für Identity.
 ms.date: 10/27/2020
 ms.topic: conceptual
-ms.openlocfilehash: e534baf48d472b9bada6366e9b0e2ccec5ef6c4c
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 1878f8b9cbc8047083c927de612e88e50b1947ca
+ms.sourcegitcommit: af41733212c2102c223fed8c8602a21a1f667080
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96542209"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100515511"
 ---
 # <a name="product-long-readiness-guide"></a>[!INCLUDE [Product long](includes/product-long.md)] Bereitschafts Leit Faden
 
@@ -57,7 +57,7 @@ Nachdem [!INCLUDE [Product short](includes/product-short.md)] ausgeführt wurde 
 
 ## <a name="security-best-practices"></a>Bewährte Sicherheitsmethoden
 
-- [ [!INCLUDE [Product short](includes/product-short.md)] Häufig gestellte Fragen](technical-faq.md) : Dieser Artikel enthält eine Liste mit häufig gestellten Fragen zu [!INCLUDE [Product short](includes/product-short.md)] und bietet Einblicke und Antworten.
+- [ [!INCLUDE [Product short](includes/product-short.md)] Häufig gestellte Fragen](technical-faq.yml) : Dieser Artikel enthält eine Liste mit häufig gestellten Fragen zu [!INCLUDE [Product short](includes/product-short.md)] und bietet Einblicke und Antworten.
 
 ## <a name="community-resources"></a>Communityressourcen
 

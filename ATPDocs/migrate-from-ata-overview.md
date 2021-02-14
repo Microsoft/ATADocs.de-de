@@ -3,12 +3,12 @@ title: Advanced Threat Analytics für Microsoft Defender zum Verschieben von Ide
 description: Erfahren Sie, wie Sie eine vorhandene Advanced Threat Analytics-Installation in Microsoft Defender für Identity verschieben.
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: be1edf7981bbf72daeb285a9d0d0896892839f59
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 5e20ed1580ad314f85845161fbb850395709d580
+ms.sourcegitcommit: af41733212c2102c223fed8c8602a21a1f667080
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96542684"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100515341"
 ---
 # <a name="advanced-threat-analytics-ata-to-product-long"></a>Advanced Threat Analytics (ATA) zu [!INCLUDE [Product long](includes/product-long.md)]
 
@@ -17,7 +17,7 @@ ms.locfileid: "96542684"
 
 Verwenden Sie dieses Handbuch, um von einer vorhandenen ATA-Installation zum ()-Dienst zu wechseln [!INCLUDE [Product long](includes/product-long.md)] . In diesem Handbuch [!INCLUDE [Product short](includes/product-short.md)] werden die Voraussetzungen und Anforderungen erläutert, und es wird erläutert, wie Sie Ihre Umstellung planen und dann vervollständigen. Überprüfungs Schritte und Tipps für die Verwendung der neuesten Bedrohungsschutz-und Sicherheitslösungen von [!INCLUDE [Product short](includes/product-short.md)] nach der Installation sind ebenfalls enthalten.
 
-Weitere Informationen zu den Unterschieden zwischen ATA und [!INCLUDE [Product short](includes/product-short.md)] finden Sie in den [ [!INCLUDE [Product short](includes/product-short.md)] häufig gestellten Fragen](technical-faq.md#what-is-azure-atp).
+Weitere Informationen zu den Unterschieden zwischen ATA und [!INCLUDE [Product short](includes/product-short.md)] finden Sie in den [ [!INCLUDE [Product short](includes/product-short.md)] häufig gestellten Fragen](technical-faq.yml).
 
 In dieser Anleitung lernen Sie Folgendes:
 
@@ -86,7 +86,7 @@ Schließen Sie den Umstieg auf [!INCLUDE [Product short](includes/product-short.
 - [Konfigurieren Sie den Sensor](install-step5.md)
 
 > [!NOTE]
-> Bestimmte Tasks in der folgenden Liste können nicht vor der Installation von [!INCLUDE [Product short](includes/product-short.md)] Sensoren abgeschlossen und dann eine anfängliche Synchronisierung abgeschlossen werden, z. **Sensitive** b. das Auswählen von Entitäten für manuelles, vertrauliches markieren Die erste Synchronisierung kann bis zu 2 Stunden dauern.
+> Bestimmte Tasks in der folgenden Liste können nicht vor der Installation von [!INCLUDE [Product short](includes/product-short.md)] Sensoren abgeschlossen und dann eine anfängliche Synchronisierung abgeschlossen werden, z.  b. das Auswählen von Entitäten für manuelles, vertrauliches markieren Die erste Synchronisierung kann bis zu 2 Stunden dauern.
 
 #### <a name="configuration"></a>Konfiguration
 
