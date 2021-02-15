@@ -1,0 +1,203 @@
+### YamlMime:FAQ
+metadata:
+  title: Häufig gestellte Fragen zu Microsoft Defender für Identitäten
+  description: Enthält eine Liste mit häufig gestellten Fragen zu Microsoft Defender für Identity und den zugehörigen Antworten.
+  ms.date: 10/27/2020
+  ms.topic: conceptual
+  ms.openlocfilehash: dfb8184376ea0c98516e28fce64eff6ac8a453d5
+  ms.sourcegitcommit: af41733212c2102c223fed8c8602a21a1f667080
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 02/14/2021
+  ms.locfileid: "100520714"
+title: Häufig gestellte Fragen zu Microsoft Defender für Identitäten
+summary: >
+  Dieser Artikel enthält eine Liste mit häufig gestellten Fragen und Antworten zu Microsoft Defender für Identity, die in die folgenden Kategorien unterteilt sind:
+sections:
+- name: Was ist Defender für Identity?
+  questions:
+  - question: Was kann Defender für die Identitäts Erkennung erkennen?
+    answer: >
+      Defender für Identity erkennt bekannte schädliche Angriffe und Techniken, Sicherheitsprobleme und Risiken im Hinblick auf Ihr Netzwerk.
+
+      Die vollständige Liste von Defender für Identitäts Erkennungen finden Sie unter [welche Erkennungen werden von Defender für die Identität durchgeführt?](suspicious-activity-guide.md).
+  - question: Welche Daten werden von Defender für die Identität gesammelt?
+    answer: >
+      Defender für Identity sammelt und speichert Informationen von ihren konfigurierten Servern (Domänen Controllern, Mitglieds Servern usw.) in einer Datenbank, die für den Dienst zu Verwaltungs-, Überwachungs-und Berichterstattungs Zwecken spezifisch ist. Gesammelte Informationen sind unter anderem Netzwerkdatenverkehr von und zu Domänencontrollern (z.B. Kerberos-Authentifizierung, NTLM-Authentifizierung, DNS-Abfragen), Sicherheitsprotokolle (z.B. Windows-Sicherheitsereignisse), Active Directory-Informationen (Struktur, Subnetze, Websites) sowie Entitätsinformationen (z.B. Namen, E-Mail-Adressen und Telefonnummern).
+
+
+      Microsoft verwendet diese Daten zu folgenden Zwecken:
+
+
+      - Zum proaktiven Identifizieren von Angriffsindikatoren (Indicators of Attack, IOAs) in Ihrer Organisation
+
+      - Zum Generieren von Warnungen, wenn ein möglicher Angriff erkannt wurde
+
+      - Zum Bereitstellen von Sicherheitsvorgängen mit einen Einblick in Entitäten, die mit Bedrohungssignalen aus Ihrem Netzwerk verknüpft sind. So können Sie überprüfen und ermitteln, ob Sicherheitsbedrohungen vorhanden sind.
+
+
+      Microsoft extrahiert Ihre Daten nicht zu Werbezwecken oder anderen Zwecken als die Bereitstellung des Dienstes für Sie.
+  - question: Wie viele Verzeichnisdienst-Anmelde Informationen werden von Defender für Identitäts Unterstützung unterstützt?
+    answer: >
+      Defender for Identity unterstützt derzeit das Hinzufügen von bis zu 10 verschiedenen Anmelde Informationen für den Verzeichnisdienst, um Active Directory Umgebungen mit nicht vertrauenswürdigen Gesamtstrukturen Wenn Sie weitere Konten benötigen, eröffnen Sie ein Supportticket.
+  - question: Nutzt Defender for Identity nur Datenverkehr von Active Directory?
+    answer: >
+      Zusätzlich zur Analyse Active Directory Datenverkehrs mithilfe der Deep Packet-Überprüfungs Technologie sammelt Defender for Identity auch relevante Windows-Ereignisse von Ihrem Domänen Controller und erstellt Entitäts Profile auf der Grundlage von Informationen aus Active Directory Domain Services. Defender für Identity unterstützt auch das Empfangen der RADIUS-Kontoführung von VPN-Protokollen von verschiedenen Anbietern (Microsoft, Cisco, F5 und Checkpoint).
+  - question: Überwacht Defender für Identity nur in die Domäne eingebundenen Geräten?
+    answer: >
+      Nein. Defender for Identity überwacht alle Geräte im Netzwerk, die Authentifizierungs-und Autorisierungs Anforderungen für Active Directory ausführen, einschließlich nicht-Windows-und mobiler Geräte.
+  - question: Überwacht Defender for Identity sowohl Computer Konten als auch Benutzerkonten?
+    answer: >
+      Ja. Da Computer Konten (ebenso wie alle anderen Entitäten) zum Durchführen böswilliger Aktivitäten verwendet werden können, überwacht Defender für Identity das Verhalten aller Computer Konten und alle anderen Entitäten in der Umgebung.
+  - question: Worin besteht der Unterschied zwischen Advanced Threat Analytics (ATA) und Defender für Identity?
+    answer: >
+      ATA ist eine eigenständige lokale Lösung mit mehreren Komponenten, zum Beispiel ATA Center, die dediziert Hardware lokal erfordern.
+
+
+      Defender für Identity ist eine cloudbasierte Sicherheitslösung, die ihre lokalen Active Directory Signale (Azure AD) nutzt. Die Lösung ist hochgradig skalierbar und wird laufend aktualisiert.
+
+
+      Die endgültige Version von ATA ist [allgemein verfügbar](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA wird die grundlegende Unterstützung am 12. Januar 2021 beenden. Der erweiterte Support wird bis zum 2026. Januar fortgesetzt. Weitere Informationen finden Sie in [unserem Blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
+
+
+      Im Gegensatz zum ATA-Sensor verwendet der Defender for Identity-Sensor auch Datenquellen wie z. b. die Ereignis Ablauf Verfolgung für Windows (Event Tracing for Windows, etw), die Defender für Identity zur Bereitstellung zusätzlicher Erkennungen
+
+
+      Zu den häufigen Updates von Defender für die Identität gehören die folgenden Features und Funktionen:
+
+
+      - **Unterstützung für [Umgebungen mit mehreren Gesamtstrukturen](multi-forest.md)** : Stellt Sichtbarkeit in Azure AD-Gesamtstrukturen für Organisationen bereit
+
+
+      - **[Bewertungen des Identitätssicherheitsstatus](isp-overview.md)** : Identifizieren häufige Fehlkonfigurationen sowie ausnutzbare Komponenten und stellen Wiederherstellungspfade zum Reduzieren der Angriffsfläche bereit
+
+
+      - **[UEBA-Funktionen](/cloud-app-security/tutorial-ueba)** : Einblicke in Risiken individueller Benutzer über die Bewertung der Benutzeruntersuchungspriorität. Die Bewertung kann SecOps bei der Untersuchung unterstützen und Analysten dabei helfen, ungewöhnliche Aktivitäten für den Benutzer und die Organisation zu verstehen.
+
+
+      - **Native Integrationen**: In Microsoft Cloud App Security und Azure AD Identity Protection integriert, bieten sie eine hybride Ansicht über Vorgänge in den lokalen und hybriden Umgebungen.
+
+
+      - **Beiträgt an Microsoft 365 Defender**: unterstützt Warnungen und Bedrohungs Daten in Microsoft 365 Defender. Microsoft 365 Defender nutzt das Microsoft 365 Sicherheits Portfolio (Identitäten, Endpunkte, Daten und Anwendungen), um Domänen übergreifende Bedrohungs Daten automatisch zu analysieren und so ein umfassendes Bild der einzelnen Angriffe in einem einzelnen Dashboard zu erhalten. Dank dieser breiten-und Übersichtlichkeit können sich die Defender auf kritische Bedrohungen konzentrieren und nach anspruchsvollen Sicherheitsverletzungen suchen, die darauf vertrauen, dass die leistungsstarke Automatisierung von Microsoft 365 Defender Angriffe an einer beliebigen Stelle in der Kill-Kette stoppt und die Organisation in einen sicheren Zustand versetzt.
+- name: Lizenzierung und Datenschutz
+  questions:
+  - question: Wo erhalte ich eine Lizenz für Microsoft Defender für Identity?
+    answer: >
+      Defender für Identity ist als Teil von Enterprise Mobility + Security 5 Suite (EMS E5) und als eigenständige Lizenz verfügbar. Sie können eine Lizenz entweder direkt über das [Microsoft 365-Portal](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) oder über das CSP-Lizenzierungsmodell (Cloud Solution Partner) erwerben.
+  - question: Benötigt Defender for Identity nur eine einzelne Lizenz oder erfordert eine Lizenz für jeden Benutzer, den Sie schützen möchten?
+    answer: >
+      Informationen zu Defender für Identitäts Lizenzierungsanforderungen finden Sie im [Leitfaden zu Defender für Identitäts Lizenzierung](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#azure-advanced-threat-protection).
+  - question: Sind die Daten von anderen Kundendaten isoliert?
+    answer: Ja, Ihre Daten werden durch Zugriffsauthentifizierung und logischer Trennung basierend auf der Kundennummer getrennt. Jeder Kunde kann nur auf Daten zugreifen, die von der eigenen Organisation gesammelt wurden, sowie auf generische Daten, die von Microsoft bereitgestellt werden.
+  - question: Kann ich frei wählen, wo ich meine Daten speichern möchte?
+    answer: >
+      Nein. Wenn Ihre Defender für Identity-Instanz erstellt wird, wird Sie automatisch in dem Land-Rechenzentrum gespeichert, das dem geografischen Standort Ihres Aad-Mandanten am nächsten liegt. Defender für Identitätsdaten kann nicht verschoben werden, sobald Ihre Defender for Identity-Instanz in einem anderen Rechenzentrum erstellt wurde.
+  - question: Wie verhindert Microsoft schädliche Insideraktivitäten und den Missbrauch von privilegierten Rollen?
+    answer: >
+      Microsoft-Entwickler und -Administratoren verfügen systembedingt über genügend Privilegien zum Ausführen der Ihnen zugewiesenen Aufgaben, um den Dienst zu betreiben und weiterzuentwickeln. Microsoft stellt zum Schützen vor Aktivitäten von unautorisierten Entwicklern und/oder Administratoren eine Kombination aus vorbeugenden und reaktiven Steuerelementen sowie Erkennungssteuerelemente einschließlich der folgenden Mechanismen bereit:
+
+
+      - Enge Zugriffssteuerung für vertrauliche Daten
+
+      - Kombination aus Steuerelementen, die die unabhängige Erkennung von schädlicher Aktivität deutlich verbessern
+
+      - Mehrere Überwachungs-, Protokollierungs- und Berichterstattungsebenen
+
+
+      Darüber hinaus führt Microsoft Hintergrundüberprüfungen von bestimmten Betriebsmitarbeitern durch und beschränkt den Zugriff auf Anwendungen, Systeme sowie die Netzwerkinfrastruktur im Verhältnis zur Ebene der Hintergrundüberprüfung. Betriebsmitarbeiter folgen einem formellen Prozess, wenn sie bei der Ausübung ihrer Aufgaben auf das Konto eines Kunden oder auf zugehörige Informationen zugreifen müssen.
+- name: Bereitstellung
+  questions:
+  - question: Wie viele Defender für Identitäts Sensoren benötige ich?
+    answer: >
+      Jeder Domänen Controller in der Umgebung sollte von einem Defender für Identitäts Sensor oder eigenständigen Sensor abgedeckt werden. Weitere Informationen finden Sie unter [Defender für die Größenanpassung des Identitäts Sensors](capacity-planning.md#sizing).
+  - question: Funktioniert Defender für die Identität mit verschlüsseltem Datenverkehr?
+    answer: Netzwerkprotokolle mit verschlüsseltem Datenverkehr (z.B. AtSvc und WMI) werden nicht verschlüsselt, sondern von den Sensoren analysiert.
+  - question: Funktioniert Defender für die Identität mit Kerberos armoring?
+    answer: >
+      Die Aktivierung von Kerberos armoring (auch als flexible Authentication Secure Tunneling (fast) bezeichnet) wird von Defender für Identity unterstützt, mit Ausnahme der over-Pass-the-Hash-Erkennung, die nicht mit Kerberos armoring funktioniert.
+  - question: Gewusst wie Überwachen eines virtuellen Domänen Controllers mithilfe von Defender für Identity?
+    answer: >
+      Die meisten virtuellen Domänen Controller können vom Defender für Identity-Sensor abgedeckt werden, um zu bestimmen, ob der Defender for Identity-Sensor für Ihre Umgebung geeignet ist. Weitere Informationen finden Sie unter [Defender für die Identitäts Kapazitätsplanung](capacity-planning.md).
+
+
+      Wenn ein virtueller Domänen Controller nicht durch den Defender for Identity-Sensor abgedeckt werden kann, können Sie einen virtuellen oder physischen Defender für den Identitäts eigenständigen Sensor wie unter [Konfigurieren der Port Spiegelung](configure-port-mirroring.md)beschrieben haben.
+
+      Die einfachste Möglichkeit besteht darin, auf jedem Host, auf dem ein virtueller Domänen Controller vorhanden ist, einen virtuellen Defender für den Identitäts eigenständigen Sensor zu haben.
+
+      Wenn die virtuellen Domänencontroller zwischen Hosts verschoben werden, müssen Sie einen der folgenden Schritte ausführen:
+
+
+      - Wenn der virtuelle Domänen Controller auf einen anderen Host verschoben wird, konfigurieren Sie den eigenständigen Defender für Identity-Sensor auf diesem Host so, dass der Datenverkehr vom kürzlich verschobene virtuellen Domänen Controller empfangen wird.
+
+      - Stellen Sie sicher, dass Sie den Virtual Defender für den Identitäts eigenständigen Sensor dem virtuellen Domänen Controller angleichen, damit der Defender für Identity-eigenständige Sensor bei der Verschiebung mit dem virtuellen Domänen Controller verschoben wird.
+
+      - Es gibt einige virtuelle Switches, über die der Datenverkehr zwischen Hosts gesendet werden kann.
+  - question: Gewusst wie die Defender für Identitäts Sensoren so konfigurieren, dass Sie mit Defender for Identity Cloud Service kommunizieren, wenn ich über einen Proxy verfüge?
+    answer: >
+      Für die Kommunikation Ihrer Domänencontroller mit dem Clouddienst müssen Sie in Ihrer Firewall und auf Ihrem Proxyserver Port 443 für „*.atp.azure.com“ freigeben. Anweisungen hierzu finden Sie unter [Konfigurieren des Proxys oder der Firewall, um die Kommunikation mit Defender für Identitäts Sensoren zu ermöglichen](configure-proxy.md).
+  - question: Kann Defender für Identitäts überwachte Domänen Controller in ihrer IaaS-Lösung virtualisiert werden?
+    answer: >
+      Ja, Sie können den Defender für Identitäts Sensor zum Überwachen von Domänen Controllern verwenden, die sich in einer beliebigen IaaS-Lösung befinden.
+  - question: Kann Defender für Identity die Unterstützung für mehrere Domänen und mehrere Gesamtstrukturen unterstützen?
+    answer: >
+      Defender für Identity unterstützt Umgebungen mit mehreren Domänen und mehrere Gesamtstrukturen. Weitere Informationen und Anforderungen in Bezug auf Vertrauensstellungen finden Sie unter [Unterstützung für mehrere Gesamtstrukturen](multi-forest.md).
+  - question: Kann die Gesamtintegrität der Bereitstellung angezeigt werden?
+    answer: >
+      Ja, Sie können die allgemeine Integrität der Bereitstellung sowie spezifische Probleme im Zusammenhang mit der Konfiguration, Konnektivität usw. anzeigen, und Sie werden benachrichtigt, sobald Sie mit Defender for Identity Health-Warnungen auftreten.
+- name: Vorgang
+  questions:
+  - question: Welche Art der Integration hat Defender für die Identität mit Siems?
+    answer: >
+      Defender für Identity kann so konfiguriert werden, dass eine syslog-Warnung an einen beliebigen Siem-Server gesendet wird, der das CEF-Format verwendet, für Integritäts Warnungen und wenn eine Sicherheitswarnung erkannt wird. Weitere Informationen finden Sie unter [Referenz zum SIEM-Protokoll](cef-format-sa.md).
+  - question: Warum gelten bestimmte Konten als sensible Konten?
+    answer: >
+      Dies ist der Fall, wenn ein Konto Mitglied bestimmter Gruppen ist, die als sensibel festgelegt sind (z. B. „Domänen-Admins“).
+
+
+      Um nachzuvollziehen, warum ein Konto ein sensibles Konto ist, können Sie seine Gruppenmitgliedschaft überprüfen, um festzustellen, welchen sensiblen Gruppen es angehört (die Gruppe, der das Konto angehört, kann auch wegen einer anderen Gruppe eine sensible Gruppe sein. Daher sollten Sie immer die höchste sensible Gruppe überprüfen). Sie können auch manuell [Konten als vertraulich kennzeichnen](sensitive-accounts.md).
+  - question: Müssen eigene Regeln geschrieben und ein Schwellenwert/eine Basislinie erstellt werden?
+    answer: >
+      Mit Defender für Identity besteht keine Notwendigkeit, Regeln, Schwellenwerte oder Basis Linien zu erstellen und dann eine Feinabstimmung durchführen zu können. Defender für Identity analysiert das Verhalten von Benutzern, Geräten und Ressourcen sowie deren Beziehungen untereinander und kann verdächtige Aktivitäten und bekannte Angriffe schnell erkennen. Drei Wochen nach der Bereitstellung beginnt Defender für Identity mit der Erkennung von verdächtigen Verhaltens Aktivitäten. Auf der anderen Seite erkennt Defender für Identity, dass bekannte böswillige Angriffe und Sicherheitsprobleme unmittelbar nach der Bereitstellung erkannt werden.
+  - question: Welchen Datenverkehr übernimmt Defender für die Identitäts Generierung im Netzwerk von Domänen Controllern und warum?
+    answer: >
+      Defender for Identity generiert in einem von drei Szenarien Datenverkehr von Domänen Controllern zu Computern in der Organisation:
+
+
+      1. **Netzwerknamen Auflösung** Defender für Identity erfasst Datenverkehr und Ereignisse, das Erlernen und die Profilerstellung für Benutzer und Computeraktivitäten im Netzwerk. Zum Erlernen und Erstellen von Profilen für Aktivitäten gemäß den Computern in der Organisation muss Defender for Identity IPS in Computer Konten auflösen. Um IP-Adressen zu Computernamen Defender für Identitäts Sensoren aufzulösen, fordern Sie die IP-Adresse des Computer namens *hinter* der IP-Adresse an.
+
+          Anforderungen erfolgen mithilfe einer von vier Methoden:
+          - NTLM über RPC (TCP-Port 135)
+          - NetBIOS (UDP-Port 137)
+          - RDP (TCP-Port 3389)
+          - Abfragen des DNS-Servers mittels Reverse-DNS-Lookup der IP-Adresse (UDP 53)
+
+          Nachdem Sie den Computernamen erhalten haben, überprüfen Defender für Identitäts Sensoren die Details in Active Directory, um festzustellen, ob ein korreliertes Computer Objekt mit demselben Computernamen vorhanden ist. Wenn eine Übereinstimmung gefunden wird, erfolgt eine Zuordnung zwischen der IP-Adresse und dem übereinstimmenden Computerobjekt.
+      2. **Lateral Movement-Pfad (LMP)** Um potenzielle LMPS für sensible Benutzer zu erstellen, benötigt Defender for Identity Informationen zu den lokalen Administratoren auf Computern. In diesem Szenario verwendet der Defender for Identity-Sensor Sam-R (TCP 445) zum Abfragen der im Netzwerk Datenverkehr identifizierten IP-Adresse, um die lokalen Administratoren des Computers zu bestimmen. Weitere Informationen zu Defender für Identity und Sam-r finden Sie unter [Konfigurieren von Sam-r erforderliche Berechtigungen](install-step8-samr.md).
+
+
+      3. Abfragen von **Active Directory mit LDAP** für Entity Data Defender für Identitäts Sensoren Abfragen des Domänen Controllers aus der Domäne, zu der die Entität gehört. Es kann derselbe Sensor oder ein anderer Domänencontroller aus dieser Domäne sein.
+
+
+      |Protokoll|Dienst|Port|Quelle| Richtung|
+
+      |---------|---------|---------|---------|--------|
+
+      |LDAP|TCP und UDP|389|Domänencontroller|Ausgehend|
+
+      |Sicheres LDAP (LDAPS)|TCP|636|Domänencontroller|Ausgehend|
+
+      |LDAP an globalen Katalog|TCP|3268|Domänencontroller|Ausgehend|
+
+      |LDAPs an globalen Katalog|TCP|3269|Domänencontroller|Ausgehend|
+  - question: Warum werden in Aktivitäten nicht immer sowohl der Quellbenutzer als auch der Quellcomputer angezeigt?
+    answer: >
+      Defender für Identity erfasst Aktivitäten über viele verschiedene Protokolle. In einigen Fällen empfängt Defender for Identity die Daten des Quell Benutzers nicht im Datenverkehr. Defender for Identity versucht, die Sitzung des Benutzers mit der Aktivität zu korrelieren, und wenn der Versuch erfolgreich ist, wird der Quell Benutzer der Aktivität angezeigt. Schlagen Korrelationsversuche des Benutzers aber fehl, wird nur der Quellcomputer angezeigt.
+- name: Problembehandlung
+  questions:
+  - question: Was soll ich tun, wenn der Defender for Identity-Sensor oder der eigenständige Sensor nicht gestartet wird?
+    answer: >
+      Sehen Sie sich den letzten Fehler im aktuellen Fehler [Protokoll](troubleshooting-using-logs.md) an (in dem Defender für Identity im Ordner "Logs" installiert ist).
+- name: Weitere Informationen
+  questions:
+  - question: ''
+    answer: "\n- [Voraussetzungen für Defender for Identity](prerequisites.md)\n- [Defender für die Identitäts Kapazitätsplanung](capacity-planning.md)\n- [Konfigurieren der Ereignissammlung](configure-event-collection.md)\n- [Konfigurieren der Windows-Ereignisweiterleitung](configure-event-forwarding.md)\n- [Problembehandlung](troubleshooting-known-issues.md)\n- [Sehen Sie sich das Defender for Identity-Forum an!](https://aka.ms/MDIcommunity)"
