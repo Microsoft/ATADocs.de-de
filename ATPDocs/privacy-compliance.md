@@ -3,14 +3,14 @@ title: Richtlinie für persönliche Daten von Microsoft Defender für Identity
 description: Enthält Links zu Informationen zum Löschen von privaten Informationen und persönlichen Daten von Microsoft Defender für die Identität.
 ms.date: 10/26/2020
 ms.topic: conceptual
-ms.openlocfilehash: c5af419c2be751a8b9f92855f57f13669860de1a
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: b8336d4b6508fc9de462dcdbb6bc6389dd2fa0f2
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96542361"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533397"
 ---
-# <a name="product-long-data-security-and-privacy"></a>[!INCLUDE [Product long](includes/product-long.md)] Datensicherheit und Datenschutz
+# <a name="microsoft-defender-for-identity-data-security-and-privacy"></a>Microsoft Defender für Identitätsdaten Sicherheit und Datenschutz
 
 [!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
 
@@ -44,6 +44,6 @@ In [!INCLUDE [Product short](includes/product-short.md)] haben Sie die Möglichk
 
 - Informationen zu [!INCLUDE [Product short](includes/product-short.md)] Vertrauenswürdigkeit und Konformität finden Sie im [Dienst Vertrauensstellungs Portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) und auf der Microsoft 365 Enterprise dsgvo-Kompatibilitäts [Website](/microsoft-365/compliance/gdpr?view=o365-worldwide&preserve-view=true).
 
-## <a name="security-and-privacy-for-product-short-us-government-gcc-high-customers"></a>Sicherheit und Datenschutz für [!INCLUDE [Product short](includes/product-short.md)] gcc High-Kunden der US-Regierung
+## <a name="security-and-privacy-for-defender-for-identity-us-government-gcc-high-customers"></a>Sicherheit und Datenschutz für Defender for Identity US Government gcc High-Kunden
 
 Weitere Informationen zu Kompatibilitäts [!INCLUDE [Product short](includes/product-short.md)] Standards und zum Speicherort von Kundendaten für die US-Regierung gcc High-Kunden finden Sie in der [Beschreibung des Enterprise Mobility + Security für den US Government-Dienst](/enterprise-mobility-security/solutions/ems-govt-service-description).

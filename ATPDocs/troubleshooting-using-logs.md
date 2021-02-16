@@ -3,14 +3,14 @@ title: Behandeln von Problemen mit Microsoft Defender für die Identität mithil
 description: Beschreibt, wie Sie Microsoft Defender für Identitäts Protokolle verwenden können, um Probleme zu beheben.
 ms.date: 10/27/2020
 ms.topic: how-to
-ms.openlocfilehash: beea555d45f1e06ea3eddeffbf057c392003a8d2
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 2c902576b4cf7b0acf58371bafe4bb60404890ba
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96542106"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534513"
 ---
-# <a name="troubleshooting-product-long-sensor-using-the-product-short-logs"></a>Problembehandlung bei [!INCLUDE [Product long](includes/product-long.md)] Sensor mithilfe der [!INCLUDE [Product short](includes/product-short.md)] Protokolle
+# <a name="troubleshooting-microsoft-defender-for-identity-sensor-using-the-defender-for-identity-logs"></a>Problembehandlung für Microsoft Defender für den Identitäts Sensor mithilfe von Defender für Identitäts Protokolle
 
 Die [!INCLUDE [Product short](includes/product-short.md)] Protokolle bieten Einblicke in die einzelnen Komponenten des [!INCLUDE [Product long](includes/product-long.md)] Sensors zu einem bestimmten Zeitpunkt.
 
@@ -27,7 +27,7 @@ Der [!INCLUDE [Product short](includes/product-short.md)] Sensor verfügt über 
 > [!NOTE]
 > Die ersten drei Protokolldateien haben eine maximale Größe von 50 MB. Wenn diese Größe erreicht ist, wird eine neue Protokolldatei geöffnet und die vorherige Datei in „&lt;Ursprünglicher Dateiname&gt;-Archived-00000“ umbenannt. Die Zahl erhöht sich bei jeder Umbenennung der Datei. Wenn bereits mehr als 10 Dateien des gleichen Typs vorhanden sind, werden die ältesten gelöscht.
 
-## <a name="product-short-deployment-logs"></a>[!INCLUDE [Product short](includes/product-short.md)] Bereitstellungs Protokolle
+## <a name="defender-for-identity-deployment-logs"></a>Defender für Identitäts Bereitstellungs Protokolle
 
 Die [!INCLUDE [Product short](includes/product-short.md)] Bereitstellungs Protokolle befinden sich im temporären Verzeichnis des Benutzers, der das Produkt installiert hat. Der Standard Speicherort für die Installation finden Sie unter: **C:\Users\Administrator\AppData\Local\Temp** (oder in einem Verzeichnis oberhalb von% Temp%).
 

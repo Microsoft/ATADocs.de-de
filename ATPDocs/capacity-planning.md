@@ -3,14 +3,14 @@ title: Planen von Microsoft Defender für die Identitäts Bereitstellung
 description: Hilft Ihnen bei der Planung der Bereitstellung und der Entscheidung, wie viele Microsoft Defender für Identitäts Server für die Unterstützung Ihres Netzwerks benötigt werden.
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: a5db3865b75e79a7b5f69dd5223e27497cc7ae18
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 8266742f2766977685d465b3634c7a71a51af682
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544231"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533895"
 ---
-# <a name="plan-capacity-for-product-long"></a>Planen der Kapazität für [!INCLUDE [Product long](includes/product-long.md)]
+# <a name="plan-capacity-for-microsoft-defender-for-identity"></a>Planen der Kapazität für Microsoft Defender für die Identität
 
 In dieser Anleitung legen Sie fest, wie viele [!INCLUDE [Product long](includes/product-long.md)] Sensoren Sie benötigen.
 
@@ -32,7 +32,9 @@ Die empfohlene und einfachste Methode zum Ermitteln der Kapazität für Ihre [!I
 1. Suchen Sie in der Excel-Ergebnisdatei in der Azure ATP-Sensortabelle nach dem Feld **Busy Packets/sec** (Aktive Pakete/s), und notieren Sie den Wert.
 1. Vergleichen Sie das Feld " **ausgelastete Pakete/** s" mit dem Feld " **Pakete pro Sekunde** " im Abschnitt " [ [!INCLUDE [Product short](includes/product-short.md)] Sensor Tabelle](#sizing) " in diesem Artikel. Verwenden Sie die Felder, um die vom Sensor verwendeten Arbeitsspeicher- und CPU-Ressourcen zu bestimmen.
 
-## <a name="product-short-sensor-sizing"></a><a name="sizing"></a>[!INCLUDE [Product short](includes/product-short.md)]Sensorgröße
+<a name="sizing"></a>
+
+## <a name="defender-for-identity-sensor-sizing"></a>Defender für die Größenanpassung des Identitäts Sensors
 
 Ein [!INCLUDE [Product short](includes/product-short.md)] Sensor kann die Überwachung eines Domänen Controllers basierend auf der Menge des vom Domänen Controller generierten Netzwerkverkehrs unterstützen. Die folgende Tabelle enthält Schätzungen. Die tatsächlich vom Sensor analysierte Menge ist abhängig vom Umfang des Datenverkehrs und dessen Verteilung.
 
@@ -73,7 +75,9 @@ Es wird empfohlen, nicht mit Hyperthreadingkernen zu arbeiten. Das Arbeiten mit 
 |VMWare|Stellen Sie sicher, dass die konfigurierte und die reservierte Arbeitsspeichermenge gleich sind, oder wählen Sie in den VM-Einstellungen die folgende Option aus: **Gesamten Gastarbeitsspeicher reservieren (alle gesperrt)** .|
 |Anderer Virtualisierungshost|Informieren Sie sich in der Dokumentation des Herstellers, wie Sie sicherstellen, dass der Arbeitsspeicher zu jedem Zeitpunkt vollständig dem virtuellen Computer zugewiesen ist. |
 
-## <a name="domain-controller-traffic-estimation"></a><a name="manual-sizing"></a> Datenverkehrsschätzung für Domänencontroller
+<a name="manual-sizing"></a>
+
+## <a name="domain-controller-traffic-estimation"></a>Abschätzung des Datenverkehrs für Domänencontroller
 
 Wenn Sie das Tool zur Größenanpassung aus irgendeinem Grund nicht verwenden können [!INCLUDE [Product short](includes/product-short.md)] , sammeln Sie die Informationen zum Paket/Sek. manuell von allen Domänen Controllern. Sammeln Sie hierbei Daten über einen Zeitraum von 24 Stunden mit einem niedrigen Erfassungsintervall (etwa 5 Sekunden). Anschließend müssen Sie für jeden Domänencontroller den Tagesdurchschnitt und den Durchschnitt für die Zeitspanne (15 Minuten) mit der höchsten Auslastung berechnen. Die folgenden Abschnitte enthalten Anweisungen dazu, wie Sie Informationen zum Pakete/Sek.-Leistungsindikator für einen Domänencontroller sammeln.
 

@@ -3,14 +3,14 @@ title: Advanced Threat Analytics für Microsoft Defender zum Verschieben von Ide
 description: Erfahren Sie, wie Sie eine vorhandene Advanced Threat Analytics-Installation in Microsoft Defender für Identity verschieben.
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: 5e20ed1580ad314f85845161fbb850395709d580
-ms.sourcegitcommit: af41733212c2102c223fed8c8602a21a1f667080
+ms.openlocfilehash: 45b9004bc439a28e144686e3147b94b6019a7a0f
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100515341"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533799"
 ---
-# <a name="advanced-threat-analytics-ata-to-product-long"></a>Advanced Threat Analytics (ATA) zu [!INCLUDE [Product long](includes/product-long.md)]
+# <a name="advanced-threat-analytics-ata-to-microsoft-defender-for-identity"></a>Advanced Threat Analytics (ATA) bei Microsoft Defender für Identity
 
 > [!NOTE]
 > Die endgültige Version von ATA ist [allgemein verfügbar](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA wird die grundlegende Unterstützung am 12. Januar 2021 beenden. Der erweiterte Support wird bis zum 2026. Januar fortgesetzt. Weitere Informationen finden Sie in [unserem Blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
@@ -70,7 +70,7 @@ Stellen Sie sicher, dass Sie die folgenden Informationen gesichert haben, bevor 
 
 Schließen Sie den Umstieg auf [!INCLUDE [Product short](includes/product-short.md)] in zwei einfachen Schritten ab:
 
-### <a name="step-1-create-and-install-product-short-instance-and-sensors"></a>Schritt 1: Erstellen und Installieren von [!INCLUDE [Product short](includes/product-short.md)] Instanzen und Sensoren
+### <a name="step-1-create-and-install-defender-for-identity-instance-and-sensors"></a>Schritt 1: Erstellen und Installieren von Defender für Identitäts Instanz und-Sensoren
 
 1. [Erstellen der neuen [!INCLUDE [Product short](includes/product-short.md)] Instanz](install-step1.md)
 
@@ -81,7 +81,7 @@ Schließen Sie den Umstieg auf [!INCLUDE [Product short](includes/product-short.
     - [Rufen Sie Ihre [!INCLUDE [Product short](includes/product-short.md)] Zugriffstaste](install-step3.md#download-the-setup-package).
     - [Installieren [!INCLUDE [Product short](includes/product-short.md)] Sie Sensoren auf Ihren Domänen Controllern](install-step4.md).
 
-### <a name="step-2-configure-and-validate-product-short-instance"></a>Schritt 2: Konfigurieren und Überprüfen der [!INCLUDE [Product short](includes/product-short.md)] Instanz
+### <a name="step-2-configure-and-validate-defender-for-identity-instance"></a>Schritt 2: Konfigurieren und Überprüfen von Defender für die Identitäts Instanz
 
 - [Konfigurieren Sie den Sensor](install-step5.md)
 

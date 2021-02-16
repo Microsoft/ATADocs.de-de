@@ -3,14 +3,14 @@ title: Filter und Suche von Microsoft Defender für Identitäts Überwachung
 description: Dieser Artikel bietet eine Übersicht über das Filtern und Durchsuchen von überwachten Aktivitäten mithilfe von Microsoft Defender für die Identität.
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: 9e1758475c9b364e1726e5f145676110b98389d9
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: e338e0294ad407c17df2476e7a7a5395f27756f2
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96543806"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533918"
 ---
-# <a name="product-long-monitored-activities-search-and-filter"></a>[!INCLUDE [Product long](includes/product-long.md)] überwachte Aktivitäten suchen und Filtern
+# <a name="microsoft-defender-for-identity-monitored-activities-search-and-filter"></a>Suchen und Filtern von Microsoft Defender für Identitäten überwachte Aktivitäten
 
 > [!NOTE]
 > Die auf dieser Seite erläuterten [!INCLUDE [Product short](includes/product-short.md)]-Features sind auch über das neue [Portal](https://portal.cloudappsecurity.com) zugänglich.

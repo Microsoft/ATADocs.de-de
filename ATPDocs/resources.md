@@ -3,18 +3,18 @@ title: Liste der hilfreichen Ressourcen für Microsoft Defender für Identity
 description: Dieser Artikel enthält eine Liste hilfreicher Ressourcen für Microsoft Defender für Identity.
 ms.date: 10/27/2020
 ms.topic: conceptual
-ms.openlocfilehash: 1878f8b9cbc8047083c927de612e88e50b1947ca
-ms.sourcegitcommit: af41733212c2102c223fed8c8602a21a1f667080
+ms.openlocfilehash: 8a814a51fdc63f59b36288922017280e0d7f3968
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100515511"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533306"
 ---
-# <a name="product-long-readiness-guide"></a>[!INCLUDE [Product long](includes/product-long.md)] Bereitschafts Leit Faden
+# <a name="microsoft-defender-for-identity-readiness-guide"></a>Leitfaden für Microsoft Defender für die Identitäts Bereitschaft
 
 In diesem Artikel erhalten Sie eine Roadmap-Liste mit Ressourcen, die Ihnen beim Einstieg in helfen [!INCLUDE [Product long](includes/product-long.md)] .
 
-## <a name="understanding-product-long"></a>Grundlegendes zu [!INCLUDE [Product long](includes/product-long.md)]
+## <a name="understanding-microsoft-defender-for-identity"></a>Grundlegendes zu Microsoft Defender für Identity
 
 [!INCLUDE [Product long](includes/product-long.md)] ist ein clouddienst, der Ihnen hilft, Ihr Unternehmen vor verschiedenen Typen von erweiterten gezielten Cyberangriffen und Insider Bedrohungen zu identifizieren und zu schützen.
 
@@ -31,7 +31,7 @@ Weitere Informationen zu [!INCLUDE [Product short](includes/product-short.md)] f
 - [ [!INCLUDE [Product short](includes/product-short.md)] Tool zur Größen](https://aka.ms/aatpsizingtool) Anpassung: das Tool zur Größenanpassung automatisiert die Erfassung der Menge an Datenverkehrs [!INCLUDE [Product short](includes/product-short.md)] Monitoren. Es stellt automatisch Empfehlungen zur Unterstützbarkeit und Ressourcen für Sensoren bereit.
 - [[!INCLUDE [Product short](includes/product-short.md)] Leitfaden zur Kapazitätsplanung](capacity-planning.md)
 
-## <a name="deploy-product-short"></a>Bereitstellen von [!INCLUDE [Product short](includes/product-short.md)]
+## <a name="deploy-defender-for-identity"></a>Bereitstellen von Defender für Identity
 
 Verwenden Sie diese Ressourcen, um die Einrichtung [!INCLUDE [Product short](includes/product-short.md)] , Verbindung mit Active Directory, das Herunterladen des Sensor Pakets, das Einrichten der Ereignis Sammlung und optional das integrieren in Ihr VPN und das Einrichten von honeytoken-Konten und-Ausschlüsse zu unterstützen.
 
@@ -39,7 +39,7 @@ Verwenden Sie diese Ressourcen, um die Einrichtung [!INCLUDE [Product short](inc
 - [ [!INCLUDE [Product short](includes/product-short.md)] ](install-step1.md) Führen Sie die folgenden Schritte aus, um [!INCLUDE [Product short](includes/product-short.md)] in Ihrer Umgebung bereitzustellen.
 - [Integration [!INCLUDE [Product short](includes/product-short.md)] in Microsoft Defender for Endpoint](integrate-mde.md)
 
-## <a name="product-short-settings"></a>[!INCLUDE [Product short](includes/product-short.md)] -Einstellungen
+## <a name="defender-for-identity-settings"></a>Defender für Identitäts Einstellungen
 
 Wenn Sie [!INCLUDE [Product short](includes/product-short.md)] die-Instanz erstellen, werden die grundlegenden Einstellungen automatisch konfiguriert. Es gibt mehrere zusätzliche konfigurierbare Einstellungen in, [!INCLUDE [Product short](includes/product-short.md)] um die Erkennung und Warnungs Genauigkeit für Ihre Umgebung zu verbessern, wie z. b. VPN-Integration, Sam required-Berechtigungen und erweiterte Überwachungs Richtlinien Einstellungen.
 
@@ -47,7 +47,7 @@ Wenn Sie [!INCLUDE [Product short](includes/product-short.md)] die-Instanz erste
 - [Erforderliche Berechtigungen für SAM-R](install-step8-samr.md)
 - Überwachungs [Richtlinien Einstellungen](configure-windows-event-collection.md) – überwachen Sie die Integrität des Domänen Controllers vor und nach der [!INCLUDE [Product short](includes/product-short.md)] Bereitstellung.
 
-## <a name="work-with-product-short"></a>Arbeiten mit [!INCLUDE [Product short](includes/product-short.md)]
+## <a name="work-with-defender-for-identity"></a>Arbeiten mit Defender für Identity
 
 Nachdem [!INCLUDE [Product short](includes/product-short.md)] ausgeführt wurde und ausgeführt wird, können Sie Sicherheitswarnungen auf der [!INCLUDE [Product short](includes/product-short.md)] Portal Aktivitäts Zeitachse anzeigen. Die Aktivitäts Zeitachse ist die Standard-Landing Page, nachdem Sie sich beim Portal angemeldet haben [!INCLUDE [Product short](includes/product-short.md)] . Standardmäßig werden alle offenen Sicherheitswarnungen auf der Aktivitätszeitachse angezeigt. Außerdem wird der Schweregrad angezeigt, der den einzelnen Warnungen zugewiesen wurde. Untersuchen Sie jede Warnung, indem Sie einen Drilldown zu den Entitäten (Computer, Geräte, Benutzer) ausführen, um deren Profilseiten mit weiteren Informationen zu öffnen. Lateral Movement-Pfade zeigen mögliche Bewegungen, die in Ihrem Netzwerk vorgenommen werden können, und gefährdete sensible Benutzer. Anhand der Graphs zur Erkennung des Lateral Movement-Pfads können Sie die Offenlegung erkennen und beheben. Diese Ressourcen helfen Ihnen bei der Arbeit mit [!INCLUDE [Product short](includes/product-short.md)] den Sicherheitswarnungen:
 

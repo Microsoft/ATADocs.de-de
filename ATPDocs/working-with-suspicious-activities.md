@@ -3,12 +3,12 @@ title: Arbeiten mit Sicherheitswarnungen in Microsoft Defender for Identity
 description: Dieser Artikel beschreibt, wie Sie von Microsoft Defender for Identity ausgegebene Sicherheitswarnungen überprüfen.
 ms.date: 10/27/2020
 ms.topic: how-to
-ms.openlocfilehash: 8cd2cf79ef590d852c66a426d0217104f55b29a1
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: cb589442143bfd78f13360c076d9f5205c0a21af
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544588"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534428"
 ---
 # <a name="working-with-security-alerts"></a>Arbeiten mit Sicherheitswarnungen
 
@@ -51,7 +51,7 @@ Jede Sicherheitswarnung enthält die folgenden Informationen:
 - [Warnungen zu Domänendominanz](domain-dominance-alerts.md)
 - [Warnungen zu Exfiltration](exfiltration-alerts.md)
 
-## <a name="preview-detections"></a>Vorschau von Erkennungsfunktionen <a name="preview-detections"></a>
+## <a name="preview-detections"></a>Vorschau von Erkennungsfunktionen 
 
 Das [!INCLUDE [Product short](includes/product-short.md)]-Forschungsteam arbeitet kontinuierlich daran, neue Erkennungen für neu entdeckte Angriffe zu implementieren. Da es sich bei [!INCLUDE [Product short](includes/product-short.md)] um einen Clouddienst handelt, werden neue Erkennungen schnell veröffentlicht, damit [!INCLUDE [Product short](includes/product-short.md)]-Kunden so schnell wie möglich davon profitieren können.
 

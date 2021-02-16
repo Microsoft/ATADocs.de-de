@@ -3,12 +3,12 @@ title: 'Schnellstart: Erstellen einer Microsoft Defender for Identity-Instanz'
 description: In diesem Schnellstart erstellen Sie die Instanz für Ihre Microsoft Defender for Identity-Bereitstellung. Dabei handelt es sich um den ersten Schritt für die Installation von Defender for Identity.
 ms.date: 10/26/2020
 ms.topic: quickstart
-ms.openlocfilehash: 299edc14a51f92efa94969a3f442b2e1ca5d8e2b
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 9860a8893ac16448b92961df9cf25801f68786b6
+ms.sourcegitcommit: af41733212c2102c223fed8c8602a21a1f667080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96543211"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100515358"
 ---
 # <a name="quickstart-create-your-product-long-instance"></a>Schnellstart: Erstellen Ihrer [!INCLUDE [Product long](includes/product-long.md)]-Instanz
 
@@ -19,7 +19,7 @@ In diesem Schnellstart erstellen Sie Ihre [!INCLUDE [Product long](includes/prod
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-- Eine [[!INCLUDE [Product long](includes/product-long.md)]-Lizenz](technical-faq.md#licensing-and-privacy)
+- Eine [[!INCLUDE [Product long](includes/product-long.md)]-Lizenz](technical-faq.yml#licensing-and-privacy)
 - Damit Sie auf das [!INCLUDE [Product short](includes/product-short.md)]-Portal zugreifen können, müssen Sie [globaler Administrator oder Sicherheitsadministrator auf diesem Mandanten](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) sein.
 - Lesen Sie den Artikel [[!INCLUDE [Product short](includes/product-short.md)]-Architektur](architecture.md).
 - Lesen Sie den Artikel [[!INCLUDE [Product short](includes/product-short.md)]-Voraussetzungen](prerequisites.md).

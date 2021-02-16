@@ -3,14 +3,14 @@ title: Deinstallieren von Microsoft Defender für Identity Sensor
 description: In diesem Artikel wird beschrieben, wie Sie den Microsoft Defender für Identity-Sensor von Domänen Controllern deinstallieren.
 ms.date: 12/22/2020
 ms.topic: how-to
-ms.openlocfilehash: f8a41923635509eaeb414d43e1bd19fe9cd3a813
-ms.sourcegitcommit: 3a478353118670b8124bc62d33751d8ba6af109d
+ms.openlocfilehash: 4d93637cabc0169efa0c3d62b4342578c4f006e1
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97746907"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533340"
 ---
-# <a name="uninstall-the-product-long-sensor"></a>Deinstallieren des [!INCLUDE [Product long](includes/product-long.md)] Sensors
+# <a name="uninstall-the-microsoft-defender-for-identity-sensor"></a>Deinstallieren des Microsoft Defender für Identity-Sensors
 
 In diesem Artikel wird beschrieben, wie Sie den [!INCLUDE [Product long](includes/product-long.md)] Sensor von Domänen Controllern für die folgenden Szenarien deinstallieren:
 

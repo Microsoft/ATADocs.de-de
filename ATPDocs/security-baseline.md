@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.date: 12/03/2020
 ms.author: mbaldwin
 ms.custom: subject-security-benchmark
-ms.openlocfilehash: 595a532bb02aeda6f82005a28833f71a3d074a18
-ms.sourcegitcommit: 2eb4078aba5085a12acc37c2a8d9aa48bd6dcb02
+ms.openlocfilehash: 8615019a2317a552b548a7b9026a75f9936c9237
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "98114257"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534343"
 ---
 # <a name="azure-security-baseline-for-microsoft-defender-for-identity"></a>Azure-Sicherheitsbaseline für Microsoft Defender für Identity
 
@@ -28,7 +28,7 @@ Informationen dazu, wie Microsoft Defender für Identity dem Azure Security Benc
 
 **Leitfaden**: Verwenden von Azure Virtual Network Service-Tags zum Definieren von Netzwerk Zugriffs Steuerungen für Netzwerk Sicherheitsgruppen oder für Ihre Defender für Identitäts Ressourcen konfigurierte Azure-Firewall. Sie können Diensttags anstelle von spezifischen IP-Adressen nutzen, wenn Sie Sicherheitsregeln erstellen. Durch Angeben des Dienst Tagnamens (z. b. "azuread vanced-Protection") im entsprechenden Quell-oder Zielfeld einer Regel können Sie den Datenverkehr für den entsprechenden Dienst zulassen oder verweigern. Microsoft verwaltet die Adresspräfixe, für die das Diensttag gilt, und aktualisiert das Diensttag automatisch, wenn sich die Adressen ändern.
 
-- [Aktivieren des Zugriffs auf Defender für Identitäts Dienst-URLs auf dem Proxy Server](configure-proxy.md#enable-access-to--service-urls-in-the-proxy-server)
+- [Aktivieren des Zugriffs auf Defender für Identitäts Dienst-URLs auf dem Proxy Server](configure-proxy.md#enable-access-to-defender-for-identity-service-urls-in-the-proxy-server)
 
 - [Grundlegendes zu Diensttags und Verwenden von Diensttags](/azure/virtual-network/service-tags-overview)
 
@@ -42,12 +42,12 @@ Informationen dazu, wie Microsoft Defender für Identity dem Azure Security Benc
 
 ### <a name="im-1-standardize-azure-active-directory-as-the-central-identity-and-authentication-system"></a>IM-1: Standardisieren von Azure Active Directory als zentrales Identitäts- und Authentifizierungssystem
 
-**Leitfaden**: Defender für Identity verwendet Azure Active Directory (Azure AD) als Standard Dienst für die Identitäts-und Zugriffs Verwaltung. Sie sollten Azure AD als Standard für die Identitäts- und Zugriffsverwaltung Ihrer Organisation verwenden:
+**Leitfaden**: Defender für Identity verwendet Azure Active Directory (Azure AD) als Standard Dienst für die Identitäts-und Zugriffs Verwaltung. Sie sollten Azure AD standardisieren, um die Identitäts-und Zugriffs Verwaltung Ihrer Organisation in zu steuern:
 
 - Microsoft-Cloudressourcen, wie z. B. das Azure-Portal, Azure Storage, Azure-VMs (Linux und Windows), Azure Key Vault, PaaS- und SaaS-Anwendungen.
 - Die Ressourcen Ihrer Organisation, z. B. Anwendungen in Azure oder Ihre Unternehmensnetzwerkressourcen.
 
-Die Sicherung von Azure AD sollte bei den Methoden Ihrer Organisation im Zusammenhang mit Cloudsicherheit eine hohe Priorität haben. Azure AD bietet eine Identitätssicherheitsbewertung, die Ihnen dabei hilft, den Identitätssicherheitsstatus in Bezug auf die Empfehlungen zu bewährten Methoden von Microsoft zu bewerten. Verwenden Sie die Bewertung, um zu beurteilen, wie gut Ihre Konfiguration den Empfehlungen zu bewährten Methoden entspricht, und um Ihren Sicherheitsstatus zu verbessern.
+Das Sichern Azure AD sollte in der cloudsicherheitsübung Ihrer Organisation eine hohe Priorität haben. Azure AD stellt eine sichere Identitäts Bewertung bereit, die Sie bei der Beurteilung der Identitäts Sicherheit in Bezug auf Empfehlungen für bewährte Methoden von Microsoft unterstützt. Verwenden Sie die Bewertung, um zu beurteilen, wie gut Ihre Konfiguration den Empfehlungen zu bewährten Methoden entspricht, und um Ihren Sicherheitsstatus zu verbessern.
 
 Hinweis: Azure AD unterstützt externe Identitäten, die es Benutzern ohne Microsoft-Konto ermöglichen, sich mit ihrer externen Identität bei ihren Anwendungen und Ressourcen anzumelden.
 
@@ -185,7 +185,7 @@ Für die zugrunde liegende Plattform, die von Microsoft verwaltet wird, behandel
 
 **Leitfaden**: Stellen Sie sicher, dass Sicherheitsteams die Berechtigungen „Sicherheitsleseberechtigter“ in Ihrem Azure-Mandanten und Ihren Abonnements erhalten, damit sie mit Azure Security Center Sicherheitsrisiken überwachen können. 
 
-Abhängig davon, wie die Verantwortlichkeiten des Sicherheitsteams strukturiert sind, kann die Überwachung auf Sicherheitsrisiken die Verantwortung eines zentralen Sicherheitsteams oder eines lokalen Teams darstellen. Aus diesem Grund müssen Sicherheitserkenntnisse und -risiken immer innerhalb einer Organisation zentral aggregiert werden. 
+Abhängig davon, wie die Verantwortungsbereiche des Sicherheitsteams strukturiert sind, kann die Überwachung auf Sicherheitsrisiken unter die Verantwortung eines zentralen Sicherheitsteams oder eines lokalen Teams fallen. Aus diesem Grund müssen Sicherheitserkenntnisse und -risiken immer innerhalb einer Organisation zentral aggregiert werden. 
 
 Die Berechtigungen der Rolle „Sicherheitsleseberechtigter“ können weit gefasst auf einen gesamten Mandanten (Stammverwaltungsgruppe) angewandt oder auf Verwaltungsgruppen oder bestimmte Abonnements beschränkt werden. 
 
@@ -229,7 +229,7 @@ Leiten Sie alle Protokolle von Defender für Identity an Ihr Siem weiter, das zu
 
 - Benutzer mit Risikomarkierung: Ein Benutzer mit Risikomarkierung ist ein Indikator für ein ggf. kompromittiertes Benutzerkonto.
 
-Azure Security Center können auch Warnungen für bestimmte verdächtige Aktivitäten, z. b. eine übermäßige Anzahl fehlgeschlagener Authentifizierungs Versuche, als veraltet markierte Konten im Abonnement angeben. Zusätzlich zur grundlegenden Sicherheitsüberwachung kann das Threat Protection-Modul von Azure Security Center auch ausführlichere Sicherheitswarnungen von einzelnen Azure-Computeressourcen (VMs, Container, App Service), Datenressourcen (SQL-Datenbanken und -Speicher) und Azure-Dienstebenen sammeln. So erhalten Sie Einblick in Kontoanomalien innerhalb einzelner Ressourcen.
+Azure Security Center können auch Warnungen für bestimmte verdächtige Aktivitäten, z. b. eine übermäßige Anzahl fehlgeschlagener Authentifizierungs Versuche, als veraltet markierte Konten im Abonnement angeben. Zusätzlich zur grundlegenden Überwachung der Sicherheitsüberwachung kann das Bedrohungsschutz Modul von Azure Security Center auch ausführlichere Sicherheitswarnungen von einzelnen Azure-computeressourcen (virtuelle Computer, Container, App Service), Datenressourcen (SQL DB und Storage) und Azure-Dienst Ebenen erfassen. So erhalten Sie Einblick in Kontoanomalien innerhalb einzelner Ressourcen.
 
 - [Berichte zu Überwachungsaktivitäten in Azure Active Directory](/azure/active-directory/reports-monitoring/concept-audit-logs) 
 
@@ -246,7 +246,7 @@ Azure Security Center können auch Warnungen für bestimmte verdächtige Aktivit
 
 Zusätzlich können Sie auch Daten in Azure Sentinel oder der SIEM-Lösung eines Drittanbieters aktivieren und integrieren.
 
-Viele Unternehmen verwenden Azure Sentinel für „heiße“ Daten, die häufig verwendet werden, und Azure Storage für seltener verwendete „kalte“ Daten.
+Viele Organisationen entscheiden sich für die Verwendung von Azure Sentinel für "heiße" Daten, die häufig verwendet werden, und Azure Storage für "kalte" Daten, die seltener verwendet werden.
 
 Defender für Identity bietet die Weiterleitung aller sicherheitsbezogenen Protokolle an Siem für die zentralisierte Verwaltung.
 
@@ -287,7 +287,7 @@ Defender für Identity bietet die Weiterleitung aller sicherheitsbezogenen Proto
 
 ### <a name="ir-3-detection-and-analysis--create-incidents-based-on-high-quality-alerts"></a>IR-3: Erkennung und Analyse – Erstellen von Vorfällen basierend auf Warnungen mit hoher Qualität
 
-**Leitfaden**: Stellen Sie sicher, dass Sie über einen Prozess zum Erstellen hochwertiger Warnungen und zum Messen der Qualität von Warnungen verfügen. Auf diese Weise können Sie Lehren aus vergangenen Vorfällen ziehen und Warnungen für Analysten priorisieren, damit diese keine Zeit mit falsch-positiven Ergebnissen verschwenden. 
+**Leitfaden**: Stellen Sie sicher, dass Sie über einen Prozess zum Erstellen hochwertiger Warnungen und zum Messen der Qualität von Warnungen verfügen. Auf diese Weise können Sie Erkenntnisse aus früheren Vorfällen kennenlernen und Warnungen für Analysten priorisieren, sodass Sie keine Zeit für falsch positive Ergebnisse verschwenden. 
 
 Qualitativ hochwertige Warnungen können auf der Grundlage von Erfahrungen aus früheren Vorfällen, validierten Communityquellen und Tools zur Generierung und Bereinigung von Warnmeldungen durch Verschmelzung und Korrelation verschiedener Signalquellen erstellt werden. 
 
@@ -392,21 +392,21 @@ Befolgen Sie die Einsatzregeln für Penetrationstests für die Microsoft Cloud, 
 
 Diese Strategie sollte dokumentierte Anleitungen, Richtlinien und Standards für die folgenden Elemente umfassen: 
 
--   Datenklassifizierungsstandard in Übereinstimmung mit den Geschäftsrisiken
+-  Datenklassifizierungsstandard in Übereinstimmung mit den Geschäftsrisiken
 
--   Sicherheitsorganisationseinblick in Risiken und Ressourcenbestand 
+-  Sicherheitsorganisationseinblick in Risiken und Ressourcenbestand 
 
--   Genehmigung durch die Sicherheitsorganisation für die Nutzung der Azure-Dienste 
+-  Genehmigung durch die Sicherheitsorganisation für die Nutzung der Azure-Dienste 
 
--   Sicherheit von Ressourcen durch ihren gesamten Lebenszyklus
+-  Sicherheit von Ressourcen durch ihren gesamten Lebenszyklus
 
--   Erforderliche Zugriffssteuerungsstrategie in Übereinstimmung mit der Organisationsdatenklassifizierung
+-  Erforderliche Zugriffssteuerungsstrategie in Übereinstimmung mit der Organisationsdatenklassifizierung
 
--   Verwendung von nativen Azure- und Drittanbieterfunktionen für den Datenschutz
+-  Verwendung von nativen Azure- und Drittanbieterfunktionen für den Datenschutz
 
--   Datenverschlüsselungsanforderungen für Anwendungsfälle während der Übertragung und für ruhende Anwendungsfälle
+-  Datenverschlüsselungsanforderungen für Anwendungsfälle während der Übertragung und für ruhende Anwendungsfälle
 
--   Geeignete Verschlüsselungsstandards
+-  Geeignete Verschlüsselungsstandards
 
 Weitere Informationen finden Sie in den folgenden Referenzen:
 - [Empfehlung für eine Azure-Sicherheitsarchitektur: Speicher, Daten, Verschlüsselung](/azure/architecture/framework/security/storage-data-encryption?amp;bc=%2fsecurity%2fcompass%2fbreadcrumb%2ftoc.json&toc=%2fsecurity%2fcompass%2ftoc.json)
@@ -467,21 +467,21 @@ Stellen Sie sicher, dass die Segmentierungs Strategie einheitlich in den Steuere
 
 ### <a name="gs-5-define-network-security-strategy"></a>GS-5: Definieren einer Netzwerksicherheitsstrategie
 
-**Leitfaden**: Richten Sie einen Ansatz für die Azure-Netzwerksicherheit im Rahmen der Gesamtstrategie Ihrer Organisation für die Sicherheitszugriffssteuerung ein.  
+**Leitfaden**: Einrichten eines Azure-Netzwerk Sicherheitsansatzes im Rahmen der allgemeinen Sicherheits Zugriffs Steuerungsstrategie Ihrer Organisation.  
 
 Diese Strategie sollte dokumentierte Anleitungen, Richtlinien und Standards für die folgenden Elemente umfassen: 
 
--   Zentralisieren der Verantwortlichkeit für Netzwerkverwaltung und -sicherheit
+-  Zentralisieren der Verantwortlichkeit für Netzwerkverwaltung und -sicherheit
 
--   Segmentierungsmodell für virtuelle Netzwerke, das auf die Segmentierungsstrategie des Unternehmens abgestimmt ist
+-  Segmentierungsmodell für virtuelle Netzwerke, das auf die Segmentierungsstrategie des Unternehmens abgestimmt ist
 
--   Wiederherstellungsstrategie in verschiedenen Bedrohungs- und Angriffsszenarien
+-  Wiederherstellungsstrategie in verschiedenen Bedrohungs- und Angriffsszenarien
 
--   Strategie für Internet-Randpunkte, -Eingangspunkte und -Ausgangspunkte
+-  Strategie für Internet-Randpunkte, -Eingangspunkte und -Ausgangspunkte
 
--   Strategie für Konnektivität zwischen Hybrid Cloud und lokalen Systemen
+-  Strategie für Konnektivität zwischen Hybrid Cloud und lokalen Systemen
 
--   Aktuelle Netzwerksicherheitsartefakte (z. B. Netzwerkdiagramme, Referenznetzwerkarchitektur)
+-  Aktuelle Netzwerksicherheitsartefakte (z. B. Netzwerkdiagramme, Referenznetzwerkarchitektur)
 
 Weitere Informationen finden Sie in den folgenden Referenzen:
 - [Azure Security Best Practice 11 – Architecture. Single unified security strategy](/azure/cloud-adoption-framework/security/security-top-10#11-architecture-establish-a-single-unified-security-strategy) (Bewährte Methoden für die Sicherheit von Azure 11 – Architektur: Zentralisierte einheitliche Sicherheitsstrategie)
@@ -498,19 +498,19 @@ Weitere Informationen finden Sie in den folgenden Referenzen:
 
 ### <a name="gs-6-define-identity-and-privileged-access-strategy"></a>GS-6: Definieren der Strategie für Identität und privilegierten Zugriff
 
-**Leitfaden**: Richten Sie einen Ansatz für Azure-Identität und privilegierten Zugriff im Rahmen der Gesamtstrategie Ihrer Organisation für die Sicherheitszugriffssteuerung ein.  
+**Leitfaden**: Einrichten einer Azure-Identität und privilegierter Zugriffs Ansätze im Rahmen der allgemeinen Sicherheits Zugriffs Steuerungsstrategie Ihrer Organisation.  
 
 Diese Strategie sollte dokumentierte Anleitungen, Richtlinien und Standards für die folgenden Elemente umfassen: 
 
--   Zentralisiertes Identitäts- und Authentifizierungssystem mit Interkonnektivität zu anderen internen und externen Identitätssystemen
+-  Zentralisiertes Identitäts- und Authentifizierungssystem mit Interkonnektivität zu anderen internen und externen Identitätssystemen
 
--   Starke Authentifizierungsmethoden in verschiedenen Anwendungsfällen und Bedingungen
+-  Starke Authentifizierungsmethoden in verschiedenen Anwendungsfällen und Bedingungen
 
--   Schutz stark privilegierter Benutzer
+-  Schutz stark privilegierter Benutzer
 
--   Überwachung und Behandlung von Anomalien bei Benutzeraktivitäten  
+-  Überwachung und Behandlung von Anomalien bei Benutzeraktivitäten  
 
--   Benutzeridentität und Zugriffsüberprüfung und Abstimmungsprozess
+-  Benutzeridentität und Zugriffsüberprüfung und Abstimmungsprozess
 
 Weitere Informationen finden Sie in den folgenden Referenzen:
 
@@ -532,19 +532,19 @@ Weitere Informationen finden Sie in den folgenden Referenzen:
 
 Diese Strategie sollte dokumentierte Anleitungen, Richtlinien und Standards für die folgenden Elemente umfassen: 
 
--   Rolle und Verantwortlichkeiten der Organisation für Sicherheitsvorgänge (SecOps) 
+-  Die Rolle und Zuständigkeiten der Sicherheitsvorgänge (SecOPs) 
 
--   Ein klar definierter Prozess zur Reaktion auf Vorfälle gemäß NIST oder einem anderen Branchenframework 
+-  Ein klar definierter Prozess zur Reaktion auf Vorfälle gemäß NIST oder einem anderen Branchenframework 
 
--   Erfassung und Aufbewahrung von Protokollen zur Unterstützung von Bedrohungserkennung, Reaktion auf Vorfälle und Complianceanforderungen
+-  Erfassung und Aufbewahrung von Protokollen zur Unterstützung von Bedrohungserkennung, Reaktion auf Vorfälle und Complianceanforderungen
 
--   Zentralisierte Sichtbarkeit von und Korrelationsinformationen zu Bedrohungen unter Verwendung von SIEM, nativen Azure-Funktionen und anderen Quellen 
+-  Zentralisierte Sichtbarkeit von und Korrelationsinformationen zu Bedrohungen unter Verwendung von SIEM, nativen Azure-Funktionen und anderen Quellen 
 
--   Kommunikations- und Benachrichtigungsplan mit Ihren Kunden, Lieferanten und öffentlichen Interessengruppen
+-  Kommunikations- und Benachrichtigungsplan mit Ihren Kunden, Lieferanten und öffentlichen Interessengruppen
 
--   Verwendung von nativen Azure-Plattformen und Plattformen von Drittanbietern für die Behandlung von Vorfällen, wie z. B. Protokollierung und Bedrohungserkennung, Forensik sowie Reduzierung und Bekämpfung von Angriffen
+-  Verwendung von nativen Azure-Plattformen und Plattformen von Drittanbietern für die Behandlung von Vorfällen, wie z. B. Protokollierung und Bedrohungserkennung, Forensik sowie Reduzierung und Bekämpfung von Angriffen
 
--   Prozesse für den Umgang mit Vorfällen und Aktivitäten nach Vorfällen, wie z. B. Erkenntnisse und Beweissicherung
+-  Prozesse für den Umgang mit Vorfällen und Aktivitäten nach Vorfällen, wie z. B. Erkenntnisse und Beweissicherung
 
 Weitere Informationen finden Sie in den folgenden Referenzen:
 

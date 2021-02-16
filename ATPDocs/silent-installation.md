@@ -3,14 +3,14 @@ title: Automatisches Installieren von Microsoft Defender für Identity
 description: Hier wird beschrieben, wie Microsoft Defender für die Identität im Hintergrund installiert wird.
 ms.date: 01/11/2021
 ms.topic: how-to
-ms.openlocfilehash: a9cddac4ca0306faddaa93b701b88745b180828c
-ms.sourcegitcommit: 57dd3e4663346db3542cf9e755dac135c5e75125
+ms.openlocfilehash: 0c22f5bcbffd415a81b84c94570cfcd7387aab56
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98062534"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534394"
 ---
-# <a name="product-long-switches-and-silent-installation"></a>[!INCLUDE [Product long](includes/product-long.md)] Switches und unbeaufsichtigte Installation
+# <a name="microsoft-defender-for-identity-switches-and-silent-installation"></a>Microsoft Defender für Identitätswechsel und unbeaufsichtigte Installation
 
 Dieser Artikel enthält Anleitungen und Anweisungen für [!INCLUDE [Product long](includes/product-long.md)] Switches und eine unbeaufsichtigte Installation.
 
@@ -27,7 +27,7 @@ Mithilfe [!INCLUDE [Product short](includes/product-short.md)] der automatischen
 
 Um den Bereitstellungs Fortschritt zu verfolgen, überwachen Sie die [!INCLUDE [Product short](includes/product-short.md)] Installations Protokolle in `%AppData%\Local\Temp` .
 
-## <a name="product-short-sensor-silent-installation"></a>[!INCLUDE [Product short](includes/product-short.md)] Automatische Sensorinstallation
+## <a name="defender-for-identity-sensor-silent-installation"></a>Defender für die automatische Installation des Identitäts Sensors
 
 > [!NOTE]
 > Bei der automatischen bereit [!INCLUDE [Product short](includes/product-short.md)] Stellung des Sensors über System Center Configuration Manager oder ein anderes Software Bereitstellungs System wird empfohlen, zwei Bereitstellungs Pakete zu erstellen:</br>– Net Framework 4.7 oder höher, einschließlich möglichem Neustart des Domänencontrollers</br>- [!INCLUDE [Product short](includes/product-short.md)] k. </br>Machen Sie das [!INCLUDE [Product short](includes/product-short.md)] sensorpaket von der Bereitstellung der .NET Framework-Paket Bereitstellung abhängig. </br>Rufen Sie das [.NET Framework 4.7-Paket für die Offlinebereitstellung](https://support.microsoft.com/help/3186497/the-net-framework-4-7-offline-installer-for-windows) ab.
@@ -95,7 +95,7 @@ Verwenden Sie die folgenden Befehle, um die Proxyauthentifizierung abzuschließe
 
 Weitere Informationen zur Proxykonfiguration finden Sie unter [Konfigurieren von Endpunkt Proxy-und internetkonnektivitätseinstellungen für den [!INCLUDE [Product long](includes/product-long.md)] Sensor](configure-proxy.md).
 
-## <a name="update-the-product-short-sensor"></a>Aktualisieren des [!INCLUDE [Product short](includes/product-short.md)] Sensors
+## <a name="update-the-defender-for-identity-sensor"></a>Defender für Identitäts Sensor aktualisieren
 
 Verwenden Sie den folgenden Befehl, um den Sensor automatisch zu aktualisieren [!INCLUDE [Product short](includes/product-short.md)] :
 
@@ -125,7 +125,7 @@ So aktualisieren Sie den Sensor im Hintergrund [!INCLUDE [Product short](include
 
 <a name="silently-uninstall-sensor"></a>
 
-## <a name="uninstall-the-product-short-sensor-silently"></a>Automatischen Deinstallieren des [!INCLUDE [Product short](includes/product-short.md)] Sensors
+## <a name="uninstall-the-defender-for-identity-sensor-silently"></a>Deinstallieren Sie den Defender für den Identitäts Sensor im Hintergrund.
 
 Verwenden Sie den folgenden Befehl, um eine unbeaufsichtigte Deinstallation des Sensors durchzuführen [!INCLUDE [Product short](includes/product-short.md)] :
 

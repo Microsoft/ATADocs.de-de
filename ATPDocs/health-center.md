@@ -3,26 +3,26 @@ title: Überwachen von Microsoft Defender auf Integrität und Ereignisse des Ide
 description: Verwenden Sie das Integritäts Center, um zu überprüfen, wie der Microsoft Defender für Identity-Dienst funktioniert, und dass Sie über mögliche Probleme informiert werden und Systemereignisse in der Ereignisanzeige anzeigen können.
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: e2a4c757682194013d34bddd6581402b5fe60920
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: ac03020c559a860fded89a496bc927da06fce3d9
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544010"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534292"
 ---
-# <a name="work-with-product-long-health-and-events"></a>Arbeiten mit Integrität [!INCLUDE [Product long](includes/product-long.md)] und Ereignissen
+# <a name="work-with-microsoft-defender-for-identity-health-and-events"></a>Arbeiten Sie mit Microsoft Defender für Identitäts Integrität und-Ereignisse
 
-## <a name="product-long-health-center"></a>[!INCLUDE [Product long](includes/product-long.md)] Integritäts Center
+## <a name="microsoft-defender-for-identity-health-center"></a>Microsoft Defender für Identity Health Center
 
 Das Integritäts [!INCLUDE [Product long](includes/product-long.md)] Center informiert Sie über die [!INCLUDE [Product short](includes/product-short.md)] Leistung Ihrer Instanz und benachrichtigt Sie, wenn Probleme auftreten.
 
-## <a name="working-with-the-product-short-health-center"></a>Arbeiten mit dem Integritäts [!INCLUDE [Product short](includes/product-short.md)] Center
+## <a name="working-with-the-defender-for-identity-health-center"></a>Arbeiten mit Defender für Identity Health Center
 
 Das Integritäts [!INCLUDE [Product short](includes/product-short.md)] Center informiert Sie darüber, dass ein Problem vorliegt, indem eine Warnung (ein roter Punkt) über dem Integritäts Center-Symbol in der Navigationsleiste ausgelöst wird.
 
 ![[! INCLUDE [Product Short] (includes/Product-Short. MD)] Integritäts Center-rote Punkt-Symbolleiste](media/health-bar.png)
 
-### <a name="managing-product-short-health"></a>Verwalten [!INCLUDE [Product short](includes/product-short.md)] der Integrität
+### <a name="managing-defender-for-identity-health"></a>Verwalten von Defender für Identity Health
 
 Wählen Sie zum Überprüfen der Gesamt Integrität Ihrer [!INCLUDE [Product short](includes/product-short.md)] Instanz die Option **Health** ![ [! INCLUDE [Product Short] (includes/Produkt-Short. MD)] Integritäts Center Symbol](media/red-dot.png)
 

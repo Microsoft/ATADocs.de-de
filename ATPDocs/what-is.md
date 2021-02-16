@@ -3,12 +3,12 @@ title: Was ist Microsoft Defender for Identity?
 description: In diesem Artikel erfahren Sie, was Microsoft Defender for Identity ist und welche Arten von verdächtigen Aktivitäten dieser Clouddienst erkennen kann.
 ms.date: 12/23/2020
 ms.topic: overview
-ms.openlocfilehash: 1aceb1889ea3f85305d64b5bde6a252b804d56f0
-ms.sourcegitcommit: e2b4ad613aa171f604ae526f0cba05fe79f4a8cb
+ms.openlocfilehash: 1329c93e18941ca42e9d446abdb0576480543992
+ms.sourcegitcommit: af41733212c2102c223fed8c8602a21a1f667080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97753345"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100515562"
 ---
 # <a name="what-is-product-long"></a>Was ist [!INCLUDE [Product long](includes/product-long.md)]?
 
@@ -107,6 +107,6 @@ Es wird empfohlen, [!INCLUDE [Product short](includes/product-short.md)] in drei
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Häufig gestellte Fragen zu [!INCLUDE [Product short](includes/product-short.md)]](technical-faq.md)
+- [Häufig gestellte Fragen zu [!INCLUDE [Product short](includes/product-short.md)]](technical-faq.yml)
 - [Arbeiten mit Sicherheitswarnungen](working-with-suspicious-activities.md)
 - [Weitere Informationen finden Sie im [!INCLUDE [Product short](includes/product-short.md)]-Forum.](https://aka.ms/MDIcommunity)

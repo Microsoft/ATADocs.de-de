@@ -3,14 +3,14 @@ title: Microsoft Defender für die Identitäts Integration mit Microsoft Defende
 description: Integrieren von Microsoft Defender für Identity in Microsoft Defender for Endpoint für die vollständige Bedrohungserkennung
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: 73cf4809e20d92534786d1df1ad580fffd5706b8
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 356f97509fe3af81a4d1c896e7b64b2779e6028a
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96542956"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533867"
 ---
-# <a name="integrate-product-long-with-microsoft-defender-for-endpoint"></a>Integration [!INCLUDE [Product long](includes/product-long.md)] in Microsoft Defender for Endpoint
+# <a name="integrate-microsoft-defender-for-identity-with-microsoft-defender-for-endpoint"></a>Integrieren von Microsoft Defender für Identity in Microsoft Defender for Endpoint
 
 [!INCLUDE [Product long](includes/product-long.md)] ermöglicht die Integration in [!INCLUDE [Product long](includes/product-long.md)] Defender for Endpoint, um eine noch umfassendere Lösung für den Schutz vor Bedrohungen zu erhalten. Während [!INCLUDE [Product short](includes/product-short.md)] den Datenverkehr auf Ihren Domänen Controllern überwacht, überwacht Defender for Endpoint ihre Endpunkte und stellt eine einzige Schnittstelle bereit, über die Sie Ihre Umgebung schützen können.
 
@@ -47,7 +47,7 @@ Um dieses Feature zu aktivieren, benötigen Sie eine Lizenz für [!INCLUDE [Prod
 
 <a name="how-to-integrate-azure-atp-with-microsoft-defender-atp"></a>
 
-## <a name="how-to-integrate-product-short-with-defender-for-endpoint"></a>Integrieren in [!INCLUDE [Product short](includes/product-short.md)] Defender for Endpoint
+## <a name="how-to-integrate-defender-for-identity-with-defender-for-endpoint"></a>Integrieren von Defender für Identity in Defender for Endpoint
 
 1. Wählen Sie im [!INCLUDE [Product short](includes/product-short.md)]-Portal **Konfiguration** aus.
 

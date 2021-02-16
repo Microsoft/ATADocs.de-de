@@ -3,14 +3,14 @@ title: Microsoft Defender für Identity in Microsoft Cloud App Security
 description: Übersicht über Microsoft Defender für Identitäts Features in Microsoft Cloud App Security.
 ms.date: 01/24/2021
 ms.topic: how-to
-ms.openlocfilehash: 6040ef27e1657dbe017a31168932536f1cb594cb
-ms.sourcegitcommit: 7002c960e1489b7ce2deadd8ce20f70a48a6766a
+ms.openlocfilehash: 93ece5c8345929984473b057fdad2d4eec6fb9c0
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2021
-ms.locfileid: "98746934"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533833"
 ---
-# <a name="using-product-long-with-microsoft-cloud-app-security"></a>Verwenden [!INCLUDE [Product long](includes/product-long.md)] von mit Microsoft Cloud App Security
+# <a name="using-microsoft-defender-for-identity-with-microsoft-cloud-app-security"></a>Verwenden von Microsoft Defender für Identity mit Microsoft Cloud App Security
 
 Dieser Artikel soll Ihnen dabei helfen, die erweiterte Untersuchung zu verstehen und zu navigieren, wenn Sie das Microsoft Cloud App Security-Portal mit verwenden [!INCLUDE [Product long](includes/product-long.md)] .
 
@@ -33,7 +33,7 @@ Die Integration [!INCLUDE [Product short](includes/product-short.md)] von in erm
 - [!INCLUDE [Product long](includes/product-long.md)], der Machine Learning und Verhaltensanalysen verwendet, um Angriffe in Ihrem lokalen Netzwerk zu erkennen.
 - Azure Active Directory Identity Protection, das Benutzer- und Anmelderisiken bei Identitäten in der Cloud erkennt und proaktiv verhindert
 
-## <a name="access-product-short"></a>Zu [!INCLUDE [Product short](includes/product-short.md)]
+## <a name="access-defender-for-identity"></a>Auf Defender für Identität zugreifen
 
 Wählen Sie weiter [!INCLUDE [Product short](includes/product-short.md)] im [!INCLUDE [Product short](includes/product-short.md)] Portal aus, oder greifen Sie [!INCLUDE [Product short](includes/product-short.md)] über das Microsoft Cloud App Security Portal auf Warnungen und Identitäts Bewertung zu. Im Workflow [!INCLUDE [Product short](includes/product-short.md)] werden die Einrichtungs-und Konfigurations Tasks weiterhin im [!INCLUDE [Product short](includes/product-short.md)] Portal verarbeitet.
 
@@ -51,13 +51,13 @@ Zur Nutzung aller Features der Benutzeruntersuchung über die gesamte Hybridumge
 
 Weitere Informationen zum schnellen Aktivieren von in Cloud App Security finden Sie unter [ [!INCLUDE [Product short](includes/product-short.md)] Integration](/cloud-app-security/mdi-integration) [!INCLUDE [Product short](includes/product-short.md)] .
 
-## <a name="product-short-in-cloud-app-security"></a>[!INCLUDE [Product short](includes/product-short.md)] in Cloud App Security
+## <a name="defender-for-identity-in-cloud-app-security"></a>Defender für Identity in Cloud App Security
 
 Lesen Sie die [Schnellstartanleitung für Cloud App Security](/cloud-app-security/getting-started-with-cloud-app-security), um sich mit den Grundlagen der Verwendung des Cloud App Security-Portals vertraut zu machen.
 
 Greifen Sie [!INCLUDE [Product short](includes/product-short.md)] in Cloud App Security Warnungen, Aktivitäten und Benutzer Seiten auf Ihre Daten und ihre neuen Hybrid Features zu.
 
-## <a name="alerts"></a>Warnungen
+## <a name="alerts"></a>Alerts
 
 [!INCLUDE [Product short](includes/product-short.md)] Warnungen werden in der Warteschlange Cloud App Security **Warnungen** angezeigt. Zusätzliche Filteroptionen stehen nur beim Anzeigen von Warnungen über Cloud App Security zur Verfügung. [!INCLUDE [Product short](includes/product-short.md)] Warnungen werden mithilfe des Anwendungs Filters gefiltert, um **Active Directory**.
 

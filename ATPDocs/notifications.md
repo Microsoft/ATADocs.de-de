@@ -3,14 +3,14 @@ title: Festlegen von Microsoft Defender for Identity-Benachrichtigungen
 description: Beschreibt, wie Microsoft Defender for Identity-Sicherheitswarnungen festgelegt werden, damit Sie bei verdächtigen Aktivitäten benachrichtigt werden.
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: 49d78935b9246797b1d83f24a06a7ffe16f57699
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: ad02fab44b76fc9d30af59a331ec5243796224d5
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544469"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533646"
 ---
-# <a name="set-product-long-notifications"></a>Festlegen von [!INCLUDE [Product long](includes/product-long.md)]-Benachrichtigungen
+# <a name="set-microsoft-defender-for-identity-notifications"></a>Festlegen von Microsoft Defender for Identity-Benachrichtigungen
 
 [!INCLUDE [Product long](includes/product-long.md)] kann Sie darüber benachrichtigen, wenn eine verdächtige Aktivität oder eine Integritätswarnung ermittelt wird, und gibt eine Sicherheitswarnung oder Integritätswarnung per E-Mail aus.
 

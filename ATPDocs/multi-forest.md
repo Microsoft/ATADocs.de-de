@@ -3,14 +3,14 @@ title: Unterstützung von Microsoft Defender für die Identitäts übergreifende
 description: Unterstützung für mehrere Active Directory Gesamtstrukturen in Microsoft Defender für die Identität.
 ms.date: 10/26/2020
 ms.topic: conceptual
-ms.openlocfilehash: 05cf574aa56f379cb636036c382cc87fb289990e
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: c0a5c135d73ecbcdd23b6ed2ea8a12a212a0f23d
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544554"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533663"
 ---
-# <a name="product-long-multi-forest-support"></a>[!INCLUDE [Product long](includes/product-long.md)] Unterstützung für mehrere Gesamtstrukturen
+# <a name="microsoft-defender-for-identity-multi-forest-support"></a>Unterstützung von Microsoft Defender für die Identitäts übergreifende Unterstützung
 
 ## <a name="multi-forest-support-set-up"></a>Einrichten der Unterstützung für mehrere Gesamtstrukturen
 
@@ -24,7 +24,7 @@ Die Möglichkeit, mehrere Active Directory-Gesamtstrukturen zu unterstützen, bi
 - Durch erweiterte Active Directory-Integration und -Kontoauflösung lassen sich falsch positive Ergebnisse besser erkennen und reduzieren.
 - Sie ermöglicht eine bessere Kontrolle und eine einfachere Bereitstellung. Verbesserte Integritäts Warnungen und Berichterstellung für die übergreifende Abdeckung, wenn alle Domänen Controller über eine einzige Konsole überwacht werden [!INCLUDE [Product short](includes/product-short.md)] .
 
-## <a name="product-short-detection-activity-across-multiple-forests"></a>[!INCLUDE [Product short](includes/product-short.md)] Erkennungs Aktivität in mehreren Gesamtstrukturen
+## <a name="defender-for-identity-detection-activity-across-multiple-forests"></a>Defender für Identitäts Erkennungs Aktivitäten in mehreren Gesamtstrukturen
 
 Zum Erkennen von Gesamtstruktur übergreifenden Aktivitäten werden von den [!INCLUDE [Product short](includes/product-short.md)] Sensoren Domänen Controller in Remote Gesamtstrukturen abgefragt, um Profile für alle Beteiligten Entitäten (einschließlich Benutzer und Computer aus Remote Gesamtstrukturen) zu erstellen.
 
@@ -36,7 +36,7 @@ Zum Erkennen von Gesamtstruktur übergreifenden Aktivitäten werden von den [!IN
 
 ![[!INCLUDE [Product short](includes/product-short.md)]-Willkommensphase 1](media/directory-services-add-no-trust-forests.png)
 
-### <a name="requirements"></a>Anforderungen
+### <a name="requirements"></a>Requirements (Anforderungen)
 
 - Der Benutzer, den Sie in der- [!INCLUDE [Product short](includes/product-short.md)] Konsole unter **Verzeichnisdienste** konfigurieren, muss in allen anderen Gesamtstrukturen als vertrauenswürdig eingestuft werden und muss mindestens über Leseberechtigung verfügen, um LDAP-Abfragen auf den Domänen Controllern auszuführen.
 - Wenn [!INCLUDE [Product short](includes/product-short.md)] eigenständige Sensoren auf eigenständigen Computern anstatt direkt auf den Domänen Controllern installiert werden, müssen Sie sicherstellen, dass die Computer mit allen Remote Gesamtstruktur-Domänen Controllern über LDAP kommunizieren können.

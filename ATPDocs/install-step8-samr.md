@@ -3,14 +3,14 @@ title: Konfigurieren von Sam-R zum Aktivieren der Erkennung von Lateral Movement
 description: Erläutert das Konfigurieren von Microsoft Defender für die Identität, um Remote Aufrufe an Sam durchführen zu können.
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: 24c1d6baf99e3d65a96897d2d0b90ffe94ad42eb
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: f1870161b60b975eef818d0a6d6cae63a4fb12c3
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96543942"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534275"
 ---
-# <a name="configure-product-long-to-make-remote-calls-to-sam"></a>Konfigurieren von [!INCLUDE [Product long](includes/product-long.md)] für das Ausführen von Remoteaufrufen an SAM
+# <a name="configure-microsoft-defender-for-identity-to-make-remote-calls-to-sam"></a>Konfigurieren von Microsoft Defender für die Identität für Remote Aufrufe von Sam
 
 [!INCLUDE [Product long](includes/product-long.md)]die Erkennung von [lateral Movement](use-case-lateral-movement-path.md) -Pfaden basiert auf Abfragen, mit denen lokale Administratoren auf bestimmten Computern identifiziert werden. Diese Abfragen werden mithilfe des Sam-R-Protokolls durchgeführt, wobei das Dienst Konto verwendet wird, das [!INCLUDE [Product short](includes/product-short.md)] während der [!INCLUDE [Product short](includes/product-short.md)] Installation  [Schritt 2 erstellt wurde. Verbindung mit AD herstellen](install-step2.md).
 

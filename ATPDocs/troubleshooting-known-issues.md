@@ -3,14 +3,14 @@ title: Problembehandlung bei Microsoft Defender für bekannte Probleme
 description: Hier wird beschrieben, wie Sie Probleme in Microsoft Defender für die Identität beheben.
 ms.date: 02/04/2021
 ms.topic: how-to
-ms.openlocfilehash: 933d4442d88f2d03ddcd2fa4c90d59d98e229340
-ms.sourcegitcommit: 50e6f5511329e56545fa5ab4c9f5ab69046d1e10
+ms.openlocfilehash: f11d840aa46ec86c88c04ea2892443fd2dc20db3
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "99551613"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534496"
 ---
-# <a name="troubleshooting-product-long-known-issues"></a>Problembehandlung bei [!INCLUDE [Product long](includes/product-long.md)] bekannten Problemen
+# <a name="troubleshooting-microsoft-defender-for-identity-known-issues"></a>Problembehandlung bei Microsoft Defender für bekannte Probleme
 
 ## <a name="sensor-failure-communication-error"></a>Kommunikationsfehler durch Sensorfehler
 
@@ -107,7 +107,9 @@ Verwenden Sie den vollständigen Befehl für eine erfolgreiche Installation.
 ./"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
 ```
 
-## <a name="product-short-sensor-nic-teaming-issue"></a>[!INCLUDE [Product short](includes/product-short.md)] Problem mit dem Sensor NIC-Team Vorgang <a name="nic-teaming"></a>
+<a name="nic-teaming"></a>
+
+## <a name="defender-for-identity-sensor-nic-teaming-issue"></a>Fehler beim Defender für den Identitäts Sensor-NIC-Team Vorgang
 
 Wenn Sie versuchen, den [!INCLUDE [Product short](includes/product-short.md)] Sensor auf einem Computer zu installieren, der mit einem NIC-Team Vorgangs Adapter konfiguriert ist, erhalten Sie einen Installationsfehler. Wenn Sie den [!INCLUDE [Product short](includes/product-short.md)] Sensor auf einem Computer installieren möchten, der mit NIC-Team Vorgang konfiguriert ist, befolgen Sie die folgenden Anweisungen:
 

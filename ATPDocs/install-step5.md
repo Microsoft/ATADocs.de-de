@@ -3,14 +3,14 @@ title: Konfigurieren von Microsoft Defender für Identitäts Sensor Einstellunge
 description: In Schritt 5 der Installation von Microsoft Defender für Identity können Sie die Einstellungen für den eigenständigen Defender für Identity-Sensor konfigurieren.
 ms.date: 09/15/2019
 ms.topic: how-to
-ms.openlocfilehash: 329bfd4f6de2e15865c81d22651e833a63d07b6d
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 42dc42caad1b76cf706cf85d34fd60f5c7a52756
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96543109"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534013"
 ---
-# <a name="configure-product-long-sensor-settings"></a>Konfigurieren von [!INCLUDE [Product long](includes/product-long.md)] Sensor Einstellungen
+# <a name="configure-microsoft-defender-for-identity-sensor-settings"></a>Konfigurieren von Microsoft Defender für Identitäts Sensor Einstellungen
 
 In diesem Artikel erfahren Sie, wie Sie Sensor Einstellungen ordnungsgemäß konfigurieren [!INCLUDE [Product long](includes/product-long.md)] , damit Sie mit dem Anzeigen von Daten beginnen können. Sie müssen zusätzliche Konfiguration und Integration durchführen, um [!INCLUDE [Product short](includes/product-short.md)] die vollständigen Funktionen von nutzen zu können.
 
@@ -63,7 +63,7 @@ In diesem Artikel erfahren Sie, wie Sie Sensor Einstellungen ordnungsgemäß kon
 1. Überprüfen [!INCLUDE [Product short](includes/product-short.md)] Sie die Konnektivität auf einem beliebigen Domänen Gerät mithilfe der folgenden Schritte:
     1. Öffnen Sie eine Eingabeaufforderung.
     1. Geben Sie `nslookup` ein.
-    1. Geben Sie **Server** und dann den FQDN oder die IP-Adresse des Domänen Controllers ein, auf dem der [!INCLUDE [Product short](includes/product-short.md)] Sensor installiert ist. Zum Beispiel, `server contosodc.contoso.azure`
+    1. Geben Sie **Server** und dann den FQDN oder die IP-Adresse des Domänen Controllers ein, auf dem der [!INCLUDE [Product short](includes/product-short.md)] Sensor installiert ist. Beispiel: `server contosodc.contoso.azure`
         - Stellen Sie sicher, dass Sie "ContosoDC. contoso. Azure" und "contoso. Azure" durch den FQDN Ihres [!INCLUDE [Product short](includes/product-short.md)] Sensors bzw. Domänen namens ersetzen.
     1. Geben Sie `ls -d contoso.azure` ein.
     1. Wiederholen Sie die Schritte 3 und 4 für jeden Sensor, den Sie testen möchten.
