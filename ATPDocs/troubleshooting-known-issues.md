@@ -3,12 +3,12 @@ title: Problembehandlung bei Microsoft Defender für bekannte Probleme
 description: Hier wird beschrieben, wie Sie Probleme in Microsoft Defender für die Identität beheben.
 ms.date: 02/04/2021
 ms.topic: how-to
-ms.openlocfilehash: f11d840aa46ec86c88c04ea2892443fd2dc20db3
-ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
+ms.openlocfilehash: be4aebf4ccbccece1348949cbe0acd19d803e163
+ms.sourcegitcommit: 412420dd904690d855539a2589f9d5485e1f832e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/16/2021
-ms.locfileid: "100534496"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100569844"
 ---
 # <a name="troubleshooting-microsoft-defender-for-identity-known-issues"></a>Problembehandlung bei Microsoft Defender für bekannte Probleme
 
@@ -52,12 +52,22 @@ Das Problem kann durch einen transparenten Proxy Konfigurationsfehler auf Server
 
 **Lösung:**
 
-Führen Sie das folgende PowerShell-Cmdlet aus, um zu überprüfen, ob das [!INCLUDE [Product short](includes/product-short.md)] Vertrauenswürdige Stamm Zertifikat auf Server Core vorhanden ist. Im folgenden Beispiel werden die Stammzertifikate „DigiCert Baltimore Root“ und „DigiCert Global Root“ verwendet.
+Führen Sie das folgende PowerShell-Cmdlet aus, um zu überprüfen, ob das [!INCLUDE [Product short](includes/product-short.md)] Vertrauenswürdige Stamm Zertifikat auf Server Core vorhanden ist.
+
+Verwenden Sie im folgenden Beispiel das Zertifikat "Digicert Baltimore root" für alle Kunden. Verwenden Sie außerdem das Zertifikat "Digicert Global root G2" für gewerbliche Kunden, oder verwenden Sie das Zertifikat "Digicert Global Root CA" für die US-Regierung gcc High-Kunden, wie dies angegeben ist.
 
 ```powershell
+# Certificate for all customers
 Get-ChildItem -Path "Cert:\LocalMachine\Root" | where { $_.Thumbprint -eq "D4DE20D05E66FC53FE1A50882C78DB2852CAE474"} | fl
+
+# Certificate for commercial customers
 Get-ChildItem -Path "Cert:\LocalMachine\Root" | where { $_.Thumbprint -eq "df3c24f9bfd666761b268073fe06d1cc8d4f82a4"} | fl
+
+# Certificate for US Government GCC High customers
+Get-ChildItem -Path "Cert:\LocalMachine\Root" | where { $_.Thumbprint -eq "a8985d3a65e5e5c4b2d7d66d40c6dd2fb19c5436"} | fl
 ```
+
+Ausgabe für das Zertifikat für alle Kunden:
 
 ```Output
 Subject      : CN=Baltimore CyberTrust Root, OU=CyberTrust, O=Baltimore, C=IE
@@ -67,7 +77,11 @@ FriendlyName : DigiCert Baltimore Root
 NotBefore    : 5/12/2000 11:46:00 AM
 NotAfter     : 5/12/2025 4:59:00 PM
 Extensions   : {System.Security.Cryptography.Oid, System.Security.Cryptography.Oid, System.Security.Cryptography.Oid}
+```
 
+Ausgabe für Zertifikat für gewerbliche kundenzertifikat:
+
+```Output
 Subject      : CN=DigiCert Global Root G2, OU=www.digicert.com, O=DigiCert Inc, C=US
 Issuer       : CN=DigiCert Global Root G2, OU=www.digicert.com, O=DigiCert Inc, C=US
 Thumbprint   : DF3C24F9BFD666761B268073FE06D1CC8D4F82A4
@@ -77,14 +91,38 @@ NotAfter     : 15/01/2038 14:00:00
 Extensions   : {System.Security.Cryptography.Oid, System.Security.Cryptography.Oid, System.Security.Cryptography.Oid}
 ```
 
+Ausgabe für das Zertifikat für gcc High-Kunden der US-Regierung:
+
+```Output
+Subject      : CN=DigiCert Global Root CA, OU=www.digicert.com, O=DigiCert Inc, C=US
+Issuer       : CN=DigiCert Global Root CA, OU=www.digicert.com, O=DigiCert Inc, C=US
+Thumbprint   : A8985D3A65E5E5C4B2D7D66D40C6DD2FB19C5436
+FriendlyName : DigiCert
+NotBefore    : 11/9/2006 4:00:00 PM
+NotAfter     : 11/9/2031 4:00:00 PM
+Extensions   : {System.Security.Cryptography.Oid, System.Security.Cryptography.Oid, System.Security.Cryptography.Oid, System.Security.Cryptography.Oid}
+```
+
 Führen Sie die folgenden Schritte aus, wenn die Ausgabe nicht Ihren Erwartungen entspricht:
 
-1. Laden Sie das [Baltimore CyberTrust-Stammzertifikat](https://cacert.omniroot.com/bc2025.crt) und [DigiCert Global Root G2](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt) auf den Server Core-Computer herunter.
+1. Laden Sie die folgenden Zertifikate auf den Server Core-Computer herunter. Laden Sie für alle Kunden das [Baltimore Cybertrust](https://cacert.omniroot.com/bc2025.crt) -Stamm Zertifikat herunter.
+
+    Zusätzlich:
+
+    - Laden Sie für Kunden mit kommerziellen Kunden das [globale Digicert](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt) -Stamm Zertifikat herunter.
+    - Laden Sie für gcc High-Kunden der US-Regierung das [globale Digicert](https://cacerts.digicert.com/DigiCertGlobalRootCA.crt) -Zertifikat herunter.
+
 1. Führen Sie das folgende PowerShell-Cmdlet aus, um das Zertifikat zu installieren.
 
     ```powershell
+    # For all customers, install certificate
     Import-Certificate -FilePath "<PATH_TO_CERTIFICATE_FILE>\bc2025.crt" -CertStoreLocation Cert:\LocalMachine\Root
+
+    # For commercial customers, install certificate
     Import-Certificate -FilePath "<PATH_TO_CERTIFICATE_FILE>\DigiCertGlobalRootG2.crt" -CertStoreLocation Cert:\LocalMachine\Root
+
+    # For US Government GCC High customers, install certificate
+    Import-Certificate -FilePath "<PATH_TO_CERTIFICATE_FILE>\DigiCertGlobalRootCA.crt" -CertStoreLocation Cert:\LocalMachine\Root
     ```
 
 ## <a name="silent-installation-error-when-attempting-to-use-powershell"></a>Fehler bei der automatischen Installation beim Versuch, PowerShell zu verwenden
