@@ -3,12 +3,12 @@ title: Liste der hilfreichen Ressourcen für Microsoft Defender für Identity
 description: Dieser Artikel enthält eine Liste hilfreicher Ressourcen für Microsoft Defender für Identity.
 ms.date: 10/27/2020
 ms.topic: conceptual
-ms.openlocfilehash: 8a814a51fdc63f59b36288922017280e0d7f3968
-ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
+ms.openlocfilehash: 218422d15ac797998b0eb0ecfb87c5b641823246
+ms.sourcegitcommit: f92dca4dc3d8a25b1a06f68ac7a9f8318105bcd8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/16/2021
-ms.locfileid: "100533306"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100630457"
 ---
 # <a name="microsoft-defender-for-identity-readiness-guide"></a>Leitfaden für Microsoft Defender für die Identitäts Bereitschaft
 
@@ -53,7 +53,7 @@ Nachdem [!INCLUDE [Product short](includes/product-short.md)] ausgeführt wurde 
 
 - [ [!INCLUDE [Product short](includes/product-short.md)] Sicherheits](suspicious-activity-guide.md) Warnungs Handbuch erlernen Sie die Selektierung, und führen Sie die nächsten Schritte mit Ihren [!INCLUDE [Product short](includes/product-short.md)] Erkennungen aus.
 - [[!INCLUDE [Product short](includes/product-short.md)] Lateral Movement-Pfade](use-case-lateral-movement-path.md)
-- [Tag groups as sensitive (Kennzeichnen von Gruppen als vertraulich):](sensitive-accounts.md) Erhalten Sie Einblicke in die Offenlegung von Anmeldeinformationen bei vertraulichen Sicherheitsgruppen.
+- [Tag groups as sensitive (Kennzeichnen von Gruppen als vertraulich):](manage-sensitive-honeytoken-accounts.md) Erhalten Sie Einblicke in die Offenlegung von Anmeldeinformationen bei vertraulichen Sicherheitsgruppen.
 
 ## <a name="security-best-practices"></a>Bewährte Sicherheitsmethoden
 
@@ -71,5 +71,5 @@ Channel 9: [Seite zu Microsoft Security Channel 9](https://channel9.msdn.com/Sho
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Working with sensitive accounts (Arbeiten mit sensiblen Konten)](sensitive-accounts.md)
+- [Working with sensitive accounts (Arbeiten mit sensiblen Konten)](manage-sensitive-honeytoken-accounts.md)
 - [Weitere Informationen finden Sie im [!INCLUDE [Product short](includes/product-short.md)]-Forum.](https://aka.ms/MDIcommunity)

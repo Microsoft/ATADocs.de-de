@@ -4,12 +4,12 @@ metadata:
   description: Enthält eine Liste mit häufig gestellten Fragen zu Microsoft Defender für Identity und den zugehörigen Antworten.
   ms.date: 10/27/2020
   ms.topic: conceptual
-  ms.openlocfilehash: dfb8184376ea0c98516e28fce64eff6ac8a453d5
-  ms.sourcegitcommit: af41733212c2102c223fed8c8602a21a1f667080
+  ms.openlocfilehash: 67326d1f4ba6291560fc25a21bca298d87bc5a58
+  ms.sourcegitcommit: f92dca4dc3d8a25b1a06f68ac7a9f8318105bcd8
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 02/14/2021
-  ms.locfileid: "100520714"
+  ms.lasthandoff: 02/17/2021
+  ms.locfileid: "100630474"
 title: Häufig gestellte Fragen zu Microsoft Defender für Identitäten
 summary: >
   Dieser Artikel enthält eine Liste mit häufig gestellten Fragen und Antworten zu Microsoft Defender für Identity, die in die folgenden Kategorien unterteilt sind:
@@ -154,7 +154,7 @@ sections:
       Dies ist der Fall, wenn ein Konto Mitglied bestimmter Gruppen ist, die als sensibel festgelegt sind (z. B. „Domänen-Admins“).
 
 
-      Um nachzuvollziehen, warum ein Konto ein sensibles Konto ist, können Sie seine Gruppenmitgliedschaft überprüfen, um festzustellen, welchen sensiblen Gruppen es angehört (die Gruppe, der das Konto angehört, kann auch wegen einer anderen Gruppe eine sensible Gruppe sein. Daher sollten Sie immer die höchste sensible Gruppe überprüfen). Sie können auch manuell [Konten als vertraulich kennzeichnen](sensitive-accounts.md).
+      Um nachzuvollziehen, warum ein Konto ein sensibles Konto ist, können Sie seine Gruppenmitgliedschaft überprüfen, um festzustellen, welchen sensiblen Gruppen es angehört (die Gruppe, der das Konto angehört, kann auch wegen einer anderen Gruppe eine sensible Gruppe sein. Daher sollten Sie immer die höchste sensible Gruppe überprüfen). Sie können auch manuell [Konten als vertraulich kennzeichnen](manage-sensitive-honeytoken-accounts.md).
   - question: Müssen eigene Regeln geschrieben und ein Schwellenwert/eine Basislinie erstellt werden?
     answer: >
       Mit Defender für Identity besteht keine Notwendigkeit, Regeln, Schwellenwerte oder Basis Linien zu erstellen und dann eine Feinabstimmung durchführen zu können. Defender für Identity analysiert das Verhalten von Benutzern, Geräten und Ressourcen sowie deren Beziehungen untereinander und kann verdächtige Aktivitäten und bekannte Angriffe schnell erkennen. Drei Wochen nach der Bereitstellung beginnt Defender für Identity mit der Erkennung von verdächtigen Verhaltens Aktivitäten. Auf der anderen Seite erkennt Defender für Identity, dass bekannte böswillige Angriffe und Sicherheitsprobleme unmittelbar nach der Bereitstellung erkannt werden.

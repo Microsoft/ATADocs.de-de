@@ -3,12 +3,12 @@ title: Festlegen von Syslog-Einstellungen in Microsoft Defender for Identity
 description: Beschreibt, wie Microsoft Defender for Identity für den Versand von Benachrichtigungen (per E-Mail oder Microsoft Defender for Identity-Ereignisweiterleitung) bei verdächtigen Aktivitäten konfiguriert werden kann
 ms.date: 10/27/2020
 ms.topic: how-to
-ms.openlocfilehash: 587fd2cab00b982ace580ef2b8b587157c960891
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 06064b549db61a65b068f78a66d886f29805444f
+ms.sourcegitcommit: f92dca4dc3d8a25b1a06f68ac7a9f8318105bcd8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544350"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100630508"
 ---
 # <a name="integrate-with-syslog"></a>Integration in Syslog
 
@@ -57,5 +57,5 @@ So überprüfen oder ändern Sie die Syslog-Einstellungen:
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Working with sensitive accounts (Arbeiten mit sensiblen Konten)](sensitive-accounts.md)
+- [Working with sensitive accounts (Arbeiten mit sensiblen Konten)](manage-sensitive-honeytoken-accounts.md)
 - [Weitere Informationen finden Sie im [!INCLUDE [Product short](includes/product-short.md)]-Forum.](https://aka.ms/MDIcommunity)

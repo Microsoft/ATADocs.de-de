@@ -3,12 +3,12 @@ title: Advanced Threat Analytics für Microsoft Defender zum Verschieben von Ide
 description: Erfahren Sie, wie Sie eine vorhandene Advanced Threat Analytics-Installation in Microsoft Defender für Identity verschieben.
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: 45b9004bc439a28e144686e3147b94b6019a7a0f
-ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
+ms.openlocfilehash: f363543cca20e0dba853c58db1e1c1cc0c60ce22
+ms.sourcegitcommit: f92dca4dc3d8a25b1a06f68ac7a9f8318105bcd8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/16/2021
-ms.locfileid: "100533799"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100630542"
 ---
 # <a name="advanced-threat-analytics-ata-to-microsoft-defender-for-identity"></a>Advanced Threat Analytics (ATA) bei Microsoft Defender für Identity
 
@@ -58,9 +58,9 @@ Stellen Sie sicher, dass Sie die folgenden Informationen gesichert haben, bevor 
 1. Warnungsausschlüsse
     - Ausschlüsse können nicht von ATA auf übertragen werden [!INCLUDE [Product short](includes/product-short.md)] . Daher sind Details zu jedem Ausschluss erforderlich, um [die Ausschlüsse in [!INCLUDE [Product short](includes/product-short.md)] zu replizieren ](excluding-entities-from-detections.md).
 1. Kontodetails für Honeytoken-Konten
-    - Wenn Sie noch nicht über dedizierte honeytoken-Konten verfügen, erfahren Sie mehr über [honeytokens in [!INCLUDE [Product short](includes/product-short.md)] ](install-step7.md) , und erstellen Sie neue Konten, die zu diesem Zweck verwendet werden können.
+    - Wenn Sie noch nicht über dedizierte honeytoken-Konten verfügen, erfahren Sie mehr über [honeytokens in [!INCLUDE [Product short](includes/product-short.md)] ](configure-detection-exclusions.md) , und erstellen Sie neue Konten, die zu diesem Zweck verwendet werden können.
 1. Eine vollständige Liste aller Entitäten (Computer, Gruppen, Benutzer), die Sie manuell als „sensible Entitäten“ kennzeichnen möchten
-    - Erfahren Sie mehr über die Wichtigkeit [sensibler Entitäten](sensitive-accounts.md) in [!INCLUDE [Product short](includes/product-short.md)] .
+    - Erfahren Sie mehr über die Wichtigkeit [sensibler Entitäten](manage-sensitive-honeytoken-accounts.md) in [!INCLUDE [Product short](includes/product-short.md)] .
 1. [Details](reports.md) der Berichtsplanung (Liste der Berichte und geplante zeitliche Steuerung)
 
 > [!NOTE]
@@ -99,8 +99,8 @@ Melden Sie sich beim Portal an, und führen Sie [!INCLUDE [Product short](includ
 | 3  | Konfigurieren von [Syslog-Benachrichtigungen](setting-syslog.md) | - [ ] |
 | 4  | [Integrieren von VPN](install-step6-vpn.md)-Informationen| - [ ] |
 | 5  | Konfigurieren der [WDATP-Integration](integrate-mde.md)| - [ ] |
-| 6  | Festlegen von [Honeytoken](install-step7.md)-Konten| - [ ] |
-| 7  | Tagging von [sensiblen Entitäten](sensitive-accounts.md)| - [ ] |
+| 6  | Festlegen von [Honeytoken](configure-detection-exclusions.md)-Konten| - [ ] |
+| 7  | Tagging von [sensiblen Entitäten](manage-sensitive-honeytoken-accounts.md)| - [ ] |
 | 8  | Erstellen von [Sicherheitswarnungsausschlüssen](excluding-entities-from-detections.md)| - [ ] |
 | 9 | [Aktivieren/Deaktivieren von E-Mail-Benachrichtigungen](notifications.md) | - [ ] |
 | 10  | Einstellungen für [Berichtszeitplan](reports.md) (Liste der Berichte und geplante zeitliche Steuerung)| - [ ] |

@@ -3,12 +3,12 @@ title: Sicherheitsbewertungen für inaktive Identitäts Entitäten von Microsoft
 description: Dieser Artikel bietet eine Übersicht über die ruhenden Entitäten von Microsoft Defender für die Identität in sensiblen Gruppen Identity Security-statusbewertungen.
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: e96b7af917f898c7ef9f701b7e7ffda1cf001598
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 44d7cc7c7152d95230440eeef45ee42a9e11c55d
+ms.sourcegitcommit: f92dca4dc3d8a25b1a06f68ac7a9f8318105bcd8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544197"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100630729"
 ---
 # <a name="security-assessment-dormant-entities-in-sensitive-groups"></a>Sicherheitsbewertung: Ruhende Entitäten in **sensiblen** Gruppen
 
@@ -16,7 +16,7 @@ ms.locfileid: "96544197"
 
 [!INCLUDE [Product long](includes/product-long.md)] ermittelt, ob bestimmte Benutzer **sensibel** sind, und stellt Attribute bereit, die verfügbar sind, wenn Sie inaktiv, deaktiviert oder abgelaufen sind.
 
-**Sensible** Konten können jedoch auch *inaktiv* (ruhend) werden, wenn sie für einen Zeitraum von 180 Tagen nicht verwendet werden. Ruhende [sensible Entitäten](sensitive-accounts.md) sind Ziele für böswillige Akteure, um Zugriff auf vertrauliche Daten Ihrer Organisation zu erhalten.
+**Sensible** Konten können jedoch auch *inaktiv* (ruhend) werden, wenn sie für einen Zeitraum von 180 Tagen nicht verwendet werden. Ruhende [sensible Entitäten](manage-sensitive-honeytoken-accounts.md) sind Ziele für böswillige Akteure, um Zugriff auf vertrauliche Daten Ihrer Organisation zu erhalten.
 
 ## <a name="what-risk-do-dormant-entities-create-in-sensitive-groups"></a>Welches Risiko bergen ruhende Entitäten in **sensiblen Gruppen**?
 
