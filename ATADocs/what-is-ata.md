@@ -5,25 +5,30 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 7/24/2018
+ms.date: 02/17/2021
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ca6b929929646be25113adb5edd8a9d03008590e
-ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
+ms.openlocfilehash: 44f197908a3818df6bba627a3de3a7edf79fd0af
+ms.sourcegitcommit: 061b0540673d058e85285d4f0dd90a7fdeae7275
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94689665"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100569764"
 ---
 # <a name="what-is-advanced-threat-analytics"></a>Was ist Advanced Threat Analytics?
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
 
 Advanced Threat Analytics (ATA) ist eine lokale Plattform, mit deren Hilfe Sie Ihr Unternehmen vor verschiedenen hochentwickelten und gezielten Cyberangriffen und Insiderbedrohungen schützen können.
+
+> [!NOTE]
+> **Supportlebenszyklus**
+>
+> Die endgültige Version von ATA ist [allgemein verfügbar](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). Die Unterstützung von ATA-Mainstream endete am 12. Januar 2021. Der erweiterte Support wird bis zum 2026. Januar fortgesetzt. Weitere Informationen finden Sie in [unserem Blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
 
 ## <a name="how-ata-works"></a>So funktioniert ATA
 
@@ -102,7 +107,7 @@ Sie können die verdächtigen Aktivitäten dieses Typs im ATA-Dashboard anzeigen
 - Wenn Sie sich dazu entscheiden, eine vollständige Migration durchzuführen, kann dies einige Zeit in Anspruch nehmen, je nach Größe der Datenbank. Bei der Auswahl der Migrationsoptionen wird die geschätzte Dauer angezeigt. Beachten Sie diese, bevor Sie sich für eine Option entscheiden. 
 
 
-## <a name="whats-next"></a>Ausblick
+## <a name="whats-next"></a>Wie geht es weiter?
 
 - Weitere Informationen zum Integrieren von ATA in Ihr Netzwerk: [ATA-Architektur](ata-architecture.md)
 
