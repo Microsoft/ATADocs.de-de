@@ -3,14 +3,14 @@ title: Grundlegendes zum Microsoft Defender for Identity-Portal
 description: Hier erfahren Sie, wie Sie sich beim Microsoft Defender for Identity-Portal anmelden, und erhalten Informationen zu den Komponenten des Portals.
 ms.date: 10/27/2020
 ms.topic: conceptual
-ms.openlocfilehash: 00e29d828a58a76bfdbec1e28582135466d756ea
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: be8c3449b1debeb2cc0aa0da2ad560e394996344
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544571"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534547"
 ---
-# <a name="working-with-the-product-long-portal"></a>Arbeiten mit dem [!INCLUDE [Product long](includes/product-long.md)]-Portal
+# <a name="working-with-the-microsoft-defender-for-identity-portal"></a>Arbeiten mit dem Microsoft Defender for Identity-Portal
 
 > [!NOTE]
 > Auf alle auf dieser Seite erläuterten [!INCLUDE [Product long](includes/product-long.md)]-Features kann auch über das neue [Cloud App Security-Portal](https://portal.cloudappsecurity.com) zugegriffen werden.
@@ -23,12 +23,12 @@ Das [!INCLUDE [Product short](includes/product-short.md)]-Portal bietet einen sc
 
 In diesem Artikel wird beschrieben, wie Sie die wichtigsten Elemente des [!INCLUDE [Product short](includes/product-short.md)]-Portals verwenden.
 
-## <a name="enabling-access-to-the-product-short-portal"></a>Aktivieren des Zugriffs auf das [!INCLUDE [Product short](includes/product-short.md)]-Portal
+## <a name="enabling-access-to-the-defender-for-identity-portal"></a>Aktivieren des Zugriffs auf das Defender for Identity-Portal
 
 Für eine erfolgreiche Anmeldung beim [!INCLUDE [Product short](includes/product-short.md)]-Portal müssen Sie einen Benutzernamen verwenden, der einer Azure Active Directory-Sicherheitsgruppe mit Zugriff auf das [!INCLUDE [Product short](includes/product-short.md)]-Portal zugewiesen wurde.
 Weitere Informationen zur rollenbasierten Zugriffssteuerung in [!INCLUDE [Product short](includes/product-short.md)] finden Sie unter [Arbeiten mit [!INCLUDE [Product short](includes/product-short.md)]-Rollengruppen](role-groups.md).
 
-## <a name="logging-into-the-product-short-portal"></a>Anmelden beim [!INCLUDE [Product short](includes/product-short.md)]-Portal
+## <a name="logging-into-the-defender-for-identity-portal"></a>Anmelden beim Defender for Identity-Portal
 
 1. Sie können auf das [!INCLUDE [Product short](includes/product-short.md)]-Portal zugreifen, indem Sie sich unter [https://portal.atp.azure.com](https://portal.atp.azure.com) beim Portal anmelden und Ihre Instanz auswählen oder indem Sie die folgende Instanz-URL öffnen: `https://*instancename*.atp.azure.com`.
 

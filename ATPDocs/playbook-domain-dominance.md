@@ -3,12 +3,12 @@ title: Playbook zur Microsoft Defender for Identity-Domänendominanz
 description: Dieses Playbook zur Microsoft Defender for Identity-Domänendominanz beschreibt, wie Sie Domänendominanzangriffe zur Erkennung durch Defender for Identity simulieren.
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.openlocfilehash: fc79528c5adb2b487b3b68f2919facadfd7ebe2e
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: ae0221c9b9d59f884e96853584e78b497328fd23
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96542786"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533782"
 ---
 # <a name="tutorial-domain-dominance-playbook"></a>Tutorial: Playbook zu Domänendominanz
 
@@ -69,7 +69,7 @@ Versuchen Sie, mithilfe von WMI über die Befehlszeile einen Prozess lokal auf d
 
 Als Angreifer haben Sie in Ihrer Testumgebung erfolgreich mithilfe von WMI einen neuen Benutzer erstellt. Sie haben auch mithilfe von PsExec den neuen Benutzer der Gruppe „Administrators“ hinzugefügt. Aus der Perspektive der Persistenz wurde eine weitere berechtigte, unabhängige Anmeldeinformation auf dem Domänencontroller erstellt. Neue Anmeldeinformationen bieten einem Angreifer permanenten Zugriff auf den Domänencontroller für den Fall, dass die vorherigen Anmeldeinformationen erkannt und entfernt wurden.
 
-### <a name="remote-code-execution-detection-in-product-short"></a>Erkennung der Remotecodeausführung in [!INCLUDE [Product short](includes/product-short.md)]
+### <a name="remote-code-execution-detection-in-defender-for-identity"></a>Erkennung von Remotecodeausführung in Defender for Identity
 
 Melden Sie sich beim [!INCLUDE [Product short](includes/product-short.md)]-Portal an, um zu überprüfen, welche Elemente unseres letzten simulierten Angriffs von [!INCLUDE [Product short](includes/product-short.md)] erkannt wurden:
 
@@ -105,7 +105,7 @@ Mithilfe von **Mimikatz** versuchen wir, den Hauptschlüssel vom Domänencontrol
 
 Als Angreifer verfügen wir jetzt über den Schlüssel zum Entschlüsseln aller DPAPI-verschlüsselten Dateien / sensiblen Daten aus *allen* Computern in der Gesamtstruktur.
 
-### <a name="dpapi-detection-in-product-short"></a>DPAPI-Erkennung in [!INCLUDE [Product short](includes/product-short.md)]
+### <a name="dpapi-detection-in-defender-for-identity"></a>DPAPI-Erkennung in Defender for Identity
 
 Jetzt überprüfen wir im [!INCLUDE [Product short](includes/product-short.md)]-Portal, ob [!INCLUDE [Product short](includes/product-short.md)] unseren DPAPI-Angriff erfolgreich erkannt hat:
 
@@ -129,7 +129,7 @@ Wir haben die Informationen zum Konto „krbtgt“ hier repliziert: `c:\\temp\\C
 
 ![Böswillige Replikation mittels Mimikatz](media/playbook-dominance-maliciousrep_mimikatz.png)
 
-#### <a name="malicious-replication-detection-in-product-short"></a>Erkennung einer böswilligen Replikation in [!INCLUDE [Product short](includes/product-short.md)]
+#### <a name="malicious-replication-detection-in-defender-for-identity"></a>Erkennung bösartiger Replikationen in Defender for Identity
 
 Überprüfen Sie im [!INCLUDE [Product short](includes/product-short.md)]-Portal, ob das Security Operations Center (SOC) die böswillige Replikation, die wir von VictimPC aus simuliert haben, erkannt hat.
 
@@ -180,7 +180,7 @@ Dieser Befehl erstellt einen neuen Prozess, *notepad*, der im Kontext von RonHD 
 > [!Important]
 > Es ist wichtig, dass Sie ContosoDC nach Ausführen des Skeleton Key-Angriffs neu starten. Wenn nicht, wird der Prozess „LSASS.exe“ auf ContosoDC gepatcht und geändert, sodass jede Authentifizierungsanforderung auf RC4 herabgestuft wird.
 
-### <a name="skeleton-key-attack-detection-in-product-short"></a>Erkennung des Skeleton Key-Angriffs in [!INCLUDE [Product short](includes/product-short.md)]
+### <a name="skeleton-key-attack-detection-in-defender-for-identity"></a>Erkennung eines Skeleton Key-Angriffs in Defender for Identity
 
 Was hat [!INCLUDE [Product short](includes/product-short.md)] während des gesamten Vorgangs erkannt und gemeldet?
 

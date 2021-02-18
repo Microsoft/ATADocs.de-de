@@ -3,12 +3,12 @@ title: Konfigurieren der Windows-Ereignisweiterleitung in Microsoft Defender for
 description: Hier werden die verfügbaren Optionen zum Konfigurieren der Windows-Ereignisweiterleitung mit Microsoft Defender for Identity beschrieben.
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: f3a11a3d39972b3bdb3df38669ef2fa4b10cc5fb
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: eb9ae24f1e51acda9ca91c459963677a5b5c300e
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96543534"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534224"
 ---
 # <a name="configuring-windows-event-forwarding"></a>Konfigurieren der Windows-Ereignisweiterleitung
 
@@ -22,7 +22,7 @@ Zur Erweiterung der Erkennungsfunktionen benötigt [!INCLUDE [Product short](inc
 > - Eigenständige [!INCLUDE [Product short](includes/product-short.md)]-Sensoren unterstützen keine Erfassung von Protokolleinträgen für die Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW), die Daten für mehrere Erkennungen bereitstellen. Zur vollständigen Erfassung Ihrer Umgebung empfiehlt sich die Bereitstellung des [!INCLUDE [Product short](includes/product-short.md)]-Sensors.
 > - Überprüfen Sie, ob der Domänencontroller ordnungsgemäß konfiguriert wurde, um die erforderlichen Ereignisse zu erfassen.
 
-## <a name="wef-configuration-for-product-short-standalone-sensors-with-port-mirroring"></a>WEF-Konfiguration für eigenständige [!INCLUDE [Product short](includes/product-short.md)]-Sensoren mit Portspiegelung
+## <a name="wef-configuration-for-defender-for-identity-standalone-sensors-with-port-mirroring"></a>WEF-Konfiguration für eigenständige Defender for Identity-Sensoren mit Portspiegelung
 
 Nachdem Sie die Portspiegelung von den Domänencontrollern zum eigenständigen [!INCLUDE [Product short](includes/product-short.md)]-Sensor konfiguriert haben, führen Sie die folgenden Schritte aus, um die Windows-Ereignisweiterleitung mithilfe der quellinitiierten Konfiguration zu konfigurieren. Dies ist eine Möglichkeit, die Windows-Ereignisweiterleitung zu konfigurieren.
 

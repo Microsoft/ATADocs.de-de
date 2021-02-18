@@ -3,14 +3,14 @@ title: Konfigurieren Ihres Proxys oder Ihrer Firewall zum Aktivieren der Microso
 description: Hier wird beschrieben, wie Sie Ihren Proxy oder Ihre Firewall so einrichten, dass die Kommunikation zwischen dem Microsoft Defender for Identity-Clouddienst und Microsoft Defender for Identity-Sensoren möglich ist.
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: 4606ab39457cbf1210974cb9f150d7410051c361
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: ea3a16db97a4ac039509d2fe295ba803cb67de35
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96543432"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534156"
 ---
-# <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-product-long-sensor"></a>Konfigurieren der Einstellungen für Endpunktproxy und Internetkonnektivität für Ihren [!INCLUDE [Product long](includes/product-long.md)]-Sensor
+# <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-microsoft-defender-for-identity-sensor"></a>Konfigurieren der Einstellungen für den Endpunktproxy und die Internetkonnektivität für Ihren Microsoft Defender for Identity-Sensor
 
 Jeder [!INCLUDE [Product long](includes/product-long.md)]-Sensor erfordert Internetkonnektivität mit dem [!INCLUDE [Product short](includes/product-short.md)]-Clouddienst, damit er erfolgreich betrieben werden und Sensordaten melden kann. In einigen Organisationen sind die Domänencontroller nicht direkt mit dem Internet verbunden, sondern über eine Webproxyverbindung.
 
@@ -76,7 +76,7 @@ Der statische Proxy kann über die Registrierung konfiguriert werden. Sie müsse
 
 <a name="enable-access-to-azure-atp-service-urls-in-the-proxy-server"></a>
 
-## <a name="enable-access-to-product-short-service-urls-in-the-proxy-server"></a>Aktivieren des Zugriffs auf [!INCLUDE [Product short](includes/product-short.md)]-Dienst-URLs im Proxyserver
+## <a name="enable-access-to-defender-for-identity-service-urls-in-the-proxy-server"></a>Aktivieren des Zugriffs auf Dienst-URLs von Defender for Identity im Proxyserver
 
 Um Zugriff auf [!INCLUDE [Product short](includes/product-short.md)] zu ermöglichen, wird empfohlen, Datenverkehr zu den folgenden URLs zuzulassen. Die URLs werden automatisch der richtigen Dienstidentifizierung für Ihre [!INCLUDE [Product short](includes/product-short.md)]-Instanz zugeordnet.
 

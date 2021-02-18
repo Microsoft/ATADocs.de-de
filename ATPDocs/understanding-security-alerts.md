@@ -3,12 +3,12 @@ title: Tutorial zu Microsoft Defender for Identity-Sicherheitswarnungen
 description: In diesem Artikel werden Sicherheitswarnungen von Microsoft Defender for Identity und deren Verwendung näher erläutert.
 ms.date: 10/27/2020
 ms.topic: how-to
-ms.openlocfilehash: f7ec5a676dfa9e243db024639867fcf8227380f2
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: bec99de6189e51fa86cfd96dc219de3fe54538fa
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544316"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534530"
 ---
 # <a name="understanding-security-alerts"></a>Grundlegendes zu Sicherheitswarnungen
 
@@ -122,7 +122,7 @@ Enthält alle Daten, für die [!INCLUDE [Product short](includes/product-short.m
 
 ![Verwandte Entitäten](media/related-entities.png)
 
-### <a name="how-can-i-use-product-short-information-in-an-investigation"></a>Wie verwende ich [!INCLUDE [Product short](includes/product-short.md)]-Informationen bei einer Untersuchung?
+### <a name="how-can-i-use-defender-for-identity-information-in-an-investigation"></a>Wie verwende ich Defender for Identity-Informationen bei einer Untersuchung?
 
 Je nach Bedarf kann eine Untersuchung mehr oder weniger ausführlich durchgeführt werden. Sie können die von [!INCLUDE [Product short](includes/product-short.md)] bereitgestellten Daten beispielsweise für die Beantwortung der folgenden Fragen verwenden.
 
@@ -130,7 +130,7 @@ Je nach Bedarf kann eine Untersuchung mehr oder weniger ausführlich durchgefüh
 - Verwenden verwandte Benutzer dieselben Ressourcen, Anwendungen oder Computer?
 - Ist ein Konto aktiv, obwohl die PasswordExpiryTime bereits überschritten ist?
 
-## <a name="product-short-and-nnr-network-name-resolution"></a>[!INCLUDE [Product short](includes/product-short.md)] und Netzwerknamensauflösung (Network Name Resolution, NNR)
+## <a name="defender-for-identity-and-nnr-network-name-resolution"></a>Defender for Identity und NNR (Network Name Resolution, Netzwerknamensauflösung)
 
 Die [!INCLUDE [Product short](includes/product-short.md)]-Erkennungsfunktionen basieren auf einer aktiven Netzwerknamensauflösung (Network Name Resolution, NNR), bei der IP-Adressen in Computer innerhalb der Organisation aufgelöst werden. Mithilfe von NNR kann [!INCLUDE [Product short](includes/product-short.md)] eine Korrelation zwischen den reinen Aktivitäten (mit IP-Adressen) und den an der Aktivität beteiligten Computer erstellen. Auf Grundlage der reinen Aktivitäten erstellt [!INCLUDE [Product short](includes/product-short.md)] ein Profil der Entitäten – einschließlich der Computer – und generiert Warnungen.
 

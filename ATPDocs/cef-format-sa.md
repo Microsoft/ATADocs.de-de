@@ -3,18 +3,18 @@ title: Referenz zum SIEM-Protokoll für Microsoft Defender for Identity
 description: Stellt Beispiele über verdächtige Aktivitätsprotokolle bereit, die von Microsoft Defender for Identity an SIEM gesendet werden.
 ms.date: 10/26/2020
 ms.topic: conceptual
-ms.openlocfilehash: f5be050f11fc41e19c37410060acb825642369e3
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: fd2c2547e00f1bf2542ab0fd42a14854d3d25287
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544112"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534190"
 ---
-# <a name="product-long-siem-log-reference"></a>Referenz zum SIEM-Protokoll für [!INCLUDE [Product long](includes/product-long.md)]
+# <a name="microsoft-defender-for-identity-siem-log-reference"></a>Referenz zum SIEM-Protokoll für Microsoft Defender for Identity
 
 [!INCLUDE [Product short](includes/product-short.md)] kann Sicherheits- und Integritätswarnungsereignisse an SIEM weiterleiten. Warnungen und Ereignisse weisen das CEF-Format auf. Dieser Referenzartikel enthält Beispiele für die Protokolle, die an SIEM gesendet werden.
 
-## <a name="sample-product-short-security-alerts-in-cef-format"></a>Beispielsicherheitswarnungen von [!INCLUDE [Product short](includes/product-short.md)] im CEF-Format
+## <a name="sample-defender-for-identity-security-alerts-in-cef-format"></a>Beispiele für Sicherheitswarnungen für Defender for Identity im CEF-Format
 
 Die folgenden Felder und deren Werte werden an Ihren SIEM-Agent weitergeleitet:
 

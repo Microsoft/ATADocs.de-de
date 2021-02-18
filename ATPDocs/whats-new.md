@@ -1,16 +1,16 @@
 ---
 title: Neues in Microsoft Defender for Identity
 description: Dieser Artikel wird regelmäßig aktualisiert, um Sie über die Neuerungen im aktuellen Release von Microsoft Defender for Identity auf dem Laufenden zu halten.
-ms.date: 01/31/2021
+ms.date: 02/14/2021
 ms.topic: overview
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 9cc03386390f0d5fac0f7e8cc79127fc0e29f819
-ms.sourcegitcommit: 14f7228dbe6af353e81f20d2047dad24043840b4
+ms.openlocfilehash: 47efcf034d9f5117a5004448c147887716176fc2
+ms.sourcegitcommit: 0746f8fadd94b75a10214bfc5084b0ddba67d087
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2021
-ms.locfileid: "99217718"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100521224"
 ---
 # <a name="whats-new-in-product-long"></a>Neues in [!INCLUDE [Product long](includes/product-long.md)]
 
@@ -23,6 +23,12 @@ RSS-Feed: Lassen Sie sich benachrichtigen, wenn diese Seite aktualisiert wird, i
 > [!IMPORTANT]
 >
 > Die Produktnamen des Bedrohungsschutzes von Microsoft ändern sich. Weitere Informationen zu diesem und anderen Updates finden Sie [hier](https://www.microsoft.com/security/blog/?p=91813). Die neuen Namen werden ab Release 2.129 verwendet.
+
+## <a name="defender-for-identity-release-2140"></a>Defender for Identity, Release 2.140
+
+Veröffentlicht: 14. Februar 2021
+
+- Diese Version enthält ebenfalls Verbesserungen und Fehlerbehebungen für die interne Sensorinfrastruktur.
 
 ## <a name="defender-for-identity-release-2139"></a>Defender for Identity, Release 2.139
 
@@ -880,7 +886,7 @@ Ausführliche Informationen zu den einzelnen [!INCLUDE [Product short](includes/
 ## <a name="see-also"></a>Weitere Informationen
 
 - [Was ist[!INCLUDE [Product long](includes/product-long.md)]?](what-is.md)
-- [Häufig gestellte Fragen](technical-faq.md)
+- [Häufig gestellte Fragen](technical-faq.yml)
 - [Voraussetzungen für [!INCLUDE [Product short](includes/product-short.md)]](prerequisites.md)
 - [Kapazitätsplanung für [!INCLUDE [Product short](includes/product-short.md)]](capacity-planning.md)
 - [Weitere Informationen finden Sie im [!INCLUDE [Product short](includes/product-short.md)]-Forum.](https://aka.ms/MDIcommunity)

@@ -3,12 +3,12 @@ title: 'Tutorial: Playbook zur Microsoft Defender for Identity-Reconnaissance'
 description: Das Playbook zur Microsoft Defender for Identity-Reconnaissance beschreibt, wie Sie Reconnaissancebedrohungen zur Erkennung durch Defender for Identity simulieren.
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.openlocfilehash: dcaac8ed69bb4c3b9ccd262af929652dbc12126a
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 735e3d24586e9fee1fdead3782d5e996f555ef03
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544486"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533680"
 ---
 # <a name="tutorial-reconnaissance-playbook"></a>Tutorial: Playbook zu Reconnaissance
 
@@ -75,7 +75,7 @@ ls -d contoso.azure
 
 Wenn **ContosoDC** Ihr erster bereitgestellter Sensor ist, warten Sie 15 Minuten, bis das Datenbank-Back-End die Bereitstellung der erforderlichen Microservices beendet hat.
 
-### <a name="network-mapping-reconnaissance-dns-detected-in-product-short"></a>Reconnaissance über Netzwerkzuordnung (DNS) in [!INCLUDE [Product short](includes/product-short.md)] erkannt
+### <a name="network-mapping-reconnaissance-dns-detected-in-defender-for-identity"></a>Reconnaissance über Netzwerkzuordnung (DNS) in Defender for Identity erkannt
 
 Das Abrufen der Sichtbarkeit dieses Versuchstyps (fehlerhaft oder erfolgreich) ist entscheidend für den Domänenbedrohungsschutz. Nachdem Sie die Umgebung installiert haben, müssen Sie zur Zeitachse **Logische Aktivitäten** wechseln, um die erkannte Aktivität anzuzeigen.
 
@@ -145,7 +145,7 @@ Alle authentifizierten Benutzer oder Computer können potenziell andere Benutzer
 
 Dank der im Rahmen unserer Reconnaissance gesammelten Informationen kennen wir nun die Sicherheitsgruppe „Helpdesk“. Diese Information ist *noch* nicht interessant. Wir wissen auch, dass **SamiraA** Mitglied der Gruppe „Domänen-Admins“ ist. Wenn wir die Anmeldeinformationen von SamiraA stehlen können, können wir auf den Domänencontroller selbst zugreifen.
 
-### <a name="directory-service-enumeration-detected-in-product-short"></a>Verzeichnisdienstenumeration in [!INCLUDE [Product short](includes/product-short.md)] erkannt
+### <a name="directory-service-enumeration-detected-in-defender-for-identity"></a>Verzeichnisdienstenumeration in Defender for Identity erkannt
 
 Wenn in unserem Lab *bei installiertem [!INCLUDE [Product short](includes/product-short.md)] 30 Tage lang echte Aktivitäten* stattfänden, würde die Aktivität, die wir eben als JeffL durchgeführt haben, wahrscheinlich als nicht ordnungsgemäß klassifiziert. Ungewöhnliche Aktivitäten würden in der Zeitachse für verdächtige Aktivitäten angezeigt. Da wir jedoch gerade die Umgebung installiert haben, müssen wir die Zeitachse logischer Aktivitäten beobachten.
 
@@ -187,7 +187,7 @@ NetSess.exe ContosoDC
 
 Wir wissen bereits, dass SamiraA Domänenadministratorin ist. Dieser Angriff lieferte uns die IP-Adresse von SamiraA – 10.0.24.6. Als Angreifer haben wir genau erfahren, wenn wir gefährden müssen. Wir haben auch den Netzwerkspeicherort erfahren, wo die Anmeldung mit diesen Anmeldeinformationen erfolgt.
 
-### <a name="user-and-ip-address-reconnaissance-smb-detected-in-product-short"></a>Reconnaissance von Benutzern und IP-Adressen (SMB) in [!INCLUDE [Product short](includes/product-short.md)] erkannt
+### <a name="user-and-ip-address-reconnaissance-smb-detected-in-defender-for-identity"></a>Reconnaissance von Benutzern und IP-Adressen (SMB) in Defender for Identity erkannt
 
 Jetzt sehen wir, was [!INCLUDE [Product short](includes/product-short.md)] für uns erkannt hat:
 

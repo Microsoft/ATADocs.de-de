@@ -3,14 +3,14 @@ title: Verwenden von Microsoft Defender for Identity-Berichten
 description: Beschreibt, wie Sie Berichte in Microsoft Defender for Identity generieren können, um Ihr Netzwerk zu überwachen.
 ms.date: 10/27/2020
 ms.topic: conceptual
-ms.openlocfilehash: ca2724526aa7fd1dcf31d2e8242930e215ed6a05
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 1d09bd832167d960323ed0422a7858e9e512c4e1
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544452"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533459"
 ---
-# <a name="product-long-reports"></a>[!INCLUDE [Product long](includes/product-long.md)]-Berichte
+# <a name="microsoft-defender-for-identity-reports"></a>Microsoft Defender for Identity: Berichte
 
 Über den Abschnitt „[!INCLUDE [Product long](includes/product-long.md)]-Berichte“ im [!INCLUDE [Product short](includes/product-short.md)]-Portal können Sie Berichte, die Ihnen System- und Entitätsstatusinformationen liefern, entweder planen oder sofort generieren und herunterladen. Mit dem Berichtsfeature können Sie Berichte zur Systemintegrität, zu Sicherheitswarnungen und potenziellen Lateral Movement-Pfaden erstellen, die in Ihrer Umgebung erkannt wurden.
 

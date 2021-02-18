@@ -3,14 +3,14 @@ title: 'Tutorialübersicht: Microsoft Defender for Identity-Sicherheitswarnungsu
 description: Diese Tutorialübersicht beschreibt die vier Teile der Microsoft Defender for Identity-Sicherheitswarnungsumgebung zur Simulation von Bedrohungen für die Erkennung durch Microsoft Defender for Identity.
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.openlocfilehash: 5d4de0173019b318fda8a5c2ee80db72c832ab7b
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 61602a6bb7d3037d2278c2f492395ed058e8910b
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544435"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533561"
 ---
-# <a name="tutorial-overview-product-long-security-alert-lab"></a>Tutorialübersicht: [!INCLUDE [Product long](includes/product-long.md)]-Sicherheitswarnungsumgebung
+# <a name="tutorial-overview-microsoft-defender-for-identity-security-alert-lab"></a>Übersicht über das Tutorial: Lab für Microsoft Defender for Identity-Sicherheitswarnungen
 
 Das Tutorial zur [!INCLUDE [Product long](includes/product-long.md)]-Sicherheitswarnungsumgebung soll die Funktionen von **[!INCLUDE [Product short](includes/product-short.md)]** zum Identifizieren und Erkennen verdächtiger Aktivitäten und potenzieller Angriffe auf Ihr Netzwerk veranschaulichen. Dieses vierteilige Tutorial erklärt, wie Sie eine Arbeitsumgebung installieren und konfigurieren, um *diskrete* Erkennungen von [!INCLUDE [Product short](includes/product-short.md)] zu testen. Die Testumgebung konzentriert sich auf *signaturbasierte* Funktionen von [!INCLUDE [Product short](includes/product-short.md)]. Die Testumgebung enthält keine erweiterten Verhaltenserkennungen auf Machine Learning-, Benutzer- oder Entitätsbasis, da diese Erkennungen eine Lernphase mit echtem Netzwerkverkehr von bis zu 30 Tagen erfordern.
 

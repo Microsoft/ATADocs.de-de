@@ -3,14 +3,14 @@ title: Tutorial zur Einrichtung eines Labs für Microsoft Defender for Identity-
 description: In diesem Tutorial richten Sie ein Microsoft Defender for Identity-Testlab ein, um Bedrohungen zu simulieren, die von Microsoft Defender for Identity erkannt werden sollen.
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.openlocfilehash: 51505b97acde09eecce25e0bafaea8fa0af60419
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 3fa1a3322a76f61f924da521654d3d722c994916
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96542565"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533595"
 ---
-# <a name="tutorial-setup-a-product-long-security-alert-lab"></a>Tutorial: Einrichten eines Labs für [!INCLUDE [Product long](includes/product-long.md)]-Sicherheitswarnungen
+# <a name="tutorial-setup-a-microsoft-defender-for-identity-security-alert-lab"></a>Tutorial: Einrichten eines Labs für Microsoft Defender for Identity-Sicherheitswarnungen
 
 Das Lab zu [!INCLUDE [Product long](includes/product-long.md)]-Sicherheitswarnungen soll die Funktionen von **[!INCLUDE [Product short](includes/product-short.md)]** zum Identifizieren und Erkennen verdächtiger Aktivitäten und potenzieller Angriffe auf Ihr Netzwerk veranschaulichen. Dieses erste Tutorial einer vierteiligen Reihe führt Sie durch die Erstellung einer Labumgebung für *diskrete* Erkennungen durch [!INCLUDE [Product short](includes/product-short.md)]. In diesem Lab für Sicherheitswarnungen geht es primär um die *signaturbasierten* Funktionen von [!INCLUDE [Product short](includes/product-short.md)]. Die Testumgebung enthält keine erweiterten Verhaltenserkennungen auf Machine Learning-, Benutzer- oder Entitätsbasis, da diese Erkennungen eine Lernphase mit echtem Netzwerkverkehr von bis zu 30 Tagen erfordern. Weitere Informationen zu den einzelnen Tutorials dieser Reihe finden Sie unter [Tutorialübersicht: [!INCLUDE [Product short](includes/product-short.md)]-Sicherheitswarnungsumgebung](playbook-lab-overview.md).
 
@@ -66,11 +66,13 @@ Es gibt eine Sicherheitsgruppe namens „Helpdesk“, der Ron HelpDesk angehört
 | Samira Abbasi | SamiraA | Bei Contoso ist diese Benutzerin unsere Domänenadministratorin. |
 | [!INCLUDE [Product short](includes/product-short.md)] Dienst | AATPService | Dienstkonto von [!INCLUDE [Product short](includes/product-short.md)] | account |
 
-## <a name="product-short-base-lab-environment"></a>Grundlegendes Testlab von [!INCLUDE [Product short](includes/product-short.md)]
+## <a name="defender-for-identity-base-lab-environment"></a>Grundlegendes Testlab von Defender for Identity
 
 Um das Basislab zu konfigurieren, fügen wir Active Directory Benutzer und Gruppen hinzu und bearbeiten eine SAM-Richtlinie sowie eine vertrauliche Gruppe in [!INCLUDE [Product short](includes/product-short.md)].
 
-### <a name="hydrate-active-directory-users-on-contosodc"></a><a name="bkmk_hydrate"></a> Aktualisieren von Active Directory-Benutzern auf ContosoDC
+<a name="bkmk_hydrate"></a>
+
+### <a name="hydrate-active-directory-users-on-contosodc"></a> Aktualisieren von Active Directory-Benutzern auf ContosoDC
 
 Um die Testumgebung zu vereinfachen, haben wir den Vorgang so automatisiert, dass fiktive Benutzer und Gruppen in Active Directory erstellt werden. Dieses Skript wird als Voraussetzung für dieses Tutorial ausgeführt. Sie können das Skript verwenden oder ändern, um die Active Directory-Umgebung ihrer Testumgebung zu aktualisieren. Wenn Sie kein Skript verwenden möchten, können Sie dies manuell tun.
 
@@ -95,8 +97,8 @@ Add-ADGroupMember -Identity "Helpdesk" -Members "RonHD"
 # Create new AD user JeffL
 New-ADUser -Name JeffL -DisplayName "Jeff Leatherman" -PasswordNeverExpires $true -AccountPassword $jefflSecurePass -Enabled $true
 
-# Take note of the "AATPService" user below which will be our service account for [!INCLUDE [Product short](includes/product-short.md)].
-# Create new AD user [!INCLUDE [Product short](includes/product-short.md)] Service
+# Take note of the "AATPService" user below which will be our service account for Defender for Identity.
+# Create new AD user Defender for Identity Service
 
 New-ADUser -Name AatpService -DisplayName "Azure ATP/ATA Service" -PasswordNeverExpires $true -AccountPassword $AATPService -Enabled $true
 ```
@@ -113,7 +115,7 @@ Damit der [!INCLUDE [Product short](includes/product-short.md)]-Dienst ordnungsg
 
     ![Hinzufügen des Diensts](media/samr-add-service.png)
 
-### <a name="add-sensitive-group-to-product-short"></a>Hinzufügen von vertraulichen Gruppen zu [!INCLUDE [Product short](includes/product-short.md)]
+### <a name="add-sensitive-group-to-defender-for-identity"></a>Hinzufügen einer sensiblen Gruppe zu Defender for Identity
 
 Wenn Sie die Sicherheitsgruppe „Helpdesk“ als **vertrauliche Gruppe** hinzufügen, können Sie das [!INCLUDE [Product short](includes/product-short.md)]-Feature für Lateral Movement-Diagramme verwenden. Das Markieren hoch sensibler Benutzer und Gruppen, die nicht unbedingt Domänenadministratoren sind, jedoch über Berechtigungen für zahlreiche Ressourcen verfügen, ist eine bewährte Methode.
 
@@ -126,7 +128,7 @@ Wenn Sie die Sicherheitsgruppe „Helpdesk“ als **vertrauliche Gruppe** hinzuf
     ![Markieren von „Helpdesk“ als vertrauliche [!INCLUDE [Product short](includes/product-short.md)]-Gruppe, um Lateral Movement-Diagramme und Berichte für diese berechtigte Gruppe zu aktivieren](media/playbook-labsetup-helpdesksensitivegroup.png)
 1. Klicken Sie auf **Speichern**.
 
-### <a name="product-short-lab-base-setup-checklist"></a>Checkliste zur grundlegenden Einrichtung des [!INCLUDE [Product short](includes/product-short.md)]-Labs
+### <a name="defender-for-identity-lab-base-setup-checklist"></a>Prüfliste zur grundlegenden Einrichtung des Defender for Identity-Labs
 
 An diesem Punkt sollten Sie über ein grundlegendes [!INCLUDE [Product short](includes/product-short.md)]-Lab verfügen. [!INCLUDE [Product short](includes/product-short.md)] sollte zur Verwendung bereit und die Benutzer sollten bereitgestellt sein. Überprüfen Sie die Checkliste, um sicherzustellen, dass die Basistestumgebung vollständig ist.
 
@@ -158,7 +160,9 @@ Add-LocalGroupMember -Group "Administrators" -Member "Contoso\Helpdesk"
 
 ![„Helpdesk“ und JeffL sollten in der lokalen Administratorengruppe für VictimPC sein.](media/playbook-labsetup-localgrouppolicies2.png)
 
-### <a name="simulate-helpdesk-support-on-victimpc"></a><a name="helpdesk-simulation"></a> Simulieren von Helpdesksupport auf VictimPC
+<a name="helpdesk-simulation"></a>
+
+### <a name="simulate-helpdesk-support-on-victimpc"></a> Simulieren von Helpdesksupport auf VictimPC
 
 Um ein funktionierendes und verwaltetes Netzwerk zu simulieren, erstellen Sie auf **VictimPC** eine geplante Aufgabe zur Ausführung des Prozesses „cmd.exe“ als **RonHD**.
 

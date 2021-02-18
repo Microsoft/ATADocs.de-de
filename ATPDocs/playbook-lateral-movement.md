@@ -3,12 +3,12 @@ title: Playbook zu Microsoft Defender for Identity-Sicherheitswarnungen zu Later
 description: Dieses Microsoft Defender for Identity-Playbook beschreibt, wie Sie Lateral Movement-Bedrohungen zur Erkennung durch Defender for Identity simulieren.
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.openlocfilehash: 50880150bb8937875677985f3a61119495d566eb
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: b0305dfbcfba45a796d2c50e21ab31fba8705520
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96542701"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533714"
 ---
 # <a name="tutorial-lateral-movement-playbook"></a>Tutorial: Lateral Movement-Playbook
 
@@ -131,7 +131,7 @@ Wir verwenden **PowerSploit** ```Get-NetLocalGroup```, um diese Frage zu beantwo
 
 Sie sehen, dass er Speicher in diesem bestimmten Prozess ein TGT von RonHD enthält. Wir haben erfolgreich einen Overpass-the-Hash-Angriff in unserer Testumgebung durchgeführt. Wir haben den zuvor kompromittierten NTLM-Hash konvertiert und damit einen Kerberos-TGT erhalten. Dieses Kerberos-TGT wurde dann verwendet, um Zugriff auf eine andere Netzwerkressource zu erhalten, in diesem Fall AdminPC.
 
-### <a name="overpass-the-hash-detected-in-product-short"></a>Overpass-the-Hash in [!INCLUDE [Product short](includes/product-short.md)] erkannt
+### <a name="overpass-the-hash-detected-in-defender-for-identity"></a>Overpass-the-Hash in Defender for Identity erkannt
 
 In der [!INCLUDE [Product short](includes/product-short.md)]-Konsole sehen wir Folgendes:
 
@@ -233,7 +233,7 @@ Die Tickets befinden sich jetzt lokal auf VictimPC. Nun ist es an der Zeit, durc
 
 Gratulation, das Programm funktioniert! Durch unsere Scheinangriffe erhielten wir Administratorzugriff auf unseren Domänencontroller und konnten die Active Directory-Domäne/-Gesamtstruktur unseres Testumgebung kompromittieren.
 
-### <a name="pass-the-ticket-detection-in-product-short"></a>Pass-the-Ticket-Erkennung in [!INCLUDE [Product short](includes/product-short.md)]
+### <a name="pass-the-ticket-detection-in-defender-for-identity"></a>Pass-the-Ticket-Erkennung in Defender for Identity
 
 Die meisten Sicherheitstools haben keine Möglichkeit zu erkennen, wann eine legitime Berechtigung für den Zugriff auf eine legitime Ressource verwendet wurde. Was erkennt [!INCLUDE [Product short](includes/product-short.md)] im Gegensatz dazu in dieser Kette von Ereignissen und warnt dann davor?
 

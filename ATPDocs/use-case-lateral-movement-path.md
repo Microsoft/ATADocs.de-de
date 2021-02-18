@@ -3,14 +3,14 @@ title: Verstehen und Verwenden von Lateral Movement-Pfaden mit Microsoft Defende
 description: Dieser Artikel beschreibt die potenziellen Lateral Movement-Pfade (LMPs) von Microsoft Defender for Identity.
 ms.date: 10/27/2020
 ms.topic: conceptual
-ms.openlocfilehash: 21d672a6c2220229060189120f1daefacd47416b
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 60fac487690d5ff71eb2df5d6ee52c15c336941e
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544537"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533442"
 ---
-# <a name="product-long-lateral-movement-paths-lmps"></a>Lateral Movement-Pfade (LMPs) von [!INCLUDE [Product long](includes/product-long.md)]
+# <a name="microsoft-defender-for-identity-lateral-movement-paths-lmps"></a>Lateral Movement-Pfade (LMPs) für Microsoft Defender for Identity
 
 > [!NOTE]
 > Die auf dieser Seite erläuterten [!INCLUDE [Product long](includes/product-long.md)]-Features sind auch über das neue [Portal](https://portal.cloudappsecurity.com) zugänglich.
@@ -23,7 +23,7 @@ Eine wichtige Komponente der [!INCLUDE [Product long](includes/product-long.md)]
 
 Lateral Movement-Angriffe können auf unterschiedliche Weise durchgeführt werden. Einige der von Angreifern am häufigsten verwendeten Methoden sind der Diebstahl von Anmeldeinformationen und Pass-the-Ticket-Angriffe. Bei beiden Methoden werden Ihre nicht sensiblen Konten von den Angreifern für Seitenangriffe genutzt, indem sie nicht sensible Computer ausnutzen, die Anmeldeinformationen gemeinsam mit Konten, Endpunktgruppen und Computern mit sensiblen Konten verwenden.
 
-## <a name="where-can-i-find-product-short-lmps"></a>Wo finde ich LMPs von [!INCLUDE [Product short](includes/product-short.md)]?
+## <a name="where-can-i-find-defender-for-identity-lmps"></a>Wo finde ich Defender for Identity-LMPs?
 
 Jeder Computer und jedes Benutzerprofil, der bzw. das sich gemäß [!INCLUDE [Product short](includes/product-short.md)]-Erkennung in einem LMP befindet, weist eine Registerkarte für **Lateral Movement-Pfade** auf. Computer und Profile, die keine Registerkarte vorweisen, wurden noch nie innerhalb einer potenziellen LMP ermittelt.
 
