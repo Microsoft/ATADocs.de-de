@@ -12,16 +12,15 @@ ms.technology: ''
 ms.assetid: 27b139e5-12b9-4953-8f53-eb58e8ce0038
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3436f675a6e1dfb9afec9bb40098e7fa51a65500
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 73c8157b582f4f3eed0550a0d59ca76eae45ce92
+ms.sourcegitcommit: 5bf0c6a204b71126306a0c64108eaf9cb7fc042f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90913309"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101097282"
 ---
 # <a name="whats-new-in-ata-version-16"></a>Neuerungen in ATA 1.6
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 Die vorliegenden Anmerkungen zu dieser Version enthalten Informationen zu bekannten Problemen in dieser Version von Advanced Threat Analytics.
 
 ## <a name="whats-new-in-the-ata-16-update"></a>Neuerungen beim Update auf ATA 1.6
@@ -132,7 +131,7 @@ Wenn einer dieser Fehler angezeigt wird, führen Sie die folgenden Schritte zur 
     1. MongoDB
     2. Microsoft Advanced Threat Analytics Center
 1. Überprüfen Sie die Protokolle, um sich zu vergewissern, dass das Produkt ohne Fehler ausgeführt wird.
-1. [Laden](https://aka.ms/ataremoveduplicateprofiles "Herunterladen") Sie das Tool "RemoveDuplicateProfiles.exe" herunter, und kopieren Sie es in den Haupt Installationspfad (%ProgramFiles%\Microsoft Advanced Threat analytics\center).
+1. [Laden](/samples/browse/?redirectedfrom=TechNet-Gallery "Herunterladen") Sie das Tool "RemoveDuplicateProfiles.exe" herunter, und kopieren Sie es in den Haupt Installationspfad (%ProgramFiles%\Microsoft Advanced Threat analytics\center).
 1. Führen Sie `RemoveDuplicateProfiles.exe` von einer Eingabeaufforderung mit erhöhten Rechten aus, und warten Sie, bis das Tool erfolgreich abgeschlossen wurde.
 1. Hier: `…\Microsoft Advanced Threat Analytics\Center\MongoDB\bin` Directory: **Mongo ATA**, geben Sie den folgenden Befehl ein:
 
@@ -154,7 +153,7 @@ Diese Version von ATA umfasst eine verbesserte Erkennungs-Engine, das eine genau
 Für die neue und verbesserte Erkennungs-Engine wird Inline-Erkennungstechnologie genutzt, die eine Erkennung ohne Auswertung früherer Netzwerkaktivitäten ermöglicht, um die Leistung von ATA Center erheblich zu erhöhen. Dies bedeutet auch, dass es nicht erforderlich ist, frühere Netzwerkaktivitäten während des Aktualisierungsvorgangs zu migrieren.
 Im ATA-Aktualisierungsvorgang werden die Daten für den Fall, dass Sie diese für zukünftige Untersuchungen benötigen, als JSON-Datei in `<Center Installation Path>\Migration` exportiert.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [Sehen Sie sich das ATA-Forum an!](https://social.technet.microsoft.com/Forums/security/home?forum=mata) 
  [Aktualisieren von ATA auf Version 1,6: Migrations Handbuch](ata-update-1.6-migration-guide.md)

@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: eeccc1e5a5dd16b2d480bf82034a085159baff60
-ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
+ms.openlocfilehash: 9a22617587fab0aeacbc52f8b539c4a1042419d3
+ms.sourcegitcommit: 5bf0c6a204b71126306a0c64108eaf9cb7fc042f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94690090"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101097265"
 ---
 # <a name="advanced-threat-analytics-suspicious-activity-guide"></a>Advanced Threat Analytics-Handbuch zu verdächtigen Aktivitäten
 
@@ -541,8 +541,8 @@ Wenden Sie die aktuellsten Patches auf alle Ihre Computer an, und überprüfen S
 
 - [Joining the security community](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community) (Der Sicherheitscommunity beitreten)
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Verdächtige ATA-Aktivitäten – Playbook](https://aka.ms/ataplaybook)
+- [Verdächtige ATA-Aktivitäten – Playbook](/samples/browse/?redirectedfrom=TechNet-Gallery)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Arbeiten mit verdächtigen Aktivitäten](working-with-suspicious-activities.md)

@@ -3,12 +3,12 @@ title: Advanced Threat Analytics für Microsoft Defender zum Verschieben von Ide
 description: Erfahren Sie, wie Sie eine vorhandene Advanced Threat Analytics-Installation in Microsoft Defender für Identity verschieben.
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: f363543cca20e0dba853c58db1e1c1cc0c60ce22
-ms.sourcegitcommit: f92dca4dc3d8a25b1a06f68ac7a9f8318105bcd8
+ms.openlocfilehash: 6a7a5391e908964c7bc570ef478fdc037e9b1051
+ms.sourcegitcommit: 5bf0c6a204b71126306a0c64108eaf9cb7fc042f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100630542"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101097299"
 ---
 # <a name="advanced-threat-analytics-ata-to-microsoft-defender-for-identity"></a>Advanced Threat Analytics (ATA) bei Microsoft Defender für Identity
 
@@ -101,7 +101,7 @@ Melden Sie sich beim Portal an, und führen Sie [!INCLUDE [Product short](includ
 | 5  | Konfigurieren der [WDATP-Integration](integrate-mde.md)| - [ ] |
 | 6  | Festlegen von [Honeytoken](configure-detection-exclusions.md)-Konten| - [ ] |
 | 7  | Tagging von [sensiblen Entitäten](manage-sensitive-honeytoken-accounts.md)| - [ ] |
-| 8  | Erstellen von [Sicherheitswarnungsausschlüssen](excluding-entities-from-detections.md)| - [ ] |
+| 8  | Erstellen von [Sicherheitswarnungsausschlüssen](configure-detection-exclusions.md)| - [ ] |
 | 9 | [Aktivieren/Deaktivieren von E-Mail-Benachrichtigungen](notifications.md) | - [ ] |
 | 10  | Einstellungen für [Berichtszeitplan](reports.md) (Liste der Berichte und geplante zeitliche Steuerung)| - [ ] |
 | 11  | Konfigurieren von [rollenbasierten Berechtigungen](role-groups.md) | - [ ] |

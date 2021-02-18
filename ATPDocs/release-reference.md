@@ -3,12 +3,12 @@ title: Verweis auf ältere Releases in Microsoft Defender für Identity
 description: Dieser Artikel ist ein Verweis auf frühere Versionen von Updates für Microsoft Defender für Identity.
 ms.date: 10/27/2020
 ms.topic: reference
-ms.openlocfilehash: 44da038cc03bb24cbc70d524e24b259c81d9fa00
-ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
+ms.openlocfilehash: 8d46e2e127e6823e45b1201845bc9f6716fec9b8
+ms.sourcegitcommit: 5bf0c6a204b71126306a0c64108eaf9cb7fc042f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/16/2021
-ms.locfileid: "100533374"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101097027"
 ---
 # <a name="release-reference-of-microsoft-defender-for-identity"></a>Versions Referenz von Microsoft Defender für Identity
 
@@ -30,7 +30,7 @@ Der Azure ATP-Sicherheitshinweis [Verdächtige Kommunikation über DNS](suspicio
 Veröffentlicht am 11. November 2018
 
 - **Featureverbesserung: Ausschlüsse der Standarddomäne zu verdächtiger Kommunikation über DNS-Warnung hinzugefügt**  
-Es wurden drei beliebte Domänen zur Ausschlussliste der Standarddomäne hinzugefügt. Die Ausschlussliste bleibt vollständig anpassbar. Weitere Informationen finden Sie unter [Ausschließen von Entitäten von der Erkennung](excluding-entities-from-detections.md)
+Es wurden drei beliebte Domänen zur Ausschlussliste der Standarddomäne hinzugefügt. Die Ausschlussliste bleibt vollständig anpassbar. Weitere Informationen finden Sie unter [Konfigurieren von Erkennungs Ausschlüssen](configure-detection-exclusions.md).
 
 - **Verbesserungen bei der Dokumentation: Update des SIEM-Protokolls, Anleitungen für bekannte Probleme**  
 Die **externalId**-Zuordnung sowie zusätzliche Erläuterungen wurden den Beschreibungen des SIEM-Protokolls hinzugefügt. Weitere Informationen finden Sie in der [Referenz zum SIEM-Protokoll](cef-format-sa.md).

@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 7597ed25-87f5-472c-a496-d5f205c9c391
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7ce78fc1f03dd310aa454063692e8ee1aae5c22c
-ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
+ms.openlocfilehash: 568dadf614105753d1ea9e8bc0d7c1e95a9ee027
+ms.sourcegitcommit: 5bf0c6a204b71126306a0c64108eaf9cb7fc042f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94690549"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101097435"
 ---
 # <a name="install-ata---step-9"></a>Installieren von ATA: Schritt 9
 
@@ -54,8 +54,8 @@ Wenn Sie sicherstellen möchten, dass Windows-Clients und -Server zulassen, dass
 > [!div class="step-by-step"]
 > [« Schritt 8 ](install-ata-step7.md)
 
-## <a name="see-also"></a>Weitere Informationen
-- [Handbuch für die ATA POC-Bereitstellung](https://aka.ms/atapoc)
+## <a name="see-also"></a>Siehe auch
+- [Handbuch für die ATA POC-Bereitstellung](/samples/browse/?redirectedfrom=TechNet-Gallery)
 - [Tool zur Bemessung von ATA-Gateways](https://aka.ms/atasizingtool)
 - [Weitere Informationen finden Sie im ATA-Forum.](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurieren der Ereignissammlung](configure-event-collection.md)

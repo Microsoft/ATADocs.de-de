@@ -3,12 +3,12 @@ title: Microsoft Defender für die Identitäts Erkennung Konfigurieren von Aussc
 description: Konfiguration der Erkennungs Ausschlüsse.
 ms.date: 02/17/2021
 ms.topic: how-to
-ms.openlocfilehash: 6e771e2a2755845fe4f02fb9d21750720bbbe37d
-ms.sourcegitcommit: f92dca4dc3d8a25b1a06f68ac7a9f8318105bcd8
+ms.openlocfilehash: 802b54f3185a50468fe4227d4099b9edbfc8f469
+ms.sourcegitcommit: 5bf0c6a204b71126306a0c64108eaf9cb7fc042f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100630779"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101097367"
 ---
 # <a name="configure-detection-exclusions"></a>Konfigurieren von Erkennungs Ausschlüssen
 
@@ -34,7 +34,7 @@ Gehen Sie folgendermaßen vor, um die Ausschlüsse auf der Seite Konfiguration z
     1. Klicken Sie auf das Pluszeichen **(+)**.
 
     > [!TIP]
-    > Das Feld Benutzer oder Computer ist durchsuchbar und wird automatisch mit Entitäten in Ihrem Netzwerk ausgefüllt. Weitere Informationen finden Sie unter [Ausschließen von Entitäten von Erkennungen](excluding-entities-from-detections.md) und im [Handbuch zu Sicherheitswarnungen](suspicious-activity-guide.md).
+    > Das Feld Benutzer oder Computer ist durchsuchbar und wird automatisch mit Entitäten in Ihrem Netzwerk ausgefüllt. Weitere Informationen finden Sie im [Handbuch zur Sicherheitswarnung](suspicious-activity-guide.md).
 
     ![Ausschließen von Entitäten von der Erkennung](media/exclusions.png)
 
