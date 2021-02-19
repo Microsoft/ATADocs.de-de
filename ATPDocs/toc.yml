@@ -120,8 +120,8 @@ items:
         href: capacity-planning.md
       - name: Verwalten von Sicherheitswarnungen
         href: working-with-suspicious-activities.md
-      - name: Ausschließen von Entitäten von der Erkennung
-        href: excluding-entities-from-detections.md
+      - name: Konfigurieren von Erkennungsausschlüssen
+        href: configure-detection-exclusions.md
       - name: Durchsuchen und Filtern überwachter Aktivitäten
         href: activities-search.md
       - name: Verwalten sensibler Konten oder Honeytoken-Konten
