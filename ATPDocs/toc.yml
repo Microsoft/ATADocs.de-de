@@ -122,12 +122,12 @@ items:
         href: working-with-suspicious-activities.md
       - name: Ausschließen von Entitäten von der Erkennung
         href: excluding-entities-from-detections.md
-      - name: Verwalten von sensiblen Konten
-        href: sensitive-accounts.md
       - name: Durchsuchen und Filtern überwachter Aktivitäten
         href: activities-search.md
-      - name: Verwenden von Ausschlüssen und Honeytoken-Konten
-        href: install-step7.md
+      - name: Verwalten sensibler Konten oder Honeytoken-Konten
+        href: manage-sensitive-honeytoken-accounts.md
+      - name: Konfigurieren von Erkennungsausschlüssen
+        href: configure-detection-exclusions.md
       - name: Überwachen von Domänencontrollern
         href: sensor-monitoring.md
       - name: Ändern des Domänenverbindungskennworts
