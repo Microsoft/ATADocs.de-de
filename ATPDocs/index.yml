@@ -12,12 +12,12 @@ metadata:
   author: shsagir
   ms.author: shsagir
   ms.date: 09/23/2019
-  ms.openlocfilehash: 43c814ebf644a19cd1f2f7bb97cc6f4a3e62c00e
-  ms.sourcegitcommit: f92dca4dc3d8a25b1a06f68ac7a9f8318105bcd8
+  ms.openlocfilehash: e4efdf028bc75d7719a8f2a389eef1d58991a403
+  ms.sourcegitcommit: 5bf0c6a204b71126306a0c64108eaf9cb7fc042f
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 02/17/2021
-  ms.locfileid: "100630678"
+  ms.lasthandoff: 02/18/2021
+  ms.locfileid: "101097248"
 landingContent:
 - title: Informationen zu Microsoft Defender for Identity
   linkLists:
@@ -55,8 +55,8 @@ landingContent:
       url: isp-overview.md
     - text: Lab für Sicherheitswarnungen für Defender for Identity
       url: playbook-lab-overview.md
-    - text: Ausschließen von Entitäten von der Erkennung
-      url: excluding-entities-from-detections.md
+    - text: Konfigurieren von Erkennungsausschlüssen
+      url: configure-detection-exclusions.md
     - text: Durchsuchen und Filtern überwachter Aktivitäten
       url: activities-search.md
     - text: Verwenden von Ausschlüssen und Honeytoken-Konten
