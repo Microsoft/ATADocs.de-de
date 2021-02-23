@@ -3,12 +3,12 @@ title: Microsoft Defender for Identity-Sicherheitswarnungen zur Domänendominanz
 description: In diesem Artikel werden die Microsoft Defender for Identity-Warnungen erläutert, die ausgegeben werden, wenn Angriffe in Ihrer Organisation erkannt werden, die in der Regel Teil der Maßnahmen der Domänendominanzphase sind.
 ms.date: 12/23/2020
 ms.topic: tutorial
-ms.openlocfilehash: c7376b617f69261c848bede401ff083612545457
-ms.sourcegitcommit: e2b4ad613aa171f604ae526f0cba05fe79f4a8cb
+ms.openlocfilehash: 82ebc2fdc88eb1a7b35e70ba8983f22d592c48e9
+ms.sourcegitcommit: f92dca4dc3d8a25b1a06f68ac7a9f8318105bcd8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97753361"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100630707"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Tutorial: Warnungen zu Domänendominanz
 
@@ -570,7 +570,7 @@ Skeleton Key ist eine Schadsoftware, die auf einem Domänencontroller ausgeführ
 
 Angreifer fügen Benutzer zu sehr privilegierten Gruppen hinzu. Dadurch erhalten Angreifer Zugriff auf weitere Ressourcen und dauerhafte Kontrolle. Diese Erkennung basiert auf dem Erfassen der Aktivitäten von Benutzern, die Gruppen ändern, und den Warnungen, die angezeigt werden, wenn einer sensiblen Gruppe unerwartet ein Benutzer hinzugefügt wird. [!INCLUDE [Product short](includes/product-short.md)] führt kontinuierlich Profilerstellungen durch.
 
-Eine Definition von sensiblen Gruppen in [!INCLUDE [Product short](includes/product-short.md)] finden Sie unter [Arbeiten mit sensiblen Konten](sensitive-accounts.md).
+Eine Definition von sensiblen Gruppen in [!INCLUDE [Product short](includes/product-short.md)] finden Sie unter [Arbeiten mit sensiblen Konten](manage-sensitive-honeytoken-accounts.md).
 
 Die Erkennung basiert auf Ereignissen, die auf Domänencontrollern überwacht werden. Stellen Sie sicher, dass Ihre Domänencontroller die [erforderlichen Ereignisse überwachen](configure-windows-event-collection.md).
 

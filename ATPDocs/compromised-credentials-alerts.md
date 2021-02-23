@@ -3,12 +3,12 @@ title: Microsoft Defender for Identity-Sicherheitswarnungen zur Phase „Komprom
 description: In diesem Artikel werden die Microsoft Defender for Identity-Warnungen erläutert, die ausgegeben werden, wenn Angriffe in Ihrer Organisation erkannt werden, die typisch für die Phase „Kompromittierte Anmeldeinformationen“ sind.
 ms.date: 12/23/2020
 ms.topic: tutorial
-ms.openlocfilehash: 4bb5313307d16c87969ac280967356e8595b767a
-ms.sourcegitcommit: e2b4ad613aa171f604ae526f0cba05fe79f4a8cb
+ms.openlocfilehash: 195f9007e91dcbcdf5c0801d7a06bb21534e683e
+ms.sourcegitcommit: f92dca4dc3d8a25b1a06f68ac7a9f8318105bcd8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97753319"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100630695"
 ---
 # <a name="tutorial-compromised-credential-alerts"></a>Tutorial: Warnungen zu kompromittierten Anmeldeinformationen
 
@@ -44,7 +44,7 @@ Mit den folgenden Sicherheitswarnungen können Sie verdächtige Aktivitäten der
 
 Honeytoken-Konten sind Köderkonten, die eingerichtet werden, um schädliche Aktivitäten, die versuchen, diese Konten zu verwenden, zu erkennen und zu verfolgen. Honeytoken-Konten sollten nicht verwendet werden, aber einen attraktiven Namen besitzen, um Angreifer anzulocken (z. B. SQL-Admin). Jede von diesen ausgehende Aktivität kann auf böswilliges Verhalten hinweisen.
 
-Weitere Informationen zu Honeytokenkonten finden Sie unter [Konfigurieren von Ausschlüssen von Erkennungen und Honeytokenkonten](install-step7.md).
+Weitere Informationen zu Honeytokenkonten finden Sie unter [Konfigurieren von Ausschlüssen von Erkennungen und Honeytokenkonten](configure-detection-exclusions.md).
 
 **TP, B-TP oder FP?**
 

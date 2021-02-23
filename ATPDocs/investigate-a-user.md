@@ -3,12 +3,12 @@ title: Tutorial für die Benutzeruntersuchung mit Microsoft Defender for Identit
 description: In diesem Artikel wird erläutert, wie Sicherheitswarnungen von Microsoft Defender for Identity zur Untersuchung eines verdächtigen Benutzers verwendet werden.
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.openlocfilehash: c9d3cb67ff4eeae0e1f4a0808751d96c67cf326e
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 783b2b4cc12bfa84812810f754deedb70c1718bb
+ms.sourcegitcommit: f92dca4dc3d8a25b1a06f68ac7a9f8318105bcd8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96542820"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100630525"
 ---
 # <a name="tutorial-investigate-a-user"></a>Tutorial: Untersuchen eines Benutzers
 
@@ -29,7 +29,7 @@ ms.locfileid: "96542820"
 Überprüfen und untersuchen Sie das Benutzerprofil auf die folgenden Details und Aktivitäten:
 
 1. Wer ist der [Benutzer](entity-profiles.md)?
-    1. Ist der Benutzer ein [sensibler Benutzer](sensitive-accounts.md) (z. B. Administrator oder auf einer Watchlist o.ä.)?
+    1. Ist der Benutzer ein [sensibler Benutzer](manage-sensitive-honeytoken-accounts.md) (z. B. Administrator oder auf einer Watchlist o.ä.)?
     1. Was ist seine Rolle innerhalb der Organisation?
     1. Ist er in der Organisationsstruktur wichtig?
 

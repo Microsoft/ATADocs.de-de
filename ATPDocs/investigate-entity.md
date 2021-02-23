@@ -3,12 +3,12 @@ title: Untersuchen von Benutzern und Computern mit Microsoft Defender for Identi
 description: In diesem Artikel wird beschrieben, wie verdächtige Aktivitäten, die von Benutzern ausgeführt werden, sowie Entitäten, Computer oder Geräte mithilfe von Microsoft Defender for Identity untersucht werden können.
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.openlocfilehash: 9f52bcc6dce4f11b8d29def2574a6b298e5a5e99
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 2a98e9134959261f075412f05d39ac2bf9d21218
+ms.sourcegitcommit: f92dca4dc3d8a25b1a06f68ac7a9f8318105bcd8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96543891"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100630599"
 ---
 # <a name="tutorial-investigate-an-entity"></a>Tutorial: Untersuchen einer Entität
 
@@ -93,7 +93,7 @@ Um Ihnen produktübergreifende Einblicke zu gewähren, stellt Ihr Entitätsprofi
 - Schema-Admins
 - Organisations-Admins
 
-Zusätzlich können Sie Entitäten in [!INCLUDE [Product short](includes/product-short.md)] **manuell markieren**, um darauf hinzuweisen, dass sie vertraulich sind. Dies ist wichtig, da einige [!INCLUDE [Product short](includes/product-short.md)]-Erkennungsvorgänge, wie die Vorgänge zum Erkennen von Änderungen sensibler Gruppen und von Lateral Movement-Pfaden, sich auf den Vertraulichkeitsstatus der Entität verlassen. Wenn Sie zusätzliche Benutzer und Gruppen als vertraulich markieren, z. B. Vorstandsmitglieder, leitende Angestellte und Verkaufsleiter, erkennt [!INCLUDE [Product short](includes/product-short.md)] diese als vertraulich an. Weitere Informationen finden Sie unter [Arbeiten mit sensiblen Konten](sensitive-accounts.md).
+Zusätzlich können Sie Entitäten in [!INCLUDE [Product short](includes/product-short.md)] **manuell markieren**, um darauf hinzuweisen, dass sie vertraulich sind. Dies ist wichtig, da einige [!INCLUDE [Product short](includes/product-short.md)]-Erkennungsvorgänge, wie die Vorgänge zum Erkennen von Änderungen sensibler Gruppen und von Lateral Movement-Pfaden, sich auf den Vertraulichkeitsstatus der Entität verlassen. Wenn Sie zusätzliche Benutzer und Gruppen als vertraulich markieren, z. B. Vorstandsmitglieder, leitende Angestellte und Verkaufsleiter, erkennt [!INCLUDE [Product short](includes/product-short.md)] diese als vertraulich an. Weitere Informationen finden Sie unter [Arbeiten mit sensiblen Konten](manage-sensitive-honeytoken-accounts.md).
 
 ## <a name="review-lateral-movement-paths"></a>Überprüfen von Lateral Movement-Pfaden
 
