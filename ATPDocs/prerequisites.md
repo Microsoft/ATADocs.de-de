@@ -1,16 +1,16 @@
 ---
 title: Voraussetzungen für Microsoft Defender for Identity
 description: In diesem Artikel werden die Voraussetzungen für eine erfolgreiche Bereitstellung von Microsoft Defender for Identity in Ihrer Umgebung beschrieben.
-ms.date: 01/27/2021
+ms.date: 02/17/2021
 ms.topic: overview
-ms.openlocfilehash: feb52ea096dd7e324e46649a746f41a293cc66e1
-ms.sourcegitcommit: b29aa522dcefce7d016fc0e03c75168a14deb423
+ms.openlocfilehash: 5b5f3c44a750896c6662bc22ac3e26bd63b47559
+ms.sourcegitcommit: 5bf0c6a204b71126306a0c64108eaf9cb7fc042f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "98912470"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101097350"
 ---
-# <a name="product-long-prerequisites"></a>Voraussetzungen für [!INCLUDE [Product long](includes/product-long.md)]
+# <a name="microsoft-defender-for-identity-prerequisites"></a>Voraussetzungen für Microsoft Defender for Identity
 
 In diesem Artikel werden die Voraussetzungen für eine erfolgreiche Bereitstellung von [!INCLUDE [Product long](includes/product-long.md)] in Ihrer Umgebung beschrieben.
 
@@ -69,13 +69,13 @@ In diesem Abschnitt werden die Informationen, die Sie erfassen sollten, sowie Ko
 
 - Container mit **gelöschten Objekten** – Empfehlung: Der Benutzer sollte über den schreibgeschützten Zugriff auf den Container mit gelöschten Objekten verfügen. Mithilfe von Leseberechtigungen für diesen Container kann [!INCLUDE [Product short](includes/product-short.md)] Löschungen von Benutzern über Ihre Active Directory-Instanz erkennen. Informationen zum Konfigurieren des schreibgeschützten Zugriffs auf den Container mit gelöschten Objekten finden Sie im Abschnitt **Ändern von Berechtigungen für einen Container mit gelöschten Objekten** im Artikel [Anzeigen und Festlegen von Berechtigungen für ein Verzeichnisobjekt](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816824(v=ws.10)).
 
-- Optionales **Honeytoken**: Ein Benutzerkonto eines Benutzers ohne Netzwerkaktivitäten. Dieses Konto wird als [!INCLUDE [Product short](includes/product-short.md)]-Honeytoken-Benutzer konfiguriert. Weitere Informationen zu Verwendung von Honeytokens finden Sie unter [Konfigurieren von Ausschlüssen und Honeytoken-Benutzern](install-step7.md).
+- Optionales **Honeytoken**: Ein Benutzerkonto eines Benutzers ohne Netzwerkaktivitäten. Dieses Konto wird als [!INCLUDE [Product short](includes/product-short.md)]-Honeytoken-Benutzer konfiguriert. Weitere Informationen zu Verwendung von Honeytokens finden Sie unter [Konfigurieren von Ausschlüssen und Honeytoken-Benutzern](configure-detection-exclusions.md).
 
 - Optional: Wenn Sie den eigenständigen Sensor bereitstellen, ist die Weiterleitung der [Windows-Ereignisse](configure-windows-event-collection.md#configure-event-collection) an [!INCLUDE [Product short](includes/product-short.md)] erforderlich, um authentifizierungsbasierte Erkennungen, Ergänzungen vertraulicher Gruppen und Erkennungen der Erstellung verdächtiger Dienste in [!INCLUDE [Product short](includes/product-short.md)] zu verbessern.  Der [!INCLUDE [Product short](includes/product-short.md)]-Sensor empfängt diese Ereignisse automatisch. Im eigenständigen [!INCLUDE [Product short](includes/product-short.md)]-Sensor können diese Ereignisse von Ihrer SIEM-Lösung (Security Information & Event Management) empfangen oder durch Festlegen der Windows-Ereignisweiterleitung von Ihrem Domänencontroller aus abgerufen werden. Die erfassten Ereignisse bieten [!INCLUDE [Product short](includes/product-short.md)] zusätzliche Informationen, die über den Netzwerkverkehr des Domänencontrollers nicht verfügbar sind.
 
 <a name="azure-atp-portal-requirements"></a>
 
-## <a name="product-short-portal-requirements"></a>Anforderungen für das [!INCLUDE [Product short](includes/product-short.md)]-Portal
+## <a name="defender-for-identity-portal-requirements"></a>Anforderungen für das Defender for Identity-Portal
 
 Der Zugriff auf das [!INCLUDE [Product short](includes/product-short.md)]-Portal erfolgt über einen Browser. Folgende Browser und Einstellungen werden unterstützt:
 
@@ -94,7 +94,7 @@ Der Zugriff auf das [!INCLUDE [Product short](includes/product-short.md)]-Portal
 > [!NOTE]
 > [!INCLUDE [Product short](includes/product-short.md)] unterstützt standardmäßig bis zu 200 Sensoren. Kontaktieren Sie den [!INCLUDE [Product short](includes/product-short.md)]-Support, wenn Sie mehr Sensoren installieren möchten.
 
-## <a name="product-short-network-name-resolution-nnr-requirements"></a>Anforderungen an die [!INCLUDE [Product short](includes/product-short.md)]-Netzwerknamensauflösung
+## <a name="defender-for-identity-network-name-resolution-nnr-requirements"></a>Anforderungen für die Netzwerknamensauflösung (NNR) für Defender for Identity
 
 Die Netzwerknamensauflösung (Network Name Resolution, NNR) ist ein Hauptbestandteil der [!INCLUDE [Product short](includes/product-short.md)]-Funktionalität. Zum Auflösen von IP-Adressen in Computernamen suchen [!INCLUDE [Product short](includes/product-short.md)]-Sensoren die IP-Adressen mithilfe der folgenden Methoden:
 
@@ -109,7 +109,7 @@ Um die besten Ergebnisse zu erzielen, sollten alle Methoden verwendet werden. We
 
 <a name="azure-atp-sensor-requirements"></a>
 
-## <a name="product-short-sensor-requirements"></a>Voraussetzungen für den [!INCLUDE [Product short](includes/product-short.md)]-Sensor
+## <a name="defender-for-identity-sensor-requirements"></a>Anforderungen für den Defender for Identity-Sensor
 
 In diesem Abschnitt werden die Voraussetzungen für [!INCLUDE [Product short](includes/product-short.md)]-Sensoren aufgeführt.
 
@@ -129,7 +129,7 @@ Der [!INCLUDE [Product short](includes/product-short.md)]-Sensor unterstützt di
 
 Beim Domänencontroller kann es sich um einen schreibgeschützten Domänencontroller (Read Only Domain Controller, RODC) handeln.
 
-Damit Sensoren, die auf Domänencontrollern und auf AD FS ausgeführt werden, mit dem Clouddienst kommunizieren können, müssen Sie Port 443 Ihrer Firewalls und Proxys für \*.atp.azure.com öffnen.
+Damit Sensoren, die auf Domänencontrollern und auf AD FS ausgeführt werden, mit dem Clouddienst kommunizieren können, müssen Sie Port 443 Ihrer Firewalls und Proxys für `*.atp.azure.com` öffnen. Wenn Sie eine Installation auf einer AD FS-Farm durchführen, wird empfohlen, den Sensor auf jedem AD FS-Server zu installieren, oder zumindest auf dem primären Knoten.
 
 Falls .NET Framework 4.7 oder höher nicht installiert ist, wird .NET Framework 4.7 während der Installation installiert, und Sie müssen möglicherweise den Server neu starten. Ein Neustart ist möglicherweise auch erforderlich, wenn bereits ein Neustart aussteht.
 
@@ -194,7 +194,7 @@ Legen Sie für Sensoren, die auf AD FS-Servern ausgeführt werden, die Überwach
 
 <a name="azure-atp-standalone-sensor-requirements"></a>
 
-## <a name="product-short-standalone-sensor-requirements"></a>Voraussetzungen für den eigenständigen [!INCLUDE [Product short](includes/product-short.md)]-Sensor
+## <a name="defender-for-identity-standalone-sensor-requirements"></a>Anforderungen für den eigenständigen Defender for Identity-Sensor
 
 In diesem Abschnitt werden die Voraussetzungen für den eigenständigen [!INCLUDE [Product short](includes/product-short.md)]-Sensor aufgeführt.
 

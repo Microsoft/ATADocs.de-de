@@ -3,12 +3,12 @@ title: Microsoft Defender for Identity-Architektur
 description: In diesem Artikel wird die Architektur von Microsoft Defender for Identity beschrieben.
 ms.date: 12/23/2020
 ms.topic: overview
-ms.openlocfilehash: 418fbe3f4a24f3af69336eda4954f5817b478e20
-ms.sourcegitcommit: e2b4ad613aa171f604ae526f0cba05fe79f4a8cb
+ms.openlocfilehash: 920c4fa99ebe2dad211fd7edae9ed928c1426510
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97753274"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533884"
 ---
 # <a name="microsoft-defender-for-identity-architecture"></a>Microsoft Defender for Identity-Architektur
 
@@ -22,7 +22,7 @@ In diesem Abschnitt wird die Netzwerk- und Ereigniserfassung in [!INCLUDE [Produ
 
 Wenn Sie den [!INCLUDE [Product short](includes/product-short.md)]-Sensor direkt auf Ihrem Domänencontroller oder Ihren AD FS-Servern installieren, greift er direkt von den Servern auf die erforderlichen Ereignisprotokolle zu. Nach Analyse dieser Protokolle und des Netzwerkdatenverkehrs durch den Sensor sendet [!INCLUDE [Product short](includes/product-short.md)] nur diese analysierten Informationen (nicht alle Protokolle) an den [!INCLUDE [Product short](includes/product-short.md)]-Clouddienst (nur ein Teil der Protokolle wird gesendet).
 
-## <a name="product-short-components"></a>[!INCLUDE [Product short](includes/product-short.md)]-Komponenten
+## <a name="defender-for-identity-components"></a>Defender for Identity-Komponenten
 
 [!INCLUDE [Product short](includes/product-short.md)] umfasst die folgenden Komponenten:
 
@@ -36,7 +36,7 @@ Wenn Sie den [!INCLUDE [Product short](includes/product-short.md)]-Sensor direkt
 - **[!INCLUDE [Product short](includes/product-short.md)]-Clouddienst**  
 Der [!INCLUDE [Product short](includes/product-short.md)]-Clouddienst wird in der Azure-Infrastruktur ausgeführt und ist aktuell in den USA, Europa und Asien verfügbar. Der [!INCLUDE [Product short](includes/product-short.md)]-Clouddienst ist mit Microsoft Intelligent Security Graph verbunden.
 
-## <a name="product-short-portal"></a>[!INCLUDE [Product short](includes/product-short.md)]-Portal
+## <a name="defender-for-identity-portal"></a>Portal für Defender for Identity
 
 Verwenden Sie das [!INCLUDE [Product short](includes/product-short.md)]-Portal für folgende Zwecke:
 
@@ -50,7 +50,7 @@ Verwenden Sie das [!INCLUDE [Product short](includes/product-short.md)]-Portal f
 > [!NOTE]
 > Wenn innerhalb von 60 Tagen kein Sensor in Ihrer [!INCLUDE [Product short](includes/product-short.md)]-Instanz installiert wird, kann es sein, dass die Instanz gelöscht wird und neu erstellt werden muss.
 
-## <a name="product-short-sensor"></a>[!INCLUDE [Product short](includes/product-short.md)]-Sensor
+## <a name="defender-for-identity-sensor"></a>Defender for Identity-Sensor
 
 Der [!INCLUDE [Product short](includes/product-short.md)]-Sensor umfasst die folgenden Hauptfunktionen:
 
@@ -61,7 +61,7 @@ Der [!INCLUDE [Product short](includes/product-short.md)]-Sensor umfasst die fol
 - Auflösen von Netzwerkentitäten (Benutzer, Gruppen und Computer)
 - Übertragen relevanter Daten an den [!INCLUDE [Product short](includes/product-short.md)]-Clouddienst
 
-## <a name="product-short-sensor-features"></a>Features des [!INCLUDE [Product short](includes/product-short.md)]-Sensors
+## <a name="defender-for-identity-sensor-features"></a>Defender for Identity-Sensorfeatures
 
 Der [!INCLUDE [Product short](includes/product-short.md)]-Sensor liest lokal Ereignisse, ohne dass zusätzliche Hardware erworben und verwaltet oder Konfigurationen vorgenommen werden müssen. Der [!INCLUDE [Product short](includes/product-short.md)]-Sensor unterstützt zudem die Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW), die die Protokollinformationen für mehrere Erkennungen bereitstellt. ETW-basierte Erkennungen beinhalten vermutete DCShadow-Angriffe, die mithilfe von Replikationsanforderungen für Domänencontroller und der Heraufstufung des Domänencontrollers versucht wurden.
 

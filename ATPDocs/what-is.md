@@ -3,14 +3,14 @@ title: Was ist Microsoft Defender for Identity?
 description: In diesem Artikel erfahren Sie, was Microsoft Defender for Identity ist und welche Arten von verdächtigen Aktivitäten dieser Clouddienst erkennen kann.
 ms.date: 12/23/2020
 ms.topic: overview
-ms.openlocfilehash: 1329c93e18941ca42e9d446abdb0576480543992
-ms.sourcegitcommit: af41733212c2102c223fed8c8602a21a1f667080
+ms.openlocfilehash: 812d26e8def619719f7239b41521c87513e807f8
+ms.sourcegitcommit: f92dca4dc3d8a25b1a06f68ac7a9f8318105bcd8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100515562"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100630559"
 ---
-# <a name="what-is-product-long"></a>Was ist [!INCLUDE [Product long](includes/product-long.md)]?
+# <a name="what-is-microsoft-defender-for-identity"></a>Was ist Microsoft Defender for Identity?
 
 [!INCLUDE [Product long](includes/product-long.md)] (ehemals Azure Advanced Threat Protection bzw. Azure ATP) ist eine cloudbasierte Sicherheitslösung, die Signale Ihrer lokalen Active Directory-Instanz nutzt, um komplexe Bedrohungen, gefährdete Identitäten und schädliche Insideraktionen gegen Ihre Organisation zu identifizieren und zu erkennen, und die Sie bei der Untersuchung dieser Bedrohungen unterstützt.
 
@@ -57,25 +57,25 @@ Hervorheben des Angreiferverhaltens bei Erreichen der Domänendominanz über die
 
 [!INCLUDE [Product short](includes/product-short.md)] wurde dafür konzipiert, die Anzahl allgemeiner Warnungen zu reduzieren, damit nur relevante, wichtige Sicherheitswarnungen in einer übersichtlichen Zeitskala mit gegen die Organisation gerichteten Angriffen in Echtzeit bereitgestellt werden können. Dank der [!INCLUDE [Product short](includes/product-short.md)]-Ansicht mit der Zeitskala zu Angriffen können Sie sich problemlos aufs Wesentliche konzentrieren und intelligente Analysen wirksam einsetzen. Verwenden Sie [!INCLUDE [Product short](includes/product-short.md)], um Bedrohungen ohne großen Aufwand zu untersuchen und organisationsübergreifend Einblicke für Benutzer, Geräte und Netzwerkressourcen zu gewinnen. Die nahtlose Integration mit Microsoft Defender für Endpunkt bietet durch zusätzliche Erkennung und Schutz vor erweiterten dauerhaften Bedrohungen für das Betriebssystem eine weitere erweiterte Sicherheitsebene.
 
-## <a name="additional-resources-for-product-short"></a>Zusätzliche Ressourcen für [!INCLUDE [Product short](includes/product-short.md)]
+## <a name="additional-resources-for-defender-for-identity"></a>Zusätzliche Ressourcen für Defender for Identity
 
 ### <a name="start-a-free-trial"></a>Kostenlosen Test starten
 
 [https://signup.microsoft.com/Signup?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7&ali=1](https://signup.microsoft.com/Signup?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7&ali=1 "Enterprise Mobility + Security E5")
 
-### <a name="follow-product-short-on-microsoft-tech-community"></a>[!INCLUDE [Product short](includes/product-short.md)] in der Microsoft Tech Community
+### <a name="follow-defender-for-identity-on-microsoft-tech-community"></a>Der Tech-Community für Defender for Identity unter Microsoft folgen
 
 [https://aka.ms/MDIcommunity](https://aka.ms/MDIcommunity "[!INCLUDE [Product short](includes/product-short.md)] on Microsoft Tech Community")
 
-### <a name="join-the-product-short-yammer-community"></a>Yammer-Community für [!INCLUDE [Product short](includes/product-short.md)]
+### <a name="join-the-defender-for-identity-yammer-community"></a>Der Yammer-Community für Defender for Identity beitreten
 
 [https://www.yammer.com/azureadvisors/#/threads/inGroup?type=in_group&feedId=9386893](https://www.yammer.com/azureadvisors/#/threads/inGroup?type=in_group&feedId=9386893 "[!INCLUDE [Product short](includes/product-short.md)] Yammer community")
 
-### <a name="visit-the-product-short-product-page"></a>Produktseite für [!INCLUDE [Product short](includes/product-short.md)]
+### <a name="visit-the-defender-for-identity-product-page"></a>Die Produktseite von Defender for Identity besuchen
 
 [https://www.microsoft.com/microsoft-365/security/identity-defender](https://www.microsoft.com/microsoft-365/security/identity-defender "[!INCLUDE [Product short](includes/product-short.md)] product page")
 
-### <a name="learn-more-about-product-short-architecture"></a>Weitere Informationen über die [!INCLUDE [Product short](includes/product-short.md)]-Architektur
+### <a name="learn-more-about-defender-for-identity-architecture"></a>Weitere Informationen zur Defender for Identity-Architektur
 
 [[!INCLUDE [Product short](includes/product-short.md)]-Architektur](architecture.md)
 
@@ -92,7 +92,7 @@ Es wird empfohlen, [!INCLUDE [Product short](includes/product-short.md)] in drei
 ### <a name="phase-1"></a>Phase 1
 
 1. Richten Sie [!INCLUDE [Product short](includes/product-short.md)] zum Schutz Ihrer primären Umgebungen ein. Mit dem [!INCLUDE [Product short](includes/product-short.md)]-Modell zur schnellen Bereitstellung können Sie mit dem Schutz Ihrer Organisation noch heute beginnen. [Installieren von [!INCLUDE [Product short](includes/product-short.md)]](install-step1.md)
-1. Legen Sie [Sensitive Accounts](sensitive-accounts.md) (sensible Konten) und [Honeytoken-Konten](install-step7.md) fest.
+1. Legen Sie [Sensitive Accounts](manage-sensitive-honeytoken-accounts.md) (sensible Konten) und [Honeytoken-Konten](configure-detection-exclusions.md) fest.
 1. Überprüfen Sie die Berichte und [Lateral Movement-Pfade](use-case-lateral-movement-path.md).
 
 ### <a name="phase-2"></a>Phase 2

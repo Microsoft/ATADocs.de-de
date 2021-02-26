@@ -3,14 +3,14 @@ title: 'Schnellstart: Erstellen einer Microsoft Defender for Identity-Instanz'
 description: In diesem Schnellstart erstellen Sie die Instanz für Ihre Microsoft Defender for Identity-Bereitstellung. Dabei handelt es sich um den ersten Schritt für die Installation von Defender for Identity.
 ms.date: 10/26/2020
 ms.topic: quickstart
-ms.openlocfilehash: 9860a8893ac16448b92961df9cf25801f68786b6
-ms.sourcegitcommit: af41733212c2102c223fed8c8602a21a1f667080
+ms.openlocfilehash: 19fb02269da5b4529941ffa89c07d914b0633754
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100515358"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534258"
 ---
-# <a name="quickstart-create-your-product-long-instance"></a>Schnellstart: Erstellen Ihrer [!INCLUDE [Product long](includes/product-long.md)]-Instanz
+# <a name="quickstart-create-your-microsoft-defender-for-identity-instance"></a>Schnellstart: Erstellen einer Microsoft Defender for Identity-Instanz
 
 In diesem Schnellstart erstellen Sie Ihre [!INCLUDE [Product long](includes/product-long.md)]-Instanz im [!INCLUDE [Product short](includes/product-short.md)]-Portal. In [!INCLUDE [Product short](includes/product-short.md)] verfügen Sie über eine einzelne Instanz, die zuvor als Arbeitsbereich bezeichnet wurde. Über diese Instanz können Sie mehrere Gesamtstrukturen von einer einzelnen zentralen Konsole aus verwalten.
 
@@ -24,7 +24,7 @@ In diesem Schnellstart erstellen Sie Ihre [!INCLUDE [Product long](includes/prod
 - Lesen Sie den Artikel [[!INCLUDE [Product short](includes/product-short.md)]-Architektur](architecture.md).
 - Lesen Sie den Artikel [[!INCLUDE [Product short](includes/product-short.md)]-Voraussetzungen](prerequisites.md).
 
-## <a name="sign-in-to-the-product-short-portal"></a>Anmelden beim [!INCLUDE [Product short](includes/product-short.md)]-Portal
+## <a name="sign-in-to-the-defender-for-identity-portal"></a>Anmelden beim Defender for Identity-Portal
 
 Nachdem Sie überprüft haben, ob Ihr Netzwerk den Anforderungen des Sensors entspricht, können Sie mit der Erstellung der [!INCLUDE [Product short](includes/product-short.md)]-Instanz beginnen.
 

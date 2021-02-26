@@ -3,14 +3,14 @@ title: Microsoft Defender for Identity für GCC High-Umgebungen der US-Regierung
 description: In diesem Artikel finden Sie eine Übersicht über das Microsoft Defender for Identity-Angebot für GCC High-Umgebungen für die US-Regierung.
 ms.date: 10/27/2020
 ms.topic: overview
-ms.openlocfilehash: 5e2c10186c929eb4a6f3ea2fc1f25691df6fd9f4
-ms.sourcegitcommit: 2cbfcab156fbd90d932eea47142d560d2b038062
+ms.openlocfilehash: d6b0ac4d60d096710abd1b3ac5569eb7dad221f9
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/06/2020
-ms.locfileid: "96740826"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533323"
 ---
-# <a name="product-long-for-us-government-gcc-high"></a>[!INCLUDE [Product long](includes/product-long.md)] für GCC High-Umgebungen für die US-Regierung
+# <a name="microsoft-defender-for-identity-for-us-government-gcc-high"></a>Microsoft Defender for Identity für GCC High-Umgebungen der US-Regierung
 
 Das [!INCLUDE [Product long](includes/product-long.md)]-GCC High-Angebot nutzt dieselben zugrunde liegenden Technologien und Funktionen wie die kommerzielle Instanz von [!INCLUDE [Product short](includes/product-short.md)]. Eine Liste der Featureabweichungen finden Sie in der [Dienstbeschreibung](/enterprise-mobility-security/solutions/ems-azure-atp-govt-service-description).
 
